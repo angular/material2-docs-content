@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/icon')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/button', ['exports', '@angular/core', '@angular/material/button', '@angular/material/icon'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.button = {}), global.ng.core, global.ng.material.button, global.ng.material.icon));
-}(this, (function (exports, i0, i1, i2) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/divider'), require('@angular/material/icon')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/button', ['exports', '@angular/core', '@angular/material/button', '@angular/material/divider', '@angular/material/icon'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.button = {}), global.ng.core, global.ng.material.button, global.ng.material.divider, global.ng.material.icon));
+}(this, (function (exports, i0, i1, i2, i3) { 'use strict';
 
     /**
      * @title Basic buttons
@@ -11,11 +11,222 @@
         function ButtonOverviewExample() {
         }
         ButtonOverviewExample.ɵfac = function ButtonOverviewExample_Factory(t) { return new (t || ButtonOverviewExample)(); };
-        ButtonOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonOverviewExample, selectors: [["button-overview-example"]], decls: 2, vars: 0, consts: [["mat-button", ""]], template: function ButtonOverviewExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "button", 0);
-                i0.ɵɵtext(1, "Click me!");
+        ButtonOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonOverviewExample, selectors: [["button-overview-example"]], decls: 132, vars: 0, consts: [[1, "example-label"], [1, "example-button-row"], ["mat-button", ""], ["mat-button", "", "color", "primary"], ["mat-button", "", "color", "accent"], ["mat-button", "", "color", "warn"], ["mat-button", "", "disabled", ""], ["mat-button", "", "href", "https://www.google.com/", "target", "_blank"], ["mat-raised-button", ""], ["mat-raised-button", "", "color", "primary"], ["mat-raised-button", "", "color", "accent"], ["mat-raised-button", "", "color", "warn"], ["mat-raised-button", "", "disabled", ""], ["mat-raised-button", "", "href", "https://www.google.com/", "target", "_blank"], ["mat-stroked-button", ""], ["mat-stroked-button", "", "color", "primary"], ["mat-stroked-button", "", "color", "accent"], ["mat-stroked-button", "", "color", "warn"], ["mat-stroked-button", "", "disabled", ""], ["mat-stroked-button", "", "href", "https://www.google.com/", "target", "_blank"], ["mat-flat-button", ""], ["mat-flat-button", "", "color", "primary"], ["mat-flat-button", "", "color", "accent"], ["mat-flat-button", "", "color", "warn"], ["mat-flat-button", "", "disabled", ""], ["mat-flat-button", "", "href", "https://www.google.com/", "target", "_blank"], [1, "example-flex-container"], ["mat-icon-button", "", "aria-label", "Example icon button with a vertical three dot icon"], ["mat-icon-button", "", "color", "primary", "aria-label", "Example icon button with a home icon"], ["mat-icon-button", "", "color", "accent", "aria-label", "Example icon button with a menu icon"], ["mat-icon-button", "", "color", "warn", "aria-label", "Example icon button with a heart icon"], ["mat-icon-button", "", "disabled", "", "aria-label", "Example icon button with a open in new tab icon"], [1, "example-button-container"], ["mat-fab", "", "color", "primary", "aria-label", "Example icon button with a delete icon"], ["mat-fab", "", "color", "accent", "aria-label", "Example icon button with a bookmark icon"], ["mat-fab", "", "color", "warn", "aria-label", "Example icon button with a home icon"], ["mat-fab", "", "disabled", "", "aria-label", "Example icon button with a heart icon"], ["mat-mini-fab", "", "color", "primary", "aria-label", "Example icon button with a menu icon"], ["mat-mini-fab", "", "color", "accent", "aria-label", "Example icon button with a plus one icon"], ["mat-mini-fab", "", "color", "warn", "aria-label", "Example icon button with a filter list icon"], ["mat-mini-fab", "", "disabled", "", "aria-label", "Example icon button with a home icon"]], template: function ButtonOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "section");
+                i0.ɵɵelementStart(1, "div", 0);
+                i0.ɵɵtext(2, "Basic");
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButton], styles: [""] });
+                i0.ɵɵelementStart(3, "div", 1);
+                i0.ɵɵelementStart(4, "button", 2);
+                i0.ɵɵtext(5, "Basic");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "button", 3);
+                i0.ɵɵtext(7, "Primary");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(8, "button", 4);
+                i0.ɵɵtext(9, "Accent");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "button", 5);
+                i0.ɵɵtext(11, "Warn");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "button", 6);
+                i0.ɵɵtext(13, "Disabled");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(14, "a", 7);
+                i0.ɵɵtext(15, "Link");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(16, "mat-divider");
+                i0.ɵɵelementStart(17, "section");
+                i0.ɵɵelementStart(18, "div", 0);
+                i0.ɵɵtext(19, "Raised");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(20, "div", 1);
+                i0.ɵɵelementStart(21, "button", 8);
+                i0.ɵɵtext(22, "Basic");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(23, "button", 9);
+                i0.ɵɵtext(24, "Primary");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(25, "button", 10);
+                i0.ɵɵtext(26, "Accent");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(27, "button", 11);
+                i0.ɵɵtext(28, "Warn");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(29, "button", 12);
+                i0.ɵɵtext(30, "Disabled");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(31, "a", 13);
+                i0.ɵɵtext(32, "Link");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(33, "mat-divider");
+                i0.ɵɵelementStart(34, "section");
+                i0.ɵɵelementStart(35, "div", 0);
+                i0.ɵɵtext(36, "Stroked");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(37, "div", 1);
+                i0.ɵɵelementStart(38, "button", 14);
+                i0.ɵɵtext(39, "Basic");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(40, "button", 15);
+                i0.ɵɵtext(41, "Primary");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(42, "button", 16);
+                i0.ɵɵtext(43, "Accent");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(44, "button", 17);
+                i0.ɵɵtext(45, "Warn");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(46, "button", 18);
+                i0.ɵɵtext(47, "Disabled");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(48, "a", 19);
+                i0.ɵɵtext(49, "Link");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(50, "mat-divider");
+                i0.ɵɵelementStart(51, "section");
+                i0.ɵɵelementStart(52, "div", 0);
+                i0.ɵɵtext(53, "Flat");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(54, "div", 1);
+                i0.ɵɵelementStart(55, "button", 20);
+                i0.ɵɵtext(56, "Basic");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(57, "button", 21);
+                i0.ɵɵtext(58, "Primary");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(59, "button", 22);
+                i0.ɵɵtext(60, "Accent");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(61, "button", 23);
+                i0.ɵɵtext(62, "Warn");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(63, "button", 24);
+                i0.ɵɵtext(64, "Disabled");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(65, "a", 25);
+                i0.ɵɵtext(66, "Link");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(67, "mat-divider");
+                i0.ɵɵelementStart(68, "section");
+                i0.ɵɵelementStart(69, "div", 0);
+                i0.ɵɵtext(70, "Icon");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(71, "div", 1);
+                i0.ɵɵelementStart(72, "div", 26);
+                i0.ɵɵelementStart(73, "button", 27);
+                i0.ɵɵelementStart(74, "mat-icon");
+                i0.ɵɵtext(75, "more_vert");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(76, "button", 28);
+                i0.ɵɵelementStart(77, "mat-icon");
+                i0.ɵɵtext(78, "home");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(79, "button", 29);
+                i0.ɵɵelementStart(80, "mat-icon");
+                i0.ɵɵtext(81, "menu");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(82, "button", 30);
+                i0.ɵɵelementStart(83, "mat-icon");
+                i0.ɵɵtext(84, "favorite");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(85, "button", 31);
+                i0.ɵɵelementStart(86, "mat-icon");
+                i0.ɵɵtext(87, "open_in_new");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(88, "mat-divider");
+                i0.ɵɵelementStart(89, "section");
+                i0.ɵɵelementStart(90, "div", 0);
+                i0.ɵɵtext(91, "FAB");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(92, "div", 1);
+                i0.ɵɵelementStart(93, "div", 26);
+                i0.ɵɵelementStart(94, "div", 32);
+                i0.ɵɵelementStart(95, "button", 33);
+                i0.ɵɵelementStart(96, "mat-icon");
+                i0.ɵɵtext(97, "delete");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(98, "div", 32);
+                i0.ɵɵelementStart(99, "button", 34);
+                i0.ɵɵelementStart(100, "mat-icon");
+                i0.ɵɵtext(101, "bookmark");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(102, "div", 32);
+                i0.ɵɵelementStart(103, "button", 35);
+                i0.ɵɵelementStart(104, "mat-icon");
+                i0.ɵɵtext(105, "home");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(106, "div", 32);
+                i0.ɵɵelementStart(107, "button", 36);
+                i0.ɵɵelementStart(108, "mat-icon");
+                i0.ɵɵtext(109, "favorite");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(110, "mat-divider");
+                i0.ɵɵelementStart(111, "section");
+                i0.ɵɵelementStart(112, "div", 0);
+                i0.ɵɵtext(113, "Mini FAB");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(114, "div", 1);
+                i0.ɵɵelementStart(115, "div", 26);
+                i0.ɵɵelementStart(116, "div", 32);
+                i0.ɵɵelementStart(117, "button", 37);
+                i0.ɵɵelementStart(118, "mat-icon");
+                i0.ɵɵtext(119, "menu");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(120, "div", 32);
+                i0.ɵɵelementStart(121, "button", 38);
+                i0.ɵɵelementStart(122, "mat-icon");
+                i0.ɵɵtext(123, "plus_one");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(124, "div", 32);
+                i0.ɵɵelementStart(125, "button", 39);
+                i0.ɵɵelementStart(126, "mat-icon");
+                i0.ɵɵtext(127, "filter_list");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(128, "div", 32);
+                i0.ɵɵelementStart(129, "button", 40);
+                i0.ɵɵelementStart(130, "mat-icon");
+                i0.ɵɵtext(131, "home");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            } }, directives: [i1.MatButton, i1.MatAnchor, i2.MatDivider, i3.MatIcon], styles: ["section[_ngcontent-%COMP%] {\n  display: table;\n  margin: 8px;\n}\n\n.example-label[_ngcontent-%COMP%] {\n  display: table-cell;\n  font-size: 14px;\n  margin-left: 8px;\n  width: 120px;\n}\n\n.example-button-row[_ngcontent-%COMP%] {\n  display: table-cell;\n}\n\n.example-button-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  display: table-cell;\n  margin-right: 8px;\n}\n\n.example-flex-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  width: 480px;\n}\n\n.example-button-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 120px;\n}"] });
         return ButtonOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonOverviewExample, [{
@@ -213,7 +424,7 @@
                 i0.ɵɵtext(113, "Link");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButton, i1.MatAnchor, i2.MatIcon], styles: [".example-button-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%], .example-button-row[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
+            } }, directives: [i1.MatButton, i1.MatAnchor, i3.MatIcon], styles: [".example-button-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%], .example-button-row[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return ButtonTypesExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonTypesExample, [{
@@ -235,20 +446,23 @@
         ButtonExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ButtonExamplesModule });
         ButtonExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ButtonExamplesModule_Factory(t) { return new (t || ButtonExamplesModule)(); }, imports: [[
                     i1.MatButtonModule,
-                    i2.MatIconModule,
+                    i2.MatDividerModule,
+                    i3.MatIconModule,
                 ]] });
         return ButtonExamplesModule;
     }());
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonExamplesModule, { declarations: [ButtonOverviewExample,
             ButtonTypesExample], imports: [i1.MatButtonModule,
-            i2.MatIconModule], exports: [ButtonOverviewExample,
+            i2.MatDividerModule,
+            i3.MatIconModule], exports: [ButtonOverviewExample,
             ButtonTypesExample] }); })();
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
                         i1.MatButtonModule,
-                        i2.MatIconModule,
+                        i2.MatDividerModule,
+                        i3.MatIconModule,
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
