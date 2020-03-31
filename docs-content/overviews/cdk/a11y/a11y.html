@@ -171,8 +171,9 @@ class:</p>
           Targeting high contrast users
         </h3>
       <p>The <code>a11y</code> package offers a mixin that allows you to target users that have the Windows high
-contrast mode turned on, via a media query. To target high contrast users, you can wrap your
-styles with the <code>cdk-high-contrast</code> mixin:</p>
+contrast mode turned on. To target high contrast users, you can wrap your styles with the
+<code>cdk-high-contrast</code> mixin. The mixin works by targeting a CSS class which is added to the <code>body</code>
+by the CDK when high contrast mode is detected at runtime.</p>
 <pre><code class="language-scss"><span class="hljs-selector-tag">button</span> {
   @<span class="hljs-keyword">include</span> cdk-high-contrast {
     <span class="hljs-attribute">outline</span>: solid <span class="hljs-number">1px</span>;
