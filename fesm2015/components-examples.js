@@ -189,7 +189,7 @@ const EXAMPLE_COMPONENTS = {
         }
     },
     "cdk-drag-drop-custom-placeholder": {
-        "title": "Drag&Drop custom placeholer",
+        "title": "Drag&Drop custom placeholder",
         "componentName": "CdkDragDropCustomPlaceholderExample",
         "additionalFiles": [],
         "additionalComponents": [],
