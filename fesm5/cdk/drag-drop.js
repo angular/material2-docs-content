@@ -246,7 +246,7 @@ function CdkDragDropCustomPlaceholderExample_div_1_Template(rf, ctx) { if (rf & 
     ɵɵtextInterpolate1(" ", movie_r11, " ");
 } }
 /**
- * @title Drag&Drop custom placeholer
+ * @title Drag&Drop custom placeholder
  */
 var CdkDragDropCustomPlaceholderExample = /** @class */ (function () {
     function CdkDragDropCustomPlaceholderExample() {

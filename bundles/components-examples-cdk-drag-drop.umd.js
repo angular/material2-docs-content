@@ -246,7 +246,7 @@
         i0.ɵɵtextInterpolate1(" ", movie_r11, " ");
     } }
     /**
-     * @title Drag&Drop custom placeholer
+     * @title Drag&Drop custom placeholder
      */
     var CdkDragDropCustomPlaceholderExample = /** @class */ (function () {
         function CdkDragDropCustomPlaceholderExample() {
