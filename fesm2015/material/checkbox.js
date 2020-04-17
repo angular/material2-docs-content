@@ -1,4 +1,5 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { NgForOf, CommonModule } from '@angular/common';
+import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵnextContext, ɵɵtextInterpolate1, ɵɵtemplate, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -115,10 +116,90 @@ if (false) {
  * Generated from: src/components-examples/material/checkbox/checkbox-overview/checkbox-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+function CheckboxOverviewExample_li_11_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "li");
+    ɵɵelementStart(1, "mat-checkbox", 6);
+    ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { ɵɵrestoreView(_r3); const subtask_r1 = ctx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { ɵɵrestoreView(_r3); const ctx_r4 = ɵɵnextContext(); return ctx_r4.updateAllComplete(); });
+    ɵɵtext(2);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const subtask_r1 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵproperty("ngModel", subtask_r1.completed)("color", subtask_r1.color);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", subtask_r1.name, " ");
+} }
+/**
+ * @record
+ */
+function Task() { }
+if (false) {
+    /** @type {?} */
+    Task.prototype.name;
+    /** @type {?} */
+    Task.prototype.completed;
+    /** @type {?} */
+    Task.prototype.color;
+    /** @type {?|undefined} */
+    Task.prototype.subtasks;
+}
 /**
  * \@title Basic checkboxes
  */
 class CheckboxOverviewExample {
+    constructor() {
+        this.task = {
+            name: 'Indeterminate',
+            completed: false,
+            color: 'primary',
+            subtasks: [
+                { name: 'Primary', completed: false, color: 'primary' },
+                { name: 'Accent', completed: false, color: 'accent' },
+                { name: 'Warn', completed: false, color: 'warn' }
+            ]
+        };
+        this.allComplete = false;
+    }
+    /**
+     * @return {?}
+     */
+    updateAllComplete() {
+        this.allComplete = this.task.subtasks != null && this.task.subtasks.every((/**
+         * @param {?} t
+         * @return {?}
+         */
+        t => t.completed));
+    }
+    /**
+     * @return {?}
+     */
+    someComplete() {
+        if (this.task.subtasks == null) {
+            return false;
+        }
+        return this.task.subtasks.filter((/**
+         * @param {?} t
+         * @return {?}
+         */
+        t => t.completed)).length > 0 && !this.allComplete;
+    }
+    /**
+     * @param {?} completed
+     * @return {?}
+     */
+    setAll(completed) {
+        this.allComplete = completed;
+        if (this.task.subtasks == null) {
+            return;
+        }
+        this.task.subtasks.forEach((/**
+         * @param {?} t
+         * @return {?}
+         */
+        t => t.completed = completed));
+    }
 }
 CheckboxOverviewExample.decorators = [
     { type: Component, args: [{
@@ -128,11 +209,38 @@ CheckboxOverviewExample.decorators = [
             },] },
 ];
 /** @nocollapse */ CheckboxOverviewExample.ɵfac = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
-/** @nocollapse */ CheckboxOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 2, vars: 0, template: function CheckboxOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-checkbox");
-        ɵɵtext(1, "Check me!");
+/** @nocollapse */ CheckboxOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 12, vars: 5, consts: [[1, "example-section"], [1, "example-margin"], [1, "example-margin", 3, "disabled"], [1, "example-list-section"], [1, "example-margin", 3, "checked", "indeterminate", "change"], [4, "ngFor", "ngForOf"], [3, "ngModel", "color", "ngModelChange"]], template: function CheckboxOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "section", 0);
+        ɵɵelementStart(1, "mat-checkbox", 1);
+        ɵɵtext(2, "Check me!");
         ɵɵelementEnd();
-    } }, directives: [MatCheckbox], styles: [""] });
+        ɵɵelementStart(3, "mat-checkbox", 2);
+        ɵɵtext(4, "Disabled");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "section", 0);
+        ɵɵelementStart(6, "span", 3);
+        ɵɵelementStart(7, "mat-checkbox", 4);
+        ɵɵlistener("change", function CheckboxOverviewExample_Template_mat_checkbox_change_7_listener($event) { return ctx.setAll($event.checked); });
+        ɵɵtext(8);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(9, "span", 3);
+        ɵɵelementStart(10, "ul");
+        ɵɵtemplate(11, CheckboxOverviewExample_li_11_Template, 3, 3, "li", 5);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(3);
+        ɵɵproperty("disabled", true);
+        ɵɵadvance(4);
+        ɵɵproperty("checked", ctx.allComplete)("indeterminate", ctx.someComplete());
+        ɵɵadvance(1);
+        ɵɵtextInterpolate1(" ", ctx.task.name, " ");
+        ɵɵadvance(3);
+        ɵɵproperty("ngForOf", ctx.task.subtasks);
+    } }, directives: [MatCheckbox, NgForOf, NgControlStatus, NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxOverviewExample, [{
         type: Component,
         args: [{
@@ -141,6 +249,12 @@ CheckboxOverviewExample.decorators = [
                 styleUrls: ['checkbox-overview-example.css'],
             }]
     }], null, null); })();
+if (false) {
+    /** @type {?} */
+    CheckboxOverviewExample.prototype.task;
+    /** @type {?} */
+    CheckboxOverviewExample.prototype.allComplete;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -157,6 +271,7 @@ class CheckboxExamplesModule {
 CheckboxExamplesModule.decorators = [
     { type: NgModule, args: [{
                 imports: [
+                    CommonModule,
                     MatCardModule,
                     MatCheckboxModule,
                     MatRadioModule,
@@ -169,13 +284,15 @@ CheckboxExamplesModule.decorators = [
 ];
 /** @nocollapse */ CheckboxExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CheckboxExamplesModule });
 /** @nocollapse */ CheckboxExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
+            CommonModule,
             MatCardModule,
             MatCheckboxModule,
             MatRadioModule,
             FormsModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
-        CheckboxOverviewExample], imports: [MatCardModule,
+        CheckboxOverviewExample], imports: [CommonModule,
+        MatCardModule,
         MatCheckboxModule,
         MatRadioModule,
         FormsModule], exports: [CheckboxConfigurableExample,
@@ -184,6 +301,7 @@ CheckboxExamplesModule.decorators = [
         type: NgModule,
         args: [{
                 imports: [
+                    CommonModule,
                     MatCardModule,
                     MatCheckboxModule,
                     MatRadioModule,
