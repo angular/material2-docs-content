@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/text-field'), require('@angular/common'), require('@angular/core'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/form-field'), require('rxjs/operators'), require('@angular/material/core')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/text-field', ['exports', '@angular/cdk/text-field', '@angular/common', '@angular/core', '@angular/material/input', '@angular/material/select', '@angular/material/form-field', 'rxjs/operators', '@angular/material/core'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.textField = {}), global.ng.cdk.textField, global.ng.common, global.ng.core, global.ng.material.input, global.ng.material.select, global.ng.material.formField, global.rxjs.operators, global.ng.material.core));
-}(this, (function (exports, i1, i4, i0, i2, i2$1, i1$1, operators, i3) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/text-field'), require('@angular/common'), require('@angular/core'), require('@angular/material/button'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/form-field'), require('rxjs/operators'), require('@angular/material/core')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/text-field', ['exports', '@angular/cdk/text-field', '@angular/common', '@angular/core', '@angular/material/button', '@angular/material/input', '@angular/material/select', '@angular/material/form-field', 'rxjs/operators', '@angular/material/core'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.textField = {}), global.ng.cdk.textField, global.ng.common, global.ng.core, global.ng.material.button, global.ng.material.input, global.ng.material.select, global.ng.material.formField, global.rxjs.operators, global.ng.material.core));
+}(this, (function (exports, i1, i4, i0, i5, i2, i2$1, i1$1, operators, i3) { 'use strict';
 
     function TextFieldAutofillDirectiveExample_mat_hint_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-hint");
@@ -48,7 +48,7 @@
                 i0.ɵɵproperty("ngIf", ctx.firstNameAutofilled);
                 i0.ɵɵadvance(5);
                 i0.ɵɵproperty("ngIf", ctx.lastNameAutofilled);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i1.CdkAutofill, i4.NgIf, i1$1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i1.CdkAutofill, i4.NgIf, i5.MatButton, i1$1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return TextFieldAutofillDirectiveExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
@@ -121,7 +121,7 @@
                 i0.ɵɵproperty("ngIf", ctx.firstNameAutofilled);
                 i0.ɵɵadvance(6);
                 i0.ɵɵproperty("ngIf", ctx.lastNameAutofilled);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i4.NgIf, i1$1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i4.NgIf, i5.MatButton, i1$1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return TextFieldAutofillMonitorExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
@@ -221,6 +221,7 @@
         CdkTextFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
                     i4.CommonModule,
                     i1.TextFieldModule,
+                    i5.MatButtonModule,
                     i2.MatInputModule,
                     i2$1.MatSelectModule,
                 ]] });
@@ -230,6 +231,7 @@
             TextFieldAutofillMonitorExample,
             TextFieldAutosizeTextareaExample], imports: [i4.CommonModule,
             i1.TextFieldModule,
+            i5.MatButtonModule,
             i2.MatInputModule,
             i2$1.MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
             TextFieldAutofillMonitorExample,
@@ -240,6 +242,7 @@
                     imports: [
                         i4.CommonModule,
                         i1.TextFieldModule,
+                        i5.MatButtonModule,
                         i2.MatInputModule,
                         i2$1.MatSelectModule,
                     ],
