@@ -1,6 +1,7 @@
 import { CdkAutofill, AutofillMonitor, CdkTextareaAutosize, TextFieldModule } from '@angular/cdk/text-field';
 import { NgIf, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ViewChild, ElementRef, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelement, NgZone, ɵɵreference, ɵɵstyleProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatFormField, MatLabel, MatHint } from '@angular/material/form-field';
@@ -64,7 +65,7 @@ TextFieldAutofillDirectiveExample.decorators = [
         ɵɵproperty("ngIf", ctx.firstNameAutofilled);
         ɵɵadvance(5);
         ɵɵproperty("ngIf", ctx.lastNameAutofilled);
-    } }, directives: [MatFormField, MatLabel, MatInput, CdkAutofill, NgIf, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, CdkAutofill, NgIf, MatButton, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
         type: Component,
         args: [{
@@ -180,7 +181,7 @@ TextFieldAutofillMonitorExample.propDecorators = {
         ɵɵproperty("ngIf", ctx.firstNameAutofilled);
         ɵɵadvance(6);
         ɵɵproperty("ngIf", ctx.lastNameAutofilled);
-    } }, directives: [MatFormField, MatLabel, MatInput, NgIf, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, NgIf, MatButton, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
         type: Component,
         args: [{
@@ -336,6 +337,7 @@ CdkTextFieldExamplesModule.decorators = [
                 imports: [
                     CommonModule,
                     TextFieldModule,
+                    MatButtonModule,
                     MatInputModule,
                     MatSelectModule,
                 ],
@@ -348,6 +350,7 @@ CdkTextFieldExamplesModule.decorators = [
 /** @nocollapse */ CdkTextFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
             CommonModule,
             TextFieldModule,
+            MatButtonModule,
             MatInputModule,
             MatSelectModule,
         ]] });
@@ -355,6 +358,7 @@ CdkTextFieldExamplesModule.decorators = [
         TextFieldAutofillMonitorExample,
         TextFieldAutosizeTextareaExample], imports: [CommonModule,
         TextFieldModule,
+        MatButtonModule,
         MatInputModule,
         MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
@@ -365,6 +369,7 @@ CdkTextFieldExamplesModule.decorators = [
                 imports: [
                     CommonModule,
                     TextFieldModule,
+                    MatButtonModule,
                     MatInputModule,
                     MatSelectModule,
                 ],

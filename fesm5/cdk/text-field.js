@@ -1,6 +1,7 @@
 import { CdkAutofill, AutofillMonitor, CdkTextareaAutosize, TextFieldModule } from '@angular/cdk/text-field';
 import { NgIf, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵviewQuery, ElementRef, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelement, ViewChild, NgZone, ɵɵreference, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatFormField, MatLabel, MatHint } from '@angular/material/form-field';
@@ -51,7 +52,7 @@ var TextFieldAutofillDirectiveExample = /** @class */ (function () {
             ɵɵproperty("ngIf", ctx.firstNameAutofilled);
             ɵɵadvance(5);
             ɵɵproperty("ngIf", ctx.lastNameAutofilled);
-        } }, directives: [MatFormField, MatLabel, MatInput, CdkAutofill, NgIf, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+        } }, directives: [MatFormField, MatLabel, MatInput, CdkAutofill, NgIf, MatButton, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return TextFieldAutofillDirectiveExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
@@ -124,7 +125,7 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
             ɵɵproperty("ngIf", ctx.firstNameAutofilled);
             ɵɵadvance(6);
             ɵɵproperty("ngIf", ctx.lastNameAutofilled);
-        } }, directives: [MatFormField, MatLabel, MatInput, NgIf, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+        } }, directives: [MatFormField, MatLabel, MatInput, NgIf, MatButton, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return TextFieldAutofillMonitorExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
@@ -224,6 +225,7 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
     CdkTextFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
                 CommonModule,
                 TextFieldModule,
+                MatButtonModule,
                 MatInputModule,
                 MatSelectModule,
             ]] });
@@ -233,6 +235,7 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
         TextFieldAutofillMonitorExample,
         TextFieldAutosizeTextareaExample], imports: [CommonModule,
         TextFieldModule,
+        MatButtonModule,
         MatInputModule,
         MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
@@ -243,6 +246,7 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
                 imports: [
                     CommonModule,
                     TextFieldModule,
+                    MatButtonModule,
                     MatInputModule,
                     MatSelectModule,
                 ],
