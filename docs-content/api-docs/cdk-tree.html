@@ -770,7 +770,7 @@ and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>expansionModel: SelectionModel&lt;T&gt;</code>
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A selection model with multi-selection to track expansion status.</p>
@@ -814,6 +814,21 @@ and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
   </td>
   <td class="docs-api-property-description"><p>Whether the data node is expandable. Returns true if expandable.
 This is for flat tree node.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Returns the identifier by which a dataNode should be tracked, should its
+reference change.</p>
+<p>Similar to trackBy for *ngFor</p>
 </td>
 </tr>
 
@@ -1208,7 +1223,7 @@ This is for flat tree node.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>expansionModel: SelectionModel&lt;T&gt;</code>
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A selection model with multi-selection to track expansion status.</p>
@@ -1250,6 +1265,33 @@ This is for flat tree node.</p>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: FlatTreeControlOptions&lt;T, K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Returns the identifier by which a dataNode should be tracked, should its
+reference change.</p>
+<p>Similar to trackBy for *ngFor</p>
+</td>
 </tr>
 
 
@@ -1647,7 +1689,7 @@ with correct levels.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>expansionModel: SelectionModel&lt;T&gt;</code>
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A selection model with multi-selection to track expansion status.</p>
@@ -1690,6 +1732,21 @@ with correct levels.</p>
   </td>
   <td class="docs-api-property-description"><p>Whether the data node is expandable. Returns true if expandable.
 This is for flat tree node.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Returns the identifier by which a dataNode should be tracked, should its
+reference change.</p>
+<p>Similar to trackBy for *ngFor</p>
 </td>
 </tr>
 
@@ -2128,6 +2185,39 @@ data nodes of the tree.</p>
     
       
 
+<h4 id="FlatTreeControlOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="FlatTreeControlOptions"></span>
+  <code>FlatTreeControlOptions</code>
+</h4><p class="docs-api-interface-description"><p>Optional set of configuration that can be provided to the FlatTreeControl.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="TreeControl" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TreeControl"></span>
   <code>TreeControl</code>
@@ -2158,7 +2248,7 @@ User can also use it outside the <code>&lt;cdk-tree&gt;</code> to control the ex
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>expansionModel: SelectionModel&lt;T&gt;</code>
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The expansion model</p>

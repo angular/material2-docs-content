@@ -12,7 +12,7 @@ interface ExampleFlatNode {
  * @title Tree with flat nodes
  */
 export declare class CdkTreeFlatExample {
-    treeControl: FlatTreeControl<ExampleFlatNode>;
+    treeControl: FlatTreeControl<ExampleFlatNode, ExampleFlatNode>;
     dataSource: ArrayDataSource<ExampleFlatNode>;
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
