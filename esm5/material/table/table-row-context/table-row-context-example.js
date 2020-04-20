@@ -11,9 +11,9 @@ function TableRowContextExample_td_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var data_r164 = ctx.$implicit;
+    var data_r168 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", data_r164, " ");
+    i0.ɵɵtextInterpolate1(" ", data_r168, " ");
 } }
 function TableRowContextExample_th_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 12);
@@ -25,9 +25,9 @@ function TableRowContextExample_td_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var index_r165 = ctx.index;
+    var index_r169 = ctx.index;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", index_r165, " ");
+    i0.ɵɵtextInterpolate1(" ", index_r169, " ");
 } }
 function TableRowContextExample_th_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 12);
@@ -39,9 +39,9 @@ function TableRowContextExample_td_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var count_r166 = ctx.count;
+    var count_r170 = ctx.count;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", count_r166, " ");
+    i0.ɵɵtextInterpolate1(" ", count_r170, " ");
 } }
 function TableRowContextExample_th_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 12);
@@ -53,9 +53,9 @@ function TableRowContextExample_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var first_r167 = ctx.first;
+    var first_r171 = ctx.first;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", first_r167, " ");
+    i0.ɵɵtextInterpolate1(" ", first_r171, " ");
 } }
 function TableRowContextExample_th_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 12);
@@ -67,9 +67,9 @@ function TableRowContextExample_td_15_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var last_r168 = ctx.last;
+    var last_r172 = ctx.last;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", last_r168, " ");
+    i0.ɵɵtextInterpolate1(" ", last_r172, " ");
 } }
 function TableRowContextExample_th_17_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 12);
@@ -81,9 +81,9 @@ function TableRowContextExample_td_18_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var even_r169 = ctx.even;
+    var even_r173 = ctx.even;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", even_r169, " ");
+    i0.ɵɵtextInterpolate1(" ", even_r173, " ");
 } }
 function TableRowContextExample_th_20_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 12);
@@ -95,9 +95,9 @@ function TableRowContextExample_td_21_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var odd_r170 = ctx.odd;
+    var odd_r174 = ctx.odd;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", odd_r170, " ");
+    i0.ɵɵtextInterpolate1(" ", odd_r174, " ");
 } }
 function TableRowContextExample_tr_22_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 14);

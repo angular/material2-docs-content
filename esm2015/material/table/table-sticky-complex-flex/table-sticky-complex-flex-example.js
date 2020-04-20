@@ -19,9 +19,9 @@ function TableStickyComplexFlexExample_mat_table_34_mat_cell_3_Template(rf, ctx)
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r255 = ctx.$implicit;
+    const element_r259 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r255.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r259.position, " ");
 } }
 function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -38,9 +38,9 @@ function TableStickyComplexFlexExample_mat_table_34_mat_cell_7_Template(rf, ctx)
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r256 = ctx.$implicit;
+    const element_r260 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r256.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r260.name, " ");
 } }
 function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -57,9 +57,9 @@ function TableStickyComplexFlexExample_mat_table_34_mat_cell_11_Template(rf, ctx
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r257 = ctx.$implicit;
+    const element_r261 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r257.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r261.weight, " ");
 } }
 function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -76,9 +76,9 @@ function TableStickyComplexFlexExample_mat_table_34_mat_cell_15_Template(rf, ctx
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r258 = ctx.$implicit;
+    const element_r262 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r258.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r262.symbol, " ");
 } }
 function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_16_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -149,29 +149,29 @@ function TableStickyComplexFlexExample_mat_table_34_Template(rf, ctx) { if (rf &
     i0.ɵɵtemplate(25, TableStickyComplexFlexExample_mat_table_34_mat_footer_row_25_Template, 1, 0, "mat-footer-row", 26);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r233 = i0.ɵɵnextContext();
-    const _r232 = i0.ɵɵreference(24);
-    const _r230 = i0.ɵɵreference(8);
-    const _r231 = i0.ɵɵreference(16);
-    i0.ɵɵproperty("dataSource", ctx_r233.dataSource);
+    const ctx_r237 = i0.ɵɵnextContext();
+    const _r236 = i0.ɵɵreference(24);
+    const _r234 = i0.ɵɵreference(8);
+    const _r235 = i0.ɵɵreference(16);
+    i0.ɵɵproperty("dataSource", ctx_r237.dataSource);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("sticky", ctx_r233.isSticky(_r232, "position"));
+    i0.ɵɵproperty("sticky", ctx_r237.isSticky(_r236, "position"));
     i0.ɵɵadvance(4);
-    i0.ɵɵproperty("sticky", ctx_r233.isSticky(_r232, "name"));
+    i0.ɵɵproperty("sticky", ctx_r237.isSticky(_r236, "name"));
     i0.ɵɵadvance(4);
-    i0.ɵɵproperty("stickyEnd", ctx_r233.isSticky(_r232, "weight"));
+    i0.ɵɵproperty("stickyEnd", ctx_r237.isSticky(_r236, "weight"));
     i0.ɵɵadvance(4);
-    i0.ɵɵproperty("stickyEnd", ctx_r233.isSticky(_r232, "symbol"));
+    i0.ɵɵproperty("stickyEnd", ctx_r237.isSticky(_r236, "symbol"));
     i0.ɵɵadvance(8);
-    i0.ɵɵproperty("matHeaderRowDef", ctx_r233.displayedColumns)("matHeaderRowDefSticky", ctx_r233.isSticky(_r230, "header-1"));
+    i0.ɵɵproperty("matHeaderRowDef", ctx_r237.displayedColumns)("matHeaderRowDefSticky", ctx_r237.isSticky(_r234, "header-1"));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matHeaderRowDef", ctx_r233.displayedColumns)("matHeaderRowDefSticky", ctx_r233.isSticky(_r230, "header-2"));
+    i0.ɵɵproperty("matHeaderRowDef", ctx_r237.displayedColumns)("matHeaderRowDefSticky", ctx_r237.isSticky(_r234, "header-2"));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matRowDefColumns", ctx_r233.displayedColumns);
+    i0.ɵɵproperty("matRowDefColumns", ctx_r237.displayedColumns);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matFooterRowDef", ctx_r233.displayedColumns)("matFooterRowDefSticky", ctx_r233.isSticky(_r231, "footer-1"));
+    i0.ɵɵproperty("matFooterRowDef", ctx_r237.displayedColumns)("matFooterRowDefSticky", ctx_r237.isSticky(_r235, "footer-1"));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matFooterRowDef", ctx_r233.displayedColumns)("matFooterRowDefSticky", ctx_r233.isSticky(_r231, "footer-2"));
+    i0.ɵɵproperty("matFooterRowDef", ctx_r237.displayedColumns)("matFooterRowDefSticky", ctx_r237.isSticky(_r235, "footer-2"));
 } }
 const _c0 = function () { return ["header-1"]; };
 const _c1 = function () { return ["footer-1"]; };

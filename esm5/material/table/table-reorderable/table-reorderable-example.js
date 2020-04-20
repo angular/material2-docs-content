@@ -13,9 +13,9 @@ function TableReorderableExample_td_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r351 = ctx.$implicit;
+    var element_r355 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r351.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r355.position, " ");
 } }
 function TableReorderableExample_th_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -27,9 +27,9 @@ function TableReorderableExample_td_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r352 = ctx.$implicit;
+    var element_r356 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r352.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r356.name, " ");
 } }
 function TableReorderableExample_th_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -41,9 +41,9 @@ function TableReorderableExample_td_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r353 = ctx.$implicit;
+    var element_r357 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r353.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r357.weight, " ");
 } }
 function TableReorderableExample_th_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -55,9 +55,9 @@ function TableReorderableExample_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r354 = ctx.$implicit;
+    var element_r358 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r354.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r358.symbol, " ");
 } }
 function TableReorderableExample_tr_13_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 11);

@@ -16,9 +16,9 @@ function TableWrappedExample_td_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r330 = ctx.$implicit;
+    var element_r334 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r330.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r334.name, " ");
 } }
 function TableWrappedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 9);
@@ -36,9 +36,9 @@ function WrapperTable_td_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r338 = ctx.$implicit;
+    var element_r342 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r338.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r342.position, " ");
 } }
 function WrapperTable_th_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 7);
@@ -50,9 +50,9 @@ function WrapperTable_td_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r339 = ctx.$implicit;
+    var element_r343 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r339.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r343.weight, " ");
 } }
 function WrapperTable_th_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -64,9 +64,9 @@ function WrapperTable_td_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    var element_r340 = ctx.$implicit;
+    var element_r344 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r340.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r344.symbol, " ");
 } }
 var _c1 = ["*"];
 var ELEMENT_DATA = [

@@ -10,29 +10,29 @@ import * as i0 from "@angular/core";
 import * as i1 from "@angular/material/table";
 import * as i2 from "@angular/material/checkbox";
 function TableSelectionExample_th_2_Template(rf, ctx) { if (rf & 1) {
-    const _r185 = i0.ɵɵgetCurrentView();
+    const _r189 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "th", 10);
     i0.ɵɵelementStart(1, "mat-checkbox", 11);
-    i0.ɵɵlistener("change", function TableSelectionExample_th_2_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r185); const ctx_r184 = i0.ɵɵnextContext(); return $event ? ctx_r184.masterToggle() : null; });
+    i0.ɵɵlistener("change", function TableSelectionExample_th_2_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r189); const ctx_r188 = i0.ɵɵnextContext(); return $event ? ctx_r188.masterToggle() : null; });
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r172 = i0.ɵɵnextContext();
+    const ctx_r176 = i0.ɵɵnextContext();
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("checked", ctx_r172.selection.hasValue() && ctx_r172.isAllSelected())("indeterminate", ctx_r172.selection.hasValue() && !ctx_r172.isAllSelected())("aria-label", ctx_r172.checkboxLabel());
+    i0.ɵɵproperty("checked", ctx_r176.selection.hasValue() && ctx_r176.isAllSelected())("indeterminate", ctx_r176.selection.hasValue() && !ctx_r176.isAllSelected())("aria-label", ctx_r176.checkboxLabel());
 } }
 function TableSelectionExample_td_3_Template(rf, ctx) { if (rf & 1) {
-    const _r188 = i0.ɵɵgetCurrentView();
+    const _r192 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "td", 12);
     i0.ɵɵelementStart(1, "mat-checkbox", 13);
-    i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r188); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r188); const row_r186 = ctx.$implicit; const ctx_r189 = i0.ɵɵnextContext(); return $event ? ctx_r189.selection.toggle(row_r186) : null; });
+    i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r192); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r192); const row_r190 = ctx.$implicit; const ctx_r193 = i0.ɵɵnextContext(); return $event ? ctx_r193.selection.toggle(row_r190) : null; });
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const row_r186 = ctx.$implicit;
-    const ctx_r173 = i0.ɵɵnextContext();
+    const row_r190 = ctx.$implicit;
+    const ctx_r177 = i0.ɵɵnextContext();
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("checked", ctx_r173.selection.isSelected(row_r186))("aria-label", ctx_r173.checkboxLabel(row_r186));
+    i0.ɵɵproperty("checked", ctx_r177.selection.isSelected(row_r190))("aria-label", ctx_r177.checkboxLabel(row_r190));
 } }
 function TableSelectionExample_th_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 10);
@@ -44,9 +44,9 @@ function TableSelectionExample_td_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r190 = ctx.$implicit;
+    const element_r194 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r190.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r194.position, " ");
 } }
 function TableSelectionExample_th_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 10);
@@ -58,9 +58,9 @@ function TableSelectionExample_td_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r191 = ctx.$implicit;
+    const element_r195 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r191.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r195.name, " ");
 } }
 function TableSelectionExample_th_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 10);
@@ -72,9 +72,9 @@ function TableSelectionExample_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r192 = ctx.$implicit;
+    const element_r196 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r192.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r196.weight, " ");
 } }
 function TableSelectionExample_th_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 10);
@@ -86,17 +86,17 @@ function TableSelectionExample_td_15_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r193 = ctx.$implicit;
+    const element_r197 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r193.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r197.symbol, " ");
 } }
 function TableSelectionExample_tr_16_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 14);
 } }
 function TableSelectionExample_tr_17_Template(rf, ctx) { if (rf & 1) {
-    const _r196 = i0.ɵɵgetCurrentView();
+    const _r200 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "tr", 15);
-    i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r196); const row_r194 = ctx.$implicit; const ctx_r195 = i0.ɵɵnextContext(); return ctx_r195.selection.toggle(row_r194); });
+    i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r200); const row_r198 = ctx.$implicit; const ctx_r199 = i0.ɵɵnextContext(); return ctx_r199.selection.toggle(row_r198); });
     i0.ɵɵelementEnd();
 } }
 /**

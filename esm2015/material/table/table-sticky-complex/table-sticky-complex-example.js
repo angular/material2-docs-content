@@ -19,9 +19,9 @@ function TableStickyComplexExample_table_34_td_3_Template(rf, ctx) { if (rf & 1)
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r286 = ctx.$implicit;
+    const element_r290 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r286.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r290.position, " ");
 } }
 function TableStickyComplexExample_table_34_td_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 29);
@@ -38,9 +38,9 @@ function TableStickyComplexExample_table_34_td_7_Template(rf, ctx) { if (rf & 1)
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r287 = ctx.$implicit;
+    const element_r291 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r287.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r291.name, " ");
 } }
 function TableStickyComplexExample_table_34_td_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 29);
@@ -57,9 +57,9 @@ function TableStickyComplexExample_table_34_td_11_Template(rf, ctx) { if (rf & 1
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r288 = ctx.$implicit;
+    const element_r292 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r288.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r292.weight, " ");
 } }
 function TableStickyComplexExample_table_34_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 29);
@@ -76,9 +76,9 @@ function TableStickyComplexExample_table_34_td_15_Template(rf, ctx) { if (rf & 1
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r289 = ctx.$implicit;
+    const element_r293 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r289.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r293.symbol, " ");
 } }
 function TableStickyComplexExample_table_34_td_16_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 29);
@@ -149,29 +149,29 @@ function TableStickyComplexExample_table_34_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtemplate(25, TableStickyComplexExample_table_34_tr_25_Template, 1, 0, "tr", 26);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r264 = i0.ɵɵnextContext();
-    const _r263 = i0.ɵɵreference(24);
-    const _r261 = i0.ɵɵreference(8);
-    const _r262 = i0.ɵɵreference(16);
-    i0.ɵɵproperty("dataSource", ctx_r264.dataSource);
+    const ctx_r268 = i0.ɵɵnextContext();
+    const _r267 = i0.ɵɵreference(24);
+    const _r265 = i0.ɵɵreference(8);
+    const _r266 = i0.ɵɵreference(16);
+    i0.ɵɵproperty("dataSource", ctx_r268.dataSource);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("sticky", ctx_r264.isSticky(_r263, "position"));
+    i0.ɵɵproperty("sticky", ctx_r268.isSticky(_r267, "position"));
     i0.ɵɵadvance(4);
-    i0.ɵɵproperty("sticky", ctx_r264.isSticky(_r263, "name"));
+    i0.ɵɵproperty("sticky", ctx_r268.isSticky(_r267, "name"));
     i0.ɵɵadvance(4);
-    i0.ɵɵproperty("stickyEnd", ctx_r264.isSticky(_r263, "weight"));
+    i0.ɵɵproperty("stickyEnd", ctx_r268.isSticky(_r267, "weight"));
     i0.ɵɵadvance(4);
-    i0.ɵɵproperty("stickyEnd", ctx_r264.isSticky(_r263, "symbol"));
+    i0.ɵɵproperty("stickyEnd", ctx_r268.isSticky(_r267, "symbol"));
     i0.ɵɵadvance(8);
-    i0.ɵɵproperty("matHeaderRowDef", ctx_r264.displayedColumns)("matHeaderRowDefSticky", ctx_r264.isSticky(_r261, "header-1"));
+    i0.ɵɵproperty("matHeaderRowDef", ctx_r268.displayedColumns)("matHeaderRowDefSticky", ctx_r268.isSticky(_r265, "header-1"));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matHeaderRowDef", ctx_r264.displayedColumns)("matHeaderRowDefSticky", ctx_r264.isSticky(_r261, "header-2"));
+    i0.ɵɵproperty("matHeaderRowDef", ctx_r268.displayedColumns)("matHeaderRowDefSticky", ctx_r268.isSticky(_r265, "header-2"));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matRowDefColumns", ctx_r264.displayedColumns);
+    i0.ɵɵproperty("matRowDefColumns", ctx_r268.displayedColumns);
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matFooterRowDef", ctx_r264.displayedColumns)("matFooterRowDefSticky", ctx_r264.isSticky(_r262, "footer-1"));
+    i0.ɵɵproperty("matFooterRowDef", ctx_r268.displayedColumns)("matFooterRowDefSticky", ctx_r268.isSticky(_r266, "footer-1"));
     i0.ɵɵadvance(1);
-    i0.ɵɵproperty("matFooterRowDef", ctx_r264.displayedColumns)("matFooterRowDefSticky", ctx_r264.isSticky(_r262, "footer-2"));
+    i0.ɵɵproperty("matFooterRowDef", ctx_r268.displayedColumns)("matFooterRowDefSticky", ctx_r268.isSticky(_r266, "footer-2"));
 } }
 const _c0 = function () { return ["header-1"]; };
 const _c1 = function () { return ["footer-1"]; };

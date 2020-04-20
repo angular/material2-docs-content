@@ -19,9 +19,9 @@ function TablePaginationExample_td_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r143 = ctx.$implicit;
+    const element_r147 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r143.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r147.position, " ");
 } }
 function TablePaginationExample_th_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 11);
@@ -33,9 +33,9 @@ function TablePaginationExample_td_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r144 = ctx.$implicit;
+    const element_r148 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r144.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r148.name, " ");
 } }
 function TablePaginationExample_th_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 11);
@@ -47,9 +47,9 @@ function TablePaginationExample_td_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r145 = ctx.$implicit;
+    const element_r149 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r145.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r149.weight, " ");
 } }
 function TablePaginationExample_th_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 11);
@@ -61,9 +61,9 @@ function TablePaginationExample_td_13_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r146 = ctx.$implicit;
+    const element_r150 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r146.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r150.symbol, " ");
 } }
 function TablePaginationExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 13);

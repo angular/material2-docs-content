@@ -19,9 +19,9 @@ function TableSortingExample_td_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r207 = ctx.$implicit;
+    const element_r211 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r207.position, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r211.position, " ");
 } }
 function TableSortingExample_th_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -33,9 +33,9 @@ function TableSortingExample_td_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r208 = ctx.$implicit;
+    const element_r212 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r208.name, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r212.name, " ");
 } }
 function TableSortingExample_th_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -47,9 +47,9 @@ function TableSortingExample_td_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r209 = ctx.$implicit;
+    const element_r213 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r209.weight, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r213.weight, " ");
 } }
 function TableSortingExample_th_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 9);
@@ -61,9 +61,9 @@ function TableSortingExample_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r210 = ctx.$implicit;
+    const element_r214 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", element_r210.symbol, " ");
+    i0.ɵɵtextInterpolate1(" ", element_r214.symbol, " ");
 } }
 function TableSortingExample_tr_13_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 11);

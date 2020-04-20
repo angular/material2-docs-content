@@ -17,9 +17,9 @@ function TableMultipleHeaderFooterExample_td_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const transaction_r115 = ctx.$implicit;
+    const transaction_r117 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", transaction_r115.item, " ");
+    i0.ɵɵtextInterpolate1(" ", transaction_r117.item, " ");
 } }
 function TableMultipleHeaderFooterExample_td_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 17);
@@ -37,9 +37,9 @@ function TableMultipleHeaderFooterExample_td_7_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵpipe(2, "currency");
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const transaction_r116 = ctx.$implicit;
+    const transaction_r118 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r116.cost), " ");
+    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r118.cost), " ");
 } }
 function TableMultipleHeaderFooterExample_td_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "td", 17);
@@ -47,9 +47,9 @@ function TableMultipleHeaderFooterExample_td_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵpipe(2, "currency");
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r106 = i0.ɵɵnextContext();
+    const ctx_r108 = i0.ɵɵnextContext();
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r106.getTotalCost()), " ");
+    i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r108.getTotalCost()), " ");
 } }
 function TableMultipleHeaderFooterExample_th_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 15);
