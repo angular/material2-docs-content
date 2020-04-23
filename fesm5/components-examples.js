@@ -1249,6 +1249,16 @@ var EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/menu"
         }
     },
+    "menu-nested": {
+        "title": "Nested menu",
+        "componentName": "MenuNestedExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "MenuExamplesModule",
+            "importSpecifier": "material/menu"
+        }
+    },
     "menu-overview": {
         "title": "Basic menu",
         "componentName": "MenuOverviewExample",
@@ -1262,16 +1272,6 @@ var EXAMPLE_COMPONENTS = {
     "menu-position": {
         "title": "Menu positioning",
         "componentName": "MenuPositionExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "MenuExamplesModule",
-            "importSpecifier": "material/menu"
-        }
-    },
-    "nested-menu": {
-        "title": "Nested menu",
-        "componentName": "NestedMenuExample",
         "additionalFiles": [],
         "additionalComponents": [],
         "module": {
