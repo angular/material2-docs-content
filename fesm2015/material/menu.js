@@ -196,23 +196,23 @@ MenuPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/menu/nested-menu/nested-menu-example.ts
+ * Generated from: src/components-examples/material/menu/menu-nested/menu-nested-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Nested menu
  */
-class NestedMenuExample {
+class MenuNestedExample {
 }
-NestedMenuExample.decorators = [
+MenuNestedExample.decorators = [
     { type: Component, args: [{
-                selector: 'nested-menu-example',
-                templateUrl: 'nested-menu-example.html',
-                styleUrls: ['nested-menu-example.css'],
+                selector: 'menu-nested-example',
+                templateUrl: 'menu-nested-example.html',
+                styleUrls: ['menu-nested-example.css'],
             },] },
 ];
-/** @nocollapse */ NestedMenuExample.ɵfac = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
-/** @nocollapse */ NestedMenuExample.ɵcmp = ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ MenuNestedExample.ɵfac = function MenuNestedExample_Factory(t) { return new (t || MenuNestedExample)(); };
+/** @nocollapse */ MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selectors: [["menu-nested-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function MenuNestedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, "Animal index");
         ɵɵelementEnd();
@@ -331,12 +331,12 @@ NestedMenuExample.decorators = [
         ɵɵadvance(2);
         ɵɵproperty("matMenuTriggerFor", _r11);
     } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NestedMenuExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,
         args: [{
-                selector: 'nested-menu-example',
-                templateUrl: 'nested-menu-example.html',
-                styleUrls: ['nested-menu-example.css'],
+                selector: 'menu-nested-example',
+                templateUrl: 'menu-nested-example.html',
+                styleUrls: ['menu-nested-example.css'],
             }]
     }], null, null); })();
 
@@ -350,7 +350,7 @@ const EXAMPLES = [
     MenuIconsExample,
     MenuOverviewExample,
     MenuPositionExample,
-    NestedMenuExample,
+    MenuNestedExample,
 ];
 class MenuExamplesModule {
 }
@@ -375,12 +375,12 @@ MenuExamplesModule.decorators = [
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
-        NestedMenuExample], imports: [MatButtonModule,
+        MenuNestedExample], imports: [MatButtonModule,
         MatIconModule,
         MatMenuModule], exports: [MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
-        NestedMenuExample] }); })();
+        MenuNestedExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuExamplesModule, [{
         type: NgModule,
         args: [{
@@ -395,5 +395,5 @@ MenuExamplesModule.decorators = [
             }]
     }], null, null); })();
 
-export { MenuExamplesModule, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample };
+export { MenuExamplesModule, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
 //# sourceMappingURL=menu.js.map

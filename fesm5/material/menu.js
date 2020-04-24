@@ -170,11 +170,11 @@ var MenuPositionExample = /** @class */ (function () {
 /**
  * @title Nested menu
  */
-var NestedMenuExample = /** @class */ (function () {
-    function NestedMenuExample() {
+var MenuNestedExample = /** @class */ (function () {
+    function MenuNestedExample() {
     }
-    NestedMenuExample.ɵfac = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
-    NestedMenuExample.ɵcmp = ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
+    MenuNestedExample.ɵfac = function MenuNestedExample_Factory(t) { return new (t || MenuNestedExample)(); };
+    MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selectors: [["menu-nested-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function MenuNestedExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵtext(1, "Animal index");
             ɵɵelementEnd();
@@ -293,14 +293,14 @@ var NestedMenuExample = /** @class */ (function () {
             ɵɵadvance(2);
             ɵɵproperty("matMenuTriggerFor", _r11);
         } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
-    return NestedMenuExample;
+    return MenuNestedExample;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NestedMenuExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,
         args: [{
-                selector: 'nested-menu-example',
-                templateUrl: 'nested-menu-example.html',
-                styleUrls: ['nested-menu-example.css'],
+                selector: 'menu-nested-example',
+                templateUrl: 'menu-nested-example.html',
+                styleUrls: ['menu-nested-example.css'],
             }]
     }], null, null); })();
 
@@ -308,7 +308,7 @@ var EXAMPLES = [
     MenuIconsExample,
     MenuOverviewExample,
     MenuPositionExample,
-    NestedMenuExample,
+    MenuNestedExample,
 ];
 var MenuExamplesModule = /** @class */ (function () {
     function MenuExamplesModule() {
@@ -324,12 +324,12 @@ var MenuExamplesModule = /** @class */ (function () {
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
-        NestedMenuExample], imports: [MatButtonModule,
+        MenuNestedExample], imports: [MatButtonModule,
         MatIconModule,
         MatMenuModule], exports: [MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
-        NestedMenuExample] }); })();
+        MenuNestedExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuExamplesModule, [{
         type: NgModule,
         args: [{
@@ -344,5 +344,5 @@ var MenuExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
-export { MenuExamplesModule, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample };
+export { MenuExamplesModule, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
 //# sourceMappingURL=menu.js.map
