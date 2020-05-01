@@ -2200,6 +2200,16 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tabs"
         }
     },
+    "toolbar-basic": {
+        "title": "Basic toolbar",
+        "componentName": "ToolbarBasicExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ToolbarExamplesModule",
+            "importSpecifier": "material/toolbar"
+        }
+    },
     "toolbar-multirow": {
         "title": "Multi-row toolbar",
         "componentName": "ToolbarMultirowExample",
@@ -2211,7 +2221,7 @@ const EXAMPLE_COMPONENTS = {
         }
     },
     "toolbar-overview": {
-        "title": "Basic toolbar",
+        "title": "Toolbar overview",
         "componentName": "ToolbarOverviewExample",
         "additionalFiles": [],
         "additionalComponents": [],

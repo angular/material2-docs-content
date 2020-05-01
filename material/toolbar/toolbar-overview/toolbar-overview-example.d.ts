@@ -1,6 +1,6 @@
 import * as i0 from "@angular/core";
 /**
- * @title Basic toolbar
+ * @title Toolbar overview
  */
 export declare class ToolbarOverviewExample {
     static ɵfac: i0.ɵɵFactoryDef<ToolbarOverviewExample, never>;
