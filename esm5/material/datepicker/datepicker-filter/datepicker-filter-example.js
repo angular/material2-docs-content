@@ -23,11 +23,11 @@ var DatepickerFilterExample = /** @class */ (function () {
             i0.ɵɵelement(5, "mat-datepicker", null, 3);
             i0.ɵɵelementEnd();
         } if (rf & 2) {
-            var _r13 = i0.ɵɵreference(6);
+            var _r20 = i0.ɵɵreference(6);
             i0.ɵɵadvance(3);
-            i0.ɵɵproperty("matDatepickerFilter", ctx.myFilter)("matDatepicker", _r13);
+            i0.ɵɵproperty("matDatepickerFilter", ctx.myFilter)("matDatepicker", _r20);
             i0.ɵɵadvance(1);
-            i0.ɵɵproperty("for", _r13);
+            i0.ɵɵproperty("for", _r20);
         } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker], styles: [""] });
     return DatepickerFilterExample;
 }());

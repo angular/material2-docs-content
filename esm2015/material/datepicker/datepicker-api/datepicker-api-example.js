@@ -23,19 +23,19 @@ DatepickerApiExample.decorators = [
 ];
 /** @nocollapse */ DatepickerApiExample.ɵfac = function DatepickerApiExample_Factory(t) { return new (t || DatepickerApiExample)(); };
 /** @nocollapse */ DatepickerApiExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 6, vars: 1, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["picker", ""], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
-        const _r1 = i0.ɵɵgetCurrentView();
+        const _r8 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelement(1, "input", 1);
         i0.ɵɵelement(2, "mat-datepicker", null, 2);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "button", 3);
-        i0.ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r1); const _r0 = i0.ɵɵreference(3); return _r0.open(); });
+        i0.ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r8); const _r7 = i0.ɵɵreference(3); return _r7.open(); });
         i0.ɵɵtext(5, "Open");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(3);
+        const _r7 = i0.ɵɵreference(3);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matDatepicker", _r0);
+        i0.ɵɵproperty("matDatepicker", _r7);
     } }, directives: [i1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepicker, i4.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DatepickerApiExample, [{
         type: Component,

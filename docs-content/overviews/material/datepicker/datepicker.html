@@ -16,7 +16,7 @@ property on the text input.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span></code></pre>
 <p>This works exactly the same with an input that is part of an <code>&lt;mat-form-field&gt;</code> and the toggle
-can easily be used as a prefix or suffix on the material input:</p>
+can easily be used as a prefix or suffix on the Material input:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
@@ -25,6 +25,41 @@ can easily be used as a prefix or suffix on the material input:</p>
 <p>If you want to customize the icon that is rendered inside the <code>mat-datepicker-toggle</code>, you can do so
 by using the <code>matDatepickerToggleIcon</code> directive:</p>
 <div material-docs-example="datepicker-custom-icon"></div>
+
+
+        <h3 id="date-range-selection" class="docs-header-link">
+          <span header-link="date-range-selection"></span>
+          Date range selection
+        </h3>
+      <p>If you want your users to select a range of dates, instead of a single date, you can use the
+<code>mat-date-range-input</code> and <code>mat-date-range-picker</code> components. They work in similarly to the
+<code>mat-datepicker</code> and the basic datepicker input.</p>
+<p>The <code>mat-date-range-input</code> component requires two <code>input</code> elements for the start and end dates,
+respectively:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Start date"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"End date"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span></code></pre>
+<p>The <code>mat-date-range-picker</code> component acts the the pop-up panel for selecting dates. This works in
+the same way as <code>mat-datepicker</code>, but allows the user to select multiple times:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code></pre>
+<p>Connect the range picker and range input using the <code>rangePicker</code> property:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span> [<span class="hljs-attr">rangePicker</span>]=<span class="hljs-string">"picker"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Start date"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"End date"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span></code></pre>
+<div material-docs-example="date-range-picker-overview"></div>
+
+
+        <h3 id="date-range-input-forms-integration" class="docs-header-link">
+          <span header-link="date-range-input-forms-integration"></span>
+          Date range input forms integration
+        </h3>
+      <p>The <code>mat-date-range-input</code> component can be used together with the <code>FormGroup</code> directive from
+<code>@angular/forms</code> to group the start and end values together and to validate them as a group.</p>
+<div material-docs-example="date-range-picker-forms"></div>
 
 
         <h3 id="setting-the-calendar-starting-view" class="docs-header-link">
@@ -157,6 +192,33 @@ their disabled state from the <code>&lt;input&gt;</code>, but this can be overri
 property on the datepicker or toggle elements. This can be useful if you want to disable text input
 but allow selection via the calendar or vice-versa.</p>
 <div material-docs-example="datepicker-disabled"></div>
+
+
+        <h3 id="comparison-ranges" class="docs-header-link">
+          <span header-link="comparison-ranges"></span>
+          Comparison ranges
+        </h3>
+      <p>If your users need to compare the date range that they&#39;re currently selecting with another range,
+you can provide the comparison range start and end dates to the <code>mat-date-range-input</code> using the
+<code>comparisonStart</code> and <code>comparisonEnd</code> bindings. The comparison range will be rendered statically
+within the calendar, but it will change colors to indicate which dates overlap with the user&#39;s
+selected range.</p>
+<div material-docs-example="date-range-picker-comparison"></div>
+
+<p>Note that comparison and overlap colors aren&#39;t derived from the current theme, due
+to limitations in the Material Design theming system. They can be customized using the
+<code>mat-date-range-colors</code> mixin.</p>
+
+        <h3 id="customizing-the-date-selection-logic" class="docs-header-link">
+          <span header-link="customizing-the-date-selection-logic"></span>
+          Customizing the date selection logic
+        </h3>
+      <p>The <code>mat-date-range-picker</code> supports custom behaviors for range previews and selection. To customize
+this, you first create a class that implements <code>MatDateRangeSelectionStrategy</code>, and then provide
+the class via the <code>MAT_DATE_RANGE_SELECTION_STRATEGY</code> injection token. The following example
+uses the range selection strategy to create a custom range picker that limits the user to five-day
+ranges.</p>
+<div material-docs-example="date-range-picker-selection-strategy"></div>
 
 
         <h3 id="touch-ui-mode" class="docs-header-link">

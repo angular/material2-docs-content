@@ -82,11 +82,11 @@ DatepickerLocaleExample.ctorParameters = () => [
         i0.ɵɵtext(8, "Dynamically switch to French");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r15 = i0.ɵɵreference(6);
+        const _r22 = i0.ɵɵreference(6);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("matDatepicker", _r15);
+        i0.ɵɵproperty("matDatepicker", _r22);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("for", _r15);
+        i0.ɵɵproperty("for", _r22);
     } }, directives: [i2.MatFormField, i2.MatLabel, i3.MatInput, i4.MatDatepickerInput, i4.MatDatepickerToggle, i2.MatSuffix, i4.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DatepickerLocaleExample, [{
         type: Component,

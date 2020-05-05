@@ -952,6 +952,46 @@
                 "importSpecifier": "material/core"
             }
         },
+        "date-range-picker-comparison": {
+            "title": "Date range picker comparison ranges",
+            "componentName": "DateRangePickerComparisonExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "DatepickerExamplesModule",
+                "importSpecifier": "material/datepicker"
+            }
+        },
+        "date-range-picker-forms": {
+            "title": "Date range picker forms integration",
+            "componentName": "DateRangePickerFormsExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "DatepickerExamplesModule",
+                "importSpecifier": "material/datepicker"
+            }
+        },
+        "date-range-picker-overview": {
+            "title": "Basic date range picker",
+            "componentName": "DateRangePickerOverviewExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "DatepickerExamplesModule",
+                "importSpecifier": "material/datepicker"
+            }
+        },
+        "date-range-picker-selection-strategy": {
+            "title": "Date range picker with custom a selection strategy",
+            "componentName": "DateRangePickerSelectionStrategyExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "DatepickerExamplesModule",
+                "importSpecifier": "material/datepicker"
+            }
+        },
         "datepicker-api": {
             "title": "Datepicker open method",
             "componentName": "DatepickerApiExample",

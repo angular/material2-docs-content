@@ -1,0 +1,27 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-form-field"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>First campaign<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span>
+    [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"campaignOne"</span>
+    [<span class="hljs-attr">rangePicker</span>]=<span class="hljs-string">"campaignOnePicker"</span>
+    [<span class="hljs-attr">comparisonStart</span>]=<span class="hljs-string">"campaignTwo.value.start"</span>
+    [<span class="hljs-attr">comparisonEnd</span>]=<span class="hljs-string">"campaignTwo.value.end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Start date"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"End date"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"end"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"campaignOnePicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">campaignOnePicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-form-field"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Second campaign<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-input</span>
+    [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"campaignTwo"</span>
+    [<span class="hljs-attr">rangePicker</span>]=<span class="hljs-string">"campaignTwoPicker"</span>
+    [<span class="hljs-attr">comparisonStart</span>]=<span class="hljs-string">"campaignOne.value.start"</span>
+    [<span class="hljs-attr">comparisonEnd</span>]=<span class="hljs-string">"campaignOne.value.end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matStartDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Start date"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matEndDate</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"End date"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"end"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"campaignTwoPicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">campaignTwoPicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

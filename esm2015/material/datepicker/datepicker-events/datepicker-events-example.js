@@ -14,9 +14,9 @@ function DatepickerEventsExample_div_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const e_r12 = ctx.$implicit;
+    const e_r19 = ctx.$implicit;
     i0.ɵɵadvance(1);
-    i0.ɵɵtextInterpolate(e_r12);
+    i0.ɵɵtextInterpolate(e_r19);
 } }
 /**
  * \@title Datepicker input and change events
@@ -57,11 +57,11 @@ DatepickerEventsExample.decorators = [
         i0.ɵɵtemplate(8, DatepickerEventsExample_div_8_Template, 2, 1, "div", 4);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r10 = i0.ɵɵreference(6);
+        const _r17 = i0.ɵɵreference(6);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("matDatepicker", _r10);
+        i0.ɵɵproperty("matDatepicker", _r17);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("for", _r10);
+        i0.ɵɵproperty("for", _r17);
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("ngForOf", ctx.events);
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i4.NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });

@@ -61,11 +61,11 @@ DatepickerMomentExample.decorators = [
         i0.ɵɵelement(5, "mat-datepicker", null, 2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r17 = i0.ɵɵreference(6);
+        const _r24 = i0.ɵɵreference(6);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("matDatepicker", _r17)("formControl", ctx.date);
+        i0.ɵɵproperty("matDatepicker", _r24)("formControl", ctx.date);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("for", _r17);
+        i0.ɵɵproperty("for", _r24);
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.FormControlDirective, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker], styles: [""] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DatepickerMomentExample, [{
         type: Component,

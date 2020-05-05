@@ -40,11 +40,11 @@ DatepickerMinMaxExample.ctorParameters = () => [];
         i0.ɵɵelement(5, "mat-datepicker", null, 3);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r16 = i0.ɵɵreference(6);
+        const _r23 = i0.ɵɵreference(6);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("min", ctx.minDate)("max", ctx.maxDate)("matDatepicker", _r16);
+        i0.ɵɵproperty("min", ctx.minDate)("max", ctx.maxDate)("matDatepicker", _r23);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("for", _r16);
+        i0.ɵɵproperty("for", _r23);
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker], styles: [""] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DatepickerMinMaxExample, [{
         type: Component,

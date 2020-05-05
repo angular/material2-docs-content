@@ -56,7 +56,7 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
                 },
                 { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
             ])], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["startView", "multi-year", "panelClass", "example-month-picker", 3, "yearSelected", "monthSelected"], ["dp", ""]], template: function DatepickerViewsSelectionExample_Template(rf, ctx) { if (rf & 1) {
-            var _r25 = i0.ɵɵgetCurrentView();
+            var _r32 = i0.ɵɵgetCurrentView();
             i0.ɵɵelementStart(0, "mat-form-field");
             i0.ɵɵelementStart(1, "mat-label");
             i0.ɵɵtext(2, "Month and Year");
@@ -64,15 +64,15 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
             i0.ɵɵelement(3, "input", 0);
             i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
             i0.ɵɵelementStart(5, "mat-datepicker", 2, 3);
-            i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_5_listener($event) { return ctx.chosenYearHandler($event); })("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_5_listener($event) { i0.ɵɵrestoreView(_r25); var _r24 = i0.ɵɵreference(6); return ctx.chosenMonthHandler($event, _r24); });
+            i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_5_listener($event) { return ctx.chosenYearHandler($event); })("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_5_listener($event) { i0.ɵɵrestoreView(_r32); var _r31 = i0.ɵɵreference(6); return ctx.chosenMonthHandler($event, _r31); });
             i0.ɵɵelementEnd();
             i0.ɵɵelementEnd();
         } if (rf & 2) {
-            var _r24 = i0.ɵɵreference(6);
+            var _r31 = i0.ɵɵreference(6);
             i0.ɵɵadvance(3);
-            i0.ɵɵproperty("matDatepicker", _r24)("formControl", ctx.date);
+            i0.ɵɵproperty("matDatepicker", _r31)("formControl", ctx.date);
             i0.ɵɵadvance(1);
-            i0.ɵɵproperty("for", _r24);
+            i0.ɵɵproperty("for", _r31);
         } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.FormControlDirective, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker], styles: [".example-month-picker[_ngcontent-%COMP%]   .mat-calendar-period-button[_ngcontent-%COMP%] {\n  pointer-events: none;\n}\n\n.example-month-picker[_ngcontent-%COMP%]   .mat-calendar-arrow[_ngcontent-%COMP%] {\n  display: none;\n}"] });
     return DatepickerViewsSelectionExample;
 }());

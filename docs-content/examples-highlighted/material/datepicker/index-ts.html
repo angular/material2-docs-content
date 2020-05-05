@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
 <span class="hljs-keyword">import</span> {MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
 <span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/datepicker'</span>;
@@ -29,6 +29,18 @@
 <span class="hljs-keyword">import</span> {
   DatepickerViewsSelectionExample
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-views-selection/datepicker-views-selection-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DateRangePickerOverviewExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./date-range-picker-overview/date-range-picker-overview-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DateRangePickerFormsExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./date-range-picker-forms/date-range-picker-forms-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DateRangePickerComparisonExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./date-range-picker-comparison/date-range-picker-comparison-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DateRangePickerSelectionStrategyExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./date-range-picker-selection-strategy/date-range-picker-selection-strategy-example'</span>;
 
 <span class="hljs-keyword">export</span> {
   DatepickerApiExample,
@@ -48,6 +60,10 @@
   DatepickerTouchExample,
   DatepickerValueExample,
   DatepickerViewsSelectionExample,
+  DateRangePickerOverviewExample,
+  DateRangePickerFormsExample,
+  DateRangePickerComparisonExample,
+  DateRangePickerSelectionStrategyExample,
   ExampleHeader,
 };
 
@@ -69,6 +85,10 @@
   DatepickerTouchExample,
   DatepickerValueExample,
   DatepickerViewsSelectionExample,
+  DateRangePickerOverviewExample,
+  DateRangePickerFormsExample,
+  DateRangePickerComparisonExample,
+  DateRangePickerSelectionStrategyExample,
   ExampleHeader,
 ];
 
@@ -81,6 +101,7 @@
     MatIconModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   declarations: EXAMPLES,
   exports: EXAMPLES,

@@ -31,6 +31,108 @@
     
       
 
+<h4 id="DefaultMatCalendarRangeStrategy" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="DefaultMatCalendarRangeStrategy"></span>
+  <code>DefaultMatCalendarRangeStrategy</code>
+  
+</h4><p class="docs-api-class-description"><p>Provides the default date range selection behavior.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createPreview
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        activeDate</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentRange</p>
+      <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">selectionFinished
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentRange</p>
+      <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
 <h4 id="MatDatepickerIntl" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatDatepickerIntl"></span>
   <code>MatDatepickerIntl</code>
@@ -257,10 +359,1275 @@ components if the labels have changed after initialization.</p>
 
 
 
+    
+      
+
+<h4 id="MatSingleDateSelectionModel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSingleDateSelectionModel"></span>
+  <code>MatSingleDateSelectionModel</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/datepicker/api#MatDateSelectionModel" class="docs-api-class-extends-type">
+      MatDateSelectionModel
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>A selection model that contains a single date.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selection: S</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The current selection.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selectionChanged: Observable&lt;DateSelectionModelChange&lt;S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the selection has changed.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">add
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Adds a date to the current selection. In the case of a single date selection, the added date
+simply overwrites the previous selection</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isComplete
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks whether the current selection is complete. In the case of a single date selection, this
+is true if the current selection is not null.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isValid
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks whether the current selection is valid.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateSelection
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Updates the current selection in the model.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>New selection that should be assigned.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        source</p>
+      <code class="docs-api-method-parameter-type">unknown</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Object that triggered the selection change.</p>
+
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatRangeDateSelectionModel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRangeDateSelectionModel"></span>
+  <code>MatRangeDateSelectionModel</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/datepicker/api#MatDateSelectionModel" class="docs-api-class-extends-type">
+      MatDateSelectionModel
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>A selection model that contains a date range.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selection: S</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The current selection.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selectionChanged: Observable&lt;DateSelectionModelChange&lt;S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the selection has changed.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">add
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Adds a date to the current selection. In the case of a date range selection, the added date
+fills in the next <code>null</code> value in the range. If both the start and the end already have a date,
+the selection is reset so that the given date is the new <code>start</code> and the <code>end</code> is null.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isComplete
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks whether the current selection is complete. In the case of a date range selection, this
+is true if the current selection has a non-null <code>start</code> and <code>end</code>.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isValid
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks whether the current selection is valid.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateSelection
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Updates the current selection in the model.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>New selection that should be assigned.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        source</p>
+      <code class="docs-api-method-parameter-type">unknown</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Object that triggered the selection change.</p>
+
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
     <h3 id="material-datepicker-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
+    
+      
+
+<h4 id="MatDatepickerInput" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDatepickerInput"></span>
+  <code>MatDatepickerInput</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive used to connect an input to a MatDatepicker.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">input[matDatepicker]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matDatepickerInput</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matDatepickerFilter&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>dateFilter: DateFilterFn&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function that can be used to filter out dates within the datepicker.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>matDatepicker: MatDatepicker&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The datepicker that this input is associated with.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>max: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The maximum valid date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>min: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The minimum valid date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the element that the datepicker popup should be connected to.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>The element to connect the popup to.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getStartValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value at which the calendar should start.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">D | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getThemePalette
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Returns the palette used by the input&#39;s form field, if any.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ThemePalette</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fn</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">validate
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        c</p>
+      <code class="docs-api-method-parameter-type">AbstractControl</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v8.0.0 Use `getConnectedOverlayOrigin` instead">
+            Deprecated
+          </div>getPopupConnectionElementRef
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatStartDate" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStartDate"></span>
+  <code>MatStartDate</code>
+  
+</h4><p class="docs-api-class-description"><p>Input for entering the start date in a <code>mat-date-range-input</code>.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">input[matStartDate]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorState: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorStateMatcher: ErrorStateMatcher</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ngControl: NgControl</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stateChanges: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMirrorValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value that should be used when mirroring the input&#39;s size.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isEmpty
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fn</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateErrorState
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">validate
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        c</p>
+      <code class="docs-api-method-parameter-type">AbstractControl</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatEndDate" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatEndDate"></span>
+  <code>MatEndDate</code>
+  
+</h4><p class="docs-api-class-description"><p>Input for entering the end date in a <code>mat-date-range-input</code>.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">input[matEndDate]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorState: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorStateMatcher: ErrorStateMatcher</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ngControl: NgControl</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stateChanges: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isEmpty
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fn</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateErrorState
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">validate
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        c</p>
+      <code class="docs-api-method-parameter-type">AbstractControl</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
     
       
 
@@ -495,8 +1862,7 @@ components if the labels have changed after initialization.</p>
       <code>calendarHeaderComponent: ComponentType&lt;any&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>An input indicating the type of the custom header component for the calendar, if set.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -509,8 +1875,7 @@ components if the labels have changed after initialization.</p>
       <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Color palette to use on the datepicker&#39;s calendar.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -523,8 +1888,7 @@ components if the labels have changed after initialization.</p>
       <code>dateClass: (date: D) =&gt; MatCalendarCellCssClasses</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Function that can be used to add custom CSS classes to dates.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -537,8 +1901,7 @@ components if the labels have changed after initialization.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the datepicker pop-up should be disabled.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -551,8 +1914,7 @@ components if the labels have changed after initialization.</p>
       <code>opened: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the calendar is open.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -565,8 +1927,7 @@ components if the labels have changed after initialization.</p>
       <code>panelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Classes to be passed to the date picker panel. Supports the same syntax as <code>ngClass</code>.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -579,8 +1940,7 @@ components if the labels have changed after initialization.</p>
       <code>startAt: D | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The date to open the calendar to initially.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -593,8 +1953,7 @@ components if the labels have changed after initialization.</p>
       <code>startView: &#39;month&#39; | &#39;year&#39; | &#39;multi-year&#39;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The view that the calendar should start in.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -607,9 +1966,7 @@ components if the labels have changed after initialization.</p>
       <code>touchUi: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather
-than a popup and elements have more padding to allow for bigger touch targets.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -622,8 +1979,7 @@ than a popup and elements have more padding to allow for bigger touch targets.</
       <code>xPosition: DatepickerDropdownPositionX</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Preferred position of the datepicker in the X axis.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -636,8 +1992,7 @@ than a popup and elements have more padding to allow for bigger touch targets.</
       <code>yPosition: DatepickerDropdownPositionY</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Preferred position of the datepicker in the Y axis.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -650,8 +2005,7 @@ than a popup and elements have more padding to allow for bigger touch targets.</
       <code>closedStream: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the datepicker has been closed.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -664,9 +2018,7 @@ than a popup and elements have more padding to allow for bigger touch targets.</
       <code>monthSelected: EventEmitter&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits selected month in year view.
-This doesn&#39;t imply a change on the selected date.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -679,8 +2031,7 @@ This doesn&#39;t imply a change on the selected date.</p>
       <code>openedStream: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the datepicker has been opened.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -693,9 +2044,7 @@ This doesn&#39;t imply a change on the selected date.</p>
       <code>yearSelected: EventEmitter&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits selected year in multiyear view.
-This doesn&#39;t imply a change on the selected date.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -707,8 +2056,7 @@ This doesn&#39;t imply a change on the selected date.</p>
       <code>id: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The id for the datepicker calendar.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -726,12 +2074,7 @@ This doesn&#39;t imply a change on the selected date.</p>
       <th colspan="2" class="docs-api-method-name-cell">close
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Close the calendar.</p>
-
-    </td>
-  </tr></table>
+  </thead></table>
 
 
   
@@ -743,12 +2086,7 @@ This doesn&#39;t imply a change on the selected date.</p>
       <th colspan="2" class="docs-api-method-name-cell">open
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Open the calendar.</p>
-
-    </td>
-  </tr></table>
+  </thead></table>
 
 
   
@@ -760,12 +2098,7 @@ This doesn&#39;t imply a change on the selected date.</p>
       <th colspan="2" class="docs-api-method-name-cell">select
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects the given date</p>
-
-    </td>
-  </tr><thead>
+  </thead><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -784,207 +2117,6 @@ This doesn&#39;t imply a change on the selected date.</p>
     </td>
   </tr>
   </table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatDatepickerInput" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDatepickerInput"></span>
-  <code>MatDatepickerInput</code>
-  
-</h4><p class="docs-api-class-description"><p>Directive used to connect an input to a MatDatepicker.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">input[matDatepicker]</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matDatepickerInput</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the datepicker-input is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>matDatepicker: MatDatepicker&lt;D&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The datepicker that this input is associated with.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>matDatepickerFilter: (date: D) =&gt; boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Function that can be used to filter out dates within the datepicker.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>max: D | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The maximum valid date.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>min: D | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The minimum valid date.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>value: D | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The value of the input.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D&gt;&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Emits when a <code>change</code> event is fired on this <code>&lt;input&gt;</code>.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D&gt;&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Emits when an <code>input</code> event is fired on this <code>&lt;input&gt;</code>.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the element that the datepicker popup should be connected to.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>The element to connect the popup to.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v8.0.0 Use `getConnectedOverlayOrigin` instead">
-            Deprecated
-          </div>getPopupConnectionElementRef
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
 
 
   
@@ -1036,7 +2168,7 @@ This doesn&#39;t imply a change on the selected date.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;for&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>datepicker: MatDatepicker&lt;D&gt;</code>
+      <code>datepicker: MatDatepickerBase&lt;MatDatepickerControl&lt;any&gt;, D&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Datepicker instance that the button will toggle.</p>
@@ -1080,6 +2212,647 @@ This doesn&#39;t imply a change on the selected date.</p>
 
 
 
+    
+      
+
+<h4 id="MatDateRangeInput" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDateRangeInput"></span>
+  <code>MatDateRangeInput</code>
+  
+</h4><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-date-range-input</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matDateRangeInput</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>comparisonEnd: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>End of the comparison range that should be shown in the calendar.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>comparisonStart: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Start of the comparison range that should be shown in the calendar.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dateFilter: DateFilterFn&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function that can be used to filter out dates within the date range picker.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the input is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>max: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The maximum valid date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>min: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The minimum valid date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>rangePicker: MatDateRangePicker&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The range picker that this input is associated with.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the input is required.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>separator: &#39;–&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Separator text to be shown between the inputs.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>controlType: &#39;mat-date-range-input&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Name of the form control.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>empty: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the datepicker input is empty.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorState: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the input is in an error state.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focused: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the control is focused.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: `mat-date-range-input-${nextUniqueId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Unique ID for the input.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>shouldLabelFloat: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the control&#39;s label should float.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stateChanges: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the input&#39;s state has changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Current value of the range input.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the element to which the calendar overlay should be attached.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getStartValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the date at which the calendar should start.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">D | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getThemePalette
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the input&#39;s theme palette.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ThemePalette</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatDateRangePicker" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDateRangePicker"></span>
+  <code>MatDateRangePicker</code>
+  
+</h4><p class="docs-api-class-description"><p>Component responsible for managing the date range picker popup/dialog.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-date-range-picker</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matDateRangePicker</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>calendarHeaderComponent: ComponentType&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dateClass: (date: D) =&gt; MatCalendarCellCssClasses</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>opened: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>panelClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>startAt: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>startView: &#39;month&#39; | &#39;year&#39; | &#39;multi-year&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>touchUi: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>xPosition: DatepickerDropdownPositionX</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>yPosition: DatepickerDropdownPositionY</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">&#39;closed&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>closedStream: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>monthSelected: EventEmitter&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">&#39;opened&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>openedStream: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>yearSelected: EventEmitter&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">select
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
     <h3 id="material-datepicker-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
@@ -1105,7 +2878,7 @@ calendar popup. For consistency, we always use MatDatepickerInputEvent instead.<
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>target: MatDatepickerInput&lt;D&gt;</code>
+      <code>target: MatDatepickerInputBase&lt;S, D&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the datepicker input component that emitted the event.</p>
@@ -1147,26 +2920,525 @@ calendar popup. For consistency, we always use MatDatepickerInputEvent instead.<
 
 
 
-    <h3 id="material-datepicker-type_aliases" class="docs-header-link docs-api-h3">
-      <span header-link="type_aliases"></span>
-      Type aliases
+    
+      
+
+<h4 id="DateRange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="DateRange"></span>
+  <code>DateRange</code>
+  
+</h4><p class="docs-api-class-description"><p>A class representing a range of dates.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>end: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The end date of the range.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>start: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The start date of the range.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatDateSelectionModel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDateSelectionModel"></span>
+  <code>MatDateSelectionModel</code>
+  
+</h4><p class="docs-api-class-description"><p>A selection model containing a date selection.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selection: S</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The current selection.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selectionChanged: Observable&lt;DateSelectionModelChange&lt;S&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the selection has changed.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">add
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Adds a date to the current selection.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isComplete
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks whether the current selection is complete.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isValid
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks whether the current selection is valid.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateSelection
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Updates the current selection in the model.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>New selection that should be assigned.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        source</p>
+      <code class="docs-api-method-parameter-type">unknown</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Object that triggered the selection change.</p>
+
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    <h3 id="material-datepicker-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
     </h3>
     
       
 
-<h4 id="MatCalendarCellCssClasses" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MatCalendarCellCssClasses"></span>
-  <code>MatCalendarCellCssClasses</code>
-</h4><p class="docs-api-type-alias-description"><p>Extra CSS classes that can be associated with a calendar cell.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCalendarCellCssClasses = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[] | Set&lt;<span class="hljs-built_in">string</span>&gt; | {
-    [key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
-};</code>
-</pre>
-</div>
+<h4 id="MatCalendarUserEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatCalendarUserEvent"></span>
+  <code>MatCalendarUserEvent</code>
+</h4><p class="docs-api-interface-description"><p>Event emitted when a date inside the calendar is triggered as a result of a user action.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: Event</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
 
 
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: D</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatDateRangeSelectionStrategy" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatDateRangeSelectionStrategy"></span>
+  <code>MatDateRangeSelectionStrategy</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be provided in order to customize the date range selection behavior.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createPreview
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Called when the user has activated a new date (e.g. by hovering over
+it or moving focus) and the calendar tries to display a date range.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        activeDate</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Date that the user has activated. Will be null if the user moved
+   focus to an element that&#39;s no a calendar cell.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentRange</p>
+      <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Range that is currently shown in the calendar.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        event</p>
+      <code class="docs-api-method-parameter-type">Event</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>DOM event that caused the preview to be changed. Will be either a
+   <code>mouseenter</code>/<code>mouseleave</code> or <code>focus</code>/<code>blur</code> depending on how the user is navigating.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">DateRange&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">selectionFinished
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Called when the user has finished selecting a value.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        date</p>
+      <code class="docs-api-method-parameter-type">D</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Date that was selected. Will be null if the user cleared the selection.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentRange</p>
+      <code class="docs-api-method-parameter-type">DateRange&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Range that is currently show in the calendar.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        event</p>
+      <code class="docs-api-method-parameter-type">Event</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>DOM event that triggered the selection. Currently only corresponds to a <code>click</code>
+   event, but it may get expanded in the future.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">DateRange&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="DateSelectionModelChange" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DateSelectionModelChange"></span>
+  <code>DateSelectionModelChange</code>
+</h4><p class="docs-api-interface-description"><p>Event emitted by the date selection model when its selection changes.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selection: S</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>New value for the selection.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: unknown</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Object that triggered the change.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-datepicker-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
     
       
 
@@ -1195,10 +3467,54 @@ calendar popup. For consistency, we always use MatDatepickerInputEvent instead.<
 </div>
 
 
+    
+      
+
+<h4 id="DateFilterFn" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DateFilterFn"></span>
+  <code>DateFilterFn</code>
+</h4><p class="docs-api-type-alias-description"><p>Function that can be used to filter out dates from a calendar.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DateFilterFn = <span class="hljs-function">(<span class="hljs-params">date: D | <span class="hljs-literal">null</span></span>) =&gt;</span> <span class="hljs-built_in">boolean</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MatCalendarCellCssClasses" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatCalendarCellCssClasses"></span>
+  <code>MatCalendarCellCssClasses</code>
+</h4><p class="docs-api-type-alias-description"><p>Extra CSS classes that can be associated with a calendar cell.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCalendarCellCssClasses = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[] | Set&lt;<span class="hljs-built_in">string</span>&gt; | {
+    [key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
+};</code>
+</pre>
+</div>
+
+
     <h3 id="material-datepicker-constants" class="docs-header-link docs-api-h3">
       <span header-link="constants"></span>
       Constants
     </h3>
+    
+      
+
+<h4 id="MAT_DATEPICKER_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_DATEPICKER_SCROLL_STRATEGY"></span>
+  <code>MAT_DATEPICKER_SCROLL_STRATEGY</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while the calendar is open.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATEPICKER_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ScrollStrategy&gt;;</code>
+</pre>
+</div>
+
+
     
       
 
@@ -1228,13 +3544,41 @@ calendar popup. For consistency, we always use MatDatepickerInputEvent instead.<
     
       
 
-<h4 id="MAT_DATEPICKER_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_DATEPICKER_SCROLL_STRATEGY"></span>
-  <code>MAT_DATEPICKER_SCROLL_STRATEGY</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while the calendar is open.</p>
+<h4 id="MAT_DATE_RANGE_SELECTION_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_DATE_RANGE_SELECTION_STRATEGY"></span>
+  <code>MAT_DATE_RANGE_SELECTION_STRATEGY</code>
+</h4><p class="docs-api-constant-description"><p>Injection token used to customize the date range selection behavior.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATEPICKER_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ScrollStrategy&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATE_RANGE_SELECTION_STRATEGY: InjectionToken&lt;MatDateRangeSelectionStrategy&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER"></span>
+  <code>MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER</code>
+</h4><p class="docs-api-constant-description"><p>Used to provide a single selection model to a component.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SINGLE_DATE_SELECTION_MODEL_PROVIDER: FactoryProvider;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER"></span>
+  <code>MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER</code>
+</h4><p class="docs-api-constant-description"><p>Used to provide a range selection model to a component.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER: FactoryProvider;</code>
 </pre>
 </div>
 
