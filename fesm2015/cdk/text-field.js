@@ -36,27 +36,28 @@ TextFieldAutofillDirectiveExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TextFieldAutofillDirectiveExample.ɵfac = function TextFieldAutofillDirectiveExample_Factory(t) { return new (t || TextFieldAutofillDirectiveExample)(); };
-/** @nocollapse */ TextFieldAutofillDirectiveExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "form");
+/** @nocollapse */ TextFieldAutofillDirectiveExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [[3, "submit"], ["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "form", 0);
+        ɵɵlistener("submit", function TextFieldAutofillDirectiveExample_Template_form_submit_0_listener($event) { return $event.preventDefault(); });
         ɵɵelementStart(1, "mat-form-field");
         ɵɵelementStart(2, "mat-label");
         ɵɵtext(3, "First name");
         ɵɵelementEnd();
-        ɵɵelementStart(4, "input", 0);
+        ɵɵelementStart(4, "input", 1);
         ɵɵlistener("cdkAutofill", function TextFieldAutofillDirectiveExample_Template_input_cdkAutofill_4_listener($event) { return ctx.firstNameAutofilled = $event.isAutofilled; });
         ɵɵelementEnd();
-        ɵɵtemplate(5, TextFieldAutofillDirectiveExample_mat_hint_5_Template, 2, 0, "mat-hint", 1);
+        ɵɵtemplate(5, TextFieldAutofillDirectiveExample_mat_hint_5_Template, 2, 0, "mat-hint", 2);
         ɵɵelementEnd();
         ɵɵelementStart(6, "mat-form-field");
         ɵɵelementStart(7, "mat-label");
         ɵɵtext(8, "Last name");
         ɵɵelementEnd();
-        ɵɵelementStart(9, "input", 0);
+        ɵɵelementStart(9, "input", 1);
         ɵɵlistener("cdkAutofill", function TextFieldAutofillDirectiveExample_Template_input_cdkAutofill_9_listener($event) { return ctx.lastNameAutofilled = $event.isAutofilled; });
         ɵɵelementEnd();
-        ɵɵtemplate(10, TextFieldAutofillDirectiveExample_mat_hint_10_Template, 2, 0, "mat-hint", 1);
+        ɵɵtemplate(10, TextFieldAutofillDirectiveExample_mat_hint_10_Template, 2, 0, "mat-hint", 2);
         ɵɵelementEnd();
-        ɵɵelementStart(11, "button", 2);
+        ɵɵelementStart(11, "button", 3);
         ɵɵtext(12, "Submit");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -156,23 +157,24 @@ TextFieldAutofillMonitorExample.propDecorators = {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.firstName = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.lastName = _t.first);
-    } }, decls: 15, vars: 2, consts: [["matInput", ""], ["first", ""], [4, "ngIf"], ["last", ""], ["mat-raised-button", ""]], template: function TextFieldAutofillMonitorExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "form");
+    } }, decls: 15, vars: 2, consts: [[3, "submit"], ["matInput", ""], ["first", ""], [4, "ngIf"], ["last", ""], ["mat-raised-button", ""]], template: function TextFieldAutofillMonitorExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "form", 0);
+        ɵɵlistener("submit", function TextFieldAutofillMonitorExample_Template_form_submit_0_listener($event) { return $event.preventDefault(); });
         ɵɵelementStart(1, "mat-form-field");
         ɵɵelementStart(2, "mat-label");
         ɵɵtext(3, "First name");
         ɵɵelementEnd();
-        ɵɵelement(4, "input", 0, 1);
-        ɵɵtemplate(6, TextFieldAutofillMonitorExample_mat_hint_6_Template, 2, 0, "mat-hint", 2);
+        ɵɵelement(4, "input", 1, 2);
+        ɵɵtemplate(6, TextFieldAutofillMonitorExample_mat_hint_6_Template, 2, 0, "mat-hint", 3);
         ɵɵelementEnd();
         ɵɵelementStart(7, "mat-form-field");
         ɵɵelementStart(8, "mat-label");
         ɵɵtext(9, "Last name");
         ɵɵelementEnd();
-        ɵɵelement(10, "input", 0, 3);
-        ɵɵtemplate(12, TextFieldAutofillMonitorExample_mat_hint_12_Template, 2, 0, "mat-hint", 2);
+        ɵɵelement(10, "input", 1, 4);
+        ɵɵtemplate(12, TextFieldAutofillMonitorExample_mat_hint_12_Template, 2, 0, "mat-hint", 3);
         ɵɵelementEnd();
-        ɵɵelementStart(13, "button", 4);
+        ɵɵelementStart(13, "button", 5);
         ɵɵtext(14, "Submit");
         ɵɵelementEnd();
         ɵɵelementEnd();
