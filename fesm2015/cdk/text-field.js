@@ -296,9 +296,9 @@ TextFieldAutosizeTextareaExample.propDecorators = {
         ɵɵelement(20, "textarea", 8, 9);
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r6 = ɵɵreference(4);
+        const _r0 = ɵɵreference(4);
         ɵɵadvance(17);
-        ɵɵstyleProp("font-size", _r6.value);
+        ɵɵstyleProp("font-size", _r0.value);
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, MatInput, CdkTextareaAutosize], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
         type: Component,

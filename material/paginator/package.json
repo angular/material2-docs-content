@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/material/paginator",
   "main": "../../bundles/components-examples-material-paginator.umd.js",
-  "fesm5": "../../fesm5/material/paginator.js",
   "fesm2015": "../../fesm2015/material/paginator.js",
-  "esm5": "../../esm5/material/paginator/index.js",
   "esm2015": "../../esm2015/material/paginator/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/material/paginator.js",
+  "module": "../../fesm2015/material/paginator.js",
   "es2015": "../../fesm2015/material/paginator.js"
 }

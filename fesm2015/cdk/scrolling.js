@@ -111,9 +111,9 @@ function CdkVirtualScrollCustomStrategyExample_div_1_Template(rf, ctx) { if (rf 
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r9 = ctx.$implicit;
+    const item_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r9);
+    ɵɵtextInterpolate(item_r1);
 } }
 class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
     constructor() {
@@ -176,9 +176,9 @@ function CdkVirtualScrollDataSourceExample_div_1_Template(rf, ctx) { if (rf & 1)
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r11 = ctx.$implicit;
+    const item_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r11 || "Loading...");
+    ɵɵtextInterpolate(item_r1 || "Loading...");
 } }
 /**
  * \@title Virtual scroll with a custom data source
@@ -336,11 +336,11 @@ function CdkVirtualScrollDlExample_ng_container_2_Template(rf, ctx) { if (rf & 1
     ɵɵelementEnd();
     ɵɵelementContainerEnd();
 } if (rf & 2) {
-    const state_r13 = ctx.$implicit;
+    const state_r1 = ctx.$implicit;
     ɵɵadvance(2);
-    ɵɵtextInterpolate(state_r13.name);
+    ɵɵtextInterpolate(state_r1.name);
     ɵɵadvance(2);
-    ɵɵtextInterpolate(state_r13.capital);
+    ɵɵtextInterpolate(state_r1.capital);
 } }
 /**
  * \@title Virtual scrolling `<dl>`
@@ -444,9 +444,9 @@ function CdkVirtualScrollFixedBufferExample_div_1_Template(rf, ctx) { if (rf & 1
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r15 = ctx.$implicit;
+    const item_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r15);
+    ɵɵtextInterpolate(item_r1);
 } }
 /**
  * \@title Fixed size virtual scroll with custom buffer parameters
@@ -502,9 +502,9 @@ function CdkVirtualScrollHorizontalExample_div_2_Template(rf, ctx) { if (rf & 1)
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r17 = ctx.$implicit;
+    const item_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r17);
+    ɵɵtextInterpolate(item_r1);
 } }
 /**
  * \@title Horizontal virtual scroll
@@ -564,9 +564,9 @@ function CdkVirtualScrollOverviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r19 = ctx.$implicit;
+    const item_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r19);
+    ɵɵtextInterpolate(item_r1);
 } }
 /**
  * \@title Basic virtual scroll
@@ -622,9 +622,9 @@ function CdkVirtualScrollTemplateCacheExample_div_1_Template(rf, ctx) { if (rf &
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r21 = ctx.$implicit;
+    const item_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r21);
+    ɵɵtextInterpolate(item_r1);
 } }
 /**
  * \@title Virtual scroll with no template caching

@@ -97,8 +97,8 @@ MenuOverviewExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r1 = ɵɵreference(3);
-        ɵɵproperty("matMenuTriggerFor", _r1);
+        const _r0 = ɵɵreference(3);
+        ɵɵproperty("matMenuTriggerFor", _r0);
     } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuOverviewExample, [{
         type: Component,
@@ -173,17 +173,17 @@ MenuPositionExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r2 = ɵɵreference(3);
-        const _r3 = ɵɵreference(11);
-        const _r4 = ɵɵreference(19);
-        const _r5 = ɵɵreference(27);
+        const _r0 = ɵɵreference(3);
+        const _r1 = ɵɵreference(11);
+        const _r2 = ɵɵreference(19);
+        const _r3 = ɵɵreference(27);
+        ɵɵproperty("matMenuTriggerFor", _r0);
+        ɵɵadvance(8);
+        ɵɵproperty("matMenuTriggerFor", _r1);
+        ɵɵadvance(8);
         ɵɵproperty("matMenuTriggerFor", _r2);
         ɵɵadvance(8);
         ɵɵproperty("matMenuTriggerFor", _r3);
-        ɵɵadvance(8);
-        ɵɵproperty("matMenuTriggerFor", _r4);
-        ɵɵadvance(8);
-        ɵɵproperty("matMenuTriggerFor", _r5);
     } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuPositionExample, [{
         type: Component,
@@ -313,23 +313,23 @@ MenuNestedExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r6 = ɵɵreference(3);
-        const _r7 = ɵɵreference(9);
-        const _r8 = ɵɵreference(21);
-        const _r9 = ɵɵreference(37);
-        const _r10 = ɵɵreference(49);
-        const _r11 = ɵɵreference(59);
-        ɵɵproperty("matMenuTriggerFor", _r6);
+        const _r0 = ɵɵreference(3);
+        const _r1 = ɵɵreference(9);
+        const _r2 = ɵɵreference(21);
+        const _r3 = ɵɵreference(37);
+        const _r4 = ɵɵreference(49);
+        const _r5 = ɵɵreference(59);
+        ɵɵproperty("matMenuTriggerFor", _r0);
         ɵɵadvance(4);
-        ɵɵproperty("matMenuTriggerFor", _r7);
+        ɵɵproperty("matMenuTriggerFor", _r1);
         ɵɵadvance(2);
-        ɵɵproperty("matMenuTriggerFor", _r8);
+        ɵɵproperty("matMenuTriggerFor", _r2);
         ɵɵadvance(4);
-        ɵɵproperty("matMenuTriggerFor", _r9);
+        ɵɵproperty("matMenuTriggerFor", _r3);
         ɵɵadvance(2);
-        ɵɵproperty("matMenuTriggerFor", _r10);
+        ɵɵproperty("matMenuTriggerFor", _r4);
         ɵɵadvance(2);
-        ɵɵproperty("matMenuTriggerFor", _r11);
+        ɵɵproperty("matMenuTriggerFor", _r5);
     } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,

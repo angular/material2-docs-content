@@ -64,10 +64,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var option_r5 = ctx.$implicit;
-        i0.ɵɵproperty("value", option_r5);
+        var option_r2 = ctx.$implicit;
+        i0.ɵɵproperty("value", option_r2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", option_r5.name, " ");
+        i0.ɵɵtextInterpolate1(" ", option_r2.name, " ");
     } }
     /**
      * @title Display value autocomplete
@@ -108,9 +108,9 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r3 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(4);
-                i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r3);
+                i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r0);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("displayWith", ctx.displayFn);
                 i0.ɵɵadvance(2);
@@ -132,10 +132,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var option_r8 = ctx.$implicit;
-        i0.ɵɵproperty("value", option_r8);
+        var option_r2 = ctx.$implicit;
+        i0.ɵɵproperty("value", option_r2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", option_r8, " ");
+        i0.ɵɵtextInterpolate1(" ", option_r2, " ");
     } }
     /**
      * @title Filter autocomplete
@@ -166,9 +166,9 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r6 = i0.ɵɵreference(4);
+                var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵadvance(2);
-                i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r6);
+                i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r0);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(6, 3, ctx.filteredOptions));
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
@@ -188,20 +188,20 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var name_r13 = ctx.$implicit;
-        i0.ɵɵproperty("value", name_r13);
+        var name_r4 = ctx.$implicit;
+        i0.ɵɵproperty("value", name_r4);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", name_r13, " ");
+        i0.ɵɵtextInterpolate1(" ", name_r4, " ");
     } }
     function AutocompleteOptgroupExample_mat_optgroup_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-optgroup", 4);
         i0.ɵɵtemplate(1, AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template, 2, 2, "mat-option", 5);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var group_r11 = ctx.$implicit;
-        i0.ɵɵproperty("label", group_r11.letter);
+        var group_r2 = ctx.$implicit;
+        i0.ɵɵproperty("label", group_r2.letter);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", group_r11.names);
+        i0.ɵɵproperty("ngForOf", group_r2.names);
     } }
     var _filter = function (opt, value) {
         var filterValue = value.toLowerCase();
@@ -302,10 +302,10 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r9 = i0.ɵɵreference(4);
+                var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵproperty("formGroup", ctx.stateForm);
                 i0.ɵɵadvance(2);
-                i0.ɵɵproperty("matAutocomplete", _r9);
+                i0.ɵɵproperty("matAutocomplete", _r0);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(6, 3, ctx.stateGroupOptions));
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOptgroup, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [""] });
@@ -332,14 +332,14 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var state_r16 = ctx.$implicit;
-        i0.ɵɵproperty("value", state_r16.name);
+        var state_r2 = ctx.$implicit;
+        i0.ɵɵproperty("value", state_r2.name);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("src", state_r16.flag, i0.ɵɵsanitizeUrl);
+        i0.ɵɵproperty("src", state_r2.flag, i0.ɵɵsanitizeUrl);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(state_r16.name);
+        i0.ɵɵtextInterpolate(state_r2.name);
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate1("Population: ", state_r16.population, "");
+        i0.ɵɵtextInterpolate1("Population: ", state_r2.population, "");
     } }
     /**
      * @title Autocomplete overview
@@ -398,9 +398,9 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r14 = i0.ɵɵreference(4);
+                var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵadvance(2);
-                i0.ɵɵproperty("matAutocomplete", _r14)("formControl", ctx.stateCtrl);
+                i0.ɵɵproperty("matAutocomplete", _r0)("formControl", ctx.stateCtrl);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(6, 4, ctx.filteredStates));
                 i0.ɵɵadvance(3);
@@ -422,10 +422,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var street_r19 = ctx.$implicit;
-        i0.ɵɵproperty("value", street_r19);
+        var street_r2 = ctx.$implicit;
+        i0.ɵɵproperty("value", street_r2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", street_r19, " ");
+        i0.ɵɵtextInterpolate1(" ", street_r2, " ");
     } }
     /**
      * @title Plain input autocomplete
@@ -457,9 +457,9 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r17 = i0.ɵɵreference(3);
+                var _r0 = i0.ɵɵreference(3);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("formControl", ctx.control)("matAutocomplete", _r17);
+                i0.ɵɵproperty("formControl", ctx.control)("matAutocomplete", _r0);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(5, 3, ctx.filteredStreets));
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
@@ -479,10 +479,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var option_r22 = ctx.$implicit;
-        i0.ɵɵproperty("value", option_r22);
+        var option_r2 = ctx.$implicit;
+        i0.ɵɵproperty("value", option_r2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", option_r22, " ");
+        i0.ɵɵtextInterpolate1(" ", option_r2, " ");
     } }
     /**
      * @title Simple autocomplete
@@ -503,9 +503,9 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r20 = i0.ɵɵreference(4);
+                var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵadvance(2);
-                i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r20);
+                i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r0);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", ctx.options);
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });

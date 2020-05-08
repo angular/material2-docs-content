@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/material/form-field",
   "main": "../../bundles/components-examples-material-form-field.umd.js",
-  "fesm5": "../../fesm5/material/form-field.js",
   "fesm2015": "../../fesm2015/material/form-field.js",
-  "esm5": "../../esm5/material/form-field/index.js",
   "esm2015": "../../esm2015/material/form-field/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/material/form-field.js",
+  "module": "../../fesm2015/material/form-field.js",
   "es2015": "../../fesm2015/material/form-field.js"
 }

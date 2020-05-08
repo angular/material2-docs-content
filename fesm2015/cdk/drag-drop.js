@@ -192,18 +192,18 @@ function CdkDragDropConnectedSortingExample_div_5_Template(rf, ctx) { if (rf & 1
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r8 = ctx.$implicit;
+    const item_r4 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r8);
+    ɵɵtextInterpolate(item_r4);
 } }
 function CdkDragDropConnectedSortingExample_div_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r9 = ctx.$implicit;
+    const item_r5 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r9);
+    ɵɵtextInterpolate(item_r5);
 } }
 const _c0 = function (a0) { return [a0]; };
 /**
@@ -266,14 +266,14 @@ CdkDragDropConnectedSortingExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r4 = ɵɵreference(4);
-        const _r6 = ɵɵreference(10);
+        const _r0 = ɵɵreference(4);
+        const _r2 = ɵɵreference(10);
         ɵɵadvance(3);
-        ɵɵproperty("cdkDropListData", ctx.todo)("cdkDropListConnectedTo", ɵɵpureFunction1(6, _c0, _r6));
+        ɵɵproperty("cdkDropListData", ctx.todo)("cdkDropListConnectedTo", ɵɵpureFunction1(6, _c0, _r2));
         ɵɵadvance(2);
         ɵɵproperty("ngForOf", ctx.todo);
         ɵɵadvance(4);
-        ɵɵproperty("cdkDropListData", ctx.done)("cdkDropListConnectedTo", ɵɵpureFunction1(8, _c0, _r4));
+        ɵɵproperty("cdkDropListData", ctx.done)("cdkDropListConnectedTo", ɵɵpureFunction1(8, _c0, _r0));
         ɵɵadvance(2);
         ɵɵproperty("ngForOf", ctx.done);
     } }, directives: [CdkDropList, NgForOf, CdkDrag], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
@@ -306,9 +306,9 @@ function CdkDragDropCustomPlaceholderExample_div_1_Template(rf, ctx) { if (rf & 
     ɵɵtext(2);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const movie_r11 = ctx.$implicit;
+    const movie_r1 = ctx.$implicit;
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", movie_r11, " ");
+    ɵɵtextInterpolate1(" ", movie_r1, " ");
 } }
 /**
  * \@title Drag&Drop custom placeholder
@@ -373,8 +373,8 @@ if (false) {
 function CdkDragDropCustomPreviewExample_div_1_img_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "img", 4);
 } if (rf & 2) {
-    const movie_r14 = ɵɵnextContext().$implicit;
-    ɵɵproperty("src", movie_r14.poster, ɵɵsanitizeUrl)("alt", movie_r14.title);
+    const movie_r1 = ɵɵnextContext().$implicit;
+    ɵɵproperty("src", movie_r1.poster, ɵɵsanitizeUrl)("alt", movie_r1.title);
 } }
 function CdkDragDropCustomPreviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 2);
@@ -382,9 +382,9 @@ function CdkDragDropCustomPreviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtemplate(2, CdkDragDropCustomPreviewExample_div_1_img_2_Template, 1, 2, "img", 3);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const movie_r14 = ctx.$implicit;
+    const movie_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", movie_r14.title, " ");
+    ɵɵtextInterpolate1(" ", movie_r1.title, " ");
 } }
 /**
  * \@title Drag&Drop custom preview
@@ -514,18 +514,18 @@ function CdkDragDropDisabledSortingExample_div_5_Template(rf, ctx) { if (rf & 1)
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r19 = ctx.$implicit;
+    const item_r2 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r19);
+    ɵɵtextInterpolate(item_r2);
 } }
 function CdkDragDropDisabledSortingExample_div_10_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r20 = ctx.$implicit;
+    const item_r3 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r20);
+    ɵɵtextInterpolate(item_r3);
 } }
 /**
  * \@title Drag&Drop disabled sorting
@@ -622,10 +622,10 @@ function CdkDragDropDisabledExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const item_r22 = ctx.$implicit;
-    ɵɵproperty("cdkDragDisabled", item_r22.disabled);
+    const item_r1 = ctx.$implicit;
+    ɵɵproperty("cdkDragDisabled", item_r1.disabled);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(item_r22.value);
+    ɵɵtextInterpolate(item_r1.value);
 } }
 /**
  * \@title Drag&Drop disabled
@@ -686,20 +686,20 @@ function CdkDragDropEnterPredicateExample_div_4_Template(rf, ctx) { if (rf & 1) 
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const number_r25 = ctx.$implicit;
-    ɵɵproperty("cdkDragData", number_r25);
+    const number_r2 = ctx.$implicit;
+    ɵɵproperty("cdkDragData", number_r2);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(number_r25);
+    ɵɵtextInterpolate(number_r2);
 } }
 function CdkDragDropEnterPredicateExample_div_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 4);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const number_r26 = ctx.$implicit;
-    ɵɵproperty("cdkDragData", number_r26);
+    const number_r3 = ctx.$implicit;
+    ɵɵproperty("cdkDragData", number_r3);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(number_r26);
+    ɵɵtextInterpolate(number_r3);
 } }
 /**
  * \@title Drag&Drop enter predicate
@@ -892,9 +892,9 @@ function CdkDragDropHorizontalSortingExample_div_1_Template(rf, ctx) { if (rf & 
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const timePeriod_r28 = ctx.$implicit;
+    const timePeriod_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(timePeriod_r28);
+    ɵɵtextInterpolate(timePeriod_r1);
 } }
 /**
  * \@title Drag&Drop horizontal sorting
@@ -1102,9 +1102,9 @@ function CdkDragDropSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const movie_r31 = ctx.$implicit;
+    const movie_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(movie_r31);
+    ɵɵtextInterpolate(movie_r1);
 } }
 /**
  * \@title Drag&Drop sorting

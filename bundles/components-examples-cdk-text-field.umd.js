@@ -193,9 +193,9 @@
                 i0.ɵɵelement(20, "textarea", 8, 9);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r6 = i0.ɵɵreference(4);
+                var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵadvance(17);
-                i0.ɵɵstyleProp("font-size", _r6.value);
+                i0.ɵɵstyleProp("font-size", _r0.value);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.MatOption, i2.MatInput, i1.CdkTextareaAutosize], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return TextFieldAutosizeTextareaExample;
     }());

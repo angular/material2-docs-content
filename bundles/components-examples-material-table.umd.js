@@ -136,9 +136,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r25 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r25.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function TableBasicExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -150,9 +150,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r26 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r26.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function TableBasicExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -164,9 +164,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r27 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r27.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function TableBasicExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -178,9 +178,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r28 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r28.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function TableBasicExample_tr_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 11);
@@ -253,19 +253,19 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var column_r33 = i0.ɵɵnextContext().$implicit;
+        var column_r3 = i0.ɵɵnextContext().$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", column_r33, " ");
+        i0.ɵɵtextInterpolate1(" ", column_r3, " ");
     } }
     function TableDynamicColumnsExample_ng_container_7_td_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 9);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r37 = ctx.$implicit;
-        var column_r33 = i0.ɵɵnextContext().$implicit;
+        var element_r7 = ctx.$implicit;
+        var column_r3 = i0.ɵɵnextContext().$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r37[column_r33], " ");
+        i0.ɵɵtextInterpolate1(" ", element_r7[column_r3], " ");
     } }
     function TableDynamicColumnsExample_ng_container_7_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementContainerStart(0, 5);
@@ -273,8 +273,8 @@
         i0.ɵɵtemplate(2, TableDynamicColumnsExample_ng_container_7_td_2_Template, 2, 1, "td", 7);
         i0.ɵɵelementContainerEnd();
     } if (rf & 2) {
-        var column_r33 = ctx.$implicit;
-        i0.ɵɵproperty("matColumnDef", column_r33);
+        var column_r3 = ctx.$implicit;
+        i0.ɵɵproperty("matColumnDef", column_r3);
     } }
     function TableDynamicColumnsExample_tr_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 10);
@@ -368,19 +368,19 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var column_r45 = i0.ɵɵnextContext().$implicit;
+        var column_r5 = i0.ɵɵnextContext().$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", column_r45, " ");
+        i0.ɵɵtextInterpolate1(" ", column_r5, " ");
     } }
     function TableExpandableRowsExample_ng_container_1_td_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 10);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r49 = ctx.$implicit;
-        var column_r45 = i0.ɵɵnextContext().$implicit;
+        var element_r9 = ctx.$implicit;
+        var column_r5 = i0.ɵɵnextContext().$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r49[column_r45], " ");
+        i0.ɵɵtextInterpolate1(" ", element_r9[column_r5], " ");
     } }
     function TableExpandableRowsExample_ng_container_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementContainerStart(0, 7);
@@ -388,8 +388,8 @@
         i0.ɵɵtemplate(2, TableExpandableRowsExample_ng_container_1_td_2_Template, 2, 1, "td", 3);
         i0.ɵɵelementContainerEnd();
     } if (rf & 2) {
-        var column_r45 = ctx.$implicit;
-        i0.ɵɵpropertyInterpolate("matColumnDef", column_r45);
+        var column_r5 = ctx.$implicit;
+        i0.ɵɵpropertyInterpolate("matColumnDef", column_r5);
     } }
     function TableExpandableRowsExample_td_3_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 10);
@@ -417,34 +417,34 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r51 = ctx.$implicit;
-        var ctx_r41 = i0.ɵɵnextContext();
-        i0.ɵɵattribute("colspan", ctx_r41.columnsToDisplay.length);
+        var element_r11 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵattribute("colspan", ctx_r1.columnsToDisplay.length);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("@detailExpand", element_r51 == ctx_r41.expandedElement ? "expanded" : "collapsed");
+        i0.ɵɵproperty("@detailExpand", element_r11 == ctx_r1.expandedElement ? "expanded" : "collapsed");
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate1(" ", element_r51.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.position, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", element_r51.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.symbol, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", element_r51.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", element_r51.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.weight, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", element_r51.description, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.description, " ");
     } }
     function TableExpandableRowsExample_tr_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 19);
     } }
     function TableExpandableRowsExample_tr_5_Template(rf, ctx) { if (rf & 1) {
-        var _r54 = i0.ɵɵgetCurrentView();
+        var _r14 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "tr", 20);
-        i0.ɵɵlistener("click", function TableExpandableRowsExample_tr_5_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r54); var element_r52 = ctx.$implicit; var ctx_r53 = i0.ɵɵnextContext(); return ctx_r53.expandedElement = ctx_r53.expandedElement === element_r52 ? null : element_r52; });
+        i0.ɵɵlistener("click", function TableExpandableRowsExample_tr_5_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r14); var element_r12 = ctx.$implicit; var ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.expandedElement = ctx_r13.expandedElement === element_r12 ? null : element_r12; });
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r52 = ctx.$implicit;
-        var ctx_r43 = i0.ɵɵnextContext();
-        i0.ɵɵclassProp("example-expanded-row", ctx_r43.expandedElement === element_r52);
+        var element_r12 = ctx.$implicit;
+        var ctx_r3 = i0.ɵɵnextContext();
+        i0.ɵɵclassProp("example-expanded-row", ctx_r3.expandedElement === element_r12);
     } }
     function TableExpandableRowsExample_tr_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 21);
@@ -577,9 +577,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r68 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r68.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.position, " ");
     } }
     function TableFilteringExample_th_10_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -591,9 +591,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r69 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r69.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.name, " ");
     } }
     function TableFilteringExample_th_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -605,9 +605,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r70 = ctx.$implicit;
+        var element_r14 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r70.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r14.weight, " ");
     } }
     function TableFilteringExample_th_16_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -619,9 +619,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r71 = ctx.$implicit;
+        var element_r15 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r71.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r15.symbol, " ");
     } }
     function TableFilteringExample_tr_18_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 14);
@@ -637,9 +637,9 @@
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵnextContext();
-        var _r56 = i0.ɵɵreference(4);
+        var _r0 = i0.ɵɵreference(4);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("No data matching the filter \"", _r56.value, "\"");
+        i0.ɵɵtextInterpolate1("No data matching the filter \"", _r0.value, "\"");
     } }
     var ELEMENT_DATA$4 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -725,9 +725,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var transaction_r82 = ctx.$implicit;
+        var transaction_r9 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", transaction_r82.item, " ");
+        i0.ɵɵtextInterpolate1(" ", transaction_r9.item, " ");
     } }
     function TableFooterRowExample_td_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 11);
@@ -745,9 +745,9 @@
         i0.ɵɵpipe(2, "currency");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var transaction_r83 = ctx.$implicit;
+        var transaction_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r83.cost), " ");
+        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r10.cost), " ");
     } }
     function TableFooterRowExample_td_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 11);
@@ -755,9 +755,9 @@
         i0.ɵɵpipe(2, "currency");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r78 = i0.ɵɵnextContext();
+        var ctx_r5 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r78.getTotalCost()), " ");
+        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r5.getTotalCost()), " ");
     } }
     function TableFooterRowExample_tr_9_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 12);
@@ -838,11 +838,11 @@
         i0.ɵɵtemplate(2, TableHttpExample_div_1_div_2_Template, 2, 0, "div", 16);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r85 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r85.isLoadingResults);
+        i0.ɵɵproperty("ngIf", ctx_r0.isLoadingResults);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r85.isRateLimitReached);
+        i0.ɵɵproperty("ngIf", ctx_r0.isRateLimitReached);
     } }
     function TableHttpExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 18);
@@ -854,9 +854,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r98 = ctx.$implicit;
+        var row_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(row_r98.number);
+        i0.ɵɵtextInterpolate(row_r13.number);
     } }
     function TableHttpExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 18);
@@ -868,9 +868,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r99 = ctx.$implicit;
+        var row_r14 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(row_r99.title);
+        i0.ɵɵtextInterpolate(row_r14.title);
     } }
     function TableHttpExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 18);
@@ -882,9 +882,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r100 = ctx.$implicit;
+        var row_r15 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(row_r100.state);
+        i0.ɵɵtextInterpolate(row_r15.state);
     } }
     function TableHttpExample_th_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 20);
@@ -897,9 +897,9 @@
         i0.ɵɵpipe(2, "date");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r101 = ctx.$implicit;
+        var row_r16 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(i0.ɵɵpipeBind1(2, 1, row_r101.created_at));
+        i0.ɵɵtextInterpolate(i0.ɵɵpipeBind1(2, 1, row_r16.created_at));
     } }
     function TableHttpExample_tr_16_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 21);
@@ -1027,9 +1027,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var transaction_r117 = ctx.$implicit;
+        var transaction_r14 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", transaction_r117.item, " ");
+        i0.ɵɵtextInterpolate1(" ", transaction_r14.item, " ");
     } }
     function TableMultipleHeaderFooterExample_td_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 17);
@@ -1047,9 +1047,9 @@
         i0.ɵɵpipe(2, "currency");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var transaction_r118 = ctx.$implicit;
+        var transaction_r15 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r118.cost), " ");
+        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r15.cost), " ");
     } }
     function TableMultipleHeaderFooterExample_td_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 17);
@@ -1057,9 +1057,9 @@
         i0.ɵɵpipe(2, "currency");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r108 = i0.ɵɵnextContext();
+        var ctx_r5 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r108.getTotalCost()), " ");
+        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r5.getTotalCost()), " ");
     } }
     function TableMultipleHeaderFooterExample_th_10_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 15);
@@ -1174,9 +1174,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r132 = ctx.$implicit;
+        var row_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", row_r132.id, " ");
+        i0.ɵɵtextInterpolate1(" ", row_r12.id, " ");
     } }
     function TableOverviewExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 15);
@@ -1188,9 +1188,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r133 = ctx.$implicit;
+        var row_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", row_r133.progress, "% ");
+        i0.ɵɵtextInterpolate1(" ", row_r13.progress, "% ");
     } }
     function TableOverviewExample_th_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 15);
@@ -1202,9 +1202,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r134 = ctx.$implicit;
+        var row_r14 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", row_r134.name, " ");
+        i0.ɵɵtextInterpolate1(" ", row_r14.name, " ");
     } }
     function TableOverviewExample_th_17_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 15);
@@ -1216,10 +1216,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r135 = ctx.$implicit;
-        i0.ɵɵstyleProp("color", row_r135.color);
+        var row_r15 = ctx.$implicit;
+        i0.ɵɵstyleProp("color", row_r15.color);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", row_r135.color, " ");
+        i0.ɵɵtextInterpolate1(" ", row_r15.color, " ");
     } }
     function TableOverviewExample_tr_19_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 17);
@@ -1235,9 +1235,9 @@
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵnextContext();
-        var _r120 = i0.ɵɵreference(4);
+        var _r0 = i0.ɵɵreference(4);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("No data matching the filter \"", _r120.value, "\"");
+        i0.ɵɵtextInterpolate1("No data matching the filter \"", _r0.value, "\"");
     } }
     var _c0$2 = function () { return [5, 10, 25, 100]; };
     /** Constants used to fill up our data base. */
@@ -1360,9 +1360,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r147 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r147.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function TablePaginationExample_th_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -1374,9 +1374,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r148 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r148.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function TablePaginationExample_th_9_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -1388,9 +1388,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r149 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r149.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function TablePaginationExample_th_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -1402,9 +1402,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r150 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r150.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function TablePaginationExample_tr_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 13);
@@ -1510,9 +1510,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var data_r168 = ctx.$implicit;
+        var data_r16 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", data_r168, " ");
+        i0.ɵɵtextInterpolate1(" ", data_r16, " ");
     } }
     function TableRowContextExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -1524,9 +1524,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var index_r169 = ctx.index;
+        var index_r17 = ctx.index;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", index_r169, " ");
+        i0.ɵɵtextInterpolate1(" ", index_r17, " ");
     } }
     function TableRowContextExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -1538,9 +1538,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var count_r170 = ctx.count;
+        var count_r18 = ctx.count;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", count_r170, " ");
+        i0.ɵɵtextInterpolate1(" ", count_r18, " ");
     } }
     function TableRowContextExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -1552,9 +1552,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var first_r171 = ctx.first;
+        var first_r19 = ctx.first;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", first_r171, " ");
+        i0.ɵɵtextInterpolate1(" ", first_r19, " ");
     } }
     function TableRowContextExample_th_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -1566,9 +1566,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var last_r172 = ctx.last;
+        var last_r20 = ctx.last;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", last_r172, " ");
+        i0.ɵɵtextInterpolate1(" ", last_r20, " ");
     } }
     function TableRowContextExample_th_17_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -1580,9 +1580,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var even_r173 = ctx.even;
+        var even_r21 = ctx.even;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", even_r173, " ");
+        i0.ɵɵtextInterpolate1(" ", even_r21, " ");
     } }
     function TableRowContextExample_th_20_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 12);
@@ -1594,9 +1594,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var odd_r174 = ctx.odd;
+        var odd_r22 = ctx.odd;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", odd_r174, " ");
+        i0.ɵɵtextInterpolate1(" ", odd_r22, " ");
     } }
     function TableRowContextExample_tr_22_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 14);
@@ -1665,29 +1665,29 @@
         }], null, null); })();
 
     function TableSelectionExample_th_2_Template(rf, ctx) { if (rf & 1) {
-        var _r189 = i0.ɵɵgetCurrentView();
+        var _r13 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "th", 10);
         i0.ɵɵelementStart(1, "mat-checkbox", 11);
-        i0.ɵɵlistener("change", function TableSelectionExample_th_2_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r189); var ctx_r188 = i0.ɵɵnextContext(); return $event ? ctx_r188.masterToggle() : null; });
+        i0.ɵɵlistener("change", function TableSelectionExample_th_2_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r13); var ctx_r12 = i0.ɵɵnextContext(); return $event ? ctx_r12.masterToggle() : null; });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r176 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("checked", ctx_r176.selection.hasValue() && ctx_r176.isAllSelected())("indeterminate", ctx_r176.selection.hasValue() && !ctx_r176.isAllSelected())("aria-label", ctx_r176.checkboxLabel());
+        i0.ɵɵproperty("checked", ctx_r0.selection.hasValue() && ctx_r0.isAllSelected())("indeterminate", ctx_r0.selection.hasValue() && !ctx_r0.isAllSelected())("aria-label", ctx_r0.checkboxLabel());
     } }
     function TableSelectionExample_td_3_Template(rf, ctx) { if (rf & 1) {
-        var _r192 = i0.ɵɵgetCurrentView();
+        var _r16 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "td", 12);
         i0.ɵɵelementStart(1, "mat-checkbox", 13);
-        i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r192); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r192); var row_r190 = ctx.$implicit; var ctx_r193 = i0.ɵɵnextContext(); return $event ? ctx_r193.selection.toggle(row_r190) : null; });
+        i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r16); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r16); var row_r14 = ctx.$implicit; var ctx_r17 = i0.ɵɵnextContext(); return $event ? ctx_r17.selection.toggle(row_r14) : null; });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var row_r190 = ctx.$implicit;
-        var ctx_r177 = i0.ɵɵnextContext();
+        var row_r14 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("checked", ctx_r177.selection.isSelected(row_r190))("aria-label", ctx_r177.checkboxLabel(row_r190));
+        i0.ɵɵproperty("checked", ctx_r1.selection.isSelected(row_r14))("aria-label", ctx_r1.checkboxLabel(row_r14));
     } }
     function TableSelectionExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -1699,9 +1699,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r194 = ctx.$implicit;
+        var element_r18 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r194.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r18.position, " ");
     } }
     function TableSelectionExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -1713,9 +1713,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r195 = ctx.$implicit;
+        var element_r19 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r195.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r19.name, " ");
     } }
     function TableSelectionExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -1727,9 +1727,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r196 = ctx.$implicit;
+        var element_r20 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r196.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r20.weight, " ");
     } }
     function TableSelectionExample_th_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -1741,17 +1741,17 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r197 = ctx.$implicit;
+        var element_r21 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r197.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r21.symbol, " ");
     } }
     function TableSelectionExample_tr_16_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 14);
     } }
     function TableSelectionExample_tr_17_Template(rf, ctx) { if (rf & 1) {
-        var _r200 = i0.ɵɵgetCurrentView();
+        var _r24 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "tr", 15);
-        i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r200); var row_r198 = ctx.$implicit; var ctx_r199 = i0.ɵɵnextContext(); return ctx_r199.selection.toggle(row_r198); });
+        i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r24); var row_r22 = ctx.$implicit; var ctx_r23 = i0.ɵɵnextContext(); return ctx_r23.selection.toggle(row_r22); });
         i0.ɵɵelementEnd();
     } }
     var ELEMENT_DATA$6 = [
@@ -1849,9 +1849,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r211 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r211.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function TableSortingExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -1863,9 +1863,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r212 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r212.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function TableSortingExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -1877,9 +1877,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r213 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r213.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function TableSortingExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -1891,9 +1891,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r214 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r214.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function TableSortingExample_tr_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 11);
@@ -1982,9 +1982,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r228 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r228.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.name, " ");
     } }
     function TableStickyColumnsExample_th_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -1996,9 +1996,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r229 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r229.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.position, " ");
     } }
     function TableStickyColumnsExample_th_9_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -2010,9 +2010,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r230 = ctx.$implicit;
+        var element_r14 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r230.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r14.weight, " ");
     } }
     function TableStickyColumnsExample_th_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -2024,9 +2024,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r231 = ctx.$implicit;
+        var element_r15 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r231.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r15.symbol, " ");
     } }
     function TableStickyColumnsExample_th_15_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "th", 11);
@@ -2121,9 +2121,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r259 = ctx.$implicit;
+        var element_r25 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r259.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r25.position, " ");
     } }
     function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -2140,9 +2140,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r260 = ctx.$implicit;
+        var element_r26 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r260.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r26.name, " ");
     } }
     function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -2159,9 +2159,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r261 = ctx.$implicit;
+        var element_r27 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r261.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r27.weight, " ");
     } }
     function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -2178,9 +2178,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r262 = ctx.$implicit;
+        var element_r28 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r262.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r28.symbol, " ");
     } }
     function TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_16_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-footer-cell");
@@ -2251,29 +2251,29 @@
         i0.ɵɵtemplate(25, TableStickyComplexFlexExample_mat_table_34_mat_footer_row_25_Template, 1, 0, "mat-footer-row", 26);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r237 = i0.ɵɵnextContext();
-        var _r236 = i0.ɵɵreference(24);
-        var _r234 = i0.ɵɵreference(8);
-        var _r235 = i0.ɵɵreference(16);
-        i0.ɵɵproperty("dataSource", ctx_r237.dataSource);
+        var ctx_r3 = i0.ɵɵnextContext();
+        var _r2 = i0.ɵɵreference(24);
+        var _r0 = i0.ɵɵreference(8);
+        var _r1 = i0.ɵɵreference(16);
+        i0.ɵɵproperty("dataSource", ctx_r3.dataSource);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("sticky", ctx_r237.isSticky(_r236, "position"));
+        i0.ɵɵproperty("sticky", ctx_r3.isSticky(_r2, "position"));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("sticky", ctx_r237.isSticky(_r236, "name"));
+        i0.ɵɵproperty("sticky", ctx_r3.isSticky(_r2, "name"));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("stickyEnd", ctx_r237.isSticky(_r236, "weight"));
+        i0.ɵɵproperty("stickyEnd", ctx_r3.isSticky(_r2, "weight"));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("stickyEnd", ctx_r237.isSticky(_r236, "symbol"));
+        i0.ɵɵproperty("stickyEnd", ctx_r3.isSticky(_r2, "symbol"));
         i0.ɵɵadvance(8);
-        i0.ɵɵproperty("matHeaderRowDef", ctx_r237.displayedColumns)("matHeaderRowDefSticky", ctx_r237.isSticky(_r234, "header-1"));
+        i0.ɵɵproperty("matHeaderRowDef", ctx_r3.displayedColumns)("matHeaderRowDefSticky", ctx_r3.isSticky(_r0, "header-1"));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matHeaderRowDef", ctx_r237.displayedColumns)("matHeaderRowDefSticky", ctx_r237.isSticky(_r234, "header-2"));
+        i0.ɵɵproperty("matHeaderRowDef", ctx_r3.displayedColumns)("matHeaderRowDefSticky", ctx_r3.isSticky(_r0, "header-2"));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matRowDefColumns", ctx_r237.displayedColumns);
+        i0.ɵɵproperty("matRowDefColumns", ctx_r3.displayedColumns);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matFooterRowDef", ctx_r237.displayedColumns)("matFooterRowDefSticky", ctx_r237.isSticky(_r235, "footer-1"));
+        i0.ɵɵproperty("matFooterRowDef", ctx_r3.displayedColumns)("matFooterRowDefSticky", ctx_r3.isSticky(_r1, "footer-1"));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matFooterRowDef", ctx_r237.displayedColumns)("matFooterRowDefSticky", ctx_r237.isSticky(_r235, "footer-2"));
+        i0.ɵɵproperty("matFooterRowDef", ctx_r3.displayedColumns)("matFooterRowDefSticky", ctx_r3.isSticky(_r1, "footer-2"));
     } }
     var _c0$4 = function () { return ["header-1"]; };
     var _c1$1 = function () { return ["footer-1"]; };
@@ -2395,9 +2395,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r290 = ctx.$implicit;
+        var element_r25 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r290.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r25.position, " ");
     } }
     function TableStickyComplexExample_table_34_td_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 29);
@@ -2414,9 +2414,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r291 = ctx.$implicit;
+        var element_r26 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r291.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r26.name, " ");
     } }
     function TableStickyComplexExample_table_34_td_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 29);
@@ -2433,9 +2433,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r292 = ctx.$implicit;
+        var element_r27 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r292.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r27.weight, " ");
     } }
     function TableStickyComplexExample_table_34_td_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 29);
@@ -2452,9 +2452,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r293 = ctx.$implicit;
+        var element_r28 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r293.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r28.symbol, " ");
     } }
     function TableStickyComplexExample_table_34_td_16_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 29);
@@ -2525,29 +2525,29 @@
         i0.ɵɵtemplate(25, TableStickyComplexExample_table_34_tr_25_Template, 1, 0, "tr", 26);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r268 = i0.ɵɵnextContext();
-        var _r267 = i0.ɵɵreference(24);
-        var _r265 = i0.ɵɵreference(8);
-        var _r266 = i0.ɵɵreference(16);
-        i0.ɵɵproperty("dataSource", ctx_r268.dataSource);
+        var ctx_r3 = i0.ɵɵnextContext();
+        var _r2 = i0.ɵɵreference(24);
+        var _r0 = i0.ɵɵreference(8);
+        var _r1 = i0.ɵɵreference(16);
+        i0.ɵɵproperty("dataSource", ctx_r3.dataSource);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("sticky", ctx_r268.isSticky(_r267, "position"));
+        i0.ɵɵproperty("sticky", ctx_r3.isSticky(_r2, "position"));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("sticky", ctx_r268.isSticky(_r267, "name"));
+        i0.ɵɵproperty("sticky", ctx_r3.isSticky(_r2, "name"));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("stickyEnd", ctx_r268.isSticky(_r267, "weight"));
+        i0.ɵɵproperty("stickyEnd", ctx_r3.isSticky(_r2, "weight"));
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("stickyEnd", ctx_r268.isSticky(_r267, "symbol"));
+        i0.ɵɵproperty("stickyEnd", ctx_r3.isSticky(_r2, "symbol"));
         i0.ɵɵadvance(8);
-        i0.ɵɵproperty("matHeaderRowDef", ctx_r268.displayedColumns)("matHeaderRowDefSticky", ctx_r268.isSticky(_r265, "header-1"));
+        i0.ɵɵproperty("matHeaderRowDef", ctx_r3.displayedColumns)("matHeaderRowDefSticky", ctx_r3.isSticky(_r0, "header-1"));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matHeaderRowDef", ctx_r268.displayedColumns)("matHeaderRowDefSticky", ctx_r268.isSticky(_r265, "header-2"));
+        i0.ɵɵproperty("matHeaderRowDef", ctx_r3.displayedColumns)("matHeaderRowDefSticky", ctx_r3.isSticky(_r0, "header-2"));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matRowDefColumns", ctx_r268.displayedColumns);
+        i0.ɵɵproperty("matRowDefColumns", ctx_r3.displayedColumns);
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matFooterRowDef", ctx_r268.displayedColumns)("matFooterRowDefSticky", ctx_r268.isSticky(_r266, "footer-1"));
+        i0.ɵɵproperty("matFooterRowDef", ctx_r3.displayedColumns)("matFooterRowDefSticky", ctx_r3.isSticky(_r1, "footer-1"));
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("matFooterRowDef", ctx_r268.displayedColumns)("matFooterRowDefSticky", ctx_r268.isSticky(_r266, "footer-2"));
+        i0.ɵɵproperty("matFooterRowDef", ctx_r3.displayedColumns)("matFooterRowDefSticky", ctx_r3.isSticky(_r1, "footer-2"));
     } }
     var _c0$5 = function () { return ["header-1"]; };
     var _c1$2 = function () { return ["footer-1"]; };
@@ -2669,9 +2669,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var transaction_r305 = ctx.$implicit;
+        var transaction_r9 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", transaction_r305.item, " ");
+        i0.ɵɵtextInterpolate1(" ", transaction_r9.item, " ");
     } }
     function TableStickyFooterExample_td_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 12);
@@ -2689,9 +2689,9 @@
         i0.ɵɵpipe(2, "currency");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var transaction_r306 = ctx.$implicit;
+        var transaction_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r306.cost), " ");
+        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, transaction_r10.cost), " ");
     } }
     function TableStickyFooterExample_td_9_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 12);
@@ -2699,9 +2699,9 @@
         i0.ɵɵpipe(2, "currency");
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r301 = i0.ɵɵnextContext();
+        var ctx_r5 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r301.getTotalCost()), " ");
+        i0.ɵɵtextInterpolate1(" ", i0.ɵɵpipeBind1(2, 1, ctx_r5.getTotalCost()), " ");
     } }
     function TableStickyFooterExample_tr_10_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 13);
@@ -2781,9 +2781,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r318 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r318.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function TableStickyHeaderExample_th_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -2795,9 +2795,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r319 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r319.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function TableStickyHeaderExample_th_9_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -2809,9 +2809,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r320 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r320.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function TableStickyHeaderExample_th_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -2823,9 +2823,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r321 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r321.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function TableStickyHeaderExample_tr_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 12);
@@ -3027,9 +3027,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r334 = ctx.$implicit;
+        var element_r5 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r334.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r5.name, " ");
     } }
     function TableWrappedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 9);
@@ -3047,9 +3047,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r342 = ctx.$implicit;
+        var element_r6 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r342.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r6.position, " ");
     } }
     function WrapperTable_th_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 7);
@@ -3061,9 +3061,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r343 = ctx.$implicit;
+        var element_r7 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r343.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r7.weight, " ");
     } }
     function WrapperTable_th_9_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -3075,9 +3075,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r344 = ctx.$implicit;
+        var element_r8 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r344.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r8.symbol, " ");
     } }
     var _c1$3 = ["*"];
     var ELEMENT_DATA$e = [
@@ -3223,9 +3223,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r355 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r355.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function TableReorderableExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -3237,9 +3237,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r356 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r356.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function TableReorderableExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -3251,9 +3251,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r357 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r357.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function TableReorderableExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -3265,9 +3265,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r358 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r358.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function TableReorderableExample_tr_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 11);

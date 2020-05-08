@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/material/list",
   "main": "../../bundles/components-examples-material-list.umd.js",
-  "fesm5": "../../fesm5/material/list.js",
   "fesm2015": "../../fesm2015/material/list.js",
-  "esm5": "../../esm5/material/list/index.js",
   "esm2015": "../../esm2015/material/list/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/material/list.js",
+  "module": "../../fesm2015/material/list.js",
   "es2015": "../../fesm2015/material/list.js"
 }

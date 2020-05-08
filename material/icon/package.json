@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/material/icon",
   "main": "../../bundles/components-examples-material-icon.umd.js",
-  "fesm5": "../../fesm5/material/icon.js",
   "fesm2015": "../../fesm2015/material/icon.js",
-  "esm5": "../../esm5/material/icon/index.js",
   "esm2015": "../../esm2015/material/icon/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/material/icon.js",
+  "module": "../../fesm2015/material/icon.js",
   "es2015": "../../fesm2015/material/icon.js"
 }

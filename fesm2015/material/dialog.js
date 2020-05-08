@@ -395,9 +395,9 @@ function DialogOverviewExample_li_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r3 = ɵɵnextContext();
+    const ctx_r0 = ɵɵnextContext();
     ɵɵadvance(3);
-    ɵɵtextInterpolate(ctx_r3.animal);
+    ɵɵtextInterpolate(ctx_r0.animal);
 } }
 /**
  * @record

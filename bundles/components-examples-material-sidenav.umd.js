@@ -58,7 +58,7 @@
         }
         SidenavBackdropExample.ɵfac = function SidenavBackdropExample_Factory(t) { return new (t || SidenavBackdropExample)(); };
         SidenavBackdropExample.ɵcmp = i0.ɵɵdefineComponent({ type: SidenavBackdropExample, selectors: [["sidenav-backdrop-example"]], decls: 29, vars: 4, consts: [[1, "example-container", 3, "hasBackdrop"], [3, "mode"], ["drawer", ""], ["value", "side"], ["mode", ""], ["value", "over"], ["value", "push"], ["hasBackdrop", ""], [3, "value"], ["mat-raised-button", "", 3, "click"]], template: function SidenavBackdropExample_Template(rf, ctx) { if (rf & 1) {
-                var _r6 = i0.ɵɵgetCurrentView();
+                var _r3 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-drawer-container", 0);
                 i0.ɵɵelementStart(1, "mat-drawer", 1, 2);
                 i0.ɵɵtext(3, "I'm a drawer");
@@ -97,17 +97,17 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(27, "button", 9);
-                i0.ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { i0.ɵɵrestoreView(_r6); var _r3 = i0.ɵɵreference(2); return _r3.toggle(); });
+                i0.ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { i0.ɵɵrestoreView(_r3); var _r0 = i0.ɵɵreference(2); return _r0.toggle(); });
                 i0.ɵɵtext(28, "Toggle drawer");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r4 = i0.ɵɵreference(9);
-                var _r5 = i0.ɵɵreference(20);
-                i0.ɵɵproperty("hasBackdrop", _r5.value);
+                var _r1 = i0.ɵɵreference(9);
+                var _r2 = i0.ɵɵreference(20);
+                i0.ɵɵproperty("hasBackdrop", _r2.value);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("mode", _r4.value);
+                i0.ɵɵproperty("mode", _r1.value);
                 i0.ɵɵadvance(22);
                 i0.ɵɵproperty("value", true);
                 i0.ɵɵadvance(2);
@@ -126,14 +126,14 @@
 
     var _c0 = ["sidenav"];
     function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
-        var _r11 = i0.ɵɵgetCurrentView();
+        var _r4 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-sidenav-container", 2);
-        i0.ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener() { i0.ɵɵrestoreView(_r11); var ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.close("backdrop"); });
+        i0.ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener() { i0.ɵɵrestoreView(_r4); var ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.close("backdrop"); });
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
-        i0.ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener() { i0.ɵɵrestoreView(_r11); var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.close("escape"); });
+        i0.ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener() { i0.ɵɵrestoreView(_r4); var ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.close("escape"); });
         i0.ɵɵelementStart(3, "p");
         i0.ɵɵelementStart(4, "button", 5);
-        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r11); var ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.close("toggle button"); });
+        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r4); var ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.close("toggle button"); });
         i0.ɵɵtext(5, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -141,7 +141,7 @@
         i0.ɵɵelementStart(6, "mat-sidenav-content");
         i0.ɵɵelementStart(7, "p");
         i0.ɵɵelementStart(8, "button", 5);
-        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener() { i0.ɵɵrestoreView(_r11); var _r9 = i0.ɵɵreference(2); return _r9.open(); });
+        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener() { i0.ɵɵrestoreView(_r4); var _r2 = i0.ɵɵreference(2); return _r2.open(); });
         i0.ɵɵtext(9, "Open");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -151,9 +151,9 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r7 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(11);
-        i0.ɵɵtextInterpolate1("Closed due to: ", ctx_r7.reason, "");
+        i0.ɵɵtextInterpolate1("Closed due to: ", ctx_r0.reason, "");
     } }
     function SidenavDisableCloseExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -225,7 +225,7 @@
         }], null, null); })();
 
     function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
-        var _r19 = i0.ɵɵgetCurrentView();
+        var _r4 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementContainerStart(0);
         i0.ɵɵelementStart(1, "mat-toolbar", 1);
         i0.ɵɵtext(2, "Header");
@@ -258,7 +258,7 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(21, "p");
         i0.ɵɵelementStart(22, "button", 9);
-        i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { i0.ɵɵrestoreView(_r19); var _r17 = i0.ɵɵreference(5); return _r17.toggle(); });
+        i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { i0.ɵɵrestoreView(_r4); var _r2 = i0.ɵɵreference(5); return _r2.toggle(); });
         i0.ɵɵtext(23, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -269,13 +269,13 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementContainerEnd();
     } if (rf & 2) {
-        var ctx_r15 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("fixedInViewport", ctx_r15.options.value.fixed)("fixedTopGap", ctx_r15.options.value.top)("fixedBottomGap", ctx_r15.options.value.bottom);
+        i0.ɵɵproperty("fixedInViewport", ctx_r0.options.value.fixed)("fixedTopGap", ctx_r0.options.value.top)("fixedBottomGap", ctx_r0.options.value.bottom);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r15.options.value.fixed ? "Fixed" : "Non-fixed", " Sidenav ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r0.options.value.fixed ? "Fixed" : "Non-fixed", " Sidenav ");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("formGroup", ctx_r15.options);
+        i0.ɵɵproperty("formGroup", ctx_r0.options);
     } }
     function SidenavFixedExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -313,12 +313,12 @@
         }], function () { return [{ type: i1$1.FormBuilder }]; }, null); })();
 
     function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
-        var _r24 = i0.ɵɵgetCurrentView();
+        var _r4 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-sidenav-container", 2);
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
         i0.ɵɵelementStart(3, "p");
         i0.ɵɵelementStart(4, "button", 5);
-        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r24); var _r22 = i0.ɵɵreference(2); return _r22.toggle(); });
+        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r4); var _r2 = i0.ɵɵreference(2); return _r2.toggle(); });
         i0.ɵɵtext(5, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -342,7 +342,7 @@
         i0.ɵɵelementStart(16, "mat-sidenav-content");
         i0.ɵɵelementStart(17, "p");
         i0.ɵɵelementStart(18, "button", 5);
-        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener() { i0.ɵɵrestoreView(_r24); var _r22 = i0.ɵɵreference(2); return _r22.toggle(); });
+        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener() { i0.ɵɵrestoreView(_r4); var _r2 = i0.ɵɵreference(2); return _r2.toggle(); });
         i0.ɵɵtext(19, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -365,13 +365,13 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r20 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("mode", ctx_r20.mode.value);
+        i0.ɵɵproperty("mode", ctx_r0.mode.value);
         i0.ɵɵadvance(6);
-        i0.ɵɵproperty("formControl", ctx_r20.mode);
+        i0.ɵɵproperty("formControl", ctx_r0.mode);
         i0.ɵɵadvance(14);
-        i0.ɵɵproperty("formControl", ctx_r20.mode);
+        i0.ɵɵproperty("formControl", ctx_r0.mode);
     } }
     function SidenavModeExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -409,27 +409,27 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var e_r30 = ctx.$implicit;
+        var e_r4 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(e_r30);
+        i0.ɵɵtextInterpolate(e_r4);
     } }
     function SidenavOpenCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
-        var _r32 = i0.ɵɵgetCurrentView();
+        var _r6 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-sidenav-container", 2);
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
-        i0.ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r31 = i0.ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener() { i0.ɵɵrestoreView(_r32); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener() { i0.ɵɵrestoreView(_r32); var ctx_r34 = i0.ɵɵnextContext(); return ctx_r34.events.push("close!"); });
+        i0.ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { i0.ɵɵrestoreView(_r6); var ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener() { i0.ɵɵrestoreView(_r6); var ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener() { i0.ɵɵrestoreView(_r6); var ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.events.push("close!"); });
         i0.ɵɵtext(3, " Sidenav content ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "mat-sidenav-content");
         i0.ɵɵelementStart(5, "p");
         i0.ɵɵelementStart(6, "mat-checkbox", 5);
-        i0.ɵɵlistener("ngModelChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_checkbox_ngModelChange_6_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r35 = i0.ɵɵnextContext(); return ctx_r35.opened = $event; });
+        i0.ɵɵlistener("ngModelChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_checkbox_ngModelChange_6_listener($event) { i0.ɵɵrestoreView(_r6); var ctx_r9 = i0.ɵɵnextContext(); return ctx_r9.opened = $event; });
         i0.ɵɵtext(7, "sidenav.opened");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(8, "p");
         i0.ɵɵelementStart(9, "button", 6);
-        i0.ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener() { i0.ɵɵrestoreView(_r32); var _r28 = i0.ɵɵreference(2); return _r28.toggle(); });
+        i0.ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener() { i0.ɵɵrestoreView(_r6); var _r2 = i0.ɵɵreference(2); return _r2.toggle(); });
         i0.ɵɵtext(10, "sidenav.toggle()");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -442,13 +442,13 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r26 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("opened", ctx_r26.opened);
+        i0.ɵɵproperty("opened", ctx_r0.opened);
         i0.ɵɵadvance(5);
-        i0.ɵɵproperty("ngModel", ctx_r26.opened);
+        i0.ɵɵproperty("ngModel", ctx_r0.opened);
         i0.ɵɵadvance(8);
-        i0.ɵɵproperty("ngForOf", ctx_r26.events);
+        i0.ɵɵproperty("ngForOf", ctx_r0.events);
     } }
     function SidenavOpenCloseExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -567,25 +567,25 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var nav_r46 = ctx.$implicit;
+        var nav_r5 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(nav_r46);
+        i0.ɵɵtextInterpolate(nav_r5);
     } }
     function SidenavResponsiveExample_div_0_p_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "p");
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var content_r47 = ctx.$implicit;
+        var content_r6 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(content_r47);
+        i0.ɵɵtextInterpolate(content_r6);
     } }
     function SidenavResponsiveExample_div_0_Template(rf, ctx) { if (rf & 1) {
-        var _r49 = i0.ɵɵgetCurrentView();
+        var _r8 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "div", 2);
         i0.ɵɵelementStart(1, "mat-toolbar", 3);
         i0.ɵɵelementStart(2, "button", 4);
-        i0.ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r49); var _r43 = i0.ɵɵreference(9); return _r43.toggle(); });
+        i0.ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r8); var _r2 = i0.ɵɵreference(9); return _r2.toggle(); });
         i0.ɵɵelementStart(3, "mat-icon");
         i0.ɵɵtext(4, "menu");
         i0.ɵɵelementEnd();
@@ -606,16 +606,16 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r41 = i0.ɵɵnextContext();
-        i0.ɵɵclassProp("example-is-mobile", ctx_r41.mobileQuery.matches);
+        var ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵclassProp("example-is-mobile", ctx_r0.mobileQuery.matches);
         i0.ɵɵadvance(7);
-        i0.ɵɵstyleProp("margin-top", ctx_r41.mobileQuery.matches ? 56 : 0, "px");
+        i0.ɵɵstyleProp("margin-top", ctx_r0.mobileQuery.matches ? 56 : 0, "px");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("mode", ctx_r41.mobileQuery.matches ? "over" : "side")("fixedInViewport", ctx_r41.mobileQuery.matches);
+        i0.ɵɵproperty("mode", ctx_r0.mobileQuery.matches ? "over" : "side")("fixedInViewport", ctx_r0.mobileQuery.matches);
         i0.ɵɵadvance(3);
-        i0.ɵɵproperty("ngForOf", ctx_r41.fillerNav);
+        i0.ɵɵproperty("ngForOf", ctx_r0.fillerNav);
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngForOf", ctx_r41.fillerContent);
+        i0.ɵɵproperty("ngForOf", ctx_r0.fillerContent);
     } }
     function SidenavResponsiveExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");

@@ -281,22 +281,22 @@
         }], null, null); })();
 
     function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
-        var _r13 = i0.ɵɵgetCurrentView();
+        var _r5 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-tab", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementStart(2, "button", 6);
-        i0.ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r13); var index_r11 = ctx.index; var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
+        i0.ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r5); var index_r3 = ctx.index; var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.removeTab(index_r3); });
         i0.ɵɵtext(3, " Delete Tab ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var tab_r10 = ctx.$implicit;
-        var ctx_r9 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("label", tab_r10);
+        var tab_r2 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("label", tab_r2);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" Contents for ", tab_r10, " tab ");
+        i0.ɵɵtextInterpolate1(" Contents for ", tab_r2, " tab ");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("disabled", ctx_r9.tabs.length === 1);
+        i0.ɵɵproperty("disabled", ctx_r1.tabs.length === 1);
     } }
     /**
      * @title Tab group with dynamically changing tabs
@@ -317,7 +317,7 @@
         };
         TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
         TabGroupDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
-                var _r14 = i0.ɵɵgetCurrentView();
+                var _r6 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Selected tab index");
@@ -326,7 +326,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(4, "div");
                 i0.ɵɵelementStart(5, "button", 1);
-                i0.ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener() { i0.ɵɵrestoreView(_r14); var _r8 = i0.ɵɵreference(8); return ctx.addTab(_r8.checked); });
+                i0.ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener() { i0.ɵɵrestoreView(_r6); var _r0 = i0.ɵɵreference(8); return ctx.addTab(_r0.checked); });
                 i0.ɵɵtext(6, " Add new tab ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(7, "mat-checkbox", null, 2);
@@ -391,22 +391,22 @@
         i0.ɵɵtext(0);
         i0.ɵɵpipe(1, "date");
     } if (rf & 2) {
-        var ctx_r15 = i0.ɵɵnextContext();
-        i0.ɵɵtextInterpolate1(" Content 1 - Loaded: ", i0.ɵɵpipeBind2(1, 1, ctx_r15.getTimeLoaded(1), "medium"), " ");
+        var ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵtextInterpolate1(" Content 1 - Loaded: ", i0.ɵɵpipeBind2(1, 1, ctx_r0.getTimeLoaded(1), "medium"), " ");
     } }
     function TabGroupLazyLoadedExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtext(0);
         i0.ɵɵpipe(1, "date");
     } if (rf & 2) {
-        var ctx_r16 = i0.ɵɵnextContext();
-        i0.ɵɵtextInterpolate1(" Content 2 - Loaded: ", i0.ɵɵpipeBind2(1, 1, ctx_r16.getTimeLoaded(2), "medium"), " ");
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵtextInterpolate1(" Content 2 - Loaded: ", i0.ɵɵpipeBind2(1, 1, ctx_r1.getTimeLoaded(2), "medium"), " ");
     } }
     function TabGroupLazyLoadedExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtext(0);
         i0.ɵɵpipe(1, "date");
     } if (rf & 2) {
-        var ctx_r17 = i0.ɵɵnextContext();
-        i0.ɵɵtextInterpolate1(" Content 3 - Loaded: ", i0.ɵɵpipeBind2(1, 1, ctx_r17.getTimeLoaded(3), "medium"), " ");
+        var ctx_r2 = i0.ɵɵnextContext();
+        i0.ɵɵtextInterpolate1(" Content 3 - Loaded: ", i0.ɵɵpipeBind2(1, 1, ctx_r2.getTimeLoaded(3), "medium"), " ");
     } }
     /**
      * @title Tab group where the tab content is loaded lazily (when activated)
@@ -523,10 +523,10 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r18 = i0.ɵɵreference(2);
-                var _r19 = i0.ɵɵreference(11);
+                var _r0 = i0.ɵɵreference(2);
+                var _r1 = i0.ɵɵreference(11);
                 i0.ɵɵadvance(18);
-                i0.ɵɵproperty("color", _r18.value)("backgroundColor", _r19.value);
+                i0.ɵɵproperty("color", _r0.value)("backgroundColor", _r1.value);
             } }, directives: [i1$1.MatButtonToggleGroup, i1$1.MatButtonToggle, i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-button-toggle-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin: 16px;\n}"] });
         return TabGroupThemeExample;
     }());
@@ -540,17 +540,17 @@
         }], null, null); })();
 
     function TabNavBarBasicExample_a_1_Template(rf, ctx) { if (rf & 1) {
-        var _r23 = i0.ɵɵgetCurrentView();
+        var _r3 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "a", 4);
-        i0.ɵɵlistener("click", function TabNavBarBasicExample_a_1_Template_a_click_0_listener() { i0.ɵɵrestoreView(_r23); var link_r21 = ctx.$implicit; var ctx_r22 = i0.ɵɵnextContext(); return ctx_r22.activeLink = link_r21; });
+        i0.ɵɵlistener("click", function TabNavBarBasicExample_a_1_Template_a_click_0_listener() { i0.ɵɵrestoreView(_r3); var link_r1 = ctx.$implicit; var ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.activeLink = link_r1; });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var link_r21 = ctx.$implicit;
-        var ctx_r20 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("active", ctx_r20.activeLink == link_r21);
+        var link_r1 = ctx.$implicit;
+        var ctx_r0 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("active", ctx_r0.activeLink == link_r1);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", link_r21, " ");
+        i0.ɵɵtextInterpolate1(" ", link_r1, " ");
     } }
     /**
      * @title Basic use of the tab nav bar

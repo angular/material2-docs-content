@@ -212,9 +212,9 @@ function ChipsDragDropExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const vegetable_r11 = ctx.$implicit;
+    const vegetable_r1 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", vegetable_r11.name, " ");
+    ɵɵtextInterpolate1(" ", vegetable_r1.name, " ");
 } }
 /**
  * @record
@@ -287,20 +287,20 @@ function ChipsInputExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1)
     ɵɵelementEnd();
 } }
 function ChipsInputExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
-    const _r17 = ɵɵgetCurrentView();
+    const _r5 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-chip", 5);
-    ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener() { ɵɵrestoreView(_r17); const fruit_r14 = ctx.$implicit; const ctx_r16 = ɵɵnextContext(); return ctx_r16.remove(fruit_r14); });
+    ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener() { ɵɵrestoreView(_r5); const fruit_r2 = ctx.$implicit; const ctx_r4 = ɵɵnextContext(); return ctx_r4.remove(fruit_r2); });
     ɵɵtext(1);
     ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 6);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const fruit_r14 = ctx.$implicit;
-    const ctx_r13 = ɵɵnextContext();
-    ɵɵproperty("selectable", ctx_r13.selectable)("removable", ctx_r13.removable);
+    const fruit_r2 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
+    ɵɵproperty("selectable", ctx_r1.selectable)("removable", ctx_r1.removable);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", fruit_r14.name, " ");
+    ɵɵtextInterpolate1(" ", fruit_r2.name, " ");
     ɵɵadvance(1);
-    ɵɵproperty("ngIf", ctx_r13.removable);
+    ɵɵproperty("ngIf", ctx_r1.removable);
 } }
 /**
  * @record
@@ -374,11 +374,11 @@ ChipsInputExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r12 = ɵɵreference(2);
+        const _r0 = ɵɵreference(2);
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.fruits);
         ɵɵadvance(1);
-        ɵɵproperty("matChipInputFor", _r12)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
+        ɵɵproperty("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
     } }, directives: [MatFormField, MatChipList, NgForOf, MatChipInput, MatChip, NgIf, MatIcon, MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsInputExample, [{
         type: Component,
@@ -456,10 +456,10 @@ function ChipsStackedExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const chip_r19 = ctx.$implicit;
-    ɵɵproperty("color", chip_r19.color);
+    const chip_r1 = ctx.$implicit;
+    ɵɵproperty("color", chip_r1.color);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", chip_r19.name, " ");
+    ɵɵtextInterpolate1(" ", chip_r1.name, " ");
 } }
 /**
  * @record

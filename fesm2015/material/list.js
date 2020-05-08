@@ -182,9 +182,9 @@ function ListSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) 
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const shoe_r6 = ctx.$implicit;
+    const shoe_r2 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", shoe_r6, " ");
+    ɵɵtextInterpolate1(" ", shoe_r2, " ");
 } }
 /**
  * \@title List with selection
@@ -210,11 +210,11 @@ ListSelectionExample.decorators = [
         ɵɵtext(4);
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r4 = ɵɵreference(1);
+        const _r0 = ɵɵreference(1);
         ɵɵadvance(2);
         ɵɵproperty("ngForOf", ctx.typesOfShoes);
         ɵɵadvance(2);
-        ɵɵtextInterpolate1(" Options selected: ", _r4.selectedOptions.selected.length, "\n");
+        ɵɵtextInterpolate1(" Options selected: ", _r0.selectedOptions.selected.length, "\n");
     } }, directives: [MatSelectionList, NgForOf, MatListOption], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ListSelectionExample, [{
         type: Component,
@@ -239,9 +239,9 @@ function ListSingleSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const shoe_r9 = ctx.$implicit;
+    const shoe_r2 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", shoe_r9, " ");
+    ɵɵtextInterpolate1(" ", shoe_r2, " ");
 } }
 /**
  * \@title List with single selection
@@ -267,12 +267,12 @@ ListSingleSelectionExample.decorators = [
         ɵɵtext(4);
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r7 = ɵɵreference(1);
+        const _r0 = ɵɵreference(1);
         ɵɵproperty("multiple", false);
         ɵɵadvance(2);
         ɵɵproperty("ngForOf", ctx.typesOfShoes);
         ɵɵadvance(2);
-        ɵɵtextInterpolate1(" Option selected: ", _r7.selectedOptions.selected, "\n");
+        ɵɵtextInterpolate1(" Option selected: ", _r0.selectedOptions.selected, "\n");
     } }, directives: [MatSelectionList, NgForOf, MatListOption], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ListSingleSelectionExample, [{
         type: Component,

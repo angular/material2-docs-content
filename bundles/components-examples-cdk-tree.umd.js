@@ -135,9 +135,9 @@
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r7 = ctx.$implicit;
+        var node_r2 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r7.name, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
     } }
     function CdkTreeNestedExample_cdk_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-nested-tree-node", 3);
@@ -152,16 +152,16 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r8 = ctx.$implicit;
-        var ctx_r6 = i0.ɵɵnextContext();
+        var node_r3 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r8.name);
+        i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r6.treeControl.isExpanded(node_r8) ? "expand_more" : "chevron_right", " ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r8.name, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵclassProp("example-tree-invisible", !ctx_r6.treeControl.isExpanded(node_r8));
+        i0.ɵɵclassProp("example-tree-invisible", !ctx_r1.treeControl.isExpanded(node_r3));
     } }
     var TREE_DATA$1 = [
         {

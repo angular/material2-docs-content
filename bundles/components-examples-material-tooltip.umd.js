@@ -171,21 +171,21 @@
         }
         TooltipManualExample.ɵfac = function TooltipManualExample_Factory(t) { return new (t || TooltipManualExample)(); };
         TooltipManualExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipManualExample, selectors: [["tooltip-manual-example"]], decls: 12, vars: 0, consts: [["mat-button", "", "aria-label", "Show tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Show/Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipPosition", "right", "aria-tooltip", "Button that displays and hides a tooltip triggered by other buttons"], ["tooltip", "matTooltip"]], template: function TooltipManualExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+                var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "span");
                 i0.ɵɵtext(2, " Click the following buttons to... ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "button", 0);
-                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.show(); });
+                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(10); return _r0.show(); });
                 i0.ɵɵtext(4, " show ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(5, "button", 1);
-                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_5_listener() { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.hide(); });
+                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_5_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(10); return _r0.hide(); });
                 i0.ɵɵtext(6, " hide ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(7, "button", 2);
-                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_7_listener() { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.toggle(); });
+                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_7_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(10); return _r0.toggle(); });
                 i0.ɵɵtext(8, " toggle show/hide ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -301,10 +301,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var positionOption_r6 = ctx.$implicit;
-        i0.ɵɵproperty("value", positionOption_r6);
+        var positionOption_r1 = ctx.$implicit;
+        i0.ɵɵproperty("value", positionOption_r1);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", positionOption_r6, " ");
+        i0.ɵɵtextInterpolate1(" ", positionOption_r1, " ");
     } }
     /**
      * @title Tooltip with a custom position

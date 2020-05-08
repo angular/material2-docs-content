@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/material/expansion",
   "main": "../../bundles/components-examples-material-expansion.umd.js",
-  "fesm5": "../../fesm5/material/expansion.js",
   "fesm2015": "../../fesm2015/material/expansion.js",
-  "esm5": "../../esm5/material/expansion/index.js",
   "esm2015": "../../esm2015/material/expansion/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/material/expansion.js",
+  "module": "../../fesm2015/material/expansion.js",
   "es2015": "../../fesm2015/material/expansion.js"
 }

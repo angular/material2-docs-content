@@ -331,20 +331,20 @@ function SelectFormExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const food_r9 = ctx.$implicit;
-    ɵɵproperty("value", food_r9.value);
+    const food_r2 = ctx.$implicit;
+    ɵɵproperty("value", food_r2.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", food_r9.viewValue, " ");
+    ɵɵtextInterpolate1(" ", food_r2.viewValue, " ");
 } }
 function SelectFormExample_option_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "option", 4);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const car_r10 = ctx.$implicit;
-    ɵɵproperty("value", car_r10.value);
+    const car_r3 = ctx.$implicit;
+    ɵɵproperty("value", car_r3.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", car_r10.viewValue, " ");
+    ɵɵtextInterpolate1(" ", car_r3.viewValue, " ");
 } }
 /**
  * @record
@@ -468,10 +468,10 @@ function SelectHintErrorExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const animal_r14 = ctx.$implicit;
-    ɵɵproperty("value", animal_r14);
+    const animal_r3 = ctx.$implicit;
+    ɵɵproperty("value", animal_r3);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", animal_r14.name, " ");
+    ɵɵtextInterpolate1(" ", animal_r3.name, " ");
 } }
 function SelectHintErrorExample_mat_error_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
@@ -600,10 +600,10 @@ function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const topping_r16 = ctx.$implicit;
-    ɵɵproperty("value", topping_r16);
+    const topping_r1 = ctx.$implicit;
+    ɵɵproperty("value", topping_r1);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(topping_r16);
+    ɵɵtextInterpolate(topping_r1);
 } }
 /**
  * \@title Select with multiple selection
@@ -707,20 +707,20 @@ function SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template(rf, ctx) { i
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const pokemon_r20 = ctx.$implicit;
-    ɵɵproperty("value", pokemon_r20.value);
+    const pokemon_r3 = ctx.$implicit;
+    ɵɵproperty("value", pokemon_r3.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", pokemon_r20.viewValue, " ");
+    ɵɵtextInterpolate1(" ", pokemon_r3.viewValue, " ");
 } }
 function SelectOptgroupExample_mat_optgroup_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-optgroup", 9);
     ɵɵtemplate(1, SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template, 2, 2, "mat-option", 10);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const group_r18 = ctx.$implicit;
-    ɵɵproperty("label", group_r18.name)("disabled", group_r18.disabled);
+    const group_r1 = ctx.$implicit;
+    ɵɵproperty("label", group_r1.name)("disabled", group_r1.disabled);
     ɵɵadvance(1);
-    ɵɵproperty("ngForOf", group_r18.pokemon);
+    ɵɵproperty("ngForOf", group_r1.pokemon);
 } }
 /**
  * @record
@@ -866,10 +866,10 @@ function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const food_r22 = ctx.$implicit;
-    ɵɵproperty("value", food_r22.value);
+    const food_r1 = ctx.$implicit;
+    ɵɵproperty("value", food_r1.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", food_r22.viewValue, " ");
+    ɵɵtextInterpolate1(" ", food_r1.viewValue, " ");
 } }
 /**
  * @record
@@ -1024,10 +1024,10 @@ function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const state_r24 = ctx.$implicit;
-    ɵɵproperty("value", state_r24);
+    const state_r1 = ctx.$implicit;
+    ɵɵproperty("value", state_r1);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(state_r24);
+    ɵɵtextInterpolate(state_r1);
 } }
 /**
  * \@title Select with reset option
@@ -1182,20 +1182,20 @@ function SelectReactiveFormExample_mat_option_9_Template(rf, ctx) { if (rf & 1) 
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const food_r27 = ctx.$implicit;
-    ɵɵproperty("value", food_r27.value);
+    const food_r2 = ctx.$implicit;
+    ɵɵproperty("value", food_r2.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", food_r27.viewValue, " ");
+    ɵɵtextInterpolate1(" ", food_r2.viewValue, " ");
 } }
 function SelectReactiveFormExample_option_20_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "option", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const car_r28 = ctx.$implicit;
-    ɵɵproperty("value", car_r28.value);
+    const car_r3 = ctx.$implicit;
+    ɵɵproperty("value", car_r3.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", car_r28.viewValue, " ");
+    ɵɵtextInterpolate1(" ", car_r3.viewValue, " ");
 } }
 /**
  * @record
@@ -1333,21 +1333,21 @@ function SelectInitialValueExample_mat_option_7_Template(rf, ctx) { if (rf & 1) 
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const option_r31 = ctx.$implicit;
-    ɵɵproperty("value", option_r31.value);
+    const option_r2 = ctx.$implicit;
+    ɵɵproperty("value", option_r2.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(option_r31.viewValue);
+    ɵɵtextInterpolate(option_r2.viewValue);
 } }
 function SelectInitialValueExample_option_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "option", 6);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const option_r32 = ctx.$implicit;
-    const ctx_r30 = ɵɵnextContext();
-    ɵɵproperty("value", option_r32.value)("selected", ctx_r30.selectedCar === option_r32.value);
+    const option_r3 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
+    ɵɵproperty("value", option_r3.value)("selected", ctx_r1.selectedCar === option_r3.value);
     ɵɵadvance(1);
-    ɵɵtextInterpolate(option_r32.viewValue);
+    ɵɵtextInterpolate(option_r3.viewValue);
 } }
 /**
  * @record

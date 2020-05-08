@@ -319,9 +319,9 @@ InputFormExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r7 = ɵɵreference(44);
+        const _r0 = ɵɵreference(44);
         ɵɵadvance(46);
-        ɵɵtextInterpolate1("", _r7.value.length, " / 5");
+        ɵɵtextInterpolate1("", _r0.value.length, " / 5");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputFormExample, [{
         type: Component,
@@ -368,9 +368,9 @@ InputHintExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r8 = ɵɵreference(5);
+        const _r0 = ɵɵreference(5);
         ɵɵadvance(10);
-        ɵɵtextInterpolate1("", _r8.value.length, " / 256");
+        ɵɵtextInterpolate1("", _r0.value.length, " / 256");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputHintExample, [{
         type: Component,

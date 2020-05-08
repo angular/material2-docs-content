@@ -23,9 +23,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r25 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r25.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function DefaultEnabledColumnResizeDemo_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 14);
@@ -39,9 +39,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r26 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r26.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function DefaultEnabledColumnResizeDemo_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 15);
@@ -53,9 +53,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r27 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r27.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function DefaultEnabledColumnResizeDemo_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 16);
@@ -67,9 +67,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r28 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r28.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function DefaultEnabledColumnResizeDemo_tr_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 17);
@@ -371,9 +371,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r40 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r40.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function OptInColumnResizeDemo_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 14);
@@ -387,9 +387,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r41 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r41.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function OptInColumnResizeDemo_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 15);
@@ -401,9 +401,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r42 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r42.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function OptInColumnResizeDemo_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 16);
@@ -415,9 +415,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r43 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r43.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function OptInColumnResizeDemo_tr_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 17);

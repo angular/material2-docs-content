@@ -355,9 +355,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r25 = ctx.$implicit;
+        var element_r10 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r25.position, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
     } }
     function CdkTableBasicExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -369,9 +369,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r26 = ctx.$implicit;
+        var element_r11 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r26.name, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
     } }
     function CdkTableBasicExample_th_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -383,9 +383,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r27 = ctx.$implicit;
+        var element_r12 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r27.weight, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
     } }
     function CdkTableBasicExample_th_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -397,9 +397,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var element_r28 = ctx.$implicit;
+        var element_r13 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", element_r28.symbol, " ");
+        i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
     } }
     function CdkTableBasicExample_tr_13_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 11);

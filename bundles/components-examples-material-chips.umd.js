@@ -134,9 +134,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var vegetable_r11 = ctx.$implicit;
+        var vegetable_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", vegetable_r11.name, " ");
+        i0.ɵɵtextInterpolate1(" ", vegetable_r1.name, " ");
     } }
     /**
      * @title Chips Drag and Drop
@@ -182,20 +182,20 @@
         i0.ɵɵelementEnd();
     } }
     function ChipsInputExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
-        var _r17 = i0.ɵɵgetCurrentView();
+        var _r5 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-chip", 5);
-        i0.ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener() { i0.ɵɵrestoreView(_r17); var fruit_r14 = ctx.$implicit; var ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.remove(fruit_r14); });
+        i0.ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener() { i0.ɵɵrestoreView(_r5); var fruit_r2 = ctx.$implicit; var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.remove(fruit_r2); });
         i0.ɵɵtext(1);
         i0.ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 6);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var fruit_r14 = ctx.$implicit;
-        var ctx_r13 = i0.ɵɵnextContext();
-        i0.ɵɵproperty("selectable", ctx_r13.selectable)("removable", ctx_r13.removable);
+        var fruit_r2 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("selectable", ctx_r1.selectable)("removable", ctx_r1.removable);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", fruit_r14.name, " ");
+        i0.ɵɵtextInterpolate1(" ", fruit_r2.name, " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx_r13.removable);
+        i0.ɵɵproperty("ngIf", ctx_r1.removable);
     } }
     /**
      * @title Chips with input
@@ -242,11 +242,11 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r12 = i0.ɵɵreference(2);
+                var _r0 = i0.ɵɵreference(2);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", ctx.fruits);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("matChipInputFor", _r12)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
+                i0.ɵɵproperty("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
             } }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i2$1.MatChipInput, i2$1.MatChip, i3.NgIf, i6.MatIcon, i2$1.MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return ChipsInputExample;
     }());
@@ -298,10 +298,10 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var chip_r19 = ctx.$implicit;
-        i0.ɵɵproperty("color", chip_r19.color);
+        var chip_r1 = ctx.$implicit;
+        i0.ɵɵproperty("color", chip_r1.color);
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", chip_r19.name, " ");
+        i0.ɵɵtextInterpolate1(" ", chip_r1.name, " ");
     } }
     /**
      * @title Stacked chips

@@ -19,9 +19,9 @@ function DefaultEnabledColumnResizeDemo_td_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r25 = ctx.$implicit;
+    const element_r10 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r25.position, " ");
+    ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
 function DefaultEnabledColumnResizeDemo_th_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 14);
@@ -35,9 +35,9 @@ function DefaultEnabledColumnResizeDemo_td_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r26 = ctx.$implicit;
+    const element_r11 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r26.name, " ");
+    ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
 function DefaultEnabledColumnResizeDemo_th_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 15);
@@ -49,9 +49,9 @@ function DefaultEnabledColumnResizeDemo_td_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r27 = ctx.$implicit;
+    const element_r12 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r27.weight, " ");
+    ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
 function DefaultEnabledColumnResizeDemo_th_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 16);
@@ -63,9 +63,9 @@ function DefaultEnabledColumnResizeDemo_td_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r28 = ctx.$implicit;
+    const element_r13 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r28.symbol, " ");
+    ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
 function DefaultEnabledColumnResizeDemo_tr_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 17);
@@ -455,9 +455,9 @@ function OptInColumnResizeDemo_td_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r40 = ctx.$implicit;
+    const element_r10 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r40.position, " ");
+    ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
 function OptInColumnResizeDemo_th_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 14);
@@ -471,9 +471,9 @@ function OptInColumnResizeDemo_td_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r41 = ctx.$implicit;
+    const element_r11 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r41.name, " ");
+    ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
 function OptInColumnResizeDemo_th_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 15);
@@ -485,9 +485,9 @@ function OptInColumnResizeDemo_td_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r42 = ctx.$implicit;
+    const element_r12 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r42.weight, " ");
+    ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
 function OptInColumnResizeDemo_th_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 16);
@@ -499,9 +499,9 @@ function OptInColumnResizeDemo_td_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r43 = ctx.$implicit;
+    const element_r13 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r43.symbol, " ");
+    ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
 function OptInColumnResizeDemo_tr_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 17);

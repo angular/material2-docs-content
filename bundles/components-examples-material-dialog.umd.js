@@ -278,9 +278,9 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var ctx_r3 = i0.ɵɵnextContext();
+        var ctx_r0 = i0.ɵɵnextContext();
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate(ctx_r3.animal);
+        i0.ɵɵtextInterpolate(ctx_r0.animal);
     } }
     /**
      * @title Dialog Overview

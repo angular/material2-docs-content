@@ -95,7 +95,7 @@ SidenavBackdropExample.decorators = [
 ];
 /** @nocollapse */ SidenavBackdropExample.ɵfac = function SidenavBackdropExample_Factory(t) { return new (t || SidenavBackdropExample)(); };
 /** @nocollapse */ SidenavBackdropExample.ɵcmp = ɵɵdefineComponent({ type: SidenavBackdropExample, selectors: [["sidenav-backdrop-example"]], decls: 29, vars: 4, consts: [[1, "example-container", 3, "hasBackdrop"], [3, "mode"], ["drawer", ""], ["value", "side"], ["mode", ""], ["value", "over"], ["value", "push"], ["hasBackdrop", ""], [3, "value"], ["mat-raised-button", "", 3, "click"]], template: function SidenavBackdropExample_Template(rf, ctx) { if (rf & 1) {
-        const _r6 = ɵɵgetCurrentView();
+        const _r3 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-drawer-container", 0);
         ɵɵelementStart(1, "mat-drawer", 1, 2);
         ɵɵtext(3, "I'm a drawer");
@@ -134,17 +134,17 @@ SidenavBackdropExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(27, "button", 9);
-        ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { ɵɵrestoreView(_r6); const _r3 = ɵɵreference(2); return _r3.toggle(); });
+        ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { ɵɵrestoreView(_r3); const _r0 = ɵɵreference(2); return _r0.toggle(); });
         ɵɵtext(28, "Toggle drawer");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r4 = ɵɵreference(9);
-        const _r5 = ɵɵreference(20);
-        ɵɵproperty("hasBackdrop", _r5.value);
+        const _r1 = ɵɵreference(9);
+        const _r2 = ɵɵreference(20);
+        ɵɵproperty("hasBackdrop", _r2.value);
         ɵɵadvance(1);
-        ɵɵproperty("mode", _r4.value);
+        ɵɵproperty("mode", _r1.value);
         ɵɵadvance(22);
         ɵɵproperty("value", true);
         ɵɵadvance(2);
@@ -166,14 +166,14 @@ SidenavBackdropExample.decorators = [
  */
 const _c0 = ["sidenav"];
 function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
-    const _r11 = ɵɵgetCurrentView();
+    const _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-sidenav-container", 2);
-    ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener() { ɵɵrestoreView(_r11); const ctx_r10 = ɵɵnextContext(); return ctx_r10.close("backdrop"); });
+    ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener() { ɵɵrestoreView(_r4); const ctx_r3 = ɵɵnextContext(); return ctx_r3.close("backdrop"); });
     ɵɵelementStart(1, "mat-sidenav", 3, 4);
-    ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener() { ɵɵrestoreView(_r11); const ctx_r12 = ɵɵnextContext(); return ctx_r12.close("escape"); });
+    ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener() { ɵɵrestoreView(_r4); const ctx_r5 = ɵɵnextContext(); return ctx_r5.close("escape"); });
     ɵɵelementStart(3, "p");
     ɵɵelementStart(4, "button", 5);
-    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener() { ɵɵrestoreView(_r11); const ctx_r13 = ɵɵnextContext(); return ctx_r13.close("toggle button"); });
+    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener() { ɵɵrestoreView(_r4); const ctx_r6 = ɵɵnextContext(); return ctx_r6.close("toggle button"); });
     ɵɵtext(5, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -181,7 +181,7 @@ function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { 
     ɵɵelementStart(6, "mat-sidenav-content");
     ɵɵelementStart(7, "p");
     ɵɵelementStart(8, "button", 5);
-    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener() { ɵɵrestoreView(_r11); const _r9 = ɵɵreference(2); return _r9.open(); });
+    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener() { ɵɵrestoreView(_r4); const _r2 = ɵɵreference(2); return _r2.open(); });
     ɵɵtext(9, "Open");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -191,9 +191,9 @@ function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { 
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r7 = ɵɵnextContext();
+    const ctx_r0 = ɵɵnextContext();
     ɵɵadvance(11);
-    ɵɵtextInterpolate1("Closed due to: ", ctx_r7.reason, "");
+    ɵɵtextInterpolate1("Closed due to: ", ctx_r0.reason, "");
 } }
 function SidenavDisableCloseExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div");
@@ -308,7 +308,7 @@ SidenavDrawerOverviewExample.decorators = [
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
-    const _r19 = ɵɵgetCurrentView();
+    const _r4 = ɵɵgetCurrentView();
     ɵɵelementContainerStart(0);
     ɵɵelementStart(1, "mat-toolbar", 1);
     ɵɵtext(2, "Header");
@@ -341,7 +341,7 @@ function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementStart(21, "p");
     ɵɵelementStart(22, "button", 9);
-    ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { ɵɵrestoreView(_r19); const _r17 = ɵɵreference(5); return _r17.toggle(); });
+    ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { ɵɵrestoreView(_r4); const _r2 = ɵɵreference(5); return _r2.toggle(); });
     ɵɵtext(23, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -352,13 +352,13 @@ function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementContainerEnd();
 } if (rf & 2) {
-    const ctx_r15 = ɵɵnextContext();
+    const ctx_r0 = ɵɵnextContext();
     ɵɵadvance(4);
-    ɵɵproperty("fixedInViewport", ctx_r15.options.value.fixed)("fixedTopGap", ctx_r15.options.value.top)("fixedBottomGap", ctx_r15.options.value.bottom);
+    ɵɵproperty("fixedInViewport", ctx_r0.options.value.fixed)("fixedTopGap", ctx_r0.options.value.top)("fixedBottomGap", ctx_r0.options.value.bottom);
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r15.options.value.fixed ? "Fixed" : "Non-fixed", " Sidenav ");
+    ɵɵtextInterpolate1(" ", ctx_r0.options.value.fixed ? "Fixed" : "Non-fixed", " Sidenav ");
     ɵɵadvance(1);
-    ɵɵproperty("formGroup", ctx_r15.options);
+    ɵɵproperty("formGroup", ctx_r0.options);
 } }
 function SidenavFixedExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div");
@@ -426,12 +426,12 @@ if (false) {
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
-    const _r24 = ɵɵgetCurrentView();
+    const _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-sidenav-container", 2);
     ɵɵelementStart(1, "mat-sidenav", 3, 4);
     ɵɵelementStart(3, "p");
     ɵɵelementStart(4, "button", 5);
-    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener() { ɵɵrestoreView(_r24); const _r22 = ɵɵreference(2); return _r22.toggle(); });
+    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener() { ɵɵrestoreView(_r4); const _r2 = ɵɵreference(2); return _r2.toggle(); });
     ɵɵtext(5, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -455,7 +455,7 @@ function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf &
     ɵɵelementStart(16, "mat-sidenav-content");
     ɵɵelementStart(17, "p");
     ɵɵelementStart(18, "button", 5);
-    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener() { ɵɵrestoreView(_r24); const _r22 = ɵɵreference(2); return _r22.toggle(); });
+    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener() { ɵɵrestoreView(_r4); const _r2 = ɵɵreference(2); return _r2.toggle(); });
     ɵɵtext(19, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -478,13 +478,13 @@ function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf &
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r20 = ɵɵnextContext();
+    const ctx_r0 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵproperty("mode", ctx_r20.mode.value);
+    ɵɵproperty("mode", ctx_r0.mode.value);
     ɵɵadvance(6);
-    ɵɵproperty("formControl", ctx_r20.mode);
+    ɵɵproperty("formControl", ctx_r0.mode);
     ɵɵadvance(14);
-    ɵɵproperty("formControl", ctx_r20.mode);
+    ɵɵproperty("formControl", ctx_r0.mode);
 } }
 function SidenavModeExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div");
@@ -545,27 +545,27 @@ function SidenavOpenCloseExample_mat_sidenav_container_0_div_14_Template(rf, ctx
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const e_r30 = ctx.$implicit;
+    const e_r4 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(e_r30);
+    ɵɵtextInterpolate(e_r4);
 } }
 function SidenavOpenCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
-    const _r32 = ɵɵgetCurrentView();
+    const _r6 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-sidenav-container", 2);
     ɵɵelementStart(1, "mat-sidenav", 3, 4);
-    ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { ɵɵrestoreView(_r32); const ctx_r31 = ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener() { ɵɵrestoreView(_r32); const ctx_r33 = ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener() { ɵɵrestoreView(_r32); const ctx_r34 = ɵɵnextContext(); return ctx_r34.events.push("close!"); });
+    ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { ɵɵrestoreView(_r6); const ctx_r5 = ɵɵnextContext(); return ctx_r5.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener() { ɵɵrestoreView(_r6); const ctx_r7 = ɵɵnextContext(); return ctx_r7.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener() { ɵɵrestoreView(_r6); const ctx_r8 = ɵɵnextContext(); return ctx_r8.events.push("close!"); });
     ɵɵtext(3, " Sidenav content ");
     ɵɵelementEnd();
     ɵɵelementStart(4, "mat-sidenav-content");
     ɵɵelementStart(5, "p");
     ɵɵelementStart(6, "mat-checkbox", 5);
-    ɵɵlistener("ngModelChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_checkbox_ngModelChange_6_listener($event) { ɵɵrestoreView(_r32); const ctx_r35 = ɵɵnextContext(); return ctx_r35.opened = $event; });
+    ɵɵlistener("ngModelChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_checkbox_ngModelChange_6_listener($event) { ɵɵrestoreView(_r6); const ctx_r9 = ɵɵnextContext(); return ctx_r9.opened = $event; });
     ɵɵtext(7, "sidenav.opened");
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementStart(8, "p");
     ɵɵelementStart(9, "button", 6);
-    ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener() { ɵɵrestoreView(_r32); const _r28 = ɵɵreference(2); return _r28.toggle(); });
+    ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener() { ɵɵrestoreView(_r6); const _r2 = ɵɵreference(2); return _r2.toggle(); });
     ɵɵtext(10, "sidenav.toggle()");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -578,13 +578,13 @@ function SidenavOpenCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if 
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r26 = ɵɵnextContext();
+    const ctx_r0 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵproperty("opened", ctx_r26.opened);
+    ɵɵproperty("opened", ctx_r0.opened);
     ɵɵadvance(5);
-    ɵɵproperty("ngModel", ctx_r26.opened);
+    ɵɵproperty("ngModel", ctx_r0.opened);
     ɵɵadvance(8);
-    ɵɵproperty("ngForOf", ctx_r26.events);
+    ɵɵproperty("ngForOf", ctx_r0.events);
 } }
 function SidenavOpenCloseExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div");
@@ -770,25 +770,25 @@ function SidenavResponsiveExample_div_0_a_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const nav_r46 = ctx.$implicit;
+    const nav_r5 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(nav_r46);
+    ɵɵtextInterpolate(nav_r5);
 } }
 function SidenavResponsiveExample_div_0_p_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "p");
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const content_r47 = ctx.$implicit;
+    const content_r6 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate(content_r47);
+    ɵɵtextInterpolate(content_r6);
 } }
 function SidenavResponsiveExample_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r49 = ɵɵgetCurrentView();
+    const _r8 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 2);
     ɵɵelementStart(1, "mat-toolbar", 3);
     ɵɵelementStart(2, "button", 4);
-    ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener() { ɵɵrestoreView(_r49); const _r43 = ɵɵreference(9); return _r43.toggle(); });
+    ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener() { ɵɵrestoreView(_r8); const _r2 = ɵɵreference(9); return _r2.toggle(); });
     ɵɵelementStart(3, "mat-icon");
     ɵɵtext(4, "menu");
     ɵɵelementEnd();
@@ -809,16 +809,16 @@ function SidenavResponsiveExample_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r41 = ɵɵnextContext();
-    ɵɵclassProp("example-is-mobile", ctx_r41.mobileQuery.matches);
+    const ctx_r0 = ɵɵnextContext();
+    ɵɵclassProp("example-is-mobile", ctx_r0.mobileQuery.matches);
     ɵɵadvance(7);
-    ɵɵstyleProp("margin-top", ctx_r41.mobileQuery.matches ? 56 : 0, "px");
+    ɵɵstyleProp("margin-top", ctx_r0.mobileQuery.matches ? 56 : 0, "px");
     ɵɵadvance(1);
-    ɵɵproperty("mode", ctx_r41.mobileQuery.matches ? "over" : "side")("fixedInViewport", ctx_r41.mobileQuery.matches);
+    ɵɵproperty("mode", ctx_r0.mobileQuery.matches ? "over" : "side")("fixedInViewport", ctx_r0.mobileQuery.matches);
     ɵɵadvance(3);
-    ɵɵproperty("ngForOf", ctx_r41.fillerNav);
+    ɵɵproperty("ngForOf", ctx_r0.fillerNav);
     ɵɵadvance(2);
-    ɵɵproperty("ngForOf", ctx_r41.fillerContent);
+    ɵɵproperty("ngForOf", ctx_r0.fillerContent);
 } }
 function SidenavResponsiveExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div");

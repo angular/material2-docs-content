@@ -12,19 +12,19 @@
         }
         DatepickerApiExample.ɵfac = function DatepickerApiExample_Factory(t) { return new (t || DatepickerApiExample)(); };
         DatepickerApiExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 6, vars: 1, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["picker", ""], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
-                var _r8 = i0.ɵɵgetCurrentView();
+                var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelement(1, "input", 1);
                 i0.ɵɵelement(2, "mat-datepicker", null, 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(4, "button", 3);
-                i0.ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r8); var _r7 = i0.ɵɵreference(3); return _r7.open(); });
+                i0.ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(3); return _r0.open(); });
                 i0.ɵɵtext(5, "Open");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r7 = i0.ɵɵreference(3);
+                var _r0 = i0.ɵɵreference(3);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("matDatepicker", _r7);
+                i0.ɵɵproperty("matDatepicker", _r0);
             } }, directives: [i1$1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepicker, i5$1.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return DatepickerApiExample;
     }());
@@ -60,16 +60,16 @@
                 i0.ɵɵelement(12, "mat-datepicker", 4, 5);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r9 = i0.ɵɵreference(6);
-                var _r10 = i0.ɵɵreference(13);
+                var _r0 = i0.ɵɵreference(6);
+                var _r1 = i0.ɵɵreference(13);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r9);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r9);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(6);
-                i0.ɵɵproperty("matDatepicker", _r10);
+                i0.ɵɵproperty("matDatepicker", _r1);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r10);
+                i0.ɵɵproperty("for", _r1);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return DatepickerColorExample;
     }());
@@ -98,11 +98,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", 2, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r11 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r11);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r11);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("calendarHeaderComponent", ctx.exampleHeader);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], encapsulation: 2, changeDetection: 0 });
@@ -225,11 +225,11 @@
                 i0.ɵɵelement(7, "mat-datepicker", null, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r12 = i0.ɵɵreference(8);
+                var _r0 = i0.ɵɵreference(8);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r12);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r12);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i6.MatIcon, i3.MatDatepickerToggleIcon, i3.MatDatepicker], styles: [""] });
         return DatepickerCustomIconExample;
     }());
@@ -262,11 +262,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", 3, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r13 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r13);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r13);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("dateClass", ctx.dateClass);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [".example-custom-date-class {\n  background: orange;\n  border-radius: 100%;\n}\n"], encapsulation: 2 });
@@ -319,21 +319,21 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r14 = i0.ɵɵreference(7);
-                var _r15 = i0.ɵɵreference(15);
-                var _r16 = i0.ɵɵreference(23);
+                var _r0 = i0.ɵɵreference(7);
+                var _r1 = i0.ɵɵreference(15);
+                var _r2 = i0.ɵɵreference(23);
                 i0.ɵɵadvance(4);
-                i0.ɵɵproperty("matDatepicker", _r14);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r14);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(7);
-                i0.ɵɵproperty("matDatepicker", _r15);
+                i0.ɵɵproperty("matDatepicker", _r1);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r15);
+                i0.ɵɵproperty("for", _r1);
                 i0.ɵɵadvance(7);
-                i0.ɵɵproperty("matDatepicker", _r16);
+                i0.ɵɵproperty("matDatepicker", _r2);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r16);
+                i0.ɵɵproperty("for", _r2);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerDisabledExample;
     }());
@@ -351,9 +351,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var e_r19 = ctx.$implicit;
+        var e_r2 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(e_r19);
+        i0.ɵɵtextInterpolate(e_r2);
     } }
     /** @title Datepicker input and change events */
     var DatepickerEventsExample = /** @class */ (function () {
@@ -379,11 +379,11 @@
                 i0.ɵɵtemplate(8, DatepickerEventsExample_div_8_Template, 2, 1, "div", 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r17 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r17);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r17);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("ngForOf", ctx.events);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker, i5.NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
@@ -418,11 +418,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r20 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepickerFilter", ctx.myFilter)("matDatepicker", _r20);
+                i0.ɵɵproperty("matDatepickerFilter", ctx.myFilter)("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r20);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerFilterExample;
     }());
@@ -475,11 +475,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", null, 2);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r21 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r21)("formControl", ctx.date);
+                i0.ɵɵproperty("matDatepicker", _r0)("formControl", ctx.date);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r21);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.FormControlDirective, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerFormatsExample;
     }());
@@ -539,11 +539,11 @@
                 i0.ɵɵtext(8, "Dynamically switch to French");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r22 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r22);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r22);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker, i5$1.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return DatepickerLocaleExample;
     }());
@@ -589,11 +589,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r23 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("min", ctx.minDate)("max", ctx.maxDate)("matDatepicker", _r23);
+                i0.ɵɵproperty("min", ctx.minDate)("max", ctx.maxDate)("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r23);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerMinMaxExample;
     }());
@@ -630,11 +630,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", null, 2);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r24 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r24)("formControl", ctx.date);
+                i0.ɵɵproperty("matDatepicker", _r0)("formControl", ctx.date);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r24);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.FormControlDirective, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerMomentExample;
     }());
@@ -669,11 +669,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", null, 2);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r25 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r25);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r25);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerOverviewExample;
     }());
@@ -702,11 +702,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", 2, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r26 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r26);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r26);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("startAt", ctx.startDate);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
@@ -736,11 +736,11 @@
                 i0.ɵɵelement(5, "mat-datepicker", 3, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r27 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r27);
+                i0.ɵɵproperty("matDatepicker", _r0);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r27);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [""] });
         return DatepickerTouchExample;
     }());
@@ -786,21 +786,21 @@
                 i0.ɵɵelement(19, "mat-datepicker", null, 5);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r28 = i0.ɵɵreference(6);
-                var _r29 = i0.ɵɵreference(13);
-                var _r30 = i0.ɵɵreference(20);
+                var _r0 = i0.ɵɵreference(6);
+                var _r1 = i0.ɵɵreference(13);
+                var _r2 = i0.ɵɵreference(20);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r28)("formControl", ctx.date);
+                i0.ɵɵproperty("matDatepicker", _r0)("formControl", ctx.date);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r28);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(6);
-                i0.ɵɵproperty("matDatepicker", _r29)("formControl", ctx.serializedDate);
+                i0.ɵɵproperty("matDatepicker", _r1)("formControl", ctx.serializedDate);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r29);
+                i0.ɵɵproperty("for", _r1);
                 i0.ɵɵadvance(6);
-                i0.ɵɵproperty("matDatepicker", _r30)("value", ctx.date.value);
+                i0.ɵɵproperty("matDatepicker", _r2)("value", ctx.date.value);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r30);
+                i0.ɵɵproperty("for", _r2);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.FormControlDirective, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return DatepickerValueExample;
     }());
@@ -855,7 +855,7 @@
                     },
                     { provide: i1.MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
                 ])], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["startView", "multi-year", "panelClass", "example-month-picker", 3, "yearSelected", "monthSelected"], ["dp", ""]], template: function DatepickerViewsSelectionExample_Template(rf, ctx) { if (rf & 1) {
-                var _r32 = i0.ɵɵgetCurrentView();
+                var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Month and Year");
@@ -863,15 +863,15 @@
                 i0.ɵɵelement(3, "input", 0);
                 i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
                 i0.ɵɵelementStart(5, "mat-datepicker", 2, 3);
-                i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_5_listener($event) { return ctx.chosenYearHandler($event); })("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_5_listener($event) { i0.ɵɵrestoreView(_r32); var _r31 = i0.ɵɵreference(6); return ctx.chosenMonthHandler($event, _r31); });
+                i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_5_listener($event) { return ctx.chosenYearHandler($event); })("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_5_listener($event) { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(6); return ctx.chosenMonthHandler($event, _r0); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r31 = i0.ɵɵreference(6);
+                var _r0 = i0.ɵɵreference(6);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("matDatepicker", _r31)("formControl", ctx.date);
+                i0.ɵɵproperty("matDatepicker", _r0)("formControl", ctx.date);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", _r31);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.FormControlDirective, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDatepicker], styles: [".example-month-picker[_ngcontent-%COMP%]   .mat-calendar-period-button[_ngcontent-%COMP%] {\n  pointer-events: none;\n}\n\n.example-month-picker[_ngcontent-%COMP%]   .mat-calendar-arrow[_ngcontent-%COMP%] {\n  display: none;\n}"] });
         return DatepickerViewsSelectionExample;
     }());
@@ -913,11 +913,11 @@
                 i0.ɵɵelement(7, "mat-date-range-picker", null, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r5 = i0.ɵɵreference(8);
+                var _r0 = i0.ɵɵreference(8);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("rangePicker", _r5);
+                i0.ɵɵproperty("rangePicker", _r0);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("for", _r5);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i3.MatDateRangeInput, i3.MatStartDate, i2.MatInput, i3.MatEndDate, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDateRangePicker], styles: [""] });
         return DateRangePickerOverviewExample;
     }());
@@ -968,11 +968,11 @@
                 i0.ɵɵpipe(13, "json");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r2 = i0.ɵɵreference(8);
+                var _r0 = i0.ɵɵreference(8);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("formGroup", ctx.range)("rangePicker", _r2);
+                i0.ɵɵproperty("formGroup", ctx.range)("rangePicker", _r0);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("for", _r2);
+                i0.ɵɵproperty("for", _r0);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngIf", ctx.range.controls.start.hasError("matStartDateInvalid"));
                 i0.ɵɵadvance(1);
@@ -1099,11 +1099,11 @@
                 i0.ɵɵelement(7, "mat-date-range-picker", null, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r6 = i0.ɵɵreference(8);
+                var _r0 = i0.ɵɵreference(8);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("rangePicker", _r6);
+                i0.ɵɵproperty("rangePicker", _r0);
                 i0.ɵɵadvance(3);
-                i0.ɵɵproperty("for", _r6);
+                i0.ɵɵproperty("for", _r0);
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i3.MatDateRangeInput, i3.MatStartDate, i2.MatInput, i3.MatEndDate, i3.MatDatepickerToggle, i1$1.MatSuffix, i3.MatDateRangePicker], styles: [""] });
         return DateRangePickerSelectionStrategyExample;
     }());

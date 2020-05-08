@@ -202,7 +202,7 @@ StepperErrorsExample.ctorParameters = () => [
 /** @nocollapse */ StepperErrorsExample.ɵcmp = ɵɵdefineComponent({ type: StepperErrorsExample, selectors: [["stepper-errors-example"]], features: [ɵɵProvidersFeature([{
                 provide: STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
             }])], decls: 33, vars: 4, consts: [["linear", ""], ["stepper", ""], ["errorMessage", "Name is required.", 3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["errorMessage", "Address is required.", 3, "stepControl"], ["matInput", "", "placeholder", "Ex. 1 Main St, New York, NY", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperErrorsExample_Template(rf, ctx) { if (rf & 1) {
-        const _r9 = ɵɵgetCurrentView();
+        const _r4 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-horizontal-stepper", 0, 1);
         ɵɵelementStart(2, "mat-step", 2);
         ɵɵelementStart(3, "form", 3);
@@ -249,7 +249,7 @@ StepperErrorsExample.ctorParameters = () => [
         ɵɵtext(30, "Back");
         ɵɵelementEnd();
         ɵɵelementStart(31, "button", 10);
-        ɵɵlistener("click", function StepperErrorsExample_Template_button_click_31_listener() { ɵɵrestoreView(_r9); const _r5 = ɵɵreference(1); return _r5.reset(); });
+        ɵɵlistener("click", function StepperErrorsExample_Template_button_click_31_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(1); return _r0.reset(); });
         ɵɵtext(32, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -337,7 +337,7 @@ StepperLabelPositionBottomExample.ctorParameters = () => [
 ];
 /** @nocollapse */ StepperLabelPositionBottomExample.ɵfac = function StepperLabelPositionBottomExample_Factory(t) { return new (t || StepperLabelPositionBottomExample)(ɵɵdirectiveInject(FormBuilder)); };
 /** @nocollapse */ StepperLabelPositionBottomExample.ɵcmp = ɵɵdefineComponent({ type: StepperLabelPositionBottomExample, selectors: [["stepper-label-position-bottom-example"]], decls: 33, vars: 4, consts: [["labelPosition", "bottom"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["optional", "", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperLabelPositionBottomExample_Template(rf, ctx) { if (rf & 1) {
-        const _r14 = ɵɵgetCurrentView();
+        const _r4 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-horizontal-stepper", 0, 1);
         ɵɵelementStart(2, "mat-step", 2);
         ɵɵelementStart(3, "form", 3);
@@ -384,7 +384,7 @@ StepperLabelPositionBottomExample.ctorParameters = () => [
         ɵɵtext(30, "Back");
         ɵɵelementEnd();
         ɵɵelementStart(31, "button", 10);
-        ɵɵlistener("click", function StepperLabelPositionBottomExample_Template_button_click_31_listener() { ɵɵrestoreView(_r14); const _r10 = ɵɵreference(1); return _r10.reset(); });
+        ɵɵlistener("click", function StepperLabelPositionBottomExample_Template_button_click_31_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(1); return _r0.reset(); });
         ɵɵtext(32, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -470,7 +470,7 @@ StepperOptionalExample.ctorParameters = () => [
 ];
 /** @nocollapse */ StepperOptionalExample.ɵfac = function StepperOptionalExample_Factory(t) { return new (t || StepperOptionalExample)(ɵɵdirectiveInject(FormBuilder)); };
 /** @nocollapse */ StepperOptionalExample.ɵcmp = ɵɵdefineComponent({ type: StepperOptionalExample, selectors: [["stepper-optional-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], [3, "stepControl", "optional"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOptionalExample_Template(rf, ctx) { if (rf & 1) {
-        const _r19 = ɵɵgetCurrentView();
+        const _r4 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "button", 0);
         ɵɵlistener("click", function StepperOptionalExample_Template_button_click_0_listener() { return ctx.isOptional = !ctx.isOptional; });
         ɵɵtext(1);
@@ -521,7 +521,7 @@ StepperOptionalExample.ctorParameters = () => [
         ɵɵtext(32, "Back");
         ɵɵelementEnd();
         ɵɵelementStart(33, "button", 11);
-        ɵɵlistener("click", function StepperOptionalExample_Template_button_click_33_listener() { ɵɵrestoreView(_r19); const _r15 = ɵɵreference(3); return _r15.reset(); });
+        ɵɵlistener("click", function StepperOptionalExample_Template_button_click_33_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(3); return _r0.reset(); });
         ɵɵtext(34, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -611,7 +611,7 @@ StepperOverviewExample.ctorParameters = () => [
 ];
 /** @nocollapse */ StepperOverviewExample.ɵfac = function StepperOverviewExample_Factory(t) { return new (t || StepperOverviewExample)(ɵɵdirectiveInject(FormBuilder)); };
 /** @nocollapse */ StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        const _r24 = ɵɵgetCurrentView();
+        const _r4 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "button", 0);
         ɵɵlistener("click", function StepperOverviewExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
         ɵɵtext(1);
@@ -662,7 +662,7 @@ StepperOverviewExample.ctorParameters = () => [
         ɵɵtext(32, "Back");
         ɵɵelementEnd();
         ɵɵelementStart(33, "button", 10);
-        ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener() { ɵɵrestoreView(_r24); const _r20 = ɵɵreference(3); return _r20.reset(); });
+        ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(3); return _r0.reset(); });
         ɵɵtext(34, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -768,7 +768,7 @@ StepperStatesExample.ctorParameters = () => [
 /** @nocollapse */ StepperStatesExample.ɵcmp = ɵɵdefineComponent({ type: StepperStatesExample, selectors: [["stepper-states-example"]], features: [ɵɵProvidersFeature([{
                 provide: STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
             }])], decls: 53, vars: 4, consts: [["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"], ["label", "Step 1", "state", "phone"], ["label", "Step 2", "state", "chat"], ["label", "Step 3"], ["matStepperIcon", "phone"], ["matStepperIcon", "chat"]], template: function StepperStatesExample_Template(rf, ctx) { if (rf & 1) {
-        const _r31 = ɵɵgetCurrentView();
+        const _r6 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-horizontal-stepper", null, 0);
         ɵɵelementStart(2, "mat-step", 1);
         ɵɵelementStart(3, "form", 2);
@@ -815,7 +815,7 @@ StepperStatesExample.ctorParameters = () => [
         ɵɵtext(30, "Back");
         ɵɵelementEnd();
         ɵɵelementStart(31, "button", 8);
-        ɵɵlistener("click", function StepperStatesExample_Template_button_click_31_listener() { ɵɵrestoreView(_r31); const _r25 = ɵɵreference(1); return _r25.reset(); });
+        ɵɵlistener("click", function StepperStatesExample_Template_button_click_31_listener() { ɵɵrestoreView(_r6); const _r0 = ɵɵreference(1); return _r0.reset(); });
         ɵɵtext(32, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -936,7 +936,7 @@ StepperVerticalExample.ctorParameters = () => [
 ];
 /** @nocollapse */ StepperVerticalExample.ɵfac = function StepperVerticalExample_Factory(t) { return new (t || StepperVerticalExample)(ɵɵdirectiveInject(FormBuilder)); };
 /** @nocollapse */ StepperVerticalExample.ɵcmp = ɵɵdefineComponent({ type: StepperVerticalExample, selectors: [["stepper-vertical-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperVerticalExample_Template(rf, ctx) { if (rf & 1) {
-        const _r36 = ɵɵgetCurrentView();
+        const _r4 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "button", 0);
         ɵɵlistener("click", function StepperVerticalExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
         ɵɵtext(1);
@@ -987,7 +987,7 @@ StepperVerticalExample.ctorParameters = () => [
         ɵɵtext(32, "Back");
         ɵɵelementEnd();
         ɵɵelementStart(33, "button", 10);
-        ɵɵlistener("click", function StepperVerticalExample_Template_button_click_33_listener() { ɵɵrestoreView(_r36); const _r32 = ɵɵreference(3); return _r32.reset(); });
+        ɵɵlistener("click", function StepperVerticalExample_Template_button_click_33_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(3); return _r0.reset(); });
         ɵɵtext(34, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();

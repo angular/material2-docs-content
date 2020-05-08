@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/stepper",
   "main": "../../bundles/components-examples-cdk-stepper.umd.js",
-  "fesm5": "../../fesm5/cdk/stepper.js",
   "fesm2015": "../../fesm2015/cdk/stepper.js",
-  "esm5": "../../esm5/cdk/stepper/index.js",
   "esm2015": "../../esm2015/cdk/stepper/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/cdk/stepper.js",
+  "module": "../../fesm2015/cdk/stepper.js",
   "es2015": "../../fesm2015/cdk/stepper.js"
 }

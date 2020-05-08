@@ -198,9 +198,9 @@ function CdkTreeNestedExample_cdk_nested_tree_node_1_Template(rf, ctx) { if (rf 
     ɵɵtext(2);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r7 = ctx.$implicit;
+    const node_r2 = ctx.$implicit;
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", node_r7.name, " ");
+    ɵɵtextInterpolate1(" ", node_r2.name, " ");
 } }
 function CdkTreeNestedExample_cdk_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-nested-tree-node", 3);
@@ -215,16 +215,16 @@ function CdkTreeNestedExample_cdk_nested_tree_node_2_Template(rf, ctx) { if (rf 
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r8 = ctx.$implicit;
-    const ctx_r6 = ɵɵnextContext();
+    const node_r3 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r8.name);
+    ɵɵattribute("aria-label", "toggle " + node_r3.name);
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r6.treeControl.isExpanded(node_r8) ? "expand_more" : "chevron_right", " ");
+    ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", node_r8.name, " ");
+    ɵɵtextInterpolate1(" ", node_r3.name, " ");
     ɵɵadvance(1);
-    ɵɵclassProp("example-tree-invisible", !ctx_r6.treeControl.isExpanded(node_r8));
+    ɵɵclassProp("example-tree-invisible", !ctx_r1.treeControl.isExpanded(node_r3));
 } }
 /**
  * Food data with nested structure.

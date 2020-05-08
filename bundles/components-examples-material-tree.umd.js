@@ -520,9 +520,9 @@
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r16 = ctx.$implicit;
+        var node_r2 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r16.item, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r2.item, " ");
     } }
     function TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "mat-progress-bar", 8);
@@ -538,16 +538,16 @@
         i0.ɵɵtemplate(5, TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template, 1, 0, "mat-progress-bar", 7);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r17 = ctx.$implicit;
-        var ctx_r15 = i0.ɵɵnextContext();
+        var node_r3 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r17.filename);
+        i0.ɵɵattribute("aria-label", "toggle " + node_r3.filename);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r15.treeControl.isExpanded(node_r17) ? "expand_more" : "chevron_right", " ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r17.item, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r3.item, " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", node_r17.isLoading);
+        i0.ɵɵproperty("ngIf", node_r3.isLoading);
     } }
     /** Flat node with expandable and level information */
     var DynamicFlatNode = /** @class */ (function () {
@@ -709,9 +709,9 @@
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r21 = ctx.$implicit;
+        var node_r2 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r21.name, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
     } }
     function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-tree-node", 3);
@@ -723,14 +723,14 @@
         i0.ɵɵtext(4);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r22 = ctx.$implicit;
-        var ctx_r20 = i0.ɵɵnextContext();
+        var node_r3 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r22.name);
+        i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r20.treeControl.isExpanded(node_r22) ? "expand_more" : "chevron_right", " ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r22.name, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
     } }
     var TREE_DATA$1 = [
         {
@@ -812,15 +812,15 @@
         i0.ɵɵtext(2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r26 = ctx.$implicit;
+        var node_r3 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r26.item, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r3.item, " ");
     } }
     function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-        var _r29 = i0.ɵɵgetCurrentView();
+        var _r6 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-tree-node", 4);
         i0.ɵɵelementStart(1, "button", 6);
-        i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r29); var node_r27 = ctx.$implicit; var ctx_r28 = i0.ɵɵnextContext(); return ctx_r28.loadChildren(node_r27); });
+        i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r6); var node_r4 = ctx.$implicit; var ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.loadChildren(node_r4); });
         i0.ɵɵelementStart(2, "mat-icon", 7);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
@@ -828,20 +828,20 @@
         i0.ɵɵtext(4);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r27 = ctx.$implicit;
-        var ctx_r24 = i0.ɵɵnextContext();
+        var node_r4 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
         i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r27.filename);
+        i0.ɵɵattribute("aria-label", "toggle " + node_r4.filename);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r24.treeControl.isExpanded(node_r27) ? "expand_more" : "chevron_right", " ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r4) ? "expand_more" : "chevron_right", " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r27.item, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r4.item, " ");
     } }
     function TreeLoadmoreExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
-        var _r32 = i0.ɵɵgetCurrentView();
+        var _r9 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-tree-node");
         i0.ɵɵelementStart(1, "button", 8);
-        i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r32); var node_r30 = ctx.$implicit; var ctx_r31 = i0.ɵɵnextContext(); return ctx_r31.loadMore(node_r30.loadMoreParentItem); });
+        i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r9); var node_r7 = ctx.$implicit; var ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.loadMore(node_r7.loadMoreParentItem); });
         i0.ɵɵtext(2, " Load more... ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -1010,9 +1010,9 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r35 = ctx.$implicit;
+        var node_r2 = ctx.$implicit;
         i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate1(" ", node_r35.name, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
     } }
     function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-nested-tree-node");
@@ -1031,16 +1031,16 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var node_r36 = ctx.$implicit;
-        var ctx_r34 = i0.ɵɵnextContext();
+        var node_r3 = ctx.$implicit;
+        var ctx_r1 = i0.ɵɵnextContext();
         i0.ɵɵadvance(3);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r36.name);
+        i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r34.treeControl.isExpanded(node_r36) ? "expand_more" : "chevron_right", " ");
+        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r36.name, " ");
+        i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵclassProp("example-tree-invisible", !ctx_r34.treeControl.isExpanded(node_r36));
+        i0.ɵɵclassProp("example-tree-invisible", !ctx_r1.treeControl.isExpanded(node_r3));
     } }
     var TREE_DATA$2 = [
         {

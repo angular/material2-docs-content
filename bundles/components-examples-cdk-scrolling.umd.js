@@ -281,9 +281,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var item_r9 = ctx.$implicit;
+        var item_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r9);
+        i0.ɵɵtextInterpolate(item_r1);
     } }
     var CustomVirtualScrollStrategy = /** @class */ (function (_super) {
         __extends(CustomVirtualScrollStrategy, _super);
@@ -324,9 +324,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var item_r11 = ctx.$implicit;
+        var item_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r11 || "Loading...");
+        i0.ɵɵtextInterpolate(item_r1 || "Loading...");
     } }
     /** @title Virtual scroll with a custom data source */
     var CdkVirtualScrollDataSourceExample = /** @class */ (function () {
@@ -409,11 +409,11 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementContainerEnd();
     } if (rf & 2) {
-        var state_r13 = ctx.$implicit;
+        var state_r1 = ctx.$implicit;
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(state_r13.name);
+        i0.ɵɵtextInterpolate(state_r1.name);
         i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(state_r13.capital);
+        i0.ɵɵtextInterpolate(state_r1.capital);
     } }
     /** @title Virtual scrolling `<dl>` */
     var CdkVirtualScrollDlExample = /** @class */ (function () {
@@ -499,9 +499,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var item_r15 = ctx.$implicit;
+        var item_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r15);
+        i0.ɵɵtextInterpolate(item_r1);
     } }
     /** @title Fixed size virtual scroll with custom buffer parameters */
     var CdkVirtualScrollFixedBufferExample = /** @class */ (function () {
@@ -534,9 +534,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var item_r17 = ctx.$implicit;
+        var item_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r17);
+        i0.ɵɵtextInterpolate(item_r1);
     } }
     /** @title Horizontal virtual scroll */
     var CdkVirtualScrollHorizontalExample = /** @class */ (function () {
@@ -572,9 +572,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var item_r19 = ctx.$implicit;
+        var item_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r19);
+        i0.ɵɵtextInterpolate(item_r1);
     } }
     /** @title Basic virtual scroll */
     var CdkVirtualScrollOverviewExample = /** @class */ (function () {
@@ -607,9 +607,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var item_r21 = ctx.$implicit;
+        var item_r1 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r21);
+        i0.ɵɵtextInterpolate(item_r1);
     } }
     /** @title Virtual scroll with no template caching */
     var CdkVirtualScrollTemplateCacheExample = /** @class */ (function () {

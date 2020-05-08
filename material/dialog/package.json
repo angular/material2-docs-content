@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/material/dialog",
   "main": "../../bundles/components-examples-material-dialog.umd.js",
-  "fesm5": "../../fesm5/material/dialog.js",
   "fesm2015": "../../fesm2015/material/dialog.js",
-  "esm5": "../../esm5/material/dialog/index.js",
   "esm2015": "../../esm2015/material/dialog/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/material/dialog.js",
+  "module": "../../fesm2015/material/dialog.js",
   "es2015": "../../fesm2015/material/dialog.js"
 }

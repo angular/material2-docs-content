@@ -582,9 +582,9 @@ FormFieldHintExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r1 = ɵɵreference(5);
+        const _r0 = ɵɵreference(5);
         ɵɵadvance(7);
-        ɵɵtextInterpolate1("", (_r1.value == null ? null : _r1.value.length) || 0, "/10");
+        ɵɵtextInterpolate1("", (_r0.value == null ? null : _r0.value.length) || 0, "/10");
     } }, directives: [MatFormField, MatLabel, MatInput, MatHint, MatSelect, MatOption], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldHintExample, [{
         type: Component,

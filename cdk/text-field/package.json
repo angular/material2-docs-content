@@ -1,11 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/text-field",
   "main": "../../bundles/components-examples-cdk-text-field.umd.js",
-  "fesm5": "../../fesm5/cdk/text-field.js",
   "fesm2015": "../../fesm2015/cdk/text-field.js",
-  "esm5": "../../esm5/cdk/text-field/index.js",
   "esm2015": "../../esm2015/cdk/text-field/index.js",
   "typings": "./index.d.ts",
-  "module": "../../fesm5/cdk/text-field.js",
+  "module": "../../fesm2015/cdk/text-field.js",
   "es2015": "../../fesm2015/cdk/text-field.js"
 }

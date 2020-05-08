@@ -548,9 +548,9 @@ function TreeDynamicExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(2);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r16 = ctx.$implicit;
+    const node_r2 = ctx.$implicit;
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", node_r16.item, " ");
+    ɵɵtextInterpolate1(" ", node_r2.item, " ");
 } }
 function TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "mat-progress-bar", 8);
@@ -566,16 +566,16 @@ function TreeDynamicExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵtemplate(5, TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template, 1, 0, "mat-progress-bar", 7);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r17 = ctx.$implicit;
-    const ctx_r15 = ɵɵnextContext();
+    const node_r3 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r17.filename);
+    ɵɵattribute("aria-label", "toggle " + node_r3.filename);
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r15.treeControl.isExpanded(node_r17) ? "expand_more" : "chevron_right", " ");
+    ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", node_r17.item, " ");
+    ɵɵtextInterpolate1(" ", node_r3.item, " ");
     ɵɵadvance(1);
-    ɵɵproperty("ngIf", node_r17.isLoading);
+    ɵɵproperty("ngIf", node_r3.isLoading);
 } }
 /**
  * Flat node with expandable and level information
@@ -872,9 +872,9 @@ function TreeFlatOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1)
     ɵɵtext(2);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r21 = ctx.$implicit;
+    const node_r2 = ctx.$implicit;
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", node_r21.name, " ");
+    ɵɵtextInterpolate1(" ", node_r2.name, " ");
 } }
 function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-tree-node", 3);
@@ -886,14 +886,14 @@ function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1)
     ɵɵtext(4);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r22 = ctx.$implicit;
-    const ctx_r20 = ɵɵnextContext();
+    const node_r3 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r22.name);
+    ɵɵattribute("aria-label", "toggle " + node_r3.name);
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r20.treeControl.isExpanded(node_r22) ? "expand_more" : "chevron_right", " ");
+    ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", node_r22.name, " ");
+    ɵɵtextInterpolate1(" ", node_r3.name, " ");
 } }
 /**
  * Food data with nested structure.
@@ -1052,15 +1052,15 @@ function TreeLoadmoreExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(2);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r26 = ctx.$implicit;
+    const node_r3 = ctx.$implicit;
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", node_r26.item, " ");
+    ɵɵtextInterpolate1(" ", node_r3.item, " ");
 } }
 function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-    const _r29 = ɵɵgetCurrentView();
+    const _r6 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tree-node", 4);
     ɵɵelementStart(1, "button", 6);
-    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { ɵɵrestoreView(_r29); const node_r27 = ctx.$implicit; const ctx_r28 = ɵɵnextContext(); return ctx_r28.loadChildren(node_r27); });
+    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { ɵɵrestoreView(_r6); const node_r4 = ctx.$implicit; const ctx_r5 = ɵɵnextContext(); return ctx_r5.loadChildren(node_r4); });
     ɵɵelementStart(2, "mat-icon", 7);
     ɵɵtext(3);
     ɵɵelementEnd();
@@ -1068,20 +1068,20 @@ function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(4);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r27 = ctx.$implicit;
-    const ctx_r24 = ɵɵnextContext();
+    const node_r4 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r27.filename);
+    ɵɵattribute("aria-label", "toggle " + node_r4.filename);
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r24.treeControl.isExpanded(node_r27) ? "expand_more" : "chevron_right", " ");
+    ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r4) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", node_r27.item, " ");
+    ɵɵtextInterpolate1(" ", node_r4.item, " ");
 } }
 function TreeLoadmoreExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
-    const _r32 = ɵɵgetCurrentView();
+    const _r9 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tree-node");
     ɵɵelementStart(1, "button", 8);
-    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { ɵɵrestoreView(_r32); const node_r30 = ctx.$implicit; const ctx_r31 = ɵɵnextContext(); return ctx_r31.loadMore(node_r30.loadMoreParentItem); });
+    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { ɵɵrestoreView(_r9); const node_r7 = ctx.$implicit; const ctx_r8 = ɵɵnextContext(); return ctx_r8.loadMore(node_r7.loadMoreParentItem); });
     ɵɵtext(2, " Load more... ");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -1407,9 +1407,9 @@ function TreeNestedOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r35 = ctx.$implicit;
+    const node_r2 = ctx.$implicit;
     ɵɵadvance(3);
-    ɵɵtextInterpolate1(" ", node_r35.name, " ");
+    ɵɵtextInterpolate1(" ", node_r2.name, " ");
 } }
 function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-nested-tree-node");
@@ -1428,16 +1428,16 @@ function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
-    const node_r36 = ctx.$implicit;
-    const ctx_r34 = ɵɵnextContext();
+    const node_r3 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(3);
-    ɵɵattribute("aria-label", "toggle " + node_r36.name);
+    ɵɵattribute("aria-label", "toggle " + node_r3.name);
     ɵɵadvance(2);
-    ɵɵtextInterpolate1(" ", ctx_r34.treeControl.isExpanded(node_r36) ? "expand_more" : "chevron_right", " ");
+    ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", node_r36.name, " ");
+    ɵɵtextInterpolate1(" ", node_r3.name, " ");
     ɵɵadvance(1);
-    ɵɵclassProp("example-tree-invisible", !ctx_r34.treeControl.isExpanded(node_r36));
+    ɵɵclassProp("example-tree-invisible", !ctx_r1.treeControl.isExpanded(node_r3));
 } }
 /**
  * Food data with nested structure.

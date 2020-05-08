@@ -252,7 +252,7 @@ ExpansionStepsExample.decorators = [
 ];
 /** @nocollapse */ ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
 /** @nocollapse */ ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
-        const _r3 = ɵɵgetCurrentView();
+        const _r1 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-accordion", 0);
         ɵɵelementStart(1, "mat-expansion-panel", 1);
         ɵɵlistener("opened", function ExpansionStepsExample_Template_mat_expansion_panel_opened_1_listener() { return ctx.setStep(0); });
@@ -334,7 +334,7 @@ ExpansionStepsExample.decorators = [
         ɵɵtext(47, "Date");
         ɵɵelementEnd();
         ɵɵelementStart(48, "input", 6);
-        ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_48_listener() { ɵɵrestoreView(_r3); const _r2 = ɵɵreference(50); return _r2.open(); });
+        ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_48_listener() { ɵɵrestoreView(_r1); const _r0 = ɵɵreference(50); return _r0.open(); });
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelement(49, "mat-datepicker", null, 7);
@@ -351,7 +351,7 @@ ExpansionStepsExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        const _r2 = ɵɵreference(50);
+        const _r0 = ɵɵreference(50);
         ɵɵadvance(1);
         ɵɵproperty("expanded", ctx.step === 0);
         ɵɵadvance(19);
@@ -359,7 +359,7 @@ ExpansionStepsExample.decorators = [
         ɵɵadvance(17);
         ɵɵproperty("expanded", ctx.step === 2);
         ɵɵadvance(11);
-        ɵɵproperty("matDatepicker", _r2);
+        ɵɵproperty("matDatepicker", _r0);
     } }, directives: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, MatIcon, MatFormField, MatLabel, MatInput, MatExpansionPanelActionRow, MatButton, MatDatepickerInput, MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionStepsExample, [{
         type: Component,

@@ -140,9 +140,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var shoe_r6 = ctx.$implicit;
+        var shoe_r2 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", shoe_r6, " ");
+        i0.ɵɵtextInterpolate1(" ", shoe_r2, " ");
     } }
     /**
      * @title List with selection
@@ -160,11 +160,11 @@
                 i0.ɵɵtext(4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r4 = i0.ɵɵreference(1);
+                var _r0 = i0.ɵɵreference(1);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngForOf", ctx.typesOfShoes);
                 i0.ɵɵadvance(2);
-                i0.ɵɵtextInterpolate1(" Options selected: ", _r4.selectedOptions.selected.length, "\n");
+                i0.ɵɵtextInterpolate1(" Options selected: ", _r0.selectedOptions.selected.length, "\n");
             } }, directives: [i1.MatSelectionList, i2.NgForOf, i1.MatListOption], styles: [""] });
         return ListSelectionExample;
     }());
@@ -182,9 +182,9 @@
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        var shoe_r9 = ctx.$implicit;
+        var shoe_r2 = ctx.$implicit;
         i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", shoe_r9, " ");
+        i0.ɵɵtextInterpolate1(" ", shoe_r2, " ");
     } }
     /**
      * @title List with single selection
@@ -202,12 +202,12 @@
                 i0.ɵɵtext(4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r7 = i0.ɵɵreference(1);
+                var _r0 = i0.ɵɵreference(1);
                 i0.ɵɵproperty("multiple", false);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngForOf", ctx.typesOfShoes);
                 i0.ɵɵadvance(2);
-                i0.ɵɵtextInterpolate1(" Option selected: ", _r7.selectedOptions.selected, "\n");
+                i0.ɵɵtextInterpolate1(" Option selected: ", _r0.selectedOptions.selected, "\n");
             } }, directives: [i1.MatSelectionList, i2.NgForOf, i1.MatListOption], styles: [""] });
         return ListSingleSelectionExample;
     }());

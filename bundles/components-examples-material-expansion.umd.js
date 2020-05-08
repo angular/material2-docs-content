@@ -195,7 +195,7 @@
         };
         ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
         ExpansionStepsExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
-                var _r3 = i0.ɵɵgetCurrentView();
+                var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-accordion", 0);
                 i0.ɵɵelementStart(1, "mat-expansion-panel", 1);
                 i0.ɵɵlistener("opened", function ExpansionStepsExample_Template_mat_expansion_panel_opened_1_listener() { return ctx.setStep(0); });
@@ -277,7 +277,7 @@
                 i0.ɵɵtext(47, "Date");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(48, "input", 6);
-                i0.ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_48_listener() { i0.ɵɵrestoreView(_r3); var _r2 = i0.ɵɵreference(50); return _r2.open(); });
+                i0.ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_48_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(50); return _r0.open(); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelement(49, "mat-datepicker", null, 7);
@@ -294,7 +294,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r2 = i0.ɵɵreference(50);
+                var _r0 = i0.ɵɵreference(50);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("expanded", ctx.step === 0);
                 i0.ɵɵadvance(19);
@@ -302,7 +302,7 @@
                 i0.ɵɵadvance(17);
                 i0.ɵɵproperty("expanded", ctx.step === 2);
                 i0.ɵɵadvance(11);
-                i0.ɵɵproperty("matDatepicker", _r2);
+                i0.ɵɵproperty("matDatepicker", _r0);
             } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i4.MatFormField, i4.MatLabel, i5.MatInput, i1$1.MatExpansionPanelActionRow, i1.MatButton, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
         return ExpansionStepsExample;
     }());
