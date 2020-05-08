@@ -183,7 +183,7 @@ to <code>123mr. smithblue</code>. If your filter string was <code>blue</code> th
 it is contained in the reduced string, and the row would be displayed in the table.</p>
 <p>To override the default filtering behavior, a custom <code>filterPredicate</code> function can be set which
 takes a data object and filter string and returns true if the data object is considered a match.</p>
-<div material-docs-example="table-filtering"></div>
+<!--- example(table-filtering) -->
 
 
         <h4 id="selection" class="docs-header-link">
@@ -235,7 +235,7 @@ the ripple effect to extend beyond the cell.</p>
 <pre><code class="language-css"><span class="hljs-selector-class">.mat-column-select</span> {
   <span class="hljs-attribute">overflow</span>: initial;
 }</code></pre>
-<div material-docs-example="table-selection"></div>
+<!--- example(table-selection) -->
 
 
         <h4 id="footer-row" class="docs-header-link">
@@ -256,7 +256,7 @@ data rows.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let myRowData; columns: columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">"columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
-<div material-docs-example="table-footer-row"></div>
+<!--- example(table-footer-row) -->
 
 
         <h4 id="sticky-rows-and-columns" class="docs-header-link">
@@ -268,16 +268,16 @@ leave the viewport even when scrolled. The table provides inputs that will autom
 correct CSS styling so that the rows and columns become sticky.</p>
 <p>In order to fix the header row to the top of the scrolling viewport containing the table, you can
 add a <code>sticky</code> input to the <code>matHeaderRowDef</code>.</p>
-<div material-docs-example="table-sticky-header"></div>
+<!--- example(table-sticky-header) -->
 
 <p>Similarly, this can also be applied to the table&#39;s footer row. Note that if you are using the native
 <code>&lt;table&gt;</code> and using Safari, then the footer will only stick if <code>sticky</code> is applied to all the
 rendered footer rows.</p>
-<div material-docs-example="table-sticky-footer"></div>
+<!--- example(table-sticky-footer) -->
 
 <p>It is also possible to fix cell columns to the start or end of the horizontally scrolling viewport.
 To do this, add the <code>sticky</code> or <code>stickyEnd</code> directive to the <code>ng-container</code> column definition.</p>
-<div material-docs-example="table-sticky-columns"></div>
+<!--- example(table-sticky-columns) -->
 
 <p>This feature is supported by Chrome, Firefox, Safari, and Edge. It is not supported in IE, but
 it does fail gracefully so that the rows simply do not stick.</p>
