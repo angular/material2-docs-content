@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 export interface PeriodicElement {
   name: string;
@@ -44,7 +44,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'opt-in-column-resize-demo',
   templateUrl: 'opt-in-column-resize-demo.html',
-  styleUrls: ['opt-in-column-resize-demo.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class OptInColumnResizeDemo {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];

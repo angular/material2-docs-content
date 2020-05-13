@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "10.0.0-next.0-sha-781051b8a",
+  "version": "10.0.0-next.0-sha-fe87bda34",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "10.0.0-next.0-sha-781051b8a",
-    "@angular/cdk-experimental": "10.0.0-next.0-sha-781051b8a",
+    "@angular/cdk": "10.0.0-next.0-sha-fe87bda34",
+    "@angular/cdk-experimental": "10.0.0-next.0-sha-fe87bda34",
     "@angular/core": "^10.0.0-0 || ^11.0.0-0",
     "@angular/common": "^10.0.0-0 || ^11.0.0-0",
-    "@angular/material": "10.0.0-next.0-sha-781051b8a",
-    "@angular/material-experimental": "10.0.0-next.0-sha-781051b8a",
-    "@angular/material-moment-adapter": "10.0.0-next.0-sha-781051b8a",
+    "@angular/material": "10.0.0-next.0-sha-fe87bda34",
+    "@angular/material-experimental": "10.0.0-next.0-sha-fe87bda34",
+    "@angular/material-moment-adapter": "10.0.0-next.0-sha-fe87bda34",
     "tslib": "^1.10.0"
   },
   "main": "./bundles/components-examples.umd.js",
