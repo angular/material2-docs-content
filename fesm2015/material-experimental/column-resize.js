@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, Component, ViewEncapsulation, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, Component, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatDefaultEnabledColumnResize, MatDefaultResizable, MatDefaultEnabledColumnResizeModule, MatDefaultEnabledColumnResizeFlex, MatColumnResize, MatResizable, MatColumnResizeModule } from '@angular/material-experimental/column-resize';
 import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableModule } from '@angular/material/table';
 
@@ -28,7 +28,7 @@ function DefaultEnabledColumnResizeDemo_th_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } if (rf & 2) {
-    ɵɵproperty("matResizableMinWidthPx", 100);
+    ɵɵproperty("matResizableMinWidthPx", 150);
 } }
 function DefaultEnabledColumnResizeDemo_td_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 13);
@@ -130,7 +130,7 @@ DefaultEnabledColumnResizeDemo.decorators = [
     { type: Component, args: [{
                 selector: 'default-enabled-column-resize-demo',
                 templateUrl: 'default-enabled-column-resize-demo.html',
-                encapsulation: ViewEncapsulation.None,
+                styleUrls: ['default-enabled-column-resize-demo.css'],
             },] },
 ];
 /** @nocollapse */ DefaultEnabledColumnResizeDemo.ɵfac = function DefaultEnabledColumnResizeDemo_Factory(t) { return new (t || DefaultEnabledColumnResizeDemo)(); };
@@ -161,13 +161,13 @@ DefaultEnabledColumnResizeDemo.decorators = [
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [MatDefaultEnabledColumnResize, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatDefaultResizable, MatHeaderCell, MatCell, MatHeaderRow, MatRow], encapsulation: 2 });
+    } }, directives: [MatDefaultEnabledColumnResize, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatDefaultResizable, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DefaultEnabledColumnResizeDemo, [{
         type: Component,
         args: [{
                 selector: 'default-enabled-column-resize-demo',
                 templateUrl: 'default-enabled-column-resize-demo.html',
-                encapsulation: ViewEncapsulation.None,
+                styleUrls: ['default-enabled-column-resize-demo.css'],
             }]
     }], null, null); })();
 if (false) {
@@ -246,7 +246,7 @@ function DefaultEnabledColumnResizeFlexDemo_mat_header_cell_5_Template(rf, ctx) 
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } if (rf & 2) {
-    ɵɵproperty("matResizableMinWidthPx", 100);
+    ɵɵproperty("matResizableMinWidthPx", 150);
 } }
 function DefaultEnabledColumnResizeFlexDemo_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-cell");
@@ -348,7 +348,7 @@ DefaultEnabledColumnResizeFlexDemo.decorators = [
     { type: Component, args: [{
                 selector: 'default-enabled-column-resize-flex-demo',
                 templateUrl: 'default-enabled-column-resize-flex-demo.html',
-                encapsulation: ViewEncapsulation.None,
+                styleUrls: ['default-enabled-column-resize-flex-demo.css'],
             },] },
 ];
 /** @nocollapse */ DefaultEnabledColumnResizeFlexDemo.ɵfac = function DefaultEnabledColumnResizeFlexDemo_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexDemo)(); };
@@ -379,13 +379,13 @@ DefaultEnabledColumnResizeFlexDemo.decorators = [
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [MatDefaultEnabledColumnResizeFlex, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatDefaultResizable, MatHeaderCell, MatCell, MatHeaderRow, MatRow], encapsulation: 2 });
+    } }, directives: [MatDefaultEnabledColumnResizeFlex, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatDefaultResizable, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DefaultEnabledColumnResizeFlexDemo, [{
         type: Component,
         args: [{
                 selector: 'default-enabled-column-resize-flex-demo',
                 templateUrl: 'default-enabled-column-resize-flex-demo.html',
-                encapsulation: ViewEncapsulation.None,
+                styleUrls: ['default-enabled-column-resize-flex-demo.css'],
             }]
     }], null, null); })();
 if (false) {
@@ -464,7 +464,7 @@ function OptInColumnResizeDemo_th_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } if (rf & 2) {
-    ɵɵproperty("matResizableMinWidthPx", 100);
+    ɵɵproperty("matResizableMinWidthPx", 150);
 } }
 function OptInColumnResizeDemo_td_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 13);
@@ -566,7 +566,7 @@ OptInColumnResizeDemo.decorators = [
     { type: Component, args: [{
                 selector: 'opt-in-column-resize-demo',
                 templateUrl: 'opt-in-column-resize-demo.html',
-                encapsulation: ViewEncapsulation.None,
+                styleUrls: ['opt-in-column-resize-demo.css'],
             },] },
 ];
 /** @nocollapse */ OptInColumnResizeDemo.ɵfac = function OptInColumnResizeDemo_Factory(t) { return new (t || OptInColumnResizeDemo)(); };
@@ -597,13 +597,13 @@ OptInColumnResizeDemo.decorators = [
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [MatTable, MatColumnResize, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatResizable, MatCell, MatHeaderRow, MatRow], encapsulation: 2 });
+    } }, directives: [MatTable, MatColumnResize, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatResizable, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(OptInColumnResizeDemo, [{
         type: Component,
         args: [{
                 selector: 'opt-in-column-resize-demo',
                 templateUrl: 'opt-in-column-resize-demo.html',
-                encapsulation: ViewEncapsulation.None,
+                styleUrls: ['opt-in-column-resize-demo.css'],
             }]
     }], null, null); })();
 if (false) {

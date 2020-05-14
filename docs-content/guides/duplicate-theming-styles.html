@@ -1,0 +1,57 @@
+<div class="docs-markdown"><h1>Avoiding duplicated theming styles</h1><p>As explained in the <a href="guide/theming">theming guide</a>, a theme in Angular Material consists of
+configurations for the <code>color</code>, <code>density</code> and <code>typography</code> systems. As some of these individual
+systems have default configurations, some usage patterns may cause duplication in the CSS output.</p>
+<p>Below are examples of patterns that generate duplicative theme styles:</p>
+<p><strong>Example #1</strong></p>
+<pre><code class="language-scss"><span class="hljs-variable">$light-theme</span>: mat-light-theme((color: ...));
+<span class="hljs-variable">$dark-theme</span>: mat-dark-theme((color: ...));
+
+<span class="hljs-comment">// Generates styles for all systems configured in the theme. In this case, color styles</span>
+<span class="hljs-comment">// and default density styles are generated. Density is in themes by default.</span>
+@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$light-theme</span>);
+
+<span class="hljs-selector-class">.dark-theme</span> {
+  <span class="hljs-comment">// Generates styles for all systems configured in the theme. In this case, color styles</span>
+  <span class="hljs-comment">// and the default density styles are generated. **Note** that this is a problem because it</span>
+  <span class="hljs-comment">// means that density styles are generated *again*, even though only the color should change.</span>
+  @<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$dark-theme</span>);
+}</code></pre>
+<p>To fix this, you can use the dedicated mixin for color styles for the <code>.dark-theme</code>
+selector. Replace the <code>angular-material-theme</code> mixin and include the dark theme using the
+<code>angular-material-color</code> mixin. For example:</p>
+<pre><code class="language-scss">...
+@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$light-theme</span>);
+
+<span class="hljs-selector-class">.dark-theme</span> {
+  <span class="hljs-comment">// This mixin only generates the color styles now.</span>
+  @<span class="hljs-keyword">include</span> angular-material-color(<span class="hljs-variable">$dark-theme</span>);
+}</code></pre>
+<p>Typography can also be configured via Sass mixin; see <code>angular-material-typography</code>.</p>
+<p><strong>Example #2</strong></p>
+<p>Theme styles could also be duplicated if individual theme mixins are used. For example:</p>
+<pre><code class="language-scss">@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$my-theme</span>);
+
+<span class="hljs-selector-class">.my-custom-dark-button</span> {
+  <span class="hljs-comment">// This will also generate the default density styles again.</span>
+  @<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$my-theme</span>);
+}</code></pre>
+<p>To avoid this duplication of styles, use the dedicated mixin for the color system and
+extract the configuration for the color system from the theme.</p>
+<pre><code class="language-scss"><span class="hljs-selector-class">.my-custom-dark-button</span> {
+  <span class="hljs-comment">// This will only generate the color styles for `mat-button`.</span>
+  @<span class="hljs-keyword">include</span> mat-button-color(<span class="hljs-variable">$my-theme</span>);
+}</code></pre>
+
+        <h4 id="disabling-duplication-warnings" class="docs-header-link">
+          <span header-link="disabling-duplication-warnings"></span>
+          Disabling duplication warnings
+        </h4>
+      <p>If your application intentionally duplicates styles, a global Sass variable can be
+set to disable duplication warnings from Angular Material. For example:</p>
+<pre><code class="language-scss"><span class="hljs-variable">$mat-theme-ignore-duplication-warnings</span>: true;
+
+<span class="hljs-comment">// Include themes as usual.</span>
+@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$light-theme</span>);
+
+...</code></pre>
+</div>
