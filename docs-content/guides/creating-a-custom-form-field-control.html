@@ -91,16 +91,16 @@ the <code>MatFormFieldControl</code> interface, see the
           Implementing the methods and properties of MatFormFieldControl
         </h3>
       
-        <h4 id="-code-value-code-" class="docs-header-link">
-          <span header-link="-code-value-code-"></span>
+        <h4 id="value" class="docs-header-link">
+          <span header-link="value"></span>
           <code>value</code>
         </h4>
       <p>This property allows someone to set or get the value of our control. Its type should be the same
 type we used for the type parameter when we implemented <code>MatFormFieldControl</code>. Since our component
 already has a value property, we don&#39;t need to do anything for this one.</p>
 
-        <h4 id="-code-statechanges-code-" class="docs-header-link">
-          <span header-link="-code-statechanges-code-"></span>
+        <h4 id="statechanges" class="docs-header-link">
+          <span header-link="statechanges"></span>
           <code>stateChanges</code>
         </h4>
       <p>Because the <code>&lt;mat-form-field&gt;</code> uses the <code>OnPush</code> change detection strategy, we need to let it know
@@ -120,8 +120,8 @@ ngOnDestroy() {
   <span class="hljs-keyword">this</span>.stateChanges.complete();
 }</code></pre>
 
-        <h4 id="-code-id-code-" class="docs-header-link">
-          <span header-link="-code-id-code-"></span>
+        <h4 id="id" class="docs-header-link">
+          <span header-link="id"></span>
           <code>id</code>
         </h4>
       <p>This property should return the ID of an element in the component&#39;s template that we want the
@@ -131,8 +131,8 @@ element and just generate a unique ID for it.</p>
 
 <span class="hljs-meta">@HostBinding</span>() id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;</code></pre>
 
-        <h4 id="-code-placeholder-code-" class="docs-header-link">
-          <span header-link="-code-placeholder-code-"></span>
+        <h4 id="placeholder" class="docs-header-link">
+          <span header-link="placeholder"></span>
           <code>placeholder</code>
         </h4>
       <p>This property allows us to tell the <code>&lt;mat-form-field&gt;</code> what to use as a placeholder. In this
@@ -150,8 +150,8 @@ placeholder changes.</p>
 }
 <span class="hljs-keyword">private</span> _placeholder: <span class="hljs-built_in">string</span>;</code></pre>
 
-        <h4 id="-code-ngcontrol-code-" class="docs-header-link">
-          <span header-link="-code-ngcontrol-code-"></span>
+        <h4 id="ngcontrol" class="docs-header-link">
+          <span header-link="ngcontrol"></span>
           <code>ngControl</code>
         </h4>
       <p>This property allows the form field control to specify the <code>@angular/forms</code> control that is bound
@@ -201,8 +201,8 @@ declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> 
 }</code></pre>
 <p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.io/api/forms/ControlValueAccessor">API docs</a>.</p>
 
-        <h4 id="-code-focused-code-" class="docs-header-link">
-          <span header-link="-code-focused-code-"></span>
+        <h4 id="focused" class="docs-header-link">
+          <span header-link="focused"></span>
           <code>focused</code>
         </h4>
       <p>This property indicates whether or not the form field control should be considered to be in a
@@ -225,8 +225,8 @@ ngOnDestroy() {
   <span class="hljs-keyword">this</span>.fm.stopMonitoring(<span class="hljs-keyword">this</span>.elRef.nativeElement);
 }</code></pre>
 
-        <h4 id="-code-empty-code-" class="docs-header-link">
-          <span header-link="-code-empty-code-"></span>
+        <h4 id="empty" class="docs-header-link">
+          <span header-link="empty"></span>
           <code>empty</code>
         </h4>
       <p>This property indicates whether the form field control is empty. For our control, we&#39;ll consider it
@@ -236,8 +236,8 @@ empty if all of the parts are empty.</p>
   <span class="hljs-keyword">return</span> !n.area &amp;&amp; !n.exchange &amp;&amp; !n.subscriber;
 }</code></pre>
 
-        <h4 id="-code-shouldlabelfloat-code-" class="docs-header-link">
-          <span header-link="-code-shouldlabelfloat-code-"></span>
+        <h4 id="shouldlabelfloat" class="docs-header-link">
+          <span header-link="shouldlabelfloat"></span>
           <code>shouldLabelFloat</code>
         </h4>
       <p>This property is used to indicate whether the label should be in the floating position. We&#39;ll
@@ -256,8 +256,8 @@ the <code>–</code> characters when it&#39;s not floating.</p>
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
 }</code></pre>
 
-        <h4 id="-code-required-code-" class="docs-header-link">
-          <span header-link="-code-required-code-"></span>
+        <h4 id="required" class="docs-header-link">
+          <span header-link="required"></span>
           <code>required</code>
         </h4>
       <p>This property is used to indicate whether the input is required. <code>&lt;mat-form-field&gt;</code> uses this
@@ -273,8 +273,8 @@ change detection if the required state changes.</p>
 }
 <span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;</code></pre>
 
-        <h4 id="-code-disabled-code-" class="docs-header-link">
-          <span header-link="-code-disabled-code-"></span>
+        <h4 id="disabled" class="docs-header-link">
+          <span header-link="disabled"></span>
           <code>disabled</code>
         </h4>
       <p>This property tells the form field when it should be in the disabled state. In addition to reporting
@@ -289,16 +289,16 @@ make up our component.</p>
 }
 <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;</code></pre>
 
-        <h4 id="-code-errorstate-code-" class="docs-header-link">
-          <span header-link="-code-errorstate-code-"></span>
+        <h4 id="errorstate" class="docs-header-link">
+          <span header-link="errorstate"></span>
           <code>errorState</code>
         </h4>
       <p>This property indicates whether the associated <code>NgControl</code> is in an error state. Since we&#39;re not
 using an <code>NgControl</code> in this example, we don&#39;t need to do anything other than just set it to <code>false</code>.</p>
 <pre><code class="language-ts">errorState = <span class="hljs-literal">false</span>;</code></pre>
 
-        <h4 id="-code-controltype-code-" class="docs-header-link">
-          <span header-link="-code-controltype-code-"></span>
+        <h4 id="controltype" class="docs-header-link">
+          <span header-link="controltype"></span>
           <code>controlType</code>
         </h4>
       <p>This property allows us to specify a unique string for the type of control in form field. The
@@ -308,8 +308,8 @@ we&#39;ll use <code>example-tel-input</code> as our control type which will resu
 class <code>mat-form-field-example-tel-input</code>.</p>
 <pre><code class="language-ts">controlType = <span class="hljs-string">'example-tel-input'</span>;</code></pre>
 
-        <h4 id="-code-setdescribedbyids-ids-string-code-" class="docs-header-link">
-          <span header-link="-code-setdescribedbyids-ids-string-code-"></span>
+        <h4 id="setdescribedbyidsids-string" class="docs-header-link">
+          <span header-link="setdescribedbyidsids-string"></span>
           <code>setDescribedByIds(ids: string[])</code>
         </h4>
       <p>This method is used by the <code>&lt;mat-form-field&gt;</code> to specify the IDs that should be used for the
@@ -321,8 +321,8 @@ setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
   <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
 }</code></pre>
 
-        <h4 id="-code-oncontainerclick-event-mouseevent-code-" class="docs-header-link">
-          <span header-link="-code-oncontainerclick-event-mouseevent-code-"></span>
+        <h4 id="oncontainerclickevent-mouseevent" class="docs-header-link">
+          <span header-link="oncontainerclickevent-mouseevent"></span>
           <code>onContainerClick(event: MouseEvent)</code>
         </h4>
       <p>This method will be called when the form field is clicked on. It allows your component to hook in
