@@ -4,8 +4,8 @@ enable use of HammerJS events in templates.</p>
 <p>Additionally the <code>GestureConfig</code> export from <code>@angular/material/core</code> has been marked as
 deprecated and will be removed in version 10.</p>
 
-        <h3 id="why-is-a-migration-needed-" class="docs-header-link">
-          <span header-link="why-is-a-migration-needed-"></span>
+        <h3 id="why-is-a-migration-needed" class="docs-header-link">
+          <span header-link="why-is-a-migration-needed"></span>
           Why is a migration needed?
         </h3>
       <p>Since HammerJS previously was a requirement for a few Angular Material components, projects might
@@ -17,8 +17,8 @@ modules to set up the HammerJS event plugin. Since this is no longer the case in
 such projects need to manually configure the HammerJS event plugin in order to continue using
 these HammerJS events.</p>
 
-        <h3 id="what-does-the-migration-do-" class="docs-header-link">
-          <span header-link="what-does-the-migration-do-"></span>
+        <h3 id="what-does-the-migration-do" class="docs-header-link">
+          <span header-link="what-does-the-migration-do"></span>
           What does the migration do?
         </h3>
       <p>The migration automatically removes HammerJS from your project if HammerJS is not used.</p>
@@ -33,10 +33,10 @@ by default in Angular versions 8 and below.</p>
 <p>If your application provides a custom <a href="https://v9.angular.io/api/platform-browser/HammerGestureConfig"><code>HAMMER_GESTURE_CONFIG</code></a> and also references the
 deprecated Angular Material <code>GestureConfig</code>, the migration will print a warning about
 ambiguous usage. The migration cannot migrate your project automatically and manual changes
-are required. Read more <a href="#The-migration-reported-ambiguous-usage-What-should-I-do">in the dedicated section</a>.</p>
+are required. Read more <a href="#the-migration-reported-ambiguous-usage-what-should-i-do">in the dedicated section</a>.</p>
 
-        <h3 id="how-does-the-schematic-remove-hammerjs-" class="docs-header-link">
-          <span header-link="how-does-the-schematic-remove-hammerjs-"></span>
+        <h3 id="how-does-the-schematic-remove-hammerjs" class="docs-header-link">
+          <span header-link="how-does-the-schematic-remove-hammerjs"></span>
           How does the schematic remove HammerJS?
         </h3>
       <p>HammerJS can be set up in many ways. The migration handles the most common cases, covering
@@ -53,14 +53,14 @@ approaches recommended by Angular Material in the past. The migration performs t
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">'hammerjs'</span>;</code></pre>
 <p>The migration cannot automatically remove HammerJS from tests. Please manually clean up
 the test setup and resolve any test issues. Read more in a
-<a href="#How-to-migrate-my-tests">dedicated section for test migration</a>.</p>
+<a href="#how-to-migrate-my-tests">dedicated section for test migration</a>.</p>
 
-        <h3 id="how-do-i-migrate-references-to-the-deprecated-code-gestureconfig-code-" class="docs-header-link">
-          <span header-link="how-do-i-migrate-references-to-the-deprecated-code-gestureconfig-code-"></span>
+        <h3 id="how-do-i-migrate-references-to-the-deprecated-gestureconfig" class="docs-header-link">
+          <span header-link="how-do-i-migrate-references-to-the-deprecated-gestureconfig"></span>
           How do I migrate references to the deprecated <code>GestureConfig</code>?
         </h3>
       <p>The <code>GestureConfig</code> can be consumed in multiple ways. The migration covers the most common cases.
-The most common case is that an <code>NgModule</code> in your application directly provides <code>GestureConfig</code>: </p>
+The most common case is that an <code>NgModule</code> in your application directly provides <code>GestureConfig</code>:</p>
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> {GestureConfig} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
@@ -81,8 +81,8 @@ in combination with a different custom gesture config. These patterns cannot be 
 automatically, but the migration will report such patterns and ask you to perform manual cleanup.</p>
 <p><a name="test-migration"></a></p>
 
-        <h3 id="how-to-migrate-my-tests-" class="docs-header-link">
-          <span header-link="how-to-migrate-my-tests-"></span>
+        <h3 id="how-to-migrate-my-tests" class="docs-header-link">
+          <span header-link="how-to-migrate-my-tests"></span>
           How to migrate my tests?
         </h3>
       <p>Components in your project might use Angular Material components which previously depended
@@ -100,8 +100,8 @@ in <code>src/test.ts</code>) where <code>hammerjs</code> may be imported.</p>
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">'hammerjs'</span>;</code></pre>
 <p><a name="what-to-do-ambiguous-usage"></a></p>
 
-        <h3 id="the-migration-reported-ambiguous-usage-what-should-i-do-" class="docs-header-link">
-          <span header-link="the-migration-reported-ambiguous-usage-what-should-i-do-"></span>
+        <h3 id="the-migration-reported-ambiguous-usage-what-should-i-do" class="docs-header-link">
+          <span header-link="the-migration-reported-ambiguous-usage-what-should-i-do"></span>
           The migration reported ambiguous usage. What should I do?
         </h3>
       <p><strong>Case 1</strong>: It detected that a HammerJS event provided by the deprecated <code>GestureConfig</code> is

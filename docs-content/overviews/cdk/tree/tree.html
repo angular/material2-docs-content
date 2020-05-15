@@ -72,8 +72,8 @@ where the children of the node will be rendered.</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span>
 </code></pre>
 
-        <h4 id="adding-expand-collapse" class="docs-header-link">
-          <span header-link="adding-expand-collapse"></span>
+        <h4 id="adding-expandcollapse" class="docs-header-link">
+          <span header-link="adding-expandcollapse"></span>
           Adding expand/collapse
         </h4>
       <p>A <code>cdkTreeNodeToggle</code> can be added in the tree node template to expand/collapse the tree node.
@@ -92,8 +92,8 @@ For best accessibility, <code>cdkTreeNodeToggle</code> should be on a button ele
   {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
 
-        <h4 id="padding-flat-tree-only-" class="docs-header-link">
-          <span header-link="padding-flat-tree-only-"></span>
+        <h4 id="padding-flat-tree-only" class="docs-header-link">
+          <span header-link="padding-flat-tree-only"></span>
           Padding (Flat tree only)
         </h4>
       <p>The cdkTreeNodePadding can be placed in a flat tree&#39;s node template to display the level
@@ -134,16 +134,16 @@ of data. Whenever the data source emits data to this stream, the tree will rende
 updates. This can be based on anything: tree node expansion change, websocket connections, user
 interaction, model updates, time-based intervals, etc.</p>
 
-        <h4 id="flat-tree" class="docs-header-link">
-          <span header-link="flat-tree"></span>
+        <h4 id="flat-tree-1" class="docs-header-link">
+          <span header-link="flat-tree-1"></span>
           Flat tree
         </h4>
       <p>The flat tree data source is responsible for the node expansion/collapsing events, since when
 the expansion status changes, the data nodes feed to the tree are changed. A new list of visible
 nodes should be sent to tree component based on current expansion status.</p>
 
-        <h4 id="nested-tree" class="docs-header-link">
-          <span header-link="nested-tree"></span>
+        <h4 id="nested-tree-1" class="docs-header-link">
+          <span header-link="nested-tree-1"></span>
           Nested tree
         </h4>
       <p>The data source for nested tree has an option to leave the node expansion/collapsing event for each

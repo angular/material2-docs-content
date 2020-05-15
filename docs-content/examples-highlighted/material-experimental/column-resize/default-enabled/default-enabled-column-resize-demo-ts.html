@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */</span>
 
-<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
@@ -44,7 +44,7 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'default-enabled-column-resize-demo'</span>,
   templateUrl: <span class="hljs-string">'default-enabled-column-resize-demo.html'</span>,
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: [<span class="hljs-string">'default-enabled-column-resize-demo.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DefaultEnabledColumnResizeDemo {
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];

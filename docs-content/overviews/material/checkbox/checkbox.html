@@ -15,8 +15,8 @@ positioned before or after the checkbox by setting the <code>labelPosition</code
 <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a> to 
 specify an appropriate label.</p>
 
-        <h3 id="use-with-code-angular-forms-code-" class="docs-header-link">
-          <span header-link="use-with-code-angular-forms-code-"></span>
+        <h3 id="use-with-angularforms" class="docs-header-link">
+          <span header-link="use-with-angularforms"></span>
           Use with <code>@angular/forms</code>
         </h3>
       <p><code>&lt;mat-checkbox&gt;</code> is compatible with <code>@angular/forms</code> and supports both <code>FormsModule</code> 
@@ -43,23 +43,23 @@ of <code>MAT_CHECKBOX_CLICK_ACTION</code> to the checkbox.</p>
   {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: &#39;check&#39;}
 ]</code></pre><p>The possible values are:</p>
 
-        <h4 id="-code-noop-code-" class="docs-header-link">
-          <span header-link="-code-noop-code-"></span>
+        <h4 id="noop" class="docs-header-link">
+          <span header-link="noop"></span>
           <code>noop</code>
         </h4>
       <p>Do not change the <code>checked</code> value or <code>indeterminate</code> value. Developers have the power to
 implement customized click actions.</p>
 
-        <h4 id="-code-check-code-" class="docs-header-link">
-          <span header-link="-code-check-code-"></span>
+        <h4 id="check" class="docs-header-link">
+          <span header-link="check"></span>
           <code>check</code>
         </h4>
       <p>Toggle <code>checked</code> value of the checkbox, ignore <code>indeterminate</code> value. If the
 checkbox is in <code>indeterminate</code> state, the checkbox will display as an <code>indeterminate</code> checkbox
 regardless the <code>checked</code> value.</p>
 
-        <h4 id="-code-check-indeterminate-code-" class="docs-header-link">
-          <span header-link="-code-check-indeterminate-code-"></span>
+        <h4 id="check-indeterminate" class="docs-header-link">
+          <span header-link="check-indeterminate"></span>
           <code>check-indeterminate</code>
         </h4>
       <p>Default behavior of <code>mat-checkbox</code>. Always set <code>indeterminate</code> to <code>false</code>
