@@ -137,7 +137,7 @@
                     .format(this._calendar.activeDate, this._dateFormats.display.monthYearLabel)
                     .toLocaleUpperCase();
             },
-            enumerable: true,
+            enumerable: false,
             configurable: true
         });
         ExampleHeader.prototype.previousClicked = function (mode) {

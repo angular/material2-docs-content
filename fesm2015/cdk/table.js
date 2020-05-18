@@ -100,48 +100,54 @@ const ELEMENT_DATA = [
 /**
  * \@title Basic use of `<cdk-table>` (uses display flex)
  */
-class CdkTableBasicFlexExample {
-    constructor() {
-        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new ExampleDataSource();
+let CdkTableBasicFlexExample = /** @class */ (() => {
+    /**
+     * \@title Basic use of `<cdk-table>` (uses display flex)
+     */
+    class CdkTableBasicFlexExample {
+        constructor() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new ExampleDataSource();
+        }
     }
-}
-CdkTableBasicFlexExample.decorators = [
-    { type: Component, args: [{
-                selector: 'cdk-table-basic-flex-example',
-                styleUrls: ['cdk-table-basic-flex-example.css'],
-                templateUrl: 'cdk-table-basic-flex-example.html',
-            },] },
-];
-/** @nocollapse */ CdkTableBasicFlexExample.ɵfac = function CdkTableBasicFlexExample_Factory(t) { return new (t || CdkTableBasicFlexExample)(); };
-/** @nocollapse */ CdkTableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicFlexExample, selectors: [["cdk-table-basic-flex-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "cdk-table", 0);
-        ɵɵelementContainerStart(1, 1);
-        ɵɵtemplate(2, CdkTableBasicFlexExample_cdk_header_cell_2_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(3, CdkTableBasicFlexExample_cdk_cell_3_Template, 2, 1, "cdk-cell", 3);
-        ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(4, 4);
-        ɵɵtemplate(5, CdkTableBasicFlexExample_cdk_header_cell_5_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(6, CdkTableBasicFlexExample_cdk_cell_6_Template, 2, 1, "cdk-cell", 3);
-        ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(7, 5);
-        ɵɵtemplate(8, CdkTableBasicFlexExample_cdk_header_cell_8_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(9, CdkTableBasicFlexExample_cdk_cell_9_Template, 2, 1, "cdk-cell", 3);
-        ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(10, 6);
-        ɵɵtemplate(11, CdkTableBasicFlexExample_cdk_header_cell_11_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(12, CdkTableBasicFlexExample_cdk_cell_12_Template, 2, 1, "cdk-cell", 3);
-        ɵɵelementContainerEnd();
-        ɵɵtemplate(13, CdkTableBasicFlexExample_cdk_header_row_13_Template, 1, 0, "cdk-header-row", 7);
-        ɵɵtemplate(14, CdkTableBasicFlexExample_cdk_row_14_Template, 1, 0, "cdk-row", 8);
-        ɵɵelementEnd();
-    } if (rf & 2) {
-        ɵɵproperty("dataSource", ctx.dataSource);
-        ɵɵadvance(13);
-        ɵɵproperty("cdkHeaderRowDef", ctx.displayedColumns);
-        ɵɵadvance(1);
-        ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
-    } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
+    CdkTableBasicFlexExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'cdk-table-basic-flex-example',
+                    styleUrls: ['cdk-table-basic-flex-example.css'],
+                    templateUrl: 'cdk-table-basic-flex-example.html',
+                },] },
+    ];
+    /** @nocollapse */ CdkTableBasicFlexExample.ɵfac = function CdkTableBasicFlexExample_Factory(t) { return new (t || CdkTableBasicFlexExample)(); };
+    /** @nocollapse */ CdkTableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicFlexExample, selectors: [["cdk-table-basic-flex-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "cdk-table", 0);
+            ɵɵelementContainerStart(1, 1);
+            ɵɵtemplate(2, CdkTableBasicFlexExample_cdk_header_cell_2_Template, 2, 0, "cdk-header-cell", 2);
+            ɵɵtemplate(3, CdkTableBasicFlexExample_cdk_cell_3_Template, 2, 1, "cdk-cell", 3);
+            ɵɵelementContainerEnd();
+            ɵɵelementContainerStart(4, 4);
+            ɵɵtemplate(5, CdkTableBasicFlexExample_cdk_header_cell_5_Template, 2, 0, "cdk-header-cell", 2);
+            ɵɵtemplate(6, CdkTableBasicFlexExample_cdk_cell_6_Template, 2, 1, "cdk-cell", 3);
+            ɵɵelementContainerEnd();
+            ɵɵelementContainerStart(7, 5);
+            ɵɵtemplate(8, CdkTableBasicFlexExample_cdk_header_cell_8_Template, 2, 0, "cdk-header-cell", 2);
+            ɵɵtemplate(9, CdkTableBasicFlexExample_cdk_cell_9_Template, 2, 1, "cdk-cell", 3);
+            ɵɵelementContainerEnd();
+            ɵɵelementContainerStart(10, 6);
+            ɵɵtemplate(11, CdkTableBasicFlexExample_cdk_header_cell_11_Template, 2, 0, "cdk-header-cell", 2);
+            ɵɵtemplate(12, CdkTableBasicFlexExample_cdk_cell_12_Template, 2, 1, "cdk-cell", 3);
+            ɵɵelementContainerEnd();
+            ɵɵtemplate(13, CdkTableBasicFlexExample_cdk_header_row_13_Template, 1, 0, "cdk-header-row", 7);
+            ɵɵtemplate(14, CdkTableBasicFlexExample_cdk_row_14_Template, 1, 0, "cdk-row", 8);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource);
+            ɵɵadvance(13);
+            ɵɵproperty("cdkHeaderRowDef", ctx.displayedColumns);
+            ɵɵadvance(1);
+            ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
+        } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
+    return CdkTableBasicFlexExample;
+})();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicFlexExample, [{
         type: Component,
         args: [{
@@ -288,48 +294,54 @@ const ELEMENT_DATA$1 = [
 /**
  * \@title Basic CDK data-table
  */
-class CdkTableBasicExample {
-    constructor() {
-        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new ExampleDataSource$1();
+let CdkTableBasicExample = /** @class */ (() => {
+    /**
+     * \@title Basic CDK data-table
+     */
+    class CdkTableBasicExample {
+        constructor() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new ExampleDataSource$1();
+        }
     }
-}
-CdkTableBasicExample.decorators = [
-    { type: Component, args: [{
-                selector: 'cdk-table-basic-example',
-                styleUrls: ['cdk-table-basic-example.css'],
-                templateUrl: 'cdk-table-basic-example.html',
-            },] },
-];
-/** @nocollapse */ CdkTableBasicExample.ɵfac = function CdkTableBasicExample_Factory(t) { return new (t || CdkTableBasicExample)(); };
-/** @nocollapse */ CdkTableBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "table", 0);
-        ɵɵelementContainerStart(1, 1);
-        ɵɵtemplate(2, CdkTableBasicExample_th_2_Template, 2, 0, "th", 2);
-        ɵɵtemplate(3, CdkTableBasicExample_td_3_Template, 2, 1, "td", 3);
-        ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(4, 4);
-        ɵɵtemplate(5, CdkTableBasicExample_th_5_Template, 2, 0, "th", 2);
-        ɵɵtemplate(6, CdkTableBasicExample_td_6_Template, 2, 1, "td", 3);
-        ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(7, 5);
-        ɵɵtemplate(8, CdkTableBasicExample_th_8_Template, 2, 0, "th", 2);
-        ɵɵtemplate(9, CdkTableBasicExample_td_9_Template, 2, 1, "td", 3);
-        ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(10, 6);
-        ɵɵtemplate(11, CdkTableBasicExample_th_11_Template, 2, 0, "th", 2);
-        ɵɵtemplate(12, CdkTableBasicExample_td_12_Template, 2, 1, "td", 3);
-        ɵɵelementContainerEnd();
-        ɵɵtemplate(13, CdkTableBasicExample_tr_13_Template, 1, 0, "tr", 7);
-        ɵɵtemplate(14, CdkTableBasicExample_tr_14_Template, 1, 0, "tr", 8);
-        ɵɵelementEnd();
-    } if (rf & 2) {
-        ɵɵproperty("dataSource", ctx.dataSource);
-        ɵɵadvance(13);
-        ɵɵproperty("cdkHeaderRowDef", ctx.displayedColumns);
-        ɵɵadvance(1);
-        ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
-    } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
+    CdkTableBasicExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'cdk-table-basic-example',
+                    styleUrls: ['cdk-table-basic-example.css'],
+                    templateUrl: 'cdk-table-basic-example.html',
+                },] },
+    ];
+    /** @nocollapse */ CdkTableBasicExample.ɵfac = function CdkTableBasicExample_Factory(t) { return new (t || CdkTableBasicExample)(); };
+    /** @nocollapse */ CdkTableBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "table", 0);
+            ɵɵelementContainerStart(1, 1);
+            ɵɵtemplate(2, CdkTableBasicExample_th_2_Template, 2, 0, "th", 2);
+            ɵɵtemplate(3, CdkTableBasicExample_td_3_Template, 2, 1, "td", 3);
+            ɵɵelementContainerEnd();
+            ɵɵelementContainerStart(4, 4);
+            ɵɵtemplate(5, CdkTableBasicExample_th_5_Template, 2, 0, "th", 2);
+            ɵɵtemplate(6, CdkTableBasicExample_td_6_Template, 2, 1, "td", 3);
+            ɵɵelementContainerEnd();
+            ɵɵelementContainerStart(7, 5);
+            ɵɵtemplate(8, CdkTableBasicExample_th_8_Template, 2, 0, "th", 2);
+            ɵɵtemplate(9, CdkTableBasicExample_td_9_Template, 2, 1, "td", 3);
+            ɵɵelementContainerEnd();
+            ɵɵelementContainerStart(10, 6);
+            ɵɵtemplate(11, CdkTableBasicExample_th_11_Template, 2, 0, "th", 2);
+            ɵɵtemplate(12, CdkTableBasicExample_td_12_Template, 2, 1, "td", 3);
+            ɵɵelementContainerEnd();
+            ɵɵtemplate(13, CdkTableBasicExample_tr_13_Template, 1, 0, "tr", 7);
+            ɵɵtemplate(14, CdkTableBasicExample_tr_14_Template, 1, 0, "tr", 8);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource);
+            ɵɵadvance(13);
+            ɵɵproperty("cdkHeaderRowDef", ctx.displayedColumns);
+            ɵɵadvance(1);
+            ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
+        } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
+    return CdkTableBasicExample;
+})();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicExample, [{
         type: Component,
         args: [{
@@ -389,22 +401,25 @@ const EXAMPLES = [
     CdkTableBasicExample,
     CdkTableBasicFlexExample,
 ];
-class CdkTableExamplesModule {
-}
-CdkTableExamplesModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [
-                    CdkTableModule,
-                ],
-                declarations: EXAMPLES,
-                exports: EXAMPLES,
-                entryComponents: EXAMPLES,
-            },] },
-];
-/** @nocollapse */ CdkTableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTableExamplesModule });
-/** @nocollapse */ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
-            CdkTableModule,
-        ]] });
+let CdkTableExamplesModule = /** @class */ (() => {
+    class CdkTableExamplesModule {
+    }
+    CdkTableExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        CdkTableModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
+                },] },
+    ];
+    /** @nocollapse */ CdkTableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTableExamplesModule });
+    /** @nocollapse */ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
+                CdkTableModule,
+            ]] });
+    return CdkTableExamplesModule;
+})();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
         CdkTableBasicFlexExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
         CdkTableBasicFlexExample] }); })();

@@ -11,38 +11,45 @@ import * as i3 from "@angular/material/icon";
 /**
  * \@title Badge overview
  */
-export class BadgeOverviewExample {
-}
-BadgeOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'badge-overview-example',
-                templateUrl: 'badge-overview-example.html',
-                styleUrls: ['badge-overview-example.css'],
-            },] },
-];
-/** @nocollapse */ BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
-/** @nocollapse */ BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "p");
-        i0.ɵɵelementStart(1, "span", 0);
-        i0.ɵɵtext(2, "Text with a badge");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "p");
-        i0.ɵɵtext(4, " Button with a badge on the left ");
-        i0.ɵɵelementStart(5, "button", 1);
-        i0.ɵɵtext(6, " Action ");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "p");
-        i0.ɵɵtext(8, " Icon with a badge ");
-        i0.ɵɵelementStart(9, "mat-icon", 2);
-        i0.ɵɵtext(10, "home");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "span", 3);
-        i0.ɵɵtext(12, " Example with a home icon with overlaid badge showing the number 15 ");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], styles: [""] });
+let BadgeOverviewExample = /** @class */ (() => {
+    /**
+     * \@title Badge overview
+     */
+    class BadgeOverviewExample {
+    }
+    BadgeOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'badge-overview-example',
+                    templateUrl: 'badge-overview-example.html',
+                    styleUrls: ['badge-overview-example.css'],
+                },] },
+    ];
+    /** @nocollapse */ BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
+    /** @nocollapse */ BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "p");
+            i0.ɵɵelementStart(1, "span", 0);
+            i0.ɵɵtext(2, "Text with a badge");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "p");
+            i0.ɵɵtext(4, " Button with a badge on the left ");
+            i0.ɵɵelementStart(5, "button", 1);
+            i0.ɵɵtext(6, " Action ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(7, "p");
+            i0.ɵɵtext(8, " Icon with a badge ");
+            i0.ɵɵelementStart(9, "mat-icon", 2);
+            i0.ɵɵtext(10, "home");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(11, "span", 3);
+            i0.ɵɵtext(12, " Example with a home icon with overlaid badge showing the number 15 ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        } }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], styles: [""] });
+    return BadgeOverviewExample;
+})();
+export { BadgeOverviewExample };
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BadgeOverviewExample, [{
         type: Component,
         args: [{
@@ -51,4 +58,4 @@ BadgeOverviewExample.decorators = [
                 styleUrls: ['badge-overview-example.css'],
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFkZ2Utb3ZlcnZpZXctZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL2JhZGdlL2JhZGdlLW92ZXJ2aWV3L2JhZGdlLW92ZXJ2aWV3LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9tYXRlcmlhbC9iYWRnZS9iYWRnZS1vdmVydmlldy9iYWRnZS1vdmVydmlldy1leGFtcGxlLmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7OztBQVV4QyxNQUFNLE9BQU8sb0JBQW9COzs7WUFMaEMsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSx3QkFBd0I7Z0JBQ2xDLFdBQVcsRUFBRSw2QkFBNkI7Z0JBQzFDLFNBQVMsRUFBRSxDQUFDLDRCQUE0QixDQUFDO2FBQzFDOzsyR0FDWSxvQkFBb0I7NEVBQXBCLG9CQUFvQjtRQ1ZqQyx5QkFDRTtRQUFBLCtCQUEyQztRQUFBLGlDQUFpQjtRQUFBLGlCQUFPO1FBQ3JFLGlCQUFJO1FBRUoseUJBQ0U7UUFBQSxpREFDQTtRQUFBLGlDQUVFO1FBQUEsd0JBQ0Y7UUFBQSxpQkFBUztRQUNYLGlCQUFJO1FBRUoseUJBQ0U7UUFBQSxtQ0FDQTtRQUFBLG1DQUE2QztRQUFBLHFCQUFJO1FBQUEsaUJBQVc7UUFFMUQsZ0NBQ0U7UUFBQSxxRkFDRjtRQUFBLGlCQUFPO1FBQ1gsaUJBQUk7O2tERFRTLG9CQUFvQjtjQUxoQyxTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLHdCQUF3QjtnQkFDbEMsV0FBVyxFQUFFLDZCQUE2QjtnQkFDMUMsU0FBUyxFQUFFLENBQUMsNEJBQTRCLENBQUM7YUFDMUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbi8qKlxuICogQHRpdGxlIEJhZGdlIG92ZXJ2aWV3XG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2JhZGdlLW92ZXJ2aWV3LWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ2JhZGdlLW92ZXJ2aWV3LWV4YW1wbGUuaHRtbCcsXG4gIHN0eWxlVXJsczogWydiYWRnZS1vdmVydmlldy1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBCYWRnZU92ZXJ2aWV3RXhhbXBsZSB7fVxuIiwiPHA+XG4gIDxzcGFuIG1hdEJhZGdlPVwiNFwiIG1hdEJhZGdlT3ZlcmxhcD1cImZhbHNlXCI+VGV4dCB3aXRoIGEgYmFkZ2U8L3NwYW4+XG48L3A+XG5cbjxwPlxuICBCdXR0b24gd2l0aCBhIGJhZGdlIG9uIHRoZSBsZWZ0XG4gIDxidXR0b24gbWF0LXJhaXNlZC1idXR0b24gY29sb3I9XCJwcmltYXJ5XCJcbiAgICAgIG1hdEJhZGdlPVwiOFwiIG1hdEJhZGdlUG9zaXRpb249XCJiZWZvcmVcIiBtYXRCYWRnZUNvbG9yPVwiYWNjZW50XCI+XG4gICAgQWN0aW9uXG4gIDwvYnV0dG9uPlxuPC9wPlxuXG48cD5cbiAgSWNvbiB3aXRoIGEgYmFkZ2VcbiAgPG1hdC1pY29uIG1hdEJhZGdlPVwiMTVcIiBtYXRCYWRnZUNvbG9yPVwid2FyblwiPmhvbWU8L21hdC1pY29uPlxuICAgIDwhLS0gSW5jbHVkZSB0ZXh0IGRlc2NyaXB0aW9uIG9mIHRoZSBpY29uJ3MgbWVhbmluZyBmb3Igc2NyZWVuLXJlYWRlcnMgLS0+XG4gICAgPHNwYW4gY2xhc3M9XCJjZGstdmlzdWFsbHktaGlkZGVuXCI+XG4gICAgICBFeGFtcGxlIHdpdGggYSBob21lIGljb24gd2l0aCBvdmVybGFpZCBiYWRnZSBzaG93aW5nIHRoZSBudW1iZXIgMTVcbiAgICA8L3NwYW4+XG48L3A+XG5cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFkZ2Utb3ZlcnZpZXctZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL2JhZGdlL2JhZGdlLW92ZXJ2aWV3L2JhZGdlLW92ZXJ2aWV3LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9tYXRlcmlhbC9iYWRnZS9iYWRnZS1vdmVydmlldy9iYWRnZS1vdmVydmlldy1leGFtcGxlLmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7OztBQUt4Qzs7OztJQUFBLE1BS2Esb0JBQW9COzs7Z0JBTGhDLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsd0JBQXdCO29CQUNsQyxXQUFXLEVBQUUsNkJBQTZCO29CQUMxQyxTQUFTLEVBQUUsQ0FBQyw0QkFBNEIsQ0FBQztpQkFDMUM7OytHQUNZLG9CQUFvQjtnRkFBcEIsb0JBQW9CO1lDVmpDLHlCQUNFO1lBQUEsK0JBQTJDO1lBQUEsaUNBQWlCO1lBQUEsaUJBQU87WUFDckUsaUJBQUk7WUFFSix5QkFDRTtZQUFBLGlEQUNBO1lBQUEsaUNBRUU7WUFBQSx3QkFDRjtZQUFBLGlCQUFTO1lBQ1gsaUJBQUk7WUFFSix5QkFDRTtZQUFBLG1DQUNBO1lBQUEsbUNBQTZDO1lBQUEscUJBQUk7WUFBQSxpQkFBVztZQUUxRCxnQ0FDRTtZQUFBLHFGQUNGO1lBQUEsaUJBQU87WUFDWCxpQkFBSTs7K0JEbkJKO0tBVW9DO1NBQXZCLG9CQUFvQjtrREFBcEIsb0JBQW9CO2NBTGhDLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsd0JBQXdCO2dCQUNsQyxXQUFXLEVBQUUsNkJBQTZCO2dCQUMxQyxTQUFTLEVBQUUsQ0FBQyw0QkFBNEIsQ0FBQzthQUMxQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgQmFkZ2Ugb3ZlcnZpZXdcbiAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnYmFkZ2Utb3ZlcnZpZXctZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnYmFkZ2Utb3ZlcnZpZXctZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ2JhZGdlLW92ZXJ2aWV3LWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIEJhZGdlT3ZlcnZpZXdFeGFtcGxlIHt9XG4iLCI8cD5cbiAgPHNwYW4gbWF0QmFkZ2U9XCI0XCIgbWF0QmFkZ2VPdmVybGFwPVwiZmFsc2VcIj5UZXh0IHdpdGggYSBiYWRnZTwvc3Bhbj5cbjwvcD5cblxuPHA+XG4gIEJ1dHRvbiB3aXRoIGEgYmFkZ2Ugb24gdGhlIGxlZnRcbiAgPGJ1dHRvbiBtYXQtcmFpc2VkLWJ1dHRvbiBjb2xvcj1cInByaW1hcnlcIlxuICAgICAgbWF0QmFkZ2U9XCI4XCIgbWF0QmFkZ2VQb3NpdGlvbj1cImJlZm9yZVwiIG1hdEJhZGdlQ29sb3I9XCJhY2NlbnRcIj5cbiAgICBBY3Rpb25cbiAgPC9idXR0b24+XG48L3A+XG5cbjxwPlxuICBJY29uIHdpdGggYSBiYWRnZVxuICA8bWF0LWljb24gbWF0QmFkZ2U9XCIxNVwiIG1hdEJhZGdlQ29sb3I9XCJ3YXJuXCI+aG9tZTwvbWF0LWljb24+XG4gICAgPCEtLSBJbmNsdWRlIHRleHQgZGVzY3JpcHRpb24gb2YgdGhlIGljb24ncyBtZWFuaW5nIGZvciBzY3JlZW4tcmVhZGVycyAtLT5cbiAgICA8c3BhbiBjbGFzcz1cImNkay12aXN1YWxseS1oaWRkZW5cIj5cbiAgICAgIEV4YW1wbGUgd2l0aCBhIGhvbWUgaWNvbiB3aXRoIG92ZXJsYWlkIGJhZGdlIHNob3dpbmcgdGhlIG51bWJlciAxNVxuICAgIDwvc3Bhbj5cbjwvcD5cblxuIl19

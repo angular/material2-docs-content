@@ -10,7 +10,7 @@
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var tile_r1 = ctx.$implicit;
-        i0.ɵɵstyleProp("background", tile_r1.color, i0.ɵɵdefaultStyleSanitizer);
+        i0.ɵɵstyleProp("background", tile_r1.color);
         i0.ɵɵproperty("colspan", tile_r1.cols)("rowspan", tile_r1.rows);
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", tile_r1.text, " ");

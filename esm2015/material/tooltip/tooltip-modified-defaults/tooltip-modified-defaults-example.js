@@ -20,26 +20,33 @@ export const myCustomTooltipDefaults = {
 /**
  * \@title Tooltip with a show and hide delay
  */
-export class TooltipModifiedDefaultsExample {
-}
-TooltipModifiedDefaultsExample.decorators = [
-    { type: Component, args: [{
-                selector: 'tooltip-modified-defaults-example',
-                templateUrl: 'tooltip-modified-defaults-example.html',
-                styleUrls: ['tooltip-modified-defaults-example.css'],
-                providers: [
-                    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
-                ],
-            },] },
-];
-/** @nocollapse */ TooltipModifiedDefaultsExample.ɵfac = function TooltipModifiedDefaultsExample_Factory(t) { return new (t || TooltipModifiedDefaultsExample)(); };
-/** @nocollapse */ TooltipModifiedDefaultsExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipModifiedDefaultsExample, selectors: [["tooltip-modified-defaults-example"]], features: [i0.ɵɵProvidersFeature([
-            { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
-        ])], decls: 2, vars: 0, consts: [["mat-raised-button", "", "matTooltip", "By default, I delay", "aria-label", "Button that displays a tooltip that has custom delays through a default config"]], template: function TooltipModifiedDefaultsExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "button", 0);
-        i0.ɵɵtext(1, " Button with delay-default tooltip\n");
-        i0.ɵɵelementEnd();
-    } }, directives: [i1.MatButton, i2.MatTooltip], styles: [""] });
+let TooltipModifiedDefaultsExample = /** @class */ (() => {
+    /**
+     * \@title Tooltip with a show and hide delay
+     */
+    class TooltipModifiedDefaultsExample {
+    }
+    TooltipModifiedDefaultsExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-modified-defaults-example',
+                    templateUrl: 'tooltip-modified-defaults-example.html',
+                    styleUrls: ['tooltip-modified-defaults-example.css'],
+                    providers: [
+                        { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
+                    ],
+                },] },
+    ];
+    /** @nocollapse */ TooltipModifiedDefaultsExample.ɵfac = function TooltipModifiedDefaultsExample_Factory(t) { return new (t || TooltipModifiedDefaultsExample)(); };
+    /** @nocollapse */ TooltipModifiedDefaultsExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipModifiedDefaultsExample, selectors: [["tooltip-modified-defaults-example"]], features: [i0.ɵɵProvidersFeature([
+                { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
+            ])], decls: 2, vars: 0, consts: [["mat-raised-button", "", "matTooltip", "By default, I delay", "aria-label", "Button that displays a tooltip that has custom delays through a default config"]], template: function TooltipModifiedDefaultsExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "button", 0);
+            i0.ɵɵtext(1, " Button with delay-default tooltip\n");
+            i0.ɵɵelementEnd();
+        } }, directives: [i1.MatButton, i2.MatTooltip], styles: [""] });
+    return TooltipModifiedDefaultsExample;
+})();
+export { TooltipModifiedDefaultsExample };
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
         type: Component,
         args: [{
@@ -51,4 +58,4 @@ TooltipModifiedDefaultsExample.decorators = [
                 ],
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC1tb2RpZmllZC1kZWZhdWx0cy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvdG9vbHRpcC90b29sdGlwLW1vZGlmaWVkLWRlZmF1bHRzL3Rvb2x0aXAtbW9kaWZpZWQtZGVmYXVsdHMtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL3Rvb2x0aXAvdG9vbHRpcC1tb2RpZmllZC1kZWZhdWx0cy90b29sdGlwLW1vZGlmaWVkLWRlZmF1bHRzLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFDeEMsT0FBTyxFQUFDLDJCQUEyQixFQUEyQixNQUFNLDJCQUEyQixDQUFDOzs7Ozs7OztBQUdoRyxNQUFNLE9BQU8sdUJBQXVCLEdBQTZCO0lBQy9ELFNBQVMsRUFBRSxJQUFJO0lBQ2YsU0FBUyxFQUFFLElBQUk7SUFDZixpQkFBaUIsRUFBRSxJQUFJO0NBQ3hCOzs7O0FBYUQsTUFBTSxPQUFPLDhCQUE4Qjs7O1lBUjFDLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsbUNBQW1DO2dCQUM3QyxXQUFXLEVBQUUsd0NBQXdDO2dCQUNyRCxTQUFTLEVBQUUsQ0FBQyx1Q0FBdUMsQ0FBQztnQkFDcEQsU0FBUyxFQUFFO29CQUNULEVBQUMsT0FBTyxFQUFFLDJCQUEyQixFQUFFLFFBQVEsRUFBRSx1QkFBdUIsRUFBQztpQkFDMUU7YUFDRjs7K0hBQ1ksOEJBQThCO3NGQUE5Qiw4QkFBOEIsdUZBSjlCO1lBQ1QsRUFBQyxPQUFPLEVBQUUsMkJBQTJCLEVBQUUsUUFBUSxFQUFFLHVCQUF1QixFQUFDO1NBQzFFO1FDbkJILGlDQUdFO1FBQUEsb0RBQ0Y7UUFBQSxpQkFBUzs7a0REaUJJLDhCQUE4QjtjQVIxQyxTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLG1DQUFtQztnQkFDN0MsV0FBVyxFQUFFLHdDQUF3QztnQkFDckQsU0FBUyxFQUFFLENBQUMsdUNBQXVDLENBQUM7Z0JBQ3BELFNBQVMsRUFBRTtvQkFDVCxFQUFDLE9BQU8sRUFBRSwyQkFBMkIsRUFBRSxRQUFRLEVBQUUsdUJBQXVCLEVBQUM7aUJBQzFFO2FBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQge01BVF9UT09MVElQX0RFRkFVTFRfT1BUSU9OUywgTWF0VG9vbHRpcERlZmF1bHRPcHRpb25zfSBmcm9tICdAYW5ndWxhci9tYXRlcmlhbC90b29sdGlwJztcblxuLyoqIEN1c3RvbSBvcHRpb25zIHRoZSBjb25maWd1cmUgdGhlIHRvb2x0aXAncyBkZWZhdWx0IHNob3cvaGlkZSBkZWxheXMuICovXG5leHBvcnQgY29uc3QgbXlDdXN0b21Ub29sdGlwRGVmYXVsdHM6IE1hdFRvb2x0aXBEZWZhdWx0T3B0aW9ucyA9IHtcbiAgc2hvd0RlbGF5OiAxMDAwLFxuICBoaWRlRGVsYXk6IDEwMDAsXG4gIHRvdWNoZW5kSGlkZURlbGF5OiAxMDAwLFxufTtcblxuLyoqXG4gKiBAdGl0bGUgVG9vbHRpcCB3aXRoIGEgc2hvdyBhbmQgaGlkZSBkZWxheVxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICd0b29sdGlwLW1vZGlmaWVkLWRlZmF1bHRzLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ3Rvb2x0aXAtbW9kaWZpZWQtZGVmYXVsdHMtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ3Rvb2x0aXAtbW9kaWZpZWQtZGVmYXVsdHMtZXhhbXBsZS5jc3MnXSxcbiAgcHJvdmlkZXJzOiBbXG4gICAge3Byb3ZpZGU6IE1BVF9UT09MVElQX0RFRkFVTFRfT1BUSU9OUywgdXNlVmFsdWU6IG15Q3VzdG9tVG9vbHRpcERlZmF1bHRzfVxuICBdLFxufSlcbmV4cG9ydCBjbGFzcyBUb29sdGlwTW9kaWZpZWREZWZhdWx0c0V4YW1wbGUge31cbiIsIjxidXR0b24gbWF0LXJhaXNlZC1idXR0b25cbiAgICAgICAgbWF0VG9vbHRpcD1cIkJ5IGRlZmF1bHQsIEkgZGVsYXlcIlxuICAgICAgICBhcmlhLWxhYmVsPVwiQnV0dG9uIHRoYXQgZGlzcGxheXMgYSB0b29sdGlwIHRoYXQgaGFzIGN1c3RvbSBkZWxheXMgdGhyb3VnaCBhIGRlZmF1bHQgY29uZmlnXCI+XG4gIEJ1dHRvbiB3aXRoIGRlbGF5LWRlZmF1bHQgdG9vbHRpcFxuPC9idXR0b24+XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidG9vbHRpcC1tb2RpZmllZC1kZWZhdWx0cy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvdG9vbHRpcC90b29sdGlwLW1vZGlmaWVkLWRlZmF1bHRzL3Rvb2x0aXAtbW9kaWZpZWQtZGVmYXVsdHMtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL3Rvb2x0aXAvdG9vbHRpcC1tb2RpZmllZC1kZWZhdWx0cy90b29sdGlwLW1vZGlmaWVkLWRlZmF1bHRzLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFDeEMsT0FBTyxFQUFDLDJCQUEyQixFQUEyQixNQUFNLDJCQUEyQixDQUFDOzs7Ozs7OztBQUdoRyxNQUFNLE9BQU8sdUJBQXVCLEdBQTZCO0lBQy9ELFNBQVMsRUFBRSxJQUFJO0lBQ2YsU0FBUyxFQUFFLElBQUk7SUFDZixpQkFBaUIsRUFBRSxJQUFJO0NBQ3hCOzs7O0FBS0Q7Ozs7SUFBQSxNQVFhLDhCQUE4Qjs7O2dCQVIxQyxTQUFTLFNBQUM7b0JBQ1QsUUFBUSxFQUFFLG1DQUFtQztvQkFDN0MsV0FBVyxFQUFFLHdDQUF3QztvQkFDckQsU0FBUyxFQUFFLENBQUMsdUNBQXVDLENBQUM7b0JBQ3BELFNBQVMsRUFBRTt3QkFDVCxFQUFDLE9BQU8sRUFBRSwyQkFBMkIsRUFBRSxRQUFRLEVBQUUsdUJBQXVCLEVBQUM7cUJBQzFFO2lCQUNGOzttSUFDWSw4QkFBOEI7MEZBQTlCLDhCQUE4Qix1RkFKOUI7Z0JBQ1QsRUFBQyxPQUFPLEVBQUUsMkJBQTJCLEVBQUUsUUFBUSxFQUFFLHVCQUF1QixFQUFDO2FBQzFFO1lDbkJILGlDQUdFO1lBQUEsb0RBQ0Y7WUFBQSxpQkFBUzs7eUNESlQ7S0FxQjhDO1NBQWpDLDhCQUE4QjtrREFBOUIsOEJBQThCO2NBUjFDLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsbUNBQW1DO2dCQUM3QyxXQUFXLEVBQUUsd0NBQXdDO2dCQUNyRCxTQUFTLEVBQUUsQ0FBQyx1Q0FBdUMsQ0FBQztnQkFDcEQsU0FBUyxFQUFFO29CQUNULEVBQUMsT0FBTyxFQUFFLDJCQUEyQixFQUFFLFFBQVEsRUFBRSx1QkFBdUIsRUFBQztpQkFDMUU7YUFDRiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7TUFUX1RPT0xUSVBfREVGQVVMVF9PUFRJT05TLCBNYXRUb29sdGlwRGVmYXVsdE9wdGlvbnN9IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL3Rvb2x0aXAnO1xuXG4vKiogQ3VzdG9tIG9wdGlvbnMgdGhlIGNvbmZpZ3VyZSB0aGUgdG9vbHRpcCdzIGRlZmF1bHQgc2hvdy9oaWRlIGRlbGF5cy4gKi9cbmV4cG9ydCBjb25zdCBteUN1c3RvbVRvb2x0aXBEZWZhdWx0czogTWF0VG9vbHRpcERlZmF1bHRPcHRpb25zID0ge1xuICBzaG93RGVsYXk6IDEwMDAsXG4gIGhpZGVEZWxheTogMTAwMCxcbiAgdG91Y2hlbmRIaWRlRGVsYXk6IDEwMDAsXG59O1xuXG4vKipcbiAqIEB0aXRsZSBUb29sdGlwIHdpdGggYSBzaG93IGFuZCBoaWRlIGRlbGF5XG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3Rvb2x0aXAtbW9kaWZpZWQtZGVmYXVsdHMtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAndG9vbHRpcC1tb2RpZmllZC1kZWZhdWx0cy1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsndG9vbHRpcC1tb2RpZmllZC1kZWZhdWx0cy1leGFtcGxlLmNzcyddLFxuICBwcm92aWRlcnM6IFtcbiAgICB7cHJvdmlkZTogTUFUX1RPT0xUSVBfREVGQVVMVF9PUFRJT05TLCB1c2VWYWx1ZTogbXlDdXN0b21Ub29sdGlwRGVmYXVsdHN9XG4gIF0sXG59KVxuZXhwb3J0IGNsYXNzIFRvb2x0aXBNb2RpZmllZERlZmF1bHRzRXhhbXBsZSB7fVxuIiwiPGJ1dHRvbiBtYXQtcmFpc2VkLWJ1dHRvblxuICAgICAgICBtYXRUb29sdGlwPVwiQnkgZGVmYXVsdCwgSSBkZWxheVwiXG4gICAgICAgIGFyaWEtbGFiZWw9XCJCdXR0b24gdGhhdCBkaXNwbGF5cyBhIHRvb2x0aXAgdGhhdCBoYXMgY3VzdG9tIGRlbGF5cyB0aHJvdWdoIGEgZGVmYXVsdCBjb25maWdcIj5cbiAgQnV0dG9uIHdpdGggZGVsYXktZGVmYXVsdCB0b29sdGlwXG48L2J1dHRvbj5cbiJdfQ==

@@ -9,19 +9,26 @@ import * as i1 from "@angular/material/progress-bar";
 /**
  * \@title Indeterminate progress-bar
  */
-export class ProgressBarIndeterminateExample {
-}
-ProgressBarIndeterminateExample.decorators = [
-    { type: Component, args: [{
-                selector: 'progress-bar-indeterminate-example',
-                templateUrl: 'progress-bar-indeterminate-example.html',
-                styleUrls: ['progress-bar-indeterminate-example.css'],
-            },] },
-];
-/** @nocollapse */ ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
-/** @nocollapse */ ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelement(0, "mat-progress-bar", 0);
-    } }, directives: [i1.MatProgressBar], styles: [""] });
+let ProgressBarIndeterminateExample = /** @class */ (() => {
+    /**
+     * \@title Indeterminate progress-bar
+     */
+    class ProgressBarIndeterminateExample {
+    }
+    ProgressBarIndeterminateExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'progress-bar-indeterminate-example',
+                    templateUrl: 'progress-bar-indeterminate-example.html',
+                    styleUrls: ['progress-bar-indeterminate-example.css'],
+                },] },
+    ];
+    /** @nocollapse */ ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
+    /** @nocollapse */ ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelement(0, "mat-progress-bar", 0);
+        } }, directives: [i1.MatProgressBar], styles: [""] });
+    return ProgressBarIndeterminateExample;
+})();
+export { ProgressBarIndeterminateExample };
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
         type: Component,
         args: [{
@@ -30,4 +37,4 @@ ProgressBarIndeterminateExample.decorators = [
                 styleUrls: ['progress-bar-indeterminate-example.css'],
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWluZGV0ZXJtaW5hdGUtZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL3Byb2dyZXNzLWJhci9wcm9ncmVzcy1iYXItaW5kZXRlcm1pbmF0ZS9wcm9ncmVzcy1iYXItaW5kZXRlcm1pbmF0ZS1leGFtcGxlLnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvcHJvZ3Jlc3MtYmFyL3Byb2dyZXNzLWJhci1pbmRldGVybWluYXRlL3Byb2dyZXNzLWJhci1pbmRldGVybWluYXRlLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7Ozs7OztBQVV4QyxNQUFNLE9BQU8sK0JBQStCOzs7WUFMM0MsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxvQ0FBb0M7Z0JBQzlDLFdBQVcsRUFBRSx5Q0FBeUM7Z0JBQ3RELFNBQVMsRUFBRSxDQUFDLHdDQUF3QyxDQUFDO2FBQ3REOztpSUFDWSwrQkFBK0I7dUZBQS9CLCtCQUErQjtRQ1Y1QyxzQ0FBMEQ7O2tERFU3QywrQkFBK0I7Y0FMM0MsU0FBUztlQUFDO2dCQUNULFFBQVEsRUFBRSxvQ0FBb0M7Z0JBQzlDLFdBQVcsRUFBRSx5Q0FBeUM7Z0JBQ3RELFNBQVMsRUFBRSxDQUFDLHdDQUF3QyxDQUFDO2FBQ3REIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBJbmRldGVybWluYXRlIHByb2dyZXNzLWJhclxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdwcm9ncmVzcy1iYXItaW5kZXRlcm1pbmF0ZS1leGFtcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICdwcm9ncmVzcy1iYXItaW5kZXRlcm1pbmF0ZS1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsncHJvZ3Jlc3MtYmFyLWluZGV0ZXJtaW5hdGUtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgUHJvZ3Jlc3NCYXJJbmRldGVybWluYXRlRXhhbXBsZSB7fVxuIiwiPG1hdC1wcm9ncmVzcy1iYXIgbW9kZT1cImluZGV0ZXJtaW5hdGVcIj48L21hdC1wcm9ncmVzcy1iYXI+XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWluZGV0ZXJtaW5hdGUtZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL3Byb2dyZXNzLWJhci9wcm9ncmVzcy1iYXItaW5kZXRlcm1pbmF0ZS9wcm9ncmVzcy1iYXItaW5kZXRlcm1pbmF0ZS1leGFtcGxlLnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvcHJvZ3Jlc3MtYmFyL3Byb2dyZXNzLWJhci1pbmRldGVybWluYXRlL3Byb2dyZXNzLWJhci1pbmRldGVybWluYXRlLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7OztBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7Ozs7OztBQUt4Qzs7OztJQUFBLE1BS2EsK0JBQStCOzs7Z0JBTDNDLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsb0NBQW9DO29CQUM5QyxXQUFXLEVBQUUseUNBQXlDO29CQUN0RCxTQUFTLEVBQUUsQ0FBQyx3Q0FBd0MsQ0FBQztpQkFDdEQ7O3FJQUNZLCtCQUErQjsyRkFBL0IsK0JBQStCO1lDVjVDLHNDQUEwRDs7MENEQTFEO0tBVStDO1NBQWxDLCtCQUErQjtrREFBL0IsK0JBQStCO2NBTDNDLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsb0NBQW9DO2dCQUM5QyxXQUFXLEVBQUUseUNBQXlDO2dCQUN0RCxTQUFTLEVBQUUsQ0FBQyx3Q0FBd0MsQ0FBQzthQUN0RCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgSW5kZXRlcm1pbmF0ZSBwcm9ncmVzcy1iYXJcbiAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAncHJvZ3Jlc3MtYmFyLWluZGV0ZXJtaW5hdGUtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAncHJvZ3Jlc3MtYmFyLWluZGV0ZXJtaW5hdGUtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ3Byb2dyZXNzLWJhci1pbmRldGVybWluYXRlLWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIFByb2dyZXNzQmFySW5kZXRlcm1pbmF0ZUV4YW1wbGUge31cbiIsIjxtYXQtcHJvZ3Jlc3MtYmFyIG1vZGU9XCJpbmRldGVybWluYXRlXCI+PC9tYXQtcHJvZ3Jlc3MtYmFyPlxuIl19

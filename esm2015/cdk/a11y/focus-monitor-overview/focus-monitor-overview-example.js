@@ -12,113 +12,120 @@ const _c1 = ["subtree"];
 /**
  * \@title Monitoring focus with FocusMonitor
  */
-export class FocusMonitorOverviewExample {
+let FocusMonitorOverviewExample = /** @class */ (() => {
     /**
-     * @param {?} _focusMonitor
-     * @param {?} _cdr
-     * @param {?} _ngZone
+     * \@title Monitoring focus with FocusMonitor
      */
-    constructor(_focusMonitor, _cdr, _ngZone) {
-        this._focusMonitor = _focusMonitor;
-        this._cdr = _cdr;
-        this._ngZone = _ngZone;
-        this.elementOrigin = this.formatOrigin(null);
-        this.subtreeOrigin = this.formatOrigin(null);
-    }
-    /**
-     * @return {?}
-     */
-    ngAfterViewInit() {
-        this._focusMonitor.monitor(this.element)
-            .subscribe((/**
+    class FocusMonitorOverviewExample {
+        /**
+         * @param {?} _focusMonitor
+         * @param {?} _cdr
+         * @param {?} _ngZone
+         */
+        constructor(_focusMonitor, _cdr, _ngZone) {
+            this._focusMonitor = _focusMonitor;
+            this._cdr = _cdr;
+            this._ngZone = _ngZone;
+            this.elementOrigin = this.formatOrigin(null);
+            this.subtreeOrigin = this.formatOrigin(null);
+        }
+        /**
+         * @return {?}
+         */
+        ngAfterViewInit() {
+            this._focusMonitor.monitor(this.element)
+                .subscribe((/**
+             * @param {?} origin
+             * @return {?}
+             */
+            origin => this._ngZone.run((/**
+             * @return {?}
+             */
+            () => {
+                this.elementOrigin = this.formatOrigin(origin);
+                this._cdr.markForCheck();
+            }))));
+            this._focusMonitor.monitor(this.subtree, true)
+                .subscribe((/**
+             * @param {?} origin
+             * @return {?}
+             */
+            origin => this._ngZone.run((/**
+             * @return {?}
+             */
+            () => {
+                this.subtreeOrigin = this.formatOrigin(origin);
+                this._cdr.markForCheck();
+            }))));
+        }
+        /**
+         * @return {?}
+         */
+        ngOnDestroy() {
+            this._focusMonitor.stopMonitoring(this.element);
+            this._focusMonitor.stopMonitoring(this.subtree);
+        }
+        /**
          * @param {?} origin
          * @return {?}
          */
-        origin => this._ngZone.run((/**
-         * @return {?}
-         */
-        () => {
-            this.elementOrigin = this.formatOrigin(origin);
-            this._cdr.markForCheck();
-        }))));
-        this._focusMonitor.monitor(this.subtree, true)
-            .subscribe((/**
-         * @param {?} origin
-         * @return {?}
-         */
-        origin => this._ngZone.run((/**
-         * @return {?}
-         */
-        () => {
-            this.subtreeOrigin = this.formatOrigin(origin);
-            this._cdr.markForCheck();
-        }))));
+        formatOrigin(origin) {
+            return origin ? origin + ' focused' : 'blurred';
+        }
     }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        this._focusMonitor.stopMonitoring(this.element);
-        this._focusMonitor.stopMonitoring(this.subtree);
-    }
-    /**
-     * @param {?} origin
-     * @return {?}
-     */
-    formatOrigin(origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    }
-}
-FocusMonitorOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'focus-monitor-overview-example',
-                templateUrl: 'focus-monitor-overview-example.html',
-                styleUrls: ['focus-monitor-overview-example.css']
-            },] },
-];
-/** @nocollapse */
-FocusMonitorOverviewExample.ctorParameters = () => [
-    { type: FocusMonitor },
-    { type: ChangeDetectorRef },
-    { type: NgZone }
-];
-FocusMonitorOverviewExample.propDecorators = {
-    element: [{ type: ViewChild, args: ['element',] }],
-    subtree: [{ type: ViewChild, args: ['subtree',] }]
-};
-/** @nocollapse */ FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
-/** @nocollapse */ FocusMonitorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0, true);
-        i0.ɵɵviewQuery(_c1, true);
-    } if (rf & 2) {
-        var _t;
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.element = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.subtree = _t.first);
-    } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"], ["element", ""], ["subtree", ""]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 0);
-        i0.ɵɵelementStart(1, "button", null, 1);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div", 0);
-        i0.ɵɵelementStart(5, "div", null, 2);
-        i0.ɵɵelementStart(7, "p");
-        i0.ɵɵtext(8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "button");
-        i0.ɵɵtext(10, "Child Button 1");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "button");
-        i0.ɵɵtext(12, "Child Button 2");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate1("Focus Monitored Element (", ctx.elementOrigin, ")");
-        i0.ɵɵadvance(5);
-        i0.ɵɵtextInterpolate1("Focus Monitored Subtree (", ctx.subtreeOrigin, ")");
-    } }, styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+    FocusMonitorOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'focus-monitor-overview-example',
+                    templateUrl: 'focus-monitor-overview-example.html',
+                    styleUrls: ['focus-monitor-overview-example.css']
+                },] },
+    ];
+    /** @nocollapse */
+    FocusMonitorOverviewExample.ctorParameters = () => [
+        { type: FocusMonitor },
+        { type: ChangeDetectorRef },
+        { type: NgZone }
+    ];
+    FocusMonitorOverviewExample.propDecorators = {
+        element: [{ type: ViewChild, args: ['element',] }],
+        subtree: [{ type: ViewChild, args: ['subtree',] }]
+    };
+    /** @nocollapse */ FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
+    /** @nocollapse */ FocusMonitorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
+            i0.ɵɵviewQuery(_c0, true);
+            i0.ɵɵviewQuery(_c1, true);
+        } if (rf & 2) {
+            var _t;
+            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.element = _t.first);
+            i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.subtree = _t.first);
+        } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"], ["element", ""], ["subtree", ""]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 0);
+            i0.ɵɵelementStart(1, "button", null, 1);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(4, "div", 0);
+            i0.ɵɵelementStart(5, "div", null, 2);
+            i0.ɵɵelementStart(7, "p");
+            i0.ɵɵtext(8);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(9, "button");
+            i0.ɵɵtext(10, "Child Button 1");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(11, "button");
+            i0.ɵɵtext(12, "Child Button 2");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        } if (rf & 2) {
+            i0.ɵɵadvance(3);
+            i0.ɵɵtextInterpolate1("Focus Monitored Element (", ctx.elementOrigin, ")");
+            i0.ɵɵadvance(5);
+            i0.ɵɵtextInterpolate1("Focus Monitored Subtree (", ctx.subtreeOrigin, ")");
+        } }, styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+    return FocusMonitorOverviewExample;
+})();
+export { FocusMonitorOverviewExample };
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FocusMonitorOverviewExample, [{
         type: Component,
         args: [{
@@ -158,4 +165,4 @@ if (false) {
      */
     FocusMonitorOverviewExample.prototype._ngZone;
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZm9jdXMtbW9uaXRvci1vdmVydmlldy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvY2RrL2ExMXkvZm9jdXMtbW9uaXRvci1vdmVydmlldy9mb2N1cy1tb25pdG9yLW92ZXJ2aWV3LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9jZGsvYTExeS9mb2N1cy1tb25pdG9yLW92ZXJ2aWV3L2ZvY3VzLW1vbml0b3Itb3ZlcnZpZXctZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxFQUFDLFlBQVksRUFBYyxNQUFNLG1CQUFtQixDQUFDO0FBQzVELE9BQU8sRUFFTCxpQkFBaUIsRUFDakIsU0FBUyxFQUNULFVBQVUsRUFDVixNQUFNLEVBRU4sU0FBUyxFQUNWLE1BQU0sZUFBZSxDQUFDOzs7Ozs7OztBQVF2QixNQUFNLE9BQU8sMkJBQTJCOzs7Ozs7SUFPdEMsWUFBb0IsYUFBMkIsRUFDM0IsSUFBdUIsRUFDdkIsT0FBZTtRQUZmLGtCQUFhLEdBQWIsYUFBYSxDQUFjO1FBQzNCLFNBQUksR0FBSixJQUFJLENBQW1CO1FBQ3ZCLFlBQU8sR0FBUCxPQUFPLENBQVE7UUFMbkMsa0JBQWEsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ3hDLGtCQUFhLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUlGLENBQUM7Ozs7SUFFdkMsZUFBZTtRQUNiLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUM7YUFDbkMsU0FBUzs7OztRQUFDLE1BQU0sQ0FBQyxFQUFFLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxHQUFHOzs7UUFBQyxHQUFHLEVBQUU7WUFDekMsSUFBSSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1lBQy9DLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUM7UUFDM0IsQ0FBQyxFQUFDLEVBQUMsQ0FBQztRQUNSLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsSUFBSSxDQUFDO2FBQ3pDLFNBQVM7Ozs7UUFBQyxNQUFNLENBQUMsRUFBRSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsR0FBRzs7O1FBQUMsR0FBRyxFQUFFO1lBQ3pDLElBQUksQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUMsQ0FBQztZQUMvQyxJQUFJLENBQUMsSUFBSSxDQUFDLFlBQVksRUFBRSxDQUFDO1FBQzNCLENBQUMsRUFBQyxFQUFDLENBQUM7SUFDVixDQUFDOzs7O0lBRUQsV0FBVztRQUNULElBQUksQ0FBQyxhQUFhLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUNoRCxJQUFJLENBQUMsYUFBYSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7SUFDbEQsQ0FBQzs7Ozs7SUFFRCxZQUFZLENBQUMsTUFBbUI7UUFDOUIsT0FBTyxNQUFNLENBQUMsQ0FBQyxDQUFDLE1BQU0sR0FBRyxVQUFVLENBQUMsQ0FBQyxDQUFDLFNBQVMsQ0FBQztJQUNsRCxDQUFDOzs7WUFwQ0YsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxnQ0FBZ0M7Z0JBQzFDLFdBQVcsRUFBRSxxQ0FBcUM7Z0JBQ2xELFNBQVMsRUFBRSxDQUFDLG9DQUFvQyxDQUFDO2FBQ2xEOzs7O1lBaEJPLFlBQVk7WUFHbEIsaUJBQWlCO1lBR2pCLE1BQU07OztzQkFZTCxTQUFTLFNBQUMsU0FBUztzQkFDbkIsU0FBUyxTQUFDLFNBQVM7O3lIQUZULDJCQUEyQjttRkFBM0IsMkJBQTJCOzs7Ozs7OztRQ2pCeEMsOEJBQ0U7UUFBQSx1Q0FBaUI7UUFBQSxZQUEyQztRQUFBLGlCQUFTO1FBQ3ZFLGlCQUFNO1FBRU4sOEJBQ0U7UUFBQSxvQ0FDRTtRQUFBLHlCQUFHO1FBQUEsWUFBMkM7UUFBQSxpQkFBSTtRQUNsRCw4QkFBUTtRQUFBLCtCQUFjO1FBQUEsaUJBQVM7UUFDL0IsK0JBQVE7UUFBQSwrQkFBYztRQUFBLGlCQUFTO1FBQ2pDLGlCQUFNO1FBQ1IsaUJBQU07O1FBVGEsZUFBMkM7UUFBM0MsMEVBQTJDO1FBS3ZELGVBQTJDO1FBQTNDLDBFQUEyQzs7a0REV3JDLDJCQUEyQjtjQUx2QyxTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLGdDQUFnQztnQkFDMUMsV0FBVyxFQUFFLHFDQUFxQztnQkFDbEQsU0FBUyxFQUFFLENBQUMsb0NBQW9DLENBQUM7YUFDbEQ7O2tCQUVFLFNBQVM7bUJBQUMsU0FBUzs7a0JBQ25CLFNBQVM7bUJBQUMsU0FBUzs7OztJQURwQiw4Q0FBdUQ7O0lBQ3ZELDhDQUF1RDs7SUFFdkQsb0RBQXdDOztJQUN4QyxvREFBd0M7Ozs7O0lBRTVCLG9EQUFtQzs7Ozs7SUFDbkMsMkNBQStCOzs7OztJQUMvQiw4Q0FBdUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0ZvY3VzTW9uaXRvciwgRm9jdXNPcmlnaW59IGZyb20gJ0Bhbmd1bGFyL2Nkay9hMTF5JztcbmltcG9ydCB7XG4gIEFmdGVyVmlld0luaXQsXG4gIENoYW5nZURldGVjdG9yUmVmLFxuICBDb21wb25lbnQsXG4gIEVsZW1lbnRSZWYsXG4gIE5nWm9uZSxcbiAgT25EZXN0cm95LFxuICBWaWV3Q2hpbGRcbn0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbi8qKiBAdGl0bGUgTW9uaXRvcmluZyBmb2N1cyB3aXRoIEZvY3VzTW9uaXRvciAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZm9jdXMtbW9uaXRvci1vdmVydmlldy1leGFtcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICdmb2N1cy1tb25pdG9yLW92ZXJ2aWV3LWV4YW1wbGUuaHRtbCcsXG4gIHN0eWxlVXJsczogWydmb2N1cy1tb25pdG9yLW92ZXJ2aWV3LWV4YW1wbGUuY3NzJ11cbn0pXG5leHBvcnQgY2xhc3MgRm9jdXNNb25pdG9yT3ZlcnZpZXdFeGFtcGxlIGltcGxlbWVudHMgT25EZXN0cm95LCBBZnRlclZpZXdJbml0IHtcbiAgQFZpZXdDaGlsZCgnZWxlbWVudCcpIGVsZW1lbnQ6IEVsZW1lbnRSZWY8SFRNTEVsZW1lbnQ+O1xuICBAVmlld0NoaWxkKCdzdWJ0cmVlJykgc3VidHJlZTogRWxlbWVudFJlZjxIVE1MRWxlbWVudD47XG5cbiAgZWxlbWVudE9yaWdpbiA9IHRoaXMuZm9ybWF0T3JpZ2luKG51bGwpO1xuICBzdWJ0cmVlT3JpZ2luID0gdGhpcy5mb3JtYXRPcmlnaW4obnVsbCk7XG5cbiAgY29uc3RydWN0b3IocHJpdmF0ZSBfZm9jdXNNb25pdG9yOiBGb2N1c01vbml0b3IsXG4gICAgICAgICAgICAgIHByaXZhdGUgX2NkcjogQ2hhbmdlRGV0ZWN0b3JSZWYsXG4gICAgICAgICAgICAgIHByaXZhdGUgX25nWm9uZTogTmdab25lKSB7fVxuXG4gIG5nQWZ0ZXJWaWV3SW5pdCgpIHtcbiAgICB0aGlzLl9mb2N1c01vbml0b3IubW9uaXRvcih0aGlzLmVsZW1lbnQpXG4gICAgICAgIC5zdWJzY3JpYmUob3JpZ2luID0+IHRoaXMuX25nWm9uZS5ydW4oKCkgPT4ge1xuICAgICAgICAgIHRoaXMuZWxlbWVudE9yaWdpbiA9IHRoaXMuZm9ybWF0T3JpZ2luKG9yaWdpbik7XG4gICAgICAgICAgdGhpcy5fY2RyLm1hcmtGb3JDaGVjaygpO1xuICAgICAgICB9KSk7XG4gICAgdGhpcy5fZm9jdXNNb25pdG9yLm1vbml0b3IodGhpcy5zdWJ0cmVlLCB0cnVlKVxuICAgICAgICAuc3Vic2NyaWJlKG9yaWdpbiA9PiB0aGlzLl9uZ1pvbmUucnVuKCgpID0+IHtcbiAgICAgICAgICB0aGlzLnN1YnRyZWVPcmlnaW4gPSB0aGlzLmZvcm1hdE9yaWdpbihvcmlnaW4pO1xuICAgICAgICAgIHRoaXMuX2Nkci5tYXJrRm9yQ2hlY2soKTtcbiAgICAgICAgfSkpO1xuICB9XG5cbiAgbmdPbkRlc3Ryb3koKSB7XG4gICAgdGhpcy5fZm9jdXNNb25pdG9yLnN0b3BNb25pdG9yaW5nKHRoaXMuZWxlbWVudCk7XG4gICAgdGhpcy5fZm9jdXNNb25pdG9yLnN0b3BNb25pdG9yaW5nKHRoaXMuc3VidHJlZSk7XG4gIH1cblxuICBmb3JtYXRPcmlnaW4ob3JpZ2luOiBGb2N1c09yaWdpbik6IHN0cmluZyB7XG4gICAgcmV0dXJuIG9yaWdpbiA/IG9yaWdpbiArICcgZm9jdXNlZCcgOiAnYmx1cnJlZCc7XG4gIH1cbn1cbiIsIjxkaXYgY2xhc3M9XCJleGFtcGxlLWZvY3VzLW1vbml0b3JcIj5cbiAgPGJ1dHRvbiAjZWxlbWVudD5Gb2N1cyBNb25pdG9yZWQgRWxlbWVudCAoe3tlbGVtZW50T3JpZ2lufX0pPC9idXR0b24+XG48L2Rpdj5cblxuPGRpdiBjbGFzcz1cImV4YW1wbGUtZm9jdXMtbW9uaXRvclwiPlxuICA8ZGl2ICNzdWJ0cmVlPlxuICAgIDxwPkZvY3VzIE1vbml0b3JlZCBTdWJ0cmVlICh7e3N1YnRyZWVPcmlnaW59fSk8L3A+XG4gICAgPGJ1dHRvbj5DaGlsZCBCdXR0b24gMTwvYnV0dG9uPlxuICAgIDxidXR0b24+Q2hpbGQgQnV0dG9uIDI8L2J1dHRvbj5cbiAgPC9kaXY+XG48L2Rpdj5cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZm9jdXMtbW9uaXRvci1vdmVydmlldy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvY2RrL2ExMXkvZm9jdXMtbW9uaXRvci1vdmVydmlldy9mb2N1cy1tb25pdG9yLW92ZXJ2aWV3LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9jZGsvYTExeS9mb2N1cy1tb25pdG9yLW92ZXJ2aWV3L2ZvY3VzLW1vbml0b3Itb3ZlcnZpZXctZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxFQUFDLFlBQVksRUFBYyxNQUFNLG1CQUFtQixDQUFDO0FBQzVELE9BQU8sRUFFTCxpQkFBaUIsRUFDakIsU0FBUyxFQUNULFVBQVUsRUFDVixNQUFNLEVBRU4sU0FBUyxFQUNWLE1BQU0sZUFBZSxDQUFDOzs7Ozs7OztBQUd2Qjs7OztJQUFBLE1BS2EsMkJBQTJCOzs7Ozs7UUFPdEMsWUFBb0IsYUFBMkIsRUFDM0IsSUFBdUIsRUFDdkIsT0FBZTtZQUZmLGtCQUFhLEdBQWIsYUFBYSxDQUFjO1lBQzNCLFNBQUksR0FBSixJQUFJLENBQW1CO1lBQ3ZCLFlBQU8sR0FBUCxPQUFPLENBQVE7WUFMbkMsa0JBQWEsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ3hDLGtCQUFhLEdBQUcsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUlGLENBQUM7Ozs7UUFFdkMsZUFBZTtZQUNiLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUM7aUJBQ25DLFNBQVM7Ozs7WUFBQyxNQUFNLENBQUMsRUFBRSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsR0FBRzs7O1lBQUMsR0FBRyxFQUFFO2dCQUN6QyxJQUFJLENBQUMsYUFBYSxHQUFHLElBQUksQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDLENBQUM7Z0JBQy9DLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxFQUFFLENBQUM7WUFDM0IsQ0FBQyxFQUFDLEVBQUMsQ0FBQztZQUNSLElBQUksQ0FBQyxhQUFhLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxPQUFPLEVBQUUsSUFBSSxDQUFDO2lCQUN6QyxTQUFTOzs7O1lBQUMsTUFBTSxDQUFDLEVBQUUsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLEdBQUc7OztZQUFDLEdBQUcsRUFBRTtnQkFDekMsSUFBSSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFDO2dCQUMvQyxJQUFJLENBQUMsSUFBSSxDQUFDLFlBQVksRUFBRSxDQUFDO1lBQzNCLENBQUMsRUFBQyxFQUFDLENBQUM7UUFDVixDQUFDOzs7O1FBRUQsV0FBVztZQUNULElBQUksQ0FBQyxhQUFhLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQztZQUNoRCxJQUFJLENBQUMsYUFBYSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLENBQUM7UUFDbEQsQ0FBQzs7Ozs7UUFFRCxZQUFZLENBQUMsTUFBbUI7WUFDOUIsT0FBTyxNQUFNLENBQUMsQ0FBQyxDQUFDLE1BQU0sR0FBRyxVQUFVLENBQUMsQ0FBQyxDQUFDLFNBQVMsQ0FBQztRQUNsRCxDQUFDOzs7Z0JBcENGLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsZ0NBQWdDO29CQUMxQyxXQUFXLEVBQUUscUNBQXFDO29CQUNsRCxTQUFTLEVBQUUsQ0FBQyxvQ0FBb0MsQ0FBQztpQkFDbEQ7Ozs7Z0JBaEJPLFlBQVk7Z0JBR2xCLGlCQUFpQjtnQkFHakIsTUFBTTs7OzBCQVlMLFNBQVMsU0FBQyxTQUFTOzBCQUNuQixTQUFTLFNBQUMsU0FBUzs7NkhBRlQsMkJBQTJCO3VGQUEzQiwyQkFBMkI7Ozs7Ozs7O1lDakJ4Qyw4QkFDRTtZQUFBLHVDQUFpQjtZQUFBLFlBQTJDO1lBQUEsaUJBQVM7WUFDdkUsaUJBQU07WUFFTiw4QkFDRTtZQUFBLG9DQUNFO1lBQUEseUJBQUc7WUFBQSxZQUEyQztZQUFBLGlCQUFJO1lBQ2xELDhCQUFRO1lBQUEsK0JBQWM7WUFBQSxpQkFBUztZQUMvQiwrQkFBUTtZQUFBLCtCQUFjO1lBQUEsaUJBQVM7WUFDakMsaUJBQU07WUFDUixpQkFBTTs7WUFUYSxlQUEyQztZQUEzQywwRUFBMkM7WUFLdkQsZUFBMkM7WUFBM0MsMEVBQTJDOztzQ0RObEQ7S0FpREM7U0FoQ1ksMkJBQTJCO2tEQUEzQiwyQkFBMkI7Y0FMdkMsU0FBUztlQUFDO2dCQUNULFFBQVEsRUFBRSxnQ0FBZ0M7Z0JBQzFDLFdBQVcsRUFBRSxxQ0FBcUM7Z0JBQ2xELFNBQVMsRUFBRSxDQUFDLG9DQUFvQyxDQUFDO2FBQ2xEOztrQkFFRSxTQUFTO21CQUFDLFNBQVM7O2tCQUNuQixTQUFTO21CQUFDLFNBQVM7Ozs7SUFEcEIsOENBQXVEOztJQUN2RCw4Q0FBdUQ7O0lBRXZELG9EQUF3Qzs7SUFDeEMsb0RBQXdDOzs7OztJQUU1QixvREFBbUM7Ozs7O0lBQ25DLDJDQUErQjs7Ozs7SUFDL0IsOENBQXVCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtGb2N1c01vbml0b3IsIEZvY3VzT3JpZ2lufSBmcm9tICdAYW5ndWxhci9jZGsvYTExeSc7XG5pbXBvcnQge1xuICBBZnRlclZpZXdJbml0LFxuICBDaGFuZ2VEZXRlY3RvclJlZixcbiAgQ29tcG9uZW50LFxuICBFbGVtZW50UmVmLFxuICBOZ1pvbmUsXG4gIE9uRGVzdHJveSxcbiAgVmlld0NoaWxkXG59IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKiogQHRpdGxlIE1vbml0b3JpbmcgZm9jdXMgd2l0aCBGb2N1c01vbml0b3IgKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2ZvY3VzLW1vbml0b3Itb3ZlcnZpZXctZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnZm9jdXMtbW9uaXRvci1vdmVydmlldy1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnZm9jdXMtbW9uaXRvci1vdmVydmlldy1leGFtcGxlLmNzcyddXG59KVxuZXhwb3J0IGNsYXNzIEZvY3VzTW9uaXRvck92ZXJ2aWV3RXhhbXBsZSBpbXBsZW1lbnRzIE9uRGVzdHJveSwgQWZ0ZXJWaWV3SW5pdCB7XG4gIEBWaWV3Q2hpbGQoJ2VsZW1lbnQnKSBlbGVtZW50OiBFbGVtZW50UmVmPEhUTUxFbGVtZW50PjtcbiAgQFZpZXdDaGlsZCgnc3VidHJlZScpIHN1YnRyZWU6IEVsZW1lbnRSZWY8SFRNTEVsZW1lbnQ+O1xuXG4gIGVsZW1lbnRPcmlnaW4gPSB0aGlzLmZvcm1hdE9yaWdpbihudWxsKTtcbiAgc3VidHJlZU9yaWdpbiA9IHRoaXMuZm9ybWF0T3JpZ2luKG51bGwpO1xuXG4gIGNvbnN0cnVjdG9yKHByaXZhdGUgX2ZvY3VzTW9uaXRvcjogRm9jdXNNb25pdG9yLFxuICAgICAgICAgICAgICBwcml2YXRlIF9jZHI6IENoYW5nZURldGVjdG9yUmVmLFxuICAgICAgICAgICAgICBwcml2YXRlIF9uZ1pvbmU6IE5nWm9uZSkge31cblxuICBuZ0FmdGVyVmlld0luaXQoKSB7XG4gICAgdGhpcy5fZm9jdXNNb25pdG9yLm1vbml0b3IodGhpcy5lbGVtZW50KVxuICAgICAgICAuc3Vic2NyaWJlKG9yaWdpbiA9PiB0aGlzLl9uZ1pvbmUucnVuKCgpID0+IHtcbiAgICAgICAgICB0aGlzLmVsZW1lbnRPcmlnaW4gPSB0aGlzLmZvcm1hdE9yaWdpbihvcmlnaW4pO1xuICAgICAgICAgIHRoaXMuX2Nkci5tYXJrRm9yQ2hlY2soKTtcbiAgICAgICAgfSkpO1xuICAgIHRoaXMuX2ZvY3VzTW9uaXRvci5tb25pdG9yKHRoaXMuc3VidHJlZSwgdHJ1ZSlcbiAgICAgICAgLnN1YnNjcmliZShvcmlnaW4gPT4gdGhpcy5fbmdab25lLnJ1bigoKSA9PiB7XG4gICAgICAgICAgdGhpcy5zdWJ0cmVlT3JpZ2luID0gdGhpcy5mb3JtYXRPcmlnaW4ob3JpZ2luKTtcbiAgICAgICAgICB0aGlzLl9jZHIubWFya0ZvckNoZWNrKCk7XG4gICAgICAgIH0pKTtcbiAgfVxuXG4gIG5nT25EZXN0cm95KCkge1xuICAgIHRoaXMuX2ZvY3VzTW9uaXRvci5zdG9wTW9uaXRvcmluZyh0aGlzLmVsZW1lbnQpO1xuICAgIHRoaXMuX2ZvY3VzTW9uaXRvci5zdG9wTW9uaXRvcmluZyh0aGlzLnN1YnRyZWUpO1xuICB9XG5cbiAgZm9ybWF0T3JpZ2luKG9yaWdpbjogRm9jdXNPcmlnaW4pOiBzdHJpbmcge1xuICAgIHJldHVybiBvcmlnaW4gPyBvcmlnaW4gKyAnIGZvY3VzZWQnIDogJ2JsdXJyZWQnO1xuICB9XG59XG4iLCI8ZGl2IGNsYXNzPVwiZXhhbXBsZS1mb2N1cy1tb25pdG9yXCI+XG4gIDxidXR0b24gI2VsZW1lbnQ+Rm9jdXMgTW9uaXRvcmVkIEVsZW1lbnQgKHt7ZWxlbWVudE9yaWdpbn19KTwvYnV0dG9uPlxuPC9kaXY+XG5cbjxkaXYgY2xhc3M9XCJleGFtcGxlLWZvY3VzLW1vbml0b3JcIj5cbiAgPGRpdiAjc3VidHJlZT5cbiAgICA8cD5Gb2N1cyBNb25pdG9yZWQgU3VidHJlZSAoe3tzdWJ0cmVlT3JpZ2lufX0pPC9wPlxuICAgIDxidXR0b24+Q2hpbGQgQnV0dG9uIDE8L2J1dHRvbj5cbiAgICA8YnV0dG9uPkNoaWxkIEJ1dHRvbiAyPC9idXR0b24+XG4gIDwvZGl2PlxuPC9kaXY+XG4iXX0=

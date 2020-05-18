@@ -21,38 +21,45 @@ function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) 
 /**
  * \@title Radios with ngModel
  */
-export class RadioNgModelExample {
-    constructor() {
-        this.seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
+let RadioNgModelExample = /** @class */ (() => {
+    /**
+     * \@title Radios with ngModel
+     */
+    class RadioNgModelExample {
+        constructor() {
+            this.seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
+        }
     }
-}
-RadioNgModelExample.decorators = [
-    { type: Component, args: [{
-                selector: 'radio-ng-model-example',
-                templateUrl: 'radio-ng-model-example.html',
-                styleUrls: ['radio-ng-model-example.css'],
-            },] },
-];
-/** @nocollapse */ RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
-/** @nocollapse */ RadioNgModelExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "label", 0);
-        i0.ɵɵtext(1, "Pick your favorite season");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(2, "mat-radio-group", 1);
-        i0.ɵɵlistener("ngModelChange", function RadioNgModelExample_Template_mat_radio_group_ngModelChange_2_listener($event) { return ctx.favoriteSeason = $event; });
-        i0.ɵɵtemplate(3, RadioNgModelExample_mat_radio_button_3_Template, 2, 2, "mat-radio-button", 2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "div");
-        i0.ɵɵtext(5);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("ngModel", ctx.favoriteSeason);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngForOf", ctx.seasons);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Your favorite season is: ", ctx.favoriteSeason, "");
-    } }, directives: [i1.MatRadioGroup, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i1.MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
+    RadioNgModelExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'radio-ng-model-example',
+                    templateUrl: 'radio-ng-model-example.html',
+                    styleUrls: ['radio-ng-model-example.css'],
+                },] },
+    ];
+    /** @nocollapse */ RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
+    /** @nocollapse */ RadioNgModelExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "label", 0);
+            i0.ɵɵtext(1, "Pick your favorite season");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(2, "mat-radio-group", 1);
+            i0.ɵɵlistener("ngModelChange", function RadioNgModelExample_Template_mat_radio_group_ngModelChange_2_listener($event) { return ctx.favoriteSeason = $event; });
+            i0.ɵɵtemplate(3, RadioNgModelExample_mat_radio_button_3_Template, 2, 2, "mat-radio-button", 2);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(4, "div");
+            i0.ɵɵtext(5);
+            i0.ɵɵelementEnd();
+        } if (rf & 2) {
+            i0.ɵɵadvance(2);
+            i0.ɵɵproperty("ngModel", ctx.favoriteSeason);
+            i0.ɵɵadvance(1);
+            i0.ɵɵproperty("ngForOf", ctx.seasons);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Your favorite season is: ", ctx.favoriteSeason, "");
+        } }, directives: [i1.MatRadioGroup, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i1.MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
+    return RadioNgModelExample;
+})();
+export { RadioNgModelExample };
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioNgModelExample, [{
         type: Component,
         args: [{
@@ -67,4 +74,4 @@ if (false) {
     /** @type {?} */
     RadioNgModelExample.prototype.seasons;
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmFkaW8tbmctbW9kZWwtZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL3JhZGlvL3JhZGlvLW5nLW1vZGVsL3JhZGlvLW5nLW1vZGVsLWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9tYXRlcmlhbC9yYWRpby9yYWRpby1uZy1tb2RlbC9yYWRpby1uZy1tb2RlbC1leGFtcGxlLmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7SUNLdEMsMkNBQ0U7SUFBQSxZQUNGO0lBQUEsaUJBQW1COzs7SUFGMkQsaUNBQWdCO0lBQzVGLGVBQ0Y7SUFERSwwQ0FDRjs7Ozs7QURHRixNQUFNLE9BQU8sbUJBQW1CO0lBTGhDO1FBT0UsWUFBTyxHQUFhLENBQUMsUUFBUSxFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsUUFBUSxDQUFDLENBQUM7S0FDOUQ7OztZQVJBLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsd0JBQXdCO2dCQUNsQyxXQUFXLEVBQUUsNkJBQTZCO2dCQUMxQyxTQUFTLEVBQUUsQ0FBQyw0QkFBNEIsQ0FBQzthQUMxQzs7eUdBQ1ksbUJBQW1COzJFQUFuQixtQkFBbUI7UUNWaEMsZ0NBQXNDO1FBQUEseUNBQXlCO1FBQUEsaUJBQVE7UUFDdkUsMENBSUU7UUFEQSw4SkFBNEI7UUFDNUIsOEZBQ0U7UUFFSixpQkFBa0I7UUFDbEIsMkJBQUs7UUFBQSxZQUEyQztRQUFBLGlCQUFNOztRQUxwRCxlQUE0QjtRQUE1Qiw0Q0FBNEI7UUFDbUIsZUFBOEI7UUFBOUIscUNBQThCO1FBSTFFLGVBQTJDO1FBQTNDLDBFQUEyQzs7a0REQ25DLG1CQUFtQjtjQUwvQixTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLHdCQUF3QjtnQkFDbEMsV0FBVyxFQUFFLDZCQUE2QjtnQkFDMUMsU0FBUyxFQUFFLENBQUMsNEJBQTRCLENBQUM7YUFDMUM7Ozs7SUFFQyw2Q0FBdUI7O0lBQ3ZCLHNDQUE2RCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgUmFkaW9zIHdpdGggbmdNb2RlbFxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdyYWRpby1uZy1tb2RlbC1leGFtcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICdyYWRpby1uZy1tb2RlbC1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsncmFkaW8tbmctbW9kZWwtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgUmFkaW9OZ01vZGVsRXhhbXBsZSB7XG4gIGZhdm9yaXRlU2Vhc29uOiBzdHJpbmc7XG4gIHNlYXNvbnM6IHN0cmluZ1tdID0gWydXaW50ZXInLCAnU3ByaW5nJywgJ1N1bW1lcicsICdBdXR1bW4nXTtcbn1cbiIsIjxsYWJlbCBpZD1cImV4YW1wbGUtcmFkaW8tZ3JvdXAtbGFiZWxcIj5QaWNrIHlvdXIgZmF2b3JpdGUgc2Vhc29uPC9sYWJlbD5cbjxtYXQtcmFkaW8tZ3JvdXBcbiAgYXJpYS1sYWJlbGxlZGJ5PVwiZXhhbXBsZS1yYWRpby1ncm91cC1sYWJlbFwiXG4gIGNsYXNzPVwiZXhhbXBsZS1yYWRpby1ncm91cFwiXG4gIFsobmdNb2RlbCldPVwiZmF2b3JpdGVTZWFzb25cIj5cbiAgPG1hdC1yYWRpby1idXR0b24gY2xhc3M9XCJleGFtcGxlLXJhZGlvLWJ1dHRvblwiICpuZ0Zvcj1cImxldCBzZWFzb24gb2Ygc2Vhc29uc1wiIFt2YWx1ZV09XCJzZWFzb25cIj5cbiAgICB7e3NlYXNvbn19XG4gIDwvbWF0LXJhZGlvLWJ1dHRvbj5cbjwvbWF0LXJhZGlvLWdyb3VwPlxuPGRpdj5Zb3VyIGZhdm9yaXRlIHNlYXNvbiBpczoge3tmYXZvcml0ZVNlYXNvbn19PC9kaXY+XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmFkaW8tbmctbW9kZWwtZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL3JhZGlvL3JhZGlvLW5nLW1vZGVsL3JhZGlvLW5nLW1vZGVsLWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9tYXRlcmlhbC9yYWRpby9yYWRpby1uZy1tb2RlbC9yYWRpby1uZy1tb2RlbC1leGFtcGxlLmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7SUNLdEMsMkNBQ0U7SUFBQSxZQUNGO0lBQUEsaUJBQW1COzs7SUFGMkQsaUNBQWdCO0lBQzVGLGVBQ0Y7SUFERSwwQ0FDRjs7Ozs7QURGRjs7OztJQUFBLE1BS2EsbUJBQW1CO1FBTGhDO1lBT0UsWUFBTyxHQUFhLENBQUMsUUFBUSxFQUFFLFFBQVEsRUFBRSxRQUFRLEVBQUUsUUFBUSxDQUFDLENBQUM7U0FDOUQ7OztnQkFSQSxTQUFTLFNBQUM7b0JBQ1QsUUFBUSxFQUFFLHdCQUF3QjtvQkFDbEMsV0FBVyxFQUFFLDZCQUE2QjtvQkFDMUMsU0FBUyxFQUFFLENBQUMsNEJBQTRCLENBQUM7aUJBQzFDOzs2R0FDWSxtQkFBbUI7K0VBQW5CLG1CQUFtQjtZQ1ZoQyxnQ0FBc0M7WUFBQSx5Q0FBeUI7WUFBQSxpQkFBUTtZQUN2RSwwQ0FJRTtZQURBLDhKQUE0QjtZQUM1Qiw4RkFDRTtZQUVKLGlCQUFrQjtZQUNsQiwyQkFBSztZQUFBLFlBQTJDO1lBQUEsaUJBQU07O1lBTHBELGVBQTRCO1lBQTVCLDRDQUE0QjtZQUNtQixlQUE4QjtZQUE5QixxQ0FBOEI7WUFJMUUsZUFBMkM7WUFBM0MsMEVBQTJDOzs4QkRUaEQ7S0FhQztTQUhZLG1CQUFtQjtrREFBbkIsbUJBQW1CO2NBTC9CLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsd0JBQXdCO2dCQUNsQyxXQUFXLEVBQUUsNkJBQTZCO2dCQUMxQyxTQUFTLEVBQUUsQ0FBQyw0QkFBNEIsQ0FBQzthQUMxQzs7OztJQUVDLDZDQUF1Qjs7SUFDdkIsc0NBQTZEIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBSYWRpb3Mgd2l0aCBuZ01vZGVsXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3JhZGlvLW5nLW1vZGVsLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ3JhZGlvLW5nLW1vZGVsLWV4YW1wbGUuaHRtbCcsXG4gIHN0eWxlVXJsczogWydyYWRpby1uZy1tb2RlbC1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBSYWRpb05nTW9kZWxFeGFtcGxlIHtcbiAgZmF2b3JpdGVTZWFzb246IHN0cmluZztcbiAgc2Vhc29uczogc3RyaW5nW10gPSBbJ1dpbnRlcicsICdTcHJpbmcnLCAnU3VtbWVyJywgJ0F1dHVtbiddO1xufVxuIiwiPGxhYmVsIGlkPVwiZXhhbXBsZS1yYWRpby1ncm91cC1sYWJlbFwiPlBpY2sgeW91ciBmYXZvcml0ZSBzZWFzb248L2xhYmVsPlxuPG1hdC1yYWRpby1ncm91cFxuICBhcmlhLWxhYmVsbGVkYnk9XCJleGFtcGxlLXJhZGlvLWdyb3VwLWxhYmVsXCJcbiAgY2xhc3M9XCJleGFtcGxlLXJhZGlvLWdyb3VwXCJcbiAgWyhuZ01vZGVsKV09XCJmYXZvcml0ZVNlYXNvblwiPlxuICA8bWF0LXJhZGlvLWJ1dHRvbiBjbGFzcz1cImV4YW1wbGUtcmFkaW8tYnV0dG9uXCIgKm5nRm9yPVwibGV0IHNlYXNvbiBvZiBzZWFzb25zXCIgW3ZhbHVlXT1cInNlYXNvblwiPlxuICAgIHt7c2Vhc29ufX1cbiAgPC9tYXQtcmFkaW8tYnV0dG9uPlxuPC9tYXQtcmFkaW8tZ3JvdXA+XG48ZGl2PllvdXIgZmF2b3JpdGUgc2Vhc29uIGlzOiB7e2Zhdm9yaXRlU2Vhc29ufX08L2Rpdj5cbiJdfQ==
