@@ -1,13 +1,8 @@
 import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material/radio';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/radio/radio-ng-model/radio-ng-model-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-radio-button", 3);
     ɵɵtext(1);
@@ -19,26 +14,16 @@ function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) 
     ɵɵtextInterpolate1(" ", season_r1, " ");
 } }
 /**
- * \@title Radios with ngModel
+ * @title Radios with ngModel
  */
 let RadioNgModelExample = /** @class */ (() => {
-    /**
-     * \@title Radios with ngModel
-     */
     class RadioNgModelExample {
         constructor() {
             this.seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
         }
     }
-    RadioNgModelExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'radio-ng-model-example',
-                    templateUrl: 'radio-ng-model-example.html',
-                    styleUrls: ['radio-ng-model-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
-    /** @nocollapse */ RadioNgModelExample.ɵcmp = ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
+    RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
+    RadioNgModelExample.ɵcmp = ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "label", 0);
             ɵɵtext(1, "Pick your favorite season");
             ɵɵelementEnd();
@@ -67,36 +52,15 @@ let RadioNgModelExample = /** @class */ (() => {
                 styleUrls: ['radio-ng-model-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    RadioNgModelExample.prototype.favoriteSeason;
-    /** @type {?} */
-    RadioNgModelExample.prototype.seasons;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/radio/radio-overview/radio-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic radios
+ * @title Basic radios
  */
 let RadioOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic radios
-     */
     class RadioOverviewExample {
     }
-    RadioOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'radio-overview-example',
-                    templateUrl: 'radio-overview-example.html',
-                    styleUrls: ['radio-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
-    /** @nocollapse */ RadioOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
+    RadioOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-radio-group", 0);
             ɵɵelementStart(1, "mat-radio-button", 1);
             ɵɵtext(2, "Option 1");
@@ -117,12 +81,6 @@ let RadioOverviewExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/radio/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     RadioNgModelExample,
     RadioOverviewExample,
@@ -130,20 +88,8 @@ const EXAMPLES = [
 let RadioExamplesModule = /** @class */ (() => {
     class RadioExamplesModule {
     }
-    RadioExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatRadioModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ RadioExamplesModule.ɵmod = ɵɵdefineNgModule({ type: RadioExamplesModule });
-    /** @nocollapse */ RadioExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
+    RadioExamplesModule.ɵmod = ɵɵdefineNgModule({ type: RadioExamplesModule });
+    RadioExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatRadioModule,
                 FormsModule,

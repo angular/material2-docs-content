@@ -1,31 +1,16 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatToolbar, MatToolbarRow, MatToolbarModule } from '@angular/material/toolbar';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/toolbar/toolbar-basic/toolbar-basic-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic toolbar
+ * @title Basic toolbar
  */
 let ToolbarBasicExample = /** @class */ (() => {
-    /**
-     * \@title Basic toolbar
-     */
     class ToolbarBasicExample {
     }
-    ToolbarBasicExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'toolbar-basic-example',
-                    templateUrl: 'toolbar-basic-example.html',
-                    styleUrls: ['toolbar-basic-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ToolbarBasicExample.ɵfac = function ToolbarBasicExample_Factory(t) { return new (t || ToolbarBasicExample)(); };
-    /** @nocollapse */ ToolbarBasicExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarBasicExample, selectors: [["toolbar-basic-example"]], decls: 13, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"]], template: function ToolbarBasicExample_Template(rf, ctx) { if (rf & 1) {
+    ToolbarBasicExample.ɵfac = function ToolbarBasicExample_Factory(t) { return new (t || ToolbarBasicExample)(); };
+    ToolbarBasicExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarBasicExample, selectors: [["toolbar-basic-example"]], decls: 13, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"]], template: function ToolbarBasicExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-toolbar");
             ɵɵelementStart(1, "button", 0);
             ɵɵelementStart(2, "mat-icon");
@@ -60,28 +45,13 @@ let ToolbarBasicExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/toolbar/toolbar-multirow/toolbar-multirow-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Multi-row toolbar
+ * @title Multi-row toolbar
  */
 let ToolbarMultirowExample = /** @class */ (() => {
-    /**
-     * \@title Multi-row toolbar
-     */
     class ToolbarMultirowExample {
     }
-    ToolbarMultirowExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'toolbar-multirow-example',
-                    templateUrl: 'toolbar-multirow-example.html',
-                    styleUrls: ['toolbar-multirow-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
-    /** @nocollapse */ ToolbarMultirowExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) { if (rf & 1) {
+    ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
+    ToolbarMultirowExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-toolbar", 0);
             ɵɵelementStart(1, "mat-toolbar-row");
             ɵɵelementStart(2, "span");
@@ -123,28 +93,13 @@ let ToolbarMultirowExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/toolbar/toolbar-overview/toolbar-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Toolbar overview
+ * @title Toolbar overview
  */
 let ToolbarOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Toolbar overview
-     */
     class ToolbarOverviewExample {
     }
-    ToolbarOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'toolbar-overview-example',
-                    templateUrl: 'toolbar-overview-example.html',
-                    styleUrls: ['toolbar-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
-    /** @nocollapse */ ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 47, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"], ["color", "primary"]], template: function ToolbarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
+    ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 47, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"], ["color", "primary"]], template: function ToolbarOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵelementStart(1, "mat-toolbar");
             ɵɵelementStart(2, "button", 0);
@@ -234,12 +189,6 @@ let ToolbarOverviewExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/toolbar/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     ToolbarBasicExample,
     ToolbarMultirowExample,
@@ -248,20 +197,8 @@ const EXAMPLES = [
 let ToolbarExamplesModule = /** @class */ (() => {
     class ToolbarExamplesModule {
     }
-    ToolbarExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatIconModule,
-                        MatToolbarModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ ToolbarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ToolbarExamplesModule });
-    /** @nocollapse */ ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
+    ToolbarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ToolbarExamplesModule });
+    ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
                 MatButtonModule,
                 MatIconModule,
                 MatToolbarModule,

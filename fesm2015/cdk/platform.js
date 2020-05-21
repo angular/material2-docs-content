@@ -1,22 +1,11 @@
 import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform, PlatformModule } from '@angular/cdk/platform';
-import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/platform/cdk-platform-overview/cdk-platform-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Platform overview
+ * @title Platform overview
  */
 let CdkPlatformOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Platform overview
-     */
     class CdkPlatformOverviewExample {
-        /**
-         * @param {?} platform
-         */
         constructor(platform) {
             this.platform = platform;
             this.supportedInputTypes = Array.from(getSupportedInputTypes()).join(', ');
@@ -24,19 +13,8 @@ let CdkPlatformOverviewExample = /** @class */ (() => {
             this.supportsScrollBehavior = supportsScrollBehavior();
         }
     }
-    CdkPlatformOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-platform-overview-example',
-                    templateUrl: 'cdk-platform-overview-example.html',
-                    styleUrls: ['cdk-platform-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    CdkPlatformOverviewExample.ctorParameters = () => [
-        { type: Platform }
-    ];
-    /** @nocollapse */ CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
-    /** @nocollapse */ CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
+    CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h2");
             ɵɵtext(1, "Platform information:");
             ɵɵelementEnd();
@@ -107,39 +85,13 @@ let CdkPlatformOverviewExample = /** @class */ (() => {
                 styleUrls: ['cdk-platform-overview-example.css'],
             }]
     }], function () { return [{ type: Platform }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    CdkPlatformOverviewExample.prototype.supportedInputTypes;
-    /** @type {?} */
-    CdkPlatformOverviewExample.prototype.supportsPassiveEventListeners;
-    /** @type {?} */
-    CdkPlatformOverviewExample.prototype.supportsScrollBehavior;
-    /** @type {?} */
-    CdkPlatformOverviewExample.prototype.platform;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/platform/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [CdkPlatformOverviewExample];
 let CdkPlatformExamplesModule = /** @class */ (() => {
     class CdkPlatformExamplesModule {
     }
-    CdkPlatformExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        PlatformModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
-    /** @nocollapse */ CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
+    CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
+    CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
                 PlatformModule,
             ]] });
     return CdkPlatformExamplesModule;

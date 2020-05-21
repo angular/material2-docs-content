@@ -1,4 +1,4 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ɵɵdirectiveInject, ɵɵtextInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgControlStatus, NgModel, Validators, FormBuilder, NgControlStatusGroup, NgForm, RequiredValidator, FormGroupDirective, FormControlName, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
@@ -7,17 +7,9 @@ import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material
 import { MatSlideToggle, MatSlideToggleRequiredValidator, MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/slide-toggle/slide-toggle-configurable/slide-toggle-configurable-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Configurable slide-toggle
+ * @title Configurable slide-toggle
  */
 let SlideToggleConfigurableExample = /** @class */ (() => {
-    /**
-     * \@title Configurable slide-toggle
-     */
     class SlideToggleConfigurableExample {
         constructor() {
             this.color = 'accent';
@@ -25,15 +17,8 @@ let SlideToggleConfigurableExample = /** @class */ (() => {
             this.disabled = false;
         }
     }
-    SlideToggleConfigurableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'slide-toggle-configurable-example',
-                    templateUrl: 'slide-toggle-configurable-example.html',
-                    styleUrls: ['slide-toggle-configurable-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SlideToggleConfigurableExample.ɵfac = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
-    /** @nocollapse */ SlideToggleConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleConfigurableExample.ɵfac = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
+    SlideToggleConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card");
             ɵɵelementStart(1, "mat-card-content");
             ɵɵelementStart(2, "h2", 0);
@@ -102,31 +87,12 @@ let SlideToggleConfigurableExample = /** @class */ (() => {
                 styleUrls: ['slide-toggle-configurable-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SlideToggleConfigurableExample.prototype.color;
-    /** @type {?} */
-    SlideToggleConfigurableExample.prototype.checked;
-    /** @type {?} */
-    SlideToggleConfigurableExample.prototype.disabled;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/slide-toggle/slide-toggle-forms/slide-toggle-forms-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Slide-toggle with forms
+ * @title Slide-toggle with forms
  */
 let SlideToggleFormsExample = /** @class */ (() => {
-    /**
-     * \@title Slide-toggle with forms
-     */
     class SlideToggleFormsExample {
-        /**
-         * @param {?} formBuilder
-         */
         constructor(formBuilder) {
             this.isChecked = true;
             this.formGroup = formBuilder.group({
@@ -134,26 +100,12 @@ let SlideToggleFormsExample = /** @class */ (() => {
                 acceptTerms: ['', Validators.requiredTrue]
             });
         }
-        /**
-         * @return {?}
-         */
         onFormSubmit() {
             alert(JSON.stringify(this.formGroup.value, null, 2));
         }
     }
-    SlideToggleFormsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'slide-toggle-forms-example',
-                    templateUrl: './slide-toggle-forms-example.html',
-                    styleUrls: ['./slide-toggle-forms-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    SlideToggleFormsExample.ctorParameters = () => [
-        { type: FormBuilder }
-    ];
-    /** @nocollapse */ SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(ɵɵdirectiveInject(FormBuilder)); };
-    /** @nocollapse */ SlideToggleFormsExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(ɵɵdirectiveInject(FormBuilder)); };
+    SlideToggleFormsExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵtext(1, "Slide Toggle using a simple NgModel.");
             ɵɵelementEnd();
@@ -214,36 +166,15 @@ let SlideToggleFormsExample = /** @class */ (() => {
                 styleUrls: ['./slide-toggle-forms-example.css'],
             }]
     }], function () { return [{ type: FormBuilder }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    SlideToggleFormsExample.prototype.isChecked;
-    /** @type {?} */
-    SlideToggleFormsExample.prototype.formGroup;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/slide-toggle/slide-toggle-overview/slide-toggle-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic slide-toggles
+ * @title Basic slide-toggles
  */
 let SlideToggleOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic slide-toggles
-     */
     class SlideToggleOverviewExample {
     }
-    SlideToggleOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'slide-toggle-overview-example',
-                    templateUrl: 'slide-toggle-overview-example.html',
-                    styleUrls: ['slide-toggle-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SlideToggleOverviewExample.ɵfac = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
-    /** @nocollapse */ SlideToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleOverviewExample.ɵfac = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
+    SlideToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-slide-toggle");
             ɵɵtext(1, "Slide me!");
             ɵɵelementEnd();
@@ -259,12 +190,6 @@ let SlideToggleOverviewExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/slide-toggle/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     SlideToggleConfigurableExample,
     SlideToggleFormsExample,
@@ -273,24 +198,8 @@ const EXAMPLES = [
 let SlideToggleExamplesModule = /** @class */ (() => {
     class SlideToggleExamplesModule {
     }
-    SlideToggleExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        FormsModule,
-                        MatButtonModule,
-                        MatCardModule,
-                        MatCheckboxModule,
-                        MatRadioModule,
-                        MatSlideToggleModule,
-                        ReactiveFormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ SlideToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
-    /** @nocollapse */ SlideToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); }, imports: [[
+    SlideToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
+    SlideToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); }, imports: [[
                 FormsModule,
                 MatButtonModule,
                 MatCardModule,

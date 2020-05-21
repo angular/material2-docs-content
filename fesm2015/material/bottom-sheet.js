@@ -1,48 +1,23 @@
-import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatNavList, MatListItem, MatListModule } from '@angular/material/list';
 import { MatLine } from '@angular/material/core';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/bottom-sheet/bottom-sheet-overview/bottom-sheet-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Bottom Sheet Overview
+ * @title Bottom Sheet Overview
  */
 let BottomSheetOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Bottom Sheet Overview
-     */
     class BottomSheetOverviewExample {
-        /**
-         * @param {?} _bottomSheet
-         */
         constructor(_bottomSheet) {
             this._bottomSheet = _bottomSheet;
         }
-        /**
-         * @return {?}
-         */
         openBottomSheet() {
             this._bottomSheet.open(BottomSheetOverviewExampleSheet);
         }
     }
-    BottomSheetOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'bottom-sheet-overview-example',
-                    templateUrl: 'bottom-sheet-overview-example.html',
-                    styleUrls: ['bottom-sheet-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    BottomSheetOverviewExample.ctorParameters = () => [
-        { type: MatBottomSheet }
-    ];
-    /** @nocollapse */ BottomSheetOverviewExample.ɵfac = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(ɵɵdirectiveInject(MatBottomSheet)); };
-    /** @nocollapse */ BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    BottomSheetOverviewExample.ɵfac = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(ɵɵdirectiveInject(MatBottomSheet)); };
+    BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵtext(1, "You have received a file called \"cat-picture.jpeg\".");
             ɵɵelementEnd();
@@ -61,42 +36,18 @@ let BottomSheetOverviewExample = /** @class */ (() => {
                 styleUrls: ['bottom-sheet-overview-example.css'],
             }]
     }], function () { return [{ type: MatBottomSheet }]; }, null); })();
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    BottomSheetOverviewExample.prototype._bottomSheet;
-}
 let BottomSheetOverviewExampleSheet = /** @class */ (() => {
     class BottomSheetOverviewExampleSheet {
-        /**
-         * @param {?} _bottomSheetRef
-         */
         constructor(_bottomSheetRef) {
             this._bottomSheetRef = _bottomSheetRef;
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         openLink(event) {
             this._bottomSheetRef.dismiss();
             event.preventDefault();
         }
     }
-    BottomSheetOverviewExampleSheet.decorators = [
-        { type: Component, args: [{
-                    selector: 'bottom-sheet-overview-example-sheet',
-                    templateUrl: 'bottom-sheet-overview-example-sheet.html',
-                },] },
-    ];
-    /** @nocollapse */
-    BottomSheetOverviewExampleSheet.ctorParameters = () => [
-        { type: MatBottomSheetRef }
-    ];
-    /** @nocollapse */ BottomSheetOverviewExampleSheet.ɵfac = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(ɵɵdirectiveInject(MatBottomSheetRef)); };
-    /** @nocollapse */ BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
+    BottomSheetOverviewExampleSheet.ɵfac = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(ɵɵdirectiveInject(MatBottomSheetRef)); };
+    BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-nav-list");
             ɵɵelementStart(1, "a", 0);
             ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_1_listener($event) { return ctx.openLink($event); });
@@ -145,20 +96,7 @@ let BottomSheetOverviewExampleSheet = /** @class */ (() => {
                 templateUrl: 'bottom-sheet-overview-example-sheet.html',
             }]
     }], function () { return [{ type: MatBottomSheetRef }]; }, null); })();
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    BottomSheetOverviewExampleSheet.prototype._bottomSheetRef;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/bottom-sheet/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     BottomSheetOverviewExample,
     BottomSheetOverviewExampleSheet,
@@ -166,20 +104,8 @@ const EXAMPLES = [
 let BottomSheetExamplesModule = /** @class */ (() => {
     class BottomSheetExamplesModule {
     }
-    BottomSheetExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatBottomSheetModule,
-                        MatButtonModule,
-                        MatListModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
-    /** @nocollapse */ BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
+    BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
+    BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
                 MatBottomSheetModule,
                 MatButtonModule,
                 MatListModule,

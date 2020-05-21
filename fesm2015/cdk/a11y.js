@@ -1,64 +1,28 @@
 import { CdkMonitorFocus, FocusMonitor, A11yModule } from '@angular/cdk/a11y';
-import { Component, NgZone, ChangeDetectorRef, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, ViewChild, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵreference, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdirectiveInject, NgZone, ChangeDetectorRef, ɵɵdefineComponent, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵreference, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatOption } from '@angular/material/core';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/a11y/focus-monitor-directives/focus-monitor-directives-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Monitoring focus with FocusMonitor
- */
+/** @title Monitoring focus with FocusMonitor */
 let FocusMonitorDirectivesExample = /** @class */ (() => {
-    /**
-     * \@title Monitoring focus with FocusMonitor
-     */
     class FocusMonitorDirectivesExample {
-        /**
-         * @param {?} _ngZone
-         * @param {?} _cdr
-         */
         constructor(_ngZone, _cdr) {
             this._ngZone = _ngZone;
             this._cdr = _cdr;
             this.elementOrigin = this.formatOrigin(null);
             this.subtreeOrigin = this.formatOrigin(null);
         }
-        /**
-         * @param {?} origin
-         * @return {?}
-         */
         formatOrigin(origin) {
             return origin ? origin + ' focused' : 'blurred';
         }
         // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
-        /**
-         * @return {?}
-         */
         markForCheck() {
-            this._ngZone.run((/**
-             * @return {?}
-             */
-            () => this._cdr.markForCheck()));
+            this._ngZone.run(() => this._cdr.markForCheck());
         }
     }
-    FocusMonitorDirectivesExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'focus-monitor-directives-example',
-                    templateUrl: 'focus-monitor-directives-example.html',
-                    styleUrls: ['focus-monitor-directives-example.css']
-                },] },
-    ];
-    /** @nocollapse */
-    FocusMonitorDirectivesExample.ctorParameters = () => [
-        { type: NgZone },
-        { type: ChangeDetectorRef }
-    ];
-    /** @nocollapse */ FocusMonitorDirectivesExample.ɵfac = function FocusMonitorDirectivesExample_Factory(t) { return new (t || FocusMonitorDirectivesExample)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef)); };
-    /** @nocollapse */ FocusMonitorDirectivesExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) { if (rf & 1) {
+    FocusMonitorDirectivesExample.ɵfac = function FocusMonitorDirectivesExample_Factory(t) { return new (t || FocusMonitorDirectivesExample)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef)); };
+    FocusMonitorDirectivesExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "button", 1);
             ɵɵlistener("cdkFocusChange", function FocusMonitorDirectivesExample_Template_button_cdkFocusChange_1_listener($event) { ctx.elementOrigin = ctx.formatOrigin($event); return ctx.markForCheck(); });
@@ -95,97 +59,33 @@ let FocusMonitorDirectivesExample = /** @class */ (() => {
                 styleUrls: ['focus-monitor-directives-example.css']
             }]
     }], function () { return [{ type: NgZone }, { type: ChangeDetectorRef }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    FocusMonitorDirectivesExample.prototype.elementOrigin;
-    /** @type {?} */
-    FocusMonitorDirectivesExample.prototype.subtreeOrigin;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorDirectivesExample.prototype._ngZone;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorDirectivesExample.prototype._cdr;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/a11y/focus-monitor-focus-via/focus-monitor-focus-via-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 const _c0 = ["monitored"];
-/**
- * \@title Focusing with a specific FocusOrigin
- */
+/** @title Focusing with a specific FocusOrigin */
 let FocusMonitorFocusViaExample = /** @class */ (() => {
-    /**
-     * \@title Focusing with a specific FocusOrigin
-     */
     class FocusMonitorFocusViaExample {
-        /**
-         * @param {?} focusMonitor
-         * @param {?} _cdr
-         * @param {?} _ngZone
-         */
         constructor(focusMonitor, _cdr, _ngZone) {
             this.focusMonitor = focusMonitor;
             this._cdr = _cdr;
             this._ngZone = _ngZone;
             this.origin = this.formatOrigin(null);
         }
-        /**
-         * @return {?}
-         */
         ngAfterViewInit() {
             this.focusMonitor.monitor(this.monitoredEl)
-                .subscribe((/**
-             * @param {?} origin
-             * @return {?}
-             */
-            origin => this._ngZone.run((/**
-             * @return {?}
-             */
-            () => {
+                .subscribe(origin => this._ngZone.run(() => {
                 this.origin = this.formatOrigin(origin);
                 this._cdr.markForCheck();
-            }))));
+            }));
         }
-        /**
-         * @return {?}
-         */
         ngOnDestroy() {
             this.focusMonitor.stopMonitoring(this.monitoredEl);
         }
-        /**
-         * @param {?} origin
-         * @return {?}
-         */
         formatOrigin(origin) {
             return origin ? origin + ' focused' : 'blurred';
         }
     }
-    FocusMonitorFocusViaExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'focus-monitor-focus-via-example',
-                    templateUrl: 'focus-monitor-focus-via-example.html',
-                    styleUrls: ['focus-monitor-focus-via-example.css']
-                },] },
-    ];
-    /** @nocollapse */
-    FocusMonitorFocusViaExample.ctorParameters = () => [
-        { type: FocusMonitor },
-        { type: ChangeDetectorRef },
-        { type: NgZone }
-    ];
-    FocusMonitorFocusViaExample.propDecorators = {
-        monitoredEl: [{ type: ViewChild, args: ['monitored',] }]
-    };
-    /** @nocollapse */ FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
-    /** @nocollapse */ FocusMonitorFocusViaExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
+    FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
+    FocusMonitorFocusViaExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(_c0, true);
         } if (rf & 2) {
             var _t;
@@ -244,45 +144,12 @@ let FocusMonitorFocusViaExample = /** @class */ (() => {
             type: ViewChild,
             args: ['monitored']
         }] }); })();
-if (false) {
-    /** @type {?} */
-    FocusMonitorFocusViaExample.prototype.monitoredEl;
-    /** @type {?} */
-    FocusMonitorFocusViaExample.prototype.origin;
-    /** @type {?} */
-    FocusMonitorFocusViaExample.prototype.focusMonitor;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorFocusViaExample.prototype._cdr;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorFocusViaExample.prototype._ngZone;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/a11y/focus-monitor-overview/focus-monitor-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 const _c0$1 = ["element"];
 const _c1 = ["subtree"];
-/**
- * \@title Monitoring focus with FocusMonitor
- */
+/** @title Monitoring focus with FocusMonitor */
 let FocusMonitorOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Monitoring focus with FocusMonitor
-     */
     class FocusMonitorOverviewExample {
-        /**
-         * @param {?} _focusMonitor
-         * @param {?} _cdr
-         * @param {?} _ngZone
-         */
         constructor(_focusMonitor, _cdr, _ngZone) {
             this._focusMonitor = _focusMonitor;
             this._cdr = _cdr;
@@ -290,69 +157,28 @@ let FocusMonitorOverviewExample = /** @class */ (() => {
             this.elementOrigin = this.formatOrigin(null);
             this.subtreeOrigin = this.formatOrigin(null);
         }
-        /**
-         * @return {?}
-         */
         ngAfterViewInit() {
             this._focusMonitor.monitor(this.element)
-                .subscribe((/**
-             * @param {?} origin
-             * @return {?}
-             */
-            origin => this._ngZone.run((/**
-             * @return {?}
-             */
-            () => {
+                .subscribe(origin => this._ngZone.run(() => {
                 this.elementOrigin = this.formatOrigin(origin);
                 this._cdr.markForCheck();
-            }))));
+            }));
             this._focusMonitor.monitor(this.subtree, true)
-                .subscribe((/**
-             * @param {?} origin
-             * @return {?}
-             */
-            origin => this._ngZone.run((/**
-             * @return {?}
-             */
-            () => {
+                .subscribe(origin => this._ngZone.run(() => {
                 this.subtreeOrigin = this.formatOrigin(origin);
                 this._cdr.markForCheck();
-            }))));
+            }));
         }
-        /**
-         * @return {?}
-         */
         ngOnDestroy() {
             this._focusMonitor.stopMonitoring(this.element);
             this._focusMonitor.stopMonitoring(this.subtree);
         }
-        /**
-         * @param {?} origin
-         * @return {?}
-         */
         formatOrigin(origin) {
             return origin ? origin + ' focused' : 'blurred';
         }
     }
-    FocusMonitorOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'focus-monitor-overview-example',
-                    templateUrl: 'focus-monitor-overview-example.html',
-                    styleUrls: ['focus-monitor-overview-example.css']
-                },] },
-    ];
-    /** @nocollapse */
-    FocusMonitorOverviewExample.ctorParameters = () => [
-        { type: FocusMonitor },
-        { type: ChangeDetectorRef },
-        { type: NgZone }
-    ];
-    FocusMonitorOverviewExample.propDecorators = {
-        element: [{ type: ViewChild, args: ['element',] }],
-        subtree: [{ type: ViewChild, args: ['subtree',] }]
-    };
-    /** @nocollapse */ FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
-    /** @nocollapse */ FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
+    FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
+    FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(_c0$1, true);
             ɵɵviewQuery(_c1, true);
         } if (rf & 2) {
@@ -400,38 +226,7 @@ let FocusMonitorOverviewExample = /** @class */ (() => {
             type: ViewChild,
             args: ['subtree']
         }] }); })();
-if (false) {
-    /** @type {?} */
-    FocusMonitorOverviewExample.prototype.element;
-    /** @type {?} */
-    FocusMonitorOverviewExample.prototype.subtree;
-    /** @type {?} */
-    FocusMonitorOverviewExample.prototype.elementOrigin;
-    /** @type {?} */
-    FocusMonitorOverviewExample.prototype.subtreeOrigin;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorOverviewExample.prototype._focusMonitor;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorOverviewExample.prototype._cdr;
-    /**
-     * @type {?}
-     * @private
-     */
-    FocusMonitorOverviewExample.prototype._ngZone;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/a11y/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     FocusMonitorDirectivesExample,
     FocusMonitorFocusViaExample,
@@ -440,19 +235,8 @@ const EXAMPLES = [
 let CdkA11yExamplesModule = /** @class */ (() => {
     class CdkA11yExamplesModule {
     }
-    CdkA11yExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        A11yModule,
-                        MatSelectModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CdkA11yExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
-    /** @nocollapse */ CdkA11yExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); }, imports: [[
+    CdkA11yExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
+    CdkA11yExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); }, imports: [[
                 A11yModule,
                 MatSelectModule,
             ]] });

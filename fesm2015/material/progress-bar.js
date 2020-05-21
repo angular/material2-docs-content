@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { Component, ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵadvance, ɵɵproperty, ɵɵtemplate, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵadvance, ɵɵproperty, ɵɵtemplate, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
@@ -7,28 +7,13 @@ import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material
 import { MatSlider, MatSliderModule } from '@angular/material/slider';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/progress-bar/progress-bar-buffer/progress-bar-buffer-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Buffer progress-bar
+ * @title Buffer progress-bar
  */
 let ProgressBarBufferExample = /** @class */ (() => {
-    /**
-     * \@title Buffer progress-bar
-     */
     class ProgressBarBufferExample {
     }
-    ProgressBarBufferExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'progress-bar-buffer-example',
-                    templateUrl: 'progress-bar-buffer-example.html',
-                    styleUrls: ['progress-bar-buffer-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
-    /** @nocollapse */ ProgressBarBufferExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
+    ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
+    ProgressBarBufferExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-progress-bar", 0);
         } }, directives: [MatProgressBar], styles: [""] });
     return ProgressBarBufferExample;
@@ -42,11 +27,6 @@ let ProgressBarBufferExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/progress-bar/progress-bar-configurable/progress-bar-configurable-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
     const _r3 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "section", 1);
@@ -78,12 +58,9 @@ function ProgressBarConfigurableExample_section_27_Template(rf, ctx) { if (rf & 
     ɵɵproperty("ngModel", ctx_r1.bufferValue);
 } }
 /**
- * \@title Configurable progress-bar
+ * @title Configurable progress-bar
  */
 let ProgressBarConfigurableExample = /** @class */ (() => {
-    /**
-     * \@title Configurable progress-bar
-     */
     class ProgressBarConfigurableExample {
         constructor() {
             this.color = 'primary';
@@ -92,15 +69,8 @@ let ProgressBarConfigurableExample = /** @class */ (() => {
             this.bufferValue = 75;
         }
     }
-    ProgressBarConfigurableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'progress-bar-configurable-example',
-                    templateUrl: 'progress-bar-configurable-example.html',
-                    styleUrls: ['progress-bar-configurable-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ProgressBarConfigurableExample.ɵfac = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
-    /** @nocollapse */ ProgressBarConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+    ProgressBarConfigurableExample.ɵfac = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
+    ProgressBarConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card");
             ɵɵelementStart(1, "mat-card-content");
             ɵɵelementStart(2, "h2", 0);
@@ -179,40 +149,15 @@ let ProgressBarConfigurableExample = /** @class */ (() => {
                 styleUrls: ['progress-bar-configurable-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    ProgressBarConfigurableExample.prototype.color;
-    /** @type {?} */
-    ProgressBarConfigurableExample.prototype.mode;
-    /** @type {?} */
-    ProgressBarConfigurableExample.prototype.value;
-    /** @type {?} */
-    ProgressBarConfigurableExample.prototype.bufferValue;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/progress-bar/progress-bar-determinate/progress-bar-determinate-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Determinate progress-bar
+ * @title Determinate progress-bar
  */
 let ProgressBarDeterminateExample = /** @class */ (() => {
-    /**
-     * \@title Determinate progress-bar
-     */
     class ProgressBarDeterminateExample {
     }
-    ProgressBarDeterminateExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'progress-bar-determinate-example',
-                    templateUrl: 'progress-bar-determinate-example.html',
-                    styleUrls: ['progress-bar-determinate-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
-    /** @nocollapse */ ProgressBarDeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
+    ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
+    ProgressBarDeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-progress-bar", 0);
         } }, directives: [MatProgressBar], styles: [""] });
     return ProgressBarDeterminateExample;
@@ -227,28 +172,13 @@ let ProgressBarDeterminateExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/progress-bar/progress-bar-indeterminate/progress-bar-indeterminate-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Indeterminate progress-bar
+ * @title Indeterminate progress-bar
  */
 let ProgressBarIndeterminateExample = /** @class */ (() => {
-    /**
-     * \@title Indeterminate progress-bar
-     */
     class ProgressBarIndeterminateExample {
     }
-    ProgressBarIndeterminateExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'progress-bar-indeterminate-example',
-                    templateUrl: 'progress-bar-indeterminate-example.html',
-                    styleUrls: ['progress-bar-indeterminate-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
-    /** @nocollapse */ ProgressBarIndeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
+    ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
+    ProgressBarIndeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-progress-bar", 0);
         } }, directives: [MatProgressBar], styles: [""] });
     return ProgressBarIndeterminateExample;
@@ -263,28 +193,13 @@ let ProgressBarIndeterminateExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/progress-bar/progress-bar-query/progress-bar-query-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Query progress-bar
+ * @title Query progress-bar
  */
 let ProgressBarQueryExample = /** @class */ (() => {
-    /**
-     * \@title Query progress-bar
-     */
     class ProgressBarQueryExample {
     }
-    ProgressBarQueryExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'progress-bar-query-example',
-                    templateUrl: 'progress-bar-query-example.html',
-                    styleUrls: ['progress-bar-query-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
-    /** @nocollapse */ ProgressBarQueryExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
+    ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
+    ProgressBarQueryExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-progress-bar", 0);
         } }, directives: [MatProgressBar], styles: [""] });
     return ProgressBarQueryExample;
@@ -298,12 +213,6 @@ let ProgressBarQueryExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/progress-bar/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     ProgressBarBufferExample,
     ProgressBarConfigurableExample,
@@ -314,23 +223,8 @@ const EXAMPLES = [
 let ProgressBarExamplesModule = /** @class */ (() => {
     class ProgressBarExamplesModule {
     }
-    ProgressBarExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatCardModule,
-                        MatProgressBarModule,
-                        MatRadioModule,
-                        MatSliderModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ ProgressBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
-    /** @nocollapse */ ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
+    ProgressBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
+    ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatCardModule,
                 MatProgressBarModule,

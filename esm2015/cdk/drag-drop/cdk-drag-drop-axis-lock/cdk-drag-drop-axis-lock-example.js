@@ -1,29 +1,14 @@
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-axis-lock/cdk-drag-drop-axis-lock-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/cdk/drag-drop";
 /**
- * \@title Drag&Drop position locking
+ * @title Drag&Drop position locking
  */
 let CdkDragDropAxisLockExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop position locking
-     */
     class CdkDragDropAxisLockExample {
     }
-    CdkDragDropAxisLockExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-axis-lock-example',
-                    templateUrl: 'cdk-drag-drop-axis-lock-example.html',
-                    styleUrls: ['cdk-drag-drop-axis-lock-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropAxisLockExample.ɵfac = function CdkDragDropAxisLockExample_Factory(t) { return new (t || CdkDragDropAxisLockExample)(); };
-    /** @nocollapse */ CdkDragDropAxisLockExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkDragDropAxisLockExample, selectors: [["cdk-drag-drop-axis-lock-example"]], decls: 4, vars: 0, consts: [["cdkDragLockAxis", "y", "cdkDrag", "", 1, "example-box"], ["cdkDragLockAxis", "x", "cdkDrag", "", 1, "example-box"]], template: function CdkDragDropAxisLockExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropAxisLockExample.ɵfac = function CdkDragDropAxisLockExample_Factory(t) { return new (t || CdkDragDropAxisLockExample)(); };
+    CdkDragDropAxisLockExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkDragDropAxisLockExample, selectors: [["cdk-drag-drop-axis-lock-example"]], decls: 4, vars: 0, consts: [["cdkDragLockAxis", "y", "cdkDrag", "", 1, "example-box"], ["cdkDragLockAxis", "x", "cdkDrag", "", 1, "example-box"]], template: function CdkDragDropAxisLockExample_Template(rf, ctx) { if (rf & 1) {
             i0.ɵɵelementStart(0, "div", 0);
             i0.ɵɵtext(1, " I can only be dragged up/down\n");
             i0.ɵɵelementEnd();
@@ -42,4 +27,4 @@ export { CdkDragDropAxisLockExample };
                 styleUrls: ['cdk-drag-drop-axis-lock-example.css'],
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL2Nkay9kcmFnLWRyb3AvY2RrLWRyYWctZHJvcC1heGlzLWxvY2svY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL2Nkay9kcmFnLWRyb3AvY2RrLWRyYWctZHJvcC1heGlzLWxvY2svY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLGVBQWUsQ0FBQzs7Ozs7O0FBS3hDOzs7O0lBQUEsTUFLYSwwQkFBMEI7OztnQkFMdEMsU0FBUyxTQUFDO29CQUNULFFBQVEsRUFBRSxpQ0FBaUM7b0JBQzNDLFdBQVcsRUFBRSxzQ0FBc0M7b0JBQ25ELFNBQVMsRUFBRSxDQUFDLHFDQUFxQyxDQUFDO2lCQUNuRDs7MkhBQ1ksMEJBQTBCO3NGQUExQiwwQkFBMEI7WUNWdkMsOEJBQ0U7WUFBQSxnREFDRjtZQUFBLGlCQUFNO1lBRU4sOEJBQ0U7WUFBQSxtREFDRjtZQUFBLGlCQUFNOztxQ0ROTjtLQVUwQztTQUE3QiwwQkFBMEI7a0RBQTFCLDBCQUEwQjtjQUx0QyxTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLGlDQUFpQztnQkFDM0MsV0FBVyxFQUFFLHNDQUFzQztnQkFDbkQsU0FBUyxFQUFFLENBQUMscUNBQXFDLENBQUM7YUFDbkQiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbi8qKlxuICogQHRpdGxlIERyYWcmRHJvcCBwb3NpdGlvbiBsb2NraW5nXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2Nkay1kcmFnLWRyb3AtYXhpcy1sb2NrLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ2Nkay1kcmFnLWRyb3AtYXhpcy1sb2NrLWV4YW1wbGUuaHRtbCcsXG4gIHN0eWxlVXJsczogWydjZGstZHJhZy1kcm9wLWF4aXMtbG9jay1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBDZGtEcmFnRHJvcEF4aXNMb2NrRXhhbXBsZSB7fVxuIiwiPGRpdiBjbGFzcz1cImV4YW1wbGUtYm94XCIgY2RrRHJhZ0xvY2tBeGlzPVwieVwiIGNka0RyYWc+XG4gIEkgY2FuIG9ubHkgYmUgZHJhZ2dlZCB1cC9kb3duXG48L2Rpdj5cblxuPGRpdiBjbGFzcz1cImV4YW1wbGUtYm94XCIgY2RrRHJhZ0xvY2tBeGlzPVwieFwiIGNka0RyYWc+XG4gIEkgY2FuIG9ubHkgYmUgZHJhZ2dlZCBsZWZ0L3JpZ2h0XG48L2Rpdj5cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL2Nkay9kcmFnLWRyb3AvY2RrLWRyYWctZHJvcC1heGlzLWxvY2svY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL2Nkay9kcmFnLWRyb3AvY2RrLWRyYWctZHJvcC1heGlzLWxvY2svY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7OztBQUV4Qzs7R0FFRztBQUNIO0lBQUEsTUFLYSwwQkFBMEI7O3dHQUExQiwwQkFBMEI7bUVBQTFCLDBCQUEwQjtZQ1Z2Qyw4QkFDRTtZQUFBLGdEQUNGO1lBQUEsaUJBQU07WUFFTiw4QkFDRTtZQUFBLG1EQUNGO1lBQUEsaUJBQU07O3FDRE5OO0tBVTBDO1NBQTdCLDBCQUEwQjtrREFBMUIsMEJBQTBCO2NBTHRDLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsaUNBQWlDO2dCQUMzQyxXQUFXLEVBQUUsc0NBQXNDO2dCQUNuRCxTQUFTLEVBQUUsQ0FBQyxxQ0FBcUMsQ0FBQzthQUNuRCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgRHJhZyZEcm9wIHBvc2l0aW9uIGxvY2tpbmdcbiAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnY2RrLWRyYWctZHJvcC1heGlzLWxvY2stZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ2Nkay1kcmFnLWRyb3AtYXhpcy1sb2NrLWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIENka0RyYWdEcm9wQXhpc0xvY2tFeGFtcGxlIHt9XG4iLCI8ZGl2IGNsYXNzPVwiZXhhbXBsZS1ib3hcIiBjZGtEcmFnTG9ja0F4aXM9XCJ5XCIgY2RrRHJhZz5cbiAgSSBjYW4gb25seSBiZSBkcmFnZ2VkIHVwL2Rvd25cbjwvZGl2PlxuXG48ZGl2IGNsYXNzPVwiZXhhbXBsZS1ib3hcIiBjZGtEcmFnTG9ja0F4aXM9XCJ4XCIgY2RrRHJhZz5cbiAgSSBjYW4gb25seSBiZSBkcmFnZ2VkIGxlZnQvcmlnaHRcbjwvZGl2PlxuIl19

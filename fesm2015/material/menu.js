@@ -1,31 +1,16 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵreference, ɵɵproperty, ɵsetClassMetadata, ɵɵadvance, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵreference, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatMenuTrigger, _MatMenu, MatMenuItem, MatMenuModule } from '@angular/material/menu';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/menu/menu-icons/menu-icons-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Menu with icons
+ * @title Menu with icons
  */
 let MenuIconsExample = /** @class */ (() => {
-    /**
-     * \@title Menu with icons
-     */
     class MenuIconsExample {
     }
-    MenuIconsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'menu-icons-example',
-                    templateUrl: 'menu-icons-example.html',
-                    styleUrls: ['menu-icons-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
-    /** @nocollapse */ MenuIconsExample.ɵcmp = ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
+    MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
+    MenuIconsExample.ɵcmp = ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵelementStart(1, "mat-icon");
             ɵɵtext(2, "more_vert");
@@ -73,28 +58,13 @@ let MenuIconsExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/menu/menu-overview/menu-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic menu
+ * @title Basic menu
  */
 let MenuOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic menu
-     */
     class MenuOverviewExample {
     }
-    MenuOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'menu-overview-example',
-                    templateUrl: 'menu-overview-example.html',
-                    styleUrls: ['menu-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
-    /** @nocollapse */ MenuOverviewExample.ɵcmp = ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
+    MenuOverviewExample.ɵcmp = ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵtext(1, "Menu");
             ɵɵelementEnd();
@@ -122,28 +92,13 @@ let MenuOverviewExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/menu/menu-position/menu-position-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Menu positioning
+ * @title Menu positioning
  */
 let MenuPositionExample = /** @class */ (() => {
-    /**
-     * \@title Menu positioning
-     */
     class MenuPositionExample {
     }
-    MenuPositionExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'menu-position-example',
-                    templateUrl: 'menu-position-example.html',
-                    styleUrls: ['menu-position-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
-    /** @nocollapse */ MenuPositionExample.ɵcmp = ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["aboveMenu", "matMenu"], ["mat-menu-item", ""], ["yPosition", "below"], ["belowMenu", "matMenu"], ["xPosition", "before"], ["beforeMenu", "matMenu"], ["xPosition", "after"], ["afterMenu", "matMenu"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
+    MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
+    MenuPositionExample.ɵcmp = ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["aboveMenu", "matMenu"], ["mat-menu-item", ""], ["yPosition", "below"], ["belowMenu", "matMenu"], ["xPosition", "before"], ["beforeMenu", "matMenu"], ["xPosition", "after"], ["afterMenu", "matMenu"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵtext(1, "Above");
             ɵɵelementEnd();
@@ -213,28 +168,13 @@ let MenuPositionExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/menu/menu-nested/menu-nested-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Nested menu
+ * @title Nested menu
  */
 let MenuNestedExample = /** @class */ (() => {
-    /**
-     * \@title Nested menu
-     */
     class MenuNestedExample {
     }
-    MenuNestedExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'menu-nested-example',
-                    templateUrl: 'menu-nested-example.html',
-                    styleUrls: ['menu-nested-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ MenuNestedExample.ɵfac = function MenuNestedExample_Factory(t) { return new (t || MenuNestedExample)(); };
-    /** @nocollapse */ MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selectors: [["menu-nested-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function MenuNestedExample_Template(rf, ctx) { if (rf & 1) {
+    MenuNestedExample.ɵfac = function MenuNestedExample_Factory(t) { return new (t || MenuNestedExample)(); };
+    MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selectors: [["menu-nested-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function MenuNestedExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵtext(1, "Animal index");
             ɵɵelementEnd();
@@ -364,12 +304,6 @@ let MenuNestedExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/menu/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     MenuIconsExample,
     MenuOverviewExample,
@@ -379,20 +313,8 @@ const EXAMPLES = [
 let MenuExamplesModule = /** @class */ (() => {
     class MenuExamplesModule {
     }
-    MenuExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatIconModule,
-                        MatMenuModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ MenuExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MenuExamplesModule });
-    /** @nocollapse */ MenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
+    MenuExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MenuExamplesModule });
+    MenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
                 MatButtonModule,
                 MatIconModule,
                 MatMenuModule,

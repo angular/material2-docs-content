@@ -1,19 +1,11 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { CdkCopyToClipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/clipboard/cdk-clipboard-overview/cdk-clipboard-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Clipboard overview
+ * @title Clipboard overview
  */
 let CdkClipboardOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Clipboard overview
-     */
     class CdkClipboardOverviewExample {
         constructor() {
             this.value = `Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It's not ` +
@@ -27,15 +19,8 @@ let CdkClipboardOverviewExample = /** @class */ (() => {
                 `killed him in his sleep. Ironic. He could save others from death, but not himself.`;
         }
     }
-    CdkClipboardOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-clipboard-overview-example',
-                    templateUrl: 'cdk-clipboard-overview-example.html',
-                    styleUrls: ['cdk-clipboard-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
-    /** @nocollapse */ CdkClipboardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
+    CdkClipboardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "label", 0);
             ɵɵtext(1, "Text to be copied");
             ɵɵelementEnd();
@@ -61,31 +46,13 @@ let CdkClipboardOverviewExample = /** @class */ (() => {
                 styleUrls: ['cdk-clipboard-overview-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkClipboardOverviewExample.prototype.value;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/clipboard/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [CdkClipboardOverviewExample];
 let CdkClipboardExamplesModule = /** @class */ (() => {
     class CdkClipboardExamplesModule {
     }
-    CdkClipboardExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [ClipboardModule, FormsModule],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CdkClipboardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
-    /** @nocollapse */ CdkClipboardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[ClipboardModule, FormsModule]] });
+    CdkClipboardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
+    CdkClipboardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[ClipboardModule, FormsModule]] });
     return CdkClipboardExamplesModule;
 })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [ClipboardModule, FormsModule], exports: [CdkClipboardOverviewExample] }); })();

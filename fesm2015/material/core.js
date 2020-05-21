@@ -1,4 +1,4 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵclassProp, ɵsetClassMetadata, ɵɵproperty, ɵɵadvance, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵclassProp, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgControlStatus, NgModel, NumberValueAccessor, DefaultValueAccessor, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -7,31 +7,16 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/core/elevation-overview/elevation-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Elevation CSS classes
+ * @title Elevation CSS classes
  */
 let ElevationOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Elevation CSS classes
-     */
     class ElevationOverviewExample {
         constructor() {
             this.isActive = false;
         }
     }
-    ElevationOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'elevation-overview-example',
-                    styleUrls: ['elevation-overview-example.css'],
-                    templateUrl: 'elevation-overview-example.html',
-                },] },
-    ];
-    /** @nocollapse */ ElevationOverviewExample.ɵfac = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
-    /** @nocollapse */ ElevationOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 4, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    ElevationOverviewExample.ɵfac = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
+    ElevationOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 4, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵtext(1, " Example\n");
             ɵɵelementEnd();
@@ -52,23 +37,11 @@ let ElevationOverviewExample = /** @class */ (() => {
                 templateUrl: 'elevation-overview-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    ElevationOverviewExample.prototype.isActive;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/core/ripple-overview/ripple-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title MatRipple basic usage
+ * @title MatRipple basic usage
  */
 let RippleOverviewExample = /** @class */ (() => {
-    /**
-     * \@title MatRipple basic usage
-     */
     class RippleOverviewExample {
         constructor() {
             this.centered = false;
@@ -76,15 +49,8 @@ let RippleOverviewExample = /** @class */ (() => {
             this.unbounded = false;
         }
     }
-    RippleOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'ripple-overview-example',
-                    templateUrl: 'ripple-overview-example.html',
-                    styleUrls: ['ripple-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ RippleOverviewExample.ɵfac = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
-    /** @nocollapse */ RippleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    RippleOverviewExample.ɵfac = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
+    RippleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-checkbox", 0);
             ɵɵlistener("ngModelChange", function RippleOverviewExample_Template_mat_checkbox_ngModelChange_0_listener($event) { return ctx.centered = $event; });
             ɵɵtext(1, "Centered");
@@ -133,25 +99,7 @@ let RippleOverviewExample = /** @class */ (() => {
                 styleUrls: ['ripple-overview-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    RippleOverviewExample.prototype.centered;
-    /** @type {?} */
-    RippleOverviewExample.prototype.disabled;
-    /** @type {?} */
-    RippleOverviewExample.prototype.unbounded;
-    /** @type {?} */
-    RippleOverviewExample.prototype.radius;
-    /** @type {?} */
-    RippleOverviewExample.prototype.color;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/core/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     ElevationOverviewExample,
     RippleOverviewExample,
@@ -159,22 +107,8 @@ const EXAMPLES = [
 let CoreExamplesModule = /** @class */ (() => {
     class CoreExamplesModule {
     }
-    CoreExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatCheckboxModule,
-                        MatInputModule,
-                        MatRippleModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
-    /** @nocollapse */ CoreExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
+    CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
+    CoreExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
                 MatButtonModule,
                 MatCheckboxModule,
                 MatInputModule,

@@ -1,30 +1,15 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵelement, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵelement, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatCardModule } from '@angular/material/card';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/card/card-fancy/card-fancy-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Card with multiple sections
+ * @title Card with multiple sections
  */
 let CardFancyExample = /** @class */ (() => {
-    /**
-     * \@title Card with multiple sections
-     */
     class CardFancyExample {
     }
-    CardFancyExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'card-fancy-example',
-                    templateUrl: 'card-fancy-example.html',
-                    styleUrls: ['card-fancy-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CardFancyExample.ɵfac = function CardFancyExample_Factory(t) { return new (t || CardFancyExample)(); };
-    /** @nocollapse */ CardFancyExample.ɵcmp = ɵɵdefineComponent({ type: CardFancyExample, selectors: [["card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function CardFancyExample_Template(rf, ctx) { if (rf & 1) {
+    CardFancyExample.ɵfac = function CardFancyExample_Factory(t) { return new (t || CardFancyExample)(); };
+    CardFancyExample.ɵcmp = ɵɵdefineComponent({ type: CardFancyExample, selectors: [["card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function CardFancyExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card", 0);
             ɵɵelementStart(1, "mat-card-header");
             ɵɵelement(2, "div", 1);
@@ -63,28 +48,13 @@ let CardFancyExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/card/card-overview/card-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic cards
+ * @title Basic cards
  */
 let CardOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic cards
-     */
     class CardOverviewExample {
     }
-    CardOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'card-overview-example',
-                    templateUrl: 'card-overview-example.html',
-                    styleUrls: ['card-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CardOverviewExample.ɵfac = function CardOverviewExample_Factory(t) { return new (t || CardOverviewExample)(); };
-    /** @nocollapse */ CardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CardOverviewExample, selectors: [["card-overview-example"]], decls: 2, vars: 0, template: function CardOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    CardOverviewExample.ɵfac = function CardOverviewExample_Factory(t) { return new (t || CardOverviewExample)(); };
+    CardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CardOverviewExample, selectors: [["card-overview-example"]], decls: 2, vars: 0, template: function CardOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card");
             ɵɵtext(1, "Simple card");
             ɵɵelementEnd();
@@ -100,12 +70,6 @@ let CardOverviewExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/card/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     CardFancyExample,
     CardOverviewExample,
@@ -113,19 +77,8 @@ const EXAMPLES = [
 let CardExamplesModule = /** @class */ (() => {
     class CardExamplesModule {
     }
-    CardExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatCardModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CardExamplesModule });
-    /** @nocollapse */ CardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CardExamplesModule_Factory(t) { return new (t || CardExamplesModule)(); }, imports: [[
+    CardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CardExamplesModule });
+    CardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CardExamplesModule_Factory(t) { return new (t || CardExamplesModule)(); }, imports: [[
                 MatButtonModule,
                 MatCardModule,
             ]] });

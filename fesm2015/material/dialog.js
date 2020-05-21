@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, ɵɵadvance, ɵɵproperty, Inject, ɵɵtemplate, ɵɵnextContext, ɵɵtextInterpolate, ɵɵtextInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵadvance, ɵɵproperty, ɵɵtemplate, Inject, ɵɵnextContext, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
@@ -7,52 +7,22 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/dialog/dialog-content/dialog-content-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Dialog with header, scrollable content and actions
+ * @title Dialog with header, scrollable content and actions
  */
 let DialogContentExample = /** @class */ (() => {
-    /**
-     * \@title Dialog with header, scrollable content and actions
-     */
     class DialogContentExample {
-        /**
-         * @param {?} dialog
-         */
         constructor(dialog) {
             this.dialog = dialog;
         }
-        /**
-         * @return {?}
-         */
         openDialog() {
-            /** @type {?} */
             const dialogRef = this.dialog.open(DialogContentExampleDialog);
-            dialogRef.afterClosed().subscribe((/**
-             * @param {?} result
-             * @return {?}
-             */
-            result => {
+            dialogRef.afterClosed().subscribe(result => {
                 console.log(`Dialog result: ${result}`);
-            }));
+            });
         }
     }
-    DialogContentExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-content-example',
-                    templateUrl: 'dialog-content-example.html',
-                    styleUrls: ['dialog-content-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    DialogContentExample.ctorParameters = () => [
-        { type: MatDialog }
-    ];
-    /** @nocollapse */ DialogContentExample.ɵfac = function DialogContentExample_Factory(t) { return new (t || DialogContentExample)(ɵɵdirectiveInject(MatDialog)); };
-    /** @nocollapse */ DialogContentExample.ɵcmp = ɵɵdefineComponent({ type: DialogContentExample, selectors: [["dialog-content-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogContentExample_Template(rf, ctx) { if (rf & 1) {
+    DialogContentExample.ɵfac = function DialogContentExample_Factory(t) { return new (t || DialogContentExample)(ɵɵdirectiveInject(MatDialog)); };
+    DialogContentExample.ɵcmp = ɵɵdefineComponent({ type: DialogContentExample, selectors: [["dialog-content-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogContentExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener() { return ctx.openDialog(); });
             ɵɵtext(1, "Open dialog");
@@ -68,21 +38,11 @@ let DialogContentExample = /** @class */ (() => {
                 styleUrls: ['dialog-content-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    DialogContentExample.prototype.dialog;
-}
 let DialogContentExampleDialog = /** @class */ (() => {
     class DialogContentExampleDialog {
     }
-    DialogContentExampleDialog.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-content-example-dialog',
-                    templateUrl: 'dialog-content-example-dialog.html',
-                },] },
-    ];
-    /** @nocollapse */ DialogContentExampleDialog.ɵfac = function DialogContentExampleDialog_Factory(t) { return new (t || DialogContentExampleDialog)(); };
-    /** @nocollapse */ DialogContentExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogContentExampleDialog, selectors: [["dialog-content-example-dialog"]], decls: 46, vars: 1, consts: [["mat-dialog-title", ""], [1, "mat-typography"], ["align", "end"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogContentExampleDialog_Template(rf, ctx) { if (rf & 1) {
+    DialogContentExampleDialog.ɵfac = function DialogContentExampleDialog_Factory(t) { return new (t || DialogContentExampleDialog)(); };
+    DialogContentExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogContentExampleDialog, selectors: [["dialog-content-example-dialog"]], decls: 46, vars: 1, consts: [["mat-dialog-title", ""], [1, "mat-typography"], ["align", "end"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogContentExampleDialog_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h2", 0);
             ɵɵtext(1, "Install Angular");
             ɵɵelementEnd();
@@ -167,11 +127,6 @@ let DialogContentExampleDialog = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/dialog/dialog-data/dialog-data-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function DialogDataExampleDialog_span_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
     ɵɵtext(1, "\u2713");
@@ -188,30 +143,13 @@ function DialogDataExampleDialog_span_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
 } }
 /**
- * @record
- */
-function DialogData() { }
-if (false) {
-    /** @type {?} */
-    DialogData.prototype.animal;
-}
-/**
- * \@title Injecting data when opening a dialog
+ * @title Injecting data when opening a dialog
  */
 let DialogDataExample = /** @class */ (() => {
-    /**
-     * \@title Injecting data when opening a dialog
-     */
     class DialogDataExample {
-        /**
-         * @param {?} dialog
-         */
         constructor(dialog) {
             this.dialog = dialog;
         }
-        /**
-         * @return {?}
-         */
         openDialog() {
             this.dialog.open(DialogDataExampleDialog, {
                 data: {
@@ -220,19 +158,8 @@ let DialogDataExample = /** @class */ (() => {
             });
         }
     }
-    DialogDataExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-data-example',
-                    templateUrl: 'dialog-data-example.html',
-                    styleUrls: ['dialog-data-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    DialogDataExample.ctorParameters = () => [
-        { type: MatDialog }
-    ];
-    /** @nocollapse */ DialogDataExample.ɵfac = function DialogDataExample_Factory(t) { return new (t || DialogDataExample)(ɵɵdirectiveInject(MatDialog)); };
-    /** @nocollapse */ DialogDataExample.ɵcmp = ɵɵdefineComponent({ type: DialogDataExample, selectors: [["dialog-data-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogDataExample_Template(rf, ctx) { if (rf & 1) {
+    DialogDataExample.ɵfac = function DialogDataExample_Factory(t) { return new (t || DialogDataExample)(ɵɵdirectiveInject(MatDialog)); };
+    DialogDataExample.ɵcmp = ɵɵdefineComponent({ type: DialogDataExample, selectors: [["dialog-data-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogDataExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵlistener("click", function DialogDataExample_Template_button_click_0_listener() { return ctx.openDialog(); });
             ɵɵtext(1, "Open dialog");
@@ -248,31 +175,14 @@ let DialogDataExample = /** @class */ (() => {
                 styleUrls: ['dialog-data-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    DialogDataExample.prototype.dialog;
-}
 let DialogDataExampleDialog = /** @class */ (() => {
     class DialogDataExampleDialog {
-        /**
-         * @param {?} data
-         */
         constructor(data) {
             this.data = data;
         }
     }
-    DialogDataExampleDialog.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-data-example-dialog',
-                    templateUrl: 'dialog-data-example-dialog.html',
-                },] },
-    ];
-    /** @nocollapse */
-    DialogDataExampleDialog.ctorParameters = () => [
-        { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
-    ];
-    /** @nocollapse */ DialogDataExampleDialog.ɵfac = function DialogDataExampleDialog_Factory(t) { return new (t || DialogDataExampleDialog)(ɵɵdirectiveInject(MAT_DIALOG_DATA)); };
-    /** @nocollapse */ DialogDataExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogDataExampleDialog, selectors: [["dialog-data-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], [4, "ngIf"]], template: function DialogDataExampleDialog_Template(rf, ctx) { if (rf & 1) {
+    DialogDataExampleDialog.ɵfac = function DialogDataExampleDialog_Factory(t) { return new (t || DialogDataExampleDialog)(ɵɵdirectiveInject(MAT_DIALOG_DATA)); };
+    DialogDataExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogDataExampleDialog, selectors: [["dialog-data-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], [4, "ngIf"]], template: function DialogDataExampleDialog_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h1", 0);
             ɵɵtext(1, "Favorite Animal");
             ɵɵelementEnd();
@@ -313,50 +223,21 @@ let DialogDataExampleDialog = /** @class */ (() => {
                 type: Inject,
                 args: [MAT_DIALOG_DATA]
             }] }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    DialogDataExampleDialog.prototype.data;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/dialog/dialog-elements/dialog-elements-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Dialog elements
+ * @title Dialog elements
  */
 let DialogElementsExample = /** @class */ (() => {
-    /**
-     * \@title Dialog elements
-     */
     class DialogElementsExample {
-        /**
-         * @param {?} dialog
-         */
         constructor(dialog) {
             this.dialog = dialog;
         }
-        /**
-         * @return {?}
-         */
         openDialog() {
             this.dialog.open(DialogElementsExampleDialog);
         }
     }
-    DialogElementsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-elements-example',
-                    templateUrl: 'dialog-elements-example.html',
-                    styleUrls: ['dialog-elements-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    DialogElementsExample.ctorParameters = () => [
-        { type: MatDialog }
-    ];
-    /** @nocollapse */ DialogElementsExample.ɵfac = function DialogElementsExample_Factory(t) { return new (t || DialogElementsExample)(ɵɵdirectiveInject(MatDialog)); };
-    /** @nocollapse */ DialogElementsExample.ɵcmp = ɵɵdefineComponent({ type: DialogElementsExample, selectors: [["dialog-elements-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogElementsExample_Template(rf, ctx) { if (rf & 1) {
+    DialogElementsExample.ɵfac = function DialogElementsExample_Factory(t) { return new (t || DialogElementsExample)(ɵɵdirectiveInject(MatDialog)); };
+    DialogElementsExample.ɵcmp = ɵɵdefineComponent({ type: DialogElementsExample, selectors: [["dialog-elements-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogElementsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵlistener("click", function DialogElementsExample_Template_button_click_0_listener() { return ctx.openDialog(); });
             ɵɵtext(1, "Launch dialog");
@@ -372,21 +253,11 @@ let DialogElementsExample = /** @class */ (() => {
                 styleUrls: ['dialog-elements-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    DialogElementsExample.prototype.dialog;
-}
 let DialogElementsExampleDialog = /** @class */ (() => {
     class DialogElementsExampleDialog {
     }
-    DialogElementsExampleDialog.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-elements-example-dialog',
-                    templateUrl: 'dialog-elements-example-dialog.html',
-                },] },
-    ];
-    /** @nocollapse */ DialogElementsExampleDialog.ɵfac = function DialogElementsExampleDialog_Factory(t) { return new (t || DialogElementsExampleDialog)(); };
-    /** @nocollapse */ DialogElementsExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogElementsExampleDialog, selectors: [["dialog-elements-example-dialog"]], decls: 7, vars: 0, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["mat-dialog-actions", ""], ["mat-button", "", "mat-dialog-close", ""]], template: function DialogElementsExampleDialog_Template(rf, ctx) { if (rf & 1) {
+    DialogElementsExampleDialog.ɵfac = function DialogElementsExampleDialog_Factory(t) { return new (t || DialogElementsExampleDialog)(); };
+    DialogElementsExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogElementsExampleDialog, selectors: [["dialog-elements-example-dialog"]], decls: 7, vars: 0, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["mat-dialog-actions", ""], ["mat-button", "", "mat-dialog-close", ""]], template: function DialogElementsExampleDialog_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h1", 0);
             ɵɵtext(1, "Dialog with elements");
             ɵɵelementEnd();
@@ -409,11 +280,6 @@ let DialogElementsExampleDialog = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/dialog/dialog-overview/dialog-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function DialogOverviewExample_li_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "li");
     ɵɵtext(1, " You chose: ");
@@ -427,61 +293,26 @@ function DialogOverviewExample_li_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate(ctx_r0.animal);
 } }
 /**
- * @record
- */
-function DialogData$1() { }
-if (false) {
-    /** @type {?} */
-    DialogData$1.prototype.animal;
-    /** @type {?} */
-    DialogData$1.prototype.name;
-}
-/**
- * \@title Dialog Overview
+ * @title Dialog Overview
  */
 let DialogOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Dialog Overview
-     */
     class DialogOverviewExample {
-        /**
-         * @param {?} dialog
-         */
         constructor(dialog) {
             this.dialog = dialog;
         }
-        /**
-         * @return {?}
-         */
         openDialog() {
-            /** @type {?} */
             const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
                 width: '250px',
                 data: { name: this.name, animal: this.animal }
             });
-            dialogRef.afterClosed().subscribe((/**
-             * @param {?} result
-             * @return {?}
-             */
-            result => {
+            dialogRef.afterClosed().subscribe(result => {
                 console.log('The dialog was closed');
                 this.animal = result;
-            }));
+            });
         }
     }
-    DialogOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-overview-example',
-                    templateUrl: 'dialog-overview-example.html',
-                    styleUrls: ['dialog-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    DialogOverviewExample.ctorParameters = () => [
-        { type: MatDialog }
-    ];
-    /** @nocollapse */ DialogOverviewExample.ɵfac = function DialogOverviewExample_Factory(t) { return new (t || DialogOverviewExample)(ɵɵdirectiveInject(MatDialog)); };
-    /** @nocollapse */ DialogOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExample, selectors: [["dialog-overview-example"]], decls: 10, vars: 2, consts: [["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", 3, "click"], [4, "ngIf"]], template: function DialogOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    DialogOverviewExample.ɵfac = function DialogOverviewExample_Factory(t) { return new (t || DialogOverviewExample)(ɵɵdirectiveInject(MatDialog)); };
+    DialogOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExample, selectors: [["dialog-overview-example"]], decls: 10, vars: 2, consts: [["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", 3, "click"], [4, "ngIf"]], template: function DialogOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "ol");
             ɵɵelementStart(1, "li");
             ɵɵelementStart(2, "mat-form-field");
@@ -517,44 +348,18 @@ let DialogOverviewExample = /** @class */ (() => {
                 styleUrls: ['dialog-overview-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    DialogOverviewExample.prototype.animal;
-    /** @type {?} */
-    DialogOverviewExample.prototype.name;
-    /** @type {?} */
-    DialogOverviewExample.prototype.dialog;
-}
 let DialogOverviewExampleDialog = /** @class */ (() => {
     class DialogOverviewExampleDialog {
-        /**
-         * @param {?} dialogRef
-         * @param {?} data
-         */
         constructor(dialogRef, data) {
             this.dialogRef = dialogRef;
             this.data = data;
         }
-        /**
-         * @return {?}
-         */
         onNoClick() {
             this.dialogRef.close();
         }
     }
-    DialogOverviewExampleDialog.decorators = [
-        { type: Component, args: [{
-                    selector: 'dialog-overview-example-dialog',
-                    templateUrl: 'dialog-overview-example-dialog.html',
-                },] },
-    ];
-    /** @nocollapse */
-    DialogOverviewExampleDialog.ctorParameters = () => [
-        { type: MatDialogRef },
-        { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
-    ];
-    /** @nocollapse */ DialogOverviewExampleDialog.ɵfac = function DialogOverviewExampleDialog_Factory(t) { return new (t || DialogOverviewExampleDialog)(ɵɵdirectiveInject(MatDialogRef), ɵɵdirectiveInject(MAT_DIALOG_DATA)); };
-    /** @nocollapse */ DialogOverviewExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExampleDialog, selectors: [["dialog-overview-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-dialog-actions", ""], ["mat-button", "", 3, "click"], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogOverviewExampleDialog_Template(rf, ctx) { if (rf & 1) {
+    DialogOverviewExampleDialog.ɵfac = function DialogOverviewExampleDialog_Factory(t) { return new (t || DialogOverviewExampleDialog)(ɵɵdirectiveInject(MatDialogRef), ɵɵdirectiveInject(MAT_DIALOG_DATA)); };
+    DialogOverviewExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExampleDialog, selectors: [["dialog-overview-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-dialog-actions", ""], ["mat-button", "", 3, "click"], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogOverviewExampleDialog_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h1", 0);
             ɵɵtext(1);
             ɵɵelementEnd();
@@ -600,19 +405,7 @@ let DialogOverviewExampleDialog = /** @class */ (() => {
                 type: Inject,
                 args: [MAT_DIALOG_DATA]
             }] }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    DialogOverviewExampleDialog.prototype.dialogRef;
-    /** @type {?} */
-    DialogOverviewExampleDialog.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/dialog/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     DialogContentExample,
     DialogContentExampleDialog,
@@ -626,22 +419,8 @@ const EXAMPLES = [
 let DialogExamplesModule = /** @class */ (() => {
     class DialogExamplesModule {
     }
-    DialogExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatButtonModule,
-                        MatDialogModule,
-                        MatInputModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ DialogExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DialogExamplesModule });
-    /** @nocollapse */ DialogExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DialogExamplesModule_Factory(t) { return new (t || DialogExamplesModule)(); }, imports: [[
+    DialogExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DialogExamplesModule });
+    DialogExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DialogExamplesModule_Factory(t) { return new (t || DialogExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatButtonModule,
                 MatDialogModule,

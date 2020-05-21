@@ -1,16 +1,11 @@
 import { CdkEditable, CdkEditControl, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkRowHoverContent, CdkEditOpen, CdkPopoverEditTabOut, CdkPopoverEditModule } from '@angular/cdk-experimental/popover-edit';
 import { CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow, CdkTableModule } from '@angular/cdk/table';
 import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵnextContext, ɵɵtext, ɵɵelement, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate1, ɵɵtemplate, ɵɵtemplateRefExtractor, Component, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵsetClassMetadata, ɵɵattribute, ɵɵpureFunction1, ɵɵpureFunction0, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵnextContext, ɵɵtext, ɵɵelement, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate1, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵsetClassMetadata, Component, ɵɵattribute, ɵɵpureFunction1, ɵɵpureFunction0, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk-experimental/popover-edit/cdk-popover-edit-cdk-table-flex/cdk-popover-edit-cdk-table-flex-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkPopoverEditCdkTableFlexExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 12);
@@ -149,21 +144,6 @@ function CdkPopoverEditCdkTableFlexExample_cdk_header_row_15_Template(rf, ctx) {
 function CdkPopoverEditCdkTableFlexExample_cdk_row_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "cdk-row");
 } }
-/**
- * @record
- */
-function PeriodicElement() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement.prototype.name;
-    /** @type {?} */
-    PeriodicElement.prototype.position;
-    /** @type {?} */
-    PeriodicElement.prototype.weight;
-    /** @type {?} */
-    PeriodicElement.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -187,12 +167,9 @@ const ELEMENT_DATA = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * \@title CDK Popover Edit on a flex cdk-table.
+ * @title CDK Popover Edit on a flex cdk-table.
  */
 let CdkPopoverEditCdkTableFlexExample = /** @class */ (() => {
-    /**
-     * \@title CDK Popover Edit on a flex cdk-table.
-     */
     class CdkPopoverEditCdkTableFlexExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
@@ -200,22 +177,12 @@ let CdkPopoverEditCdkTableFlexExample = /** @class */ (() => {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
@@ -223,15 +190,8 @@ let CdkPopoverEditCdkTableFlexExample = /** @class */ (() => {
             element.weight = f.value.weight;
         }
     }
-    CdkPopoverEditCdkTableFlexExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-popover-edit-cdk-table-flex-example',
-                    styleUrls: ['cdk-popover-edit-cdk-table-flex-example.css'],
-                    templateUrl: 'cdk-popover-edit-cdk-table-flex-example.html',
-                },] },
-    ];
-    /** @nocollapse */ CdkPopoverEditCdkTableFlexExample.ɵfac = function CdkPopoverEditCdkTableFlexExample_Factory(t) { return new (t || CdkPopoverEditCdkTableFlexExample)(); };
-    /** @nocollapse */ CdkPopoverEditCdkTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditCdkTableFlexExample, selectors: [["cdk-popover-edit-cdk-table-flex-example"]], decls: 17, vars: 3, consts: [["editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], [3, "cdkPopoverEdit", 4, "cdkCellDef"], ["cdkColumnDef", "weight"], [3, "cdkPopoverEdit", "cdkPopoverEditContext", 4, "cdkCellDef"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"], [2, "background-color", "white"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", ""], ["cdkEditClose", ""], [3, "cdkPopoverEdit"], ["nameEdit", ""], [4, "cdkRowHoverContent"], ["name", "name", "required", "", 3, "ngModel"], ["cdkEditOpen", ""], [3, "cdkPopoverEdit", "cdkPopoverEditContext"]], template: function CdkPopoverEditCdkTableFlexExample_Template(rf, ctx) { if (rf & 1) {
+    CdkPopoverEditCdkTableFlexExample.ɵfac = function CdkPopoverEditCdkTableFlexExample_Factory(t) { return new (t || CdkPopoverEditCdkTableFlexExample)(); };
+    CdkPopoverEditCdkTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditCdkTableFlexExample, selectors: [["cdk-popover-edit-cdk-table-flex-example"]], decls: 17, vars: 3, consts: [["editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], [3, "cdkPopoverEdit", 4, "cdkCellDef"], ["cdkColumnDef", "weight"], [3, "cdkPopoverEdit", "cdkPopoverEditContext", 4, "cdkCellDef"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"], [2, "background-color", "white"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", ""], ["cdkEditClose", ""], [3, "cdkPopoverEdit"], ["nameEdit", ""], [4, "cdkRowHoverContent"], ["name", "name", "required", "", 3, "ngModel"], ["cdkEditOpen", ""], [3, "cdkPopoverEdit", "cdkPopoverEditContext"]], template: function CdkPopoverEditCdkTableFlexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "cdk-table", 0);
             ɵɵtemplate(1, CdkPopoverEditCdkTableFlexExample_ng_template_1_Template, 12, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementContainerStart(3, 2);
@@ -270,16 +230,6 @@ let CdkPopoverEditCdkTableFlexExample = /** @class */ (() => {
                 templateUrl: 'cdk-popover-edit-cdk-table-flex-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkPopoverEditCdkTableFlexExample.prototype.displayedColumns;
-    /** @type {?} */
-    CdkPopoverEditCdkTableFlexExample.prototype.dataSource;
-    /** @type {?} */
-    CdkPopoverEditCdkTableFlexExample.prototype.preservedNameValues;
-    /** @type {?} */
-    CdkPopoverEditCdkTableFlexExample.prototype.preservedWeightValues;
-}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -290,36 +240,16 @@ if (false) {
 class ExampleDataSource extends DataSource {
     constructor() {
         super(...arguments);
-        /**
-         * Stream of data that is provided to the table.
-         */
+        /** Stream of data that is provided to the table. */
         this.data = new BehaviorSubject(ELEMENT_DATA);
     }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect() {
         return this.data;
     }
-    /**
-     * @return {?}
-     */
     disconnect() { }
 }
-if (false) {
-    /**
-     * Stream of data that is provided to the table.
-     * @type {?}
-     */
-    ExampleDataSource.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk-experimental/popover-edit/cdk-popover-edit-cdk-table/cdk-popover-edit-cdk-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkPopoverEditCdkTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 12);
@@ -455,21 +385,6 @@ function CdkPopoverEditCdkTableExample_tr_15_Template(rf, ctx) { if (rf & 1) {
 function CdkPopoverEditCdkTableExample_tr_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 29);
 } }
-/**
- * @record
- */
-function PeriodicElement$1() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$1.prototype.name;
-    /** @type {?} */
-    PeriodicElement$1.prototype.position;
-    /** @type {?} */
-    PeriodicElement$1.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$1.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -493,12 +408,9 @@ const ELEMENT_DATA$1 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * \@title CDK Popover Edit on a CDK data-table
+ * @title CDK Popover Edit on a CDK data-table
  */
 let CdkPopoverEditCdkTableExample = /** @class */ (() => {
-    /**
-     * \@title CDK Popover Edit on a CDK data-table
-     */
     class CdkPopoverEditCdkTableExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
@@ -506,22 +418,12 @@ let CdkPopoverEditCdkTableExample = /** @class */ (() => {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
@@ -529,15 +431,8 @@ let CdkPopoverEditCdkTableExample = /** @class */ (() => {
             element.weight = f.value.weight;
         }
     }
-    CdkPopoverEditCdkTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-popover-edit-cdk-table-example',
-                    styleUrls: ['cdk-popover-edit-cdk-table-example.css'],
-                    templateUrl: 'cdk-popover-edit-cdk-table-example.html',
-                },] },
-    ];
-    /** @nocollapse */ CdkPopoverEditCdkTableExample.ɵfac = function CdkPopoverEditCdkTableExample_Factory(t) { return new (t || CdkPopoverEditCdkTableExample)(); };
-    /** @nocollapse */ CdkPopoverEditCdkTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditCdkTableExample, selectors: [["cdk-popover-edit-cdk-table-example"]], decls: 17, vars: 3, consts: [["cdk-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdk-cell", "", 3, "cdkPopoverEdit", 4, "cdkCellDef"], ["cdkColumnDef", "weight"], ["cdk-cell", "", 3, "cdkPopoverEdit", "cdkPopoverEditContext", 4, "cdkCellDef"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], [2, "background-color", "white"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", "", "cdkEditClose", ""], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-cell", "", 3, "cdkPopoverEdit"], ["nameEdit", ""], [4, "cdkRowHoverContent"], ["name", "name", "required", "", 3, "ngModel"], ["cdkEditRevert", ""], ["cdkEditClose", ""], ["cdkEditOpen", ""], ["cdk-cell", "", 3, "cdkPopoverEdit", "cdkPopoverEditContext"], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkPopoverEditCdkTableExample_Template(rf, ctx) { if (rf & 1) {
+    CdkPopoverEditCdkTableExample.ɵfac = function CdkPopoverEditCdkTableExample_Factory(t) { return new (t || CdkPopoverEditCdkTableExample)(); };
+    CdkPopoverEditCdkTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditCdkTableExample, selectors: [["cdk-popover-edit-cdk-table-example"]], decls: 17, vars: 3, consts: [["cdk-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdk-cell", "", 3, "cdkPopoverEdit", 4, "cdkCellDef"], ["cdkColumnDef", "weight"], ["cdk-cell", "", 3, "cdkPopoverEdit", "cdkPopoverEditContext", 4, "cdkCellDef"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], [2, "background-color", "white"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", "", "cdkEditClose", ""], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-cell", "", 3, "cdkPopoverEdit"], ["nameEdit", ""], [4, "cdkRowHoverContent"], ["name", "name", "required", "", 3, "ngModel"], ["cdkEditRevert", ""], ["cdkEditClose", ""], ["cdkEditOpen", ""], ["cdk-cell", "", 3, "cdkPopoverEdit", "cdkPopoverEditContext"], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkPopoverEditCdkTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, CdkPopoverEditCdkTableExample_ng_template_1_Template, 10, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementContainerStart(3, 2);
@@ -576,16 +471,6 @@ let CdkPopoverEditCdkTableExample = /** @class */ (() => {
                 templateUrl: 'cdk-popover-edit-cdk-table-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkPopoverEditCdkTableExample.prototype.displayedColumns;
-    /** @type {?} */
-    CdkPopoverEditCdkTableExample.prototype.dataSource;
-    /** @type {?} */
-    CdkPopoverEditCdkTableExample.prototype.preservedNameValues;
-    /** @type {?} */
-    CdkPopoverEditCdkTableExample.prototype.preservedWeightValues;
-}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -596,36 +481,16 @@ if (false) {
 class ExampleDataSource$1 extends DataSource {
     constructor() {
         super(...arguments);
-        /**
-         * Stream of data that is provided to the table.
-         */
+        /** Stream of data that is provided to the table. */
         this.data = new BehaviorSubject(ELEMENT_DATA$1);
     }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect() {
         return this.data;
     }
-    /**
-     * @return {?}
-     */
     disconnect() { }
 }
-if (false) {
-    /**
-     * Stream of data that is provided to the table.
-     * @type {?}
-     */
-    ExampleDataSource$1.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk-experimental/popover-edit/cdk-popover-edit-cell-span-vanilla-table/cdk-popover-edit-cell-span-vanilla-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r6 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
@@ -728,21 +593,6 @@ function CdkPopoverEditCellSpanVanillaTableExample_tr_12_Template(rf, ctx) { if 
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r8.lastName, " ");
 } }
-/**
- * @record
- */
-function Person() { }
-if (false) {
-    /** @type {?} */
-    Person.prototype.id;
-    /** @type {?} */
-    Person.prototype.firstName;
-    /** @type {?} */
-    Person.prototype.middleName;
-    /** @type {?} */
-    Person.prototype.lastName;
-}
-/** @type {?} */
 const PERSON_DATA = [
     { id: 1, firstName: 'Terra', middleName: 'Maduin', lastName: 'Branford' },
     { id: 2, firstName: 'Locke', middleName: '', lastName: 'Cole' },
@@ -755,22 +605,14 @@ const PERSON_DATA = [
     { id: 9, firstName: 'Mog', middleName: '', lastName: 'McMoogle' },
 ];
 /**
- * \@title CDK Popover Edit spanning multiple columns on an HTML data-table
+ * @title CDK Popover Edit spanning multiple columns on an HTML data-table
  */
 let CdkPopoverEditCellSpanVanillaTableExample = /** @class */ (() => {
-    /**
-     * \@title CDK Popover Edit spanning multiple columns on an HTML data-table
-     */
     class CdkPopoverEditCellSpanVanillaTableExample {
         constructor() {
             this.preservedValues = new WeakMap();
             this.persons = PERSON_DATA;
         }
-        /**
-         * @param {?} person
-         * @param {?} f
-         * @return {?}
-         */
         onSubmit(person, f) {
             if (!f.valid) {
                 return;
@@ -780,15 +622,8 @@ let CdkPopoverEditCellSpanVanillaTableExample = /** @class */ (() => {
             person.lastName = f.value['lastName'];
         }
     }
-    CdkPopoverEditCellSpanVanillaTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-popover-edit-cell-span-vanilla-table-example',
-                    styleUrls: ['cdk-popover-edit-cell-span-vanilla-table-example.css'],
-                    templateUrl: 'cdk-popover-edit-cell-span-vanilla-table-example.html',
-                },] },
-    ];
-    /** @nocollapse */ CdkPopoverEditCellSpanVanillaTableExample.ɵfac = function CdkPopoverEditCellSpanVanillaTableExample_Factory(t) { return new (t || CdkPopoverEditCellSpanVanillaTableExample)(); };
-    /** @nocollapse */ CdkPopoverEditCellSpanVanillaTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditCellSpanVanillaTableExample, selectors: [["cdk-popover-edit-cell-span-vanilla-table-example"]], decls: 13, vars: 1, consts: [["editable", "", 1, "example-table"], ["nameEdit", ""], [4, "ngFor", "ngForOf"], [2, "background-color", "#ddd", "width", "100%"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], [1, "example-input-container"], ["name", "firstName", "required", "", 3, "ngModel"], ["name", "middleName", 3, "ngModel"], ["name", "lastName", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", ""], ["cdkEditClose", ""], [3, "cdkPopoverEdit", "cdkPopoverEditContext", "cdkPopoverEditColspan"], [4, "cdkRowHoverContent"], ["cdkEditOpen", ""]], template: function CdkPopoverEditCellSpanVanillaTableExample_Template(rf, ctx) { if (rf & 1) {
+    CdkPopoverEditCellSpanVanillaTableExample.ɵfac = function CdkPopoverEditCellSpanVanillaTableExample_Factory(t) { return new (t || CdkPopoverEditCellSpanVanillaTableExample)(); };
+    CdkPopoverEditCellSpanVanillaTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditCellSpanVanillaTableExample, selectors: [["cdk-popover-edit-cell-span-vanilla-table-example"]], decls: 13, vars: 1, consts: [["editable", "", 1, "example-table"], ["nameEdit", ""], [4, "ngFor", "ngForOf"], [2, "background-color", "#ddd", "width", "100%"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], [1, "example-input-container"], ["name", "firstName", "required", "", 3, "ngModel"], ["name", "middleName", 3, "ngModel"], ["name", "lastName", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", ""], ["cdkEditClose", ""], [3, "cdkPopoverEdit", "cdkPopoverEditContext", "cdkPopoverEditColspan"], [4, "cdkRowHoverContent"], ["cdkEditOpen", ""]], template: function CdkPopoverEditCellSpanVanillaTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template, 15, 7, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementStart(3, "tr");
@@ -821,18 +656,7 @@ let CdkPopoverEditCellSpanVanillaTableExample = /** @class */ (() => {
                 templateUrl: 'cdk-popover-edit-cell-span-vanilla-table-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkPopoverEditCellSpanVanillaTableExample.prototype.preservedValues;
-    /** @type {?} */
-    CdkPopoverEditCellSpanVanillaTableExample.prototype.persons;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk-experimental/popover-edit/cdk-popover-edit-tab-out-vanilla-table/cdk-popover-edit-tab-out-vanilla-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r6 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
@@ -903,21 +727,6 @@ function CdkPopoverEditTabOutVanillaTableExample_tr_12_Template(rf, ctx) { if (r
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", element_r8.symbol, " ");
 } }
-/**
- * @record
- */
-function PeriodicElement$2() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$2.prototype.name;
-    /** @type {?} */
-    PeriodicElement$2.prototype.position;
-    /** @type {?} */
-    PeriodicElement$2.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$2.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -941,34 +750,21 @@ const ELEMENT_DATA$2 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * \@title CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
+ * @title CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
  */
 let CdkPopoverEditTabOutVanillaTableExample = /** @class */ (() => {
-    /**
-     * \@title CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
-     */
     class CdkPopoverEditTabOutVanillaTableExample {
         constructor() {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
             this.elements = ELEMENT_DATA$2;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
@@ -976,15 +772,8 @@ let CdkPopoverEditTabOutVanillaTableExample = /** @class */ (() => {
             element.weight = f.value.weight;
         }
     }
-    CdkPopoverEditTabOutVanillaTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-popover-edit-tab-out-vanilla-table-example',
-                    styleUrls: ['cdk-popover-edit-tab-out-vanilla-table-example.css'],
-                    templateUrl: 'cdk-popover-edit-tab-out-vanilla-table-example.html',
-                },] },
-    ];
-    /** @nocollapse */ CdkPopoverEditTabOutVanillaTableExample.ɵfac = function CdkPopoverEditTabOutVanillaTableExample_Factory(t) { return new (t || CdkPopoverEditTabOutVanillaTableExample)(); };
-    /** @nocollapse */ CdkPopoverEditTabOutVanillaTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditTabOutVanillaTableExample, selectors: [["cdk-popover-edit-tab-out-vanilla-table-example"]], decls: 13, vars: 1, consts: [["editable", "", 1, "example-table"], ["weightEdit", ""], [4, "ngFor", "ngForOf"], [2, "background-color", "white", "width", "100%"], ["cdkEditControl", "", "cdkEditControlClickOutBehavior", "submit", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["cdkPopoverEditTabOut", "", "cdkEditOpen", "", 3, "cdkPopoverEdit"], ["nameEdit", ""], ["cdkPopoverEditTabOut", "", "cdkEditOpen", "", 3, "cdkPopoverEdit", "cdkPopoverEditContext"], ["name", "name", "required", "", 3, "ngModel"], ["type", "submit"]], template: function CdkPopoverEditTabOutVanillaTableExample_Template(rf, ctx) { if (rf & 1) {
+    CdkPopoverEditTabOutVanillaTableExample.ɵfac = function CdkPopoverEditTabOutVanillaTableExample_Factory(t) { return new (t || CdkPopoverEditTabOutVanillaTableExample)(); };
+    CdkPopoverEditTabOutVanillaTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditTabOutVanillaTableExample, selectors: [["cdk-popover-edit-tab-out-vanilla-table-example"]], decls: 13, vars: 1, consts: [["editable", "", 1, "example-table"], ["weightEdit", ""], [4, "ngFor", "ngForOf"], [2, "background-color", "white", "width", "100%"], ["cdkEditControl", "", "cdkEditControlClickOutBehavior", "submit", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["cdkPopoverEditTabOut", "", "cdkEditOpen", "", 3, "cdkPopoverEdit"], ["nameEdit", ""], ["cdkPopoverEditTabOut", "", "cdkEditOpen", "", 3, "cdkPopoverEdit", "cdkPopoverEditContext"], ["name", "name", "required", "", 3, "ngModel"], ["type", "submit"]], template: function CdkPopoverEditTabOutVanillaTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template, 4, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementStart(3, "tr");
@@ -1017,20 +806,7 @@ let CdkPopoverEditTabOutVanillaTableExample = /** @class */ (() => {
                 templateUrl: 'cdk-popover-edit-tab-out-vanilla-table-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkPopoverEditTabOutVanillaTableExample.prototype.preservedNameValues;
-    /** @type {?} */
-    CdkPopoverEditTabOutVanillaTableExample.prototype.preservedWeightValues;
-    /** @type {?} */
-    CdkPopoverEditTabOutVanillaTableExample.prototype.elements;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk-experimental/popover-edit/cdk-popover-edit-vanilla-table/cdk-popover-edit-vanilla-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkPopoverEditVanillaTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r6 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
@@ -1135,21 +911,6 @@ function CdkPopoverEditVanillaTableExample_tr_12_Template(rf, ctx) { if (rf & 1)
     ɵɵadvance(3);
     ɵɵtextInterpolate1(" ", element_r8.symbol, " ");
 } }
-/**
- * @record
- */
-function PeriodicElement$3() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$3.prototype.name;
-    /** @type {?} */
-    PeriodicElement$3.prototype.position;
-    /** @type {?} */
-    PeriodicElement$3.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$3.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -1173,34 +934,21 @@ const ELEMENT_DATA$3 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * \@title CDK Popover Edit on an HTML data-table
+ * @title CDK Popover Edit on an HTML data-table
  */
 let CdkPopoverEditVanillaTableExample = /** @class */ (() => {
-    /**
-     * \@title CDK Popover Edit on an HTML data-table
-     */
     class CdkPopoverEditVanillaTableExample {
         constructor() {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
             this.elements = ELEMENT_DATA$3;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
@@ -1208,15 +956,8 @@ let CdkPopoverEditVanillaTableExample = /** @class */ (() => {
             element.weight = f.value.weight;
         }
     }
-    CdkPopoverEditVanillaTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-popover-edit-vanilla-table-example',
-                    styleUrls: ['cdk-popover-edit-vanilla-table-example.css'],
-                    templateUrl: 'cdk-popover-edit-vanilla-table-example.html',
-                },] },
-    ];
-    /** @nocollapse */ CdkPopoverEditVanillaTableExample.ɵfac = function CdkPopoverEditVanillaTableExample_Factory(t) { return new (t || CdkPopoverEditVanillaTableExample)(); };
-    /** @nocollapse */ CdkPopoverEditVanillaTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditVanillaTableExample, selectors: [["cdk-popover-edit-vanilla-table-example"]], decls: 13, vars: 1, consts: [["editable", "", 1, "example-table"], ["weightEdit", ""], [4, "ngFor", "ngForOf"], [2, "background-color", "white", "width", "100%"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", ""], ["cdkEditClose", ""], [3, "cdkPopoverEdit"], ["nameEdit", ""], [4, "cdkRowHoverContent"], [3, "cdkPopoverEdit", "cdkPopoverEditContext"], ["name", "name", "required", "", 3, "ngModel"], ["cdkEditOpen", ""]], template: function CdkPopoverEditVanillaTableExample_Template(rf, ctx) { if (rf & 1) {
+    CdkPopoverEditVanillaTableExample.ɵfac = function CdkPopoverEditVanillaTableExample_Factory(t) { return new (t || CdkPopoverEditVanillaTableExample)(); };
+    CdkPopoverEditVanillaTableExample.ɵcmp = ɵɵdefineComponent({ type: CdkPopoverEditVanillaTableExample, selectors: [["cdk-popover-edit-vanilla-table-example"]], decls: 13, vars: 1, consts: [["editable", "", 1, "example-table"], ["weightEdit", ""], [4, "ngFor", "ngForOf"], [2, "background-color", "white", "width", "100%"], ["cdkEditControl", "", 3, "cdkEditControlPreservedFormValue", "ngSubmit", "cdkEditControlPreservedFormValueChange"], ["f", "ngForm"], ["type", "number", "name", "weight", "required", "", 3, "ngModel"], ["type", "submit"], ["cdkEditRevert", ""], ["cdkEditClose", ""], [3, "cdkPopoverEdit"], ["nameEdit", ""], [4, "cdkRowHoverContent"], [3, "cdkPopoverEdit", "cdkPopoverEditContext"], ["name", "name", "required", "", 3, "ngModel"], ["cdkEditOpen", ""]], template: function CdkPopoverEditVanillaTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, CdkPopoverEditVanillaTableExample_ng_template_1_Template, 12, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementStart(3, "tr");
@@ -1249,21 +990,7 @@ let CdkPopoverEditVanillaTableExample = /** @class */ (() => {
                 templateUrl: 'cdk-popover-edit-vanilla-table-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkPopoverEditVanillaTableExample.prototype.preservedNameValues;
-    /** @type {?} */
-    CdkPopoverEditVanillaTableExample.prototype.preservedWeightValues;
-    /** @type {?} */
-    CdkPopoverEditVanillaTableExample.prototype.elements;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk-experimental/popover-edit/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     CdkPopoverEditCdkTableExample,
     CdkPopoverEditCdkTableFlexExample,
@@ -1274,21 +1001,8 @@ const EXAMPLES = [
 let CdkPopoverEditExamplesModule = /** @class */ (() => {
     class CdkPopoverEditExamplesModule {
     }
-    CdkPopoverEditExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CdkPopoverEditModule,
-                        CdkTableModule,
-                        FormsModule,
-                        CommonModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CdkPopoverEditExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPopoverEditExamplesModule });
-    /** @nocollapse */ CdkPopoverEditExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPopoverEditExamplesModule_Factory(t) { return new (t || CdkPopoverEditExamplesModule)(); }, imports: [[
+    CdkPopoverEditExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPopoverEditExamplesModule });
+    CdkPopoverEditExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPopoverEditExamplesModule_Factory(t) { return new (t || CdkPopoverEditExamplesModule)(); }, imports: [[
                 CdkPopoverEditModule,
                 CdkTableModule,
                 FormsModule,

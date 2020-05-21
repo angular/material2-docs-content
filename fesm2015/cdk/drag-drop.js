@@ -1,32 +1,17 @@
 import { CdkDrag, moveItemInArray, transferArrayItem, CdkDropListGroup, CdkDropList, CdkDragPlaceholder, CdkDragPreview, CdkDragHandle, DragDropModule } from '@angular/cdk/drag-drop';
 import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 import { NgForOf, CommonModule } from '@angular/common';
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, ɵɵadvance, ɵɵtextInterpolate, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵɵreference, ɵɵpureFunction1, ɵɵelement, ɵɵtextInterpolate1, ɵɵnextContext, ɵɵsanitizeUrl, ɵɵnamespaceSVG, ViewContainerRef, ViewChild, TemplateRef, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵadvance, ɵɵtextInterpolate, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵɵreference, ɵɵpureFunction1, ɵɵelement, ɵɵtextInterpolate1, ɵɵnextContext, ɵɵsanitizeUrl, ɵɵnamespaceSVG, ɵɵdirectiveInject, ViewContainerRef, ɵɵviewQuery, TemplateRef, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { TemplatePortal } from '@angular/cdk/portal';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-axis-lock/cdk-drag-drop-axis-lock-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Drag&Drop position locking
+ * @title Drag&Drop position locking
  */
 let CdkDragDropAxisLockExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop position locking
-     */
     class CdkDragDropAxisLockExample {
     }
-    CdkDragDropAxisLockExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-axis-lock-example',
-                    templateUrl: 'cdk-drag-drop-axis-lock-example.html',
-                    styleUrls: ['cdk-drag-drop-axis-lock-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropAxisLockExample.ɵfac = function CdkDragDropAxisLockExample_Factory(t) { return new (t || CdkDragDropAxisLockExample)(); };
-    /** @nocollapse */ CdkDragDropAxisLockExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropAxisLockExample, selectors: [["cdk-drag-drop-axis-lock-example"]], decls: 4, vars: 0, consts: [["cdkDragLockAxis", "y", "cdkDrag", "", 1, "example-box"], ["cdkDragLockAxis", "x", "cdkDrag", "", 1, "example-box"]], template: function CdkDragDropAxisLockExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropAxisLockExample.ɵfac = function CdkDragDropAxisLockExample_Factory(t) { return new (t || CdkDragDropAxisLockExample)(); };
+    CdkDragDropAxisLockExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropAxisLockExample, selectors: [["cdk-drag-drop-axis-lock-example"]], decls: 4, vars: 0, consts: [["cdkDragLockAxis", "y", "cdkDrag", "", 1, "example-box"], ["cdkDragLockAxis", "x", "cdkDrag", "", 1, "example-box"]], template: function CdkDragDropAxisLockExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵtext(1, " I can only be dragged up/down\n");
             ɵɵelementEnd();
@@ -46,28 +31,13 @@ let CdkDragDropAxisLockExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-boundary/cdk-drag-drop-boundary-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Drag&Drop boundary
+ * @title Drag&Drop boundary
  */
 let CdkDragDropBoundaryExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop boundary
-     */
     class CdkDragDropBoundaryExample {
     }
-    CdkDragDropBoundaryExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-boundary-example',
-                    templateUrl: 'cdk-drag-drop-boundary-example.html',
-                    styleUrls: ['cdk-drag-drop-boundary-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropBoundaryExample.ɵfac = function CdkDragDropBoundaryExample_Factory(t) { return new (t || CdkDragDropBoundaryExample)(); };
-    /** @nocollapse */ CdkDragDropBoundaryExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropBoundaryExample, selectors: [["cdk-drag-drop-boundary-example"]], decls: 3, vars: 0, consts: [[1, "example-boundary"], ["cdkDragBoundary", ".example-boundary", "cdkDrag", "", 1, "example-box"]], template: function CdkDragDropBoundaryExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropBoundaryExample.ɵfac = function CdkDragDropBoundaryExample_Factory(t) { return new (t || CdkDragDropBoundaryExample)(); };
+    CdkDragDropBoundaryExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropBoundaryExample, selectors: [["cdk-drag-drop-boundary-example"]], decls: 3, vars: 0, consts: [[1, "example-boundary"], ["cdkDragBoundary", ".example-boundary", "cdkDrag", "", 1, "example-box"]], template: function CdkDragDropBoundaryExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "div", 1);
             ɵɵtext(2, " I can only be dragged within the dotted container ");
@@ -85,11 +55,6 @@ let CdkDragDropBoundaryExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-connected-sorting-group/cdk-drag-drop-connected-sorting-group-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropConnectedSortingGroupExample_div_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 4);
     ɵɵtext(1);
@@ -109,12 +74,9 @@ function CdkDragDropConnectedSortingGroupExample_div_10_Template(rf, ctx) { if (
     ɵɵtextInterpolate(item_r3);
 } }
 /**
- * \@title Drag&Drop connected sorting group
+ * @title Drag&Drop connected sorting group
  */
 let CdkDragDropConnectedSortingGroupExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop connected sorting group
-     */
     class CdkDragDropConnectedSortingGroupExample {
         constructor() {
             this.todo = [
@@ -131,10 +93,6 @@ let CdkDragDropConnectedSortingGroupExample = /** @class */ (() => {
                 'Walk dog'
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             if (event.previousContainer === event.container) {
                 moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -144,15 +102,8 @@ let CdkDragDropConnectedSortingGroupExample = /** @class */ (() => {
             }
         }
     }
-    CdkDragDropConnectedSortingGroupExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-connected-sorting-group-example',
-                    templateUrl: 'cdk-drag-drop-connected-sorting-group-example.html',
-                    styleUrls: ['cdk-drag-drop-connected-sorting-group-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropConnectedSortingGroupExample.ɵfac = function CdkDragDropConnectedSortingGroupExample_Factory(t) { return new (t || CdkDragDropConnectedSortingGroupExample)(); };
-    /** @nocollapse */ CdkDragDropConnectedSortingGroupExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropConnectedSortingGroupExample, selectors: [["cdk-drag-drop-connected-sorting-group-example"]], decls: 11, vars: 4, consts: [["cdkDropListGroup", ""], [1, "example-container"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropConnectedSortingGroupExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropConnectedSortingGroupExample.ɵfac = function CdkDragDropConnectedSortingGroupExample_Factory(t) { return new (t || CdkDragDropConnectedSortingGroupExample)(); };
+    CdkDragDropConnectedSortingGroupExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropConnectedSortingGroupExample, selectors: [["cdk-drag-drop-connected-sorting-group-example"]], decls: 11, vars: 4, consts: [["cdkDropListGroup", ""], [1, "example-container"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropConnectedSortingGroupExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "div", 1);
             ɵɵelementStart(2, "h2");
@@ -193,18 +144,7 @@ let CdkDragDropConnectedSortingGroupExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-connected-sorting-group-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropConnectedSortingGroupExample.prototype.todo;
-    /** @type {?} */
-    CdkDragDropConnectedSortingGroupExample.prototype.done;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-connected-sorting/cdk-drag-drop-connected-sorting-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropConnectedSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 5);
     ɵɵtext(1);
@@ -225,12 +165,9 @@ function CdkDragDropConnectedSortingExample_div_11_Template(rf, ctx) { if (rf & 
 } }
 const _c0 = function (a0) { return [a0]; };
 /**
- * \@title Drag&Drop connected sorting
+ * @title Drag&Drop connected sorting
  */
 let CdkDragDropConnectedSortingExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop connected sorting
-     */
     class CdkDragDropConnectedSortingExample {
         constructor() {
             this.todo = [
@@ -247,10 +184,6 @@ let CdkDragDropConnectedSortingExample = /** @class */ (() => {
                 'Walk dog'
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             if (event.previousContainer === event.container) {
                 moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -260,15 +193,8 @@ let CdkDragDropConnectedSortingExample = /** @class */ (() => {
             }
         }
     }
-    CdkDragDropConnectedSortingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-connected-sorting-example',
-                    templateUrl: 'cdk-drag-drop-connected-sorting-example.html',
-                    styleUrls: ['cdk-drag-drop-connected-sorting-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropConnectedSortingExample.ɵfac = function CdkDragDropConnectedSortingExample_Factory(t) { return new (t || CdkDragDropConnectedSortingExample)(); };
-    /** @nocollapse */ CdkDragDropConnectedSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropConnectedSortingExample, selectors: [["cdk-drag-drop-connected-sorting-example"]], decls: 12, vars: 10, consts: [[1, "example-container"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListConnectedTo", "cdkDropListDropped"], ["todoList", "cdkDropList"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["doneList", "cdkDropList"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropConnectedSortingExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropConnectedSortingExample.ɵfac = function CdkDragDropConnectedSortingExample_Factory(t) { return new (t || CdkDragDropConnectedSortingExample)(); };
+    CdkDragDropConnectedSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropConnectedSortingExample, selectors: [["cdk-drag-drop-connected-sorting-example"]], decls: 12, vars: 10, consts: [[1, "example-container"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListConnectedTo", "cdkDropListDropped"], ["todoList", "cdkDropList"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["doneList", "cdkDropList"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropConnectedSortingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "h2");
             ɵɵtext(2, "To do");
@@ -309,18 +235,7 @@ let CdkDragDropConnectedSortingExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-connected-sorting-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropConnectedSortingExample.prototype.todo;
-    /** @type {?} */
-    CdkDragDropConnectedSortingExample.prototype.done;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-custom-placeholder/cdk-drag-drop-custom-placeholder-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropCustomPlaceholderExample_div_1_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "div", 4);
 } }
@@ -335,12 +250,9 @@ function CdkDragDropCustomPlaceholderExample_div_1_Template(rf, ctx) { if (rf & 
     ɵɵtextInterpolate1(" ", movie_r1, " ");
 } }
 /**
- * \@title Drag&Drop custom placeholder
+ * @title Drag&Drop custom placeholder
  */
 let CdkDragDropCustomPlaceholderExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop custom placeholder
-     */
     class CdkDragDropCustomPlaceholderExample {
         constructor() {
             this.movies = [
@@ -355,23 +267,12 @@ let CdkDragDropCustomPlaceholderExample = /** @class */ (() => {
                 'Episode IX – The Rise of Skywalker'
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
         }
     }
-    CdkDragDropCustomPlaceholderExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-custom-placeholder-example',
-                    templateUrl: 'cdk-drag-drop-custom-placeholder-example.html',
-                    styleUrls: ['cdk-drag-drop-custom-placeholder-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropCustomPlaceholderExample.ɵfac = function CdkDragDropCustomPlaceholderExample_Factory(t) { return new (t || CdkDragDropCustomPlaceholderExample)(); };
-    /** @nocollapse */ CdkDragDropCustomPlaceholderExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropCustomPlaceholderExample, selectors: [["cdk-drag-drop-custom-placeholder-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"], ["class", "example-custom-placeholder", 4, "cdkDragPlaceholder"], [1, "example-custom-placeholder"]], template: function CdkDragDropCustomPlaceholderExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropCustomPlaceholderExample.ɵfac = function CdkDragDropCustomPlaceholderExample_Factory(t) { return new (t || CdkDragDropCustomPlaceholderExample)(); };
+    CdkDragDropCustomPlaceholderExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropCustomPlaceholderExample, selectors: [["cdk-drag-drop-custom-placeholder-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"], ["class", "example-custom-placeholder", 4, "cdkDragPlaceholder"], [1, "example-custom-placeholder"]], template: function CdkDragDropCustomPlaceholderExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropCustomPlaceholderExample_Template_div_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵtemplate(1, CdkDragDropCustomPlaceholderExample_div_1_Template, 3, 1, "div", 1);
@@ -390,16 +291,7 @@ let CdkDragDropCustomPlaceholderExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-custom-placeholder-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropCustomPlaceholderExample.prototype.movies;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-custom-preview/cdk-drag-drop-custom-preview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropCustomPreviewExample_div_1_img_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "img", 4);
 } if (rf & 2) {
@@ -417,12 +309,9 @@ function CdkDragDropCustomPreviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", movie_r1.title, " ");
 } }
 /**
- * \@title Drag&Drop custom preview
+ * @title Drag&Drop custom preview
  */
 let CdkDragDropCustomPreviewExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop custom preview
-     */
     class CdkDragDropCustomPreviewExample {
         constructor() {
             // tslint:disable:max-line-length
@@ -466,23 +355,12 @@ let CdkDragDropCustomPreviewExample = /** @class */ (() => {
             ];
         }
         // tslint:enable:max-line-length
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
         }
     }
-    CdkDragDropCustomPreviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-custom-preview-example',
-                    templateUrl: 'cdk-drag-drop-custom-preview-example.html',
-                    styleUrls: ['cdk-drag-drop-custom-preview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropCustomPreviewExample.ɵfac = function CdkDragDropCustomPreviewExample_Factory(t) { return new (t || CdkDragDropCustomPreviewExample)(); };
-    /** @nocollapse */ CdkDragDropCustomPreviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropCustomPreviewExample, selectors: [["cdk-drag-drop-custom-preview-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"], [3, "src", "alt", 4, "cdkDragPreview"], [3, "src", "alt"]], template: function CdkDragDropCustomPreviewExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropCustomPreviewExample.ɵfac = function CdkDragDropCustomPreviewExample_Factory(t) { return new (t || CdkDragDropCustomPreviewExample)(); };
+    CdkDragDropCustomPreviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropCustomPreviewExample, selectors: [["cdk-drag-drop-custom-preview-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"], [3, "src", "alt", 4, "cdkDragPreview"], [3, "src", "alt"]], template: function CdkDragDropCustomPreviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropCustomPreviewExample_Template_div_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵtemplate(1, CdkDragDropCustomPreviewExample_div_1_Template, 3, 1, "div", 1);
@@ -501,34 +379,15 @@ let CdkDragDropCustomPreviewExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-custom-preview-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropCustomPreviewExample.prototype.movies;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-delay/cdk-drag-drop-delay-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Delayed dragging
+ * @title Delayed dragging
  */
 let CdkDragDropDelayExample = /** @class */ (() => {
-    /**
-     * \@title Delayed dragging
-     */
     class CdkDragDropDelayExample {
     }
-    CdkDragDropDelayExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-delay-example',
-                    templateUrl: 'cdk-drag-drop-delay-example.html',
-                    styleUrls: ['cdk-drag-drop-delay-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropDelayExample.ɵfac = function CdkDragDropDelayExample_Factory(t) { return new (t || CdkDragDropDelayExample)(); };
-    /** @nocollapse */ CdkDragDropDelayExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropDelayExample, selectors: [["cdk-drag-drop-delay-example"]], decls: 2, vars: 1, consts: [["cdkDrag", "", 1, "example-box", 3, "cdkDragStartDelay"]], template: function CdkDragDropDelayExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropDelayExample.ɵfac = function CdkDragDropDelayExample_Factory(t) { return new (t || CdkDragDropDelayExample)(); };
+    CdkDragDropDelayExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropDelayExample, selectors: [["cdk-drag-drop-delay-example"]], decls: 2, vars: 1, consts: [["cdkDrag", "", 1, "example-box", 3, "cdkDragStartDelay"]], template: function CdkDragDropDelayExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵtext(1, " Dragging starts after one second\n");
             ɵɵelementEnd();
@@ -546,11 +405,6 @@ let CdkDragDropDelayExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-disabled-sorting/cdk-drag-drop-disabled-sorting-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropDisabledSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 5);
     ɵɵtext(1);
@@ -570,12 +424,9 @@ function CdkDragDropDisabledSortingExample_div_10_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate(item_r3);
 } }
 /**
- * \@title Drag&Drop disabled sorting
+ * @title Drag&Drop disabled sorting
  */
 let CdkDragDropDisabledSortingExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop disabled sorting
-     */
     class CdkDragDropDisabledSortingExample {
         constructor() {
             this.items = [
@@ -591,10 +442,6 @@ let CdkDragDropDisabledSortingExample = /** @class */ (() => {
                 'Cucumbers'
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             if (event.previousContainer === event.container) {
                 moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -604,15 +451,8 @@ let CdkDragDropDisabledSortingExample = /** @class */ (() => {
             }
         }
     }
-    CdkDragDropDisabledSortingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-disabled-sorting-example',
-                    templateUrl: 'cdk-drag-drop-disabled-sorting-example.html',
-                    styleUrls: ['cdk-drag-drop-disabled-sorting-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropDisabledSortingExample.ɵfac = function CdkDragDropDisabledSortingExample_Factory(t) { return new (t || CdkDragDropDisabledSortingExample)(); };
-    /** @nocollapse */ CdkDragDropDisabledSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropDisabledSortingExample, selectors: [["cdk-drag-drop-disabled-sorting-example"]], decls: 11, vars: 4, consts: [["cdkDropListGroup", ""], [1, "example-container"], ["cdkDropList", "", "cdkDropListSortingDisabled", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListDropped"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropDisabledSortingExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropDisabledSortingExample.ɵfac = function CdkDragDropDisabledSortingExample_Factory(t) { return new (t || CdkDragDropDisabledSortingExample)(); };
+    CdkDragDropDisabledSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropDisabledSortingExample, selectors: [["cdk-drag-drop-disabled-sorting-example"]], decls: 11, vars: 4, consts: [["cdkDropListGroup", ""], [1, "example-container"], ["cdkDropList", "", "cdkDropListSortingDisabled", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListDropped"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropDisabledSortingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "div", 1);
             ɵɵelementStart(2, "h2");
@@ -653,18 +493,7 @@ let CdkDragDropDisabledSortingExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-disabled-sorting-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropDisabledSortingExample.prototype.items;
-    /** @type {?} */
-    CdkDragDropDisabledSortingExample.prototype.basket;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-disabled/cdk-drag-drop-disabled-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropDisabledExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 2);
     ɵɵtext(1);
@@ -676,12 +505,9 @@ function CdkDragDropDisabledExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate(item_r1.value);
 } }
 /**
- * \@title Drag&Drop disabled
+ * @title Drag&Drop disabled
  */
 let CdkDragDropDisabledExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop disabled
-     */
     class CdkDragDropDisabledExample {
         constructor() {
             this.items = [
@@ -690,23 +516,12 @@ let CdkDragDropDisabledExample = /** @class */ (() => {
                 { value: 'I can also be dragged', disabled: false }
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             moveItemInArray(this.items, event.previousIndex, event.currentIndex);
         }
     }
-    CdkDragDropDisabledExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-disabled-example',
-                    templateUrl: 'cdk-drag-drop-disabled-example.html',
-                    styleUrls: ['cdk-drag-drop-disabled-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropDisabledExample.ɵfac = function CdkDragDropDisabledExample_Factory(t) { return new (t || CdkDragDropDisabledExample)(); };
-    /** @nocollapse */ CdkDragDropDisabledExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropDisabledExample, selectors: [["cdk-drag-drop-disabled-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 3, "cdkDragDisabled", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragDisabled"]], template: function CdkDragDropDisabledExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropDisabledExample.ɵfac = function CdkDragDropDisabledExample_Factory(t) { return new (t || CdkDragDropDisabledExample)(); };
+    CdkDragDropDisabledExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropDisabledExample, selectors: [["cdk-drag-drop-disabled-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 3, "cdkDragDisabled", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragDisabled"]], template: function CdkDragDropDisabledExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropDisabledExample_Template_div_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵtemplate(1, CdkDragDropDisabledExample_div_1_Template, 2, 2, "div", 1);
@@ -725,16 +540,7 @@ let CdkDragDropDisabledExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-disabled-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropDisabledExample.prototype.items;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-enter-predicate/cdk-drag-drop-enter-predicate-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropEnterPredicateExample_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 4);
     ɵɵtext(1);
@@ -756,21 +562,14 @@ function CdkDragDropEnterPredicateExample_div_9_Template(rf, ctx) { if (rf & 1) 
     ɵɵtextInterpolate(number_r3);
 } }
 /**
- * \@title Drag&Drop enter predicate
+ * @title Drag&Drop enter predicate
  */
 let CdkDragDropEnterPredicateExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop enter predicate
-     */
     class CdkDragDropEnterPredicateExample {
         constructor() {
             this.all = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             this.even = [10];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             if (event.previousContainer === event.container) {
                 moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -779,31 +578,17 @@ let CdkDragDropEnterPredicateExample = /** @class */ (() => {
                 transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
             }
         }
-        /**
-         * Predicate function that only allows even numbers to be dropped into a list.
-         * @param {?} item
-         * @return {?}
-         */
+        /** Predicate function that only allows even numbers to be dropped into a list. */
         evenPredicate(item) {
             return item.data % 2 === 0;
         }
-        /**
-         * Predicate function that doesn't allow items to be dropped into a list.
-         * @return {?}
-         */
+        /** Predicate function that doesn't allow items to be dropped into a list. */
         noReturnPredicate() {
             return false;
         }
     }
-    CdkDragDropEnterPredicateExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-enter-predicate-example',
-                    templateUrl: 'cdk-drag-drop-enter-predicate-example.html',
-                    styleUrls: ['cdk-drag-drop-enter-predicate-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropEnterPredicateExample.ɵfac = function CdkDragDropEnterPredicateExample_Factory(t) { return new (t || CdkDragDropEnterPredicateExample)(); };
-    /** @nocollapse */ CdkDragDropEnterPredicateExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropEnterPredicateExample, selectors: [["cdk-drag-drop-enter-predicate-example"]], decls: 10, vars: 6, consts: [[1, "example-container"], ["id", "all", "cdkDropList", "", "cdkDropListConnectedTo", "even", 1, "example-list", 3, "cdkDropListData", "cdkDropListEnterPredicate", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 3, "cdkDragData", 4, "ngFor", "ngForOf"], ["id", "even", "cdkDropList", "", "cdkDropListConnectedTo", "all", 1, "example-list", 3, "cdkDropListData", "cdkDropListEnterPredicate", "cdkDropListDropped"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragData"]], template: function CdkDragDropEnterPredicateExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropEnterPredicateExample.ɵfac = function CdkDragDropEnterPredicateExample_Factory(t) { return new (t || CdkDragDropEnterPredicateExample)(); };
+    CdkDragDropEnterPredicateExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropEnterPredicateExample, selectors: [["cdk-drag-drop-enter-predicate-example"]], decls: 10, vars: 6, consts: [[1, "example-container"], ["id", "all", "cdkDropList", "", "cdkDropListConnectedTo", "even", 1, "example-list", 3, "cdkDropListData", "cdkDropListEnterPredicate", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 3, "cdkDragData", 4, "ngFor", "ngForOf"], ["id", "even", "cdkDropList", "", "cdkDropListConnectedTo", "all", 1, "example-list", 3, "cdkDropListData", "cdkDropListEnterPredicate", "cdkDropListDropped"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragData"]], template: function CdkDragDropEnterPredicateExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "h2");
             ɵɵtext(2, "Available numbers");
@@ -842,45 +627,21 @@ let CdkDragDropEnterPredicateExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-enter-predicate-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropEnterPredicateExample.prototype.all;
-    /** @type {?} */
-    CdkDragDropEnterPredicateExample.prototype.even;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-free-drag-position/cdk-drag-drop-free-drag-position-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Programmatically setting the free drag position
+ * @title Programmatically setting the free drag position
  */
 let CdkDragDropFreeDragPositionExample = /** @class */ (() => {
-    /**
-     * \@title Programmatically setting the free drag position
-     */
     class CdkDragDropFreeDragPositionExample {
         constructor() {
             this.dragPosition = { x: 0, y: 0 };
         }
-        /**
-         * @return {?}
-         */
         changePosition() {
             this.dragPosition = { x: this.dragPosition.x + 50, y: this.dragPosition.y + 50 };
         }
     }
-    CdkDragDropFreeDragPositionExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-free-drag-position-example',
-                    templateUrl: 'cdk-drag-drop-free-drag-position-example.html',
-                    styleUrls: ['cdk-drag-drop-free-drag-position-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropFreeDragPositionExample.ɵfac = function CdkDragDropFreeDragPositionExample_Factory(t) { return new (t || CdkDragDropFreeDragPositionExample)(); };
-    /** @nocollapse */ CdkDragDropFreeDragPositionExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropFreeDragPositionExample, selectors: [["cdk-drag-drop-free-drag-position-example"]], decls: 5, vars: 1, consts: [[3, "click"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragFreeDragPosition"]], template: function CdkDragDropFreeDragPositionExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropFreeDragPositionExample.ɵfac = function CdkDragDropFreeDragPositionExample_Factory(t) { return new (t || CdkDragDropFreeDragPositionExample)(); };
+    CdkDragDropFreeDragPositionExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropFreeDragPositionExample, selectors: [["cdk-drag-drop-free-drag-position-example"]], decls: 5, vars: 1, consts: [[3, "click"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragFreeDragPosition"]], template: function CdkDragDropFreeDragPositionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵelementStart(1, "button", 0);
             ɵɵlistener("click", function CdkDragDropFreeDragPositionExample_Template_button_click_1_listener() { return ctx.changePosition(); });
@@ -904,34 +665,15 @@ let CdkDragDropFreeDragPositionExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-free-drag-position-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropFreeDragPositionExample.prototype.dragPosition;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-handle/cdk-drag-drop-handle-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Drag&Drop with a handle
+ * @title Drag&Drop with a handle
  */
 let CdkDragDropHandleExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop with a handle
-     */
     class CdkDragDropHandleExample {
     }
-    CdkDragDropHandleExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-handle-example',
-                    templateUrl: 'cdk-drag-drop-handle-example.html',
-                    styleUrls: ['cdk-drag-drop-handle-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropHandleExample.ɵfac = function CdkDragDropHandleExample_Factory(t) { return new (t || CdkDragDropHandleExample)(); };
-    /** @nocollapse */ CdkDragDropHandleExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropHandleExample, selectors: [["cdk-drag-drop-handle-example"]], decls: 6, vars: 0, consts: [["cdkDrag", "", 1, "example-box"], ["cdkDragHandle", "", 1, "example-handle"], ["width", "24px", "fill", "currentColor", "viewBox", "0 0 24 24"], ["d", "M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"], ["d", "M0 0h24v24H0z", "fill", "none"]], template: function CdkDragDropHandleExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropHandleExample.ɵfac = function CdkDragDropHandleExample_Factory(t) { return new (t || CdkDragDropHandleExample)(); };
+    CdkDragDropHandleExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropHandleExample, selectors: [["cdk-drag-drop-handle-example"]], decls: 6, vars: 0, consts: [["cdkDrag", "", 1, "example-box"], ["cdkDragHandle", "", 1, "example-handle"], ["width", "24px", "fill", "currentColor", "viewBox", "0 0 24 24"], ["d", "M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"], ["d", "M0 0h24v24H0z", "fill", "none"]], template: function CdkDragDropHandleExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵtext(1, " I can only be dragged using the handle ");
             ɵɵelementStart(2, "div", 1);
@@ -954,11 +696,6 @@ let CdkDragDropHandleExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-horizontal-sorting/cdk-drag-drop-horizontal-sorting-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropHorizontalSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 2);
     ɵɵtext(1);
@@ -969,12 +706,9 @@ function CdkDragDropHorizontalSortingExample_div_1_Template(rf, ctx) { if (rf & 
     ɵɵtextInterpolate(timePeriod_r1);
 } }
 /**
- * \@title Drag&Drop horizontal sorting
+ * @title Drag&Drop horizontal sorting
  */
 let CdkDragDropHorizontalSortingExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop horizontal sorting
-     */
     class CdkDragDropHorizontalSortingExample {
         constructor() {
             this.timePeriods = [
@@ -985,23 +719,12 @@ let CdkDragDropHorizontalSortingExample = /** @class */ (() => {
                 'Long nineteenth century'
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
         }
     }
-    CdkDragDropHorizontalSortingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-horizontal-sorting-example',
-                    templateUrl: 'cdk-drag-drop-horizontal-sorting-example.html',
-                    styleUrls: ['cdk-drag-drop-horizontal-sorting-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropHorizontalSortingExample.ɵfac = function CdkDragDropHorizontalSortingExample_Factory(t) { return new (t || CdkDragDropHorizontalSortingExample)(); };
-    /** @nocollapse */ CdkDragDropHorizontalSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropHorizontalSortingExample, selectors: [["cdk-drag-drop-horizontal-sorting-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropHorizontalSortingExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropHorizontalSortingExample.ɵfac = function CdkDragDropHorizontalSortingExample_Factory(t) { return new (t || CdkDragDropHorizontalSortingExample)(); };
+    CdkDragDropHorizontalSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropHorizontalSortingExample, selectors: [["cdk-drag-drop-horizontal-sorting-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropHorizontalSortingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropHorizontalSortingExample_Template_div_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵtemplate(1, CdkDragDropHorizontalSortingExample_div_1_Template, 2, 1, "div", 1);
@@ -1020,34 +743,15 @@ let CdkDragDropHorizontalSortingExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-horizontal-sorting-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropHorizontalSortingExample.prototype.timePeriods;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-overview/cdk-drag-drop-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic Drag&Drop
+ * @title Basic Drag&Drop
  */
 let CdkDragDropOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic Drag&Drop
-     */
     class CdkDragDropOverviewExample {
     }
-    CdkDragDropOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-overview-example',
-                    templateUrl: 'cdk-drag-drop-overview-example.html',
-                    styleUrls: ['cdk-drag-drop-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropOverviewExample.ɵfac = function CdkDragDropOverviewExample_Factory(t) { return new (t || CdkDragDropOverviewExample)(); };
-    /** @nocollapse */ CdkDragDropOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropOverviewExample, selectors: [["cdk-drag-drop-overview-example"]], decls: 2, vars: 0, consts: [["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropOverviewExample.ɵfac = function CdkDragDropOverviewExample_Factory(t) { return new (t || CdkDragDropOverviewExample)(); };
+    CdkDragDropOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropOverviewExample, selectors: [["cdk-drag-drop-overview-example"]], decls: 2, vars: 0, consts: [["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵtext(1, " Drag me around\n");
             ɵɵelementEnd();
@@ -1063,76 +767,37 @@ let CdkDragDropOverviewExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-root-element/cdk-drag-drop-root-element-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropRootElementExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 1);
     ɵɵtext(1, " Drag the dialog around! ");
     ɵɵelementEnd();
 } }
 /**
- * \@title Drag&Drop with alternate root element
+ * @title Drag&Drop with alternate root element
  */
 let CdkDragDropRootElementExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop with alternate root element
-     */
     class CdkDragDropRootElementExample {
-        /**
-         * @param {?} _overlay
-         * @param {?} _viewContainerRef
-         */
         constructor(_overlay, _viewContainerRef) {
             this._overlay = _overlay;
             this._viewContainerRef = _viewContainerRef;
         }
-        /**
-         * @return {?}
-         */
         ngAfterViewInit() {
             this._portal = new TemplatePortal(this._dialogTemplate, this._viewContainerRef);
             this._overlayRef = this._overlay.create({
                 positionStrategy: this._overlay.position().global().centerHorizontally().centerVertically(),
                 hasBackdrop: true
             });
-            this._overlayRef.backdropClick().subscribe((/**
-             * @return {?}
-             */
-            () => this._overlayRef.detach()));
+            this._overlayRef.backdropClick().subscribe(() => this._overlayRef.detach());
         }
-        /**
-         * @return {?}
-         */
         ngOnDestroy() {
             this._overlayRef.dispose();
         }
-        /**
-         * @return {?}
-         */
         openDialog() {
             this._overlayRef.attach(this._portal);
         }
     }
-    CdkDragDropRootElementExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-root-element-example',
-                    templateUrl: 'cdk-drag-drop-root-element-example.html',
-                    styleUrls: ['cdk-drag-drop-root-element-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    CdkDragDropRootElementExample.ctorParameters = () => [
-        { type: Overlay },
-        { type: ViewContainerRef }
-    ];
-    CdkDragDropRootElementExample.propDecorators = {
-        _dialogTemplate: [{ type: ViewChild, args: [TemplateRef,] }]
-    };
-    /** @nocollapse */ CdkDragDropRootElementExample.ɵfac = function CdkDragDropRootElementExample_Factory(t) { return new (t || CdkDragDropRootElementExample)(ɵɵdirectiveInject(Overlay), ɵɵdirectiveInject(ViewContainerRef)); };
-    /** @nocollapse */ CdkDragDropRootElementExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropRootElementExample, selectors: [["cdk-drag-drop-root-element-example"]], viewQuery: function CdkDragDropRootElementExample_Query(rf, ctx) { if (rf & 1) {
+    CdkDragDropRootElementExample.ɵfac = function CdkDragDropRootElementExample_Factory(t) { return new (t || CdkDragDropRootElementExample)(ɵɵdirectiveInject(Overlay), ɵɵdirectiveInject(ViewContainerRef)); };
+    CdkDragDropRootElementExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropRootElementExample, selectors: [["cdk-drag-drop-root-element-example"]], viewQuery: function CdkDragDropRootElementExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(TemplateRef, true);
         } if (rf & 2) {
             var _t;
@@ -1157,36 +822,7 @@ let CdkDragDropRootElementExample = /** @class */ (() => {
             type: ViewChild,
             args: [TemplateRef]
         }] }); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropRootElementExample.prototype._dialogTemplate;
-    /**
-     * @type {?}
-     * @private
-     */
-    CdkDragDropRootElementExample.prototype._overlayRef;
-    /**
-     * @type {?}
-     * @private
-     */
-    CdkDragDropRootElementExample.prototype._portal;
-    /**
-     * @type {?}
-     * @private
-     */
-    CdkDragDropRootElementExample.prototype._overlay;
-    /**
-     * @type {?}
-     * @private
-     */
-    CdkDragDropRootElementExample.prototype._viewContainerRef;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-sorting/cdk-drag-drop-sorting-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function CdkDragDropSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 2);
     ɵɵtext(1);
@@ -1197,12 +833,9 @@ function CdkDragDropSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate(movie_r1);
 } }
 /**
- * \@title Drag&Drop sorting
+ * @title Drag&Drop sorting
  */
 let CdkDragDropSortingExample = /** @class */ (() => {
-    /**
-     * \@title Drag&Drop sorting
-     */
     class CdkDragDropSortingExample {
         constructor() {
             this.movies = [
@@ -1217,23 +850,12 @@ let CdkDragDropSortingExample = /** @class */ (() => {
                 'Episode IX – The Rise of Skywalker'
             ];
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
         }
     }
-    CdkDragDropSortingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-drag-drop-sorting-example',
-                    templateUrl: 'cdk-drag-drop-sorting-example.html',
-                    styleUrls: ['cdk-drag-drop-sorting-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropSortingExample.ɵfac = function CdkDragDropSortingExample_Factory(t) { return new (t || CdkDragDropSortingExample)(); };
-    /** @nocollapse */ CdkDragDropSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropSortingExample, selectors: [["cdk-drag-drop-sorting-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropSortingExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropSortingExample.ɵfac = function CdkDragDropSortingExample_Factory(t) { return new (t || CdkDragDropSortingExample)(); };
+    CdkDragDropSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropSortingExample, selectors: [["cdk-drag-drop-sorting-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropSortingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropSortingExample_Template_div_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵtemplate(1, CdkDragDropSortingExample_div_1_Template, 2, 1, "div", 1);
@@ -1252,17 +874,7 @@ let CdkDragDropSortingExample = /** @class */ (() => {
                 styleUrls: ['cdk-drag-drop-sorting-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    CdkDragDropSortingExample.prototype.movies;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/cdk/drag-drop/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     CdkDragDropAxisLockExample,
     CdkDragDropBoundaryExample,
@@ -1284,20 +896,8 @@ const EXAMPLES = [
 let CdkDragDropExamplesModule = /** @class */ (() => {
     class CdkDragDropExamplesModule {
     }
-    CdkDragDropExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        DragDropModule,
-                        OverlayModule,
-                        CommonModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ CdkDragDropExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkDragDropExamplesModule });
-    /** @nocollapse */ CdkDragDropExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkDragDropExamplesModule_Factory(t) { return new (t || CdkDragDropExamplesModule)(); }, imports: [[
+    CdkDragDropExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkDragDropExamplesModule });
+    CdkDragDropExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkDragDropExamplesModule_Factory(t) { return new (t || CdkDragDropExamplesModule)(); }, imports: [[
                 DragDropModule,
                 OverlayModule,
                 CommonModule,

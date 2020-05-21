@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, ElementRef, Optional, Self, Input, ɵɵdirectiveInject, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ElementRef, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, Optional, Self, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { Validators, FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, ReactiveFormsModule } from '@angular/forms';
 import { MatFormField, MatLabel, MatSuffix, MatHint, MatFormFieldControl, MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -7,29 +7,12 @@ import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/mdc-form-field/mdc-form-field-custom-control/form-field-custom-control-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Form field with custom telephone number input control.
- */
+/** @title Form field with custom telephone number input control. */
 let FormFieldCustomControlExample = /** @class */ (() => {
-    /**
-     * \@title Form field with custom telephone number input control.
-     */
     class FormFieldCustomControlExample {
     }
-    FormFieldCustomControlExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'form-field-custom-control-example',
-                    templateUrl: 'form-field-custom-control-example.html',
-                    styleUrls: ['form-field-custom-control-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
-    /** @nocollapse */ FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+    FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
+    FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Phone number");
@@ -53,43 +36,17 @@ let FormFieldCustomControlExample = /** @class */ (() => {
                 styleUrls: ['form-field-custom-control-example.css'],
             }]
     }], null, null); })();
-/**
- * Data structure for holding telephone number.
- */
+/** Data structure for holding telephone number. */
 class MyTel {
-    /**
-     * @param {?} area
-     * @param {?} exchange
-     * @param {?} subscriber
-     */
     constructor(area, exchange, subscriber) {
         this.area = area;
         this.exchange = exchange;
         this.subscriber = subscriber;
     }
 }
-if (false) {
-    /** @type {?} */
-    MyTel.prototype.area;
-    /** @type {?} */
-    MyTel.prototype.exchange;
-    /** @type {?} */
-    MyTel.prototype.subscriber;
-}
-/**
- * Custom `MatFormFieldControl` for telephone number input.
- */
+/** Custom `MatFormFieldControl` for telephone number input. */
 let MyTelInput = /** @class */ (() => {
-    /**
-     * Custom `MatFormFieldControl` for telephone number input.
-     */
     class MyTelInput {
-        /**
-         * @param {?} formBuilder
-         * @param {?} _focusMonitor
-         * @param {?} _elementRef
-         * @param {?} ngControl
-         */
         constructor(formBuilder, _focusMonitor, _elementRef, ngControl) {
             this._focusMonitor = _focusMonitor;
             this._elementRef = _elementRef;
@@ -100,15 +57,8 @@ let MyTelInput = /** @class */ (() => {
             this.controlType = 'example-tel-input';
             this.id = `example-tel-input-${MyTelInput.nextId++}`;
             this.describedBy = '';
-            this.onChange = (/**
-             * @param {?} _
-             * @return {?}
-             */
-            (_) => { });
-            this.onTouched = (/**
-             * @return {?}
-             */
-            () => { });
+            this.onChange = (_) => { };
+            this.onTouched = () => { };
             this._required = false;
             this._disabled = false;
             this.parts = formBuilder.group({
@@ -116,72 +66,38 @@ let MyTelInput = /** @class */ (() => {
                 exchange: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
                 subscriber: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
             });
-            _focusMonitor.monitor(_elementRef, true).subscribe((/**
-             * @param {?} origin
-             * @return {?}
-             */
-            origin => {
+            _focusMonitor.monitor(_elementRef, true).subscribe(origin => {
                 if (this.focused && !origin) {
                     this.onTouched();
                 }
                 this.focused = !!origin;
                 this.stateChanges.next();
-            }));
+            });
             if (this.ngControl != null) {
                 this.ngControl.valueAccessor = this;
             }
         }
-        /**
-         * @return {?}
-         */
         get empty() {
             const { value: { area, exchange, subscriber } } = this.parts;
             return !area && !exchange && !subscriber;
         }
-        /**
-         * @return {?}
-         */
         get shouldLabelFloat() { return this.focused || !this.empty; }
-        /**
-         * @return {?}
-         */
         get placeholder() { return this._placeholder; }
-        /**
-         * @param {?} value
-         * @return {?}
-         */
         set placeholder(value) {
             this._placeholder = value;
             this.stateChanges.next();
         }
-        /**
-         * @return {?}
-         */
         get required() { return this._required; }
-        /**
-         * @param {?} value
-         * @return {?}
-         */
         set required(value) {
             this._required = coerceBooleanProperty(value);
             this.stateChanges.next();
         }
-        /**
-         * @return {?}
-         */
         get disabled() { return this._disabled; }
-        /**
-         * @param {?} value
-         * @return {?}
-         */
         set disabled(value) {
             this._disabled = coerceBooleanProperty(value);
             this._disabled ? this.parts.disable() : this.parts.enable();
             this.stateChanges.next();
         }
-        /**
-         * @return {?}
-         */
         get value() {
             if (this.parts.valid) {
                 const { value: { area, exchange, subscriber } } = this.parts;
@@ -189,102 +105,42 @@ let MyTelInput = /** @class */ (() => {
             }
             return null;
         }
-        /**
-         * @param {?} tel
-         * @return {?}
-         */
         set value(tel) {
             const { area, exchange, subscriber } = tel || new MyTel('', '', '');
             this.parts.setValue({ area, exchange, subscriber });
             this.stateChanges.next();
         }
-        /**
-         * @return {?}
-         */
         ngOnDestroy() {
             this.stateChanges.complete();
             this._focusMonitor.stopMonitoring(this._elementRef);
         }
-        /**
-         * @param {?} ids
-         * @return {?}
-         */
         setDescribedByIds(ids) {
             this.describedBy = ids.join(' ');
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         onContainerClick(event) {
-            if (((/** @type {?} */ (event.target))).tagName.toLowerCase() != 'input') {
-                (/** @type {?} */ (this._elementRef.nativeElement.querySelector('input'))).focus();
+            if (event.target.tagName.toLowerCase() != 'input') {
+                this._elementRef.nativeElement.querySelector('input').focus();
             }
         }
-        /**
-         * @param {?} tel
-         * @return {?}
-         */
         writeValue(tel) {
             this.value = tel;
         }
-        /**
-         * @param {?} fn
-         * @return {?}
-         */
         registerOnChange(fn) {
             this.onChange = fn;
         }
-        /**
-         * @param {?} fn
-         * @return {?}
-         */
         registerOnTouched(fn) {
             this.onTouched = fn;
         }
-        /**
-         * @param {?} isDisabled
-         * @return {?}
-         */
         setDisabledState(isDisabled) {
             this.disabled = isDisabled;
         }
-        /**
-         * @return {?}
-         */
         _handleInput() {
             this.onChange(this.value);
         }
     }
     MyTelInput.nextId = 0;
-    MyTelInput.decorators = [
-        { type: Component, args: [{
-                    selector: 'example-tel-input',
-                    templateUrl: 'example-tel-input-example.html',
-                    styleUrls: ['example-tel-input-example.css'],
-                    providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
-                    host: {
-                        '[class.example-floating]': 'shouldLabelFloat',
-                        '[id]': 'id',
-                        '[attr.aria-describedby]': 'describedBy',
-                    }
-                },] },
-    ];
-    /** @nocollapse */
-    MyTelInput.ctorParameters = () => [
-        { type: FormBuilder },
-        { type: FocusMonitor },
-        { type: ElementRef },
-        { type: NgControl, decorators: [{ type: Optional }, { type: Self }] }
-    ];
-    MyTelInput.propDecorators = {
-        placeholder: [{ type: Input }],
-        required: [{ type: Input }],
-        disabled: [{ type: Input }],
-        value: [{ type: Input }]
-    };
-    /** @nocollapse */ MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgControl, 10)); };
-    /** @nocollapse */ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
+    MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgControl, 10)); };
+    MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
             ɵɵhostProperty("id", ctx.id);
             ɵɵattribute("aria-describedby", ctx.describedBy);
             ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
@@ -337,87 +193,15 @@ let MyTelInput = /** @class */ (() => {
         }], value: [{
             type: Input
         }] }); })();
-if (false) {
-    /** @type {?} */
-    MyTelInput.nextId;
-    /** @type {?} */
-    MyTelInput.ngAcceptInputType_disabled;
-    /** @type {?} */
-    MyTelInput.ngAcceptInputType_required;
-    /** @type {?} */
-    MyTelInput.prototype.parts;
-    /** @type {?} */
-    MyTelInput.prototype.stateChanges;
-    /** @type {?} */
-    MyTelInput.prototype.focused;
-    /** @type {?} */
-    MyTelInput.prototype.errorState;
-    /** @type {?} */
-    MyTelInput.prototype.controlType;
-    /** @type {?} */
-    MyTelInput.prototype.id;
-    /** @type {?} */
-    MyTelInput.prototype.describedBy;
-    /** @type {?} */
-    MyTelInput.prototype.onChange;
-    /** @type {?} */
-    MyTelInput.prototype.onTouched;
-    /**
-     * @type {?}
-     * @private
-     */
-    MyTelInput.prototype._placeholder;
-    /**
-     * @type {?}
-     * @private
-     */
-    MyTelInput.prototype._required;
-    /**
-     * @type {?}
-     * @private
-     */
-    MyTelInput.prototype._disabled;
-    /**
-     * @type {?}
-     * @private
-     */
-    MyTelInput.prototype._focusMonitor;
-    /**
-     * @type {?}
-     * @private
-     */
-    MyTelInput.prototype._elementRef;
-    /** @type {?} */
-    MyTelInput.prototype.ngControl;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/mdc-form-field/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     FormFieldCustomControlExample,
 ];
 let MdcFormFieldExamplesModule = /** @class */ (() => {
     class MdcFormFieldExamplesModule {
     }
-    MdcFormFieldExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatFormFieldModule,
-                        MatIconModule,
-                        ReactiveFormsModule,
-                    ],
-                    declarations: [...EXAMPLES, MyTelInput],
-                    exports: [...EXAMPLES, MyTelInput],
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ MdcFormFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
-    /** @nocollapse */ MdcFormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); }, imports: [[
+    MdcFormFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
+    MdcFormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatFormFieldModule,
                 MatIconModule,

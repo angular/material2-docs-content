@@ -1,5 +1,5 @@
 import { NgIf, NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate2, ɵɵproperty, ɵɵtextInterpolate, Component, ɵɵdefineComponent, ɵɵtemplate, ɵɵtextInterpolate1, ɵsetClassMetadata, ɵɵelement, ɵɵlistener, ViewEncapsulation, ɵɵpropertyInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate2, ɵɵproperty, ɵɵtextInterpolate, ɵɵdefineComponent, ɵɵtemplate, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵelement, ɵɵlistener, ɵɵpropertyInterpolate1, ViewEncapsulation, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { FormControl, NgControlStatus, FormControlDirective, NgSelectOption, ɵangular_packages_forms_forms_x, Validators, SelectControlValueAccessor, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NgModel, RequiredValidator, FormGroup, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
@@ -7,11 +7,6 @@ import { MatSelect, MatSelectTrigger, MatSelectModule } from '@angular/material/
 import { MatFormField, MatLabel, MatHint, MatError } from '@angular/material/form-field';
 import { MatOption, MatOptgroup } from '@angular/material/core';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-custom-trigger/select-custom-trigger-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectCustomTriggerExample_span_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span", 3);
     ɵɵtext(1);
@@ -31,28 +26,16 @@ function SelectCustomTriggerExample_mat_option_7_Template(rf, ctx) { if (rf & 1)
     ɵɵadvance(1);
     ɵɵtextInterpolate(topping_r2);
 } }
-/**
- * \@title Select with custom trigger text
- */
+/** @title Select with custom trigger text */
 let SelectCustomTriggerExample = /** @class */ (() => {
-    /**
-     * \@title Select with custom trigger text
-     */
     class SelectCustomTriggerExample {
         constructor() {
             this.toppings = new FormControl();
             this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
         }
     }
-    SelectCustomTriggerExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-custom-trigger-example',
-                    templateUrl: 'select-custom-trigger-example.html',
-                    styleUrls: ['select-custom-trigger-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectCustomTriggerExample.ɵfac = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
-    /** @nocollapse */ SelectCustomTriggerExample.ɵcmp = ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 8, vars: 4, consts: [["multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
+    SelectCustomTriggerExample.ɵfac = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
+    SelectCustomTriggerExample.ɵcmp = ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 8, vars: 4, consts: [["multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Toppings");
@@ -85,39 +68,16 @@ let SelectCustomTriggerExample = /** @class */ (() => {
                 styleUrls: ['select-custom-trigger-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectCustomTriggerExample.prototype.toppings;
-    /** @type {?} */
-    SelectCustomTriggerExample.prototype.toppingList;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-disabled/select-disabled-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Disabled select
- */
+/** @title Disabled select */
 let SelectDisabledExample = /** @class */ (() => {
-    /**
-     * \@title Disabled select
-     */
     class SelectDisabledExample {
         constructor() {
             this.disableSelect = new FormControl(false);
         }
     }
-    SelectDisabledExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-disabled-example',
-                    templateUrl: 'select-disabled-example.html',
-                    styleUrls: ['select-disabled-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectDisabledExample.ɵfac = function SelectDisabledExample_Factory(t) { return new (t || SelectDisabledExample)(); };
-    /** @nocollapse */ SelectDisabledExample.ɵcmp = ɵɵdefineComponent({ type: SelectDisabledExample, selectors: [["select-disabled-example"]], decls: 30, vars: 3, consts: [[3, "formControl"], [3, "disabled"], ["value", "option1"], ["value", "option2", "disabled", ""], ["value", "option3"], ["matNativeControl", "", 3, "disabled"], ["value", "", "selected", ""], ["value", "volvo"], ["value", "saab", "disabled", ""], ["value", "mercedes"], ["value", "audi"]], template: function SelectDisabledExample_Template(rf, ctx) { if (rf & 1) {
+    SelectDisabledExample.ɵfac = function SelectDisabledExample_Factory(t) { return new (t || SelectDisabledExample)(); };
+    SelectDisabledExample.ɵcmp = ɵɵdefineComponent({ type: SelectDisabledExample, selectors: [["select-disabled-example"]], decls: 30, vars: 3, consts: [[3, "formControl"], [3, "disabled"], ["value", "option1"], ["value", "option2", "disabled", ""], ["value", "option3"], ["matNativeControl", "", 3, "disabled"], ["value", "", "selected", ""], ["value", "volvo"], ["value", "saab", "disabled", ""], ["value", "mercedes"], ["value", "audi"]], template: function SelectDisabledExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵelementStart(1, "mat-checkbox", 0);
             ɵɵtext(2, "Disable select");
@@ -183,16 +143,7 @@ let SelectDisabledExample = /** @class */ (() => {
                 styleUrls: ['select-disabled-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectDisabledExample.prototype.disableSelect;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-error-state-matcher/select-error-state-matcher-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectErrorStateMatcherExample_mat_error_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
     ɵɵtext(1, "You must make a selection");
@@ -213,28 +164,15 @@ function SelectErrorStateMatcherExample_mat_error_28_Template(rf, ctx) { if (rf 
     ɵɵtext(1, " Your selection is invalid ");
     ɵɵelementEnd();
 } }
-/**
- * Error when invalid control is dirty, touched, or submitted.
- */
+/** Error when invalid control is dirty, touched, or submitted. */
 class MyErrorStateMatcher {
-    /**
-     * @param {?} control
-     * @param {?} form
-     * @return {?}
-     */
     isErrorState(control, form) {
-        /** @type {?} */
         const isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     }
 }
-/**
- * \@title Select with a custom ErrorStateMatcher
- */
+/** @title Select with a custom ErrorStateMatcher */
 let SelectErrorStateMatcherExample = /** @class */ (() => {
-    /**
-     * \@title Select with a custom ErrorStateMatcher
-     */
     class SelectErrorStateMatcherExample {
         constructor() {
             this.selected = new FormControl('valid', [
@@ -252,15 +190,8 @@ let SelectErrorStateMatcherExample = /** @class */ (() => {
             this.matcher = new MyErrorStateMatcher();
         }
     }
-    SelectErrorStateMatcherExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-error-state-matcher-example',
-                    templateUrl: 'select-error-state-matcher-example.html',
-                    styleUrls: ['select-error-state-matcher-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectErrorStateMatcherExample.ɵfac = function SelectErrorStateMatcherExample_Factory(t) { return new (t || SelectErrorStateMatcherExample)(); };
-    /** @nocollapse */ SelectErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: SelectErrorStateMatcherExample, selectors: [["select-error-state-matcher-example"]], decls: 29, vars: 8, consts: [[3, "formControl", "errorStateMatcher"], ["value", "valid"], ["value", "invalid"], [4, "ngIf"], [1, "demo-full-width"], ["matNativeControl", "", 3, "formControl", "errorStateMatcher"], ["value", ""], ["value", "valid", "selected", ""]], template: function SelectErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
+    SelectErrorStateMatcherExample.ɵfac = function SelectErrorStateMatcherExample_Factory(t) { return new (t || SelectErrorStateMatcherExample)(); };
+    SelectErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: SelectErrorStateMatcherExample, selectors: [["select-error-state-matcher-example"]], decls: 29, vars: 8, consts: [[3, "formControl", "errorStateMatcher"], ["value", "valid"], ["value", "invalid"], [4, "ngIf"], [1, "demo-full-width"], ["matNativeControl", "", 3, "formControl", "errorStateMatcher"], ["value", ""], ["value", "valid", "selected", ""]], template: function SelectErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
             ɵɵtext(1, "mat-select");
             ɵɵelementEnd();
@@ -328,22 +259,7 @@ let SelectErrorStateMatcherExample = /** @class */ (() => {
                 styleUrls: ['select-error-state-matcher-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectErrorStateMatcherExample.prototype.selected;
-    /** @type {?} */
-    SelectErrorStateMatcherExample.prototype.selectFormControl;
-    /** @type {?} */
-    SelectErrorStateMatcherExample.prototype.nativeSelectFormControl;
-    /** @type {?} */
-    SelectErrorStateMatcherExample.prototype.matcher;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-form/select-form-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectFormExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 4);
     ɵɵtext(1);
@@ -365,32 +281,9 @@ function SelectFormExample_option_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", car_r3.viewValue, " ");
 } }
 /**
- * @record
- */
-function Food() { }
-if (false) {
-    /** @type {?} */
-    Food.prototype.value;
-    /** @type {?} */
-    Food.prototype.viewValue;
-}
-/**
- * @record
- */
-function Car() { }
-if (false) {
-    /** @type {?} */
-    Car.prototype.value;
-    /** @type {?} */
-    Car.prototype.viewValue;
-}
-/**
- * \@title Select in a form
+ * @title Select in a form
  */
 let SelectFormExample = /** @class */ (() => {
-    /**
-     * \@title Select in a form
-     */
     class SelectFormExample {
         constructor() {
             this.foods = [
@@ -405,15 +298,8 @@ let SelectFormExample = /** @class */ (() => {
             ];
         }
     }
-    SelectFormExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-form-example',
-                    templateUrl: 'select-form-example.html',
-                    styleUrls: ['select-form-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectFormExample.ɵfac = function SelectFormExample_Factory(t) { return new (t || SelectFormExample)(); };
-    /** @nocollapse */ SelectFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectFormExample, selectors: [["select-form-example"]], decls: 20, vars: 6, consts: [["name", "food", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "ngModel", "ngModelChange"], ["value", "", "selected", ""], [3, "value"]], template: function SelectFormExample_Template(rf, ctx) { if (rf & 1) {
+    SelectFormExample.ɵfac = function SelectFormExample_Factory(t) { return new (t || SelectFormExample)(); };
+    SelectFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectFormExample, selectors: [["select-form-example"]], decls: 20, vars: 6, consts: [["name", "food", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "ngModel", "ngModelChange"], ["value", "", "selected", ""], [3, "value"]], template: function SelectFormExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form");
             ɵɵelementStart(1, "h4");
             ɵɵtext(2, "mat-select");
@@ -471,22 +357,7 @@ let SelectFormExample = /** @class */ (() => {
                 styleUrls: ['select-form-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectFormExample.prototype.selectedValue;
-    /** @type {?} */
-    SelectFormExample.prototype.selectedCar;
-    /** @type {?} */
-    SelectFormExample.prototype.foods;
-    /** @type {?} */
-    SelectFormExample.prototype.cars;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-hint-error/select-hint-error-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectHintErrorExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 8);
     ɵɵtext(1);
@@ -507,23 +378,8 @@ function SelectHintErrorExample_mat_error_25_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(1, " This field is required ");
     ɵɵelementEnd();
 } }
-/**
- * @record
- */
-function Animal() { }
-if (false) {
-    /** @type {?} */
-    Animal.prototype.name;
-    /** @type {?} */
-    Animal.prototype.sound;
-}
-/**
- * \@title Select with form field features
- */
+/** @title Select with form field features */
 let SelectHintErrorExample = /** @class */ (() => {
-    /**
-     * \@title Select with form field features
-     */
     class SelectHintErrorExample {
         constructor() {
             this.animalControl = new FormControl('', Validators.required);
@@ -536,15 +392,8 @@ let SelectHintErrorExample = /** @class */ (() => {
             ];
         }
     }
-    SelectHintErrorExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-hint-error-example',
-                    templateUrl: 'select-hint-error-example.html',
-                    styleUrls: ['select-hint-error-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectHintErrorExample.ɵfac = function SelectHintErrorExample_Factory(t) { return new (t || SelectHintErrorExample)(); };
-    /** @nocollapse */ SelectHintErrorExample.ɵcmp = ɵɵdefineComponent({ type: SelectHintErrorExample, selectors: [["select-hint-error-example"]], decls: 28, vars: 6, consts: [["required", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["matNativeControl", "", "required", "", 3, "formControl"], ["label", "--select something --"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectHintErrorExample_Template(rf, ctx) { if (rf & 1) {
+    SelectHintErrorExample.ɵfac = function SelectHintErrorExample_Factory(t) { return new (t || SelectHintErrorExample)(); };
+    SelectHintErrorExample.ɵcmp = ɵɵdefineComponent({ type: SelectHintErrorExample, selectors: [["select-hint-error-example"]], decls: 28, vars: 6, consts: [["required", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["matNativeControl", "", "required", "", 3, "formControl"], ["label", "--select something --"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectHintErrorExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
             ɵɵtext(1, "mat select");
             ɵɵelementEnd();
@@ -611,20 +460,7 @@ let SelectHintErrorExample = /** @class */ (() => {
                 styleUrls: ['select-hint-error-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectHintErrorExample.prototype.animalControl;
-    /** @type {?} */
-    SelectHintErrorExample.prototype.selectFormControl;
-    /** @type {?} */
-    SelectHintErrorExample.prototype.animals;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-multiple/select-multiple-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 2);
     ɵɵtext(1);
@@ -635,28 +471,16 @@ function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate(topping_r1);
 } }
-/**
- * \@title Select with multiple selection
- */
+/** @title Select with multiple selection */
 let SelectMultipleExample = /** @class */ (() => {
-    /**
-     * \@title Select with multiple selection
-     */
     class SelectMultipleExample {
         constructor() {
             this.toppings = new FormControl();
             this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
         }
     }
-    SelectMultipleExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-multiple-example',
-                    templateUrl: 'select-multiple-example.html',
-                    styleUrls: ['select-multiple-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectMultipleExample.ɵfac = function SelectMultipleExample_Factory(t) { return new (t || SelectMultipleExample)(); };
-    /** @nocollapse */ SelectMultipleExample.ɵcmp = ɵɵdefineComponent({ type: SelectMultipleExample, selectors: [["select-multiple-example"]], decls: 5, vars: 2, consts: [["multiple", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectMultipleExample_Template(rf, ctx) { if (rf & 1) {
+    SelectMultipleExample.ɵfac = function SelectMultipleExample_Factory(t) { return new (t || SelectMultipleExample)(); };
+    SelectMultipleExample.ɵcmp = ɵɵdefineComponent({ type: SelectMultipleExample, selectors: [["select-multiple-example"]], decls: 5, vars: 2, consts: [["multiple", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectMultipleExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Toppings");
@@ -681,36 +505,13 @@ let SelectMultipleExample = /** @class */ (() => {
                 styleUrls: ['select-multiple-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectMultipleExample.prototype.toppings;
-    /** @type {?} */
-    SelectMultipleExample.prototype.toppingList;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-no-ripple/select-no-ripple-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Select with no option ripple
- */
+/** @title Select with no option ripple */
 let SelectNoRippleExample = /** @class */ (() => {
-    /**
-     * \@title Select with no option ripple
-     */
     class SelectNoRippleExample {
     }
-    SelectNoRippleExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-no-ripple-example',
-                    templateUrl: 'select-no-ripple-example.html',
-                    styleUrls: ['select-no-ripple-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectNoRippleExample.ɵfac = function SelectNoRippleExample_Factory(t) { return new (t || SelectNoRippleExample)(); };
-    /** @nocollapse */ SelectNoRippleExample.ɵcmp = ɵɵdefineComponent({ type: SelectNoRippleExample, selectors: [["select-no-ripple-example"]], decls: 10, vars: 0, consts: [["disableRipple", ""], ["value", "1"], ["value", "2"], ["value", "3"]], template: function SelectNoRippleExample_Template(rf, ctx) { if (rf & 1) {
+    SelectNoRippleExample.ɵfac = function SelectNoRippleExample_Factory(t) { return new (t || SelectNoRippleExample)(); };
+    SelectNoRippleExample.ɵcmp = ɵɵdefineComponent({ type: SelectNoRippleExample, selectors: [["select-no-ripple-example"]], decls: 10, vars: 0, consts: [["disableRipple", ""], ["value", "1"], ["value", "2"], ["value", "3"]], template: function SelectNoRippleExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Select an option");
@@ -739,11 +540,6 @@ let SelectNoRippleExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-optgroup/select-optgroup-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 11);
     ɵɵtext(1);
@@ -764,35 +560,8 @@ function SelectOptgroupExample_mat_optgroup_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵproperty("ngForOf", group_r1.pokemon);
 } }
-/**
- * @record
- */
-function Pokemon() { }
-if (false) {
-    /** @type {?} */
-    Pokemon.prototype.value;
-    /** @type {?} */
-    Pokemon.prototype.viewValue;
-}
-/**
- * @record
- */
-function PokemonGroup() { }
-if (false) {
-    /** @type {?|undefined} */
-    PokemonGroup.prototype.disabled;
-    /** @type {?} */
-    PokemonGroup.prototype.name;
-    /** @type {?} */
-    PokemonGroup.prototype.pokemon;
-}
-/**
- * \@title Select with option groups
- */
+/** @title Select with option groups */
 let SelectOptgroupExample = /** @class */ (() => {
-    /**
-     * \@title Select with option groups
-     */
     class SelectOptgroupExample {
         constructor() {
             this.pokemonControl = new FormControl();
@@ -832,15 +601,8 @@ let SelectOptgroupExample = /** @class */ (() => {
             ];
         }
     }
-    SelectOptgroupExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-optgroup-example',
-                    templateUrl: 'select-optgroup-example.html',
-                    styleUrls: ['select-optgroup-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectOptgroupExample.ɵfac = function SelectOptgroupExample_Factory(t) { return new (t || SelectOptgroupExample)(); };
-    /** @nocollapse */ SelectOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: SelectOptgroupExample, selectors: [["select-optgroup-example"]], decls: 25, vars: 2, consts: [[3, "formControl"], [3, "label", "disabled", 4, "ngFor", "ngForOf"], ["matNativeControl", ""], ["label", "Swedish Cars"], ["value", "volvo"], ["value", "saab"], ["label", "German Cars"], ["value", "mercedes"], ["value", "audi"], [3, "label", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectOptgroupExample_Template(rf, ctx) { if (rf & 1) {
+    SelectOptgroupExample.ɵfac = function SelectOptgroupExample_Factory(t) { return new (t || SelectOptgroupExample)(); };
+    SelectOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: SelectOptgroupExample, selectors: [["select-optgroup-example"]], decls: 25, vars: 2, consts: [[3, "formControl"], [3, "label", "disabled", 4, "ngFor", "ngForOf"], ["matNativeControl", ""], ["label", "Swedish Cars"], ["value", "volvo"], ["value", "saab"], ["label", "German Cars"], ["value", "mercedes"], ["value", "audi"], [3, "label", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectOptgroupExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
             ɵɵtext(1, "mat-select");
             ɵɵelementEnd();
@@ -897,18 +659,7 @@ let SelectOptgroupExample = /** @class */ (() => {
                 styleUrls: ['select-optgroup-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectOptgroupExample.prototype.pokemonControl;
-    /** @type {?} */
-    SelectOptgroupExample.prototype.pokemonGroups;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-overview/select-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 6);
     ɵɵtext(1);
@@ -920,22 +671,9 @@ function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", food_r1.viewValue, " ");
 } }
 /**
- * @record
- */
-function Food$1() { }
-if (false) {
-    /** @type {?} */
-    Food$1.prototype.value;
-    /** @type {?} */
-    Food$1.prototype.viewValue;
-}
-/**
- * \@title Basic select
+ * @title Basic select
  */
 let SelectOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic select
-     */
     class SelectOverviewExample {
         constructor() {
             this.foods = [
@@ -945,15 +683,8 @@ let SelectOverviewExample = /** @class */ (() => {
             ];
         }
     }
-    SelectOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-overview-example',
-                    templateUrl: 'select-overview-example.html',
-                    styleUrls: ['select-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectOverviewExample.ɵfac = function SelectOverviewExample_Factory(t) { return new (t || SelectOverviewExample)(); };
-    /** @nocollapse */ SelectOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SelectOverviewExample, selectors: [["select-overview-example"]], decls: 21, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "required", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    SelectOverviewExample.ɵfac = function SelectOverviewExample_Factory(t) { return new (t || SelectOverviewExample)(); };
+    SelectOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SelectOverviewExample, selectors: [["select-overview-example"]], decls: 21, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "required", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
             ɵɵtext(1, "Basic mat-select");
             ɵɵelementEnd();
@@ -1001,40 +732,18 @@ let SelectOverviewExample = /** @class */ (() => {
                 styleUrls: ['select-overview-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectOverviewExample.prototype.foods;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-panel-class/select-panel-class-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Select with custom panel styling
+ * @title Select with custom panel styling
  */
 let SelectPanelClassExample = /** @class */ (() => {
-    /**
-     * \@title Select with custom panel styling
-     */
     class SelectPanelClassExample {
         constructor() {
             this.panelColor = new FormControl('red');
         }
     }
-    SelectPanelClassExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-panel-class-example',
-                    templateUrl: 'select-panel-class-example.html',
-                    styleUrls: ['select-panel-class-example.css'],
-                    // Encapsulation has to be disabled in order for the
-                    // component style to apply to the select panel.
-                    encapsulation: ViewEncapsulation.None,
-                },] },
-    ];
-    /** @nocollapse */ SelectPanelClassExample.ɵfac = function SelectPanelClassExample_Factory(t) { return new (t || SelectPanelClassExample)(); };
-    /** @nocollapse */ SelectPanelClassExample.ɵcmp = ɵɵdefineComponent({ type: SelectPanelClassExample, selectors: [["select-panel-class-example"]], decls: 10, vars: 2, consts: [[3, "formControl", "panelClass"], ["value", "red"], ["value", "green"], ["value", "blue"]], template: function SelectPanelClassExample_Template(rf, ctx) { if (rf & 1) {
+    SelectPanelClassExample.ɵfac = function SelectPanelClassExample_Factory(t) { return new (t || SelectPanelClassExample)(); };
+    SelectPanelClassExample.ɵcmp = ɵɵdefineComponent({ type: SelectPanelClassExample, selectors: [["select-panel-class-example"]], decls: 10, vars: 2, consts: [[3, "formControl", "panelClass"], ["value", "red"], ["value", "green"], ["value", "blue"]], template: function SelectPanelClassExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Panel color");
@@ -1069,16 +778,7 @@ let SelectPanelClassExample = /** @class */ (() => {
                 encapsulation: ViewEncapsulation.None,
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectPanelClassExample.prototype.panelColor;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-reset/select-reset-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 7);
     ɵɵtext(1);
@@ -1089,13 +789,8 @@ function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate(state_r1);
 } }
-/**
- * \@title Select with reset option
- */
+/** @title Select with reset option */
 let SelectResetExample = /** @class */ (() => {
-    /**
-     * \@title Select with reset option
-     */
     class SelectResetExample {
         constructor() {
             this.states = [
@@ -1109,15 +804,8 @@ let SelectResetExample = /** @class */ (() => {
             ];
         }
     }
-    SelectResetExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-reset-example',
-                    templateUrl: 'select-reset-example.html',
-                    styleUrls: ['select-reset-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectResetExample.ɵfac = function SelectResetExample_Factory(t) { return new (t || SelectResetExample)(); };
-    /** @nocollapse */ SelectResetExample.ɵcmp = ɵɵdefineComponent({ type: SelectResetExample, selectors: [["select-reset-example"]], decls: 24, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "id", "mySelectId"], ["value", "", "disabled", "", "selected", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectResetExample_Template(rf, ctx) { if (rf & 1) {
+    SelectResetExample.ɵfac = function SelectResetExample_Factory(t) { return new (t || SelectResetExample)(); };
+    SelectResetExample.ɵcmp = ɵɵdefineComponent({ type: SelectResetExample, selectors: [["select-reset-example"]], decls: 24, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "id", "mySelectId"], ["value", "", "disabled", "", "selected", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectResetExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
             ɵɵtext(1, "mat-select");
             ɵɵelementEnd();
@@ -1169,37 +857,16 @@ let SelectResetExample = /** @class */ (() => {
                 styleUrls: ['select-reset-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectResetExample.prototype.states;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-value-binding/select-value-binding-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Select with 2-way value binding
- */
+/** @title Select with 2-way value binding */
 let SelectValueBindingExample = /** @class */ (() => {
-    /**
-     * \@title Select with 2-way value binding
-     */
     class SelectValueBindingExample {
         constructor() {
             this.selected = 'option2';
         }
     }
-    SelectValueBindingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-value-binding-example',
-                    templateUrl: 'select-value-binding-example.html',
-                    styleUrls: ['select-value-binding-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectValueBindingExample.ɵfac = function SelectValueBindingExample_Factory(t) { return new (t || SelectValueBindingExample)(); };
-    /** @nocollapse */ SelectValueBindingExample.ɵcmp = ɵɵdefineComponent({ type: SelectValueBindingExample, selectors: [["select-value-binding-example"]], decls: 14, vars: 2, consts: [[3, "value", "valueChange"], ["value", "option1"], ["value", "option2"], ["value", "option3"]], template: function SelectValueBindingExample_Template(rf, ctx) { if (rf & 1) {
+    SelectValueBindingExample.ɵfac = function SelectValueBindingExample_Factory(t) { return new (t || SelectValueBindingExample)(); };
+    SelectValueBindingExample.ɵcmp = ɵɵdefineComponent({ type: SelectValueBindingExample, selectors: [["select-value-binding-example"]], decls: 14, vars: 2, consts: [[3, "value", "valueChange"], ["value", "option1"], ["value", "option2"], ["value", "option3"]], template: function SelectValueBindingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Select an option");
@@ -1239,16 +906,7 @@ let SelectValueBindingExample = /** @class */ (() => {
                 styleUrls: ['select-value-binding-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectValueBindingExample.prototype.selected;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-reactive-form/select-reactive-form-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectReactiveFormExample_mat_option_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 5);
     ɵɵtext(1);
@@ -1270,32 +928,9 @@ function SelectReactiveFormExample_option_20_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", car_r3.viewValue, " ");
 } }
 /**
- * @record
- */
-function Food$2() { }
-if (false) {
-    /** @type {?} */
-    Food$2.prototype.value;
-    /** @type {?} */
-    Food$2.prototype.viewValue;
-}
-/**
- * @record
- */
-function Car$1() { }
-if (false) {
-    /** @type {?} */
-    Car$1.prototype.value;
-    /** @type {?} */
-    Car$1.prototype.viewValue;
-}
-/**
- * \@title Select in a reactive form
+ * @title Select in a reactive form
  */
 let SelectReactiveFormExample = /** @class */ (() => {
-    /**
-     * \@title Select in a reactive form
-     */
     class SelectReactiveFormExample {
         constructor() {
             this.foods = [
@@ -1316,17 +951,8 @@ let SelectReactiveFormExample = /** @class */ (() => {
             });
         }
     }
-    SelectReactiveFormExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-reactive-form-example',
-                    templateUrl: 'select-reactive-form-example.html',
-                    styleUrls: ['select-reactive-form-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    SelectReactiveFormExample.ctorParameters = () => [];
-    /** @nocollapse */ SelectReactiveFormExample.ɵfac = function SelectReactiveFormExample_Factory(t) { return new (t || SelectReactiveFormExample)(); };
-    /** @nocollapse */ SelectReactiveFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectReactiveFormExample, selectors: [["select-reactive-form-example"]], decls: 23, vars: 7, consts: [[3, "formGroup"], ["name", "food", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "formControl"], ["value", ""], [3, "value"]], template: function SelectReactiveFormExample_Template(rf, ctx) { if (rf & 1) {
+    SelectReactiveFormExample.ɵfac = function SelectReactiveFormExample_Factory(t) { return new (t || SelectReactiveFormExample)(); };
+    SelectReactiveFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectReactiveFormExample, selectors: [["select-reactive-form-example"]], decls: 23, vars: 7, consts: [[3, "formGroup"], ["name", "food", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "formControl"], ["value", ""], [3, "value"]], template: function SelectReactiveFormExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "h4");
             ɵɵtext(2, "mat-select");
@@ -1388,24 +1014,7 @@ let SelectReactiveFormExample = /** @class */ (() => {
                 styleUrls: ['select-reactive-form-example.css'],
             }]
     }], function () { return []; }, null); })();
-if (false) {
-    /** @type {?} */
-    SelectReactiveFormExample.prototype.form;
-    /** @type {?} */
-    SelectReactiveFormExample.prototype.foods;
-    /** @type {?} */
-    SelectReactiveFormExample.prototype.cars;
-    /** @type {?} */
-    SelectReactiveFormExample.prototype.foodControl;
-    /** @type {?} */
-    SelectReactiveFormExample.prototype.carControl;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/select-initial-value/select-initial-value-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function SelectInitialValueExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 5);
     ɵɵtext(1);
@@ -1428,32 +1037,9 @@ function SelectInitialValueExample_option_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate(option_r3.viewValue);
 } }
 /**
- * @record
- */
-function Food$3() { }
-if (false) {
-    /** @type {?} */
-    Food$3.prototype.value;
-    /** @type {?} */
-    Food$3.prototype.viewValue;
-}
-/**
- * @record
- */
-function Car$2() { }
-if (false) {
-    /** @type {?} */
-    Car$2.prototype.value;
-    /** @type {?} */
-    Car$2.prototype.viewValue;
-}
-/**
- * \@title Basic select with initial value and no form
+ * @title Basic select with initial value and no form
  */
 let SelectInitialValueExample = /** @class */ (() => {
-    /**
-     * \@title Basic select with initial value and no form
-     */
     class SelectInitialValueExample {
         constructor() {
             this.foods = [
@@ -1469,23 +1055,12 @@ let SelectInitialValueExample = /** @class */ (() => {
             this.selectedFood = this.foods[2].value;
             this.selectedCar = this.cars[0].value;
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         selectCar(event) {
-            this.selectedCar = ((/** @type {?} */ (event.target))).value;
+            this.selectedCar = event.target.value;
         }
     }
-    SelectInitialValueExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'select-initial-value-example',
-                    templateUrl: 'select-initial-value-example.html',
-                    styleUrls: ['select-initial-value-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ SelectInitialValueExample.ɵfac = function SelectInitialValueExample_Factory(t) { return new (t || SelectInitialValueExample)(); };
-    /** @nocollapse */ SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [[3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
+    SelectInitialValueExample.ɵfac = function SelectInitialValueExample_Factory(t) { return new (t || SelectInitialValueExample)(); };
+    SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [[3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
             ɵɵtext(1, "Basic mat-select with initial value");
             ɵɵelementEnd();
@@ -1540,23 +1115,7 @@ let SelectInitialValueExample = /** @class */ (() => {
                 styleUrls: ['select-initial-value-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    SelectInitialValueExample.prototype.foods;
-    /** @type {?} */
-    SelectInitialValueExample.prototype.cars;
-    /** @type {?} */
-    SelectInitialValueExample.prototype.selectedFood;
-    /** @type {?} */
-    SelectInitialValueExample.prototype.selectedCar;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/select/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     SelectCustomTriggerExample,
     SelectDisabledExample,
@@ -1576,23 +1135,8 @@ const EXAMPLES = [
 let SelectExamplesModule = /** @class */ (() => {
     class SelectExamplesModule {
     }
-    SelectExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        FormsModule,
-                        MatCheckboxModule,
-                        MatInputModule,
-                        MatSelectModule,
-                        ReactiveFormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ SelectExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SelectExamplesModule });
-    /** @nocollapse */ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExamplesModule_Factory(t) { return new (t || SelectExamplesModule)(); }, imports: [[
+    SelectExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SelectExamplesModule });
+    SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExamplesModule_Factory(t) { return new (t || SelectExamplesModule)(); }, imports: [[
                 CommonModule,
                 FormsModule,
                 MatCheckboxModule,

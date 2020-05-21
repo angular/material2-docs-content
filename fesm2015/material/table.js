@@ -1,5 +1,5 @@
 import { NgForOf, CurrencyPipe, NgIf, DatePipe, DecimalPipe, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, Component, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ViewChild, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵstyleProp, ɵɵstaticViewQuery, ContentChildren, Input, ɵɵcontentQuery, ɵɵprojectionDef, ɵɵprojection, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵstaticViewQuery, ɵɵcontentQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -18,11 +18,6 @@ import { merge, of } from 'rxjs';
 import { startWith, switchMap, map, catchError } from 'rxjs/operators';
 import { SelectionModel } from '@angular/cdk/collections';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-basic-flex/table-basic-flex-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableBasicFlexExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " No. ");
@@ -85,21 +80,6 @@ function TableBasicFlexExample_mat_header_row_13_Template(rf, ctx) { if (rf & 1)
 function TableBasicFlexExample_mat_row_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "mat-row");
 } }
-/**
- * @record
- */
-function PeriodicElement() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement.prototype.name;
-    /** @type {?} */
-    PeriodicElement.prototype.position;
-    /** @type {?} */
-    PeriodicElement.prototype.weight;
-    /** @type {?} */
-    PeriodicElement.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -113,27 +93,17 @@ const ELEMENT_DATA = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Basic use of `<mat-table>` (uses display flex)
+ * @title Basic use of `<mat-table>` (uses display flex)
  */
 let TableBasicFlexExample = /** @class */ (() => {
-    /**
-     * \@title Basic use of `<mat-table>` (uses display flex)
-     */
     class TableBasicFlexExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA;
         }
     }
-    TableBasicFlexExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-basic-flex-example',
-                    styleUrls: ['table-basic-flex-example.css'],
-                    templateUrl: 'table-basic-flex-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableBasicFlexExample.ɵfac = function TableBasicFlexExample_Factory(t) { return new (t || TableBasicFlexExample)(); };
-    /** @nocollapse */ TableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicFlexExample, selectors: [["table-basic-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"]], template: function TableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
+    TableBasicFlexExample.ɵfac = function TableBasicFlexExample_Factory(t) { return new (t || TableBasicFlexExample)(); };
+    TableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicFlexExample, selectors: [["table-basic-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"]], template: function TableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-table", 0);
             ɵɵelementContainerStart(1, 1);
             ɵɵtemplate(2, TableBasicFlexExample_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 2);
@@ -171,18 +141,7 @@ let TableBasicFlexExample = /** @class */ (() => {
                 templateUrl: 'table-basic-flex-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableBasicFlexExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableBasicFlexExample.prototype.dataSource;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-basic/table-basic-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableBasicExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 9);
     ɵɵtext(1, " No. ");
@@ -245,21 +204,6 @@ function TableBasicExample_tr_13_Template(rf, ctx) { if (rf & 1) {
 function TableBasicExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 12);
 } }
-/**
- * @record
- */
-function PeriodicElement$1() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$1.prototype.name;
-    /** @type {?} */
-    PeriodicElement$1.prototype.position;
-    /** @type {?} */
-    PeriodicElement$1.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$1.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -273,27 +217,17 @@ const ELEMENT_DATA$1 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Basic use of `<table mat-table>`
+ * @title Basic use of `<table mat-table>`
  */
 let TableBasicExample = /** @class */ (() => {
-    /**
-     * \@title Basic use of `<table mat-table>`
-     */
     class TableBasicExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA$1;
         }
     }
-    TableBasicExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-basic-example',
-                    styleUrls: ['table-basic-example.css'],
-                    templateUrl: 'table-basic-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableBasicExample.ɵfac = function TableBasicExample_Factory(t) { return new (t || TableBasicExample)(); };
-    /** @nocollapse */ TableBasicExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicExample, selectors: [["table-basic-example"]], decls: 15, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableBasicExample_Template(rf, ctx) { if (rf & 1) {
+    TableBasicExample.ɵfac = function TableBasicExample_Factory(t) { return new (t || TableBasicExample)(); };
+    TableBasicExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicExample, selectors: [["table-basic-example"]], decls: 15, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableBasicExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelementContainerStart(1, 1);
             ɵɵtemplate(2, TableBasicExample_th_2_Template, 2, 0, "th", 2);
@@ -331,18 +265,7 @@ let TableBasicExample = /** @class */ (() => {
                 templateUrl: 'table-basic-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableBasicExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableBasicExample.prototype.dataSource;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-dynamic-columns/table-dynamic-columns-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableDynamicColumnsExample_ng_container_7_th_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 8);
     ɵɵtext(1);
@@ -377,21 +300,6 @@ function TableDynamicColumnsExample_tr_8_Template(rf, ctx) { if (rf & 1) {
 function TableDynamicColumnsExample_tr_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 11);
 } }
-/**
- * @record
- */
-function PeriodicElement$2() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$2.prototype.name;
-    /** @type {?} */
-    PeriodicElement$2.prototype.position;
-    /** @type {?} */
-    PeriodicElement$2.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$2.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -405,61 +313,38 @@ const ELEMENT_DATA$2 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Table dynamically changing the columns displayed
+ * @title Table dynamically changing the columns displayed
  */
 let TableDynamicColumnsExample = /** @class */ (() => {
-    /**
-     * \@title Table dynamically changing the columns displayed
-     */
     class TableDynamicColumnsExample {
         constructor() {
             this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
             this.columnsToDisplay = this.displayedColumns.slice();
             this.data = ELEMENT_DATA$2;
         }
-        /**
-         * @return {?}
-         */
         addColumn() {
-            /** @type {?} */
             const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
             this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
         }
-        /**
-         * @return {?}
-         */
         removeColumn() {
             if (this.columnsToDisplay.length) {
                 this.columnsToDisplay.pop();
             }
         }
-        /**
-         * @return {?}
-         */
         shuffle() {
-            /** @type {?} */
             let currentIndex = this.columnsToDisplay.length;
             while (0 !== currentIndex) {
-                /** @type {?} */
                 let randomIndex = Math.floor(Math.random() * currentIndex);
                 currentIndex -= 1;
                 // Swap
-                /** @type {?} */
                 let temp = this.columnsToDisplay[currentIndex];
                 this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
                 this.columnsToDisplay[randomIndex] = temp;
             }
         }
     }
-    TableDynamicColumnsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-dynamic-columns-example',
-                    styleUrls: ['table-dynamic-columns-example.css'],
-                    templateUrl: 'table-dynamic-columns-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableDynamicColumnsExample.ɵfac = function TableDynamicColumnsExample_Factory(t) { return new (t || TableDynamicColumnsExample)(); };
-    /** @nocollapse */ TableDynamicColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableDynamicColumnsExample, selectors: [["table-dynamic-columns-example"]], decls: 10, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableDynamicColumnsExample_Template(rf, ctx) { if (rf & 1) {
+    TableDynamicColumnsExample.ɵfac = function TableDynamicColumnsExample_Factory(t) { return new (t || TableDynamicColumnsExample)(); };
+    TableDynamicColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableDynamicColumnsExample, selectors: [["table-dynamic-columns-example"]], decls: 10, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableDynamicColumnsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
             ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener() { return ctx.addColumn(); });
             ɵɵtext(1, " Add column ");
@@ -497,20 +382,7 @@ let TableDynamicColumnsExample = /** @class */ (() => {
                 templateUrl: 'table-dynamic-columns-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableDynamicColumnsExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableDynamicColumnsExample.prototype.columnsToDisplay;
-    /** @type {?} */
-    TableDynamicColumnsExample.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-expandable-rows/table-expandable-rows-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableExpandableRowsExample_ng_container_1_th_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 9);
     ɵɵtext(1);
@@ -599,34 +471,17 @@ function TableExpandableRowsExample_tr_6_Template(rf, ctx) { if (rf & 1) {
 } }
 const _c0 = function () { return ["expandedDetail"]; };
 /**
- * \@title Table with expandable rows
+ * @title Table with expandable rows
  */
 let TableExpandableRowsExample = /** @class */ (() => {
-    /**
-     * \@title Table with expandable rows
-     */
     class TableExpandableRowsExample {
         constructor() {
             this.dataSource = ELEMENT_DATA$3;
             this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
         }
     }
-    TableExpandableRowsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-expandable-rows-example',
-                    styleUrls: ['table-expandable-rows-example.css'],
-                    templateUrl: 'table-expandable-rows-example.html',
-                    animations: [
-                        trigger('detailExpand', [
-                            state('collapsed', style({ height: '0px', minHeight: '0' })),
-                            state('expanded', style({ height: '*' })),
-                            transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-                        ]),
-                    ],
-                },] },
-    ];
-    /** @nocollapse */ TableExpandableRowsExample.ɵfac = function TableExpandableRowsExample_Factory(t) { return new (t || TableExpandableRowsExample)(); };
-    /** @nocollapse */ TableExpandableRowsExample.ɵcmp = ɵɵdefineComponent({ type: TableExpandableRowsExample, selectors: [["table-expandable-rows-example"]], decls: 7, vars: 6, consts: [["mat-table", "", "multiTemplateDataRows", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "expandedDetail"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "class", "example-element-row", 3, "example-expanded-row", "click", 4, "matRowDef", "matRowDefColumns"], ["mat-row", "", "class", "example-detail-row", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], [1, "example-element-detail"], [1, "example-element-diagram"], [1, "example-element-position"], [1, "example-element-symbol"], [1, "example-element-name"], [1, "example-element-weight"], [1, "example-element-description"], [1, "example-element-description-attribution"], ["mat-header-row", ""], ["mat-row", "", 1, "example-element-row", 3, "click"], ["mat-row", "", 1, "example-detail-row"]], template: function TableExpandableRowsExample_Template(rf, ctx) { if (rf & 1) {
+    TableExpandableRowsExample.ɵfac = function TableExpandableRowsExample_Factory(t) { return new (t || TableExpandableRowsExample)(); };
+    TableExpandableRowsExample.ɵcmp = ɵɵdefineComponent({ type: TableExpandableRowsExample, selectors: [["table-expandable-rows-example"]], decls: 7, vars: 6, consts: [["mat-table", "", "multiTemplateDataRows", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "expandedDetail"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "class", "example-element-row", 3, "example-expanded-row", "click", 4, "matRowDef", "matRowDefColumns"], ["mat-row", "", "class", "example-detail-row", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], [1, "example-element-detail"], [1, "example-element-diagram"], [1, "example-element-position"], [1, "example-element-symbol"], [1, "example-element-name"], [1, "example-element-weight"], [1, "example-element-description"], [1, "example-element-description-attribution"], ["mat-header-row", ""], ["mat-row", "", 1, "example-element-row", 3, "click"], ["mat-row", "", 1, "example-detail-row"]], template: function TableExpandableRowsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, TableExpandableRowsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
             ɵɵelementContainerStart(2, 2);
@@ -670,31 +525,6 @@ let TableExpandableRowsExample = /** @class */ (() => {
                 ],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableExpandableRowsExample.prototype.dataSource;
-    /** @type {?} */
-    TableExpandableRowsExample.prototype.columnsToDisplay;
-    /** @type {?} */
-    TableExpandableRowsExample.prototype.expandedElement;
-}
-/**
- * @record
- */
-function PeriodicElement$3() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$3.prototype.name;
-    /** @type {?} */
-    PeriodicElement$3.prototype.position;
-    /** @type {?} */
-    PeriodicElement$3.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$3.prototype.symbol;
-    /** @type {?} */
-    PeriodicElement$3.prototype.description;
-}
-/** @type {?} */
 const ELEMENT_DATA$3 = [
     {
         position: 1,
@@ -777,11 +607,6 @@ const ELEMENT_DATA$3 = [
     },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-filtering/table-filtering-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableFilteringExample_th_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 12);
     ɵɵtext(1, " No. ");
@@ -856,21 +681,6 @@ function TableFilteringExample_tr_20_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(2);
     ɵɵtextInterpolate1("No data matching the filter \"", _r0.value, "\"");
 } }
-/**
- * @record
- */
-function PeriodicElement$4() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$4.prototype.name;
-    /** @type {?} */
-    PeriodicElement$4.prototype.position;
-    /** @type {?} */
-    PeriodicElement$4.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$4.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -884,36 +694,21 @@ const ELEMENT_DATA$4 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Table with filtering
+ * @title Table with filtering
  */
 let TableFilteringExample = /** @class */ (() => {
-    /**
-     * \@title Table with filtering
-     */
     class TableFilteringExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new MatTableDataSource(ELEMENT_DATA$4);
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         applyFilter(event) {
-            /** @type {?} */
-            const filterValue = ((/** @type {?} */ (event.target))).value;
+            const filterValue = event.target.value;
             this.dataSource.filter = filterValue.trim().toLowerCase();
         }
     }
-    TableFilteringExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-filtering-example',
-                    styleUrls: ['table-filtering-example.css'],
-                    templateUrl: 'table-filtering-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
-    /** @nocollapse */ TableFilteringExample.ɵcmp = ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 21, vars: 3, consts: [["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["input", ""], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
+    TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
+    TableFilteringExample.ɵcmp = ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 21, vars: 3, consts: [["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["input", ""], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Filter");
@@ -961,18 +756,7 @@ let TableFilteringExample = /** @class */ (() => {
                 templateUrl: 'table-filtering-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableFilteringExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableFilteringExample.prototype.dataSource;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-footer-row/table-footer-row-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableFooterRowExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 9);
     ɵɵtext(1, " Item ");
@@ -1027,22 +811,9 @@ function TableFooterRowExample_tr_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 14);
 } }
 /**
- * @record
- */
-function Transaction() { }
-if (false) {
-    /** @type {?} */
-    Transaction.prototype.item;
-    /** @type {?} */
-    Transaction.prototype.cost;
-}
-/**
- * \@title Footer row table
+ * @title Footer row table
  */
 let TableFooterRowExample = /** @class */ (() => {
-    /**
-     * \@title Footer row table
-     */
     class TableFooterRowExample {
         constructor() {
             this.displayedColumns = ['item', 'cost'];
@@ -1055,32 +826,13 @@ let TableFooterRowExample = /** @class */ (() => {
                 { item: 'Swim suit', cost: 15 },
             ];
         }
-        /**
-         * Gets the total cost of all transactions.
-         * @return {?}
-         */
+        /** Gets the total cost of all transactions. */
         getTotalCost() {
-            return this.transactions.map((/**
-             * @param {?} t
-             * @return {?}
-             */
-            t => t.cost)).reduce((/**
-             * @param {?} acc
-             * @param {?} value
-             * @return {?}
-             */
-            (acc, value) => acc + value), 0);
+            return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
         }
     }
-    TableFooterRowExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-footer-row-example',
-                    styleUrls: ['table-footer-row-example.css'],
-                    templateUrl: 'table-footer-row-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableFooterRowExample.ɵfac = function TableFooterRowExample_Factory(t) { return new (t || TableFooterRowExample)(); };
-    /** @nocollapse */ TableFooterRowExample.ɵcmp = ɵɵdefineComponent({ type: TableFooterRowExample, selectors: [["table-footer-row-example"]], decls: 12, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableFooterRowExample_Template(rf, ctx) { if (rf & 1) {
+    TableFooterRowExample.ɵfac = function TableFooterRowExample_Factory(t) { return new (t || TableFooterRowExample)(); };
+    TableFooterRowExample.ɵcmp = ɵɵdefineComponent({ type: TableFooterRowExample, selectors: [["table-footer-row-example"]], decls: 12, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableFooterRowExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelementContainerStart(1, 1);
             ɵɵtemplate(2, TableFooterRowExample_th_2_Template, 2, 0, "th", 2);
@@ -1115,18 +867,7 @@ let TableFooterRowExample = /** @class */ (() => {
                 templateUrl: 'table-footer-row-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableFooterRowExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableFooterRowExample.prototype.transactions;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-http/table-http-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableHttpExample_div_1_mat_spinner_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "mat-spinner");
 } }
@@ -1211,16 +952,10 @@ function TableHttpExample_tr_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 22);
 } }
 /**
- * \@title Table retrieving data through HTTP
+ * @title Table retrieving data through HTTP
  */
 let TableHttpExample = /** @class */ (() => {
-    /**
-     * \@title Table retrieving data through HTTP
-     */
     class TableHttpExample {
-        /**
-         * @param {?} _httpClient
-         */
         constructor(_httpClient) {
             this._httpClient = _httpClient;
             this.displayedColumns = ['created', 'state', 'number', 'title'];
@@ -1229,65 +964,30 @@ let TableHttpExample = /** @class */ (() => {
             this.isLoadingResults = true;
             this.isRateLimitReached = false;
         }
-        /**
-         * @return {?}
-         */
         ngAfterViewInit() {
             this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
             // If the user changes the sort order, reset back to the first page.
-            this.sort.sortChange.subscribe((/**
-             * @return {?}
-             */
-            () => this.paginator.pageIndex = 0));
+            this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
             merge(this.sort.sortChange, this.paginator.page)
-                .pipe(startWith({}), switchMap((/**
-             * @return {?}
-             */
-            () => {
+                .pipe(startWith({}), switchMap(() => {
                 this.isLoadingResults = true;
-                return (/** @type {?} */ (this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
-            })), map((/**
-             * @param {?} data
-             * @return {?}
-             */
-            data => {
+                return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+            }), map(data => {
                 // Flip flag to show that loading has finished.
                 this.isLoadingResults = false;
                 this.isRateLimitReached = false;
                 this.resultsLength = data.total_count;
                 return data.items;
-            })), catchError((/**
-             * @return {?}
-             */
-            () => {
+            }), catchError(() => {
                 this.isLoadingResults = false;
                 // Catch if the GitHub API has reached its rate limit. Return empty data.
                 this.isRateLimitReached = true;
                 return of([]);
-            }))).subscribe((/**
-             * @param {?} data
-             * @return {?}
-             */
-            data => this.data = data));
+            })).subscribe(data => this.data = data);
         }
     }
-    TableHttpExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-http-example',
-                    styleUrls: ['table-http-example.css'],
-                    templateUrl: 'table-http-example.html',
-                },] },
-    ];
-    /** @nocollapse */
-    TableHttpExample.ctorParameters = () => [
-        { type: HttpClient }
-    ];
-    TableHttpExample.propDecorators = {
-        paginator: [{ type: ViewChild, args: [MatPaginator,] }],
-        sort: [{ type: ViewChild, args: [MatSort,] }]
-    };
-    /** @nocollapse */ TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
-    /** @nocollapse */ TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
+    TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
+    TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(MatPaginator, true);
             ɵɵviewQuery(MatSort, true);
         } if (rf & 2) {
@@ -1349,90 +1049,18 @@ let TableHttpExample = /** @class */ (() => {
             type: ViewChild,
             args: [MatSort]
         }] }); })();
-if (false) {
-    /** @type {?} */
-    TableHttpExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableHttpExample.prototype.exampleDatabase;
-    /** @type {?} */
-    TableHttpExample.prototype.data;
-    /** @type {?} */
-    TableHttpExample.prototype.resultsLength;
-    /** @type {?} */
-    TableHttpExample.prototype.isLoadingResults;
-    /** @type {?} */
-    TableHttpExample.prototype.isRateLimitReached;
-    /** @type {?} */
-    TableHttpExample.prototype.paginator;
-    /** @type {?} */
-    TableHttpExample.prototype.sort;
-    /**
-     * @type {?}
-     * @private
-     */
-    TableHttpExample.prototype._httpClient;
-}
-/**
- * @record
- */
-function GithubApi() { }
-if (false) {
-    /** @type {?} */
-    GithubApi.prototype.items;
-    /** @type {?} */
-    GithubApi.prototype.total_count;
-}
-/**
- * @record
- */
-function GithubIssue() { }
-if (false) {
-    /** @type {?} */
-    GithubIssue.prototype.created_at;
-    /** @type {?} */
-    GithubIssue.prototype.number;
-    /** @type {?} */
-    GithubIssue.prototype.state;
-    /** @type {?} */
-    GithubIssue.prototype.title;
-}
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
+/** An example database that the data source uses to retrieve data for the table. */
 class ExampleHttpDatabase {
-    /**
-     * @param {?} _httpClient
-     */
     constructor(_httpClient) {
         this._httpClient = _httpClient;
     }
-    /**
-     * @param {?} sort
-     * @param {?} order
-     * @param {?} page
-     * @return {?}
-     */
     getRepoIssues(sort, order, page) {
-        /** @type {?} */
         const href = 'https://api.github.com/search/issues';
-        /** @type {?} */
         const requestUrl = `${href}?q=repo:angular/components&sort=${sort}&order=${order}&page=${page + 1}`;
         return this._httpClient.get(requestUrl);
     }
 }
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    ExampleHttpDatabase.prototype._httpClient;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-multiple-header-footer/table-multiple-header-footer-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableMultipleHeaderFooterExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 15);
     ɵɵtext(1, " Item ");
@@ -1510,12 +1138,9 @@ function TableMultipleHeaderFooterExample_tr_19_Template(rf, ctx) { if (rf & 1) 
 const _c0$1 = function () { return ["item-description", "cost-description"]; };
 const _c1 = function () { return ["disclaimer"]; };
 /**
- * \@title Table with multiple header and footer rows
+ * @title Table with multiple header and footer rows
  */
 let TableMultipleHeaderFooterExample = /** @class */ (() => {
-    /**
-     * \@title Table with multiple header and footer rows
-     */
     class TableMultipleHeaderFooterExample {
         constructor() {
             this.displayedColumns = ['item', 'cost'];
@@ -1528,32 +1153,13 @@ let TableMultipleHeaderFooterExample = /** @class */ (() => {
                 { item: 'Swim suit', cost: 15 },
             ];
         }
-        /**
-         * Gets the total cost of all transactions.
-         * @return {?}
-         */
+        /** Gets the total cost of all transactions. */
         getTotalCost() {
-            return this.transactions.map((/**
-             * @param {?} t
-             * @return {?}
-             */
-            t => t.cost)).reduce((/**
-             * @param {?} acc
-             * @param {?} value
-             * @return {?}
-             */
-            (acc, value) => acc + value), 0);
+            return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
         }
     }
-    TableMultipleHeaderFooterExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-multiple-header-footer-example',
-                    styleUrls: ['table-multiple-header-footer-example.css'],
-                    templateUrl: 'table-multiple-header-footer-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableMultipleHeaderFooterExample.ɵfac = function TableMultipleHeaderFooterExample_Factory(t) { return new (t || TableMultipleHeaderFooterExample)(); };
-    /** @nocollapse */ TableMultipleHeaderFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableMultipleHeaderFooterExample, selectors: [["table-multiple-header-footer-example"]], decls: 20, vars: 8, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["matColumnDef", "item-description"], ["matColumnDef", "cost-description"], ["matColumnDef", "disclaimer"], ["mat-footer-cell", "", "colspan", "2", 4, "matFooterCellDef"], ["mat-header-row", "", "class", "example-first-header-row", 4, "matHeaderRowDef"], ["mat-header-row", "", "class", "example-second-header-row", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", "class", "example-first-footer-row", 4, "matFooterRowDef"], ["mat-footer-row", "", "class", "example-second-footer-row", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-footer-cell", "", "colspan", "2"], ["mat-header-row", "", 1, "example-first-header-row"], ["mat-header-row", "", 1, "example-second-header-row"], ["mat-row", ""], ["mat-footer-row", "", 1, "example-first-footer-row"], ["mat-footer-row", "", 1, "example-second-footer-row"]], template: function TableMultipleHeaderFooterExample_Template(rf, ctx) { if (rf & 1) {
+    TableMultipleHeaderFooterExample.ɵfac = function TableMultipleHeaderFooterExample_Factory(t) { return new (t || TableMultipleHeaderFooterExample)(); };
+    TableMultipleHeaderFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableMultipleHeaderFooterExample, selectors: [["table-multiple-header-footer-example"]], decls: 20, vars: 8, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["matColumnDef", "item-description"], ["matColumnDef", "cost-description"], ["matColumnDef", "disclaimer"], ["mat-footer-cell", "", "colspan", "2", 4, "matFooterCellDef"], ["mat-header-row", "", "class", "example-first-header-row", 4, "matHeaderRowDef"], ["mat-header-row", "", "class", "example-second-header-row", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", "class", "example-first-footer-row", 4, "matFooterRowDef"], ["mat-footer-row", "", "class", "example-second-footer-row", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-footer-cell", "", "colspan", "2"], ["mat-header-row", "", 1, "example-first-header-row"], ["mat-header-row", "", 1, "example-second-header-row"], ["mat-row", ""], ["mat-footer-row", "", 1, "example-first-footer-row"], ["mat-footer-row", "", 1, "example-second-footer-row"]], template: function TableMultipleHeaderFooterExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelementContainerStart(1, 1);
             ɵɵtemplate(2, TableMultipleHeaderFooterExample_th_2_Template, 2, 0, "th", 2);
@@ -1603,18 +1209,7 @@ let TableMultipleHeaderFooterExample = /** @class */ (() => {
                 templateUrl: 'table-multiple-header-footer-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableMultipleHeaderFooterExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableMultipleHeaderFooterExample.prototype.transactions;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-overview/table-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableOverviewExample_th_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 15);
     ɵɵtext(1, " ID ");
@@ -1691,89 +1286,41 @@ function TableOverviewExample_tr_21_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1("No data matching the filter \"", _r0.value, "\"");
 } }
 const _c0$2 = function () { return [5, 10, 25, 100]; };
-/**
- * @record
- */
-function UserData() { }
-if (false) {
-    /** @type {?} */
-    UserData.prototype.id;
-    /** @type {?} */
-    UserData.prototype.name;
-    /** @type {?} */
-    UserData.prototype.progress;
-    /** @type {?} */
-    UserData.prototype.color;
-}
-/**
- * Constants used to fill up our data base.
- * @type {?}
- */
+/** Constants used to fill up our data base. */
 const COLORS = [
     'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
     'aqua', 'blue', 'navy', 'black', 'gray'
 ];
-/** @type {?} */
 const NAMES = [
     'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
     'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
 ];
 /**
- * \@title Data table with sorting, pagination, and filtering.
+ * @title Data table with sorting, pagination, and filtering.
  */
 let TableOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Data table with sorting, pagination, and filtering.
-     */
     class TableOverviewExample {
         constructor() {
             this.displayedColumns = ['id', 'name', 'progress', 'color'];
             // Create 100 users
-            /** @type {?} */
-            const users = Array.from({ length: 100 }, (/**
-             * @param {?} _
-             * @param {?} k
-             * @return {?}
-             */
-            (_, k) => createNewUser(k + 1)));
+            const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
             // Assign the data to the data source for the table to render
             this.dataSource = new MatTableDataSource(users);
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         applyFilter(event) {
-            /** @type {?} */
-            const filterValue = ((/** @type {?} */ (event.target))).value;
+            const filterValue = event.target.value;
             this.dataSource.filter = filterValue.trim().toLowerCase();
             if (this.dataSource.paginator) {
                 this.dataSource.paginator.firstPage();
             }
         }
     }
-    TableOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-overview-example',
-                    styleUrls: ['table-overview-example.css'],
-                    templateUrl: 'table-overview-example.html',
-                },] },
-    ];
-    /** @nocollapse */
-    TableOverviewExample.ctorParameters = () => [];
-    TableOverviewExample.propDecorators = {
-        paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }],
-        sort: [{ type: ViewChild, args: [MatSort, { static: true },] }]
-    };
-    /** @nocollapse */ TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
-    /** @nocollapse */ TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
+    TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
+    TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵstaticViewQuery(MatPaginator, true);
             ɵɵstaticViewQuery(MatSort, true);
         } if (rf & 2) {
@@ -1839,23 +1386,8 @@ let TableOverviewExample = /** @class */ (() => {
             type: ViewChild,
             args: [MatSort, { static: true }]
         }] }); })();
-if (false) {
-    /** @type {?} */
-    TableOverviewExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableOverviewExample.prototype.dataSource;
-    /** @type {?} */
-    TableOverviewExample.prototype.paginator;
-    /** @type {?} */
-    TableOverviewExample.prototype.sort;
-}
-/**
- * Builds and returns a new User.
- * @param {?} id
- * @return {?}
- */
+/** Builds and returns a new User. */
 function createNewUser(id) {
-    /** @type {?} */
     const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
         NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
     return {
@@ -1866,11 +1398,6 @@ function createNewUser(id) {
     };
 }
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-pagination/table-pagination-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TablePaginationExample_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 11);
     ɵɵtext(1, " No. ");
@@ -1935,36 +1462,20 @@ function TablePaginationExample_tr_15_Template(rf, ctx) { if (rf & 1) {
 } }
 const _c0$3 = function () { return [5, 10, 20]; };
 /**
- * \@title Table with pagination
+ * @title Table with pagination
  */
 let TablePaginationExample = /** @class */ (() => {
-    /**
-     * \@title Table with pagination
-     */
     class TablePaginationExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new MatTableDataSource(ELEMENT_DATA$5);
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
             this.dataSource.paginator = this.paginator;
         }
     }
-    TablePaginationExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-pagination-example',
-                    styleUrls: ['table-pagination-example.css'],
-                    templateUrl: 'table-pagination-example.html',
-                },] },
-    ];
-    TablePaginationExample.propDecorators = {
-        paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }]
-    };
-    /** @nocollapse */ TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
-    /** @nocollapse */ TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) { if (rf & 1) {
+    TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
+    TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵstaticViewQuery(MatPaginator, true);
         } if (rf & 2) {
             var _t;
@@ -2016,29 +1527,6 @@ let TablePaginationExample = /** @class */ (() => {
             type: ViewChild,
             args: [MatPaginator, { static: true }]
         }] }); })();
-if (false) {
-    /** @type {?} */
-    TablePaginationExample.prototype.displayedColumns;
-    /** @type {?} */
-    TablePaginationExample.prototype.dataSource;
-    /** @type {?} */
-    TablePaginationExample.prototype.paginator;
-}
-/**
- * @record
- */
-function PeriodicElement$5() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$5.prototype.name;
-    /** @type {?} */
-    PeriodicElement$5.prototype.position;
-    /** @type {?} */
-    PeriodicElement$5.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$5.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$5 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2062,11 +1550,6 @@ const ELEMENT_DATA$5 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-row-context/table-row-context-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableRowContextExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 12);
     ɵɵtext(1, " $implicit ");
@@ -2172,27 +1655,17 @@ function TableRowContextExample_tr_23_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 15);
 } }
 /**
- * \@title Table showing each row context properties.
+ * @title Table showing each row context properties.
  */
 let TableRowContextExample = /** @class */ (() => {
-    /**
-     * \@title Table showing each row context properties.
-     */
     class TableRowContextExample {
         constructor() {
             this.displayedColumns = ['$implicit', 'index', 'count', 'first', 'last', 'even', 'odd'];
             this.data = ['one', 'two', 'three', 'four', 'five'];
         }
     }
-    TableRowContextExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-row-context-example',
-                    styleUrls: ['table-row-context-example.css'],
-                    templateUrl: 'table-row-context-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableRowContextExample.ɵfac = function TableRowContextExample_Factory(t) { return new (t || TableRowContextExample)(); };
-    /** @nocollapse */ TableRowContextExample.ɵcmp = ɵɵdefineComponent({ type: TableRowContextExample, selectors: [["table-row-context-example"]], decls: 24, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "$implicit"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "index"], ["matColumnDef", "count"], ["matColumnDef", "first"], ["matColumnDef", "last"], ["matColumnDef", "even"], ["matColumnDef", "odd"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableRowContextExample_Template(rf, ctx) { if (rf & 1) {
+    TableRowContextExample.ɵfac = function TableRowContextExample_Factory(t) { return new (t || TableRowContextExample)(); };
+    TableRowContextExample.ɵcmp = ɵɵdefineComponent({ type: TableRowContextExample, selectors: [["table-row-context-example"]], decls: 24, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "$implicit"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "index"], ["matColumnDef", "count"], ["matColumnDef", "first"], ["matColumnDef", "last"], ["matColumnDef", "even"], ["matColumnDef", "odd"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableRowContextExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelementContainerStart(1, 1);
             ɵɵtemplate(2, TableRowContextExample_th_2_Template, 2, 0, "th", 2);
@@ -2242,18 +1715,7 @@ let TableRowContextExample = /** @class */ (() => {
                 templateUrl: 'table-row-context-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableRowContextExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableRowContextExample.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-selection/table-selection-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableSelectionExample_th_2_Template(rf, ctx) { if (rf & 1) {
     const _r13 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "th", 10);
@@ -2344,21 +1806,6 @@ function TableSelectionExample_tr_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { ɵɵrestoreView(_r24); const row_r22 = ctx.$implicit; const ctx_r23 = ɵɵnextContext(); return ctx_r23.selection.toggle(row_r22); });
     ɵɵelementEnd();
 } }
-/**
- * @record
- */
-function PeriodicElement$6() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$6.prototype.name;
-    /** @type {?} */
-    PeriodicElement$6.prototype.position;
-    /** @type {?} */
-    PeriodicElement$6.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$6.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2372,47 +1819,28 @@ const ELEMENT_DATA$6 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Table with selection
+ * @title Table with selection
  */
 let TableSelectionExample = /** @class */ (() => {
-    /**
-     * \@title Table with selection
-     */
     class TableSelectionExample {
         constructor() {
             this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
             this.dataSource = new MatTableDataSource(ELEMENT_DATA$6);
             this.selection = new SelectionModel(true, []);
         }
-        /**
-         * Whether the number of selected elements matches the total number of rows.
-         * @return {?}
-         */
+        /** Whether the number of selected elements matches the total number of rows. */
         isAllSelected() {
-            /** @type {?} */
             const numSelected = this.selection.selected.length;
-            /** @type {?} */
             const numRows = this.dataSource.data.length;
             return numSelected === numRows;
         }
-        /**
-         * Selects all rows if they are not all selected; otherwise clear selection.
-         * @return {?}
-         */
+        /** Selects all rows if they are not all selected; otherwise clear selection. */
         masterToggle() {
             this.isAllSelected() ?
                 this.selection.clear() :
-                this.dataSource.data.forEach((/**
-                 * @param {?} row
-                 * @return {?}
-                 */
-                row => this.selection.select(row)));
+                this.dataSource.data.forEach(row => this.selection.select(row));
         }
-        /**
-         * The label for the checkbox on the passed row
-         * @param {?=} row
-         * @return {?}
-         */
+        /** The label for the checkbox on the passed row */
         checkboxLabel(row) {
             if (!row) {
                 return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
@@ -2420,15 +1848,8 @@ let TableSelectionExample = /** @class */ (() => {
             return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
         }
     }
-    TableSelectionExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-selection-example',
-                    styleUrls: ['table-selection-example.css'],
-                    templateUrl: 'table-selection-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableSelectionExample.ɵfac = function TableSelectionExample_Factory(t) { return new (t || TableSelectionExample)(); };
-    /** @nocollapse */ TableSelectionExample.ɵcmp = ɵɵdefineComponent({ type: TableSelectionExample, selectors: [["table-selection-example"]], decls: 18, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 3, "click", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], [3, "checked", "indeterminate", "aria-label", "change"], ["mat-cell", ""], [3, "checked", "aria-label", "click", "change"], ["mat-header-row", ""], ["mat-row", "", 3, "click"]], template: function TableSelectionExample_Template(rf, ctx) { if (rf & 1) {
+    TableSelectionExample.ɵfac = function TableSelectionExample_Factory(t) { return new (t || TableSelectionExample)(); };
+    TableSelectionExample.ɵcmp = ɵɵdefineComponent({ type: TableSelectionExample, selectors: [["table-selection-example"]], decls: 18, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 3, "click", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], [3, "checked", "indeterminate", "aria-label", "change"], ["mat-cell", ""], [3, "checked", "aria-label", "click", "change"], ["mat-header-row", ""], ["mat-row", "", 3, "click"]], template: function TableSelectionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelementContainerStart(1, 1);
             ɵɵtemplate(2, TableSelectionExample_th_2_Template, 2, 3, "th", 2);
@@ -2470,20 +1891,7 @@ let TableSelectionExample = /** @class */ (() => {
                 templateUrl: 'table-selection-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableSelectionExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableSelectionExample.prototype.dataSource;
-    /** @type {?} */
-    TableSelectionExample.prototype.selection;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-sorting/table-sorting-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableSortingExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 9);
     ɵɵtext(1, " No. ");
@@ -2546,21 +1954,6 @@ function TableSortingExample_tr_13_Template(rf, ctx) { if (rf & 1) {
 function TableSortingExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 12);
 } }
-/**
- * @record
- */
-function PeriodicElement$7() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$7.prototype.name;
-    /** @type {?} */
-    PeriodicElement$7.prototype.position;
-    /** @type {?} */
-    PeriodicElement$7.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$7.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2574,36 +1967,20 @@ const ELEMENT_DATA$7 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Table with sorting
+ * @title Table with sorting
  */
 let TableSortingExample = /** @class */ (() => {
-    /**
-     * \@title Table with sorting
-     */
     class TableSortingExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new MatTableDataSource(ELEMENT_DATA$7);
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
             this.dataSource.sort = this.sort;
         }
     }
-    TableSortingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-sorting-example',
-                    styleUrls: ['table-sorting-example.css'],
-                    templateUrl: 'table-sorting-example.html',
-                },] },
-    ];
-    TableSortingExample.propDecorators = {
-        sort: [{ type: ViewChild, args: [MatSort, { static: true },] }]
-    };
-    /** @nocollapse */ TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
-    /** @nocollapse */ TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
+    TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
+    TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵstaticViewQuery(MatSort, true);
         } if (rf & 2) {
             var _t;
@@ -2649,20 +2026,7 @@ let TableSortingExample = /** @class */ (() => {
             type: ViewChild,
             args: [MatSort, { static: true }]
         }] }); })();
-if (false) {
-    /** @type {?} */
-    TableSortingExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableSortingExample.prototype.dataSource;
-    /** @type {?} */
-    TableSortingExample.prototype.sort;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-sticky-columns/table-sticky-columns-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableStickyColumnsExample_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 11);
     ɵɵtext(1, " Name ");
@@ -2736,27 +2100,17 @@ function TableStickyColumnsExample_tr_18_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 14);
 } }
 /**
- * \@title Table with sticky columns
+ * @title Table with sticky columns
  */
 let TableStickyColumnsExample = /** @class */ (() => {
-    /**
-     * \@title Table with sticky columns
-     */
     class TableStickyColumnsExample {
         constructor() {
             this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
             this.dataSource = ELEMENT_DATA$8;
         }
     }
-    TableStickyColumnsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-sticky-columns-example',
-                    styleUrls: ['table-sticky-columns-example.css'],
-                    templateUrl: 'table-sticky-columns-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableStickyColumnsExample.ɵfac = function TableStickyColumnsExample_Factory(t) { return new (t || TableStickyColumnsExample)(); };
-    /** @nocollapse */ TableStickyColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyColumnsExample, selectors: [["table-sticky-columns-example"]], decls: 19, vars: 3, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "name", "sticky", ""], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["matColumnDef", "star", "stickyEnd", ""], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyColumnsExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyColumnsExample.ɵfac = function TableStickyColumnsExample_Factory(t) { return new (t || TableStickyColumnsExample)(); };
+    TableStickyColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyColumnsExample, selectors: [["table-sticky-columns-example"]], decls: 19, vars: 3, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "name", "sticky", ""], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["matColumnDef", "star", "stickyEnd", ""], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyColumnsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "table", 1);
             ɵɵelementContainerStart(2, 2);
@@ -2801,27 +2155,6 @@ let TableStickyColumnsExample = /** @class */ (() => {
                 templateUrl: 'table-sticky-columns-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableStickyColumnsExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableStickyColumnsExample.prototype.dataSource;
-}
-/**
- * @record
- */
-function PeriodicElement$8() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$8.prototype.name;
-    /** @type {?} */
-    PeriodicElement$8.prototype.position;
-    /** @type {?} */
-    PeriodicElement$8.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$8.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2835,11 +2168,6 @@ const ELEMENT_DATA$8 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-sticky-complex-flex/table-sticky-complex-flex-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableStickyComplexFlexExample_mat_table_34_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " Position ");
@@ -3008,12 +2336,9 @@ const _c0$4 = function () { return ["header-1"]; };
 const _c1$1 = function () { return ["footer-1"]; };
 const _c2 = function () { return ["position", "symbol"]; };
 /**
- * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
+ * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
  */
 let TableStickyComplexFlexExample = /** @class */ (() => {
-    /**
-     * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
-     */
     class TableStickyComplexFlexExample {
         constructor() {
             this.displayedColumns = [];
@@ -3027,27 +2352,13 @@ let TableStickyComplexFlexExample = /** @class */ (() => {
             this.displayedColumns[22] = 'weight';
             this.displayedColumns[23] = 'symbol';
         }
-        /**
-         * Whether the button toggle group contains the id as an active value.
-         * @param {?} buttonToggleGroup
-         * @param {?} id
-         * @return {?}
-         */
+        /** Whether the button toggle group contains the id as an active value. */
         isSticky(buttonToggleGroup, id) {
             return (buttonToggleGroup.value || []).indexOf(id) !== -1;
         }
     }
-    TableStickyComplexFlexExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-sticky-complex-flex-example',
-                    styleUrls: ['table-sticky-complex-flex-example.css'],
-                    templateUrl: 'table-sticky-complex-flex-example.html',
-                },] },
-    ];
-    /** @nocollapse */
-    TableStickyComplexFlexExample.ctorParameters = () => [];
-    /** @nocollapse */ TableStickyComplexFlexExample.ɵfac = function TableStickyComplexFlexExample_Factory(t) { return new (t || TableStickyComplexFlexExample)(); };
-    /** @nocollapse */ TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyComplexFlexExample.ɵfac = function TableStickyComplexFlexExample_Factory(t) { return new (t || TableStickyComplexFlexExample)(); };
+    TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div");
             ɵɵelementStart(1, "button", 0);
             ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
@@ -3120,29 +2431,6 @@ let TableStickyComplexFlexExample = /** @class */ (() => {
                 templateUrl: 'table-sticky-complex-flex-example.html',
             }]
     }], function () { return []; }, null); })();
-if (false) {
-    /** @type {?} */
-    TableStickyComplexFlexExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableStickyComplexFlexExample.prototype.dataSource;
-    /** @type {?} */
-    TableStickyComplexFlexExample.prototype.tables;
-}
-/**
- * @record
- */
-function PeriodicElement$9() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$9.prototype.name;
-    /** @type {?} */
-    PeriodicElement$9.prototype.position;
-    /** @type {?} */
-    PeriodicElement$9.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$9.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3156,11 +2444,6 @@ const ELEMENT_DATA$9 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-sticky-complex/table-sticky-complex-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableStickyComplexExample_table_34_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 27);
     ɵɵtext(1, " Position ");
@@ -3329,12 +2612,9 @@ const _c0$5 = function () { return ["header-1"]; };
 const _c1$2 = function () { return ["footer-1"]; };
 const _c2$1 = function () { return ["position", "symbol"]; };
 /**
- * \@title Tables with toggle-able sticky headers, footers, and columns
+ * @title Tables with toggle-able sticky headers, footers, and columns
  */
 let TableStickyComplexExample = /** @class */ (() => {
-    /**
-     * \@title Tables with toggle-able sticky headers, footers, and columns
-     */
     class TableStickyComplexExample {
         constructor() {
             this.displayedColumns = [];
@@ -3348,27 +2628,13 @@ let TableStickyComplexExample = /** @class */ (() => {
             this.displayedColumns[22] = 'weight';
             this.displayedColumns[23] = 'symbol';
         }
-        /**
-         * Whether the button toggle group contains the id as an active value.
-         * @param {?} buttonToggleGroup
-         * @param {?} id
-         * @return {?}
-         */
+        /** Whether the button toggle group contains the id as an active value. */
         isSticky(buttonToggleGroup, id) {
             return (buttonToggleGroup.value || []).indexOf(id) !== -1;
         }
     }
-    TableStickyComplexExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-sticky-complex-example',
-                    styleUrls: ['table-sticky-complex-example.css'],
-                    templateUrl: 'table-sticky-complex-example.html',
-                },] },
-    ];
-    /** @nocollapse */
-    TableStickyComplexExample.ctorParameters = () => [];
-    /** @nocollapse */ TableStickyComplexExample.ɵfac = function TableStickyComplexExample_Factory(t) { return new (t || TableStickyComplexExample)(); };
-    /** @nocollapse */ TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyComplexExample.ɵfac = function TableStickyComplexExample_Factory(t) { return new (t || TableStickyComplexExample)(); };
+    TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div");
             ɵɵelementStart(1, "button", 0);
             ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
@@ -3441,29 +2707,6 @@ let TableStickyComplexExample = /** @class */ (() => {
                 templateUrl: 'table-sticky-complex-example.html',
             }]
     }], function () { return []; }, null); })();
-if (false) {
-    /** @type {?} */
-    TableStickyComplexExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableStickyComplexExample.prototype.dataSource;
-    /** @type {?} */
-    TableStickyComplexExample.prototype.tables;
-}
-/**
- * @record
- */
-function PeriodicElement$a() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$a.prototype.name;
-    /** @type {?} */
-    PeriodicElement$a.prototype.position;
-    /** @type {?} */
-    PeriodicElement$a.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$a.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$a = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3477,11 +2720,6 @@ const ELEMENT_DATA$a = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-sticky-footer/table-sticky-footer-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableStickyFooterExample_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 10);
     ɵɵtext(1, " Item ");
@@ -3536,22 +2774,9 @@ function TableStickyFooterExample_tr_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 15);
 } }
 /**
- * @record
- */
-function Transaction$1() { }
-if (false) {
-    /** @type {?} */
-    Transaction$1.prototype.item;
-    /** @type {?} */
-    Transaction$1.prototype.cost;
-}
-/**
- * \@title Table with a sticky footer
+ * @title Table with a sticky footer
  */
 let TableStickyFooterExample = /** @class */ (() => {
-    /**
-     * \@title Table with a sticky footer
-     */
     class TableStickyFooterExample {
         constructor() {
             this.displayedColumns = ['item', 'cost'];
@@ -3564,32 +2789,13 @@ let TableStickyFooterExample = /** @class */ (() => {
                 { item: 'Swim suit', cost: 15 },
             ];
         }
-        /**
-         * Gets the total cost of all transactions.
-         * @return {?}
-         */
+        /** Gets the total cost of all transactions. */
         getTotalCost() {
-            return this.transactions.map((/**
-             * @param {?} t
-             * @return {?}
-             */
-            t => t.cost)).reduce((/**
-             * @param {?} acc
-             * @param {?} value
-             * @return {?}
-             */
-            (acc, value) => acc + value), 0);
+            return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
         }
     }
-    TableStickyFooterExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-sticky-footer-example',
-                    styleUrls: ['table-sticky-footer-example.css'],
-                    templateUrl: 'table-sticky-footer-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableStickyFooterExample.ɵfac = function TableStickyFooterExample_Factory(t) { return new (t || TableStickyFooterExample)(); };
-    /** @nocollapse */ TableStickyFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyFooterExample, selectors: [["table-sticky-footer-example"]], decls: 13, vars: 5, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyFooterExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyFooterExample.ɵfac = function TableStickyFooterExample_Factory(t) { return new (t || TableStickyFooterExample)(); };
+    TableStickyFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyFooterExample, selectors: [["table-sticky-footer-example"]], decls: 13, vars: 5, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyFooterExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "table", 1);
             ɵɵelementContainerStart(2, 2);
@@ -3627,18 +2833,7 @@ let TableStickyFooterExample = /** @class */ (() => {
                 templateUrl: 'table-sticky-footer-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableStickyFooterExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableStickyFooterExample.prototype.transactions;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-sticky-header/table-sticky-header-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableStickyHeaderExample_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 10);
     ɵɵtext(1, " No. ");
@@ -3702,27 +2897,17 @@ function TableStickyHeaderExample_tr_15_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 13);
 } }
 /**
- * \@title Table with sticky header
+ * @title Table with sticky header
  */
 let TableStickyHeaderExample = /** @class */ (() => {
-    /**
-     * \@title Table with sticky header
-     */
     class TableStickyHeaderExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA$b;
         }
     }
-    TableStickyHeaderExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-sticky-header-example',
-                    styleUrls: ['table-sticky-header-example.css'],
-                    templateUrl: 'table-sticky-header-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableStickyHeaderExample.ɵfac = function TableStickyHeaderExample_Factory(t) { return new (t || TableStickyHeaderExample)(); };
-    /** @nocollapse */ TableStickyHeaderExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyHeaderExample, selectors: [["table-sticky-header-example"]], decls: 16, vars: 4, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyHeaderExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyHeaderExample.ɵfac = function TableStickyHeaderExample_Factory(t) { return new (t || TableStickyHeaderExample)(); };
+    TableStickyHeaderExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyHeaderExample, selectors: [["table-sticky-header-example"]], decls: 16, vars: 4, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyHeaderExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "table", 1);
             ɵɵelementContainerStart(2, 2);
@@ -3763,27 +2948,6 @@ let TableStickyHeaderExample = /** @class */ (() => {
                 templateUrl: 'table-sticky-header-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableStickyHeaderExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableStickyHeaderExample.prototype.dataSource;
-}
-/**
- * @record
- */
-function PeriodicElement$b() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$b.prototype.name;
-    /** @type {?} */
-    PeriodicElement$b.prototype.position;
-    /** @type {?} */
-    PeriodicElement$b.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$b.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$b = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3797,32 +2961,12 @@ const ELEMENT_DATA$b = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-text-column-advanced/table-text-column-advanced-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableTextColumnAdvancedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 7);
 } }
 function TableTextColumnAdvancedExample_tr_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 8);
 } }
-/**
- * @record
- */
-function PeriodicElement$c() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$c.prototype.name;
-    /** @type {?} */
-    PeriodicElement$c.prototype.position;
-    /** @type {?} */
-    PeriodicElement$c.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$c.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$c = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3836,40 +2980,23 @@ const ELEMENT_DATA$c = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Use of 'mat-text-column' with various configurations of the interface.
+ * @title Use of 'mat-text-column' with various configurations of the interface.
  */
 let TableTextColumnAdvancedExample = /** @class */ (() => {
-    /**
-     * \@title Use of 'mat-text-column' with various configurations of the interface.
-     */
     class TableTextColumnAdvancedExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
             this.decimalPipe = new DecimalPipe('en-US');
-            /**
-             * Data accessor function that transforms the weight value to have at most 2 decimal digits.
-             */
-            this.getWeight = (/**
-             * @param {?} data
-             * @return {?}
-             */
-            (data) => {
-                /** @type {?} */
+            /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
+            this.getWeight = (data) => {
                 const result = this.decimalPipe.transform(data.weight, '1.0-2');
                 return result === null ? '' : result;
-            });
+            };
         }
     }
-    TableTextColumnAdvancedExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-text-column-advanced-example',
-                    styleUrls: ['table-text-column-advanced-example.css'],
-                    templateUrl: 'table-text-column-advanced-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableTextColumnAdvancedExample.ɵfac = function TableTextColumnAdvancedExample_Factory(t) { return new (t || TableTextColumnAdvancedExample)(); };
-    /** @nocollapse */ TableTextColumnAdvancedExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnAdvancedExample, selectors: [["table-text-column-advanced-example"]], decls: 7, vars: 5, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position", 3, "headerText"], ["name", "name", "headerText", "Element"], ["name", "weight", 3, "dataAccessor"], ["name", "symbol", "justify", "end"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnAdvancedExample_Template(rf, ctx) { if (rf & 1) {
+    TableTextColumnAdvancedExample.ɵfac = function TableTextColumnAdvancedExample_Factory(t) { return new (t || TableTextColumnAdvancedExample)(); };
+    TableTextColumnAdvancedExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnAdvancedExample, selectors: [["table-text-column-advanced-example"]], decls: 7, vars: 5, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position", 3, "headerText"], ["name", "name", "headerText", "Element"], ["name", "weight", 3, "dataAccessor"], ["name", "symbol", "justify", "end"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnAdvancedExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelement(1, "mat-text-column", 1);
             ɵɵelement(2, "mat-text-column", 2);
@@ -3899,48 +3026,13 @@ let TableTextColumnAdvancedExample = /** @class */ (() => {
                 templateUrl: 'table-text-column-advanced-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableTextColumnAdvancedExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableTextColumnAdvancedExample.prototype.dataSource;
-    /** @type {?} */
-    TableTextColumnAdvancedExample.prototype.headerText;
-    /** @type {?} */
-    TableTextColumnAdvancedExample.prototype.decimalPipe;
-    /**
-     * Data accessor function that transforms the weight value to have at most 2 decimal digits.
-     * @type {?}
-     */
-    TableTextColumnAdvancedExample.prototype.getWeight;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-text-column/table-text-column-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableTextColumnExample_tr_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 7);
 } }
 function TableTextColumnExample_tr_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 8);
 } }
-/**
- * @record
- */
-function PeriodicElement$d() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$d.prototype.name;
-    /** @type {?} */
-    PeriodicElement$d.prototype.position;
-    /** @type {?} */
-    PeriodicElement$d.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$d.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$d = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3954,29 +3046,18 @@ const ELEMENT_DATA$d = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Use of `mat-text-column` which can be used for simple columns that only need to display
+ * @title Use of `mat-text-column` which can be used for simple columns that only need to display
  * a text value for the header and cells.
  */
 let TableTextColumnExample = /** @class */ (() => {
-    /**
-     * \@title Use of `mat-text-column` which can be used for simple columns that only need to display
-     * a text value for the header and cells.
-     */
     class TableTextColumnExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA$d;
         }
     }
-    TableTextColumnExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-text-column-example',
-                    styleUrls: ['table-text-column-example.css'],
-                    templateUrl: 'table-text-column-example.html',
-                },] },
-    ];
-    /** @nocollapse */ TableTextColumnExample.ɵfac = function TableTextColumnExample_Factory(t) { return new (t || TableTextColumnExample)(); };
-    /** @nocollapse */ TableTextColumnExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnExample, selectors: [["table-text-column-example"]], decls: 7, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position"], ["name", "name"], ["name", "weight"], ["name", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnExample_Template(rf, ctx) { if (rf & 1) {
+    TableTextColumnExample.ɵfac = function TableTextColumnExample_Factory(t) { return new (t || TableTextColumnExample)(); };
+    TableTextColumnExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnExample, selectors: [["table-text-column-example"]], decls: 7, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position"], ["name", "name"], ["name", "weight"], ["name", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵelement(1, "mat-text-column", 1);
             ɵɵelement(2, "mat-text-column", 2);
@@ -4002,18 +3083,7 @@ let TableTextColumnExample = /** @class */ (() => {
                 templateUrl: 'table-text-column-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableTextColumnExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableTextColumnExample.prototype.dataSource;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-wrapped/table-wrapped-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 const _c0$6 = ["sort"];
 function TableWrappedExample_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 7);
@@ -4078,21 +3148,6 @@ function WrapperTable_td_10_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r8.symbol, " ");
 } }
 const _c1$3 = ["*"];
-/**
- * @record
- */
-function PeriodicElement$e() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$e.prototype.name;
-    /** @type {?} */
-    PeriodicElement$e.prototype.position;
-    /** @type {?} */
-    PeriodicElement$e.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$e.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -4106,36 +3161,20 @@ const ELEMENT_DATA$e = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Table example that shows how to wrap a table component for definition and behavior reuse.
+ * @title Table example that shows how to wrap a table component for definition and behavior reuse.
  */
 let TableWrappedExample = /** @class */ (() => {
-    /**
-     * \@title Table example that shows how to wrap a table component for definition and behavior reuse.
-     */
     class TableWrappedExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
             this.dataSource.sort = this.sort;
         }
     }
-    TableWrappedExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-wrapped-example',
-                    styleUrls: ['table-wrapped-example.css'],
-                    templateUrl: 'table-wrapped-example.html',
-                },] },
-    ];
-    TableWrappedExample.propDecorators = {
-        sort: [{ type: ViewChild, args: ['sort', { static: true },] }]
-    };
-    /** @nocollapse */ TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
-    /** @nocollapse */ TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
+    TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
+    TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵstaticViewQuery(_c0$6, true);
         } if (rf & 2) {
             var _t;
@@ -4169,68 +3208,20 @@ let TableWrappedExample = /** @class */ (() => {
             type: ViewChild,
             args: ['sort', { static: true }]
         }] }); })();
-if (false) {
-    /** @type {?} */
-    TableWrappedExample.prototype.displayedColumns;
-    /** @type {?} */
-    TableWrappedExample.prototype.dataSource;
-    /** @type {?} */
-    TableWrappedExample.prototype.sort;
-}
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
  * table.
- * @template T
  */
 let WrapperTable = /** @class */ (() => {
-    /**
-     * Table component that accepts column and row definitions in its content to be registered to the
-     * table.
-     * @template T
-     */
     class WrapperTable {
-        /**
-         * @return {?}
-         */
         ngAfterContentInit() {
-            this.columnDefs.forEach((/**
-             * @param {?} columnDef
-             * @return {?}
-             */
-            columnDef => this.table.addColumnDef(columnDef)));
-            this.rowDefs.forEach((/**
-             * @param {?} rowDef
-             * @return {?}
-             */
-            rowDef => this.table.addRowDef(rowDef)));
-            this.headerRowDefs.forEach((/**
-             * @param {?} headerRowDef
-             * @return {?}
-             */
-            headerRowDef => this.table.addHeaderRowDef(headerRowDef)));
+            this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));
+            this.rowDefs.forEach(rowDef => this.table.addRowDef(rowDef));
+            this.headerRowDefs.forEach(headerRowDef => this.table.addHeaderRowDef(headerRowDef));
         }
     }
-    WrapperTable.decorators = [
-        { type: Component, args: [{
-                    selector: 'wrapper-table',
-                    templateUrl: 'wrapper-table.html',
-                    styles: [`
-    table {
-      width: 100%;
-    }
-  `]
-                },] },
-    ];
-    WrapperTable.propDecorators = {
-        headerRowDefs: [{ type: ContentChildren, args: [MatHeaderRowDef,] }],
-        rowDefs: [{ type: ContentChildren, args: [MatRowDef,] }],
-        columnDefs: [{ type: ContentChildren, args: [MatColumnDef,] }],
-        table: [{ type: ViewChild, args: [MatTable, { static: true },] }],
-        columns: [{ type: Input }],
-        dataSource: [{ type: Input }]
-    };
-    /** @nocollapse */ WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
-    /** @nocollapse */ WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
+    WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
+    WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
             ɵɵcontentQuery(dirIndex, MatHeaderRowDef, false);
             ɵɵcontentQuery(dirIndex, MatRowDef, false);
             ɵɵcontentQuery(dirIndex, MatColumnDef, false);
@@ -4294,26 +3285,7 @@ let WrapperTable = /** @class */ (() => {
         }], dataSource: [{
             type: Input
         }] }); })();
-if (false) {
-    /** @type {?} */
-    WrapperTable.prototype.headerRowDefs;
-    /** @type {?} */
-    WrapperTable.prototype.rowDefs;
-    /** @type {?} */
-    WrapperTable.prototype.columnDefs;
-    /** @type {?} */
-    WrapperTable.prototype.table;
-    /** @type {?} */
-    WrapperTable.prototype.columns;
-    /** @type {?} */
-    WrapperTable.prototype.dataSource;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/table-reorderable/table-reorderable-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function TableReorderableExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 9);
     ɵɵtext(1, " No. ");
@@ -4377,34 +3349,20 @@ function TableReorderableExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 12);
 } }
 /**
- * \@title Table with re-orderable columns
+ * @title Table with re-orderable columns
  */
 let TableReorderableExample = /** @class */ (() => {
-    /**
-     * \@title Table with re-orderable columns
-     */
     class TableReorderableExample {
         constructor() {
             this.columns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA$f;
         }
-        /**
-         * @param {?} event
-         * @return {?}
-         */
         drop(event) {
             moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
         }
     }
-    TableReorderableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'table-reorderable-example',
-                    templateUrl: './table-reorderable-example.html',
-                    styleUrls: ['./table-reorderable-example.css']
-                },] },
-    ];
-    /** @nocollapse */ TableReorderableExample.ɵfac = function TableReorderableExample_Factory(t) { return new (t || TableReorderableExample)(); };
-    /** @nocollapse */ TableReorderableExample.ɵcmp = ɵɵdefineComponent({ type: TableReorderableExample, selectors: [["table-reorderable-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 3, "dataSource", "cdkDropListDropped"], ["matColumnDef", "position"], ["mat-header-cell", "", "cdkDrag", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "cdkDrag", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableReorderableExample_Template(rf, ctx) { if (rf & 1) {
+    TableReorderableExample.ɵfac = function TableReorderableExample_Factory(t) { return new (t || TableReorderableExample)(); };
+    TableReorderableExample.ɵcmp = ɵɵdefineComponent({ type: TableReorderableExample, selectors: [["table-reorderable-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 3, "dataSource", "cdkDropListDropped"], ["matColumnDef", "position"], ["mat-header-cell", "", "cdkDrag", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "cdkDrag", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableReorderableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵlistener("cdkDropListDropped", function TableReorderableExample_Template_table_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵelementContainerStart(1, 1);
@@ -4443,27 +3401,6 @@ let TableReorderableExample = /** @class */ (() => {
                 styleUrls: ['./table-reorderable-example.css']
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    TableReorderableExample.prototype.columns;
-    /** @type {?} */
-    TableReorderableExample.prototype.dataSource;
-}
-/**
- * @record
- */
-function PeriodicElement$f() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$f.prototype.name;
-    /** @type {?} */
-    PeriodicElement$f.prototype.position;
-    /** @type {?} */
-    PeriodicElement$f.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$f.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -4477,12 +3414,6 @@ const ELEMENT_DATA$f = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/table/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     TableBasicExample, TableBasicFlexExample,
     TableDynamicColumnsExample, TableExpandableRowsExample,
@@ -4500,29 +3431,8 @@ const EXAMPLES = [
 let TableExamplesModule = /** @class */ (() => {
     class TableExamplesModule {
     }
-    TableExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatButtonModule,
-                        MatButtonToggleModule,
-                        MatCheckboxModule,
-                        MatIconModule,
-                        MatInputModule,
-                        MatPaginatorModule,
-                        MatProgressSpinnerModule,
-                        MatSortModule,
-                        MatTableModule,
-                        CdkTableModule,
-                        DragDropModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ TableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TableExamplesModule });
-    /** @nocollapse */ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamplesModule_Factory(t) { return new (t || TableExamplesModule)(); }, imports: [[
+    TableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TableExamplesModule });
+    TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamplesModule_Factory(t) { return new (t || TableExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatButtonModule,
                 MatButtonToggleModule,

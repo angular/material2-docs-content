@@ -1,5 +1,5 @@
 import { NgForOf, AsyncPipe, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵelement, ɵɵtemplate, ɵɵpipe, ɵɵreference, ɵɵpipeBind1, ɵsetClassMetadata, ɵɵdirectiveInject, ɵɵsanitizeUrl, ɵɵtextInterpolate, ɵɵlistener, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵelement, ɵɵtemplate, ɵɵpipe, ɵɵreference, ɵɵpipeBind1, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵsanitizeUrl, ɵɵtextInterpolate, ɵɵlistener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { FormControl, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, DefaultValueAccessor, NgControlStatus, FormControlDirective, FormBuilder, FormGroupDirective, FormControlName, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteTrigger, MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormField, MatLabel, MatFormFieldModule } from '@angular/material/form-field';
@@ -8,11 +8,6 @@ import { MatSlideToggle, MatSlideToggleModule } from '@angular/material/slide-to
 import { startWith, map } from 'rxjs/operators';
 import { MatOption, MatOptgroup } from '@angular/material/core';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompleteAutoActiveFirstOptionExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 6);
     ɵɵtext(1);
@@ -24,51 +19,24 @@ function AutocompleteAutoActiveFirstOptionExample_mat_option_5_Template(rf, ctx)
     ɵɵtextInterpolate1(" ", option_r2, " ");
 } }
 /**
- * \@title Highlight the first autocomplete option
+ * @title Highlight the first autocomplete option
  */
 let AutocompleteAutoActiveFirstOptionExample = /** @class */ (() => {
-    /**
-     * \@title Highlight the first autocomplete option
-     */
     class AutocompleteAutoActiveFirstOptionExample {
         constructor() {
             this.myControl = new FormControl();
             this.options = ['One', 'Two', 'Three'];
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
-            this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map((/**
-             * @param {?} value
-             * @return {?}
-             */
-            value => this._filter(value))));
+            this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
         }
-        /**
-         * @private
-         * @param {?} value
-         * @return {?}
-         */
         _filter(value) {
-            /** @type {?} */
             const filterValue = value.toLowerCase();
-            return this.options.filter((/**
-             * @param {?} option
-             * @return {?}
-             */
-            option => option.toLowerCase().indexOf(filterValue) === 0));
+            return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
         }
     }
-    AutocompleteAutoActiveFirstOptionExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-auto-active-first-option-example',
-                    templateUrl: 'autocomplete-auto-active-first-option-example.html',
-                    styleUrls: ['autocomplete-auto-active-first-option-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ AutocompleteAutoActiveFirstOptionExample.ɵfac = function AutocompleteAutoActiveFirstOptionExample_Factory(t) { return new (t || AutocompleteAutoActiveFirstOptionExample)(); };
-    /** @nocollapse */ AutocompleteAutoActiveFirstOptionExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompleteAutoActiveFirstOptionExample.ɵfac = function AutocompleteAutoActiveFirstOptionExample_Factory(t) { return new (t || AutocompleteAutoActiveFirstOptionExample)(); };
+    AutocompleteAutoActiveFirstOptionExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
             ɵɵelement(2, "input", 2);
@@ -95,20 +63,7 @@ let AutocompleteAutoActiveFirstOptionExample = /** @class */ (() => {
                 styleUrls: ['autocomplete-auto-active-first-option-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompleteAutoActiveFirstOptionExample.prototype.myControl;
-    /** @type {?} */
-    AutocompleteAutoActiveFirstOptionExample.prototype.options;
-    /** @type {?} */
-    AutocompleteAutoActiveFirstOptionExample.prototype.filteredOptions;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-display/autocomplete-display-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompleteDisplayExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 6);
     ɵɵtext(1);
@@ -120,20 +75,9 @@ function AutocompleteDisplayExample_mat_option_7_Template(rf, ctx) { if (rf & 1)
     ɵɵtextInterpolate1(" ", option_r2.name, " ");
 } }
 /**
- * @record
- */
-function User() { }
-if (false) {
-    /** @type {?} */
-    User.prototype.name;
-}
-/**
- * \@title Display value autocomplete
+ * @title Display value autocomplete
  */
 let AutocompleteDisplayExample = /** @class */ (() => {
-    /**
-     * \@title Display value autocomplete
-     */
     class AutocompleteDisplayExample {
         constructor() {
             this.myControl = new FormControl();
@@ -143,52 +87,20 @@ let AutocompleteDisplayExample = /** @class */ (() => {
                 { name: 'Igor' }
             ];
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
             this.filteredOptions = this.myControl.valueChanges
-                .pipe(startWith(''), map((/**
-             * @param {?} value
-             * @return {?}
-             */
-            value => typeof value === 'string' ? value : value.name)), map((/**
-             * @param {?} name
-             * @return {?}
-             */
-            name => name ? this._filter(name) : this.options.slice())));
+                .pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name), map(name => name ? this._filter(name) : this.options.slice()));
         }
-        /**
-         * @param {?} user
-         * @return {?}
-         */
         displayFn(user) {
             return user && user.name ? user.name : '';
         }
-        /**
-         * @private
-         * @param {?} name
-         * @return {?}
-         */
         _filter(name) {
-            /** @type {?} */
             const filterValue = name.toLowerCase();
-            return this.options.filter((/**
-             * @param {?} option
-             * @return {?}
-             */
-            option => option.name.toLowerCase().indexOf(filterValue) === 0));
+            return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);
         }
     }
-    AutocompleteDisplayExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-display-example',
-                    templateUrl: 'autocomplete-display-example.html',
-                    styleUrls: ['autocomplete-display-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
-    /** @nocollapse */ AutocompleteDisplayExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 9, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
+    AutocompleteDisplayExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 9, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
             ɵɵelementStart(2, "mat-label");
@@ -220,20 +132,7 @@ let AutocompleteDisplayExample = /** @class */ (() => {
                 styleUrls: ['autocomplete-display-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompleteDisplayExample.prototype.myControl;
-    /** @type {?} */
-    AutocompleteDisplayExample.prototype.options;
-    /** @type {?} */
-    AutocompleteDisplayExample.prototype.filteredOptions;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-filter/autocomplete-filter-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompleteFilterExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 5);
     ɵɵtext(1);
@@ -245,52 +144,25 @@ function AutocompleteFilterExample_mat_option_5_Template(rf, ctx) { if (rf & 1) 
     ɵɵtextInterpolate1(" ", option_r2, " ");
 } }
 /**
- * \@title Filter autocomplete
+ * @title Filter autocomplete
  */
 let AutocompleteFilterExample = /** @class */ (() => {
-    /**
-     * \@title Filter autocomplete
-     */
     class AutocompleteFilterExample {
         constructor() {
             this.myControl = new FormControl();
             this.options = ['One', 'Two', 'Three'];
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
             this.filteredOptions = this.myControl.valueChanges
-                .pipe(startWith(''), map((/**
-             * @param {?} value
-             * @return {?}
-             */
-            value => this._filter(value))));
+                .pipe(startWith(''), map(value => this._filter(value)));
         }
-        /**
-         * @private
-         * @param {?} value
-         * @return {?}
-         */
         _filter(value) {
-            /** @type {?} */
             const filterValue = value.toLowerCase();
-            return this.options.filter((/**
-             * @param {?} option
-             * @return {?}
-             */
-            option => option.toLowerCase().includes(filterValue)));
+            return this.options.filter(option => option.toLowerCase().includes(filterValue));
         }
     }
-    AutocompleteFilterExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-filter-example',
-                    templateUrl: 'autocomplete-filter-example.html',
-                    styleUrls: ['autocomplete-filter-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ AutocompleteFilterExample.ɵfac = function AutocompleteFilterExample_Factory(t) { return new (t || AutocompleteFilterExample)(); };
-    /** @nocollapse */ AutocompleteFilterExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompleteFilterExample.ɵfac = function AutocompleteFilterExample_Factory(t) { return new (t || AutocompleteFilterExample)(); };
+    AutocompleteFilterExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
             ɵɵelement(2, "input", 2);
@@ -317,20 +189,7 @@ let AutocompleteFilterExample = /** @class */ (() => {
                 styleUrls: ['autocomplete-filter-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompleteFilterExample.prototype.myControl;
-    /** @type {?} */
-    AutocompleteFilterExample.prototype.options;
-    /** @type {?} */
-    AutocompleteFilterExample.prototype.filteredOptions;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-optgroup/autocomplete-optgroup-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 6);
     ɵɵtext(1);
@@ -351,42 +210,15 @@ function AutocompleteOptgroupExample_mat_optgroup_5_Template(rf, ctx) { if (rf &
     ɵɵadvance(1);
     ɵɵproperty("ngForOf", group_r2.names);
 } }
-/**
- * @record
- */
-function StateGroup() { }
-if (false) {
-    /** @type {?} */
-    StateGroup.prototype.letter;
-    /** @type {?} */
-    StateGroup.prototype.names;
-}
-/** @type {?} */
-const _filter = (/**
- * @param {?} opt
- * @param {?} value
- * @return {?}
- */
-(opt, value) => {
-    /** @type {?} */
+const _filter = (opt, value) => {
     const filterValue = value.toLowerCase();
-    return opt.filter((/**
-     * @param {?} item
-     * @return {?}
-     */
-    item => item.toLowerCase().indexOf(filterValue) === 0));
-});
+    return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
+};
 /**
- * \@title Option groups autocomplete
+ * @title Option groups autocomplete
  */
 let AutocompleteOptgroupExample = /** @class */ (() => {
-    /**
-     * \@title Option groups autocomplete
-     */
     class AutocompleteOptgroupExample {
-        /**
-         * @param {?} _formBuilder
-         */
         constructor(_formBuilder) {
             this._formBuilder = _formBuilder;
             this.stateForm = this._formBuilder.group({
@@ -453,52 +285,21 @@ let AutocompleteOptgroupExample = /** @class */ (() => {
                     names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
                 }];
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
-            this.stateGroupOptions = (/** @type {?} */ (this.stateForm.get('stateGroup'))).valueChanges
-                .pipe(startWith(''), map((/**
-             * @param {?} value
-             * @return {?}
-             */
-            value => this._filterGroup(value))));
+            this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
+                .pipe(startWith(''), map(value => this._filterGroup(value)));
         }
-        /**
-         * @private
-         * @param {?} value
-         * @return {?}
-         */
         _filterGroup(value) {
             if (value) {
                 return this.stateGroups
-                    .map((/**
-                 * @param {?} group
-                 * @return {?}
-                 */
-                group => ({ letter: group.letter, names: _filter(group.names, value) })))
-                    .filter((/**
-                 * @param {?} group
-                 * @return {?}
-                 */
-                group => group.names.length > 0));
+                    .map(group => ({ letter: group.letter, names: _filter(group.names, value) }))
+                    .filter(group => group.names.length > 0);
             }
             return this.stateGroups;
         }
     }
-    AutocompleteOptgroupExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-optgroup-example',
-                    templateUrl: './autocomplete-optgroup-example.html',
-                    styleUrls: ['./autocomplete-optgroup-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    AutocompleteOptgroupExample.ctorParameters = () => [
-        { type: FormBuilder }
-    ];
-    /** @nocollapse */ AutocompleteOptgroupExample.ɵfac = function AutocompleteOptgroupExample_Factory(t) { return new (t || AutocompleteOptgroupExample)(ɵɵdirectiveInject(FormBuilder)); };
-    /** @nocollapse */ AutocompleteOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 7, vars: 5, consts: [[3, "formGroup"], ["type", "text", "matInput", "", "placeholder", "States Group", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], ["autoGroup", "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompleteOptgroupExample.ɵfac = function AutocompleteOptgroupExample_Factory(t) { return new (t || AutocompleteOptgroupExample)(ɵɵdirectiveInject(FormBuilder)); };
+    AutocompleteOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 7, vars: 5, consts: [[3, "formGroup"], ["type", "text", "matInput", "", "placeholder", "States Group", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], ["autoGroup", "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field");
             ɵɵelement(2, "input", 1);
@@ -526,25 +327,7 @@ let AutocompleteOptgroupExample = /** @class */ (() => {
                 styleUrls: ['./autocomplete-optgroup-example.css'],
             }]
     }], function () { return [{ type: FormBuilder }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompleteOptgroupExample.prototype.stateForm;
-    /** @type {?} */
-    AutocompleteOptgroupExample.prototype.stateGroups;
-    /** @type {?} */
-    AutocompleteOptgroupExample.prototype.stateGroupOptions;
-    /**
-     * @type {?}
-     * @private
-     */
-    AutocompleteOptgroupExample.prototype._formBuilder;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-overview/autocomplete-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompleteOverviewExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 6);
     ɵɵelement(1, "img", 7);
@@ -567,24 +350,9 @@ function AutocompleteOverviewExample_mat_option_5_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate1("Population: ", state_r2.population, "");
 } }
 /**
- * @record
- */
-function State() { }
-if (false) {
-    /** @type {?} */
-    State.prototype.flag;
-    /** @type {?} */
-    State.prototype.name;
-    /** @type {?} */
-    State.prototype.population;
-}
-/**
- * \@title Autocomplete overview
+ * @title Autocomplete overview
  */
 let AutocompleteOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Autocomplete overview
-     */
     class AutocompleteOverviewExample {
         constructor() {
             this.stateCtrl = new FormControl();
@@ -615,38 +383,15 @@ let AutocompleteOverviewExample = /** @class */ (() => {
                 }
             ];
             this.filteredStates = this.stateCtrl.valueChanges
-                .pipe(startWith(''), map((/**
-             * @param {?} state
-             * @return {?}
-             */
-            state => state ? this._filterStates(state) : this.states.slice())));
+                .pipe(startWith(''), map(state => state ? this._filterStates(state) : this.states.slice()));
         }
-        /**
-         * @private
-         * @param {?} value
-         * @return {?}
-         */
         _filterStates(value) {
-            /** @type {?} */
             const filterValue = value.toLowerCase();
-            return this.states.filter((/**
-             * @param {?} state
-             * @return {?}
-             */
-            state => state.name.toLowerCase().indexOf(filterValue) === 0));
+            return this.states.filter(state => state.name.toLowerCase().indexOf(filterValue) === 0);
         }
     }
-    AutocompleteOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-overview-example',
-                    templateUrl: 'autocomplete-overview-example.html',
-                    styleUrls: ['autocomplete-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    AutocompleteOverviewExample.ctorParameters = () => [];
-    /** @nocollapse */ AutocompleteOverviewExample.ɵfac = function AutocompleteOverviewExample_Factory(t) { return new (t || AutocompleteOverviewExample)(); };
-    /** @nocollapse */ AutocompleteOverviewExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 10, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "State", "aria-label", "State", 3, "matAutocomplete", "formControl"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompleteOverviewExample.ɵfac = function AutocompleteOverviewExample_Factory(t) { return new (t || AutocompleteOverviewExample)(); };
+    AutocompleteOverviewExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 10, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "State", "aria-label", "State", 3, "matAutocomplete", "formControl"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
             ɵɵelement(2, "input", 2);
@@ -680,20 +425,7 @@ let AutocompleteOverviewExample = /** @class */ (() => {
                 styleUrls: ['autocomplete-overview-example.css'],
             }]
     }], function () { return []; }, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompleteOverviewExample.prototype.stateCtrl;
-    /** @type {?} */
-    AutocompleteOverviewExample.prototype.filteredStates;
-    /** @type {?} */
-    AutocompleteOverviewExample.prototype.states;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-plain-input/autocomplete-plain-input-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompletePlainInputExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 4);
     ɵɵtext(1);
@@ -705,59 +437,27 @@ function AutocompletePlainInputExample_mat_option_4_Template(rf, ctx) { if (rf &
     ɵɵtextInterpolate1(" ", street_r2, " ");
 } }
 /**
- * \@title Plain input autocomplete
+ * @title Plain input autocomplete
  */
 let AutocompletePlainInputExample = /** @class */ (() => {
-    /**
-     * \@title Plain input autocomplete
-     */
     class AutocompletePlainInputExample {
         constructor() {
             this.control = new FormControl();
             this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
         }
-        /**
-         * @return {?}
-         */
         ngOnInit() {
-            this.filteredStreets = this.control.valueChanges.pipe(startWith(''), map((/**
-             * @param {?} value
-             * @return {?}
-             */
-            value => this._filter(value))));
+            this.filteredStreets = this.control.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
         }
-        /**
-         * @private
-         * @param {?} value
-         * @return {?}
-         */
         _filter(value) {
-            /** @type {?} */
             const filterValue = this._normalizeValue(value);
-            return this.streets.filter((/**
-             * @param {?} street
-             * @return {?}
-             */
-            street => this._normalizeValue(street).includes(filterValue)));
+            return this.streets.filter(street => this._normalizeValue(street).includes(filterValue));
         }
-        /**
-         * @private
-         * @param {?} value
-         * @return {?}
-         */
         _normalizeValue(value) {
             return value.toLowerCase().replace(/\s/g, '');
         }
     }
-    AutocompletePlainInputExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-plain-input-example',
-                    templateUrl: 'autocomplete-plain-input-example.html',
-                    styleUrls: ['autocomplete-plain-input-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ AutocompletePlainInputExample.ɵfac = function AutocompletePlainInputExample_Factory(t) { return new (t || AutocompletePlainInputExample)(); };
-    /** @nocollapse */ AutocompletePlainInputExample.ɵcmp = ɵɵdefineComponent({ type: AutocompletePlainInputExample, selectors: [["autocomplete-plain-input-example"]], decls: 6, vars: 5, consts: [[1, "example-form"], ["type", "text", "placeholder", "Search for a street", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompletePlainInputExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompletePlainInputExample.ɵfac = function AutocompletePlainInputExample_Factory(t) { return new (t || AutocompletePlainInputExample)(); };
+    AutocompletePlainInputExample.ɵcmp = ɵɵdefineComponent({ type: AutocompletePlainInputExample, selectors: [["autocomplete-plain-input-example"]], decls: 6, vars: 5, consts: [[1, "example-form"], ["type", "text", "placeholder", "Search for a street", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompletePlainInputExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelement(1, "input", 1);
             ɵɵelementStart(2, "mat-autocomplete", null, 2);
@@ -782,20 +482,7 @@ let AutocompletePlainInputExample = /** @class */ (() => {
                 styleUrls: ['autocomplete-plain-input-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompletePlainInputExample.prototype.control;
-    /** @type {?} */
-    AutocompletePlainInputExample.prototype.streets;
-    /** @type {?} */
-    AutocompletePlainInputExample.prototype.filteredStreets;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/autocomplete-simple/autocomplete-simple-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function AutocompleteSimpleExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 5);
     ɵɵtext(1);
@@ -807,27 +494,17 @@ function AutocompleteSimpleExample_mat_option_5_Template(rf, ctx) { if (rf & 1) 
     ɵɵtextInterpolate1(" ", option_r2, " ");
 } }
 /**
- * \@title Simple autocomplete
+ * @title Simple autocomplete
  */
 let AutocompleteSimpleExample = /** @class */ (() => {
-    /**
-     * \@title Simple autocomplete
-     */
     class AutocompleteSimpleExample {
         constructor() {
             this.myControl = new FormControl();
             this.options = ['One', 'Two', 'Three'];
         }
     }
-    AutocompleteSimpleExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'autocomplete-simple-example',
-                    templateUrl: 'autocomplete-simple-example.html',
-                    styleUrls: ['autocomplete-simple-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ AutocompleteSimpleExample.ɵfac = function AutocompleteSimpleExample_Factory(t) { return new (t || AutocompleteSimpleExample)(); };
-    /** @nocollapse */ AutocompleteSimpleExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 6, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) { if (rf & 1) {
+    AutocompleteSimpleExample.ɵfac = function AutocompleteSimpleExample_Factory(t) { return new (t || AutocompleteSimpleExample)(); };
+    AutocompleteSimpleExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 6, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
             ɵɵelement(2, "input", 2);
@@ -853,19 +530,7 @@ let AutocompleteSimpleExample = /** @class */ (() => {
                 styleUrls: ['autocomplete-simple-example.css'],
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    AutocompleteSimpleExample.prototype.myControl;
-    /** @type {?} */
-    AutocompleteSimpleExample.prototype.options;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/autocomplete/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
@@ -878,24 +543,8 @@ const EXAMPLES = [
 let AutocompleteExamplesModule = /** @class */ (() => {
     class AutocompleteExamplesModule {
     }
-    AutocompleteExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatAutocompleteModule,
-                        MatFormFieldModule,
-                        MatInputModule,
-                        MatSlideToggleModule,
-                        FormsModule,
-                        ReactiveFormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ AutocompleteExamplesModule.ɵmod = ɵɵdefineNgModule({ type: AutocompleteExamplesModule });
-    /** @nocollapse */ AutocompleteExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function AutocompleteExamplesModule_Factory(t) { return new (t || AutocompleteExamplesModule)(); }, imports: [[
+    AutocompleteExamplesModule.ɵmod = ɵɵdefineNgModule({ type: AutocompleteExamplesModule });
+    AutocompleteExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function AutocompleteExamplesModule_Factory(t) { return new (t || AutocompleteExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatAutocompleteModule,
                 MatFormFieldModule,

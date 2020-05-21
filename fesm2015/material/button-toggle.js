@@ -1,30 +1,15 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/button-toggle/button-toggle-appearance/button-toggle-appearance-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Button toggle appearance
+ * @title Button toggle appearance
  */
 let ButtonToggleAppearanceExample = /** @class */ (() => {
-    /**
-     * \@title Button toggle appearance
-     */
     class ButtonToggleAppearanceExample {
     }
-    ButtonToggleAppearanceExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'button-toggle-appearance-example',
-                    templateUrl: 'button-toggle-appearance-example.html',
-                    styleUrls: ['button-toggle-appearance-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ButtonToggleAppearanceExample.ɵfac = function ButtonToggleAppearanceExample_Factory(t) { return new (t || ButtonToggleAppearanceExample)(); };
-    /** @nocollapse */ ButtonToggleAppearanceExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) { if (rf & 1) {
+    ButtonToggleAppearanceExample.ɵfac = function ButtonToggleAppearanceExample_Factory(t) { return new (t || ButtonToggleAppearanceExample)(); };
+    ButtonToggleAppearanceExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵtext(1, " Default appearance: ");
             ɵɵelementStart(2, "mat-button-toggle-group", 0);
@@ -66,28 +51,13 @@ let ButtonToggleAppearanceExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/button-toggle/button-toggle-exclusive/button-toggle-exclusive-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Exclusive selection
+ * @title Exclusive selection
  */
 let ButtonToggleExclusiveExample = /** @class */ (() => {
-    /**
-     * \@title Exclusive selection
-     */
     class ButtonToggleExclusiveExample {
     }
-    ButtonToggleExclusiveExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'button-toggle-exclusive-example',
-                    templateUrl: 'button-toggle-exclusive-example.html',
-                    styleUrls: ['button-toggle-exclusive-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
-    /** @nocollapse */ ButtonToggleExclusiveExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
+    ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
+    ButtonToggleExclusiveExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
             ɵɵelementStart(2, "mat-button-toggle", 1);
             ɵɵelementStart(3, "mat-icon");
@@ -130,28 +100,13 @@ let ButtonToggleExclusiveExample = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/button-toggle/button-toggle-overview/button-toggle-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic button-toggles
+ * @title Basic button-toggles
  */
 let ButtonToggleOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic button-toggles
-     */
     class ButtonToggleOverviewExample {
     }
-    ButtonToggleOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'button-toggle-overview-example',
-                    templateUrl: 'button-toggle-overview-example.html',
-                    styleUrls: ['button-toggle-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */ ButtonToggleOverviewExample.ɵfac = function ButtonToggleOverviewExample_Factory(t) { return new (t || ButtonToggleOverviewExample)(); };
-    /** @nocollapse */ ButtonToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    ButtonToggleOverviewExample.ɵfac = function ButtonToggleOverviewExample_Factory(t) { return new (t || ButtonToggleOverviewExample)(); };
+    ButtonToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-button-toggle-group", 0);
             ɵɵelementStart(1, "mat-button-toggle", 1);
             ɵɵtext(2, "Bold");
@@ -175,12 +130,6 @@ let ButtonToggleOverviewExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/button-toggle/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     ButtonToggleAppearanceExample,
     ButtonToggleExclusiveExample,
@@ -189,19 +138,8 @@ const EXAMPLES = [
 let ButtonToggleExamplesModule = /** @class */ (() => {
     class ButtonToggleExamplesModule {
     }
-    ButtonToggleExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatButtonToggleModule,
-                        MatIconModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ ButtonToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
-    /** @nocollapse */ ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
+    ButtonToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
+    ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
                 MatButtonToggleModule,
                 MatIconModule,
             ]] });

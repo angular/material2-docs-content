@@ -1,4 +1,4 @@
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵnextContext, ɵɵelement, ɵɵelementEnd, ɵɵtext, ɵɵadvance, ɵɵproperty, ɵɵattribute, ɵɵtextInterpolate1, ɵɵtemplate, ɵɵpureFunction1, ɵɵpureFunction0, Component, ɵɵdefineComponent, ɵɵtemplateRefExtractor, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵsetClassMetadata, ɵɵdirectiveInject, ChangeDetectionStrategy, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵnextContext, ɵɵelement, ɵɵelementEnd, ɵɵtext, ɵɵadvance, ɵɵproperty, ɵɵattribute, ɵɵtextInterpolate1, ɵɵtemplate, ɵɵpureFunction1, ɵɵpureFunction0, ɵɵdefineComponent, ɵɵtemplateRefExtractor, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ChangeDetectionStrategy, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgIf, NgForOf, CommonModule } from '@angular/common';
 import { ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, NumberValueAccessor, FormsModule } from '@angular/forms';
 import { MatEditLens, MatPopoverEdit, MatRowHoverContent, MatEditOpen, MatEditRevert, MatEditClose, MatPopoverEditTabOut, MatPopoverEditModule } from '@angular/material-experimental/popover-edit';
@@ -14,11 +14,6 @@ import { BehaviorSubject } from 'rxjs';
 import { CdkEditable, FormValueContainer } from '@angular/cdk-experimental/popover-edit';
 import { MatFormField } from '@angular/material/form-field';
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/popover-edit/popover-edit-cell-span-mat-table/popover-edit-cell-span-mat-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function PopoverEditCellSpanMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
@@ -170,21 +165,6 @@ function PopoverEditCellSpanMatTableExample_tr_15_Template(rf, ctx) { if (rf & 1
 function PopoverEditCellSpanMatTableExample_tr_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 27);
 } }
-/**
- * @record
- */
-function Person() { }
-if (false) {
-    /** @type {?} */
-    Person.prototype.id;
-    /** @type {?} */
-    Person.prototype.firstName;
-    /** @type {?} */
-    Person.prototype.middleName;
-    /** @type {?} */
-    Person.prototype.lastName;
-}
-/** @type {?} */
 const PERSON_DATA = [
     { id: 1, firstName: 'Terra', middleName: 'Maduin', lastName: 'Branford' },
     { id: 2, firstName: 'Locke', middleName: '', lastName: 'Cole' },
@@ -197,23 +177,15 @@ const PERSON_DATA = [
     { id: 9, firstName: 'Mog', middleName: '', lastName: 'McMoogle' },
 ];
 /**
- * \@title Material Popover Edit spanning multiple columns on a Material data-table
+ * @title Material Popover Edit spanning multiple columns on a Material data-table
  */
 let PopoverEditCellSpanMatTableExample = /** @class */ (() => {
-    /**
-     * \@title Material Popover Edit spanning multiple columns on a Material data-table
-     */
     class PopoverEditCellSpanMatTableExample {
         constructor() {
             this.displayedColumns = ['id', 'firstName', 'middleName', 'lastName'];
             this.dataSource = new ExampleDataSource();
             this.preservedValues = new WeakMap();
         }
-        /**
-         * @param {?} person
-         * @param {?} f
-         * @return {?}
-         */
         onSubmit(person, f) {
             if (!f.valid) {
                 return;
@@ -223,15 +195,8 @@ let PopoverEditCellSpanMatTableExample = /** @class */ (() => {
             person.lastName = f.value['lastName'];
         }
     }
-    PopoverEditCellSpanMatTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'popover-edit-cell-span-mat-table-example',
-                    styleUrls: ['popover-edit-cell-span-mat-table-example.css'],
-                    templateUrl: 'popover-edit-cell-span-mat-table-example.html',
-                },] },
-    ];
-    /** @nocollapse */ PopoverEditCellSpanMatTableExample.ɵfac = function PopoverEditCellSpanMatTableExample_Factory(t) { return new (t || PopoverEditCellSpanMatTableExample)(); };
-    /** @nocollapse */ PopoverEditCellSpanMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditCellSpanMatTableExample, selectors: [["popover-edit-cell-span-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["nameEdit", ""], ["matColumnDef", "id"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "firstName"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan", 4, "matCellDef"], ["matColumnDef", "middleName"], ["matColumnDef", "lastName"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", "", 1, "example-input-container"], ["matInput", "", "name", "firstName", "required", "", 3, "ngModel"], ["matInput", "", "name", "middleName", 3, "ngModel"], ["matInput", "", "name", "lastName", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "cdkEditRevert", ""], ["mat-button", "", "cdkEditClose", ""], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan"], [4, "matRowHoverContent"], ["mat-icon-button", "", "matEditOpen", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditCellSpanMatTableExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditCellSpanMatTableExample.ɵfac = function PopoverEditCellSpanMatTableExample_Factory(t) { return new (t || PopoverEditCellSpanMatTableExample)(); };
+    PopoverEditCellSpanMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditCellSpanMatTableExample, selectors: [["popover-edit-cell-span-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["nameEdit", ""], ["matColumnDef", "id"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "firstName"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan", 4, "matCellDef"], ["matColumnDef", "middleName"], ["matColumnDef", "lastName"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", "", 1, "example-input-container"], ["matInput", "", "name", "firstName", "required", "", 3, "ngModel"], ["matInput", "", "name", "middleName", 3, "ngModel"], ["matInput", "", "name", "lastName", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "cdkEditRevert", ""], ["mat-button", "", "cdkEditClose", ""], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan"], [4, "matRowHoverContent"], ["mat-icon-button", "", "matEditOpen", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditCellSpanMatTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, PopoverEditCellSpanMatTableExample_ng_template_1_Template, 17, 7, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementContainerStart(3, 2);
@@ -270,14 +235,6 @@ let PopoverEditCellSpanMatTableExample = /** @class */ (() => {
                 templateUrl: 'popover-edit-cell-span-mat-table-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    PopoverEditCellSpanMatTableExample.prototype.displayedColumns;
-    /** @type {?} */
-    PopoverEditCellSpanMatTableExample.prototype.dataSource;
-    /** @type {?} */
-    PopoverEditCellSpanMatTableExample.prototype.preservedValues;
-}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -288,36 +245,16 @@ if (false) {
 class ExampleDataSource extends DataSource {
     constructor() {
         super(...arguments);
-        /**
-         * Stream of data that is provided to the table.
-         */
+        /** Stream of data that is provided to the table. */
         this.data = new BehaviorSubject(PERSON_DATA);
     }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect() {
         return this.data;
     }
-    /**
-     * @return {?}
-     */
     disconnect() { }
 }
-if (false) {
-    /**
-     * Stream of data that is provided to the table.
-     * @type {?}
-     */
-    ExampleDataSource.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/popover-edit/popover-edit-mat-table-flex/popover-edit-mat-table-flex-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function PopoverEditMatTableFlexExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
@@ -460,21 +397,6 @@ function PopoverEditMatTableFlexExample_mat_header_row_15_Template(rf, ctx) { if
 function PopoverEditMatTableFlexExample_mat_row_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "mat-row");
 } }
-/**
- * @record
- */
-function PeriodicElement() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement.prototype.name;
-    /** @type {?} */
-    PeriodicElement.prototype.position;
-    /** @type {?} */
-    PeriodicElement.prototype.weight;
-    /** @type {?} */
-    PeriodicElement.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -498,12 +420,9 @@ const ELEMENT_DATA = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * \@title Material Popover Edit on a flex Material data-table
+ * @title Material Popover Edit on a flex Material data-table
  */
 let PopoverEditMatTableFlexExample = /** @class */ (() => {
-    /**
-     * \@title Material Popover Edit on a flex Material data-table
-     */
     class PopoverEditMatTableFlexExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
@@ -511,22 +430,12 @@ let PopoverEditMatTableFlexExample = /** @class */ (() => {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
@@ -534,15 +443,8 @@ let PopoverEditMatTableFlexExample = /** @class */ (() => {
             element.weight = f.value.weight;
         }
     }
-    PopoverEditMatTableFlexExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'popover-edit-mat-table-flex-example',
-                    styleUrls: ['popover-edit-mat-table-flex-example.css'],
-                    templateUrl: 'popover-edit-mat-table-flex-example.html',
-                },] },
-    ];
-    /** @nocollapse */ PopoverEditMatTableFlexExample.ɵfac = function PopoverEditMatTableFlexExample_Factory(t) { return new (t || PopoverEditMatTableFlexExample)(); };
-    /** @nocollapse */ PopoverEditMatTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableFlexExample, selectors: [["popover-edit-mat-table-flex-example"]], decls: 17, vars: 3, consts: [["editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], [3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], [3, "matPopoverEdit"], ["nameEdit", ""], [4, "matRowHoverContent"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], [3, "matPopoverEdit", "matPopoverEditContext"]], template: function PopoverEditMatTableFlexExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditMatTableFlexExample.ɵfac = function PopoverEditMatTableFlexExample_Factory(t) { return new (t || PopoverEditMatTableFlexExample)(); };
+    PopoverEditMatTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableFlexExample, selectors: [["popover-edit-mat-table-flex-example"]], decls: 17, vars: 3, consts: [["editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], [3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], [3, "matPopoverEdit"], ["nameEdit", ""], [4, "matRowHoverContent"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], [3, "matPopoverEdit", "matPopoverEditContext"]], template: function PopoverEditMatTableFlexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-table", 0);
             ɵɵtemplate(1, PopoverEditMatTableFlexExample_ng_template_1_Template, 6, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementContainerStart(3, 2);
@@ -581,16 +483,6 @@ let PopoverEditMatTableFlexExample = /** @class */ (() => {
                 templateUrl: 'popover-edit-mat-table-flex-example.html',
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    PopoverEditMatTableFlexExample.prototype.displayedColumns;
-    /** @type {?} */
-    PopoverEditMatTableFlexExample.prototype.dataSource;
-    /** @type {?} */
-    PopoverEditMatTableFlexExample.prototype.preservedNameValues;
-    /** @type {?} */
-    PopoverEditMatTableFlexExample.prototype.preservedWeightValues;
-}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -601,36 +493,16 @@ if (false) {
 class ExampleDataSource$1 extends DataSource {
     constructor() {
         super(...arguments);
-        /**
-         * Stream of data that is provided to the table.
-         */
+        /** Stream of data that is provided to the table. */
         this.data = new BehaviorSubject(ELEMENT_DATA);
     }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect() {
         return this.data;
     }
-    /**
-     * @return {?}
-     */
     disconnect() { }
 }
-if (false) {
-    /**
-     * Stream of data that is provided to the table.
-     * @type {?}
-     */
-    ExampleDataSource$1.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/popover-edit/popover-edit-mat-table/popover-edit-mat-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function PopoverEditMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r19 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
@@ -936,25 +808,6 @@ function PopoverEditMatTableExample_td_22_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r60.fantasyCounterparts.join(", "), " ");
 } }
-/**
- * @record
- */
-function PeriodicElement$1() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$1.prototype.name;
-    /** @type {?} */
-    PeriodicElement$1.prototype.type;
-    /** @type {?} */
-    PeriodicElement$1.prototype.position;
-    /** @type {?} */
-    PeriodicElement$1.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$1.prototype.symbol;
-    /** @type {?} */
-    PeriodicElement$1.prototype.fantasyCounterparts;
-}
-/** @type {?} */
 const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', type: 'Nonmetal', weight: 1.0079, symbol: 'H',
         fantasyCounterparts: ['Fire', 'Wind', 'Light'] },
@@ -997,21 +850,13 @@ const ELEMENT_DATA$1 = [
     { position: 20, name: 'Calcium', type: 'Metal', weight: 40.078, symbol: 'Ca',
         fantasyCounterparts: [] },
 ];
-/** @type {?} */
 const TYPES = ['Metal', 'Semimetal', 'Nonmetal'];
-/** @type {?} */
 const FANTASY_ELEMENTS = ['Earth', 'Water', 'Wind', 'Fire', 'Light', 'Dark'];
 /**
- * \@title Material Popover Edit on a Material data-table
+ * @title Material Popover Edit on a Material data-table
  */
 let PopoverEditMatTableExample = /** @class */ (() => {
-    /**
-     * \@title Material Popover Edit on a Material data-table
-     */
     class PopoverEditMatTableExample {
-        /**
-         * @param {?} _snackBar
-         */
         constructor(_snackBar) {
             this._snackBar = _snackBar;
             this.displayedColumns = ['position', 'name', 'type', 'weight', 'symbol', 'fantasyCounterpart'];
@@ -1024,78 +869,39 @@ let PopoverEditMatTableExample = /** @class */ (() => {
             this.typeValues = new FormValueContainer();
             this.fantasyValues = new FormValueContainer();
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
             }
             element.weight = f.value.weight;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitType(element, f) {
             if (!f.valid) {
                 return;
             }
             element.type = f.value.type[0];
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitFantasyCounterparts(element, f) {
             if (!f.valid) {
                 return;
             }
             element.fantasyCounterparts = f.value.fantasyCounterparts;
         }
-        /**
-         * @param {?} element
-         * @return {?}
-         */
         goodJob(element) {
             this._snackBar.open(`Way to go, ${element.name}!`, undefined, { duration: 2000 });
         }
-        /**
-         * @param {?} element
-         * @return {?}
-         */
         badJob(element) {
             this._snackBar.open(`You have failed me for the last time, #${element.position}.`, undefined, { duration: 2000 });
         }
     }
-    PopoverEditMatTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'popover-edit-mat-table-example',
-                    styleUrls: ['popover-edit-mat-table-example.css'],
-                    templateUrl: 'popover-edit-mat-table-example.html',
-                },] },
-    ];
-    /** @nocollapse */
-    PopoverEditMatTableExample.ctorParameters = () => [
-        { type: MatSnackBar }
-    ];
-    /** @nocollapse */ PopoverEditMatTableExample.ɵfac = function PopoverEditMatTableExample_Factory(t) { return new (t || PopoverEditMatTableExample)(ɵɵdirectiveInject(MatSnackBar)); };
-    /** @nocollapse */ PopoverEditMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableExample, selectors: [["popover-edit-mat-table-example"]], decls: 23, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditDisabled", 4, "matCellDef"], ["matColumnDef", "type"], ["mat-cell", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matColumnDef", "fantasyCounterpart"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], [4, "matRowHoverContent"], ["mat-icon-button", "", 3, "click"], [3, "ngModel", "ngModelChange"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditDisabled"], ["nameEdit", ""], [4, "ngIf"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], ["mat-cell", "", 3, "matPopoverEdit"], ["typeEdit", ""], ["matEditLens", "", "matEditClose", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["mat-edit-fill", ""], ["name", "type", "aria-label", "Element type", 3, "multiple", "ngModel", "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""], ["fantasyCounterpartEdit", ""], ["name", "fantasyCounterparts", "aria-label", "Fantasy Element Counterparts", 3, "ngModel"], ["checkboxPosition", "before", 3, "value", 4, "ngFor", "ngForOf"], ["checkboxPosition", "before", 3, "value"]], template: function PopoverEditMatTableExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditMatTableExample.ɵfac = function PopoverEditMatTableExample_Factory(t) { return new (t || PopoverEditMatTableExample)(ɵɵdirectiveInject(MatSnackBar)); };
+    PopoverEditMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableExample, selectors: [["popover-edit-mat-table-example"]], decls: 23, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditDisabled", 4, "matCellDef"], ["matColumnDef", "type"], ["mat-cell", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matColumnDef", "fantasyCounterpart"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], [4, "matRowHoverContent"], ["mat-icon-button", "", 3, "click"], [3, "ngModel", "ngModelChange"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditDisabled"], ["nameEdit", ""], [4, "ngIf"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], ["mat-cell", "", 3, "matPopoverEdit"], ["typeEdit", ""], ["matEditLens", "", "matEditClose", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["mat-edit-fill", ""], ["name", "type", "aria-label", "Element type", 3, "multiple", "ngModel", "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""], ["fantasyCounterpartEdit", ""], ["name", "fantasyCounterparts", "aria-label", "Fantasy Element Counterparts", 3, "ngModel"], ["checkboxPosition", "before", 3, "value", 4, "ngFor", "ngForOf"], ["checkboxPosition", "before", 3, "value"]], template: function PopoverEditMatTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, PopoverEditMatTableExample_ng_template_1_Template, 6, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementContainerStart(3, 2);
@@ -1142,31 +948,6 @@ let PopoverEditMatTableExample = /** @class */ (() => {
                 templateUrl: 'popover-edit-mat-table-example.html',
             }]
     }], function () { return [{ type: MatSnackBar }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.displayedColumns;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.dataSource;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.nameEditEnabled;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.TYPES;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.FANTASY_ELEMENTS;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.nameValues;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.weightValues;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.typeValues;
-    /** @type {?} */
-    PopoverEditMatTableExample.prototype.fantasyValues;
-    /**
-     * @type {?}
-     * @private
-     */
-    PopoverEditMatTableExample.prototype._snackBar;
-}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -1177,36 +958,16 @@ if (false) {
 class ExampleDataSource$2 extends DataSource {
     constructor() {
         super(...arguments);
-        /**
-         * Stream of data that is provided to the table.
-         */
+        /** Stream of data that is provided to the table. */
         this.data = new BehaviorSubject(ELEMENT_DATA$1);
     }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect() {
         return this.data;
     }
-    /**
-     * @return {?}
-     */
     disconnect() { }
 }
-if (false) {
-    /**
-     * Stream of data that is provided to the table.
-     * @type {?}
-     */
-    ExampleDataSource$2.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/popover-edit/popover-edit-tab-out-mat-table/popover-edit-tab-out-mat-table-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 function PopoverEditTabOutMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     const _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
@@ -1331,21 +1092,6 @@ function PopoverEditTabOutMatTableExample_tr_15_Template(rf, ctx) { if (rf & 1) 
 function PopoverEditTabOutMatTableExample_tr_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 24);
 } }
-/**
- * @record
- */
-function PeriodicElement$2() { }
-if (false) {
-    /** @type {?} */
-    PeriodicElement$2.prototype.name;
-    /** @type {?} */
-    PeriodicElement$2.prototype.position;
-    /** @type {?} */
-    PeriodicElement$2.prototype.weight;
-    /** @type {?} */
-    PeriodicElement$2.prototype.symbol;
-}
-/** @type {?} */
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -1369,12 +1115,9 @@ const ELEMENT_DATA$2 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * \@title Material Popover Edit with spreadsheet-like configuration on a Material data-table
+ * @title Material Popover Edit with spreadsheet-like configuration on a Material data-table
  */
 let PopoverEditTabOutMatTableExample = /** @class */ (() => {
-    /**
-     * \@title Material Popover Edit with spreadsheet-like configuration on a Material data-table
-     */
     class PopoverEditTabOutMatTableExample {
         constructor() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
@@ -1382,22 +1125,12 @@ let PopoverEditTabOutMatTableExample = /** @class */ (() => {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitName(element, f) {
             if (!f.valid) {
                 return;
             }
             element.name = f.value.name;
         }
-        /**
-         * @param {?} element
-         * @param {?} f
-         * @return {?}
-         */
         onSubmitWeight(element, f) {
             if (!f.valid) {
                 return;
@@ -1405,16 +1138,8 @@ let PopoverEditTabOutMatTableExample = /** @class */ (() => {
             element.weight = f.value.weight;
         }
     }
-    PopoverEditTabOutMatTableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'popover-edit-tab-out-mat-table-example',
-                    styleUrls: ['popover-edit-tab-out-mat-table-example.css'],
-                    templateUrl: 'popover-edit-tab-out-mat-table-example.html',
-                    changeDetection: ChangeDetectionStrategy.OnPush,
-                },] },
-    ];
-    /** @nocollapse */ PopoverEditTabOutMatTableExample.ɵfac = function PopoverEditTabOutMatTableExample_Factory(t) { return new (t || PopoverEditTabOutMatTableExample)(); };
-    /** @nocollapse */ PopoverEditTabOutMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditTabOutMatTableExample, selectors: [["popover-edit-tab-out-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", "matEditLensClickOutBehavior", "submit", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit"], ["nameEdit", ""], [4, "matRowHoverContent"], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditTabOutMatTableExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditTabOutMatTableExample.ɵfac = function PopoverEditTabOutMatTableExample_Factory(t) { return new (t || PopoverEditTabOutMatTableExample)(); };
+    PopoverEditTabOutMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditTabOutMatTableExample, selectors: [["popover-edit-tab-out-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", "matEditLensClickOutBehavior", "submit", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit"], ["nameEdit", ""], [4, "matRowHoverContent"], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditTabOutMatTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
             ɵɵtemplate(1, PopoverEditTabOutMatTableExample_ng_template_1_Template, 6, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
             ɵɵelementContainerStart(3, 2);
@@ -1454,16 +1179,6 @@ let PopoverEditTabOutMatTableExample = /** @class */ (() => {
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
     }], null, null); })();
-if (false) {
-    /** @type {?} */
-    PopoverEditTabOutMatTableExample.prototype.displayedColumns;
-    /** @type {?} */
-    PopoverEditTabOutMatTableExample.prototype.dataSource;
-    /** @type {?} */
-    PopoverEditTabOutMatTableExample.prototype.preservedNameValues;
-    /** @type {?} */
-    PopoverEditTabOutMatTableExample.prototype.preservedWeightValues;
-}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -1474,37 +1189,16 @@ if (false) {
 class ExampleDataSource$3 extends DataSource {
     constructor() {
         super(...arguments);
-        /**
-         * Stream of data that is provided to the table.
-         */
+        /** Stream of data that is provided to the table. */
         this.data = new BehaviorSubject(ELEMENT_DATA$2);
     }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect() {
         return this.data;
     }
-    /**
-     * @return {?}
-     */
     disconnect() { }
 }
-if (false) {
-    /**
-     * Stream of data that is provided to the table.
-     * @type {?}
-     */
-    ExampleDataSource$3.prototype.data;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material-experimental/popover-edit/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     PopoverEditCellSpanMatTableExample,
     PopoverEditMatTableExample,
@@ -1514,27 +1208,8 @@ const EXAMPLES = [
 let PopoverEditExamplesModule = /** @class */ (() => {
     class PopoverEditExamplesModule {
     }
-    PopoverEditExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatButtonModule,
-                        MatCheckboxModule,
-                        MatIconModule,
-                        MatInputModule,
-                        MatListModule,
-                        MatPopoverEditModule,
-                        MatSnackBarModule,
-                        MatTableModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
-    /** @nocollapse */ PopoverEditExamplesModule.ɵmod = ɵɵdefineNgModule({ type: PopoverEditExamplesModule });
-    /** @nocollapse */ PopoverEditExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function PopoverEditExamplesModule_Factory(t) { return new (t || PopoverEditExamplesModule)(); }, imports: [[
+    PopoverEditExamplesModule.ɵmod = ɵɵdefineNgModule({ type: PopoverEditExamplesModule });
+    PopoverEditExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function PopoverEditExamplesModule_Factory(t) { return new (t || PopoverEditExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatButtonModule,
                 MatCheckboxModule,

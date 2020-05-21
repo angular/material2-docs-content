@@ -1,4 +1,4 @@
-import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ɵɵgetCurrentView, ɵɵelement, ɵɵrestoreView, ɵɵreference, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
@@ -8,47 +8,22 @@ import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatOption } from '@angular/material/core';
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/snack-bar/snack-bar-component/snack-bar-component-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Snack-bar with a custom component
+ * @title Snack-bar with a custom component
  */
 let SnackBarComponentExample = /** @class */ (() => {
-    /**
-     * \@title Snack-bar with a custom component
-     */
     class SnackBarComponentExample {
-        /**
-         * @param {?} _snackBar
-         */
         constructor(_snackBar) {
             this._snackBar = _snackBar;
             this.durationInSeconds = 5;
         }
-        /**
-         * @return {?}
-         */
         openSnackBar() {
             this._snackBar.openFromComponent(PizzaPartyComponent, {
                 duration: this.durationInSeconds * 1000,
             });
         }
     }
-    SnackBarComponentExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'snack-bar-component-example',
-                    templateUrl: 'snack-bar-component-example.html',
-                    styleUrls: ['snack-bar-component-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    SnackBarComponentExample.ctorParameters = () => [
-        { type: MatSnackBar }
-    ];
-    /** @nocollapse */ SnackBarComponentExample.ɵfac = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(ɵɵdirectiveInject(MatSnackBar)); };
-    /** @nocollapse */ SnackBarComponentExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) { if (rf & 1) {
+    SnackBarComponentExample.ɵfac = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(ɵɵdirectiveInject(MatSnackBar)); };
+    SnackBarComponentExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Snack bar duration (seconds)");
@@ -75,31 +50,11 @@ let SnackBarComponentExample = /** @class */ (() => {
                 styleUrls: ['snack-bar-component-example.css'],
             }]
     }], function () { return [{ type: MatSnackBar }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    SnackBarComponentExample.prototype.durationInSeconds;
-    /**
-     * @type {?}
-     * @private
-     */
-    SnackBarComponentExample.prototype._snackBar;
-}
 let PizzaPartyComponent = /** @class */ (() => {
     class PizzaPartyComponent {
     }
-    PizzaPartyComponent.decorators = [
-        { type: Component, args: [{
-                    selector: 'snack-bar-component-example-snack',
-                    templateUrl: 'snack-bar-component-example-snack.html',
-                    styles: [`
-    .example-pizza-party {
-      color: hotpink;
-    }
-  `],
-                },] },
-    ];
-    /** @nocollapse */ PizzaPartyComponent.ɵfac = function PizzaPartyComponent_Factory(t) { return new (t || PizzaPartyComponent)(); };
-    /** @nocollapse */ PizzaPartyComponent.ɵcmp = ɵɵdefineComponent({ type: PizzaPartyComponent, selectors: [["snack-bar-component-example-snack"]], decls: 2, vars: 0, consts: [[1, "example-pizza-party"]], template: function PizzaPartyComponent_Template(rf, ctx) { if (rf & 1) {
+    PizzaPartyComponent.ɵfac = function PizzaPartyComponent_Factory(t) { return new (t || PizzaPartyComponent)(); };
+    PizzaPartyComponent.ɵcmp = ɵɵdefineComponent({ type: PizzaPartyComponent, selectors: [["snack-bar-component-example-snack"]], decls: 2, vars: 0, consts: [[1, "example-pizza-party"]], template: function PizzaPartyComponent_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "span", 0);
             ɵɵtext(1, " Pizza party!!! \uD83C\uDF55\n");
             ɵɵelementEnd();
@@ -120,48 +75,21 @@ let PizzaPartyComponent = /** @class */ (() => {
     }], null, null); })();
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/snack-bar/snack-bar-overview/snack-bar-overview-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Basic snack-bar
+ * @title Basic snack-bar
  */
 let SnackBarOverviewExample = /** @class */ (() => {
-    /**
-     * \@title Basic snack-bar
-     */
     class SnackBarOverviewExample {
-        /**
-         * @param {?} _snackBar
-         */
         constructor(_snackBar) {
             this._snackBar = _snackBar;
         }
-        /**
-         * @param {?} message
-         * @param {?} action
-         * @return {?}
-         */
         openSnackBar(message, action) {
             this._snackBar.open(message, action, {
                 duration: 2000,
             });
         }
     }
-    SnackBarOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'snack-bar-overview-example',
-                    templateUrl: 'snack-bar-overview-example.html',
-                    styleUrls: ['snack-bar-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    SnackBarOverviewExample.ctorParameters = () => [
-        { type: MatSnackBar }
-    ];
-    /** @nocollapse */ SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(ɵɵdirectiveInject(MatSnackBar)); };
-    /** @nocollapse */ SnackBarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(ɵɵdirectiveInject(MatSnackBar)); };
+    SnackBarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
             const _r2 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
@@ -190,38 +118,17 @@ let SnackBarOverviewExample = /** @class */ (() => {
                 styleUrls: ['snack-bar-overview-example.css'],
             }]
     }], function () { return [{ type: MatSnackBar }]; }, null); })();
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    SnackBarOverviewExample.prototype._snackBar;
-}
 
 /**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/snack-bar/snack-bar-position/snack-bar-position-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * \@title Snack-bar with configurable position
+ * @title Snack-bar with configurable position
  */
 let SnackBarPositionExample = /** @class */ (() => {
-    /**
-     * \@title Snack-bar with configurable position
-     */
     class SnackBarPositionExample {
-        /**
-         * @param {?} _snackBar
-         */
         constructor(_snackBar) {
             this._snackBar = _snackBar;
             this.horizontalPosition = 'start';
             this.verticalPosition = 'bottom';
         }
-        /**
-         * @return {?}
-         */
         openSnackBar() {
             this._snackBar.open('Cannonball!!', 'End now', {
                 duration: 500,
@@ -230,19 +137,8 @@ let SnackBarPositionExample = /** @class */ (() => {
             });
         }
     }
-    SnackBarPositionExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'snack-bar-position-example',
-                    templateUrl: 'snack-bar-position-example.html',
-                    styleUrls: ['snack-bar-position-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    SnackBarPositionExample.ctorParameters = () => [
-        { type: MatSnackBar }
-    ];
-    /** @nocollapse */ SnackBarPositionExample.ɵfac = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(ɵɵdirectiveInject(MatSnackBar)); };
-    /** @nocollapse */ SnackBarPositionExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [[3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) { if (rf & 1) {
+    SnackBarPositionExample.ɵfac = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(ɵɵdirectiveInject(MatSnackBar)); };
+    SnackBarPositionExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [[3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Horizontal position");
@@ -300,24 +196,7 @@ let SnackBarPositionExample = /** @class */ (() => {
                 styleUrls: ['snack-bar-position-example.css'],
             }]
     }], function () { return [{ type: MatSnackBar }]; }, null); })();
-if (false) {
-    /** @type {?} */
-    SnackBarPositionExample.prototype.horizontalPosition;
-    /** @type {?} */
-    SnackBarPositionExample.prototype.verticalPosition;
-    /**
-     * @type {?}
-     * @private
-     */
-    SnackBarPositionExample.prototype._snackBar;
-}
 
-/**
- * @fileoverview added by tsickle
- * Generated from: src/components-examples/material/snack-bar/index.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
 const EXAMPLES = [
     SnackBarComponentExample,
     SnackBarOverviewExample,
@@ -326,22 +205,8 @@ const EXAMPLES = [
 let SnackBarExamplesModule = /** @class */ (() => {
     class SnackBarExamplesModule {
     }
-    SnackBarExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        FormsModule,
-                        MatButtonModule,
-                        MatInputModule,
-                        MatSelectModule,
-                        MatSnackBarModule,
-                    ],
-                    declarations: [...EXAMPLES, PizzaPartyComponent],
-                    exports: EXAMPLES,
-                    entryComponents: [...EXAMPLES, PizzaPartyComponent],
-                },] },
-    ];
-    /** @nocollapse */ SnackBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SnackBarExamplesModule });
-    /** @nocollapse */ SnackBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); }, imports: [[
+    SnackBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SnackBarExamplesModule });
+    SnackBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); }, imports: [[
                 FormsModule,
                 MatButtonModule,
                 MatInputModule,
