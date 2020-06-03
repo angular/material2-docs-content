@@ -487,6 +487,16 @@
                 "importSpecifier": "cdk/drag-drop"
             }
         },
+        "cdk-overlay-basic": {
+            "title": "Overlay basic example",
+            "componentName": "CdkOverlayBasicExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "CdkOverlayExamplesModule",
+                "importSpecifier": "cdk/overlay"
+            }
+        },
         "cdk-platform-overview": {
             "title": "Platform overview",
             "componentName": "CdkPlatformOverviewExample",
