@@ -1,0 +1,6 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span> [<span class="hljs-attr">backgroundColor</span>]=<span class="hljs-string">"background"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of links"</span>
+     (<span class="hljs-attr">click</span>)=<span class="hljs-string">"activeLink = link"</span>
+     [<span class="hljs-attr">active</span>]=<span class="hljs-string">"activeLink == link"</span>&gt;</span> {{link}} <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>

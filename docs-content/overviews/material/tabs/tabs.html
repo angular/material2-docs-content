@@ -20,33 +20,15 @@ the header, usually through keyboard navigation.</p>
           Labels
         </h3>
       <p>If a tab&#39;s label is only text then the simple tab-group API can be used.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"One"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Some tab content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Two"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Some more tab content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span></code></pre>
+<div material-docs-example="tab-group-basic"
+                               file="tab-group-basic.html"
+                               region="undefined"></div>
+
 <p>For more complex labels, add a template with the <code>mat-tab-label</code> directive inside the <code>mat-tab</code>.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
-      The <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>best<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> pasta
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Best pasta restaurants<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>thumb_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span> The worst sushi
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Terrible sushi restaurants<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span></code></pre>
+<div material-docs-example="tab-group-custom-label"
+                               file="tab-group-custom-label-example.html"
+                               region="label-directive"></div>
+
 
         <h3 id="dynamic-height" class="docs-header-link">
           <span header-link="dynamic-height"></span>
@@ -55,6 +37,10 @@ the header, usually through keyboard navigation.</p>
       <p>By default, the tab group will not change its height to the height of the currently active tab. To
 change this, set the <code>dynamicHeight</code> input to true. The tab body will animate its height according
  to the height of the active tab.</p>
+ <div material-docs-example="tab-group-dynamic-height"
+                               file="tab-group-dynamic-height-example.html"
+                               region="dynamic-height"></div>
+
 
         <h3 id="tabs-and-navigation" class="docs-header-link">
           <span header-link="tabs-and-navigation"></span>
@@ -62,17 +48,10 @@ change this, set the <code>dynamicHeight</code> input to true. The tab body will
         </h3>
       <p>While <code>&lt;mat-tab-group&gt;</code> is used to switch between views within a single route, <code>&lt;nav mat-tab-nav-bar&gt;</code>
 provides a tab-like UI for navigating between routes.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span>
-     *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of navLinks"</span>
-     [<span class="hljs-attr">routerLink</span>]=<span class="hljs-string">"link.path"</span>
-     <span class="hljs-attr">routerLinkActive</span> #<span class="hljs-attr">rla</span>=<span class="hljs-string">"routerLinkActive"</span>
-     [<span class="hljs-attr">active</span>]=<span class="hljs-string">"rla.isActive"</span>&gt;</span>
-    {{link.label}}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+ <div material-docs-example="tab-nav-bar-basic"
+                               file="tab-nav-bar-basic-example.html"
+                               region="mat-tab-nav"></div>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span></code></pre>
 <p>The <code>tab-nav-bar</code> is not tied to any particular router; it works with normal <code>&lt;a&gt;</code> elements and uses
 the <code>active</code> property to determine which tab is currently active. The corresponding
 <code>&lt;router-outlet&gt;</code> can be placed anywhere in the view.</p>
@@ -89,18 +68,10 @@ rely on DOM calculations during initialization, it is advised
 to lazy load the tab&#39;s content.</p>
 <p>Tab contents can be lazy loaded by declaring the body in a <code>ng-template</code>
 with the <code>matTabContent</code> attribute.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"First"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matTabContent</span>&gt;</span>
-      The First Content
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Second"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matTabContent</span>&gt;</span>
-      The Second Content
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span></code></pre>
+ <div material-docs-example="tab-group-lazy-loaded"
+                               file="tab-group-lazy-loaded-example.html"
+                               region="mat-tab-content"></div>
+
 
         <h3 id="label-alignment" class="docs-header-link">
           <span header-link="label-alignment"></span>
@@ -108,7 +79,9 @@ with the <code>matTabContent</code> attribute.</p>
         </h3>
       <p>If you want to align the tab labels in the center or towards the end of the container, you can
 do so using the <code>[mat-align-tabs]</code> attribute.</p>
-<div material-docs-example="tab-group-align"></div>
+ <div material-docs-example="tab-group-align"
+                               file="tab-group-align-example.html"
+                               region="align-start"></div>
 
 
         <h3 id="controlling-the-tab-animation" class="docs-header-link">
@@ -118,7 +91,9 @@ do so using the <code>[mat-align-tabs]</code> attribute.</p>
       <p>You can control the duration of the tabs&#39; animation using the <code>animationDuration</code> input. If you
 want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>. The
 duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injection token.</p>
-<div material-docs-example="tab-group-animations"></div>
+ <div material-docs-example="tab-group-animations"
+                               file="tab-group-animations-example.html"
+                               region="slow-animation-duration"></div>
 
 
         <h3 id="accessibility" class="docs-header-link">

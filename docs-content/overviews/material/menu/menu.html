@@ -3,14 +3,10 @@
 
 <p>By itself, the <code>&lt;mat-menu&gt;</code> element does not render anything. The menu is attached to and opened
 via application of the <code>matMenuTriggerFor</code> directive:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+<div material-docs-example="menu-overview"
+                               file="menu-overview-example.html"
+                               region="mat-menu-trigger-for"></div>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
 
         <h3 id="toggling-the-menu-programmatically" class="docs-header-link">
           <span header-link="toggling-the-menu-programmatically"></span>
@@ -31,21 +27,10 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
           Icons
         </h3>
       <p>Menus support displaying <code>mat-icon</code> elements before the menu item text.</p>
-<p><em>my-comp.html</em></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">menu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>dialpad<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Redial<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span> <span class="hljs-attr">disabled</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>voicemail<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Check voicemail<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>notifications_off<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Disable alerts<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span></code></pre>
+<div material-docs-example="menu-icons"
+                               file="menu-icons-example.html"
+                               region="undefined"></div>
+
 
         <h3 id="customizing-menu-position" class="docs-header-link">
           <span header-link="customizing-menu-position"></span>
@@ -55,15 +40,9 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
 its trigger. The position can be changed using the <code>xPosition</code> (<code>before | after</code>) and <code>yPosition</code>
 (<code>above | below</code>) attributes. The menu can be forced to overlap the trigger using the
 <code>overlapTrigger</code> attribute.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span> <span class="hljs-attr">yPosition</span>=<span class="hljs-string">"above"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-<div material-docs-example="menu-position"></div>
+<div material-docs-example="menu-position"
+                               file="menu-position-example.html"
+                               region="menu-position"></div>
 
 
         <h3 id="nested-menu" class="docs-header-link">
@@ -73,21 +52,9 @@ its trigger. The position can be changed using the <code>xPosition</code> (<code
       <p>Material supports the ability for an <code>mat-menu-item</code> to open a sub-menu. To do so, you have to define
 your root menu and sub-menus, in addition to setting the <code>[matMenuTriggerFor]</code> on the <code>mat-menu-item</code>
 that should trigger the sub-menu:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">rootMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"subMenu"</span>&gt;</span>Power<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>System settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">subMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Shut down<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Restart<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Hibernate<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"rootMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-<div material-docs-example="menu-nested"></div>
+<div material-docs-example="menu-nested"
+                               file="menu-nested-example.html"
+                               region="sub-menu"></div>
 
 
         <h3 id="lazy-rendering" class="docs-header-link">
