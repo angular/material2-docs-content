@@ -11,7 +11,7 @@
         function ExpansionExpandCollapseAllExample() {
         }
         ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
-        ExpansionExpandCollapseAllExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-toggle-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
+        ExpansionExpandCollapseAllExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-expand-collapse-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵviewQuery(i1$1.MatAccordion, true);
             } if (rf & 2) {
                 var _t;
@@ -106,7 +106,7 @@
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
             type: i0.Component,
             args: [{
-                    selector: 'expansion-toggle-all-example',
+                    selector: 'expansion-expand-collapse-all-example',
                     templateUrl: 'expansion-expand-collapse-all-example.html',
                     styleUrls: ['expansion-expand-collapse-all-example.css'],
                 }]

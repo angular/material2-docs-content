@@ -1,6 +1,7 @@
 import { CdkStep, CdkStepper, CdkStepperPrevious, CdkStepperNext, CdkStepperModule } from '@angular/cdk/stepper';
 import { NgTemplateOutlet, NgForOf, NgClass, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵpureFunction1, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵsetClassMetadata, ɵɵProvidersFeature, ɵɵInheritDefinitionFeature, ɵɵelementContainer, ɵɵtemplate, ɵɵtextInterpolate2, ɵɵstyleProp, ɵɵgetInheritedFactory, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵpureFunction1, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵsetClassMetadata, ɵɵProvidersFeature, ɵɵInheritDefinitionFeature, ɵɵelementContainer, ɵɵtemplate, ɵɵtextInterpolate2, ɵɵstyleProp, ɵɵgetInheritedFactory, ɵɵclassProp, ɵɵdirectiveInject, ɵɵelement, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { Validators, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, ReactiveFormsModule } from '@angular/forms';
 
 /**
  * @fileoverview added by tsickle
@@ -120,6 +121,175 @@ const ɵCustomStepper_BaseFactory = ɵɵgetInheritedFactory(CustomStepper);
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/stepper/cdk-linear-stepper-with-form/cdk-linear-stepper-with-form-example.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+function CustomLinearStepper_button_8_Template(rf, ctx) { if (rf & 1) {
+    const _r9 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "button", 6);
+    ɵɵlistener("click", function CustomLinearStepper_button_8_Template_button_click_0_listener() { ɵɵrestoreView(_r9); const i_r7 = ctx.index; const ctx_r8 = ɵɵnextContext(); return ctx_r8.selectStepByIndex(i_r7); });
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const i_r7 = ctx.index;
+    const ctx_r5 = ɵɵnextContext();
+    ɵɵclassProp("example-active", ctx_r5.selectedIndex === i_r7);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" Step ", i_r7 + 1, " ");
+} }
+/**
+ * \@title A custom CDK linear stepper with forms
+ */
+class CdkLinearStepperWithFormExample {
+    /**
+     * @param {?} _formBuilder
+     */
+    constructor(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isLinear = true;
+        this.firstFormGroup = this._formBuilder.group({
+            firstControl: ['', Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondControl: ['', Validators.required]
+        });
+    }
+    /**
+     * @return {?}
+     */
+    toggleLinearity() {
+        this.isLinear = !this.isLinear;
+    }
+}
+CdkLinearStepperWithFormExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-linear-stepper-with-form',
+                templateUrl: './cdk-linear-stepper-with-form-example.html',
+                styleUrls: ['./cdk-linear-stepper-with-form-example.css']
+            },] },
+];
+/** @nocollapse */
+CdkLinearStepperWithFormExample.ctorParameters = () => [
+    { type: FormBuilder }
+];
+/** @nocollapse */ CdkLinearStepperWithFormExample.ɵfac = function CdkLinearStepperWithFormExample_Factory(t) { return new (t || CdkLinearStepperWithFormExample)(ɵɵdirectiveInject(FormBuilder)); };
+/** @nocollapse */ CdkLinearStepperWithFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkLinearStepperWithFormExample, selectors: [["cdk-linear-stepper-with-form"]], decls: 13, vars: 6, consts: [[3, "linear"], [3, "stepControl"], ["for", "stepOneInput"], [3, "formGroup"], ["placeholder", "Input", "formControlName", "firstControl", "id", "stepOneInput", "required", ""], ["for", "stepTwoInput"], ["placeholder", "Input", "formControlName", "secondControl", "id", "stepTwoInput", "required", ""], [1, "example-toggle-linear-button", 3, "click"]], template: function CdkLinearStepperWithFormExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "example-custom-linear-stepper", 0);
+        ɵɵelementStart(1, "cdk-step", 1);
+        ɵɵelementStart(2, "label", 2);
+        ɵɵtext(3, "Step 1 input");
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "form", 3);
+        ɵɵelement(5, "input", 4);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "cdk-step", 1);
+        ɵɵelementStart(7, "label", 5);
+        ɵɵtext(8, "Step 2 input");
+        ɵɵelementEnd();
+        ɵɵelementStart(9, "form", 3);
+        ɵɵelement(10, "input", 6);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(11, "button", 7);
+        ɵɵlistener("click", function CdkLinearStepperWithFormExample_Template_button_click_11_listener() { return ctx.toggleLinearity(); });
+        ɵɵtext(12);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("linear", ctx.isLinear);
+        ɵɵadvance(1);
+        ɵɵproperty("stepControl", ctx.firstFormGroup);
+        ɵɵadvance(3);
+        ɵɵproperty("formGroup", ctx.firstFormGroup);
+        ɵɵadvance(2);
+        ɵɵproperty("stepControl", ctx.secondFormGroup);
+        ɵɵadvance(3);
+        ɵɵproperty("formGroup", ctx.secondFormGroup);
+        ɵɵadvance(3);
+        ɵɵtextInterpolate1(" ", ctx.isLinear ? "Disable linear mode" : "Enable linear mode", "\n");
+    } }, directives: function () { return [CustomLinearStepper, CdkStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
+        type: Component,
+        args: [{
+                selector: 'cdk-linear-stepper-with-form',
+                templateUrl: './cdk-linear-stepper-with-form-example.html',
+                styleUrls: ['./cdk-linear-stepper-with-form-example.css']
+            }]
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
+if (false) {
+    /** @type {?} */
+    CdkLinearStepperWithFormExample.prototype.isLinear;
+    /** @type {?} */
+    CdkLinearStepperWithFormExample.prototype.firstFormGroup;
+    /** @type {?} */
+    CdkLinearStepperWithFormExample.prototype.secondFormGroup;
+    /**
+     * @type {?}
+     * @private
+     */
+    CdkLinearStepperWithFormExample.prototype._formBuilder;
+}
+/**
+ * Custom CDK linear stepper component
+ */
+class CustomLinearStepper extends CdkStepper {
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    selectStepByIndex(index) {
+        this.selectedIndex = index;
+    }
+}
+CustomLinearStepper.decorators = [
+    { type: Component, args: [{
+                selector: 'example-custom-linear-stepper',
+                templateUrl: './example-custom-linear-stepper.html',
+                styleUrls: ['./example-custom-linear-stepper.css'],
+                providers: [{ provide: CdkStepper, useExisting: CustomLinearStepper }]
+            },] },
+];
+/** @nocollapse */ CustomLinearStepper.ɵfac = function CustomLinearStepper_Factory(t) { return ɵCustomLinearStepper_BaseFactory(t || CustomLinearStepper); };
+/** @nocollapse */ CustomLinearStepper.ɵcmp = ɵɵdefineComponent({ type: CustomLinearStepper, selectors: [["example-custom-linear-stepper"]], features: [ɵɵProvidersFeature([{ provide: CdkStepper, useExisting: CustomLinearStepper }]), ɵɵInheritDefinitionFeature], decls: 11, vars: 4, consts: [[1, "example-container"], [3, "ngTemplateOutlet"], [1, "example-step-navigation-bar"], ["cdkStepperPrevious", "", 1, "example-nav-button"], ["class", "example-step", 3, "example-active", "click", 4, "ngFor", "ngForOf"], ["cdkStepperNext", "", 1, "example-nav-button"], [1, "example-step", 3, "click"]], template: function CustomLinearStepper_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "section", 0);
+        ɵɵelementStart(1, "header");
+        ɵɵelementStart(2, "h2");
+        ɵɵtext(3);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelement(4, "div", 1);
+        ɵɵelementStart(5, "footer", 2);
+        ɵɵelementStart(6, "button", 3);
+        ɵɵtext(7, "\u2190");
+        ɵɵelementEnd();
+        ɵɵtemplate(8, CustomLinearStepper_button_8_Template, 2, 3, "button", 4);
+        ɵɵelementStart(9, "button", 5);
+        ɵɵtext(10, "\u2192");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(3);
+        ɵɵtextInterpolate2("Step ", ctx.selectedIndex + 1, "/", ctx.steps.length, "");
+        ɵɵadvance(1);
+        ɵɵproperty("ngTemplateOutlet", ctx.selected ? ctx.selected.content : null);
+        ɵɵadvance(4);
+        ɵɵproperty("ngForOf", ctx.steps);
+    } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid blue;\n  color: blue;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n}"] });
+const ɵCustomLinearStepper_BaseFactory = ɵɵgetInheritedFactory(CustomLinearStepper);
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CustomLinearStepper, [{
+        type: Component,
+        args: [{
+                selector: 'example-custom-linear-stepper',
+                templateUrl: './example-custom-linear-stepper.html',
+                styleUrls: ['./example-custom-linear-stepper.css'],
+                providers: [{ provide: CdkStepper, useExisting: CustomLinearStepper }]
+            }]
+    }], null, null); })();
+
+/**
+ * @fileoverview added by tsickle
  * Generated from: src/components-examples/cdk/stepper/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
@@ -127,6 +297,8 @@ const ɵCustomStepper_BaseFactory = ɵɵgetInheritedFactory(CustomStepper);
 const EXAMPLES = [
     CdkCustomStepperWithoutFormExample,
     CustomStepper,
+    CdkLinearStepperWithFormExample,
+    CustomLinearStepper
 ];
 class CdkStepperExamplesModule {
 }
@@ -135,6 +307,7 @@ CdkStepperExamplesModule.decorators = [
                 imports: [
                     CdkStepperModule,
                     CommonModule,
+                    ReactiveFormsModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -145,17 +318,24 @@ CdkStepperExamplesModule.decorators = [
 /** @nocollapse */ CdkStepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkStepperExamplesModule_Factory(t) { return new (t || CdkStepperExamplesModule)(); }, imports: [[
             CdkStepperModule,
             CommonModule,
+            ReactiveFormsModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkStepperExamplesModule, { declarations: [CdkCustomStepperWithoutFormExample,
-        CustomStepper], imports: [CdkStepperModule,
-        CommonModule], exports: [CdkCustomStepperWithoutFormExample,
-        CustomStepper] }); })();
+        CustomStepper,
+        CdkLinearStepperWithFormExample,
+        CustomLinearStepper], imports: [CdkStepperModule,
+        CommonModule,
+        ReactiveFormsModule], exports: [CdkCustomStepperWithoutFormExample,
+        CustomStepper,
+        CdkLinearStepperWithFormExample,
+        CustomLinearStepper] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkStepperExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
                     CdkStepperModule,
                     CommonModule,
+                    ReactiveFormsModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -163,5 +343,5 @@ CdkStepperExamplesModule.decorators = [
             }]
     }], null, null); })();
 
-export { CdkCustomStepperWithoutFormExample, CdkStepperExamplesModule, CustomStepper };
+export { CdkCustomStepperWithoutFormExample, CdkLinearStepperWithFormExample, CdkStepperExamplesModule, CustomLinearStepper, CustomStepper };
 //# sourceMappingURL=stepper.js.map

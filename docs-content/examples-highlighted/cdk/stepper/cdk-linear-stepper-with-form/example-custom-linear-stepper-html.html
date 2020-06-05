@@ -1,0 +1,20 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Step {{selectedIndex + 1}}/{{steps.length}}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">ngTemplateOutlet</span>]=<span class="hljs-string">"selected ? selected.content : null"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-step-navigation-bar"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-nav-button"</span> <span class="hljs-attr">cdkStepperPrevious</span>&gt;</span>&amp;larr;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"example-step"</span>
+      [<span class="hljs-attr">class.example-active</span>]=<span class="hljs-string">"selectedIndex === i"</span>
+      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let step of steps; let i = index"</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">"selectStepByIndex(i)"</span>
+    &gt;</span>
+      Step {{ i + 1 }}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-nav-button"</span> <span class="hljs-attr">cdkStepperNext</span>&gt;</span>&amp;rarr;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>

@@ -19,7 +19,7 @@ class ExpansionExpandCollapseAllExample {
 }
 ExpansionExpandCollapseAllExample.decorators = [
     { type: Component, args: [{
-                selector: 'expansion-toggle-all-example',
+                selector: 'expansion-expand-collapse-all-example',
                 templateUrl: 'expansion-expand-collapse-all-example.html',
                 styleUrls: ['expansion-expand-collapse-all-example.css'],
             },] },
@@ -28,7 +28,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
     accordion: [{ type: ViewChild, args: [MatAccordion,] }]
 };
 /** @nocollapse */ ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
-/** @nocollapse */ ExpansionExpandCollapseAllExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-toggle-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ExpansionExpandCollapseAllExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-expand-collapse-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(MatAccordion, true);
     } if (rf & 2) {
         var _t;
@@ -121,7 +121,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
         type: Component,
         args: [{
-                selector: 'expansion-toggle-all-example',
+                selector: 'expansion-expand-collapse-all-example',
                 templateUrl: 'expansion-expand-collapse-all-example.html',
                 styleUrls: ['expansion-expand-collapse-all-example.css'],
             }]
