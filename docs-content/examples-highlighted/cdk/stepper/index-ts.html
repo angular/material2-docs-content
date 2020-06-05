@@ -5,22 +5,32 @@
   CdkCustomStepperWithoutFormExample,
   CustomStepper
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-custom-stepper-without-form/cdk-custom-stepper-without-form-example'</span>;
+<span class="hljs-keyword">import</span> {
+    CdkLinearStepperWithFormExample,
+    CustomLinearStepper
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-linear-stepper-with-form/cdk-linear-stepper-with-form-example'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-keyword">export</span> {
   CdkCustomStepperWithoutFormExample,
   CustomStepper,
+  CdkLinearStepperWithFormExample,
+  CustomLinearStepper
 };
 
 <span class="hljs-keyword">const</span> EXAMPLES = [
   CdkCustomStepperWithoutFormExample,
   CustomStepper,
+  CdkLinearStepperWithFormExample,
+  CustomLinearStepper
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
-    CdkStepperModule,
-    CommonModule,
-  ],
+    imports: [
+        CdkStepperModule,
+        CommonModule,
+        ReactiveFormsModule,
+    ],
   declarations: EXAMPLES,
   exports: EXAMPLES,
   entryComponents: EXAMPLES,

@@ -380,6 +380,21 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/stepper"
         }
     },
+    "cdk-linear-stepper-with-form": {
+        "title": "A custom CDK linear stepper with forms",
+        "componentName": "CdkLinearStepperWithFormExample",
+        "additionalFiles": [
+            "./example-custom-linear-stepper.html",
+            "./example-custom-linear-stepper.css"
+        ],
+        "additionalComponents": [
+            "CustomLinearStepper"
+        ],
+        "module": {
+            "name": "CdkStepperExamplesModule",
+            "importSpecifier": "cdk/stepper"
+        }
+    },
     "cdk-table-basic-flex": {
         "title": "Basic use of `<cdk-table>` (uses display flex)",
         "componentName": "CdkTableBasicFlexExample",

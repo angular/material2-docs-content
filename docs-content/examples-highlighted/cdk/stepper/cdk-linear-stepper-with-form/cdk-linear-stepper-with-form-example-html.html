@@ -1,0 +1,17 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">example-custom-linear-stepper</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">"isLinear"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"stepOneInput"</span>&gt;</span>Step 1 input<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Input"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"firstControl"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stepOneInput"</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"secondFormGroup"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"stepTwoInput"</span>&gt;</span>Step 2 input<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"secondFormGroup"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Input"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"secondControl"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stepTwoInput"</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">example-custom-linear-stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-toggle-linear-button"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"toggleLinearity()"</span>&gt;</span>
+  {{isLinear ? 'Disable linear mode' : 'Enable linear mode'}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
