@@ -21,13 +21,13 @@ the header, usually through keyboard navigation.</p>
         </h3>
       <p>If a tab&#39;s label is only text then the simple tab-group API can be used.</p>
 <div material-docs-example="tab-group-basic"
-                               file="tab-group-basic.html"
-                               region="undefined"></div>
+                             file="tab-group-basic.html"
+                             region="undefined"></div>
 
 <p>For more complex labels, add a template with the <code>mat-tab-label</code> directive inside the <code>mat-tab</code>.</p>
 <div material-docs-example="tab-group-custom-label"
-                               file="tab-group-custom-label-example.html"
-                               region="label-directive"></div>
+                             file="tab-group-custom-label-example.html"
+                             region="label-directive"></div>
 
 
         <h3 id="dynamic-height" class="docs-header-link">
@@ -38,8 +38,8 @@ the header, usually through keyboard navigation.</p>
 change this, set the <code>dynamicHeight</code> input to true. The tab body will animate its height according
  to the height of the active tab.</p>
  <div material-docs-example="tab-group-dynamic-height"
-                               file="tab-group-dynamic-height-example.html"
-                               region="dynamic-height"></div>
+                             file="tab-group-dynamic-height-example.html"
+                             region="dynamic-height"></div>
 
 
         <h3 id="tabs-and-navigation" class="docs-header-link">
@@ -49,8 +49,8 @@ change this, set the <code>dynamicHeight</code> input to true. The tab body will
       <p>While <code>&lt;mat-tab-group&gt;</code> is used to switch between views within a single route, <code>&lt;nav mat-tab-nav-bar&gt;</code>
 provides a tab-like UI for navigating between routes.</p>
  <div material-docs-example="tab-nav-bar-basic"
-                               file="tab-nav-bar-basic-example.html"
-                               region="mat-tab-nav"></div>
+                             file="tab-nav-bar-basic-example.html"
+                             region="mat-tab-nav"></div>
 
 <p>The <code>tab-nav-bar</code> is not tied to any particular router; it works with normal <code>&lt;a&gt;</code> elements and uses
 the <code>active</code> property to determine which tab is currently active. The corresponding
@@ -69,8 +69,8 @@ to lazy load the tab&#39;s content.</p>
 <p>Tab contents can be lazy loaded by declaring the body in a <code>ng-template</code>
 with the <code>matTabContent</code> attribute.</p>
  <div material-docs-example="tab-group-lazy-loaded"
-                               file="tab-group-lazy-loaded-example.html"
-                               region="mat-tab-content"></div>
+                             file="tab-group-lazy-loaded-example.html"
+                             region="mat-tab-content"></div>
 
 
         <h3 id="label-alignment" class="docs-header-link">
@@ -80,8 +80,8 @@ with the <code>matTabContent</code> attribute.</p>
       <p>If you want to align the tab labels in the center or towards the end of the container, you can
 do so using the <code>[mat-align-tabs]</code> attribute.</p>
  <div material-docs-example="tab-group-align"
-                               file="tab-group-align-example.html"
-                               region="align-start"></div>
+                             file="tab-group-align-example.html"
+                             region="align-start"></div>
 
 
         <h3 id="controlling-the-tab-animation" class="docs-header-link">
@@ -92,8 +92,8 @@ do so using the <code>[mat-align-tabs]</code> attribute.</p>
 want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>. The
 duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injection token.</p>
  <div material-docs-example="tab-group-animations"
-                               file="tab-group-animations-example.html"
-                               region="slow-animation-duration"></div>
+                             file="tab-group-animations-example.html"
+                             region="slow-animation-duration"></div>
 
 
         <h3 id="accessibility" class="docs-header-link">
