@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/chips",
   "main": "../../bundles/components-examples-material-chips.umd.js",
   "fesm2015": "../../fesm2015/material/chips.js",
-  "esm2015": "../../esm2015/material/chips/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/chips/chips_public_index.js",
+  "typings": "./chips_public_index.d.ts",
   "module": "../../fesm2015/material/chips.js",
   "es2015": "../../fesm2015/material/chips.js"
 }

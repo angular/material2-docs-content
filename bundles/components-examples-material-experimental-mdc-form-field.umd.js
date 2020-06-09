@@ -477,6 +477,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.FormFieldCustomControlExample = FormFieldCustomControlExample;
     exports.MdcFormFieldExamplesModule = MdcFormFieldExamplesModule;
     exports.MyTelInput = MyTelInput;

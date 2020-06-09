@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/sidenav",
   "main": "../../bundles/components-examples-material-sidenav.umd.js",
   "fesm2015": "../../fesm2015/material/sidenav.js",
-  "esm2015": "../../esm2015/material/sidenav/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/sidenav/sidenav_public_index.js",
+  "typings": "./sidenav_public_index.d.ts",
   "module": "../../fesm2015/material/sidenav.js",
   "es2015": "../../fesm2015/material/sidenav.js"
 }

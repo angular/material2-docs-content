@@ -710,6 +710,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkScrollingExamplesModule = CdkScrollingExamplesModule;
     exports.CdkVirtualScrollContextExample = CdkVirtualScrollContextExample;
     exports.CdkVirtualScrollCustomStrategyExample = CdkVirtualScrollCustomStrategyExample;

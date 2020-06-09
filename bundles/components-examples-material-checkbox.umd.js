@@ -221,6 +221,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CheckboxConfigurableExample = CheckboxConfigurableExample;
     exports.CheckboxExamplesModule = CheckboxExamplesModule;
     exports.CheckboxOverviewExample = CheckboxOverviewExample;

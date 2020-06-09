@@ -74,5 +74,9 @@ let BadgeExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { BadgeExamplesModule, BadgeOverviewExample };
 //# sourceMappingURL=badge.js.map

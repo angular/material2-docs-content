@@ -136,6 +136,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.SortExamplesModule = SortExamplesModule;
     exports.SortOverviewExample = SortOverviewExample;
 

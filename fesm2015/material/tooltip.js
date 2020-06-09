@@ -432,5 +432,9 @@ let TooltipExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample };
 //# sourceMappingURL=tooltip.js.map

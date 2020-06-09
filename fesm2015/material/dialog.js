@@ -464,5 +464,9 @@ let DialogExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogExamplesModule, DialogOverviewExample, DialogOverviewExampleDialog };
 //# sourceMappingURL=dialog.js.map

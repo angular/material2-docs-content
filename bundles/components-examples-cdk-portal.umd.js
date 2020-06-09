@@ -100,6 +100,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkPortalExamplesModule = CdkPortalExamplesModule;
     exports.CdkPortalOverviewExample = CdkPortalOverviewExample;
     exports.ComponentPortalExample = ComponentPortalExample;

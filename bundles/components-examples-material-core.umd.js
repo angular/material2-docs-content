@@ -134,6 +134,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CoreExamplesModule = CoreExamplesModule;
     exports.ElevationOverviewExample = ElevationOverviewExample;
     exports.RippleOverviewExample = RippleOverviewExample;

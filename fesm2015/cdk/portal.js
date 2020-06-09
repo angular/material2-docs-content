@@ -99,5 +99,9 @@ let CdkPortalExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CdkPortalExamplesModule, CdkPortalOverviewExample, ComponentPortalExample };
 //# sourceMappingURL=portal.js.map

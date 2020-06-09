@@ -416,6 +416,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.TooltipAutoHideExample = TooltipAutoHideExample;
     exports.TooltipCustomClassExample = TooltipCustomClassExample;
     exports.TooltipDelayExample = TooltipDelayExample;

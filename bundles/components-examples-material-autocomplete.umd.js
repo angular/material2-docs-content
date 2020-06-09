@@ -581,6 +581,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.AutocompleteAutoActiveFirstOptionExample = AutocompleteAutoActiveFirstOptionExample;
     exports.AutocompleteDisplayExample = AutocompleteDisplayExample;
     exports.AutocompleteExamplesModule = AutocompleteExamplesModule;

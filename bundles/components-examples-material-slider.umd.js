@@ -268,6 +268,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.SliderConfigurableExample = SliderConfigurableExample;
     exports.SliderExamplesModule = SliderExamplesModule;
     exports.SliderFormattingExample = SliderFormattingExample;

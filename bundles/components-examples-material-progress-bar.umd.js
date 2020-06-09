@@ -261,6 +261,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ProgressBarBufferExample = ProgressBarBufferExample;
     exports.ProgressBarConfigurableExample = ProgressBarConfigurableExample;
     exports.ProgressBarDeterminateExample = ProgressBarDeterminateExample;

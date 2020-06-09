@@ -1259,6 +1259,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkPopoverEditCdkTableExample = CdkPopoverEditCdkTableExample;
     exports.CdkPopoverEditCdkTableFlexExample = CdkPopoverEditCdkTableFlexExample;
     exports.CdkPopoverEditCellSpanVanillaTableExample = CdkPopoverEditCellSpanVanillaTableExample;

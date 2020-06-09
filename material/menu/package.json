@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/menu",
   "main": "../../bundles/components-examples-material-menu.umd.js",
   "fesm2015": "../../fesm2015/material/menu.js",
-  "esm2015": "../../esm2015/material/menu/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/menu/menu_public_index.js",
+  "typings": "./menu_public_index.d.ts",
   "module": "../../fesm2015/material/menu.js",
   "es2015": "../../fesm2015/material/menu.js"
 }

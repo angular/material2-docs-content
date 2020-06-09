@@ -273,5 +273,9 @@ let SliderExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { SliderConfigurableExample, SliderExamplesModule, SliderFormattingExample, SliderOverviewExample };
 //# sourceMappingURL=slider.js.map

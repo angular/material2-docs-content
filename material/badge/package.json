@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/badge",
   "main": "../../bundles/components-examples-material-badge.umd.js",
   "fesm2015": "../../fesm2015/material/badge.js",
-  "esm2015": "../../esm2015/material/badge/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/badge/badge_public_index.js",
+  "typings": "./badge_public_index.d.ts",
   "module": "../../fesm2015/material/badge.js",
   "es2015": "../../fesm2015/material/badge.js"
 }

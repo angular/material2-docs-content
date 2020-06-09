@@ -68,6 +68,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkOverlayBasicExample = CdkOverlayBasicExample;
     exports.CdkOverlayExamplesModule = CdkOverlayExamplesModule;
 

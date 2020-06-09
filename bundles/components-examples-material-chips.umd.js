@@ -390,6 +390,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ChipsAutocompleteExample = ChipsAutocompleteExample;
     exports.ChipsDragDropExample = ChipsDragDropExample;
     exports.ChipsExamplesModule = ChipsExamplesModule;

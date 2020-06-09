@@ -526,6 +526,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.DefaultEnabledColumnResizeDemo = DefaultEnabledColumnResizeDemo;
     exports.DefaultEnabledColumnResizeDemoModule = DefaultEnabledColumnResizeDemoModule;
     exports.DefaultEnabledColumnResizeFlexDemo = DefaultEnabledColumnResizeFlexDemo;

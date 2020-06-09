@@ -75,6 +75,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.BadgeExamplesModule = BadgeExamplesModule;
     exports.BadgeOverviewExample = BadgeOverviewExample;
 

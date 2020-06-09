@@ -110,6 +110,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkPlatformExamplesModule = CdkPlatformExamplesModule;
     exports.CdkPlatformOverviewExample = CdkPlatformOverviewExample;
 

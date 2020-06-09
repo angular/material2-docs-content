@@ -254,6 +254,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkTextFieldExamplesModule = CdkTextFieldExamplesModule;
     exports.TextFieldAutofillDirectiveExample = TextFieldAutofillDirectiveExample;
     exports.TextFieldAutofillMonitorExample = TextFieldAutofillMonitorExample;

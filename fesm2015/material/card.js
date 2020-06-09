@@ -101,5 +101,9 @@ let CardExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CardExamplesModule, CardFancyExample, CardOverviewExample };
 //# sourceMappingURL=card.js.map

@@ -239,5 +239,9 @@ let SlideToggleExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { SlideToggleConfigurableExample, SlideToggleExamplesModule, SlideToggleFormsExample, SlideToggleOverviewExample };
 //# sourceMappingURL=slide-toggle.js.map

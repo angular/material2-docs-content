@@ -260,6 +260,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ListExamplesModule = ListExamplesModule;
     exports.ListOverviewExample = ListOverviewExample;
     exports.ListSectionsExample = ListSectionsExample;
