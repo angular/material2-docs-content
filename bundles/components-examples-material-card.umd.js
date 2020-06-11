@@ -103,6 +103,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CardExamplesModule = CardExamplesModule;
     exports.CardFancyExample = CardFancyExample;
     exports.CardOverviewExample = CardOverviewExample;

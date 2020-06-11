@@ -83,6 +83,9 @@ trapped. When using the tab key, focus will move through this region and wrap ar
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusInitial</span>&gt;</span>Initially focused<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusRegionEnd</span>&gt;</span>Focus region end<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+<p><strong>Note:</strong> If you&#39;re using <code>cdkFocusInitial</code> together with the <code>CdkTrapFocus</code> directive, nothing
+will happen unless you&#39;ve enabled the <code>cdkTrapFocusAutoCapture</code> option as well. This is due to
+<code>CdkTrapFocus</code> not capturing focus on initialization by default.</p>
 <h2>InteractivityChecker</h2><p><code>InteractivityChecker</code> is used to check the interactivity of an element, capturing disabled,
 visible, tabbable, and focusable states for accessibility purposes. See the API docs for more
 details.</p>

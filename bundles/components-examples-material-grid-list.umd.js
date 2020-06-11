@@ -112,6 +112,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.GridListDynamicExample = GridListDynamicExample;
     exports.GridListExamplesModule = GridListExamplesModule;
     exports.GridListOverviewExample = GridListOverviewExample;

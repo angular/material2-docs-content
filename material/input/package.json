@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/input",
   "main": "../../bundles/components-examples-material-input.umd.js",
   "fesm2015": "../../fesm2015/material/input.js",
-  "esm2015": "../../esm2015/material/input/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/input/input_public_index.js",
+  "typings": "./input_public_index.d.ts",
   "module": "../../fesm2015/material/input.js",
   "es2015": "../../fesm2015/material/input.js"
 }

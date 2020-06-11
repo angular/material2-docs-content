@@ -9,19 +9,17 @@ the calendar. It is made up of several components and directives that work toget
         </h3>
       <p>A datepicker is composed of a text input and a calendar pop-up, connected via the <code>matDatepicker</code>
 property on the text input.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span></code></pre>
-<p>An optional datepicker toggle button is available. A toggle can be added to the example above:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span></code></pre>
+<p>There is also an optional datepicker toggle button that gives the user an easy way to open the datepicker pop-up.</p>
+<div material-docs-example="datepicker-overview"
+                             file="datepicker-overview-example.html"
+                             region="toggle"></div>
+
 <p>This works exactly the same with an input that is part of an <code>&lt;mat-form-field&gt;</code> and the toggle
 can easily be used as a prefix or suffix on the Material input:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
+<div material-docs-example="datepicker-overview"
+                             file="datepicker-overview-example.html"
+                             region="undefined"></div>
+
 <p>If you want to customize the icon that is rendered inside the <code>mat-datepicker-toggle</code>, you can do so
 by using the <code>matDatepickerToggleIcon</code> directive:</p>
 <div material-docs-example="datepicker-custom-icon"></div>

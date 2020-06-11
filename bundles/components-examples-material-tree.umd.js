@@ -1187,6 +1187,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.TreeChecklistExample = TreeChecklistExample;
     exports.TreeDynamicExample = TreeDynamicExample;
     exports.TreeExamplesModule = TreeExamplesModule;

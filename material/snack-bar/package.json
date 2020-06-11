@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/snack-bar",
   "main": "../../bundles/components-examples-material-snack-bar.umd.js",
   "fesm2015": "../../fesm2015/material/snack-bar.js",
-  "esm2015": "../../esm2015/material/snack-bar/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/snack-bar/snack-bar_public_index.js",
+  "typings": "./snack-bar_public_index.d.ts",
   "module": "../../fesm2015/material/snack-bar.js",
   "es2015": "../../fesm2015/material/snack-bar.js"
 }

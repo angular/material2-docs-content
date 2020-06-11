@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/cdk/clipboard",
   "main": "../../bundles/components-examples-cdk-clipboard.umd.js",
   "fesm2015": "../../fesm2015/cdk/clipboard.js",
-  "esm2015": "../../esm2015/cdk/clipboard/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/cdk/clipboard/clipboard_public_index.js",
+  "typings": "./clipboard_public_index.d.ts",
   "module": "../../fesm2015/cdk/clipboard.js",
   "es2015": "../../fesm2015/cdk/clipboard.js"
 }

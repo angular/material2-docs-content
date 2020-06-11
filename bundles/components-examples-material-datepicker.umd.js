@@ -1229,6 +1229,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.DateRangePickerComparisonExample = DateRangePickerComparisonExample;
     exports.DateRangePickerFormsExample = DateRangePickerFormsExample;
     exports.DateRangePickerOverviewExample = DateRangePickerOverviewExample;

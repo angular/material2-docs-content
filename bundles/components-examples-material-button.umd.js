@@ -470,6 +470,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ButtonExamplesModule = ButtonExamplesModule;
     exports.ButtonOverviewExample = ButtonOverviewExample;
     exports.ButtonTypesExample = ButtonTypesExample;

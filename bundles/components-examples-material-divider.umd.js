@@ -65,6 +65,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.DividerExamplesModule = DividerExamplesModule;
     exports.DividerOverviewExample = DividerOverviewExample;
 

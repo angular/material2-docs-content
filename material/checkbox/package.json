@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/checkbox",
   "main": "../../bundles/components-examples-material-checkbox.umd.js",
   "fesm2015": "../../fesm2015/material/checkbox.js",
-  "esm2015": "../../esm2015/material/checkbox/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/checkbox/checkbox_public_index.js",
+  "typings": "./checkbox_public_index.d.ts",
   "module": "../../fesm2015/material/checkbox.js",
   "es2015": "../../fesm2015/material/checkbox.js"
 }

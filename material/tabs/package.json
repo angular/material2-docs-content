@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/tabs",
   "main": "../../bundles/components-examples-material-tabs.umd.js",
   "fesm2015": "../../fesm2015/material/tabs.js",
-  "esm2015": "../../esm2015/material/tabs/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/tabs/tabs_public_index.js",
+  "typings": "./tabs_public_index.d.ts",
   "module": "../../fesm2015/material/tabs.js",
   "es2015": "../../fesm2015/material/tabs.js"
 }

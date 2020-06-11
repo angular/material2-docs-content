@@ -258,6 +258,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkA11yExamplesModule = CdkA11yExamplesModule;
     exports.FocusMonitorDirectivesExample = FocusMonitorDirectivesExample;
     exports.FocusMonitorFocusViaExample = FocusMonitorFocusViaExample;

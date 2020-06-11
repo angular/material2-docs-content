@@ -4,8 +4,16 @@
           <span header-link="simple-autocomplete"></span>
           Simple autocomplete
         </h3>
-      <p>Start by adding a regular <code>matInput</code> to your template. Let&#39;s assume you&#39;re using the <code>formControl</code>
-directive from <code>ReactiveFormsModule</code> to track the value of the input.</p>
+      <p>Start by creating the autocomplete panel and the options displayed inside it. Each option should be
+defined by a <code>mat-option</code> tag. Set each option&#39;s value property to whatever you&#39;d like the value
+of the text input to be when that option is selected.</p>
+<div material-docs-example="autocomplete-simple"
+                             file="autocomplete-simple-example.html"
+                             region="mat-autocomplete"></div>
+
+<p>Next, create the input and set the <code>matAutocomplete</code> input to refer to the template reference we assigned 
+to the autocomplete. Let&#39;s assume you&#39;re using the <code>formControl</code> directive from <code>ReactiveFormsModule</code> to 
+track the value of the input.</p>
 <blockquote>
 <p>Note: It is possible to use template-driven forms instead, if you prefer. We use reactive forms
 in this example because it makes subscribing to changes in the input&#39;s value easy. For this
@@ -13,31 +21,12 @@ example, be sure to import <code>ReactiveFormsModule</code> from <code>@angular/
 If you are unfamiliar with using reactive forms, you can read more about the subject in the
 <a href="https://angular.io/guide/reactive-forms">Angular documentation</a>.</p>
 </blockquote>
-<p><em>my-comp.html</em></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
-<p>Next, create the autocomplete panel and the options displayed inside it. Each option should be
-defined by a <code>mat-option</code> tag. Set each option&#39;s value property to whatever you&#39;d like the value
-of the text input to be upon that option&#39;s selection.</p>
-<p><em>my-comp.html</em></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
-    {{ option }}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
 <p>Now we&#39;ll need to link the text input to its panel. We can do this by exporting the autocomplete
 panel instance into a local template variable (here we called it &quot;auto&quot;), and binding that variable
 to the input&#39;s <code>matAutocomplete</code> property.</p>
-<p><em>my-comp.html</em></p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"auto"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
-<div material-docs-example="autocomplete-simple"></div>
+<div material-docs-example="autocomplete-simple"
+                             file="autocomplete-simple-example.html"
+                             region="input"></div>
 
 
         <h3 id="adding-a-custom-filter" class="docs-header-link">
@@ -130,16 +119,10 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
           Option groups
         </h3>
       <p><code>mat-option</code> can be collected into groups using the <code>mat-optgroup</code> element:</p>
-<div material-docs-example="autocomplete-optgroup"></div>
+<div material-docs-example="autocomplete-optgroup"
+                             file="autocomplete-optgroup-example.html"
+                             region="mat-autocomplete"></div>
 
-
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let group of filteredGroups | async"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"group.name"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of group.options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
-      {{option.name}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>

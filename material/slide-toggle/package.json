@@ -2,8 +2,8 @@
   "name": "@angular/components-examples/material/slide-toggle",
   "main": "../../bundles/components-examples-material-slide-toggle.umd.js",
   "fesm2015": "../../fesm2015/material/slide-toggle.js",
-  "esm2015": "../../esm2015/material/slide-toggle/index.js",
-  "typings": "./index.d.ts",
+  "esm2015": "../../esm2015/material/slide-toggle/slide-toggle_public_index.js",
+  "typings": "./slide-toggle_public_index.d.ts",
   "module": "../../fesm2015/material/slide-toggle.js",
   "es2015": "../../fesm2015/material/slide-toggle.js"
 }

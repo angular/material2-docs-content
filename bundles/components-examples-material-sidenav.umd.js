@@ -739,6 +739,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.SidenavAutosizeExample = SidenavAutosizeExample;
     exports.SidenavBackdropExample = SidenavBackdropExample;
     exports.SidenavDisableCloseExample = SidenavDisableCloseExample;

@@ -158,6 +158,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.PaginatorConfigurableExample = PaginatorConfigurableExample;
     exports.PaginatorExamplesModule = PaginatorExamplesModule;
     exports.PaginatorOverviewExample = PaginatorOverviewExample;

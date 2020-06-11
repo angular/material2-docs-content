@@ -226,5 +226,9 @@ let ToolbarExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ToolbarBasicExample, ToolbarExamplesModule, ToolbarMultirowExample, ToolbarOverviewExample };
 //# sourceMappingURL=toolbar.js.map

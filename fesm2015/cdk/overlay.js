@@ -67,5 +67,9 @@ let CdkOverlayExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CdkOverlayBasicExample, CdkOverlayExamplesModule };
 //# sourceMappingURL=overlay.js.map

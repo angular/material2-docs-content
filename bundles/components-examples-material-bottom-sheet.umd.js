@@ -127,6 +127,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.BottomSheetExamplesModule = BottomSheetExamplesModule;
     exports.BottomSheetOverviewExample = BottomSheetOverviewExample;
     exports.BottomSheetOverviewExampleSheet = BottomSheetOverviewExampleSheet;

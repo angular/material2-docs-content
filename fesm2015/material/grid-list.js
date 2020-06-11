@@ -112,5 +112,9 @@ let GridListExamplesModule = /** @class */ (() => {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { GridListDynamicExample, GridListExamplesModule, GridListOverviewExample };
 //# sourceMappingURL=grid-list.js.map
