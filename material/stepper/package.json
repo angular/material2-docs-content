@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-stepper.umd.js",
   "fesm5": "../../fesm5/material/stepper.js",
   "fesm2015": "../../fesm2015/material/stepper.js",
-  "esm5": "../../esm5/material/stepper/index.js",
-  "esm2015": "../../esm2015/material/stepper/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/stepper/stepper_public_index.js",
+  "esm2015": "../../esm2015/material/stepper/stepper_public_index.js",
+  "typings": "./stepper_public_index.d.ts",
   "module": "../../fesm5/material/stepper.js",
   "es2015": "../../fesm2015/material/stepper.js"
 }

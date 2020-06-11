@@ -134,5 +134,9 @@ var SortExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { SortExamplesModule, SortOverviewExample };
 //# sourceMappingURL=sort.js.map

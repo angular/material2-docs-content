@@ -1558,5 +1558,9 @@ PopoverEditExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { PopoverEditCellSpanMatTableExample, PopoverEditExamplesModule, PopoverEditMatTableExample, PopoverEditMatTableFlexExample, PopoverEditTabOutMatTableExample };
 //# sourceMappingURL=popover-edit.js.map

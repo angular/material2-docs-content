@@ -989,6 +989,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.DatepickerApiExample = DatepickerApiExample;
     exports.DatepickerColorExample = DatepickerColorExample;
     exports.DatepickerCustomHeaderExample = DatepickerCustomHeaderExample;

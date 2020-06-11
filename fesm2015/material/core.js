@@ -191,5 +191,9 @@ CoreExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CoreExamplesModule, ElevationOverviewExample, RippleOverviewExample };
 //# sourceMappingURL=core.js.map

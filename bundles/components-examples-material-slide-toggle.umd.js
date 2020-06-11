@@ -233,6 +233,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.SlideToggleConfigurableExample = SlideToggleConfigurableExample;
     exports.SlideToggleExamplesModule = SlideToggleExamplesModule;
     exports.SlideToggleFormsExample = SlideToggleFormsExample;

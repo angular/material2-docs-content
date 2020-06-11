@@ -258,5 +258,9 @@ var CdkA11yExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CdkA11yExamplesModule, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample };
 //# sourceMappingURL=a11y.js.map

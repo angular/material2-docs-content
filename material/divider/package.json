@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-divider.umd.js",
   "fesm5": "../../fesm5/material/divider.js",
   "fesm2015": "../../fesm2015/material/divider.js",
-  "esm5": "../../esm5/material/divider/index.js",
-  "esm2015": "../../esm2015/material/divider/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/divider/divider_public_index.js",
+  "esm2015": "../../esm2015/material/divider/divider_public_index.js",
+  "typings": "./divider_public_index.d.ts",
   "module": "../../fesm5/material/divider.js",
   "es2015": "../../fesm2015/material/divider.js"
 }

@@ -263,5 +263,9 @@ var ProgressBarExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarExamplesModule, ProgressBarIndeterminateExample, ProgressBarQueryExample };
 //# sourceMappingURL=progress-bar.js.map

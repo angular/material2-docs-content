@@ -205,5 +205,9 @@ ButtonToggleExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.js.map

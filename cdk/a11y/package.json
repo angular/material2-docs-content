@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-cdk-a11y.umd.js",
   "fesm5": "../../fesm5/cdk/a11y.js",
   "fesm2015": "../../fesm2015/cdk/a11y.js",
-  "esm5": "../../esm5/cdk/a11y/index.js",
-  "esm2015": "../../esm2015/cdk/a11y/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/cdk/a11y/a11y_public_index.js",
+  "esm2015": "../../esm2015/cdk/a11y/a11y_public_index.js",
+  "typings": "./a11y_public_index.d.ts",
   "module": "../../fesm5/cdk/a11y.js",
   "es2015": "../../fesm2015/cdk/a11y.js"
 }

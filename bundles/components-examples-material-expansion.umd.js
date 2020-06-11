@@ -361,6 +361,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ExpansionExamplesModule = ExpansionExamplesModule;
     exports.ExpansionExpandCollapseAllExample = ExpansionExpandCollapseAllExample;
     exports.ExpansionOverviewExample = ExpansionOverviewExample;

@@ -678,6 +678,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.TabGroupAlignExample = TabGroupAlignExample;
     exports.TabGroupAnimationsExample = TabGroupAnimationsExample;
     exports.TabGroupAsyncExample = TabGroupAsyncExample;

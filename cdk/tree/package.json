@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-cdk-tree.umd.js",
   "fesm5": "../../fesm5/cdk/tree.js",
   "fesm2015": "../../fesm2015/cdk/tree.js",
-  "esm5": "../../esm5/cdk/tree/index.js",
-  "esm2015": "../../esm2015/cdk/tree/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/cdk/tree/tree_public_index.js",
+  "esm2015": "../../esm2015/cdk/tree/tree_public_index.js",
+  "typings": "./tree_public_index.d.ts",
   "module": "../../fesm5/cdk/tree.js",
   "es2015": "../../fesm2015/cdk/tree.js"
 }

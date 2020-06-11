@@ -77,6 +77,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.IconExamplesModule = IconExamplesModule;
     exports.IconOverviewExample = IconOverviewExample;
     exports.IconSvgExample = IconSvgExample;

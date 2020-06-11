@@ -396,5 +396,9 @@ var ChipsExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
 //# sourceMappingURL=chips.js.map

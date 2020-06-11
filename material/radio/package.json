@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-radio.umd.js",
   "fesm5": "../../fesm5/material/radio.js",
   "fesm2015": "../../fesm2015/material/radio.js",
-  "esm5": "../../esm5/material/radio/index.js",
-  "esm2015": "../../esm2015/material/radio/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/radio/radio_public_index.js",
+  "esm2015": "../../esm2015/material/radio/radio_public_index.js",
+  "typings": "./radio_public_index.d.ts",
   "module": "../../fesm5/material/radio.js",
   "es2015": "../../fesm2015/material/radio.js"
 }

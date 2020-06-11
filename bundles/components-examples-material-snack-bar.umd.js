@@ -425,6 +425,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.PizzaPartyComponent = PizzaPartyComponent;
     exports.SnackBarComponentExample = SnackBarComponentExample;
     exports.SnackBarExamplesModule = SnackBarExamplesModule;

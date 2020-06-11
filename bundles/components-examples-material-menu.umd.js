@@ -345,6 +345,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.MenuExamplesModule = MenuExamplesModule;
     exports.MenuIconsExample = MenuIconsExample;
     exports.MenuNestedExample = MenuNestedExample;

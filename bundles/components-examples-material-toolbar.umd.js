@@ -106,6 +106,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ToolbarExamplesModule = ToolbarExamplesModule;
     exports.ToolbarMultirowExample = ToolbarMultirowExample;
     exports.ToolbarOverviewExample = ToolbarOverviewExample;

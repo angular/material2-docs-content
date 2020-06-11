@@ -63,5 +63,9 @@ var DividerExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { DividerExamplesModule, DividerOverviewExample };
 //# sourceMappingURL=divider.js.map

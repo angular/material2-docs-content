@@ -364,5 +364,9 @@ var ExpansionExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ExpansionExamplesModule, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample };
 //# sourceMappingURL=expansion.js.map

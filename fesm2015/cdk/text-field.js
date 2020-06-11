@@ -381,5 +381,9 @@ CdkTextFieldExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CdkTextFieldExamplesModule, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample };
 //# sourceMappingURL=text-field.js.map

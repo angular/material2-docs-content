@@ -193,5 +193,9 @@ BottomSheetExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { BottomSheetExamplesModule, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet };
 //# sourceMappingURL=bottom-sheet.js.map

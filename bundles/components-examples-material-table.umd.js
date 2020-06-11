@@ -3404,6 +3404,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.TableBasicExample = TableBasicExample;
     exports.TableBasicFlexExample = TableBasicFlexExample;
     exports.TableDynamicColumnsExample = TableDynamicColumnsExample;

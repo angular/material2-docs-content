@@ -162,6 +162,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.ProgressSpinnerConfigurableExample = ProgressSpinnerConfigurableExample;
     exports.ProgressSpinnerExamplesModule = ProgressSpinnerExamplesModule;
     exports.ProgressSpinnerOverviewExample = ProgressSpinnerOverviewExample;

@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-bottom-sheet.umd.js",
   "fesm5": "../../fesm5/material/bottom-sheet.js",
   "fesm2015": "../../fesm2015/material/bottom-sheet.js",
-  "esm5": "../../esm5/material/bottom-sheet/index.js",
-  "esm2015": "../../esm2015/material/bottom-sheet/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/bottom-sheet/bottom-sheet_public_index.js",
+  "esm2015": "../../esm2015/material/bottom-sheet/bottom-sheet_public_index.js",
+  "typings": "./bottom-sheet_public_index.d.ts",
   "module": "../../fesm5/material/bottom-sheet.js",
   "es2015": "../../fesm2015/material/bottom-sheet.js"
 }

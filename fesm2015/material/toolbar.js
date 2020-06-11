@@ -136,5 +136,9 @@ ToolbarExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ToolbarExamplesModule, ToolbarMultirowExample, ToolbarOverviewExample };
 //# sourceMappingURL=toolbar.js.map

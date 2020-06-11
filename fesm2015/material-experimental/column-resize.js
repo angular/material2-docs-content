@@ -662,5 +662,9 @@ OptInColumnResizeDemoModule.decorators = [
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { DefaultEnabledColumnResizeDemo, DefaultEnabledColumnResizeDemoModule, DefaultEnabledColumnResizeFlexDemo, DefaultEnabledColumnResizeFlexDemoModule, OptInColumnResizeDemo, OptInColumnResizeDemoModule };
 //# sourceMappingURL=column-resize.js.map

@@ -930,6 +930,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkDragDropAxisLockExample = CdkDragDropAxisLockExample;
     exports.CdkDragDropBoundaryExample = CdkDragDropBoundaryExample;
     exports.CdkDragDropConnectedSortingExample = CdkDragDropConnectedSortingExample;

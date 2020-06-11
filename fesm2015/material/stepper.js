@@ -1101,5 +1101,9 @@ StepperExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
 //# sourceMappingURL=stepper.js.map

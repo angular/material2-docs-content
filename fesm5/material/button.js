@@ -469,5 +469,9 @@ var ButtonExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ButtonExamplesModule, ButtonOverviewExample, ButtonTypesExample };
 //# sourceMappingURL=button.js.map

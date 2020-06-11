@@ -431,5 +431,9 @@ MdcFormFieldExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { FormFieldCustomControlExample, MdcFormFieldExamplesModule, MyTelInput };
 //# sourceMappingURL=mdc-form-field.js.map

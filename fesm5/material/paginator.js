@@ -159,5 +159,9 @@ var PaginatorExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorOverviewExample };
 //# sourceMappingURL=paginator.js.map

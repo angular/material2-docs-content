@@ -517,6 +517,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkTableBasicExample = CdkTableBasicExample;
     exports.CdkTableBasicFlexExample = CdkTableBasicFlexExample;
     exports.CdkTableExamplesModule = CdkTableExamplesModule;

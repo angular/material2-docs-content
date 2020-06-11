@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-cdk-text-field.umd.js",
   "fesm5": "../../fesm5/cdk/text-field.js",
   "fesm2015": "../../fesm2015/cdk/text-field.js",
-  "esm5": "../../esm5/cdk/text-field/index.js",
-  "esm2015": "../../esm2015/cdk/text-field/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/cdk/text-field/text-field_public_index.js",
+  "esm2015": "../../esm2015/cdk/text-field/text-field_public_index.js",
+  "typings": "./text-field_public_index.d.ts",
   "module": "../../fesm5/cdk/text-field.js",
   "es2015": "../../fesm2015/cdk/text-field.js"
 }

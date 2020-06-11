@@ -1169,6 +1169,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.SelectCustomTriggerExample = SelectCustomTriggerExample;
     exports.SelectDisabledExample = SelectDisabledExample;
     exports.SelectErrorStateMatcherExample = SelectErrorStateMatcherExample;

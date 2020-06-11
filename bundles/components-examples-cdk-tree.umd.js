@@ -255,6 +255,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkTreeExamplesModule = CdkTreeExamplesModule;
     exports.CdkTreeFlatExample = CdkTreeFlatExample;
     exports.CdkTreeNestedExample = CdkTreeNestedExample;

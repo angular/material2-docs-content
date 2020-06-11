@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-input.umd.js",
   "fesm5": "../../fesm5/material/input.js",
   "fesm2015": "../../fesm2015/material/input.js",
-  "esm5": "../../esm5/material/input/index.js",
-  "esm2015": "../../esm2015/material/input/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/input/input_public_index.js",
+  "esm2015": "../../esm2015/material/input/input_public_index.js",
+  "typings": "./input_public_index.d.ts",
   "module": "../../fesm5/material/input.js",
   "es2015": "../../fesm2015/material/input.js"
 }

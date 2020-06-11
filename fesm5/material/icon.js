@@ -75,5 +75,9 @@ var IconExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { IconExamplesModule, IconOverviewExample, IconSvgExample };
 //# sourceMappingURL=icon.js.map

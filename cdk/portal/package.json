@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-cdk-portal.umd.js",
   "fesm5": "../../fesm5/cdk/portal.js",
   "fesm2015": "../../fesm2015/cdk/portal.js",
-  "esm5": "../../esm5/cdk/portal/index.js",
-  "esm2015": "../../esm2015/cdk/portal/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/cdk/portal/portal_public_index.js",
+  "esm2015": "../../esm2015/cdk/portal/portal_public_index.js",
+  "typings": "./portal_public_index.d.ts",
   "module": "../../fesm5/cdk/portal.js",
   "es2015": "../../fesm2015/cdk/portal.js"
 }

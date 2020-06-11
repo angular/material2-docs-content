@@ -107,5 +107,9 @@ var CdkPlatformExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CdkPlatformExamplesModule, CdkPlatformOverviewExample };
 //# sourceMappingURL=platform.js.map

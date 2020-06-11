@@ -1564,5 +1564,9 @@ SelectExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectExamplesModule, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample };
 //# sourceMappingURL=select.js.map

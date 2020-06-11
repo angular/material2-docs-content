@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-button-toggle.umd.js",
   "fesm5": "../../fesm5/material/button-toggle.js",
   "fesm2015": "../../fesm2015/material/button-toggle.js",
-  "esm5": "../../esm5/material/button-toggle/index.js",
-  "esm2015": "../../esm2015/material/button-toggle/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/button-toggle/button-toggle_public_index.js",
+  "esm2015": "../../esm2015/material/button-toggle/button-toggle_public_index.js",
+  "typings": "./button-toggle_public_index.d.ts",
   "module": "../../fesm5/material/button-toggle.js",
   "es2015": "../../fesm2015/material/button-toggle.js"
 }

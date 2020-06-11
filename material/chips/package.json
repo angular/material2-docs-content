@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-chips.umd.js",
   "fesm5": "../../fesm5/material/chips.js",
   "fesm2015": "../../fesm2015/material/chips.js",
-  "esm5": "../../esm5/material/chips/index.js",
-  "esm2015": "../../esm2015/material/chips/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/chips/chips_public_index.js",
+  "esm2015": "../../esm2015/material/chips/chips_public_index.js",
+  "typings": "./chips_public_index.d.ts",
   "module": "../../fesm5/material/chips.js",
   "es2015": "../../fesm2015/material/chips.js"
 }

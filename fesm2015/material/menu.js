@@ -395,5 +395,9 @@ MenuExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { MenuExamplesModule, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
 //# sourceMappingURL=menu.js.map

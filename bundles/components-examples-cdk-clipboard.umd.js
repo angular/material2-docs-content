@@ -66,6 +66,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkClipboardExamplesModule = CdkClipboardExamplesModule;
     exports.CdkClipboardOverviewExample = CdkClipboardOverviewExample;
 

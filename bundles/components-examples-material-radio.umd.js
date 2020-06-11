@@ -114,6 +114,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.RadioExamplesModule = RadioExamplesModule;
     exports.RadioNgModelExample = RadioNgModelExample;
     exports.RadioOverviewExample = RadioOverviewExample;

@@ -461,6 +461,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.CdkCustomStepperWithoutFormExample = CdkCustomStepperWithoutFormExample;
     exports.CdkLinearStepperWithFormExample = CdkLinearStepperWithFormExample;
     exports.CdkStepperExamplesModule = CdkStepperExamplesModule;

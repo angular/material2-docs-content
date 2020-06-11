@@ -968,5 +968,9 @@ var TreeExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { TreeChecklistExample, TreeDynamicExample, TreeExamplesModule, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample };
 //# sourceMappingURL=tree.js.map

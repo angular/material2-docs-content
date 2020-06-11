@@ -3,9 +3,9 @@
   "main": "../../bundles/components-examples-material-tooltip.umd.js",
   "fesm5": "../../fesm5/material/tooltip.js",
   "fesm2015": "../../fesm2015/material/tooltip.js",
-  "esm5": "../../esm5/material/tooltip/index.js",
-  "esm2015": "../../esm2015/material/tooltip/index.js",
-  "typings": "./index.d.ts",
+  "esm5": "../../esm5/material/tooltip/tooltip_public_index.js",
+  "esm2015": "../../esm2015/material/tooltip/tooltip_public_index.js",
+  "typings": "./tooltip_public_index.d.ts",
   "module": "../../fesm5/material/tooltip.js",
   "es2015": "../../fesm2015/material/tooltip.js"
 }

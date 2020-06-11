@@ -164,5 +164,9 @@ var ProgressSpinnerExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { ProgressSpinnerConfigurableExample, ProgressSpinnerExamplesModule, ProgressSpinnerOverviewExample };
 //# sourceMappingURL=progress-spinner.js.map

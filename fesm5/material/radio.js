@@ -113,5 +113,9 @@ var RadioExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { RadioExamplesModule, RadioNgModelExample, RadioOverviewExample };
 //# sourceMappingURL=radio.js.map

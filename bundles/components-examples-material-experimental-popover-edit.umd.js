@@ -1451,6 +1451,10 @@
                 }]
         }], null, null); })();
 
+    /**
+     * Generated bundle index. Do not edit.
+     */
+
     exports.PopoverEditCellSpanMatTableExample = PopoverEditCellSpanMatTableExample;
     exports.PopoverEditExamplesModule = PopoverEditExamplesModule;
     exports.PopoverEditMatTableExample = PopoverEditMatTableExample;

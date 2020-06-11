@@ -524,5 +524,9 @@ var OptInColumnResizeDemoModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { DefaultEnabledColumnResizeDemo, DefaultEnabledColumnResizeDemoModule, DefaultEnabledColumnResizeFlexDemo, DefaultEnabledColumnResizeFlexDemoModule, OptInColumnResizeDemo, OptInColumnResizeDemoModule };
 //# sourceMappingURL=column-resize.js.map

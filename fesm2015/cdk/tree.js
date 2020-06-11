@@ -369,5 +369,9 @@ CdkTreeExamplesModule.decorators = [
             }]
     }], null, null); })();
 
+/**
+ * Generated bundle index. Do not edit.
+ */
+
 export { CdkTreeExamplesModule, CdkTreeFlatExample, CdkTreeNestedExample };
 //# sourceMappingURL=tree.js.map
