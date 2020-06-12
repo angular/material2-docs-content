@@ -962,7 +962,7 @@ let DateRangePickerOverviewExample = /** @class */ (() => {
     class DateRangePickerOverviewExample {
     }
     DateRangePickerOverviewExample.ɵfac = function DateRangePickerOverviewExample_Factory(t) { return new (t || DateRangePickerOverviewExample)(); };
-    DateRangePickerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerOverviewExample, selectors: [["date-range-picker-overview-example"]], decls: 9, vars: 2, consts: [[3, "rangePicker"], ["matStartDate", "", "matInput", "", "placeholder", "Start date"], ["matEndDate", "", "matInput", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    DateRangePickerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerOverviewExample, selectors: [["date-range-picker-overview-example"]], decls: 9, vars: 2, consts: [[3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Enter a date range");
@@ -980,7 +980,7 @@ let DateRangePickerOverviewExample = /** @class */ (() => {
             ɵɵproperty("rangePicker", _r0);
             ɵɵadvance(3);
             ɵɵproperty("for", _r0);
-        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatInput, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [""] });
+        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [""] });
     return DateRangePickerOverviewExample;
 })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerOverviewExample, [{
@@ -1013,7 +1013,7 @@ let DateRangePickerFormsExample = /** @class */ (() => {
         }
     }
     DateRangePickerFormsExample.ɵfac = function DateRangePickerFormsExample_Factory(t) { return new (t || DateRangePickerFormsExample)(); };
-    DateRangePickerFormsExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerFormsExample, selectors: [["date-range-picker-forms-example"]], decls: 14, vars: 8, consts: [[3, "formGroup", "rangePicker"], ["matStartDate", "", "matInput", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "matInput", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"]], template: function DateRangePickerFormsExample_Template(rf, ctx) { if (rf & 1) {
+    DateRangePickerFormsExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerFormsExample, selectors: [["date-range-picker-forms-example"]], decls: 14, vars: 8, consts: [[3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"]], template: function DateRangePickerFormsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Enter a date range");
@@ -1043,7 +1043,7 @@ let DateRangePickerFormsExample = /** @class */ (() => {
             ɵɵproperty("ngIf", ctx.range.controls.end.hasError("matEndDateInvalid"));
             ɵɵadvance(2);
             ɵɵtextInterpolate1("Selected range: ", ɵɵpipeBind1(13, 6, ctx.range.value), "");
-        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, NgControlStatusGroup, FormGroupDirective, MatStartDate, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker, NgIf, MatError], pipes: [JsonPipe], styles: [""] });
+        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, NgControlStatusGroup, FormGroupDirective, MatStartDate, DefaultValueAccessor, NgControlStatus, FormControlName, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker, NgIf, MatError], pipes: [JsonPipe], styles: [""] });
     return DateRangePickerFormsExample;
 })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerFormsExample, [{
@@ -1073,7 +1073,7 @@ let DateRangePickerComparisonExample = /** @class */ (() => {
         }
     }
     DateRangePickerComparisonExample.ɵfac = function DateRangePickerComparisonExample_Factory(t) { return new (t || DateRangePickerComparisonExample)(); };
-    DateRangePickerComparisonExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerComparisonExample, selectors: [["date-range-picker-comparison-example"]], decls: 18, vars: 10, consts: [[1, "example-form-field"], [3, "formGroup", "rangePicker", "comparisonStart", "comparisonEnd"], ["matStartDate", "", "matInput", "", "placeholder", "Start date", "formControlName", "start"], ["matEndDate", "", "matInput", "", "placeholder", "End date", "formControlName", "end"], ["matSuffix", "", 3, "for"], ["campaignOnePicker", ""], ["campaignTwoPicker", ""]], template: function DateRangePickerComparisonExample_Template(rf, ctx) { if (rf & 1) {
+    DateRangePickerComparisonExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerComparisonExample, selectors: [["date-range-picker-comparison-example"]], decls: 18, vars: 10, consts: [[1, "example-form-field"], [3, "formGroup", "rangePicker", "comparisonStart", "comparisonEnd"], ["matStartDate", "", "placeholder", "Start date", "formControlName", "start"], ["matEndDate", "", "placeholder", "End date", "formControlName", "end"], ["matSuffix", "", 3, "for"], ["campaignOnePicker", ""], ["campaignTwoPicker", ""]], template: function DateRangePickerComparisonExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "First campaign");
@@ -1107,7 +1107,7 @@ let DateRangePickerComparisonExample = /** @class */ (() => {
             ɵɵproperty("formGroup", ctx.campaignTwo)("rangePicker", _r1)("comparisonStart", ctx.campaignOne.value.start)("comparisonEnd", ctx.campaignOne.value.end);
             ɵɵadvance(3);
             ɵɵproperty("for", _r1);
-        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, NgControlStatusGroup, FormGroupDirective, MatStartDate, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin: 0 8px 16px 0;\n}"] });
+        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, NgControlStatusGroup, FormGroupDirective, MatStartDate, DefaultValueAccessor, NgControlStatus, FormControlName, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin: 0 8px 16px 0;\n}"] });
     return DateRangePickerComparisonExample;
 })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerComparisonExample, [{
@@ -1154,7 +1154,7 @@ let DateRangePickerSelectionStrategyExample = /** @class */ (() => {
     DateRangePickerSelectionStrategyExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerSelectionStrategyExample, selectors: [["date-range-picker-selection-strategy-example"]], features: [ɵɵProvidersFeature([{
                     provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
                     useClass: FiveDayRangeSelectionStrategy
-                }])], decls: 9, vars: 2, consts: [[3, "rangePicker"], ["matStartDate", "", "matInput", "", "placeholder", "Start date"], ["matEndDate", "", "matInput", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerSelectionStrategyExample_Template(rf, ctx) { if (rf & 1) {
+                }])], decls: 9, vars: 2, consts: [[3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerSelectionStrategyExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Enter a date range");
@@ -1172,7 +1172,7 @@ let DateRangePickerSelectionStrategyExample = /** @class */ (() => {
             ɵɵproperty("rangePicker", _r0);
             ɵɵadvance(3);
             ɵɵproperty("for", _r0);
-        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatInput, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [""] });
+        } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [""] });
     return DateRangePickerSelectionStrategyExample;
 })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
