@@ -119,10 +119,10 @@ let StepperEditableExample = /** @class */ (() => {
 function StepperErrorsExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
 } }
-function StepperErrorsExample_ng_template_14_Template(rf, ctx) { if (rf & 1) {
+function StepperErrorsExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your address");
 } }
-function StepperErrorsExample_ng_template_25_Template(rf, ctx) { if (rf & 1) {
+function StepperErrorsExample_ng_template_29_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Done");
 } }
 /**
@@ -145,56 +145,62 @@ let StepperErrorsExample = /** @class */ (() => {
     StepperErrorsExample.ɵfac = function StepperErrorsExample_Factory(t) { return new (t || StepperErrorsExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperErrorsExample.ɵcmp = ɵɵdefineComponent({ type: StepperErrorsExample, selectors: [["stepper-errors-example"]], features: [ɵɵProvidersFeature([{
                     provide: STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
-                }])], decls: 33, vars: 4, consts: [["linear", ""], ["stepper", ""], ["errorMessage", "Name is required.", 3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["errorMessage", "Address is required.", 3, "stepControl"], ["matInput", "", "placeholder", "Ex. 1 Main St, New York, NY", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperErrorsExample_Template(rf, ctx) { if (rf & 1) {
+                }])], decls: 37, vars: 4, consts: [["stepper", ""], ["errorMessage", "Name is required.", 3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["errorMessage", "Address is required.", 3, "stepControl"], ["matInput", "", "placeholder", "Ex. 1 Main St, New York, NY", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperErrorsExample_Template(rf, ctx) { if (rf & 1) {
             const _r4 = ɵɵgetCurrentView();
-            ɵɵelementStart(0, "mat-horizontal-stepper", 0, 1);
-            ɵɵelementStart(2, "mat-step", 2);
-            ɵɵelementStart(3, "form", 3);
-            ɵɵtemplate(4, StepperErrorsExample_ng_template_4_Template, 1, 0, "ng-template", 4);
+            ɵɵelementStart(0, "mat-horizontal-stepper", null, 0);
+            ɵɵelementStart(2, "mat-step", 1);
+            ɵɵelementStart(3, "form", 2);
+            ɵɵtemplate(4, StepperErrorsExample_ng_template_4_Template, 1, 0, "ng-template", 3);
             ɵɵelementStart(5, "mat-form-field");
             ɵɵelementStart(6, "mat-label");
             ɵɵtext(7, "Name");
             ɵɵelementEnd();
-            ɵɵelement(8, "input", 5);
+            ɵɵelement(8, "input", 4);
             ɵɵelementEnd();
             ɵɵelementStart(9, "div");
-            ɵɵelementStart(10, "button", 6);
-            ɵɵtext(11, "Next");
+            ɵɵelementStart(10, "p");
+            ɵɵtext(11, "Go to a different step to see the error state");
+            ɵɵelementEnd();
+            ɵɵelementStart(12, "button", 5);
+            ɵɵtext(13, "Next");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(12, "mat-step", 7);
-            ɵɵelementStart(13, "form", 3);
-            ɵɵtemplate(14, StepperErrorsExample_ng_template_14_Template, 1, 0, "ng-template", 4);
-            ɵɵelementStart(15, "mat-form-field");
-            ɵɵelementStart(16, "mat-label");
-            ɵɵtext(17, "Address");
+            ɵɵelementStart(14, "mat-step", 6);
+            ɵɵelementStart(15, "form", 2);
+            ɵɵtemplate(16, StepperErrorsExample_ng_template_16_Template, 1, 0, "ng-template", 3);
+            ɵɵelementStart(17, "mat-form-field");
+            ɵɵelementStart(18, "mat-label");
+            ɵɵtext(19, "Address");
             ɵɵelementEnd();
-            ɵɵelement(18, "input", 8);
+            ɵɵelement(20, "input", 7);
             ɵɵelementEnd();
-            ɵɵelementStart(19, "div");
-            ɵɵelementStart(20, "button", 9);
-            ɵɵtext(21, "Back");
+            ɵɵelementStart(21, "div");
+            ɵɵelementStart(22, "p");
+            ɵɵtext(23, "Go to a different step to see the error state");
             ɵɵelementEnd();
-            ɵɵelementStart(22, "button", 6);
-            ɵɵtext(23, "Next");
+            ɵɵelementStart(24, "button", 8);
+            ɵɵtext(25, "Back");
+            ɵɵelementEnd();
+            ɵɵelementStart(26, "button", 5);
+            ɵɵtext(27, "Next");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(24, "mat-step");
-            ɵɵtemplate(25, StepperErrorsExample_ng_template_25_Template, 1, 0, "ng-template", 4);
-            ɵɵelementStart(26, "p");
-            ɵɵtext(27, "You are now done.");
+            ɵɵelementStart(28, "mat-step");
+            ɵɵtemplate(29, StepperErrorsExample_ng_template_29_Template, 1, 0, "ng-template", 3);
+            ɵɵelementStart(30, "p");
+            ɵɵtext(31, "You are now done.");
             ɵɵelementEnd();
-            ɵɵelementStart(28, "div");
-            ɵɵelementStart(29, "button", 9);
-            ɵɵtext(30, "Back");
+            ɵɵelementStart(32, "div");
+            ɵɵelementStart(33, "button", 8);
+            ɵɵtext(34, "Back");
             ɵɵelementEnd();
-            ɵɵelementStart(31, "button", 10);
-            ɵɵlistener("click", function StepperErrorsExample_Template_button_click_31_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(1); return _r0.reset(); });
-            ɵɵtext(32, "Reset");
+            ɵɵelementStart(35, "button", 9);
+            ɵɵlistener("click", function StepperErrorsExample_Template_button_click_35_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(1); return _r0.reset(); });
+            ɵɵtext(36, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -204,7 +210,7 @@ let StepperErrorsExample = /** @class */ (() => {
             ɵɵproperty("stepControl", ctx.firstFormGroup);
             ɵɵadvance(1);
             ɵɵproperty("formGroup", ctx.firstFormGroup);
-            ɵɵadvance(9);
+            ɵɵadvance(11);
             ɵɵproperty("stepControl", ctx.secondFormGroup);
             ɵɵadvance(1);
             ɵɵproperty("formGroup", ctx.secondFormGroup);
