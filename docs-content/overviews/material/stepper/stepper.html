@@ -230,8 +230,11 @@ the global default stepper options which can be specified by providing a value f
           <span header-link="error-state"></span>
           Error State
         </h3>
-      <p>The stepper can now show error states by simply providing the <code>showError</code> option to the
-<code>STEPPER_GLOBAL_OPTIONS</code> in your application&#39;s root module as mentioned above.</p>
+      <p>If you want to show an error when the user moved past a step that hasn&#39;t been filled out correctly,
+you can set the error message through the <code>errorMessage</code> input and configure the stepper to show
+errors via the <code>showError</code> option in the <code>STEPPER_GLOBAL_OPTIONS</code> injection token. Note that since
+<code>linear</code> steppers prevent a user from advancing past an invalid step to begin with, this setting
+will not affect steppers marked as <code>linear</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   providers: [
     {
