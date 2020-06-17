@@ -8,9 +8,9 @@ export interface PeriodicElement {
 /**
  * @title Opt-in column resize with a table-based mat-table.
  */
-export declare class OptInColumnResizeDemo {
+export declare class OptInColumnResizeExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<OptInColumnResizeDemo, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<OptInColumnResizeDemo, "opt-in-column-resize-demo", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDef<OptInColumnResizeExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<OptInColumnResizeExample, "opt-in-column-resize-example", never, {}, {}, never, never>;
 }

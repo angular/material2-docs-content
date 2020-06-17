@@ -1,20 +1,40 @@
-<span class="hljs-keyword">export</span> {
-  DefaultEnabledColumnResizeDemo
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled/default-enabled-column-resize-demo'</span>;
-<span class="hljs-keyword">export</span> {
-  DefaultEnabledColumnResizeDemoModule
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled/default-enabled-column-resize-demo-module'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {OptInColumnResizeExampleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'./opt-in/opt-in-column-resize-example-module'</span>;
+<span class="hljs-keyword">import</span> {
+  DefaultEnabledColumnResizeExampleModule,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled/default-enabled-column-resize-example-module'</span>;
+<span class="hljs-keyword">import</span> {
+  DefaultEnabledColumnResizeFlexExampleModule,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled-flex/default-enabled-column-resize-flex-example-module'</span>;
 
 <span class="hljs-keyword">export</span> {
-  DefaultEnabledColumnResizeFlexDemo
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled-flex/default-enabled-column-resize-flex-demo'</span>;
+  DefaultEnabledColumnResizeExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled/default-enabled-column-resize-example'</span>;
 <span class="hljs-keyword">export</span> {
-  DefaultEnabledColumnResizeFlexDemoModule
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled-flex/default-enabled-column-resize-flex-demo-module'</span>;
+  DefaultEnabledColumnResizeExampleModule
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled/default-enabled-column-resize-example-module'</span>;
 
 <span class="hljs-keyword">export</span> {
-  OptInColumnResizeDemo
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./opt-in/opt-in-column-resize-demo'</span>;
+  DefaultEnabledColumnResizeFlexExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled-flex/default-enabled-column-resize-flex-example'</span>;
 <span class="hljs-keyword">export</span> {
-  OptInColumnResizeDemoModule
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./opt-in/opt-in-column-resize-demo-module'</span>;
+  DefaultEnabledColumnResizeFlexExampleModule
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./default-enabled-flex/default-enabled-column-resize-flex-example-module'</span>;
+
+<span class="hljs-keyword">export</span> {
+  OptInColumnResizeExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./opt-in/opt-in-column-resize-example'</span>;
+<span class="hljs-keyword">export</span> {
+  OptInColumnResizeExampleModule
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./opt-in/opt-in-column-resize-example-module'</span>;
+
+
+<span class="hljs-meta">@NgModule</span>({
+  exports: [
+    DefaultEnabledColumnResizeExampleModule,
+    DefaultEnabledColumnResizeFlexExampleModule,
+    OptInColumnResizeExampleModule,
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ColumnResizeExamplesModule {
+}
