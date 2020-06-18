@@ -306,25 +306,35 @@
                 }]
         }], null, null); })();
 
+    var _c0 = ["area"];
+    var _c1 = ["exchange"];
+    var _c2 = ["subscriber"];
     /** @title Form field with custom telephone number input control. */
     var FormFieldCustomControlExample = /** @class */ (function () {
         function FormFieldCustomControlExample() {
+            this.form = new i1.FormGroup({
+                tel: new i1.FormControl(new MyTel('', '', ''))
+            });
         }
         FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
-        FormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["appearance", "fill"], ["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field", 0);
-                i0.ɵɵelementStart(1, "mat-label");
-                i0.ɵɵtext(2, "Phone number");
+        FormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 9, vars: 1, consts: [[3, "formGroup"], ["appearance", "fill"], ["formControlName", "tel", "required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "div", 0);
+                i0.ɵɵelementStart(1, "mat-form-field", 1);
+                i0.ɵɵelementStart(2, "mat-label");
+                i0.ɵɵtext(3, "Phone number");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "example-tel-input", 1);
-                i0.ɵɵelementStart(4, "mat-icon", 2);
-                i0.ɵɵtext(5, "phone");
+                i0.ɵɵelement(4, "example-tel-input", 2);
+                i0.ɵɵelementStart(5, "mat-icon", 3);
+                i0.ɵɵtext(6, "phone");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-hint");
-                i0.ɵɵtext(7, "Include area code");
+                i0.ɵɵelementStart(7, "mat-hint");
+                i0.ɵɵtext(8, "Include area code");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: function () { return [i1$1.MatFormField, i1$1.MatLabel, MyTelInput, i3$1.MatIcon, i1$1.MatSuffix, i1$1.MatHint]; }, styles: [""] });
+                i0.ɵɵelementEnd();
+            } if (rf & 2) {
+                i0.ɵɵproperty("formGroup", ctx.form);
+            } }, directives: function () { return [i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, MyTelInput, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3$1.MatIcon, i1$1.MatSuffix, i1$1.MatHint]; }, styles: [""] });
         return FormFieldCustomControlExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FormFieldCustomControlExample, [{
@@ -332,7 +342,7 @@
             args: [{
                     selector: 'form-field-custom-control-example',
                     templateUrl: 'form-field-custom-control-example.html',
-                    styleUrls: ['form-field-custom-control-example.css'],
+                    styleUrls: ['form-field-custom-control-example.css']
                 }]
         }], null, null); })();
     /** Data structure for holding telephone number. */
@@ -362,9 +372,18 @@
             this._required = false;
             this._disabled = false;
             this.parts = formBuilder.group({
-                area: [null, [i1.Validators.required, i1.Validators.minLength(3), i1.Validators.maxLength(3)]],
-                exchange: [null, [i1.Validators.required, i1.Validators.minLength(3), i1.Validators.maxLength(3)]],
-                subscriber: [null, [i1.Validators.required, i1.Validators.minLength(4), i1.Validators.maxLength(4)]],
+                area: [
+                    null,
+                    [i1.Validators.required, i1.Validators.minLength(3), i1.Validators.maxLength(3)]
+                ],
+                exchange: [
+                    null,
+                    [i1.Validators.required, i1.Validators.minLength(3), i1.Validators.maxLength(3)]
+                ],
+                subscriber: [
+                    null,
+                    [i1.Validators.required, i1.Validators.minLength(4), i1.Validators.maxLength(4)]
+                ]
             });
             _focusMonitor.monitor(_elementRef, true).subscribe(function (origin) {
                 if (_this.focused && !origin) {
@@ -386,12 +405,16 @@
             configurable: true
         });
         Object.defineProperty(MyTelInput.prototype, "shouldLabelFloat", {
-            get: function () { return this.focused || !this.empty; },
+            get: function () {
+                return this.focused || !this.empty;
+            },
             enumerable: false,
             configurable: true
         });
         Object.defineProperty(MyTelInput.prototype, "placeholder", {
-            get: function () { return this._placeholder; },
+            get: function () {
+                return this._placeholder;
+            },
             set: function (value) {
                 this._placeholder = value;
                 this.stateChanges.next();
@@ -400,7 +423,9 @@
             configurable: true
         });
         Object.defineProperty(MyTelInput.prototype, "required", {
-            get: function () { return this._required; },
+            get: function () {
+                return this._required;
+            },
             set: function (value) {
                 this._required = coercion.coerceBooleanProperty(value);
                 this.stateChanges.next();
@@ -409,7 +434,9 @@
             configurable: true
         });
         Object.defineProperty(MyTelInput.prototype, "disabled", {
-            get: function () { return this._disabled; },
+            get: function () {
+                return this._disabled;
+            },
             set: function (value) {
                 this._disabled = coercion.coerceBooleanProperty(value);
                 this._disabled ? this.parts.disable() : this.parts.enable();
@@ -434,6 +461,16 @@
             enumerable: false,
             configurable: true
         });
+        MyTelInput.prototype.autoFocusNext = function (control, nextElement) {
+            if (!control.errors && nextElement) {
+                this._focusMonitor.focusVia(nextElement, 'program');
+            }
+        };
+        MyTelInput.prototype.autoFocusPrev = function (control, prevElement) {
+            if (control.value.length < 1) {
+                this._focusMonitor.focusVia(prevElement, 'program');
+            }
+        };
         MyTelInput.prototype.ngOnDestroy = function () {
             this.stateChanges.complete();
             this._focusMonitor.stopMonitoring(this._elementRef);
@@ -442,8 +479,17 @@
             this.describedBy = ids.join(' ');
         };
         MyTelInput.prototype.onContainerClick = function (event) {
-            if (event.target.tagName.toLowerCase() != 'input') {
-                this._elementRef.nativeElement.querySelector('input').focus();
+            if (this.parts.controls.subscriber.valid) {
+                this._focusMonitor.focusVia(this.subscriberInput, 'program');
+            }
+            else if (this.parts.controls.exchange.valid) {
+                this._focusMonitor.focusVia(this.subscriberInput, 'program');
+            }
+            else if (this.parts.controls.area.valid) {
+                this._focusMonitor.focusVia(this.exchangeInput, 'program');
+            }
+            else {
+                this._focusMonitor.focusVia(this.areaInput, 'program');
             }
         };
         MyTelInput.prototype.writeValue = function (tel) {
@@ -458,31 +504,42 @@
         MyTelInput.prototype.setDisabledState = function (isDisabled) {
             this.disabled = isDisabled;
         };
-        MyTelInput.prototype._handleInput = function () {
+        MyTelInput.prototype._handleInput = function (control, nextElement) {
+            this.autoFocusNext(control, nextElement);
             this.onChange(this.value);
         };
         MyTelInput.nextId = 0;
         MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
-        MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
+        MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], viewQuery: function MyTelInput_Query(rf, ctx) { if (rf & 1) {
+                i0.ɵɵviewQuery(_c0, true);
+                i0.ɵɵviewQuery(_c1, true);
+                i0.ɵɵviewQuery(_c2, true);
+            } if (rf & 2) {
+                var _t;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.areaInput = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.exchangeInput = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.subscriberInput = _t.first);
+            } }, hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
                 i0.ɵɵhostProperty("id", ctx.id);
                 i0.ɵɵattribute("aria-describedby", ctx.describedBy);
                 i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
-            } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: i1$1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+            } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: i1$1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+                var _r3 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelementStart(1, "input", 1);
-                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { return ctx._handleInput(); });
+                i0.ɵɵelementStart(1, "input", 1, 2);
+                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { i0.ɵɵrestoreView(_r3); var _r1 = i0.ɵɵreference(6); return ctx._handleInput(ctx.parts.controls.area, _r1); });
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "span", 2);
-                i0.ɵɵtext(3, "\u2013");
+                i0.ɵɵelementStart(3, "span", 3);
+                i0.ɵɵtext(4, "\u2013");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(4, "input", 3);
-                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_4_listener() { return ctx._handleInput(); });
+                i0.ɵɵelementStart(5, "input", 4, 5);
+                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_5_listener() { i0.ɵɵrestoreView(_r3); var _r2 = i0.ɵɵreference(10); return ctx._handleInput(ctx.parts.controls.exchange, _r2); })("keyup.backspace", function MyTelInput_Template_input_keyup_backspace_5_listener() { i0.ɵɵrestoreView(_r3); var _r0 = i0.ɵɵreference(2); return ctx.autoFocusPrev(ctx.parts.controls.exchange, _r0); });
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "span", 2);
-                i0.ɵɵtext(6, "\u2013");
+                i0.ɵɵelementStart(7, "span", 3);
+                i0.ɵɵtext(8, "\u2013");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "input", 4);
-                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_7_listener() { return ctx._handleInput(); });
+                i0.ɵɵelementStart(9, "input", 6, 7);
+                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_9_listener() { return ctx._handleInput(ctx.parts.controls.subscriber); })("keyup.backspace", function MyTelInput_Template_input_keyup_backspace_9_listener() { i0.ɵɵrestoreView(_r3); var _r1 = i0.ɵɵreference(6); return ctx.autoFocusPrev(ctx.parts.controls.subscriber, _r1); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -500,14 +557,23 @@
                     host: {
                         '[class.example-floating]': 'shouldLabelFloat',
                         '[id]': 'id',
-                        '[attr.aria-describedby]': 'describedBy',
+                        '[attr.aria-describedby]': 'describedBy'
                     }
                 }]
         }], function () { return [{ type: i1.FormBuilder }, { type: i4$1.FocusMonitor }, { type: i0.ElementRef }, { type: i1.NgControl, decorators: [{
                     type: i0.Optional
                 }, {
                     type: i0.Self
-                }] }]; }, { placeholder: [{
+                }] }]; }, { areaInput: [{
+                type: i0.ViewChild,
+                args: ['area']
+            }], exchangeInput: [{
+                type: i0.ViewChild,
+                args: ['exchange']
+            }], subscriberInput: [{
+                type: i0.ViewChild,
+                args: ['subscriber']
+            }], placeholder: [{
                 type: i0.Input
             }], required: [{
                 type: i0.Input

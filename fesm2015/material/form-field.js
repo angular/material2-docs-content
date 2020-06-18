@@ -1,6 +1,6 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ElementRef, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, Optional, Self, Input, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate, ɵɵtemplate, ɵɵreference, ɵɵtextInterpolate1, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { Validators, FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, FormControl, RequiredValidator, FormControlDirective, ɵangular_packages_forms_forms_y, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵdirectiveInject, ElementRef, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, Optional, Self, ViewChild, Input, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate, ɵɵtemplate, ɵɵtextInterpolate1, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { FormGroup, FormControl, NgControlStatusGroup, FormGroupDirective, NgControlStatus, FormControlName, RequiredValidator, Validators, FormBuilder, NgControl, DefaultValueAccessor, FormControlDirective, ɵangular_packages_forms_forms_y, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormField, MatLabel, MatSuffix, MatHint, MatFormFieldControl, MatError, MatPrefix, MatFormFieldModule } from '@angular/material/form-field';
@@ -87,25 +87,37 @@ let FormFieldAppearanceExample = /** @class */ (() => {
             }]
     }], null, null); })();
 
+const _c0 = ["area"];
+const _c1 = ["exchange"];
+const _c2 = ["subscriber"];
 /** @title Form field with custom telephone number input control. */
 let FormFieldCustomControlExample = /** @class */ (() => {
     class FormFieldCustomControlExample {
+        constructor() {
+            this.form = new FormGroup({
+                tel: new FormControl(new MyTel('', '', ''))
+            });
+        }
     }
     FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
-    FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["appearance", "fill"], ["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-form-field", 0);
-            ɵɵelementStart(1, "mat-label");
-            ɵɵtext(2, "Phone number");
+    FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 9, vars: 1, consts: [[3, "formGroup"], ["appearance", "fill"], ["formControlName", "tel", "required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "div", 0);
+            ɵɵelementStart(1, "mat-form-field", 1);
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Phone number");
             ɵɵelementEnd();
-            ɵɵelement(3, "example-tel-input", 1);
-            ɵɵelementStart(4, "mat-icon", 2);
-            ɵɵtext(5, "phone");
+            ɵɵelement(4, "example-tel-input", 2);
+            ɵɵelementStart(5, "mat-icon", 3);
+            ɵɵtext(6, "phone");
             ɵɵelementEnd();
-            ɵɵelementStart(6, "mat-hint");
-            ɵɵtext(7, "Include area code");
+            ɵɵelementStart(7, "mat-hint");
+            ɵɵtext(8, "Include area code");
             ɵɵelementEnd();
             ɵɵelementEnd();
-        } }, directives: function () { return [MatFormField, MatLabel, MyTelInput, MatIcon, MatSuffix, MatHint]; }, styles: [""] });
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("formGroup", ctx.form);
+        } }, directives: function () { return [NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MyTelInput, NgControlStatus, FormControlName, RequiredValidator, MatIcon, MatSuffix, MatHint]; }, styles: [""] });
     return FormFieldCustomControlExample;
 })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldCustomControlExample, [{
@@ -113,7 +125,7 @@ let FormFieldCustomControlExample = /** @class */ (() => {
         args: [{
                 selector: 'form-field-custom-control-example',
                 templateUrl: 'form-field-custom-control-example.html',
-                styleUrls: ['form-field-custom-control-example.css'],
+                styleUrls: ['form-field-custom-control-example.css']
             }]
     }], null, null); })();
 /** Data structure for holding telephone number. */
@@ -142,9 +154,18 @@ let MyTelInput = /** @class */ (() => {
             this._required = false;
             this._disabled = false;
             this.parts = formBuilder.group({
-                area: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
-                exchange: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
-                subscriber: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
+                area: [
+                    null,
+                    [Validators.required, Validators.minLength(3), Validators.maxLength(3)]
+                ],
+                exchange: [
+                    null,
+                    [Validators.required, Validators.minLength(3), Validators.maxLength(3)]
+                ],
+                subscriber: [
+                    null,
+                    [Validators.required, Validators.minLength(4), Validators.maxLength(4)]
+                ]
             });
             _focusMonitor.monitor(_elementRef, true).subscribe(origin => {
                 if (this.focused && !origin) {
@@ -161,18 +182,26 @@ let MyTelInput = /** @class */ (() => {
             const { value: { area, exchange, subscriber } } = this.parts;
             return !area && !exchange && !subscriber;
         }
-        get shouldLabelFloat() { return this.focused || !this.empty; }
-        get placeholder() { return this._placeholder; }
+        get shouldLabelFloat() {
+            return this.focused || !this.empty;
+        }
+        get placeholder() {
+            return this._placeholder;
+        }
         set placeholder(value) {
             this._placeholder = value;
             this.stateChanges.next();
         }
-        get required() { return this._required; }
+        get required() {
+            return this._required;
+        }
         set required(value) {
             this._required = coerceBooleanProperty(value);
             this.stateChanges.next();
         }
-        get disabled() { return this._disabled; }
+        get disabled() {
+            return this._disabled;
+        }
         set disabled(value) {
             this._disabled = coerceBooleanProperty(value);
             this._disabled ? this.parts.disable() : this.parts.enable();
@@ -190,6 +219,16 @@ let MyTelInput = /** @class */ (() => {
             this.parts.setValue({ area, exchange, subscriber });
             this.stateChanges.next();
         }
+        autoFocusNext(control, nextElement) {
+            if (!control.errors && nextElement) {
+                this._focusMonitor.focusVia(nextElement, 'program');
+            }
+        }
+        autoFocusPrev(control, prevElement) {
+            if (control.value.length < 1) {
+                this._focusMonitor.focusVia(prevElement, 'program');
+            }
+        }
         ngOnDestroy() {
             this.stateChanges.complete();
             this._focusMonitor.stopMonitoring(this._elementRef);
@@ -198,8 +237,17 @@ let MyTelInput = /** @class */ (() => {
             this.describedBy = ids.join(' ');
         }
         onContainerClick(event) {
-            if (event.target.tagName.toLowerCase() != 'input') {
-                this._elementRef.nativeElement.querySelector('input').focus();
+            if (this.parts.controls.subscriber.valid) {
+                this._focusMonitor.focusVia(this.subscriberInput, 'program');
+            }
+            else if (this.parts.controls.exchange.valid) {
+                this._focusMonitor.focusVia(this.subscriberInput, 'program');
+            }
+            else if (this.parts.controls.area.valid) {
+                this._focusMonitor.focusVia(this.exchangeInput, 'program');
+            }
+            else {
+                this._focusMonitor.focusVia(this.areaInput, 'program');
             }
         }
         writeValue(tel) {
@@ -214,32 +262,43 @@ let MyTelInput = /** @class */ (() => {
         setDisabledState(isDisabled) {
             this.disabled = isDisabled;
         }
-        _handleInput() {
+        _handleInput(control, nextElement) {
+            this.autoFocusNext(control, nextElement);
             this.onChange(this.value);
         }
     }
     MyTelInput.nextId = 0;
     MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgControl, 10)); };
-    MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
+    MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], viewQuery: function MyTelInput_Query(rf, ctx) { if (rf & 1) {
+            ɵɵviewQuery(_c0, true);
+            ɵɵviewQuery(_c1, true);
+            ɵɵviewQuery(_c2, true);
+        } if (rf & 2) {
+            var _t;
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.areaInput = _t.first);
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.exchangeInput = _t.first);
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.subscriberInput = _t.first);
+        } }, hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
             ɵɵhostProperty("id", ctx.id);
             ɵɵattribute("aria-describedby", ctx.describedBy);
             ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
-        } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+        } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+            const _r3 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "input", 1);
-            ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { return ctx._handleInput(); });
+            ɵɵelementStart(1, "input", 1, 2);
+            ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { ɵɵrestoreView(_r3); const _r1 = ɵɵreference(6); return ctx._handleInput(ctx.parts.controls.area, _r1); });
             ɵɵelementEnd();
-            ɵɵelementStart(2, "span", 2);
-            ɵɵtext(3, "\u2013");
+            ɵɵelementStart(3, "span", 3);
+            ɵɵtext(4, "\u2013");
             ɵɵelementEnd();
-            ɵɵelementStart(4, "input", 3);
-            ɵɵlistener("input", function MyTelInput_Template_input_input_4_listener() { return ctx._handleInput(); });
+            ɵɵelementStart(5, "input", 4, 5);
+            ɵɵlistener("input", function MyTelInput_Template_input_input_5_listener() { ɵɵrestoreView(_r3); const _r2 = ɵɵreference(10); return ctx._handleInput(ctx.parts.controls.exchange, _r2); })("keyup.backspace", function MyTelInput_Template_input_keyup_backspace_5_listener() { ɵɵrestoreView(_r3); const _r0 = ɵɵreference(2); return ctx.autoFocusPrev(ctx.parts.controls.exchange, _r0); });
             ɵɵelementEnd();
-            ɵɵelementStart(5, "span", 2);
-            ɵɵtext(6, "\u2013");
+            ɵɵelementStart(7, "span", 3);
+            ɵɵtext(8, "\u2013");
             ɵɵelementEnd();
-            ɵɵelementStart(7, "input", 4);
-            ɵɵlistener("input", function MyTelInput_Template_input_input_7_listener() { return ctx._handleInput(); });
+            ɵɵelementStart(9, "input", 6, 7);
+            ɵɵlistener("input", function MyTelInput_Template_input_input_9_listener() { return ctx._handleInput(ctx.parts.controls.subscriber); })("keyup.backspace", function MyTelInput_Template_input_keyup_backspace_9_listener() { ɵɵrestoreView(_r3); const _r1 = ɵɵreference(6); return ctx.autoFocusPrev(ctx.parts.controls.subscriber, _r1); });
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
@@ -257,14 +316,23 @@ let MyTelInput = /** @class */ (() => {
                 host: {
                     '[class.example-floating]': 'shouldLabelFloat',
                     '[id]': 'id',
-                    '[attr.aria-describedby]': 'describedBy',
+                    '[attr.aria-describedby]': 'describedBy'
                 }
             }]
     }], function () { return [{ type: FormBuilder }, { type: FocusMonitor }, { type: ElementRef }, { type: NgControl, decorators: [{
                 type: Optional
             }, {
                 type: Self
-            }] }]; }, { placeholder: [{
+            }] }]; }, { areaInput: [{
+            type: ViewChild,
+            args: ['area']
+        }], exchangeInput: [{
+            type: ViewChild,
+            args: ['exchange']
+        }], subscriberInput: [{
+            type: ViewChild,
+            args: ['subscriber']
+        }], placeholder: [{
             type: Input
         }], required: [{
             type: Input

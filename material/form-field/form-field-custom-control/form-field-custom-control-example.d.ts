@@ -1,11 +1,12 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { ElementRef, OnDestroy } from '@angular/core';
-import { FormBuilder, FormGroup, ControlValueAccessor, NgControl } from '@angular/forms';
+import { FormBuilder, FormGroup, ControlValueAccessor, NgControl, AbstractControl } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs';
 import * as i0 from "@angular/core";
 /** @title Form field with custom telephone number input control. */
 export declare class FormFieldCustomControlExample {
+    form: FormGroup;
     static ɵfac: i0.ɵɵFactoryDef<FormFieldCustomControlExample, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never>;
 }
@@ -22,6 +23,9 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     private _elementRef;
     ngControl: NgControl;
     static nextId: number;
+    areaInput: HTMLInputElement;
+    exchangeInput: HTMLInputElement;
+    subscriberInput: HTMLInputElement;
     parts: FormGroup;
     stateChanges: Subject<void>;
     focused: boolean;
@@ -45,6 +49,8 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     get value(): MyTel | null;
     set value(tel: MyTel | null);
     constructor(formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, ngControl: NgControl);
+    autoFocusNext(control: AbstractControl, nextElement?: HTMLInputElement): void;
+    autoFocusPrev(control: AbstractControl, prevElement: HTMLInputElement): void;
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;
@@ -52,7 +58,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     registerOnChange(fn: any): void;
     registerOnTouched(fn: any): void;
     setDisabledState(isDisabled: boolean): void;
-    _handleInput(): void;
+    _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
     static ngAcceptInputType_disabled: boolean | string | null | undefined;
     static ngAcceptInputType_required: boolean | string | null | undefined;
     static ɵfac: i0.ɵɵFactoryDef<MyTelInput, [null, null, null, { optional: true; self: true; }]>;
