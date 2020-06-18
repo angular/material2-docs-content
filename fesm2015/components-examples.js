@@ -465,6 +465,36 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/tree"
         }
     },
+    "default-enabled-column-resize-flex": {
+        "title": "Default-enabled column resize with a flex-based mat-table.",
+        "componentName": "DefaultEnabledColumnResizeFlexExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ColumnResizeExamplesModule",
+            "importSpecifier": "material-experimental/column-resize"
+        }
+    },
+    "default-enabled-column-resize": {
+        "title": "Default-enabled column resize with a table-based mat-table.",
+        "componentName": "DefaultEnabledColumnResizeExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ColumnResizeExamplesModule",
+            "importSpecifier": "material-experimental/column-resize"
+        }
+    },
+    "opt-in-column-resize": {
+        "title": "Opt-in column resize with a table-based mat-table.",
+        "componentName": "OptInColumnResizeExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ColumnResizeExamplesModule",
+            "importSpecifier": "material-experimental/column-resize"
+        }
+    },
     "form-field-custom-control": {
         "title": "Form field with custom telephone number input control.",
         "componentName": "FormFieldCustomControlExample",

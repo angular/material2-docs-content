@@ -9,29 +9,48 @@
      */
     var BadgeOverviewExample = /** @class */ (function () {
         function BadgeOverviewExample() {
+            this.hidden = false;
         }
+        BadgeOverviewExample.prototype.toggleBadgeVisibility = function () {
+            this.hidden = !this.hidden;
+        };
         BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
-        BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 20, vars: 1, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["matBadge", "1", "matBadgeSize", "large"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["mat-raised-button", "", "matBadge", "7", 3, "matBadgeHidden", "click"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵelementStart(1, "span", 0);
                 i0.ɵɵtext(2, "Text with a badge");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "p");
-                i0.ɵɵtext(4, " Button with a badge on the left ");
-                i0.ɵɵelementStart(5, "button", 1);
-                i0.ɵɵtext(6, " Action ");
+                i0.ɵɵelementStart(4, "span", 1);
+                i0.ɵɵtext(5, "Text with large badge");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "p");
-                i0.ɵɵtext(8, " Icon with a badge ");
-                i0.ɵɵelementStart(9, "mat-icon", 2);
-                i0.ɵɵtext(10, "home");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "span", 3);
-                i0.ɵɵtext(12, " Example with a home icon with overlaid badge showing the number 15 ");
+                i0.ɵɵelementStart(6, "p");
+                i0.ɵɵtext(7, " Button with a badge on the left\n");
+                i0.ɵɵelementStart(8, "button", 2);
+                i0.ɵɵtext(9, " Action ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "p");
+                i0.ɵɵtext(11, " Button toggles badge visibility\n");
+                i0.ɵɵelementStart(12, "button", 3);
+                i0.ɵɵlistener("click", function BadgeOverviewExample_Template_button_click_12_listener() { return ctx.toggleBadgeVisibility(); });
+                i0.ɵɵtext(13, " Hide ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(14, "p");
+                i0.ɵɵtext(15, " Icon with a badge\n");
+                i0.ɵɵelementStart(16, "mat-icon", 4);
+                i0.ɵɵtext(17, "home");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(18, "span", 5);
+                i0.ɵɵtext(19, " Example with a home icon with overlaid badge showing the number 15 ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            } if (rf & 2) {
+                i0.ɵɵadvance(12);
+                i0.ɵɵproperty("matBadgeHidden", ctx.hidden);
             } }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], styles: [""] });
         return BadgeOverviewExample;
     }());

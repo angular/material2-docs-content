@@ -10,13 +10,17 @@ another object.</p>
         </h3>
       <p>By default, the badge will be placed <code>above after</code>. The direction can be changed by defining
 the attribute <code>matBadgePosition</code> follow by <code>above|below</code> and <code>before|after</code>.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matBadge</span>=<span class="hljs-string">"22"</span> <span class="hljs-attr">matBadgePosition</span>=<span class="hljs-string">"above after"</span>&gt;</span>home<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span></code></pre>
+<div material-docs-example="badge-overview"
+                             file="badge-overview-example.html"
+                             region="mat-badge-position"></div>
+
 <p>The overlap of the badge in relation to its inner contents can also be defined
 using the <code>matBadgeOverlap</code> tag. Typically, you want the badge to overlap an icon and not
 a text phrase. By default it will overlap.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">matBadge</span>=<span class="hljs-string">"11"</span> <span class="hljs-attr">matBadgeOverlap</span>=<span class="hljs-string">"false"</span>&gt;</span>
-  Email
-<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+<div material-docs-example="badge-overview"
+                             file="badge-overview-example.html"
+                             region="mat-badge-overlap"></div>
+
 
         <h3 id="badge-sizing" class="docs-header-link">
           <span header-link="badge-sizing"></span>
@@ -24,18 +28,20 @@ a text phrase. By default it will overlap.</p>
         </h3>
       <p>The badge has 3 sizes: <code>small</code>, <code>medium</code> and <code>large</code>. By default, the badge is set to <code>medium</code>.
 You can change the size by adding <code>matBadgeSize</code> to the host element.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">matBadge</span>=<span class="hljs-string">"11"</span> <span class="hljs-attr">matBadgeSize</span>=<span class="hljs-string">"large"</span>&gt;</span>
-  Email
-<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+<div material-docs-example="badge-overview"
+                             file="badge-overview-example.html"
+                             region="mat-badge-size"></div>
+
 
         <h3 id="badge-visibility" class="docs-header-link">
           <span header-link="badge-visibility"></span>
           Badge visibility
         </h3>
       <p>The badge visibility can be toggled programmatically by defining <code>matBadgeHidden</code>.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">matBadge</span>=<span class="hljs-string">"11"</span> [<span class="hljs-attr">matBadgeHidden</span>]=<span class="hljs-string">"!visible"</span>&gt;</span>
-  Email
-<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></code></pre>
+<div material-docs-example="badge-overview"
+                             file="badge-overview-example.html"
+                             region="mat-badge-hide"></div>
+
 
         <h3 id="theming" class="docs-header-link">
           <span header-link="theming"></span>
@@ -43,9 +49,10 @@ You can change the size by adding <code>matBadgeSize</code> to the host element.
         </h3>
       <p>Badges can be colored in terms of the current theme using the <code>matBadgeColor</code> property to set the
 background color to <code>primary</code>, <code>accent</code>, or <code>warn</code>.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matBadge</span>=<span class="hljs-string">"22"</span> <span class="hljs-attr">matBadgeColor</span>=<span class="hljs-string">"accent"</span>&gt;</span>
-  home
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span></code></pre>
+<div material-docs-example="badge-overview"
+                             file="badge-overview-example.html"
+                             region="mat-badge-color"></div>
+
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>

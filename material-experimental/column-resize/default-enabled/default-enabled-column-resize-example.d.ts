@@ -8,9 +8,9 @@ export interface PeriodicElement {
 /**
  * @title Default-enabled column resize with a table-based mat-table.
  */
-export declare class DefaultEnabledColumnResizeDemo {
+export declare class DefaultEnabledColumnResizeExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<DefaultEnabledColumnResizeDemo, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DefaultEnabledColumnResizeDemo, "default-enabled-column-resize-demo", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDef<DefaultEnabledColumnResizeExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<DefaultEnabledColumnResizeExample, "default-enabled-column-resize-example", never, {}, {}, never, never>;
 }

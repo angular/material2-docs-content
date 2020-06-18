@@ -8,4 +8,10 @@
   templateUrl: <span class="hljs-string">'badge-overview-example.html'</span>,
   styleUrls: [<span class="hljs-string">'badge-overview-example.css'</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BadgeOverviewExample {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BadgeOverviewExample {
+  hidden = <span class="hljs-literal">false</span>;
+
+  toggleBadgeVisibility() {
+    <span class="hljs-keyword">this</span>.hidden = !<span class="hljs-keyword">this</span>.hidden;
+  }
+}

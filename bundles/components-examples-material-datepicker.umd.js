@@ -11,21 +11,24 @@
         function DatepickerApiExample() {
         }
         DatepickerApiExample.ɵfac = function DatepickerApiExample_Factory(t) { return new (t || DatepickerApiExample)(); };
-        DatepickerApiExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 6, vars: 1, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["picker", ""], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerApiExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 8, vars: 1, consts: [["appearance", "fill", 1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["picker", ""], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
                 var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
-                i0.ɵɵelement(1, "input", 1);
-                i0.ɵɵelement(2, "mat-datepicker", null, 2);
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Choose a date");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(4, "button", 3);
-                i0.ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(3); return _r0.open(); });
-                i0.ɵɵtext(5, "Open");
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker", null, 2);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "button", 3);
+                i0.ɵɵlistener("click", function DatepickerApiExample_Template_button_click_6_listener() { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(5); return _r0.open(); });
+                i0.ɵɵtext(7, "Open");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r0 = i0.ɵɵreference(3);
-                i0.ɵɵadvance(1);
+                var _r0 = i0.ɵɵreference(5);
+                i0.ɵɵadvance(3);
                 i0.ɵɵproperty("matDatepicker", _r0);
-            } }, directives: [i1$1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return DatepickerApiExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DatepickerApiExample, [{
@@ -42,7 +45,7 @@
         function DatepickerColorExample() {
         }
         DatepickerColorExample.ɵfac = function DatepickerColorExample_Factory(t) { return new (t || DatepickerColorExample)(); };
-        DatepickerColorExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerColorExample, selectors: [["datepicker-color-example"]], decls: 14, vars: 4, consts: [["color", "accent"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker1", ""], ["color", "primary"], ["picker2", ""]], template: function DatepickerColorExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerColorExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerColorExample, selectors: [["datepicker-color-example"]], decls: 14, vars: 4, consts: [["color", "accent", "appearance", "fill"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker1", ""], ["color", "primary"], ["picker2", ""]], template: function DatepickerColorExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Inherited calendar color");
@@ -88,14 +91,14 @@
             this.exampleHeader = ExampleHeader;
         }
         DatepickerCustomHeaderExample.ɵfac = function DatepickerCustomHeaderExample_Factory(t) { return new (t || DatepickerCustomHeaderExample)(); };
-        DatepickerCustomHeaderExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerCustomHeaderExample, selectors: [["datepicker-custom-header-example"]], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "calendarHeaderComponent"], ["picker", ""]], template: function DatepickerCustomHeaderExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DatepickerCustomHeaderExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerCustomHeaderExample, selectors: [["datepicker-custom-header-example"]], decls: 7, vars: 3, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "calendarHeaderComponent"], ["picker", ""]], template: function DatepickerCustomHeaderExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Custom calendar header");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", 2, 3);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", 3, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -211,7 +214,7 @@
         function DatepickerCustomIconExample() {
         }
         DatepickerCustomIconExample.ɵfac = function DatepickerCustomIconExample_Factory(t) { return new (t || DatepickerCustomIconExample)(); };
-        DatepickerCustomIconExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerCustomIconExample, selectors: [["datepicker-custom-icon-example"]], decls: 9, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matDatepickerToggleIcon", ""], ["picker", ""]], template: function DatepickerCustomIconExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerCustomIconExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerCustomIconExample, selectors: [["datepicker-custom-icon-example"]], decls: 9, vars: 2, consts: [["appearance", "fill", 1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matDatepickerToggleIcon", ""], ["picker", ""]], template: function DatepickerCustomIconExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
@@ -252,7 +255,7 @@
             };
         }
         DatepickerDateClassExample.ɵfac = function DatepickerDateClassExample_Factory(t) { return new (t || DatepickerDateClassExample)(); };
-        DatepickerDateClassExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerDateClassExample, selectors: [["datepicker-date-class-example"]], decls: 7, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "dateClass"], ["picker", ""]], template: function DatepickerDateClassExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerDateClassExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerDateClassExample, selectors: [["datepicker-date-class-example"]], decls: 7, vars: 3, consts: [["appearance", "fill", 1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "dateClass"], ["picker", ""]], template: function DatepickerDateClassExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
@@ -287,35 +290,35 @@
         function DatepickerDisabledExample() {
         }
         DatepickerDisabledExample.ɵfac = function DatepickerDisabledExample_Factory(t) { return new (t || DatepickerDisabledExample)(); };
-        DatepickerDisabledExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerDisabledExample, selectors: [["datepicker-disabled-example"]], decls: 24, vars: 6, consts: [["matInput", "", "disabled", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["dp1", ""], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", "disabled", "", 3, "for"], ["dp2", ""], ["disabled", "false"], ["dp3", ""]], template: function DatepickerDisabledExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerDisabledExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerDisabledExample, selectors: [["datepicker-disabled-example"]], decls: 24, vars: 6, consts: [["appearance", "fill"], ["matInput", "", "disabled", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["dp1", ""], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", "disabled", "", 3, "for"], ["dp2", ""], ["disabled", "false"], ["dp3", ""]], template: function DatepickerDisabledExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
-                i0.ɵɵelementStart(1, "mat-form-field");
+                i0.ɵɵelementStart(1, "mat-form-field", 0);
                 i0.ɵɵelementStart(2, "mat-label");
                 i0.ɵɵtext(3, "Completely disabled");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(4, "input", 0);
-                i0.ɵɵelement(5, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(6, "mat-datepicker", null, 2);
+                i0.ɵɵelement(4, "input", 1);
+                i0.ɵɵelement(5, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(6, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(8, "p");
-                i0.ɵɵelementStart(9, "mat-form-field");
+                i0.ɵɵelementStart(9, "mat-form-field", 0);
                 i0.ɵɵelementStart(10, "mat-label");
                 i0.ɵɵtext(11, "Popup disabled");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(12, "input", 3);
-                i0.ɵɵelement(13, "mat-datepicker-toggle", 4);
-                i0.ɵɵelement(14, "mat-datepicker", null, 5);
+                i0.ɵɵelement(12, "input", 4);
+                i0.ɵɵelement(13, "mat-datepicker-toggle", 5);
+                i0.ɵɵelement(14, "mat-datepicker", null, 6);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(16, "p");
-                i0.ɵɵelementStart(17, "mat-form-field");
+                i0.ɵɵelementStart(17, "mat-form-field", 0);
                 i0.ɵɵelementStart(18, "mat-label");
                 i0.ɵɵtext(19, "Input disabled");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(20, "input", 0);
-                i0.ɵɵelement(21, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(22, "mat-datepicker", 6, 7);
+                i0.ɵɵelement(20, "input", 1);
+                i0.ɵɵelement(21, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(22, "mat-datepicker", 7, 8);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -364,19 +367,19 @@
             this.events.push(type + ": " + event.value);
         };
         DatepickerEventsExample.ɵfac = function DatepickerEventsExample_Factory(t) { return new (t || DatepickerEventsExample)(); };
-        DatepickerEventsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerEventsExample, selectors: [["datepicker-events-example"]], decls: 9, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "dateInput", "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function DatepickerEventsExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DatepickerEventsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerEventsExample, selectors: [["datepicker-events-example"]], decls: 9, vars: 3, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker", "dateInput", "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function DatepickerEventsExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Input & change events");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "input", 0);
+                i0.ɵɵelementStart(3, "input", 1);
                 i0.ɵɵlistener("dateInput", function DatepickerEventsExample_Template_input_dateInput_3_listener($event) { return ctx.addEvent("input", $event); })("dateChange", function DatepickerEventsExample_Template_input_dateChange_3_listener($event) { return ctx.addEvent("change", $event); });
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", null, 2);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "div", 3);
-                i0.ɵɵtemplate(8, DatepickerEventsExample_div_8_Template, 2, 1, "div", 4);
+                i0.ɵɵelementStart(7, "div", 4);
+                i0.ɵɵtemplate(8, DatepickerEventsExample_div_8_Template, 2, 1, "div", 5);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -408,7 +411,7 @@
             };
         }
         DatepickerFilterExample.ɵfac = function DatepickerFilterExample_Factory(t) { return new (t || DatepickerFilterExample)(); };
-        DatepickerFilterExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerFilterExample, selectors: [["datepicker-filter-example"]], decls: 7, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", 3, "matDatepickerFilter", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerFilterExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerFilterExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerFilterExample, selectors: [["datepicker-filter-example"]], decls: 7, vars: 3, consts: [["appearance", "fill", 1, "example-full-width"], ["matInput", "", 3, "matDatepickerFilter", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerFilterExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
@@ -465,14 +468,14 @@
                         deps: [i1.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
                     },
                     { provide: i1.MAT_DATE_FORMATS, useValue: MY_FORMATS },
-                ])], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["dp", ""]], template: function DatepickerFormatsExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+                ])], decls: 7, vars: 3, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["dp", ""]], template: function DatepickerFormatsExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Verbose datepicker");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", null, 2);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -525,16 +528,16 @@
                         deps: [i1.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
                     },
                     { provide: i1.MAT_DATE_FORMATS, useValue: materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
-                ])], decls: 9, vars: 2, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["dp", ""], ["mat-button", "", 3, "click"]], template: function DatepickerLocaleExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+                ])], decls: 9, vars: 2, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["dp", ""], ["mat-button", "", 3, "click"]], template: function DatepickerLocaleExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Different locale");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", null, 2);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "button", 3);
+                i0.ɵɵelementStart(7, "button", 4);
                 i0.ɵɵlistener("click", function DatepickerLocaleExample_Template_button_click_7_listener() { return ctx.french(); });
                 i0.ɵɵtext(8, "Dynamically switch to French");
                 i0.ɵɵelementEnd();
@@ -579,7 +582,7 @@
             this.maxDate = new Date(currentYear + 1, 11, 31);
         }
         DatepickerMinMaxExample.ɵfac = function DatepickerMinMaxExample_Factory(t) { return new (t || DatepickerMinMaxExample)(); };
-        DatepickerMinMaxExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerMinMaxExample, selectors: [["datepicker-min-max-example"]], decls: 7, vars: 4, consts: [[1, "example-full-width"], ["matInput", "", 3, "min", "max", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerMinMaxExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerMinMaxExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerMinMaxExample, selectors: [["datepicker-min-max-example"]], decls: 7, vars: 4, consts: [["appearance", "fill", 1, "example-full-width"], ["matInput", "", 3, "min", "max", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerMinMaxExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
@@ -620,14 +623,14 @@
                     // here, due to limitations of our example generation script.
                     { provide: i1.DateAdapter, useClass: materialMomentAdapter.MomentDateAdapter, deps: [i1.MAT_DATE_LOCALE] },
                     { provide: i1.MAT_DATE_FORMATS, useValue: materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
-                ])], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["dp", ""]], template: function DatepickerMomentExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+                ])], decls: 7, vars: 3, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["dp", ""]], template: function DatepickerMomentExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Moment.js datepicker");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", null, 2);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -659,14 +662,14 @@
         function DatepickerOverviewExample() {
         }
         DatepickerOverviewExample.ɵfac = function DatepickerOverviewExample_Factory(t) { return new (t || DatepickerOverviewExample)(); };
-        DatepickerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerOverviewExample, selectors: [["datepicker-overview-example"]], decls: 7, vars: 2, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DatepickerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerOverviewExample, selectors: [["datepicker-overview-example"]], decls: 7, vars: 2, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", null, 2);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -692,14 +695,14 @@
             this.startDate = new Date(1990, 0, 1);
         }
         DatepickerStartViewExample.ɵfac = function DatepickerStartViewExample_Factory(t) { return new (t || DatepickerStartViewExample)(); };
-        DatepickerStartViewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerStartViewExample, selectors: [["datepicker-start-view-example"]], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["startView", "year", 3, "startAt"], ["picker", ""]], template: function DatepickerStartViewExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DatepickerStartViewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerStartViewExample, selectors: [["datepicker-start-view-example"]], decls: 7, vars: 3, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["startView", "year", 3, "startAt"], ["picker", ""]], template: function DatepickerStartViewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", 2, 3);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", 3, 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -726,7 +729,7 @@
         function DatepickerTouchExample() {
         }
         DatepickerTouchExample.ɵfac = function DatepickerTouchExample_Factory(t) { return new (t || DatepickerTouchExample)(); };
-        DatepickerTouchExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerTouchExample, selectors: [["datepicker-touch-example"]], decls: 7, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["touchUi", ""], ["picker", ""]], template: function DatepickerTouchExample_Template(rf, ctx) { if (rf & 1) {
+        DatepickerTouchExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerTouchExample, selectors: [["datepicker-touch-example"]], decls: 7, vars: 2, consts: [["appearance", "fill", 1, "example-full-width"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["touchUi", ""], ["picker", ""]], template: function DatepickerTouchExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Choose a date");
@@ -760,30 +763,30 @@
             this.serializedDate = new i4$1.FormControl((new Date()).toISOString());
         }
         DatepickerValueExample.ɵfac = function DatepickerValueExample_Factory(t) { return new (t || DatepickerValueExample)(); };
-        DatepickerValueExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerValueExample, selectors: [["datepicker-value-example"]], decls: 21, vars: 9, consts: [["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["picker1", ""], ["picker2", ""], ["matInput", "", 3, "matDatepicker", "value"], ["picker3", ""]], template: function DatepickerValueExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DatepickerValueExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerValueExample, selectors: [["datepicker-value-example"]], decls: 21, vars: 9, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["picker1", ""], ["picker2", ""], ["matInput", "", 3, "matDatepicker", "value"], ["picker3", ""]], template: function DatepickerValueExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Angular forms");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(5, "mat-datepicker", null, 2);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(5, "mat-datepicker", null, 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "mat-form-field");
+                i0.ɵɵelementStart(7, "mat-form-field", 0);
                 i0.ɵɵelementStart(8, "mat-label");
                 i0.ɵɵtext(9, "Angular forms (w/ deserialization)");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(10, "input", 0);
-                i0.ɵɵelement(11, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(12, "mat-datepicker", null, 3);
+                i0.ɵɵelement(10, "input", 1);
+                i0.ɵɵelement(11, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(12, "mat-datepicker", null, 4);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "mat-form-field");
+                i0.ɵɵelementStart(14, "mat-form-field", 0);
                 i0.ɵɵelementStart(15, "mat-label");
                 i0.ɵɵtext(16, "Value binding");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(17, "input", 4);
-                i0.ɵɵelement(18, "mat-datepicker-toggle", 1);
-                i0.ɵɵelement(19, "mat-datepicker", null, 5);
+                i0.ɵɵelement(17, "input", 5);
+                i0.ɵɵelement(18, "mat-datepicker-toggle", 2);
+                i0.ɵɵelement(19, "mat-datepicker", null, 6);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(6);
@@ -854,15 +857,15 @@
                         deps: [i1.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
                     },
                     { provide: i1.MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
-                ])], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["startView", "multi-year", "panelClass", "example-month-picker", 3, "yearSelected", "monthSelected"], ["dp", ""]], template: function DatepickerViewsSelectionExample_Template(rf, ctx) { if (rf & 1) {
+                ])], decls: 7, vars: 3, consts: [["appearance", "fill"], ["matInput", "", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["startView", "multi-year", "panelClass", "example-month-picker", 3, "yearSelected", "monthSelected"], ["dp", ""]], template: function DatepickerViewsSelectionExample_Template(rf, ctx) { if (rf & 1) {
                 var _r1 = i0.ɵɵgetCurrentView();
-                i0.ɵɵelementStart(0, "mat-form-field");
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Month and Year");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "input", 0);
-                i0.ɵɵelement(4, "mat-datepicker-toggle", 1);
-                i0.ɵɵelementStart(5, "mat-datepicker", 2, 3);
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelementStart(5, "mat-datepicker", 3, 4);
                 i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_5_listener($event) { return ctx.chosenYearHandler($event); })("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_5_listener($event) { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(6); return ctx.chosenMonthHandler($event, _r0); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -900,17 +903,17 @@
         function DateRangePickerOverviewExample() {
         }
         DateRangePickerOverviewExample.ɵfac = function DateRangePickerOverviewExample_Factory(t) { return new (t || DateRangePickerOverviewExample)(); };
-        DateRangePickerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerOverviewExample, selectors: [["date-range-picker-overview-example"]], decls: 9, vars: 2, consts: [[3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DateRangePickerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerOverviewExample, selectors: [["date-range-picker-overview-example"]], decls: 9, vars: 2, consts: [["appearance", "fill"], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Enter a date range");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-date-range-input", 0);
-                i0.ɵɵelement(4, "input", 1);
-                i0.ɵɵelement(5, "input", 2);
+                i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+                i0.ɵɵelement(4, "input", 2);
+                i0.ɵɵelement(5, "input", 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(6, "mat-datepicker-toggle", 3);
-                i0.ɵɵelement(7, "mat-date-range-picker", null, 4);
+                i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+                i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(8);
@@ -949,19 +952,19 @@
             });
         }
         DateRangePickerFormsExample.ɵfac = function DateRangePickerFormsExample_Factory(t) { return new (t || DateRangePickerFormsExample)(); };
-        DateRangePickerFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerFormsExample, selectors: [["date-range-picker-forms-example"]], decls: 14, vars: 8, consts: [[3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"]], template: function DateRangePickerFormsExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        DateRangePickerFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerFormsExample, selectors: [["date-range-picker-forms-example"]], decls: 14, vars: 8, consts: [["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"]], template: function DateRangePickerFormsExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Enter a date range");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-date-range-input", 0);
-                i0.ɵɵelement(4, "input", 1);
-                i0.ɵɵelement(5, "input", 2);
+                i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+                i0.ɵɵelement(4, "input", 2);
+                i0.ɵɵelement(5, "input", 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(6, "mat-datepicker-toggle", 3);
-                i0.ɵɵelement(7, "mat-date-range-picker", null, 4);
-                i0.ɵɵtemplate(9, DateRangePickerFormsExample_mat_error_9_Template, 2, 0, "mat-error", 5);
-                i0.ɵɵtemplate(10, DateRangePickerFormsExample_mat_error_10_Template, 2, 0, "mat-error", 5);
+                i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+                i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
+                i0.ɵɵtemplate(9, DateRangePickerFormsExample_mat_error_9_Template, 2, 0, "mat-error", 6);
+                i0.ɵɵtemplate(10, DateRangePickerFormsExample_mat_error_10_Template, 2, 0, "mat-error", 6);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(11, "p");
                 i0.ɵɵtext(12);
@@ -1007,7 +1010,7 @@
             });
         }
         DateRangePickerComparisonExample.ɵfac = function DateRangePickerComparisonExample_Factory(t) { return new (t || DateRangePickerComparisonExample)(); };
-        DateRangePickerComparisonExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerComparisonExample, selectors: [["date-range-picker-comparison-example"]], decls: 18, vars: 10, consts: [[1, "example-form-field"], [3, "formGroup", "rangePicker", "comparisonStart", "comparisonEnd"], ["matStartDate", "", "placeholder", "Start date", "formControlName", "start"], ["matEndDate", "", "placeholder", "End date", "formControlName", "end"], ["matSuffix", "", 3, "for"], ["campaignOnePicker", ""], ["campaignTwoPicker", ""]], template: function DateRangePickerComparisonExample_Template(rf, ctx) { if (rf & 1) {
+        DateRangePickerComparisonExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerComparisonExample, selectors: [["date-range-picker-comparison-example"]], decls: 18, vars: 10, consts: [["appearance", "fill", 1, "example-form-field"], [3, "formGroup", "rangePicker", "comparisonStart", "comparisonEnd"], ["matStartDate", "", "placeholder", "Start date", "formControlName", "start"], ["matEndDate", "", "placeholder", "End date", "formControlName", "end"], ["matSuffix", "", 3, "for"], ["campaignOnePicker", ""], ["campaignTwoPicker", ""]], template: function DateRangePickerComparisonExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "First campaign");
@@ -1086,17 +1089,17 @@
         DateRangePickerSelectionStrategyExample.ɵcmp = i0.ɵɵdefineComponent({ type: DateRangePickerSelectionStrategyExample, selectors: [["date-range-picker-selection-strategy-example"]], features: [i0.ɵɵProvidersFeature([{
                         provide: i3.MAT_DATE_RANGE_SELECTION_STRATEGY,
                         useClass: FiveDayRangeSelectionStrategy
-                    }])], decls: 9, vars: 2, consts: [[3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerSelectionStrategyExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+                    }])], decls: 9, vars: 2, consts: [["appearance", "fill"], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerSelectionStrategyExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Enter a date range");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-date-range-input", 0);
-                i0.ɵɵelement(4, "input", 1);
-                i0.ɵɵelement(5, "input", 2);
+                i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+                i0.ɵɵelement(4, "input", 2);
+                i0.ɵɵelement(5, "input", 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(6, "mat-datepicker-toggle", 3);
-                i0.ɵɵelement(7, "mat-date-range-picker", null, 4);
+                i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+                i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(8);
