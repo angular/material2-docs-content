@@ -123,49 +123,40 @@
             this.panelOpenState = false;
         }
         ExpansionOverviewExample.ɵfac = function ExpansionOverviewExample_Factory(t) { return new (t || ExpansionOverviewExample)(); };
-        ExpansionOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionOverviewExample, selectors: [["expansion-overview-example"]], decls: 23, vars: 1, consts: [["matInput", ""], ["matInput", "", "type", "number", "min", "1"], [3, "opened", "closed"]], template: function ExpansionOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ExpansionOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionOverviewExample, selectors: [["expansion-overview-example"]], decls: 17, vars: 1, consts: [["hideToggle", ""], [3, "opened", "closed"]], template: function ExpansionOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-accordion");
-                i0.ɵɵelementStart(1, "mat-expansion-panel");
+                i0.ɵɵelementStart(1, "mat-expansion-panel", 0);
                 i0.ɵɵelementStart(2, "mat-expansion-panel-header");
                 i0.ɵɵelementStart(3, "mat-panel-title");
-                i0.ɵɵtext(4, " Personal data ");
+                i0.ɵɵtext(4, " This is the expansion title ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(5, "mat-panel-description");
-                i0.ɵɵtext(6, " Type your name and age ");
+                i0.ɵɵtext(6, " This is a summary of the content ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "mat-form-field");
-                i0.ɵɵelementStart(8, "mat-label");
-                i0.ɵɵtext(9, "First name");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelement(10, "input", 0);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-form-field");
-                i0.ɵɵelementStart(12, "mat-label");
-                i0.ɵɵtext(13, "Age");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelement(14, "input", 1);
+                i0.ɵɵelementStart(7, "p");
+                i0.ɵɵtext(8, "This is the primary content of the panel.");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(15, "mat-expansion-panel", 2);
-                i0.ɵɵlistener("opened", function ExpansionOverviewExample_Template_mat_expansion_panel_opened_15_listener() { return ctx.panelOpenState = true; })("closed", function ExpansionOverviewExample_Template_mat_expansion_panel_closed_15_listener() { return ctx.panelOpenState = false; });
-                i0.ɵɵelementStart(16, "mat-expansion-panel-header");
-                i0.ɵɵelementStart(17, "mat-panel-title");
-                i0.ɵɵtext(18, " Self aware panel ");
+                i0.ɵɵelementStart(9, "mat-expansion-panel", 1);
+                i0.ɵɵlistener("opened", function ExpansionOverviewExample_Template_mat_expansion_panel_opened_9_listener() { return ctx.panelOpenState = true; })("closed", function ExpansionOverviewExample_Template_mat_expansion_panel_closed_9_listener() { return ctx.panelOpenState = false; });
+                i0.ɵɵelementStart(10, "mat-expansion-panel-header");
+                i0.ɵɵelementStart(11, "mat-panel-title");
+                i0.ɵɵtext(12, " Self aware panel ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(19, "mat-panel-description");
-                i0.ɵɵtext(20);
+                i0.ɵɵelementStart(13, "mat-panel-description");
+                i0.ɵɵtext(14);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "p");
-                i0.ɵɵtext(22, "I'm visible because I am open");
+                i0.ɵɵelementStart(15, "p");
+                i0.ɵɵtext(16, "I'm visible because I am open");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                i0.ɵɵadvance(20);
+                i0.ɵɵadvance(14);
                 i0.ɵɵtextInterpolate1(" Currently I am ", ctx.panelOpenState ? "open" : "closed", " ");
-            } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i4.MatFormField, i4.MatLabel, i5.MatInput], styles: [".mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
+            } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription], styles: [".mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
         return ExpansionOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ExpansionOverviewExample, [{
