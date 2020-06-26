@@ -5,7 +5,7 @@
 }(this, (function (exports, i4, i0, i3, i1, i6, i2, i1$1, i4$1) { 'use strict';
 
     function SelectCustomTriggerExample_span_6_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "span", 3);
+        i0.ɵɵelementStart(0, "span", 4);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -14,7 +14,7 @@
         i0.ɵɵtextInterpolate2(" (+", ctx_r0.toppings.value.length - 1, " ", (ctx_r0.toppings.value == null ? null : ctx_r0.toppings.value.length) === 2 ? "other" : "others", ") ");
     } }
     function SelectCustomTriggerExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 4);
+        i0.ɵɵelementStart(0, "mat-option", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -30,17 +30,17 @@
             this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
         }
         SelectCustomTriggerExample.ɵfac = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
-        SelectCustomTriggerExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 8, vars: 4, consts: [["multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        SelectCustomTriggerExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 8, vars: 4, consts: [["appearance", "fill"], ["multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Toppings");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-select", 0);
+                i0.ɵɵelementStart(3, "mat-select", 1);
                 i0.ɵɵelementStart(4, "mat-select-trigger");
                 i0.ɵɵtext(5);
-                i0.ɵɵtemplate(6, SelectCustomTriggerExample_span_6_Template, 2, 2, "span", 1);
+                i0.ɵɵtemplate(6, SelectCustomTriggerExample_span_6_Template, 2, 2, "span", 2);
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(7, SelectCustomTriggerExample_mat_option_7_Template, 2, 2, "mat-option", 2);
+                i0.ɵɵtemplate(7, SelectCustomTriggerExample_mat_option_7_Template, 2, 2, "mat-option", 3);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -70,7 +70,7 @@
             this.disableSelect = new i3.FormControl(false);
         }
         SelectDisabledExample.ɵfac = function SelectDisabledExample_Factory(t) { return new (t || SelectDisabledExample)(); };
-        SelectDisabledExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectDisabledExample, selectors: [["select-disabled-example"]], decls: 30, vars: 3, consts: [[3, "formControl"], [3, "disabled"], ["value", "option1"], ["value", "option2", "disabled", ""], ["value", "option3"], ["matNativeControl", "", 3, "disabled"], ["value", "", "selected", ""], ["value", "volvo"], ["value", "saab", "disabled", ""], ["value", "mercedes"], ["value", "audi"]], template: function SelectDisabledExample_Template(rf, ctx) { if (rf & 1) {
+        SelectDisabledExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectDisabledExample, selectors: [["select-disabled-example"]], decls: 30, vars: 3, consts: [[3, "formControl"], ["appearance", "fill"], [3, "disabled"], ["value", "option1"], ["value", "option2", "disabled", ""], ["value", "option3"], ["matNativeControl", "", 3, "disabled"], ["value", "", "selected", ""], ["value", "volvo"], ["value", "saab", "disabled", ""], ["value", "mercedes"], ["value", "audi"]], template: function SelectDisabledExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵelementStart(1, "mat-checkbox", 0);
                 i0.ɵɵtext(2, "Disable select");
@@ -79,18 +79,18 @@
                 i0.ɵɵelementStart(3, "h4");
                 i0.ɵɵtext(4, "mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-form-field");
+                i0.ɵɵelementStart(5, "mat-form-field", 1);
                 i0.ɵɵelementStart(6, "mat-label");
                 i0.ɵɵtext(7, "Choose an option");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-select", 1);
-                i0.ɵɵelementStart(9, "mat-option", 2);
+                i0.ɵɵelementStart(8, "mat-select", 2);
+                i0.ɵɵelementStart(9, "mat-option", 3);
                 i0.ɵɵtext(10, "Option 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-option", 3);
+                i0.ɵɵelementStart(11, "mat-option", 4);
                 i0.ɵɵtext(12, "Option 2 (disabled)");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(13, "mat-option", 4);
+                i0.ɵɵelementStart(13, "mat-option", 5);
                 i0.ɵɵtext(14, "Option 3");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -98,22 +98,22 @@
                 i0.ɵɵelementStart(15, "h4");
                 i0.ɵɵtext(16, "native html select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(17, "mat-form-field");
+                i0.ɵɵelementStart(17, "mat-form-field", 1);
                 i0.ɵɵelementStart(18, "mat-label");
                 i0.ɵɵtext(19, "Choose an option");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(20, "select", 5);
-                i0.ɵɵelement(21, "option", 6);
-                i0.ɵɵelementStart(22, "option", 7);
+                i0.ɵɵelementStart(20, "select", 6);
+                i0.ɵɵelement(21, "option", 7);
+                i0.ɵɵelementStart(22, "option", 8);
                 i0.ɵɵtext(23, "Volvo");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(24, "option", 8);
+                i0.ɵɵelementStart(24, "option", 9);
                 i0.ɵɵtext(25, "Saab");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(26, "option", 9);
+                i0.ɵɵelementStart(26, "option", 10);
                 i0.ɵɵtext(27, "Mercedes");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(28, "option", 10);
+                i0.ɵɵelementStart(28, "option", 11);
                 i0.ɵɵtext(29, "Audi");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -185,49 +185,49 @@
             this.matcher = new MyErrorStateMatcher();
         }
         SelectErrorStateMatcherExample.ɵfac = function SelectErrorStateMatcherExample_Factory(t) { return new (t || SelectErrorStateMatcherExample)(); };
-        SelectErrorStateMatcherExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectErrorStateMatcherExample, selectors: [["select-error-state-matcher-example"]], decls: 29, vars: 8, consts: [[3, "formControl", "errorStateMatcher"], ["value", "valid"], ["value", "invalid"], [4, "ngIf"], [1, "demo-full-width"], ["matNativeControl", "", 3, "formControl", "errorStateMatcher"], ["value", ""], ["value", "valid", "selected", ""]], template: function SelectErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
+        SelectErrorStateMatcherExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectErrorStateMatcherExample, selectors: [["select-error-state-matcher-example"]], decls: 29, vars: 8, consts: [["appearance", "fill"], [3, "formControl", "errorStateMatcher"], ["value", "valid"], ["value", "invalid"], [4, "ngIf"], ["appearance", "fill", 1, "demo-full-width"], ["matNativeControl", "", 3, "formControl", "errorStateMatcher"], ["value", ""], ["value", "valid", "selected", ""]], template: function SelectErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h4");
                 i0.ɵɵtext(1, "mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(2, "mat-form-field", 0);
                 i0.ɵɵelementStart(3, "mat-label");
                 i0.ɵɵtext(4, "Choose one");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-select", 0);
+                i0.ɵɵelementStart(5, "mat-select", 1);
                 i0.ɵɵelementStart(6, "mat-option");
                 i0.ɵɵtext(7, "Clear");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-option", 1);
+                i0.ɵɵelementStart(8, "mat-option", 2);
                 i0.ɵɵtext(9, "Valid option");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-option", 2);
+                i0.ɵɵelementStart(10, "mat-option", 3);
                 i0.ɵɵtext(11, "Invalid option");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(12, "mat-hint");
                 i0.ɵɵtext(13, "Errors appear instantly!");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(14, SelectErrorStateMatcherExample_mat_error_14_Template, 2, 0, "mat-error", 3);
-                i0.ɵɵtemplate(15, SelectErrorStateMatcherExample_mat_error_15_Template, 2, 0, "mat-error", 3);
+                i0.ɵɵtemplate(14, SelectErrorStateMatcherExample_mat_error_14_Template, 2, 0, "mat-error", 4);
+                i0.ɵɵtemplate(15, SelectErrorStateMatcherExample_mat_error_15_Template, 2, 0, "mat-error", 4);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(16, "h4");
                 i0.ɵɵtext(17, "native html select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "mat-form-field", 4);
+                i0.ɵɵelementStart(18, "mat-form-field", 5);
                 i0.ɵɵelementStart(19, "mat-label");
                 i0.ɵɵtext(20, "Choose one");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "select", 5);
-                i0.ɵɵelement(22, "option", 6);
-                i0.ɵɵelementStart(23, "option", 7);
+                i0.ɵɵelementStart(21, "select", 6);
+                i0.ɵɵelement(22, "option", 7);
+                i0.ɵɵelementStart(23, "option", 8);
                 i0.ɵɵtext(24, "Valid option");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(25, "option", 2);
+                i0.ɵɵelementStart(25, "option", 3);
                 i0.ɵɵtext(26, "Invalid option");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(27, SelectErrorStateMatcherExample_mat_error_27_Template, 2, 0, "mat-error", 3);
-                i0.ɵɵtemplate(28, SelectErrorStateMatcherExample_mat_error_28_Template, 2, 0, "mat-error", 3);
+                i0.ɵɵtemplate(27, SelectErrorStateMatcherExample_mat_error_27_Template, 2, 0, "mat-error", 4);
+                i0.ɵɵtemplate(28, SelectErrorStateMatcherExample_mat_error_28_Template, 2, 0, "mat-error", 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(5);
@@ -255,7 +255,7 @@
         }], null, null); })();
 
     function SelectFormExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 4);
+        i0.ɵɵelementStart(0, "mat-option", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -265,7 +265,7 @@
         i0.ɵɵtextInterpolate1(" ", food_r2.viewValue, " ");
     } }
     function SelectFormExample_option_17_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "option", 4);
+        i0.ɵɵelementStart(0, "option", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -291,18 +291,18 @@
             ];
         }
         SelectFormExample.ɵfac = function SelectFormExample_Factory(t) { return new (t || SelectFormExample)(); };
-        SelectFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectFormExample, selectors: [["select-form-example"]], decls: 20, vars: 6, consts: [["name", "food", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "ngModel", "ngModelChange"], ["value", "", "selected", ""], [3, "value"]], template: function SelectFormExample_Template(rf, ctx) { if (rf & 1) {
+        SelectFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectFormExample, selectors: [["select-form-example"]], decls: 20, vars: 6, consts: [["appearance", "fill"], ["name", "food", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "ngModel", "ngModelChange"], ["value", "", "selected", ""], [3, "value"]], template: function SelectFormExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form");
                 i0.ɵɵelementStart(1, "h4");
                 i0.ɵɵtext(2, "mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-form-field");
+                i0.ɵɵelementStart(3, "mat-form-field", 0);
                 i0.ɵɵelementStart(4, "mat-label");
                 i0.ɵɵtext(5, "Favorite food");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-select", 0);
+                i0.ɵɵelementStart(6, "mat-select", 1);
                 i0.ɵɵlistener("ngModelChange", function SelectFormExample_Template_mat_select_ngModelChange_6_listener($event) { return ctx.selectedValue = $event; });
-                i0.ɵɵtemplate(7, SelectFormExample_mat_option_7_Template, 2, 2, "mat-option", 1);
+                i0.ɵɵtemplate(7, SelectFormExample_mat_option_7_Template, 2, 2, "mat-option", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(8, "p");
@@ -311,14 +311,14 @@
                 i0.ɵɵelementStart(10, "h4");
                 i0.ɵɵtext(11, "native html select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "mat-form-field");
+                i0.ɵɵelementStart(12, "mat-form-field", 0);
                 i0.ɵɵelementStart(13, "mat-label");
                 i0.ɵɵtext(14, "Favorite car");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(15, "select", 2);
+                i0.ɵɵelementStart(15, "select", 3);
                 i0.ɵɵlistener("ngModelChange", function SelectFormExample_Template_select_ngModelChange_15_listener($event) { return ctx.selectedCar = $event; });
-                i0.ɵɵelement(16, "option", 3);
-                i0.ɵɵtemplate(17, SelectFormExample_option_17_Template, 2, 2, "option", 1);
+                i0.ɵɵelement(16, "option", 4);
+                i0.ɵɵtemplate(17, SelectFormExample_option_17_Template, 2, 2, "option", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(18, "p");
@@ -351,7 +351,7 @@
         }], null, null); })();
 
     function SelectHintErrorExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 8);
+        i0.ɵɵelementStart(0, "mat-option", 9);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -383,21 +383,21 @@
             ];
         }
         SelectHintErrorExample.ɵfac = function SelectHintErrorExample_Factory(t) { return new (t || SelectHintErrorExample)(); };
-        SelectHintErrorExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectHintErrorExample, selectors: [["select-hint-error-example"]], decls: 28, vars: 6, consts: [["required", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["matNativeControl", "", "required", "", 3, "formControl"], ["label", "--select something --"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectHintErrorExample_Template(rf, ctx) { if (rf & 1) {
+        SelectHintErrorExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectHintErrorExample, selectors: [["select-hint-error-example"]], decls: 28, vars: 6, consts: [["appearance", "fill"], ["required", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["matNativeControl", "", "required", "", 3, "formControl"], ["label", "--select something --"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectHintErrorExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h4");
                 i0.ɵɵtext(1, "mat select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(2, "mat-form-field", 0);
                 i0.ɵɵelementStart(3, "mat-label");
                 i0.ɵɵtext(4, "Favorite animal");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-select", 0);
+                i0.ɵɵelementStart(5, "mat-select", 1);
                 i0.ɵɵelementStart(6, "mat-option");
                 i0.ɵɵtext(7, "--");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(8, SelectHintErrorExample_mat_option_8_Template, 2, 2, "mat-option", 1);
+                i0.ɵɵtemplate(8, SelectHintErrorExample_mat_option_8_Template, 2, 2, "mat-option", 2);
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(9, SelectHintErrorExample_mat_error_9_Template, 2, 0, "mat-error", 2);
+                i0.ɵɵtemplate(9, SelectHintErrorExample_mat_error_9_Template, 2, 0, "mat-error", 3);
                 i0.ɵɵelementStart(10, "mat-hint");
                 i0.ɵɵtext(11);
                 i0.ɵɵelementEnd();
@@ -405,23 +405,23 @@
                 i0.ɵɵelementStart(12, "h4");
                 i0.ɵɵtext(13, "native html select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "mat-form-field");
+                i0.ɵɵelementStart(14, "mat-form-field", 0);
                 i0.ɵɵelementStart(15, "mat-label");
                 i0.ɵɵtext(16, "Select your car (required)");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(17, "select", 3);
-                i0.ɵɵelement(18, "option", 4);
-                i0.ɵɵelementStart(19, "option", 5);
+                i0.ɵɵelementStart(17, "select", 4);
+                i0.ɵɵelement(18, "option", 5);
+                i0.ɵɵelementStart(19, "option", 6);
                 i0.ɵɵtext(20, "Saab");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "option", 6);
+                i0.ɵɵelementStart(21, "option", 7);
                 i0.ɵɵtext(22, "Mercedes");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(23, "option", 7);
+                i0.ɵɵelementStart(23, "option", 8);
                 i0.ɵɵtext(24, "Audi");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(25, SelectHintErrorExample_mat_error_25_Template, 2, 0, "mat-error", 2);
+                i0.ɵɵtemplate(25, SelectHintErrorExample_mat_error_25_Template, 2, 0, "mat-error", 3);
                 i0.ɵɵelementStart(26, "mat-hint");
                 i0.ɵɵtext(27, "You can pick up your favorite car here");
                 i0.ɵɵelementEnd();
@@ -452,7 +452,7 @@
         }], null, null); })();
 
     function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 2);
+        i0.ɵɵelementStart(0, "mat-option", 3);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -468,13 +468,13 @@
             this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
         }
         SelectMultipleExample.ɵfac = function SelectMultipleExample_Factory(t) { return new (t || SelectMultipleExample)(); };
-        SelectMultipleExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectMultipleExample, selectors: [["select-multiple-example"]], decls: 5, vars: 2, consts: [["multiple", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectMultipleExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        SelectMultipleExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectMultipleExample, selectors: [["select-multiple-example"]], decls: 5, vars: 2, consts: [["appearance", "fill"], ["multiple", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectMultipleExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Toppings");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-select", 0);
-                i0.ɵɵtemplate(4, SelectMultipleExample_mat_option_4_Template, 2, 2, "mat-option", 1);
+                i0.ɵɵelementStart(3, "mat-select", 1);
+                i0.ɵɵtemplate(4, SelectMultipleExample_mat_option_4_Template, 2, 2, "mat-option", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -499,19 +499,19 @@
         function SelectNoRippleExample() {
         }
         SelectNoRippleExample.ɵfac = function SelectNoRippleExample_Factory(t) { return new (t || SelectNoRippleExample)(); };
-        SelectNoRippleExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectNoRippleExample, selectors: [["select-no-ripple-example"]], decls: 10, vars: 0, consts: [["disableRipple", ""], ["value", "1"], ["value", "2"], ["value", "3"]], template: function SelectNoRippleExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        SelectNoRippleExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectNoRippleExample, selectors: [["select-no-ripple-example"]], decls: 10, vars: 0, consts: [["appearance", "fill"], ["disableRipple", ""], ["value", "1"], ["value", "2"], ["value", "3"]], template: function SelectNoRippleExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Select an option");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-select", 0);
-                i0.ɵɵelementStart(4, "mat-option", 1);
+                i0.ɵɵelementStart(3, "mat-select", 1);
+                i0.ɵɵelementStart(4, "mat-option", 2);
                 i0.ɵɵtext(5, "Option 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-option", 2);
+                i0.ɵɵelementStart(6, "mat-option", 3);
                 i0.ɵɵtext(7, "Option 2");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-option", 3);
+                i0.ɵɵelementStart(8, "mat-option", 4);
                 i0.ɵɵtext(9, "Option 3");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -529,7 +529,7 @@
         }], null, null); })();
 
     function SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 11);
+        i0.ɵɵelementStart(0, "mat-option", 12);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -539,8 +539,8 @@
         i0.ɵɵtextInterpolate1(" ", pokemon_r3.viewValue, " ");
     } }
     function SelectOptgroupExample_mat_optgroup_8_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-optgroup", 9);
-        i0.ɵɵtemplate(1, SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template, 2, 2, "mat-option", 10);
+        i0.ɵɵelementStart(0, "mat-optgroup", 10);
+        i0.ɵɵtemplate(1, SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template, 2, 2, "mat-option", 11);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var group_r1 = ctx.$implicit;
@@ -588,42 +588,42 @@
             ];
         }
         SelectOptgroupExample.ɵfac = function SelectOptgroupExample_Factory(t) { return new (t || SelectOptgroupExample)(); };
-        SelectOptgroupExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectOptgroupExample, selectors: [["select-optgroup-example"]], decls: 25, vars: 2, consts: [[3, "formControl"], [3, "label", "disabled", 4, "ngFor", "ngForOf"], ["matNativeControl", ""], ["label", "Swedish Cars"], ["value", "volvo"], ["value", "saab"], ["label", "German Cars"], ["value", "mercedes"], ["value", "audi"], [3, "label", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectOptgroupExample_Template(rf, ctx) { if (rf & 1) {
+        SelectOptgroupExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectOptgroupExample, selectors: [["select-optgroup-example"]], decls: 25, vars: 2, consts: [["appearance", "fill"], [3, "formControl"], [3, "label", "disabled", 4, "ngFor", "ngForOf"], ["matNativeControl", ""], ["label", "Swedish Cars"], ["value", "volvo"], ["value", "saab"], ["label", "German Cars"], ["value", "mercedes"], ["value", "audi"], [3, "label", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectOptgroupExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h4");
                 i0.ɵɵtext(1, "mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(2, "mat-form-field", 0);
                 i0.ɵɵelementStart(3, "mat-label");
                 i0.ɵɵtext(4, "Pokemon");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-select", 0);
+                i0.ɵɵelementStart(5, "mat-select", 1);
                 i0.ɵɵelementStart(6, "mat-option");
                 i0.ɵɵtext(7, "-- None --");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(8, SelectOptgroupExample_mat_optgroup_8_Template, 2, 3, "mat-optgroup", 1);
+                i0.ɵɵtemplate(8, SelectOptgroupExample_mat_optgroup_8_Template, 2, 3, "mat-optgroup", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(9, "h4");
                 i0.ɵɵtext(10, "native html select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-form-field");
+                i0.ɵɵelementStart(11, "mat-form-field", 0);
                 i0.ɵɵelementStart(12, "mat-label");
                 i0.ɵɵtext(13, "Cars");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "select", 2);
-                i0.ɵɵelementStart(15, "optgroup", 3);
-                i0.ɵɵelementStart(16, "option", 4);
+                i0.ɵɵelementStart(14, "select", 3);
+                i0.ɵɵelementStart(15, "optgroup", 4);
+                i0.ɵɵelementStart(16, "option", 5);
                 i0.ɵɵtext(17, "volvo");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "option", 5);
+                i0.ɵɵelementStart(18, "option", 6);
                 i0.ɵɵtext(19, "Saab");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(20, "optgroup", 6);
-                i0.ɵɵelementStart(21, "option", 7);
+                i0.ɵɵelementStart(20, "optgroup", 7);
+                i0.ɵɵelementStart(21, "option", 8);
                 i0.ɵɵtext(22, "Mercedes");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(23, "option", 8);
+                i0.ɵɵelementStart(23, "option", 9);
                 i0.ɵɵtext(24, "Audi");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -647,7 +647,7 @@
         }], null, null); })();
 
     function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 6);
+        i0.ɵɵelementStart(0, "mat-option", 7);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -668,36 +668,36 @@
             ];
         }
         SelectOverviewExample.ɵfac = function SelectOverviewExample_Factory(t) { return new (t || SelectOverviewExample)(); };
-        SelectOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectOverviewExample, selectors: [["select-overview-example"]], decls: 21, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "required", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        SelectOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectOverviewExample, selectors: [["select-overview-example"]], decls: 21, vars: 1, consts: [["appearance", "fill"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "required", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h4");
                 i0.ɵɵtext(1, "Basic mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(2, "mat-form-field", 0);
                 i0.ɵɵelementStart(3, "mat-label");
                 i0.ɵɵtext(4, "Favorite food");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(5, "mat-select");
-                i0.ɵɵtemplate(6, SelectOverviewExample_mat_option_6_Template, 2, 2, "mat-option", 0);
+                i0.ɵɵtemplate(6, SelectOverviewExample_mat_option_6_Template, 2, 2, "mat-option", 1);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(7, "h4");
                 i0.ɵɵtext(8, "Basic native select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(9, "mat-form-field");
+                i0.ɵɵelementStart(9, "mat-form-field", 0);
                 i0.ɵɵelementStart(10, "mat-label");
                 i0.ɵɵtext(11, "Cars");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "select", 1);
-                i0.ɵɵelementStart(13, "option", 2);
+                i0.ɵɵelementStart(12, "select", 2);
+                i0.ɵɵelementStart(13, "option", 3);
                 i0.ɵɵtext(14, "Volvo");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(15, "option", 3);
+                i0.ɵɵelementStart(15, "option", 4);
                 i0.ɵɵtext(16, "Saab");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(17, "option", 4);
+                i0.ɵɵelementStart(17, "option", 5);
                 i0.ɵɵtext(18, "Mercedes");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(19, "option", 5);
+                i0.ɵɵelementStart(19, "option", 6);
                 i0.ɵɵtext(20, "Audi");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -725,19 +725,19 @@
             this.panelColor = new i3.FormControl('red');
         }
         SelectPanelClassExample.ɵfac = function SelectPanelClassExample_Factory(t) { return new (t || SelectPanelClassExample)(); };
-        SelectPanelClassExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectPanelClassExample, selectors: [["select-panel-class-example"]], decls: 10, vars: 2, consts: [[3, "formControl", "panelClass"], ["value", "red"], ["value", "green"], ["value", "blue"]], template: function SelectPanelClassExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        SelectPanelClassExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectPanelClassExample, selectors: [["select-panel-class-example"]], decls: 10, vars: 2, consts: [["appearance", "fill"], [3, "formControl", "panelClass"], ["value", "red"], ["value", "green"], ["value", "blue"]], template: function SelectPanelClassExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Panel color");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-select", 0);
-                i0.ɵɵelementStart(4, "mat-option", 1);
+                i0.ɵɵelementStart(3, "mat-select", 1);
+                i0.ɵɵelementStart(4, "mat-option", 2);
                 i0.ɵɵtext(5, "Red");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-option", 2);
+                i0.ɵɵelementStart(6, "mat-option", 3);
                 i0.ɵɵtext(7, "Green");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-option", 3);
+                i0.ɵɵelementStart(8, "mat-option", 4);
                 i0.ɵɵtext(9, "Blue");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -762,7 +762,7 @@
         }], null, null); })();
 
     function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 7);
+        i0.ɵɵelementStart(0, "mat-option", 8);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -785,11 +785,11 @@
             ];
         }
         SelectResetExample.ɵfac = function SelectResetExample_Factory(t) { return new (t || SelectResetExample)(); };
-        SelectResetExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectResetExample, selectors: [["select-reset-example"]], decls: 24, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "id", "mySelectId"], ["value", "", "disabled", "", "selected", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectResetExample_Template(rf, ctx) { if (rf & 1) {
+        SelectResetExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectResetExample, selectors: [["select-reset-example"]], decls: 24, vars: 1, consts: [["appearance", "fill"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "id", "mySelectId"], ["value", "", "disabled", "", "selected", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectResetExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h4");
                 i0.ɵɵtext(1, "mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(2, "mat-form-field", 0);
                 i0.ɵɵelementStart(3, "mat-label");
                 i0.ɵɵtext(4, "State");
                 i0.ɵɵelementEnd();
@@ -797,28 +797,28 @@
                 i0.ɵɵelementStart(6, "mat-option");
                 i0.ɵɵtext(7, "None");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(8, SelectResetExample_mat_option_8_Template, 2, 2, "mat-option", 0);
+                i0.ɵɵtemplate(8, SelectResetExample_mat_option_8_Template, 2, 2, "mat-option", 1);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(9, "h4");
                 i0.ɵɵtext(10, "native html select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-form-field");
+                i0.ɵɵelementStart(11, "mat-form-field", 0);
                 i0.ɵɵelementStart(12, "mat-label");
                 i0.ɵɵtext(13, "Select your car");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "select", 1);
-                i0.ɵɵelement(15, "option", 2);
-                i0.ɵɵelementStart(16, "option", 3);
+                i0.ɵɵelementStart(14, "select", 2);
+                i0.ɵɵelement(15, "option", 3);
+                i0.ɵɵelementStart(16, "option", 4);
                 i0.ɵɵtext(17, "Volvo");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "option", 4);
+                i0.ɵɵelementStart(18, "option", 5);
                 i0.ɵɵtext(19, "Saab");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(20, "option", 5);
+                i0.ɵɵelementStart(20, "option", 6);
                 i0.ɵɵtext(21, "Mercedes");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(22, "option", 6);
+                i0.ɵɵelementStart(22, "option", 7);
                 i0.ɵɵtext(23, "Audi");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -844,23 +844,23 @@
             this.selected = 'option2';
         }
         SelectValueBindingExample.ɵfac = function SelectValueBindingExample_Factory(t) { return new (t || SelectValueBindingExample)(); };
-        SelectValueBindingExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectValueBindingExample, selectors: [["select-value-binding-example"]], decls: 14, vars: 2, consts: [[3, "value", "valueChange"], ["value", "option1"], ["value", "option2"], ["value", "option3"]], template: function SelectValueBindingExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
+        SelectValueBindingExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectValueBindingExample, selectors: [["select-value-binding-example"]], decls: 14, vars: 2, consts: [["appearance", "fill"], [3, "value", "valueChange"], ["value", "option1"], ["value", "option2"], ["value", "option3"]], template: function SelectValueBindingExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Select an option");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-select", 0);
+                i0.ɵɵelementStart(3, "mat-select", 1);
                 i0.ɵɵlistener("valueChange", function SelectValueBindingExample_Template_mat_select_valueChange_3_listener($event) { return ctx.selected = $event; });
                 i0.ɵɵelementStart(4, "mat-option");
                 i0.ɵɵtext(5, "None");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-option", 1);
+                i0.ɵɵelementStart(6, "mat-option", 2);
                 i0.ɵɵtext(7, "Option 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-option", 2);
+                i0.ɵɵelementStart(8, "mat-option", 3);
                 i0.ɵɵtext(9, "Option 2");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-option", 3);
+                i0.ɵɵelementStart(10, "mat-option", 4);
                 i0.ɵɵtext(11, "Option 3");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -886,7 +886,7 @@
         }], null, null); })();
 
     function SelectReactiveFormExample_mat_option_9_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵelementStart(0, "mat-option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -896,7 +896,7 @@
         i0.ɵɵtextInterpolate1(" ", food_r2.viewValue, " ");
     } }
     function SelectReactiveFormExample_option_20_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "option", 5);
+        i0.ɵɵelementStart(0, "option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -928,20 +928,20 @@
             });
         }
         SelectReactiveFormExample.ɵfac = function SelectReactiveFormExample_Factory(t) { return new (t || SelectReactiveFormExample)(); };
-        SelectReactiveFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectReactiveFormExample, selectors: [["select-reactive-form-example"]], decls: 23, vars: 7, consts: [[3, "formGroup"], ["name", "food", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "formControl"], ["value", ""], [3, "value"]], template: function SelectReactiveFormExample_Template(rf, ctx) { if (rf & 1) {
+        SelectReactiveFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectReactiveFormExample, selectors: [["select-reactive-form-example"]], decls: 23, vars: 7, consts: [[3, "formGroup"], ["appearance", "fill"], ["name", "food", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "formControl"], ["value", ""], [3, "value"]], template: function SelectReactiveFormExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "h4");
                 i0.ɵɵtext(2, "mat-select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-form-field");
+                i0.ɵɵelementStart(3, "mat-form-field", 1);
                 i0.ɵɵelementStart(4, "mat-label");
                 i0.ɵɵtext(5, "Favorite Food");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-select", 1);
+                i0.ɵɵelementStart(6, "mat-select", 2);
                 i0.ɵɵelementStart(7, "mat-option");
                 i0.ɵɵtext(8, "None");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(9, SelectReactiveFormExample_mat_option_9_Template, 2, 2, "mat-option", 2);
+                i0.ɵɵtemplate(9, SelectReactiveFormExample_mat_option_9_Template, 2, 2, "mat-option", 3);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(10, "p");
@@ -950,15 +950,15 @@
                 i0.ɵɵelementStart(12, "h4");
                 i0.ɵɵtext(13, "Native select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "mat-form-field");
+                i0.ɵɵelementStart(14, "mat-form-field", 1);
                 i0.ɵɵelementStart(15, "mat-label");
                 i0.ɵɵtext(16, "Favorite Car");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(17, "select", 3);
-                i0.ɵɵelementStart(18, "option", 4);
+                i0.ɵɵelementStart(17, "select", 4);
+                i0.ɵɵelementStart(18, "option", 5);
                 i0.ɵɵtext(19, "None");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(20, SelectReactiveFormExample_option_20_Template, 2, 2, "option", 2);
+                i0.ɵɵtemplate(20, SelectReactiveFormExample_option_20_Template, 2, 2, "option", 3);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(21, "p");
@@ -992,7 +992,7 @@
         }], function () { return []; }, null); })();
 
     function SelectInitialValueExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵelementStart(0, "mat-option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -1002,7 +1002,7 @@
         i0.ɵɵtextInterpolate(option_r2.viewValue);
     } }
     function SelectInitialValueExample_option_17_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "option", 6);
+        i0.ɵɵelementStart(0, "option", 7);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -1034,18 +1034,18 @@
             this.selectedCar = event.target.value;
         };
         SelectInitialValueExample.ɵfac = function SelectInitialValueExample_Factory(t) { return new (t || SelectInitialValueExample)(); };
-        SelectInitialValueExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [[3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
+        SelectInitialValueExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [["appearance", "fill"], [3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h4");
                 i0.ɵɵtext(1, "Basic mat-select with initial value");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(2, "mat-form-field", 0);
                 i0.ɵɵelementStart(3, "mat-label");
                 i0.ɵɵtext(4, "Favorite Food");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-select", 0);
+                i0.ɵɵelementStart(5, "mat-select", 1);
                 i0.ɵɵlistener("valueChange", function SelectInitialValueExample_Template_mat_select_valueChange_5_listener($event) { return ctx.selectedFood = $event; });
                 i0.ɵɵelement(6, "mat-option");
-                i0.ɵɵtemplate(7, SelectInitialValueExample_mat_option_7_Template, 2, 2, "mat-option", 1);
+                i0.ɵɵtemplate(7, SelectInitialValueExample_mat_option_7_Template, 2, 2, "mat-option", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(8, "p");
@@ -1054,14 +1054,14 @@
                 i0.ɵɵelementStart(10, "h4");
                 i0.ɵɵtext(11, "Basic native select with initial value");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "mat-form-field");
+                i0.ɵɵelementStart(12, "mat-form-field", 0);
                 i0.ɵɵelementStart(13, "mat-label");
                 i0.ɵɵtext(14, "Favorite Car");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(15, "select", 2);
+                i0.ɵɵelementStart(15, "select", 3);
                 i0.ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectCar($event); });
-                i0.ɵɵelement(16, "option", 3);
-                i0.ɵɵtemplate(17, SelectInitialValueExample_option_17_Template, 2, 3, "option", 4);
+                i0.ɵɵelement(16, "option", 4);
+                i0.ɵɵtemplate(17, SelectInitialValueExample_option_17_Template, 2, 3, "option", 5);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(18, "p");
