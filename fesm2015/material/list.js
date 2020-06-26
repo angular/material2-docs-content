@@ -183,11 +183,12 @@ let ListSelectionExample = /** @class */ (() => {
     }], null, null); })();
 
 function ListSingleSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-list-option");
+    ɵɵelementStart(0, "mat-list-option", 3);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
     const shoe_r2 = ctx.$implicit;
+    ɵɵproperty("value", shoe_r2);
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", shoe_r2, " ");
 } }
@@ -201,9 +202,9 @@ let ListSingleSelectionExample = /** @class */ (() => {
         }
     }
     ListSingleSelectionExample.ɵfac = function ListSingleSelectionExample_Factory(t) { return new (t || ListSingleSelectionExample)(); };
-    ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelectionExample, selectors: [["list-single-selection-example"]], decls: 5, vars: 3, consts: [[3, "multiple"], ["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSingleSelectionExample_Template(rf, ctx) { if (rf & 1) {
+    ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelectionExample, selectors: [["list-single-selection-example"]], decls: 5, vars: 3, consts: [[3, "multiple"], ["shoes", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function ListSingleSelectionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-selection-list", 0, 1);
-            ɵɵtemplate(2, ListSingleSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 2);
+            ɵɵtemplate(2, ListSingleSelectionExample_mat_list_option_2_Template, 2, 2, "mat-list-option", 2);
             ɵɵelementEnd();
             ɵɵelementStart(3, "p");
             ɵɵtext(4);
@@ -214,7 +215,7 @@ let ListSingleSelectionExample = /** @class */ (() => {
             ɵɵadvance(2);
             ɵɵproperty("ngForOf", ctx.typesOfShoes);
             ɵɵadvance(2);
-            ɵɵtextInterpolate1(" Option selected: ", _r0.selectedOptions.selected, "\n");
+            ɵɵtextInterpolate1(" Option selected: ", _r0.selectedOptions.selected[0] == null ? null : _r0.selectedOptions.selected[0].value, "\n");
         } }, directives: [MatSelectionList, NgForOf, MatListOption], styles: [""] });
     return ListSingleSelectionExample;
 })();
