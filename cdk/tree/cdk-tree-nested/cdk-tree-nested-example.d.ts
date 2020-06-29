@@ -13,7 +13,7 @@ interface FoodNode {
  * @title Tree with nested nodes
  */
 export declare class CdkTreeNestedExample {
-    treeControl: NestedTreeControl<FoodNode>;
+    treeControl: NestedTreeControl<FoodNode, FoodNode>;
     dataSource: ArrayDataSource<FoodNode>;
     hasChild: (_: number, node: FoodNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDef<CdkTreeNestedExample, never>;

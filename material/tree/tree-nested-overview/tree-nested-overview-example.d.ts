@@ -13,7 +13,7 @@ interface FoodNode {
  * @title Tree with nested nodes
  */
 export declare class TreeNestedOverviewExample {
-    treeControl: NestedTreeControl<FoodNode>;
+    treeControl: NestedTreeControl<FoodNode, FoodNode>;
     dataSource: MatTreeNestedDataSource<FoodNode>;
     constructor();
     hasChild: (_: number, node: FoodNode) => boolean;
