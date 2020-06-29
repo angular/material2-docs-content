@@ -3915,14 +3915,63 @@ behavior of the drag&amp;drop-related components.</p>
     
       
 
-<h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="CDK_DROP_LIST"></span>
-  <code>CDK_DROP_LIST</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that is used to provide a CdkDropList instance to CdkDrag.
-Used for avoiding circular imports.</p>
+<h4 id="CDK_DROP_LIST_GROUP" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DROP_LIST_GROUP"></span>
+  <code>CDK_DROP_LIST_GROUP</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDropListGroup</code>. It serves as
+alternative token to the actual <code>CdkDropListGroup</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropListInternal&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: InjectionToken&lt;CdkDropListGroup&lt;unknown&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_HANDLE" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_HANDLE"></span>
+  <code>CDK_DRAG_HANDLE</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDragHandle</code>. It serves as
+alternative token to the actual <code>CdkDragHandle</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_HANDLE: InjectionToken&lt;CdkDragHandle&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_PREVIEW" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_PREVIEW"></span>
+  <code>CDK_DRAG_PREVIEW</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDragPreview</code>. It serves as
+alternative token to the actual <code>CdkDragPreview</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PREVIEW: InjectionToken&lt;CdkDragPreview&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_PLACEHOLDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_PLACEHOLDER"></span>
+  <code>CDK_DRAG_PLACEHOLDER</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDragPlaceholder</code>. It serves as
+alternative token to the actual <code>CdkDragPlaceholder</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PLACEHOLDER: InjectionToken&lt;CdkDragPlaceholder&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 
