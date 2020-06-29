@@ -95,44 +95,41 @@ const ELEMENT_DATA = [
 /**
  * @title Basic use of `<mat-table>` (uses display flex)
  */
-let TableBasicFlexExample = /** @class */ (() => {
-    class TableBasicFlexExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA;
-        }
+class TableBasicFlexExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA;
     }
-    TableBasicFlexExample.ɵfac = function TableBasicFlexExample_Factory(t) { return new (t || TableBasicFlexExample)(); };
-    TableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicFlexExample, selectors: [["table-basic-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"]], template: function TableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableBasicFlexExample_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(3, TableBasicFlexExample_mat_cell_3_Template, 2, 1, "mat-cell", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableBasicFlexExample_mat_header_cell_5_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(6, TableBasicFlexExample_mat_cell_6_Template, 2, 1, "mat-cell", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 5);
-            ɵɵtemplate(8, TableBasicFlexExample_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(9, TableBasicFlexExample_mat_cell_9_Template, 2, 1, "mat-cell", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 6);
-            ɵɵtemplate(11, TableBasicFlexExample_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(12, TableBasicFlexExample_mat_cell_12_Template, 2, 1, "mat-cell", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(13, TableBasicFlexExample_mat_header_row_13_Template, 1, 0, "mat-header-row", 7);
-            ɵɵtemplate(14, TableBasicFlexExample_mat_row_14_Template, 1, 0, "mat-row", 8);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableBasicFlexExample;
-})();
+}
+TableBasicFlexExample.ɵfac = function TableBasicFlexExample_Factory(t) { return new (t || TableBasicFlexExample)(); };
+TableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicFlexExample, selectors: [["table-basic-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"]], template: function TableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableBasicFlexExample_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(3, TableBasicFlexExample_mat_cell_3_Template, 2, 1, "mat-cell", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableBasicFlexExample_mat_header_cell_5_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(6, TableBasicFlexExample_mat_cell_6_Template, 2, 1, "mat-cell", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableBasicFlexExample_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(9, TableBasicFlexExample_mat_cell_9_Template, 2, 1, "mat-cell", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableBasicFlexExample_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(12, TableBasicFlexExample_mat_cell_12_Template, 2, 1, "mat-cell", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, TableBasicFlexExample_mat_header_row_13_Template, 1, 0, "mat-header-row", 7);
+        ɵɵtemplate(14, TableBasicFlexExample_mat_row_14_Template, 1, 0, "mat-row", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableBasicFlexExample, [{
         type: Component,
         args: [{
@@ -219,44 +216,41 @@ const ELEMENT_DATA$1 = [
 /**
  * @title Basic use of `<table mat-table>`
  */
-let TableBasicExample = /** @class */ (() => {
-    class TableBasicExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$1;
-        }
+class TableBasicExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$1;
     }
-    TableBasicExample.ɵfac = function TableBasicExample_Factory(t) { return new (t || TableBasicExample)(); };
-    TableBasicExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicExample, selectors: [["table-basic-example"]], decls: 15, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableBasicExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableBasicExample_th_2_Template, 2, 0, "th", 2);
-            ɵɵtemplate(3, TableBasicExample_td_3_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableBasicExample_th_5_Template, 2, 0, "th", 2);
-            ɵɵtemplate(6, TableBasicExample_td_6_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 5);
-            ɵɵtemplate(8, TableBasicExample_th_8_Template, 2, 0, "th", 2);
-            ɵɵtemplate(9, TableBasicExample_td_9_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 6);
-            ɵɵtemplate(11, TableBasicExample_th_11_Template, 2, 0, "th", 2);
-            ɵɵtemplate(12, TableBasicExample_td_12_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(13, TableBasicExample_tr_13_Template, 1, 0, "tr", 7);
-            ɵɵtemplate(14, TableBasicExample_tr_14_Template, 1, 0, "tr", 8);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableBasicExample;
-})();
+}
+TableBasicExample.ɵfac = function TableBasicExample_Factory(t) { return new (t || TableBasicExample)(); };
+TableBasicExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicExample, selectors: [["table-basic-example"]], decls: 15, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableBasicExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableBasicExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableBasicExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableBasicExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableBasicExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableBasicExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableBasicExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableBasicExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableBasicExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, TableBasicExample_tr_13_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(14, TableBasicExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableBasicExample, [{
         type: Component,
         args: [{
@@ -315,65 +309,62 @@ const ELEMENT_DATA$2 = [
 /**
  * @title Table dynamically changing the columns displayed
  */
-let TableDynamicColumnsExample = /** @class */ (() => {
-    class TableDynamicColumnsExample {
-        constructor() {
-            this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
-            this.columnsToDisplay = this.displayedColumns.slice();
-            this.data = ELEMENT_DATA$2;
-        }
-        addColumn() {
-            const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
-            this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
-        }
-        removeColumn() {
-            if (this.columnsToDisplay.length) {
-                this.columnsToDisplay.pop();
-            }
-        }
-        shuffle() {
-            let currentIndex = this.columnsToDisplay.length;
-            while (0 !== currentIndex) {
-                let randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-                // Swap
-                let temp = this.columnsToDisplay[currentIndex];
-                this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
-                this.columnsToDisplay[randomIndex] = temp;
-            }
+class TableDynamicColumnsExample {
+    constructor() {
+        this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
+        this.columnsToDisplay = this.displayedColumns.slice();
+        this.data = ELEMENT_DATA$2;
+    }
+    addColumn() {
+        const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
+        this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
+    }
+    removeColumn() {
+        if (this.columnsToDisplay.length) {
+            this.columnsToDisplay.pop();
         }
     }
-    TableDynamicColumnsExample.ɵfac = function TableDynamicColumnsExample_Factory(t) { return new (t || TableDynamicColumnsExample)(); };
-    TableDynamicColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableDynamicColumnsExample, selectors: [["table-dynamic-columns-example"]], decls: 10, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableDynamicColumnsExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "button", 0);
-            ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener() { return ctx.addColumn(); });
-            ɵɵtext(1, " Add column ");
-            ɵɵelementEnd();
-            ɵɵelementStart(2, "button", 0);
-            ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_2_listener() { return ctx.removeColumn(); });
-            ɵɵtext(3, " Remove column ");
-            ɵɵelementEnd();
-            ɵɵelementStart(4, "button", 0);
-            ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_4_listener() { return ctx.shuffle(); });
-            ɵɵtext(5, " Shuffle ");
-            ɵɵelementEnd();
-            ɵɵelementStart(6, "table", 1);
-            ɵɵtemplate(7, TableDynamicColumnsExample_ng_container_7_Template, 3, 1, "ng-container", 2);
-            ɵɵtemplate(8, TableDynamicColumnsExample_tr_8_Template, 1, 0, "tr", 3);
-            ɵɵtemplate(9, TableDynamicColumnsExample_tr_9_Template, 1, 0, "tr", 4);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(6);
-            ɵɵproperty("dataSource", ctx.data);
-            ɵɵadvance(1);
-            ɵɵproperty("ngForOf", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matHeaderRowDef", ctx.columnsToDisplay);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.columnsToDisplay);
-        } }, directives: [MatButton, MatTable, NgForOf, MatHeaderRowDef, MatRowDef, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin: 16px 8px;\n}"] });
-    return TableDynamicColumnsExample;
-})();
+    shuffle() {
+        let currentIndex = this.columnsToDisplay.length;
+        while (0 !== currentIndex) {
+            let randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            // Swap
+            let temp = this.columnsToDisplay[currentIndex];
+            this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
+            this.columnsToDisplay[randomIndex] = temp;
+        }
+    }
+}
+TableDynamicColumnsExample.ɵfac = function TableDynamicColumnsExample_Factory(t) { return new (t || TableDynamicColumnsExample)(); };
+TableDynamicColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableDynamicColumnsExample, selectors: [["table-dynamic-columns-example"]], decls: 10, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableDynamicColumnsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "button", 0);
+        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener() { return ctx.addColumn(); });
+        ɵɵtext(1, " Add column ");
+        ɵɵelementEnd();
+        ɵɵelementStart(2, "button", 0);
+        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_2_listener() { return ctx.removeColumn(); });
+        ɵɵtext(3, " Remove column ");
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "button", 0);
+        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_4_listener() { return ctx.shuffle(); });
+        ɵɵtext(5, " Shuffle ");
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "table", 1);
+        ɵɵtemplate(7, TableDynamicColumnsExample_ng_container_7_Template, 3, 1, "ng-container", 2);
+        ɵɵtemplate(8, TableDynamicColumnsExample_tr_8_Template, 1, 0, "tr", 3);
+        ɵɵtemplate(9, TableDynamicColumnsExample_tr_9_Template, 1, 0, "tr", 4);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(6);
+        ɵɵproperty("dataSource", ctx.data);
+        ɵɵadvance(1);
+        ɵɵproperty("ngForOf", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matHeaderRowDef", ctx.columnsToDisplay);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.columnsToDisplay);
+    } }, directives: [MatButton, MatTable, NgForOf, MatHeaderRowDef, MatRowDef, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin: 16px 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableDynamicColumnsExample, [{
         type: Component,
         args: [{
@@ -473,43 +464,40 @@ const _c0 = function () { return ["expandedDetail"]; };
 /**
  * @title Table with expandable rows
  */
-let TableExpandableRowsExample = /** @class */ (() => {
-    class TableExpandableRowsExample {
-        constructor() {
-            this.dataSource = ELEMENT_DATA$3;
-            this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
-        }
+class TableExpandableRowsExample {
+    constructor() {
+        this.dataSource = ELEMENT_DATA$3;
+        this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
     }
-    TableExpandableRowsExample.ɵfac = function TableExpandableRowsExample_Factory(t) { return new (t || TableExpandableRowsExample)(); };
-    TableExpandableRowsExample.ɵcmp = ɵɵdefineComponent({ type: TableExpandableRowsExample, selectors: [["table-expandable-rows-example"]], decls: 7, vars: 6, consts: [["mat-table", "", "multiTemplateDataRows", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "expandedDetail"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "class", "example-element-row", 3, "example-expanded-row", "click", 4, "matRowDef", "matRowDefColumns"], ["mat-row", "", "class", "example-detail-row", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], [1, "example-element-detail"], [1, "example-element-diagram"], [1, "example-element-position"], [1, "example-element-symbol"], [1, "example-element-name"], [1, "example-element-weight"], [1, "example-element-description"], [1, "example-element-description-attribution"], ["mat-header-row", ""], ["mat-row", "", 1, "example-element-row", 3, "click"], ["mat-row", "", 1, "example-detail-row"]], template: function TableExpandableRowsExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵtemplate(1, TableExpandableRowsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
-            ɵɵelementContainerStart(2, 2);
-            ɵɵtemplate(3, TableExpandableRowsExample_td_3_Template, 15, 7, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(4, TableExpandableRowsExample_tr_4_Template, 1, 0, "tr", 4);
-            ɵɵtemplate(5, TableExpandableRowsExample_tr_5_Template, 1, 2, "tr", 5);
-            ɵɵtemplate(6, TableExpandableRowsExample_tr_6_Template, 1, 0, "tr", 6);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(1);
-            ɵɵproperty("ngForOf", ctx.columnsToDisplay);
-            ɵɵadvance(3);
-            ɵɵproperty("matHeaderRowDef", ctx.columnsToDisplay);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.columnsToDisplay);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ɵɵpureFunction0(5, _c0));
-        } }, directives: [MatTable, NgForOf, MatColumnDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCellDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.example-detail-row[_ngcontent-%COMP%] {\n  height: 0;\n}\n\ntr.example-element-row[_ngcontent-%COMP%]:not(.example-expanded-row):hover {\n  background: whitesmoke;\n}\n\ntr.example-element-row[_ngcontent-%COMP%]:not(.example-expanded-row):active {\n  background: #efefef;\n}\n\n.example-element-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  border-bottom-width: 0;\n}\n\n.example-element-detail[_ngcontent-%COMP%] {\n  overflow: hidden;\n  display: flex;\n}\n\n.example-element-diagram[_ngcontent-%COMP%] {\n  min-width: 80px;\n  border: 2px solid black;\n  padding: 8px;\n  font-weight: lighter;\n  margin: 8px 0;\n  height: 104px;\n}\n\n.example-element-symbol[_ngcontent-%COMP%] {\n  font-weight: bold;\n  font-size: 40px;\n  line-height: normal;\n}\n\n.example-element-description[_ngcontent-%COMP%] {\n  padding: 16px;\n}\n\n.example-element-description-attribution[_ngcontent-%COMP%] {\n  opacity: 0.5;\n}"], data: { animation: [
-                trigger('detailExpand', [
-                    state('collapsed', style({ height: '0px', minHeight: '0' })),
-                    state('expanded', style({ height: '*' })),
-                    transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-                ]),
-            ] } });
-    return TableExpandableRowsExample;
-})();
+}
+TableExpandableRowsExample.ɵfac = function TableExpandableRowsExample_Factory(t) { return new (t || TableExpandableRowsExample)(); };
+TableExpandableRowsExample.ɵcmp = ɵɵdefineComponent({ type: TableExpandableRowsExample, selectors: [["table-expandable-rows-example"]], decls: 7, vars: 6, consts: [["mat-table", "", "multiTemplateDataRows", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "expandedDetail"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "class", "example-element-row", 3, "example-expanded-row", "click", 4, "matRowDef", "matRowDefColumns"], ["mat-row", "", "class", "example-detail-row", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], [1, "example-element-detail"], [1, "example-element-diagram"], [1, "example-element-position"], [1, "example-element-symbol"], [1, "example-element-name"], [1, "example-element-weight"], [1, "example-element-description"], [1, "example-element-description-attribution"], ["mat-header-row", ""], ["mat-row", "", 1, "example-element-row", 3, "click"], ["mat-row", "", 1, "example-detail-row"]], template: function TableExpandableRowsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵtemplate(1, TableExpandableRowsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
+        ɵɵelementContainerStart(2, 2);
+        ɵɵtemplate(3, TableExpandableRowsExample_td_3_Template, 15, 7, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(4, TableExpandableRowsExample_tr_4_Template, 1, 0, "tr", 4);
+        ɵɵtemplate(5, TableExpandableRowsExample_tr_5_Template, 1, 2, "tr", 5);
+        ɵɵtemplate(6, TableExpandableRowsExample_tr_6_Template, 1, 0, "tr", 6);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(1);
+        ɵɵproperty("ngForOf", ctx.columnsToDisplay);
+        ɵɵadvance(3);
+        ɵɵproperty("matHeaderRowDef", ctx.columnsToDisplay);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.columnsToDisplay);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ɵɵpureFunction0(5, _c0));
+    } }, directives: [MatTable, NgForOf, MatColumnDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCellDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.example-detail-row[_ngcontent-%COMP%] {\n  height: 0;\n}\n\ntr.example-element-row[_ngcontent-%COMP%]:not(.example-expanded-row):hover {\n  background: whitesmoke;\n}\n\ntr.example-element-row[_ngcontent-%COMP%]:not(.example-expanded-row):active {\n  background: #efefef;\n}\n\n.example-element-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  border-bottom-width: 0;\n}\n\n.example-element-detail[_ngcontent-%COMP%] {\n  overflow: hidden;\n  display: flex;\n}\n\n.example-element-diagram[_ngcontent-%COMP%] {\n  min-width: 80px;\n  border: 2px solid black;\n  padding: 8px;\n  font-weight: lighter;\n  margin: 8px 0;\n  height: 104px;\n}\n\n.example-element-symbol[_ngcontent-%COMP%] {\n  font-weight: bold;\n  font-size: 40px;\n  line-height: normal;\n}\n\n.example-element-description[_ngcontent-%COMP%] {\n  padding: 16px;\n}\n\n.example-element-description-attribution[_ngcontent-%COMP%] {\n  opacity: 0.5;\n}"], data: { animation: [
+            trigger('detailExpand', [
+                state('collapsed', style({ height: '0px', minHeight: '0' })),
+                state('expanded', style({ height: '*' })),
+                transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+            ]),
+        ] } });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableExpandableRowsExample, [{
         type: Component,
         args: [{
@@ -696,58 +684,55 @@ const ELEMENT_DATA$4 = [
 /**
  * @title Table with filtering
  */
-let TableFilteringExample = /** @class */ (() => {
-    class TableFilteringExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new MatTableDataSource(ELEMENT_DATA$4);
-        }
-        applyFilter(event) {
-            const filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-        }
+class TableFilteringExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$4);
     }
-    TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
-    TableFilteringExample.ɵcmp = ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 21, vars: 3, consts: [["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["input", ""], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-form-field");
-            ɵɵelementStart(1, "mat-label");
-            ɵɵtext(2, "Filter");
-            ɵɵelementEnd();
-            ɵɵelementStart(3, "input", 0, 1);
-            ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(5, "table", 2);
-            ɵɵelementContainerStart(6, 3);
-            ɵɵtemplate(7, TableFilteringExample_th_7_Template, 2, 0, "th", 4);
-            ɵɵtemplate(8, TableFilteringExample_td_8_Template, 2, 1, "td", 5);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(9, 6);
-            ɵɵtemplate(10, TableFilteringExample_th_10_Template, 2, 0, "th", 4);
-            ɵɵtemplate(11, TableFilteringExample_td_11_Template, 2, 1, "td", 5);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(12, 7);
-            ɵɵtemplate(13, TableFilteringExample_th_13_Template, 2, 0, "th", 4);
-            ɵɵtemplate(14, TableFilteringExample_td_14_Template, 2, 1, "td", 5);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(15, 8);
-            ɵɵtemplate(16, TableFilteringExample_th_16_Template, 2, 0, "th", 4);
-            ɵɵtemplate(17, TableFilteringExample_td_17_Template, 2, 1, "td", 5);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(18, TableFilteringExample_tr_18_Template, 1, 0, "tr", 9);
-            ɵɵtemplate(19, TableFilteringExample_tr_19_Template, 1, 0, "tr", 10);
-            ɵɵtemplate(20, TableFilteringExample_tr_20_Template, 3, 1, "tr", 11);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(5);
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatFormField, MatLabel, MatInput, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatNoDataRow, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}"] });
-    return TableFilteringExample;
-})();
+    applyFilter(event) {
+        const filterValue = event.target.value;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    }
+}
+TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
+TableFilteringExample.ɵcmp = ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 21, vars: 3, consts: [["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["input", ""], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field");
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Filter");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "input", 0, 1);
+        ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "table", 2);
+        ɵɵelementContainerStart(6, 3);
+        ɵɵtemplate(7, TableFilteringExample_th_7_Template, 2, 0, "th", 4);
+        ɵɵtemplate(8, TableFilteringExample_td_8_Template, 2, 1, "td", 5);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(9, 6);
+        ɵɵtemplate(10, TableFilteringExample_th_10_Template, 2, 0, "th", 4);
+        ɵɵtemplate(11, TableFilteringExample_td_11_Template, 2, 1, "td", 5);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(12, 7);
+        ɵɵtemplate(13, TableFilteringExample_th_13_Template, 2, 0, "th", 4);
+        ɵɵtemplate(14, TableFilteringExample_td_14_Template, 2, 1, "td", 5);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(15, 8);
+        ɵɵtemplate(16, TableFilteringExample_th_16_Template, 2, 0, "th", 4);
+        ɵɵtemplate(17, TableFilteringExample_td_17_Template, 2, 1, "td", 5);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(18, TableFilteringExample_tr_18_Template, 1, 0, "tr", 9);
+        ɵɵtemplate(19, TableFilteringExample_tr_19_Template, 1, 0, "tr", 10);
+        ɵɵtemplate(20, TableFilteringExample_tr_20_Template, 3, 1, "tr", 11);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(5);
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatFormField, MatLabel, MatInput, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatNoDataRow, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableFilteringExample, [{
         type: Component,
         args: [{
@@ -813,52 +798,49 @@ function TableFooterRowExample_tr_11_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Footer row table
  */
-let TableFooterRowExample = /** @class */ (() => {
-    class TableFooterRowExample {
-        constructor() {
-            this.displayedColumns = ['item', 'cost'];
-            this.transactions = [
-                { item: 'Beach ball', cost: 4 },
-                { item: 'Towel', cost: 5 },
-                { item: 'Frisbee', cost: 2 },
-                { item: 'Sunscreen', cost: 4 },
-                { item: 'Cooler', cost: 25 },
-                { item: 'Swim suit', cost: 15 },
-            ];
-        }
-        /** Gets the total cost of all transactions. */
-        getTotalCost() {
-            return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
-        }
+class TableFooterRowExample {
+    constructor() {
+        this.displayedColumns = ['item', 'cost'];
+        this.transactions = [
+            { item: 'Beach ball', cost: 4 },
+            { item: 'Towel', cost: 5 },
+            { item: 'Frisbee', cost: 2 },
+            { item: 'Sunscreen', cost: 4 },
+            { item: 'Cooler', cost: 25 },
+            { item: 'Swim suit', cost: 15 },
+        ];
     }
-    TableFooterRowExample.ɵfac = function TableFooterRowExample_Factory(t) { return new (t || TableFooterRowExample)(); };
-    TableFooterRowExample.ɵcmp = ɵɵdefineComponent({ type: TableFooterRowExample, selectors: [["table-footer-row-example"]], decls: 12, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableFooterRowExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableFooterRowExample_th_2_Template, 2, 0, "th", 2);
-            ɵɵtemplate(3, TableFooterRowExample_td_3_Template, 2, 1, "td", 3);
-            ɵɵtemplate(4, TableFooterRowExample_td_4_Template, 2, 0, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(5, 5);
-            ɵɵtemplate(6, TableFooterRowExample_th_6_Template, 2, 0, "th", 2);
-            ɵɵtemplate(7, TableFooterRowExample_td_7_Template, 3, 3, "td", 3);
-            ɵɵtemplate(8, TableFooterRowExample_td_8_Template, 3, 3, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(9, TableFooterRowExample_tr_9_Template, 1, 0, "tr", 6);
-            ɵɵtemplate(10, TableFooterRowExample_tr_10_Template, 1, 0, "tr", 7);
-            ɵɵtemplate(11, TableFooterRowExample_tr_11_Template, 1, 0, "tr", 8);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.transactions);
-            ɵɵadvance(9);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matFooterRowDef", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], pipes: [CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.mat-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}"] });
-    return TableFooterRowExample;
-})();
+    /** Gets the total cost of all transactions. */
+    getTotalCost() {
+        return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+    }
+}
+TableFooterRowExample.ɵfac = function TableFooterRowExample_Factory(t) { return new (t || TableFooterRowExample)(); };
+TableFooterRowExample.ɵcmp = ɵɵdefineComponent({ type: TableFooterRowExample, selectors: [["table-footer-row-example"]], decls: 12, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableFooterRowExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableFooterRowExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableFooterRowExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵtemplate(4, TableFooterRowExample_td_4_Template, 2, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 5);
+        ɵɵtemplate(6, TableFooterRowExample_th_6_Template, 2, 0, "th", 2);
+        ɵɵtemplate(7, TableFooterRowExample_td_7_Template, 3, 3, "td", 3);
+        ɵɵtemplate(8, TableFooterRowExample_td_8_Template, 3, 3, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(9, TableFooterRowExample_tr_9_Template, 1, 0, "tr", 6);
+        ɵɵtemplate(10, TableFooterRowExample_tr_10_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(11, TableFooterRowExample_tr_11_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.transactions);
+        ɵɵadvance(9);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matFooterRowDef", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], pipes: [CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.mat-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableFooterRowExample, [{
         type: Component,
         args: [{
@@ -954,87 +936,84 @@ function TableHttpExample_tr_17_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Table retrieving data through HTTP
  */
-let TableHttpExample = /** @class */ (() => {
-    class TableHttpExample {
-        constructor(_httpClient) {
-            this._httpClient = _httpClient;
-            this.displayedColumns = ['created', 'state', 'number', 'title'];
-            this.data = [];
-            this.resultsLength = 0;
-            this.isLoadingResults = true;
-            this.isRateLimitReached = false;
-        }
-        ngAfterViewInit() {
-            this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
-            // If the user changes the sort order, reset back to the first page.
-            this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-            merge(this.sort.sortChange, this.paginator.page)
-                .pipe(startWith({}), switchMap(() => {
-                this.isLoadingResults = true;
-                return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
-            }), map(data => {
-                // Flip flag to show that loading has finished.
-                this.isLoadingResults = false;
-                this.isRateLimitReached = false;
-                this.resultsLength = data.total_count;
-                return data.items;
-            }), catchError(() => {
-                this.isLoadingResults = false;
-                // Catch if the GitHub API has reached its rate limit. Return empty data.
-                this.isRateLimitReached = true;
-                return of([]);
-            })).subscribe(data => this.data = data);
-        }
+class TableHttpExample {
+    constructor(_httpClient) {
+        this._httpClient = _httpClient;
+        this.displayedColumns = ['created', 'state', 'number', 'title'];
+        this.data = [];
+        this.resultsLength = 0;
+        this.isLoadingResults = true;
+        this.isRateLimitReached = false;
     }
-    TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
-    TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
-            ɵɵviewQuery(MatPaginator, true);
-            ɵɵviewQuery(MatSort, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
-        } }, decls: 19, vars: 6, consts: [[1, "example-container", "mat-elevation-z8"], ["class", "example-loading-shade", 4, "ngIf"], [1, "example-table-container"], ["mat-table", "", "matSort", "", "matSortActive", "created", "matSortDisableClear", "", "matSortDirection", "desc", 1, "example-table", 3, "dataSource"], ["matColumnDef", "number"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "title"], ["matColumnDef", "state"], ["matColumnDef", "created"], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "length", "pageSize"], [1, "example-loading-shade"], [4, "ngIf"], ["class", "example-rate-limit-reached", 4, "ngIf"], [1, "example-rate-limit-reached"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableHttpExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵtemplate(1, TableHttpExample_div_1_Template, 3, 2, "div", 1);
-            ɵɵelementStart(2, "div", 2);
-            ɵɵelementStart(3, "table", 3);
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableHttpExample_th_5_Template, 2, 0, "th", 5);
-            ɵɵtemplate(6, TableHttpExample_td_6_Template, 2, 1, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 7);
-            ɵɵtemplate(8, TableHttpExample_th_8_Template, 2, 0, "th", 5);
-            ɵɵtemplate(9, TableHttpExample_td_9_Template, 2, 1, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 8);
-            ɵɵtemplate(11, TableHttpExample_th_11_Template, 2, 0, "th", 5);
-            ɵɵtemplate(12, TableHttpExample_td_12_Template, 2, 1, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(13, 9);
-            ɵɵtemplate(14, TableHttpExample_th_14_Template, 2, 0, "th", 10);
-            ɵɵtemplate(15, TableHttpExample_td_15_Template, 3, 3, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(16, TableHttpExample_tr_16_Template, 1, 0, "tr", 11);
-            ɵɵtemplate(17, TableHttpExample_tr_17_Template, 1, 0, "tr", 12);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(18, "mat-paginator", 13);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("ngIf", ctx.isLoadingResults || ctx.isRateLimitReached);
-            ɵɵadvance(2);
-            ɵɵproperty("dataSource", ctx.data);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("length", ctx.resultsLength)("pageSize", 30);
-        } }, directives: [NgIf, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatPaginator, MatSpinner, MatHeaderCell, MatCell, MatSortHeader, MatHeaderRow, MatRow], pipes: [DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
-    return TableHttpExample;
-})();
+    ngAfterViewInit() {
+        this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        merge(this.sort.sortChange, this.paginator.page)
+            .pipe(startWith({}), switchMap(() => {
+            this.isLoadingResults = true;
+            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+        }), map(data => {
+            // Flip flag to show that loading has finished.
+            this.isLoadingResults = false;
+            this.isRateLimitReached = false;
+            this.resultsLength = data.total_count;
+            return data.items;
+        }), catchError(() => {
+            this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
+            this.isRateLimitReached = true;
+            return of([]);
+        })).subscribe(data => this.data = data);
+    }
+}
+TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
+TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(MatPaginator, true);
+        ɵɵviewQuery(MatSort, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
+    } }, decls: 19, vars: 6, consts: [[1, "example-container", "mat-elevation-z8"], ["class", "example-loading-shade", 4, "ngIf"], [1, "example-table-container"], ["mat-table", "", "matSort", "", "matSortActive", "created", "matSortDisableClear", "", "matSortDirection", "desc", 1, "example-table", 3, "dataSource"], ["matColumnDef", "number"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "title"], ["matColumnDef", "state"], ["matColumnDef", "created"], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "length", "pageSize"], [1, "example-loading-shade"], [4, "ngIf"], ["class", "example-rate-limit-reached", 4, "ngIf"], [1, "example-rate-limit-reached"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableHttpExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵtemplate(1, TableHttpExample_div_1_Template, 3, 2, "div", 1);
+        ɵɵelementStart(2, "div", 2);
+        ɵɵelementStart(3, "table", 3);
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableHttpExample_th_5_Template, 2, 0, "th", 5);
+        ɵɵtemplate(6, TableHttpExample_td_6_Template, 2, 1, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 7);
+        ɵɵtemplate(8, TableHttpExample_th_8_Template, 2, 0, "th", 5);
+        ɵɵtemplate(9, TableHttpExample_td_9_Template, 2, 1, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 8);
+        ɵɵtemplate(11, TableHttpExample_th_11_Template, 2, 0, "th", 5);
+        ɵɵtemplate(12, TableHttpExample_td_12_Template, 2, 1, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(13, 9);
+        ɵɵtemplate(14, TableHttpExample_th_14_Template, 2, 0, "th", 10);
+        ɵɵtemplate(15, TableHttpExample_td_15_Template, 3, 3, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(16, TableHttpExample_tr_16_Template, 1, 0, "tr", 11);
+        ɵɵtemplate(17, TableHttpExample_tr_17_Template, 1, 0, "tr", 12);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelement(18, "mat-paginator", 13);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("ngIf", ctx.isLoadingResults || ctx.isRateLimitReached);
+        ɵɵadvance(2);
+        ɵɵproperty("dataSource", ctx.data);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("length", ctx.resultsLength)("pageSize", 30);
+    } }, directives: [NgIf, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatPaginator, MatSpinner, MatHeaderCell, MatCell, MatSortHeader, MatHeaderRow, MatRow], pipes: [DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableHttpExample, [{
         type: Component,
         args: [{
@@ -1140,67 +1119,64 @@ const _c1 = function () { return ["disclaimer"]; };
 /**
  * @title Table with multiple header and footer rows
  */
-let TableMultipleHeaderFooterExample = /** @class */ (() => {
-    class TableMultipleHeaderFooterExample {
-        constructor() {
-            this.displayedColumns = ['item', 'cost'];
-            this.transactions = [
-                { item: 'Beach ball', cost: 4 },
-                { item: 'Towel', cost: 5 },
-                { item: 'Frisbee', cost: 2 },
-                { item: 'Sunscreen', cost: 4 },
-                { item: 'Cooler', cost: 25 },
-                { item: 'Swim suit', cost: 15 },
-            ];
-        }
-        /** Gets the total cost of all transactions. */
-        getTotalCost() {
-            return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
-        }
+class TableMultipleHeaderFooterExample {
+    constructor() {
+        this.displayedColumns = ['item', 'cost'];
+        this.transactions = [
+            { item: 'Beach ball', cost: 4 },
+            { item: 'Towel', cost: 5 },
+            { item: 'Frisbee', cost: 2 },
+            { item: 'Sunscreen', cost: 4 },
+            { item: 'Cooler', cost: 25 },
+            { item: 'Swim suit', cost: 15 },
+        ];
     }
-    TableMultipleHeaderFooterExample.ɵfac = function TableMultipleHeaderFooterExample_Factory(t) { return new (t || TableMultipleHeaderFooterExample)(); };
-    TableMultipleHeaderFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableMultipleHeaderFooterExample, selectors: [["table-multiple-header-footer-example"]], decls: 20, vars: 8, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["matColumnDef", "item-description"], ["matColumnDef", "cost-description"], ["matColumnDef", "disclaimer"], ["mat-footer-cell", "", "colspan", "2", 4, "matFooterCellDef"], ["mat-header-row", "", "class", "example-first-header-row", 4, "matHeaderRowDef"], ["mat-header-row", "", "class", "example-second-header-row", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", "class", "example-first-footer-row", 4, "matFooterRowDef"], ["mat-footer-row", "", "class", "example-second-footer-row", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-footer-cell", "", "colspan", "2"], ["mat-header-row", "", 1, "example-first-header-row"], ["mat-header-row", "", 1, "example-second-header-row"], ["mat-row", ""], ["mat-footer-row", "", 1, "example-first-footer-row"], ["mat-footer-row", "", 1, "example-second-footer-row"]], template: function TableMultipleHeaderFooterExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableMultipleHeaderFooterExample_th_2_Template, 2, 0, "th", 2);
-            ɵɵtemplate(3, TableMultipleHeaderFooterExample_td_3_Template, 2, 1, "td", 3);
-            ɵɵtemplate(4, TableMultipleHeaderFooterExample_td_4_Template, 2, 0, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(5, 5);
-            ɵɵtemplate(6, TableMultipleHeaderFooterExample_th_6_Template, 2, 0, "th", 2);
-            ɵɵtemplate(7, TableMultipleHeaderFooterExample_td_7_Template, 3, 3, "td", 3);
-            ɵɵtemplate(8, TableMultipleHeaderFooterExample_td_8_Template, 3, 3, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(9, 6);
-            ɵɵtemplate(10, TableMultipleHeaderFooterExample_th_10_Template, 2, 0, "th", 2);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(11, 7);
-            ɵɵtemplate(12, TableMultipleHeaderFooterExample_th_12_Template, 2, 0, "th", 2);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(13, 8);
-            ɵɵtemplate(14, TableMultipleHeaderFooterExample_td_14_Template, 2, 0, "td", 9);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(15, TableMultipleHeaderFooterExample_tr_15_Template, 1, 0, "tr", 10);
-            ɵɵtemplate(16, TableMultipleHeaderFooterExample_tr_16_Template, 1, 0, "tr", 11);
-            ɵɵtemplate(17, TableMultipleHeaderFooterExample_tr_17_Template, 1, 0, "tr", 12);
-            ɵɵtemplate(18, TableMultipleHeaderFooterExample_tr_18_Template, 1, 0, "tr", 13);
-            ɵɵtemplate(19, TableMultipleHeaderFooterExample_tr_19_Template, 1, 0, "tr", 14);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.transactions);
-            ɵɵadvance(15);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matHeaderRowDef", ɵɵpureFunction0(6, _c0$1));
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matFooterRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matFooterRowDef", ɵɵpureFunction0(7, _c1));
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], pipes: [CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-first-header-row[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  border-bottom: none;\n}\n\n.example-second-header-row[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n\n.example-first-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.example-second-footer-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  color: #900000;\n}"] });
-    return TableMultipleHeaderFooterExample;
-})();
+    /** Gets the total cost of all transactions. */
+    getTotalCost() {
+        return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+    }
+}
+TableMultipleHeaderFooterExample.ɵfac = function TableMultipleHeaderFooterExample_Factory(t) { return new (t || TableMultipleHeaderFooterExample)(); };
+TableMultipleHeaderFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableMultipleHeaderFooterExample, selectors: [["table-multiple-header-footer-example"]], decls: 20, vars: 8, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["matColumnDef", "item-description"], ["matColumnDef", "cost-description"], ["matColumnDef", "disclaimer"], ["mat-footer-cell", "", "colspan", "2", 4, "matFooterCellDef"], ["mat-header-row", "", "class", "example-first-header-row", 4, "matHeaderRowDef"], ["mat-header-row", "", "class", "example-second-header-row", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", "class", "example-first-footer-row", 4, "matFooterRowDef"], ["mat-footer-row", "", "class", "example-second-footer-row", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-footer-cell", "", "colspan", "2"], ["mat-header-row", "", 1, "example-first-header-row"], ["mat-header-row", "", 1, "example-second-header-row"], ["mat-row", ""], ["mat-footer-row", "", 1, "example-first-footer-row"], ["mat-footer-row", "", 1, "example-second-footer-row"]], template: function TableMultipleHeaderFooterExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableMultipleHeaderFooterExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableMultipleHeaderFooterExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵtemplate(4, TableMultipleHeaderFooterExample_td_4_Template, 2, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 5);
+        ɵɵtemplate(6, TableMultipleHeaderFooterExample_th_6_Template, 2, 0, "th", 2);
+        ɵɵtemplate(7, TableMultipleHeaderFooterExample_td_7_Template, 3, 3, "td", 3);
+        ɵɵtemplate(8, TableMultipleHeaderFooterExample_td_8_Template, 3, 3, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(9, 6);
+        ɵɵtemplate(10, TableMultipleHeaderFooterExample_th_10_Template, 2, 0, "th", 2);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(11, 7);
+        ɵɵtemplate(12, TableMultipleHeaderFooterExample_th_12_Template, 2, 0, "th", 2);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(13, 8);
+        ɵɵtemplate(14, TableMultipleHeaderFooterExample_td_14_Template, 2, 0, "td", 9);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(15, TableMultipleHeaderFooterExample_tr_15_Template, 1, 0, "tr", 10);
+        ɵɵtemplate(16, TableMultipleHeaderFooterExample_tr_16_Template, 1, 0, "tr", 11);
+        ɵɵtemplate(17, TableMultipleHeaderFooterExample_tr_17_Template, 1, 0, "tr", 12);
+        ɵɵtemplate(18, TableMultipleHeaderFooterExample_tr_18_Template, 1, 0, "tr", 13);
+        ɵɵtemplate(19, TableMultipleHeaderFooterExample_tr_19_Template, 1, 0, "tr", 14);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.transactions);
+        ɵɵadvance(15);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matHeaderRowDef", ɵɵpureFunction0(6, _c0$1));
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matFooterRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matFooterRowDef", ɵɵpureFunction0(7, _c1));
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], pipes: [CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-first-header-row[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  border-bottom: none;\n}\n\n.example-second-header-row[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n\n.example-first-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.example-second-footer-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  color: #900000;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableMultipleHeaderFooterExample, [{
         type: Component,
         args: [{
@@ -1298,80 +1274,77 @@ const NAMES = [
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
-let TableOverviewExample = /** @class */ (() => {
-    class TableOverviewExample {
-        constructor() {
-            this.displayedColumns = ['id', 'name', 'progress', 'color'];
-            // Create 100 users
-            const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
-            // Assign the data to the data source for the table to render
-            this.dataSource = new MatTableDataSource(users);
-        }
-        ngOnInit() {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-        }
-        applyFilter(event) {
-            const filterValue = event.target.value;
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-            if (this.dataSource.paginator) {
-                this.dataSource.paginator.firstPage();
-            }
+class TableOverviewExample {
+    constructor() {
+        this.displayedColumns = ['id', 'name', 'progress', 'color'];
+        // Create 100 users
+        const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+        // Assign the data to the data source for the table to render
+        this.dataSource = new MatTableDataSource(users);
+    }
+    ngOnInit() {
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+    }
+    applyFilter(event) {
+        const filterValue = event.target.value;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+        if (this.dataSource.paginator) {
+            this.dataSource.paginator.firstPage();
         }
     }
-    TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
-    TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
-            ɵɵstaticViewQuery(MatPaginator, true);
-            ɵɵstaticViewQuery(MatSort, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
-        } }, decls: 23, vars: 5, consts: [["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], ["input", ""], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-form-field");
-            ɵɵelementStart(1, "mat-label");
-            ɵɵtext(2, "Filter");
-            ɵɵelementEnd();
-            ɵɵelementStart(3, "input", 0, 1);
-            ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(5, "div", 2);
-            ɵɵelementStart(6, "table", 3);
-            ɵɵelementContainerStart(7, 4);
-            ɵɵtemplate(8, TableOverviewExample_th_8_Template, 2, 0, "th", 5);
-            ɵɵtemplate(9, TableOverviewExample_td_9_Template, 2, 1, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 7);
-            ɵɵtemplate(11, TableOverviewExample_th_11_Template, 2, 0, "th", 5);
-            ɵɵtemplate(12, TableOverviewExample_td_12_Template, 2, 1, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(13, 8);
-            ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 5);
-            ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 1, "td", 6);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(16, 9);
-            ɵɵtemplate(17, TableOverviewExample_th_17_Template, 2, 0, "th", 5);
-            ɵɵtemplate(18, TableOverviewExample_td_18_Template, 2, 3, "td", 10);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 11);
-            ɵɵtemplate(20, TableOverviewExample_tr_20_Template, 1, 0, "tr", 12);
-            ɵɵtemplate(21, TableOverviewExample_tr_21_Template, 3, 1, "tr", 13);
-            ɵɵelementEnd();
-            ɵɵelement(22, "mat-paginator", 14);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(6);
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-            ɵɵadvance(2);
-            ɵɵproperty("pageSizeOptions", ɵɵpureFunction0(4, _c0$2));
-        } }, directives: [MatFormField, MatLabel, MatInput, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatNoDataRow, MatPaginator, MatHeaderCell, MatSortHeader, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
-    return TableOverviewExample;
-})();
+}
+TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
+TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(MatPaginator, true);
+        ɵɵstaticViewQuery(MatSort, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
+    } }, decls: 23, vars: 5, consts: [["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], ["input", ""], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field");
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Filter");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "input", 0, 1);
+        ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "div", 2);
+        ɵɵelementStart(6, "table", 3);
+        ɵɵelementContainerStart(7, 4);
+        ɵɵtemplate(8, TableOverviewExample_th_8_Template, 2, 0, "th", 5);
+        ɵɵtemplate(9, TableOverviewExample_td_9_Template, 2, 1, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 7);
+        ɵɵtemplate(11, TableOverviewExample_th_11_Template, 2, 0, "th", 5);
+        ɵɵtemplate(12, TableOverviewExample_td_12_Template, 2, 1, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(13, 8);
+        ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 5);
+        ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 1, "td", 6);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(16, 9);
+        ɵɵtemplate(17, TableOverviewExample_th_17_Template, 2, 0, "th", 5);
+        ɵɵtemplate(18, TableOverviewExample_td_18_Template, 2, 3, "td", 10);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 11);
+        ɵɵtemplate(20, TableOverviewExample_tr_20_Template, 1, 0, "tr", 12);
+        ɵɵtemplate(21, TableOverviewExample_tr_21_Template, 3, 1, "tr", 13);
+        ɵɵelementEnd();
+        ɵɵelement(22, "mat-paginator", 14);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(6);
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+        ɵɵadvance(2);
+        ɵɵproperty("pageSizeOptions", ɵɵpureFunction0(4, _c0$2));
+    } }, directives: [MatFormField, MatLabel, MatInput, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatNoDataRow, MatPaginator, MatHeaderCell, MatSortHeader, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableOverviewExample, [{
         type: Component,
         args: [{
@@ -1464,58 +1437,55 @@ const _c0$3 = function () { return [5, 10, 20]; };
 /**
  * @title Table with pagination
  */
-let TablePaginationExample = /** @class */ (() => {
-    class TablePaginationExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new MatTableDataSource(ELEMENT_DATA$5);
-        }
-        ngOnInit() {
-            this.dataSource.paginator = this.paginator;
-        }
+class TablePaginationExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$5);
     }
-    TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
-    TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) { if (rf & 1) {
-            ɵɵstaticViewQuery(MatPaginator, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
-        } }, decls: 17, vars: 5, consts: [[1, "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSizeOptions"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TablePaginationExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "table", 1);
-            ɵɵelementContainerStart(2, 2);
-            ɵɵtemplate(3, TablePaginationExample_th_3_Template, 2, 0, "th", 3);
-            ɵɵtemplate(4, TablePaginationExample_td_4_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(5, 5);
-            ɵɵtemplate(6, TablePaginationExample_th_6_Template, 2, 0, "th", 3);
-            ɵɵtemplate(7, TablePaginationExample_td_7_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(8, 6);
-            ɵɵtemplate(9, TablePaginationExample_th_9_Template, 2, 0, "th", 3);
-            ɵɵtemplate(10, TablePaginationExample_td_10_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(11, 7);
-            ɵɵtemplate(12, TablePaginationExample_th_12_Template, 2, 0, "th", 3);
-            ɵɵtemplate(13, TablePaginationExample_td_13_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(14, TablePaginationExample_tr_14_Template, 1, 0, "tr", 8);
-            ɵɵtemplate(15, TablePaginationExample_tr_15_Template, 1, 0, "tr", 9);
-            ɵɵelementEnd();
-            ɵɵelement(16, "mat-paginator", 10);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("pageSizeOptions", ɵɵpureFunction0(4, _c0$3));
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatPaginator, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TablePaginationExample;
-})();
+    ngOnInit() {
+        this.dataSource.paginator = this.paginator;
+    }
+}
+TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
+TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(MatPaginator, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
+    } }, decls: 17, vars: 5, consts: [[1, "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSizeOptions"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TablePaginationExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "table", 1);
+        ɵɵelementContainerStart(2, 2);
+        ɵɵtemplate(3, TablePaginationExample_th_3_Template, 2, 0, "th", 3);
+        ɵɵtemplate(4, TablePaginationExample_td_4_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 5);
+        ɵɵtemplate(6, TablePaginationExample_th_6_Template, 2, 0, "th", 3);
+        ɵɵtemplate(7, TablePaginationExample_td_7_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(8, 6);
+        ɵɵtemplate(9, TablePaginationExample_th_9_Template, 2, 0, "th", 3);
+        ɵɵtemplate(10, TablePaginationExample_td_10_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(11, 7);
+        ɵɵtemplate(12, TablePaginationExample_th_12_Template, 2, 0, "th", 3);
+        ɵɵtemplate(13, TablePaginationExample_td_13_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(14, TablePaginationExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵtemplate(15, TablePaginationExample_tr_15_Template, 1, 0, "tr", 9);
+        ɵɵelementEnd();
+        ɵɵelement(16, "mat-paginator", 10);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("pageSizeOptions", ɵɵpureFunction0(4, _c0$3));
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatPaginator, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TablePaginationExample, [{
         type: Component,
         args: [{
@@ -1657,56 +1627,53 @@ function TableRowContextExample_tr_23_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Table showing each row context properties.
  */
-let TableRowContextExample = /** @class */ (() => {
-    class TableRowContextExample {
-        constructor() {
-            this.displayedColumns = ['$implicit', 'index', 'count', 'first', 'last', 'even', 'odd'];
-            this.data = ['one', 'two', 'three', 'four', 'five'];
-        }
+class TableRowContextExample {
+    constructor() {
+        this.displayedColumns = ['$implicit', 'index', 'count', 'first', 'last', 'even', 'odd'];
+        this.data = ['one', 'two', 'three', 'four', 'five'];
     }
-    TableRowContextExample.ɵfac = function TableRowContextExample_Factory(t) { return new (t || TableRowContextExample)(); };
-    TableRowContextExample.ɵcmp = ɵɵdefineComponent({ type: TableRowContextExample, selectors: [["table-row-context-example"]], decls: 24, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "$implicit"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "index"], ["matColumnDef", "count"], ["matColumnDef", "first"], ["matColumnDef", "last"], ["matColumnDef", "even"], ["matColumnDef", "odd"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableRowContextExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableRowContextExample_th_2_Template, 2, 0, "th", 2);
-            ɵɵtemplate(3, TableRowContextExample_td_3_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableRowContextExample_th_5_Template, 2, 0, "th", 2);
-            ɵɵtemplate(6, TableRowContextExample_td_6_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 5);
-            ɵɵtemplate(8, TableRowContextExample_th_8_Template, 2, 0, "th", 2);
-            ɵɵtemplate(9, TableRowContextExample_td_9_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 6);
-            ɵɵtemplate(11, TableRowContextExample_th_11_Template, 2, 0, "th", 2);
-            ɵɵtemplate(12, TableRowContextExample_td_12_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(13, 7);
-            ɵɵtemplate(14, TableRowContextExample_th_14_Template, 2, 0, "th", 2);
-            ɵɵtemplate(15, TableRowContextExample_td_15_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(16, 8);
-            ɵɵtemplate(17, TableRowContextExample_th_17_Template, 2, 0, "th", 2);
-            ɵɵtemplate(18, TableRowContextExample_td_18_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(19, 9);
-            ɵɵtemplate(20, TableRowContextExample_th_20_Template, 2, 0, "th", 2);
-            ɵɵtemplate(21, TableRowContextExample_td_21_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(22, TableRowContextExample_tr_22_Template, 1, 0, "tr", 10);
-            ɵɵtemplate(23, TableRowContextExample_tr_23_Template, 1, 0, "tr", 11);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.data);
-            ɵɵadvance(22);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableRowContextExample;
-})();
+}
+TableRowContextExample.ɵfac = function TableRowContextExample_Factory(t) { return new (t || TableRowContextExample)(); };
+TableRowContextExample.ɵcmp = ɵɵdefineComponent({ type: TableRowContextExample, selectors: [["table-row-context-example"]], decls: 24, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "$implicit"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "index"], ["matColumnDef", "count"], ["matColumnDef", "first"], ["matColumnDef", "last"], ["matColumnDef", "even"], ["matColumnDef", "odd"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableRowContextExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableRowContextExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableRowContextExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableRowContextExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableRowContextExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableRowContextExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableRowContextExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableRowContextExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableRowContextExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(13, 7);
+        ɵɵtemplate(14, TableRowContextExample_th_14_Template, 2, 0, "th", 2);
+        ɵɵtemplate(15, TableRowContextExample_td_15_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(16, 8);
+        ɵɵtemplate(17, TableRowContextExample_th_17_Template, 2, 0, "th", 2);
+        ɵɵtemplate(18, TableRowContextExample_td_18_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(19, 9);
+        ɵɵtemplate(20, TableRowContextExample_th_20_Template, 2, 0, "th", 2);
+        ɵɵtemplate(21, TableRowContextExample_td_21_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(22, TableRowContextExample_tr_22_Template, 1, 0, "tr", 10);
+        ɵɵtemplate(23, TableRowContextExample_tr_23_Template, 1, 0, "tr", 11);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.data);
+        ɵɵadvance(22);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableRowContextExample, [{
         type: Component,
         args: [{
@@ -1821,68 +1788,65 @@ const ELEMENT_DATA$6 = [
 /**
  * @title Table with selection
  */
-let TableSelectionExample = /** @class */ (() => {
-    class TableSelectionExample {
-        constructor() {
-            this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-            this.dataSource = new MatTableDataSource(ELEMENT_DATA$6);
-            this.selection = new SelectionModel(true, []);
-        }
-        /** Whether the number of selected elements matches the total number of rows. */
-        isAllSelected() {
-            const numSelected = this.selection.selected.length;
-            const numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-        }
-        /** Selects all rows if they are not all selected; otherwise clear selection. */
-        masterToggle() {
-            this.isAllSelected() ?
-                this.selection.clear() :
-                this.dataSource.data.forEach(row => this.selection.select(row));
-        }
-        /** The label for the checkbox on the passed row */
-        checkboxLabel(row) {
-            if (!row) {
-                return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
-            }
-            return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
-        }
+class TableSelectionExample {
+    constructor() {
+        this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$6);
+        this.selection = new SelectionModel(true, []);
     }
-    TableSelectionExample.ɵfac = function TableSelectionExample_Factory(t) { return new (t || TableSelectionExample)(); };
-    TableSelectionExample.ɵcmp = ɵɵdefineComponent({ type: TableSelectionExample, selectors: [["table-selection-example"]], decls: 18, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 3, "click", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], [3, "checked", "indeterminate", "aria-label", "change"], ["mat-cell", ""], [3, "checked", "aria-label", "click", "change"], ["mat-header-row", ""], ["mat-row", "", 3, "click"]], template: function TableSelectionExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableSelectionExample_th_2_Template, 2, 3, "th", 2);
-            ɵɵtemplate(3, TableSelectionExample_td_3_Template, 2, 2, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableSelectionExample_th_5_Template, 2, 0, "th", 2);
-            ɵɵtemplate(6, TableSelectionExample_td_6_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 5);
-            ɵɵtemplate(8, TableSelectionExample_th_8_Template, 2, 0, "th", 2);
-            ɵɵtemplate(9, TableSelectionExample_td_9_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 6);
-            ɵɵtemplate(11, TableSelectionExample_th_11_Template, 2, 0, "th", 2);
-            ɵɵtemplate(12, TableSelectionExample_td_12_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(13, 7);
-            ɵɵtemplate(14, TableSelectionExample_th_14_Template, 2, 0, "th", 2);
-            ɵɵtemplate(15, TableSelectionExample_td_15_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(16, TableSelectionExample_tr_16_Template, 1, 0, "tr", 8);
-            ɵɵtemplate(17, TableSelectionExample_tr_17_Template, 1, 0, "tr", 9);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(16);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCheckbox, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableSelectionExample;
-})();
+    /** Whether the number of selected elements matches the total number of rows. */
+    isAllSelected() {
+        const numSelected = this.selection.selected.length;
+        const numRows = this.dataSource.data.length;
+        return numSelected === numRows;
+    }
+    /** Selects all rows if they are not all selected; otherwise clear selection. */
+    masterToggle() {
+        this.isAllSelected() ?
+            this.selection.clear() :
+            this.dataSource.data.forEach(row => this.selection.select(row));
+    }
+    /** The label for the checkbox on the passed row */
+    checkboxLabel(row) {
+        if (!row) {
+            return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
+        }
+        return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+    }
+}
+TableSelectionExample.ɵfac = function TableSelectionExample_Factory(t) { return new (t || TableSelectionExample)(); };
+TableSelectionExample.ɵcmp = ɵɵdefineComponent({ type: TableSelectionExample, selectors: [["table-selection-example"]], decls: 18, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "select"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 3, "click", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], [3, "checked", "indeterminate", "aria-label", "change"], ["mat-cell", ""], [3, "checked", "aria-label", "click", "change"], ["mat-header-row", ""], ["mat-row", "", 3, "click"]], template: function TableSelectionExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableSelectionExample_th_2_Template, 2, 3, "th", 2);
+        ɵɵtemplate(3, TableSelectionExample_td_3_Template, 2, 2, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableSelectionExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableSelectionExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableSelectionExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableSelectionExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableSelectionExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableSelectionExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(13, 7);
+        ɵɵtemplate(14, TableSelectionExample_th_14_Template, 2, 0, "th", 2);
+        ɵɵtemplate(15, TableSelectionExample_td_15_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(16, TableSelectionExample_tr_16_Template, 1, 0, "tr", 8);
+        ɵɵtemplate(17, TableSelectionExample_tr_17_Template, 1, 0, "tr", 9);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(16);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCheckbox, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableSelectionExample, [{
         type: Component,
         args: [{
@@ -1969,52 +1933,49 @@ const ELEMENT_DATA$7 = [
 /**
  * @title Table with sorting
  */
-let TableSortingExample = /** @class */ (() => {
-    class TableSortingExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new MatTableDataSource(ELEMENT_DATA$7);
-        }
-        ngOnInit() {
-            this.dataSource.sort = this.sort;
-        }
+class TableSortingExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$7);
     }
-    TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
-    TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
-            ɵɵstaticViewQuery(MatSort, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
-        } }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableSortingExample_th_2_Template, 2, 0, "th", 2);
-            ɵɵtemplate(3, TableSortingExample_td_3_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableSortingExample_th_5_Template, 2, 0, "th", 2);
-            ɵɵtemplate(6, TableSortingExample_td_6_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 5);
-            ɵɵtemplate(8, TableSortingExample_th_8_Template, 2, 0, "th", 2);
-            ɵɵtemplate(9, TableSortingExample_td_9_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 6);
-            ɵɵtemplate(11, TableSortingExample_th_11_Template, 2, 0, "th", 2);
-            ɵɵtemplate(12, TableSortingExample_td_12_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(13, TableSortingExample_tr_13_Template, 1, 0, "tr", 7);
-            ɵɵtemplate(14, TableSortingExample_tr_14_Template, 1, 0, "tr", 8);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatSortHeader, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth.mat-sort-header-sorted[_ngcontent-%COMP%] {\n  color: black;\n}"] });
-    return TableSortingExample;
-})();
+    ngOnInit() {
+        this.dataSource.sort = this.sort;
+    }
+}
+TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
+TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(MatSort, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
+    } }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableSortingExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableSortingExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableSortingExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableSortingExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableSortingExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableSortingExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableSortingExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableSortingExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, TableSortingExample_tr_13_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(14, TableSortingExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatSortHeader, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth.mat-sort-header-sorted[_ngcontent-%COMP%] {\n  color: black;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableSortingExample, [{
         type: Component,
         args: [{
@@ -2102,51 +2063,48 @@ function TableStickyColumnsExample_tr_18_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Table with sticky columns
  */
-let TableStickyColumnsExample = /** @class */ (() => {
-    class TableStickyColumnsExample {
-        constructor() {
-            this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-            this.dataSource = ELEMENT_DATA$8;
-        }
+class TableStickyColumnsExample {
+    constructor() {
+        this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
+        this.dataSource = ELEMENT_DATA$8;
     }
-    TableStickyColumnsExample.ɵfac = function TableStickyColumnsExample_Factory(t) { return new (t || TableStickyColumnsExample)(); };
-    TableStickyColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyColumnsExample, selectors: [["table-sticky-columns-example"]], decls: 19, vars: 3, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "name", "sticky", ""], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["matColumnDef", "star", "stickyEnd", ""], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyColumnsExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "table", 1);
-            ɵɵelementContainerStart(2, 2);
-            ɵɵtemplate(3, TableStickyColumnsExample_th_3_Template, 2, 0, "th", 3);
-            ɵɵtemplate(4, TableStickyColumnsExample_td_4_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(5, 5);
-            ɵɵtemplate(6, TableStickyColumnsExample_th_6_Template, 2, 0, "th", 3);
-            ɵɵtemplate(7, TableStickyColumnsExample_td_7_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(8, 6);
-            ɵɵtemplate(9, TableStickyColumnsExample_th_9_Template, 2, 0, "th", 3);
-            ɵɵtemplate(10, TableStickyColumnsExample_td_10_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(11, 7);
-            ɵɵtemplate(12, TableStickyColumnsExample_th_12_Template, 2, 0, "th", 3);
-            ɵɵtemplate(13, TableStickyColumnsExample_td_13_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(14, 8);
-            ɵɵtemplate(15, TableStickyColumnsExample_th_15_Template, 1, 0, "th", 3);
-            ɵɵtemplate(16, TableStickyColumnsExample_td_16_Template, 3, 0, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(17, TableStickyColumnsExample_tr_17_Template, 1, 0, "tr", 9);
-            ɵɵtemplate(18, TableStickyColumnsExample_tr_18_Template, 1, 0, "tr", 10);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(16);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatIcon, MatHeaderRow, MatRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  width: 550px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 800px;\n}\n\ntd.mat-column-star[_ngcontent-%COMP%] {\n  width: 20px;\n  padding-right: 8px;\n}\n\nth.mat-column-position[_ngcontent-%COMP%], td.mat-column-position[_ngcontent-%COMP%] {\n  padding-left: 8px;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%]:first-child {\n  border-right: 1px solid #e0e0e0;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%]:last-child {\n  border-left: 1px solid #e0e0e0;\n}"] });
-    return TableStickyColumnsExample;
-})();
+}
+TableStickyColumnsExample.ɵfac = function TableStickyColumnsExample_Factory(t) { return new (t || TableStickyColumnsExample)(); };
+TableStickyColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyColumnsExample, selectors: [["table-sticky-columns-example"]], decls: 19, vars: 3, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "name", "sticky", ""], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "position"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["matColumnDef", "star", "stickyEnd", ""], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyColumnsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "table", 1);
+        ɵɵelementContainerStart(2, 2);
+        ɵɵtemplate(3, TableStickyColumnsExample_th_3_Template, 2, 0, "th", 3);
+        ɵɵtemplate(4, TableStickyColumnsExample_td_4_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 5);
+        ɵɵtemplate(6, TableStickyColumnsExample_th_6_Template, 2, 0, "th", 3);
+        ɵɵtemplate(7, TableStickyColumnsExample_td_7_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(8, 6);
+        ɵɵtemplate(9, TableStickyColumnsExample_th_9_Template, 2, 0, "th", 3);
+        ɵɵtemplate(10, TableStickyColumnsExample_td_10_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(11, 7);
+        ɵɵtemplate(12, TableStickyColumnsExample_th_12_Template, 2, 0, "th", 3);
+        ɵɵtemplate(13, TableStickyColumnsExample_td_13_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(14, 8);
+        ɵɵtemplate(15, TableStickyColumnsExample_th_15_Template, 1, 0, "th", 3);
+        ɵɵtemplate(16, TableStickyColumnsExample_td_16_Template, 3, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(17, TableStickyColumnsExample_tr_17_Template, 1, 0, "tr", 9);
+        ɵɵtemplate(18, TableStickyColumnsExample_tr_18_Template, 1, 0, "tr", 10);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(16);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatIcon, MatHeaderRow, MatRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  width: 550px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 800px;\n}\n\ntd.mat-column-star[_ngcontent-%COMP%] {\n  width: 20px;\n  padding-right: 8px;\n}\n\nth.mat-column-position[_ngcontent-%COMP%], td.mat-column-position[_ngcontent-%COMP%] {\n  padding-left: 8px;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%]:first-child {\n  border-right: 1px solid #e0e0e0;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%]:last-child {\n  border-left: 1px solid #e0e0e0;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableStickyColumnsExample, [{
         type: Component,
         args: [{
@@ -2338,91 +2296,88 @@ const _c2 = function () { return ["position", "symbol"]; };
 /**
  * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
  */
-let TableStickyComplexFlexExample = /** @class */ (() => {
-    class TableStickyComplexFlexExample {
-        constructor() {
-            this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$9;
-            this.tables = [0];
-            this.displayedColumns.length = 24;
-            this.displayedColumns.fill('filler');
-            // The first two columns should be position and name; the last two columns: weight, symbol
-            this.displayedColumns[0] = 'position';
-            this.displayedColumns[1] = 'name';
-            this.displayedColumns[22] = 'weight';
-            this.displayedColumns[23] = 'symbol';
-        }
-        /** Whether the button toggle group contains the id as an active value. */
-        isSticky(buttonToggleGroup, id) {
-            return (buttonToggleGroup.value || []).indexOf(id) !== -1;
-        }
+class TableStickyComplexFlexExample {
+    constructor() {
+        this.displayedColumns = [];
+        this.dataSource = ELEMENT_DATA$9;
+        this.tables = [0];
+        this.displayedColumns.length = 24;
+        this.displayedColumns.fill('filler');
+        // The first two columns should be position and name; the last two columns: weight, symbol
+        this.displayedColumns[0] = 'position';
+        this.displayedColumns[1] = 'name';
+        this.displayedColumns[22] = 'weight';
+        this.displayedColumns[23] = 'symbol';
     }
-    TableStickyComplexFlexExample.ɵfac = function TableStickyComplexFlexExample_Factory(t) { return new (t || TableStickyComplexFlexExample)(); };
-    TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div");
-            ɵɵelementStart(1, "button", 0);
-            ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
-            ɵɵtext(2, "Add table");
-            ɵɵelementEnd();
-            ɵɵelementStart(3, "button", 0);
-            ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
-            ɵɵtext(4, "Remove table");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(5, "div");
-            ɵɵtext(6, " Sticky Headers: ");
-            ɵɵelementStart(7, "mat-button-toggle-group", 1, 2);
-            ɵɵelementStart(9, "mat-button-toggle", 3);
-            ɵɵtext(10, " Row 1 ");
-            ɵɵelementEnd();
-            ɵɵelementStart(11, "mat-button-toggle", 4);
-            ɵɵtext(12, " Row 2 ");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(13, "div");
-            ɵɵtext(14, " Sticky Footers: ");
-            ɵɵelementStart(15, "mat-button-toggle-group", 1, 5);
-            ɵɵelementStart(17, "mat-button-toggle", 6);
-            ɵɵtext(18, " Row 1 ");
-            ɵɵelementEnd();
-            ɵɵelementStart(19, "mat-button-toggle", 7);
-            ɵɵtext(20, " Row 2 ");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(21, "div");
-            ɵɵtext(22, " Sticky Columns: ");
-            ɵɵelementStart(23, "mat-button-toggle-group", 1, 8);
-            ɵɵelementStart(25, "mat-button-toggle", 9);
-            ɵɵtext(26, " Position ");
-            ɵɵelementEnd();
-            ɵɵelementStart(27, "mat-button-toggle", 10);
-            ɵɵtext(28, " Name ");
-            ɵɵelementEnd();
-            ɵɵelementStart(29, "mat-button-toggle", 11);
-            ɵɵtext(30, " Weight ");
-            ɵɵelementEnd();
-            ɵɵelementStart(31, "mat-button-toggle", 12);
-            ɵɵtext(32, " Symbol ");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(33, "div", 13);
-            ɵɵtemplate(34, TableStickyComplexFlexExample_mat_table_34_Template, 26, 14, "mat-table", 14);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(7);
-            ɵɵproperty("value", ɵɵpureFunction0(4, _c0$4));
-            ɵɵadvance(8);
-            ɵɵproperty("value", ɵɵpureFunction0(5, _c1$1));
-            ɵɵadvance(8);
-            ɵɵproperty("value", ɵɵpureFunction0(6, _c2));
-            ɵɵadvance(11);
-            ɵɵproperty("ngForOf", ctx.tables);
-        } }, directives: [MatButton, MatButtonToggleGroup, MatButtonToggle, NgForOf, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n\n.mat-header-row[_ngcontent-%COMP%], .mat-footer-row[_ngcontent-%COMP%], .mat-row[_ngcontent-%COMP%] {\n  min-width: 1920px; \n}"] });
-    return TableStickyComplexFlexExample;
-})();
+    /** Whether the button toggle group contains the id as an active value. */
+    isSticky(buttonToggleGroup, id) {
+        return (buttonToggleGroup.value || []).indexOf(id) !== -1;
+    }
+}
+TableStickyComplexFlexExample.ɵfac = function TableStickyComplexFlexExample_Factory(t) { return new (t || TableStickyComplexFlexExample)(); };
+TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div");
+        ɵɵelementStart(1, "button", 0);
+        ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
+        ɵɵtext(2, "Add table");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "button", 0);
+        ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
+        ɵɵtext(4, "Remove table");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "div");
+        ɵɵtext(6, " Sticky Headers: ");
+        ɵɵelementStart(7, "mat-button-toggle-group", 1, 2);
+        ɵɵelementStart(9, "mat-button-toggle", 3);
+        ɵɵtext(10, " Row 1 ");
+        ɵɵelementEnd();
+        ɵɵelementStart(11, "mat-button-toggle", 4);
+        ɵɵtext(12, " Row 2 ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(13, "div");
+        ɵɵtext(14, " Sticky Footers: ");
+        ɵɵelementStart(15, "mat-button-toggle-group", 1, 5);
+        ɵɵelementStart(17, "mat-button-toggle", 6);
+        ɵɵtext(18, " Row 1 ");
+        ɵɵelementEnd();
+        ɵɵelementStart(19, "mat-button-toggle", 7);
+        ɵɵtext(20, " Row 2 ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(21, "div");
+        ɵɵtext(22, " Sticky Columns: ");
+        ɵɵelementStart(23, "mat-button-toggle-group", 1, 8);
+        ɵɵelementStart(25, "mat-button-toggle", 9);
+        ɵɵtext(26, " Position ");
+        ɵɵelementEnd();
+        ɵɵelementStart(27, "mat-button-toggle", 10);
+        ɵɵtext(28, " Name ");
+        ɵɵelementEnd();
+        ɵɵelementStart(29, "mat-button-toggle", 11);
+        ɵɵtext(30, " Weight ");
+        ɵɵelementEnd();
+        ɵɵelementStart(31, "mat-button-toggle", 12);
+        ɵɵtext(32, " Symbol ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(33, "div", 13);
+        ɵɵtemplate(34, TableStickyComplexFlexExample_mat_table_34_Template, 26, 14, "mat-table", 14);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(7);
+        ɵɵproperty("value", ɵɵpureFunction0(4, _c0$4));
+        ɵɵadvance(8);
+        ɵɵproperty("value", ɵɵpureFunction0(5, _c1$1));
+        ɵɵadvance(8);
+        ɵɵproperty("value", ɵɵpureFunction0(6, _c2));
+        ɵɵadvance(11);
+        ɵɵproperty("ngForOf", ctx.tables);
+    } }, directives: [MatButton, MatButtonToggleGroup, MatButtonToggle, NgForOf, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n\n.mat-header-row[_ngcontent-%COMP%], .mat-footer-row[_ngcontent-%COMP%], .mat-row[_ngcontent-%COMP%] {\n  min-width: 1920px; \n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableStickyComplexFlexExample, [{
         type: Component,
         args: [{
@@ -2614,91 +2569,88 @@ const _c2$1 = function () { return ["position", "symbol"]; };
 /**
  * @title Tables with toggle-able sticky headers, footers, and columns
  */
-let TableStickyComplexExample = /** @class */ (() => {
-    class TableStickyComplexExample {
-        constructor() {
-            this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$a;
-            this.tables = [0];
-            this.displayedColumns.length = 24;
-            this.displayedColumns.fill('filler');
-            // The first two columns should be position and name; the last two columns: weight, symbol
-            this.displayedColumns[0] = 'position';
-            this.displayedColumns[1] = 'name';
-            this.displayedColumns[22] = 'weight';
-            this.displayedColumns[23] = 'symbol';
-        }
-        /** Whether the button toggle group contains the id as an active value. */
-        isSticky(buttonToggleGroup, id) {
-            return (buttonToggleGroup.value || []).indexOf(id) !== -1;
-        }
+class TableStickyComplexExample {
+    constructor() {
+        this.displayedColumns = [];
+        this.dataSource = ELEMENT_DATA$a;
+        this.tables = [0];
+        this.displayedColumns.length = 24;
+        this.displayedColumns.fill('filler');
+        // The first two columns should be position and name; the last two columns: weight, symbol
+        this.displayedColumns[0] = 'position';
+        this.displayedColumns[1] = 'name';
+        this.displayedColumns[22] = 'weight';
+        this.displayedColumns[23] = 'symbol';
     }
-    TableStickyComplexExample.ɵfac = function TableStickyComplexExample_Factory(t) { return new (t || TableStickyComplexExample)(); };
-    TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div");
-            ɵɵelementStart(1, "button", 0);
-            ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
-            ɵɵtext(2, "Add table");
-            ɵɵelementEnd();
-            ɵɵelementStart(3, "button", 0);
-            ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
-            ɵɵtext(4, "Remove table");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(5, "div");
-            ɵɵtext(6, " Sticky Headers: ");
-            ɵɵelementStart(7, "mat-button-toggle-group", 1, 2);
-            ɵɵelementStart(9, "mat-button-toggle", 3);
-            ɵɵtext(10, " Row 1 ");
-            ɵɵelementEnd();
-            ɵɵelementStart(11, "mat-button-toggle", 4);
-            ɵɵtext(12, " Row 2 ");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(13, "div");
-            ɵɵtext(14, " Sticky Footers: ");
-            ɵɵelementStart(15, "mat-button-toggle-group", 1, 5);
-            ɵɵelementStart(17, "mat-button-toggle", 6);
-            ɵɵtext(18, " Row 1 ");
-            ɵɵelementEnd();
-            ɵɵelementStart(19, "mat-button-toggle", 7);
-            ɵɵtext(20, " Row 2 ");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(21, "div");
-            ɵɵtext(22, " Sticky Columns: ");
-            ɵɵelementStart(23, "mat-button-toggle-group", 1, 8);
-            ɵɵelementStart(25, "mat-button-toggle", 9);
-            ɵɵtext(26, " Position ");
-            ɵɵelementEnd();
-            ɵɵelementStart(27, "mat-button-toggle", 10);
-            ɵɵtext(28, " Name ");
-            ɵɵelementEnd();
-            ɵɵelementStart(29, "mat-button-toggle", 11);
-            ɵɵtext(30, " Weight ");
-            ɵɵelementEnd();
-            ɵɵelementStart(31, "mat-button-toggle", 12);
-            ɵɵtext(32, " Symbol ");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(33, "div", 13);
-            ɵɵtemplate(34, TableStickyComplexExample_table_34_Template, 26, 14, "table", 14);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(7);
-            ɵɵproperty("value", ɵɵpureFunction0(4, _c0$5));
-            ɵɵadvance(8);
-            ɵɵproperty("value", ɵɵpureFunction0(5, _c1$2));
-            ɵɵadvance(8);
-            ɵɵproperty("value", ɵɵpureFunction0(6, _c2$1));
-            ɵɵadvance(11);
-            ɵɵproperty("ngForOf", ctx.tables);
-        } }, directives: [MatButton, MatButtonToggleGroup, MatButtonToggle, NgForOf, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}"] });
-    return TableStickyComplexExample;
-})();
+    /** Whether the button toggle group contains the id as an active value. */
+    isSticky(buttonToggleGroup, id) {
+        return (buttonToggleGroup.value || []).indexOf(id) !== -1;
+    }
+}
+TableStickyComplexExample.ɵfac = function TableStickyComplexExample_Factory(t) { return new (t || TableStickyComplexExample)(); };
+TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div");
+        ɵɵelementStart(1, "button", 0);
+        ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
+        ɵɵtext(2, "Add table");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "button", 0);
+        ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
+        ɵɵtext(4, "Remove table");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "div");
+        ɵɵtext(6, " Sticky Headers: ");
+        ɵɵelementStart(7, "mat-button-toggle-group", 1, 2);
+        ɵɵelementStart(9, "mat-button-toggle", 3);
+        ɵɵtext(10, " Row 1 ");
+        ɵɵelementEnd();
+        ɵɵelementStart(11, "mat-button-toggle", 4);
+        ɵɵtext(12, " Row 2 ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(13, "div");
+        ɵɵtext(14, " Sticky Footers: ");
+        ɵɵelementStart(15, "mat-button-toggle-group", 1, 5);
+        ɵɵelementStart(17, "mat-button-toggle", 6);
+        ɵɵtext(18, " Row 1 ");
+        ɵɵelementEnd();
+        ɵɵelementStart(19, "mat-button-toggle", 7);
+        ɵɵtext(20, " Row 2 ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(21, "div");
+        ɵɵtext(22, " Sticky Columns: ");
+        ɵɵelementStart(23, "mat-button-toggle-group", 1, 8);
+        ɵɵelementStart(25, "mat-button-toggle", 9);
+        ɵɵtext(26, " Position ");
+        ɵɵelementEnd();
+        ɵɵelementStart(27, "mat-button-toggle", 10);
+        ɵɵtext(28, " Name ");
+        ɵɵelementEnd();
+        ɵɵelementStart(29, "mat-button-toggle", 11);
+        ɵɵtext(30, " Weight ");
+        ɵɵelementEnd();
+        ɵɵelementStart(31, "mat-button-toggle", 12);
+        ɵɵtext(32, " Symbol ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(33, "div", 13);
+        ɵɵtemplate(34, TableStickyComplexExample_table_34_Template, 26, 14, "table", 14);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(7);
+        ɵɵproperty("value", ɵɵpureFunction0(4, _c0$5));
+        ɵɵadvance(8);
+        ɵɵproperty("value", ɵɵpureFunction0(5, _c1$2));
+        ɵɵadvance(8);
+        ɵɵproperty("value", ɵɵpureFunction0(6, _c2$1));
+        ɵɵadvance(11);
+        ɵɵproperty("ngForOf", ctx.tables);
+    } }, directives: [MatButton, MatButtonToggleGroup, MatButtonToggle, NgForOf, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableStickyComplexExample, [{
         type: Component,
         args: [{
@@ -2776,55 +2728,52 @@ function TableStickyFooterExample_tr_12_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Table with a sticky footer
  */
-let TableStickyFooterExample = /** @class */ (() => {
-    class TableStickyFooterExample {
-        constructor() {
-            this.displayedColumns = ['item', 'cost'];
-            this.transactions = [
-                { item: 'Beach ball', cost: 4 },
-                { item: 'Towel', cost: 5 },
-                { item: 'Frisbee', cost: 2 },
-                { item: 'Sunscreen', cost: 4 },
-                { item: 'Cooler', cost: 25 },
-                { item: 'Swim suit', cost: 15 },
-            ];
-        }
-        /** Gets the total cost of all transactions. */
-        getTotalCost() {
-            return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
-        }
+class TableStickyFooterExample {
+    constructor() {
+        this.displayedColumns = ['item', 'cost'];
+        this.transactions = [
+            { item: 'Beach ball', cost: 4 },
+            { item: 'Towel', cost: 5 },
+            { item: 'Frisbee', cost: 2 },
+            { item: 'Sunscreen', cost: 4 },
+            { item: 'Cooler', cost: 25 },
+            { item: 'Swim suit', cost: 15 },
+        ];
     }
-    TableStickyFooterExample.ɵfac = function TableStickyFooterExample_Factory(t) { return new (t || TableStickyFooterExample)(); };
-    TableStickyFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyFooterExample, selectors: [["table-sticky-footer-example"]], decls: 13, vars: 5, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyFooterExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "table", 1);
-            ɵɵelementContainerStart(2, 2);
-            ɵɵtemplate(3, TableStickyFooterExample_th_3_Template, 2, 0, "th", 3);
-            ɵɵtemplate(4, TableStickyFooterExample_td_4_Template, 2, 1, "td", 4);
-            ɵɵtemplate(5, TableStickyFooterExample_td_5_Template, 2, 0, "td", 5);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(6, 6);
-            ɵɵtemplate(7, TableStickyFooterExample_th_7_Template, 2, 0, "th", 3);
-            ɵɵtemplate(8, TableStickyFooterExample_td_8_Template, 3, 3, "td", 4);
-            ɵɵtemplate(9, TableStickyFooterExample_td_9_Template, 3, 3, "td", 5);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(10, TableStickyFooterExample_tr_10_Template, 1, 0, "tr", 7);
-            ɵɵtemplate(11, TableStickyFooterExample_tr_11_Template, 1, 0, "tr", 8);
-            ɵɵtemplate(12, TableStickyFooterExample_tr_12_Template, 1, 0, "tr", 9);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("dataSource", ctx.transactions);
-            ɵɵadvance(9);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matFooterRowDef", ctx.displayedColumns)("matFooterRowDefSticky", true);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], pipes: [CurrencyPipe], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 270px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.mat-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  border-top: 1px solid #e0e0e0;\n}"] });
-    return TableStickyFooterExample;
-})();
+    /** Gets the total cost of all transactions. */
+    getTotalCost() {
+        return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+    }
+}
+TableStickyFooterExample.ɵfac = function TableStickyFooterExample_Factory(t) { return new (t || TableStickyFooterExample)(); };
+TableStickyFooterExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyFooterExample, selectors: [["table-sticky-footer-example"]], decls: 13, vars: 5, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyFooterExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "table", 1);
+        ɵɵelementContainerStart(2, 2);
+        ɵɵtemplate(3, TableStickyFooterExample_th_3_Template, 2, 0, "th", 3);
+        ɵɵtemplate(4, TableStickyFooterExample_td_4_Template, 2, 1, "td", 4);
+        ɵɵtemplate(5, TableStickyFooterExample_td_5_Template, 2, 0, "td", 5);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(6, 6);
+        ɵɵtemplate(7, TableStickyFooterExample_th_7_Template, 2, 0, "th", 3);
+        ɵɵtemplate(8, TableStickyFooterExample_td_8_Template, 3, 3, "td", 4);
+        ɵɵtemplate(9, TableStickyFooterExample_td_9_Template, 3, 3, "td", 5);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(10, TableStickyFooterExample_tr_10_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(11, TableStickyFooterExample_tr_11_Template, 1, 0, "tr", 8);
+        ɵɵtemplate(12, TableStickyFooterExample_tr_12_Template, 1, 0, "tr", 9);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("dataSource", ctx.transactions);
+        ɵɵadvance(9);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matFooterRowDef", ctx.displayedColumns)("matFooterRowDefSticky", true);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], pipes: [CurrencyPipe], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 270px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.mat-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  border-top: 1px solid #e0e0e0;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableStickyFooterExample, [{
         type: Component,
         args: [{
@@ -2899,47 +2848,44 @@ function TableStickyHeaderExample_tr_15_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Table with sticky header
  */
-let TableStickyHeaderExample = /** @class */ (() => {
-    class TableStickyHeaderExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$b;
-        }
+class TableStickyHeaderExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$b;
     }
-    TableStickyHeaderExample.ɵfac = function TableStickyHeaderExample_Factory(t) { return new (t || TableStickyHeaderExample)(); };
-    TableStickyHeaderExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyHeaderExample, selectors: [["table-sticky-header-example"]], decls: 16, vars: 4, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyHeaderExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "table", 1);
-            ɵɵelementContainerStart(2, 2);
-            ɵɵtemplate(3, TableStickyHeaderExample_th_3_Template, 2, 0, "th", 3);
-            ɵɵtemplate(4, TableStickyHeaderExample_td_4_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(5, 5);
-            ɵɵtemplate(6, TableStickyHeaderExample_th_6_Template, 2, 0, "th", 3);
-            ɵɵtemplate(7, TableStickyHeaderExample_td_7_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(8, 6);
-            ɵɵtemplate(9, TableStickyHeaderExample_th_9_Template, 2, 0, "th", 3);
-            ɵɵtemplate(10, TableStickyHeaderExample_td_10_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(11, 7);
-            ɵɵtemplate(12, TableStickyHeaderExample_th_12_Template, 2, 0, "th", 3);
-            ɵɵtemplate(13, TableStickyHeaderExample_td_13_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(14, TableStickyHeaderExample_tr_14_Template, 1, 0, "tr", 8);
-            ɵɵtemplate(15, TableStickyHeaderExample_tr_15_Template, 1, 0, "tr", 9);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns)("matHeaderRowDefSticky", true);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableStickyHeaderExample;
-})();
+}
+TableStickyHeaderExample.ɵfac = function TableStickyHeaderExample_Factory(t) { return new (t || TableStickyHeaderExample)(); };
+TableStickyHeaderExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyHeaderExample, selectors: [["table-sticky-header-example"]], decls: 16, vars: 4, consts: [[1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableStickyHeaderExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "table", 1);
+        ɵɵelementContainerStart(2, 2);
+        ɵɵtemplate(3, TableStickyHeaderExample_th_3_Template, 2, 0, "th", 3);
+        ɵɵtemplate(4, TableStickyHeaderExample_td_4_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 5);
+        ɵɵtemplate(6, TableStickyHeaderExample_th_6_Template, 2, 0, "th", 3);
+        ɵɵtemplate(7, TableStickyHeaderExample_td_7_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(8, 6);
+        ɵɵtemplate(9, TableStickyHeaderExample_th_9_Template, 2, 0, "th", 3);
+        ɵɵtemplate(10, TableStickyHeaderExample_td_10_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(11, 7);
+        ɵɵtemplate(12, TableStickyHeaderExample_th_12_Template, 2, 0, "th", 3);
+        ɵɵtemplate(13, TableStickyHeaderExample_td_13_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(14, TableStickyHeaderExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵtemplate(15, TableStickyHeaderExample_tr_15_Template, 1, 0, "tr", 9);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns)("matHeaderRowDefSticky", true);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableStickyHeaderExample, [{
         type: Component,
         args: [{
@@ -2982,42 +2928,39 @@ const ELEMENT_DATA$c = [
 /**
  * @title Use of 'mat-text-column' with various configurations of the interface.
  */
-let TableTextColumnAdvancedExample = /** @class */ (() => {
-    class TableTextColumnAdvancedExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
-            this.decimalPipe = new DecimalPipe('en-US');
-            /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-            this.getWeight = (data) => {
-                const result = this.decimalPipe.transform(data.weight, '1.0-2');
-                return result === null ? '' : result;
-            };
-        }
+class TableTextColumnAdvancedExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
+        this.decimalPipe = new DecimalPipe('en-US');
+        /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
+        this.getWeight = (data) => {
+            const result = this.decimalPipe.transform(data.weight, '1.0-2');
+            return result === null ? '' : result;
+        };
     }
-    TableTextColumnAdvancedExample.ɵfac = function TableTextColumnAdvancedExample_Factory(t) { return new (t || TableTextColumnAdvancedExample)(); };
-    TableTextColumnAdvancedExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnAdvancedExample, selectors: [["table-text-column-advanced-example"]], decls: 7, vars: 5, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position", 3, "headerText"], ["name", "name", "headerText", "Element"], ["name", "weight", 3, "dataAccessor"], ["name", "symbol", "justify", "end"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnAdvancedExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelement(1, "mat-text-column", 1);
-            ɵɵelement(2, "mat-text-column", 2);
-            ɵɵelement(3, "mat-text-column", 3);
-            ɵɵelement(4, "mat-text-column", 4);
-            ɵɵtemplate(5, TableTextColumnAdvancedExample_tr_5_Template, 1, 0, "tr", 5);
-            ɵɵtemplate(6, TableTextColumnAdvancedExample_tr_6_Template, 1, 0, "tr", 6);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(1);
-            ɵɵproperty("headerText", ctx.headerText);
-            ɵɵadvance(2);
-            ɵɵproperty("dataAccessor", ctx.getWeight);
-            ɵɵadvance(2);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatTextColumn, MatHeaderRowDef, MatRowDef, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableTextColumnAdvancedExample;
-})();
+}
+TableTextColumnAdvancedExample.ɵfac = function TableTextColumnAdvancedExample_Factory(t) { return new (t || TableTextColumnAdvancedExample)(); };
+TableTextColumnAdvancedExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnAdvancedExample, selectors: [["table-text-column-advanced-example"]], decls: 7, vars: 5, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position", 3, "headerText"], ["name", "name", "headerText", "Element"], ["name", "weight", 3, "dataAccessor"], ["name", "symbol", "justify", "end"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnAdvancedExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelement(1, "mat-text-column", 1);
+        ɵɵelement(2, "mat-text-column", 2);
+        ɵɵelement(3, "mat-text-column", 3);
+        ɵɵelement(4, "mat-text-column", 4);
+        ɵɵtemplate(5, TableTextColumnAdvancedExample_tr_5_Template, 1, 0, "tr", 5);
+        ɵɵtemplate(6, TableTextColumnAdvancedExample_tr_6_Template, 1, 0, "tr", 6);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(1);
+        ɵɵproperty("headerText", ctx.headerText);
+        ɵɵadvance(2);
+        ɵɵproperty("dataAccessor", ctx.getWeight);
+        ɵɵadvance(2);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatTextColumn, MatHeaderRowDef, MatRowDef, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableTextColumnAdvancedExample, [{
         type: Component,
         args: [{
@@ -3049,32 +2992,29 @@ const ELEMENT_DATA$d = [
  * @title Use of `mat-text-column` which can be used for simple columns that only need to display
  * a text value for the header and cells.
  */
-let TableTextColumnExample = /** @class */ (() => {
-    class TableTextColumnExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$d;
-        }
+class TableTextColumnExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$d;
     }
-    TableTextColumnExample.ɵfac = function TableTextColumnExample_Factory(t) { return new (t || TableTextColumnExample)(); };
-    TableTextColumnExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnExample, selectors: [["table-text-column-example"]], decls: 7, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position"], ["name", "name"], ["name", "weight"], ["name", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵelement(1, "mat-text-column", 1);
-            ɵɵelement(2, "mat-text-column", 2);
-            ɵɵelement(3, "mat-text-column", 3);
-            ɵɵelement(4, "mat-text-column", 4);
-            ɵɵtemplate(5, TableTextColumnExample_tr_5_Template, 1, 0, "tr", 5);
-            ɵɵtemplate(6, TableTextColumnExample_tr_6_Template, 1, 0, "tr", 6);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(5);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: [MatTable, MatTextColumn, MatHeaderRowDef, MatRowDef, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableTextColumnExample;
-})();
+}
+TableTextColumnExample.ɵfac = function TableTextColumnExample_Factory(t) { return new (t || TableTextColumnExample)(); };
+TableTextColumnExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnExample, selectors: [["table-text-column-example"]], decls: 7, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["name", "position"], ["name", "name"], ["name", "weight"], ["name", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableTextColumnExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelement(1, "mat-text-column", 1);
+        ɵɵelement(2, "mat-text-column", 2);
+        ɵɵelement(3, "mat-text-column", 3);
+        ɵɵelement(4, "mat-text-column", 4);
+        ɵɵtemplate(5, TableTextColumnExample_tr_5_Template, 1, 0, "tr", 5);
+        ɵɵtemplate(6, TableTextColumnExample_tr_6_Template, 1, 0, "tr", 6);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(5);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatTextColumn, MatHeaderRowDef, MatRowDef, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableTextColumnExample, [{
         type: Component,
         args: [{
@@ -3163,40 +3103,37 @@ const ELEMENT_DATA$e = [
 /**
  * @title Table example that shows how to wrap a table component for definition and behavior reuse.
  */
-let TableWrappedExample = /** @class */ (() => {
-    class TableWrappedExample {
-        constructor() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
-        }
-        ngOnInit() {
-            this.dataSource.sort = this.sort;
-        }
+class TableWrappedExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
     }
-    TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
-    TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
-            ɵɵstaticViewQuery(_c0$6, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
-        } }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "wrapper-table", 0, 1);
-            ɵɵelementContainerStart(2, 2);
-            ɵɵtemplate(3, TableWrappedExample_th_3_Template, 2, 0, "th", 3);
-            ɵɵtemplate(4, TableWrappedExample_td_4_Template, 2, 1, "td", 4);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(5, TableWrappedExample_tr_5_Template, 1, 0, "tr", 5);
-            ɵɵtemplate(6, TableWrappedExample_tr_6_Template, 1, 0, "tr", 6);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource)("columns", ctx.displayedColumns);
-            ɵɵadvance(5);
-            ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-        } }, directives: function () { return [WrapperTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableWrappedExample;
-})();
+    ngOnInit() {
+        this.dataSource.sort = this.sort;
+    }
+}
+TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
+TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(_c0$6, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
+    } }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "wrapper-table", 0, 1);
+        ɵɵelementContainerStart(2, 2);
+        ɵɵtemplate(3, TableWrappedExample_th_3_Template, 2, 0, "th", 3);
+        ɵɵtemplate(4, TableWrappedExample_td_4_Template, 2, 1, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(5, TableWrappedExample_tr_5_Template, 1, 0, "tr", 5);
+        ɵɵtemplate(6, TableWrappedExample_tr_6_Template, 1, 0, "tr", 6);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("columns", ctx.displayedColumns);
+        ɵɵadvance(5);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: function () { return [WrapperTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableWrappedExample, [{
         type: Component,
         args: [{
@@ -3212,51 +3149,48 @@ let TableWrappedExample = /** @class */ (() => {
  * Table component that accepts column and row definitions in its content to be registered to the
  * table.
  */
-let WrapperTable = /** @class */ (() => {
-    class WrapperTable {
-        ngAfterContentInit() {
-            this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));
-            this.rowDefs.forEach(rowDef => this.table.addRowDef(rowDef));
-            this.headerRowDefs.forEach(headerRowDef => this.table.addHeaderRowDef(headerRowDef));
-        }
+class WrapperTable {
+    ngAfterContentInit() {
+        this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));
+        this.rowDefs.forEach(rowDef => this.table.addRowDef(rowDef));
+        this.headerRowDefs.forEach(headerRowDef => this.table.addHeaderRowDef(headerRowDef));
     }
-    WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
-    WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-            ɵɵcontentQuery(dirIndex, MatHeaderRowDef, false);
-            ɵɵcontentQuery(dirIndex, MatRowDef, false);
-            ɵɵcontentQuery(dirIndex, MatColumnDef, false);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.headerRowDefs = _t);
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.rowDefs = _t);
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.columnDefs = _t);
-        } }, viewQuery: function WrapperTable_Query(rf, ctx) { if (rf & 1) {
-            ɵɵstaticViewQuery(MatTable, true);
-        } if (rf & 2) {
-            var _t;
-            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.table = _t.first);
-        } }, inputs: { columns: "columns", dataSource: "dataSource" }, ngContentSelectors: _c1$3, decls: 11, vars: 1, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-cell", ""]], template: function WrapperTable_Template(rf, ctx) { if (rf & 1) {
-            ɵɵprojectionDef();
-            ɵɵelementStart(0, "table", 0);
-            ɵɵprojection(1);
-            ɵɵelementContainerStart(2, 1);
-            ɵɵtemplate(3, WrapperTable_th_3_Template, 2, 0, "th", 2);
-            ɵɵtemplate(4, WrapperTable_td_4_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(5, 4);
-            ɵɵtemplate(6, WrapperTable_th_6_Template, 2, 0, "th", 2);
-            ɵɵtemplate(7, WrapperTable_td_7_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(8, 5);
-            ɵɵtemplate(9, WrapperTable_th_9_Template, 2, 0, "th", 6);
-            ɵɵtemplate(10, WrapperTable_td_10_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-        } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderCell, MatSortHeader, MatCell], styles: ["table[_ngcontent-%COMP%] {\n      width: 100%;\n    }"] });
-    return WrapperTable;
-})();
+}
+WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
+WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
+        ɵɵcontentQuery(dirIndex, MatHeaderRowDef, false);
+        ɵɵcontentQuery(dirIndex, MatRowDef, false);
+        ɵɵcontentQuery(dirIndex, MatColumnDef, false);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.headerRowDefs = _t);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.rowDefs = _t);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.columnDefs = _t);
+    } }, viewQuery: function WrapperTable_Query(rf, ctx) { if (rf & 1) {
+        ɵɵstaticViewQuery(MatTable, true);
+    } if (rf & 2) {
+        var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.table = _t.first);
+    } }, inputs: { columns: "columns", dataSource: "dataSource" }, ngContentSelectors: _c1$3, decls: 11, vars: 1, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-cell", ""]], template: function WrapperTable_Template(rf, ctx) { if (rf & 1) {
+        ɵɵprojectionDef();
+        ɵɵelementStart(0, "table", 0);
+        ɵɵprojection(1);
+        ɵɵelementContainerStart(2, 1);
+        ɵɵtemplate(3, WrapperTable_th_3_Template, 2, 0, "th", 2);
+        ɵɵtemplate(4, WrapperTable_td_4_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 4);
+        ɵɵtemplate(6, WrapperTable_th_6_Template, 2, 0, "th", 2);
+        ɵɵtemplate(7, WrapperTable_td_7_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(8, 5);
+        ɵɵtemplate(9, WrapperTable_th_9_Template, 2, 0, "th", 6);
+        ɵɵtemplate(10, WrapperTable_td_10_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderCell, MatSortHeader, MatCell], styles: ["table[_ngcontent-%COMP%] {\n      width: 100%;\n    }"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(WrapperTable, [{
         type: Component,
         args: [{
@@ -3351,48 +3285,45 @@ function TableReorderableExample_tr_14_Template(rf, ctx) { if (rf & 1) {
 /**
  * @title Table with re-orderable columns
  */
-let TableReorderableExample = /** @class */ (() => {
-    class TableReorderableExample {
-        constructor() {
-            this.columns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$f;
-        }
-        drop(event) {
-            moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
-        }
+class TableReorderableExample {
+    constructor() {
+        this.columns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$f;
     }
-    TableReorderableExample.ɵfac = function TableReorderableExample_Factory(t) { return new (t || TableReorderableExample)(); };
-    TableReorderableExample.ɵcmp = ɵɵdefineComponent({ type: TableReorderableExample, selectors: [["table-reorderable-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 3, "dataSource", "cdkDropListDropped"], ["matColumnDef", "position"], ["mat-header-cell", "", "cdkDrag", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "cdkDrag", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableReorderableExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "table", 0);
-            ɵɵlistener("cdkDropListDropped", function TableReorderableExample_Template_table_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
-            ɵɵelementContainerStart(1, 1);
-            ɵɵtemplate(2, TableReorderableExample_th_2_Template, 2, 0, "th", 2);
-            ɵɵtemplate(3, TableReorderableExample_td_3_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(4, 4);
-            ɵɵtemplate(5, TableReorderableExample_th_5_Template, 2, 0, "th", 2);
-            ɵɵtemplate(6, TableReorderableExample_td_6_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(7, 5);
-            ɵɵtemplate(8, TableReorderableExample_th_8_Template, 2, 0, "th", 2);
-            ɵɵtemplate(9, TableReorderableExample_td_9_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(10, 6);
-            ɵɵtemplate(11, TableReorderableExample_th_11_Template, 2, 0, "th", 2);
-            ɵɵtemplate(12, TableReorderableExample_td_12_Template, 2, 1, "td", 3);
-            ɵɵelementContainerEnd();
-            ɵɵtemplate(13, TableReorderableExample_tr_13_Template, 1, 0, "tr", 7);
-            ɵɵtemplate(14, TableReorderableExample_tr_14_Template, 1, 0, "tr", 8);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource);
-            ɵɵadvance(13);
-            ɵɵproperty("matHeaderRowDef", ctx.columns);
-            ɵɵadvance(1);
-            ɵɵproperty("matRowDefColumns", ctx.columns);
-        } }, directives: [MatTable, CdkDropList, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, CdkDrag, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    return TableReorderableExample;
-})();
+    drop(event) {
+        moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
+    }
+}
+TableReorderableExample.ɵfac = function TableReorderableExample_Factory(t) { return new (t || TableReorderableExample)(); };
+TableReorderableExample.ɵcmp = ɵɵdefineComponent({ type: TableReorderableExample, selectors: [["table-reorderable-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 3, "dataSource", "cdkDropListDropped"], ["matColumnDef", "position"], ["mat-header-cell", "", "cdkDrag", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "cdkDrag", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableReorderableExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵlistener("cdkDropListDropped", function TableReorderableExample_Template_table_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableReorderableExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableReorderableExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableReorderableExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableReorderableExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableReorderableExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableReorderableExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableReorderableExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableReorderableExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, TableReorderableExample_tr_13_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(14, TableReorderableExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.columns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.columns);
+    } }, directives: [MatTable, CdkDropList, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, CdkDrag, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableReorderableExample, [{
         type: Component,
         args: [{
@@ -3428,26 +3359,23 @@ const EXAMPLES = [
     TableWrappedExample, WrapperTable,
     TableReorderableExample,
 ];
-let TableExamplesModule = /** @class */ (() => {
-    class TableExamplesModule {
-    }
-    TableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TableExamplesModule });
-    TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamplesModule_Factory(t) { return new (t || TableExamplesModule)(); }, imports: [[
-                CommonModule,
-                MatButtonModule,
-                MatButtonToggleModule,
-                MatCheckboxModule,
-                MatIconModule,
-                MatInputModule,
-                MatPaginatorModule,
-                MatProgressSpinnerModule,
-                MatSortModule,
-                MatTableModule,
-                CdkTableModule,
-                DragDropModule,
-            ]] });
-    return TableExamplesModule;
-})();
+class TableExamplesModule {
+}
+TableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TableExamplesModule });
+TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamplesModule_Factory(t) { return new (t || TableExamplesModule)(); }, imports: [[
+            CommonModule,
+            MatButtonModule,
+            MatButtonToggleModule,
+            MatCheckboxModule,
+            MatIconModule,
+            MatInputModule,
+            MatPaginatorModule,
+            MatProgressSpinnerModule,
+            MatSortModule,
+            MatTableModule,
+            CdkTableModule,
+            DragDropModule,
+        ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TableExamplesModule, { declarations: [TableBasicExample, TableBasicFlexExample,
         TableDynamicColumnsExample, TableExpandableRowsExample,
         TableFilteringExample, TableFooterRowExample,

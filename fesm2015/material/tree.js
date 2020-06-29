@@ -109,194 +109,188 @@ const TREE_DATA = {
  * Each node in Json object represents a to-do item or a category.
  * If a node is a category, it has children items and new items can be added under the category.
  */
-let ChecklistDatabase = /** @class */ (() => {
-    class ChecklistDatabase {
-        constructor() {
-            this.dataChange = new BehaviorSubject([]);
-            this.initialize();
-        }
-        get data() { return this.dataChange.value; }
-        initialize() {
-            // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
-            //     file node as children.
-            const data = this.buildFileTree(TREE_DATA, 0);
-            // Notify the change.
-            this.dataChange.next(data);
-        }
-        /**
-         * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-         * The return value is the list of `TodoItemNode`.
-         */
-        buildFileTree(obj, level) {
-            return Object.keys(obj).reduce((accumulator, key) => {
-                const value = obj[key];
-                const node = new TodoItemNode();
-                node.item = key;
-                if (value != null) {
-                    if (typeof value === 'object') {
-                        node.children = this.buildFileTree(value, level + 1);
-                    }
-                    else {
-                        node.item = value;
-                    }
+class ChecklistDatabase {
+    constructor() {
+        this.dataChange = new BehaviorSubject([]);
+        this.initialize();
+    }
+    get data() { return this.dataChange.value; }
+    initialize() {
+        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
+        //     file node as children.
+        const data = this.buildFileTree(TREE_DATA, 0);
+        // Notify the change.
+        this.dataChange.next(data);
+    }
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `TodoItemNode`.
+     */
+    buildFileTree(obj, level) {
+        return Object.keys(obj).reduce((accumulator, key) => {
+            const value = obj[key];
+            const node = new TodoItemNode();
+            node.item = key;
+            if (value != null) {
+                if (typeof value === 'object') {
+                    node.children = this.buildFileTree(value, level + 1);
                 }
-                return accumulator.concat(node);
-            }, []);
-        }
-        /** Add an item to to-do list */
-        insertItem(parent, name) {
-            if (parent.children) {
-                parent.children.push({ item: name });
-                this.dataChange.next(this.data);
+                else {
+                    node.item = value;
+                }
             }
-        }
-        updateItem(node, name) {
-            node.item = name;
+            return accumulator.concat(node);
+        }, []);
+    }
+    /** Add an item to to-do list */
+    insertItem(parent, name) {
+        if (parent.children) {
+            parent.children.push({ item: name });
             this.dataChange.next(this.data);
         }
     }
-    ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
-    ChecklistDatabase.ɵprov = ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
-    return ChecklistDatabase;
-})();
+    updateItem(node, name) {
+        node.item = name;
+        this.dataChange.next(this.data);
+    }
+}
+ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
+ChecklistDatabase.ɵprov = ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ChecklistDatabase, [{
         type: Injectable
     }], function () { return []; }, null); })();
 /**
  * @title Tree with checkboxes
  */
-let TreeChecklistExample = /** @class */ (() => {
-    class TreeChecklistExample {
-        constructor(_database) {
-            this._database = _database;
-            /** Map from flat node to nested node. This helps us finding the nested node to be modified */
-            this.flatNodeMap = new Map();
-            /** Map from nested node to flattened node. This helps us to keep the same object for selection */
-            this.nestedNodeMap = new Map();
-            /** A selected parent node to be inserted */
-            this.selectedParent = null;
-            /** The new item's name */
-            this.newItemName = '';
-            /** The selection for checklist */
-            this.checklistSelection = new SelectionModel(true /* multiple */);
-            this.getLevel = (node) => node.level;
-            this.isExpandable = (node) => node.expandable;
-            this.getChildren = (node) => node.children;
-            this.hasChild = (_, _nodeData) => _nodeData.expandable;
-            this.hasNoContent = (_, _nodeData) => _nodeData.item === '';
-            /**
-             * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
-             */
-            this.transformer = (node, level) => {
-                const existingNode = this.nestedNodeMap.get(node);
-                const flatNode = existingNode && existingNode.item === node.item
-                    ? existingNode
-                    : new TodoItemFlatNode();
-                flatNode.item = node.item;
-                flatNode.level = level;
-                flatNode.expandable = !!node.children;
-                this.flatNodeMap.set(flatNode, node);
-                this.nestedNodeMap.set(node, flatNode);
-                return flatNode;
-            };
-            this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
-            this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-            this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-            _database.dataChange.subscribe(data => {
-                this.dataSource.data = data;
-            });
-        }
-        /** Whether all the descendants of the node are selected. */
-        descendantsAllSelected(node) {
-            const descendants = this.treeControl.getDescendants(node);
-            const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
-            return descAllSelected;
-        }
-        /** Whether part of the descendants are selected */
-        descendantsPartiallySelected(node) {
-            const descendants = this.treeControl.getDescendants(node);
-            const result = descendants.some(child => this.checklistSelection.isSelected(child));
-            return result && !this.descendantsAllSelected(node);
-        }
-        /** Toggle the to-do item selection. Select/deselect all the descendants node */
-        todoItemSelectionToggle(node) {
-            this.checklistSelection.toggle(node);
-            const descendants = this.treeControl.getDescendants(node);
-            this.checklistSelection.isSelected(node)
-                ? this.checklistSelection.select(...descendants)
-                : this.checklistSelection.deselect(...descendants);
-            // Force update for the parent
-            descendants.every(child => this.checklistSelection.isSelected(child));
-            this.checkAllParentsSelection(node);
-        }
-        /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
-        todoLeafItemSelectionToggle(node) {
-            this.checklistSelection.toggle(node);
-            this.checkAllParentsSelection(node);
-        }
-        /* Checks all the parents when a leaf node is selected/unselected */
-        checkAllParentsSelection(node) {
-            let parent = this.getParentNode(node);
-            while (parent) {
-                this.checkRootNodeSelection(parent);
-                parent = this.getParentNode(parent);
-            }
-        }
-        /** Check root node checked state and change it accordingly */
-        checkRootNodeSelection(node) {
-            const nodeSelected = this.checklistSelection.isSelected(node);
-            const descendants = this.treeControl.getDescendants(node);
-            const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
-            if (nodeSelected && !descAllSelected) {
-                this.checklistSelection.deselect(node);
-            }
-            else if (!nodeSelected && descAllSelected) {
-                this.checklistSelection.select(node);
-            }
-        }
-        /* Get the parent node of a node */
-        getParentNode(node) {
-            const currentLevel = this.getLevel(node);
-            if (currentLevel < 1) {
-                return null;
-            }
-            const startIndex = this.treeControl.dataNodes.indexOf(node) - 1;
-            for (let i = startIndex; i >= 0; i--) {
-                const currentNode = this.treeControl.dataNodes[i];
-                if (this.getLevel(currentNode) < currentLevel) {
-                    return currentNode;
-                }
-            }
-            return null;
-        }
-        /** Select the category so we can insert the new item. */
-        addNewItem(node) {
-            const parentNode = this.flatNodeMap.get(node);
-            this._database.insertItem(parentNode, '');
-            this.treeControl.expand(node);
-        }
-        /** Save the node to database */
-        saveNode(node, itemValue) {
-            const nestedNode = this.flatNodeMap.get(node);
-            this._database.updateItem(nestedNode, itemValue);
+class TreeChecklistExample {
+    constructor(_database) {
+        this._database = _database;
+        /** Map from flat node to nested node. This helps us finding the nested node to be modified */
+        this.flatNodeMap = new Map();
+        /** Map from nested node to flattened node. This helps us to keep the same object for selection */
+        this.nestedNodeMap = new Map();
+        /** A selected parent node to be inserted */
+        this.selectedParent = null;
+        /** The new item's name */
+        this.newItemName = '';
+        /** The selection for checklist */
+        this.checklistSelection = new SelectionModel(true /* multiple */);
+        this.getLevel = (node) => node.level;
+        this.isExpandable = (node) => node.expandable;
+        this.getChildren = (node) => node.children;
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
+        this.hasNoContent = (_, _nodeData) => _nodeData.item === '';
+        /**
+         * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
+         */
+        this.transformer = (node, level) => {
+            const existingNode = this.nestedNodeMap.get(node);
+            const flatNode = existingNode && existingNode.item === node.item
+                ? existingNode
+                : new TodoItemFlatNode();
+            flatNode.item = node.item;
+            flatNode.level = level;
+            flatNode.expandable = !!node.children;
+            this.flatNodeMap.set(flatNode, node);
+            this.nestedNodeMap.set(node, flatNode);
+            return flatNode;
+        };
+        this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
+        this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
+        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        _database.dataChange.subscribe(data => {
+            this.dataSource.data = data;
+        });
+    }
+    /** Whether all the descendants of the node are selected. */
+    descendantsAllSelected(node) {
+        const descendants = this.treeControl.getDescendants(node);
+        const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
+        return descAllSelected;
+    }
+    /** Whether part of the descendants are selected */
+    descendantsPartiallySelected(node) {
+        const descendants = this.treeControl.getDescendants(node);
+        const result = descendants.some(child => this.checklistSelection.isSelected(child));
+        return result && !this.descendantsAllSelected(node);
+    }
+    /** Toggle the to-do item selection. Select/deselect all the descendants node */
+    todoItemSelectionToggle(node) {
+        this.checklistSelection.toggle(node);
+        const descendants = this.treeControl.getDescendants(node);
+        this.checklistSelection.isSelected(node)
+            ? this.checklistSelection.select(...descendants)
+            : this.checklistSelection.deselect(...descendants);
+        // Force update for the parent
+        descendants.every(child => this.checklistSelection.isSelected(child));
+        this.checkAllParentsSelection(node);
+    }
+    /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
+    todoLeafItemSelectionToggle(node) {
+        this.checklistSelection.toggle(node);
+        this.checkAllParentsSelection(node);
+    }
+    /* Checks all the parents when a leaf node is selected/unselected */
+    checkAllParentsSelection(node) {
+        let parent = this.getParentNode(node);
+        while (parent) {
+            this.checkRootNodeSelection(parent);
+            parent = this.getParentNode(parent);
         }
     }
-    TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(ɵɵdirectiveInject(ChecklistDatabase)); };
-    TreeChecklistExample.ɵcmp = ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-tree", 0);
-            ɵɵtemplate(1, TreeChecklistExample_mat_tree_node_1_Template, 4, 2, "mat-tree-node", 1);
-            ɵɵtemplate(2, TreeChecklistExample_mat_tree_node_2_Template, 9, 0, "mat-tree-node", 2);
-            ɵɵtemplate(3, TreeChecklistExample_mat_tree_node_3_Template, 9, 5, "mat-tree-node", 2);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
-            ɵɵadvance(2);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.hasNoContent);
-            ɵɵadvance(1);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatTreeNodePadding, MatButton, MatCheckbox, MatFormField, MatLabel, MatInput, MatIcon], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 4px;\n}"] });
-    return TreeChecklistExample;
-})();
+    /** Check root node checked state and change it accordingly */
+    checkRootNodeSelection(node) {
+        const nodeSelected = this.checklistSelection.isSelected(node);
+        const descendants = this.treeControl.getDescendants(node);
+        const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
+        if (nodeSelected && !descAllSelected) {
+            this.checklistSelection.deselect(node);
+        }
+        else if (!nodeSelected && descAllSelected) {
+            this.checklistSelection.select(node);
+        }
+    }
+    /* Get the parent node of a node */
+    getParentNode(node) {
+        const currentLevel = this.getLevel(node);
+        if (currentLevel < 1) {
+            return null;
+        }
+        const startIndex = this.treeControl.dataNodes.indexOf(node) - 1;
+        for (let i = startIndex; i >= 0; i--) {
+            const currentNode = this.treeControl.dataNodes[i];
+            if (this.getLevel(currentNode) < currentLevel) {
+                return currentNode;
+            }
+        }
+        return null;
+    }
+    /** Select the category so we can insert the new item. */
+    addNewItem(node) {
+        const parentNode = this.flatNodeMap.get(node);
+        this._database.insertItem(parentNode, '');
+        this.treeControl.expand(node);
+    }
+    /** Save the node to database */
+    saveNode(node, itemValue) {
+        const nestedNode = this.flatNodeMap.get(node);
+        this._database.updateItem(nestedNode, itemValue);
+    }
+}
+TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(ɵɵdirectiveInject(ChecklistDatabase)); };
+TreeChecklistExample.ɵcmp = ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-tree", 0);
+        ɵɵtemplate(1, TreeChecklistExample_mat_tree_node_1_Template, 4, 2, "mat-tree-node", 1);
+        ɵɵtemplate(2, TreeChecklistExample_mat_tree_node_2_Template, 9, 0, "mat-tree-node", 2);
+        ɵɵtemplate(3, TreeChecklistExample_mat_tree_node_3_Template, 9, 5, "mat-tree-node", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.hasNoContent);
+        ɵɵadvance(1);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+    } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatTreeNodePadding, MatButton, MatCheckbox, MatFormField, MatLabel, MatInput, MatIcon], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 4px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TreeChecklistExample, [{
         type: Component,
         args: [{
@@ -355,32 +349,29 @@ class DynamicFlatNode {
  * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
  * the descendants data from the database.
  */
-let DynamicDatabase = /** @class */ (() => {
-    class DynamicDatabase {
-        constructor() {
-            this.dataMap = new Map([
-                ['Fruits', ['Apple', 'Orange', 'Banana']],
-                ['Vegetables', ['Tomato', 'Potato', 'Onion']],
-                ['Apple', ['Fuji', 'Macintosh']],
-                ['Onion', ['Yellow', 'White', 'Purple']]
-            ]);
-            this.rootLevelNodes = ['Fruits', 'Vegetables'];
-        }
-        /** Initial data from database */
-        initialData() {
-            return this.rootLevelNodes.map(name => new DynamicFlatNode(name, 0, true));
-        }
-        getChildren(node) {
-            return this.dataMap.get(node);
-        }
-        isExpandable(node) {
-            return this.dataMap.has(node);
-        }
+class DynamicDatabase {
+    constructor() {
+        this.dataMap = new Map([
+            ['Fruits', ['Apple', 'Orange', 'Banana']],
+            ['Vegetables', ['Tomato', 'Potato', 'Onion']],
+            ['Apple', ['Fuji', 'Macintosh']],
+            ['Onion', ['Yellow', 'White', 'Purple']]
+        ]);
+        this.rootLevelNodes = ['Fruits', 'Vegetables'];
     }
-    DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
-    DynamicDatabase.ɵprov = ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
-    return DynamicDatabase;
-})();
+    /** Initial data from database */
+    initialData() {
+        return this.rootLevelNodes.map(name => new DynamicFlatNode(name, 0, true));
+    }
+    getChildren(node) {
+        return this.dataMap.get(node);
+    }
+    isExpandable(node) {
+        return this.dataMap.has(node);
+    }
+}
+DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
+DynamicDatabase.ɵprov = ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDatabase, [{
         type: Injectable,
         args: [{ providedIn: 'root' }]
@@ -452,30 +443,27 @@ class DynamicDataSource {
 /**
  * @title Tree with dynamic data
  */
-let TreeDynamicExample = /** @class */ (() => {
-    class TreeDynamicExample {
-        constructor(database) {
-            this.getLevel = (node) => node.level;
-            this.isExpandable = (node) => node.expandable;
-            this.hasChild = (_, _nodeData) => _nodeData.expandable;
-            this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-            this.dataSource = new DynamicDataSource(this.treeControl, database);
-            this.dataSource.data = database.initialData();
-        }
+class TreeDynamicExample {
+    constructor(database) {
+        this.getLevel = (node) => node.level;
+        this.isExpandable = (node) => node.expandable;
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
+        this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
+        this.dataSource = new DynamicDataSource(this.treeControl, database);
+        this.dataSource.data = database.initialData();
     }
-    TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(ɵɵdirectiveInject(DynamicDatabase)); };
-    TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-tree", 0);
-            ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
-            ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
-            ɵɵadvance(2);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon, NgIf, MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
-    return TreeDynamicExample;
-})();
+}
+TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(ɵɵdirectiveInject(DynamicDatabase)); };
+TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-tree", 0);
+        ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+        ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+    } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon, NgIf, MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TreeDynamicExample, [{
         type: Component,
         args: [{
@@ -544,36 +532,33 @@ const TREE_DATA$1 = [
 /**
  * @title Tree with flat nodes
  */
-let TreeFlatOverviewExample = /** @class */ (() => {
-    class TreeFlatOverviewExample {
-        constructor() {
-            this._transformer = (node, level) => {
-                return {
-                    expandable: !!node.children && node.children.length > 0,
-                    name: node.name,
-                    level: level,
-                };
+class TreeFlatOverviewExample {
+    constructor() {
+        this._transformer = (node, level) => {
+            return {
+                expandable: !!node.children && node.children.length > 0,
+                name: node.name,
+                level: level,
             };
-            this.treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
-            this.treeFlattener = new MatTreeFlattener(this._transformer, node => node.level, node => node.expandable, node => node.children);
-            this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-            this.hasChild = (_, node) => node.expandable;
-            this.dataSource.data = TREE_DATA$1;
-        }
+        };
+        this.treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
+        this.treeFlattener = new MatTreeFlattener(this._transformer, node => node.level, node => node.expandable, node => node.children);
+        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        this.hasChild = (_, node) => node.expandable;
+        this.dataSource.data = TREE_DATA$1;
     }
-    TreeFlatOverviewExample.ɵfac = function TreeFlatOverviewExample_Factory(t) { return new (t || TreeFlatOverviewExample)(); };
-    TreeFlatOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeFlatOverviewExample, selectors: [["tree-flat-overview-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeFlatOverviewExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-tree", 0);
-            ɵɵtemplate(1, TreeFlatOverviewExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
-            ɵɵtemplate(2, TreeFlatOverviewExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
-            ɵɵadvance(2);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
-    return TreeFlatOverviewExample;
-})();
+}
+TreeFlatOverviewExample.ɵfac = function TreeFlatOverviewExample_Factory(t) { return new (t || TreeFlatOverviewExample)(); };
+TreeFlatOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeFlatOverviewExample, selectors: [["tree-flat-overview-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeFlatOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-tree", 0);
+        ɵɵtemplate(1, TreeFlatOverviewExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+        ɵɵtemplate(2, TreeFlatOverviewExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+    } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TreeFlatOverviewExample, [{
         type: Component,
         args: [{
@@ -656,115 +641,109 @@ class LoadmoreFlatNode {
  * A database that only load part of the data initially. After user clicks on the `Load more`
  * button, more data will be loaded.
  */
-let LoadmoreDatabase = /** @class */ (() => {
-    class LoadmoreDatabase {
-        constructor() {
-            this.batchNumber = 5;
-            this.dataChange = new BehaviorSubject([]);
-            this.nodeMap = new Map();
-            /** The data */
-            this.rootLevelNodes = ['Vegetables', 'Fruits'];
-            this.dataMap = new Map([
-                ['Fruits', ['Apple', 'Orange', 'Banana']],
-                ['Vegetables', ['Tomato', 'Potato', 'Onion']],
-                ['Apple', ['Fuji', 'Macintosh']],
-                ['Onion', ['Yellow', 'White', 'Purple', 'Green', 'Shallot', 'Sweet', 'Red', 'Leek']],
-            ]);
-        }
-        initialize() {
-            const data = this.rootLevelNodes.map(name => this._generateNode(name));
-            this.dataChange.next(data);
-        }
-        /** Expand a node whose children are not loaded */
-        loadMore(item, onlyFirstTime = false) {
-            if (!this.nodeMap.has(item) || !this.dataMap.has(item)) {
-                return;
-            }
-            const parent = this.nodeMap.get(item);
-            const children = this.dataMap.get(item);
-            if (onlyFirstTime && parent.children.length > 0) {
-                return;
-            }
-            const newChildrenNumber = parent.children.length + this.batchNumber;
-            const nodes = children.slice(0, newChildrenNumber)
-                .map(name => this._generateNode(name));
-            if (newChildrenNumber < children.length) {
-                // Need a new load more node
-                nodes.push(new LoadmoreNode(LOAD_MORE, false, item));
-            }
-            parent.childrenChange.next(nodes);
-            this.dataChange.next(this.dataChange.value);
-        }
-        _generateNode(item) {
-            if (this.nodeMap.has(item)) {
-                return this.nodeMap.get(item);
-            }
-            const result = new LoadmoreNode(item, this.dataMap.has(item));
-            this.nodeMap.set(item, result);
-            return result;
-        }
+class LoadmoreDatabase {
+    constructor() {
+        this.batchNumber = 5;
+        this.dataChange = new BehaviorSubject([]);
+        this.nodeMap = new Map();
+        /** The data */
+        this.rootLevelNodes = ['Vegetables', 'Fruits'];
+        this.dataMap = new Map([
+            ['Fruits', ['Apple', 'Orange', 'Banana']],
+            ['Vegetables', ['Tomato', 'Potato', 'Onion']],
+            ['Apple', ['Fuji', 'Macintosh']],
+            ['Onion', ['Yellow', 'White', 'Purple', 'Green', 'Shallot', 'Sweet', 'Red', 'Leek']],
+        ]);
     }
-    LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
-    LoadmoreDatabase.ɵprov = ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
-    return LoadmoreDatabase;
-})();
+    initialize() {
+        const data = this.rootLevelNodes.map(name => this._generateNode(name));
+        this.dataChange.next(data);
+    }
+    /** Expand a node whose children are not loaded */
+    loadMore(item, onlyFirstTime = false) {
+        if (!this.nodeMap.has(item) || !this.dataMap.has(item)) {
+            return;
+        }
+        const parent = this.nodeMap.get(item);
+        const children = this.dataMap.get(item);
+        if (onlyFirstTime && parent.children.length > 0) {
+            return;
+        }
+        const newChildrenNumber = parent.children.length + this.batchNumber;
+        const nodes = children.slice(0, newChildrenNumber)
+            .map(name => this._generateNode(name));
+        if (newChildrenNumber < children.length) {
+            // Need a new load more node
+            nodes.push(new LoadmoreNode(LOAD_MORE, false, item));
+        }
+        parent.childrenChange.next(nodes);
+        this.dataChange.next(this.dataChange.value);
+    }
+    _generateNode(item) {
+        if (this.nodeMap.has(item)) {
+            return this.nodeMap.get(item);
+        }
+        const result = new LoadmoreNode(item, this.dataMap.has(item));
+        this.nodeMap.set(item, result);
+        return result;
+    }
+}
+LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
+LoadmoreDatabase.ɵprov = ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(LoadmoreDatabase, [{
         type: Injectable
     }], null, null); })();
 /**
  * @title Tree with partially loaded data
  */
-let TreeLoadmoreExample = /** @class */ (() => {
-    class TreeLoadmoreExample {
-        constructor(_database) {
-            this._database = _database;
-            this.nodeMap = new Map();
-            this.getChildren = (node) => node.childrenChange;
-            this.transformer = (node, level) => {
-                const existingNode = this.nodeMap.get(node.item);
-                if (existingNode) {
-                    return existingNode;
-                }
-                const newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
-                this.nodeMap.set(node.item, newNode);
-                return newNode;
-            };
-            this.getLevel = (node) => node.level;
-            this.isExpandable = (node) => node.expandable;
-            this.hasChild = (_, _nodeData) => _nodeData.expandable;
-            this.isLoadMore = (_, _nodeData) => _nodeData.item === LOAD_MORE;
-            this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
-            this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-            this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-            _database.dataChange.subscribe(data => {
-                this.dataSource.data = data;
-            });
-            _database.initialize();
-        }
-        /** Load more nodes from data source */
-        loadMore(item) {
-            this._database.loadMore(item);
-        }
-        loadChildren(node) {
-            this._database.loadMore(node.item, true);
-        }
+class TreeLoadmoreExample {
+    constructor(_database) {
+        this._database = _database;
+        this.nodeMap = new Map();
+        this.getChildren = (node) => node.childrenChange;
+        this.transformer = (node, level) => {
+            const existingNode = this.nodeMap.get(node.item);
+            if (existingNode) {
+                return existingNode;
+            }
+            const newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
+            this.nodeMap.set(node.item, newNode);
+            return newNode;
+        };
+        this.getLevel = (node) => node.level;
+        this.isExpandable = (node) => node.expandable;
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
+        this.isLoadMore = (_, _nodeData) => _nodeData.item === LOAD_MORE;
+        this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
+        this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
+        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        _database.dataChange.subscribe(data => {
+            this.dataSource.data = data;
+        });
+        _database.initialize();
     }
-    TreeLoadmoreExample.ɵfac = function TreeLoadmoreExample_Factory(t) { return new (t || TreeLoadmoreExample)(ɵɵdirectiveInject(LoadmoreDatabase)); };
-    TreeLoadmoreExample.ɵcmp = ɵɵdefineComponent({ type: TreeLoadmoreExample, selectors: [["tree-loadmore-example"]], features: [ɵɵProvidersFeature([LoadmoreDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"], ["mat-button", "", 3, "click"]], template: function TreeLoadmoreExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-tree", 0);
-            ɵɵtemplate(1, TreeLoadmoreExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
-            ɵɵtemplate(2, TreeLoadmoreExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
-            ɵɵtemplate(3, TreeLoadmoreExample_mat_tree_node_3_Template, 3, 0, "mat-tree-node", 3);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
-            ɵɵadvance(2);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            ɵɵadvance(1);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.isLoadMore);
-        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
-    return TreeLoadmoreExample;
-})();
+    /** Load more nodes from data source */
+    loadMore(item) {
+        this._database.loadMore(item);
+    }
+    loadChildren(node) {
+        this._database.loadMore(node.item, true);
+    }
+}
+TreeLoadmoreExample.ɵfac = function TreeLoadmoreExample_Factory(t) { return new (t || TreeLoadmoreExample)(ɵɵdirectiveInject(LoadmoreDatabase)); };
+TreeLoadmoreExample.ɵcmp = ɵɵdefineComponent({ type: TreeLoadmoreExample, selectors: [["tree-loadmore-example"]], features: [ɵɵProvidersFeature([LoadmoreDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"], ["mat-button", "", 3, "click"]], template: function TreeLoadmoreExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-tree", 0);
+        ɵɵtemplate(1, TreeLoadmoreExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+        ɵɵtemplate(2, TreeLoadmoreExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
+        ɵɵtemplate(3, TreeLoadmoreExample_mat_tree_node_3_Template, 3, 0, "mat-tree-node", 3);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+        ɵɵadvance(1);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.isLoadMore);
+    } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TreeLoadmoreExample, [{
         type: Component,
         args: [{
@@ -845,28 +824,25 @@ const TREE_DATA$2 = [
 /**
  * @title Tree with nested nodes
  */
-let TreeNestedOverviewExample = /** @class */ (() => {
-    class TreeNestedOverviewExample {
-        constructor() {
-            this.treeControl = new NestedTreeControl(node => node.children);
-            this.dataSource = new MatTreeNestedDataSource();
-            this.hasChild = (_, node) => !!node.children && node.children.length > 0;
-            this.dataSource.data = TREE_DATA$2;
-        }
+class TreeNestedOverviewExample {
+    constructor() {
+        this.treeControl = new NestedTreeControl(node => node.children);
+        this.dataSource = new MatTreeNestedDataSource();
+        this.hasChild = (_, node) => !!node.children && node.children.length > 0;
+        this.dataSource.data = TREE_DATA$2;
     }
-    TreeNestedOverviewExample.ɵfac = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
-    TreeNestedOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-tree", 0);
-            ɵɵtemplate(1, TreeNestedOverviewExample_mat_tree_node_1_Template, 4, 1, "mat-tree-node", 1);
-            ɵɵtemplate(2, TreeNestedOverviewExample_mat_nested_tree_node_2_Template, 9, 5, "mat-nested-tree-node", 2);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
-            ɵɵadvance(2);
-            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatButton, MatNestedTreeNode, MatIcon, MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
-    return TreeNestedOverviewExample;
-})();
+}
+TreeNestedOverviewExample.ɵfac = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
+TreeNestedOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-tree", 0);
+        ɵɵtemplate(1, TreeNestedOverviewExample_mat_tree_node_1_Template, 4, 1, "mat-tree-node", 1);
+        ɵɵtemplate(2, TreeNestedOverviewExample_mat_nested_tree_node_2_Template, 9, 5, "mat-nested-tree-node", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+    } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatButton, MatNestedTreeNode, MatIcon, MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TreeNestedOverviewExample, [{
         type: Component,
         args: [{
@@ -883,21 +859,18 @@ const EXAMPLES = [
     TreeLoadmoreExample,
     TreeNestedOverviewExample,
 ];
-let TreeExamplesModule = /** @class */ (() => {
-    class TreeExamplesModule {
-    }
-    TreeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TreeExamplesModule });
-    TreeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
-                CommonModule,
-                MatButtonModule,
-                MatCheckboxModule,
-                MatIconModule,
-                MatInputModule,
-                MatProgressBarModule,
-                MatTreeModule,
-            ]] });
-    return TreeExamplesModule;
-})();
+class TreeExamplesModule {
+}
+TreeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TreeExamplesModule });
+TreeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
+            CommonModule,
+            MatButtonModule,
+            MatCheckboxModule,
+            MatIconModule,
+            MatInputModule,
+            MatProgressBarModule,
+            MatTreeModule,
+        ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
         TreeDynamicExample,
         TreeFlatOverviewExample,

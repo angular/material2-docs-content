@@ -6,28 +6,24 @@ import * as i2 from "@angular/material/button";
 /**
  * @title Dialog with header, scrollable content and actions
  */
-let DialogContentExample = /** @class */ (() => {
-    class DialogContentExample {
-        constructor(dialog) {
-            this.dialog = dialog;
-        }
-        openDialog() {
-            const dialogRef = this.dialog.open(DialogContentExampleDialog);
-            dialogRef.afterClosed().subscribe(result => {
-                console.log(`Dialog result: ${result}`);
-            });
-        }
+export class DialogContentExample {
+    constructor(dialog) {
+        this.dialog = dialog;
     }
-    DialogContentExample.ɵfac = function DialogContentExample_Factory(t) { return new (t || DialogContentExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
-    DialogContentExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExample, selectors: [["dialog-content-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogContentExample_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "button", 0);
-            i0.ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener() { return ctx.openDialog(); });
-            i0.ɵɵtext(1, "Open dialog");
-            i0.ɵɵelementEnd();
-        } }, directives: [i2.MatButton], styles: [""] });
-    return DialogContentExample;
-})();
-export { DialogContentExample };
+    openDialog() {
+        const dialogRef = this.dialog.open(DialogContentExampleDialog);
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
+        });
+    }
+}
+DialogContentExample.ɵfac = function DialogContentExample_Factory(t) { return new (t || DialogContentExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
+DialogContentExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExample, selectors: [["dialog-content-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogContentExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener() { return ctx.openDialog(); });
+        i0.ɵɵtext(1, "Open dialog");
+        i0.ɵɵelementEnd();
+    } }, directives: [i2.MatButton], styles: [""] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogContentExample, [{
         type: Component,
         args: [{
@@ -36,88 +32,84 @@ export { DialogContentExample };
                 styleUrls: ['dialog-content-example.css'],
             }]
     }], function () { return [{ type: i1.MatDialog }]; }, null); })();
-let DialogContentExampleDialog = /** @class */ (() => {
-    class DialogContentExampleDialog {
-    }
-    DialogContentExampleDialog.ɵfac = function DialogContentExampleDialog_Factory(t) { return new (t || DialogContentExampleDialog)(); };
-    DialogContentExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExampleDialog, selectors: [["dialog-content-example-dialog"]], decls: 46, vars: 1, consts: [["mat-dialog-title", ""], [1, "mat-typography"], ["align", "end"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogContentExampleDialog_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "h2", 0);
-            i0.ɵɵtext(1, "Install Angular");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(2, "mat-dialog-content", 1);
-            i0.ɵɵelementStart(3, "h3");
-            i0.ɵɵtext(4, "Develop across all platforms");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(5, "p");
-            i0.ɵɵtext(6, "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(7, "h3");
-            i0.ɵɵtext(8, "Speed & Performance");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(9, "p");
-            i0.ɵɵtext(10, "Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(11, "h3");
-            i0.ɵɵtext(12, "Incredible tooling");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(13, "p");
-            i0.ɵɵtext(14, "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(15, "h3");
-            i0.ɵɵtext(16, "Loved by millions");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(17, "p");
-            i0.ɵɵtext(18, "From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(19, "h3");
-            i0.ɵɵtext(20, "What is Angular?");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(21, "p");
-            i0.ɵɵtext(22, "Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(23, "h3");
-            i0.ɵɵtext(24, "Architecture overview");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(25, "p");
-            i0.ɵɵtext(26, "Angular is a platform and framework for building client applications in HTML and TypeScript. Angular is itself written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(27, "p");
-            i0.ɵɵtext(28, "The basic building blocks of an Angular application are NgModules, which provide a compilation context for components. NgModules collect related code into functional sets; an Angular app is defined by a set of NgModules. An app always has at least a root module that enables bootstrapping, and typically has many more feature modules.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(29, "p");
-            i0.ɵɵtext(30, "Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data. Every app has at least a root component.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(31, "p");
-            i0.ɵɵtext(32, "Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(33, "p");
-            i0.ɵɵtext(34, "Both components and services are simply classes, with decorators that mark their type and provide metadata that tells Angular how to use them.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(35, "p");
-            i0.ɵɵtext(36, "The metadata for a component class associates it with a template that defines a view. A template combines ordinary HTML with Angular directives and binding markup that allow Angular to modify the HTML before rendering it for display.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(37, "p");
-            i0.ɵɵtext(38, "The metadata for a service class provides the information Angular needs to make it available to components through Dependency Injection (DI).");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(39, "p");
-            i0.ɵɵtext(40, "An app's components typically define many views, arranged hierarchically. Angular provides the Router service to help you define navigation paths among views. The router provides sophisticated in-browser navigational capabilities.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(41, "mat-dialog-actions", 2);
-            i0.ɵɵelementStart(42, "button", 3);
-            i0.ɵɵtext(43, "Cancel");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(44, "button", 4);
-            i0.ɵɵtext(45, "Install");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        } if (rf & 2) {
-            i0.ɵɵadvance(44);
-            i0.ɵɵproperty("mat-dialog-close", true);
-        } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
-    return DialogContentExampleDialog;
-})();
-export { DialogContentExampleDialog };
+export class DialogContentExampleDialog {
+}
+DialogContentExampleDialog.ɵfac = function DialogContentExampleDialog_Factory(t) { return new (t || DialogContentExampleDialog)(); };
+DialogContentExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExampleDialog, selectors: [["dialog-content-example-dialog"]], decls: 46, vars: 1, consts: [["mat-dialog-title", ""], [1, "mat-typography"], ["align", "end"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogContentExampleDialog_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "h2", 0);
+        i0.ɵɵtext(1, "Install Angular");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(2, "mat-dialog-content", 1);
+        i0.ɵɵelementStart(3, "h3");
+        i0.ɵɵtext(4, "Develop across all platforms");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "p");
+        i0.ɵɵtext(6, "Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "h3");
+        i0.ɵɵtext(8, "Speed & Performance");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "p");
+        i0.ɵɵtext(10, "Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "h3");
+        i0.ɵɵtext(12, "Incredible tooling");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(13, "p");
+        i0.ɵɵtext(14, "Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(15, "h3");
+        i0.ɵɵtext(16, "Loved by millions");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(17, "p");
+        i0.ɵɵtext(18, "From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(19, "h3");
+        i0.ɵɵtext(20, "What is Angular?");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(21, "p");
+        i0.ɵɵtext(22, "Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(23, "h3");
+        i0.ɵɵtext(24, "Architecture overview");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(25, "p");
+        i0.ɵɵtext(26, "Angular is a platform and framework for building client applications in HTML and TypeScript. Angular is itself written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(27, "p");
+        i0.ɵɵtext(28, "The basic building blocks of an Angular application are NgModules, which provide a compilation context for components. NgModules collect related code into functional sets; an Angular app is defined by a set of NgModules. An app always has at least a root module that enables bootstrapping, and typically has many more feature modules.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(29, "p");
+        i0.ɵɵtext(30, "Components define views, which are sets of screen elements that Angular can choose among and modify according to your program logic and data. Every app has at least a root component.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(31, "p");
+        i0.ɵɵtext(32, "Components use services, which provide specific functionality not directly related to views. Service providers can be injected into components as dependencies, making your code modular, reusable, and efficient.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(33, "p");
+        i0.ɵɵtext(34, "Both components and services are simply classes, with decorators that mark their type and provide metadata that tells Angular how to use them.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(35, "p");
+        i0.ɵɵtext(36, "The metadata for a component class associates it with a template that defines a view. A template combines ordinary HTML with Angular directives and binding markup that allow Angular to modify the HTML before rendering it for display.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(37, "p");
+        i0.ɵɵtext(38, "The metadata for a service class provides the information Angular needs to make it available to components through Dependency Injection (DI).");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(39, "p");
+        i0.ɵɵtext(40, "An app's components typically define many views, arranged hierarchically. Angular provides the Router service to help you define navigation paths among views. The router provides sophisticated in-browser navigational capabilities.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(41, "mat-dialog-actions", 2);
+        i0.ɵɵelementStart(42, "button", 3);
+        i0.ɵɵtext(43, "Cancel");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(44, "button", 4);
+        i0.ɵɵtext(45, "Install");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(44);
+        i0.ɵɵproperty("mat-dialog-close", true);
+    } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogContentExampleDialog, [{
         type: Component,
         args: [{
@@ -125,4 +117,4 @@ export { DialogContentExampleDialog };
                 templateUrl: 'dialog-content-example-dialog.html',
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGlhbG9nLWNvbnRlbnQtZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL2RpYWxvZy9kaWFsb2ctY29udGVudC9kaWFsb2ctY29udGVudC1leGFtcGxlLnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvZGlhbG9nL2RpYWxvZy1jb250ZW50L2RpYWxvZy1jb250ZW50LWV4YW1wbGUuaHRtbCIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL2RpYWxvZy9kaWFsb2ctY29udGVudC9kaWFsb2ctY29udGVudC1leGFtcGxlLWRpYWxvZy5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFDeEMsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLDBCQUEwQixDQUFDOzs7O0FBRW5EOztHQUVHO0FBQ0g7SUFBQSxNQUthLG9CQUFvQjtRQUMvQixZQUFtQixNQUFpQjtZQUFqQixXQUFNLEdBQU4sTUFBTSxDQUFXO1FBQUcsQ0FBQztRQUV4QyxVQUFVO1lBQ1IsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsMEJBQTBCLENBQUMsQ0FBQztZQUUvRCxTQUFTLENBQUMsV0FBVyxFQUFFLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxFQUFFO2dCQUN6QyxPQUFPLENBQUMsR0FBRyxDQUFDLGtCQUFrQixNQUFNLEVBQUUsQ0FBQyxDQUFDO1lBQzFDLENBQUMsQ0FBQyxDQUFDO1FBQ0wsQ0FBQzs7NEZBVFUsb0JBQW9COzZEQUFwQixvQkFBb0I7WUNYakMsaUNBQTBDO1lBQXZCLGlHQUFTLGdCQUFZLElBQUM7WUFBQywyQkFBVztZQUFBLGlCQUFTOzsrQkRBOUQ7S0FxQkM7U0FWWSxvQkFBb0I7a0RBQXBCLG9CQUFvQjtjQUxoQyxTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLHdCQUF3QjtnQkFDbEMsV0FBVyxFQUFFLDZCQUE2QjtnQkFDMUMsU0FBUyxFQUFFLENBQUMsNEJBQTRCLENBQUM7YUFDMUM7O0FBYUQ7SUFBQSxNQUlhLDBCQUEwQjs7d0dBQTFCLDBCQUEwQjttRUFBMUIsMEJBQTBCO1lFM0J2Qyw2QkFBcUI7WUFBQSwrQkFBZTtZQUFBLGlCQUFLO1lBQ3pDLDZDQUNFO1lBQUEsMEJBQUk7WUFBQSw0Q0FBNEI7WUFBQSxpQkFBSztZQUNyQyx5QkFBRztZQUFBLGtNQUNxRjtZQUFBLGlCQUFJO1lBRTVGLDBCQUFJO1lBQUEsbUNBQXVCO1lBQUEsaUJBQUs7WUFDaEMseUJBQUc7WUFBQSw2UkFFcUY7WUFBQSxpQkFBSTtZQUU1RiwyQkFBSTtZQUFBLG1DQUFrQjtZQUFBLGlCQUFLO1lBQzNCLDBCQUFHO1lBQUEsNldBR2lFO1lBQUEsaUJBQUk7WUFFeEUsMkJBQUk7WUFBQSxrQ0FBaUI7WUFBQSxpQkFBSztZQUMxQiwwQkFBRztZQUFBLHFLQUMwRDtZQUFBLGlCQUFJO1lBRWpFLDJCQUFJO1lBQUEsaUNBQWdCO1lBQUEsaUJBQUs7WUFFekIsMEJBQUc7WUFBQSw2VUFHd0Q7WUFBQSxpQkFBSTtZQUUvRCwyQkFBSTtZQUFBLHNDQUFxQjtZQUFBLGlCQUFLO1lBRTlCLDBCQUFHO1lBQUEscVFBRXdEO1lBQUEsaUJBQUk7WUFFL0QsMEJBQUc7WUFBQSwrVkFHd0Q7WUFBQSxpQkFBSTtZQUUvRCwwQkFBRztZQUFBLHVNQUNzRjtZQUFBLGlCQUFJO1lBRTdGLDBCQUFHO1lBQUEsbU9BRXFCO1lBQUEsaUJBQUk7WUFFNUIsMEJBQUc7WUFBQSwrSkFDaUQ7WUFBQSxpQkFBSTtZQUV4RCwwQkFBRztZQUFBLDBQQUVnRDtZQUFBLGlCQUFJO1lBRXZELDBCQUFHO1lBQUEsOEpBQzZDO1lBQUEsaUJBQUk7WUFFcEQsMEJBQUc7WUFBQSx1UEFFZ0Q7WUFBQSxpQkFBSTtZQUN6RCxpQkFBcUI7WUFDckIsOENBQ0U7WUFBQSxrQ0FBb0M7WUFBQSx1QkFBTTtZQUFBLGlCQUFTO1lBQ25ELGtDQUE2RDtZQUFBLHdCQUFPO1lBQUEsaUJBQVM7WUFDL0UsaUJBQXFCOztZQURBLGdCQUF5QjtZQUF6Qix1Q0FBeUI7O3FDRjlEOUM7S0EyQjBDO1NBQTdCLDBCQUEwQjtrREFBMUIsMEJBQTBCO2NBSnRDLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsK0JBQStCO2dCQUN6QyxXQUFXLEVBQUUsb0NBQW9DO2FBQ2xEIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHtNYXREaWFsb2d9IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL2RpYWxvZyc7XG5cbi8qKlxuICogQHRpdGxlIERpYWxvZyB3aXRoIGhlYWRlciwgc2Nyb2xsYWJsZSBjb250ZW50IGFuZCBhY3Rpb25zXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2RpYWxvZy1jb250ZW50LWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ2RpYWxvZy1jb250ZW50LWV4YW1wbGUuaHRtbCcsXG4gIHN0eWxlVXJsczogWydkaWFsb2ctY29udGVudC1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBEaWFsb2dDb250ZW50RXhhbXBsZSB7XG4gIGNvbnN0cnVjdG9yKHB1YmxpYyBkaWFsb2c6IE1hdERpYWxvZykge31cblxuICBvcGVuRGlhbG9nKCkge1xuICAgIGNvbnN0IGRpYWxvZ1JlZiA9IHRoaXMuZGlhbG9nLm9wZW4oRGlhbG9nQ29udGVudEV4YW1wbGVEaWFsb2cpO1xuXG4gICAgZGlhbG9nUmVmLmFmdGVyQ2xvc2VkKCkuc3Vic2NyaWJlKHJlc3VsdCA9PiB7XG4gICAgICBjb25zb2xlLmxvZyhgRGlhbG9nIHJlc3VsdDogJHtyZXN1bHR9YCk7XG4gICAgfSk7XG4gIH1cbn1cblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZGlhbG9nLWNvbnRlbnQtZXhhbXBsZS1kaWFsb2cnLFxuICB0ZW1wbGF0ZVVybDogJ2RpYWxvZy1jb250ZW50LWV4YW1wbGUtZGlhbG9nLmh0bWwnLFxufSlcbmV4cG9ydCBjbGFzcyBEaWFsb2dDb250ZW50RXhhbXBsZURpYWxvZyB7fVxuIiwiPGJ1dHRvbiBtYXQtYnV0dG9uIChjbGljayk9XCJvcGVuRGlhbG9nKClcIj5PcGVuIGRpYWxvZzwvYnV0dG9uPlxuIiwiPGgyIG1hdC1kaWFsb2ctdGl0bGU+SW5zdGFsbCBBbmd1bGFyPC9oMj5cbjxtYXQtZGlhbG9nLWNvbnRlbnQgY2xhc3M9XCJtYXQtdHlwb2dyYXBoeVwiPlxuICA8aDM+RGV2ZWxvcCBhY3Jvc3MgYWxsIHBsYXRmb3JtczwvaDM+XG4gIDxwPkxlYXJuIG9uZSB3YXkgdG8gYnVpbGQgYXBwbGljYXRpb25zIHdpdGggQW5ndWxhciBhbmQgcmV1c2UgeW91ciBjb2RlIGFuZCBhYmlsaXRpZXMgdG8gYnVpbGRcbiAgICBhcHBzIGZvciBhbnkgZGVwbG95bWVudCB0YXJnZXQuIEZvciB3ZWIsIG1vYmlsZSB3ZWIsIG5hdGl2ZSBtb2JpbGUgYW5kIG5hdGl2ZSBkZXNrdG9wLjwvcD5cblxuICA8aDM+U3BlZWQgJmFtcDsgUGVyZm9ybWFuY2U8L2gzPlxuICA8cD5BY2hpZXZlIHRoZSBtYXhpbXVtIHNwZWVkIHBvc3NpYmxlIG9uIHRoZSBXZWIgUGxhdGZvcm0gdG9kYXksIGFuZCB0YWtlIGl0IGZ1cnRoZXIsIHZpYSBXZWJcbiAgICBXb3JrZXJzIGFuZCBzZXJ2ZXItc2lkZSByZW5kZXJpbmcuIEFuZ3VsYXIgcHV0cyB5b3UgaW4gY29udHJvbCBvdmVyIHNjYWxhYmlsaXR5LiBNZWV0IGh1Z2VcbiAgICBkYXRhIHJlcXVpcmVtZW50cyBieSBidWlsZGluZyBkYXRhIG1vZGVscyBvbiBSeEpTLCBJbW11dGFibGUuanMgb3IgYW5vdGhlciBwdXNoLW1vZGVsLjwvcD5cblxuICA8aDM+SW5jcmVkaWJsZSB0b29saW5nPC9oMz5cbiAgPHA+QnVpbGQgZmVhdHVyZXMgcXVpY2tseSB3aXRoIHNpbXBsZSwgZGVjbGFyYXRpdmUgdGVtcGxhdGVzLiBFeHRlbmQgdGhlIHRlbXBsYXRlIGxhbmd1YWdlIHdpdGhcbiAgICB5b3VyIG93biBjb21wb25lbnRzIGFuZCB1c2UgYSB3aWRlIGFycmF5IG9mIGV4aXN0aW5nIGNvbXBvbmVudHMuIEdldCBpbW1lZGlhdGUgQW5ndWxhci1zcGVjaWZpY1xuICAgIGhlbHAgYW5kIGZlZWRiYWNrIHdpdGggbmVhcmx5IGV2ZXJ5IElERSBhbmQgZWRpdG9yLiBBbGwgdGhpcyBjb21lcyB0b2dldGhlciBzbyB5b3UgY2FuIGZvY3VzXG4gICAgb24gYnVpbGRpbmcgYW1hemluZyBhcHBzIHJhdGhlciB0aGFuIHRyeWluZyB0byBtYWtlIHRoZSBjb2RlIHdvcmsuPC9wPlxuXG4gIDxoMz5Mb3ZlZCBieSBtaWxsaW9uczwvaDM+XG4gIDxwPkZyb20gcHJvdG90eXBlIHRocm91Z2ggZ2xvYmFsIGRlcGxveW1lbnQsIEFuZ3VsYXIgZGVsaXZlcnMgdGhlIHByb2R1Y3Rpdml0eSBhbmQgc2NhbGFibGVcbiAgICBpbmZyYXN0cnVjdHVyZSB0aGF0IHN1cHBvcnRzIEdvb2dsZSdzIGxhcmdlc3QgYXBwbGljYXRpb25zLjwvcD5cblxuICA8aDM+V2hhdCBpcyBBbmd1bGFyPzwvaDM+XG5cbiAgPHA+QW5ndWxhciBpcyBhIHBsYXRmb3JtIHRoYXQgbWFrZXMgaXQgZWFzeSB0byBidWlsZCBhcHBsaWNhdGlvbnMgd2l0aCB0aGUgd2ViLiBBbmd1bGFyXG4gICAgY29tYmluZXMgZGVjbGFyYXRpdmUgdGVtcGxhdGVzLCBkZXBlbmRlbmN5IGluamVjdGlvbiwgZW5kIHRvIGVuZCB0b29saW5nLCBhbmQgaW50ZWdyYXRlZFxuICAgIGJlc3QgcHJhY3RpY2VzIHRvIHNvbHZlIGRldmVsb3BtZW50IGNoYWxsZW5nZXMuIEFuZ3VsYXIgZW1wb3dlcnMgZGV2ZWxvcGVycyB0byBidWlsZFxuICAgIGFwcGxpY2F0aW9ucyB0aGF0IGxpdmUgb24gdGhlIHdlYiwgbW9iaWxlLCBvciB0aGUgZGVza3RvcDwvcD5cblxuICA8aDM+QXJjaGl0ZWN0dXJlIG92ZXJ2aWV3PC9oMz5cblxuICA8cD5Bbmd1bGFyIGlzIGEgcGxhdGZvcm0gYW5kIGZyYW1ld29yayBmb3IgYnVpbGRpbmcgY2xpZW50IGFwcGxpY2F0aW9ucyBpbiBIVE1MIGFuZCBUeXBlU2NyaXB0LlxuICBBbmd1bGFyIGlzIGl0c2VsZiB3cml0dGVuIGluIFR5cGVTY3JpcHQuIEl0IGltcGxlbWVudHMgY29yZSBhbmQgb3B0aW9uYWwgZnVuY3Rpb25hbGl0eSBhcyBhXG4gIHNldCBvZiBUeXBlU2NyaXB0IGxpYnJhcmllcyB0aGF0IHlvdSBpbXBvcnQgaW50byB5b3VyIGFwcHMuPC9wPlxuXG4gIDxwPlRoZSBiYXNpYyBidWlsZGluZyBibG9ja3Mgb2YgYW4gQW5ndWxhciBhcHBsaWNhdGlvbiBhcmUgTmdNb2R1bGVzLCB3aGljaCBwcm92aWRlIGEgY29tcGlsYXRpb25cbiAgY29udGV4dCBmb3IgY29tcG9uZW50cy4gTmdNb2R1bGVzIGNvbGxlY3QgcmVsYXRlZCBjb2RlIGludG8gZnVuY3Rpb25hbCBzZXRzOyBhbiBBbmd1bGFyIGFwcCBpc1xuICBkZWZpbmVkIGJ5IGEgc2V0IG9mIE5nTW9kdWxlcy4gQW4gYXBwIGFsd2F5cyBoYXMgYXQgbGVhc3QgYSByb290IG1vZHVsZSB0aGF0IGVuYWJsZXNcbiAgYm9vdHN0cmFwcGluZywgYW5kIHR5cGljYWxseSBoYXMgbWFueSBtb3JlIGZlYXR1cmUgbW9kdWxlcy48L3A+XG5cbiAgPHA+Q29tcG9uZW50cyBkZWZpbmUgdmlld3MsIHdoaWNoIGFyZSBzZXRzIG9mIHNjcmVlbiBlbGVtZW50cyB0aGF0IEFuZ3VsYXIgY2FuIGNob29zZSBhbW9uZyBhbmRcbiAgbW9kaWZ5IGFjY29yZGluZyB0byB5b3VyIHByb2dyYW0gbG9naWMgYW5kIGRhdGEuIEV2ZXJ5IGFwcCBoYXMgYXQgbGVhc3QgYSByb290IGNvbXBvbmVudC48L3A+XG5cbiAgPHA+Q29tcG9uZW50cyB1c2Ugc2VydmljZXMsIHdoaWNoIHByb3ZpZGUgc3BlY2lmaWMgZnVuY3Rpb25hbGl0eSBub3QgZGlyZWN0bHkgcmVsYXRlZCB0byB2aWV3cy5cbiAgU2VydmljZSBwcm92aWRlcnMgY2FuIGJlIGluamVjdGVkIGludG8gY29tcG9uZW50cyBhcyBkZXBlbmRlbmNpZXMsIG1ha2luZyB5b3VyIGNvZGUgbW9kdWxhcixcbiAgcmV1c2FibGUsIGFuZCBlZmZpY2llbnQuPC9wPlxuXG4gIDxwPkJvdGggY29tcG9uZW50cyBhbmQgc2VydmljZXMgYXJlIHNpbXBseSBjbGFzc2VzLCB3aXRoIGRlY29yYXRvcnMgdGhhdCBtYXJrIHRoZWlyIHR5cGUgYW5kXG4gIHByb3ZpZGUgbWV0YWRhdGEgdGhhdCB0ZWxscyBBbmd1bGFyIGhvdyB0byB1c2UgdGhlbS48L3A+XG5cbiAgPHA+VGhlIG1ldGFkYXRhIGZvciBhIGNvbXBvbmVudCBjbGFzcyBhc3NvY2lhdGVzIGl0IHdpdGggYSB0ZW1wbGF0ZSB0aGF0IGRlZmluZXMgYSB2aWV3LiBBXG4gIHRlbXBsYXRlIGNvbWJpbmVzIG9yZGluYXJ5IEhUTUwgd2l0aCBBbmd1bGFyIGRpcmVjdGl2ZXMgYW5kIGJpbmRpbmcgbWFya3VwIHRoYXQgYWxsb3cgQW5ndWxhclxuICB0byBtb2RpZnkgdGhlIEhUTUwgYmVmb3JlIHJlbmRlcmluZyBpdCBmb3IgZGlzcGxheS48L3A+XG5cbiAgPHA+VGhlIG1ldGFkYXRhIGZvciBhIHNlcnZpY2UgY2xhc3MgcHJvdmlkZXMgdGhlIGluZm9ybWF0aW9uIEFuZ3VsYXIgbmVlZHMgdG8gbWFrZSBpdCBhdmFpbGFibGVcbiAgdG8gY29tcG9uZW50cyB0aHJvdWdoIERlcGVuZGVuY3kgSW5qZWN0aW9uIChESSkuPC9wPlxuXG4gIDxwPkFuIGFwcCdzIGNvbXBvbmVudHMgdHlwaWNhbGx5IGRlZmluZSBtYW55IHZpZXdzLCBhcnJhbmdlZCBoaWVyYXJjaGljYWxseS4gQW5ndWxhciBwcm92aWRlc1xuICB0aGUgUm91dGVyIHNlcnZpY2UgdG8gaGVscCB5b3UgZGVmaW5lIG5hdmlnYXRpb24gcGF0aHMgYW1vbmcgdmlld3MuIFRoZSByb3V0ZXIgcHJvdmlkZXNcbiAgc29waGlzdGljYXRlZCBpbi1icm93c2VyIG5hdmlnYXRpb25hbCBjYXBhYmlsaXRpZXMuPC9wPlxuPC9tYXQtZGlhbG9nLWNvbnRlbnQ+XG48bWF0LWRpYWxvZy1hY3Rpb25zIGFsaWduPVwiZW5kXCI+XG4gIDxidXR0b24gbWF0LWJ1dHRvbiBtYXQtZGlhbG9nLWNsb3NlPkNhbmNlbDwvYnV0dG9uPlxuICA8YnV0dG9uIG1hdC1idXR0b24gW21hdC1kaWFsb2ctY2xvc2VdPVwidHJ1ZVwiIGNka0ZvY3VzSW5pdGlhbD5JbnN0YWxsPC9idXR0b24+XG48L21hdC1kaWFsb2ctYWN0aW9ucz5cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGlhbG9nLWNvbnRlbnQtZXhhbXBsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL2RpYWxvZy9kaWFsb2ctY29udGVudC9kaWFsb2ctY29udGVudC1leGFtcGxlLnRzIiwiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvZGlhbG9nL2RpYWxvZy1jb250ZW50L2RpYWxvZy1jb250ZW50LWV4YW1wbGUuaHRtbCIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL2RpYWxvZy9kaWFsb2ctY29udGVudC9kaWFsb2ctY29udGVudC1leGFtcGxlLWRpYWxvZy5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7QUFDeEMsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLDBCQUEwQixDQUFDOzs7O0FBRW5EOztHQUVHO0FBTUgsTUFBTSxPQUFPLG9CQUFvQjtJQUMvQixZQUFtQixNQUFpQjtRQUFqQixXQUFNLEdBQU4sTUFBTSxDQUFXO0lBQUcsQ0FBQztJQUV4QyxVQUFVO1FBQ1IsTUFBTSxTQUFTLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsMEJBQTBCLENBQUMsQ0FBQztRQUUvRCxTQUFTLENBQUMsV0FBVyxFQUFFLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxFQUFFO1lBQ3pDLE9BQU8sQ0FBQyxHQUFHLENBQUMsa0JBQWtCLE1BQU0sRUFBRSxDQUFDLENBQUM7UUFDMUMsQ0FBQyxDQUFDLENBQUM7SUFDTCxDQUFDOzt3RkFUVSxvQkFBb0I7eURBQXBCLG9CQUFvQjtRQ1hqQyxpQ0FBMEM7UUFBdkIsaUdBQVMsZ0JBQVksSUFBQztRQUFDLDJCQUFXO1FBQUEsaUJBQVM7O2tERFdqRCxvQkFBb0I7Y0FMaEMsU0FBUztlQUFDO2dCQUNULFFBQVEsRUFBRSx3QkFBd0I7Z0JBQ2xDLFdBQVcsRUFBRSw2QkFBNkI7Z0JBQzFDLFNBQVMsRUFBRSxDQUFDLDRCQUE0QixDQUFDO2FBQzFDOztBQWlCRCxNQUFNLE9BQU8sMEJBQTBCOztvR0FBMUIsMEJBQTBCOytEQUExQiwwQkFBMEI7UUUzQnZDLDZCQUFxQjtRQUFBLCtCQUFlO1FBQUEsaUJBQUs7UUFDekMsNkNBQ0U7UUFBQSwwQkFBSTtRQUFBLDRDQUE0QjtRQUFBLGlCQUFLO1FBQ3JDLHlCQUFHO1FBQUEsa01BQ3FGO1FBQUEsaUJBQUk7UUFFNUYsMEJBQUk7UUFBQSxtQ0FBdUI7UUFBQSxpQkFBSztRQUNoQyx5QkFBRztRQUFBLDZSQUVxRjtRQUFBLGlCQUFJO1FBRTVGLDJCQUFJO1FBQUEsbUNBQWtCO1FBQUEsaUJBQUs7UUFDM0IsMEJBQUc7UUFBQSw2V0FHaUU7UUFBQSxpQkFBSTtRQUV4RSwyQkFBSTtRQUFBLGtDQUFpQjtRQUFBLGlCQUFLO1FBQzFCLDBCQUFHO1FBQUEscUtBQzBEO1FBQUEsaUJBQUk7UUFFakUsMkJBQUk7UUFBQSxpQ0FBZ0I7UUFBQSxpQkFBSztRQUV6QiwwQkFBRztRQUFBLDZVQUd3RDtRQUFBLGlCQUFJO1FBRS9ELDJCQUFJO1FBQUEsc0NBQXFCO1FBQUEsaUJBQUs7UUFFOUIsMEJBQUc7UUFBQSxxUUFFd0Q7UUFBQSxpQkFBSTtRQUUvRCwwQkFBRztRQUFBLCtWQUd3RDtRQUFBLGlCQUFJO1FBRS9ELDBCQUFHO1FBQUEsdU1BQ3NGO1FBQUEsaUJBQUk7UUFFN0YsMEJBQUc7UUFBQSxtT0FFcUI7UUFBQSxpQkFBSTtRQUU1QiwwQkFBRztRQUFBLCtKQUNpRDtRQUFBLGlCQUFJO1FBRXhELDBCQUFHO1FBQUEsMFBBRWdEO1FBQUEsaUJBQUk7UUFFdkQsMEJBQUc7UUFBQSw4SkFDNkM7UUFBQSxpQkFBSTtRQUVwRCwwQkFBRztRQUFBLHVQQUVnRDtRQUFBLGlCQUFJO1FBQ3pELGlCQUFxQjtRQUNyQiw4Q0FDRTtRQUFBLGtDQUFvQztRQUFBLHVCQUFNO1FBQUEsaUJBQVM7UUFDbkQsa0NBQTZEO1FBQUEsd0JBQU87UUFBQSxpQkFBUztRQUMvRSxpQkFBcUI7O1FBREEsZ0JBQXlCO1FBQXpCLHVDQUF5Qjs7a0RGbkNqQywwQkFBMEI7Y0FKdEMsU0FBUztlQUFDO2dCQUNULFFBQVEsRUFBRSwrQkFBK0I7Z0JBQ3pDLFdBQVcsRUFBRSxvQ0FBb0M7YUFDbEQiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQge01hdERpYWxvZ30gZnJvbSAnQGFuZ3VsYXIvbWF0ZXJpYWwvZGlhbG9nJztcblxuLyoqXG4gKiBAdGl0bGUgRGlhbG9nIHdpdGggaGVhZGVyLCBzY3JvbGxhYmxlIGNvbnRlbnQgYW5kIGFjdGlvbnNcbiAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnZGlhbG9nLWNvbnRlbnQtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnZGlhbG9nLWNvbnRlbnQtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ2RpYWxvZy1jb250ZW50LWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIERpYWxvZ0NvbnRlbnRFeGFtcGxlIHtcbiAgY29uc3RydWN0b3IocHVibGljIGRpYWxvZzogTWF0RGlhbG9nKSB7fVxuXG4gIG9wZW5EaWFsb2coKSB7XG4gICAgY29uc3QgZGlhbG9nUmVmID0gdGhpcy5kaWFsb2cub3BlbihEaWFsb2dDb250ZW50RXhhbXBsZURpYWxvZyk7XG5cbiAgICBkaWFsb2dSZWYuYWZ0ZXJDbG9zZWQoKS5zdWJzY3JpYmUocmVzdWx0ID0+IHtcbiAgICAgIGNvbnNvbGUubG9nKGBEaWFsb2cgcmVzdWx0OiAke3Jlc3VsdH1gKTtcbiAgICB9KTtcbiAgfVxufVxuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdkaWFsb2ctY29udGVudC1leGFtcGxlLWRpYWxvZycsXG4gIHRlbXBsYXRlVXJsOiAnZGlhbG9nLWNvbnRlbnQtZXhhbXBsZS1kaWFsb2cuaHRtbCcsXG59KVxuZXhwb3J0IGNsYXNzIERpYWxvZ0NvbnRlbnRFeGFtcGxlRGlhbG9nIHt9XG4iLCI8YnV0dG9uIG1hdC1idXR0b24gKGNsaWNrKT1cIm9wZW5EaWFsb2coKVwiPk9wZW4gZGlhbG9nPC9idXR0b24+XG4iLCI8aDIgbWF0LWRpYWxvZy10aXRsZT5JbnN0YWxsIEFuZ3VsYXI8L2gyPlxuPG1hdC1kaWFsb2ctY29udGVudCBjbGFzcz1cIm1hdC10eXBvZ3JhcGh5XCI+XG4gIDxoMz5EZXZlbG9wIGFjcm9zcyBhbGwgcGxhdGZvcm1zPC9oMz5cbiAgPHA+TGVhcm4gb25lIHdheSB0byBidWlsZCBhcHBsaWNhdGlvbnMgd2l0aCBBbmd1bGFyIGFuZCByZXVzZSB5b3VyIGNvZGUgYW5kIGFiaWxpdGllcyB0byBidWlsZFxuICAgIGFwcHMgZm9yIGFueSBkZXBsb3ltZW50IHRhcmdldC4gRm9yIHdlYiwgbW9iaWxlIHdlYiwgbmF0aXZlIG1vYmlsZSBhbmQgbmF0aXZlIGRlc2t0b3AuPC9wPlxuXG4gIDxoMz5TcGVlZCAmYW1wOyBQZXJmb3JtYW5jZTwvaDM+XG4gIDxwPkFjaGlldmUgdGhlIG1heGltdW0gc3BlZWQgcG9zc2libGUgb24gdGhlIFdlYiBQbGF0Zm9ybSB0b2RheSwgYW5kIHRha2UgaXQgZnVydGhlciwgdmlhIFdlYlxuICAgIFdvcmtlcnMgYW5kIHNlcnZlci1zaWRlIHJlbmRlcmluZy4gQW5ndWxhciBwdXRzIHlvdSBpbiBjb250cm9sIG92ZXIgc2NhbGFiaWxpdHkuIE1lZXQgaHVnZVxuICAgIGRhdGEgcmVxdWlyZW1lbnRzIGJ5IGJ1aWxkaW5nIGRhdGEgbW9kZWxzIG9uIFJ4SlMsIEltbXV0YWJsZS5qcyBvciBhbm90aGVyIHB1c2gtbW9kZWwuPC9wPlxuXG4gIDxoMz5JbmNyZWRpYmxlIHRvb2xpbmc8L2gzPlxuICA8cD5CdWlsZCBmZWF0dXJlcyBxdWlja2x5IHdpdGggc2ltcGxlLCBkZWNsYXJhdGl2ZSB0ZW1wbGF0ZXMuIEV4dGVuZCB0aGUgdGVtcGxhdGUgbGFuZ3VhZ2Ugd2l0aFxuICAgIHlvdXIgb3duIGNvbXBvbmVudHMgYW5kIHVzZSBhIHdpZGUgYXJyYXkgb2YgZXhpc3RpbmcgY29tcG9uZW50cy4gR2V0IGltbWVkaWF0ZSBBbmd1bGFyLXNwZWNpZmljXG4gICAgaGVscCBhbmQgZmVlZGJhY2sgd2l0aCBuZWFybHkgZXZlcnkgSURFIGFuZCBlZGl0b3IuIEFsbCB0aGlzIGNvbWVzIHRvZ2V0aGVyIHNvIHlvdSBjYW4gZm9jdXNcbiAgICBvbiBidWlsZGluZyBhbWF6aW5nIGFwcHMgcmF0aGVyIHRoYW4gdHJ5aW5nIHRvIG1ha2UgdGhlIGNvZGUgd29yay48L3A+XG5cbiAgPGgzPkxvdmVkIGJ5IG1pbGxpb25zPC9oMz5cbiAgPHA+RnJvbSBwcm90b3R5cGUgdGhyb3VnaCBnbG9iYWwgZGVwbG95bWVudCwgQW5ndWxhciBkZWxpdmVycyB0aGUgcHJvZHVjdGl2aXR5IGFuZCBzY2FsYWJsZVxuICAgIGluZnJhc3RydWN0dXJlIHRoYXQgc3VwcG9ydHMgR29vZ2xlJ3MgbGFyZ2VzdCBhcHBsaWNhdGlvbnMuPC9wPlxuXG4gIDxoMz5XaGF0IGlzIEFuZ3VsYXI/PC9oMz5cblxuICA8cD5Bbmd1bGFyIGlzIGEgcGxhdGZvcm0gdGhhdCBtYWtlcyBpdCBlYXN5IHRvIGJ1aWxkIGFwcGxpY2F0aW9ucyB3aXRoIHRoZSB3ZWIuIEFuZ3VsYXJcbiAgICBjb21iaW5lcyBkZWNsYXJhdGl2ZSB0ZW1wbGF0ZXMsIGRlcGVuZGVuY3kgaW5qZWN0aW9uLCBlbmQgdG8gZW5kIHRvb2xpbmcsIGFuZCBpbnRlZ3JhdGVkXG4gICAgYmVzdCBwcmFjdGljZXMgdG8gc29sdmUgZGV2ZWxvcG1lbnQgY2hhbGxlbmdlcy4gQW5ndWxhciBlbXBvd2VycyBkZXZlbG9wZXJzIHRvIGJ1aWxkXG4gICAgYXBwbGljYXRpb25zIHRoYXQgbGl2ZSBvbiB0aGUgd2ViLCBtb2JpbGUsIG9yIHRoZSBkZXNrdG9wPC9wPlxuXG4gIDxoMz5BcmNoaXRlY3R1cmUgb3ZlcnZpZXc8L2gzPlxuXG4gIDxwPkFuZ3VsYXIgaXMgYSBwbGF0Zm9ybSBhbmQgZnJhbWV3b3JrIGZvciBidWlsZGluZyBjbGllbnQgYXBwbGljYXRpb25zIGluIEhUTUwgYW5kIFR5cGVTY3JpcHQuXG4gIEFuZ3VsYXIgaXMgaXRzZWxmIHdyaXR0ZW4gaW4gVHlwZVNjcmlwdC4gSXQgaW1wbGVtZW50cyBjb3JlIGFuZCBvcHRpb25hbCBmdW5jdGlvbmFsaXR5IGFzIGFcbiAgc2V0IG9mIFR5cGVTY3JpcHQgbGlicmFyaWVzIHRoYXQgeW91IGltcG9ydCBpbnRvIHlvdXIgYXBwcy48L3A+XG5cbiAgPHA+VGhlIGJhc2ljIGJ1aWxkaW5nIGJsb2NrcyBvZiBhbiBBbmd1bGFyIGFwcGxpY2F0aW9uIGFyZSBOZ01vZHVsZXMsIHdoaWNoIHByb3ZpZGUgYSBjb21waWxhdGlvblxuICBjb250ZXh0IGZvciBjb21wb25lbnRzLiBOZ01vZHVsZXMgY29sbGVjdCByZWxhdGVkIGNvZGUgaW50byBmdW5jdGlvbmFsIHNldHM7IGFuIEFuZ3VsYXIgYXBwIGlzXG4gIGRlZmluZWQgYnkgYSBzZXQgb2YgTmdNb2R1bGVzLiBBbiBhcHAgYWx3YXlzIGhhcyBhdCBsZWFzdCBhIHJvb3QgbW9kdWxlIHRoYXQgZW5hYmxlc1xuICBib290c3RyYXBwaW5nLCBhbmQgdHlwaWNhbGx5IGhhcyBtYW55IG1vcmUgZmVhdHVyZSBtb2R1bGVzLjwvcD5cblxuICA8cD5Db21wb25lbnRzIGRlZmluZSB2aWV3cywgd2hpY2ggYXJlIHNldHMgb2Ygc2NyZWVuIGVsZW1lbnRzIHRoYXQgQW5ndWxhciBjYW4gY2hvb3NlIGFtb25nIGFuZFxuICBtb2RpZnkgYWNjb3JkaW5nIHRvIHlvdXIgcHJvZ3JhbSBsb2dpYyBhbmQgZGF0YS4gRXZlcnkgYXBwIGhhcyBhdCBsZWFzdCBhIHJvb3QgY29tcG9uZW50LjwvcD5cblxuICA8cD5Db21wb25lbnRzIHVzZSBzZXJ2aWNlcywgd2hpY2ggcHJvdmlkZSBzcGVjaWZpYyBmdW5jdGlvbmFsaXR5IG5vdCBkaXJlY3RseSByZWxhdGVkIHRvIHZpZXdzLlxuICBTZXJ2aWNlIHByb3ZpZGVycyBjYW4gYmUgaW5qZWN0ZWQgaW50byBjb21wb25lbnRzIGFzIGRlcGVuZGVuY2llcywgbWFraW5nIHlvdXIgY29kZSBtb2R1bGFyLFxuICByZXVzYWJsZSwgYW5kIGVmZmljaWVudC48L3A+XG5cbiAgPHA+Qm90aCBjb21wb25lbnRzIGFuZCBzZXJ2aWNlcyBhcmUgc2ltcGx5IGNsYXNzZXMsIHdpdGggZGVjb3JhdG9ycyB0aGF0IG1hcmsgdGhlaXIgdHlwZSBhbmRcbiAgcHJvdmlkZSBtZXRhZGF0YSB0aGF0IHRlbGxzIEFuZ3VsYXIgaG93IHRvIHVzZSB0aGVtLjwvcD5cblxuICA8cD5UaGUgbWV0YWRhdGEgZm9yIGEgY29tcG9uZW50IGNsYXNzIGFzc29jaWF0ZXMgaXQgd2l0aCBhIHRlbXBsYXRlIHRoYXQgZGVmaW5lcyBhIHZpZXcuIEFcbiAgdGVtcGxhdGUgY29tYmluZXMgb3JkaW5hcnkgSFRNTCB3aXRoIEFuZ3VsYXIgZGlyZWN0aXZlcyBhbmQgYmluZGluZyBtYXJrdXAgdGhhdCBhbGxvdyBBbmd1bGFyXG4gIHRvIG1vZGlmeSB0aGUgSFRNTCBiZWZvcmUgcmVuZGVyaW5nIGl0IGZvciBkaXNwbGF5LjwvcD5cblxuICA8cD5UaGUgbWV0YWRhdGEgZm9yIGEgc2VydmljZSBjbGFzcyBwcm92aWRlcyB0aGUgaW5mb3JtYXRpb24gQW5ndWxhciBuZWVkcyB0byBtYWtlIGl0IGF2YWlsYWJsZVxuICB0byBjb21wb25lbnRzIHRocm91Z2ggRGVwZW5kZW5jeSBJbmplY3Rpb24gKERJKS48L3A+XG5cbiAgPHA+QW4gYXBwJ3MgY29tcG9uZW50cyB0eXBpY2FsbHkgZGVmaW5lIG1hbnkgdmlld3MsIGFycmFuZ2VkIGhpZXJhcmNoaWNhbGx5LiBBbmd1bGFyIHByb3ZpZGVzXG4gIHRoZSBSb3V0ZXIgc2VydmljZSB0byBoZWxwIHlvdSBkZWZpbmUgbmF2aWdhdGlvbiBwYXRocyBhbW9uZyB2aWV3cy4gVGhlIHJvdXRlciBwcm92aWRlc1xuICBzb3BoaXN0aWNhdGVkIGluLWJyb3dzZXIgbmF2aWdhdGlvbmFsIGNhcGFiaWxpdGllcy48L3A+XG48L21hdC1kaWFsb2ctY29udGVudD5cbjxtYXQtZGlhbG9nLWFjdGlvbnMgYWxpZ249XCJlbmRcIj5cbiAgPGJ1dHRvbiBtYXQtYnV0dG9uIG1hdC1kaWFsb2ctY2xvc2U+Q2FuY2VsPC9idXR0b24+XG4gIDxidXR0b24gbWF0LWJ1dHRvbiBbbWF0LWRpYWxvZy1jbG9zZV09XCJ0cnVlXCIgY2RrRm9jdXNJbml0aWFsPkluc3RhbGw8L2J1dHRvbj5cbjwvbWF0LWRpYWxvZy1hY3Rpb25zPlxuIl19

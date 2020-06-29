@@ -6,35 +6,32 @@ import { MatToolbar, MatToolbarRow, MatToolbarModule } from '@angular/material/t
 /**
  * @title Basic toolbar
  */
-let ToolbarBasicExample = /** @class */ (() => {
-    class ToolbarBasicExample {
-    }
-    ToolbarBasicExample.ɵfac = function ToolbarBasicExample_Factory(t) { return new (t || ToolbarBasicExample)(); };
-    ToolbarBasicExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarBasicExample, selectors: [["toolbar-basic-example"]], decls: 13, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"]], template: function ToolbarBasicExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-toolbar");
-            ɵɵelementStart(1, "button", 0);
-            ɵɵelementStart(2, "mat-icon");
-            ɵɵtext(3, "menu");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(4, "span");
-            ɵɵtext(5, "My App");
-            ɵɵelementEnd();
-            ɵɵelement(6, "span", 1);
-            ɵɵelementStart(7, "button", 2);
-            ɵɵelementStart(8, "mat-icon");
-            ɵɵtext(9, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(10, "button", 3);
-            ɵɵelementStart(11, "mat-icon");
-            ɵɵtext(12, "share");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } }, directives: [MatToolbar, MatButton, MatIcon], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-    return ToolbarBasicExample;
-})();
+class ToolbarBasicExample {
+}
+ToolbarBasicExample.ɵfac = function ToolbarBasicExample_Factory(t) { return new (t || ToolbarBasicExample)(); };
+ToolbarBasicExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarBasicExample, selectors: [["toolbar-basic-example"]], decls: 13, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"]], template: function ToolbarBasicExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-toolbar");
+        ɵɵelementStart(1, "button", 0);
+        ɵɵelementStart(2, "mat-icon");
+        ɵɵtext(3, "menu");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "span");
+        ɵɵtext(5, "My App");
+        ɵɵelementEnd();
+        ɵɵelement(6, "span", 1);
+        ɵɵelementStart(7, "button", 2);
+        ɵɵelementStart(8, "mat-icon");
+        ɵɵtext(9, "favorite");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "button", 3);
+        ɵɵelementStart(11, "mat-icon");
+        ɵɵtext(12, "share");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatToolbar, MatButton, MatIcon], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarBasicExample, [{
         type: Component,
         args: [{
@@ -47,42 +44,39 @@ let ToolbarBasicExample = /** @class */ (() => {
 /**
  * @title Multi-row toolbar
  */
-let ToolbarMultirowExample = /** @class */ (() => {
-    class ToolbarMultirowExample {
-    }
-    ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
-    ToolbarMultirowExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-toolbar", 0);
-            ɵɵelementStart(1, "mat-toolbar-row");
-            ɵɵelementStart(2, "span");
-            ɵɵtext(3, "Custom Toolbar");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(4, "mat-toolbar-row");
-            ɵɵelementStart(5, "span");
-            ɵɵtext(6, "Second Line");
-            ɵɵelementEnd();
-            ɵɵelement(7, "span", 1);
-            ɵɵelementStart(8, "mat-icon", 2);
-            ɵɵtext(9, "verified_user");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(10, "mat-toolbar-row");
-            ɵɵelementStart(11, "span");
-            ɵɵtext(12, "Third Line");
-            ɵɵelementEnd();
-            ɵɵelement(13, "span", 1);
-            ɵɵelementStart(14, "mat-icon", 3);
-            ɵɵtext(15, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementStart(16, "mat-icon", 4);
-            ɵɵtext(17, "delete");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } }, directives: [MatToolbar, MatToolbarRow, MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-    return ToolbarMultirowExample;
-})();
+class ToolbarMultirowExample {
+}
+ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
+ToolbarMultirowExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-toolbar", 0);
+        ɵɵelementStart(1, "mat-toolbar-row");
+        ɵɵelementStart(2, "span");
+        ɵɵtext(3, "Custom Toolbar");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "mat-toolbar-row");
+        ɵɵelementStart(5, "span");
+        ɵɵtext(6, "Second Line");
+        ɵɵelementEnd();
+        ɵɵelement(7, "span", 1);
+        ɵɵelementStart(8, "mat-icon", 2);
+        ɵɵtext(9, "verified_user");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "mat-toolbar-row");
+        ɵɵelementStart(11, "span");
+        ɵɵtext(12, "Third Line");
+        ɵɵelementEnd();
+        ɵɵelement(13, "span", 1);
+        ɵɵelementStart(14, "mat-icon", 3);
+        ɵɵtext(15, "favorite");
+        ɵɵelementEnd();
+        ɵɵelementStart(16, "mat-icon", 4);
+        ɵɵtext(17, "delete");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatToolbar, MatToolbarRow, MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarMultirowExample, [{
         type: Component,
         args: [{
@@ -95,98 +89,95 @@ let ToolbarMultirowExample = /** @class */ (() => {
 /**
  * @title Toolbar overview
  */
-let ToolbarOverviewExample = /** @class */ (() => {
-    class ToolbarOverviewExample {
-    }
-    ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
-    ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 51, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"], ["color", "primary"]], template: function ToolbarOverviewExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "p");
-            ɵɵelementStart(1, "mat-toolbar");
-            ɵɵelementStart(2, "span");
-            ɵɵtext(3, "My Application");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(4, "p");
-            ɵɵelementStart(5, "mat-toolbar");
-            ɵɵelementStart(6, "button", 0);
-            ɵɵelementStart(7, "mat-icon");
-            ɵɵtext(8, "menu");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(9, "span");
-            ɵɵtext(10, "My App");
-            ɵɵelementEnd();
-            ɵɵelement(11, "span", 1);
-            ɵɵelementStart(12, "button", 2);
-            ɵɵelementStart(13, "mat-icon");
-            ɵɵtext(14, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(15, "button", 3);
-            ɵɵelementStart(16, "mat-icon");
-            ɵɵtext(17, "share");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(18, "p");
-            ɵɵelementStart(19, "mat-toolbar", 4);
-            ɵɵelementStart(20, "button", 0);
-            ɵɵelementStart(21, "mat-icon");
-            ɵɵtext(22, "menu");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(23, "span");
-            ɵɵtext(24, "My App");
-            ɵɵelementEnd();
-            ɵɵelement(25, "span", 1);
-            ɵɵelementStart(26, "button", 2);
-            ɵɵelementStart(27, "mat-icon");
-            ɵɵtext(28, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(29, "button", 3);
-            ɵɵelementStart(30, "mat-icon");
-            ɵɵtext(31, "share");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(32, "p");
-            ɵɵelementStart(33, "mat-toolbar", 4);
-            ɵɵelementStart(34, "mat-toolbar-row");
-            ɵɵelementStart(35, "span");
-            ɵɵtext(36, "My App");
-            ɵɵelementEnd();
-            ɵɵelement(37, "span", 1);
-            ɵɵelementStart(38, "button", 0);
-            ɵɵelementStart(39, "mat-icon");
-            ɵɵtext(40, "menu");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(41, "mat-toolbar-row");
-            ɵɵelementStart(42, "span");
-            ɵɵtext(43, "Second Line");
-            ɵɵelementEnd();
-            ɵɵelement(44, "span", 1);
-            ɵɵelementStart(45, "button", 2);
-            ɵɵelementStart(46, "mat-icon");
-            ɵɵtext(47, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(48, "button", 3);
-            ɵɵelementStart(49, "mat-icon");
-            ɵɵtext(50, "share");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } }, directives: [MatToolbar, MatButton, MatIcon, MatToolbarRow], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-    return ToolbarOverviewExample;
-})();
+class ToolbarOverviewExample {
+}
+ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
+ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 51, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"], ["color", "primary"]], template: function ToolbarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "p");
+        ɵɵelementStart(1, "mat-toolbar");
+        ɵɵelementStart(2, "span");
+        ɵɵtext(3, "My Application");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "p");
+        ɵɵelementStart(5, "mat-toolbar");
+        ɵɵelementStart(6, "button", 0);
+        ɵɵelementStart(7, "mat-icon");
+        ɵɵtext(8, "menu");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(9, "span");
+        ɵɵtext(10, "My App");
+        ɵɵelementEnd();
+        ɵɵelement(11, "span", 1);
+        ɵɵelementStart(12, "button", 2);
+        ɵɵelementStart(13, "mat-icon");
+        ɵɵtext(14, "favorite");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(15, "button", 3);
+        ɵɵelementStart(16, "mat-icon");
+        ɵɵtext(17, "share");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(18, "p");
+        ɵɵelementStart(19, "mat-toolbar", 4);
+        ɵɵelementStart(20, "button", 0);
+        ɵɵelementStart(21, "mat-icon");
+        ɵɵtext(22, "menu");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(23, "span");
+        ɵɵtext(24, "My App");
+        ɵɵelementEnd();
+        ɵɵelement(25, "span", 1);
+        ɵɵelementStart(26, "button", 2);
+        ɵɵelementStart(27, "mat-icon");
+        ɵɵtext(28, "favorite");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(29, "button", 3);
+        ɵɵelementStart(30, "mat-icon");
+        ɵɵtext(31, "share");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(32, "p");
+        ɵɵelementStart(33, "mat-toolbar", 4);
+        ɵɵelementStart(34, "mat-toolbar-row");
+        ɵɵelementStart(35, "span");
+        ɵɵtext(36, "My App");
+        ɵɵelementEnd();
+        ɵɵelement(37, "span", 1);
+        ɵɵelementStart(38, "button", 0);
+        ɵɵelementStart(39, "mat-icon");
+        ɵɵtext(40, "menu");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(41, "mat-toolbar-row");
+        ɵɵelementStart(42, "span");
+        ɵɵtext(43, "Second Line");
+        ɵɵelementEnd();
+        ɵɵelement(44, "span", 1);
+        ɵɵelementStart(45, "button", 2);
+        ɵɵelementStart(46, "mat-icon");
+        ɵɵtext(47, "favorite");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(48, "button", 3);
+        ɵɵelementStart(49, "mat-icon");
+        ɵɵtext(50, "share");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatToolbar, MatButton, MatIcon, MatToolbarRow], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarOverviewExample, [{
         type: Component,
         args: [{
@@ -201,17 +192,14 @@ const EXAMPLES = [
     ToolbarMultirowExample,
     ToolbarOverviewExample,
 ];
-let ToolbarExamplesModule = /** @class */ (() => {
-    class ToolbarExamplesModule {
-    }
-    ToolbarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ToolbarExamplesModule });
-    ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
-                MatButtonModule,
-                MatIconModule,
-                MatToolbarModule,
-            ]] });
-    return ToolbarExamplesModule;
-})();
+class ToolbarExamplesModule {
+}
+ToolbarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ToolbarExamplesModule });
+ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
+            MatButtonModule,
+            MatIconModule,
+            MatToolbarModule,
+        ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarBasicExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample], imports: [MatButtonModule,
