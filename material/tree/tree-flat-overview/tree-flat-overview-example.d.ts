@@ -25,8 +25,16 @@ export declare class TreeFlatOverviewExample {
         expandable: boolean;
         name: string;
         level: number;
+    }, {
+        expandable: boolean;
+        name: string;
+        level: number;
     }>;
     dataSource: MatTreeFlatDataSource<FoodNode, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }, {
         expandable: boolean;
         name: string;
         level: number;
