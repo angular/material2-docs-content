@@ -297,94 +297,6 @@ Only that element and its children are visible when in fullscreen mode.</p>
     
       
 
-<h4 id="OverlayKeyboardDispatcher" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="OverlayKeyboardDispatcher"></span>
-  <code>OverlayKeyboardDispatcher</code>
-  
-</h4><p class="docs-api-class-description"><p>Service for dispatching keyboard events that land on the body to appropriate overlay ref,
-if any. It maintains a list of attached overlays to determine best suited overlay based
-on event target and order of overlay opens.</p>
-</p>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">add
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Add a new overlay to the list of attached overlay refs.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        overlayRef</p>
-      <code class="docs-api-method-parameter-type">OverlayReference</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">remove
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Remove an overlay from the list of attached overlay refs.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        overlayRef</p>
-      <code class="docs-api-method-parameter-type">OverlayReference</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-
-
-
-    
-      
-
 <h4 id="OverlayPositionBuilder" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="OverlayPositionBuilder"></span>
   <code>OverlayPositionBuilder</code>
@@ -629,6 +541,206 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
 
 
 
+
+
+
+    
+      
+
+<h4 id="OverlayOutsideClickDispatcher" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="OverlayOutsideClickDispatcher"></span>
+  <code>OverlayOutsideClickDispatcher</code>
+  
+</h4><p class="docs-api-class-description"><p>Service for dispatching mouse click events that land on the body to appropriate overlay ref,
+if any. It maintains a list of attached overlays to determine best suited overlay based
+on event target and order of overlay opens.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">add
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Add a new overlay to the list of attached overlay refs.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        overlayRef</p>
+      <code class="docs-api-method-parameter-type">OverlayReference</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Detaches the global keyboard event listener.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">remove
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        overlayRef</p>
+      <code class="docs-api-method-parameter-type">OverlayReference</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="OverlayKeyboardDispatcher" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="OverlayKeyboardDispatcher"></span>
+  <code>OverlayKeyboardDispatcher</code>
+  
+</h4><p class="docs-api-class-description"><p>Service for dispatching keyboard events that land on the body to appropriate overlay ref,
+if any. It maintains a list of attached overlays to determine best suited overlay based
+on event target and order of overlay opens.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">add
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Add a new overlay to the list of attached overlay refs.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        overlayRef</p>
+      <code class="docs-api-method-parameter-type">OverlayReference</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Detaches the global keyboard event listener.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">remove
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        overlayRef</p>
+      <code class="docs-api-method-parameter-type">OverlayReference</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
 
 
 
@@ -1040,6 +1152,20 @@ in arbitrary positioning strategies.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when there are keyboard events that are targeted at the overlay.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>overlayOutsideClick: EventEmitter&lt;MouseEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when there are mouse outside click events that are targeted at the overlay.</p>
 </td>
 </tr>
 
@@ -1598,6 +1724,37 @@ required around the overlay pane.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Observable&lt;KeyboardEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">outsidePointerEvents
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets an observable of pointer events targeted outside this overlay.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;MouseEvent&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3556,6 +3713,19 @@ is passed in, the overlay will handle changes to its value automatically.</p>
   <td class="docs-api-property-description"><p>Whether the overlay should be disposed of when the user goes backwards/forwards in history.
 Note that this usually doesn&#39;t include clicking on links (unless the user is using
 the <code>HashLocationStrategy</code>).</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>excludeFromOutsideClick: HTMLElement[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Array of HTML elements clicking on which should not be considered as outside click</p>
 </td>
 </tr>
 
