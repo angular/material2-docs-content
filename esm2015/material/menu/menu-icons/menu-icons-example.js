@@ -6,49 +6,45 @@ import * as i3 from "@angular/material/icon";
 /**
  * @title Menu with icons
  */
-let MenuIconsExample = /** @class */ (() => {
-    class MenuIconsExample {
-    }
-    MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
-    MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
-            i0.ɵɵelementStart(0, "button", 0);
-            i0.ɵɵelementStart(1, "mat-icon");
-            i0.ɵɵtext(2, "more_vert");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "mat-menu", null, 1);
-            i0.ɵɵelementStart(5, "button", 2);
-            i0.ɵɵelementStart(6, "mat-icon");
-            i0.ɵɵtext(7, "dialpad");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(8, "span");
-            i0.ɵɵtext(9, "Redial");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(10, "button", 3);
-            i0.ɵɵelementStart(11, "mat-icon");
-            i0.ɵɵtext(12, "voicemail");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(13, "span");
-            i0.ɵɵtext(14, "Check voice mail");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(15, "button", 2);
-            i0.ɵɵelementStart(16, "mat-icon");
-            i0.ɵɵtext(17, "notifications_off");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(18, "span");
-            i0.ɵɵtext(19, "Disable alerts");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        } if (rf & 2) {
-            const _r0 = i0.ɵɵreference(4);
-            i0.ɵɵproperty("matMenuTriggerFor", _r0);
-        } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], styles: [""] });
-    return MenuIconsExample;
-})();
-export { MenuIconsExample };
+export class MenuIconsExample {
+}
+MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
+MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "button", 0);
+        i0.ɵɵelementStart(1, "mat-icon");
+        i0.ɵɵtext(2, "more_vert");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-menu", null, 1);
+        i0.ɵɵelementStart(5, "button", 2);
+        i0.ɵɵelementStart(6, "mat-icon");
+        i0.ɵɵtext(7, "dialpad");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(8, "span");
+        i0.ɵɵtext(9, "Redial");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "button", 3);
+        i0.ɵɵelementStart(11, "mat-icon");
+        i0.ɵɵtext(12, "voicemail");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(13, "span");
+        i0.ɵɵtext(14, "Check voice mail");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(15, "button", 2);
+        i0.ɵɵelementStart(16, "mat-icon");
+        i0.ɵɵtext(17, "notifications_off");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(18, "span");
+        i0.ɵɵtext(19, "Disable alerts");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(4);
+        i0.ɵɵproperty("matMenuTriggerFor", _r0);
+    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], styles: [""] });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuIconsExample, [{
         type: Component,
         args: [{
@@ -57,4 +53,4 @@ export { MenuIconsExample };
                 styleUrls: ['menu-icons-example.css'],
             }]
     }], null, null); })();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVudS1pY29ucy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvbWVudS9tZW51LWljb25zL21lbnUtaWNvbnMtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL21lbnUvbWVudS1pY29ucy9tZW51LWljb25zLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7OztBQUV4Qzs7R0FFRztBQUNIO0lBQUEsTUFLYSxnQkFBZ0I7O29GQUFoQixnQkFBZ0I7eURBQWhCLGdCQUFnQjtZQ1Y3QixpQ0FDRTtZQUFBLGdDQUFVO1lBQUEseUJBQVM7WUFBQSxpQkFBVztZQUNoQyxpQkFBUztZQUNULHlDQUNFO1lBQUEsaUNBQ0U7WUFBQSxnQ0FBVTtZQUFBLHVCQUFPO1lBQUEsaUJBQVc7WUFDNUIsNEJBQU07WUFBQSxzQkFBTTtZQUFBLGlCQUFPO1lBQ3JCLGlCQUFTO1lBQ1Qsa0NBQ0U7WUFBQSxpQ0FBVTtZQUFBLDBCQUFTO1lBQUEsaUJBQVc7WUFDOUIsNkJBQU07WUFBQSxpQ0FBZ0I7WUFBQSxpQkFBTztZQUMvQixpQkFBUztZQUNULGtDQUNFO1lBQUEsaUNBQVU7WUFBQSxrQ0FBaUI7WUFBQSxpQkFBVztZQUN0Qyw2QkFBTTtZQUFBLCtCQUFjO1lBQUEsaUJBQU87WUFDN0IsaUJBQVM7WUFDWCxpQkFBVzs7O1lBaEJhLHVDQUEwQjs7MkJEQWxEO0tBVWdDO1NBQW5CLGdCQUFnQjtrREFBaEIsZ0JBQWdCO2NBTDVCLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsb0JBQW9CO2dCQUM5QixXQUFXLEVBQUUseUJBQXlCO2dCQUN0QyxTQUFTLEVBQUUsQ0FBQyx3QkFBd0IsQ0FBQzthQUN0QyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgTWVudSB3aXRoIGljb25zXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ21lbnUtaWNvbnMtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnbWVudS1pY29ucy1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnbWVudS1pY29ucy1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBNZW51SWNvbnNFeGFtcGxlIHt9XG4iLCI8YnV0dG9uIG1hdC1pY29uLWJ1dHRvbiBbbWF0TWVudVRyaWdnZXJGb3JdPVwibWVudVwiIGFyaWEtbGFiZWw9XCJFeGFtcGxlIGljb24tYnV0dG9uIHdpdGggYSBtZW51XCI+XG4gIDxtYXQtaWNvbj5tb3JlX3ZlcnQ8L21hdC1pY29uPlxuPC9idXR0b24+XG48bWF0LW1lbnUgI21lbnU9XCJtYXRNZW51XCI+XG4gIDxidXR0b24gbWF0LW1lbnUtaXRlbT5cbiAgICA8bWF0LWljb24+ZGlhbHBhZDwvbWF0LWljb24+XG4gICAgPHNwYW4+UmVkaWFsPC9zcGFuPlxuICA8L2J1dHRvbj5cbiAgPGJ1dHRvbiBtYXQtbWVudS1pdGVtIGRpc2FibGVkPlxuICAgIDxtYXQtaWNvbj52b2ljZW1haWw8L21hdC1pY29uPlxuICAgIDxzcGFuPkNoZWNrIHZvaWNlIG1haWw8L3NwYW4+XG4gIDwvYnV0dG9uPlxuICA8YnV0dG9uIG1hdC1tZW51LWl0ZW0+XG4gICAgPG1hdC1pY29uPm5vdGlmaWNhdGlvbnNfb2ZmPC9tYXQtaWNvbj5cbiAgICA8c3Bhbj5EaXNhYmxlIGFsZXJ0czwvc3Bhbj5cbiAgPC9idXR0b24+XG48L21hdC1tZW51PlxuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVudS1pY29ucy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvbWVudS9tZW51LWljb25zL21lbnUtaWNvbnMtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9jb21wb25lbnRzLWV4YW1wbGVzL21hdGVyaWFsL21lbnUvbWVudS1pY29ucy9tZW51LWljb25zLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7OztBQUV4Qzs7R0FFRztBQU1ILE1BQU0sT0FBTyxnQkFBZ0I7O2dGQUFoQixnQkFBZ0I7cURBQWhCLGdCQUFnQjtRQ1Y3QixpQ0FDRTtRQUFBLGdDQUFVO1FBQUEseUJBQVM7UUFBQSxpQkFBVztRQUNoQyxpQkFBUztRQUNULHlDQUNFO1FBQUEsaUNBQ0U7UUFBQSxnQ0FBVTtRQUFBLHVCQUFPO1FBQUEsaUJBQVc7UUFDNUIsNEJBQU07UUFBQSxzQkFBTTtRQUFBLGlCQUFPO1FBQ3JCLGlCQUFTO1FBQ1Qsa0NBQ0U7UUFBQSxpQ0FBVTtRQUFBLDBCQUFTO1FBQUEsaUJBQVc7UUFDOUIsNkJBQU07UUFBQSxpQ0FBZ0I7UUFBQSxpQkFBTztRQUMvQixpQkFBUztRQUNULGtDQUNFO1FBQUEsaUNBQVU7UUFBQSxrQ0FBaUI7UUFBQSxpQkFBVztRQUN0Qyw2QkFBTTtRQUFBLCtCQUFjO1FBQUEsaUJBQU87UUFDN0IsaUJBQVM7UUFDWCxpQkFBVzs7O1FBaEJhLHVDQUEwQjs7a0REVXJDLGdCQUFnQjtjQUw1QixTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLG9CQUFvQjtnQkFDOUIsV0FBVyxFQUFFLHlCQUF5QjtnQkFDdEMsU0FBUyxFQUFFLENBQUMsd0JBQXdCLENBQUM7YUFDdEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbi8qKlxuICogQHRpdGxlIE1lbnUgd2l0aCBpY29uc1xuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdtZW51LWljb25zLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ21lbnUtaWNvbnMtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ21lbnUtaWNvbnMtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgTWVudUljb25zRXhhbXBsZSB7fVxuIiwiPGJ1dHRvbiBtYXQtaWNvbi1idXR0b24gW21hdE1lbnVUcmlnZ2VyRm9yXT1cIm1lbnVcIiBhcmlhLWxhYmVsPVwiRXhhbXBsZSBpY29uLWJ1dHRvbiB3aXRoIGEgbWVudVwiPlxuICA8bWF0LWljb24+bW9yZV92ZXJ0PC9tYXQtaWNvbj5cbjwvYnV0dG9uPlxuPG1hdC1tZW51ICNtZW51PVwibWF0TWVudVwiPlxuICA8YnV0dG9uIG1hdC1tZW51LWl0ZW0+XG4gICAgPG1hdC1pY29uPmRpYWxwYWQ8L21hdC1pY29uPlxuICAgIDxzcGFuPlJlZGlhbDwvc3Bhbj5cbiAgPC9idXR0b24+XG4gIDxidXR0b24gbWF0LW1lbnUtaXRlbSBkaXNhYmxlZD5cbiAgICA8bWF0LWljb24+dm9pY2VtYWlsPC9tYXQtaWNvbj5cbiAgICA8c3Bhbj5DaGVjayB2b2ljZSBtYWlsPC9zcGFuPlxuICA8L2J1dHRvbj5cbiAgPGJ1dHRvbiBtYXQtbWVudS1pdGVtPlxuICAgIDxtYXQtaWNvbj5ub3RpZmljYXRpb25zX29mZjwvbWF0LWljb24+XG4gICAgPHNwYW4+RGlzYWJsZSBhbGVydHM8L3NwYW4+XG4gIDwvYnV0dG9uPlxuPC9tYXQtbWVudT5cbiJdfQ==

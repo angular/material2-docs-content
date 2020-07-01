@@ -52,24 +52,21 @@ function CdkVirtualScrollContextExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1("Odd: ", odd_r7 ? "Yes" : "No", "");
 } }
 /** @title Virtual scroll context variables */
-let CdkVirtualScrollContextExample = /** @class */ (() => {
-    class CdkVirtualScrollContextExample {
-        constructor() {
-            this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-        }
+class CdkVirtualScrollContextExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     }
-    CdkVirtualScrollContextExample.ɵfac = function CdkVirtualScrollContextExample_Factory(t) { return new (t || CdkVirtualScrollContextExample)(); };
-    CdkVirtualScrollContextExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollContextExample, selectors: [["cdk-virtual-scroll-context-example"]], decls: 2, vars: 2, consts: [[1, "example-viewport", 3, "itemSize"], [3, "example-alternate", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item-detail"]], template: function CdkVirtualScrollContextExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵtemplate(1, CdkVirtualScrollContextExample_div_1_Template, 15, 9, "div", 1);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵproperty("itemSize", 18 * 7);
-            ɵɵadvance(1);
-            ɵɵproperty("cdkVirtualForOf", ctx.items);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail[_ngcontent-%COMP%] {\n  height: 18px;\n}\n\n.example-alternate[_ngcontent-%COMP%] {\n  background: rgba(127, 127, 127, 0.3);\n}"], changeDetection: 0 });
-    return CdkVirtualScrollContextExample;
-})();
+}
+CdkVirtualScrollContextExample.ɵfac = function CdkVirtualScrollContextExample_Factory(t) { return new (t || CdkVirtualScrollContextExample)(); };
+CdkVirtualScrollContextExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollContextExample, selectors: [["cdk-virtual-scroll-context-example"]], decls: 2, vars: 2, consts: [[1, "example-viewport", 3, "itemSize"], [3, "example-alternate", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item-detail"]], template: function CdkVirtualScrollContextExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵtemplate(1, CdkVirtualScrollContextExample_div_1_Template, 15, 9, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("itemSize", 18 * 7);
+        ɵɵadvance(1);
+        ɵɵproperty("cdkVirtualForOf", ctx.items);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail[_ngcontent-%COMP%] {\n  height: 18px;\n}\n\n.example-alternate[_ngcontent-%COMP%] {\n  background: rgba(127, 127, 127, 0.3);\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollContextExample, [{
         type: Component,
         args: [{
@@ -95,23 +92,20 @@ class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
     }
 }
 /** @title Virtual scroll with a custom strategy */
-let CdkVirtualScrollCustomStrategyExample = /** @class */ (() => {
-    class CdkVirtualScrollCustomStrategyExample {
-        constructor() {
-            this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-        }
+class CdkVirtualScrollCustomStrategyExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     }
-    CdkVirtualScrollCustomStrategyExample.ɵfac = function CdkVirtualScrollCustomStrategyExample_Factory(t) { return new (t || CdkVirtualScrollCustomStrategyExample)(); };
-    CdkVirtualScrollCustomStrategyExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollCustomStrategyExample, selectors: [["cdk-virtual-scroll-custom-strategy-example"]], features: [ɵɵProvidersFeature([{ provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }])], decls: 2, vars: 1, consts: [[1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollCustomStrategyExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵtemplate(1, CdkVirtualScrollCustomStrategyExample_div_1_Template, 2, 1, "div", 1);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("cdkVirtualForOf", ctx.items);
-        } }, directives: [CdkVirtualScrollViewport, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-    return CdkVirtualScrollCustomStrategyExample;
-})();
+}
+CdkVirtualScrollCustomStrategyExample.ɵfac = function CdkVirtualScrollCustomStrategyExample_Factory(t) { return new (t || CdkVirtualScrollCustomStrategyExample)(); };
+CdkVirtualScrollCustomStrategyExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollCustomStrategyExample, selectors: [["cdk-virtual-scroll-custom-strategy-example"]], features: [ɵɵProvidersFeature([{ provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }])], decls: 2, vars: 1, consts: [[1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollCustomStrategyExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵtemplate(1, CdkVirtualScrollCustomStrategyExample_div_1_Template, 2, 1, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("cdkVirtualForOf", ctx.items);
+    } }, directives: [CdkVirtualScrollViewport, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollCustomStrategyExample, [{
         type: Component,
         args: [{
@@ -133,23 +127,20 @@ function CdkVirtualScrollDataSourceExample_div_1_Template(rf, ctx) { if (rf & 1)
     ɵɵtextInterpolate(item_r1 || "Loading...");
 } }
 /** @title Virtual scroll with a custom data source */
-let CdkVirtualScrollDataSourceExample = /** @class */ (() => {
-    class CdkVirtualScrollDataSourceExample {
-        constructor() {
-            this.ds = new MyDataSource();
-        }
+class CdkVirtualScrollDataSourceExample {
+    constructor() {
+        this.ds = new MyDataSource();
     }
-    CdkVirtualScrollDataSourceExample.ɵfac = function CdkVirtualScrollDataSourceExample_Factory(t) { return new (t || CdkVirtualScrollDataSourceExample)(); };
-    CdkVirtualScrollDataSourceExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollDataSourceExample, selectors: [["cdk-virtual-scroll-data-source-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollDataSourceExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵtemplate(1, CdkVirtualScrollDataSourceExample_div_1_Template, 2, 1, "div", 1);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("cdkVirtualForOf", ctx.ds);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-    return CdkVirtualScrollDataSourceExample;
-})();
+}
+CdkVirtualScrollDataSourceExample.ɵfac = function CdkVirtualScrollDataSourceExample_Factory(t) { return new (t || CdkVirtualScrollDataSourceExample)(); };
+CdkVirtualScrollDataSourceExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollDataSourceExample, selectors: [["cdk-virtual-scroll-data-source-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollDataSourceExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵtemplate(1, CdkVirtualScrollDataSourceExample_div_1_Template, 2, 1, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("cdkVirtualForOf", ctx.ds);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollDataSourceExample, [{
         type: Component,
         args: [{
@@ -216,76 +207,73 @@ function CdkVirtualScrollDlExample_ng_container_2_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate(state_r1.capital);
 } }
 /** @title Virtual scrolling `<dl>` */
-let CdkVirtualScrollDlExample = /** @class */ (() => {
-    class CdkVirtualScrollDlExample {
-        constructor() {
-            this.states = [
-                { name: 'Alabama', capital: 'Montgomery' },
-                { name: 'Alaska', capital: 'Juneau' },
-                { name: 'Arizona', capital: 'Phoenix' },
-                { name: 'Arkansas', capital: 'Little Rock' },
-                { name: 'California', capital: 'Sacramento' },
-                { name: 'Colorado', capital: 'Denver' },
-                { name: 'Connecticut', capital: 'Hartford' },
-                { name: 'Delaware', capital: 'Dover' },
-                { name: 'Florida', capital: 'Tallahassee' },
-                { name: 'Georgia', capital: 'Atlanta' },
-                { name: 'Hawaii', capital: 'Honolulu' },
-                { name: 'Idaho', capital: 'Boise' },
-                { name: 'Illinois', capital: 'Springfield' },
-                { name: 'Indiana', capital: 'Indianapolis' },
-                { name: 'Iowa', capital: 'Des Moines' },
-                { name: 'Kansas', capital: 'Topeka' },
-                { name: 'Kentucky', capital: 'Frankfort' },
-                { name: 'Louisiana', capital: 'Baton Rouge' },
-                { name: 'Maine', capital: 'Augusta' },
-                { name: 'Maryland', capital: 'Annapolis' },
-                { name: 'Massachusetts', capital: 'Boston' },
-                { name: 'Michigan', capital: 'Lansing' },
-                { name: 'Minnesota', capital: 'St. Paul' },
-                { name: 'Mississippi', capital: 'Jackson' },
-                { name: 'Missouri', capital: 'Jefferson City' },
-                { name: 'Montana', capital: 'Helena' },
-                { name: 'Nebraska', capital: 'Lincoln' },
-                { name: 'Nevada', capital: 'Carson City' },
-                { name: 'New Hampshire', capital: 'Concord' },
-                { name: 'New Jersey', capital: 'Trenton' },
-                { name: 'New Mexico', capital: 'Santa Fe' },
-                { name: 'New York', capital: 'Albany' },
-                { name: 'North Carolina', capital: 'Raleigh' },
-                { name: 'North Dakota', capital: 'Bismarck' },
-                { name: 'Ohio', capital: 'Columbus' },
-                { name: 'Oklahoma', capital: 'Oklahoma City' },
-                { name: 'Oregon', capital: 'Salem' },
-                { name: 'Pennsylvania', capital: 'Harrisburg' },
-                { name: 'Rhode Island', capital: 'Providence' },
-                { name: 'South Carolina', capital: 'Columbia' },
-                { name: 'South Dakota', capital: 'Pierre' },
-                { name: 'Tennessee', capital: 'Nashville' },
-                { name: 'Texas', capital: 'Austin' },
-                { name: 'Utah', capital: 'Salt Lake City' },
-                { name: 'Vermont', capital: 'Montpelier' },
-                { name: 'Virginia', capital: 'Richmond' },
-                { name: 'Washington', capital: 'Olympia' },
-                { name: 'West Virginia', capital: 'Charleston' },
-                { name: 'Wisconsin', capital: 'Madison' },
-                { name: 'Wyoming', capital: 'Cheyenne' },
-            ];
-        }
+class CdkVirtualScrollDlExample {
+    constructor() {
+        this.states = [
+            { name: 'Alabama', capital: 'Montgomery' },
+            { name: 'Alaska', capital: 'Juneau' },
+            { name: 'Arizona', capital: 'Phoenix' },
+            { name: 'Arkansas', capital: 'Little Rock' },
+            { name: 'California', capital: 'Sacramento' },
+            { name: 'Colorado', capital: 'Denver' },
+            { name: 'Connecticut', capital: 'Hartford' },
+            { name: 'Delaware', capital: 'Dover' },
+            { name: 'Florida', capital: 'Tallahassee' },
+            { name: 'Georgia', capital: 'Atlanta' },
+            { name: 'Hawaii', capital: 'Honolulu' },
+            { name: 'Idaho', capital: 'Boise' },
+            { name: 'Illinois', capital: 'Springfield' },
+            { name: 'Indiana', capital: 'Indianapolis' },
+            { name: 'Iowa', capital: 'Des Moines' },
+            { name: 'Kansas', capital: 'Topeka' },
+            { name: 'Kentucky', capital: 'Frankfort' },
+            { name: 'Louisiana', capital: 'Baton Rouge' },
+            { name: 'Maine', capital: 'Augusta' },
+            { name: 'Maryland', capital: 'Annapolis' },
+            { name: 'Massachusetts', capital: 'Boston' },
+            { name: 'Michigan', capital: 'Lansing' },
+            { name: 'Minnesota', capital: 'St. Paul' },
+            { name: 'Mississippi', capital: 'Jackson' },
+            { name: 'Missouri', capital: 'Jefferson City' },
+            { name: 'Montana', capital: 'Helena' },
+            { name: 'Nebraska', capital: 'Lincoln' },
+            { name: 'Nevada', capital: 'Carson City' },
+            { name: 'New Hampshire', capital: 'Concord' },
+            { name: 'New Jersey', capital: 'Trenton' },
+            { name: 'New Mexico', capital: 'Santa Fe' },
+            { name: 'New York', capital: 'Albany' },
+            { name: 'North Carolina', capital: 'Raleigh' },
+            { name: 'North Dakota', capital: 'Bismarck' },
+            { name: 'Ohio', capital: 'Columbus' },
+            { name: 'Oklahoma', capital: 'Oklahoma City' },
+            { name: 'Oregon', capital: 'Salem' },
+            { name: 'Pennsylvania', capital: 'Harrisburg' },
+            { name: 'Rhode Island', capital: 'Providence' },
+            { name: 'South Carolina', capital: 'Columbia' },
+            { name: 'South Dakota', capital: 'Pierre' },
+            { name: 'Tennessee', capital: 'Nashville' },
+            { name: 'Texas', capital: 'Austin' },
+            { name: 'Utah', capital: 'Salt Lake City' },
+            { name: 'Vermont', capital: 'Montpelier' },
+            { name: 'Virginia', capital: 'Richmond' },
+            { name: 'Washington', capital: 'Olympia' },
+            { name: 'West Virginia', capital: 'Charleston' },
+            { name: 'Wisconsin', capital: 'Madison' },
+            { name: 'Wyoming', capital: 'Cheyenne' },
+        ];
     }
-    CdkVirtualScrollDlExample.ɵfac = function CdkVirtualScrollDlExample_Factory(t) { return new (t || CdkVirtualScrollDlExample)(); };
-    CdkVirtualScrollDlExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollDlExample, selectors: [["cdk-virtual-scroll-dl-example"]], decls: 3, vars: 1, consts: [["itemSize", "60", 1, "example-viewport"], [1, "example-dl"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-dt"], [1, "example-dd"]], template: function CdkVirtualScrollDlExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵelementStart(1, "dl", 1);
-            ɵɵtemplate(2, CdkVirtualScrollDlExample_ng_container_2_Template, 5, 2, "ng-container", 2);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(2);
-            ɵɵproperty("cdkVirtualForOf", ctx.states);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt[_ngcontent-%COMP%] {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd[_ngcontent-%COMP%] {\n  height: 30px;\n}"], changeDetection: 0 });
-    return CdkVirtualScrollDlExample;
-})();
+}
+CdkVirtualScrollDlExample.ɵfac = function CdkVirtualScrollDlExample_Factory(t) { return new (t || CdkVirtualScrollDlExample)(); };
+CdkVirtualScrollDlExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollDlExample, selectors: [["cdk-virtual-scroll-dl-example"]], decls: 3, vars: 1, consts: [["itemSize", "60", 1, "example-viewport"], [1, "example-dl"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-dt"], [1, "example-dd"]], template: function CdkVirtualScrollDlExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵelementStart(1, "dl", 1);
+        ɵɵtemplate(2, CdkVirtualScrollDlExample_ng_container_2_Template, 5, 2, "ng-container", 2);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(2);
+        ɵɵproperty("cdkVirtualForOf", ctx.states);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt[_ngcontent-%COMP%] {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd[_ngcontent-%COMP%] {\n  height: 30px;\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollDlExample, [{
         type: Component,
         args: [{
@@ -306,23 +294,20 @@ function CdkVirtualScrollFixedBufferExample_div_1_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate(item_r1);
 } }
 /** @title Fixed size virtual scroll with custom buffer parameters */
-let CdkVirtualScrollFixedBufferExample = /** @class */ (() => {
-    class CdkVirtualScrollFixedBufferExample {
-        constructor() {
-            this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-        }
+class CdkVirtualScrollFixedBufferExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     }
-    CdkVirtualScrollFixedBufferExample.ɵfac = function CdkVirtualScrollFixedBufferExample_Factory(t) { return new (t || CdkVirtualScrollFixedBufferExample)(); };
-    CdkVirtualScrollFixedBufferExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollFixedBufferExample, selectors: [["cdk-virtual-scroll-fixed-buffer-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", "minBufferPx", "200", "maxBufferPx", "400", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollFixedBufferExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵtemplate(1, CdkVirtualScrollFixedBufferExample_div_1_Template, 2, 1, "div", 1);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("cdkVirtualForOf", ctx.items);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-    return CdkVirtualScrollFixedBufferExample;
-})();
+}
+CdkVirtualScrollFixedBufferExample.ɵfac = function CdkVirtualScrollFixedBufferExample_Factory(t) { return new (t || CdkVirtualScrollFixedBufferExample)(); };
+CdkVirtualScrollFixedBufferExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollFixedBufferExample, selectors: [["cdk-virtual-scroll-fixed-buffer-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", "minBufferPx", "200", "maxBufferPx", "400", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollFixedBufferExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵtemplate(1, CdkVirtualScrollFixedBufferExample_div_1_Template, 2, 1, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("cdkVirtualForOf", ctx.items);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollFixedBufferExample, [{
         type: Component,
         args: [{
@@ -343,25 +328,22 @@ function CdkVirtualScrollHorizontalExample_div_2_Template(rf, ctx) { if (rf & 1)
     ɵɵtextInterpolate(item_r1);
 } }
 /** @title Horizontal virtual scroll */
-let CdkVirtualScrollHorizontalExample = /** @class */ (() => {
-    class CdkVirtualScrollHorizontalExample {
-        constructor() {
-            this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-        }
+class CdkVirtualScrollHorizontalExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     }
-    CdkVirtualScrollHorizontalExample.ɵfac = function CdkVirtualScrollHorizontalExample_Factory(t) { return new (t || CdkVirtualScrollHorizontalExample)(); };
-    CdkVirtualScrollHorizontalExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollHorizontalExample, selectors: [["cdk-virtual-scroll-horizontal-example"]], decls: 3, vars: 1, consts: [[1, "cdk-virtual-scroll-data-source-example"], ["orientation", "horizontal", "itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollHorizontalExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "cdk-virtual-scroll-viewport", 1);
-            ɵɵtemplate(2, CdkVirtualScrollHorizontalExample_div_2_Template, 2, 1, "div", 2);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(2);
-            ɵɵproperty("cdkVirtualForOf", ctx.items);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"], encapsulation: 2, changeDetection: 0 });
-    return CdkVirtualScrollHorizontalExample;
-})();
+}
+CdkVirtualScrollHorizontalExample.ɵfac = function CdkVirtualScrollHorizontalExample_Factory(t) { return new (t || CdkVirtualScrollHorizontalExample)(); };
+CdkVirtualScrollHorizontalExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollHorizontalExample, selectors: [["cdk-virtual-scroll-horizontal-example"]], decls: 3, vars: 1, consts: [[1, "cdk-virtual-scroll-data-source-example"], ["orientation", "horizontal", "itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollHorizontalExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵelementStart(1, "cdk-virtual-scroll-viewport", 1);
+        ɵɵtemplate(2, CdkVirtualScrollHorizontalExample_div_2_Template, 2, 1, "div", 2);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(2);
+        ɵɵproperty("cdkVirtualForOf", ctx.items);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"], encapsulation: 2, changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollHorizontalExample, [{
         type: Component,
         args: [{
@@ -383,23 +365,20 @@ function CdkVirtualScrollOverviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate(item_r1);
 } }
 /** @title Basic virtual scroll */
-let CdkVirtualScrollOverviewExample = /** @class */ (() => {
-    class CdkVirtualScrollOverviewExample {
-        constructor() {
-            this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-        }
+class CdkVirtualScrollOverviewExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     }
-    CdkVirtualScrollOverviewExample.ɵfac = function CdkVirtualScrollOverviewExample_Factory(t) { return new (t || CdkVirtualScrollOverviewExample)(); };
-    CdkVirtualScrollOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollOverviewExample, selectors: [["cdk-virtual-scroll-overview-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollOverviewExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵtemplate(1, CdkVirtualScrollOverviewExample_div_1_Template, 2, 1, "div", 1);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("cdkVirtualForOf", ctx.items);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-    return CdkVirtualScrollOverviewExample;
-})();
+}
+CdkVirtualScrollOverviewExample.ɵfac = function CdkVirtualScrollOverviewExample_Factory(t) { return new (t || CdkVirtualScrollOverviewExample)(); };
+CdkVirtualScrollOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollOverviewExample, selectors: [["cdk-virtual-scroll-overview-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵtemplate(1, CdkVirtualScrollOverviewExample_div_1_Template, 2, 1, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("cdkVirtualForOf", ctx.items);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollOverviewExample, [{
         type: Component,
         args: [{
@@ -420,23 +399,20 @@ function CdkVirtualScrollTemplateCacheExample_div_1_Template(rf, ctx) { if (rf &
     ɵɵtextInterpolate(item_r1);
 } }
 /** @title Virtual scroll with no template caching */
-let CdkVirtualScrollTemplateCacheExample = /** @class */ (() => {
-    class CdkVirtualScrollTemplateCacheExample {
-        constructor() {
-            this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-        }
+class CdkVirtualScrollTemplateCacheExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
     }
-    CdkVirtualScrollTemplateCacheExample.ɵfac = function CdkVirtualScrollTemplateCacheExample_Factory(t) { return new (t || CdkVirtualScrollTemplateCacheExample)(); };
-    CdkVirtualScrollTemplateCacheExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollTemplateCacheExample, selectors: [["cdk-virtual-scroll-template-cache-example"]], decls: 2, vars: 2, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTemplateCacheSize"], [1, "example-item"]], template: function CdkVirtualScrollTemplateCacheExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
-            ɵɵtemplate(1, CdkVirtualScrollTemplateCacheExample_div_1_Template, 2, 1, "div", 1);
-            ɵɵelementEnd();
-        } if (rf & 2) {
-            ɵɵadvance(1);
-            ɵɵproperty("cdkVirtualForOf", ctx.items)("cdkVirtualForTemplateCacheSize", 0);
-        } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-    return CdkVirtualScrollTemplateCacheExample;
-})();
+}
+CdkVirtualScrollTemplateCacheExample.ɵfac = function CdkVirtualScrollTemplateCacheExample_Factory(t) { return new (t || CdkVirtualScrollTemplateCacheExample)(); };
+CdkVirtualScrollTemplateCacheExample.ɵcmp = ɵɵdefineComponent({ type: CdkVirtualScrollTemplateCacheExample, selectors: [["cdk-virtual-scroll-template-cache-example"]], decls: 2, vars: 2, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTemplateCacheSize"], [1, "example-item"]], template: function CdkVirtualScrollTemplateCacheExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        ɵɵtemplate(1, CdkVirtualScrollTemplateCacheExample_div_1_Template, 2, 1, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(1);
+        ɵɵproperty("cdkVirtualForOf", ctx.items)("cdkVirtualForTemplateCacheSize", 0);
+    } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollTemplateCacheExample, [{
         type: Component,
         args: [{
@@ -457,13 +433,10 @@ const EXAMPLES = [
     CdkVirtualScrollOverviewExample,
     CdkVirtualScrollTemplateCacheExample,
 ];
-let CdkScrollingExamplesModule = /** @class */ (() => {
-    class CdkScrollingExamplesModule {
-    }
-    CdkScrollingExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkScrollingExamplesModule });
-    CdkScrollingExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[ScrollingModule]] });
-    return CdkScrollingExamplesModule;
-})();
+class CdkScrollingExamplesModule {
+}
+CdkScrollingExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkScrollingExamplesModule });
+CdkScrollingExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[ScrollingModule]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
