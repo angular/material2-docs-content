@@ -5,6 +5,7 @@
 }(this, (function (exports, i1, i0) { 'use strict';
 
     var _c0 = ["templatePortalContent"];
+    var _c1 = ["domPortalContent"];
     function CdkPortalOverviewExample_ng_template_3_Template(rf, ctx) { }
     function CdkPortalOverviewExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtext(0, "Hello, this is a template portal");
@@ -19,14 +20,17 @@
         CdkPortalOverviewExample.prototype.ngAfterViewInit = function () {
             this.componentPortal = new i1.ComponentPortal(ComponentPortalExample);
             this.templatePortal = new i1.TemplatePortal(this.templatePortalContent, this._viewContainerRef);
+            this.domPortal = new i1.DomPortal(this.domPortalContent);
         };
         CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(i0.ɵɵdirectiveInject(i0.ViewContainerRef)); };
         CdkPortalOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵviewQuery(_c0, true);
+                i0.ɵɵstaticViewQuery(_c1, true);
             } if (rf & 2) {
                 var _t;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
-            } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.domPortalContent = _t.first);
+            } }, decls: 15, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"], ["domPortalContent", ""]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2");
                 i0.ɵɵtext(1, "The portal outlet is below:");
                 i0.ɵɵelementEnd();
@@ -41,6 +45,13 @@
                 i0.ɵɵelementStart(8, "button", 3);
                 i0.ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_8_listener() { return ctx.selectedPortal = ctx.templatePortal; });
                 i0.ɵɵtext(9, "Render template portal");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "button", 3);
+                i0.ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_10_listener() { return ctx.selectedPortal = ctx.domPortal; });
+                i0.ɵɵtext(11, "Render DOM portal");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "div", null, 4);
+                i0.ɵɵtext(14, "Hello, this is a DOM portal");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(3);
@@ -58,6 +69,9 @@
         }], function () { return [{ type: i0.ViewContainerRef }]; }, { templatePortalContent: [{
                 type: i0.ViewChild,
                 args: ['templatePortalContent']
+            }], domPortalContent: [{
+                type: i0.ViewChild,
+                args: ['domPortalContent', { static: true }]
             }] }); })();
     var ComponentPortalExample = /** @class */ (function () {
         function ComponentPortalExample() {
