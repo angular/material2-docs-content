@@ -1,7 +1,8 @@
-import { ComponentPortal, TemplatePortal, CdkPortalOutlet, PortalModule } from '@angular/cdk/portal';
-import { ɵɵtext, ɵɵdirectiveInject, ViewContainerRef, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelementStart, ɵɵelementEnd, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ComponentPortal, TemplatePortal, DomPortal, CdkPortalOutlet, PortalModule } from '@angular/cdk/portal';
+import { ɵɵtext, ɵɵdirectiveInject, ViewContainerRef, ɵɵdefineComponent, ɵɵviewQuery, ɵɵstaticViewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelementStart, ɵɵelementEnd, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 
 const _c0 = ["templatePortalContent"];
+const _c1 = ["domPortalContent"];
 function CdkPortalOverviewExample_ng_template_3_Template(rf, ctx) { }
 function CdkPortalOverviewExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Hello, this is a template portal");
@@ -16,15 +17,18 @@ class CdkPortalOverviewExample {
     ngAfterViewInit() {
         this.componentPortal = new ComponentPortal(ComponentPortalExample);
         this.templatePortal = new TemplatePortal(this.templatePortalContent, this._viewContainerRef);
+        this.domPortal = new DomPortal(this.domPortalContent);
     }
 }
 CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
 CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
+        ɵɵstaticViewQuery(_c1, true);
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
-    } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.domPortalContent = _t.first);
+    } }, decls: 15, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"], ["domPortalContent", ""]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h2");
         ɵɵtext(1, "The portal outlet is below:");
         ɵɵelementEnd();
@@ -40,6 +44,13 @@ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewEx
         ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_8_listener() { return ctx.selectedPortal = ctx.templatePortal; });
         ɵɵtext(9, "Render template portal");
         ɵɵelementEnd();
+        ɵɵelementStart(10, "button", 3);
+        ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_10_listener() { return ctx.selectedPortal = ctx.domPortal; });
+        ɵɵtext(11, "Render DOM portal");
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "div", null, 4);
+        ɵɵtext(14, "Hello, this is a DOM portal");
+        ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵadvance(3);
         ɵɵproperty("cdkPortalOutlet", ctx.selectedPortal);
@@ -54,6 +65,9 @@ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewEx
     }], function () { return [{ type: ViewContainerRef }]; }, { templatePortalContent: [{
             type: ViewChild,
             args: ['templatePortalContent']
+        }], domPortalContent: [{
+            type: ViewChild,
+            args: ['domPortalContent', { static: true }]
         }] }); })();
 class ComponentPortalExample {
 }
