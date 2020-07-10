@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/mdc-button'</span>;
+<span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/mdc-card'</span>;
+<span class="hljs-keyword">import</span> {MdcCardFancyExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./mdc-card-fancy/mdc-card-fancy-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  MdcCardFancyExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  MdcCardFancyExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatButtonModule,
+    MatCardModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MdcCardExamplesModule {
+}
