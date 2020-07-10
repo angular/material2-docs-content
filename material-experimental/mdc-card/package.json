@@ -1,0 +1,9 @@
+{
+  "name": "@angular/components-examples/material-experimental/mdc-card",
+  "main": "../../bundles/components-examples-material-experimental-mdc-card.umd.js",
+  "fesm2015": "../../fesm2015/material-experimental/mdc-card.js",
+  "esm2015": "../../esm2015/material-experimental/mdc-card/mdc-card_public_index.js",
+  "typings": "./mdc-card_public_index.d.ts",
+  "module": "../../fesm2015/material-experimental/mdc-card.js",
+  "es2015": "../../fesm2015/material-experimental/mdc-card.js"
+}

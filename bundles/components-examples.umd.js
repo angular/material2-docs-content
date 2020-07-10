@@ -729,6 +729,16 @@
                 "importSpecifier": "material-experimental/column-resize"
             }
         },
+        "mdc-card-fancy": {
+            "title": "Card with multiple sections",
+            "componentName": "MdcCardFancyExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "MdcCardExamplesModule",
+                "importSpecifier": "material-experimental/mdc-card"
+            }
+        },
         "form-field-custom-control": {
             "title": "Form field with custom telephone number input control.",
             "componentName": "FormFieldCustomControlExample",
