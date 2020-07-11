@@ -227,74 +227,6 @@ for a control that matches the specified harness predicate.</p>
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
-        </div>getHarnessLoaderForPrefix
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a reference to the container element which contains all projected
-prefixes of the form-field.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;TestElement | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
-          async
-        </div>getHarnessLoaderForSuffix
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a reference to the container element which contains all projected
-suffixes of the form-field.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;TestElement | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
-          async
         </div>getLabel
       </th>
     </tr>
@@ -311,6 +243,72 @@ suffixes of the form-field.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getPrefixText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the prefix element.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getSuffixText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the suffix element.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -744,6 +742,78 @@ if no form control is set up.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v11.0.0">
+            Deprecated
+          </div><div class="docs-api-async-method-marker">
+          async
+        </div>getHarnessLoaderForPrefix
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a reference to the container element which contains all projected
+prefixes of the form-field.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v11.0.0">
+            Deprecated
+          </div><div class="docs-api-async-method-marker">
+          async
+        </div>getHarnessLoaderForSuffix
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a reference to the container element which contains all projected
+suffixes of the form-field.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
