@@ -54,13 +54,12 @@ CardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CardOverviewExample, sel
         ɵɵelementStart(0, "mat-card");
         ɵɵtext(1, "Simple card");
         ɵɵelementEnd();
-    } }, directives: [MatCard], styles: [""] });
+    } }, directives: [MatCard], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CardOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'card-overview-example',
                 templateUrl: 'card-overview-example.html',
-                styleUrls: ['card-overview-example.css'],
             }]
     }], null, null); })();
 

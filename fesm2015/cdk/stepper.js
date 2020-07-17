@@ -121,7 +121,7 @@ class CdkLinearStepperWithFormExample {
     }
 }
 CdkLinearStepperWithFormExample.ɵfac = function CdkLinearStepperWithFormExample_Factory(t) { return new (t || CdkLinearStepperWithFormExample)(ɵɵdirectiveInject(FormBuilder)); };
-CdkLinearStepperWithFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkLinearStepperWithFormExample, selectors: [["cdk-linear-stepper-with-form"]], decls: 13, vars: 6, consts: [[3, "linear"], [3, "stepControl"], ["for", "stepOneInput"], [3, "formGroup"], ["placeholder", "Input", "formControlName", "firstControl", "id", "stepOneInput", "required", ""], ["for", "stepTwoInput"], ["placeholder", "Input", "formControlName", "secondControl", "id", "stepTwoInput", "required", ""], [1, "example-toggle-linear-button", 3, "click"]], template: function CdkLinearStepperWithFormExample_Template(rf, ctx) { if (rf & 1) {
+CdkLinearStepperWithFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkLinearStepperWithFormExample, selectors: [["cdk-linear-stepper-with-form-example"]], decls: 13, vars: 6, consts: [[3, "linear"], [3, "stepControl"], ["for", "stepOneInput"], [3, "formGroup"], ["placeholder", "Input", "formControlName", "firstControl", "id", "stepOneInput", "required", ""], ["for", "stepTwoInput"], ["placeholder", "Input", "formControlName", "secondControl", "id", "stepTwoInput", "required", ""], [1, "example-toggle-linear-button", 3, "click"]], template: function CdkLinearStepperWithFormExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "example-custom-linear-stepper", 0);
         ɵɵelementStart(1, "cdk-step", 1);
         ɵɵelementStart(2, "label", 2);
@@ -160,7 +160,7 @@ CdkLinearStepperWithFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkLinearSte
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
         type: Component,
         args: [{
-                selector: 'cdk-linear-stepper-with-form',
+                selector: 'cdk-linear-stepper-with-form-example',
                 templateUrl: './cdk-linear-stepper-with-form-example.html',
                 styleUrls: ['./cdk-linear-stepper-with-form-example.css']
             }]

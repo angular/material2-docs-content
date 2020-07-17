@@ -109,7 +109,7 @@
                 i0.ɵɵelement(0, "mat-paginator", 0);
             } if (rf & 2) {
                 i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c0$1));
-            } }, directives: [i4.MatPaginator], styles: [""] });
+            } }, directives: [i4.MatPaginator], encapsulation: 2 });
         return PaginatorOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
@@ -117,7 +117,6 @@
             args: [{
                     selector: 'paginator-overview-example',
                     templateUrl: 'paginator-overview-example.html',
-                    styleUrls: ['paginator-overview-example.css'],
                 }]
         }], null, null); })();
 

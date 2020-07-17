@@ -24,13 +24,12 @@ BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOvervi
         ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener() { return ctx.openBottomSheet(); });
         ɵɵtext(3, "Open file");
         ɵɵelementEnd();
-    } }, directives: [MatButton], styles: [""] });
+    } }, directives: [MatButton], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'bottom-sheet-overview-example',
                 templateUrl: 'bottom-sheet-overview-example.html',
-                styleUrls: ['bottom-sheet-overview-example.css'],
             }]
     }], function () { return [{ type: MatBottomSheet }]; }, null); })();
 class BottomSheetOverviewExampleSheet {

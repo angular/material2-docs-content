@@ -153,7 +153,7 @@
                 i0.ɵɵproperty("ngIf", i0.ɵɵpipeBind1(1, 2, ctx.asyncTabs) === null);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(4, 4, ctx.asyncTabs));
-            } }, directives: [i1.NgIf, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab, i1$2.MatTabLabel], pipes: [i1.AsyncPipe], styles: [""] });
+            } }, directives: [i1.NgIf, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab, i1$2.MatTabLabel], pipes: [i1.AsyncPipe], encapsulation: 2 });
         return TabGroupAsyncExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupAsyncExample, [{
@@ -161,7 +161,6 @@
             args: [{
                     selector: 'tab-group-async-example',
                     templateUrl: 'tab-group-async-example.html',
-                    styleUrls: ['tab-group-async-example.css'],
                 }]
         }], function () { return []; }, null); })();
 
@@ -184,7 +183,7 @@
                 i0.ɵɵtext(6, " Content 3 ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [""] });
+            } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], encapsulation: 2 });
         return TabGroupBasicExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupBasicExample, [{
@@ -192,7 +191,6 @@
             args: [{
                     selector: 'tab-group-basic-example',
                     templateUrl: 'tab-group-basic-example.html',
-                    styleUrls: ['tab-group-basic-example.css'],
                 }]
         }], null, null); })();
 
@@ -375,7 +373,7 @@
                 i0.ɵɵtext(6, " Content 3 ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [""] });
+            } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], encapsulation: 2 });
         return TabGroupHeaderBelowExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
@@ -383,7 +381,6 @@
             args: [{
                     selector: 'tab-group-header-below-example',
                     templateUrl: 'tab-group-header-below-example.html',
-                    styleUrls: ['tab-group-header-below-example.css'],
                 }]
         }], null, null); })();
 
@@ -434,7 +431,7 @@
                 i0.ɵɵtemplate(6, TabGroupLazyLoadedExample_ng_template_6_Template, 2, 4, "ng-template", 1);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$2.MatTabGroup, i1$2.MatTab, i1$2.MatTabContent], pipes: [i1.DatePipe], styles: [""] });
+            } }, directives: [i1$2.MatTabGroup, i1$2.MatTab, i1$2.MatTabContent], pipes: [i1.DatePipe], encapsulation: 2 });
         return TabGroupLazyLoadedExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
@@ -442,7 +439,6 @@
             args: [{
                     selector: 'tab-group-lazy-loaded-example',
                     templateUrl: 'tab-group-lazy-loaded-example.html',
-                    styleUrls: ['tab-group-lazy-loaded-example.css'],
                 }]
         }], null, null); })();
 

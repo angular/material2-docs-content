@@ -1,11 +1,11 @@
 import { ChipsAutocompleteExample } from './chips-autocomplete/chips-autocomplete-example';
-import { ChipsDragDropExample } from './chips-drag-and-drop/chips-drag-drop-example';
+import { ChipsDragDropExample } from './chips-drag-drop/chips-drag-drop-example';
 import { ChipsInputExample } from './chips-input/chips-input-example';
 import { ChipsOverviewExample } from './chips-overview/chips-overview-example';
 import { ChipsStackedExample } from './chips-stacked/chips-stacked-example';
 import * as i0 from "@angular/core";
 import * as i1 from "./chips-autocomplete/chips-autocomplete-example";
-import * as i2 from "./chips-drag-and-drop/chips-drag-drop-example";
+import * as i2 from "./chips-drag-drop/chips-drag-drop-example";
 import * as i3 from "./chips-input/chips-input-example";
 import * as i4 from "./chips-overview/chips-overview-example";
 import * as i5 from "./chips-stacked/chips-stacked-example";

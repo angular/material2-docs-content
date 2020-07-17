@@ -125,7 +125,7 @@
                 i0.ɵɵproperty("disabled", ctx.disableSelect.value);
                 i0.ɵɵadvance(12);
                 i0.ɵɵproperty("disabled", ctx.disableSelect.value);
-            } }, directives: [i1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
+            } }, directives: [i1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
         return SelectDisabledExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectDisabledExample, [{
@@ -133,7 +133,6 @@
             args: [{
                     selector: 'select-disabled-example',
                     templateUrl: 'select-disabled-example.html',
-                    styleUrls: ['select-disabled-example.css'],
                 }]
         }], null, null); })();
 
@@ -242,7 +241,7 @@
                 i0.ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("required"));
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1$1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1$1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], encapsulation: 2 });
         return SelectErrorStateMatcherExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
@@ -250,7 +249,6 @@
             args: [{
                     selector: 'select-error-state-matcher-example',
                     templateUrl: 'select-error-state-matcher-example.html',
-                    styleUrls: ['select-error-state-matcher-example.css'],
                 }]
         }], null, null); })();
 
@@ -338,7 +336,7 @@
                 i0.ɵɵproperty("ngForOf", ctx.cars);
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
-            } }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], styles: [""] });
+            } }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], encapsulation: 2 });
         return SelectFormExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectFormExample, [{
@@ -346,7 +344,6 @@
             args: [{
                     selector: 'select-form-example',
                     templateUrl: 'select-form-example.html',
-                    styleUrls: ['select-form-example.css'],
                 }]
         }], null, null); })();
 
@@ -439,7 +436,7 @@
                 i0.ɵɵproperty("formControl", ctx.selectFormControl);
                 i0.ɵɵadvance(8);
                 i0.ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1$1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1$1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], encapsulation: 2 });
         return SelectHintErrorExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectHintErrorExample, [{
@@ -447,7 +444,6 @@
             args: [{
                     selector: 'select-hint-error-example',
                     templateUrl: 'select-hint-error-example.html',
-                    styleUrls: ['select-hint-error-example.css'],
                 }]
         }], null, null); })();
 
@@ -482,7 +478,7 @@
                 i0.ɵɵproperty("formControl", ctx.toppings);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.toppingList);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i4$1.MatOption], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i4$1.MatOption], encapsulation: 2 });
         return SelectMultipleExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectMultipleExample, [{
@@ -490,7 +486,6 @@
             args: [{
                     selector: 'select-multiple-example',
                     templateUrl: 'select-multiple-example.html',
-                    styleUrls: ['select-multiple-example.css'],
                 }]
         }], null, null); })();
 
@@ -516,7 +511,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], encapsulation: 2 });
         return SelectNoRippleExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectNoRippleExample, [{
@@ -524,7 +519,6 @@
             args: [{
                     selector: 'select-no-ripple-example',
                     templateUrl: 'select-no-ripple-example.html',
-                    styleUrls: ['select-no-ripple-example.css'],
                 }]
         }], null, null); })();
 
@@ -634,7 +628,7 @@
                 i0.ɵɵproperty("formControl", ctx.pokemonControl);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", ctx.pokemonGroups);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOptgroup], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOptgroup], encapsulation: 2 });
         return SelectOptgroupExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectOptgroupExample, [{
@@ -642,7 +636,6 @@
             args: [{
                     selector: 'select-optgroup-example',
                     templateUrl: 'select-optgroup-example.html',
-                    styleUrls: ['select-optgroup-example.css'],
                 }]
         }], null, null); })();
 
@@ -705,7 +698,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(6);
                 i0.ɵɵproperty("ngForOf", ctx.foods);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], encapsulation: 2 });
         return SelectOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectOverviewExample, [{
@@ -713,7 +706,6 @@
             args: [{
                     selector: 'select-overview-example',
                     templateUrl: 'select-overview-example.html',
-                    styleUrls: ['select-overview-example.css'],
                 }]
         }], null, null); })();
 
@@ -826,7 +818,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(8);
                 i0.ɵɵproperty("ngForOf", ctx.states);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
         return SelectResetExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectResetExample, [{
@@ -834,7 +826,6 @@
             args: [{
                     selector: 'select-reset-example',
                     templateUrl: 'select-reset-example.html',
-                    styleUrls: ['select-reset-example.css'],
                 }]
         }], null, null); })();
 
@@ -873,7 +864,7 @@
                 i0.ɵɵproperty("value", ctx.selected);
                 i0.ɵɵadvance(10);
                 i0.ɵɵtextInterpolate1("You selected: ", ctx.selected, "");
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], encapsulation: 2 });
         return SelectValueBindingExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectValueBindingExample, [{
@@ -881,7 +872,6 @@
             args: [{
                     selector: 'select-value-binding-example',
                     templateUrl: 'select-value-binding-example.html',
-                    styleUrls: ['select-value-binding-example.css'],
                 }]
         }], null, null); })();
 
@@ -979,7 +969,7 @@
                 i0.ɵɵproperty("ngForOf", ctx.cars);
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
-            } }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
+            } }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
         return SelectReactiveFormExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectReactiveFormExample, [{
@@ -987,7 +977,6 @@
             args: [{
                     selector: 'select-reactive-form-example',
                     templateUrl: 'select-reactive-form-example.html',
-                    styleUrls: ['select-reactive-form-example.css'],
                 }]
         }], function () { return []; }, null); })();
 
@@ -1078,7 +1067,7 @@
                 i0.ɵɵproperty("ngForOf", ctx.cars);
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
         return SelectInitialValueExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectInitialValueExample, [{
@@ -1086,7 +1075,6 @@
             args: [{
                     selector: 'select-initial-value-example',
                     templateUrl: 'select-initial-value-example.html',
-                    styleUrls: ['select-initial-value-example.css'],
                 }]
         }], null, null); })();
 

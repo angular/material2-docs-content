@@ -22,13 +22,12 @@ DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExampl
         ɵɵtext(8, "Item 3");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatList, MatListItem, MatDivider], styles: [""] });
+    } }, directives: [MatList, MatListItem, MatDivider], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DividerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'divider-overview-example',
                 templateUrl: 'divider-overview-example.html',
-                styleUrls: ['divider-overview-example.css'],
             }]
     }], null, null); })();
 

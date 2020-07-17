@@ -23,7 +23,7 @@
                 i0.ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener() { return ctx.openBottomSheet(); });
                 i0.ɵɵtext(3, "Open file");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatButton], styles: [""] });
+            } }, directives: [i2.MatButton], encapsulation: 2 });
         return BottomSheetOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BottomSheetOverviewExample, [{
@@ -31,7 +31,6 @@
             args: [{
                     selector: 'bottom-sheet-overview-example',
                     templateUrl: 'bottom-sheet-overview-example.html',
-                    styleUrls: ['bottom-sheet-overview-example.css'],
                 }]
         }], function () { return [{ type: i1.MatBottomSheet }]; }, null); })();
     var BottomSheetOverviewExampleSheet = /** @class */ (function () {

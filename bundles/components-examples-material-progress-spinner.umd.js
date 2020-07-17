@@ -107,7 +107,7 @@
         ProgressSpinnerOverviewExample.ɵfac = function ProgressSpinnerOverviewExample_Factory(t) { return new (t || ProgressSpinnerOverviewExample)(); };
         ProgressSpinnerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-spinner");
-            } }, directives: [i5.MatSpinner], styles: [""] });
+            } }, directives: [i5.MatSpinner], encapsulation: 2 });
         return ProgressSpinnerOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
@@ -115,7 +115,6 @@
             args: [{
                     selector: 'progress-spinner-overview-example',
                     templateUrl: 'progress-spinner-overview-example.html',
-                    styleUrls: ['progress-spinner-overview-example.css'],
                 }]
         }], null, null); })();
 

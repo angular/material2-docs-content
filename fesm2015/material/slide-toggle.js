@@ -171,13 +171,12 @@ SlideToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleOvervi
         ɵɵelementStart(0, "mat-slide-toggle");
         ɵɵtext(1, "Slide me!");
         ɵɵelementEnd();
-    } }, directives: [MatSlideToggle], styles: [""] });
+    } }, directives: [MatSlideToggle], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-overview-example',
                 templateUrl: 'slide-toggle-overview-example.html',
-                styleUrls: ['slide-toggle-overview-example.css'],
             }]
     }], null, null); })();
 

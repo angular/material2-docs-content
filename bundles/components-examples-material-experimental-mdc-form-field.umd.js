@@ -233,11 +233,11 @@
     }
 
     /** @title Form field with custom telephone number input control. */
-    var FormFieldCustomControlExample = /** @class */ (function () {
-        function FormFieldCustomControlExample() {
+    var MdcFormFieldCustomControlExample = /** @class */ (function () {
+        function MdcFormFieldCustomControlExample() {
         }
-        FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
-        FormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+        MdcFormFieldCustomControlExample.ɵfac = function MdcFormFieldCustomControlExample_Factory(t) { return new (t || MdcFormFieldCustomControlExample)(); };
+        MdcFormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Phone number");
@@ -250,15 +250,14 @@
                 i0.ɵɵtext(7, "Include area code");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: function () { return [i1.MatFormField, i1.MatLabel, MyTelInput, i2.MatIcon, i1.MatSuffix, i1.MatHint]; }, styles: [""] });
-        return FormFieldCustomControlExample;
+            } }, directives: function () { return [i1.MatFormField, i1.MatLabel, MyTelInput, i2.MatIcon, i1.MatSuffix, i1.MatHint]; }, encapsulation: 2 });
+        return MdcFormFieldCustomControlExample;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FormFieldCustomControlExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
             type: i0.Component,
             args: [{
-                    selector: 'form-field-custom-control-example',
+                    selector: 'mdc-form-field-custom-control-example',
                     templateUrl: 'form-field-custom-control-example.html',
-                    styleUrls: ['form-field-custom-control-example.css'],
                 }]
         }], null, null); })();
     /** Data structure for holding telephone number. */
@@ -444,7 +443,7 @@
             }] }); })();
 
     var EXAMPLES = [
-        FormFieldCustomControlExample,
+        MdcFormFieldCustomControlExample,
     ];
     var MdcFormFieldExamplesModule = /** @class */ (function () {
         function MdcFormFieldExamplesModule() {
@@ -458,10 +457,10 @@
                 ]] });
         return MdcFormFieldExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [FormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
             i1.MatFormFieldModule,
             i2.MatIconModule,
-            i3.ReactiveFormsModule], exports: [FormFieldCustomControlExample, MyTelInput] }); })();
+            i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] }); })();
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
             type: i0.NgModule,
             args: [{
@@ -481,7 +480,7 @@
      * Generated bundle index. Do not edit.
      */
 
-    exports.FormFieldCustomControlExample = FormFieldCustomControlExample;
+    exports.MdcFormFieldCustomControlExample = MdcFormFieldCustomControlExample;
     exports.MdcFormFieldExamplesModule = MdcFormFieldExamplesModule;
     exports.MyTelInput = MyTelInput;
 

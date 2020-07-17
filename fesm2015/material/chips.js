@@ -282,13 +282,12 @@ ChipsOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ChipsOverviewExample, s
         ɵɵtext(8, "Accent fish");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatChipList, MatChip], styles: [""] });
+    } }, directives: [MatChipList, MatChip], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'chips-overview-example',
                 templateUrl: 'chips-overview-example.html',
-                styleUrls: ['chips-overview-example.css'],
             }]
     }], null, null); })();
 

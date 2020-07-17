@@ -74,13 +74,12 @@ FormFieldAppearanceExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldAppearan
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatFormField, MatLabel, MatInput, MatIcon, MatSuffix, MatHint], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatIcon, MatSuffix, MatHint], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldAppearanceExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-appearance-example',
                 templateUrl: 'form-field-appearance-example.html',
-                styleUrls: ['form-field-appearance-example.css'],
             }]
     }], null, null); })();
 
@@ -113,13 +112,12 @@ FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCusto
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("formGroup", ctx.form);
-    } }, directives: function () { return [NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MyTelInput, NgControlStatus, FormControlName, RequiredValidator, MatIcon, MatSuffix, MatHint]; }, styles: [""] });
+    } }, directives: function () { return [NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MyTelInput, NgControlStatus, FormControlName, RequiredValidator, MatIcon, MatSuffix, MatHint]; }, encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldCustomControlExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-custom-control-example',
                 templateUrl: 'form-field-custom-control-example.html',
-                styleUrls: ['form-field-custom-control-example.css']
             }]
     }], null, null); })();
 /** Data structure for holding telephone number. */
@@ -540,13 +538,12 @@ FormFieldOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldOverviewEx
         ɵɵelement(16, "textarea", 2);
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatFormField, MatLabel, MatInput, MatSelect, MatOption], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatSelect, MatOption], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-overview-example',
                 templateUrl: 'form-field-overview-example.html',
-                styleUrls: ['form-field-overview-example.css'],
             }]
     }], null, null); })();
 

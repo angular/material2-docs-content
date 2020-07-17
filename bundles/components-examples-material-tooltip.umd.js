@@ -258,7 +258,7 @@
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, " Button with delay-default tooltip\n");
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [""] });
+            } }, directives: [i1.MatButton, i2$2.MatTooltip], encapsulation: 2 });
         return TooltipModifiedDefaultsExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
@@ -266,7 +266,6 @@
             args: [{
                     selector: 'tooltip-modified-defaults-example',
                     templateUrl: 'tooltip-modified-defaults-example.html',
-                    styleUrls: ['tooltip-modified-defaults-example.css'],
                     providers: [
                         { provide: i2$2.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
                     ],
@@ -284,7 +283,7 @@
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, " Action\n");
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [""] });
+            } }, directives: [i1.MatButton, i2$2.MatTooltip], encapsulation: 2 });
         return TooltipOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipOverviewExample, [{
@@ -292,7 +291,6 @@
             args: [{
                     selector: 'tooltip-overview-example',
                     templateUrl: 'tooltip-overview-example.html',
-                    styleUrls: ['tooltip-overview-example.css'],
                 }]
         }], null, null); })();
 

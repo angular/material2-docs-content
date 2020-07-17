@@ -34,13 +34,12 @@ GridListDynamicExample.ɵcmp = ɵɵdefineComponent({ type: GridListDynamicExampl
     } if (rf & 2) {
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.tiles);
-    } }, directives: [MatGridList, NgForOf, MatGridTile], styles: [""] });
+    } }, directives: [MatGridList, NgForOf, MatGridTile], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(GridListDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-dynamic-example',
                 templateUrl: 'grid-list-dynamic-example.html',
-                styleUrls: ['grid-list-dynamic-example.css'],
             }]
     }], null, null); })();
 

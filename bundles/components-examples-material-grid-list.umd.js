@@ -35,7 +35,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.tiles);
-            } }, directives: [i1.MatGridList, i2.NgForOf, i1.MatGridTile], styles: [""] });
+            } }, directives: [i1.MatGridList, i2.NgForOf, i1.MatGridTile], encapsulation: 2 });
         return GridListDynamicExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(GridListDynamicExample, [{
@@ -43,7 +43,6 @@
             args: [{
                     selector: 'grid-list-dynamic-example',
                     templateUrl: 'grid-list-dynamic-example.html',
-                    styleUrls: ['grid-list-dynamic-example.css'],
                 }]
         }], null, null); })();
 

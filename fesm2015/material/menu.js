@@ -44,13 +44,12 @@ MenuIconsExample.ɵcmp = ɵɵdefineComponent({ type: MenuIconsExample, selectors
     } if (rf & 2) {
         const _r0 = ɵɵreference(4);
         ɵɵproperty("matMenuTriggerFor", _r0);
-    } }, directives: [MatButton, MatMenuTrigger, MatIcon, _MatMenu, MatMenuItem], styles: [""] });
+    } }, directives: [MatButton, MatMenuTrigger, MatIcon, _MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuIconsExample, [{
         type: Component,
         args: [{
                 selector: 'menu-icons-example',
                 templateUrl: 'menu-icons-example.html',
-                styleUrls: ['menu-icons-example.css'],
             }]
     }], null, null); })();
 
@@ -75,13 +74,12 @@ MenuOverviewExample.ɵcmp = ɵɵdefineComponent({ type: MenuOverviewExample, sel
     } if (rf & 2) {
         const _r0 = ɵɵreference(3);
         ɵɵproperty("matMenuTriggerFor", _r0);
-    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
+    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'menu-overview-example',
                 templateUrl: 'menu-overview-example.html',
-                styleUrls: ['menu-overview-example.css'],
             }]
     }], null, null); })();
 
@@ -148,13 +146,12 @@ MenuPositionExample.ɵcmp = ɵɵdefineComponent({ type: MenuPositionExample, sel
         ɵɵproperty("matMenuTriggerFor", _r2);
         ɵɵadvance(8);
         ɵɵproperty("matMenuTriggerFor", _r3);
-    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
+    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuPositionExample, [{
         type: Component,
         args: [{
                 selector: 'menu-position-example',
                 templateUrl: 'menu-position-example.html',
-                styleUrls: ['menu-position-example.css'],
             }]
     }], null, null); })();
 
@@ -282,13 +279,12 @@ MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selecto
         ɵɵproperty("matMenuTriggerFor", _r4);
         ɵɵadvance(2);
         ɵɵproperty("matMenuTriggerFor", _r5);
-    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], styles: [""] });
+    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,
         args: [{
                 selector: 'menu-nested-example',
                 templateUrl: 'menu-nested-example.html',
-                styleUrls: ['menu-nested-example.css'],
             }]
     }], null, null); })();
 

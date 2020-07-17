@@ -12,13 +12,12 @@ IconOverviewExample.ɵcmp = ɵɵdefineComponent({ type: IconOverviewExample, sel
         ɵɵelementStart(0, "mat-icon", 0);
         ɵɵtext(1, "home");
         ɵɵelementEnd();
-    } }, directives: [MatIcon], styles: [""] });
+    } }, directives: [MatIcon], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(IconOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'icon-overview-example',
                 templateUrl: 'icon-overview-example.html',
-                styleUrls: ['icon-overview-example.css'],
             }]
     }], null, null); })();
 
@@ -33,13 +32,12 @@ class IconSvgExample {
 IconSvgExample.ɵfac = function IconSvgExample_Factory(t) { return new (t || IconSvgExample)(ɵɵdirectiveInject(MatIconRegistry), ɵɵdirectiveInject(DomSanitizer)); };
 IconSvgExample.ɵcmp = ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-icon", 0);
-    } }, directives: [MatIcon], styles: [""] });
+    } }, directives: [MatIcon], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(IconSvgExample, [{
         type: Component,
         args: [{
                 selector: 'icon-svg-example',
                 templateUrl: 'icon-svg-example.html',
-                styleUrls: ['icon-svg-example.css'],
             }]
     }], function () { return [{ type: MatIconRegistry }, { type: DomSanitizer }]; }, null); })();
 

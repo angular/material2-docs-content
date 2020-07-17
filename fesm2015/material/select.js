@@ -128,13 +128,12 @@ SelectDisabledExample.ɵcmp = ɵɵdefineComponent({ type: SelectDisabledExample,
         ɵɵproperty("disabled", ctx.disableSelect.value);
         ɵɵadvance(12);
         ɵɵproperty("disabled", ctx.disableSelect.value);
-    } }, directives: [MatCheckbox, NgControlStatus, FormControlDirective, MatFormField, MatLabel, MatSelect, MatOption, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
+    } }, directives: [MatCheckbox, NgControlStatus, FormControlDirective, MatFormField, MatLabel, MatSelect, MatOption, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
         args: [{
                 selector: 'select-disabled-example',
                 templateUrl: 'select-disabled-example.html',
-                styleUrls: ['select-disabled-example.css'],
             }]
     }], null, null); })();
 
@@ -241,13 +240,12 @@ SelectErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: SelectErrorSt
         ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("required"));
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatHint, NgIf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatHint, NgIf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
         type: Component,
         args: [{
                 selector: 'select-error-state-matcher-example',
                 templateUrl: 'select-error-state-matcher-example.html',
-                styleUrls: ['select-error-state-matcher-example.css'],
             }]
     }], null, null); })();
 
@@ -336,13 +334,12 @@ SelectFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectFormExample, selecto
         ɵɵproperty("ngForOf", ctx.cars);
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
-    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatSelect, NgControlStatus, NgModel, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], styles: [""] });
+    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatSelect, NgControlStatus, NgModel, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
         args: [{
                 selector: 'select-form-example',
                 templateUrl: 'select-form-example.html',
-                styleUrls: ['select-form-example.css'],
             }]
     }], null, null); })();
 
@@ -436,13 +433,12 @@ SelectHintErrorExample.ɵcmp = ɵɵdefineComponent({ type: SelectHintErrorExampl
         ɵɵproperty("formControl", ctx.selectFormControl);
         ɵɵadvance(8);
         ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
-    } }, directives: [MatFormField, MatLabel, MatSelect, RequiredValidator, NgControlStatus, FormControlDirective, MatOption, NgForOf, NgIf, MatHint, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, RequiredValidator, NgControlStatus, FormControlDirective, MatOption, NgForOf, NgIf, MatHint, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
         args: [{
                 selector: 'select-hint-error-example',
                 templateUrl: 'select-hint-error-example.html',
-                styleUrls: ['select-hint-error-example.css'],
             }]
     }], null, null); })();
 
@@ -478,13 +474,12 @@ SelectMultipleExample.ɵcmp = ɵɵdefineComponent({ type: SelectMultipleExample,
         ɵɵproperty("formControl", ctx.toppings);
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.toppingList);
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatOption], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatOption], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectMultipleExample, [{
         type: Component,
         args: [{
                 selector: 'select-multiple-example',
                 templateUrl: 'select-multiple-example.html',
-                styleUrls: ['select-multiple-example.css'],
             }]
     }], null, null); })();
 
@@ -509,13 +504,12 @@ SelectNoRippleExample.ɵcmp = ɵɵdefineComponent({ type: SelectNoRippleExample,
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectNoRippleExample, [{
         type: Component,
         args: [{
                 selector: 'select-no-ripple-example',
                 templateUrl: 'select-no-ripple-example.html',
-                styleUrls: ['select-no-ripple-example.css'],
             }]
     }], null, null); })();
 
@@ -626,13 +620,12 @@ SelectOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: SelectOptgroupExample,
         ɵɵproperty("formControl", ctx.pokemonControl);
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.pokemonGroups);
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOptgroup], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOptgroup], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
         args: [{
                 selector: 'select-optgroup-example',
                 templateUrl: 'select-optgroup-example.html',
-                styleUrls: ['select-optgroup-example.css'],
             }]
     }], null, null); })();
 
@@ -696,13 +689,12 @@ SelectOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SelectOverviewExample,
     } if (rf & 2) {
         ɵɵadvance(6);
         ɵɵproperty("ngForOf", ctx.foods);
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'select-overview-example',
                 templateUrl: 'select-overview-example.html',
-                styleUrls: ['select-overview-example.css'],
             }]
     }], null, null); })();
 
@@ -815,13 +807,12 @@ SelectResetExample.ɵcmp = ɵɵdefineComponent({ type: SelectResetExample, selec
     } if (rf & 2) {
         ɵɵadvance(8);
         ɵɵproperty("ngForOf", ctx.states);
-    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectResetExample, [{
         type: Component,
         args: [{
                 selector: 'select-reset-example',
                 templateUrl: 'select-reset-example.html',
-                styleUrls: ['select-reset-example.css'],
             }]
     }], null, null); })();
 
@@ -861,13 +852,12 @@ SelectValueBindingExample.ɵcmp = ɵɵdefineComponent({ type: SelectValueBinding
         ɵɵproperty("value", ctx.selected);
         ɵɵadvance(10);
         ɵɵtextInterpolate1("You selected: ", ctx.selected, "");
-    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectValueBindingExample, [{
         type: Component,
         args: [{
                 selector: 'select-value-binding-example',
                 templateUrl: 'select-value-binding-example.html',
-                styleUrls: ['select-value-binding-example.css'],
             }]
     }], null, null); })();
 
@@ -966,13 +956,12 @@ SelectReactiveFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectReactiveForm
         ɵɵproperty("ngForOf", ctx.cars);
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
-    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
+    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectReactiveFormExample, [{
         type: Component,
         args: [{
                 selector: 'select-reactive-form-example',
                 templateUrl: 'select-reactive-form-example.html',
-                styleUrls: ['select-reactive-form-example.css'],
             }]
     }], function () { return []; }, null); })();
 
@@ -1064,13 +1053,12 @@ SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValue
         ɵɵproperty("ngForOf", ctx.cars);
         ɵɵadvance(2);
         ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
-    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectInitialValueExample, [{
         type: Component,
         args: [{
                 selector: 'select-initial-value-example',
                 templateUrl: 'select-initial-value-example.html',
-                styleUrls: ['select-initial-value-example.css'],
             }]
     }], null, null); })();
 

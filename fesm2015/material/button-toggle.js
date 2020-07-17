@@ -111,13 +111,12 @@ ButtonToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleOver
         ɵɵtext(6, "Underline");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatButtonToggleGroup, MatButtonToggle], styles: [""] });
+    } }, directives: [MatButtonToggleGroup, MatButtonToggle], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-overview-example',
                 templateUrl: 'button-toggle-overview-example.html',
-                styleUrls: ['button-toggle-overview-example.css'],
             }]
     }], null, null); })();
 

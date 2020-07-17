@@ -154,13 +154,12 @@ TabGroupAsyncExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAsyncExample, s
         ɵɵproperty("ngIf", ɵɵpipeBind1(1, 2, ctx.asyncTabs) === null);
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(4, 4, ctx.asyncTabs));
-    } }, directives: [NgIf, MatTabGroup, NgForOf, MatTab, MatTabLabel], pipes: [AsyncPipe], styles: [""] });
+    } }, directives: [NgIf, MatTabGroup, NgForOf, MatTab, MatTabLabel], pipes: [AsyncPipe], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupAsyncExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-async-example',
                 templateUrl: 'tab-group-async-example.html',
-                styleUrls: ['tab-group-async-example.css'],
             }]
     }], function () { return []; }, null); })();
 
@@ -182,13 +181,12 @@ TabGroupBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupBasicExample, s
         ɵɵtext(6, " Content 3 ");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatTabGroup, MatTab], styles: [""] });
+    } }, directives: [MatTabGroup, MatTab], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupBasicExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-basic-example',
                 templateUrl: 'tab-group-basic-example.html',
-                styleUrls: ['tab-group-basic-example.css'],
             }]
     }], null, null); })();
 
@@ -363,13 +361,12 @@ TabGroupHeaderBelowExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupHeaderBel
         ɵɵtext(6, " Content 3 ");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatTabGroup, MatTab], styles: [""] });
+    } }, directives: [MatTabGroup, MatTab], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-header-below-example',
                 templateUrl: 'tab-group-header-below-example.html',
-                styleUrls: ['tab-group-header-below-example.css'],
             }]
     }], null, null); })();
 
@@ -421,13 +418,12 @@ TabGroupLazyLoadedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupLazyLoaded
         ɵɵtemplate(6, TabGroupLazyLoadedExample_ng_template_6_Template, 2, 4, "ng-template", 1);
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatTabGroup, MatTab, MatTabContent], pipes: [DatePipe], styles: [""] });
+    } }, directives: [MatTabGroup, MatTab, MatTabContent], pipes: [DatePipe], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-lazy-loaded-example',
                 templateUrl: 'tab-group-lazy-loaded-example.html',
-                styleUrls: ['tab-group-lazy-loaded-example.css'],
             }]
     }], null, null); })();
 

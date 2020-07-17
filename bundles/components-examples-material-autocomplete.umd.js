@@ -308,7 +308,7 @@
                 i0.ɵɵproperty("matAutocomplete", _r0);
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(6, 3, ctx.stateGroupOptions));
-            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOptgroup, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [""] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOptgroup, i6$1.MatOption], pipes: [i5.AsyncPipe], encapsulation: 2 });
         return AutocompleteOptgroupExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteOptgroupExample, [{
@@ -316,7 +316,6 @@
             args: [{
                     selector: 'autocomplete-optgroup-example',
                     templateUrl: './autocomplete-optgroup-example.html',
-                    styleUrls: ['./autocomplete-optgroup-example.css'],
                 }]
         }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
 

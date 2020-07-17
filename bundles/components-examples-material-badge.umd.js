@@ -51,7 +51,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(12);
                 i0.ɵɵproperty("matBadgeHidden", ctx.hidden);
-            } }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], styles: [""] });
+            } }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], encapsulation: 2 });
         return BadgeOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BadgeOverviewExample, [{
@@ -59,7 +59,6 @@
             args: [{
                     selector: 'badge-overview-example',
                     templateUrl: 'badge-overview-example.html',
-                    styleUrls: ['badge-overview-example.css'],
                 }]
         }], null, null); })();
 

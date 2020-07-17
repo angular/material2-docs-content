@@ -120,7 +120,7 @@
                 i0.ɵɵtext(6, "Underline");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], styles: [""] });
+            } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
         return ButtonToggleOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonToggleOverviewExample, [{
@@ -128,7 +128,6 @@
             args: [{
                     selector: 'button-toggle-overview-example',
                     templateUrl: 'button-toggle-overview-example.html',
-                    styleUrls: ['button-toggle-overview-example.css'],
                 }]
         }], null, null); })();
 

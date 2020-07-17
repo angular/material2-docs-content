@@ -75,7 +75,7 @@
                 i0.ɵɵtextInterpolate1("Supports passive event listeners: ", ctx.supportsPassiveEventListeners, "");
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
-            } }, styles: [""] });
+            } }, encapsulation: 2 });
         return CdkPlatformOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPlatformOverviewExample, [{
@@ -83,7 +83,6 @@
             args: [{
                     selector: 'cdk-platform-overview-example',
                     templateUrl: 'cdk-platform-overview-example.html',
-                    styleUrls: ['cdk-platform-overview-example.css'],
                 }]
         }], function () { return [{ type: i1.Platform }]; }, null); })();
 

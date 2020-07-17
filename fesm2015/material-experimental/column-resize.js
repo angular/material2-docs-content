@@ -1,6 +1,6 @@
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableModule } from '@angular/material/table';
-import { MatColumnResize, MatResizable, MatColumnResizeModule, MatDefaultEnabledColumnResize, MatDefaultResizable, MatDefaultEnabledColumnResizeModule, MatDefaultEnabledColumnResizeFlex } from '@angular/material-experimental/column-resize';
+import { MatDefaultEnabledColumnResizeFlex, MatDefaultResizable, MatDefaultEnabledColumnResizeModule, MatDefaultEnabledColumnResize, MatColumnResize, MatResizable, MatColumnResizeModule } from '@angular/material-experimental/column-resize';
 
 /**
  * @license
@@ -9,15 +9,15 @@ import { MatColumnResize, MatResizable, MatColumnResizeModule, MatDefaultEnabled
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-function OptInColumnResizeExample_th_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 12);
+function DefaultEnabledColumnResizeFlexExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-header-cell", 12);
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } if (rf & 2) {
     ɵɵproperty("matResizableMaxWidthPx", 100);
 } }
-function OptInColumnResizeExample_td_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 13);
+function DefaultEnabledColumnResizeFlexExample_mat_cell_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -25,15 +25,15 @@ function OptInColumnResizeExample_td_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
-function OptInColumnResizeExample_th_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+function DefaultEnabledColumnResizeFlexExample_mat_header_cell_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-header-cell", 13);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } if (rf & 2) {
     ɵɵproperty("matResizableMinWidthPx", 150);
 } }
-function OptInColumnResizeExample_td_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 13);
+function DefaultEnabledColumnResizeFlexExample_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -41,13 +41,13 @@ function OptInColumnResizeExample_td_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
-function OptInColumnResizeExample_th_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 15);
+function DefaultEnabledColumnResizeFlexExample_mat_header_cell_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-header-cell", 14);
     ɵɵtext(1, " Weight (Not resizable) ");
     ɵɵelementEnd();
 } }
-function OptInColumnResizeExample_td_9_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 13);
+function DefaultEnabledColumnResizeFlexExample_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -55,13 +55,13 @@ function OptInColumnResizeExample_td_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
-function OptInColumnResizeExample_th_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 16);
+function DefaultEnabledColumnResizeFlexExample_mat_header_cell_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
-function OptInColumnResizeExample_td_12_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 13);
+function DefaultEnabledColumnResizeFlexExample_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -69,11 +69,11 @@ function OptInColumnResizeExample_td_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
-function OptInColumnResizeExample_tr_13_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 17);
+function DefaultEnabledColumnResizeFlexExample_mat_header_row_13_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "mat-header-row");
 } }
-function OptInColumnResizeExample_tr_14_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 18);
+function DefaultEnabledColumnResizeFlexExample_mat_row_14_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "mat-row");
 } }
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -98,35 +98,35 @@ const ELEMENT_DATA = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * @title Opt-in column resize with a table-based mat-table.
+ * @title Default-enabled column resize with a flex-based mat-table.
  */
-class OptInColumnResizeExample {
+class DefaultEnabledColumnResizeFlexExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA;
     }
 }
-OptInColumnResizeExample.ɵfac = function OptInColumnResizeExample_Factory(t) { return new (t || OptInColumnResizeExample)(); };
-OptInColumnResizeExample.ɵcmp = ɵɵdefineComponent({ type: OptInColumnResizeExample, selectors: [["opt-in-column-resize-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "columnResize", "", 1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], ["mat-header-cell", "", "resizable", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMaxWidthPx"], ["mat-cell", ""], ["mat-header-cell", "", "resizable", "", 3, "matResizableMinWidthPx"], ["mat-header-cell", ""], ["mat-header-cell", "", "resizable", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function OptInColumnResizeExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "table", 0);
+DefaultEnabledColumnResizeFlexExample.ɵfac = function DefaultEnabledColumnResizeFlexExample_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexExample)(); };
+DefaultEnabledColumnResizeFlexExample.ɵcmp = ɵɵdefineComponent({ type: DefaultEnabledColumnResizeFlexExample, selectors: [["default-enabled-column-resize-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], [3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["disableResize", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderCellDef"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "matResizableMaxWidthPx"], [3, "matResizableMinWidthPx"], ["disableResize", ""]], template: function DefaultEnabledColumnResizeFlexExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-table", 0);
         ɵɵelementContainerStart(1, 1);
-        ɵɵtemplate(2, OptInColumnResizeExample_th_2_Template, 2, 1, "th", 2);
-        ɵɵtemplate(3, OptInColumnResizeExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵtemplate(2, DefaultEnabledColumnResizeFlexExample_mat_header_cell_2_Template, 2, 1, "mat-header-cell", 2);
+        ɵɵtemplate(3, DefaultEnabledColumnResizeFlexExample_mat_cell_3_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(4, 4);
-        ɵɵtemplate(5, OptInColumnResizeExample_th_5_Template, 2, 1, "th", 5);
-        ɵɵtemplate(6, OptInColumnResizeExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵtemplate(5, DefaultEnabledColumnResizeFlexExample_mat_header_cell_5_Template, 2, 1, "mat-header-cell", 5);
+        ɵɵtemplate(6, DefaultEnabledColumnResizeFlexExample_mat_cell_6_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(7, 6);
-        ɵɵtemplate(8, OptInColumnResizeExample_th_8_Template, 2, 0, "th", 7);
-        ɵɵtemplate(9, OptInColumnResizeExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵtemplate(8, DefaultEnabledColumnResizeFlexExample_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 7);
+        ɵɵtemplate(9, DefaultEnabledColumnResizeFlexExample_mat_cell_9_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(10, 8);
-        ɵɵtemplate(11, OptInColumnResizeExample_th_11_Template, 2, 0, "th", 9);
-        ɵɵtemplate(12, OptInColumnResizeExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵtemplate(11, DefaultEnabledColumnResizeFlexExample_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 9);
+        ɵɵtemplate(12, DefaultEnabledColumnResizeFlexExample_mat_cell_12_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(13, OptInColumnResizeExample_tr_13_Template, 1, 0, "tr", 10);
-        ɵɵtemplate(14, OptInColumnResizeExample_tr_14_Template, 1, 0, "tr", 11);
+        ɵɵtemplate(13, DefaultEnabledColumnResizeFlexExample_mat_header_row_13_Template, 1, 0, "mat-header-row", 10);
+        ɵɵtemplate(14, DefaultEnabledColumnResizeFlexExample_mat_row_14_Template, 1, 0, "mat-row", 11);
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("dataSource", ctx.dataSource);
@@ -134,13 +134,13 @@ OptInColumnResizeExample.ɵcmp = ɵɵdefineComponent({ type: OptInColumnResizeEx
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [MatTable, MatColumnResize, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatResizable, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(OptInColumnResizeExample, [{
+    } }, directives: [MatDefaultEnabledColumnResizeFlex, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatDefaultResizable, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExample, [{
         type: Component,
         args: [{
-                selector: 'opt-in-column-resize-example',
-                templateUrl: 'opt-in-column-resize-example.html',
-                styleUrls: ['opt-in-column-resize-example.css'],
+                selector: 'default-enabled-column-resize-flex-example',
+                templateUrl: 'default-enabled-column-resize-flex-example.html',
+                styleUrls: ['default-enabled-column-resize-flex-example.css'],
             }]
     }], null, null); })();
 
@@ -151,24 +151,24 @@ OptInColumnResizeExample.ɵcmp = ɵɵdefineComponent({ type: OptInColumnResizeEx
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-class OptInColumnResizeExampleModule {
+class DefaultEnabledColumnResizeFlexExampleModule {
 }
-OptInColumnResizeExampleModule.ɵmod = ɵɵdefineNgModule({ type: OptInColumnResizeExampleModule });
-OptInColumnResizeExampleModule.ɵinj = ɵɵdefineInjector({ factory: function OptInColumnResizeExampleModule_Factory(t) { return new (t || OptInColumnResizeExampleModule)(); }, imports: [[
-            MatColumnResizeModule,
+DefaultEnabledColumnResizeFlexExampleModule.ɵmod = ɵɵdefineNgModule({ type: DefaultEnabledColumnResizeFlexExampleModule });
+DefaultEnabledColumnResizeFlexExampleModule.ɵinj = ɵɵdefineInjector({ factory: function DefaultEnabledColumnResizeFlexExampleModule_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexExampleModule)(); }, imports: [[
+            MatDefaultEnabledColumnResizeModule,
             MatTableModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(OptInColumnResizeExampleModule, { declarations: [OptInColumnResizeExample], imports: [MatColumnResizeModule,
-        MatTableModule], exports: [OptInColumnResizeExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(OptInColumnResizeExampleModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DefaultEnabledColumnResizeFlexExampleModule, { declarations: [DefaultEnabledColumnResizeFlexExample], imports: [MatDefaultEnabledColumnResizeModule,
+        MatTableModule], exports: [DefaultEnabledColumnResizeFlexExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExampleModule, [{
         type: NgModule,
         args: [{
                 imports: [
-                    MatColumnResizeModule,
+                    MatDefaultEnabledColumnResizeModule,
                     MatTableModule,
                 ],
-                declarations: [OptInColumnResizeExample],
-                exports: [OptInColumnResizeExample],
+                declarations: [DefaultEnabledColumnResizeFlexExample],
+                exports: [DefaultEnabledColumnResizeFlexExample],
             }]
     }], null, null); })();
 
@@ -349,15 +349,15 @@ DefaultEnabledColumnResizeExampleModule.ɵinj = ɵɵdefineInjector({ factory: fu
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-function DefaultEnabledColumnResizeFlexExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-header-cell", 12);
+function OptInColumnResizeExample_th_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 12);
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } if (rf & 2) {
     ɵɵproperty("matResizableMaxWidthPx", 100);
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_cell_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-cell");
+function OptInColumnResizeExample_td_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -365,15 +365,15 @@ function DefaultEnabledColumnResizeFlexExample_mat_cell_3_Template(rf, ctx) { if
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_header_cell_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-header-cell", 13);
+function OptInColumnResizeExample_th_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 14);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } if (rf & 2) {
     ɵɵproperty("matResizableMinWidthPx", 150);
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-cell");
+function OptInColumnResizeExample_td_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -381,13 +381,13 @@ function DefaultEnabledColumnResizeFlexExample_mat_cell_6_Template(rf, ctx) { if
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_header_cell_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-header-cell", 14);
+function OptInColumnResizeExample_th_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 15);
     ɵɵtext(1, " Weight (Not resizable) ");
     ɵɵelementEnd();
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-cell");
+function OptInColumnResizeExample_td_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -395,13 +395,13 @@ function DefaultEnabledColumnResizeFlexExample_mat_cell_9_Template(rf, ctx) { if
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_header_cell_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-header-cell");
+function OptInColumnResizeExample_th_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-cell");
+function OptInColumnResizeExample_td_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -409,11 +409,11 @@ function DefaultEnabledColumnResizeFlexExample_mat_cell_12_Template(rf, ctx) { i
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_header_row_13_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "mat-header-row");
+function OptInColumnResizeExample_tr_13_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 17);
 } }
-function DefaultEnabledColumnResizeFlexExample_mat_row_14_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "mat-row");
+function OptInColumnResizeExample_tr_14_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 18);
 } }
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -438,35 +438,35 @@ const ELEMENT_DATA$2 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
- * @title Default-enabled column resize with a flex-based mat-table.
+ * @title Opt-in column resize with a table-based mat-table.
  */
-class DefaultEnabledColumnResizeFlexExample {
+class OptInColumnResizeExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA$2;
     }
 }
-DefaultEnabledColumnResizeFlexExample.ɵfac = function DefaultEnabledColumnResizeFlexExample_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexExample)(); };
-DefaultEnabledColumnResizeFlexExample.ɵcmp = ɵɵdefineComponent({ type: DefaultEnabledColumnResizeFlexExample, selectors: [["default-enabled-column-resize-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], [3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["disableResize", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderCellDef"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "matResizableMaxWidthPx"], [3, "matResizableMinWidthPx"], ["disableResize", ""]], template: function DefaultEnabledColumnResizeFlexExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-table", 0);
+OptInColumnResizeExample.ɵfac = function OptInColumnResizeExample_Factory(t) { return new (t || OptInColumnResizeExample)(); };
+OptInColumnResizeExample.ɵcmp = ɵɵdefineComponent({ type: OptInColumnResizeExample, selectors: [["opt-in-column-resize-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "columnResize", "", 1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], ["mat-header-cell", "", "resizable", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMaxWidthPx"], ["mat-cell", ""], ["mat-header-cell", "", "resizable", "", 3, "matResizableMinWidthPx"], ["mat-header-cell", ""], ["mat-header-cell", "", "resizable", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function OptInColumnResizeExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
         ɵɵelementContainerStart(1, 1);
-        ɵɵtemplate(2, DefaultEnabledColumnResizeFlexExample_mat_header_cell_2_Template, 2, 1, "mat-header-cell", 2);
-        ɵɵtemplate(3, DefaultEnabledColumnResizeFlexExample_mat_cell_3_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(2, OptInColumnResizeExample_th_2_Template, 2, 1, "th", 2);
+        ɵɵtemplate(3, OptInColumnResizeExample_td_3_Template, 2, 1, "td", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(4, 4);
-        ɵɵtemplate(5, DefaultEnabledColumnResizeFlexExample_mat_header_cell_5_Template, 2, 1, "mat-header-cell", 5);
-        ɵɵtemplate(6, DefaultEnabledColumnResizeFlexExample_mat_cell_6_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(5, OptInColumnResizeExample_th_5_Template, 2, 1, "th", 5);
+        ɵɵtemplate(6, OptInColumnResizeExample_td_6_Template, 2, 1, "td", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(7, 6);
-        ɵɵtemplate(8, DefaultEnabledColumnResizeFlexExample_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 7);
-        ɵɵtemplate(9, DefaultEnabledColumnResizeFlexExample_mat_cell_9_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(8, OptInColumnResizeExample_th_8_Template, 2, 0, "th", 7);
+        ɵɵtemplate(9, OptInColumnResizeExample_td_9_Template, 2, 1, "td", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(10, 8);
-        ɵɵtemplate(11, DefaultEnabledColumnResizeFlexExample_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 9);
-        ɵɵtemplate(12, DefaultEnabledColumnResizeFlexExample_mat_cell_12_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(11, OptInColumnResizeExample_th_11_Template, 2, 0, "th", 9);
+        ɵɵtemplate(12, OptInColumnResizeExample_td_12_Template, 2, 1, "td", 3);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(13, DefaultEnabledColumnResizeFlexExample_mat_header_row_13_Template, 1, 0, "mat-header-row", 10);
-        ɵɵtemplate(14, DefaultEnabledColumnResizeFlexExample_mat_row_14_Template, 1, 0, "mat-row", 11);
+        ɵɵtemplate(13, OptInColumnResizeExample_tr_13_Template, 1, 0, "tr", 10);
+        ɵɵtemplate(14, OptInColumnResizeExample_tr_14_Template, 1, 0, "tr", 11);
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("dataSource", ctx.dataSource);
@@ -474,13 +474,13 @@ DefaultEnabledColumnResizeFlexExample.ɵcmp = ɵɵdefineComponent({ type: Defaul
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [MatDefaultEnabledColumnResizeFlex, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatDefaultResizable, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExample, [{
+    } }, directives: [MatTable, MatColumnResize, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatResizable, MatCell, MatHeaderRow, MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(OptInColumnResizeExample, [{
         type: Component,
         args: [{
-                selector: 'default-enabled-column-resize-flex-example',
-                templateUrl: 'default-enabled-column-resize-flex-example.html',
-                styleUrls: ['default-enabled-column-resize-flex-example.css'],
+                selector: 'opt-in-column-resize-example',
+                templateUrl: 'opt-in-column-resize-example.html',
+                styleUrls: ['opt-in-column-resize-example.css'],
             }]
     }], null, null); })();
 
@@ -491,24 +491,24 @@ DefaultEnabledColumnResizeFlexExample.ɵcmp = ɵɵdefineComponent({ type: Defaul
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-class DefaultEnabledColumnResizeFlexExampleModule {
+class OptInColumnResizeExampleModule {
 }
-DefaultEnabledColumnResizeFlexExampleModule.ɵmod = ɵɵdefineNgModule({ type: DefaultEnabledColumnResizeFlexExampleModule });
-DefaultEnabledColumnResizeFlexExampleModule.ɵinj = ɵɵdefineInjector({ factory: function DefaultEnabledColumnResizeFlexExampleModule_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexExampleModule)(); }, imports: [[
-            MatDefaultEnabledColumnResizeModule,
+OptInColumnResizeExampleModule.ɵmod = ɵɵdefineNgModule({ type: OptInColumnResizeExampleModule });
+OptInColumnResizeExampleModule.ɵinj = ɵɵdefineInjector({ factory: function OptInColumnResizeExampleModule_Factory(t) { return new (t || OptInColumnResizeExampleModule)(); }, imports: [[
+            MatColumnResizeModule,
             MatTableModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DefaultEnabledColumnResizeFlexExampleModule, { declarations: [DefaultEnabledColumnResizeFlexExample], imports: [MatDefaultEnabledColumnResizeModule,
-        MatTableModule], exports: [DefaultEnabledColumnResizeFlexExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExampleModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(OptInColumnResizeExampleModule, { declarations: [OptInColumnResizeExample], imports: [MatColumnResizeModule,
+        MatTableModule], exports: [OptInColumnResizeExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(OptInColumnResizeExampleModule, [{
         type: NgModule,
         args: [{
                 imports: [
-                    MatDefaultEnabledColumnResizeModule,
+                    MatColumnResizeModule,
                     MatTableModule,
                 ],
-                declarations: [DefaultEnabledColumnResizeFlexExample],
-                exports: [DefaultEnabledColumnResizeFlexExample],
+                declarations: [OptInColumnResizeExample],
+                exports: [OptInColumnResizeExample],
             }]
     }], null, null); })();
 

@@ -73,13 +73,12 @@ CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOvervi
         ɵɵtextInterpolate1("Supports passive event listeners: ", ctx.supportsPassiveEventListeners, "");
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
-    } }, styles: [""] });
+    } }, encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPlatformOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-platform-overview-example',
                 templateUrl: 'cdk-platform-overview-example.html',
-                styleUrls: ['cdk-platform-overview-example.css'],
             }]
     }], function () { return [{ type: Platform }]; }, null); })();
 

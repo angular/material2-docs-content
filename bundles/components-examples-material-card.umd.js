@@ -60,7 +60,7 @@
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵtext(1, "Simple card");
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatCard], styles: [""] });
+            } }, directives: [i1.MatCard], encapsulation: 2 });
         return CardOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CardOverviewExample, [{
@@ -68,7 +68,6 @@
             args: [{
                     selector: 'card-overview-example',
                     templateUrl: 'card-overview-example.html',
-                    styleUrls: ['card-overview-example.css'],
                 }]
         }], null, null); })();
 

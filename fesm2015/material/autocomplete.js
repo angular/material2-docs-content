@@ -306,13 +306,12 @@ AutocompleteOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOptg
         ɵɵproperty("matAutocomplete", _r0);
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(6, 3, ctx.stateGroupOptions));
-    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlName, RequiredValidator, MatAutocomplete, NgForOf, MatOptgroup, MatOption], pipes: [AsyncPipe], styles: [""] });
+    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlName, RequiredValidator, MatAutocomplete, NgForOf, MatOptgroup, MatOption], pipes: [AsyncPipe], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteOptgroupExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-optgroup-example',
                 templateUrl: './autocomplete-optgroup-example.html',
-                styleUrls: ['./autocomplete-optgroup-example.css'],
             }]
     }], function () { return [{ type: FormBuilder }]; }, null); })();
 

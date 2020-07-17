@@ -46,7 +46,7 @@
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵproperty("matMenuTriggerFor", _r0);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], styles: [""] });
+            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
         return MenuIconsExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuIconsExample, [{
@@ -54,7 +54,6 @@
             args: [{
                     selector: 'menu-icons-example',
                     templateUrl: 'menu-icons-example.html',
-                    styleUrls: ['menu-icons-example.css'],
                 }]
         }], null, null); })();
 
@@ -80,7 +79,7 @@
             } if (rf & 2) {
                 var _r0 = i0.ɵɵreference(3);
                 i0.ɵɵproperty("matMenuTriggerFor", _r0);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
+            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
         return MenuOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuOverviewExample, [{
@@ -88,7 +87,6 @@
             args: [{
                     selector: 'menu-overview-example',
                     templateUrl: 'menu-overview-example.html',
-                    styleUrls: ['menu-overview-example.css'],
                 }]
         }], null, null); })();
 
@@ -156,7 +154,7 @@
                 i0.ɵɵproperty("matMenuTriggerFor", _r2);
                 i0.ɵɵadvance(8);
                 i0.ɵɵproperty("matMenuTriggerFor", _r3);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
+            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
         return MenuPositionExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuPositionExample, [{
@@ -164,7 +162,6 @@
             args: [{
                     selector: 'menu-position-example',
                     templateUrl: 'menu-position-example.html',
-                    styleUrls: ['menu-position-example.css'],
                 }]
         }], null, null); })();
 
@@ -293,7 +290,7 @@
                 i0.ɵɵproperty("matMenuTriggerFor", _r4);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matMenuTriggerFor", _r5);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
+            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
         return MenuNestedExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuNestedExample, [{
@@ -301,7 +298,6 @@
             args: [{
                     selector: 'menu-nested-example',
                     templateUrl: 'menu-nested-example.html',
-                    styleUrls: ['menu-nested-example.css'],
                 }]
         }], null, null); })();
 

@@ -26,13 +26,12 @@ DialogContentExample.ɵcmp = ɵɵdefineComponent({ type: DialogContentExample, s
         ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener() { return ctx.openDialog(); });
         ɵɵtext(1, "Open dialog");
         ɵɵelementEnd();
-    } }, directives: [MatButton], styles: [""] });
+    } }, directives: [MatButton], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogContentExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-content-example',
                 templateUrl: 'dialog-content-example.html',
-                styleUrls: ['dialog-content-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
 class DialogContentExampleDialog {
@@ -157,13 +156,12 @@ DialogDataExample.ɵcmp = ɵɵdefineComponent({ type: DialogDataExample, selecto
         ɵɵlistener("click", function DialogDataExample_Template_button_click_0_listener() { return ctx.openDialog(); });
         ɵɵtext(1, "Open dialog");
         ɵɵelementEnd();
-    } }, directives: [MatButton], styles: [""] });
+    } }, directives: [MatButton], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogDataExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-data-example',
                 templateUrl: 'dialog-data-example.html',
-                styleUrls: ['dialog-data-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
 class DialogDataExampleDialog {
@@ -229,13 +227,12 @@ DialogElementsExample.ɵcmp = ɵɵdefineComponent({ type: DialogElementsExample,
         ɵɵlistener("click", function DialogElementsExample_Template_button_click_0_listener() { return ctx.openDialog(); });
         ɵɵtext(1, "Launch dialog");
         ɵɵelementEnd();
-    } }, directives: [MatButton], styles: [""] });
+    } }, directives: [MatButton], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogElementsExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-elements-example',
                 templateUrl: 'dialog-elements-example.html',
-                styleUrls: ['dialog-elements-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
 class DialogElementsExampleDialog {
@@ -318,13 +315,12 @@ DialogOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExample,
         ɵɵproperty("ngModel", ctx.name);
         ɵɵadvance(4);
         ɵɵproperty("ngIf", ctx.animal);
-    } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton, NgIf], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton, NgIf], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-overview-example',
                 templateUrl: 'dialog-overview-example.html',
-                styleUrls: ['dialog-overview-example.css'],
             }]
     }], function () { return [{ type: MatDialog }]; }, null); })();
 class DialogOverviewExampleDialog {

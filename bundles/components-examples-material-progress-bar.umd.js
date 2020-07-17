@@ -13,7 +13,7 @@
         ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
         ProgressBarBufferExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], styles: [""] });
+            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarBufferExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
@@ -21,7 +21,6 @@
             args: [{
                     selector: 'progress-bar-buffer-example',
                     templateUrl: 'progress-bar-buffer-example.html',
-                    styleUrls: ['progress-bar-buffer-example.css'],
                 }]
         }], null, null); })();
 
@@ -155,7 +154,7 @@
         ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
         ProgressBarDeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], styles: [""] });
+            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarDeterminateExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
@@ -163,7 +162,6 @@
             args: [{
                     selector: 'progress-bar-determinate-example',
                     templateUrl: 'progress-bar-determinate-example.html',
-                    styleUrls: ['progress-bar-determinate-example.css'],
                 }]
         }], null, null); })();
 
@@ -176,7 +174,7 @@
         ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
         ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], styles: [""] });
+            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarIndeterminateExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
@@ -184,7 +182,6 @@
             args: [{
                     selector: 'progress-bar-indeterminate-example',
                     templateUrl: 'progress-bar-indeterminate-example.html',
-                    styleUrls: ['progress-bar-indeterminate-example.css'],
                 }]
         }], null, null); })();
 
@@ -197,7 +194,7 @@
         ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
         ProgressBarQueryExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], styles: [""] });
+            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarQueryExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
@@ -205,7 +202,6 @@
             args: [{
                     selector: 'progress-bar-query-example',
                     templateUrl: 'progress-bar-query-example.html',
-                    styleUrls: ['progress-bar-query-example.css'],
                 }]
         }], null, null); })();
 

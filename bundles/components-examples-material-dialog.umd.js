@@ -23,7 +23,7 @@
                 i0.ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(1, "Open dialog");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatButton], styles: [""] });
+            } }, directives: [i2.MatButton], encapsulation: 2 });
         return DialogContentExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogContentExample, [{
@@ -31,7 +31,6 @@
             args: [{
                     selector: 'dialog-content-example',
                     templateUrl: 'dialog-content-example.html',
-                    styleUrls: ['dialog-content-example.css'],
                 }]
         }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogContentExampleDialog = /** @class */ (function () {
@@ -158,7 +157,7 @@
                 i0.ɵɵlistener("click", function DialogDataExample_Template_button_click_0_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(1, "Open dialog");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatButton], styles: [""] });
+            } }, directives: [i2.MatButton], encapsulation: 2 });
         return DialogDataExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogDataExample, [{
@@ -166,7 +165,6 @@
             args: [{
                     selector: 'dialog-data-example',
                     templateUrl: 'dialog-data-example.html',
-                    styleUrls: ['dialog-data-example.css'],
                 }]
         }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogDataExampleDialog = /** @class */ (function () {
@@ -232,7 +230,7 @@
                 i0.ɵɵlistener("click", function DialogElementsExample_Template_button_click_0_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(1, "Launch dialog");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatButton], styles: [""] });
+            } }, directives: [i2.MatButton], encapsulation: 2 });
         return DialogElementsExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogElementsExample, [{
@@ -240,7 +238,6 @@
             args: [{
                     selector: 'dialog-elements-example',
                     templateUrl: 'dialog-elements-example.html',
-                    styleUrls: ['dialog-elements-example.css'],
                 }]
         }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogElementsExampleDialog = /** @class */ (function () {
@@ -326,7 +323,7 @@
                 i0.ɵɵproperty("ngModel", ctx.name);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("ngIf", ctx.animal);
-            } }, directives: [i2$1.MatFormField, i2$1.MatLabel, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i2.MatButton, i3.NgIf], styles: [""] });
+            } }, directives: [i2$1.MatFormField, i2$1.MatLabel, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i2.MatButton, i3.NgIf], encapsulation: 2 });
         return DialogOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogOverviewExample, [{
@@ -334,7 +331,6 @@
             args: [{
                     selector: 'dialog-overview-example',
                     templateUrl: 'dialog-overview-example.html',
-                    styleUrls: ['dialog-overview-example.css'],
                 }]
         }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogOverviewExampleDialog = /** @class */ (function () {

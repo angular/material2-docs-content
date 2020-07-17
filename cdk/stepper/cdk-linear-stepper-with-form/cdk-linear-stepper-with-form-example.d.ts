@@ -10,7 +10,7 @@ export declare class CdkLinearStepperWithFormExample {
     constructor(_formBuilder: FormBuilder);
     toggleLinearity(): void;
     static ɵfac: i0.ɵɵFactoryDef<CdkLinearStepperWithFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form-example", never, {}, {}, never, never>;
 }
 /** Custom CDK linear stepper component */
 export declare class CustomLinearStepper extends CdkStepper {

@@ -262,13 +262,12 @@ DatepickerCustomIconExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerCustom
         ɵɵproperty("matDatepicker", _r0);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatIcon, MatDatepickerToggleIcon, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatIcon, MatDatepickerToggleIcon, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerCustomIconExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-custom-icon-example',
                 templateUrl: 'datepicker-custom-icon-example.html',
-                styleUrls: ['datepicker-custom-icon-example.css'],
             }]
     }], null, null); })();
 
@@ -362,13 +361,12 @@ DatepickerDisabledExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerDisabled
         ɵɵproperty("matDatepicker", _r2);
         ɵɵadvance(1);
         ɵɵproperty("for", _r2);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerDisabledExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-disabled-example',
                 templateUrl: 'datepicker-disabled-example.html',
-                styleUrls: ['datepicker-disabled-example.css'],
             }]
     }], null, null); })();
 
@@ -449,13 +447,12 @@ DatepickerFilterExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerFilterExam
         ɵɵproperty("matDatepickerFilter", ctx.myFilter)("matDatepicker", _r0);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerFilterExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-filter-example',
                 templateUrl: 'datepicker-filter-example.html',
-                styleUrls: ['datepicker-filter-example.css'],
             }]
     }], null, null); })();
 
@@ -505,13 +502,12 @@ DatepickerFormatsExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerFormatsEx
         ɵɵproperty("matDatepicker", _r0)("formControl", ctx.date);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerFormatsExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-formats-example',
                 templateUrl: 'datepicker-formats-example.html',
-                styleUrls: ['datepicker-formats-example.css'],
                 providers: [
                     // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                     // application's root module. We provide it at the component level here, due to limitations of
@@ -617,13 +613,12 @@ DatepickerMinMaxExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerMinMaxExam
         ɵɵproperty("min", ctx.minDate)("max", ctx.maxDate)("matDatepicker", _r0);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerMinMaxExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-min-max-example',
                 templateUrl: 'datepicker-min-max-example.html',
-                styleUrls: ['datepicker-min-max-example.css'],
             }]
     }], function () { return []; }, null); })();
 
@@ -657,13 +652,12 @@ DatepickerMomentExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerMomentExam
         ɵɵproperty("matDatepicker", _r0)("formControl", ctx.date);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerMomentExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-moment-example',
                 templateUrl: 'datepicker-moment-example.html',
-                styleUrls: ['datepicker-moment-example.css'],
                 providers: [
                     // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
@@ -693,13 +687,12 @@ DatepickerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerOverview
         ɵɵproperty("matDatepicker", _r0);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-overview-example',
                 templateUrl: 'datepicker-overview-example.html',
-                styleUrls: ['datepicker-overview-example.css'],
             }]
     }], null, null); })();
 
@@ -727,13 +720,12 @@ DatepickerStartViewExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerStartVi
         ɵɵproperty("for", _r0);
         ɵɵadvance(1);
         ɵɵproperty("startAt", ctx.startDate);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerStartViewExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-start-view-example',
                 templateUrl: 'datepicker-start-view-example.html',
-                styleUrls: ['datepicker-start-view-example.css'],
             }]
     }], null, null); })();
 
@@ -756,13 +748,12 @@ DatepickerTouchExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerTouchExampl
         ɵɵproperty("matDatepicker", _r0);
         ɵɵadvance(1);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerTouchExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-touch-example',
                 templateUrl: 'datepicker-touch-example.html',
-                styleUrls: ['datepicker-touch-example.css'],
             }]
     }], null, null); })();
 
@@ -928,13 +919,12 @@ DateRangePickerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePick
         ɵɵproperty("rangePicker", _r0);
         ɵɵadvance(3);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'date-range-picker-overview-example',
                 templateUrl: 'date-range-picker-overview-example.html',
-                styleUrls: ['date-range-picker-overview-example.css'],
             }]
     }], null, null); })();
 
@@ -988,13 +978,12 @@ DateRangePickerFormsExample.ɵcmp = ɵɵdefineComponent({ type: DateRangePickerF
         ɵɵproperty("ngIf", ctx.range.controls.end.hasError("matEndDateInvalid"));
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Selected range: ", ɵɵpipeBind1(13, 6, ctx.range.value), "");
-    } }, directives: [MatFormField, MatLabel, MatDateRangeInput, NgControlStatusGroup, FormGroupDirective, MatStartDate, DefaultValueAccessor, NgControlStatus, FormControlName, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker, NgIf, MatError], pipes: [JsonPipe], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatDateRangeInput, NgControlStatusGroup, FormGroupDirective, MatStartDate, DefaultValueAccessor, NgControlStatus, FormControlName, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker, NgIf, MatError], pipes: [JsonPipe], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerFormsExample, [{
         type: Component,
         args: [{
                 selector: 'date-range-picker-forms-example',
                 templateUrl: 'date-range-picker-forms-example.html',
-                styleUrls: ['date-range-picker-forms-example.css'],
             }]
     }], null, null); })();
 
@@ -1108,13 +1097,12 @@ DateRangePickerSelectionStrategyExample.ɵcmp = ɵɵdefineComponent({ type: Date
         ɵɵproperty("rangePicker", _r0);
         ɵɵadvance(3);
         ɵɵproperty("for", _r0);
-    } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatDateRangeInput, MatStartDate, MatEndDate, MatDatepickerToggle, MatSuffix, MatDateRangePicker], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
         type: Component,
         args: [{
                 selector: 'date-range-picker-selection-strategy-example',
                 templateUrl: 'date-range-picker-selection-strategy-example.html',
-                styleUrls: ['date-range-picker-selection-strategy-example.css'],
                 providers: [{
                         provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
                         useClass: FiveDayRangeSelectionStrategy

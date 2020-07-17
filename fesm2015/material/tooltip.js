@@ -253,13 +253,12 @@ TooltipModifiedDefaultsExample.ɵcmp = ɵɵdefineComponent({ type: TooltipModifi
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, " Button with delay-default tooltip\n");
         ɵɵelementEnd();
-    } }, directives: [MatButton, MatTooltip], styles: [""] });
+    } }, directives: [MatButton, MatTooltip], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-modified-defaults-example',
                 templateUrl: 'tooltip-modified-defaults-example.html',
-                styleUrls: ['tooltip-modified-defaults-example.css'],
                 providers: [
                     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
                 ],
@@ -276,13 +275,12 @@ TooltipOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TooltipOverviewExampl
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, " Action\n");
         ɵɵelementEnd();
-    } }, directives: [MatButton, MatTooltip], styles: [""] });
+    } }, directives: [MatButton, MatTooltip], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-overview-example',
                 templateUrl: 'tooltip-overview-example.html',
-                styleUrls: ['tooltip-overview-example.css'],
             }]
     }], null, null); })();
 

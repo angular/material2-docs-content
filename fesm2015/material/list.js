@@ -23,13 +23,12 @@ ListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ListOverviewExample, sel
         ɵɵtext(6, "Item 3");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: [MatList, MatListItem], styles: [""] });
+    } }, directives: [MatList, MatListItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ListOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'list-overview-example',
                 templateUrl: 'list-overview-example.html',
-                styleUrls: ['list-overview-example.css'],
             }]
     }], null, null); })();
 

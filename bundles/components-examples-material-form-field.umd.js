@@ -294,7 +294,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatInput, i3$1.MatIcon, i1$1.MatSuffix, i1$1.MatHint], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatInput, i3$1.MatIcon, i1$1.MatSuffix, i1$1.MatHint], encapsulation: 2 });
         return FormFieldAppearanceExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FormFieldAppearanceExample, [{
@@ -302,7 +302,6 @@
             args: [{
                     selector: 'form-field-appearance-example',
                     templateUrl: 'form-field-appearance-example.html',
-                    styleUrls: ['form-field-appearance-example.css'],
                 }]
         }], null, null); })();
 
@@ -334,7 +333,7 @@
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵproperty("formGroup", ctx.form);
-            } }, directives: function () { return [i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, MyTelInput, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3$1.MatIcon, i1$1.MatSuffix, i1$1.MatHint]; }, styles: [""] });
+            } }, directives: function () { return [i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, MyTelInput, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3$1.MatIcon, i1$1.MatSuffix, i1$1.MatHint]; }, encapsulation: 2 });
         return FormFieldCustomControlExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FormFieldCustomControlExample, [{
@@ -342,7 +341,6 @@
             args: [{
                     selector: 'form-field-custom-control-example',
                     templateUrl: 'form-field-custom-control-example.html',
-                    styleUrls: ['form-field-custom-control-example.css']
                 }]
         }], null, null); })();
     /** Data structure for holding telephone number. */
@@ -796,7 +794,7 @@
                 i0.ɵɵelement(16, "textarea", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatInput, i3$3.MatSelect, i4$2.MatOption], styles: [""] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatInput, i3$3.MatSelect, i4$2.MatOption], encapsulation: 2 });
         return FormFieldOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(FormFieldOverviewExample, [{
@@ -804,7 +802,6 @@
             args: [{
                     selector: 'form-field-overview-example',
                     templateUrl: 'form-field-overview-example.html',
-                    styleUrls: ['form-field-overview-example.css'],
                 }]
         }], null, null); })();
 

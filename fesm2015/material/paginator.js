@@ -108,13 +108,12 @@ PaginatorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorOverviewEx
         ɵɵelement(0, "mat-paginator", 0);
     } if (rf & 2) {
         ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", ɵɵpureFunction0(3, _c0$1));
-    } }, directives: [MatPaginator], styles: [""] });
+    } }, directives: [MatPaginator], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'paginator-overview-example',
                 templateUrl: 'paginator-overview-example.html',
-                styleUrls: ['paginator-overview-example.css'],
             }]
     }], null, null); })();
 

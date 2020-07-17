@@ -23,7 +23,7 @@
                 i0.ɵɵtext(6, "Item 3");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatList, i1.MatListItem], styles: [""] });
+            } }, directives: [i1.MatList, i1.MatListItem], encapsulation: 2 });
         return ListOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ListOverviewExample, [{
@@ -31,7 +31,6 @@
             args: [{
                     selector: 'list-overview-example',
                     templateUrl: 'list-overview-example.html',
-                    styleUrls: ['list-overview-example.css'],
                 }]
         }], null, null); })();
 

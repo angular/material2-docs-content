@@ -281,7 +281,7 @@
                 i0.ɵɵtext(8, "Accent fish");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i2$1.MatChipList, i2$1.MatChip], styles: [""] });
+            } }, directives: [i2$1.MatChipList, i2$1.MatChip], encapsulation: 2 });
         return ChipsOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ChipsOverviewExample, [{
@@ -289,7 +289,6 @@
             args: [{
                     selector: 'chips-overview-example',
                     templateUrl: 'chips-overview-example.html',
-                    styleUrls: ['chips-overview-example.css'],
                 }]
         }], null, null); })();
 

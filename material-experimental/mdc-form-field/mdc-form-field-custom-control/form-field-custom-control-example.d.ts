@@ -5,9 +5,9 @@ import { MatFormFieldControl } from '@angular/material-experimental/mdc-form-fie
 import { Subject } from 'rxjs';
 import * as i0 from "@angular/core";
 /** @title Form field with custom telephone number input control. */
-export declare class FormFieldCustomControlExample {
-    static ɵfac: i0.ɵɵFactoryDef<FormFieldCustomControlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never>;
+export declare class MdcFormFieldCustomControlExample {
+    static ɵfac: i0.ɵɵFactoryDef<MdcFormFieldCustomControlExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<MdcFormFieldCustomControlExample, "mdc-form-field-custom-control-example", never, {}, {}, never, never>;
 }
 /** Data structure for holding telephone number. */
 export declare class MyTel {

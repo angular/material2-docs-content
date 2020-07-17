@@ -25,7 +25,7 @@
                 i0.ɵɵtext(8, "Item 3");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], styles: [""] });
+            } }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], encapsulation: 2 });
         return DividerOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DividerOverviewExample, [{
@@ -33,7 +33,6 @@
             args: [{
                     selector: 'divider-overview-example',
                     templateUrl: 'divider-overview-example.html',
-                    styleUrls: ['divider-overview-example.css'],
                 }]
         }], null, null); })();
 

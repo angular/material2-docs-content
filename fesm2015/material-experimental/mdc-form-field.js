@@ -8,10 +8,10 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs';
 
 /** @title Form field with custom telephone number input control. */
-class FormFieldCustomControlExample {
+class MdcFormFieldCustomControlExample {
 }
-FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
-FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+MdcFormFieldCustomControlExample.ɵfac = function MdcFormFieldCustomControlExample_Factory(t) { return new (t || MdcFormFieldCustomControlExample)(); };
+MdcFormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
         ɵɵtext(2, "Phone number");
@@ -24,13 +24,12 @@ FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCusto
         ɵɵtext(7, "Include area code");
         ɵɵelementEnd();
         ɵɵelementEnd();
-    } }, directives: function () { return [MatFormField, MatLabel, MyTelInput, MatIcon, MatSuffix, MatHint]; }, styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldCustomControlExample, [{
+    } }, directives: function () { return [MatFormField, MatLabel, MyTelInput, MatIcon, MatSuffix, MatHint]; }, encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
         type: Component,
         args: [{
-                selector: 'form-field-custom-control-example',
+                selector: 'mdc-form-field-custom-control-example',
                 templateUrl: 'form-field-custom-control-example.html',
-                styleUrls: ['form-field-custom-control-example.css'],
             }]
     }], null, null); })();
 /** Data structure for holding telephone number. */
@@ -189,7 +188,7 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         }] }); })();
 
 const EXAMPLES = [
-    FormFieldCustomControlExample,
+    MdcFormFieldCustomControlExample,
 ];
 class MdcFormFieldExamplesModule {
 }
@@ -200,10 +199,10 @@ MdcFormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcFor
             MatIconModule,
             ReactiveFormsModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [FormFieldCustomControlExample, MyTelInput], imports: [CommonModule,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [CommonModule,
         MatFormFieldModule,
         MatIconModule,
-        ReactiveFormsModule], exports: [FormFieldCustomControlExample, MyTelInput] }); })();
+        ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
         type: NgModule,
         args: [{
@@ -223,5 +222,5 @@ MdcFormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcFor
  * Generated bundle index. Do not edit.
  */
 
-export { FormFieldCustomControlExample, MdcFormFieldExamplesModule, MyTelInput };
+export { MdcFormFieldCustomControlExample, MdcFormFieldExamplesModule, MyTelInput };
 //# sourceMappingURL=mdc-form-field.js.map

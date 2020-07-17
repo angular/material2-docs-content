@@ -172,7 +172,7 @@
                 i0.ɵɵelementStart(0, "mat-slide-toggle");
                 i0.ɵɵtext(1, "Slide me!");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2$1.MatSlideToggle], styles: [""] });
+            } }, directives: [i2$1.MatSlideToggle], encapsulation: 2 });
         return SlideToggleOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
@@ -180,7 +180,6 @@
             args: [{
                     selector: 'slide-toggle-overview-example',
                     templateUrl: 'slide-toggle-overview-example.html',
-                    styleUrls: ['slide-toggle-overview-example.css'],
                 }]
         }], null, null); })();
 

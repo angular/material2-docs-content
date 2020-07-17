@@ -51,13 +51,12 @@ BadgeOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BadgeOverviewExample, s
     } if (rf & 2) {
         ɵɵadvance(12);
         ɵɵproperty("matBadgeHidden", ctx.hidden);
-    } }, directives: [MatBadge, MatButton, MatIcon], styles: [""] });
+    } }, directives: [MatBadge, MatButton, MatIcon], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(BadgeOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'badge-overview-example',
                 templateUrl: 'badge-overview-example.html',
-                styleUrls: ['badge-overview-example.css'],
             }]
     }], null, null); })();
 
