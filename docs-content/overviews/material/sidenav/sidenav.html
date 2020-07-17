@@ -203,6 +203,13 @@ describes your sidenav, <code>role=&quot;region&quot;</code> is recommended.</p>
 represents the primary content of the page, it may make sense to mark it <code>role=&quot;main&quot;</code>. If no more
 specific role makes sense, <code>role=&quot;region&quot;</code> is again a good fallback.</p>
 
+        <h4 id="focus-management" class="docs-header-link">
+          <span header-link="focus-management"></span>
+          Focus management
+        </h4>
+      <p>The sidenav has the ability to capture focus. This behavior is turned on for the <code>push</code> and <code>over</code> modes and it is off for <code>side</code> mode. You can change its default behavior by the <code>autoFocus</code> input.</p>
+<p>By default the first tabbable element will recieve focus upon open. If you want a different element to be focused, you can set the <code>cdkFocusInitial</code> attribute on it.</p>
+
         <h3 id="troubleshooting" class="docs-header-link">
           <span header-link="troubleshooting"></span>
           Troubleshooting
