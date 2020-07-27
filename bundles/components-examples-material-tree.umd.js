@@ -417,13 +417,14 @@
              * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
              */
             this.transformer = function (node, level) {
+                var _a;
                 var existingNode = _this.nestedNodeMap.get(node);
                 var flatNode = existingNode && existingNode.item === node.item
                     ? existingNode
                     : new TodoItemFlatNode();
                 flatNode.item = node.item;
                 flatNode.level = level;
-                flatNode.expandable = !!node.children;
+                flatNode.expandable = !!((_a = node.children) === null || _a === void 0 ? void 0 : _a.length);
                 _this.flatNodeMap.set(flatNode, node);
                 _this.nestedNodeMap.set(node, flatNode);
                 return flatNode;
@@ -439,7 +440,7 @@
         TreeChecklistExample.prototype.descendantsAllSelected = function (node) {
             var _this = this;
             var descendants = this.treeControl.getDescendants(node);
-            var descAllSelected = descendants.every(function (child) {
+            var descAllSelected = descendants.length > 0 && descendants.every(function (child) {
                 return _this.checklistSelection.isSelected(child);
             });
             return descAllSelected;
@@ -460,9 +461,7 @@
             this.checklistSelection.isSelected(node)
                 ? (_a = this.checklistSelection).select.apply(_a, __spread(descendants)) : (_b = this.checklistSelection).deselect.apply(_b, __spread(descendants));
             // Force update for the parent
-            descendants.every(function (child) {
-                return _this.checklistSelection.isSelected(child);
-            });
+            descendants.forEach(function (child) { return _this.checklistSelection.isSelected(child); });
             this.checkAllParentsSelection(node);
         };
         /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
@@ -483,7 +482,7 @@
             var _this = this;
             var nodeSelected = this.checklistSelection.isSelected(node);
             var descendants = this.treeControl.getDescendants(node);
-            var descAllSelected = descendants.every(function (child) {
+            var descAllSelected = descendants.length > 0 && descendants.every(function (child) {
                 return _this.checklistSelection.isSelected(child);
             });
             if (nodeSelected && !descAllSelected) {

@@ -184,13 +184,14 @@ class TreeChecklistExample {
          * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
          */
         this.transformer = (node, level) => {
+            var _a;
             const existingNode = this.nestedNodeMap.get(node);
             const flatNode = existingNode && existingNode.item === node.item
                 ? existingNode
                 : new TodoItemFlatNode();
             flatNode.item = node.item;
             flatNode.level = level;
-            flatNode.expandable = !!node.children;
+            flatNode.expandable = !!((_a = node.children) === null || _a === void 0 ? void 0 : _a.length);
             this.flatNodeMap.set(flatNode, node);
             this.nestedNodeMap.set(node, flatNode);
             return flatNode;
@@ -205,7 +206,9 @@ class TreeChecklistExample {
     /** Whether all the descendants of the node are selected. */
     descendantsAllSelected(node) {
         const descendants = this.treeControl.getDescendants(node);
-        const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
+        const descAllSelected = descendants.length > 0 && descendants.every(child => {
+            return this.checklistSelection.isSelected(child);
+        });
         return descAllSelected;
     }
     /** Whether part of the descendants are selected */
@@ -222,7 +225,7 @@ class TreeChecklistExample {
             ? this.checklistSelection.select(...descendants)
             : this.checklistSelection.deselect(...descendants);
         // Force update for the parent
-        descendants.every(child => this.checklistSelection.isSelected(child));
+        descendants.forEach(child => this.checklistSelection.isSelected(child));
         this.checkAllParentsSelection(node);
     }
     /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
@@ -242,7 +245,9 @@ class TreeChecklistExample {
     checkRootNodeSelection(node) {
         const nodeSelected = this.checklistSelection.isSelected(node);
         const descendants = this.treeControl.getDescendants(node);
-        const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
+        const descAllSelected = descendants.length > 0 && descendants.every(child => {
+            return this.checklistSelection.isSelected(child);
+        });
         if (nodeSelected && !descAllSelected) {
             this.checklistSelection.deselect(node);
         }
