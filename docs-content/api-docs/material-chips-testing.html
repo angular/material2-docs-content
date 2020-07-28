@@ -1,0 +1,1365 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Material chips-testing
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatChipHarness} from '@angular/material/chips/testing';
+    </code>
+  </p><h3 id="material-chips-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="MatChipHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipHarness"></span>
+  <code>MatChipHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material chip in tests.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>deselect
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Deselects the given chip. Only applies if it&#39;s selectable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getRemoveButton
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the remove button inside of a chip.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipRemoveHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Optionally filters which chips are included.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipRemoveHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the chip.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the chip is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isSelected
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the chip is selected.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>remove
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Removes the given chip. Only applies if it&#39;s removable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>select
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects the given chip. Only applies if it&#39;s selectable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>toggle
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Toggles the selected state of the given chip. Only applies if it&#39;s selectable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipListHarness"></span>
+  <code>MatChipListHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard chip list in tests.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getChips
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the list of chips inside the chip list.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Optionally filters which chips are included.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getInput
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the <code>MatChipInput</code> inside the chip list.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipInputHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Optionally filters which chip input is included.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipInputHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getOrientation
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the orientation of the chip list.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;&#39;horizontal&#39; | &#39;vertical&#39;&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isInvalid
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is invalid.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isMultiple
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is in multi selection mode.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isRequired
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is required.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>selectChips
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects a chip inside the chip list.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>An optional filter to apply to the child chips.
+   All the chips matching the filter will be selected.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipInputHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipInputHarness"></span>
+  <code>MatChipInputHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Material chip inputs in tests.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>blur
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Blurs the input and returns a promise that indicates when the
+action is complete.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the input and returns a promise that indicates when the
+action is complete.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getPlaceholder
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the placeholder of the input.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value of the input.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the input is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isFocused
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the input is focused.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isRequired
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the input is required.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>sendSeparatorKey
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sends a chip separator key to the input element.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        key</p>
+      <code class="docs-api-method-parameter-type">string | TestKey</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>setValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the value of the input. The value will be set by simulating
+keypresses that correspond to the given value.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        newValue</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipRemoveHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipRemoveHarness"></span>
+  <code>MatChipRemoveHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Material chip remove button in tests.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>click
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Clicks the remove button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="material-chips-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="ChipHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipHarnessFilters"></span>
+  <code>ChipHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selected: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find chip instances whose selected state matches the given value.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>text: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find instances whose text matches the given value.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipListHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipListHarnessFilters"></span>
+  <code>ChipListHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipListHarness</code> instances.</p>
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipInputHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipInputHarnessFilters"></span>
+  <code>ChipInputHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipListInputHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>placeholder: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Filters based on the placeholder text of the input.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Filters based on the value of the input.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipRemoveHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipRemoveHarnessFilters"></span>
+  <code>ChipRemoveHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipRemoveHarness</code> instances.</p>
+</p>
+
+
+
+
+
+
+    </div>
