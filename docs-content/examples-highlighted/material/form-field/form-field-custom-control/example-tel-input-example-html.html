@@ -1,4 +1,7 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"parts"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-tel-input-container"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-tel-input-container"</span>
+     [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"parts"</span>
+     [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">"_formField?.getLabelId()"</span>
+     [<span class="hljs-attr">attr.aria-describedby</span>]=<span class="hljs-string">"describedBy"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-tel-input-element"</span>
          <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"area"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span>
          <span class="hljs-attr">maxLength</span>=<span class="hljs-string">"3"</span>

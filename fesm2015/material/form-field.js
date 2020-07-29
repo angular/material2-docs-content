@@ -1,9 +1,9 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵdirectiveInject, ElementRef, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, Optional, Self, ViewChild, Input, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate, ɵɵtemplate, ɵɵtextInterpolate1, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵdirectiveInject, ElementRef, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵhostProperty, ɵɵclassProp, ɵɵProvidersFeature, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵattribute, Optional, Inject, Self, ViewChild, Input, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate, ɵɵtemplate, ɵɵtextInterpolate1, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { FormGroup, FormControl, NgControlStatusGroup, FormGroupDirective, NgControlStatus, FormControlName, RequiredValidator, Validators, FormBuilder, NgControl, DefaultValueAccessor, FormControlDirective, ɵangular_packages_forms_forms_y, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
-import { MatFormField, MatLabel, MatSuffix, MatHint, MatFormFieldControl, MatError, MatPrefix, MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormField, MatLabel, MatSuffix, MatHint, MAT_FORM_FIELD, MatFormFieldControl, MatError, MatPrefix, MatFormFieldModule } from '@angular/material/form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material/radio';
@@ -130,9 +130,10 @@ class MyTel {
 }
 /** Custom `MatFormFieldControl` for telephone number input. */
 class MyTelInput {
-    constructor(formBuilder, _focusMonitor, _elementRef, ngControl) {
+    constructor(formBuilder, _focusMonitor, _elementRef, _formField, ngControl) {
         this._focusMonitor = _focusMonitor;
         this._elementRef = _elementRef;
+        this._formField = _formField;
         this.ngControl = ngControl;
         this.stateChanges = new Subject();
         this.focused = false;
@@ -259,7 +260,7 @@ class MyTelInput {
     }
 }
 MyTelInput.nextId = 0;
-MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgControl, 10)); };
+MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(MAT_FORM_FIELD, 8), ɵɵdirectiveInject(NgControl, 10)); };
 MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], viewQuery: function MyTelInput_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
         ɵɵviewQuery(_c1, true);
@@ -269,11 +270,10 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.areaInput = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.exchangeInput = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.subscriberInput = _t.first);
-    } }, hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
+    } }, hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
         ɵɵhostProperty("id", ctx.id);
-        ɵɵattribute("aria-describedby", ctx.describedBy);
         ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
-    } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 3, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
         const _r3 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "input", 1, 2);
@@ -294,6 +294,7 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("formGroup", ctx.parts);
+        ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId())("aria-describedby", ctx.describedBy);
     } }, directives: [NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MyTelInput, [{
         type: Component,
@@ -305,10 +306,14 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
                 host: {
                     '[class.example-floating]': 'shouldLabelFloat',
                     '[id]': 'id',
-                    '[attr.aria-describedby]': 'describedBy'
                 }
             }]
-    }], function () { return [{ type: FormBuilder }, { type: FocusMonitor }, { type: ElementRef }, { type: NgControl, decorators: [{
+    }], function () { return [{ type: FormBuilder }, { type: FocusMonitor }, { type: ElementRef }, { type: MatFormField, decorators: [{
+                type: Optional
+            }, {
+                type: Inject,
+                args: [MAT_FORM_FIELD]
+            }] }, { type: NgControl, decorators: [{
                 type: Optional
             }, {
                 type: Self

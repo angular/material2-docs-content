@@ -17,7 +17,7 @@ just a starting point for us to learn.)</p>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'example-tel-input'</span>,
   template: <span class="hljs-string">`
-    &lt;div [formGroup]="parts"&gt;
+    &lt;div role="group" [formGroup]="parts"&gt;
       &lt;input class="area" formControlName="area" maxlength="3"&gt;
       &lt;span&gt;&amp;ndash;&lt;/span&gt;
       &lt;input class="exchange" formControlName="exchange" maxlength="3"&gt;
@@ -39,7 +39,7 @@ just a starting point for us to learn.)</p>
     }
   `</span>],
 })
-<span class="hljs-keyword">class</span> MyTelInput {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyTelInput {
   parts: FormGroup;
 
   <span class="hljs-meta">@Input</span>()
@@ -78,7 +78,7 @@ a provider to our component so that the form field will be able to inject it as 
   ...
   providers: [{provide: MatFormFieldControl, useExisting: MyTelInput}],
 })
-<span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
   ...
 }</code></pre>
 <p>This sets up our component so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
@@ -184,7 +184,7 @@ declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> 
     <span class="hljs-comment">// },</span>
   ],
 })
-<span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
     ...,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
@@ -314,12 +314,12 @@ class <code>mat-form-field-example-tel-input</code>.</p>
         </h4>
       <p>This method is used by the <code>&lt;mat-form-field&gt;</code> to specify the IDs that should be used for the
 <code>aria-describedby</code> attribute of your component. The method has one parameter, the list of IDs, we
-just need to apply the given IDs to our host element.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@HostBinding</span>(<span class="hljs-string">'attr.aria-describedby'</span>) describedBy = <span class="hljs-string">''</span>;
-
-setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
+just need to apply the given IDs to the element that represents our control.</p>
+<p>In our concrete example, these IDs would need to be applied to the group element. </p>
+<pre><code class="language-ts">setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
   <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
 }</code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"parts"</span> [<span class="hljs-attr">attr.aria-describedby</span>]=<span class="hljs-string">"describedBy"</span>&gt;</span></code></pre>
 
         <h4 id="oncontainerclickevent-mouseevent" class="docs-header-link">
           <span header-link="oncontainerclickevent-mouseevent"></span>
@@ -334,6 +334,34 @@ click. In our case we&#39;ll just focus the first <code>&lt;input&gt;</code> if 
     <span class="hljs-keyword">this</span>.elRef.nativeElement.querySelector(<span class="hljs-string">'input'</span>).focus();
   }
 }</code></pre>
+
+        <h3 id="improving-accessibility" class="docs-header-link">
+          <span header-link="improving-accessibility"></span>
+          Improving accessibility
+        </h3>
+      <p>Our custom form field control consists of multiple inputs that describe segments of a phone
+number. For accessibility purposes, we put those inputs as part of a <code>div</code> element with
+<code>role=&quot;group&quot;</code>. This ensures that screen reader users can tell that all those inputs belong
+together.</p>
+<p>One significant piece of information is missing for screen reader users though. They won&#39;t be able
+to tell what this input group represents. To improve this, we should add a label for the group
+element using either <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+<p>It&#39;s recommended to link the group to the label that is displayed as part of the parent
+<code>&lt;mat-form-field&gt;</code>. This ensures that explicitly specified labels (using <code>&lt;mat-label&gt;</code>) are
+actually used for labelling the control.</p>
+<p>In our concrete example, we add an attribute binding for <code>aria-labelledby</code> and bind it
+to the label element id provided by the parent <code>&lt;mat-form-field&gt;</code>.</p>
+<pre><code class="language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
+  ...
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">...
+              <span class="hljs-meta">@Optional</span>() <span class="hljs-keyword">public</span> parentFormField: MatFormField</span>) {</code></pre>
+<pre><code class="language-html">@Component({
+  selector: 'example-tel-input',
+  template: `
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"parts"</span>
+         [<span class="hljs-attr">attr.aria-describedby</span>]=<span class="hljs-string">"describedBy"</span>
+         [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">"parentFormField?.getLabelId()"</span>&gt;</span></code></pre>
 
         <h3 id="trying-it-out" class="docs-header-link">
           <span header-link="trying-it-out"></span>

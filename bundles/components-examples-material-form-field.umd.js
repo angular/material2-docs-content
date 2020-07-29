@@ -354,10 +354,11 @@
     }());
     /** Custom `MatFormFieldControl` for telephone number input. */
     var MyTelInput = /** @class */ (function () {
-        function MyTelInput(formBuilder, _focusMonitor, _elementRef, ngControl) {
+        function MyTelInput(formBuilder, _focusMonitor, _elementRef, _formField, ngControl) {
             var _this = this;
             this._focusMonitor = _focusMonitor;
             this._elementRef = _elementRef;
+            this._formField = _formField;
             this.ngControl = ngControl;
             this.stateChanges = new rxjs.Subject();
             this.focused = false;
@@ -507,7 +508,7 @@
             this.onChange(this.value);
         };
         MyTelInput.nextId = 0;
-        MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
+        MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1$1.MAT_FORM_FIELD, 8), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
         MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], viewQuery: function MyTelInput_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵviewQuery(_c0, true);
                 i0.ɵɵviewQuery(_c1, true);
@@ -517,11 +518,10 @@
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.areaInput = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.exchangeInput = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.subscriberInput = _t.first);
-            } }, hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
+            } }, hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
                 i0.ɵɵhostProperty("id", ctx.id);
-                i0.ɵɵattribute("aria-describedby", ctx.describedBy);
                 i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
-            } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: i1$1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+            } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: i1$1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 3, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
                 var _r3 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "input", 1, 2);
@@ -542,6 +542,7 @@
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵproperty("formGroup", ctx.parts);
+                i0.ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId())("aria-describedby", ctx.describedBy);
             } }, directives: [i1.NgControlStatusGroup, i1.FormGroupDirective, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
         return MyTelInput;
     }());
@@ -555,10 +556,14 @@
                     host: {
                         '[class.example-floating]': 'shouldLabelFloat',
                         '[id]': 'id',
-                        '[attr.aria-describedby]': 'describedBy'
                     }
                 }]
-        }], function () { return [{ type: i1.FormBuilder }, { type: i4$1.FocusMonitor }, { type: i0.ElementRef }, { type: i1.NgControl, decorators: [{
+        }], function () { return [{ type: i1.FormBuilder }, { type: i4$1.FocusMonitor }, { type: i0.ElementRef }, { type: i1$1.MatFormField, decorators: [{
+                    type: i0.Optional
+                }, {
+                    type: i0.Inject,
+                    args: [i1$1.MAT_FORM_FIELD]
+                }] }, { type: i1.NgControl, decorators: [{
                     type: i0.Optional
                 }, {
                     type: i0.Self

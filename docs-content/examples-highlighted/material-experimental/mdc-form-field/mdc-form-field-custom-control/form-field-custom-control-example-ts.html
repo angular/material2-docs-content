@@ -1,8 +1,9 @@
 <span class="hljs-keyword">import</span> {FocusMonitor} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
 <span class="hljs-keyword">import</span> {coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/coercion'</span>;
-<span class="hljs-keyword">import</span> {Component, ElementRef, Input, OnDestroy, Optional, Self} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, ControlValueAccessor, NgControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/mdc-form-field'</span>;
+<span class="hljs-keyword">import</span> {Component, ElementRef, Inject, Input, OnDestroy, Optional, Self} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ControlValueAccessor, FormBuilder, FormGroup, NgControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatFormField, MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/mdc-form-field'</span>;
+<span class="hljs-keyword">import</span> {MAT_FORM_FIELD} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/form-field'</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
 <span class="hljs-comment">/** @title Form field with custom telephone number input control. */</span>
@@ -26,7 +27,6 @@
   host: {
     <span class="hljs-string">'[class.example-floating]'</span>: <span class="hljs-string">'shouldLabelFloat'</span>,
     <span class="hljs-string">'[id]'</span>: <span class="hljs-string">'id'</span>,
-    <span class="hljs-string">'[attr.aria-describedby]'</span>: <span class="hljs-string">'describedBy'</span>,
   }
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> ControlValueAccessor, MatFormFieldControl&lt;MyTel&gt;, OnDestroy {
@@ -93,6 +93,7 @@
     formBuilder: FormBuilder,
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
+    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl</span>) {
 
     <span class="hljs-keyword">this</span>.parts = formBuilder.group({

@@ -1,7 +1,7 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { ElementRef, OnDestroy } from '@angular/core';
-import { FormBuilder, FormGroup, ControlValueAccessor, NgControl } from '@angular/forms';
-import { MatFormFieldControl } from '@angular/material-experimental/mdc-form-field';
+import { ControlValueAccessor, FormBuilder, FormGroup, NgControl } from '@angular/forms';
+import { MatFormField, MatFormFieldControl } from '@angular/material-experimental/mdc-form-field';
 import { Subject } from 'rxjs';
 import * as i0 from "@angular/core";
 /** @title Form field with custom telephone number input control. */
@@ -20,6 +20,7 @@ export declare class MyTel {
 export declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
     private _focusMonitor;
     private _elementRef;
+    _formField: MatFormField;
     ngControl: NgControl;
     static nextId: number;
     parts: FormGroup;
@@ -44,7 +45,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     private _disabled;
     get value(): MyTel | null;
     set value(tel: MyTel | null);
-    constructor(formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, ngControl: NgControl);
+    constructor(formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;
@@ -55,6 +56,6 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     _handleInput(): void;
     static ngAcceptInputType_disabled: boolean | string | null | undefined;
     static ngAcceptInputType_required: boolean | string | null | undefined;
-    static ɵfac: i0.ɵɵFactoryDef<MyTelInput, [null, null, null, { optional: true; self: true; }]>;
+    static ɵfac: i0.ɵɵFactoryDef<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
 }
