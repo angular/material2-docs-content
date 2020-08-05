@@ -4,37 +4,40 @@
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.sort = {}), global.ng.common, global.ng.core, global.ng.material.sort));
 }(this, (function (exports, i2, i0, i1) { 'use strict';
 
-    function SortOverviewExample_tr_12_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "tr");
-        i0.ɵɵelementStart(1, "td");
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "td");
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "td");
-        i0.ɵɵtext(6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "td");
-        i0.ɵɵtext(8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "td");
-        i0.ɵɵtext(10);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var dessert_r1 = ctx.$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(dessert_r1.name);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(dessert_r1.calories);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(dessert_r1.fat);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(dessert_r1.carbs);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(dessert_r1.protein);
-    } }
+    function SortOverviewExample_tr_12_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "tr");
+            i0.ɵɵelementStart(1, "td");
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "td");
+            i0.ɵɵtext(4);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(5, "td");
+            i0.ɵɵtext(6);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(7, "td");
+            i0.ɵɵtext(8);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(9, "td");
+            i0.ɵɵtext(10);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var dessert_r1 = ctx.$implicit;
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(dessert_r1.name);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(dessert_r1.calories);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(dessert_r1.fat);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(dessert_r1.carbs);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(dessert_r1.protein);
+        }
+    }
     /**
      * @title Sorting overview
      */
@@ -67,8 +70,11 @@
                 }
             });
         };
-        SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
-        SortOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return SortOverviewExample;
+    }());
+    SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
+    SortOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵlistener("matSortChange", function SortOverviewExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
                 i0.ɵɵelementStart(1, "tr");
@@ -90,20 +96,22 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵtemplate(12, SortOverviewExample_tr_12_Template, 11, 5, "tr", 6);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(12);
                 i0.ɵɵproperty("ngForOf", ctx.sortedData);
-            } }, directives: [i1.MatSort, i1.MatSortHeader, i2.NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
-        return SortOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SortOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'sort-overview-example',
-                    templateUrl: 'sort-overview-example.html',
-                    styleUrls: ['sort-overview-example.css'],
-                }]
-        }], function () { return []; }, null); })();
+            }
+        }, directives: [i1.MatSort, i1.MatSortHeader, i2.NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SortOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'sort-overview-example',
+                        templateUrl: 'sort-overview-example.html',
+                        styleUrls: ['sort-overview-example.css'],
+                    }]
+            }], function () { return []; }, null);
+    })();
     function compare(a, b, isAsc) {
         return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
     }
@@ -114,27 +122,31 @@
     var SortExamplesModule = /** @class */ (function () {
         function SortExamplesModule() {
         }
-        SortExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SortExamplesModule });
-        SortExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
-                    i2.CommonModule,
-                    i1.MatSortModule,
-                ]] });
         return SortExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SortExamplesModule, { declarations: [SortOverviewExample], imports: [i2.CommonModule,
-            i1.MatSortModule], exports: [SortOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SortExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i2.CommonModule,
-                        i1.MatSortModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    SortExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SortExamplesModule });
+    SortExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
+                i2.CommonModule,
+                i1.MatSortModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SortExamplesModule, { declarations: [SortOverviewExample], imports: [i2.CommonModule,
+                i1.MatSortModule], exports: [SortOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SortExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i2.CommonModule,
+                            i1.MatSortModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

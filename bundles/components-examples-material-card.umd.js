@@ -10,8 +10,11 @@
     var CardFancyExample = /** @class */ (function () {
         function CardFancyExample() {
         }
-        CardFancyExample.ɵfac = function CardFancyExample_Factory(t) { return new (t || CardFancyExample)(); };
-        CardFancyExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardFancyExample, selectors: [["card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function CardFancyExample_Template(rf, ctx) { if (rf & 1) {
+        return CardFancyExample;
+    }());
+    CardFancyExample.ɵfac = function CardFancyExample_Factory(t) { return new (t || CardFancyExample)(); };
+    CardFancyExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardFancyExample, selectors: [["card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function CardFancyExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card", 0);
                 i0.ɵɵelementStart(1, "mat-card-header");
                 i0.ɵɵelement(2, "div", 1);
@@ -37,17 +40,18 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
-        return CardFancyExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CardFancyExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'card-fancy-example',
-                    templateUrl: 'card-fancy-example.html',
-                    styleUrls: ['card-fancy-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CardFancyExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'card-fancy-example',
+                        templateUrl: 'card-fancy-example.html',
+                        styleUrls: ['card-fancy-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Basic cards
@@ -55,21 +59,25 @@
     var CardOverviewExample = /** @class */ (function () {
         function CardOverviewExample() {
         }
-        CardOverviewExample.ɵfac = function CardOverviewExample_Factory(t) { return new (t || CardOverviewExample)(); };
-        CardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardOverviewExample, selectors: [["card-overview-example"]], decls: 2, vars: 0, template: function CardOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return CardOverviewExample;
+    }());
+    CardOverviewExample.ɵfac = function CardOverviewExample_Factory(t) { return new (t || CardOverviewExample)(); };
+    CardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardOverviewExample, selectors: [["card-overview-example"]], decls: 2, vars: 0, template: function CardOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵtext(1, "Simple card");
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatCard], encapsulation: 2 });
-        return CardOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CardOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'card-overview-example',
-                    templateUrl: 'card-overview-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatCard], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CardOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'card-overview-example',
+                        templateUrl: 'card-overview-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         CardFancyExample,
@@ -78,29 +86,33 @@
     var CardExamplesModule = /** @class */ (function () {
         function CardExamplesModule() {
         }
-        CardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CardExamplesModule });
-        CardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CardExamplesModule_Factory(t) { return new (t || CardExamplesModule)(); }, imports: [[
-                    i2.MatButtonModule,
-                    i1.MatCardModule,
-                ]] });
         return CardExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
-            CardOverviewExample], imports: [i2.MatButtonModule,
-            i1.MatCardModule], exports: [CardFancyExample,
-            CardOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CardExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i2.MatButtonModule,
-                        i1.MatCardModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    CardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CardExamplesModule });
+    CardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CardExamplesModule_Factory(t) { return new (t || CardExamplesModule)(); }, imports: [[
+                i2.MatButtonModule,
+                i1.MatCardModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
+                CardOverviewExample], imports: [i2.MatButtonModule,
+                i1.MatCardModule], exports: [CardFancyExample,
+                CardOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CardExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i2.MatButtonModule,
+                            i1.MatCardModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

@@ -10,8 +10,11 @@
     var ButtonToggleAppearanceExample = /** @class */ (function () {
         function ButtonToggleAppearanceExample() {
         }
-        ButtonToggleAppearanceExample.ɵfac = function ButtonToggleAppearanceExample_Factory(t) { return new (t || ButtonToggleAppearanceExample)(); };
-        ButtonToggleAppearanceExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) { if (rf & 1) {
+        return ButtonToggleAppearanceExample;
+    }());
+    ButtonToggleAppearanceExample.ɵfac = function ButtonToggleAppearanceExample_Factory(t) { return new (t || ButtonToggleAppearanceExample)(); };
+    ButtonToggleAppearanceExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵtext(1, " Default appearance: ");
                 i0.ɵɵelementStart(2, "mat-button-toggle-group", 0);
@@ -40,17 +43,18 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
-        return ButtonToggleAppearanceExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'button-toggle-appearance-example',
-                    templateUrl: 'button-toggle-appearance-example.html',
-                    styleUrls: ['button-toggle-appearance-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-toggle-appearance-example',
+                        templateUrl: 'button-toggle-appearance-example.html',
+                        styleUrls: ['button-toggle-appearance-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Exclusive selection
@@ -58,8 +62,11 @@
     var ButtonToggleExclusiveExample = /** @class */ (function () {
         function ButtonToggleExclusiveExample() {
         }
-        ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
-        ButtonToggleExclusiveExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
+        return ButtonToggleExclusiveExample;
+    }());
+    ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
+    ButtonToggleExclusiveExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
                 i0.ɵɵelementStart(2, "mat-button-toggle", 1);
                 i0.ɵɵelementStart(3, "mat-icon");
@@ -85,21 +92,23 @@
                 i0.ɵɵelementStart(14, "div", 5);
                 i0.ɵɵtext(15);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 var _r0 = i0.ɵɵreference(1);
                 i0.ɵɵadvance(15);
                 i0.ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
-            } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle, i2.MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
-        return ButtonToggleExclusiveExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'button-toggle-exclusive-example',
-                    templateUrl: 'button-toggle-exclusive-example.html',
-                    styleUrls: ['button-toggle-exclusive-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle, i2.MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-toggle-exclusive-example',
+                        templateUrl: 'button-toggle-exclusive-example.html',
+                        styleUrls: ['button-toggle-exclusive-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Basic button-toggles
@@ -107,8 +116,11 @@
     var ButtonToggleOverviewExample = /** @class */ (function () {
         function ButtonToggleOverviewExample() {
         }
-        ButtonToggleOverviewExample.ɵfac = function ButtonToggleOverviewExample_Factory(t) { return new (t || ButtonToggleOverviewExample)(); };
-        ButtonToggleOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return ButtonToggleOverviewExample;
+    }());
+    ButtonToggleOverviewExample.ɵfac = function ButtonToggleOverviewExample_Factory(t) { return new (t || ButtonToggleOverviewExample)(); };
+    ButtonToggleOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-button-toggle-group", 0);
                 i0.ɵɵelementStart(1, "mat-button-toggle", 1);
                 i0.ɵɵtext(2, "Bold");
@@ -120,16 +132,17 @@
                 i0.ɵɵtext(6, "Underline");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
-        return ButtonToggleOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonToggleOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'button-toggle-overview-example',
-                    templateUrl: 'button-toggle-overview-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ButtonToggleOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-toggle-overview-example',
+                        templateUrl: 'button-toggle-overview-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         ButtonToggleAppearanceExample,
@@ -139,31 +152,35 @@
     var ButtonToggleExamplesModule = /** @class */ (function () {
         function ButtonToggleExamplesModule() {
         }
-        ButtonToggleExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
-        ButtonToggleExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
-                    i1.MatButtonToggleModule,
-                    i2.MatIconModule,
-                ]] });
         return ButtonToggleExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
-            ButtonToggleExclusiveExample,
-            ButtonToggleOverviewExample], imports: [i1.MatButtonToggleModule,
-            i2.MatIconModule], exports: [ButtonToggleAppearanceExample,
-            ButtonToggleExclusiveExample,
-            ButtonToggleOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i1.MatButtonToggleModule,
-                        i2.MatIconModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    ButtonToggleExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
+    ButtonToggleExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
+                i1.MatButtonToggleModule,
+                i2.MatIconModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
+                ButtonToggleExclusiveExample,
+                ButtonToggleOverviewExample], imports: [i1.MatButtonToggleModule,
+                i2.MatIconModule], exports: [ButtonToggleAppearanceExample,
+                ButtonToggleExclusiveExample,
+                ButtonToggleOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i1.MatButtonToggleModule,
+                            i2.MatIconModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

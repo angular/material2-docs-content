@@ -10,8 +10,11 @@
     var DividerOverviewExample = /** @class */ (function () {
         function DividerOverviewExample() {
         }
-        DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
-        DividerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return DividerOverviewExample;
+    }());
+    DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
+    DividerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list");
                 i0.ɵɵelementStart(1, "mat-list-item");
                 i0.ɵɵtext(2, "Item 1");
@@ -25,16 +28,17 @@
                 i0.ɵɵtext(8, "Item 3");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], encapsulation: 2 });
-        return DividerOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DividerOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'divider-overview-example',
-                    templateUrl: 'divider-overview-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DividerOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'divider-overview-example',
+                        templateUrl: 'divider-overview-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         DividerOverviewExample,
@@ -42,27 +46,31 @@
     var DividerExamplesModule = /** @class */ (function () {
         function DividerExamplesModule() {
         }
-        DividerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DividerExamplesModule });
-        DividerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
-                    i2.MatDividerModule,
-                    i1.MatListModule,
-                ]] });
         return DividerExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [i2.MatDividerModule,
-            i1.MatListModule], exports: [DividerOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DividerExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i2.MatDividerModule,
-                        i1.MatListModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    DividerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DividerExamplesModule });
+    DividerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
+                i2.MatDividerModule,
+                i1.MatListModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [i2.MatDividerModule,
+                i1.MatListModule], exports: [DividerOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DividerExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i2.MatDividerModule,
+                            i1.MatListModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

@@ -10,50 +10,60 @@
     var ProgressBarBufferExample = /** @class */ (function () {
         function ProgressBarBufferExample() {
         }
-        ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
-        ProgressBarBufferExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarBufferExample;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'progress-bar-buffer-example',
-                    templateUrl: 'progress-bar-buffer-example.html',
-                }]
-        }], null, null); })();
+    ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
+    ProgressBarBufferExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-progress-bar", 0);
+            }
+        }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-bar-buffer-example',
+                        templateUrl: 'progress-bar-buffer-example.html',
+                    }]
+            }], null, null);
+    })();
 
-    function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
-        var _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "section", 1);
-        i0.ɵɵelementStart(1, "label", 2);
-        i0.ɵɵtext(2, "Progress:");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-slider", 13);
-        i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_26_Template_mat_slider_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r3); var ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.value = $event; });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("ngModel", ctx_r0.value);
-    } }
-    function ProgressBarConfigurableExample_section_27_Template(rf, ctx) { if (rf & 1) {
-        var _r5 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "section", 1);
-        i0.ɵɵelementStart(1, "label", 2);
-        i0.ɵɵtext(2, "Buffer:");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-slider", 13);
-        i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_27_Template_mat_slider_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r5); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.bufferValue = $event; });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("ngModel", ctx_r1.bufferValue);
-    } }
+    function ProgressBarConfigurableExample_section_26_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r3_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "section", 1);
+            i0.ɵɵelementStart(1, "label", 2);
+            i0.ɵɵtext(2, "Progress:");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "mat-slider", 13);
+            i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_26_Template_mat_slider_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r3_1); var ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.value = $event; });
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var ctx_r0 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(3);
+            i0.ɵɵproperty("ngModel", ctx_r0.value);
+        }
+    }
+    function ProgressBarConfigurableExample_section_27_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r5_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "section", 1);
+            i0.ɵɵelementStart(1, "label", 2);
+            i0.ɵɵtext(2, "Buffer:");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "mat-slider", 13);
+            i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_27_Template_mat_slider_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r5_1); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.bufferValue = $event; });
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var ctx_r1 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(3);
+            i0.ɵɵproperty("ngModel", ctx_r1.bufferValue);
+        }
+    }
     /**
      * @title Configurable progress-bar
      */
@@ -64,8 +74,11 @@
             this.value = 50;
             this.bufferValue = 75;
         }
-        ProgressBarConfigurableExample.ɵfac = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
-        ProgressBarConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        return ProgressBarConfigurableExample;
+    }());
+    ProgressBarConfigurableExample.ɵfac = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
+    ProgressBarConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵelementStart(1, "mat-card-content");
                 i0.ɵɵelementStart(2, "h2", 0);
@@ -122,7 +135,8 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("ngModel", ctx.color);
                 i0.ɵɵadvance(10);
@@ -133,17 +147,18 @@
                 i0.ɵɵproperty("ngIf", ctx.mode === "buffer");
                 i0.ɵɵadvance(6);
                 i0.ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value)("bufferValue", ctx.bufferValue);
-            } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressBar, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-        return ProgressBarConfigurableExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'progress-bar-configurable-example',
-                    templateUrl: 'progress-bar-configurable-example.html',
-                    styleUrls: ['progress-bar-configurable-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressBar, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-bar-configurable-example',
+                        templateUrl: 'progress-bar-configurable-example.html',
+                        styleUrls: ['progress-bar-configurable-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Determinate progress-bar
@@ -151,19 +166,23 @@
     var ProgressBarDeterminateExample = /** @class */ (function () {
         function ProgressBarDeterminateExample() {
         }
-        ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
-        ProgressBarDeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarDeterminateExample;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'progress-bar-determinate-example',
-                    templateUrl: 'progress-bar-determinate-example.html',
-                }]
-        }], null, null); })();
+    ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
+    ProgressBarDeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-progress-bar", 0);
+            }
+        }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-bar-determinate-example',
+                        templateUrl: 'progress-bar-determinate-example.html',
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Indeterminate progress-bar
@@ -171,19 +190,23 @@
     var ProgressBarIndeterminateExample = /** @class */ (function () {
         function ProgressBarIndeterminateExample() {
         }
-        ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
-        ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarIndeterminateExample;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'progress-bar-indeterminate-example',
-                    templateUrl: 'progress-bar-indeterminate-example.html',
-                }]
-        }], null, null); })();
+    ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
+    ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-progress-bar", 0);
+            }
+        }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-bar-indeterminate-example',
+                        templateUrl: 'progress-bar-indeterminate-example.html',
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Query progress-bar
@@ -191,19 +214,23 @@
     var ProgressBarQueryExample = /** @class */ (function () {
         function ProgressBarQueryExample() {
         }
-        ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
-        ProgressBarQueryExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelement(0, "mat-progress-bar", 0);
-            } }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
         return ProgressBarQueryExample;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'progress-bar-query-example',
-                    templateUrl: 'progress-bar-query-example.html',
-                }]
-        }], null, null); })();
+    ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
+    ProgressBarQueryExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-progress-bar", 0);
+            }
+        }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-bar-query-example',
+                        templateUrl: 'progress-bar-query-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         ProgressBarBufferExample,
@@ -215,47 +242,51 @@
     var ProgressBarExamplesModule = /** @class */ (function () {
         function ProgressBarExamplesModule() {
         }
-        ProgressBarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
-        ProgressBarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
-                    i4.CommonModule,
-                    i1.MatCardModule,
-                    i1$1.MatProgressBarModule,
-                    i2.MatRadioModule,
-                    i6.MatSliderModule,
-                    i3.FormsModule,
-                ]] });
         return ProgressBarExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
-            ProgressBarConfigurableExample,
-            ProgressBarDeterminateExample,
-            ProgressBarIndeterminateExample,
-            ProgressBarQueryExample], imports: [i4.CommonModule,
-            i1.MatCardModule,
-            i1$1.MatProgressBarModule,
-            i2.MatRadioModule,
-            i6.MatSliderModule,
-            i3.FormsModule], exports: [ProgressBarBufferExample,
-            ProgressBarConfigurableExample,
-            ProgressBarDeterminateExample,
-            ProgressBarIndeterminateExample,
-            ProgressBarQueryExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i4.CommonModule,
-                        i1.MatCardModule,
-                        i1$1.MatProgressBarModule,
-                        i2.MatRadioModule,
-                        i6.MatSliderModule,
-                        i3.FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    ProgressBarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
+    ProgressBarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
+                i4.CommonModule,
+                i1.MatCardModule,
+                i1$1.MatProgressBarModule,
+                i2.MatRadioModule,
+                i6.MatSliderModule,
+                i3.FormsModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
+                ProgressBarConfigurableExample,
+                ProgressBarDeterminateExample,
+                ProgressBarIndeterminateExample,
+                ProgressBarQueryExample], imports: [i4.CommonModule,
+                i1.MatCardModule,
+                i1$1.MatProgressBarModule,
+                i2.MatRadioModule,
+                i6.MatSliderModule,
+                i3.FormsModule], exports: [ProgressBarBufferExample,
+                ProgressBarConfigurableExample,
+                ProgressBarDeterminateExample,
+                ProgressBarIndeterminateExample,
+                ProgressBarQueryExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i4.CommonModule,
+                            i1.MatCardModule,
+                            i1$1.MatProgressBarModule,
+                            i2.MatRadioModule,
+                            i6.MatSliderModule,
+                            i3.FormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

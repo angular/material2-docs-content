@@ -13,8 +13,11 @@
             this.checked = false;
             this.disabled = false;
         }
-        SlideToggleConfigurableExample.ɵfac = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
-        SlideToggleConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        return SlideToggleConfigurableExample;
+    }());
+    SlideToggleConfigurableExample.ɵfac = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
+    SlideToggleConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵelementStart(1, "mat-card-content");
                 i0.ɵɵelementStart(2, "h2", 0);
@@ -63,7 +66,8 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("ngModel", ctx.color);
                 i0.ɵɵadvance(8);
@@ -72,17 +76,18 @@
                 i0.ɵɵproperty("ngModel", ctx.disabled);
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("color", ctx.color)("checked", ctx.checked)("disabled", ctx.disabled);
-            } }, directives: [i1$1.MatCard, i1$1.MatCardContent, i2.MatRadioGroup, i1.NgControlStatus, i1.NgModel, i2.MatRadioButton, i4.MatCheckbox, i2$1.MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
-        return SlideToggleConfigurableExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'slide-toggle-configurable-example',
-                    templateUrl: 'slide-toggle-configurable-example.html',
-                    styleUrls: ['slide-toggle-configurable-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1$1.MatCard, i1$1.MatCardContent, i2.MatRadioGroup, i1.NgControlStatus, i1.NgModel, i2.MatRadioButton, i4.MatCheckbox, i2$1.MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'slide-toggle-configurable-example',
+                        templateUrl: 'slide-toggle-configurable-example.html',
+                        styleUrls: ['slide-toggle-configurable-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Slide-toggle with forms
@@ -98,8 +103,11 @@
         SlideToggleFormsExample.prototype.onFormSubmit = function () {
             alert(JSON.stringify(this.formGroup.value, null, 2));
         };
-        SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        SlideToggleFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+        return SlideToggleFormsExample;
+    }());
+    SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    SlideToggleFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"]], template: function SlideToggleFormsExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵtext(1, "Slide Toggle using a simple NgModel.");
                 i0.ɵɵelementEnd();
@@ -140,7 +148,8 @@
                 i0.ɵɵtext(24, "Save Settings");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngModel", ctx.isChecked);
                 i0.ɵɵadvance(1);
@@ -149,17 +158,18 @@
                 i0.ɵɵproperty("formGroup", ctx.formGroup);
                 i0.ɵɵadvance(6);
                 i0.ɵɵtextInterpolate1("Form Group Status: ", ctx.formGroup.status, "");
-            } }, directives: [i2$1.MatSlideToggle, i1.NgControlStatus, i1.NgModel, i1.NgControlStatusGroup, i1.NgForm, i2$1.MatSlideToggleRequiredValidator, i1.RequiredValidator, i3.MatButton, i1.FormGroupDirective, i1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
-        return SlideToggleFormsExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'slide-toggle-forms-example',
-                    templateUrl: './slide-toggle-forms-example.html',
-                    styleUrls: ['./slide-toggle-forms-example.css'],
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i2$1.MatSlideToggle, i1.NgControlStatus, i1.NgModel, i1.NgControlStatusGroup, i1.NgForm, i2$1.MatSlideToggleRequiredValidator, i1.RequiredValidator, i3.MatButton, i1.FormGroupDirective, i1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'slide-toggle-forms-example',
+                        templateUrl: './slide-toggle-forms-example.html',
+                        styleUrls: ['./slide-toggle-forms-example.css'],
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
     /**
      * @title Basic slide-toggles
@@ -167,21 +177,25 @@
     var SlideToggleOverviewExample = /** @class */ (function () {
         function SlideToggleOverviewExample() {
         }
-        SlideToggleOverviewExample.ɵfac = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
-        SlideToggleOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return SlideToggleOverviewExample;
+    }());
+    SlideToggleOverviewExample.ɵfac = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
+    SlideToggleOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-slide-toggle");
                 i0.ɵɵtext(1, "Slide me!");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2$1.MatSlideToggle], encapsulation: 2 });
-        return SlideToggleOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'slide-toggle-overview-example',
-                    templateUrl: 'slide-toggle-overview-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i2$1.MatSlideToggle], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'slide-toggle-overview-example',
+                        templateUrl: 'slide-toggle-overview-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         SlideToggleConfigurableExample,
@@ -191,46 +205,50 @@
     var SlideToggleExamplesModule = /** @class */ (function () {
         function SlideToggleExamplesModule() {
         }
-        SlideToggleExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
-        SlideToggleExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); }, imports: [[
-                    i1.FormsModule,
-                    i3.MatButtonModule,
-                    i1$1.MatCardModule,
-                    i4.MatCheckboxModule,
-                    i2.MatRadioModule,
-                    i2$1.MatSlideToggleModule,
-                    i1.ReactiveFormsModule,
-                ]] });
         return SlideToggleExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
-            SlideToggleFormsExample,
-            SlideToggleOverviewExample], imports: [i1.FormsModule,
-            i3.MatButtonModule,
-            i1$1.MatCardModule,
-            i4.MatCheckboxModule,
-            i2.MatRadioModule,
-            i2$1.MatSlideToggleModule,
-            i1.ReactiveFormsModule], exports: [SlideToggleConfigurableExample,
-            SlideToggleFormsExample,
-            SlideToggleOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i1.FormsModule,
-                        i3.MatButtonModule,
-                        i1$1.MatCardModule,
-                        i4.MatCheckboxModule,
-                        i2.MatRadioModule,
-                        i2$1.MatSlideToggleModule,
-                        i1.ReactiveFormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    SlideToggleExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
+    SlideToggleExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); }, imports: [[
+                i1.FormsModule,
+                i3.MatButtonModule,
+                i1$1.MatCardModule,
+                i4.MatCheckboxModule,
+                i2.MatRadioModule,
+                i2$1.MatSlideToggleModule,
+                i1.ReactiveFormsModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
+                SlideToggleFormsExample,
+                SlideToggleOverviewExample], imports: [i1.FormsModule,
+                i3.MatButtonModule,
+                i1$1.MatCardModule,
+                i4.MatCheckboxModule,
+                i2.MatRadioModule,
+                i2$1.MatSlideToggleModule,
+                i1.ReactiveFormsModule], exports: [SlideToggleConfigurableExample,
+                SlideToggleFormsExample,
+                SlideToggleOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i1.FormsModule,
+                            i3.MatButtonModule,
+                            i1$1.MatCardModule,
+                            i4.MatCheckboxModule,
+                            i2.MatRadioModule,
+                            i2$1.MatSlideToggleModule,
+                            i1.ReactiveFormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

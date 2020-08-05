@@ -4,16 +4,19 @@
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.radio = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.radio));
 }(this, (function (exports, i3, i0, i2, i1) { 'use strict';
 
-    function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-radio-button", 3);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var season_r1 = ctx.$implicit;
-        i0.ɵɵproperty("value", season_r1);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", season_r1, " ");
-    } }
+    function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-radio-button", 3);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var season_r1 = ctx.$implicit;
+            i0.ɵɵproperty("value", season_r1);
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", season_r1, " ");
+        }
+    }
     /**
      * @title Radios with ngModel
      */
@@ -21,8 +24,11 @@
         function RadioNgModelExample() {
             this.seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
         }
-        RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
-        RadioNgModelExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
+        return RadioNgModelExample;
+    }());
+    RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
+    RadioNgModelExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "label", 0);
                 i0.ɵɵtext(1, "Pick your favorite season");
                 i0.ɵɵelementEnd();
@@ -33,24 +39,26 @@
                 i0.ɵɵelementStart(4, "div");
                 i0.ɵɵtext(5);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngModel", ctx.favoriteSeason);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.seasons);
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1("Your favorite season is: ", ctx.favoriteSeason, "");
-            } }, directives: [i1.MatRadioGroup, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i1.MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
-        return RadioNgModelExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioNgModelExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'radio-ng-model-example',
-                    templateUrl: 'radio-ng-model-example.html',
-                    styleUrls: ['radio-ng-model-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatRadioGroup, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i1.MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(RadioNgModelExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'radio-ng-model-example',
+                        templateUrl: 'radio-ng-model-example.html',
+                        styleUrls: ['radio-ng-model-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Basic radios
@@ -58,8 +66,11 @@
     var RadioOverviewExample = /** @class */ (function () {
         function RadioOverviewExample() {
         }
-        RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
-        RadioOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return RadioOverviewExample;
+    }());
+    RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
+    RadioOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-radio-group", 0);
                 i0.ɵɵelementStart(1, "mat-radio-button", 1);
                 i0.ɵɵtext(2, "Option 1");
@@ -68,17 +79,18 @@
                 i0.ɵɵtext(4, "Option 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatRadioGroup, i1.MatRadioButton], styles: [".mat-radio-button[_ngcontent-%COMP%]    ~ .mat-radio-button[_ngcontent-%COMP%] {\n  margin-left: 16px;\n}"] });
-        return RadioOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'radio-overview-example',
-                    templateUrl: 'radio-overview-example.html',
-                    styleUrls: ['radio-overview-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatRadioGroup, i1.MatRadioButton], styles: [".mat-radio-button[_ngcontent-%COMP%]    ~ .mat-radio-button[_ngcontent-%COMP%] {\n  margin-left: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(RadioOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'radio-overview-example',
+                        templateUrl: 'radio-overview-example.html',
+                        styleUrls: ['radio-overview-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         RadioNgModelExample,
@@ -87,32 +99,36 @@
     var RadioExamplesModule = /** @class */ (function () {
         function RadioExamplesModule() {
         }
-        RadioExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: RadioExamplesModule });
-        RadioExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
-                    i3.CommonModule,
-                    i1.MatRadioModule,
-                    i2.FormsModule,
-                ]] });
         return RadioExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioNgModelExample,
-            RadioOverviewExample], imports: [i3.CommonModule,
-            i1.MatRadioModule,
-            i2.FormsModule], exports: [RadioNgModelExample,
-            RadioOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i3.CommonModule,
-                        i1.MatRadioModule,
-                        i2.FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    RadioExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: RadioExamplesModule });
+    RadioExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
+                i3.CommonModule,
+                i1.MatRadioModule,
+                i2.FormsModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioNgModelExample,
+                RadioOverviewExample], imports: [i3.CommonModule,
+                i1.MatRadioModule,
+                i2.FormsModule], exports: [RadioNgModelExample,
+                RadioOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(RadioExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i3.CommonModule,
+                            i1.MatRadioModule,
+                            i2.FormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

@@ -10,8 +10,11 @@
     var MenuIconsExample = /** @class */ (function () {
         function MenuIconsExample() {
         }
-        MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
-        MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
+        return MenuIconsExample;
+    }());
+    MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
+    MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵelementStart(1, "mat-icon");
                 i0.ɵɵtext(2, "more_vert");
@@ -43,19 +46,21 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 var _r0 = i0.ɵɵreference(4);
                 i0.ɵɵproperty("matMenuTriggerFor", _r0);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
-        return MenuIconsExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuIconsExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'menu-icons-example',
-                    templateUrl: 'menu-icons-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(MenuIconsExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'menu-icons-example',
+                        templateUrl: 'menu-icons-example.html',
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Basic menu
@@ -63,8 +68,11 @@
     var MenuOverviewExample = /** @class */ (function () {
         function MenuOverviewExample() {
         }
-        MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
-        MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return MenuOverviewExample;
+    }());
+    MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
+    MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Menu");
                 i0.ɵɵelementEnd();
@@ -76,19 +84,21 @@
                 i0.ɵɵtext(7, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 var _r0 = i0.ɵɵreference(3);
                 i0.ɵɵproperty("matMenuTriggerFor", _r0);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
-        return MenuOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'menu-overview-example',
-                    templateUrl: 'menu-overview-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(MenuOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'menu-overview-example',
+                        templateUrl: 'menu-overview-example.html',
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Menu positioning
@@ -96,8 +106,11 @@
     var MenuPositionExample = /** @class */ (function () {
         function MenuPositionExample() {
         }
-        MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
-        MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["aboveMenu", "matMenu"], ["mat-menu-item", ""], ["yPosition", "below"], ["belowMenu", "matMenu"], ["xPosition", "before"], ["beforeMenu", "matMenu"], ["xPosition", "after"], ["afterMenu", "matMenu"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
+        return MenuPositionExample;
+    }());
+    MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
+    MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["aboveMenu", "matMenu"], ["mat-menu-item", ""], ["yPosition", "below"], ["belowMenu", "matMenu"], ["xPosition", "before"], ["beforeMenu", "matMenu"], ["xPosition", "after"], ["afterMenu", "matMenu"]], template: function MenuPositionExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Above");
                 i0.ɵɵelementEnd();
@@ -142,7 +155,8 @@
                 i0.ɵɵtext(31, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 var _r0 = i0.ɵɵreference(3);
                 var _r1 = i0.ɵɵreference(11);
                 var _r2 = i0.ɵɵreference(19);
@@ -154,16 +168,17 @@
                 i0.ɵɵproperty("matMenuTriggerFor", _r2);
                 i0.ɵɵadvance(8);
                 i0.ɵɵproperty("matMenuTriggerFor", _r3);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
-        return MenuPositionExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuPositionExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'menu-position-example',
-                    templateUrl: 'menu-position-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(MenuPositionExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'menu-position-example',
+                        templateUrl: 'menu-position-example.html',
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Nested menu
@@ -171,8 +186,11 @@
     var MenuNestedExample = /** @class */ (function () {
         function MenuNestedExample() {
         }
-        MenuNestedExample.ɵfac = function MenuNestedExample_Factory(t) { return new (t || MenuNestedExample)(); };
-        MenuNestedExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuNestedExample, selectors: [["menu-nested-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function MenuNestedExample_Template(rf, ctx) { if (rf & 1) {
+        return MenuNestedExample;
+    }());
+    MenuNestedExample.ɵfac = function MenuNestedExample_Factory(t) { return new (t || MenuNestedExample)(); };
+    MenuNestedExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuNestedExample, selectors: [["menu-nested-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function MenuNestedExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Animal index");
                 i0.ɵɵelementEnd();
@@ -272,7 +290,8 @@
                 i0.ɵɵtext(69, "Velociraptor");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 var _r0 = i0.ɵɵreference(3);
                 var _r1 = i0.ɵɵreference(9);
                 var _r2 = i0.ɵɵreference(21);
@@ -290,16 +309,17 @@
                 i0.ɵɵproperty("matMenuTriggerFor", _r4);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matMenuTriggerFor", _r5);
-            } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
-        return MenuNestedExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuNestedExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'menu-nested-example',
-                    templateUrl: 'menu-nested-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(MenuNestedExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'menu-nested-example',
+                        templateUrl: 'menu-nested-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         MenuIconsExample,
@@ -310,36 +330,40 @@
     var MenuExamplesModule = /** @class */ (function () {
         function MenuExamplesModule() {
         }
-        MenuExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MenuExamplesModule });
-        MenuExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
-                    i1.MatButtonModule,
-                    i3.MatIconModule,
-                    i2.MatMenuModule,
-                ]] });
         return MenuExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
-            MenuOverviewExample,
-            MenuPositionExample,
-            MenuNestedExample], imports: [i1.MatButtonModule,
-            i3.MatIconModule,
-            i2.MatMenuModule], exports: [MenuIconsExample,
-            MenuOverviewExample,
-            MenuPositionExample,
-            MenuNestedExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i1.MatButtonModule,
-                        i3.MatIconModule,
-                        i2.MatMenuModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    MenuExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MenuExamplesModule });
+    MenuExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
+                i1.MatButtonModule,
+                i3.MatIconModule,
+                i2.MatMenuModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
+                MenuOverviewExample,
+                MenuPositionExample,
+                MenuNestedExample], imports: [i1.MatButtonModule,
+                i3.MatIconModule,
+                i2.MatMenuModule], exports: [MenuIconsExample,
+                MenuOverviewExample,
+                MenuPositionExample,
+                MenuNestedExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(MenuExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i1.MatButtonModule,
+                            i3.MatIconModule,
+                            i2.MatMenuModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.
