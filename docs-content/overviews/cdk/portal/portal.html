@@ -94,7 +94,7 @@ ngAfterViewInit() {
 <h5><code>DomPortal</code></h5><p>You can create a <code>DomPortal</code> from any native DOM element. <code>DomPortal</code> allows you to take any arbitrary DOM content and render it somewhere else. <code>DomPortal</code> moves content _as is_, so elements with Angular features like bindings or directives may no longer update if moved via <code>DomPortal</code>.</p>
 <p>Usage:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">domPortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-<pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'domPortalContent'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) domPortalContent: ElementRef&lt;HTMLElement&gt;;
+<pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'domPortalContent'</span>) domPortalContent: ElementRef&lt;HTMLElement&gt;;
 ngAfterViewInit() {
   <span class="hljs-keyword">this</span>.domPortal = <span class="hljs-keyword">new</span> DomPortal(<span class="hljs-keyword">this</span>.domPortalContent);
 }</code></pre>
