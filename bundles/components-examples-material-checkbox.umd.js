@@ -14,8 +14,11 @@
             this.labelPosition = 'after';
             this.disabled = false;
         }
-        CheckboxConfigurableExample.ɵfac = function CheckboxConfigurableExample_Factory(t) { return new (t || CheckboxConfigurableExample)(); };
-        CheckboxConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxConfigurableExample, selectors: [["checkbox-configurable-example"]], decls: 27, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "after", 1, "example-margin"], ["value", "before", 1, "example-margin"], [1, "result"], [1, "example-margin", 3, "ngModel", "indeterminate", "labelPosition", "disabled", "ngModelChange", "indeterminateChange"]], template: function CheckboxConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        return CheckboxConfigurableExample;
+    }());
+    CheckboxConfigurableExample.ɵfac = function CheckboxConfigurableExample_Factory(t) { return new (t || CheckboxConfigurableExample)(); };
+    CheckboxConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxConfigurableExample, selectors: [["checkbox-configurable-example"]], decls: 27, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "after", 1, "example-margin"], ["value", "before", 1, "example-margin"], [1, "result"], [1, "example-margin", 3, "ngModel", "indeterminate", "labelPosition", "disabled", "ngModelChange", "indeterminateChange"]], template: function CheckboxConfigurableExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵelementStart(1, "mat-card-content");
                 i0.ɵɵelementStart(2, "h2", 0);
@@ -66,7 +69,8 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(5);
                 i0.ɵɵproperty("ngModel", ctx.checked);
                 i0.ɵɵadvance(2);
@@ -77,33 +81,37 @@
                 i0.ɵɵproperty("ngModel", ctx.disabled);
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
-            } }, directives: [i1.MatCard, i1.MatCardContent, i2$1.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-        return CheckboxConfigurableExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CheckboxConfigurableExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'checkbox-configurable-example',
-                    templateUrl: 'checkbox-configurable-example.html',
-                    styleUrls: ['checkbox-configurable-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatCard, i1.MatCardContent, i2$1.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CheckboxConfigurableExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'checkbox-configurable-example',
+                        templateUrl: 'checkbox-configurable-example.html',
+                        styleUrls: ['checkbox-configurable-example.css'],
+                    }]
+            }], null, null);
+    })();
 
-    function CheckboxOverviewExample_li_11_Template(rf, ctx) { if (rf & 1) {
-        var _r3 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "li");
-        i0.ɵɵelementStart(1, "mat-checkbox", 6);
-        i0.ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r3); var subtask_r1 = ctx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r3); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.updateAllComplete(); });
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var subtask_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngModel", subtask_r1.completed)("color", subtask_r1.color);
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", subtask_r1.name, " ");
-    } }
+    function CheckboxOverviewExample_li_11_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r3_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "li");
+            i0.ɵɵelementStart(1, "mat-checkbox", 6);
+            i0.ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r3_1); var subtask_r1 = ctx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { i0.ɵɵrestoreView(_r3_1); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.updateAllComplete(); });
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var subtask_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵproperty("ngModel", subtask_r1.completed)("color", subtask_r1.color);
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", subtask_r1.name, " ");
+        }
+    }
     /**
      * @title Basic checkboxes
      */
@@ -137,8 +145,11 @@
             }
             this.task.subtasks.forEach(function (t) { return t.completed = completed; });
         };
-        CheckboxOverviewExample.ɵfac = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
-        CheckboxOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 12, vars: 5, consts: [[1, "example-section"], [1, "example-margin"], [1, "example-margin", 3, "disabled"], [1, "example-list-section"], [1, "example-margin", 3, "checked", "indeterminate", "change"], [4, "ngFor", "ngForOf"], [3, "ngModel", "color", "ngModelChange"]], template: function CheckboxOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return CheckboxOverviewExample;
+    }());
+    CheckboxOverviewExample.ɵfac = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
+    CheckboxOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 12, vars: 5, consts: [[1, "example-section"], [1, "example-margin"], [1, "example-margin", 3, "disabled"], [1, "example-list-section"], [1, "example-margin", 3, "checked", "indeterminate", "change"], [4, "ngFor", "ngForOf"], [3, "ngModel", "color", "ngModelChange"]], template: function CheckboxOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "section", 0);
                 i0.ɵɵelementStart(1, "mat-checkbox", 1);
                 i0.ɵɵtext(2, "Check me!");
@@ -160,7 +171,8 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("disabled", true);
                 i0.ɵɵadvance(4);
@@ -169,17 +181,18 @@
                 i0.ɵɵtextInterpolate1(" ", ctx.task.name, " ");
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", ctx.task.subtasks);
-            } }, directives: [i2$1.MatCheckbox, i2.NgForOf, i3.NgControlStatus, i3.NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
-        return CheckboxOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CheckboxOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'checkbox-overview-example',
-                    templateUrl: 'checkbox-overview-example.html',
-                    styleUrls: ['checkbox-overview-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i2$1.MatCheckbox, i2.NgForOf, i3.NgControlStatus, i3.NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CheckboxOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'checkbox-overview-example',
+                        templateUrl: 'checkbox-overview-example.html',
+                        styleUrls: ['checkbox-overview-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         CheckboxConfigurableExample,
@@ -188,38 +201,42 @@
     var CheckboxExamplesModule = /** @class */ (function () {
         function CheckboxExamplesModule() {
         }
-        CheckboxExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CheckboxExamplesModule });
-        CheckboxExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
-                    i2.CommonModule,
-                    i1.MatCardModule,
-                    i2$1.MatCheckboxModule,
-                    i4.MatRadioModule,
-                    i3.FormsModule,
-                ]] });
         return CheckboxExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
-            CheckboxOverviewExample], imports: [i2.CommonModule,
-            i1.MatCardModule,
-            i2$1.MatCheckboxModule,
-            i4.MatRadioModule,
-            i3.FormsModule], exports: [CheckboxConfigurableExample,
-            CheckboxOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CheckboxExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i2.CommonModule,
-                        i1.MatCardModule,
-                        i2$1.MatCheckboxModule,
-                        i4.MatRadioModule,
-                        i3.FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    CheckboxExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CheckboxExamplesModule });
+    CheckboxExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
+                i2.CommonModule,
+                i1.MatCardModule,
+                i2$1.MatCheckboxModule,
+                i4.MatRadioModule,
+                i3.FormsModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
+                CheckboxOverviewExample], imports: [i2.CommonModule,
+                i1.MatCardModule,
+                i2$1.MatCheckboxModule,
+                i4.MatRadioModule,
+                i3.FormsModule], exports: [CheckboxConfigurableExample,
+                CheckboxOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CheckboxExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i2.CommonModule,
+                            i1.MatCardModule,
+                            i2$1.MatCheckboxModule,
+                            i4.MatRadioModule,
+                            i3.FormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

@@ -4,15 +4,21 @@
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.stepper = {}), global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.icon, global.ng.material.input, global.ng.material.stepper, global.ng.material.formField, global.ng.cdk.stepper));
 }(this, (function (exports, i0, i1, i2, i6, i5, i3, i4, stepper) { 'use strict';
 
-    function StepperEditableExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperEditableExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperEditableExample_ng_template_27_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
+    function StepperEditableExample_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperEditableExample_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperEditableExample_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
     /**
      * @title Stepper with editable steps
      */
@@ -29,9 +35,12 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
-        StepperEditableExample.ɵfac = function StepperEditableExample_Factory(t) { return new (t || StepperEditableExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperEditableExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperEditableExample, selectors: [["stepper-editable-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl", "editable"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "formControlName", "firstCtrl", "placeholder", "Last name, First name", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperEditableExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+        return StepperEditableExample;
+    }());
+    StepperEditableExample.ɵfac = function StepperEditableExample_Factory(t) { return new (t || StepperEditableExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperEditableExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperEditableExample, selectors: [["stepper-editable-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl", "editable"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "formControlName", "firstCtrl", "placeholder", "Last name, First name", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperEditableExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r4_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵlistener("click", function StepperEditableExample_Template_button_click_0_listener() { return ctx.isEditable = !ctx.isEditable; });
                 i0.ɵɵtext(1);
@@ -82,13 +91,14 @@
                 i0.ɵɵtext(32, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(33, "button", 10);
-                i0.ɵɵlistener("click", function StepperEditableExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperEditableExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4_1); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
                 i0.ɵɵtext(34, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵtextInterpolate1(" ", !ctx.isEditable ? "Enable edit mode" : "Disable edit mode", "\n");
                 i0.ɵɵadvance(3);
@@ -99,27 +109,34 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup)("editable", ctx.isEditable);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperEditableExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperEditableExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-editable-example',
-                    templateUrl: 'stepper-editable-example.html',
-                    styleUrls: ['stepper-editable-example.css']
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperEditableExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-editable-example',
+                        templateUrl: 'stepper-editable-example.html',
+                        styleUrls: ['stepper-editable-example.css']
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
-    function StepperErrorsExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperErrorsExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperErrorsExample_ng_template_29_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
+    function StepperErrorsExample_ng_template_4_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperErrorsExample_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperErrorsExample_ng_template_29_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
     /**
      * @title Stepper that displays errors in the steps
      */
@@ -135,11 +152,14 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
-        StepperErrorsExample.ɵfac = function StepperErrorsExample_Factory(t) { return new (t || StepperErrorsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperErrorsExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperErrorsExample, selectors: [["stepper-errors-example"]], features: [i0.ɵɵProvidersFeature([{
-                        provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
-                    }])], decls: 37, vars: 4, consts: [["stepper", ""], ["errorMessage", "Name is required.", 3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["errorMessage", "Address is required.", 3, "stepControl"], ["matInput", "", "placeholder", "Ex. 1 Main St, New York, NY", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperErrorsExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+        return StepperErrorsExample;
+    }());
+    StepperErrorsExample.ɵfac = function StepperErrorsExample_Factory(t) { return new (t || StepperErrorsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperErrorsExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperErrorsExample, selectors: [["stepper-errors-example"]], features: [i0.ɵɵProvidersFeature([{
+                    provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
+                }])], decls: 37, vars: 4, consts: [["stepper", ""], ["errorMessage", "Name is required.", 3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["errorMessage", "Address is required.", 3, "stepControl"], ["matInput", "", "placeholder", "Ex. 1 Main St, New York, NY", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperErrorsExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r4_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-horizontal-stepper", null, 0);
                 i0.ɵɵelementStart(2, "mat-step", 1);
                 i0.ɵɵelementStart(3, "form", 2);
@@ -192,13 +212,14 @@
                 i0.ɵɵtext(34, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(35, "button", 9);
-                i0.ɵɵlistener("click", function StepperErrorsExample_Template_button_click_35_listener() { i0.ɵɵrestoreView(_r4); var _r0 = i0.ɵɵreference(1); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperErrorsExample_Template_button_click_35_listener() { i0.ɵɵrestoreView(_r4_1); var _r0 = i0.ɵɵreference(1); return _r0.reset(); });
                 i0.ɵɵtext(36, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("stepControl", ctx.firstFormGroup);
                 i0.ɵɵadvance(1);
@@ -207,30 +228,37 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperErrorsExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperErrorsExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-errors-example',
-                    templateUrl: 'stepper-errors-example.html',
-                    styleUrls: ['stepper-errors-example.css'],
-                    providers: [{
-                            provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
-                        }]
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperErrorsExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-errors-example',
+                        templateUrl: 'stepper-errors-example.html',
+                        styleUrls: ['stepper-errors-example.css'],
+                        providers: [{
+                                provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
+                            }]
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
-    function StepperLabelPositionBottomExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperLabelPositionBottomExample_ng_template_14_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperLabelPositionBottomExample_ng_template_25_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
+    function StepperLabelPositionBottomExample_ng_template_4_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperLabelPositionBottomExample_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperLabelPositionBottomExample_ng_template_25_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
     /**
      * @title Stepper label bottom position
      */
@@ -246,9 +274,12 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
-        StepperLabelPositionBottomExample.ɵfac = function StepperLabelPositionBottomExample_Factory(t) { return new (t || StepperLabelPositionBottomExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperLabelPositionBottomExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperLabelPositionBottomExample, selectors: [["stepper-label-position-bottom-example"]], decls: 33, vars: 4, consts: [["labelPosition", "bottom"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["optional", "", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperLabelPositionBottomExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+        return StepperLabelPositionBottomExample;
+    }());
+    StepperLabelPositionBottomExample.ɵfac = function StepperLabelPositionBottomExample_Factory(t) { return new (t || StepperLabelPositionBottomExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperLabelPositionBottomExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperLabelPositionBottomExample, selectors: [["stepper-label-position-bottom-example"]], decls: 33, vars: 4, consts: [["labelPosition", "bottom"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["optional", "", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperLabelPositionBottomExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r4_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-horizontal-stepper", 0, 1);
                 i0.ɵɵelementStart(2, "mat-step", 2);
                 i0.ɵɵelementStart(3, "form", 3);
@@ -295,13 +326,14 @@
                 i0.ɵɵtext(30, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(31, "button", 10);
-                i0.ɵɵlistener("click", function StepperLabelPositionBottomExample_Template_button_click_31_listener() { i0.ɵɵrestoreView(_r4); var _r0 = i0.ɵɵreference(1); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperLabelPositionBottomExample_Template_button_click_31_listener() { i0.ɵɵrestoreView(_r4_1); var _r0 = i0.ɵɵreference(1); return _r0.reset(); });
                 i0.ɵɵtext(32, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("stepControl", ctx.firstFormGroup);
                 i0.ɵɵadvance(1);
@@ -310,27 +342,34 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperLabelPositionBottomExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-label-position-bottom-example',
-                    templateUrl: 'stepper-label-position-bottom-example.html',
-                    styleUrls: ['stepper-label-position-bottom-example.css'],
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-label-position-bottom-example',
+                        templateUrl: 'stepper-label-position-bottom-example.html',
+                        styleUrls: ['stepper-label-position-bottom-example.css'],
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
-    function StepperOptionalExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperOptionalExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperOptionalExample_ng_template_27_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
+    function StepperOptionalExample_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperOptionalExample_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperOptionalExample_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
     /**
      * @title Stepper with optional steps
      */
@@ -347,9 +386,12 @@
                 secondCtrl: ''
             });
         };
-        StepperOptionalExample.ɵfac = function StepperOptionalExample_Factory(t) { return new (t || StepperOptionalExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperOptionalExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperOptionalExample, selectors: [["stepper-optional-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], [3, "stepControl", "optional"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOptionalExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+        return StepperOptionalExample;
+    }());
+    StepperOptionalExample.ɵfac = function StepperOptionalExample_Factory(t) { return new (t || StepperOptionalExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperOptionalExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperOptionalExample, selectors: [["stepper-optional-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], [3, "stepControl", "optional"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOptionalExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r4_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵlistener("click", function StepperOptionalExample_Template_button_click_0_listener() { return ctx.isOptional = !ctx.isOptional; });
                 i0.ɵɵtext(1);
@@ -400,13 +442,14 @@
                 i0.ɵɵtext(32, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(33, "button", 11);
-                i0.ɵɵlistener("click", function StepperOptionalExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperOptionalExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4_1); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
                 i0.ɵɵtext(34, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵtextInterpolate1(" ", !ctx.isOptional ? "Enable optional steps" : "Disable optional steps", "\n");
                 i0.ɵɵadvance(3);
@@ -417,27 +460,34 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup)("optional", ctx.isOptional);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperOptionalExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperOptionalExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-optional-example',
-                    templateUrl: 'stepper-optional-example.html',
-                    styleUrls: ['stepper-optional-example.css']
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperOptionalExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-optional-example',
+                        templateUrl: 'stepper-optional-example.html',
+                        styleUrls: ['stepper-optional-example.css']
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
-    function StepperOverviewExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperOverviewExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperOverviewExample_ng_template_27_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
+    function StepperOverviewExample_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperOverviewExample_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperOverviewExample_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
     /**
      * @title Stepper overview
      */
@@ -454,9 +504,12 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
-        StepperOverviewExample.ɵfac = function StepperOverviewExample_Factory(t) { return new (t || StepperOverviewExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+        return StepperOverviewExample;
+    }());
+    StepperOverviewExample.ɵfac = function StepperOverviewExample_Factory(t) { return new (t || StepperOverviewExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r4_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵlistener("click", function StepperOverviewExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
                 i0.ɵɵtext(1);
@@ -507,13 +560,14 @@
                 i0.ɵɵtext(32, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(33, "button", 10);
-                i0.ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4_1); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
                 i0.ɵɵtext(34, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵtextInterpolate1(" ", !ctx.isLinear ? "Enable linear mode" : "Disable linear mode", "\n");
                 i0.ɵɵadvance(1);
@@ -526,37 +580,48 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-overview-example',
-                    templateUrl: 'stepper-overview-example.html',
-                    styleUrls: ['stepper-overview-example.css'],
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-overview-example',
+                        templateUrl: 'stepper-overview-example.html',
+                        styleUrls: ['stepper-overview-example.css'],
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
-    function StepperStatesExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperStatesExample_ng_template_14_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperStatesExample_ng_template_25_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
-    function StepperStatesExample_ng_template_51_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-icon");
-        i0.ɵɵtext(1, "call_end");
-        i0.ɵɵelementEnd();
-    } }
-    function StepperStatesExample_ng_template_52_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-icon");
-        i0.ɵɵtext(1, "forum");
-        i0.ɵɵelementEnd();
-    } }
+    function StepperStatesExample_ng_template_4_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperStatesExample_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperStatesExample_ng_template_25_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
+    function StepperStatesExample_ng_template_51_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-icon");
+            i0.ɵɵtext(1, "call_end");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function StepperStatesExample_ng_template_52_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-icon");
+            i0.ɵɵtext(1, "forum");
+            i0.ɵɵelementEnd();
+        }
+    }
     /**
      * @title Stepper with customized states
      */
@@ -572,11 +637,14 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
-        StepperStatesExample.ɵfac = function StepperStatesExample_Factory(t) { return new (t || StepperStatesExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperStatesExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperStatesExample, selectors: [["stepper-states-example"]], features: [i0.ɵɵProvidersFeature([{
-                        provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
-                    }])], decls: 53, vars: 4, consts: [["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"], ["label", "Step 1", "state", "phone"], ["label", "Step 2", "state", "chat"], ["label", "Step 3"], ["matStepperIcon", "phone"], ["matStepperIcon", "chat"]], template: function StepperStatesExample_Template(rf, ctx) { if (rf & 1) {
-                var _r6 = i0.ɵɵgetCurrentView();
+        return StepperStatesExample;
+    }());
+    StepperStatesExample.ɵfac = function StepperStatesExample_Factory(t) { return new (t || StepperStatesExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperStatesExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperStatesExample, selectors: [["stepper-states-example"]], features: [i0.ɵɵProvidersFeature([{
+                    provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
+                }])], decls: 53, vars: 4, consts: [["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"], ["label", "Step 1", "state", "phone"], ["label", "Step 2", "state", "chat"], ["label", "Step 3"], ["matStepperIcon", "phone"], ["matStepperIcon", "chat"]], template: function StepperStatesExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r6_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-horizontal-stepper", null, 0);
                 i0.ɵɵelementStart(2, "mat-step", 1);
                 i0.ɵɵelementStart(3, "form", 2);
@@ -623,7 +691,7 @@
                 i0.ɵɵtext(30, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(31, "button", 8);
-                i0.ɵɵlistener("click", function StepperStatesExample_Template_button_click_31_listener() { i0.ɵɵrestoreView(_r6); var _r0 = i0.ɵɵreference(1); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperStatesExample_Template_button_click_31_listener() { i0.ɵɵrestoreView(_r6_1); var _r0 = i0.ɵɵreference(1); return _r0.reset(); });
                 i0.ɵɵtext(32, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -661,7 +729,8 @@
                 i0.ɵɵtemplate(51, StepperStatesExample_ng_template_51_Template, 2, 0, "ng-template", 12);
                 i0.ɵɵtemplate(52, StepperStatesExample_ng_template_52_Template, 2, 0, "ng-template", 13);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("stepControl", ctx.firstFormGroup);
                 i0.ɵɵadvance(1);
@@ -670,30 +739,37 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious, i3.MatStepperIcon, i6.MatIcon], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperStatesExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperStatesExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-states-example',
-                    templateUrl: 'stepper-states-example.html',
-                    styleUrls: ['stepper-states-example.css'],
-                    providers: [{
-                            provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
-                        }]
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious, i3.MatStepperIcon, i6.MatIcon], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperStatesExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-states-example',
+                        templateUrl: 'stepper-states-example.html',
+                        styleUrls: ['stepper-states-example.css'],
+                        providers: [{
+                                provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
+                            }]
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
-    function StepperVerticalExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your name");
-    } }
-    function StepperVerticalExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Fill out your address");
-    } }
-    function StepperVerticalExample_ng_template_27_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵtext(0, "Done");
-    } }
+    function StepperVerticalExample_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperVerticalExample_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Fill out your address");
+        }
+    }
+    function StepperVerticalExample_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Done");
+        }
+    }
     /**
      * @title Stepper vertical
      */
@@ -710,9 +786,12 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
-        StepperVerticalExample.ɵfac = function StepperVerticalExample_Factory(t) { return new (t || StepperVerticalExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        StepperVerticalExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperVerticalExample, selectors: [["stepper-vertical-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperVerticalExample_Template(rf, ctx) { if (rf & 1) {
-                var _r4 = i0.ɵɵgetCurrentView();
+        return StepperVerticalExample;
+    }());
+    StepperVerticalExample.ɵfac = function StepperVerticalExample_Factory(t) { return new (t || StepperVerticalExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    StepperVerticalExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperVerticalExample, selectors: [["stepper-vertical-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperVerticalExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r4_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵlistener("click", function StepperVerticalExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
                 i0.ɵɵtext(1);
@@ -763,13 +842,14 @@
                 i0.ɵɵtext(32, "Back");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(33, "button", 10);
-                i0.ɵɵlistener("click", function StepperVerticalExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
+                i0.ɵɵlistener("click", function StepperVerticalExample_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r4_1); var _r0 = i0.ɵɵreference(3); return _r0.reset(); });
                 i0.ɵɵtext(34, "Reset");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵtextInterpolate1(" ", !ctx.isLinear ? "Enable linear mode" : "Disable linear mode", "\n");
                 i0.ɵɵadvance(1);
@@ -782,17 +862,18 @@
                 i0.ɵɵproperty("stepControl", ctx.secondFormGroup);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
-            } }, directives: [i2.MatButton, i3.MatVerticalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-vertical[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-        return StepperVerticalExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperVerticalExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'stepper-vertical-example',
-                    templateUrl: 'stepper-vertical-example.html',
-                    styleUrls: ['stepper-vertical-example.css']
-                }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
+            }
+        }, directives: [i2.MatButton, i3.MatVerticalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-vertical[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperVerticalExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-vertical-example',
+                        templateUrl: 'stepper-vertical-example.html',
+                        styleUrls: ['stepper-vertical-example.css']
+                    }]
+            }], function () { return [{ type: i1.FormBuilder }]; }, null);
+    })();
 
     var EXAMPLES = [
         StepperEditableExample,
@@ -806,48 +887,52 @@
     var StepperExamplesModule = /** @class */ (function () {
         function StepperExamplesModule() {
         }
-        StepperExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: StepperExamplesModule });
-        StepperExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function StepperExamplesModule_Factory(t) { return new (t || StepperExamplesModule)(); }, imports: [[
-                    i2.MatButtonModule,
-                    i6.MatIconModule,
-                    i5.MatInputModule,
-                    i3.MatStepperModule,
-                    i1.ReactiveFormsModule,
-                ]] });
         return StepperExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
-            StepperErrorsExample,
-            StepperLabelPositionBottomExample,
-            StepperOptionalExample,
-            StepperOverviewExample,
-            StepperStatesExample,
-            StepperVerticalExample], imports: [i2.MatButtonModule,
-            i6.MatIconModule,
-            i5.MatInputModule,
-            i3.MatStepperModule,
-            i1.ReactiveFormsModule], exports: [StepperEditableExample,
-            StepperErrorsExample,
-            StepperLabelPositionBottomExample,
-            StepperOptionalExample,
-            StepperOverviewExample,
-            StepperStatesExample,
-            StepperVerticalExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(StepperExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i2.MatButtonModule,
-                        i6.MatIconModule,
-                        i5.MatInputModule,
-                        i3.MatStepperModule,
-                        i1.ReactiveFormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    StepperExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: StepperExamplesModule });
+    StepperExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function StepperExamplesModule_Factory(t) { return new (t || StepperExamplesModule)(); }, imports: [[
+                i2.MatButtonModule,
+                i6.MatIconModule,
+                i5.MatInputModule,
+                i3.MatStepperModule,
+                i1.ReactiveFormsModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
+                StepperErrorsExample,
+                StepperLabelPositionBottomExample,
+                StepperOptionalExample,
+                StepperOverviewExample,
+                StepperStatesExample,
+                StepperVerticalExample], imports: [i2.MatButtonModule,
+                i6.MatIconModule,
+                i5.MatInputModule,
+                i3.MatStepperModule,
+                i1.ReactiveFormsModule], exports: [StepperEditableExample,
+                StepperErrorsExample,
+                StepperLabelPositionBottomExample,
+                StepperOptionalExample,
+                StepperOverviewExample,
+                StepperStatesExample,
+                StepperVerticalExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i2.MatButtonModule,
+                            i6.MatIconModule,
+                            i5.MatInputModule,
+                            i3.MatStepperModule,
+                            i1.ReactiveFormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

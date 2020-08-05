@@ -14,8 +14,11 @@
         BadgeOverviewExample.prototype.toggleBadgeVisibility = function () {
             this.hidden = !this.hidden;
         };
-        BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
-        BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 20, vars: 1, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["matBadge", "1", "matBadgeSize", "large"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["mat-raised-button", "", "matBadge", "7", 3, "matBadgeHidden", "click"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return BadgeOverviewExample;
+    }());
+    BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
+    BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 20, vars: 1, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["matBadge", "1", "matBadgeSize", "large"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["mat-raised-button", "", "matBadge", "7", 3, "matBadgeHidden", "click"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵelementStart(1, "span", 0);
                 i0.ɵɵtext(2, "Text with a badge");
@@ -48,19 +51,21 @@
                 i0.ɵɵtext(19, " Example with a home icon with overlaid badge showing the number 15 ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(12);
                 i0.ɵɵproperty("matBadgeHidden", ctx.hidden);
-            } }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], encapsulation: 2 });
-        return BadgeOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BadgeOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'badge-overview-example',
-                    templateUrl: 'badge-overview-example.html',
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(BadgeOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'badge-overview-example',
+                        templateUrl: 'badge-overview-example.html',
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         BadgeOverviewExample,
@@ -68,30 +73,34 @@
     var BadgeExamplesModule = /** @class */ (function () {
         function BadgeExamplesModule() {
         }
-        BadgeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: BadgeExamplesModule });
-        BadgeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
-                    i1.MatBadgeModule,
-                    i2.MatButtonModule,
-                    i3.MatIconModule,
-                ]] });
         return BadgeExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(BadgeExamplesModule, { declarations: [BadgeOverviewExample], imports: [i1.MatBadgeModule,
-            i2.MatButtonModule,
-            i3.MatIconModule], exports: [BadgeOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(BadgeExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i1.MatBadgeModule,
-                        i2.MatButtonModule,
-                        i3.MatIconModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    BadgeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: BadgeExamplesModule });
+    BadgeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
+                i1.MatBadgeModule,
+                i2.MatButtonModule,
+                i3.MatIconModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(BadgeExamplesModule, { declarations: [BadgeOverviewExample], imports: [i1.MatBadgeModule,
+                i2.MatButtonModule,
+                i3.MatIconModule], exports: [BadgeOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(BadgeExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i1.MatBadgeModule,
+                            i2.MatButtonModule,
+                            i3.MatIconModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

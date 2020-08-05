@@ -19,35 +19,36 @@
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
     /* global Reflect, Promise */
-
-    var extendStatics = function(d, b) {
+    var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b)
+                if (b.hasOwnProperty(p))
+                    d[p] = b[p]; };
         return extendStatics(d, b);
     };
-
     function __extends(d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
-
-    var __assign = function() {
+    var __assign = function () {
         __assign = Object.assign || function __assign(t) {
             for (var s, i = 1, n = arguments.length; i < n; i++) {
                 s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+                for (var p in s)
+                    if (Object.prototype.hasOwnProperty.call(s, p))
+                        t[p] = s[p];
             }
             return t;
         };
         return __assign.apply(this, arguments);
     };
-
     function __rest(s, e) {
         var t = {};
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
+        for (var p in s)
+            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+                t[p] = s[p];
         if (s != null && typeof Object.getOwnPropertySymbols === "function")
             for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
                 if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
@@ -55,175 +56,247 @@
             }
         return t;
     }
-
     function __decorate(decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+            r = Reflect.decorate(decorators, target, key, desc);
+        else
+            for (var i = decorators.length - 1; i >= 0; i--)
+                if (d = decorators[i])
+                    r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     }
-
     function __param(paramIndex, decorator) {
-        return function (target, key) { decorator(target, key, paramIndex); }
+        return function (target, key) { decorator(target, key, paramIndex); };
     }
-
     function __metadata(metadataKey, metadataValue) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+            return Reflect.metadata(metadataKey, metadataValue);
     }
-
     function __awaiter(thisArg, _arguments, P, generator) {
         function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
         return new (P || (P = Promise))(function (resolve, reject) {
-            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function fulfilled(value) { try {
+                step(generator.next(value));
+            }
+            catch (e) {
+                reject(e);
+            } }
+            function rejected(value) { try {
+                step(generator["throw"](value));
+            }
+            catch (e) {
+                reject(e);
+            } }
             function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
             step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
     }
-
     function __generator(thisArg, body) {
-        var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+        var _ = { label: 0, sent: function () { if (t[0] & 1)
+                throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
-            if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
-                if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-                if (y = 0, t) op = [op[0] & 2, t.value];
-                switch (op[0]) {
-                    case 0: case 1: t = op; break;
-                    case 4: _.label++; return { value: op[1], done: false };
-                    case 5: _.label++; y = op[1]; op = [0]; continue;
-                    case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                    default:
-                        if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                        if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                        if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                        if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                        if (t[2]) _.ops.pop();
-                        _.trys.pop(); continue;
+            if (f)
+                throw new TypeError("Generator is already executing.");
+            while (_)
+                try {
+                    if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
+                        return t;
+                    if (y = 0, t)
+                        op = [op[0] & 2, t.value];
+                    switch (op[0]) {
+                        case 0:
+                        case 1:
+                            t = op;
+                            break;
+                        case 4:
+                            _.label++;
+                            return { value: op[1], done: false };
+                        case 5:
+                            _.label++;
+                            y = op[1];
+                            op = [0];
+                            continue;
+                        case 7:
+                            op = _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                        default:
+                            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                                _ = 0;
+                                continue;
+                            }
+                            if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) {
+                                _.label = op[1];
+                                break;
+                            }
+                            if (op[0] === 6 && _.label < t[1]) {
+                                _.label = t[1];
+                                t = op;
+                                break;
+                            }
+                            if (t && _.label < t[2]) {
+                                _.label = t[2];
+                                _.ops.push(op);
+                                break;
+                            }
+                            if (t[2])
+                                _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                    }
+                    op = body.call(thisArg, _);
                 }
-                op = body.call(thisArg, _);
-            } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-            if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+                catch (e) {
+                    op = [6, e];
+                    y = 0;
+                }
+                finally {
+                    f = t = 0;
+                }
+            if (op[0] & 5)
+                throw op[1];
+            return { value: op[0] ? op[1] : void 0, done: true };
         }
     }
-
-    var __createBinding = Object.create ? (function(o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
-        Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-    }) : (function(o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
+    var __createBinding = Object.create ? (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
+        Object.defineProperty(o, k2, { enumerable: true, get: function () { return m[k]; } });
+    }) : (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
         o[k2] = m[k];
     });
-
     function __exportStar(m, exports) {
-        for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+        for (var p in m)
+            if (p !== "default" && !exports.hasOwnProperty(p))
+                __createBinding(exports, m, p);
     }
-
     function __values(o) {
         var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-        if (m) return m.call(o);
-        if (o && typeof o.length === "number") return {
-            next: function () {
-                if (o && i >= o.length) o = void 0;
-                return { value: o && o[i++], done: !o };
-            }
-        };
+        if (m)
+            return m.call(o);
+        if (o && typeof o.length === "number")
+            return {
+                next: function () {
+                    if (o && i >= o.length)
+                        o = void 0;
+                    return { value: o && o[i++], done: !o };
+                }
+            };
         throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     }
-
     function __read(o, n) {
         var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m) return o;
+        if (!m)
+            return o;
         var i = m.call(o), r, ar = [], e;
         try {
-            while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
+                ar.push(r.value);
         }
-        catch (error) { e = { error: error }; }
+        catch (error) {
+            e = { error: error };
+        }
         finally {
             try {
-                if (r && !r.done && (m = i["return"])) m.call(i);
+                if (r && !r.done && (m = i["return"]))
+                    m.call(i);
             }
-            finally { if (e) throw e.error; }
+            finally {
+                if (e)
+                    throw e.error;
+            }
         }
         return ar;
     }
-
     function __spread() {
         for (var ar = [], i = 0; i < arguments.length; i++)
             ar = ar.concat(__read(arguments[i]));
         return ar;
     }
-
     function __spreadArrays() {
-        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++)
+            s += arguments[i].length;
         for (var r = Array(s), k = 0, i = 0; i < il; i++)
             for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
                 r[k] = a[j];
         return r;
-    };
-
+    }
+    ;
     function __await(v) {
         return this instanceof __await ? (this.v = v, this) : new __await(v);
     }
-
     function __asyncGenerator(thisArg, _arguments, generator) {
-        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
         var g = generator.apply(thisArg, _arguments || []), i, q = [];
         return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-        function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-        function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+        function verb(n) { if (g[n])
+            i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n, v) { try {
+            step(g[n](v));
+        }
+        catch (e) {
+            settle(q[0][3], e);
+        } }
         function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
         function fulfill(value) { resume("next", value); }
         function reject(value) { resume("throw", value); }
-        function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+        function settle(f, v) { if (f(v), q.shift(), q.length)
+            resume(q[0][0], q[0][1]); }
     }
-
     function __asyncDelegator(o) {
         var i, p;
         return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
         function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
     }
-
     function __asyncValues(o) {
-        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
         var m = o[Symbol.asyncIterator], i;
         return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
         function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function (v) { resolve({ value: v, done: d }); }, reject); }
     }
-
     function __makeTemplateObject(cooked, raw) {
-        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        if (Object.defineProperty) {
+            Object.defineProperty(cooked, "raw", { value: raw });
+        }
+        else {
+            cooked.raw = raw;
+        }
         return cooked;
-    };
-
-    var __setModuleDefault = Object.create ? (function(o, v) {
+    }
+    ;
+    var __setModuleDefault = Object.create ? (function (o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
-    }) : function(o, v) {
+    }) : function (o, v) {
         o["default"] = v;
     };
-
     function __importStar(mod) {
-        if (mod && mod.__esModule) return mod;
+        if (mod && mod.__esModule)
+            return mod;
         var result = {};
-        if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        if (mod != null)
+            for (var k in mod)
+                if (Object.hasOwnProperty.call(mod, k))
+                    __createBinding(result, mod, k);
         __setModuleDefault(result, mod);
         return result;
     }
-
     function __importDefault(mod) {
         return (mod && mod.__esModule) ? mod : { default: mod };
     }
-
     function __classPrivateFieldGet(receiver, privateMap) {
         if (!privateMap.has(receiver)) {
             throw new TypeError("attempted to get private field on non-instance");
         }
         return privateMap.get(receiver);
     }
-
     function __classPrivateFieldSet(receiver, privateMap, value) {
         if (!privateMap.has(receiver)) {
             throw new TypeError("attempted to set private field on non-instance");
@@ -232,70 +305,78 @@
         return value;
     }
 
-    function TreeChecklistExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
-        var _r5 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tree-node", 3);
-        i0.ɵɵelement(1, "button", 4);
-        i0.ɵɵelementStart(2, "mat-checkbox", 5);
-        i0.ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_1_Template_mat_checkbox_change_2_listener() { i0.ɵɵrestoreView(_r5); var node_r3 = ctx.$implicit; var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.todoLeafItemSelectionToggle(node_r3); });
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r3 = ctx.$implicit;
-        var ctx_r0 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(2);
-        i0.ɵɵproperty("checked", ctx_r0.checklistSelection.isSelected(node_r3));
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(node_r3.item);
-    } }
-    function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-        var _r9 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tree-node", 6);
-        i0.ɵɵelement(1, "button", 4);
-        i0.ɵɵelementStart(2, "mat-form-field");
-        i0.ɵɵelementStart(3, "mat-label");
-        i0.ɵɵtext(4, "New item...");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(5, "input", 7, 8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "button", 9);
-        i0.ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_7_listener() { i0.ɵɵrestoreView(_r9); var node_r6 = ctx.$implicit; var _r7 = i0.ɵɵreference(6); var ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
-        i0.ɵɵtext(8, "Save");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } }
-    function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
-        var _r12 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tree-node", 6);
-        i0.ɵɵelementStart(1, "button", 10);
-        i0.ɵɵelementStart(2, "mat-icon", 11);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "mat-checkbox", 12);
-        i0.ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener() { i0.ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r11 = i0.ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
-        i0.ɵɵtext(5);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(6, "button", 13);
-        i0.ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener() { i0.ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
-        i0.ɵɵelementStart(7, "mat-icon");
-        i0.ɵɵtext(8, "add");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r10 = ctx.$implicit;
-        var ctx_r2 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r10.filename);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r2.treeControl.isExpanded(node_r10) ? "expand_more" : "chevron_right", " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("checked", ctx_r2.descendantsAllSelected(node_r10))("indeterminate", ctx_r2.descendantsPartiallySelected(node_r10));
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(node_r10.item);
-    } }
+    function TreeChecklistExample_mat_tree_node_1_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r5_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelement(1, "button", 4);
+            i0.ɵɵelementStart(2, "mat-checkbox", 5);
+            i0.ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_1_Template_mat_checkbox_change_2_listener() { i0.ɵɵrestoreView(_r5_1); var node_r3 = ctx.$implicit; var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.todoLeafItemSelectionToggle(node_r3); });
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r3 = ctx.$implicit;
+            var ctx_r0 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(2);
+            i0.ɵɵproperty("checked", ctx_r0.checklistSelection.isSelected(node_r3));
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(node_r3.item);
+        }
+    }
+    function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r9_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "mat-tree-node", 6);
+            i0.ɵɵelement(1, "button", 4);
+            i0.ɵɵelementStart(2, "mat-form-field");
+            i0.ɵɵelementStart(3, "mat-label");
+            i0.ɵɵtext(4, "New item...");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelement(5, "input", 7, 8);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(7, "button", 9);
+            i0.ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_7_listener() { i0.ɵɵrestoreView(_r9_1); var node_r6 = ctx.$implicit; var _r7 = i0.ɵɵreference(6); var ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
+            i0.ɵɵtext(8, "Save");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+    }
+    function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r12_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "mat-tree-node", 6);
+            i0.ɵɵelementStart(1, "button", 10);
+            i0.ɵɵelementStart(2, "mat-icon", 11);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(4, "mat-checkbox", 12);
+            i0.ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener() { i0.ɵɵrestoreView(_r12_1); var node_r10 = ctx.$implicit; var ctx_r11 = i0.ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
+            i0.ɵɵtext(5);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(6, "button", 13);
+            i0.ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener() { i0.ɵɵrestoreView(_r12_1); var node_r10 = ctx.$implicit; var ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
+            i0.ɵɵelementStart(7, "mat-icon");
+            i0.ɵɵtext(8, "add");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r10 = ctx.$implicit;
+            var ctx_r2 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(1);
+            i0.ɵɵattribute("aria-label", "toggle " + node_r10.filename);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", ctx_r2.treeControl.isExpanded(node_r10) ? "expand_more" : "chevron_right", " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵproperty("checked", ctx_r2.descendantsAllSelected(node_r10))("indeterminate", ctx_r2.descendantsPartiallySelected(node_r10));
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(node_r10.item);
+        }
+    }
     /**
      * Node for to-do item
      */
@@ -384,13 +465,15 @@
             node.item = name;
             this.dataChange.next(this.data);
         };
-        ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
-        ChecklistDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
         return ChecklistDatabase;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ChecklistDatabase, [{
-            type: i0.Injectable
-        }], function () { return []; }, null); })();
+    ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
+    ChecklistDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ChecklistDatabase, [{
+                type: i0.Injectable
+            }], function () { return []; }, null);
+    })();
     /**
      * @title Tree with checkboxes
      */
@@ -454,12 +537,12 @@
         };
         /** Toggle the to-do item selection. Select/deselect all the descendants node */
         TreeChecklistExample.prototype.todoItemSelectionToggle = function (node) {
-            var _a, _b;
+            var _b, _c;
             var _this = this;
             this.checklistSelection.toggle(node);
             var descendants = this.treeControl.getDescendants(node);
             this.checklistSelection.isSelected(node)
-                ? (_a = this.checklistSelection).select.apply(_a, __spread(descendants)) : (_b = this.checklistSelection).deselect.apply(_b, __spread(descendants));
+                ? (_b = this.checklistSelection).select.apply(_b, __spread(descendants)) : (_c = this.checklistSelection).deselect.apply(_c, __spread(descendants));
             // Force update for the parent
             descendants.forEach(function (child) { return _this.checklistSelection.isSelected(child); });
             this.checkAllParentsSelection(node);
@@ -518,67 +601,80 @@
             var nestedNode = this.flatNodeMap.get(node);
             this._database.updateItem(nestedNode, itemValue);
         };
-        TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(i0.ɵɵdirectiveInject(ChecklistDatabase)); };
-        TreeChecklistExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [i0.ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
+        return TreeChecklistExample;
+    }());
+    TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(i0.ɵɵdirectiveInject(ChecklistDatabase)); };
+    TreeChecklistExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [i0.ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-tree", 0);
                 i0.ɵɵtemplate(1, TreeChecklistExample_mat_tree_node_1_Template, 4, 2, "mat-tree-node", 1);
                 i0.ɵɵtemplate(2, TreeChecklistExample_mat_tree_node_2_Template, 9, 0, "mat-tree-node", 2);
                 i0.ɵɵtemplate(3, TreeChecklistExample_mat_tree_node_3_Template, 9, 5, "mat-tree-node", 2);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasNoContent);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i1.MatTreeNodePadding, i2.MatButton, i3.MatCheckbox, i4$1.MatFormField, i4$1.MatLabel, i5.MatInput, i3$1.MatIcon], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 4px;\n}"] });
-        return TreeChecklistExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeChecklistExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'tree-checklist-example',
-                    templateUrl: 'tree-checklist-example.html',
-                    styleUrls: ['tree-checklist-example.css'],
-                    providers: [ChecklistDatabase]
-                }]
-        }], function () { return [{ type: ChecklistDatabase }]; }, null); })();
+            }
+        }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i1.MatTreeNodePadding, i2.MatButton, i3.MatCheckbox, i4$1.MatFormField, i4$1.MatLabel, i5.MatInput, i3$1.MatIcon], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 4px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeChecklistExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tree-checklist-example',
+                        templateUrl: 'tree-checklist-example.html',
+                        styleUrls: ['tree-checklist-example.css'],
+                        providers: [ChecklistDatabase]
+                    }]
+            }], function () { return [{ type: ChecklistDatabase }]; }, null);
+    })();
 
-    function TreeDynamicExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-tree-node", 3);
-        i0.ɵɵelement(1, "button", 4);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r2 = ctx.$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r2.item, " ");
-    } }
-    function TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelement(0, "mat-progress-bar", 8);
-    } }
-    function TreeDynamicExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-tree-node", 3);
-        i0.ɵɵelementStart(1, "button", 5);
-        i0.ɵɵelementStart(2, "mat-icon", 6);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtext(4);
-        i0.ɵɵtemplate(5, TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template, 1, 0, "mat-progress-bar", 7);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r3 = ctx.$implicit;
-        var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r3.filename);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r3.item, " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", node_r3.isLoading);
-    } }
+    function TreeDynamicExample_mat_tree_node_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelement(1, "button", 4);
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r2 = ctx.$implicit;
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", node_r2.item, " ");
+        }
+    }
+    function TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelement(0, "mat-progress-bar", 8);
+        }
+    }
+    function TreeDynamicExample_mat_tree_node_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelementStart(1, "button", 5);
+            i0.ɵɵelementStart(2, "mat-icon", 6);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵtext(4);
+            i0.ɵɵtemplate(5, TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template, 1, 0, "mat-progress-bar", 7);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r3 = ctx.$implicit;
+            var ctx_r1 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(1);
+            i0.ɵɵattribute("aria-label", "toggle " + node_r3.filename);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", node_r3.item, " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵproperty("ngIf", node_r3.isLoading);
+        }
+    }
     /** Flat node with expandable and level information */
     var DynamicFlatNode = /** @class */ (function () {
         function DynamicFlatNode(item, level, expandable, isLoading) {
@@ -616,14 +712,16 @@
         DynamicDatabase.prototype.isExpandable = function (node) {
             return this.dataMap.has(node);
         };
-        DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
-        DynamicDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
         return DynamicDatabase;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DynamicDatabase, [{
-            type: i0.Injectable,
-            args: [{ providedIn: 'root' }]
-        }], null, null); })();
+    DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
+    DynamicDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DynamicDatabase, [{
+                type: i0.Injectable,
+                args: [{ providedIn: 'root' }]
+            }], null, null);
+    })();
     /**
      * File database, it can build a tree structured Json object from string.
      * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -681,9 +779,7 @@
             setTimeout(function () {
                 var _a;
                 if (expand) {
-                    var nodes = children.map(function (name) {
-                        return new DynamicFlatNode(name, node.level + 1, _this._database.isExpandable(name));
-                    });
+                    var nodes = children.map(function (name) { return new DynamicFlatNode(name, node.level + 1, _this._database.isExpandable(name)); });
                     (_a = _this.data).splice.apply(_a, __spread([index + 1, 0], nodes));
                 }
                 else {
@@ -711,57 +807,68 @@
             this.dataSource = new DynamicDataSource(this.treeControl, database);
             this.dataSource.data = database.initialData();
         }
-        TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(i0.ɵɵdirectiveInject(DynamicDatabase)); };
-        TreeDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
+        return TreeDynamicExample;
+    }());
+    TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(i0.ɵɵdirectiveInject(DynamicDatabase)); };
+    TreeDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-tree", 0);
                 i0.ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
                 i0.ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon, i4.NgIf, i5$1.MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
-        return TreeDynamicExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeDynamicExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'tree-dynamic-example',
-                    templateUrl: 'tree-dynamic-example.html',
-                    styleUrls: ['tree-dynamic-example.css']
-                }]
-        }], function () { return [{ type: DynamicDatabase }]; }, null); })();
+            }
+        }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon, i4.NgIf, i5$1.MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeDynamicExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tree-dynamic-example',
+                        templateUrl: 'tree-dynamic-example.html',
+                        styleUrls: ['tree-dynamic-example.css']
+                    }]
+            }], function () { return [{ type: DynamicDatabase }]; }, null);
+    })();
 
-    function TreeFlatOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-tree-node", 3);
-        i0.ɵɵelement(1, "button", 4);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r2 = ctx.$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
-    } }
-    function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-tree-node", 3);
-        i0.ɵɵelementStart(1, "button", 5);
-        i0.ɵɵelementStart(2, "mat-icon", 6);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r3 = ctx.$implicit;
-        var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
-    } }
+    function TreeFlatOverviewExample_mat_tree_node_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelement(1, "button", 4);
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r2 = ctx.$implicit;
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
+        }
+    }
+    function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelementStart(1, "button", 5);
+            i0.ɵɵelementStart(2, "mat-icon", 6);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵtext(4);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r3 = ctx.$implicit;
+            var ctx_r1 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(1);
+            i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
+        }
+    }
     var TREE_DATA$1 = [
         {
             name: 'Fruit',
@@ -807,27 +914,32 @@
             this.hasChild = function (_, node) { return node.expandable; };
             this.dataSource.data = TREE_DATA$1;
         }
-        TreeFlatOverviewExample.ɵfac = function TreeFlatOverviewExample_Factory(t) { return new (t || TreeFlatOverviewExample)(); };
-        TreeFlatOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeFlatOverviewExample, selectors: [["tree-flat-overview-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeFlatOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return TreeFlatOverviewExample;
+    }());
+    TreeFlatOverviewExample.ɵfac = function TreeFlatOverviewExample_Factory(t) { return new (t || TreeFlatOverviewExample)(); };
+    TreeFlatOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeFlatOverviewExample, selectors: [["tree-flat-overview-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeFlatOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-tree", 0);
                 i0.ɵɵtemplate(1, TreeFlatOverviewExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
                 i0.ɵɵtemplate(2, TreeFlatOverviewExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon], styles: [""] });
-        return TreeFlatOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeFlatOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'tree-flat-overview-example',
-                    templateUrl: 'tree-flat-overview-example.html',
-                    styleUrls: ['tree-flat-overview-example.css'],
-                }]
-        }], function () { return []; }, null); })();
+            }
+        }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon], styles: [""] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeFlatOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tree-flat-overview-example',
+                        templateUrl: 'tree-flat-overview-example.html',
+                        styleUrls: ['tree-flat-overview-example.css'],
+                    }]
+            }], function () { return []; }, null);
+    })();
 
     /**
      * @license
@@ -836,46 +948,54 @@
      * Use of this source code is governed by an MIT-style license that can be
      * found in the LICENSE file at https://angular.io/license
      */
-    function TreeLoadmoreExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-tree-node", 4);
-        i0.ɵɵelement(1, "button", 5);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r3 = ctx.$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", node_r3.item, " ");
-    } }
-    function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-        var _r6 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tree-node", 4);
-        i0.ɵɵelementStart(1, "button", 6);
-        i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r6); var node_r4 = ctx.$implicit; var ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.loadChildren(node_r4); });
-        i0.ɵɵelementStart(2, "mat-icon", 7);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r4 = ctx.$implicit;
-        var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(1);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r4.filename);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r4) ? "expand_more" : "chevron_right", " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r4.item, " ");
-    } }
-    function TreeLoadmoreExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
-        var _r9 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tree-node");
-        i0.ɵɵelementStart(1, "button", 8);
-        i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r9); var node_r7 = ctx.$implicit; var ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.loadMore(node_r7.loadMoreParentItem); });
-        i0.ɵɵtext(2, " Load more... ");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } }
+    function TreeLoadmoreExample_mat_tree_node_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 4);
+            i0.ɵɵelement(1, "button", 5);
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r3 = ctx.$implicit;
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", node_r3.item, " ");
+        }
+    }
+    function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r6_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "mat-tree-node", 4);
+            i0.ɵɵelementStart(1, "button", 6);
+            i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r6_1); var node_r4 = ctx.$implicit; var ctx_r5 = i0.ɵɵnextContext(); return ctx_r5.loadChildren(node_r4); });
+            i0.ɵɵelementStart(2, "mat-icon", 7);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵtext(4);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r4 = ctx.$implicit;
+            var ctx_r1 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(1);
+            i0.ɵɵattribute("aria-label", "toggle " + node_r4.filename);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r4) ? "expand_more" : "chevron_right", " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", node_r4.item, " ");
+        }
+    }
+    function TreeLoadmoreExample_mat_tree_node_3_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r9_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementStart(0, "mat-tree-node");
+            i0.ɵɵelementStart(1, "button", 8);
+            i0.ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r9_1); var node_r7 = ctx.$implicit; var ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.loadMore(node_r7.loadMoreParentItem); });
+            i0.ɵɵtext(2, " Load more... ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+    }
     var LOAD_MORE = 'LOAD_MORE';
     /** Nested node */
     var LoadmoreNode = /** @class */ (function () {
@@ -962,13 +1082,15 @@
             this.nodeMap.set(item, result);
             return result;
         };
-        LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
-        LoadmoreDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
         return LoadmoreDatabase;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LoadmoreDatabase, [{
-            type: i0.Injectable
-        }], null, null); })();
+    LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
+    LoadmoreDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(LoadmoreDatabase, [{
+                type: i0.Injectable
+            }], null, null);
+    })();
     /**
      * @title Tree with partially loaded data
      */
@@ -1006,72 +1128,83 @@
         TreeLoadmoreExample.prototype.loadChildren = function (node) {
             this._database.loadMore(node.item, true);
         };
-        TreeLoadmoreExample.ɵfac = function TreeLoadmoreExample_Factory(t) { return new (t || TreeLoadmoreExample)(i0.ɵɵdirectiveInject(LoadmoreDatabase)); };
-        TreeLoadmoreExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeLoadmoreExample, selectors: [["tree-loadmore-example"]], features: [i0.ɵɵProvidersFeature([LoadmoreDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"], ["mat-button", "", 3, "click"]], template: function TreeLoadmoreExample_Template(rf, ctx) { if (rf & 1) {
+        return TreeLoadmoreExample;
+    }());
+    TreeLoadmoreExample.ɵfac = function TreeLoadmoreExample_Factory(t) { return new (t || TreeLoadmoreExample)(i0.ɵɵdirectiveInject(LoadmoreDatabase)); };
+    TreeLoadmoreExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeLoadmoreExample, selectors: [["tree-loadmore-example"]], features: [i0.ɵɵProvidersFeature([LoadmoreDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"], ["mat-button", "", 3, "click"]], template: function TreeLoadmoreExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-tree", 0);
                 i0.ɵɵtemplate(1, TreeLoadmoreExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
                 i0.ɵɵtemplate(2, TreeLoadmoreExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
                 i0.ɵɵtemplate(3, TreeLoadmoreExample_mat_tree_node_3_Template, 3, 0, "mat-tree-node", 3);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.isLoadMore);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon], styles: [""] });
-        return TreeLoadmoreExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeLoadmoreExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'tree-loadmore-example',
-                    templateUrl: 'tree-loadmore-example.html',
-                    styleUrls: ['tree-loadmore-example.css'],
-                    providers: [LoadmoreDatabase]
-                }]
-        }], function () { return [{ type: LoadmoreDatabase }]; }, null); })();
+            }
+        }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon], styles: [""] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeLoadmoreExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tree-loadmore-example',
+                        templateUrl: 'tree-loadmore-example.html',
+                        styleUrls: ['tree-loadmore-example.css'],
+                        providers: [LoadmoreDatabase]
+                    }]
+            }], function () { return [{ type: LoadmoreDatabase }]; }, null);
+    })();
 
-    function TreeNestedOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-tree-node", 3);
-        i0.ɵɵelementStart(1, "li", 4);
-        i0.ɵɵelement(2, "button", 5);
-        i0.ɵɵtext(3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r2 = ctx.$implicit;
-        i0.ɵɵadvance(3);
-        i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
-    } }
-    function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-nested-tree-node");
-        i0.ɵɵelementStart(1, "li");
-        i0.ɵɵelementStart(2, "div", 4);
-        i0.ɵɵelementStart(3, "button", 6);
-        i0.ɵɵelementStart(4, "mat-icon", 7);
-        i0.ɵɵtext(5);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵtext(6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "ul");
-        i0.ɵɵelementContainer(8, 8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var node_r3 = ctx.$implicit;
-        var ctx_r1 = i0.ɵɵnextContext();
-        i0.ɵɵadvance(3);
-        i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
-        i0.ɵɵadvance(1);
-        i0.ɵɵclassProp("example-tree-invisible", !ctx_r1.treeControl.isExpanded(node_r3));
-    } }
+    function TreeNestedOverviewExample_mat_tree_node_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelementStart(1, "li", 4);
+            i0.ɵɵelement(2, "button", 5);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r2 = ctx.$implicit;
+            i0.ɵɵadvance(3);
+            i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
+        }
+    }
+    function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-nested-tree-node");
+            i0.ɵɵelementStart(1, "li");
+            i0.ɵɵelementStart(2, "div", 4);
+            i0.ɵɵelementStart(3, "button", 6);
+            i0.ɵɵelementStart(4, "mat-icon", 7);
+            i0.ɵɵtext(5);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵtext(6);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(7, "ul");
+            i0.ɵɵelementContainer(8, 8);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r3 = ctx.$implicit;
+            var ctx_r1 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(3);
+            i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵclassProp("example-tree-invisible", !ctx_r1.treeControl.isExpanded(node_r3));
+        }
+    }
     var TREE_DATA$2 = [
         {
             name: 'Fruit',
@@ -1109,27 +1242,32 @@
             this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
             this.dataSource.data = TREE_DATA$2;
         }
-        TreeNestedOverviewExample.ɵfac = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
-        TreeNestedOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return TreeNestedOverviewExample;
+    }());
+    TreeNestedOverviewExample.ɵfac = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
+    TreeNestedOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-tree", 0);
                 i0.ɵɵtemplate(1, TreeNestedOverviewExample_mat_tree_node_1_Template, 4, 1, "mat-tree-node", 1);
                 i0.ɵɵtemplate(2, TreeNestedOverviewExample_mat_nested_tree_node_2_Template, 9, 5, "mat-nested-tree-node", 2);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i2.MatButton, i1.MatNestedTreeNode, i3$1.MatIcon, i1.MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
-        return TreeNestedOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeNestedOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'tree-nested-overview-example',
-                    templateUrl: 'tree-nested-overview-example.html',
-                    styleUrls: ['tree-nested-overview-example.css'],
-                }]
-        }], function () { return []; }, null); })();
+            }
+        }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i2.MatButton, i1.MatNestedTreeNode, i3$1.MatIcon, i1.MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeNestedOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tree-nested-overview-example',
+                        templateUrl: 'tree-nested-overview-example.html',
+                        styleUrls: ['tree-nested-overview-example.css'],
+                    }]
+            }], function () { return []; }, null);
+    })();
 
     var EXAMPLES = [
         TreeChecklistExample,
@@ -1141,50 +1279,54 @@
     var TreeExamplesModule = /** @class */ (function () {
         function TreeExamplesModule() {
         }
-        TreeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TreeExamplesModule });
-        TreeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
-                    i4.CommonModule,
-                    i2.MatButtonModule,
-                    i3.MatCheckboxModule,
-                    i3$1.MatIconModule,
-                    i5.MatInputModule,
-                    i5$1.MatProgressBarModule,
-                    i1.MatTreeModule,
-                ]] });
         return TreeExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
-            TreeDynamicExample,
-            TreeFlatOverviewExample,
-            TreeLoadmoreExample,
-            TreeNestedOverviewExample], imports: [i4.CommonModule,
-            i2.MatButtonModule,
-            i3.MatCheckboxModule,
-            i3$1.MatIconModule,
-            i5.MatInputModule,
-            i5$1.MatProgressBarModule,
-            i1.MatTreeModule], exports: [TreeChecklistExample,
-            TreeDynamicExample,
-            TreeFlatOverviewExample,
-            TreeLoadmoreExample,
-            TreeNestedOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i4.CommonModule,
-                        i2.MatButtonModule,
-                        i3.MatCheckboxModule,
-                        i3$1.MatIconModule,
-                        i5.MatInputModule,
-                        i5$1.MatProgressBarModule,
-                        i1.MatTreeModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    TreeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TreeExamplesModule });
+    TreeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
+                i4.CommonModule,
+                i2.MatButtonModule,
+                i3.MatCheckboxModule,
+                i3$1.MatIconModule,
+                i5.MatInputModule,
+                i5$1.MatProgressBarModule,
+                i1.MatTreeModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
+                TreeDynamicExample,
+                TreeFlatOverviewExample,
+                TreeLoadmoreExample,
+                TreeNestedOverviewExample], imports: [i4.CommonModule,
+                i2.MatButtonModule,
+                i3.MatCheckboxModule,
+                i3$1.MatIconModule,
+                i5.MatInputModule,
+                i5$1.MatProgressBarModule,
+                i1.MatTreeModule], exports: [TreeChecklistExample,
+                TreeDynamicExample,
+                TreeFlatOverviewExample,
+                TreeLoadmoreExample,
+                TreeNestedOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i4.CommonModule,
+                            i2.MatButtonModule,
+                            i3.MatCheckboxModule,
+                            i3$1.MatIconModule,
+                            i5.MatInputModule,
+                            i5$1.MatProgressBarModule,
+                            i1.MatTreeModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

@@ -4,80 +4,88 @@
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.scrolling = {}), global.ng.cdk.scrolling, global.ng.core, global.ng.cdk.collections, global.rxjs));
 }(this, (function (exports, i1, i0, collections, rxjs) { 'use strict';
 
-    function CdkVirtualScrollContextExample_div_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div");
-        i0.ɵɵelementStart(1, "div", 2);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "div", 2);
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "div", 2);
-        i0.ɵɵtext(6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "div", 2);
-        i0.ɵɵtext(8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "div", 2);
-        i0.ɵɵtext(10);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "div", 2);
-        i0.ɵɵtext(12);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(13, "div", 2);
-        i0.ɵɵtext(14);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        var index_r2 = ctx.index;
-        var count_r3 = ctx.count;
-        var first_r4 = ctx.first;
-        var last_r5 = ctx.last;
-        var even_r6 = ctx.even;
-        var odd_r7 = ctx.odd;
-        i0.ɵɵclassProp("example-alternate", odd_r7);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Item: ", item_r1, "");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Index: ", index_r2, "");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Count: ", count_r3, "");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("First: ", first_r4 ? "Yes" : "No", "");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Last: ", last_r5 ? "Yes" : "No", "");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Even: ", even_r6 ? "Yes" : "No", "");
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Odd: ", odd_r7 ? "Yes" : "No", "");
-    } }
+    function CdkVirtualScrollContextExample_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div");
+            i0.ɵɵelementStart(1, "div", 2);
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "div", 2);
+            i0.ɵɵtext(4);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(5, "div", 2);
+            i0.ɵɵtext(6);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(7, "div", 2);
+            i0.ɵɵtext(8);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(9, "div", 2);
+            i0.ɵɵtext(10);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(11, "div", 2);
+            i0.ɵɵtext(12);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(13, "div", 2);
+            i0.ɵɵtext(14);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            var index_r2 = ctx.index;
+            var count_r3 = ctx.count;
+            var first_r4 = ctx.first;
+            var last_r5 = ctx.last;
+            var even_r6 = ctx.even;
+            var odd_r7 = ctx.odd;
+            i0.ɵɵclassProp("example-alternate", odd_r7);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Item: ", item_r1, "");
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Index: ", index_r2, "");
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Count: ", count_r3, "");
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("First: ", first_r4 ? "Yes" : "No", "");
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Last: ", last_r5 ? "Yes" : "No", "");
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Even: ", even_r6 ? "Yes" : "No", "");
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1("Odd: ", odd_r7 ? "Yes" : "No", "");
+        }
+    }
     /** @title Virtual scroll context variables */
     var CdkVirtualScrollContextExample = /** @class */ (function () {
         function CdkVirtualScrollContextExample() {
             this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
         }
-        CdkVirtualScrollContextExample.ɵfac = function CdkVirtualScrollContextExample_Factory(t) { return new (t || CdkVirtualScrollContextExample)(); };
-        CdkVirtualScrollContextExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollContextExample, selectors: [["cdk-virtual-scroll-context-example"]], decls: 2, vars: 2, consts: [[1, "example-viewport", 3, "itemSize"], [3, "example-alternate", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item-detail"]], template: function CdkVirtualScrollContextExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollContextExample;
+    }());
+    CdkVirtualScrollContextExample.ɵfac = function CdkVirtualScrollContextExample_Factory(t) { return new (t || CdkVirtualScrollContextExample)(); };
+    CdkVirtualScrollContextExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollContextExample, selectors: [["cdk-virtual-scroll-context-example"]], decls: 2, vars: 2, consts: [[1, "example-viewport", 3, "itemSize"], [3, "example-alternate", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item-detail"]], template: function CdkVirtualScrollContextExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵtemplate(1, CdkVirtualScrollContextExample_div_1_Template, 15, 9, "div", 1);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵproperty("itemSize", 18 * 7);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.items);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail[_ngcontent-%COMP%] {\n  height: 18px;\n}\n\n.example-alternate[_ngcontent-%COMP%] {\n  background: rgba(127, 127, 127, 0.3);\n}"], changeDetection: 0 });
-        return CdkVirtualScrollContextExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollContextExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-context-example',
-                    styleUrls: ['cdk-virtual-scroll-context-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-context-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail[_ngcontent-%COMP%] {\n  height: 18px;\n}\n\n.example-alternate[_ngcontent-%COMP%] {\n  background: rgba(127, 127, 127, 0.3);\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollContextExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-context-example',
+                        styleUrls: ['cdk-virtual-scroll-context-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-context-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
@@ -94,35 +102,36 @@
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
     /* global Reflect, Promise */
-
-    var extendStatics = function(d, b) {
+    var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b)
+                if (b.hasOwnProperty(p))
+                    d[p] = b[p]; };
         return extendStatics(d, b);
     };
-
     function __extends(d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
-
-    var __assign = function() {
+    var __assign = function () {
         __assign = Object.assign || function __assign(t) {
             for (var s, i = 1, n = arguments.length; i < n; i++) {
                 s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+                for (var p in s)
+                    if (Object.prototype.hasOwnProperty.call(s, p))
+                        t[p] = s[p];
             }
             return t;
         };
         return __assign.apply(this, arguments);
     };
-
     function __rest(s, e) {
         var t = {};
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
+        for (var p in s)
+            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+                t[p] = s[p];
         if (s != null && typeof Object.getOwnPropertySymbols === "function")
             for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
                 if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
@@ -130,175 +139,247 @@
             }
         return t;
     }
-
     function __decorate(decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+            r = Reflect.decorate(decorators, target, key, desc);
+        else
+            for (var i = decorators.length - 1; i >= 0; i--)
+                if (d = decorators[i])
+                    r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     }
-
     function __param(paramIndex, decorator) {
-        return function (target, key) { decorator(target, key, paramIndex); }
+        return function (target, key) { decorator(target, key, paramIndex); };
     }
-
     function __metadata(metadataKey, metadataValue) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+            return Reflect.metadata(metadataKey, metadataValue);
     }
-
     function __awaiter(thisArg, _arguments, P, generator) {
         function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
         return new (P || (P = Promise))(function (resolve, reject) {
-            function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-            function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+            function fulfilled(value) { try {
+                step(generator.next(value));
+            }
+            catch (e) {
+                reject(e);
+            } }
+            function rejected(value) { try {
+                step(generator["throw"](value));
+            }
+            catch (e) {
+                reject(e);
+            } }
             function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
             step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
     }
-
     function __generator(thisArg, body) {
-        var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+        var _ = { label: 0, sent: function () { if (t[0] & 1)
+                throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
         function verb(n) { return function (v) { return step([n, v]); }; }
         function step(op) {
-            if (f) throw new TypeError("Generator is already executing.");
-            while (_) try {
-                if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-                if (y = 0, t) op = [op[0] & 2, t.value];
-                switch (op[0]) {
-                    case 0: case 1: t = op; break;
-                    case 4: _.label++; return { value: op[1], done: false };
-                    case 5: _.label++; y = op[1]; op = [0]; continue;
-                    case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                    default:
-                        if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                        if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                        if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                        if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                        if (t[2]) _.ops.pop();
-                        _.trys.pop(); continue;
+            if (f)
+                throw new TypeError("Generator is already executing.");
+            while (_)
+                try {
+                    if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
+                        return t;
+                    if (y = 0, t)
+                        op = [op[0] & 2, t.value];
+                    switch (op[0]) {
+                        case 0:
+                        case 1:
+                            t = op;
+                            break;
+                        case 4:
+                            _.label++;
+                            return { value: op[1], done: false };
+                        case 5:
+                            _.label++;
+                            y = op[1];
+                            op = [0];
+                            continue;
+                        case 7:
+                            op = _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                        default:
+                            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                                _ = 0;
+                                continue;
+                            }
+                            if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) {
+                                _.label = op[1];
+                                break;
+                            }
+                            if (op[0] === 6 && _.label < t[1]) {
+                                _.label = t[1];
+                                t = op;
+                                break;
+                            }
+                            if (t && _.label < t[2]) {
+                                _.label = t[2];
+                                _.ops.push(op);
+                                break;
+                            }
+                            if (t[2])
+                                _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                    }
+                    op = body.call(thisArg, _);
                 }
-                op = body.call(thisArg, _);
-            } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-            if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+                catch (e) {
+                    op = [6, e];
+                    y = 0;
+                }
+                finally {
+                    f = t = 0;
+                }
+            if (op[0] & 5)
+                throw op[1];
+            return { value: op[0] ? op[1] : void 0, done: true };
         }
     }
-
-    var __createBinding = Object.create ? (function(o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
-        Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
-    }) : (function(o, m, k, k2) {
-        if (k2 === undefined) k2 = k;
+    var __createBinding = Object.create ? (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
+        Object.defineProperty(o, k2, { enumerable: true, get: function () { return m[k]; } });
+    }) : (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
         o[k2] = m[k];
     });
-
     function __exportStar(m, exports) {
-        for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+        for (var p in m)
+            if (p !== "default" && !exports.hasOwnProperty(p))
+                __createBinding(exports, m, p);
     }
-
     function __values(o) {
         var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-        if (m) return m.call(o);
-        if (o && typeof o.length === "number") return {
-            next: function () {
-                if (o && i >= o.length) o = void 0;
-                return { value: o && o[i++], done: !o };
-            }
-        };
+        if (m)
+            return m.call(o);
+        if (o && typeof o.length === "number")
+            return {
+                next: function () {
+                    if (o && i >= o.length)
+                        o = void 0;
+                    return { value: o && o[i++], done: !o };
+                }
+            };
         throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     }
-
     function __read(o, n) {
         var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m) return o;
+        if (!m)
+            return o;
         var i = m.call(o), r, ar = [], e;
         try {
-            while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
+                ar.push(r.value);
         }
-        catch (error) { e = { error: error }; }
+        catch (error) {
+            e = { error: error };
+        }
         finally {
             try {
-                if (r && !r.done && (m = i["return"])) m.call(i);
+                if (r && !r.done && (m = i["return"]))
+                    m.call(i);
             }
-            finally { if (e) throw e.error; }
+            finally {
+                if (e)
+                    throw e.error;
+            }
         }
         return ar;
     }
-
     function __spread() {
         for (var ar = [], i = 0; i < arguments.length; i++)
             ar = ar.concat(__read(arguments[i]));
         return ar;
     }
-
     function __spreadArrays() {
-        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++)
+            s += arguments[i].length;
         for (var r = Array(s), k = 0, i = 0; i < il; i++)
             for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
                 r[k] = a[j];
         return r;
-    };
-
+    }
+    ;
     function __await(v) {
         return this instanceof __await ? (this.v = v, this) : new __await(v);
     }
-
     function __asyncGenerator(thisArg, _arguments, generator) {
-        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
         var g = generator.apply(thisArg, _arguments || []), i, q = [];
         return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-        function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-        function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+        function verb(n) { if (g[n])
+            i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n, v) { try {
+            step(g[n](v));
+        }
+        catch (e) {
+            settle(q[0][3], e);
+        } }
         function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
         function fulfill(value) { resume("next", value); }
         function reject(value) { resume("throw", value); }
-        function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+        function settle(f, v) { if (f(v), q.shift(), q.length)
+            resume(q[0][0], q[0][1]); }
     }
-
     function __asyncDelegator(o) {
         var i, p;
         return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
         function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
     }
-
     function __asyncValues(o) {
-        if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
         var m = o[Symbol.asyncIterator], i;
         return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
         function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function (v) { resolve({ value: v, done: d }); }, reject); }
     }
-
     function __makeTemplateObject(cooked, raw) {
-        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        if (Object.defineProperty) {
+            Object.defineProperty(cooked, "raw", { value: raw });
+        }
+        else {
+            cooked.raw = raw;
+        }
         return cooked;
-    };
-
-    var __setModuleDefault = Object.create ? (function(o, v) {
+    }
+    ;
+    var __setModuleDefault = Object.create ? (function (o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
-    }) : function(o, v) {
+    }) : function (o, v) {
         o["default"] = v;
     };
-
     function __importStar(mod) {
-        if (mod && mod.__esModule) return mod;
+        if (mod && mod.__esModule)
+            return mod;
         var result = {};
-        if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        if (mod != null)
+            for (var k in mod)
+                if (Object.hasOwnProperty.call(mod, k))
+                    __createBinding(result, mod, k);
         __setModuleDefault(result, mod);
         return result;
     }
-
     function __importDefault(mod) {
         return (mod && mod.__esModule) ? mod : { default: mod };
     }
-
     function __classPrivateFieldGet(receiver, privateMap) {
         if (!privateMap.has(receiver)) {
             throw new TypeError("attempted to get private field on non-instance");
         }
         return privateMap.get(receiver);
     }
-
     function __classPrivateFieldSet(receiver, privateMap, value) {
         if (!privateMap.has(receiver)) {
             throw new TypeError("attempted to set private field on non-instance");
@@ -307,15 +388,18 @@
         return value;
     }
 
-    function CdkVirtualScrollCustomStrategyExample_div_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 2);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r1);
-    } }
+    function CdkVirtualScrollCustomStrategyExample_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 2);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(item_r1);
+        }
+    }
     var CustomVirtualScrollStrategy = /** @class */ (function (_super) {
         __extends(CustomVirtualScrollStrategy, _super);
         function CustomVirtualScrollStrategy() {
@@ -328,66 +412,79 @@
         function CdkVirtualScrollCustomStrategyExample() {
             this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
         }
-        CdkVirtualScrollCustomStrategyExample.ɵfac = function CdkVirtualScrollCustomStrategyExample_Factory(t) { return new (t || CdkVirtualScrollCustomStrategyExample)(); };
-        CdkVirtualScrollCustomStrategyExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollCustomStrategyExample, selectors: [["cdk-virtual-scroll-custom-strategy-example"]], features: [i0.ɵɵProvidersFeature([{ provide: i1.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }])], decls: 2, vars: 1, consts: [[1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollCustomStrategyExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollCustomStrategyExample;
+    }());
+    CdkVirtualScrollCustomStrategyExample.ɵfac = function CdkVirtualScrollCustomStrategyExample_Factory(t) { return new (t || CdkVirtualScrollCustomStrategyExample)(); };
+    CdkVirtualScrollCustomStrategyExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollCustomStrategyExample, selectors: [["cdk-virtual-scroll-custom-strategy-example"]], features: [i0.ɵɵProvidersFeature([{ provide: i1.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }])], decls: 2, vars: 1, consts: [[1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollCustomStrategyExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵtemplate(1, CdkVirtualScrollCustomStrategyExample_div_1_Template, 2, 1, "div", 1);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.items);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-        return CdkVirtualScrollCustomStrategyExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollCustomStrategyExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-custom-strategy-example',
-                    styleUrls: ['cdk-virtual-scroll-custom-strategy-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-custom-strategy-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    providers: [{ provide: i1.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }]
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollCustomStrategyExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-custom-strategy-example',
+                        styleUrls: ['cdk-virtual-scroll-custom-strategy-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-custom-strategy-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                        providers: [{ provide: i1.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }]
+                    }]
+            }], null, null);
+    })();
 
-    function CdkVirtualScrollDataSourceExample_div_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 2);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r1 || "Loading...");
-    } }
+    function CdkVirtualScrollDataSourceExample_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 2);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(item_r1 || "Loading...");
+        }
+    }
     /** @title Virtual scroll with a custom data source */
     var CdkVirtualScrollDataSourceExample = /** @class */ (function () {
         function CdkVirtualScrollDataSourceExample() {
             this.ds = new MyDataSource();
         }
-        CdkVirtualScrollDataSourceExample.ɵfac = function CdkVirtualScrollDataSourceExample_Factory(t) { return new (t || CdkVirtualScrollDataSourceExample)(); };
-        CdkVirtualScrollDataSourceExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollDataSourceExample, selectors: [["cdk-virtual-scroll-data-source-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollDataSourceExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollDataSourceExample;
+    }());
+    CdkVirtualScrollDataSourceExample.ɵfac = function CdkVirtualScrollDataSourceExample_Factory(t) { return new (t || CdkVirtualScrollDataSourceExample)(); };
+    CdkVirtualScrollDataSourceExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollDataSourceExample, selectors: [["cdk-virtual-scroll-data-source-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollDataSourceExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵtemplate(1, CdkVirtualScrollDataSourceExample_div_1_Template, 2, 1, "div", 1);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.ds);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-        return CdkVirtualScrollDataSourceExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollDataSourceExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-data-source-example',
-                    styleUrls: ['cdk-virtual-scroll-data-source-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-data-source-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollDataSourceExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-data-source-example',
+                        styleUrls: ['cdk-virtual-scroll-data-source-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-data-source-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
     var MyDataSource = /** @class */ (function (_super) {
         __extends(MyDataSource, _super);
         function MyDataSource() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
+            var _this = _super.apply(this, __spread(arguments)) || this;
             _this._length = 100000;
             _this._pageSize = 100;
             _this._cachedData = Array.from({ length: _this._length });
@@ -430,22 +527,25 @@
         return MyDataSource;
     }(collections.DataSource));
 
-    function CdkVirtualScrollDlExample_ng_container_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementContainerStart(0);
-        i0.ɵɵelementStart(1, "dt", 3);
-        i0.ɵɵtext(2);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "dd", 4);
-        i0.ɵɵtext(4);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementContainerEnd();
-    } if (rf & 2) {
-        var state_r1 = ctx.$implicit;
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(state_r1.name);
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate(state_r1.capital);
-    } }
+    function CdkVirtualScrollDlExample_ng_container_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementContainerStart(0);
+            i0.ɵɵelementStart(1, "dt", 3);
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "dd", 4);
+            i0.ɵɵtext(4);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementContainerEnd();
+        }
+        if (rf & 2) {
+            var state_r1 = ctx.$implicit;
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(state_r1.name);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate(state_r1.capital);
+        }
+    }
     /** @title Virtual scrolling `<dl>` */
     var CdkVirtualScrollDlExample = /** @class */ (function () {
         function CdkVirtualScrollDlExample() {
@@ -502,171 +602,208 @@
                 { name: 'Wyoming', capital: 'Cheyenne' },
             ];
         }
-        CdkVirtualScrollDlExample.ɵfac = function CdkVirtualScrollDlExample_Factory(t) { return new (t || CdkVirtualScrollDlExample)(); };
-        CdkVirtualScrollDlExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollDlExample, selectors: [["cdk-virtual-scroll-dl-example"]], decls: 3, vars: 1, consts: [["itemSize", "60", 1, "example-viewport"], [1, "example-dl"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-dt"], [1, "example-dd"]], template: function CdkVirtualScrollDlExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollDlExample;
+    }());
+    CdkVirtualScrollDlExample.ɵfac = function CdkVirtualScrollDlExample_Factory(t) { return new (t || CdkVirtualScrollDlExample)(); };
+    CdkVirtualScrollDlExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollDlExample, selectors: [["cdk-virtual-scroll-dl-example"]], decls: 3, vars: 1, consts: [["itemSize", "60", 1, "example-viewport"], [1, "example-dl"], [4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-dt"], [1, "example-dd"]], template: function CdkVirtualScrollDlExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵelementStart(1, "dl", 1);
                 i0.ɵɵtemplate(2, CdkVirtualScrollDlExample_ng_container_2_Template, 5, 2, "ng-container", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.states);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt[_ngcontent-%COMP%] {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd[_ngcontent-%COMP%] {\n  height: 30px;\n}"], changeDetection: 0 });
-        return CdkVirtualScrollDlExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollDlExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-dl-example',
-                    styleUrls: ['cdk-virtual-scroll-dl-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-dl-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt[_ngcontent-%COMP%] {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd[_ngcontent-%COMP%] {\n  height: 30px;\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollDlExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-dl-example',
+                        styleUrls: ['cdk-virtual-scroll-dl-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-dl-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
 
-    function CdkVirtualScrollFixedBufferExample_div_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 2);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r1);
-    } }
+    function CdkVirtualScrollFixedBufferExample_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 2);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(item_r1);
+        }
+    }
     /** @title Fixed size virtual scroll with custom buffer parameters */
     var CdkVirtualScrollFixedBufferExample = /** @class */ (function () {
         function CdkVirtualScrollFixedBufferExample() {
             this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
         }
-        CdkVirtualScrollFixedBufferExample.ɵfac = function CdkVirtualScrollFixedBufferExample_Factory(t) { return new (t || CdkVirtualScrollFixedBufferExample)(); };
-        CdkVirtualScrollFixedBufferExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollFixedBufferExample, selectors: [["cdk-virtual-scroll-fixed-buffer-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", "minBufferPx", "200", "maxBufferPx", "400", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollFixedBufferExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollFixedBufferExample;
+    }());
+    CdkVirtualScrollFixedBufferExample.ɵfac = function CdkVirtualScrollFixedBufferExample_Factory(t) { return new (t || CdkVirtualScrollFixedBufferExample)(); };
+    CdkVirtualScrollFixedBufferExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollFixedBufferExample, selectors: [["cdk-virtual-scroll-fixed-buffer-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", "minBufferPx", "200", "maxBufferPx", "400", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollFixedBufferExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵtemplate(1, CdkVirtualScrollFixedBufferExample_div_1_Template, 2, 1, "div", 1);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.items);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-        return CdkVirtualScrollFixedBufferExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollFixedBufferExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-fixed-buffer-example',
-                    styleUrls: ['cdk-virtual-scroll-fixed-buffer-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-fixed-buffer-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollFixedBufferExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-fixed-buffer-example',
+                        styleUrls: ['cdk-virtual-scroll-fixed-buffer-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-fixed-buffer-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
 
-    function CdkVirtualScrollHorizontalExample_div_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 3);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r1);
-    } }
+    function CdkVirtualScrollHorizontalExample_div_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 3);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(item_r1);
+        }
+    }
     /** @title Horizontal virtual scroll */
     var CdkVirtualScrollHorizontalExample = /** @class */ (function () {
         function CdkVirtualScrollHorizontalExample() {
             this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
         }
-        CdkVirtualScrollHorizontalExample.ɵfac = function CdkVirtualScrollHorizontalExample_Factory(t) { return new (t || CdkVirtualScrollHorizontalExample)(); };
-        CdkVirtualScrollHorizontalExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollHorizontalExample, selectors: [["cdk-virtual-scroll-horizontal-example"]], decls: 3, vars: 1, consts: [[1, "cdk-virtual-scroll-data-source-example"], ["orientation", "horizontal", "itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollHorizontalExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollHorizontalExample;
+    }());
+    CdkVirtualScrollHorizontalExample.ɵfac = function CdkVirtualScrollHorizontalExample_Factory(t) { return new (t || CdkVirtualScrollHorizontalExample)(); };
+    CdkVirtualScrollHorizontalExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollHorizontalExample, selectors: [["cdk-virtual-scroll-horizontal-example"]], decls: 3, vars: 1, consts: [[1, "cdk-virtual-scroll-data-source-example"], ["orientation", "horizontal", "itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollHorizontalExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "cdk-virtual-scroll-viewport", 1);
                 i0.ɵɵtemplate(2, CdkVirtualScrollHorizontalExample_div_2_Template, 2, 1, "div", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.items);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"], encapsulation: 2, changeDetection: 0 });
-        return CdkVirtualScrollHorizontalExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollHorizontalExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-horizontal-example',
-                    styleUrls: ['cdk-virtual-scroll-horizontal-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-horizontal-example.html',
-                    encapsulation: i0.ViewEncapsulation.None,
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"], encapsulation: 2, changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollHorizontalExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-horizontal-example',
+                        styleUrls: ['cdk-virtual-scroll-horizontal-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-horizontal-example.html',
+                        encapsulation: i0.ViewEncapsulation.None,
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
 
-    function CdkVirtualScrollOverviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 2);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r1);
-    } }
+    function CdkVirtualScrollOverviewExample_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 2);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(item_r1);
+        }
+    }
     /** @title Basic virtual scroll */
     var CdkVirtualScrollOverviewExample = /** @class */ (function () {
         function CdkVirtualScrollOverviewExample() {
             this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
         }
-        CdkVirtualScrollOverviewExample.ɵfac = function CdkVirtualScrollOverviewExample_Factory(t) { return new (t || CdkVirtualScrollOverviewExample)(); };
-        CdkVirtualScrollOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollOverviewExample, selectors: [["cdk-virtual-scroll-overview-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollOverviewExample;
+    }());
+    CdkVirtualScrollOverviewExample.ɵfac = function CdkVirtualScrollOverviewExample_Factory(t) { return new (t || CdkVirtualScrollOverviewExample)(); };
+    CdkVirtualScrollOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollOverviewExample, selectors: [["cdk-virtual-scroll-overview-example"]], decls: 2, vars: 1, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵtemplate(1, CdkVirtualScrollOverviewExample_div_1_Template, 2, 1, "div", 1);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.items);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-        return CdkVirtualScrollOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-overview-example',
-                    styleUrls: ['cdk-virtual-scroll-overview-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-overview-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-overview-example',
+                        styleUrls: ['cdk-virtual-scroll-overview-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-overview-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
 
-    function CdkVirtualScrollTemplateCacheExample_div_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "div", 2);
-        i0.ɵɵtext(1);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        var item_r1 = ctx.$implicit;
-        i0.ɵɵadvance(1);
-        i0.ɵɵtextInterpolate(item_r1);
-    } }
+    function CdkVirtualScrollTemplateCacheExample_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "div", 2);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var item_r1 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate(item_r1);
+        }
+    }
     /** @title Virtual scroll with no template caching */
     var CdkVirtualScrollTemplateCacheExample = /** @class */ (function () {
         function CdkVirtualScrollTemplateCacheExample() {
             this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
         }
-        CdkVirtualScrollTemplateCacheExample.ɵfac = function CdkVirtualScrollTemplateCacheExample_Factory(t) { return new (t || CdkVirtualScrollTemplateCacheExample)(); };
-        CdkVirtualScrollTemplateCacheExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollTemplateCacheExample, selectors: [["cdk-virtual-scroll-template-cache-example"]], decls: 2, vars: 2, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTemplateCacheSize"], [1, "example-item"]], template: function CdkVirtualScrollTemplateCacheExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkVirtualScrollTemplateCacheExample;
+    }());
+    CdkVirtualScrollTemplateCacheExample.ɵfac = function CdkVirtualScrollTemplateCacheExample_Factory(t) { return new (t || CdkVirtualScrollTemplateCacheExample)(); };
+    CdkVirtualScrollTemplateCacheExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkVirtualScrollTemplateCacheExample, selectors: [["cdk-virtual-scroll-template-cache-example"]], decls: 2, vars: 2, consts: [["itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf", "cdkVirtualForTemplateCacheSize"], [1, "example-item"]], template: function CdkVirtualScrollTemplateCacheExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
                 i0.ɵɵtemplate(1, CdkVirtualScrollTemplateCacheExample_div_1_Template, 2, 1, "div", 1);
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkVirtualForOf", ctx.items)("cdkVirtualForTemplateCacheSize", 0);
-            } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-        return CdkVirtualScrollTemplateCacheExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkVirtualScrollTemplateCacheExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-virtual-scroll-template-cache-example',
-                    styleUrls: ['cdk-virtual-scroll-template-cache-example.css'],
-                    templateUrl: 'cdk-virtual-scroll-template-cache-example.html',
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkVirtualScrollTemplateCacheExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-virtual-scroll-template-cache-example',
+                        styleUrls: ['cdk-virtual-scroll-template-cache-example.css'],
+                        templateUrl: 'cdk-virtual-scroll-template-cache-example.html',
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         CdkVirtualScrollContextExample,
@@ -681,34 +818,38 @@
     var CdkScrollingExamplesModule = /** @class */ (function () {
         function CdkScrollingExamplesModule() {
         }
-        CdkScrollingExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkScrollingExamplesModule });
-        CdkScrollingExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[i1.ScrollingModule]] });
         return CdkScrollingExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
-            CdkVirtualScrollCustomStrategyExample,
-            CdkVirtualScrollDataSourceExample,
-            CdkVirtualScrollDlExample,
-            CdkVirtualScrollFixedBufferExample,
-            CdkVirtualScrollHorizontalExample,
-            CdkVirtualScrollOverviewExample,
-            CdkVirtualScrollTemplateCacheExample], imports: [i1.ScrollingModule], exports: [CdkVirtualScrollContextExample,
-            CdkVirtualScrollCustomStrategyExample,
-            CdkVirtualScrollDataSourceExample,
-            CdkVirtualScrollDlExample,
-            CdkVirtualScrollFixedBufferExample,
-            CdkVirtualScrollHorizontalExample,
-            CdkVirtualScrollOverviewExample,
-            CdkVirtualScrollTemplateCacheExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkScrollingExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [i1.ScrollingModule],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    CdkScrollingExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkScrollingExamplesModule });
+    CdkScrollingExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[i1.ScrollingModule]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
+                CdkVirtualScrollCustomStrategyExample,
+                CdkVirtualScrollDataSourceExample,
+                CdkVirtualScrollDlExample,
+                CdkVirtualScrollFixedBufferExample,
+                CdkVirtualScrollHorizontalExample,
+                CdkVirtualScrollOverviewExample,
+                CdkVirtualScrollTemplateCacheExample], imports: [i1.ScrollingModule], exports: [CdkVirtualScrollContextExample,
+                CdkVirtualScrollCustomStrategyExample,
+                CdkVirtualScrollDataSourceExample,
+                CdkVirtualScrollDlExample,
+                CdkVirtualScrollFixedBufferExample,
+                CdkVirtualScrollHorizontalExample,
+                CdkVirtualScrollOverviewExample,
+                CdkVirtualScrollTemplateCacheExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkScrollingExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [i1.ScrollingModule],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

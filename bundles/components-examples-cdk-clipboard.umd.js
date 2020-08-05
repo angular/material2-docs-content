@@ -19,8 +19,11 @@
                 "Unfortunately, he taught his apprentice everything he knew, then his apprentice " +
                 "killed him in his sleep. Ironic. He could save others from death, but not himself.";
         }
-        CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
-        CdkClipboardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return CdkClipboardOverviewExample;
+    }());
+    CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
+    CdkClipboardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "label", 0);
                 i0.ɵɵtext(1, "Text to be copied");
                 i0.ɵɵelementEnd();
@@ -30,41 +33,45 @@
                 i0.ɵɵelementStart(3, "button", 2);
                 i0.ɵɵtext(4, "Copy to clipboard");
                 i0.ɵɵelementEnd();
-            } if (rf & 2) {
+            }
+            if (rf & 2) {
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngModel", ctx.value);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("cdkCopyToClipboard", ctx.value);
-            } }, directives: [i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i2.CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
-        return CdkClipboardOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkClipboardOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'cdk-clipboard-overview-example',
-                    templateUrl: 'cdk-clipboard-overview-example.html',
-                    styleUrls: ['cdk-clipboard-overview-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i2.CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkClipboardOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cdk-clipboard-overview-example',
+                        templateUrl: 'cdk-clipboard-overview-example.html',
+                        styleUrls: ['cdk-clipboard-overview-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [CdkClipboardOverviewExample];
     var CdkClipboardExamplesModule = /** @class */ (function () {
         function CdkClipboardExamplesModule() {
         }
-        CdkClipboardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
-        CdkClipboardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[i2.ClipboardModule, i1.FormsModule]] });
         return CdkClipboardExamplesModule;
     }());
+    CdkClipboardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
+    CdkClipboardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[i2.ClipboardModule, i1.FormsModule]] });
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [i2.ClipboardModule, i1.FormsModule], exports: [CdkClipboardOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkClipboardExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [i2.ClipboardModule, i1.FormsModule],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CdkClipboardExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [i2.ClipboardModule, i1.FormsModule],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.

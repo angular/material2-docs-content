@@ -80,7 +80,7 @@ CustomStepper.ɵcmp = ɵɵdefineComponent({ type: CustomStepper, selectors: [["e
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.steps);
     } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext, NgClass], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
-const ɵCustomStepper_BaseFactory = ɵɵgetInheritedFactory(CustomStepper);
+const ɵCustomStepper_BaseFactory = /*@__PURE__*/ ɵɵgetInheritedFactory(CustomStepper);
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CustomStepper, [{
         type: Component,
         args: [{
@@ -198,7 +198,7 @@ CustomLinearStepper.ɵcmp = ɵɵdefineComponent({ type: CustomLinearStepper, sel
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.steps);
     } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
-const ɵCustomLinearStepper_BaseFactory = ɵɵgetInheritedFactory(CustomLinearStepper);
+const ɵCustomLinearStepper_BaseFactory = /*@__PURE__*/ ɵɵgetInheritedFactory(CustomLinearStepper);
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CustomLinearStepper, [{
         type: Component,
         args: [{

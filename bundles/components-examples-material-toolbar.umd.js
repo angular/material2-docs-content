@@ -10,8 +10,11 @@
     var ToolbarBasicExample = /** @class */ (function () {
         function ToolbarBasicExample() {
         }
-        ToolbarBasicExample.ɵfac = function ToolbarBasicExample_Factory(t) { return new (t || ToolbarBasicExample)(); };
-        ToolbarBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarBasicExample, selectors: [["toolbar-basic-example"]], decls: 13, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"]], template: function ToolbarBasicExample_Template(rf, ctx) { if (rf & 1) {
+        return ToolbarBasicExample;
+    }());
+    ToolbarBasicExample.ɵfac = function ToolbarBasicExample_Factory(t) { return new (t || ToolbarBasicExample)(); };
+    ToolbarBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarBasicExample, selectors: [["toolbar-basic-example"]], decls: 13, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"]], template: function ToolbarBasicExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-toolbar");
                 i0.ɵɵelementStart(1, "button", 0);
                 i0.ɵɵelementStart(2, "mat-icon");
@@ -33,17 +36,18 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatToolbar, i2.MatButton, i3.MatIcon], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-        return ToolbarBasicExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarBasicExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'toolbar-basic-example',
-                    templateUrl: 'toolbar-basic-example.html',
-                    styleUrls: ['toolbar-basic-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatToolbar, i2.MatButton, i3.MatIcon], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ToolbarBasicExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'toolbar-basic-example',
+                        templateUrl: 'toolbar-basic-example.html',
+                        styleUrls: ['toolbar-basic-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Multi-row toolbar
@@ -51,8 +55,11 @@
     var ToolbarMultirowExample = /** @class */ (function () {
         function ToolbarMultirowExample() {
         }
-        ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
-        ToolbarMultirowExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) { if (rf & 1) {
+        return ToolbarMultirowExample;
+    }());
+    ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
+    ToolbarMultirowExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-toolbar", 0);
                 i0.ɵɵelementStart(1, "mat-toolbar-row");
                 i0.ɵɵelementStart(2, "span");
@@ -81,17 +88,18 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatToolbar, i1.MatToolbarRow, i3.MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-        return ToolbarMultirowExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarMultirowExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'toolbar-multirow-example',
-                    templateUrl: 'toolbar-multirow-example.html',
-                    styleUrls: ['toolbar-multirow-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatToolbar, i1.MatToolbarRow, i3.MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ToolbarMultirowExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'toolbar-multirow-example',
+                        templateUrl: 'toolbar-multirow-example.html',
+                        styleUrls: ['toolbar-multirow-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @title Toolbar overview
@@ -99,8 +107,11 @@
     var ToolbarOverviewExample = /** @class */ (function () {
         function ToolbarOverviewExample() {
         }
-        ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
-        ToolbarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 51, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"], ["color", "primary"]], template: function ToolbarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        return ToolbarOverviewExample;
+    }());
+    ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
+    ToolbarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 51, vars: 0, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with menu icon", 1, "example-icon"], [1, "example-spacer"], ["mat-icon-button", "", "aria-label", "Example icon-button with heart icon", 1, "example-icon", "favorite-icon"], ["mat-icon-button", "", "aria-label", "Example icon-button with share icon", 1, "example-icon"], ["color", "primary"]], template: function ToolbarOverviewExample_Template(rf, ctx) {
+            if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵelementStart(1, "mat-toolbar");
                 i0.ɵɵelementStart(2, "span");
@@ -185,17 +196,18 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.MatToolbar, i2.MatButton, i3.MatIcon, i1.MatToolbarRow], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-        return ToolbarOverviewExample;
-    }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarOverviewExample, [{
-            type: i0.Component,
-            args: [{
-                    selector: 'toolbar-overview-example',
-                    templateUrl: 'toolbar-overview-example.html',
-                    styleUrls: ['toolbar-overview-example.css'],
-                }]
-        }], null, null); })();
+            }
+        }, directives: [i1.MatToolbar, i2.MatButton, i3.MatIcon, i1.MatToolbarRow], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ToolbarOverviewExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'toolbar-overview-example',
+                        templateUrl: 'toolbar-overview-example.html',
+                        styleUrls: ['toolbar-overview-example.css'],
+                    }]
+            }], null, null);
+    })();
 
     var EXAMPLES = [
         ToolbarBasicExample,
@@ -205,34 +217,38 @@
     var ToolbarExamplesModule = /** @class */ (function () {
         function ToolbarExamplesModule() {
         }
-        ToolbarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ToolbarExamplesModule });
-        ToolbarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
-                    i2.MatButtonModule,
-                    i3.MatIconModule,
-                    i1.MatToolbarModule,
-                ]] });
         return ToolbarExamplesModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarBasicExample,
-            ToolbarMultirowExample,
-            ToolbarOverviewExample], imports: [i2.MatButtonModule,
-            i3.MatIconModule,
-            i1.MatToolbarModule], exports: [ToolbarBasicExample,
-            ToolbarMultirowExample,
-            ToolbarOverviewExample] }); })();
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarExamplesModule, [{
-            type: i0.NgModule,
-            args: [{
-                    imports: [
-                        i2.MatButtonModule,
-                        i3.MatIconModule,
-                        i1.MatToolbarModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                }]
-        }], null, null); })();
+    ToolbarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ToolbarExamplesModule });
+    ToolbarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
+                i2.MatButtonModule,
+                i3.MatIconModule,
+                i1.MatToolbarModule,
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarBasicExample,
+                ToolbarMultirowExample,
+                ToolbarOverviewExample], imports: [i2.MatButtonModule,
+                i3.MatIconModule,
+                i1.MatToolbarModule], exports: [ToolbarBasicExample,
+                ToolbarMultirowExample,
+                ToolbarOverviewExample] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ToolbarExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i2.MatButtonModule,
+                            i3.MatIconModule,
+                            i1.MatToolbarModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
+                    }]
+            }], null, null);
+    })();
 
     /**
      * Generated bundle index. Do not edit.
