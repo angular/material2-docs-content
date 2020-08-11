@@ -431,10 +431,7 @@ StepperOptionalExample.ɵcmp = ɵɵdefineComponent({ type: StepperOptionalExampl
 function StepperOverviewExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
 } }
-function StepperOverviewExample_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-    ɵɵtext(0, "Fill out your address");
-} }
-function StepperOverviewExample_ng_template_27_Template(rf, ctx) { if (rf & 1) {
+function StepperOverviewExample_ng_template_26_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Done");
 } }
 /**
@@ -455,8 +452,8 @@ class StepperOverviewExample {
     }
 }
 StepperOverviewExample.ɵfac = function StepperOverviewExample_Factory(t) { return new (t || StepperOverviewExample)(ɵɵdirectiveInject(FormBuilder)); };
-StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        const _r4 = ɵɵgetCurrentView();
+StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 34, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["label", "Fill out your address", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        const _r3 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "button", 0);
         ɵɵlistener("click", function StepperOverviewExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
         ɵɵtext(1);
@@ -478,37 +475,36 @@ StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExampl
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(14, "mat-step", 3);
+        ɵɵelementStart(14, "mat-step", 8);
         ɵɵelementStart(15, "form", 4);
-        ɵɵtemplate(16, StepperOverviewExample_ng_template_16_Template, 1, 0, "ng-template", 5);
-        ɵɵelementStart(17, "mat-form-field");
-        ɵɵelementStart(18, "mat-label");
-        ɵɵtext(19, "Address");
+        ɵɵelementStart(16, "mat-form-field");
+        ɵɵelementStart(17, "mat-label");
+        ɵɵtext(18, "Address");
         ɵɵelementEnd();
-        ɵɵelement(20, "input", 8);
+        ɵɵelement(19, "input", 9);
         ɵɵelementEnd();
-        ɵɵelementStart(21, "div");
-        ɵɵelementStart(22, "button", 9);
-        ɵɵtext(23, "Back");
+        ɵɵelementStart(20, "div");
+        ɵɵelementStart(21, "button", 10);
+        ɵɵtext(22, "Back");
         ɵɵelementEnd();
-        ɵɵelementStart(24, "button", 7);
-        ɵɵtext(25, "Next");
-        ɵɵelementEnd();
+        ɵɵelementStart(23, "button", 7);
+        ɵɵtext(24, "Next");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(26, "mat-step");
-        ɵɵtemplate(27, StepperOverviewExample_ng_template_27_Template, 1, 0, "ng-template", 5);
-        ɵɵelementStart(28, "p");
-        ɵɵtext(29, "You are now done.");
         ɵɵelementEnd();
-        ɵɵelementStart(30, "div");
-        ɵɵelementStart(31, "button", 9);
-        ɵɵtext(32, "Back");
+        ɵɵelementStart(25, "mat-step");
+        ɵɵtemplate(26, StepperOverviewExample_ng_template_26_Template, 1, 0, "ng-template", 5);
+        ɵɵelementStart(27, "p");
+        ɵɵtext(28, "You are now done.");
         ɵɵelementEnd();
-        ɵɵelementStart(33, "button", 10);
-        ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener() { ɵɵrestoreView(_r4); const _r0 = ɵɵreference(3); return _r0.reset(); });
-        ɵɵtext(34, "Reset");
+        ɵɵelementStart(29, "div");
+        ɵɵelementStart(30, "button", 10);
+        ɵɵtext(31, "Back");
+        ɵɵelementEnd();
+        ɵɵelementStart(32, "button", 11);
+        ɵɵlistener("click", function StepperOverviewExample_Template_button_click_32_listener() { ɵɵrestoreView(_r3); const _r0 = ɵɵreference(3); return _r0.reset(); });
+        ɵɵtext(33, "Reset");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
