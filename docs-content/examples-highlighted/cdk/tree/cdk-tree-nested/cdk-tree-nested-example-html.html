@@ -7,7 +7,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">"let node; when: hasChild"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-tree-node"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'toggle ' + node.name"</span> <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'Toggle ' + node.name"</span> <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-icon-rtl-mirror"</span>&gt;</span>
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>

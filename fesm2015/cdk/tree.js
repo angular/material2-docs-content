@@ -32,7 +32,7 @@ function CdkTreeFlatExample_cdk_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵstyleProp("display", ctx_r1.shouldRender(node_r3) ? "flex" : "none");
     ɵɵadvance(1);
     ɵɵstyleProp("visibility", node_r3.expandable ? "visible" : "hidden");
-    ɵɵattribute("aria-label", "toggle " + node_r3.filename);
+    ɵɵattribute("aria-label", "Toggle " + node_r3.name);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
@@ -154,7 +154,7 @@ function CdkTreeNestedExample_cdk_nested_tree_node_2_Template(rf, ctx) { if (rf 
     const node_r3 = ctx.$implicit;
     const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r3.name);
+    ɵɵattribute("aria-label", "Toggle " + node_r3.name);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
