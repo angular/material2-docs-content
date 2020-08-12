@@ -37,7 +37,7 @@
             i0.ɵɵstyleProp("display", ctx_r1.shouldRender(node_r3) ? "flex" : "none");
             i0.ɵɵadvance(1);
             i0.ɵɵstyleProp("visibility", node_r3.expandable ? "visible" : "hidden");
-            i0.ɵɵattribute("aria-label", "toggle " + node_r3.filename);
+            i0.ɵɵattribute("aria-label", "Toggle " + node_r3.name);
             i0.ɵɵadvance(2);
             i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
             i0.ɵɵadvance(1);
@@ -171,7 +171,7 @@
             var node_r3 = ctx.$implicit;
             var ctx_r1 = i0.ɵɵnextContext();
             i0.ɵɵadvance(1);
-            i0.ɵɵattribute("aria-label", "toggle " + node_r3.name);
+            i0.ɵɵattribute("aria-label", "Toggle " + node_r3.name);
             i0.ɵɵadvance(2);
             i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
             i0.ɵɵadvance(1);

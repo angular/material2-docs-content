@@ -68,7 +68,7 @@ function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
     const node_r10 = ctx.$implicit;
     const ctx_r2 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r10.filename);
+    ɵɵattribute("aria-label", "Toggle " + node_r10.item);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r2.treeControl.isExpanded(node_r10) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
@@ -333,7 +333,7 @@ function TreeDynamicExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     const node_r3 = ctx.$implicit;
     const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r3.filename);
+    ɵɵattribute("aria-label", "Toggle " + node_r3.item);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
@@ -501,7 +501,7 @@ function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1)
     const node_r3 = ctx.$implicit;
     const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r3.name);
+    ɵɵattribute("aria-label", "Toggle " + node_r3.name);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
@@ -605,7 +605,7 @@ function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     const node_r4 = ctx.$implicit;
     const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(1);
-    ɵɵattribute("aria-label", "toggle " + node_r4.filename);
+    ɵɵattribute("aria-label", "Toggle " + node_r4.item);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r4) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
@@ -791,7 +791,7 @@ function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if
     const node_r3 = ctx.$implicit;
     const ctx_r1 = ɵɵnextContext();
     ɵɵadvance(3);
-    ɵɵattribute("aria-label", "toggle " + node_r3.name);
+    ɵɵattribute("aria-label", "Toggle " + node_r3.name);
     ɵɵadvance(2);
     ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
     ɵɵadvance(1);
