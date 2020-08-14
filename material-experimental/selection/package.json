@@ -1,0 +1,9 @@
+{
+  "name": "@angular/components-examples/material-experimental/selection",
+  "main": "../../bundles/components-examples-material-experimental-selection.umd.js",
+  "fesm2015": "../../fesm2015/material-experimental/selection.js",
+  "esm2015": "../../esm2015/material-experimental/selection/selection_public_index.js",
+  "typings": "./selection_public_index.d.ts",
+  "module": "../../fesm2015/material-experimental/selection.js",
+  "es2015": "../../fesm2015/material-experimental/selection.js"
+}

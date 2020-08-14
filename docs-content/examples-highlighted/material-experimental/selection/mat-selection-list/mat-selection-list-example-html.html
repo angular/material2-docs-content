@@ -1,0 +1,45 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>native input<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+Selected: {{selected1}}
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">matSelection</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"data"</span> [<span class="hljs-attr">matSelectionMultiple</span>]=<span class="hljs-string">"true"</span> (<span class="hljs-attr">matSelectionChange</span>)=<span class="hljs-string">"selected1 = getCurrentSelected($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">matSelectAll</span> #<span class="hljs-attr">allToggler</span>=<span class="hljs-string">"matSelectAll"</span>
+      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"allToggler.checked | async"</span>
+      [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"allToggler.indeterminate | async"</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">"allToggler.toggle($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of data"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">matSelectionToggle</span> #<span class="hljs-attr">toggler</span>=<span class="hljs-string">"matSelectionToggle"</span> [<span class="hljs-attr">matSelectionToggleValue</span>]=<span class="hljs-string">"item"</span>
+      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"toggler.checked | async"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"toggler.toggle()"</span>&gt;</span>
+    {{item}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>mat-checkbox<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+Selected: {{selected2}}
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">matSelection</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"data"</span> [<span class="hljs-attr">matSelectionMultiple</span>]=<span class="hljs-string">"true"</span> (<span class="hljs-attr">matSelectionChange</span>)=<span class="hljs-string">"selected2 = getCurrentSelected($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">matSelectAll</span> #<span class="hljs-attr">toggle1</span>=<span class="hljs-string">"matSelectAll"</span> [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"toggle1.indeterminate | async"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of data"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">matSelectionToggle</span> [<span class="hljs-attr">matSelectionToggleValue</span>]=<span class="hljs-string">"item"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    {{item}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>Single select with mat-checkbox<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+Selected: {{selected3}}
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">matSelection</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"data"</span> [<span class="hljs-attr">matSelectionMultiple</span>]=<span class="hljs-string">"false"</span> (<span class="hljs-attr">matSelectionChange</span>)=<span class="hljs-string">"selected3 = getCurrentSelected($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of data"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">matSelectionToggle</span> [<span class="hljs-attr">matSelectionToggleValue</span>]=<span class="hljs-string">"item"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    {{item}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>with trackBy<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+Selected: {{selected4}}
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">matSelection</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"data"</span> [<span class="hljs-attr">matSelectionMultiple</span>]=<span class="hljs-string">"true"</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">"trackByFn"</span> (<span class="hljs-attr">matSelectionChange</span>)=<span class="hljs-string">"selected4 = getCurrentSelected($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">matSelectAll</span> #<span class="hljs-attr">toggle2</span>=<span class="hljs-string">"matSelectAll"</span> [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"toggle2.indeterminate | async"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of data; index as i; trackBy: trackByFn"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">matSelectionToggle</span> [<span class="hljs-attr">matSelectionToggleValue</span>]=<span class="hljs-string">"item"</span> [<span class="hljs-attr">matSelectionToggleIndex</span>]=<span class="hljs-string">"i"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    {{item}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"changeElementName()"</span>&gt;</span>Change element names and the already selected stays<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"reset()"</span>&gt;</span>reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

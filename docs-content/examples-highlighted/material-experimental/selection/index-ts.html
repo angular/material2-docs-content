@@ -1,0 +1,34 @@
+<span class="hljs-keyword">import</span> {MatSelectionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/selection'</span>;
+<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+
+<span class="hljs-keyword">import</span> {MatSelectionColumnExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./mat-selection-column/mat-selection-column-example'</span>;
+<span class="hljs-keyword">import</span> {MatSelectionListExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./mat-selection-list/mat-selection-list-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  MatSelectionListExample,
+  MatSelectionColumnExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  MatSelectionListExample,
+  MatSelectionColumnExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatSelectionModule,
+    MatTableModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MatSelectionExamplesModule {
+}

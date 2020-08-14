@@ -1,0 +1,53 @@
+<span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk-experimental/selection'</span>;
+<span class="hljs-keyword">import</span> {Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ReplaySubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+
+<span class="hljs-comment">/**
+ * @title CDK Selection on a simple list.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-selection-list-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-selection-list-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkSelectionListExample <span class="hljs-keyword">implements</span> OnDestroy {
+  <span class="hljs-keyword">private</span> readonly _destroyed = <span class="hljs-keyword">new</span> ReplaySubject(<span class="hljs-number">1</span>);
+
+  data = ELEMENT_NAMES;
+
+  selected1: <span class="hljs-built_in">string</span>[] = [];
+  selected2: <span class="hljs-built_in">string</span>[] = [];
+  selected3: <span class="hljs-built_in">string</span>[] = [];
+  selected4: <span class="hljs-built_in">string</span>[] = [];
+
+  ngOnDestroy() {
+    <span class="hljs-keyword">this</span>._destroyed.next();
+    <span class="hljs-keyword">this</span>._destroyed.complete();
+  }
+
+  getCurrentSelected(event: SelectionChange&lt;<span class="hljs-built_in">string</span>&gt;) {
+    <span class="hljs-keyword">return</span> event.after.map(<span class="hljs-function">(<span class="hljs-params">select</span>) =&gt;</span> select.value);
+  }
+
+  trackByFn(index: <span class="hljs-built_in">number</span>, value: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">return</span> index;
+  }
+
+  changeElementName() {
+    <span class="hljs-keyword">this</span>.data = ELEMENT_SYMBOLS;
+  }
+
+  reset() {
+    <span class="hljs-keyword">this</span>.data = ELEMENT_NAMES;
+  }
+}
+
+<span class="hljs-keyword">const</span> ELEMENT_NAMES = [
+  <span class="hljs-string">'Hydrogen'</span>,   <span class="hljs-string">'Helium'</span>,   <span class="hljs-string">'Lithium'</span>,  <span class="hljs-string">'Beryllium'</span>, <span class="hljs-string">'Boron'</span>,     <span class="hljs-string">'Carbon'</span>,   <span class="hljs-string">'Nitrogen'</span>,
+  <span class="hljs-string">'Oxygen'</span>,     <span class="hljs-string">'Fluorine'</span>, <span class="hljs-string">'Neon'</span>,     <span class="hljs-string">'Sodium'</span>,    <span class="hljs-string">'Magnesium'</span>, <span class="hljs-string">'Aluminum'</span>, <span class="hljs-string">'Silicon'</span>,
+  <span class="hljs-string">'Phosphorus'</span>, <span class="hljs-string">'Sulfur'</span>,   <span class="hljs-string">'Chlorine'</span>, <span class="hljs-string">'Argon'</span>,     <span class="hljs-string">'Potassium'</span>, <span class="hljs-string">'Calcium'</span>,
+];
+
+<span class="hljs-keyword">const</span> ELEMENT_SYMBOLS = [
+  <span class="hljs-string">'H'</span>,  <span class="hljs-string">'He'</span>, <span class="hljs-string">'Li'</span>, <span class="hljs-string">'Be'</span>, <span class="hljs-string">'B'</span>, <span class="hljs-string">'C'</span>, <span class="hljs-string">'N'</span>,  <span class="hljs-string">'O'</span>,  <span class="hljs-string">'F'</span>, <span class="hljs-string">'Ne'</span>,
+  <span class="hljs-string">'Na'</span>, <span class="hljs-string">'Mg'</span>, <span class="hljs-string">'Al'</span>, <span class="hljs-string">'Si'</span>, <span class="hljs-string">'P'</span>, <span class="hljs-string">'S'</span>, <span class="hljs-string">'Cl'</span>, <span class="hljs-string">'Ar'</span>, <span class="hljs-string">'K'</span>, <span class="hljs-string">'Ca'</span>
+];

@@ -396,6 +396,39 @@
                 "importSpecifier": "cdk-experimental/popover-edit"
             }
         },
+        "cdk-selection-column": {
+            "packagePath": "cdk-experimental/selection/cdk-selection-column",
+            "title": "CDK Selection Column on a CDK table.",
+            "componentName": "CdkSelectionColumnExample",
+            "files": [
+                "cdk-selection-column-example.ts",
+                "cdk-selection-column-example.html",
+                "cdk-selection-column-example.css"
+            ],
+            "selector": "cdk-selection-column-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-selection-column-example.ts",
+            "module": {
+                "name": "CdkSelectionExamplesModule",
+                "importSpecifier": "cdk-experimental/selection"
+            }
+        },
+        "cdk-selection-list": {
+            "packagePath": "cdk-experimental/selection/cdk-selection-list",
+            "title": "CDK Selection on a simple list.",
+            "componentName": "CdkSelectionListExample",
+            "files": [
+                "cdk-selection-list-example.ts",
+                "cdk-selection-list-example.html"
+            ],
+            "selector": "cdk-selection-list-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-selection-list-example.ts",
+            "module": {
+                "name": "CdkSelectionExamplesModule",
+                "importSpecifier": "cdk-experimental/selection"
+            }
+        },
         "focus-monitor-directives": {
             "packagePath": "cdk/a11y/focus-monitor-directives",
             "title": "Monitoring focus with FocusMonitor",
@@ -1239,6 +1272,39 @@
             "module": {
                 "name": "PopoverEditExamplesModule",
                 "importSpecifier": "material-experimental/popover-edit"
+            }
+        },
+        "mat-selection-column": {
+            "packagePath": "material-experimental/selection/mat-selection-column",
+            "title": "Table that uses `matSelectionColumn` which allows users to select rows.",
+            "componentName": "MatSelectionColumnExample",
+            "files": [
+                "mat-selection-column-example.ts",
+                "mat-selection-column-example.html",
+                "mat-selection-column-example.css"
+            ],
+            "selector": "mat-selection-column-example",
+            "additionalComponents": [],
+            "primaryFile": "mat-selection-column-example.ts",
+            "module": {
+                "name": "MatSelectionExamplesModule",
+                "importSpecifier": "material-experimental/selection"
+            }
+        },
+        "mat-selection-list": {
+            "packagePath": "material-experimental/selection/mat-selection-list",
+            "title": "Mat Selection on a simple list.",
+            "componentName": "MatSelectionListExample",
+            "files": [
+                "mat-selection-list-example.ts",
+                "mat-selection-list-example.html"
+            ],
+            "selector": "mat-selection-list-example",
+            "additionalComponents": [],
+            "primaryFile": "mat-selection-list-example.ts",
+            "module": {
+                "name": "MatSelectionExamplesModule",
+                "importSpecifier": "material-experimental/selection"
             }
         },
         "autocomplete-auto-active-first-option": {
