@@ -63,7 +63,6 @@
   parts: FormGroup;
   stateChanges = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
   focused = <span class="hljs-literal">false</span>;
-  errorState = <span class="hljs-literal">false</span>;
   controlType = <span class="hljs-string">'example-tel-input'</span>;
   id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;
   describedBy = <span class="hljs-string">''</span>;
@@ -129,6 +128,10 @@
     <span class="hljs-keyword">this</span>.stateChanges.next();
   }
 
+  <span class="hljs-keyword">get</span> errorState(): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.parts.invalid &amp;&amp; <span class="hljs-keyword">this</span>.parts.dirty;
+  }
+
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
     formBuilder: FormBuilder,
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
@@ -185,7 +188,7 @@
     <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
   }
 
-  onContainerClick(event: MouseEvent) {
+  onContainerClick() {
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.parts.controls.subscriber.valid) {
       <span class="hljs-keyword">this</span>._focusMonitor.focusVia(<span class="hljs-keyword">this</span>.subscriberInput, <span class="hljs-string">'program'</span>);
     } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.parts.controls.exchange.valid) {

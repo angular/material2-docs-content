@@ -30,7 +30,6 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     parts: FormGroup;
     stateChanges: Subject<void>;
     focused: boolean;
-    errorState: boolean;
     controlType: string;
     id: string;
     describedBy: string;
@@ -49,12 +48,13 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     private _disabled;
     get value(): MyTel | null;
     set value(tel: MyTel | null);
+    get errorState(): boolean;
     constructor(formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
     autoFocusNext(control: AbstractControl, nextElement?: HTMLInputElement): void;
     autoFocusPrev(control: AbstractControl, prevElement: HTMLInputElement): void;
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
-    onContainerClick(event: MouseEvent): void;
+    onContainerClick(): void;
     writeValue(tel: MyTel | null): void;
     registerOnChange(fn: any): void;
     registerOnTouched(fn: any): void;

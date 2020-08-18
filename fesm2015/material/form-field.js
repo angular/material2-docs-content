@@ -137,7 +137,6 @@ class MyTelInput {
         this.ngControl = ngControl;
         this.stateChanges = new Subject();
         this.focused = false;
-        this.errorState = false;
         this.controlType = 'example-tel-input';
         this.id = `example-tel-input-${MyTelInput.nextId++}`;
         this.describedBy = '';
@@ -211,6 +210,9 @@ class MyTelInput {
         this.parts.setValue({ area, exchange, subscriber });
         this.stateChanges.next();
     }
+    get errorState() {
+        return this.parts.invalid && this.parts.dirty;
+    }
     autoFocusNext(control, nextElement) {
         if (!control.errors && nextElement) {
             this._focusMonitor.focusVia(nextElement, 'program');
@@ -228,7 +230,7 @@ class MyTelInput {
     setDescribedByIds(ids) {
         this.describedBy = ids.join(' ');
     }
-    onContainerClick(event) {
+    onContainerClick() {
         if (this.parts.controls.subscriber.valid) {
             this._focusMonitor.focusVia(this.subscriberInput, 'program');
         }
