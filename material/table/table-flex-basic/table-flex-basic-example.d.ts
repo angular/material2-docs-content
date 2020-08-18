@@ -8,9 +8,9 @@ export interface PeriodicElement {
 /**
  * @title Basic use of `<mat-table>` (uses display flex)
  */
-export declare class TableBasicFlexExample {
+export declare class TableFlexBasicExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<TableBasicFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableBasicFlexExample, "table-basic-flex-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableFlexBasicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never>;
 }

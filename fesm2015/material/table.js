@@ -18,12 +18,12 @@ import { merge, of } from 'rxjs';
 import { startWith, switchMap, map, catchError } from 'rxjs/operators';
 import { SelectionModel } from '@angular/cdk/collections';
 
-function TableBasicFlexExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } }
-function TableBasicFlexExample_mat_cell_3_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_cell_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -32,12 +32,12 @@ function TableBasicFlexExample_mat_cell_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
-function TableBasicFlexExample_mat_header_cell_5_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_header_cell_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-function TableBasicFlexExample_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -46,12 +46,12 @@ function TableBasicFlexExample_mat_cell_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
-function TableBasicFlexExample_mat_header_cell_8_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_header_cell_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " Weight ");
     ɵɵelementEnd();
 } }
-function TableBasicFlexExample_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -60,12 +60,12 @@ function TableBasicFlexExample_mat_cell_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
-function TableBasicFlexExample_mat_header_cell_11_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_header_cell_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
-function TableBasicFlexExample_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -74,10 +74,10 @@ function TableBasicFlexExample_mat_cell_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
-function TableBasicFlexExample_mat_header_row_13_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_header_row_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "mat-header-row");
 } }
-function TableBasicFlexExample_mat_row_14_Template(rf, ctx) { if (rf & 1) {
+function TableFlexBasicExample_mat_row_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "mat-row");
 } }
 const ELEMENT_DATA = [
@@ -95,33 +95,33 @@ const ELEMENT_DATA = [
 /**
  * @title Basic use of `<mat-table>` (uses display flex)
  */
-class TableBasicFlexExample {
+class TableFlexBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA;
     }
 }
-TableBasicFlexExample.ɵfac = function TableBasicFlexExample_Factory(t) { return new (t || TableBasicFlexExample)(); };
-TableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicFlexExample, selectors: [["table-basic-flex-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"]], template: function TableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
+TableFlexBasicExample.ɵfac = function TableFlexBasicExample_Factory(t) { return new (t || TableFlexBasicExample)(); };
+TableFlexBasicExample.ɵcmp = ɵɵdefineComponent({ type: TableFlexBasicExample, selectors: [["table-flex-basic-example"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"]], template: function TableFlexBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-table", 0);
         ɵɵelementContainerStart(1, 1);
-        ɵɵtemplate(2, TableBasicFlexExample_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 2);
-        ɵɵtemplate(3, TableBasicFlexExample_mat_cell_3_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(2, TableFlexBasicExample_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(3, TableFlexBasicExample_mat_cell_3_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(4, 4);
-        ɵɵtemplate(5, TableBasicFlexExample_mat_header_cell_5_Template, 2, 0, "mat-header-cell", 2);
-        ɵɵtemplate(6, TableBasicFlexExample_mat_cell_6_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(5, TableFlexBasicExample_mat_header_cell_5_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(6, TableFlexBasicExample_mat_cell_6_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(7, 5);
-        ɵɵtemplate(8, TableBasicFlexExample_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 2);
-        ɵɵtemplate(9, TableBasicFlexExample_mat_cell_9_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(8, TableFlexBasicExample_mat_header_cell_8_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(9, TableFlexBasicExample_mat_cell_9_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(10, 6);
-        ɵɵtemplate(11, TableBasicFlexExample_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 2);
-        ɵɵtemplate(12, TableBasicFlexExample_mat_cell_12_Template, 2, 1, "mat-cell", 3);
+        ɵɵtemplate(11, TableFlexBasicExample_mat_header_cell_11_Template, 2, 0, "mat-header-cell", 2);
+        ɵɵtemplate(12, TableFlexBasicExample_mat_cell_12_Template, 2, 1, "mat-cell", 3);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(13, TableBasicFlexExample_mat_header_row_13_Template, 1, 0, "mat-header-row", 7);
-        ɵɵtemplate(14, TableBasicFlexExample_mat_row_14_Template, 1, 0, "mat-row", 8);
+        ɵɵtemplate(13, TableFlexBasicExample_mat_header_row_13_Template, 1, 0, "mat-header-row", 7);
+        ɵɵtemplate(14, TableFlexBasicExample_mat_row_14_Template, 1, 0, "mat-row", 8);
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("dataSource", ctx.dataSource);
@@ -130,12 +130,12 @@ TableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableBasicFlexExample,
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TableBasicFlexExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TableFlexBasicExample, [{
         type: Component,
         args: [{
-                selector: 'table-basic-flex-example',
-                styleUrls: ['table-basic-flex-example.css'],
-                templateUrl: 'table-basic-flex-example.html',
+                selector: 'table-flex-basic-example',
+                styleUrls: ['table-flex-basic-example.css'],
+                templateUrl: 'table-flex-basic-example.html',
             }]
     }], null, null); })();
 
@@ -3346,7 +3346,7 @@ const ELEMENT_DATA$f = [
 ];
 
 const EXAMPLES = [
-    TableBasicExample, TableBasicFlexExample,
+    TableBasicExample, TableFlexBasicExample,
     TableDynamicColumnsExample, TableExpandableRowsExample,
     TableFilteringExample, TableFooterRowExample,
     TableHttpExample, TableMultipleHeaderFooterExample,
@@ -3376,7 +3376,7 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
             CdkTableModule,
             DragDropModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TableExamplesModule, { declarations: [TableBasicExample, TableBasicFlexExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TableExamplesModule, { declarations: [TableBasicExample, TableFlexBasicExample,
         TableDynamicColumnsExample, TableExpandableRowsExample,
         TableFilteringExample, TableFooterRowExample,
         TableHttpExample, TableMultipleHeaderFooterExample,
@@ -3398,7 +3398,7 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
         MatSortModule,
         MatTableModule,
         CdkTableModule,
-        DragDropModule], exports: [TableBasicExample, TableBasicFlexExample,
+        DragDropModule], exports: [TableBasicExample, TableFlexBasicExample,
         TableDynamicColumnsExample, TableExpandableRowsExample,
         TableFilteringExample, TableFooterRowExample,
         TableHttpExample, TableMultipleHeaderFooterExample,
@@ -3437,5 +3437,5 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
  * Generated bundle index. Do not edit.
  */
 
-export { TableBasicExample, TableBasicFlexExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=table.js.map

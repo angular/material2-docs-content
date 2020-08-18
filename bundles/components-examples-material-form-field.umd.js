@@ -443,7 +443,6 @@
             this.ngControl = ngControl;
             this.stateChanges = new rxjs.Subject();
             this.focused = false;
-            this.errorState = false;
             this.controlType = 'example-tel-input';
             this.id = "example-tel-input-" + MyTelInput.nextId++;
             this.describedBy = '';
@@ -541,6 +540,13 @@
             enumerable: false,
             configurable: true
         });
+        Object.defineProperty(MyTelInput.prototype, "errorState", {
+            get: function () {
+                return this.parts.invalid && this.parts.dirty;
+            },
+            enumerable: false,
+            configurable: true
+        });
         MyTelInput.prototype.autoFocusNext = function (control, nextElement) {
             if (!control.errors && nextElement) {
                 this._focusMonitor.focusVia(nextElement, 'program');
@@ -558,7 +564,7 @@
         MyTelInput.prototype.setDescribedByIds = function (ids) {
             this.describedBy = ids.join(' ');
         };
-        MyTelInput.prototype.onContainerClick = function (event) {
+        MyTelInput.prototype.onContainerClick = function () {
             if (this.parts.controls.subscriber.valid) {
                 this._focusMonitor.focusVia(this.subscriberInput, 'program');
             }
