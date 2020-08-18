@@ -3,12 +3,12 @@ import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterp
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs';
 
-function CdkTableBasicFlexExample_cdk_header_cell_2_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_header_cell_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-header-cell");
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } }
-function CdkTableBasicFlexExample_cdk_cell_3_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_cell_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -17,12 +17,12 @@ function CdkTableBasicFlexExample_cdk_cell_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
-function CdkTableBasicFlexExample_cdk_header_cell_5_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_header_cell_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-header-cell");
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-function CdkTableBasicFlexExample_cdk_cell_6_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_cell_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -31,12 +31,12 @@ function CdkTableBasicFlexExample_cdk_cell_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
-function CdkTableBasicFlexExample_cdk_header_cell_8_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_header_cell_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-header-cell");
     ɵɵtext(1, " Weight ");
     ɵɵelementEnd();
 } }
-function CdkTableBasicFlexExample_cdk_cell_9_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_cell_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -45,12 +45,12 @@ function CdkTableBasicFlexExample_cdk_cell_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
-function CdkTableBasicFlexExample_cdk_header_cell_11_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_header_cell_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-header-cell");
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
-function CdkTableBasicFlexExample_cdk_cell_12_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_cell_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "cdk-cell");
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -59,10 +59,10 @@ function CdkTableBasicFlexExample_cdk_cell_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
-function CdkTableBasicFlexExample_cdk_header_row_13_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_header_row_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "cdk-header-row");
 } }
-function CdkTableBasicFlexExample_cdk_row_14_Template(rf, ctx) { if (rf & 1) {
+function CdkTableFlexBasicExample_cdk_row_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "cdk-row");
 } }
 const ELEMENT_DATA = [
@@ -80,33 +80,33 @@ const ELEMENT_DATA = [
 /**
  * @title Basic use of `<cdk-table>` (uses display flex)
  */
-class CdkTableBasicFlexExample {
+class CdkTableFlexBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new ExampleDataSource();
     }
 }
-CdkTableBasicFlexExample.ɵfac = function CdkTableBasicFlexExample_Factory(t) { return new (t || CdkTableBasicFlexExample)(); };
-CdkTableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicFlexExample, selectors: [["cdk-table-basic-flex-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
+CdkTableFlexBasicExample.ɵfac = function CdkTableFlexBasicExample_Factory(t) { return new (t || CdkTableFlexBasicExample)(); };
+CdkTableFlexBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableFlexBasicExample, selectors: [["cdk-table-flex-basic-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableFlexBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "cdk-table", 0);
         ɵɵelementContainerStart(1, 1);
-        ɵɵtemplate(2, CdkTableBasicFlexExample_cdk_header_cell_2_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(3, CdkTableBasicFlexExample_cdk_cell_3_Template, 2, 1, "cdk-cell", 3);
+        ɵɵtemplate(2, CdkTableFlexBasicExample_cdk_header_cell_2_Template, 2, 0, "cdk-header-cell", 2);
+        ɵɵtemplate(3, CdkTableFlexBasicExample_cdk_cell_3_Template, 2, 1, "cdk-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(4, 4);
-        ɵɵtemplate(5, CdkTableBasicFlexExample_cdk_header_cell_5_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(6, CdkTableBasicFlexExample_cdk_cell_6_Template, 2, 1, "cdk-cell", 3);
+        ɵɵtemplate(5, CdkTableFlexBasicExample_cdk_header_cell_5_Template, 2, 0, "cdk-header-cell", 2);
+        ɵɵtemplate(6, CdkTableFlexBasicExample_cdk_cell_6_Template, 2, 1, "cdk-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(7, 5);
-        ɵɵtemplate(8, CdkTableBasicFlexExample_cdk_header_cell_8_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(9, CdkTableBasicFlexExample_cdk_cell_9_Template, 2, 1, "cdk-cell", 3);
+        ɵɵtemplate(8, CdkTableFlexBasicExample_cdk_header_cell_8_Template, 2, 0, "cdk-header-cell", 2);
+        ɵɵtemplate(9, CdkTableFlexBasicExample_cdk_cell_9_Template, 2, 1, "cdk-cell", 3);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(10, 6);
-        ɵɵtemplate(11, CdkTableBasicFlexExample_cdk_header_cell_11_Template, 2, 0, "cdk-header-cell", 2);
-        ɵɵtemplate(12, CdkTableBasicFlexExample_cdk_cell_12_Template, 2, 1, "cdk-cell", 3);
+        ɵɵtemplate(11, CdkTableFlexBasicExample_cdk_header_cell_11_Template, 2, 0, "cdk-header-cell", 2);
+        ɵɵtemplate(12, CdkTableFlexBasicExample_cdk_cell_12_Template, 2, 1, "cdk-cell", 3);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(13, CdkTableBasicFlexExample_cdk_header_row_13_Template, 1, 0, "cdk-header-row", 7);
-        ɵɵtemplate(14, CdkTableBasicFlexExample_cdk_row_14_Template, 1, 0, "cdk-row", 8);
+        ɵɵtemplate(13, CdkTableFlexBasicExample_cdk_header_row_13_Template, 1, 0, "cdk-header-row", 7);
+        ɵɵtemplate(14, CdkTableFlexBasicExample_cdk_row_14_Template, 1, 0, "cdk-row", 8);
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("dataSource", ctx.dataSource);
@@ -115,12 +115,12 @@ CdkTableBasicFlexExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicFlexEx
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicFlexExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableFlexBasicExample, [{
         type: Component,
         args: [{
-                selector: 'cdk-table-basic-flex-example',
-                styleUrls: ['cdk-table-basic-flex-example.css'],
-                templateUrl: 'cdk-table-basic-flex-example.html',
+                selector: 'cdk-table-flex-basic-example',
+                styleUrls: ['cdk-table-flex-basic-example.css'],
+                templateUrl: 'cdk-table-flex-basic-example.html',
             }]
     }], null, null); })();
 /**
@@ -285,7 +285,7 @@ class ExampleDataSource$1 extends DataSource {
 
 const EXAMPLES = [
     CdkTableBasicExample,
-    CdkTableBasicFlexExample,
+    CdkTableFlexBasicExample,
 ];
 class CdkTableExamplesModule {
 }
@@ -294,8 +294,8 @@ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableEx
             CdkTableModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
-        CdkTableBasicFlexExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
-        CdkTableBasicFlexExample] }); })();
+        CdkTableFlexBasicExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
+        CdkTableFlexBasicExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableExamplesModule, [{
         type: NgModule,
         args: [{
@@ -312,5 +312,5 @@ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableEx
  * Generated bundle index. Do not edit.
  */
 
-export { CdkTableBasicExample, CdkTableBasicFlexExample, CdkTableExamplesModule };
+export { CdkTableBasicExample, CdkTableExamplesModule, CdkTableFlexBasicExample };
 //# sourceMappingURL=table.js.map

@@ -10,11 +10,11 @@ export interface PeriodicElement {
 /**
  * @title Basic use of `<cdk-table>` (uses display flex)
  */
-export declare class CdkTableBasicFlexExample {
+export declare class CdkTableFlexBasicExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
-    static ɵfac: i0.ɵɵFactoryDef<CdkTableBasicFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTableBasicFlexExample, "cdk-table-basic-flex-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkTableFlexBasicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTableFlexBasicExample, "cdk-table-flex-basic-example", never, {}, {}, never, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

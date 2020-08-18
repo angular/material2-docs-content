@@ -999,23 +999,6 @@
                 "importSpecifier": "cdk/stepper"
             }
         },
-        "cdk-table-basic-flex": {
-            "packagePath": "cdk/table/cdk-table-basic-flex",
-            "title": "Basic use of `<cdk-table>` (uses display flex)",
-            "componentName": "CdkTableBasicFlexExample",
-            "files": [
-                "cdk-table-basic-flex-example.ts",
-                "cdk-table-basic-flex-example.html",
-                "cdk-table-basic-flex-example.css"
-            ],
-            "selector": "cdk-table-basic-flex-example",
-            "additionalComponents": [],
-            "primaryFile": "cdk-table-basic-flex-example.ts",
-            "module": {
-                "name": "CdkTableExamplesModule",
-                "importSpecifier": "cdk/table"
-            }
-        },
         "cdk-table-basic": {
             "packagePath": "cdk/table/cdk-table-basic",
             "title": "Basic CDK data-table",
@@ -1028,6 +1011,23 @@
             "selector": "cdk-table-basic-example",
             "additionalComponents": [],
             "primaryFile": "cdk-table-basic-example.ts",
+            "module": {
+                "name": "CdkTableExamplesModule",
+                "importSpecifier": "cdk/table"
+            }
+        },
+        "cdk-table-flex-basic": {
+            "packagePath": "cdk/table/cdk-table-flex-basic",
+            "title": "Basic use of `<cdk-table>` (uses display flex)",
+            "componentName": "CdkTableFlexBasicExample",
+            "files": [
+                "cdk-table-flex-basic-example.ts",
+                "cdk-table-flex-basic-example.html",
+                "cdk-table-flex-basic-example.css"
+            ],
+            "selector": "cdk-table-flex-basic-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-table-flex-basic-example.ts",
             "module": {
                 "name": "CdkTableExamplesModule",
                 "importSpecifier": "cdk/table"
@@ -3538,23 +3538,6 @@
                 "importSpecifier": "material/stepper"
             }
         },
-        "table-basic-flex": {
-            "packagePath": "material/table/table-basic-flex",
-            "title": "Basic use of `<mat-table>` (uses display flex)",
-            "componentName": "TableBasicFlexExample",
-            "files": [
-                "table-basic-flex-example.ts",
-                "table-basic-flex-example.html",
-                "table-basic-flex-example.css"
-            ],
-            "selector": "table-basic-flex-example",
-            "additionalComponents": [],
-            "primaryFile": "table-basic-flex-example.ts",
-            "module": {
-                "name": "TableExamplesModule",
-                "importSpecifier": "material/table"
-            }
-        },
         "table-basic": {
             "packagePath": "material/table/table-basic",
             "title": "Basic use of `<table mat-table>`",
@@ -3618,6 +3601,23 @@
             "selector": "table-filtering-example",
             "additionalComponents": [],
             "primaryFile": "table-filtering-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
+        "table-flex-basic": {
+            "packagePath": "material/table/table-flex-basic",
+            "title": "Basic use of `<mat-table>` (uses display flex)",
+            "componentName": "TableFlexBasicExample",
+            "files": [
+                "table-flex-basic-example.ts",
+                "table-flex-basic-example.html",
+                "table-flex-basic-example.css"
+            ],
+            "selector": "table-flex-basic-example",
+            "additionalComponents": [],
+            "primaryFile": "table-flex-basic-example.ts",
             "module": {
                 "name": "TableExamplesModule",
                 "importSpecifier": "material/table"
