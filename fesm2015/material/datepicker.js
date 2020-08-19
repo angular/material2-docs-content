@@ -274,10 +274,14 @@ DatepickerCustomIconExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerCustom
 /** @title Datepicker with custom date classes */
 class DatepickerDateClassExample {
     constructor() {
-        this.dateClass = (d) => {
-            const date = d.getDate();
-            // Highlight the 1st and 20th day of each month.
-            return (date === 1 || date === 20) ? 'example-custom-date-class' : '';
+        this.dateClass = (cellDate, view) => {
+            // Only highligh dates inside the month view.
+            if (view === 'month') {
+                const date = cellDate.getDate();
+                // Highlight the 1st and 20th day of each month.
+                return (date === 1 || date === 20) ? 'example-custom-date-class' : '';
+            }
+            return '';
         };
     }
 }

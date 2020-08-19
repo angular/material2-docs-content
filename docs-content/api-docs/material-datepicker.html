@@ -1145,7 +1145,7 @@ is true if the current selection has a non-null <code>start</code> and <code>end
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>dateClass: (date: D) =&gt; MatCalendarCellCssClasses</code>
+      <code>dateClass: MatCalendarCellClassFunction&lt;D&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -2175,7 +2175,7 @@ is true if the current selection has a non-null <code>start</code> and <code>end
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>dateClass: (date: D) =&gt; MatCalendarCellCssClasses</code>
+      <code>dateClass: MatCalendarCellClassFunction&lt;D&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -3493,6 +3493,20 @@ it or moving focus) and the calendar tries to display a date range.</p>
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCalendarCellCssClasses = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[] | Set&lt;<span class="hljs-built_in">string</span>&gt; | {
     [key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
 };</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MatCalendarCellClassFunction" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatCalendarCellClassFunction"></span>
+  <code>MatCalendarCellClassFunction</code>
+</h4><p class="docs-api-type-alias-description"><p>Function that can generate the extra classes that should be added to a calendar cell.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCalendarCellClassFunction = <span class="hljs-function">(<span class="hljs-params">date: D, view: 'month' | 'year' | 'multi-year'</span>) =&gt;</span> MatCalendarCellCssClasses;</code>
 </pre>
 </div>
 

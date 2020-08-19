@@ -274,10 +274,14 @@
     /** @title Datepicker with custom date classes */
     var DatepickerDateClassExample = /** @class */ (function () {
         function DatepickerDateClassExample() {
-            this.dateClass = function (d) {
-                var date = d.getDate();
-                // Highlight the 1st and 20th day of each month.
-                return (date === 1 || date === 20) ? 'example-custom-date-class' : '';
+            this.dateClass = function (cellDate, view) {
+                // Only highligh dates inside the month view.
+                if (view === 'month') {
+                    var date = cellDate.getDate();
+                    // Highlight the 1st and 20th day of each month.
+                    return (date === 1 || date === 20) ? 'example-custom-date-class' : '';
+                }
+                return '';
             };
         }
         return DatepickerDateClassExample;
