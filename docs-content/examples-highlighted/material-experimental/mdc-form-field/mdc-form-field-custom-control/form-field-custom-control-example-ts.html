@@ -38,7 +38,6 @@
   errorState = <span class="hljs-literal">false</span>;
   controlType = <span class="hljs-string">'example-tel-input'</span>;
   id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;
-  describedBy = <span class="hljs-string">''</span>;
   onChange = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">any</span></span>) =&gt;</span> {};
   onTouched = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {};
 
@@ -49,6 +48,8 @@
   }
 
   <span class="hljs-keyword">get</span> shouldLabelFloat() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.focused || !<span class="hljs-keyword">this</span>.empty; }
+
+  <span class="hljs-meta">@Input</span>(<span class="hljs-string">'aria-describedby'</span>) userAriaDescribedBy: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-meta">@Input</span>()
   <span class="hljs-keyword">get</span> placeholder(): <span class="hljs-built_in">string</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._placeholder; }
@@ -121,7 +122,9 @@
   }
 
   setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
-    <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
+    <span class="hljs-keyword">const</span> controlElement = <span class="hljs-keyword">this</span>._elementRef.nativeElement
+      .querySelector(<span class="hljs-string">'.example-tel-input-container'</span>)!;
+    controlElement.setAttribute(<span class="hljs-string">'aria-describedby'</span>, ids.join(<span class="hljs-string">' '</span>));
   }
 
   onContainerClick(event: MouseEvent) {

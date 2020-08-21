@@ -53,7 +53,6 @@ class MyTelInput {
         this.errorState = false;
         this.controlType = 'example-tel-input';
         this.id = `example-tel-input-${MyTelInput.nextId++}`;
-        this.describedBy = '';
         this.onChange = (_) => { };
         this.onTouched = () => { };
         this._required = false;
@@ -112,7 +111,9 @@ class MyTelInput {
         this._focusMonitor.stopMonitoring(this._elementRef);
     }
     setDescribedByIds(ids) {
-        this.describedBy = ids.join(' ');
+        const controlElement = this._elementRef.nativeElement
+            .querySelector('.example-tel-input-container');
+        controlElement.setAttribute('aria-describedby', ids.join(' '));
     }
     onContainerClick(event) {
         if (event.target.tagName.toLowerCase() != 'input') {
@@ -140,7 +141,7 @@ MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)
 MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
         ɵɵhostProperty("id", ctx.id);
         ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
-    } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 3, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "input", 1);
         ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { return ctx._handleInput(); });
@@ -160,7 +161,7 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         ɵɵelementEnd();
     } if (rf & 2) {
         ɵɵproperty("formGroup", ctx.parts);
-        ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId())("aria-describedby", ctx.describedBy);
+        ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId());
     } }, directives: [NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MyTelInput, [{
         type: Component,
@@ -183,7 +184,10 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
                 type: Optional
             }, {
                 type: Self
-            }] }]; }, { placeholder: [{
+            }] }]; }, { userAriaDescribedBy: [{
+            type: Input,
+            args: ['aria-describedby']
+        }], placeholder: [{
             type: Input
         }], required: [{
             type: Input

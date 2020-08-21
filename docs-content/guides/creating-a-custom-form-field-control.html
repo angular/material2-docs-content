@@ -312,14 +312,25 @@ class <code>mat-form-field-example-tel-input</code>.</p>
           <span header-link="setdescribedbyidsids-string"></span>
           <code>setDescribedByIds(ids: string[])</code>
         </h4>
-      <p>This method is used by the <code>&lt;mat-form-field&gt;</code> to specify the IDs that should be used for the
-<code>aria-describedby</code> attribute of your component. The method has one parameter, the list of IDs, we
-just need to apply the given IDs to the element that represents our control.</p>
-<p>In our concrete example, these IDs would need to be applied to the group element. </p>
+      <p>This method is used by the <code>&lt;mat-form-field&gt;</code> to set element ids that should be used for the
+<code>aria-describedby</code> attribute of your control. The ids are controlled through the form field
+as hints or errors are conditionally displayed and should be reflected in the control&#39;s
+<code>aria-describedby</code> attribute for an improved accessibility experience. </p>
+<p>The <code>setDescribedByIds</code> method is invoked whenever the control&#39;s state changes. Custom controls
+need to implement this method and update the <code>aria-describedby</code> attribute based on the specified
+element ids. Below is an example that shows how this can be achieved.</p>
+<p>Note that the method by default will not respect element ids that have been set manually on the
+control element through the <code>aria-describedby</code> attribute. To ensure that your control does not
+accidentally override existing element ids specified by consumers of your control, create an
+input called <code>userAriaDescribedby</code>  like followed:</p>
+<pre><code class="language-ts"><span class="hljs-meta">@Input</span>(<span class="hljs-string">'aria-describedby'</span>) userAriaDescribedBy: <span class="hljs-built_in">string</span>;</code></pre>
+<p>The form field will then pick up the user specified <code>aria-describedby</code> ids and merge
+them with ids for hints or errors whenever <code>setDescribedByIds</code> is invoked.</p>
 <pre><code class="language-ts">setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
-  <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
+  <span class="hljs-keyword">const</span> controlElement = <span class="hljs-keyword">this</span>._elementRef.nativeElement
+    .querySelector(<span class="hljs-string">'.example-tel-input-container'</span>)!;
+  controlElement.setAttribute(<span class="hljs-string">'aria-describedby'</span>, ids.join(<span class="hljs-string">' '</span>));
 }</code></pre>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"parts"</span> [<span class="hljs-attr">attr.aria-describedby</span>]=<span class="hljs-string">"describedBy"</span>&gt;</span></code></pre>
 
         <h4 id="oncontainerclickevent-mouseevent" class="docs-header-link">
           <span header-link="oncontainerclickevent-mouseevent"></span>
