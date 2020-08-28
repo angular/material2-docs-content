@@ -14,10 +14,10 @@
   selector: <span class="hljs-string">'example-custom-stepper'</span>,
   templateUrl: <span class="hljs-string">'./example-custom-stepper.html'</span>,
   styleUrls: [<span class="hljs-string">'./example-custom-stepper.css'</span>],
-  providers: [{ provide: CdkStepper, useExisting: CustomStepper }]
+  providers: [{provide: CdkStepper, useExisting: CustomStepper}]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomStepper <span class="hljs-keyword">extends</span> CdkStepper {
-  onClick(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+  selectStepByIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.selectedIndex = index;
   }
 }
