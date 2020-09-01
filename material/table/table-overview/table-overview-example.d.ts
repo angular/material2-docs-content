@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -12,13 +12,13 @@ export interface UserData {
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
-export declare class TableOverviewExample implements OnInit {
+export declare class TableOverviewExample implements AfterViewInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<UserData>;
     paginator: MatPaginator;
     sort: MatSort;
     constructor();
-    ngOnInit(): void;
+    ngAfterViewInit(): void;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDef<TableOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<TableOverviewExample, "table-overview-example", never, {}, {}, never, never>;

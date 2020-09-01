@@ -30,7 +30,7 @@
     CdkPortalOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵviewQuery(_c0, true);
-                i0.ɵɵstaticViewQuery(_c1, true);
+                i0.ɵɵviewQuery(_c1, true);
             }
             if (rf & 2) {
                 var _t;
@@ -80,7 +80,7 @@
                     args: ['templatePortalContent']
                 }], domPortalContent: [{
                     type: i0.ViewChild,
-                    args: ['domPortalContent', { static: true }]
+                    args: ['domPortalContent']
                 }] });
     })();
     var ComponentPortalExample = /** @class */ (function () {
