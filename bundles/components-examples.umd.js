@@ -1016,6 +1016,23 @@
                 "importSpecifier": "cdk/table"
             }
         },
+        "cdk-table-fixed-layout": {
+            "packagePath": "cdk/table/cdk-table-fixed-layout",
+            "title": "CDK table with a fixed layout.",
+            "componentName": "CdkTableFixedLayoutExample",
+            "files": [
+                "cdk-table-fixed-layout-example.ts",
+                "cdk-table-fixed-layout-example.html",
+                "cdk-table-fixed-layout-example.css"
+            ],
+            "selector": "cdk-table-fixed-layout-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-table-fixed-layout-example.ts",
+            "module": {
+                "name": "CdkTableExamplesModule",
+                "importSpecifier": "cdk/table"
+            }
+        },
         "cdk-table-flex-basic": {
             "packagePath": "cdk/table/cdk-table-flex-basic",
             "title": "Basic use of `<cdk-table>` (uses display flex)",
