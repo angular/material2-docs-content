@@ -7,7 +7,7 @@ export declare class CdkCustomStepperWithoutFormExample {
 }
 /** Custom CDK stepper component */
 export declare class CustomStepper extends CdkStepper {
-    selectStepByIndex(index: number): void;
+    onClick(index: number): void;
     static ɵfac: i0.ɵɵFactoryDef<CustomStepper, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<CustomStepper, "example-custom-stepper", never, {}, {}, never, never>;
 }

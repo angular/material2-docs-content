@@ -1,5 +1,5 @@
 import { ComponentPortal, TemplatePortal, DomPortal, CdkPortalOutlet, PortalModule } from '@angular/cdk/portal';
-import { ɵɵtext, ɵɵdirectiveInject, ViewContainerRef, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelementStart, ɵɵelementEnd, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵtext, ɵɵdirectiveInject, ViewContainerRef, ɵɵdefineComponent, ɵɵviewQuery, ɵɵstaticViewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelementStart, ɵɵelementEnd, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 
 const _c0 = ["templatePortalContent"];
 const _c1 = ["domPortalContent"];
@@ -23,7 +23,7 @@ class CdkPortalOverviewExample {
 CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
 CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
-        ɵɵviewQuery(_c1, true);
+        ɵɵstaticViewQuery(_c1, true);
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
@@ -67,7 +67,7 @@ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewEx
             args: ['templatePortalContent']
         }], domPortalContent: [{
             type: ViewChild,
-            args: ['domPortalContent']
+            args: ['domPortalContent', { static: true }]
         }] }); })();
 class ComponentPortalExample {
 }

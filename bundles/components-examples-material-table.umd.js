@@ -1520,7 +1520,7 @@
             // Assign the data to the data source for the table to render
             this.dataSource = new i1$1.MatTableDataSource(users);
         }
-        TableOverviewExample.prototype.ngAfterViewInit = function () {
+        TableOverviewExample.prototype.ngOnInit = function () {
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
         };
@@ -1536,8 +1536,8 @@
     TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
     TableOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i5.MatPaginator, true);
-                i0.ɵɵviewQuery(i4.MatSort, true);
+                i0.ɵɵstaticViewQuery(i5.MatPaginator, true);
+                i0.ɵɵstaticViewQuery(i4.MatSort, true);
             }
             if (rf & 2) {
                 var _t;
@@ -1600,10 +1600,10 @@
                     }]
             }], function () { return []; }, { paginator: [{
                     type: i0.ViewChild,
-                    args: [i5.MatPaginator]
+                    args: [i5.MatPaginator, { static: true }]
                 }], sort: [{
                     type: i0.ViewChild,
-                    args: [i4.MatSort]
+                    args: [i4.MatSort, { static: true }]
                 }] });
     })();
     /** Builds and returns a new User. */
@@ -1713,7 +1713,7 @@
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new i1$1.MatTableDataSource(ELEMENT_DATA$5);
         }
-        TablePaginationExample.prototype.ngAfterViewInit = function () {
+        TablePaginationExample.prototype.ngOnInit = function () {
             this.dataSource.paginator = this.paginator;
         };
         return TablePaginationExample;
@@ -1721,7 +1721,7 @@
     TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
     TablePaginationExample.ɵcmp = i0.ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i5.MatPaginator, true);
+                i0.ɵɵstaticViewQuery(i5.MatPaginator, true);
             }
             if (rf & 2) {
                 var _t;
@@ -1774,7 +1774,7 @@
                     }]
             }], null, { paginator: [{
                     type: i0.ViewChild,
-                    args: [i5.MatPaginator]
+                    args: [i5.MatPaginator, { static: true }]
                 }] });
     })();
     var ELEMENT_DATA$5 = [
@@ -2324,7 +2324,7 @@
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new i1$1.MatTableDataSource(ELEMENT_DATA$7);
         }
-        TableSortingExample.prototype.ngAfterViewInit = function () {
+        TableSortingExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
         };
         return TableSortingExample;
@@ -2332,7 +2332,7 @@
     TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
     TableSortingExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i4.MatSort, true);
+                i0.ɵɵstaticViewQuery(i4.MatSort, true);
             }
             if (rf & 2) {
                 var _t;
@@ -2379,7 +2379,7 @@
                     }]
             }], null, { sort: [{
                     type: i0.ViewChild,
-                    args: [i4.MatSort]
+                    args: [i4.MatSort, { static: true }]
                 }] });
     })();
 
@@ -3745,7 +3745,7 @@
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new i1$1.MatTableDataSource(ELEMENT_DATA$e);
         }
-        TableWrappedExample.prototype.ngAfterViewInit = function () {
+        TableWrappedExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
         };
         return TableWrappedExample;
@@ -3753,7 +3753,7 @@
     TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
     TableWrappedExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0$6, true);
+                i0.ɵɵstaticViewQuery(_c0$6, true);
             }
             if (rf & 2) {
                 var _t;
@@ -3788,7 +3788,7 @@
                     }]
             }], null, { sort: [{
                     type: i0.ViewChild,
-                    args: ['sort']
+                    args: ['sort', { static: true }]
                 }] });
     })();
     /**

@@ -1,5 +1,5 @@
 import { NgForOf, CurrencyPipe, NgIf, DatePipe, DecimalPipe, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵcontentQuery, ɵɵstaticViewQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵstaticViewQuery, ɵɵcontentQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -1282,7 +1282,7 @@ class TableOverviewExample {
         // Assign the data to the data source for the table to render
         this.dataSource = new MatTableDataSource(users);
     }
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
     }
@@ -1296,8 +1296,8 @@ class TableOverviewExample {
 }
 TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
 TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatPaginator, true);
-        ɵɵviewQuery(MatSort, true);
+        ɵɵstaticViewQuery(MatPaginator, true);
+        ɵɵstaticViewQuery(MatSort, true);
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
@@ -1354,10 +1354,10 @@ TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, s
             }]
     }], function () { return []; }, { paginator: [{
             type: ViewChild,
-            args: [MatPaginator]
+            args: [MatPaginator, { static: true }]
         }], sort: [{
             type: ViewChild,
-            args: [MatSort]
+            args: [MatSort, { static: true }]
         }] }); })();
 /** Builds and returns a new User. */
 function createNewUser(id) {
@@ -1442,13 +1442,13 @@ class TablePaginationExample {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$5);
     }
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.paginator = this.paginator;
     }
 }
 TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
 TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatPaginator, true);
+        ɵɵstaticViewQuery(MatPaginator, true);
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
@@ -1495,7 +1495,7 @@ TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExampl
             }]
     }], null, { paginator: [{
             type: ViewChild,
-            args: [MatPaginator]
+            args: [MatPaginator, { static: true }]
         }] }); })();
 const ELEMENT_DATA$5 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -1938,13 +1938,13 @@ class TableSortingExample {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$7);
     }
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.sort = this.sort;
     }
 }
 TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
 TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatSort, true);
+        ɵɵstaticViewQuery(MatSort, true);
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
@@ -1985,7 +1985,7 @@ TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, sel
             }]
     }], null, { sort: [{
             type: ViewChild,
-            args: [MatSort]
+            args: [MatSort, { static: true }]
         }] }); })();
 
 function TableStickyColumnsExample_th_3_Template(rf, ctx) { if (rf & 1) {
@@ -3108,13 +3108,13 @@ class TableWrappedExample {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
     }
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.sort = this.sort;
     }
 }
 TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
 TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0$6, true);
+        ɵɵstaticViewQuery(_c0$6, true);
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
@@ -3143,7 +3143,7 @@ TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, sel
             }]
     }], null, { sort: [{
             type: ViewChild,
-            args: ['sort']
+            args: ['sort', { static: true }]
         }] }); })();
 /**
  * Table component that accepts column and row definitions in its content to be registered to the

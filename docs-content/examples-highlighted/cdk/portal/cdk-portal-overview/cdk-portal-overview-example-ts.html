@@ -18,7 +18,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkPortalOverviewExample <span class="hljs-keyword">implements</span> AfterViewInit {
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'templatePortalContent'</span>) templatePortalContent: TemplateRef&lt;unknown&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'domPortalContent'</span>) domPortalContent: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'domPortalContent'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) domPortalContent: ElementRef&lt;HTMLElement&gt;;
 
   selectedPortal: Portal&lt;<span class="hljs-built_in">any</span>&gt;;
   componentPortal: ComponentPortal&lt;ComponentPortalExample&gt;;

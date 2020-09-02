@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/paginator'</span>;
 <span class="hljs-keyword">import</span> {MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sort'</span>;
 <span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
@@ -28,12 +28,12 @@
   styleUrls: [<span class="hljs-string">'table-overview-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-overview-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableOverviewExample <span class="hljs-keyword">implements</span> AfterViewInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableOverviewExample <span class="hljs-keyword">implements</span> OnInit {
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'id'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'progress'</span>, <span class="hljs-string">'color'</span>];
   dataSource: MatTableDataSource&lt;UserData&gt;;
 
-  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
-  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) paginator: MatPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MatSort, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) sort: MatSort;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-comment">// Create 100 users</span>
@@ -43,7 +43,7 @@
     <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(users);
   }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     <span class="hljs-keyword">this</span>.dataSource.paginator = <span class="hljs-keyword">this</span>.paginator;
     <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
   }

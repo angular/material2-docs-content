@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -10,13 +10,13 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['table-pagination-example.css'],
   templateUrl: 'table-pagination-example.html',
 })
-export class TablePaginationExample implements AfterViewInit {
+export class TablePaginationExample implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.dataSource.paginator = this.paginator;
   }
 }

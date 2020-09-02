@@ -4,7 +4,7 @@
   Component,
   ContentChildren,
   Input,
-  AfterViewInit,
+  OnInit,
   QueryList,
   ViewChild
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
@@ -45,13 +45,13 @@
   styleUrls: [<span class="hljs-string">'table-wrapped-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-wrapped-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableWrappedExample <span class="hljs-keyword">implements</span> AfterViewInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableWrappedExample <span class="hljs-keyword">implements</span> OnInit {
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sort'</span>) sort: MatSort;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sort'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) sort: MatSort;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
   }
 }

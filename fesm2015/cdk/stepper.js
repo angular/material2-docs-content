@@ -1,18 +1,19 @@
 import { CdkStep, CdkStepper, CdkStepperPrevious, CdkStepperNext, CdkStepperModule } from '@angular/cdk/stepper';
-import { NgTemplateOutlet, NgForOf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵclassProp, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵsetClassMetadata, Component, ɵɵProvidersFeature, ɵɵInheritDefinitionFeature, ɵɵelement, ɵɵtemplate, ɵɵtextInterpolate2, ɵɵproperty, ɵɵgetInheritedFactory, ɵɵdirectiveInject, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { NgTemplateOutlet, NgForOf, NgClass, CommonModule } from '@angular/common';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵpureFunction1, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵsetClassMetadata, Component, ɵɵProvidersFeature, ɵɵInheritDefinitionFeature, ɵɵelementContainer, ɵɵtemplate, ɵɵtextInterpolate2, ɵɵstyleProp, ɵɵgetInheritedFactory, ɵɵclassProp, ɵɵdirectiveInject, ɵɵelement, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { Validators, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, ReactiveFormsModule } from '@angular/forms';
 
-function CustomStepper_button_8_Template(rf, ctx) { if (rf & 1) {
+const _c0 = function (a0) { return { "example-active": a0 }; };
+function CustomStepper_button_9_Template(rf, ctx) { if (rf & 1) {
     const _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "button", 6);
-    ɵɵlistener("click", function CustomStepper_button_8_Template_button_click_0_listener() { ɵɵrestoreView(_r4); const i_r2 = ctx.index; const ctx_r3 = ɵɵnextContext(); return ctx_r3.selectStepByIndex(i_r2); });
+    ɵɵlistener("click", function CustomStepper_button_9_Template_button_click_0_listener() { ɵɵrestoreView(_r4); const i_r2 = ctx.index; const ctx_r3 = ɵɵnextContext(); return ctx_r3.onClick(i_r2); });
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
     const i_r2 = ctx.index;
     const ctx_r0 = ɵɵnextContext();
-    ɵɵclassProp("example-active", ctx_r0.selectedIndex === i_r2);
+    ɵɵproperty("ngClass", ɵɵpureFunction1(2, _c0, ctx_r0.selectedIndex === i_r2));
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" Step ", i_r2 + 1, " ");
 } }
@@ -44,26 +45,28 @@ CdkCustomStepperWithoutFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkCustom
     }], null, null); })();
 /** Custom CDK stepper component */
 class CustomStepper extends CdkStepper {
-    selectStepByIndex(index) {
+    onClick(index) {
         this.selectedIndex = index;
     }
 }
 CustomStepper.ɵfac = function CustomStepper_Factory(t) { return ɵCustomStepper_BaseFactory(t || CustomStepper); };
-CustomStepper.ɵcmp = ɵɵdefineComponent({ type: CustomStepper, selectors: [["example-custom-stepper"]], features: [ɵɵProvidersFeature([{ provide: CdkStepper, useExisting: CustomStepper }]), ɵɵInheritDefinitionFeature], decls: 11, vars: 4, consts: [[1, "example-container"], [3, "ngTemplateOutlet"], [1, "example-step-navigation-bar"], ["cdkStepperPrevious", "", 1, "example-nav-button"], ["class", "example-step", 3, "example-active", "click", 4, "ngFor", "ngForOf"], ["cdkStepperNext", "", 1, "example-nav-button"], [1, "example-step", 3, "click"]], template: function CustomStepper_Template(rf, ctx) { if (rf & 1) {
+CustomStepper.ɵcmp = ɵɵdefineComponent({ type: CustomStepper, selectors: [["example-custom-stepper"]], features: [ɵɵProvidersFeature([{ provide: CdkStepper, useExisting: CustomStepper }]), ɵɵInheritDefinitionFeature], decls: 12, vars: 6, consts: [[1, "example-container"], [3, "ngTemplateOutlet"], [1, "example-step-navigation-bar"], ["cdkStepperPrevious", "", 1, "example-nav-button"], ["class", "example-step", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["cdkStepperNext", "", 1, "example-nav-button"], [1, "example-step", 3, "ngClass", "click"]], template: function CustomStepper_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "section", 0);
         ɵɵelementStart(1, "header");
         ɵɵelementStart(2, "h2");
         ɵɵtext(3);
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelement(4, "div", 1);
-        ɵɵelementStart(5, "footer", 2);
-        ɵɵelementStart(6, "button", 3);
-        ɵɵtext(7, "\u2190");
+        ɵɵelementStart(4, "div");
+        ɵɵelementContainer(5, 1);
         ɵɵelementEnd();
-        ɵɵtemplate(8, CustomStepper_button_8_Template, 2, 3, "button", 4);
-        ɵɵelementStart(9, "button", 5);
-        ɵɵtext(10, "\u2192");
+        ɵɵelementStart(6, "footer", 2);
+        ɵɵelementStart(7, "button", 3);
+        ɵɵtext(8, "\u2190");
+        ɵɵelementEnd();
+        ɵɵtemplate(9, CustomStepper_button_9_Template, 2, 4, "button", 4);
+        ɵɵelementStart(10, "button", 5);
+        ɵɵtext(11, "\u2192");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -71,10 +74,12 @@ CustomStepper.ɵcmp = ɵɵdefineComponent({ type: CustomStepper, selectors: [["e
         ɵɵadvance(3);
         ɵɵtextInterpolate2("Step ", ctx.selectedIndex + 1, "/", ctx.steps.length, "");
         ɵɵadvance(1);
-        ɵɵproperty("ngTemplateOutlet", ctx.selected ? ctx.selected.content : null);
+        ɵɵstyleProp("display", ctx.selected ? "block" : "none");
+        ɵɵadvance(1);
+        ɵɵproperty("ngTemplateOutlet", ctx.selected.content);
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.steps);
-    } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
+    } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext, NgClass], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
 const ɵCustomStepper_BaseFactory = /*@__PURE__*/ ɵɵgetInheritedFactory(CustomStepper);
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CustomStepper, [{
         type: Component,

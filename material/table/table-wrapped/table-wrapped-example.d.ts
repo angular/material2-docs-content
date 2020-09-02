@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { AfterContentInit, AfterViewInit, QueryList } from '@angular/core';
+import { AfterContentInit, OnInit, QueryList } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatColumnDef, MatHeaderRowDef, MatRowDef, MatTable, MatTableDataSource } from '@angular/material/table';
 import * as i0 from "@angular/core";
@@ -12,11 +12,11 @@ export interface PeriodicElement {
 /**
  * @title Table example that shows how to wrap a table component for definition and behavior reuse.
  */
-export declare class TableWrappedExample implements AfterViewInit {
+export declare class TableWrappedExample implements OnInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<PeriodicElement>;
     sort: MatSort;
-    ngAfterViewInit(): void;
+    ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDef<TableWrappedExample, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never>;
 }

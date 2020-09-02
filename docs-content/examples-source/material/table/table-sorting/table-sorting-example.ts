@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
@@ -30,13 +30,13 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['table-sorting-example.css'],
   templateUrl: 'table-sorting-example.html',
 })
-export class TableSortingExample implements AfterViewInit {
+export class TableSortingExample implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.dataSource.sort = this.sort;
   }
 }
