@@ -12,7 +12,7 @@ structure. The idea for component harnesses comes from the
 testing.</p>
 <p><code>@angular/cdk/testing</code> contains infrastructure for creating and using component test harnesses. You
 can create test harnesses for any component, ranging from small reusable widgets to full application
-pages. </p>
+pages.</p>
 <p>The component harness system supports multiple testing environments. You can use the same harness
 implementation in both unit and end-to-end tests. This means that users only need to learn one API,
 and component authors don&#39;t have to maintain separate unit and end-to-end test implementations.</p>
@@ -83,7 +83,7 @@ create <code>ComponentHarness</code> instances directly.</p>
 <p>In most cases, you can create a <code>HarnessLoader</code> in the <code>beforeEach</code> block using
 <code>TestbedHarnessEnvironment.loader(fixture)</code> and then use that <code>HarnessLoader</code> to create any
 necessary <code>ComponentHarness</code> instances. The other methods cover special cases as shown in this
-example:  </p>
+example:</p>
 <p>Consider a reusable dialog-button component that opens a dialog on click, containing the following
 components, each with a corresponding harness:</p>
 <ul>
@@ -171,7 +171,7 @@ are used to create <code>ComponentHarness</code> instances for elements under th
 <td>Acts like <code>getHarness</code>, but returns an array of harness instances, one for each matching element, rather than just the first matching element</td>
 </tr>
 </tbody></table>
-<p>Calls to <code>getHarness</code> and <code>getAllHarnesses</code> can either take <code>ComponentHarness</code> subclass or a 
+<p>Calls to <code>getHarness</code> and <code>getAllHarnesses</code> can either take <code>ComponentHarness</code> subclass or a
 <code>HarnessPredicate</code>. <code>HarnessPredicate</code> applies additional restrictions to the search (e.g. searching
 for a button that has some particular text, etc). The
 <a href="#filtering-harness-instances-with-harnesspredicate">details of <code>HarnessPredicate</code></a> are discussed in
@@ -186,7 +186,7 @@ created manually.</p>
         </h4>
       <p>To support both unit and end-to-end tests, and to insulate tests against changes in
 asynchronous behavior, almost all harness methods are asynchronous and return a <code>Promise</code>;
-therefore, the Angular team recommends using 
+therefore, the Angular team recommends using
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code>/<code>await</code> syntax</a>
 to improve the test readability.</p>
 <p>Note that <code>await</code> statements block the execution of your test until the associated <code>Promise</code>
@@ -255,7 +255,7 @@ in more detail.</p>
 corresponding component. You can access the component&#39;s host element via the <code>host</code> method from
 the <code>ComponentHarness</code> base class.</p>
 <p><code>ComponentHarness</code> additionally offers several methods for locating elements within the component&#39;s
-DOM. These methods are <code>locatorFor</code>, <code>locatorForOptional</code>, and <code>locatorForAll</code>. 
+DOM. These methods are <code>locatorFor</code>, <code>locatorForOptional</code>, and <code>locatorForAll</code>.
 Note, though, that these methods do not directly find elements. Instead, they <em>create functions</em>
 that find elements. This approach safeguards against caching references to out-of-date elements. For
 example, when an <code>ngIf</code> hides and then shows an element, the result is a new DOM element; using
@@ -498,7 +498,7 @@ for adding options.</p>
 </tr>
 </tbody></table>
 <p>For example, when working with a menu it would likely be useful to add a way to filter based on
-trigger text and to filter menu items based on their text: </p>
+trigger text and to filter menu items based on their text:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">interface</span> MyMenuHarnessFilters <span class="hljs-keyword">extends</span> BaseHarnessFilters {
   <span class="hljs-comment">/** Filters based on the trigger text for the menu. */</span>
   triggerText?: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">RegExp</span>;
@@ -594,14 +594,10 @@ several APIs that can be used to create <code>HarnessLoader</code> instances for
 </tr>
 </tbody></table>
 <p>The <code>MyPopup</code> component discussed earlier is a good example of a component with arbitrary content
-that users may want to load harnesses for. <code>MyPopupHarness</code> could add support for this:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">class</span> MyPopupHarness <span class="hljs-keyword">extends</span> ComponentHarness {
+that users may want to load harnesses for. <code>MyPopupHarness</code> could add support for this by
+extending <code>ContentContainerComponentHarness</code>.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> MyPopupHarness <span class="hljs-keyword">extends</span> ContentContainerComponentHarness&lt;<span class="hljs-built_in">string</span>&gt; {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">'my-popup'</span>;
-
-  <span class="hljs-comment">/** Gets a `HarnessLoader` whose root element is the popup's content element. */</span>
-  <span class="hljs-keyword">async</span> getHarnessLoaderForContent(): <span class="hljs-built_in">Promise</span>&lt;HarnessLoader&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.harnessLoaderFor(<span class="hljs-string">'my-popup-content'</span>);
-  }
 }</code></pre>
 
         <h4 id="accessing-elements-outside-of-the-components-host-element" class="docs-header-link">
@@ -677,7 +673,7 @@ may need to explicitly wait for tasks outside <code>NgZone</code>, as this does 
       <p>Harness environment authors are developers who want to add support for using component harnesses in
 additional testing environments. Out-of-the-box, Angular CDK&#39;s component harnesses can be used in
 Protractor E2E tests and Karma unit tests. Developers can support additional environments by
-creating custom implementations of <code>TestElement</code> and <code>HarnessEnvironment</code>. </p>
+creating custom implementations of <code>TestElement</code> and <code>HarnessEnvironment</code>.</p>
 
         <h4 id="creating-a-testelement-implementation-for-the-environment" class="docs-header-link">
           <span header-link="creating-a-testelement-implementation-for-the-environment"></span>
@@ -759,9 +755,9 @@ implementing the methods fairly straightforward. However, one important differen
 implementing the <code>sendKeys</code> method, is that the key codes in the <code>TestKey</code>
 enum likely differ from the key codes used in the test environment. Environment authors should
 maintain a mapping from <code>TestKey</code> codes to the codes used in the particular testing environment.</p>
-<p>The 
+<p>The
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/testbed/unit-test-element.ts#L57"><code>UnitTestElement</code></a>
-and 
+and
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-element.ts#L67"><code>ProtractorElement</code></a>
 implementations in Angular CDK serve as good examples of implementations of this interface.</p>
 
@@ -769,7 +765,7 @@ implementations in Angular CDK serve as good examples of implementations of this
           <span header-link="creating-a-harnessenvironemnt-implementation-for-the-environment"></span>
           Creating a <code>HarnessEnvironemnt</code> implementation for the environment
         </h4>
-      <p>Test authors use <code>HarnessEnvironemnt</code> to create component harness instances for use in tests. </p>
+      <p>Test authors use <code>HarnessEnvironemnt</code> to create component harness instances for use in tests.</p>
 <p><code>HarnessEnvironment</code> is an abstract class that must be extended to create a concrete subclass for
 the new environment. When supporting a new test environment, you must create a <code>HarnessEnvironment</code>
 subclass that adds concrete implementations for all abstract members.</p>
@@ -817,9 +813,9 @@ needs of the particular environment, the class may provide several different sta
 require arguments to be passed. (e.g. the <code>loader</code> method on <code>TestbedHarnessEnvironment</code> takes a
 <code>ComponentFixture</code>, and the class provides additional static methods called <code>documentRootLoader</code> and
 <code>harnessForFixture</code>).</p>
-<p>The 
+<p>The
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/testbed/testbed-harness-environment.ts#L20"><code>TestbedHarnessEnvironment</code></a>
-and 
+and
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-harness-environment.ts#L16"><code>ProtractorHarnessEnvironment</code></a>
 implementations in Angular CDK serve as good examples of implementations of this interface.</p>
 </div>
