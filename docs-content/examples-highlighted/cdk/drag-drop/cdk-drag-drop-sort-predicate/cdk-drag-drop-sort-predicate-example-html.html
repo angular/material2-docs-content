@@ -1,0 +1,11 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">cdkDropList</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">"example-list"</span>
+  (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">"drop($event)"</span>
+  [<span class="hljs-attr">cdkDropListSortPredicate</span>]=<span class="hljs-string">"sortPredicate"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"example-box"</span>
+    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let number of numbers"</span>
+    [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">"number"</span>
+    <span class="hljs-attr">cdkDrag</span>&gt;</span>{{number}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

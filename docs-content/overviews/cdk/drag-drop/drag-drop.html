@@ -280,4 +280,15 @@ moved by a user. The element&#39;s position can be explicitly set, however, via 
 <code>cdkDragFreeDragPosition</code> input. Applications commonly use this, for example, to restore a
 draggable&#39;s position after a user has navigated away and then returned.</p>
 <div material-docs-example="cdk-drag-drop-free-drag-position"></div>
+
+
+        <h3 id="controlling-whether-an-item-can-be-sorted-into-a-particular-index" class="docs-header-link">
+          <span header-link="controlling-whether-an-item-can-be-sorted-into-a-particular-index"></span>
+          Controlling whether an item can be sorted into a particular index
+        </h3>
+      <p><code>cdkDrag</code> items can be sorted into any position inside of a <code>cdkDropList</code> by default. You can change
+this behavior by setting a <code>cdkDropListSortPredicate</code>. The predicate function will be called
+whenever an item is about to be moved into a new index. If the predicate returns <code>true</code>, the
+item will be moved into the new index, otherwise it will keep its current position.</p>
+<div material-docs-example="cdk-drag-drop-sort-predicate"></div>
 </div>

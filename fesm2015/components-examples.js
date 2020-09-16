@@ -445,6 +445,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/drag-drop"
         }
     },
+    "cdk-drag-drop-sort-predicate": {
+        "packagePath": "cdk/drag-drop/cdk-drag-drop-sort-predicate",
+        "title": "Drag&Drop sort predicate",
+        "componentName": "CdkDragDropSortPredicateExample",
+        "files": [
+            "cdk-drag-drop-sort-predicate-example.ts",
+            "cdk-drag-drop-sort-predicate-example.html",
+            "cdk-drag-drop-sort-predicate-example.css"
+        ],
+        "selector": "cdk-drag-drop-sort-predicate-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-drag-drop-sort-predicate-example.ts",
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "cdk/drag-drop"
+        }
+    },
     "cdk-drag-drop-sorting": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-sorting",
         "title": "Drag&Drop sorting",

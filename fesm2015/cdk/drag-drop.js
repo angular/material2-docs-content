@@ -827,6 +827,54 @@ CdkDragDropSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropSorting
             }]
     }], null, null); })();
 
+function CdkDragDropSortPredicateExample_div_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "div", 2);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const number_r1 = ctx.$implicit;
+    ɵɵproperty("cdkDragData", number_r1);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(number_r1);
+} }
+/**
+ * @title Drag&Drop sort predicate
+ */
+class CdkDragDropSortPredicateExample {
+    constructor() {
+        this.numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    }
+    drop(event) {
+        moveItemInArray(this.numbers, event.previousIndex, event.currentIndex);
+    }
+    /**
+     * Predicate function that only allows even numbers to be
+     * sorted into even indices and odd numbers at odd indices.
+     */
+    sortPredicate(index, item) {
+        return (index + 1) % 2 === item.data % 2;
+    }
+}
+CdkDragDropSortPredicateExample.ɵfac = function CdkDragDropSortPredicateExample_Factory(t) { return new (t || CdkDragDropSortPredicateExample)(); };
+CdkDragDropSortPredicateExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropSortPredicateExample, selectors: [["cdk-drag-drop-sort-predicate-example"]], decls: 2, vars: 2, consts: [["cdkDropList", "", 1, "example-list", 3, "cdkDropListSortPredicate", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 3, "cdkDragData", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragData"]], template: function CdkDragDropSortPredicateExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div", 0);
+        ɵɵlistener("cdkDropListDropped", function CdkDragDropSortPredicateExample_Template_div_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
+        ɵɵtemplate(1, CdkDragDropSortPredicateExample_div_1_Template, 2, 2, "div", 1);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("cdkDropListSortPredicate", ctx.sortPredicate);
+        ɵɵadvance(1);
+        ɵɵproperty("ngForOf", ctx.numbers);
+    } }, directives: [CdkDropList, NgForOf, CdkDrag], styles: [".example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n  width: 400px;\n  max-width: 100%;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkDragDropSortPredicateExample, [{
+        type: Component,
+        args: [{
+                selector: 'cdk-drag-drop-sort-predicate-example',
+                templateUrl: 'cdk-drag-drop-sort-predicate-example.html',
+                styleUrls: ['cdk-drag-drop-sort-predicate-example.css'],
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     CdkDragDropAxisLockExample,
     CdkDragDropBoundaryExample,
@@ -844,6 +892,7 @@ const EXAMPLES = [
     CdkDragDropOverviewExample,
     CdkDragDropRootElementExample,
     CdkDragDropSortingExample,
+    CdkDragDropSortPredicateExample,
 ];
 class CdkDragDropExamplesModule {
 }
@@ -868,7 +917,8 @@ CdkDragDropExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkDrag
         CdkDragDropHorizontalSortingExample,
         CdkDragDropOverviewExample,
         CdkDragDropRootElementExample,
-        CdkDragDropSortingExample], imports: [DragDropModule,
+        CdkDragDropSortingExample,
+        CdkDragDropSortPredicateExample], imports: [DragDropModule,
         OverlayModule,
         CommonModule], exports: [CdkDragDropAxisLockExample,
         CdkDragDropBoundaryExample,
@@ -885,7 +935,8 @@ CdkDragDropExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkDrag
         CdkDragDropHorizontalSortingExample,
         CdkDragDropOverviewExample,
         CdkDragDropRootElementExample,
-        CdkDragDropSortingExample] }); })();
+        CdkDragDropSortingExample,
+        CdkDragDropSortPredicateExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkDragDropExamplesModule, [{
         type: NgModule,
         args: [{
@@ -904,5 +955,5 @@ CdkDragDropExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkDrag
  * Generated bundle index. Do not edit.
  */
 
-export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropExamplesModule, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample };
+export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropExamplesModule, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortPredicateExample, CdkDragDropSortingExample };
 //# sourceMappingURL=drag-drop.js.map
