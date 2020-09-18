@@ -302,7 +302,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>selectionChange: EventEmitter&lt;MatSelectChange&gt;</code>
+      <code>selectionChange: EventEmitter&lt;C&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the selected value has been changed by the user.</p>
@@ -331,8 +331,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <code>customTrigger: MatSelectTrigger</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>User-supplied override of the trigger element.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -407,8 +406,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <code>optionGroups: QueryList&lt;MatOptgroup&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>All of the defined groups of options.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -433,8 +431,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <code>options: QueryList&lt;MatOption&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>All of the defined select options.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -581,12 +578,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <th colspan="2" class="docs-api-method-name-cell">open
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Opens the overlay panel.</p>
-
-    </td>
-  </tr></table>
+  </thead></table>
 
 
   
@@ -735,7 +727,9 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <h4 id="SELECT_PANEL_MAX_HEIGHT" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="SELECT_PANEL_MAX_HEIGHT"></span>
   <code>SELECT_PANEL_MAX_HEIGHT</code>
-</h4><p class="docs-api-constant-description"><p>The max height of the select&#39;s overlay panel</p>
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be deleted in v12.0.0">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>The max height of the select&#39;s overlay panel.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> SELECT_PANEL_MAX_HEIGHT: <span class="hljs-number">256</span>;</code>
@@ -749,7 +743,9 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <h4 id="SELECT_PANEL_PADDING_X" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="SELECT_PANEL_PADDING_X"></span>
   <code>SELECT_PANEL_PADDING_X</code>
-</h4><p class="docs-api-constant-description"><p>The panel&#39;s padding on the x-axis</p>
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be deleted in v12.0.0">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>The panel&#39;s padding on the x-axis.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> SELECT_PANEL_PADDING_X: <span class="hljs-number">16</span>;</code>
@@ -763,7 +759,9 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <h4 id="SELECT_PANEL_INDENT_PADDING_X" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="SELECT_PANEL_INDENT_PADDING_X"></span>
   <code>SELECT_PANEL_INDENT_PADDING_X</code>
-</h4><p class="docs-api-constant-description"><p>The panel&#39;s x axis padding if it is indented (e.g. there is an option group).</p>
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be deleted in v12.0.0">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>The panel&#39;s x axis padding if it is indented (e.g. there is an option group).</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> SELECT_PANEL_INDENT_PADDING_X: <span class="hljs-built_in">number</span>;</code>
@@ -777,7 +775,9 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <h4 id="SELECT_ITEM_HEIGHT_EM" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="SELECT_ITEM_HEIGHT_EM"></span>
   <code>SELECT_ITEM_HEIGHT_EM</code>
-</h4><p class="docs-api-constant-description"><p>The height of the select items in <code>em</code> units.</p>
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be deleted in v12.0.0">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>The height of the select items in <code>em</code> units.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> SELECT_ITEM_HEIGHT_EM: <span class="hljs-number">3</span>;</code>
@@ -791,7 +791,9 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <h4 id="SELECT_MULTIPLE_PANEL_PADDING_X" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="SELECT_MULTIPLE_PANEL_PADDING_X"></span>
   <code>SELECT_MULTIPLE_PANEL_PADDING_X</code>
-</h4><p class="docs-api-constant-description"><p>Distance between the panel edge and the option text in
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be deleted in v12.0.0">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>Distance between the panel edge and the option text in
 multi-selection mode.</p>
 <p>Calculated as:
 (SELECT_PANEL_PADDING_X * 1.5) + 16 = 40
@@ -810,7 +812,9 @@ The checkbox width is 16px.</p>
 <h4 id="SELECT_PANEL_VIEWPORT_PADDING" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="SELECT_PANEL_VIEWPORT_PADDING"></span>
   <code>SELECT_PANEL_VIEWPORT_PADDING</code>
-</h4><p class="docs-api-constant-description"><p>The select panel will only &quot;fit&quot; inside the viewport if it is positioned at
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be deleted in v12.0.0">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>The select panel will only &quot;fit&quot; inside the viewport if it is positioned at
 this value or more away from the viewport boundary.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
