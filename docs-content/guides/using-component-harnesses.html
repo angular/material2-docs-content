@@ -83,7 +83,8 @@ This method creates a <code>HarnessPredicate</code>, an object that filters load
 provided constraints. The particular constraint options vary depending on the harness class, but all
 harnesses support at least:</p>
 <ul>
-<li><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such<pre><code>         as `[mat-button]`)</code></pre></li>
+<li><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such
+as <code>[mat-button]</code>)</li>
 <li><code>ancestor</code> - CSS selector for a some ancestor element above the component in the DOM</li>
 </ul>
 <p>In addition to these standard options, <code>MatButtonHarness</code> also supports</p>
@@ -115,7 +116,7 @@ capture more knowledge about the component&#39;s internals.</p>
   <span class="hljs-keyword">await</span> okButton.click();
   expect(fixture.componentInstance.confirmed).toBe(<span class="hljs-literal">true</span>);
 });</code></pre>
-<p>Note that the code above has does not call <code>fixture.detectChanges()</code>, something you commonly see in
+<p>Note that the code above does not call <code>fixture.detectChanges()</code>, something you commonly see in
 unit tests. The CDK&#39;s component harnesses automatically invoke change detection after performing
 actions and before reading state. The harness also automatically waits for the fixture to be stable,
 which will cause the test to wait for <code>setTimeout</code>, <code>Promise</code>, etc.</p>
