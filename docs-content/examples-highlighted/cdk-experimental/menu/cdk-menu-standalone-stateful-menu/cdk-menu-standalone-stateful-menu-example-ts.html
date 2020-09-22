@@ -1,0 +1,19 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkMenuItem} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk-experimental/menu'</span>;
+
+<span class="hljs-comment">/** @title Stateful Menu with Standalone Trigger. */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-menu-standalone-stateful-menu-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-menu-standalone-stateful-menu-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-menu-standalone-stateful-menu-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkMenuStandaloneStatefulMenuExample {
+  bold = <span class="hljs-literal">true</span>;
+  italic = <span class="hljs-literal">false</span>;
+
+  size: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-string">'Normal'</span>;
+
+  onSizeChange(item: CdkMenuItem) {
+    <span class="hljs-keyword">this</span>.size = item._elementRef.nativeElement.textContent?.trim();
+  }
+}

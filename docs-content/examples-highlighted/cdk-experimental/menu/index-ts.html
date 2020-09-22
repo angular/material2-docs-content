@@ -1,0 +1,34 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk-experimental/menu'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkMenuStandaloneMenuExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-menu-standalone-menu/cdk-menu-standalone-menu-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkMenuStandaloneStatefulMenuExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-menu-standalone-stateful-menu/cdk-menu-standalone-stateful-menu-example'</span>;
+<span class="hljs-keyword">import</span> {CdkMenuMenubarExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-menu-menubar/cdk-menu-menubar-example'</span>;
+<span class="hljs-keyword">import</span> {CdkMenuInlineExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-menu-inline/cdk-menu-inline-example'</span>;
+<span class="hljs-keyword">import</span> {CdkMenuContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-menu-context/cdk-menu-context-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkMenuStandaloneMenuExample,
+  CdkMenuMenubarExample,
+  CdkMenuInlineExample,
+  CdkMenuContextExample,
+  CdkMenuStandaloneStatefulMenuExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkMenuStandaloneMenuExample,
+  CdkMenuMenubarExample,
+  CdkMenuInlineExample,
+  CdkMenuContextExample,
+  CdkMenuStandaloneStatefulMenuExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [CdkMenuModule],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkMenuExamplesModule {}

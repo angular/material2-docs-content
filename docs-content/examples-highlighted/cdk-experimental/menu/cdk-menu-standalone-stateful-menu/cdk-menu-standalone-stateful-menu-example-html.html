@@ -1,0 +1,30 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItem</span> [<span class="hljs-attr">cdkMenuTriggerFor</span>]=<span class="hljs-string">"menu"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-standalone-item"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">menu</span>=<span class="hljs-string">"cdkMenuPanel"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-menu"</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">"menu"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"example-menu-item"</span>
+      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"bold"</span>
+      (<span class="hljs-attr">cdkMenuItemToggled</span>)=<span class="hljs-string">"bold = !bold"</span>
+      <span class="hljs-attr">cdkMenuItemCheckbox</span>
+    &gt;</span>
+      Bold
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"example-menu-item"</span>
+      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"italic"</span>
+      (<span class="hljs-attr">cdkMenuItemToggled</span>)=<span class="hljs-string">"italic = !italic"</span>
+      <span class="hljs-attr">cdkMenuItemCheckbox</span>
+    &gt;</span>
+      Italic
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenuGroup</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"onSizeChange($event)"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-menu-item"</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"size === 'Small'"</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-menu-item"</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"size === 'Normal'"</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>
+        Normal
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-menu-item"</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"size === 'Large'"</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Large<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
