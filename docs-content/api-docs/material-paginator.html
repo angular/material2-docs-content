@@ -75,17 +75,7 @@ changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>getRangeLabel: (page: number, pageSize: number, length: number) =&gt; {
-    if (length == 0 || pageSize == 0) {
-        return `0 of ${length}`;
-    }
-    length = Math.max(length, 0);
-    const startIndex = page * pageSize;
-    const endIndex = startIndex &lt; length ?
-        Math.min(startIndex + pageSize, length) :
-        startIndex + pageSize;
-    return `${startIndex + 1} – ${endIndex} of ${length}`;
-}</code>
+      <code>getRangeLabel: (page: number, pageSize: number, length: number) =&gt; string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the range of items within the current page and the length of the whole list.</p>
