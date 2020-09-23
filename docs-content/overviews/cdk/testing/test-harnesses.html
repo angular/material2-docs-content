@@ -180,6 +180,29 @@ provide convenience methods on their <code>ComponentHarness</code> subclass to f
 <code>HarnessPredicate</code> instances. However, if the harness author&#39;s API is not sufficient, they can be
 created manually.</p>
 
+        <h4 id="change-detection" class="docs-header-link">
+          <span header-link="change-detection"></span>
+          Change detection
+        </h4>
+      <p>By default, test harnesses will run Angular&#39;s change detection before reading the state of a DOM
+element and after interacting with a DOM element. While convenient in most cases, there may be times
+that you need finer-grained control over change detection. For example, you may want to check the
+state of a component while an async operation is pending. In these cases you can use the
+<code>manualChangeDetection</code> function to disable automatic handling of change detection for a block of
+code. For example:</p>
+<pre><code class="language-ts">it(<span class="hljs-string">'checks state while async action is in progress'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> buttonHarness = loader.getHarness(MyButtonHarness);
+  <span class="hljs-keyword">await</span> manualChangeDetection(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> buttonHarness.click();
+    fixture.detectChanges();
+    <span class="hljs-comment">// Check expectations while async click operation is in progress.</span>
+    expect(isProgressSpinnerVisible()).toBe(<span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">await</span> fixture.whenStable();
+    <span class="hljs-comment">// Check expectations after async click operation complete.</span>
+    expect(isProgressSpinnerVisible()).toBe(<span class="hljs-literal">false</span>);
+  });
+});</code></pre>
+
         <h4 id="working-with-asynchronous-component-harness-methods" class="docs-header-link">
           <span header-link="working-with-asynchronous-component-harness-methods"></span>
           Working with asynchronous component harness methods
@@ -190,18 +213,21 @@ therefore, the Angular team recommends using
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code>/<code>await</code> syntax</a>
 to improve the test readability.</p>
 <p>Note that <code>await</code> statements block the execution of your test until the associated <code>Promise</code>
-resolves. When reading multiple properties of a harness it may not be necessary to block on the
-first before asking for the next, in these cases use <code>Promise.all</code> to parallelize.</p>
-<p>For example, consider the following example of reading both the <code>checked</code> and <code>indeterminate</code> state
-off of a checkbox harness:</p>
+resolves. Occasionally, you may want to perform multiple actions simultaneously and wait until
+they&#39;re all done rather than performing each action sequentially. For example, reading multiple
+properties off a single component. In these situations use the <code>parallel</code> function to parallelize
+the operations. The parallel function works similarly to <code>Promise.all</code>, while also optimizing change
+detection, so it is not run an excessive number of times. The following code demonstrates how you
+can read multiple properties from a harness with <code>parallel</code>:</p>
 <pre><code class="language-ts">it(<span class="hljs-string">'reads properties in parallel'</span>, <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">const</span> checkboxHarness = loader.getHarness(MyCheckboxHarness);
-  <span class="hljs-keyword">const</span> [checked, indeterminate] = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([
+  <span class="hljs-comment">// Read the checked and intermediate properties simultaneously.</span>
+  <span class="hljs-keyword">const</span> [checked, indeterminate] = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> [
     checkboxHarness.isChecked(),
     checkboxHarness.isIndeterminate()
   ]);
-
-  <span class="hljs-comment">// ... make some assertions</span>
+  expect(checked).toBe(<span class="hljs-literal">false</span>);
+  expect(indeterminate).toBe(<span class="hljs-literal">true</span>);
 });</code></pre>
 
         <h3 id="api-for-component-harness-authors" class="docs-header-link">
@@ -522,7 +548,7 @@ trigger text and to filter menu items based on their text:</p>
   <span class="hljs-keyword">protected</span> getPopupHarness = <span class="hljs-keyword">this</span>.locatorFor(MyPopupHarness);
 
   <span class="hljs-comment">/** Gets the text of the menu trigger. */</span>
-  getTriggerText(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">string</span>&gt; {
+  <span class="hljs-keyword">async</span> getTriggerText(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">string</span>&gt; {
     <span class="hljs-keyword">const</span> popupHarness = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.getPopupHarness();
     <span class="hljs-keyword">return</span> popupHarness.getTriggerText();
   }
@@ -818,4 +844,23 @@ require arguments to be passed. (e.g. the <code>loader</code> method on <code>Te
 and
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-harness-environment.ts#L16"><code>ProtractorHarnessEnvironment</code></a>
 implementations in Angular CDK serve as good examples of implementations of this interface.</p>
+
+        <h4 id="handling-auto-change-detection-status" class="docs-header-link">
+          <span header-link="handling-auto-change-detection-status"></span>
+          Handling auto change detection status
+        </h4>
+      <p>In order to support the <code>manualChangeDetection</code> and <code>parallel</code> APIs, your environment should install
+a handler for the auto change detection status.</p>
+<p>When your environment wants to start handling the auto change detection status it can call
+<code>handleAutoChangeDetectionStatus(handler)</code>. The handler function will receive a 
+<code>AutoChangeDetectionStatus</code> which has two properties:</p>
+<ul>
+<li><code>isDisabled: boolean</code> - Indicates whether auto change detection is currently disabled. When true,
+your environment&#39;s <code>forceStabilize</code> method should act as a no-op. This allows users to trigger
+change detection manually instead.</li>
+<li><code>onDetectChangesNow?: () =&gt; void</code> - If this optional callback is specified, your environment
+should trigger change detection immediately and call the callback when change detection finishes.</li>
+</ul>
+<p>If your environment wants to stop handling auto change detection status it can call
+<code>stopHandlingAutoChangeDetectionStatus()</code>.</p>
 </div>

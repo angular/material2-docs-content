@@ -3710,6 +3710,195 @@ and attempts to add the string to the Element&#39;s value.</p>
 
 
 
+    
+      
+
+<h4 id="AutoChangeDetectionStatus" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="AutoChangeDetectionStatus"></span>
+  <code>AutoChangeDetectionStatus</code>
+</h4><p class="docs-api-interface-description"><p>Represents the status of auto change detection.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether auto change detection is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>onDetectChangesNow: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>An optional callback, if present it indicates that change detection should be run immediately,
+while handling the status change. The callback should then be called as soon as change
+detection is done.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="cdk-testing-functions" class="docs-header-link docs-api-h3">
+      <span header-link="functions"></span>
+      Functions
+    </h3>
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">handleAutoChangeDetectionStatus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Allows a test <code>HarnessEnvironment</code> to install its own handler for auto change detection status
+changes.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        handler</p>
+      <code class="docs-api-method-parameter-type">(status</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The handler for the auto change detection status.</p>
+
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">stopHandlingAutoChangeDetectionStatus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Allows a <code>HarnessEnvironment</code> to stop handling auto change detection status changes.</p>
+
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>manualChangeDetection
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Disables the harness system&#39;s auto change detection for the duration of the given function.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fn</p>
+      <code class="docs-api-method-parameter-type">() =&gt; Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The function to disable auto change detection for.</p>
+
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>parallel
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Resolves the given list of async values in parallel (i.e. via Promise.all) while batching change
+detection over the entire operation such that change detection occurs exactly once before
+resolving the values and once after.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        values</p>
+      <code class="docs-api-method-parameter-type">() =&gt; any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>A getter for the async values to resolve in parallel with batched change detection.</p>
+
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
     <h3 id="cdk-testing-type_aliases" class="docs-header-link docs-api-h3">
       <span header-link="type_aliases"></span>
       Type aliases
