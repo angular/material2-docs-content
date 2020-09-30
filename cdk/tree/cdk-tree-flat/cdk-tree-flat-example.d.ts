@@ -16,7 +16,7 @@ export declare class CdkTreeFlatExample {
     dataSource: ArrayDataSource<ExampleFlatNode>;
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
-    shouldRender(node: ExampleFlatNode): boolean | undefined;
+    shouldRender(node: ExampleFlatNode): boolean;
     static ɵfac: i0.ɵɵFactoryDef<CdkTreeFlatExample, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never, never>;
 }

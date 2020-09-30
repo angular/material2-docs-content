@@ -111,7 +111,13 @@
         };
         CdkTreeFlatExample.prototype.shouldRender = function (node) {
             var parent = this.getParentNode(node);
-            return !parent || parent.isExpanded;
+            while (parent) {
+                if (!parent.isExpanded) {
+                    return false;
+                }
+                parent = this.getParentNode(parent);
+            }
+            return true;
         };
         return CdkTreeFlatExample;
     }());

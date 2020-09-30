@@ -88,7 +88,13 @@
   }
 
   shouldRender(node: ExampleFlatNode) {
-    <span class="hljs-keyword">const</span> parent = <span class="hljs-keyword">this</span>.getParentNode(node);
-    <span class="hljs-keyword">return</span> !parent || parent.isExpanded;
+    <span class="hljs-keyword">let</span> parent = <span class="hljs-keyword">this</span>.getParentNode(node);
+    <span class="hljs-keyword">while</span> (parent) {
+      <span class="hljs-keyword">if</span> (!parent.isExpanded) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+      parent = <span class="hljs-keyword">this</span>.getParentNode(parent);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
   }
 }

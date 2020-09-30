@@ -104,8 +104,14 @@ class CdkTreeFlatExample {
         return null;
     }
     shouldRender(node) {
-        const parent = this.getParentNode(node);
-        return !parent || parent.isExpanded;
+        let parent = this.getParentNode(node);
+        while (parent) {
+            if (!parent.isExpanded) {
+                return false;
+            }
+            parent = this.getParentNode(parent);
+        }
+        return true;
     }
 }
 CdkTreeFlatExample.ɵfac = function CdkTreeFlatExample_Factory(t) { return new (t || CdkTreeFlatExample)(); };
