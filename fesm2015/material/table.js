@@ -1,5 +1,5 @@
 import { NgForOf, CurrencyPipe, NgIf, DatePipe, DecimalPipe, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵcontentQuery, ɵɵstaticViewQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵcontentQuery, ɵɵstaticViewQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, ContentChild, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -3025,25 +3025,32 @@ TableTextColumnExample.ɵcmp = ɵɵdefineComponent({ type: TableTextColumnExampl
     }], null, null); })();
 
 const _c0$6 = ["sort"];
-function TableWrappedExample_th_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 7);
+function TableWrappedExample_th_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-function TableWrappedExample_td_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 8);
+function TableWrappedExample_td_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
-    const element_r5 = ctx.$implicit;
+    const element_r6 = ctx.$implicit;
     ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", element_r5.name, " ");
+    ɵɵtextInterpolate1(" ", element_r6.name, " ");
 } }
-function TableWrappedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 9);
+function TableWrappedExample_tr_10_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 11);
 } }
-function TableWrappedExample_tr_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 10);
+function TableWrappedExample_tr_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 12);
+} }
+function TableWrappedExample_tr_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "tr", 13);
+    ɵɵelementStart(1, "td", 14);
+    ɵɵtext(2, "No data");
+    ɵɵelementEnd();
+    ɵɵelementEnd();
 } }
 function WrapperTable_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 7);
@@ -3111,6 +3118,12 @@ class TableWrappedExample {
     ngAfterViewInit() {
         this.dataSource.sort = this.sort;
     }
+    clearTable() {
+        this.dataSource.data = [];
+    }
+    addData() {
+        this.dataSource.data = ELEMENT_DATA$e;
+    }
 }
 TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
 TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
@@ -3118,22 +3131,34 @@ TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, sel
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
-    } }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "wrapper-table", 0, 1);
-        ɵɵelementContainerStart(2, 2);
-        ɵɵtemplate(3, TableWrappedExample_th_3_Template, 2, 0, "th", 3);
-        ɵɵtemplate(4, TableWrappedExample_td_4_Template, 2, 1, "td", 4);
+    } }, decls: 13, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "div");
+        ɵɵelementStart(1, "button", 0);
+        ɵɵlistener("click", function TableWrappedExample_Template_button_click_1_listener() { return ctx.clearTable(); });
+        ɵɵtext(2, "Clear table");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "button", 0);
+        ɵɵlistener("click", function TableWrappedExample_Template_button_click_3_listener() { return ctx.addData(); });
+        ɵɵtext(4, "Add data");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "wrapper-table", 1, 2);
+        ɵɵelementContainerStart(7, 3);
+        ɵɵtemplate(8, TableWrappedExample_th_8_Template, 2, 0, "th", 4);
+        ɵɵtemplate(9, TableWrappedExample_td_9_Template, 2, 1, "td", 5);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(5, TableWrappedExample_tr_5_Template, 1, 0, "tr", 5);
-        ɵɵtemplate(6, TableWrappedExample_tr_6_Template, 1, 0, "tr", 6);
+        ɵɵtemplate(10, TableWrappedExample_tr_10_Template, 1, 0, "tr", 6);
+        ɵɵtemplate(11, TableWrappedExample_tr_11_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(12, TableWrappedExample_tr_12_Template, 3, 0, "tr", 8);
         ɵɵelementEnd();
     } if (rf & 2) {
+        ɵɵadvance(5);
         ɵɵproperty("dataSource", ctx.dataSource)("columns", ctx.displayedColumns);
         ɵɵadvance(5);
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: function () { return [WrapperTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: function () { return [MatButton, WrapperTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatNoDataRow, MatHeaderCell, MatCell, MatHeaderRow, MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin: 0 8px 8px 0;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableWrappedExample, [{
         type: Component,
         args: [{
@@ -3154,15 +3179,18 @@ class WrapperTable {
         this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));
         this.rowDefs.forEach(rowDef => this.table.addRowDef(rowDef));
         this.headerRowDefs.forEach(headerRowDef => this.table.addHeaderRowDef(headerRowDef));
+        this.table.setNoDataRow(this.noDataRow);
     }
 }
 WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
 WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
+        ɵɵcontentQuery(dirIndex, MatNoDataRow, true);
         ɵɵcontentQuery(dirIndex, MatHeaderRowDef, false);
         ɵɵcontentQuery(dirIndex, MatRowDef, false);
         ɵɵcontentQuery(dirIndex, MatColumnDef, false);
     } if (rf & 2) {
         var _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.noDataRow = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.headerRowDefs = _t);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.rowDefs = _t);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.columnDefs = _t);
@@ -3211,6 +3239,9 @@ WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wra
         }], columnDefs: [{
             type: ContentChildren,
             args: [MatColumnDef]
+        }], noDataRow: [{
+            type: ContentChild,
+            args: [MatNoDataRow]
         }], table: [{
             type: ViewChild,
             args: [MatTable, { static: true }]

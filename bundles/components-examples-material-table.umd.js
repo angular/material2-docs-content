@@ -3638,33 +3638,42 @@
     })();
 
     var _c0$6 = ["sort"];
-    function TableWrappedExample_th_3_Template(rf, ctx) {
+    function TableWrappedExample_th_8_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "th", 7);
+            i0.ɵɵelementStart(0, "th", 9);
             i0.ɵɵtext(1, " Name ");
             i0.ɵɵelementEnd();
         }
     }
-    function TableWrappedExample_td_4_Template(rf, ctx) {
+    function TableWrappedExample_td_9_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "td", 8);
+            i0.ɵɵelementStart(0, "td", 10);
             i0.ɵɵtext(1);
             i0.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var element_r5 = ctx.$implicit;
+            var element_r6 = ctx.$implicit;
             i0.ɵɵadvance(1);
-            i0.ɵɵtextInterpolate1(" ", element_r5.name, " ");
+            i0.ɵɵtextInterpolate1(" ", element_r6.name, " ");
         }
     }
-    function TableWrappedExample_tr_5_Template(rf, ctx) {
+    function TableWrappedExample_tr_10_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "tr", 9);
+            i0.ɵɵelement(0, "tr", 11);
         }
     }
-    function TableWrappedExample_tr_6_Template(rf, ctx) {
+    function TableWrappedExample_tr_11_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "tr", 10);
+            i0.ɵɵelement(0, "tr", 12);
+        }
+    }
+    function TableWrappedExample_tr_12_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "tr", 13);
+            i0.ɵɵelementStart(1, "td", 14);
+            i0.ɵɵtext(2, "No data");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
         }
     }
     function WrapperTable_th_3_Template(rf, ctx) {
@@ -3748,6 +3757,12 @@
         TableWrappedExample.prototype.ngAfterViewInit = function () {
             this.dataSource.sort = this.sort;
         };
+        TableWrappedExample.prototype.clearTable = function () {
+            this.dataSource.data = [];
+        };
+        TableWrappedExample.prototype.addData = function () {
+            this.dataSource.data = ELEMENT_DATA$e;
+        };
         return TableWrappedExample;
     }());
     TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
@@ -3759,25 +3774,37 @@
                 var _t;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
             }
-        }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) {
+        }, decls: 13, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableWrappedExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "wrapper-table", 0, 1);
-                i0.ɵɵelementContainerStart(2, 2);
-                i0.ɵɵtemplate(3, TableWrappedExample_th_3_Template, 2, 0, "th", 3);
-                i0.ɵɵtemplate(4, TableWrappedExample_td_4_Template, 2, 1, "td", 4);
+                i0.ɵɵelementStart(0, "div");
+                i0.ɵɵelementStart(1, "button", 0);
+                i0.ɵɵlistener("click", function TableWrappedExample_Template_button_click_1_listener() { return ctx.clearTable(); });
+                i0.ɵɵtext(2, "Clear table");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "button", 0);
+                i0.ɵɵlistener("click", function TableWrappedExample_Template_button_click_3_listener() { return ctx.addData(); });
+                i0.ɵɵtext(4, "Add data");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "wrapper-table", 1, 2);
+                i0.ɵɵelementContainerStart(7, 3);
+                i0.ɵɵtemplate(8, TableWrappedExample_th_8_Template, 2, 0, "th", 4);
+                i0.ɵɵtemplate(9, TableWrappedExample_td_9_Template, 2, 1, "td", 5);
                 i0.ɵɵelementContainerEnd();
-                i0.ɵɵtemplate(5, TableWrappedExample_tr_5_Template, 1, 0, "tr", 5);
-                i0.ɵɵtemplate(6, TableWrappedExample_tr_6_Template, 1, 0, "tr", 6);
+                i0.ɵɵtemplate(10, TableWrappedExample_tr_10_Template, 1, 0, "tr", 6);
+                i0.ɵɵtemplate(11, TableWrappedExample_tr_11_Template, 1, 0, "tr", 7);
+                i0.ɵɵtemplate(12, TableWrappedExample_tr_12_Template, 3, 0, "tr", 8);
                 i0.ɵɵelementEnd();
             }
             if (rf & 2) {
+                i0.ɵɵadvance(5);
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("columns", ctx.displayedColumns);
                 i0.ɵɵadvance(5);
                 i0.ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
-        }, directives: function () { return [WrapperTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: function () { return [i1.MatButton, WrapperTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatNoDataRow, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin: 0 8px 8px 0;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(TableWrappedExample, [{
                 type: i0.Component,
@@ -3803,18 +3830,21 @@
             this.columnDefs.forEach(function (columnDef) { return _this.table.addColumnDef(columnDef); });
             this.rowDefs.forEach(function (rowDef) { return _this.table.addRowDef(rowDef); });
             this.headerRowDefs.forEach(function (headerRowDef) { return _this.table.addHeaderRowDef(headerRowDef); });
+            this.table.setNoDataRow(this.noDataRow);
         };
         return WrapperTable;
     }());
     WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
     WrapperTable.ɵcmp = i0.ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) {
             if (rf & 1) {
+                i0.ɵɵcontentQuery(dirIndex, i1$1.MatNoDataRow, true);
                 i0.ɵɵcontentQuery(dirIndex, i1$1.MatHeaderRowDef, false);
                 i0.ɵɵcontentQuery(dirIndex, i1$1.MatRowDef, false);
                 i0.ɵɵcontentQuery(dirIndex, i1$1.MatColumnDef, false);
             }
             if (rf & 2) {
                 var _t;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.noDataRow = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.headerRowDefs = _t);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.rowDefs = _t);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.columnDefs = _t);
@@ -3867,6 +3897,9 @@
                 }], columnDefs: [{
                     type: i0.ContentChildren,
                     args: [i1$1.MatColumnDef]
+                }], noDataRow: [{
+                    type: i0.ContentChild,
+                    args: [i1$1.MatNoDataRow]
                 }], table: [{
                     type: i0.ViewChild,
                     args: [i1$1.MatTable, { static: true }]

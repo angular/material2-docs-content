@@ -6,12 +6,14 @@
   Input,
   AfterViewInit,
   QueryList,
-  ViewChild
+  ViewChild,
+  ContentChild,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sort'</span>;
 <span class="hljs-keyword">import</span> {
   MatColumnDef,
   MatHeaderRowDef,
+  MatNoDataRow,
   MatRowDef,
   MatTable,
   MatTableDataSource
@@ -54,6 +56,14 @@
   ngAfterViewInit() {
     <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
   }
+
+  clearTable() {
+    <span class="hljs-keyword">this</span>.dataSource.data = [];
+  }
+
+  addData() {
+    <span class="hljs-keyword">this</span>.dataSource.data = ELEMENT_DATA;
+  }
 }
 
 <span class="hljs-comment">/**
@@ -73,6 +83,7 @@
   <span class="hljs-meta">@ContentChildren</span>(MatHeaderRowDef) headerRowDefs: QueryList&lt;MatHeaderRowDef&gt;;
   <span class="hljs-meta">@ContentChildren</span>(MatRowDef) rowDefs: QueryList&lt;MatRowDef&lt;T&gt;&gt;;
   <span class="hljs-meta">@ContentChildren</span>(MatColumnDef) columnDefs: QueryList&lt;MatColumnDef&gt;;
+  <span class="hljs-meta">@ContentChild</span>(MatNoDataRow) noDataRow: MatNoDataRow;
 
   <span class="hljs-meta">@ViewChild</span>(MatTable, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) table: MatTable&lt;T&gt;;
 
@@ -84,5 +95,6 @@
     <span class="hljs-keyword">this</span>.columnDefs.forEach(<span class="hljs-function"><span class="hljs-params">columnDef</span> =&gt;</span> <span class="hljs-keyword">this</span>.table.addColumnDef(columnDef));
     <span class="hljs-keyword">this</span>.rowDefs.forEach(<span class="hljs-function"><span class="hljs-params">rowDef</span> =&gt;</span> <span class="hljs-keyword">this</span>.table.addRowDef(rowDef));
     <span class="hljs-keyword">this</span>.headerRowDefs.forEach(<span class="hljs-function"><span class="hljs-params">headerRowDef</span> =&gt;</span> <span class="hljs-keyword">this</span>.table.addHeaderRowDef(headerRowDef));
+    <span class="hljs-keyword">this</span>.table.setNoDataRow(<span class="hljs-keyword">this</span>.noDataRow);
   }
 }
