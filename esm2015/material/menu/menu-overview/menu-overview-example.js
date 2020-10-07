@@ -23,7 +23,7 @@ MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, 
     } if (rf & 2) {
         const _r0 = i0.ɵɵreference(3);
         i0.ɵɵproperty("matMenuTriggerFor", _r0);
-    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2.MatMenu, i2.MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuOverviewExample, [{
         type: Component,
         args: [{

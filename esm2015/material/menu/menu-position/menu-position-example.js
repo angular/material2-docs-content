@@ -65,7 +65,7 @@ MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, 
         i0.ɵɵproperty("matMenuTriggerFor", _r2);
         i0.ɵɵadvance(8);
         i0.ɵɵproperty("matMenuTriggerFor", _r3);
-    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2.MatMenu, i2.MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuPositionExample, [{
         type: Component,
         args: [{

@@ -1,7 +1,7 @@
 import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵreference, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
-import { MatMenuTrigger, _MatMenu, MatMenuItem, MatMenuModule } from '@angular/material/menu';
+import { MatMenuTrigger, MatMenu, MatMenuItem, MatMenuModule } from '@angular/material/menu';
 
 /**
  * @title Menu with icons
@@ -44,7 +44,7 @@ MenuIconsExample.ɵcmp = ɵɵdefineComponent({ type: MenuIconsExample, selectors
     } if (rf & 2) {
         const _r0 = ɵɵreference(4);
         ɵɵproperty("matMenuTriggerFor", _r0);
-    } }, directives: [MatButton, MatMenuTrigger, MatIcon, _MatMenu, MatMenuItem], encapsulation: 2 });
+    } }, directives: [MatButton, MatMenuTrigger, MatIcon, MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuIconsExample, [{
         type: Component,
         args: [{
@@ -74,7 +74,7 @@ MenuOverviewExample.ɵcmp = ɵɵdefineComponent({ type: MenuOverviewExample, sel
     } if (rf & 2) {
         const _r0 = ɵɵreference(3);
         ɵɵproperty("matMenuTriggerFor", _r0);
-    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], encapsulation: 2 });
+    } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuOverviewExample, [{
         type: Component,
         args: [{
@@ -146,7 +146,7 @@ MenuPositionExample.ɵcmp = ɵɵdefineComponent({ type: MenuPositionExample, sel
         ɵɵproperty("matMenuTriggerFor", _r2);
         ɵɵadvance(8);
         ɵɵproperty("matMenuTriggerFor", _r3);
-    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], encapsulation: 2 });
+    } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuPositionExample, [{
         type: Component,
         args: [{
@@ -279,7 +279,7 @@ MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selecto
         ɵɵproperty("matMenuTriggerFor", _r4);
         ɵɵadvance(2);
         ɵɵproperty("matMenuTriggerFor", _r5);
-    } }, directives: [MatButton, MatMenuTrigger, _MatMenu, MatMenuItem], encapsulation: 2 });
+    } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,
         args: [{

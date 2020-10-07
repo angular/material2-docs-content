@@ -44,7 +44,7 @@ MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, select
     } if (rf & 2) {
         const _r0 = i0.ɵɵreference(4);
         i0.ɵɵproperty("matMenuTriggerFor", _r0);
-    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2.MatMenu, i2.MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuIconsExample, [{
         type: Component,
         args: [{

@@ -126,7 +126,7 @@ MenuNestedExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuNestedExample, sele
         i0.ɵɵproperty("matMenuTriggerFor", _r4);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("matMenuTriggerFor", _r5);
-    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2.MatMenu, i2.MatMenuItem], encapsulation: 2 });
 /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,
         args: [{
