@@ -84,7 +84,7 @@ FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory
 FocusMonitorFocusViaExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.monitoredEl = _t.first);
     } }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) { if (rf & 1) {
         const _r3 = ɵɵgetCurrentView();
@@ -175,7 +175,7 @@ FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOver
         ɵɵviewQuery(_c0$1, true);
         ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.element = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.subtree = _t.first);
     } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"], ["element", ""], ["subtree", ""]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {

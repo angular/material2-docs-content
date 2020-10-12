@@ -95,7 +95,7 @@
                 i0.ɵɵviewQuery(_c0, true);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.monitoredEl = _t.first);
             }
         }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) {
@@ -196,7 +196,7 @@
                 i0.ɵɵviewQuery(_c1, true);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.element = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.subtree = _t.first);
             }

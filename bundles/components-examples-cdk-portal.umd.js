@@ -33,7 +33,7 @@
                 i0.ɵɵviewQuery(_c1, true);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.domPortalContent = _t.first);
             }

@@ -38,7 +38,7 @@ FocusMonitorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorO
         i0.ɵɵviewQuery(_c0, true);
         i0.ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.element = _t.first);
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.subtree = _t.first);
     } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"], ["element", ""], ["subtree", ""]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {

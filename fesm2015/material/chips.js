@@ -91,7 +91,7 @@ ChipsAutocompleteExample.ɵcmp = ɵɵdefineComponent({ type: ChipsAutocompleteEx
         ɵɵviewQuery(_c0, true);
         ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.fruitInput = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.matAutocomplete = _t.first);
     } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], ["fruitInput", ""], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {

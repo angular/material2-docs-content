@@ -95,7 +95,7 @@ TextFieldAutofillMonitorExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAut
         ɵɵviewQuery(_c0, true, ElementRef);
         ɵɵviewQuery(_c1, true, ElementRef);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.firstName = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.lastName = _t.first);
     } }, decls: 15, vars: 2, consts: [[3, "submit"], ["matInput", ""], ["first", ""], [4, "ngIf"], ["last", ""], ["mat-raised-button", ""]], template: function TextFieldAutofillMonitorExample_Template(rf, ctx) { if (rf & 1) {
@@ -156,7 +156,7 @@ TextFieldAutosizeTextareaExample.ɵfac = function TextFieldAutosizeTextareaExamp
 TextFieldAutosizeTextareaExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0$1, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.autosize = _t.first);
     } }, decls: 22, vars: 2, consts: [["value", "16px", 3, "selectionChange"], ["fontSize", ""], ["value", "10px"], ["value", "12px"], ["value", "14px"], ["value", "16px"], ["value", "18px"], ["value", "20px"], ["matInput", "", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "1", "cdkAutosizeMaxRows", "5"], ["autosize", "cdkTextareaAutosize"]], template: function TextFieldAutosizeTextareaExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");

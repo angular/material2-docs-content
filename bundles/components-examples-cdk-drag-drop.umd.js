@@ -894,7 +894,7 @@
                 i0.ɵɵviewQuery(i0.TemplateRef, true);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._dialogTemplate = _t.first);
             }
         }, decls: 3, vars: 0, consts: [[3, "click"], ["cdkDrag", "", "cdkDragRootElement", ".cdk-overlay-pane", 1, "example-dialog-content"]], template: function CdkDragDropRootElementExample_Template(rf, ctx) {

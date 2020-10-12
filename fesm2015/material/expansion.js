@@ -16,7 +16,7 @@ ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExa
 ExpansionExpandCollapseAllExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-expand-collapse-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(MatAccordion, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.accordion = _t.first);
     } }, decls: 48, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["disabled", ""], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
         const _r1 = ɵɵgetCurrentView();

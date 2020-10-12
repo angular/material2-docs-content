@@ -757,7 +757,7 @@ CdkDragDropRootElementExample.ɵfac = function CdkDragDropRootElementExample_Fac
 CdkDragDropRootElementExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropRootElementExample, selectors: [["cdk-drag-drop-root-element-example"]], viewQuery: function CdkDragDropRootElementExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(TemplateRef, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._dialogTemplate = _t.first);
     } }, decls: 3, vars: 0, consts: [[3, "click"], ["cdkDrag", "", "cdkDragRootElement", ".cdk-overlay-pane", 1, "example-dialog-content"]], template: function CdkDragDropRootElementExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);

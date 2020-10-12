@@ -269,7 +269,7 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         ɵɵviewQuery(_c1, true);
         ɵɵviewQuery(_c2, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.areaInput = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.exchangeInput = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.subscriberInput = _t.first);

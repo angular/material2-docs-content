@@ -25,7 +25,7 @@ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewEx
         ɵɵviewQuery(_c0, true);
         ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.domPortalContent = _t.first);
     } }, decls: 15, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"], ["domPortalContent", ""]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
