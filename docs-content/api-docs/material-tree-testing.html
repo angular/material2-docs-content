@@ -580,6 +580,78 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
+        </div>getTreeStructure
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets an object representation for the visible tree structure
+If a node is under an unexpanded node it will not be included.
+Eg.
+Tree (all nodes expanded):
+`</p>
+<p><mat-tree>
+  <mat-tree-node>Node 1<mat-tree-node>
+  <mat-nested-tree-node>
+    Node 2
+    <mat-nested-tree-node>
+      Node 2.1
+      <mat-tree-node>
+        Node 2.1.1
+      <mat-tree-node>
+    <mat-nested-tree-node>
+    <mat-tree-node>
+      Node 2.2
+    <mat-tree-node>
+  <mat-nested-tree-node>
+</mat-tree>`</p>
+<p>Tree structure:
+{
+ children: [
+   {
+     text: &#39;Node 1&#39;,
+     children: [
+       {
+         text: &#39;Node 2&#39;,
+         children: [
+           {
+             text: &#39;Node 2.1&#39;,
+             children: [{text: &#39;Node 2.1.1&#39;}]
+           },
+           {text: &#39;Node 2.2&#39;}
+         ]
+       }
+     ]
+   }
+ ]
+};</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TextTree&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
         </div>host
       </th>
     </tr>
@@ -698,6 +770,26 @@
 
 
 
+
+
+    <h3 id="material-tree-testing-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="TextTree" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="TextTree"></span>
+  <code>TextTree</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> TextTree = {
+    text?: <span class="hljs-built_in">string</span>;
+    children?: TextTree[];
+};</code>
+</pre>
+</div>
 
 
     </div>
