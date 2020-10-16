@@ -444,9 +444,38 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatButtonHarness
+     */
+    var ButtonHarnessExample = /** @class */ (function () {
+        function ButtonHarnessExample() {
+            this.clicked = false;
+        }
+        return ButtonHarnessExample;
+    }());
+    ButtonHarnessExample.ɵfac = function ButtonHarnessExample_Factory(t) { return new (t || ButtonHarnessExample)(); };
+    ButtonHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonHarnessExample, selectors: [["button-harness-example"]], decls: 2, vars: 0, consts: [["id", "basic", "type", "button", "mat-button", "", 3, "click"]], template: function ButtonHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "button", 0);
+                i0.ɵɵlistener("click", function ButtonHarnessExample_Template_button_click_0_listener() { return ctx.clicked = true; });
+                i0.ɵɵtext(1, " Basic button\n");
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatButton], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ButtonHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-harness-example',
+                        templateUrl: 'button-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ButtonOverviewExample,
         ButtonTypesExample,
+        ButtonHarnessExample,
     ];
     var ButtonExamplesModule = /** @class */ (function () {
         function ButtonExamplesModule() {
@@ -461,10 +490,12 @@
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonExamplesModule, { declarations: [ButtonOverviewExample,
-                ButtonTypesExample], imports: [i1.MatButtonModule,
+                ButtonTypesExample,
+                ButtonHarnessExample], imports: [i1.MatButtonModule,
                 i2.MatDividerModule,
                 i3.MatIconModule], exports: [ButtonOverviewExample,
-                ButtonTypesExample] });
+                ButtonTypesExample,
+                ButtonHarnessExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ButtonExamplesModule, [{
@@ -487,6 +518,7 @@
      */
 
     exports.ButtonExamplesModule = ButtonExamplesModule;
+    exports.ButtonHarnessExample = ButtonHarnessExample;
     exports.ButtonOverviewExample = ButtonOverviewExample;
     exports.ButtonTypesExample = ButtonTypesExample;
 

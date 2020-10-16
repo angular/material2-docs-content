@@ -1322,6 +1322,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/button-toggle"
         }
     },
+    "button-harness": {
+        "packagePath": "material/button/button-harness",
+        "title": "Testing with MatButtonHarness",
+        "componentName": "ButtonHarnessExample",
+        "files": [
+            "button-harness-example.ts",
+            "button-harness-example.html",
+            "button-harness-example.spec.ts"
+        ],
+        "selector": "button-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "button-harness-example.ts",
+        "module": {
+            "name": "ButtonExamplesModule",
+            "importSpecifier": "material/button"
+        }
+    },
     "button-overview": {
         "packagePath": "material/button/button-overview",
         "title": "Basic buttons",
