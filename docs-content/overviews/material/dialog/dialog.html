@@ -85,7 +85,7 @@ option to pass information to the dialog component.</p>
   template: <span class="hljs-string">'passed in {{ data.name }}'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> YourDialog {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: <span class="hljs-built_in">any</span></span>) { }
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: {name: <span class="hljs-built_in">string</span>}</span>) { }
 }</code></pre>
 <p>Note that if you&#39;re using a template dialog (one that was opened with a <code>TemplateRef</code>), the data
 will be available implicitly in the template:</p>
