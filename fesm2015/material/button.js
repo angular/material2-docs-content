@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵlistener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatAnchor, MatButtonModule } from '@angular/material/button';
 import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -429,9 +429,33 @@ ButtonTypesExample.ɵcmp = ɵɵdefineComponent({ type: ButtonTypesExample, selec
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatButtonHarness
+ */
+class ButtonHarnessExample {
+    constructor() {
+        this.clicked = false;
+    }
+}
+ButtonHarnessExample.ɵfac = function ButtonHarnessExample_Factory(t) { return new (t || ButtonHarnessExample)(); };
+ButtonHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ButtonHarnessExample, selectors: [["button-harness-example"]], decls: 2, vars: 0, consts: [["id", "basic", "type", "button", "mat-button", "", 3, "click"]], template: function ButtonHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "button", 0);
+        ɵɵlistener("click", function ButtonHarnessExample_Template_button_click_0_listener() { return ctx.clicked = true; });
+        ɵɵtext(1, " Basic button\n");
+        ɵɵelementEnd();
+    } }, directives: [MatButton], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'button-harness-example',
+                templateUrl: 'button-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ButtonOverviewExample,
     ButtonTypesExample,
+    ButtonHarnessExample,
 ];
 class ButtonExamplesModule {
 }
@@ -442,10 +466,12 @@ ButtonExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonExampl
             MatIconModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonExamplesModule, { declarations: [ButtonOverviewExample,
-        ButtonTypesExample], imports: [MatButtonModule,
+        ButtonTypesExample,
+        ButtonHarnessExample], imports: [MatButtonModule,
         MatDividerModule,
         MatIconModule], exports: [ButtonOverviewExample,
-        ButtonTypesExample] }); })();
+        ButtonTypesExample,
+        ButtonHarnessExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonExamplesModule, [{
         type: NgModule,
         args: [{
@@ -464,5 +490,5 @@ ButtonExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonExampl
  * Generated bundle index. Do not edit.
  */
 
-export { ButtonExamplesModule, ButtonOverviewExample, ButtonTypesExample };
+export { ButtonExamplesModule, ButtonHarnessExample, ButtonOverviewExample, ButtonTypesExample };
 //# sourceMappingURL=button.js.map
