@@ -1494,6 +1494,23 @@
                 "importSpecifier": "material/button-toggle"
             }
         },
+        "button-toggle-harness": {
+            "packagePath": "material/button-toggle/button-toggle-harness",
+            "title": "Testing with MatButtonToggleHarness",
+            "componentName": "ButtonToggleHarnessExample",
+            "files": [
+                "button-toggle-harness-example.ts",
+                "button-toggle-harness-example.html",
+                "button-toggle-harness-example.spec.ts"
+            ],
+            "selector": "button-toggle-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "button-toggle-harness-example.ts",
+            "module": {
+                "name": "ButtonToggleExamplesModule",
+                "importSpecifier": "material/button-toggle"
+            }
+        },
         "button-toggle-overview": {
             "packagePath": "material/button-toggle/button-toggle-overview",
             "title": "Basic button-toggles",
