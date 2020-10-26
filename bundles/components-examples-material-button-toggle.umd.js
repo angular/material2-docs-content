@@ -144,10 +144,47 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatButtonToggleHarness
+     */
+    var ButtonToggleHarnessExample = /** @class */ (function () {
+        function ButtonToggleHarnessExample() {
+            this.disabled = false;
+            this.appearance = 'standard';
+        }
+        return ButtonToggleHarnessExample;
+    }());
+    ButtonToggleHarnessExample.ɵfac = function ButtonToggleHarnessExample_Factory(t) { return new (t || ButtonToggleHarnessExample)(); };
+    ButtonToggleHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleHarnessExample, selectors: [["button-toggle-harness-example"]], decls: 5, vars: 2, consts: [[3, "disabled", "appearance"], ["value", "1"], ["value", "2"]], template: function ButtonToggleHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-button-toggle-group", 0);
+                i0.ɵɵelementStart(1, "mat-button-toggle", 1);
+                i0.ɵɵtext(2, "One");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-button-toggle", 2);
+                i0.ɵɵtext(4, "Two");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("disabled", ctx.disabled)("appearance", ctx.appearance);
+            }
+        }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ButtonToggleHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-toggle-harness-example',
+                        templateUrl: 'button-toggle-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
+        ButtonToggleHarnessExample,
     ];
     var ButtonToggleExamplesModule = /** @class */ (function () {
         function ButtonToggleExamplesModule() {
@@ -162,10 +199,12 @@
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
                 ButtonToggleExclusiveExample,
-                ButtonToggleOverviewExample], imports: [i1.MatButtonToggleModule,
+                ButtonToggleOverviewExample,
+                ButtonToggleHarnessExample], imports: [i1.MatButtonToggleModule,
                 i2.MatIconModule], exports: [ButtonToggleAppearanceExample,
                 ButtonToggleExclusiveExample,
-                ButtonToggleOverviewExample] });
+                ButtonToggleOverviewExample,
+                ButtonToggleHarnessExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
@@ -189,6 +228,7 @@
     exports.ButtonToggleAppearanceExample = ButtonToggleAppearanceExample;
     exports.ButtonToggleExamplesModule = ButtonToggleExamplesModule;
     exports.ButtonToggleExclusiveExample = ButtonToggleExclusiveExample;
+    exports.ButtonToggleHarnessExample = ButtonToggleHarnessExample;
     exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
