@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 
@@ -120,10 +120,41 @@ ButtonToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleOver
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatButtonToggleHarness
+ */
+class ButtonToggleHarnessExample {
+    constructor() {
+        this.disabled = false;
+        this.appearance = 'standard';
+    }
+}
+ButtonToggleHarnessExample.ɵfac = function ButtonToggleHarnessExample_Factory(t) { return new (t || ButtonToggleHarnessExample)(); };
+ButtonToggleHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleHarnessExample, selectors: [["button-toggle-harness-example"]], decls: 5, vars: 2, consts: [[3, "disabled", "appearance"], ["value", "1"], ["value", "2"]], template: function ButtonToggleHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-button-toggle-group", 0);
+        ɵɵelementStart(1, "mat-button-toggle", 1);
+        ɵɵtext(2, "One");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-button-toggle", 2);
+        ɵɵtext(4, "Two");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("disabled", ctx.disabled)("appearance", ctx.appearance);
+    } }, directives: [MatButtonToggleGroup, MatButtonToggle], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'button-toggle-harness-example',
+                templateUrl: 'button-toggle-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ButtonToggleAppearanceExample,
     ButtonToggleExclusiveExample,
     ButtonToggleOverviewExample,
+    ButtonToggleHarnessExample,
 ];
 class ButtonToggleExamplesModule {
 }
@@ -134,10 +165,12 @@ ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Button
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
-        ButtonToggleOverviewExample], imports: [MatButtonToggleModule,
+        ButtonToggleOverviewExample,
+        ButtonToggleHarnessExample], imports: [MatButtonToggleModule,
         MatIconModule], exports: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
-        ButtonToggleOverviewExample] }); })();
+        ButtonToggleOverviewExample,
+        ButtonToggleHarnessExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleExamplesModule, [{
         type: NgModule,
         args: [{
@@ -155,5 +188,5 @@ ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Button
  * Generated bundle index. Do not edit.
  */
 
-export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleOverviewExample };
+export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleHarnessExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.js.map
