@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * @title Testing with MatAutocompleteHarness
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'autocomplete-harness-example'</span>,
+  templateUrl: <span class="hljs-string">'autocomplete-harness-example.html'</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteHarnessExample {
+  states = [
+    {code: <span class="hljs-string">'AL'</span>, name: <span class="hljs-string">'Alabama'</span>},
+    {code: <span class="hljs-string">'CA'</span>, name: <span class="hljs-string">'California'</span>},
+    {code: <span class="hljs-string">'FL'</span>, name: <span class="hljs-string">'Florida'</span>},
+    {code: <span class="hljs-string">'KS'</span>, name: <span class="hljs-string">'Kansas'</span>},
+    {code: <span class="hljs-string">'MA'</span>, name: <span class="hljs-string">'Massachusetts'</span>},
+    {code: <span class="hljs-string">'NY'</span>, name: <span class="hljs-string">'New York'</span>},
+    {code: <span class="hljs-string">'OR'</span>, name: <span class="hljs-string">'Oregon'</span>},
+    {code: <span class="hljs-string">'PA'</span>, name: <span class="hljs-string">'Pennsylvania'</span>},
+    {code: <span class="hljs-string">'TN'</span>, name: <span class="hljs-string">'Tennessee'</span>},
+    {code: <span class="hljs-string">'VA'</span>, name: <span class="hljs-string">'Virginia'</span>},
+    {code: <span class="hljs-string">'WY'</span>, name: <span class="hljs-string">'Wyoming'</span>},
+  ];
+}

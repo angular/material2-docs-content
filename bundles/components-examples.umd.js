@@ -1477,6 +1477,23 @@
                 "importSpecifier": "material/autocomplete"
             }
         },
+        "autocomplete-harness": {
+            "packagePath": "material/autocomplete/autocomplete-harness",
+            "title": "Testing with MatAutocompleteHarness",
+            "componentName": "AutocompleteHarnessExample",
+            "files": [
+                "autocomplete-harness-example.ts",
+                "autocomplete-harness-example.html",
+                "autocomplete-harness-example.spec.ts"
+            ],
+            "selector": "autocomplete-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "autocomplete-harness-example.ts",
+            "module": {
+                "name": "AutocompleteExamplesModule",
+                "importSpecifier": "material/autocomplete"
+            }
+        },
         "autocomplete-optgroup": {
             "packagePath": "material/autocomplete/autocomplete-optgroup",
             "title": "Option groups autocomplete",

@@ -509,10 +509,65 @@ AutocompleteSimpleExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteSimple
             }]
     }], null, null); })();
 
+function AutocompleteHarnessExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-option", 4);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const state_r2 = ctx.$implicit;
+    ɵɵproperty("value", state_r2.code);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(state_r2.name);
+} }
+/**
+ * @title Testing with MatAutocompleteHarness
+ */
+class AutocompleteHarnessExample {
+    constructor() {
+        this.states = [
+            { code: 'AL', name: 'Alabama' },
+            { code: 'CA', name: 'California' },
+            { code: 'FL', name: 'Florida' },
+            { code: 'KS', name: 'Kansas' },
+            { code: 'MA', name: 'Massachusetts' },
+            { code: 'NY', name: 'New York' },
+            { code: 'OR', name: 'Oregon' },
+            { code: 'PA', name: 'Pennsylvania' },
+            { code: 'TN', name: 'Tennessee' },
+            { code: 'VA', name: 'Virginia' },
+            { code: 'WY', name: 'Wyoming' },
+        ];
+    }
+}
+AutocompleteHarnessExample.ɵfac = function AutocompleteHarnessExample_Factory(t) { return new (t || AutocompleteHarnessExample)(); };
+AutocompleteHarnessExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteHarnessExample, selectors: [["autocomplete-harness-example"]], decls: 5, vars: 3, consts: [["autocomplete", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], ["id", "plain", 3, "matAutocomplete"], ["id", "disabled", "disabled", "", 3, "matAutocomplete"], [3, "value"]], template: function AutocompleteHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-autocomplete", null, 0);
+        ɵɵtemplate(2, AutocompleteHarnessExample_mat_option_2_Template, 2, 2, "mat-option", 1);
+        ɵɵelementEnd();
+        ɵɵelement(3, "input", 2);
+        ɵɵelement(4, "input", 3);
+    } if (rf & 2) {
+        const _r0 = ɵɵreference(1);
+        ɵɵadvance(2);
+        ɵɵproperty("ngForOf", ctx.states);
+        ɵɵadvance(1);
+        ɵɵproperty("matAutocomplete", _r0);
+        ɵɵadvance(1);
+        ɵɵproperty("matAutocomplete", _r0);
+    } }, directives: [MatAutocomplete, NgForOf, MatAutocompleteTrigger, MatOption], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'autocomplete-harness-example',
+                templateUrl: 'autocomplete-harness-example.html'
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
+    AutocompleteHarnessExample,
     AutocompleteOptgroupExample,
     AutocompleteOverviewExample,
     AutocompletePlainInputExample,
@@ -533,6 +588,7 @@ AutocompleteExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Autoco
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(AutocompleteExamplesModule, { declarations: [AutocompleteAutoActiveFirstOptionExample,
         AutocompleteDisplayExample,
         AutocompleteFilterExample,
+        AutocompleteHarnessExample,
         AutocompleteOptgroupExample,
         AutocompleteOverviewExample,
         AutocompletePlainInputExample,
@@ -545,6 +601,7 @@ AutocompleteExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Autoco
         ReactiveFormsModule], exports: [AutocompleteAutoActiveFirstOptionExample,
         AutocompleteDisplayExample,
         AutocompleteFilterExample,
+        AutocompleteHarnessExample,
         AutocompleteOptgroupExample,
         AutocompleteOverviewExample,
         AutocompletePlainInputExample,
@@ -571,5 +628,5 @@ AutocompleteExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Autoco
  * Generated bundle index. Do not edit.
  */
 
-export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteExamplesModule, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample };
+export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteExamplesModule, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample };
 //# sourceMappingURL=autocomplete.js.map
