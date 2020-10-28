@@ -1748,6 +1748,23 @@
                 "importSpecifier": "material/card"
             }
         },
+        "card-harness": {
+            "packagePath": "material/card/card-harness",
+            "title": "Testing with MatCardHarness",
+            "componentName": "CardHarnessExample",
+            "files": [
+                "card-harness-example.ts",
+                "card-harness-example.html",
+                "card-harness-example.spec.ts"
+            ],
+            "selector": "card-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "card-harness-example.ts",
+            "module": {
+                "name": "CardExamplesModule",
+                "importSpecifier": "material/card"
+            }
+        },
         "card-overview": {
             "packagePath": "material/card/card-overview",
             "title": "Basic cards",
