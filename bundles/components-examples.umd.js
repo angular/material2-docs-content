@@ -1798,6 +1798,23 @@
                 "importSpecifier": "material/checkbox"
             }
         },
+        "checkbox-harness": {
+            "packagePath": "material/checkbox/checkbox-harness",
+            "title": "Testing with MatCheckboxHarness",
+            "componentName": "CheckboxHarnessExample",
+            "files": [
+                "checkbox-harness-example.ts",
+                "checkbox-harness-example.html",
+                "checkbox-harness-example.spec.ts"
+            ],
+            "selector": "checkbox-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "checkbox-harness-example.ts",
+            "module": {
+                "name": "CheckboxExamplesModule",
+                "importSpecifier": "material/checkbox"
+            }
+        },
         "checkbox-overview": {
             "packagePath": "material/checkbox/checkbox-overview",
             "title": "Basic checkboxes",
