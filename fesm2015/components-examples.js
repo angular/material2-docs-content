@@ -1051,6 +1051,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/autocomplete"
         }
     },
+    "autocomplete-harness": {
+        "packagePath": "material/autocomplete/autocomplete-harness",
+        "title": "Testing with MatAutocompleteHarness",
+        "componentName": "AutocompleteHarnessExample",
+        "files": [
+            "autocomplete-harness-example.ts",
+            "autocomplete-harness-example.html",
+            "autocomplete-harness-example.spec.ts"
+        ],
+        "selector": "autocomplete-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "autocomplete-harness-example.ts",
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
     "autocomplete-optgroup": {
         "packagePath": "material/autocomplete/autocomplete-optgroup",
         "title": "Option groups autocomplete",
@@ -1116,6 +1133,23 @@ const EXAMPLE_COMPONENTS = {
         "module": {
             "name": "AutocompleteExamplesModule",
             "importSpecifier": "material/autocomplete"
+        }
+    },
+    "badge-harness": {
+        "packagePath": "material/badge/badge-harness",
+        "title": "Testing with MatBadgeHarness",
+        "componentName": "BadgeHarnessExample",
+        "files": [
+            "badge-harness-example.ts",
+            "badge-harness-example.html",
+            "badge-harness-example.spec.ts"
+        ],
+        "selector": "badge-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "badge-harness-example.ts",
+        "module": {
+            "name": "BadgeExamplesModule",
+            "importSpecifier": "material/badge"
         }
     },
     "badge-overview": {
@@ -1288,6 +1322,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/card"
         }
     },
+    "card-harness": {
+        "packagePath": "material/card/card-harness",
+        "title": "Testing with MatCardHarness",
+        "componentName": "CardHarnessExample",
+        "files": [
+            "card-harness-example.ts",
+            "card-harness-example.html",
+            "card-harness-example.spec.ts"
+        ],
+        "selector": "card-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "card-harness-example.ts",
+        "module": {
+            "name": "CardExamplesModule",
+            "importSpecifier": "material/card"
+        }
+    },
     "card-overview": {
         "packagePath": "material/card/card-overview",
         "title": "Basic cards",
@@ -1316,6 +1367,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "checkbox-configurable-example",
         "additionalComponents": [],
         "primaryFile": "checkbox-configurable-example.ts",
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "material/checkbox"
+        }
+    },
+    "checkbox-harness": {
+        "packagePath": "material/checkbox/checkbox-harness",
+        "title": "Testing with MatCheckboxHarness",
+        "componentName": "CheckboxHarnessExample",
+        "files": [
+            "checkbox-harness-example.ts",
+            "checkbox-harness-example.html",
+            "checkbox-harness-example.spec.ts"
+        ],
+        "selector": "checkbox-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "checkbox-harness-example.ts",
         "module": {
             "name": "CheckboxExamplesModule",
             "importSpecifier": "material/checkbox"

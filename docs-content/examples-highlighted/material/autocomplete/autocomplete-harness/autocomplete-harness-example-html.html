@@ -1,0 +1,6 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of states"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.code"</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"plain"</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"autocomplete"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">disabled</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"autocomplete"</span>&gt;</span>

@@ -79,9 +79,59 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatCardHarness
+     */
+    var CardHarnessExample = /** @class */ (function () {
+        function CardHarnessExample() {
+        }
+        return CardHarnessExample;
+    }());
+    CardHarnessExample.ɵfac = function CardHarnessExample_Factory(t) { return new (t || CardHarnessExample)(); };
+    CardHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardHarnessExample, selectors: [["card-harness-example"]], decls: 17, vars: 0, consts: [["mat-card-avatar", ""], ["mat-card-image", ""], ["mat-button", ""]], template: function CardHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-card");
+                i0.ɵɵelementStart(1, "mat-card");
+                i0.ɵɵelementStart(2, "mat-card-header");
+                i0.ɵɵelement(3, "div", 0);
+                i0.ɵɵelementStart(4, "mat-card-title");
+                i0.ɵɵtext(5, "Shiba Inu");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-card-subtitle");
+                i0.ɵɵtext(7, "Dog Breed");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(8, "div", 1);
+                i0.ɵɵelementStart(9, "mat-card-content");
+                i0.ɵɵelementStart(10, "p");
+                i0.ɵɵtext(11, " The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "mat-card-actions");
+                i0.ɵɵelementStart(13, "button", 2);
+                i0.ɵɵtext(14, "LIKE");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(15, "button", 2);
+                i0.ɵɵtext(16, "SHARE");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CardHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'card-harness-example',
+                        templateUrl: 'card-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         CardFancyExample,
         CardOverviewExample,
+        CardHarnessExample,
     ];
     var CardExamplesModule = /** @class */ (function () {
         function CardExamplesModule() {
@@ -95,9 +145,11 @@
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
-                CardOverviewExample], imports: [i2.MatButtonModule,
+                CardOverviewExample,
+                CardHarnessExample], imports: [i2.MatButtonModule,
                 i1.MatCardModule], exports: [CardFancyExample,
-                CardOverviewExample] });
+                CardOverviewExample,
+                CardHarnessExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(CardExamplesModule, [{
@@ -120,6 +172,7 @@
 
     exports.CardExamplesModule = CardExamplesModule;
     exports.CardFancyExample = CardFancyExample;
+    exports.CardHarnessExample = CardHarnessExample;
     exports.CardOverviewExample = CardOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
