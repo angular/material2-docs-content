@@ -1254,6 +1254,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/autocomplete"
         }
     },
+    "badge-harness": {
+        "packagePath": "material/badge/badge-harness",
+        "title": "Testing with MatBadgeHarness",
+        "componentName": "BadgeHarnessExample",
+        "files": [
+            "badge-harness-example.ts",
+            "badge-harness-example.html",
+            "badge-harness-example.spec.ts"
+        ],
+        "selector": "badge-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "badge-harness-example.ts",
+        "module": {
+            "name": "BadgeExamplesModule",
+            "importSpecifier": "material/badge"
+        }
+    },
     "badge-overview": {
         "packagePath": "material/badge/badge-overview",
         "title": "Badge overview",
