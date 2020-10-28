@@ -180,9 +180,39 @@ CheckboxOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxOverviewExam
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatCheckboxHarness
+ */
+class CheckboxHarnessExample {
+    constructor() {
+        this.disabled = true;
+    }
+}
+CheckboxHarnessExample.ɵfac = function CheckboxHarnessExample_Factory(t) { return new (t || CheckboxHarnessExample)(); };
+CheckboxHarnessExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxHarnessExample, selectors: [["checkbox-harness-example"]], decls: 4, vars: 2, consts: [["required", "", "name", "first-name", "value", "first-value", "aria-label", "First checkbox", 3, "checked"], ["indeterminate", "true", "aria-label", "Second checkbox", 3, "disabled"]], template: function CheckboxHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-checkbox", 0);
+        ɵɵtext(1, " First\n");
+        ɵɵelementEnd();
+        ɵɵelementStart(2, "mat-checkbox", 1);
+        ɵɵtext(3, " Second\n");
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("checked", true);
+        ɵɵadvance(2);
+        ɵɵproperty("disabled", ctx.disabled);
+    } }, directives: [MatCheckbox], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'checkbox-harness-example',
+                templateUrl: 'checkbox-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
+    CheckboxHarnessExample,
 ];
 class CheckboxExamplesModule {
 }
@@ -195,12 +225,14 @@ CheckboxExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CheckboxEx
             FormsModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
-        CheckboxOverviewExample], imports: [CommonModule,
+        CheckboxOverviewExample,
+        CheckboxHarnessExample], imports: [CommonModule,
         MatCardModule,
         MatCheckboxModule,
         MatRadioModule,
         FormsModule], exports: [CheckboxConfigurableExample,
-        CheckboxOverviewExample] }); })();
+        CheckboxOverviewExample,
+        CheckboxHarnessExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxExamplesModule, [{
         type: NgModule,
         args: [{
@@ -221,5 +253,5 @@ CheckboxExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CheckboxEx
  * Generated bundle index. Do not edit.
  */
 
-export { CheckboxConfigurableExample, CheckboxExamplesModule, CheckboxOverviewExample };
+export { CheckboxConfigurableExample, CheckboxExamplesModule, CheckboxHarnessExample, CheckboxOverviewExample };
 //# sourceMappingURL=checkbox.js.map

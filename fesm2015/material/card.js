@@ -63,9 +63,52 @@ CardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CardOverviewExample, sel
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatCardHarness
+ */
+class CardHarnessExample {
+}
+CardHarnessExample.ɵfac = function CardHarnessExample_Factory(t) { return new (t || CardHarnessExample)(); };
+CardHarnessExample.ɵcmp = ɵɵdefineComponent({ type: CardHarnessExample, selectors: [["card-harness-example"]], decls: 17, vars: 0, consts: [["mat-card-avatar", ""], ["mat-card-image", ""], ["mat-button", ""]], template: function CardHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-card");
+        ɵɵelementStart(1, "mat-card");
+        ɵɵelementStart(2, "mat-card-header");
+        ɵɵelement(3, "div", 0);
+        ɵɵelementStart(4, "mat-card-title");
+        ɵɵtext(5, "Shiba Inu");
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-card-subtitle");
+        ɵɵtext(7, "Dog Breed");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelement(8, "div", 1);
+        ɵɵelementStart(9, "mat-card-content");
+        ɵɵelementStart(10, "p");
+        ɵɵtext(11, " The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "mat-card-actions");
+        ɵɵelementStart(13, "button", 2);
+        ɵɵtext(14, "LIKE");
+        ɵɵelementEnd();
+        ɵɵelementStart(15, "button", 2);
+        ɵɵtext(16, "SHARE");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatButton], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CardHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'card-harness-example',
+                templateUrl: 'card-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     CardFancyExample,
     CardOverviewExample,
+    CardHarnessExample,
 ];
 class CardExamplesModule {
 }
@@ -75,9 +118,11 @@ CardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CardExamplesMo
             MatCardModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
-        CardOverviewExample], imports: [MatButtonModule,
+        CardOverviewExample,
+        CardHarnessExample], imports: [MatButtonModule,
         MatCardModule], exports: [CardFancyExample,
-        CardOverviewExample] }); })();
+        CardOverviewExample,
+        CardHarnessExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CardExamplesModule, [{
         type: NgModule,
         args: [{
@@ -95,5 +140,5 @@ CardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CardExamplesMo
  * Generated bundle index. Do not edit.
  */
 
-export { CardExamplesModule, CardFancyExample, CardOverviewExample };
+export { CardExamplesModule, CardFancyExample, CardHarnessExample, CardOverviewExample };
 //# sourceMappingURL=card.js.map

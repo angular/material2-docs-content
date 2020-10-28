@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/checkbox', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.checkbox = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio));
-}(this, (function (exports, i2, i0, i3, i1, i2$1, i4) { 'use strict';
+}(this, (function (exports, i2, i0, i3, i1, i1$1, i4) { 'use strict';
 
     /**
      * @title Configurable checkbox
@@ -82,7 +82,7 @@
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
             }
-        }, directives: [i1.MatCard, i1.MatCardContent, i2$1.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+        }, directives: [i1.MatCard, i1.MatCardContent, i1$1.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(CheckboxConfigurableExample, [{
                 type: i0.Component,
@@ -182,7 +182,7 @@
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngForOf", ctx.task.subtasks);
             }
-        }, directives: [i2$1.MatCheckbox, i2.NgForOf, i3.NgControlStatus, i3.NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
+        }, directives: [i1$1.MatCheckbox, i2.NgForOf, i3.NgControlStatus, i3.NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(CheckboxOverviewExample, [{
                 type: i0.Component,
@@ -194,9 +194,45 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatCheckboxHarness
+     */
+    var CheckboxHarnessExample = /** @class */ (function () {
+        function CheckboxHarnessExample() {
+            this.disabled = true;
+        }
+        return CheckboxHarnessExample;
+    }());
+    CheckboxHarnessExample.ɵfac = function CheckboxHarnessExample_Factory(t) { return new (t || CheckboxHarnessExample)(); };
+    CheckboxHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxHarnessExample, selectors: [["checkbox-harness-example"]], decls: 4, vars: 2, consts: [["required", "", "name", "first-name", "value", "first-value", "aria-label", "First checkbox", 3, "checked"], ["indeterminate", "true", "aria-label", "Second checkbox", 3, "disabled"]], template: function CheckboxHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-checkbox", 0);
+                i0.ɵɵtext(1, " First\n");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "mat-checkbox", 1);
+                i0.ɵɵtext(3, " Second\n");
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("checked", true);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("disabled", ctx.disabled);
+            }
+        }, directives: [i1$1.MatCheckbox], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(CheckboxHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'checkbox-harness-example',
+                        templateUrl: 'checkbox-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         CheckboxConfigurableExample,
         CheckboxOverviewExample,
+        CheckboxHarnessExample,
     ];
     var CheckboxExamplesModule = /** @class */ (function () {
         function CheckboxExamplesModule() {
@@ -207,18 +243,20 @@
     CheckboxExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
                 i2.CommonModule,
                 i1.MatCardModule,
-                i2$1.MatCheckboxModule,
+                i1$1.MatCheckboxModule,
                 i4.MatRadioModule,
                 i3.FormsModule,
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
-                CheckboxOverviewExample], imports: [i2.CommonModule,
+                CheckboxOverviewExample,
+                CheckboxHarnessExample], imports: [i2.CommonModule,
                 i1.MatCardModule,
-                i2$1.MatCheckboxModule,
+                i1$1.MatCheckboxModule,
                 i4.MatRadioModule,
                 i3.FormsModule], exports: [CheckboxConfigurableExample,
-                CheckboxOverviewExample] });
+                CheckboxOverviewExample,
+                CheckboxHarnessExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(CheckboxExamplesModule, [{
@@ -227,7 +265,7 @@
                         imports: [
                             i2.CommonModule,
                             i1.MatCardModule,
-                            i2$1.MatCheckboxModule,
+                            i1$1.MatCheckboxModule,
                             i4.MatRadioModule,
                             i3.FormsModule,
                         ],
@@ -244,6 +282,7 @@
 
     exports.CheckboxConfigurableExample = CheckboxConfigurableExample;
     exports.CheckboxExamplesModule = CheckboxExamplesModule;
+    exports.CheckboxHarnessExample = CheckboxHarnessExample;
     exports.CheckboxOverviewExample = CheckboxOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

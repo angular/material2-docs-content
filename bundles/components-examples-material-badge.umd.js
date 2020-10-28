@@ -67,8 +67,51 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatBadgeHarness
+     */
+    var BadgeHarnessExample = /** @class */ (function () {
+        function BadgeHarnessExample() {
+            this.simpleContent = 'S';
+            this.overlap = true;
+            this.disabled = true;
+        }
+        return BadgeHarnessExample;
+    }());
+    BadgeHarnessExample.ɵfac = function BadgeHarnessExample_Factory(t) { return new (t || BadgeHarnessExample)(); };
+    BadgeHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeHarnessExample, selectors: [["badge-harness-example"]], decls: 6, vars: 3, consts: [["mat-button", "", "id", "simple", 3, "matBadge"], ["mat-button", "", "id", "overlapping", "matBadge", "O", 3, "matBadgeOverlap"], ["mat-button", "", "id", "disabled", "matBadge", "D", 3, "matBadgeDisabled"]], template: function BadgeHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "button", 0);
+                i0.ɵɵtext(1, "Simple");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "button", 1);
+                i0.ɵɵtext(3, "Overlapping");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "button", 2);
+                i0.ɵɵtext(5, "Disabled");
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("matBadge", ctx.simpleContent);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("matBadgeOverlap", ctx.overlap);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("matBadgeDisabled", ctx.disabled);
+            }
+        }, directives: [i2.MatButton, i1.MatBadge], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(BadgeHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'badge-harness-example',
+                        templateUrl: 'badge-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         BadgeOverviewExample,
+        BadgeHarnessExample
     ];
     var BadgeExamplesModule = /** @class */ (function () {
         function BadgeExamplesModule() {
@@ -82,9 +125,11 @@
                 i3.MatIconModule,
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(BadgeExamplesModule, { declarations: [BadgeOverviewExample], imports: [i1.MatBadgeModule,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(BadgeExamplesModule, { declarations: [BadgeOverviewExample,
+                BadgeHarnessExample], imports: [i1.MatBadgeModule,
                 i2.MatButtonModule,
-                i3.MatIconModule], exports: [BadgeOverviewExample] });
+                i3.MatIconModule], exports: [BadgeOverviewExample,
+                BadgeHarnessExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(BadgeExamplesModule, [{
@@ -107,6 +152,7 @@
      */
 
     exports.BadgeExamplesModule = BadgeExamplesModule;
+    exports.BadgeHarnessExample = BadgeHarnessExample;
     exports.BadgeOverviewExample = BadgeOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
