@@ -1696,10 +1696,10 @@ function TableSelectionExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵproperty("checked", ctx_r0.selection.hasValue() && ctx_r0.isAllSelected())("indeterminate", ctx_r0.selection.hasValue() && !ctx_r0.isAllSelected())("aria-label", ctx_r0.checkboxLabel());
 } }
 function TableSelectionExample_td_3_Template(rf, ctx) { if (rf & 1) {
-    const _r16 = ɵɵgetCurrentView();
+    const _r17 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "td", 12);
     ɵɵelementStart(1, "mat-checkbox", 13);
-    ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { ɵɵrestoreView(_r16); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { ɵɵrestoreView(_r16); const row_r14 = ctx.$implicit; const ctx_r17 = ɵɵnextContext(); return $event ? ctx_r17.selection.toggle(row_r14) : null; });
+    ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { ɵɵrestoreView(_r17); const row_r14 = ctx.$implicit; const ctx_r16 = ɵɵnextContext(); return $event ? ctx_r16.selection.toggle(row_r14) : null; });
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {
