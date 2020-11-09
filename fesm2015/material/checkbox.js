@@ -90,10 +90,10 @@ CheckboxConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxConfigur
     }], null, null); })();
 
 function CheckboxOverviewExample_li_11_Template(rf, ctx) { if (rf & 1) {
-    const _r3 = ɵɵgetCurrentView();
+    const _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "li");
     ɵɵelementStart(1, "mat-checkbox", 6);
-    ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { ɵɵrestoreView(_r3); const subtask_r1 = ctx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { ɵɵrestoreView(_r3); const ctx_r4 = ɵɵnextContext(); return ctx_r4.updateAllComplete(); });
+    ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { const subtask_r1 = ctx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { ɵɵrestoreView(_r4); const ctx_r3 = ɵɵnextContext(); return ctx_r3.updateAllComplete(); });
     ɵɵtext(2);
     ɵɵelementEnd();
     ɵɵelementEnd();

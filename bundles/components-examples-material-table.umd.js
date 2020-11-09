@@ -2025,10 +2025,10 @@
     }
     function TableSelectionExample_td_3_Template(rf, ctx) {
         if (rf & 1) {
-            var _r16_1 = i0.ɵɵgetCurrentView();
+            var _r17_1 = i0.ɵɵgetCurrentView();
             i0.ɵɵelementStart(0, "td", 12);
             i0.ɵɵelementStart(1, "mat-checkbox", 13);
-            i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r16_1); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r16_1); var row_r14 = ctx.$implicit; var ctx_r17 = i0.ɵɵnextContext(); return $event ? ctx_r17.selection.toggle(row_r14) : null; });
+            i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r17_1); var row_r14 = ctx.$implicit; var ctx_r16 = i0.ɵɵnextContext(); return $event ? ctx_r16.selection.toggle(row_r14) : null; });
             i0.ɵɵelementEnd();
             i0.ɵɵelementEnd();
         }
