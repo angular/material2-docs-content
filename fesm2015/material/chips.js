@@ -3,7 +3,7 @@ import { NgForOf, NgIf, AsyncPipe, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtemplate, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵpipe, ɵɵreference, ɵɵpipeBind1, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { FormControl, DefaultValueAccessor, NgControlStatus, FormControlDirective, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteTrigger, MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatChipList, MatChipInput, MatChip, MatChipRemove, MatChipsModule } from '@angular/material/chips';
+import { MatChipList, MatChipInput, MatChip, MatChipRemove, MatChipAvatar, MatChipsModule } from '@angular/material/chips';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
@@ -332,12 +332,56 @@ ChipsStackedExample.ɵcmp = ɵɵdefineComponent({ type: ChipsStackedExample, sel
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatChipsHarness
+ */
+class ChipsHarnessExample {
+    constructor() {
+        this.isDisabled = false;
+        this.remove = jasmine.createSpy('remove spy');
+        this.add = jasmine.createSpy('add spy');
+    }
+}
+ChipsHarnessExample.ɵfac = function ChipsHarnessExample_Factory(t) { return new (t || ChipsHarnessExample)(); };
+ChipsHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ChipsHarnessExample, selectors: [["chips-harness-example"]], decls: 11, vars: 2, consts: [[3, "disabled", "aria-orientation"], [3, "removed"], ["matChipRemove", ""]], template: function ChipsHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-chip-list", 0);
+        ɵɵelementStart(1, "mat-chip", 1);
+        ɵɵlistener("removed", function ChipsHarnessExample_Template_mat_chip_removed_1_listener() { return ctx.remove(); });
+        ɵɵtext(2, "Chip 1");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-chip", 1);
+        ɵɵlistener("removed", function ChipsHarnessExample_Template_mat_chip_removed_3_listener() { return ctx.remove(); });
+        ɵɵtext(4, "Chip 2 ");
+        ɵɵelementStart(5, "span", 2);
+        ɵɵtext(6, "remove_icon");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(7, "mat-chip", 1);
+        ɵɵlistener("removed", function ChipsHarnessExample_Template_mat_chip_removed_7_listener() { return ctx.remove(); });
+        ɵɵelementStart(8, "mat-chip-avatar");
+        ɵɵtext(9, "C");
+        ɵɵelementEnd();
+        ɵɵtext(10, "Chip 4");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("disabled", ctx.isDisabled)("aria-orientation", "horizontal");
+    } }, directives: [MatChipList, MatChip, MatChipRemove, MatChipAvatar], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'chips-harness-example',
+                templateUrl: 'chips-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ChipsAutocompleteExample,
     ChipsDragDropExample,
     ChipsInputExample,
     ChipsOverviewExample,
     ChipsStackedExample,
+    ChipsHarnessExample,
 ];
 class ChipsExamplesModule {
 }
@@ -355,7 +399,8 @@ ChipsExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ChipsExamples
         ChipsDragDropExample,
         ChipsInputExample,
         ChipsOverviewExample,
-        ChipsStackedExample], imports: [CommonModule,
+        ChipsStackedExample,
+        ChipsHarnessExample], imports: [CommonModule,
         DragDropModule,
         MatAutocompleteModule,
         MatChipsModule,
@@ -365,7 +410,8 @@ ChipsExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ChipsExamples
         ChipsDragDropExample,
         ChipsInputExample,
         ChipsOverviewExample,
-        ChipsStackedExample] }); })();
+        ChipsStackedExample,
+        ChipsHarnessExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsExamplesModule, [{
         type: NgModule,
         args: [{
@@ -388,5 +434,5 @@ ChipsExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ChipsExamples
  * Generated bundle index. Do not edit.
  */
 
-export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
+export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
 //# sourceMappingURL=chips.js.map
