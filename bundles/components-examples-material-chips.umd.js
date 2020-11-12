@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/drag-drop'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/autocomplete'), require('@angular/material/chips'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/cdk/keycodes'), require('rxjs/operators'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/chips', ['exports', '@angular/cdk/drag-drop', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/autocomplete', '@angular/material/chips', '@angular/material/form-field', '@angular/material/icon', '@angular/cdk/keycodes', 'rxjs/operators', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.chips = {}), global.ng.cdk.dragDrop, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.autocomplete, global.ng.material.chips, global.ng.material.formField, global.ng.material.icon, global.ng.cdk.keycodes, global.rxjs.operators, global.ng.material.core));
-}(this, (function (exports, i2, i3, i0, i4, i5, i2$1, i1, i6, keycodes, operators, i7) { 'use strict';
+}(this, (function (exports, i2, i3, i0, i4, i5, i1, i1$1, i6, keycodes, operators, i7) { 'use strict';
 
     var _c0 = ["fruitInput"];
     var _c1 = ["auto"];
@@ -127,7 +127,7 @@
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(9, 6, ctx.filteredFruits));
             }
-        }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i4.DefaultValueAccessor, i5.MatAutocompleteTrigger, i2$1.MatChipInput, i4.NgControlStatus, i4.FormControlDirective, i5.MatAutocomplete, i2$1.MatChip, i3.NgIf, i6.MatIcon, i2$1.MatChipRemove, i7.MatOption], pipes: [i3.AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1$1.MatFormField, i1.MatChipList, i3.NgForOf, i4.DefaultValueAccessor, i5.MatAutocompleteTrigger, i1.MatChipInput, i4.NgControlStatus, i4.FormControlDirective, i5.MatAutocomplete, i1.MatChip, i3.NgIf, i6.MatIcon, i1.MatChipRemove, i7.MatOption], pipes: [i3.AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ChipsAutocompleteExample, [{
                 type: i0.Component,
@@ -188,7 +188,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.vegetables);
             }
-        }, directives: [i2$1.MatChipList, i2.CdkDropList, i3.NgForOf, i2$1.MatChip, i2.CdkDrag], styles: [".example-box.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip[_ngcontent-%COMP%]   .cdk-drop-list-dragging[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
+        }, directives: [i1.MatChipList, i2.CdkDropList, i3.NgForOf, i1.MatChip, i2.CdkDrag], styles: [".example-box.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip[_ngcontent-%COMP%]   .cdk-drop-list-dragging[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ChipsDragDropExample, [{
                 type: i0.Component,
@@ -281,7 +281,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
             }
-        }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i2$1.MatChipInput, i2$1.MatChip, i3.NgIf, i6.MatIcon, i2$1.MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1$1.MatFormField, i1.MatChipList, i3.NgForOf, i1.MatChipInput, i1.MatChip, i3.NgIf, i6.MatIcon, i1.MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ChipsInputExample, [{
                 type: i0.Component,
@@ -319,7 +319,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             }
-        }, directives: [i2$1.MatChipList, i2$1.MatChip], encapsulation: 2 });
+        }, directives: [i1.MatChipList, i1.MatChip], encapsulation: 2 });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ChipsOverviewExample, [{
                 type: i0.Component,
@@ -368,7 +368,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.availableColors);
             }
-        }, directives: [i2$1.MatChipList, i3.NgForOf, i2$1.MatChip], styles: ["mat-chip[_ngcontent-%COMP%] {\n  max-width: 200px;\n}"] });
+        }, directives: [i1.MatChipList, i3.NgForOf, i1.MatChip], styles: ["mat-chip[_ngcontent-%COMP%] {\n  max-width: 200px;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ChipsStackedExample, [{
                 type: i0.Component,
@@ -380,12 +380,62 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatChipsHarness
+     */
+    var ChipsHarnessExample = /** @class */ (function () {
+        function ChipsHarnessExample() {
+            this.isDisabled = false;
+            this.remove = jasmine.createSpy('remove spy');
+            this.add = jasmine.createSpy('add spy');
+        }
+        return ChipsHarnessExample;
+    }());
+    ChipsHarnessExample.ɵfac = function ChipsHarnessExample_Factory(t) { return new (t || ChipsHarnessExample)(); };
+    ChipsHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ChipsHarnessExample, selectors: [["chips-harness-example"]], decls: 11, vars: 2, consts: [[3, "disabled", "aria-orientation"], [3, "removed"], ["matChipRemove", ""]], template: function ChipsHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-chip-list", 0);
+                i0.ɵɵelementStart(1, "mat-chip", 1);
+                i0.ɵɵlistener("removed", function ChipsHarnessExample_Template_mat_chip_removed_1_listener() { return ctx.remove(); });
+                i0.ɵɵtext(2, "Chip 1");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-chip", 1);
+                i0.ɵɵlistener("removed", function ChipsHarnessExample_Template_mat_chip_removed_3_listener() { return ctx.remove(); });
+                i0.ɵɵtext(4, "Chip 2 ");
+                i0.ɵɵelementStart(5, "span", 2);
+                i0.ɵɵtext(6, "remove_icon");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(7, "mat-chip", 1);
+                i0.ɵɵlistener("removed", function ChipsHarnessExample_Template_mat_chip_removed_7_listener() { return ctx.remove(); });
+                i0.ɵɵelementStart(8, "mat-chip-avatar");
+                i0.ɵɵtext(9, "C");
+                i0.ɵɵelementEnd();
+                i0.ɵɵtext(10, "Chip 4");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("disabled", ctx.isDisabled)("aria-orientation", "horizontal");
+            }
+        }, directives: [i1.MatChipList, i1.MatChip, i1.MatChipRemove, i1.MatChipAvatar], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ChipsHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'chips-harness-example',
+                        templateUrl: 'chips-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ChipsAutocompleteExample,
         ChipsDragDropExample,
         ChipsInputExample,
         ChipsOverviewExample,
         ChipsStackedExample,
+        ChipsHarnessExample,
     ];
     var ChipsExamplesModule = /** @class */ (function () {
         function ChipsExamplesModule() {
@@ -397,9 +447,9 @@
                 i3.CommonModule,
                 i2.DragDropModule,
                 i5.MatAutocompleteModule,
-                i2$1.MatChipsModule,
+                i1.MatChipsModule,
                 i6.MatIconModule,
-                i1.MatFormFieldModule,
+                i1$1.MatFormFieldModule,
                 i4.ReactiveFormsModule,
             ]] });
     (function () {
@@ -407,17 +457,19 @@
                 ChipsDragDropExample,
                 ChipsInputExample,
                 ChipsOverviewExample,
-                ChipsStackedExample], imports: [i3.CommonModule,
+                ChipsStackedExample,
+                ChipsHarnessExample], imports: [i3.CommonModule,
                 i2.DragDropModule,
                 i5.MatAutocompleteModule,
-                i2$1.MatChipsModule,
+                i1.MatChipsModule,
                 i6.MatIconModule,
-                i1.MatFormFieldModule,
+                i1$1.MatFormFieldModule,
                 i4.ReactiveFormsModule], exports: [ChipsAutocompleteExample,
                 ChipsDragDropExample,
                 ChipsInputExample,
                 ChipsOverviewExample,
-                ChipsStackedExample] });
+                ChipsStackedExample,
+                ChipsHarnessExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ChipsExamplesModule, [{
@@ -427,9 +479,9 @@
                             i3.CommonModule,
                             i2.DragDropModule,
                             i5.MatAutocompleteModule,
-                            i2$1.MatChipsModule,
+                            i1.MatChipsModule,
                             i6.MatIconModule,
-                            i1.MatFormFieldModule,
+                            i1$1.MatFormFieldModule,
                             i4.ReactiveFormsModule,
                         ],
                         declarations: EXAMPLES,
@@ -446,6 +498,7 @@
     exports.ChipsAutocompleteExample = ChipsAutocompleteExample;
     exports.ChipsDragDropExample = ChipsDragDropExample;
     exports.ChipsExamplesModule = ChipsExamplesModule;
+    exports.ChipsHarnessExample = ChipsHarnessExample;
     exports.ChipsInputExample = ChipsInputExample;
     exports.ChipsOverviewExample = ChipsOverviewExample;
     exports.ChipsStackedExample = ChipsStackedExample;

@@ -1,0 +1,14 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * @title Testing with MatChipsHarness
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'chips-harness-example'</span>,
+  templateUrl: <span class="hljs-string">'chips-harness-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsHarnessExample {
+  isDisabled = <span class="hljs-literal">false</span>;
+  remove = jasmine.createSpy(<span class="hljs-string">'remove spy'</span>);
+  add = jasmine.createSpy(<span class="hljs-string">'add spy'</span>);
+}
