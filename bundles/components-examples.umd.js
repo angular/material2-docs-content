@@ -1866,6 +1866,23 @@
                 "importSpecifier": "material/chips"
             }
         },
+        "chips-harness": {
+            "packagePath": "material/chips/chips-harness",
+            "title": "Testing with MatChipsHarness",
+            "componentName": "ChipsHarnessExample",
+            "files": [
+                "chips-harness-example.ts",
+                "chips-harness-example.html",
+                "chips-harness-example.spec.ts"
+            ],
+            "selector": "chips-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "chips-harness-example.ts",
+            "module": {
+                "name": "ChipsExamplesModule",
+                "importSpecifier": "material/chips"
+            }
+        },
         "chips-input": {
             "packagePath": "material/chips/chips-input",
             "title": "Chips with input",
