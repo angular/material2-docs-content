@@ -11,7 +11,6 @@ import {ChipsDragDropExample} from './chips-drag-drop/chips-drag-drop-example';
 import {ChipsInputExample} from './chips-input/chips-input-example';
 import {ChipsOverviewExample} from './chips-overview/chips-overview-example';
 import {ChipsStackedExample} from './chips-stacked/chips-stacked-example';
-import {ChipsHarnessExample} from './chips-harness/chips-harness-example';
 
 export {
   ChipsAutocompleteExample,
@@ -19,7 +18,6 @@ export {
   ChipsInputExample,
   ChipsOverviewExample,
   ChipsStackedExample,
-  ChipsHarnessExample,
 };
 
 const EXAMPLES = [
@@ -28,7 +26,6 @@ const EXAMPLES = [
   ChipsInputExample,
   ChipsOverviewExample,
   ChipsStackedExample,
-  ChipsHarnessExample,
 ];
 
 @NgModule({
