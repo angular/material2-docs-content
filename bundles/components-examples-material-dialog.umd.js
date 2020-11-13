@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/dialog'), require('@angular/material/input'), require('@angular/material/form-field')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/dialog', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/dialog', '@angular/material/input', '@angular/material/form-field'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.dialog = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.dialog, global.ng.material.input, global.ng.material.formField));
-}(this, (function (exports, i3, i0, i4, i2, i1, i3$1, i2$1) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/dialog'), require('@angular/material/input'), require('@angular/material/menu'), require('@angular/material/form-field')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/dialog', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/dialog', '@angular/material/input', '@angular/material/menu', '@angular/material/form-field'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.dialog = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.dialog, global.ng.material.input, global.ng.material.menu, global.ng.material.formField));
+}(this, (function (exports, i3, i0, i4, i2, i1, i3$1, i3$2, i2$1) { 'use strict';
 
     /**
      * @title Dialog with header, scrollable content and actions
@@ -438,6 +438,91 @@
         }, null);
     })();
 
+    var _c0 = ["menuTrigger"];
+    /**
+     * @title Dialog launched from a menu
+     */
+    var DialogFromMenuExample = /** @class */ (function () {
+        function DialogFromMenuExample(dialog) {
+            this.dialog = dialog;
+        }
+        DialogFromMenuExample.prototype.openDialog = function () {
+            var _this = this;
+            // #docregion focus-restoration
+            var dialogRef = this.dialog.open(DialogFromMenuExampleDialog, { restoreFocus: false });
+            // Manually restore focus to the menu trigger since the element that
+            // opens the dialog won't be in the DOM any more when the dialog closes.
+            dialogRef.afterClosed().subscribe(function () { return _this.menuTrigger.focus(); });
+            // #enddocregion focus-restoration
+        };
+        return DialogFromMenuExample;
+    }());
+    DialogFromMenuExample.ɵfac = function DialogFromMenuExample_Factory(t) { return new (t || DialogFromMenuExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
+    DialogFromMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogFromMenuExample, selectors: [["dialog-from-menu-example"]], viewQuery: function DialogFromMenuExample_Query(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵviewQuery(_c0, true);
+            }
+            if (rf & 2) {
+                var _t = void 0;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.menuTrigger = _t.first);
+            }
+        }, decls: 7, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menuTrigger", ""], ["menu", "matMenu"], ["mat-menu-item", "", 3, "click"]], template: function DialogFromMenuExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "button", 0, 1);
+                i0.ɵɵtext(2, "Menu");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-menu", null, 2);
+                i0.ɵɵelementStart(5, "button", 3);
+                i0.ɵɵlistener("click", function DialogFromMenuExample_Template_button_click_5_listener() { return ctx.openDialog(); });
+                i0.ɵɵtext(6, "Open dialog");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                var _r1 = i0.ɵɵreference(4);
+                i0.ɵɵproperty("matMenuTriggerFor", _r1);
+            }
+        }, directives: [i2.MatButton, i3$2.MatMenuTrigger, i3$2.MatMenu, i3$2.MatMenuItem], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DialogFromMenuExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'dialog-from-menu-example',
+                        templateUrl: 'dialog-from-menu-example.html',
+                    }]
+            }], function () { return [{ type: i1.MatDialog }]; }, { menuTrigger: [{
+                    type: i0.ViewChild,
+                    args: ['menuTrigger']
+                }] });
+    })();
+    var DialogFromMenuExampleDialog = /** @class */ (function () {
+        function DialogFromMenuExampleDialog() {
+        }
+        return DialogFromMenuExampleDialog;
+    }());
+    DialogFromMenuExampleDialog.ɵfac = function DialogFromMenuExampleDialog_Factory(t) { return new (t || DialogFromMenuExampleDialog)(); };
+    DialogFromMenuExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogFromMenuExampleDialog, selectors: [["dialog-from-menu-dialog"]], decls: 5, vars: 0, consts: [["mat-button", "", "mat-dialog-close", ""]], template: function DialogFromMenuExampleDialog_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-dialog-content");
+                i0.ɵɵtext(1, " This is a dialog\n");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "mat-dialog-actions");
+                i0.ɵɵelementStart(3, "button", 0);
+                i0.ɵɵtext(4, "Okay");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DialogFromMenuExampleDialog, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'dialog-from-menu-dialog',
+                        templateUrl: 'dialog-from-menu-example-dialog.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         DialogContentExample,
         DialogContentExampleDialog,
@@ -445,6 +530,8 @@
         DialogDataExampleDialog,
         DialogElementsExample,
         DialogElementsExampleDialog,
+        DialogFromMenuExample,
+        DialogFromMenuExampleDialog,
         DialogOverviewExample,
         DialogOverviewExampleDialog,
     ];
@@ -459,6 +546,7 @@
                 i2.MatButtonModule,
                 i1.MatDialogModule,
                 i3$1.MatInputModule,
+                i3$2.MatMenuModule,
                 i4.FormsModule,
             ]] });
     (function () {
@@ -468,17 +556,22 @@
                 DialogDataExampleDialog,
                 DialogElementsExample,
                 DialogElementsExampleDialog,
+                DialogFromMenuExample,
+                DialogFromMenuExampleDialog,
                 DialogOverviewExample,
                 DialogOverviewExampleDialog], imports: [i3.CommonModule,
                 i2.MatButtonModule,
                 i1.MatDialogModule,
                 i3$1.MatInputModule,
+                i3$2.MatMenuModule,
                 i4.FormsModule], exports: [DialogContentExample,
                 DialogContentExampleDialog,
                 DialogDataExample,
                 DialogDataExampleDialog,
                 DialogElementsExample,
                 DialogElementsExampleDialog,
+                DialogFromMenuExample,
+                DialogFromMenuExampleDialog,
                 DialogOverviewExample,
                 DialogOverviewExampleDialog] });
     })();
@@ -491,6 +584,7 @@
                             i2.MatButtonModule,
                             i1.MatDialogModule,
                             i3$1.MatInputModule,
+                            i3$2.MatMenuModule,
                             i4.FormsModule,
                         ],
                         declarations: EXAMPLES,
@@ -511,6 +605,8 @@
     exports.DialogElementsExample = DialogElementsExample;
     exports.DialogElementsExampleDialog = DialogElementsExampleDialog;
     exports.DialogExamplesModule = DialogExamplesModule;
+    exports.DialogFromMenuExample = DialogFromMenuExample;
+    exports.DialogFromMenuExampleDialog = DialogFromMenuExampleDialog;
     exports.DialogOverviewExample = DialogOverviewExample;
     exports.DialogOverviewExampleDialog = DialogOverviewExampleDialog;
 
