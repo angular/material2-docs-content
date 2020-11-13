@@ -2063,6 +2063,25 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/dialog"
         }
     },
+    "dialog-from-menu": {
+        "packagePath": "material/dialog/dialog-from-menu",
+        "title": "Dialog launched from a menu",
+        "componentName": "DialogFromMenuExample",
+        "files": [
+            "dialog-from-menu-example.ts",
+            "dialog-from-menu-example.html",
+            "dialog-from-menu-example-dialog.html"
+        ],
+        "selector": "dialog-from-menu-example",
+        "additionalComponents": [
+            "DialogFromMenuExampleDialog"
+        ],
+        "primaryFile": "dialog-from-menu-example.ts",
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "material/dialog"
+        }
+    },
     "dialog-overview": {
         "packagePath": "material/dialog/dialog-overview",
         "title": "Dialog Overview",

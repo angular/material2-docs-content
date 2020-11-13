@@ -4,6 +4,7 @@
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
 <span class="hljs-keyword">import</span> {MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/dialog'</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/menu'</span>;
 <span class="hljs-keyword">import</span> {
   DialogContentExample,
   DialogContentExampleDialog
@@ -17,6 +18,10 @@
   DialogOverviewExample,
   DialogOverviewExampleDialog
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DialogFromMenuExample,
+  DialogFromMenuExampleDialog
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-from-menu/dialog-from-menu-example'</span>;
 
 <span class="hljs-keyword">export</span> {
   DialogContentExample,
@@ -25,6 +30,8 @@
   DialogDataExampleDialog,
   DialogElementsExample,
   DialogElementsExampleDialog,
+  DialogFromMenuExample,
+  DialogFromMenuExampleDialog,
   DialogOverviewExample,
   DialogOverviewExampleDialog,
 };
@@ -36,6 +43,8 @@
   DialogDataExampleDialog,
   DialogElementsExample,
   DialogElementsExampleDialog,
+  DialogFromMenuExample,
+  DialogFromMenuExampleDialog,
   DialogOverviewExample,
   DialogOverviewExampleDialog,
 ];
@@ -46,6 +55,7 @@
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
+    MatMenuModule,
     FormsModule,
   ],
   declarations: EXAMPLES,
