@@ -333,11 +333,39 @@ TooltipPositionExample.ɵcmp = ɵɵdefineComponent({ type: TooltipPositionExampl
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatTooltipHarness
+ */
+class TooltipHarnessExample {
+    constructor() {
+        this.message = 'Tooltip message';
+    }
+}
+TooltipHarnessExample.ɵfac = function TooltipHarnessExample_Factory(t) { return new (t || TooltipHarnessExample)(); };
+TooltipHarnessExample.ɵcmp = ɵɵdefineComponent({ type: TooltipHarnessExample, selectors: [["tooltip-harness-example"]], decls: 4, vars: 1, consts: [["id", "one", 3, "matTooltip"], ["matTooltip", "Static message", "id", "two"]], template: function TooltipHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "button", 0);
+        ɵɵtext(1, "Trigger 1");
+        ɵɵelementEnd();
+        ɵɵelementStart(2, "button", 1);
+        ɵɵtext(3, "Trigger 2");
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("matTooltip", ctx.message);
+    } }, directives: [MatTooltip], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'tooltip-harness-example',
+                templateUrl: 'tooltip-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     TooltipAutoHideExample,
     TooltipCustomClassExample,
     TooltipDelayExample,
     TooltipDisabledExample,
+    TooltipHarnessExample,
     TooltipManualExample,
     TooltipMessageExample,
     TooltipModifiedDefaultsExample,
@@ -361,6 +389,7 @@ TooltipExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TooltipExam
         TooltipCustomClassExample,
         TooltipDelayExample,
         TooltipDisabledExample,
+        TooltipHarnessExample,
         TooltipManualExample,
         TooltipMessageExample,
         TooltipModifiedDefaultsExample,
@@ -376,6 +405,7 @@ TooltipExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TooltipExam
         TooltipCustomClassExample,
         TooltipDelayExample,
         TooltipDisabledExample,
+        TooltipHarnessExample,
         TooltipManualExample,
         TooltipMessageExample,
         TooltipModifiedDefaultsExample,
@@ -404,5 +434,5 @@ TooltipExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TooltipExam
  * Generated bundle index. Do not edit.
  */
 
-export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample };
+export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipHarnessExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample };
 //# sourceMappingURL=tooltip.js.map

@@ -4508,6 +4508,23 @@
                 "importSpecifier": "material/tooltip"
             }
         },
+        "tooltip-harness": {
+            "packagePath": "material/tooltip/tooltip-harness",
+            "title": "Testing with MatTooltipHarness",
+            "componentName": "TooltipHarnessExample",
+            "files": [
+                "tooltip-harness-example.ts",
+                "tooltip-harness-example.html",
+                "tooltip-harness-example.spec.ts"
+            ],
+            "selector": "tooltip-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "tooltip-harness-example.ts",
+            "module": {
+                "name": "TooltipExamplesModule",
+                "importSpecifier": "material/tooltip"
+            }
+        },
         "tooltip-manual": {
             "packagePath": "material/tooltip/tooltip-manual",
             "title": "Tooltip that can be manually shown/hidden.",
