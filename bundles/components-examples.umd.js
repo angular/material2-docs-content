@@ -4389,6 +4389,23 @@
                 "importSpecifier": "material/toolbar"
             }
         },
+        "toolbar-harness": {
+            "packagePath": "material/toolbar/toolbar-harness",
+            "title": "Testing with MatToolbarHarness",
+            "componentName": "ToolbarHarnessExample",
+            "files": [
+                "toolbar-harness-example.ts",
+                "toolbar-harness-example.html",
+                "toolbar-harness-example.spec.ts"
+            ],
+            "selector": "toolbar-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "toolbar-harness-example.ts",
+            "module": {
+                "name": "ToolbarExamplesModule",
+                "importSpecifier": "material/toolbar"
+            }
+        },
         "toolbar-multirow": {
             "packagePath": "material/toolbar/toolbar-multirow",
             "title": "Multi-row toolbar",
@@ -4620,6 +4637,23 @@
             "selector": "tree-flat-overview-example",
             "additionalComponents": [],
             "primaryFile": "tree-flat-overview-example.ts",
+            "module": {
+                "name": "TreeExamplesModule",
+                "importSpecifier": "material/tree"
+            }
+        },
+        "tree-harness": {
+            "packagePath": "material/tree/tree-harness",
+            "title": "Testing with MatTreeHarness",
+            "componentName": "TreeHarnessExample",
+            "files": [
+                "tree-harness-example.ts",
+                "tree-harness-example.html",
+                "tree-harness-example.spec.ts"
+            ],
+            "selector": "tree-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "tree-harness-example.ts",
             "module": {
                 "name": "TreeExamplesModule",
                 "importSpecifier": "material/tree"
