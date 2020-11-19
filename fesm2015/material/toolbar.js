@@ -187,8 +187,48 @@ ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExampl
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatToolbarHarness
+ */
+class ToolbarHarnessExample {
+}
+ToolbarHarnessExample.ɵfac = function ToolbarHarnessExample_Factory(t) { return new (t || ToolbarHarnessExample)(); };
+ToolbarHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarHarnessExample, selectors: [["toolbar-harness-example"]], decls: 14, vars: 0, consts: [["mat-button", ""]], template: function ToolbarHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-toolbar");
+        ɵɵelementStart(1, "span");
+        ɵɵtext(2, "My App");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-toolbar");
+        ɵɵelementStart(4, "mat-toolbar-row");
+        ɵɵelementStart(5, "span");
+        ɵɵtext(6, "Row 1");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(7, "mat-toolbar-row");
+        ɵɵelementStart(8, "span");
+        ɵɵtext(9, "Row 2");
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "button", 0);
+        ɵɵtext(11, " Button 1 ");
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "button", 0);
+        ɵɵtext(13, " Button 2 ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatToolbar, MatToolbarRow, MatButton], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'toolbar-harness-example',
+                templateUrl: 'toolbar-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ToolbarBasicExample,
+    ToolbarHarnessExample,
     ToolbarMultirowExample,
     ToolbarOverviewExample,
 ];
@@ -201,10 +241,12 @@ ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExam
             MatToolbarModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarBasicExample,
+        ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample], imports: [MatButtonModule,
         MatIconModule,
         MatToolbarModule], exports: [ToolbarBasicExample,
+        ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarExamplesModule, [{
@@ -225,5 +267,5 @@ ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExam
  * Generated bundle index. Do not edit.
  */
 
-export { ToolbarBasicExample, ToolbarExamplesModule, ToolbarMultirowExample, ToolbarOverviewExample };
+export { ToolbarBasicExample, ToolbarExamplesModule, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample };
 //# sourceMappingURL=toolbar.js.map

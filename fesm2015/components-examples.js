@@ -4082,6 +4082,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/toolbar"
         }
     },
+    "toolbar-harness": {
+        "packagePath": "material/toolbar/toolbar-harness",
+        "title": "Testing with MatToolbarHarness",
+        "componentName": "ToolbarHarnessExample",
+        "files": [
+            "toolbar-harness-example.ts",
+            "toolbar-harness-example.html",
+            "toolbar-harness-example.spec.ts"
+        ],
+        "selector": "toolbar-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-harness-example.ts",
+        "module": {
+            "name": "ToolbarExamplesModule",
+            "importSpecifier": "material/toolbar"
+        }
+    },
     "toolbar-multirow": {
         "packagePath": "material/toolbar/toolbar-multirow",
         "title": "Multi-row toolbar",

@@ -209,8 +209,55 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatToolbarHarness
+     */
+    var ToolbarHarnessExample = /** @class */ (function () {
+        function ToolbarHarnessExample() {
+        }
+        return ToolbarHarnessExample;
+    }());
+    ToolbarHarnessExample.ɵfac = function ToolbarHarnessExample_Factory(t) { return new (t || ToolbarHarnessExample)(); };
+    ToolbarHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ToolbarHarnessExample, selectors: [["toolbar-harness-example"]], decls: 14, vars: 0, consts: [["mat-button", ""]], template: function ToolbarHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-toolbar");
+                i0.ɵɵelementStart(1, "span");
+                i0.ɵɵtext(2, "My App");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-toolbar");
+                i0.ɵɵelementStart(4, "mat-toolbar-row");
+                i0.ɵɵelementStart(5, "span");
+                i0.ɵɵtext(6, "Row 1");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(7, "mat-toolbar-row");
+                i0.ɵɵelementStart(8, "span");
+                i0.ɵɵtext(9, "Row 2");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "button", 0);
+                i0.ɵɵtext(11, " Button 1 ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "button", 0);
+                i0.ɵɵtext(13, " Button 2 ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatToolbar, i1.MatToolbarRow, i2.MatButton], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ToolbarHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'toolbar-harness-example',
+                        templateUrl: 'toolbar-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ToolbarBasicExample,
+        ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample,
     ];
@@ -227,10 +274,12 @@
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarBasicExample,
+                ToolbarHarnessExample,
                 ToolbarMultirowExample,
                 ToolbarOverviewExample], imports: [i2.MatButtonModule,
                 i3.MatIconModule,
                 i1.MatToolbarModule], exports: [ToolbarBasicExample,
+                ToolbarHarnessExample,
                 ToolbarMultirowExample,
                 ToolbarOverviewExample] });
     })();
@@ -256,6 +305,7 @@
 
     exports.ToolbarBasicExample = ToolbarBasicExample;
     exports.ToolbarExamplesModule = ToolbarExamplesModule;
+    exports.ToolbarHarnessExample = ToolbarHarnessExample;
     exports.ToolbarMultirowExample = ToolbarMultirowExample;
     exports.ToolbarOverviewExample = ToolbarOverviewExample;
 
