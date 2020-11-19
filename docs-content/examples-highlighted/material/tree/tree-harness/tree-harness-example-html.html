@@ -1,0 +1,18 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">"treeControl"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- This is the tree node template for leaf nodes --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">"let node"</span> <span class="hljs-attr">matTreeNodePadding</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- use a disabled button to provide padding for tree leaf --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    {{node.name}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">"let node;when: hasChild"</span> <span class="hljs-attr">matTreeNodePadding</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matTreeNodeToggle</span>
+            [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'Toggle ' + node.name"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-icon-rtl-mirror"</span>&gt;</span>
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    {{node.name}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree</span>&gt;</span>

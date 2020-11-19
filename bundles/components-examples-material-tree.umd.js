@@ -941,6 +941,107 @@
             }], function () { return []; }, null);
     })();
 
+    function TreeHarnessExample_mat_tree_node_1_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelement(1, "button", 4);
+            i0.ɵɵtext(2);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r2 = ctx.$implicit;
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
+        }
+    }
+    function TreeHarnessExample_mat_tree_node_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-tree-node", 3);
+            i0.ɵɵelementStart(1, "button", 5);
+            i0.ɵɵelementStart(2, "mat-icon", 6);
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵtext(4);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var node_r3 = ctx.$implicit;
+            var ctx_r1 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(1);
+            i0.ɵɵattribute("aria-label", "Toggle " + node_r3.name);
+            i0.ɵɵadvance(2);
+            i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", node_r3.name, " ");
+        }
+    }
+    var FLAT_TREE_DATA = [
+        {
+            name: 'Flat Group 1',
+            children: [
+                { name: 'Flat Leaf 1.1' },
+                { name: 'Flat Leaf 1.2' },
+                { name: 'Flat Leaf 1.3' },
+            ]
+        }, {
+            name: 'Flat Group 2',
+            children: [
+                {
+                    name: 'Flat Group 2.1',
+                    children: [
+                        { name: 'Flat Leaf 2.1.1' },
+                        { name: 'Flat Leaf 2.1.2' },
+                        { name: 'Flat Leaf 2.1.3' },
+                    ]
+                }
+            ]
+        },
+    ];
+    /**
+     * @title Testing with MatTreeHarness
+     */
+    var TreeHarnessExample = /** @class */ (function () {
+        function TreeHarnessExample() {
+            this._transformer = function (node, level) {
+                return {
+                    expandable: !!node.children && node.children.length > 0,
+                    name: node.name,
+                    level: level,
+                };
+            };
+            this.treeControl = new tree.FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
+            this.treeFlattener = new i1.MatTreeFlattener(this._transformer, function (node) { return node.level; }, function (node) { return node.expandable; }, function (node) { return node.children; });
+            this.dataSource = new i1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+            this.hasChild = function (_, node) { return node.expandable; };
+            this.dataSource.data = FLAT_TREE_DATA;
+        }
+        return TreeHarnessExample;
+    }());
+    TreeHarnessExample.ɵfac = function TreeHarnessExample_Factory(t) { return new (t || TreeHarnessExample)(); };
+    TreeHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeHarnessExample, selectors: [["tree-harness-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-tree", 0);
+                i0.ɵɵtemplate(1, TreeHarnessExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+                i0.ɵɵtemplate(2, TreeHarnessExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+            }
+        }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TreeHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tree-harness-example',
+                        templateUrl: 'tree-harness-example.html',
+                    }]
+            }], function () { return []; }, null);
+    })();
+
     /**
      * @license
      * Copyright Google LLC All Rights Reserved.
@@ -1273,6 +1374,7 @@
         TreeChecklistExample,
         TreeDynamicExample,
         TreeFlatOverviewExample,
+        TreeHarnessExample,
         TreeLoadmoreExample,
         TreeNestedOverviewExample,
     ];
@@ -1295,6 +1397,7 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
                 TreeDynamicExample,
                 TreeFlatOverviewExample,
+                TreeHarnessExample,
                 TreeLoadmoreExample,
                 TreeNestedOverviewExample], imports: [i4.CommonModule,
                 i2.MatButtonModule,
@@ -1305,6 +1408,7 @@
                 i1.MatTreeModule], exports: [TreeChecklistExample,
                 TreeDynamicExample,
                 TreeFlatOverviewExample,
+                TreeHarnessExample,
                 TreeLoadmoreExample,
                 TreeNestedOverviewExample] });
     })();
@@ -1336,6 +1440,7 @@
     exports.TreeDynamicExample = TreeDynamicExample;
     exports.TreeExamplesModule = TreeExamplesModule;
     exports.TreeFlatOverviewExample = TreeFlatOverviewExample;
+    exports.TreeHarnessExample = TreeHarnessExample;
     exports.TreeLoadmoreExample = TreeLoadmoreExample;
     exports.TreeNestedOverviewExample = TreeNestedOverviewExample;
 

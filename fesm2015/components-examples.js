@@ -4318,6 +4318,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tree"
         }
     },
+    "tree-harness": {
+        "packagePath": "material/tree/tree-harness",
+        "title": "Testing with MatTreeHarness",
+        "componentName": "TreeHarnessExample",
+        "files": [
+            "tree-harness-example.ts",
+            "tree-harness-example.html",
+            "tree-harness-example.spec.ts"
+        ],
+        "selector": "tree-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-harness-example.ts",
+        "module": {
+            "name": "TreeExamplesModule",
+            "importSpecifier": "material/tree"
+        }
+    },
     "tree-loadmore": {
         "packagePath": "material/tree/tree-loadmore",
         "title": "Tree with partially loaded data",
