@@ -1,0 +1,62 @@
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core/testing'</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
+<span class="hljs-keyword">import</span> {MatTooltipHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tooltip/testing'</span>;
+<span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
+  <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
+<span class="hljs-keyword">import</span> {MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tooltip'</span>;
+<span class="hljs-keyword">import</span> {TooltipHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-harness-example'</span>;
+<span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
+
+describe(<span class="hljs-string">'TooltipHarnessExample'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;TooltipHarnessExample&gt;;
+  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+  beforeAll(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+  });
+
+  beforeEach(
+    waitForAsync(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      TestBed.configureTestingModule({
+        imports: [MatTooltipModule, NoopAnimationsModule],
+        declarations: [TooltipHarnessExample]
+      }).compileComponents();
+      fixture = TestBed.createComponent(TooltipHarnessExample);
+      fixture.detectChanges();
+      loader = TestbedHarnessEnvironment.loader(fixture);
+    })
+  );
+
+  it(<span class="hljs-string">'should load all tooltip harnesses'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> tooltips = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatTooltipHarness);
+    expect(tooltips.length).toBe(<span class="hljs-number">2</span>);
+  });
+
+  it(<span class="hljs-string">'should be able to show a tooltip'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> tooltip = <span class="hljs-keyword">await</span> loader.getHarness(MatTooltipHarness.with({selector: <span class="hljs-string">'#one'</span>}));
+    expect(<span class="hljs-keyword">await</span> tooltip.isOpen()).toBe(<span class="hljs-literal">false</span>);
+    <span class="hljs-keyword">await</span> tooltip.show();
+    expect(<span class="hljs-keyword">await</span> tooltip.isOpen()).toBe(<span class="hljs-literal">true</span>);
+  });
+
+  it(<span class="hljs-string">'should be able to hide a tooltip'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> tooltip = <span class="hljs-keyword">await</span> loader.getHarness(MatTooltipHarness.with({selector: <span class="hljs-string">'#one'</span>}));
+    expect(<span class="hljs-keyword">await</span> tooltip.isOpen()).toBe(<span class="hljs-literal">false</span>);
+    <span class="hljs-keyword">await</span> tooltip.show();
+    expect(<span class="hljs-keyword">await</span> tooltip.isOpen()).toBe(<span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">await</span> tooltip.hide();
+    expect(<span class="hljs-keyword">await</span> tooltip.isOpen()).toBe(<span class="hljs-literal">false</span>);
+  });
+
+  it(<span class="hljs-string">'should be able to get the text of a tooltip'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> tooltip = <span class="hljs-keyword">await</span> loader.getHarness(MatTooltipHarness.with({selector: <span class="hljs-string">'#one'</span>}));
+    <span class="hljs-keyword">await</span> tooltip.show();
+    expect(<span class="hljs-keyword">await</span> tooltip.getTooltipText()).toBe(<span class="hljs-string">'Tooltip message'</span>);
+  });
+
+  it(<span class="hljs-string">'should return empty when getting the tooltip text while closed'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> tooltip = <span class="hljs-keyword">await</span> loader.getHarness(MatTooltipHarness.with({selector: <span class="hljs-string">'#one'</span>}));
+    expect(<span class="hljs-keyword">await</span> tooltip.getTooltipText()).toBe(<span class="hljs-string">''</span>);
+  });
+});

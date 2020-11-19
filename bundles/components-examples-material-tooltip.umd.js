@@ -391,11 +391,45 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatTooltipHarness
+     */
+    var TooltipHarnessExample = /** @class */ (function () {
+        function TooltipHarnessExample() {
+            this.message = 'Tooltip message';
+        }
+        return TooltipHarnessExample;
+    }());
+    TooltipHarnessExample.ɵfac = function TooltipHarnessExample_Factory(t) { return new (t || TooltipHarnessExample)(); };
+    TooltipHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipHarnessExample, selectors: [["tooltip-harness-example"]], decls: 4, vars: 1, consts: [["id", "one", 3, "matTooltip"], ["matTooltip", "Static message", "id", "two"]], template: function TooltipHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "button", 0);
+                i0.ɵɵtext(1, "Trigger 1");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "button", 1);
+                i0.ɵɵtext(3, "Trigger 2");
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("matTooltip", ctx.message);
+            }
+        }, directives: [i2$2.MatTooltip], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TooltipHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tooltip-harness-example',
+                        templateUrl: 'tooltip-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         TooltipAutoHideExample,
         TooltipCustomClassExample,
         TooltipDelayExample,
         TooltipDisabledExample,
+        TooltipHarnessExample,
         TooltipManualExample,
         TooltipMessageExample,
         TooltipModifiedDefaultsExample,
@@ -423,6 +457,7 @@
                 TooltipCustomClassExample,
                 TooltipDelayExample,
                 TooltipDisabledExample,
+                TooltipHarnessExample,
                 TooltipManualExample,
                 TooltipMessageExample,
                 TooltipModifiedDefaultsExample,
@@ -438,6 +473,7 @@
                 TooltipCustomClassExample,
                 TooltipDelayExample,
                 TooltipDisabledExample,
+                TooltipHarnessExample,
                 TooltipManualExample,
                 TooltipMessageExample,
                 TooltipModifiedDefaultsExample,
@@ -474,6 +510,7 @@
     exports.TooltipDelayExample = TooltipDelayExample;
     exports.TooltipDisabledExample = TooltipDisabledExample;
     exports.TooltipExamplesModule = TooltipExamplesModule;
+    exports.TooltipHarnessExample = TooltipHarnessExample;
     exports.TooltipManualExample = TooltipManualExample;
     exports.TooltipMessageExample = TooltipMessageExample;
     exports.TooltipModifiedDefaultsExample = TooltipModifiedDefaultsExample;
