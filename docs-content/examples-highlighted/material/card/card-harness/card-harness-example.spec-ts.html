@@ -2,9 +2,11 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
 <span class="hljs-keyword">import</span> {MatButtonHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button/testing'</span>;
 <span class="hljs-keyword">import</span> {MatCardHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/card/testing'</span>;
-<span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
-<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
+<span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
 <span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/card'</span>;
 <span class="hljs-keyword">import</span> {CardHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./card-harness-example'</span>;
 
@@ -36,7 +38,7 @@ describe(<span class="hljs-string">'CardHarnessExample'</span>, <span class="hlj
 
   it(<span class="hljs-string">'should get subtitle text'</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> cards = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatCardHarness);
-    expect(<span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(cards.map(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> c.getSubtitleText()))).toEqual([
+    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> cards.map(<span class="hljs-function"><span class="hljs-params">card</span> =&gt;</span> card.getSubtitleText()))).toEqual([
       <span class="hljs-string">''</span>,
       <span class="hljs-string">'Dog Breed'</span>
     ]);
