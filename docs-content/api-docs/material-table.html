@@ -1667,13 +1667,6 @@ set, the header text will default to the column name with its first letter capit
   <span header-link="MatTableDataSource"></span>
   <code>MatTableDataSource</code>
   
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="" class="docs-api-class-extends-type">
-      DataSource
-    </a>
-  </span>
-  
 </h4><p class="docs-api-class-description"><p>Data source that accepts a client-side data array and includes native support of filtering,
 sorting (using MatSort), and pagination (using MatPaginator).</p>
 <p>Allows for sort customization by overriding sortingDataAccessor, which defines how data
@@ -1754,7 +1747,7 @@ shown to the user rather than all the data.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>paginator: MatPaginator | null</code>
+      <code>paginator: P | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Instance of the MatPaginator component used by the table to control what page of the data is
