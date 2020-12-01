@@ -1,14 +1,14 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Configurable slider
+ * <span class="hljs-doctag">@title </span>Configurable slider
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'slider-configurable-example'</span>,
-  templateUrl: <span class="hljs-string">'slider-configurable-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'slider-configurable-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;slider-configurable-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;slider-configurable-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;slider-configurable-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SliderConfigurableExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SliderConfigurableExample</span> </span>{
   autoTicks = <span class="hljs-literal">false</span>;
   disabled = <span class="hljs-literal">false</span>;
   invert = <span class="hljs-literal">false</span>;
@@ -21,9 +21,9 @@
   vertical = <span class="hljs-literal">false</span>;
   tickInterval = <span class="hljs-number">1</span>;
 
-  getSliderTickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">'auto'</span> {
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.showTicks) {
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.autoTicks ? <span class="hljs-string">'auto'</span> : <span class="hljs-keyword">this</span>.tickInterval;
+  getSliderTickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">&#x27;auto&#x27;</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.showTicks) {
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.autoTicks ? <span class="hljs-string">&#x27;auto&#x27;</span> : <span class="hljs-built_in">this</span>.tickInterval;
     }
 
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;

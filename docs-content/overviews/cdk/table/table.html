@@ -24,9 +24,9 @@ A column definition is specified via an <code>&lt;ng-container&gt;</code> with t
 the column a name. Each column definition can contain a header-cell template
 (<code>cdkHeaderCellDef</code>), data-cell template (<code>cdkCellDef</code>), and footer-cell 
 template (<code>cdkFooterCellDef</code>).</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"username"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.a}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.a}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-footer-cell</span> *<span class="hljs-attr">cdkFooterCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span></code></pre>
 <p>The set of columns defined represent the columns that are <em>available</em> to be rendered. The specific
@@ -38,53 +38,53 @@ last).</p>
 and footer-row (<code>cdkFooterRowDef</code>). Note that each of these are optional to include, depending on
 what type of rows you want rendered (e.g. if you do not need a footer row, simply do not add
 its definition).</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: ['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-footer-row</span> *<span class="hljs-attr">cdkFooterRowDef</span>=<span class="hljs-string">"['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-footer-row</span> *<span class="hljs-attr">cdkFooterRowDef</span>=<span class="hljs-string">&quot;[&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
 <p>These row templates accept the specific columns to be rendered via the name given to the
 <code>cdkColumnDef</code>.</p>
 <p>The <code>cdkRowDef</code> also exports row context, which can be used for event and property
 bindings on the row element. Any content placed <em>inside</em> of the header row or data row template
 will be ignored, as the rendered content of the row comes from the cell templates described
 above.</p>
-<h5>Example: table with three columns</h5><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+<h5>Example: table with three columns</h5><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"username"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.username}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.username}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Age Definition --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"age"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;age&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Age <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.age}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.age}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Title Definition --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"title"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Title <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.title}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.title}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Header and Row Declarations --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: ['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></code></pre>
 <p>The columns given on the row determine which cells are rendered and in which order. Thus, the
 columns can be set via binding to support dynamically changing the columns shown at run-time.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: myDisplayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: myDisplayedColumns&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
 <p>It is not required to display all the columns that are defined within the template,
 nor use the same ordering. For example, to display the table with only <code>age</code>
 and <code>username</code> and in that order, then the row and header definitions would be written as:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: ['age', 'username']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
 <p>Event and property bindings can be added directly to the row element.</p>
-<h5>Example: table with event and class binding</h5><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"['age', 'username']"</span>
-    (<span class="hljs-attr">click</span>)=<span class="hljs-string">"handleHeaderRowClick(row)"</span>&gt;</span>
+<h5>Example: table with event and class binding</h5><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>
+    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;handleHeaderRowClick(row)&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: ['age', 'username']"</span>
-    [<span class="hljs-attr">class.can-vote</span>]=<span class="hljs-string">"row.age &gt;= 18"</span>
-    (<span class="hljs-attr">click</span>)=<span class="hljs-string">"handleRowClick(row)"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>
+    [<span class="hljs-attr">class.can-vote</span>]=<span class="hljs-string">&quot;row.age &gt;= 18&quot;</span>
+    (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;handleRowClick(row)&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
 <h5>Styling columns</h5><p>Each header and row cell will be provided a CSS class that includes its column. For example,
 cells that are displayed in the column <code>name</code> will be given the class <code>cdk-column-name</code>. This allows
@@ -108,7 +108,7 @@ sorting and pagination.</p>
 <h5><code>trackBy</code></h5><p>To improve performance, a <code>trackBy</code> function can be provided to the table similar to Angular’s
 <a href="https://angular.io/api/common/NgForOf#change-propagation"><code>ngFor</code> <code>trackBy</code></a>. This informs the
 table how to uniquely identify rows to track how the data changes with each update.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">"myTrackById"</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;myTrackById&quot;</span>&gt;</span></code></pre>
 
         <h3 id="alternate-html-to-using-native-table" class="docs-header-link">
           <span header-link="alternate-html-to-using-native-table"></span>
@@ -120,28 +120,28 @@ not use the native table element tags.</p>
 <p>This alternative approach replaces the native table element tags with the CDK table directive
 selectors. For example, <code>&lt;table cdk-table&gt;</code> becomes <code>&lt;cdk-table&gt;</code>; <code>&lt;tr cdk-row</code>&gt; becomes 
 <code>&lt;cdk-row&gt;</code>. The following shows a previous example using this alternative template:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"username"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.username}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.username}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Age Definition --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"age"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;age&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Age <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.age}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.age}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Title Definition --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"title"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Title <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.title}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.title}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Header and Row Declarations --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-row</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: ['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-row</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-table</span>&gt;</span></code></pre>
 <p>For an example of how to render the structure as a table, see the
 <a href="https://material.angular.io/components/table">documentation for <code>&lt;mat-table&gt;</code></a> which includes

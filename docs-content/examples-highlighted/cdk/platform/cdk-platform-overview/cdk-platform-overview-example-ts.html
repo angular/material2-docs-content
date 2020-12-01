@@ -1,22 +1,22 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   getSupportedInputTypes,
   Platform,
   supportsPassiveEventListeners,
   supportsScrollBehavior,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/platform'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/platform&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Platform overview
+ * <span class="hljs-doctag">@title </span>Platform overview
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'cdk-platform-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'cdk-platform-overview-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-platform-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-platform-overview-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkPlatformOverviewExample {
-  supportedInputTypes = <span class="hljs-built_in">Array</span>.from(getSupportedInputTypes()).join(<span class="hljs-string">', '</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPlatformOverviewExample</span> </span>{
+  supportedInputTypes = <span class="hljs-built_in">Array</span>.from(getSupportedInputTypes()).join(<span class="hljs-string">&#x27;, &#x27;</span>);
   supportsPassiveEventListeners = supportsPassiveEventListeners();
   supportsScrollBehavior = supportsScrollBehavior();
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> platform: Platform</span>) {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> platform: Platform</span>)</span> {}
 }

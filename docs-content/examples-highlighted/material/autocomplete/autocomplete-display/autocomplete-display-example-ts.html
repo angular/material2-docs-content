@@ -1,45 +1,45 @@
-<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> User {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * @title Display value autocomplete
+ * <span class="hljs-doctag">@title </span>Display value autocomplete
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'autocomplete-display-example'</span>,
-  templateUrl: <span class="hljs-string">'autocomplete-display-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'autocomplete-display-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;autocomplete-display-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;autocomplete-display-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;autocomplete-display-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteDisplayExample <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteDisplayExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
   myControl = <span class="hljs-keyword">new</span> FormControl();
   options: User[] = [
-    {name: <span class="hljs-string">'Mary'</span>},
-    {name: <span class="hljs-string">'Shelley'</span>},
-    {name: <span class="hljs-string">'Igor'</span>}
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Mary&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Shelley&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Igor&#x27;</span>}
   ];
   filteredOptions: Observable&lt;User[]&gt;;
 
-  ngOnInit() {
-    <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
+  <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.filteredOptions = <span class="hljs-built_in">this</span>.myControl.valueChanges
       .pipe(
-        startWith(<span class="hljs-string">''</span>),
-        map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">'string'</span> ? value : value.name),
-        map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> name ? <span class="hljs-keyword">this</span>._filter(name) : <span class="hljs-keyword">this</span>.options.slice())
+        startWith(<span class="hljs-string">&#x27;&#x27;</span>),
+        map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&#x27;string&#x27;</span> ? value : value.name),
+        map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> name ? <span class="hljs-built_in">this</span>._filter(name) : <span class="hljs-built_in">this</span>.options.slice())
       );
   }
 
   displayFn(user: User): <span class="hljs-built_in">string</span> {
-    <span class="hljs-keyword">return</span> user &amp;&amp; user.name ? user.name : <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">return</span> user &amp;&amp; user.name ? user.name : <span class="hljs-string">&#x27;&#x27;</span>;
   }
 
   <span class="hljs-keyword">private</span> _filter(name: <span class="hljs-built_in">string</span>): User[] {
     <span class="hljs-keyword">const</span> filterValue = name.toLowerCase();
 
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span> option.name.toLowerCase().indexOf(filterValue) === <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span> option.name.toLowerCase().indexOf(filterValue) === <span class="hljs-number">0</span>);
   }
 }

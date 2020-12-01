@@ -1,30 +1,30 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatBottomSheet, MatBottomSheetRef} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/bottom-sheet'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatBottomSheet, MatBottomSheetRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Bottom Sheet Overview
+ * <span class="hljs-doctag">@title </span>Bottom Sheet Overview
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'bottom-sheet-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'bottom-sheet-overview-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomSheetOverviewExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _bottomSheet: MatBottomSheet</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomSheetOverviewExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _bottomSheet: MatBottomSheet</span>)</span> {}
 
   openBottomSheet(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>._bottomSheet.open(BottomSheetOverviewExampleSheet);
+    <span class="hljs-built_in">this</span>._bottomSheet.open(BottomSheetOverviewExampleSheet);
   }
 }
 
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'bottom-sheet-overview-example-sheet'</span>,
-  templateUrl: <span class="hljs-string">'bottom-sheet-overview-example-sheet.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example-sheet&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example-sheet.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomSheetOverviewExampleSheet {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomSheetOverviewExampleSheet</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;</span>)</span> {}
 
   openLink(event: MouseEvent): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>._bottomSheetRef.dismiss();
+    <span class="hljs-built_in">this</span>._bottomSheetRef.dismiss();
     event.preventDefault();
   }
 }

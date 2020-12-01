@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {FocusMonitor, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
+<span class="hljs-keyword">import</span> {FocusMonitor, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   AfterViewInit,
   ChangeDetectorRef,
@@ -7,36 +7,36 @@
   NgZone,
   OnDestroy,
   ViewChild
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
-<span class="hljs-comment">/** @title Focusing with a specific FocusOrigin */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Focusing with a specific FocusOrigin */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'focus-monitor-focus-via-example'</span>,
-  templateUrl: <span class="hljs-string">'focus-monitor-focus-via-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'focus-monitor-focus-via-example.css'</span>]
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-focus-via-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-focus-via-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-focus-via-example.css&#x27;</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorFocusViaExample <span class="hljs-keyword">implements</span> OnDestroy, AfterViewInit {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'monitored'</span>) monitoredEl: ElementRef&lt;HTMLElement&gt;;
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorFocusViaExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span>, <span class="hljs-title">AfterViewInit</span> </span>{
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;monitored&#x27;</span>) monitoredEl: ElementRef&lt;HTMLElement&gt;;
 
-  origin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+  origin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> focusMonitor: FocusMonitor,
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> focusMonitor: FocusMonitor,
               <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef,
-              <span class="hljs-keyword">private</span> _ngZone: NgZone</span>) {}
+              <span class="hljs-keyword">private</span> _ngZone: NgZone</span>)</span> {}
 
-  ngAfterViewInit() {
-    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.monitoredEl)
-        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>._ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-          <span class="hljs-keyword">this</span>.origin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
-          <span class="hljs-keyword">this</span>._cdr.markForCheck();
+  <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.focusMonitor.monitor(<span class="hljs-built_in">this</span>.monitoredEl)
+        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> {
+          <span class="hljs-built_in">this</span>.origin = <span class="hljs-built_in">this</span>.formatOrigin(origin);
+          <span class="hljs-built_in">this</span>._cdr.markForCheck();
         }));
   }
 
-  ngOnDestroy() {
-    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.monitoredEl);
+  <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.focusMonitor.stopMonitoring(<span class="hljs-built_in">this</span>.monitoredEl);
   }
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
-    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">' focused'</span> : <span class="hljs-string">'blurred'</span>;
+    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">&#x27; focused&#x27;</span> : <span class="hljs-string">&#x27;blurred&#x27;</span>;
   }
 }

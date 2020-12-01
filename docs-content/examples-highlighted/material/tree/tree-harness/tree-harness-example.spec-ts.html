@@ -1,26 +1,26 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core/testing'</span>;
-<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
-<span class="hljs-keyword">import</span> {MatTreeHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree/testing'</span>;
-<span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTreeHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
-<span class="hljs-keyword">import</span> {MatTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
-<span class="hljs-keyword">import</span> {TreeHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-harness-example'</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {TreeHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tree-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 
-describe(<span class="hljs-string">'TreeHarnessExample'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+describe(<span class="hljs-string">&#x27;TreeHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;TreeHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
-  beforeAll(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
   beforeEach(
-    waitForAsync(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    waitForAsync(<span class="hljs-function">() =&gt;</span> {
       TestBed.configureTestingModule({
-        imports: [MatTreeModule, MatIconModule],
-        declarations: [TreeHarnessExample]
+        <span class="hljs-attr">imports</span>: [MatTreeModule, MatIconModule],
+        <span class="hljs-attr">declarations</span>: [TreeHarnessExample]
       }).compileComponents();
       fixture = TestBed.createComponent(TreeHarnessExample);
       fixture.detectChanges();
@@ -28,7 +28,7 @@ describe(<span class="hljs-string">'TreeHarnessExample'</span>, <span class="hlj
     })
   );
 
-  it(<span class="hljs-string">'should get correct number of children and descendants'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  it(<span class="hljs-string">&#x27;should get correct number of children and descendants&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> tree = <span class="hljs-keyword">await</span> loader.getHarness(MatTreeHarness);
     <span class="hljs-keyword">const</span> treeDescendants = <span class="hljs-keyword">await</span> tree.getNodes();
 
@@ -40,42 +40,42 @@ describe(<span class="hljs-string">'TreeHarnessExample'</span>, <span class="hlj
     expect((<span class="hljs-keyword">await</span> tree.getNodes()).length).toBe(<span class="hljs-number">5</span>);
   });
 
-  it(<span class="hljs-string">'should correctly get correct node with text'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  it(<span class="hljs-string">&#x27;should correctly get correct node with text&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> tree = <span class="hljs-keyword">await</span> loader.getHarness(MatTreeHarness);
-    <span class="hljs-keyword">const</span> treeNodes = <span class="hljs-keyword">await</span> tree.getNodes({text: <span class="hljs-regexp">/Flat Group/</span>});
+    <span class="hljs-keyword">const</span> treeNodes = <span class="hljs-keyword">await</span> tree.getNodes({<span class="hljs-attr">text</span>: <span class="hljs-regexp">/Flat Group/</span>});
     expect(treeNodes.length).toBe(<span class="hljs-number">2</span>);
     <span class="hljs-keyword">const</span> secondGroup = treeNodes[<span class="hljs-number">0</span>];
 
-    expect(<span class="hljs-keyword">await</span> secondGroup.getText()).toBe(<span class="hljs-string">'Flat Group 1'</span>);
+    expect(<span class="hljs-keyword">await</span> secondGroup.getText()).toBe(<span class="hljs-string">&#x27;Flat Group 1&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> secondGroup.getLevel()).toBe(<span class="hljs-number">1</span>);
     expect(<span class="hljs-keyword">await</span> secondGroup.isDisabled()).toBe(<span class="hljs-literal">false</span>);
     expect(<span class="hljs-keyword">await</span> secondGroup.isExpanded()).toBe(<span class="hljs-literal">false</span>);
   });
 
-  it (<span class="hljs-string">'should correctly get tree structure'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  it (<span class="hljs-string">&#x27;should correctly get tree structure&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> tree = <span class="hljs-keyword">await</span> loader.getHarness(MatTreeHarness);
 
     expect(<span class="hljs-keyword">await</span> tree.getTreeStructure()).toEqual({
-      children: [
-        {text: <span class="hljs-string">'Flat Group 1'</span>},
-        {text: <span class="hljs-string">'Flat Group 2'</span>}
+      <span class="hljs-attr">children</span>: [
+        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 1&#x27;</span>},
+        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 2&#x27;</span>}
       ]
     });
 
-    <span class="hljs-keyword">const</span> firstGroup = (<span class="hljs-keyword">await</span> tree.getNodes({text: <span class="hljs-regexp">/Flat Group 1/</span>}))[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">const</span> firstGroup = (<span class="hljs-keyword">await</span> tree.getNodes({<span class="hljs-attr">text</span>: <span class="hljs-regexp">/Flat Group 1/</span>}))[<span class="hljs-number">0</span>];
     <span class="hljs-keyword">await</span> firstGroup.expand();
 
     expect(<span class="hljs-keyword">await</span> tree.getTreeStructure()).toEqual({
-      children: [
+      <span class="hljs-attr">children</span>: [
         {
-          text: <span class="hljs-string">'Flat Group 1'</span>,
-          children: [
-            {text: <span class="hljs-string">'Flat Leaf 1.1'</span>},
-            {text: <span class="hljs-string">'Flat Leaf 1.2'</span>},
-            {text: <span class="hljs-string">'Flat Leaf 1.3'</span>}
+          <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 1&#x27;</span>,
+          <span class="hljs-attr">children</span>: [
+            {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.1&#x27;</span>},
+            {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.2&#x27;</span>},
+            {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.3&#x27;</span>}
           ]
         },
-        {text: <span class="hljs-string">'Flat Group 2'</span>}
+        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 2&#x27;</span>}
       ]
     });
   });

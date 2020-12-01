@@ -14,9 +14,9 @@ be defined with Sass.</p>
 outputs the color-specific styles for the component. A color configuration is a Sass map.</p>
 <p>For example, if building a custom carousel component:</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Import library functions for theme creation.</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 
-@<span class="hljs-keyword">mixin</span> candy-carousel-color(<span class="hljs-variable">$config-or-theme</span>) {
+<span class="hljs-keyword">@mixin</span> candy-carousel-color(<span class="hljs-variable">$config-or-theme</span>) {
   <span class="hljs-comment">// Extract the color configuration in case a theme has been passed.</span>
   <span class="hljs-comment">// This allows consumers to either pass a theme object or a color configuration.</span>
   <span class="hljs-variable">$config</span>: mat-get-color-config(<span class="hljs-variable">$config-or-theme</span>);
@@ -33,7 +33,7 @@ outputs the color-specific styles for the component. A color configuration is a 
 }</code></pre>
 <p>Second, create another Sass mixin that accepts an Angular Material typography configuration
 and outputs typographic styles. For example:</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">mixin</span> candy-carousel-typography(<span class="hljs-variable">$config-or-theme</span>) {
+<pre><code class="language-scss"><span class="hljs-keyword">@mixin</span> candy-carousel-typography(<span class="hljs-variable">$config-or-theme</span>) {
   <span class="hljs-comment">// Extract the typography configuration in case a theme has been passed.</span>
   <span class="hljs-variable">$config</span>: mat-get-typography-config(<span class="hljs-variable">$config-or-theme</span>);
 
@@ -48,18 +48,18 @@ and outputs typographic styles. For example:</p>
 <p>Finally, create a mixin that accepts an Angular Material theme, and delegates to the individual
 theming system mixins based on the configurations. A theme consists of configurations for
 individual theming systems (<code>color</code> and <code>typography</code>).</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">mixin</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>) {
+<pre><code class="language-scss"><span class="hljs-keyword">@mixin</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-comment">// Extracts the color and typography configurations from the theme.</span>
   <span class="hljs-variable">$color</span>: mat-get-color-config(<span class="hljs-variable">$theme</span>);
   <span class="hljs-variable">$typography</span>: mat-get-typography-config(<span class="hljs-variable">$theme</span>);
 
   <span class="hljs-comment">// Do not generate styles if configurations for individual theming</span>
   <span class="hljs-comment">// systems have been explicitly set to `null`.</span>
-  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$color</span> != null {
-    @<span class="hljs-keyword">include</span> candy-carousel-color(<span class="hljs-variable">$color</span>); 
+  <span class="hljs-keyword">@if</span> <span class="hljs-variable">$color</span> != null {
+    <span class="hljs-keyword">@include</span> candy-carousel-color(<span class="hljs-variable">$color</span>); 
   }
-  @<span class="hljs-keyword">if</span> <span class="hljs-variable">$typography</span> != null {
-    @<span class="hljs-keyword">include</span> candy-carousel-typography(<span class="hljs-variable">$typography</span>);
+  <span class="hljs-keyword">@if</span> <span class="hljs-variable">$typography</span> != null {
+    <span class="hljs-keyword">@include</span> candy-carousel-typography(<span class="hljs-variable">$typography</span>);
   }
 }</code></pre>
 <p>See the <a href="https://material.angular.io/guide/typography">typography guide</a> for more information on
@@ -79,12 +79,12 @@ typographic customization.</p>
       <p>Use the Sass <code>@include</code> keyword to include a component&#39;s theme mixin wherever you&#39;re already
 including Angular Material&#39;s built-in theme mixins. </p>
 <pre><code class="language-scss"><span class="hljs-comment">// Import library functions for theme creation.</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 
 <span class="hljs-comment">// Include non-theme styles for core.</span>
-@<span class="hljs-keyword">include</span> mat-core();
+<span class="hljs-keyword">@include</span> mat-core();
 
-<span class="hljs-comment">// Define your application's custom theme.</span>
+<span class="hljs-comment">// Define your application&#x27;s custom theme.</span>
 <span class="hljs-variable">$primary</span>: mat-palette(<span class="hljs-variable">$mat-indigo</span>);
 <span class="hljs-variable">$accent</span>:  mat-palette(<span class="hljs-variable">$mat-pink</span>, A200, A100, A400);
 <span class="hljs-variable">$theme</span>: mat-light-theme((
@@ -95,10 +95,10 @@ including Angular Material&#39;s built-in theme mixins. </p>
 ));
 
 <span class="hljs-comment">// Include theme styles for Angular Material components.</span>
-@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$theme</span>);
+<span class="hljs-keyword">@include</span> angular-material-theme(<span class="hljs-variable">$theme</span>);
 
 <span class="hljs-comment">// Include theme styles for your custom components.</span>
-@<span class="hljs-keyword">include</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>);</code></pre>
+<span class="hljs-keyword">@include</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>);</code></pre>
 
         <h4 id="note-using-the-mat-color-function-to-extract-colors-from-a-palette" class="docs-header-link">
           <span header-link="note-using-the-mat-color-function-to-extract-colors-from-a-palette"></span>
@@ -108,7 +108,7 @@ including Angular Material&#39;s built-in theme mixins. </p>
 <code>@angular/material/theming</code>. The <code>mat-color</code> Sass function extracts a specific color from a palette.
 For example:</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Import theming functions</span>
-@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 
 <span class="hljs-selector-class">.candy-carousel</span> {
   <span class="hljs-comment">// Get the default hue for a palette.</span>
@@ -118,10 +118,10 @@ For example:</p>
   <span class="hljs-comment">// See https://material.io/archive/guidelines/style/color.html#color-color-palette for hues.</span>
   <span class="hljs-attribute">background-color</span>: mat-color(<span class="hljs-variable">$accent</span>, <span class="hljs-number">300</span>);
 
-  <span class="hljs-comment">// Get a relative color for a hue ('lighter' or 'darker')</span>
+  <span class="hljs-comment">// Get a relative color for a hue (&#x27;lighter&#x27; or &#x27;darker&#x27;)</span>
   <span class="hljs-attribute">outline-color</span>: mat-color(<span class="hljs-variable">$accent</span>, lighter);
 
   <span class="hljs-comment">// Get a contrast color for a hue by adding `-contrast` to any other key.</span>
-  <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$primary</span>, <span class="hljs-string">'100-contrast'</span>);
+  <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$primary</span>, <span class="hljs-string">&#x27;100-contrast&#x27;</span>);
 }</code></pre>
 </div>

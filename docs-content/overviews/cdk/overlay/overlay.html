@@ -8,7 +8,7 @@
 Angular Material, these styles have been included together with the theme, otherwise if you&#39;re
 using the CDK on its own, you&#39;ll have to include the styles yourself. You can do so by importing
 the prebuilt styles in your global stylesheet:</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/cdk/overlay-prebuilt.css'</span>;</code></pre>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/cdk/overlay-prebuilt.css&#x27;</span>;</code></pre>
 
         <h3 id="creating-overlays" class="docs-header-link">
           <span header-link="creating-overlays"></span>
@@ -28,8 +28,8 @@ overlayRef.attach(userProfilePortal);</code></pre>
         </h3>
       <p>When creating an overlay, an optional configuration object can be provided.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> overlayRef = overlay.create({
-  height: <span class="hljs-string">'400px'</span>,
-  width: <span class="hljs-string">'600px'</span>,
+  <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;400px&#x27;</span>,
+  <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;600px&#x27;</span>,
 });</code></pre>
 <p>The full set of configuration options can be found in the API documentation.</p>
 
@@ -99,8 +99,8 @@ displaying of overlay elements in
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen">fullscreen mode</a>.</p>
 <p><code>FullscreenOverlayContainer</code> can be enabled by providing it in your <code>NgModule</code>:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [{provide: OverlayContainer, useClass: FullscreenOverlayContainer}],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: OverlayContainer, <span class="hljs-attr">useClass</span>: FullscreenOverlayContainer}],
   <span class="hljs-comment">// ...</span>
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyModule { }</code></pre>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyModule</span> </span>{ }</code></pre>
 </div>

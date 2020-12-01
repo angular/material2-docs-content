@@ -1,11 +1,11 @@
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatBottomSheetModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/bottom-sheet'</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/list'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatBottomSheetModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   BottomSheetOverviewExample,
   BottomSheetOverviewExampleSheet
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./bottom-sheet-overview/bottom-sheet-overview-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./bottom-sheet-overview/bottom-sheet-overview-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   BottomSheetOverviewExample,
@@ -18,14 +18,14 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     MatBottomSheetModule,
     MatButtonModule,
     MatListModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomSheetExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomSheetExamplesModule</span> </span>{
 }

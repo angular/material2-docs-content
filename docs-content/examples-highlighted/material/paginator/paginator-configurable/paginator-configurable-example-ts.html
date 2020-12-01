@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {PageEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/paginator'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {PageEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Configurable paginator
+ * <span class="hljs-doctag">@title </span>Configurable paginator
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'paginator-configurable-example'</span>,
-  templateUrl: <span class="hljs-string">'paginator-configurable-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'paginator-configurable-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;paginator-configurable-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;paginator-configurable-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;paginator-configurable-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PaginatorConfigurableExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorConfigurableExample</span> </span>{
   <span class="hljs-comment">// MatPaginator Inputs</span>
   length = <span class="hljs-number">100</span>;
   pageSize = <span class="hljs-number">10</span>;
@@ -18,9 +18,9 @@
   <span class="hljs-comment">// MatPaginator Output</span>
   pageEvent: PageEvent;
 
-  setPageSizeOptions(setPageSizeOptionsInput: <span class="hljs-built_in">string</span>) {
+  <span class="hljs-function"><span class="hljs-title">setPageSizeOptions</span>(<span class="hljs-params">setPageSizeOptionsInput: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-keyword">if</span> (setPageSizeOptionsInput) {
-      <span class="hljs-keyword">this</span>.pageSizeOptions = setPageSizeOptionsInput.split(<span class="hljs-string">','</span>).map(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
+      <span class="hljs-built_in">this</span>.pageSizeOptions = setPageSizeOptionsInput.split(<span class="hljs-string">&#x27;,&#x27;</span>).map(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
     }
   }
 }

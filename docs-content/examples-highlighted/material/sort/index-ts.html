@@ -1,7 +1,7 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sort'</span>;
-<span class="hljs-keyword">import</span> {SortOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sort-overview/sort-overview-example'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
+<span class="hljs-keyword">import</span> {SortOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./sort-overview/sort-overview-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {SortOverviewExample};
 
@@ -10,13 +10,13 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CommonModule,
     MatSortModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SortExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SortExamplesModule</span> </span>{
 }

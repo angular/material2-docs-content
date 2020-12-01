@@ -1,18 +1,18 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
-<span class="hljs-keyword">import</span> {ProgressBarMode} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-bar'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ProgressBarMode} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-bar&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Configurable progress-bar
+ * <span class="hljs-doctag">@title </span>Configurable progress-bar
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'progress-bar-configurable-example'</span>,
-  templateUrl: <span class="hljs-string">'progress-bar-configurable-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'progress-bar-configurable-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;progress-bar-configurable-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;progress-bar-configurable-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;progress-bar-configurable-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProgressBarConfigurableExample {
-  color: ThemePalette = <span class="hljs-string">'primary'</span>;
-  mode: ProgressBarMode = <span class="hljs-string">'determinate'</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProgressBarConfigurableExample</span> </span>{
+  <span class="hljs-attr">color</span>: ThemePalette = <span class="hljs-string">&#x27;primary&#x27;</span>;
+  mode: ProgressBarMode = <span class="hljs-string">&#x27;determinate&#x27;</span>;
   value = <span class="hljs-number">50</span>;
   bufferValue = <span class="hljs-number">75</span>;
 }

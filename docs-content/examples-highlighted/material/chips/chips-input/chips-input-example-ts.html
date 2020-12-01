@@ -1,29 +1,29 @@
-<span class="hljs-keyword">import</span> {COMMA, ENTER} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/keycodes'</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/chips'</span>;
+<span class="hljs-keyword">import</span> {COMMA, ENTER} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Fruit {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * @title Chips with input
+ * <span class="hljs-doctag">@title </span>Chips with input
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'chips-input-example'</span>,
-  templateUrl: <span class="hljs-string">'chips-input-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'chips-input-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-input-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-input-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;chips-input-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsInputExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsInputExample</span> </span>{
   visible = <span class="hljs-literal">true</span>;
   selectable = <span class="hljs-literal">true</span>;
   removable = <span class="hljs-literal">true</span>;
   addOnBlur = <span class="hljs-literal">true</span>;
-  readonly separatorKeysCodes: <span class="hljs-built_in">number</span>[] = [ENTER, COMMA];
+  <span class="hljs-keyword">readonly</span> separatorKeysCodes: <span class="hljs-built_in">number</span>[] = [ENTER, COMMA];
   fruits: Fruit[] = [
-    {name: <span class="hljs-string">'Lemon'</span>},
-    {name: <span class="hljs-string">'Lime'</span>},
-    {name: <span class="hljs-string">'Apple'</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lemon&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lime&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>},
   ];
 
   add(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
@@ -31,21 +31,21 @@
     <span class="hljs-keyword">const</span> value = event.value;
 
     <span class="hljs-comment">// Add our fruit</span>
-    <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">''</span>).trim()) {
-      <span class="hljs-keyword">this</span>.fruits.push({name: value.trim()});
+    <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">&#x27;&#x27;</span>).trim()) {
+      <span class="hljs-built_in">this</span>.fruits.push({<span class="hljs-attr">name</span>: value.trim()});
     }
 
     <span class="hljs-comment">// Reset the input value</span>
     <span class="hljs-keyword">if</span> (input) {
-      input.value = <span class="hljs-string">''</span>;
+      input.value = <span class="hljs-string">&#x27;&#x27;</span>;
     }
   }
 
   remove(fruit: Fruit): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">const</span> index = <span class="hljs-keyword">this</span>.fruits.indexOf(fruit);
+    <span class="hljs-keyword">const</span> index = <span class="hljs-built_in">this</span>.fruits.indexOf(fruit);
 
     <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
-      <span class="hljs-keyword">this</span>.fruits.splice(index, <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">this</span>.fruits.splice(index, <span class="hljs-number">1</span>);
     }
   }
 }

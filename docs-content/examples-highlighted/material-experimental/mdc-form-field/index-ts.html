@@ -1,12 +1,12 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/mdc-form-field'</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/mdc-form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MdcFormFieldCustomControlExample,
   MyTelInput
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./mdc-form-field-custom-control/form-field-custom-control-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./mdc-form-field-custom-control/form-field-custom-control-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   MdcFormFieldCustomControlExample,
@@ -18,15 +18,15 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CommonModule,
     MatFormFieldModule,
     MatIconModule,
     ReactiveFormsModule,
   ],
-  declarations: [...EXAMPLES, MyTelInput],
-  exports: [...EXAMPLES, MyTelInput],
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: [...EXAMPLES, MyTelInput],
+  <span class="hljs-attr">exports</span>: [...EXAMPLES, MyTelInput],
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MdcFormFieldExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MdcFormFieldExamplesModule</span> </span>{
 }

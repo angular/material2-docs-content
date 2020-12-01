@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   CdkCustomStepperWithoutFormExample,
   CustomStepper
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-custom-stepper-without-form/cdk-custom-stepper-without-form-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-custom-stepper-without-form/cdk-custom-stepper-without-form-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {
     CdkLinearStepperWithFormExample,
     CustomLinearStepper
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-linear-stepper-with-form/cdk-linear-stepper-with-form-example'</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-linear-stepper-with-form/cdk-linear-stepper-with-form-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   CdkCustomStepperWithoutFormExample,
@@ -26,14 +26,14 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-    imports: [
+    <span class="hljs-attr">imports</span>: [
         CdkStepperModule,
         CommonModule,
         ReactiveFormsModule,
     ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkStepperExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkStepperExamplesModule</span> </span>{
 }

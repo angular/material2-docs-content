@@ -1,29 +1,29 @@
-<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/dialog'</span>;
-<span class="hljs-keyword">import</span> {MatMenuTrigger} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/menu'</span>;
+<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatMenuTrigger} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
 <span class="hljs-comment">/**
- * @title Dialog launched from a menu
+ * <span class="hljs-doctag">@title </span>Dialog launched from a menu
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'dialog-from-menu-example'</span>,
-  templateUrl: <span class="hljs-string">'dialog-from-menu-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-from-menu-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-from-menu-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogFromMenuExample {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'menuTrigger'</span>) menuTrigger: MatMenuTrigger;
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogFromMenuExample</span> </span>{
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;menuTrigger&#x27;</span>) menuTrigger: MatMenuTrigger;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
 
-  openDialog() {
-    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogFromMenuExampleDialog, {restoreFocus: <span class="hljs-literal">false</span>});
+  <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogFromMenuExampleDialog, {<span class="hljs-attr">restoreFocus</span>: <span class="hljs-literal">false</span>});
 
     <span class="hljs-comment">// Manually restore focus to the menu trigger since the element that</span>
-    <span class="hljs-comment">// opens the dialog won't be in the DOM any more when the dialog closes.</span>
-    dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.menuTrigger.focus());
+    <span class="hljs-comment">// opens the dialog won&#x27;t be in the DOM any more when the dialog closes.</span>
+    dialogRef.afterClosed().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.menuTrigger.focus());
   }
 }
 
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'dialog-from-menu-dialog'</span>,
-  templateUrl: <span class="hljs-string">'dialog-from-menu-example-dialog.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-from-menu-dialog&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-from-menu-example-dialog.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogFromMenuExampleDialog {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogFromMenuExampleDialog</span> </span>{}

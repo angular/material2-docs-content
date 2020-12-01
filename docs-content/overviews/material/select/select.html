@@ -142,8 +142,8 @@ should not.)</p>
 applies to all inputs. For convenience, <code>ShowOnDirtyErrorStateMatcher</code> is available in order to
 globally cause input errors to show when the input is dirty and invalid.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [
-    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: ErrorStateMatcher, <span class="hljs-attr">useClass</span>: ShowOnDirtyErrorStateMatcher}
   ]
 })</code></pre>
 
@@ -178,10 +178,10 @@ globally cause input errors to show when the input is dirty and invalid.</p>
       <p>This error is thrown if you attempt to bind the <code>multiple</code> property on <code>&lt;mat-select&gt;</code> to a dynamic
 value. (e.g. <code>[multiple]=&quot;isMultiple&quot;</code> where the value of <code>isMultiple</code> changes over the course of
 the component&#39;s lifetime). If you need to change this dynamically, use <code>ngIf</code> or <code>ngSwitch</code> instead:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isMultiple"</span> <span class="hljs-attr">multiple</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;isMultiple&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"!isMultiple"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!isMultiple&quot;</span>&gt;</span>
   ...
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span></code></pre>
 

@@ -1,27 +1,27 @@
-<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {DateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {DateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MatDateRangeSelectionStrategy,
   DateRange,
   MAT_DATE_RANGE_SELECTION_STRATEGY,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/datepicker'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 
 <span class="hljs-meta">@Injectable</span>()
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FiveDayRangeSelectionStrategy&lt;D&gt; <span class="hljs-keyword">implements</span> MatDateRangeSelectionStrategy&lt;D&gt; {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _dateAdapter: DateAdapter&lt;D&gt;</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FiveDayRangeSelectionStrategy</span>&lt;<span class="hljs-title">D</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">MatDateRangeSelectionStrategy</span>&lt;<span class="hljs-title">D</span>&gt; </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _dateAdapter: DateAdapter&lt;D&gt;</span>)</span> {}
 
   selectionFinished(date: D | <span class="hljs-literal">null</span>): DateRange&lt;D&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._createFiveDayRange(date);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._createFiveDayRange(date);
   }
 
   createPreview(activeDate: D | <span class="hljs-literal">null</span>): DateRange&lt;D&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._createFiveDayRange(activeDate);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._createFiveDayRange(activeDate);
   }
 
   <span class="hljs-keyword">private</span> _createFiveDayRange(date: D | <span class="hljs-literal">null</span>): DateRange&lt;D&gt; {
     <span class="hljs-keyword">if</span> (date) {
-      <span class="hljs-keyword">const</span> start = <span class="hljs-keyword">this</span>._dateAdapter.addCalendarDays(date, <span class="hljs-number">-2</span>);
-      <span class="hljs-keyword">const</span> end = <span class="hljs-keyword">this</span>._dateAdapter.addCalendarDays(date, <span class="hljs-number">2</span>);
+      <span class="hljs-keyword">const</span> start = <span class="hljs-built_in">this</span>._dateAdapter.addCalendarDays(date, -<span class="hljs-number">2</span>);
+      <span class="hljs-keyword">const</span> end = <span class="hljs-built_in">this</span>._dateAdapter.addCalendarDays(date, <span class="hljs-number">2</span>);
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> DateRange&lt;D&gt;(start, end);
     }
 
@@ -29,13 +29,13 @@
   }
 }
 
-<span class="hljs-comment">/** @title Date range picker with custom a selection strategy */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Date range picker with custom a selection strategy */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'date-range-picker-selection-strategy-example'</span>,
-  templateUrl: <span class="hljs-string">'date-range-picker-selection-strategy-example.html'</span>,
-  providers: [{
-    provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
-    useClass: FiveDayRangeSelectionStrategy
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;date-range-picker-selection-strategy-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;date-range-picker-selection-strategy-example.html&#x27;</span>,
+  <span class="hljs-attr">providers</span>: [{
+    <span class="hljs-attr">provide</span>: MAT_DATE_RANGE_SELECTION_STRATEGY,
+    <span class="hljs-attr">useClass</span>: FiveDayRangeSelectionStrategy
   }]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DateRangePickerSelectionStrategyExample {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRangePickerSelectionStrategyExample</span> </span>{}

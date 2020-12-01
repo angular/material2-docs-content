@@ -89,10 +89,10 @@ available levels are:</p>
         </h3>
       <p>To get started, you first include the <code>Roboto</code> font with the 300, 400 and 500 weights.
 You can host it yourself or include it from <a href="https://fonts.google.com/">Google Fonts</a>:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;display=swap&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code></pre>
 <p>Now you can add the appropriate CSS classes to the elements that you want to style:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-display-1"</span>&gt;</span>Jackdaws love my big sphinx of quartz.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-h2"</span>&gt;</span>The quick brown fox jumps over the lazy dog.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-display-1&quot;</span>&gt;</span>Jackdaws love my big sphinx of quartz.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-h2&quot;</span>&gt;</span>The quick brown fox jumps over the lazy dog.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre>
 <p>By default, Angular Material doesn&#39;t apply any global CSS. To apply the library&#39;s typographic styles
 more broadly, you can take advantage of the <code>mat-typography</code> CSS class. This class will style all
 descendant native elements.</p>
@@ -100,7 +100,7 @@ descendant native elements.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This header is unstyled<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- Applying the mat-tyography class adds styles for native elements. --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-typography"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-typography&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This header will be styled<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
 
@@ -110,12 +110,12 @@ descendant native elements.</p>
         </h3>
       <p>Typography customization is an extension of Angular Material&#39;s Sass-based theming. Similar to
 creating a custom theme, you can create a custom <strong>typography configuration</strong>.</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 
 <span class="hljs-comment">// Define a custom typography config that overrides the font-family as well as the</span>
 <span class="hljs-comment">// `headlines` and `body-1` levels.</span>
 <span class="hljs-variable">$custom-typography</span>: mat-typography-config(
-  <span class="hljs-variable">$font-family</span>: <span class="hljs-string">'Roboto, monospace'</span>,
+  <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Roboto, monospace&#x27;</span>,
   <span class="hljs-variable">$headline</span>: mat-typography-level(<span class="hljs-number">32px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">700</span>),
   <span class="hljs-variable">$body-1</span>: mat-typography-level(<span class="hljs-number">16px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">500</span>)
 );</code></pre>
@@ -127,17 +127,17 @@ has to be in quotes.</p>
 <p>Once the custom typography definition is created, it can be consumed to generate styles via
 different Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).</span>
-@<span class="hljs-keyword">include</span> mat-base-typography(<span class="hljs-variable">$custom-typography</span>);
+<span class="hljs-keyword">@include</span> mat-base-typography(<span class="hljs-variable">$custom-typography</span>);
 
 <span class="hljs-comment">// Override typography for a specific Angular Material components.</span>
-@<span class="hljs-keyword">include</span> mat-checkbox-typography(<span class="hljs-variable">$custom-typography</span>);
+<span class="hljs-keyword">@include</span> mat-checkbox-typography(<span class="hljs-variable">$custom-typography</span>);
 
 <span class="hljs-comment">// Override typography for all Angular Material, including mat-base-typography and all components.</span>
-@<span class="hljs-keyword">include</span> angular-material-typography(<span class="hljs-variable">$custom-typography</span>);</code></pre>
+<span class="hljs-keyword">@include</span> angular-material-typography(<span class="hljs-variable">$custom-typography</span>);</code></pre>
 <p>If you&#39;re using Material&#39;s theming, you can also pass in your typography config to the
 <code>mat-core</code> mixin:</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Override the typography in the core CSS.</span>
-@<span class="hljs-keyword">include</span> mat-core(<span class="hljs-variable">$custom-typography</span>);</code></pre>
+<span class="hljs-keyword">@include</span> mat-core(<span class="hljs-variable">$custom-typography</span>);</code></pre>
 <p>For more details about the typography functions and default config, see the
 <a href="https://github.com/angular/components/blob/master/src/material/core/typography/_typography.scss">source</a>.</p>
 
@@ -157,7 +157,7 @@ config and level.</li>
 <li><code>mat-typography-level-to-styles($config, $level)</code> - Mixin that takes in a configuration object
 and a typography level, and outputs a short-hand CSS <code>font</code> declaration.</li>
 </ul>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 
 <span class="hljs-comment">// Create a config with the default typography levels.</span>
 <span class="hljs-variable">$config</span>: mat-typography-config();
@@ -170,6 +170,6 @@ and a typography level, and outputs a short-hand CSS <code>font</code> declarati
 
 <span class="hljs-comment">// Custom title that uses all of the typography styles from the `title` level.</span>
 <span class="hljs-selector-class">.unicorn-title</span> {
-  @<span class="hljs-keyword">include</span> mat-typography-level-to-styles(<span class="hljs-variable">$config</span>, title);
+  <span class="hljs-keyword">@include</span> mat-typography-level-to-styles(<span class="hljs-variable">$config</span>, title);
 }</code></pre>
 </div>

@@ -1,16 +1,16 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Configurable checkbox
+ * <span class="hljs-doctag">@title </span>Configurable checkbox
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'checkbox-configurable-example'</span>,
-  templateUrl: <span class="hljs-string">'checkbox-configurable-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'checkbox-configurable-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;checkbox-configurable-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;checkbox-configurable-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;checkbox-configurable-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CheckboxConfigurableExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CheckboxConfigurableExample</span> </span>{
   checked = <span class="hljs-literal">false</span>;
   indeterminate = <span class="hljs-literal">false</span>;
-  labelPosition: <span class="hljs-string">'before'</span> | <span class="hljs-string">'after'</span> = <span class="hljs-string">'after'</span>;
+  labelPosition: <span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span> = <span class="hljs-string">&#x27;after&#x27;</span>;
   disabled = <span class="hljs-literal">false</span>;
 }

@@ -77,19 +77,19 @@ both <code>completed</code> and <code>stepControl</code> are set, the <code>step
       <p>When using a single form for the stepper, <code>matStepperPrevious</code> and <code>matStepperNext</code> have to be
 set to <code>type=&quot;button&quot;</code> in order to prevent submission of the form before all steps
 are completed.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">"formArray"</span> <span class="hljs-attr">linear</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"0"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([0])"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">&quot;formArray&quot;</span> <span class="hljs-attr">linear</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">&quot;0&quot;</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;formArray.get([0])&quot;</span>&gt;</span>
       ...
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"1"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([1])"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">&quot;1&quot;</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;formArray.get([1])&quot;</span>&gt;</span>
       ...
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
     ...
@@ -101,13 +101,13 @@ are completed.</p>
           Using a different form for each step
         </h4>
       <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-vertical-stepper</span> <span class="hljs-attr">linear</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;formGroup1&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup1&quot;</span>&gt;</span>
       ...
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;formGroup2&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup2&quot;</span>&gt;</span>
       ...
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
@@ -177,10 +177,10 @@ However, it can be overridden the same way as mentioned above.</p>
 the global default stepper options which can be specified by providing a value for
 <code>STEPPER_GLOBAL_OPTIONS</code> in your application&#39;s root module.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [
+  <span class="hljs-attr">providers</span>: [
     {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: { displayDefaultIndicatorType: <span class="hljs-literal">false</span> }
+      <span class="hljs-attr">provide</span>: STEPPER_GLOBAL_OPTIONS,
+      <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">displayDefaultIndicatorType</span>: <span class="hljs-literal">false</span> }
     }
   ]
 })</code></pre>
@@ -197,10 +197,10 @@ errors via the <code>showError</code> option in the <code>STEPPER_GLOBAL_OPTIONS
 <code>linear</code> steppers prevent a user from advancing past an invalid step to begin with, this setting
 will not affect steppers marked as <code>linear</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [
+  <span class="hljs-attr">providers</span>: [
     {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: { showError: <span class="hljs-literal">true</span> }
+      <span class="hljs-attr">provide</span>: STEPPER_GLOBAL_OPTIONS,
+      <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">showError</span>: <span class="hljs-literal">true</span> }
     }
   ]
 })</code></pre>
@@ -228,12 +228,12 @@ will not affect steppers marked as <code>linear</code>.</p>
       <p>Labels used by the stepper are provided through <code>MatStepperIntl</code>. Localization of these messages
 can be done by providing a subclass with translated values in your application root module.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  imports: [MatStepperModule],
-  providers: [
-    {provide: MatStepperIntl, useClass: MyIntl},
+  <span class="hljs-attr">imports</span>: [MatStepperModule],
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MatStepperIntl, <span class="hljs-attr">useClass</span>: MyIntl},
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}</code></pre>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}</code></pre>
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>

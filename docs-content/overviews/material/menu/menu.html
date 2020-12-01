@@ -14,11 +14,11 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
         </h3>
       <p>The menu exposes an API to open/close programmatically. Please note that in this case, an
 <code>matMenuTriggerFor</code> directive is still necessary to attach the menu to a trigger element in the DOM.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">class</span> MyComponent {
+<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
   <span class="hljs-meta">@ViewChild</span>(MatMenuTrigger) trigger: MatMenuTrigger;
 
-  someMethod() {
-    <span class="hljs-keyword">this</span>.trigger.openMenu();
+  <span class="hljs-function"><span class="hljs-title">someMethod</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.trigger.openMenu();
   }
 }</code></pre>
 
@@ -64,14 +64,14 @@ that should trigger the sub-menu:</p>
       <p>By default, the menu content will be initialized even when the panel is closed. To defer
 initialization until the menu is open, the content can be provided as an <code>ng-template</code>
 with the <code>matMenuContent</code> attribute:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">&quot;matMenu&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matMenuContent</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
 
@@ -82,18 +82,18 @@ with the <code>matMenuContent</code> attribute:</p>
       <p>When using lazy rendering, additional context data can be passed to the menu panel via
 the <code>matMenuTriggerData</code> input. This allows for a single menu instance to be rendered
 with a different set of data, depending on the trigger that opened it:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matMenuContent</span> <span class="hljs-attr">let-name</span>=<span class="hljs-string">"name"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">&quot;matMenu&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matMenuContent</span> <span class="hljs-attr">let-name</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Log off {{name}}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">"{name: 'Sally'}"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">&quot;{name: &#x27;Sally&#x27;}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">"{name: 'Bob'}"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">&quot;{name: &#x27;Bob&#x27;}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
 

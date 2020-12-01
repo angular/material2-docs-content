@@ -1,20 +1,20 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
-<span class="hljs-comment">/** @title Form field with error messages */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field with error messages */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'form-field-error-example'</span>,
-  templateUrl: <span class="hljs-string">'form-field-error-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'form-field-error-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;form-field-error-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;form-field-error-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;form-field-error-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldErrorExample {
-  email = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required, Validators.email]);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldErrorExample</span> </span>{
+  email = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.email]);
 
-  getErrorMessage() {
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'required'</span>)) {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">'You must enter a value'</span>;
+  <span class="hljs-function"><span class="hljs-title">getErrorMessage</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.email.hasError(<span class="hljs-string">&#x27;required&#x27;</span>)) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;You must enter a value&#x27;</span>;
     }
 
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'email'</span>) ? <span class="hljs-string">'Not a valid email'</span> : <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.email.hasError(<span class="hljs-string">&#x27;email&#x27;</span>) ? <span class="hljs-string">&#x27;Not a valid email&#x27;</span> : <span class="hljs-string">&#x27;&#x27;</span>;
   }
 }

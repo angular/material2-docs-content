@@ -1,10 +1,10 @@
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatDividerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/divider'</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
-<span class="hljs-keyword">import</span> {ButtonOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-overview/button-overview-example'</span>;
-<span class="hljs-keyword">import</span> {ButtonTypesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-types/button-types-example'</span>;
-<span class="hljs-keyword">import</span> {ButtonHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-harness/button-harness-example'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDividerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {ButtonOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./button-overview/button-overview-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ButtonTypesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./button-types/button-types-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ButtonHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./button-harness/button-harness-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   ButtonOverviewExample,
@@ -19,14 +19,14 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ButtonExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ButtonExamplesModule</span> </span>{
 }

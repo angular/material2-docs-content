@@ -39,9 +39,9 @@ single css file for Angular Material in your app.</p>
 </ul>
 <p>If you&#39;re using Angular CLI, this is as simple as including one line
 in your <code>styles.css</code>  file:</p>
-<pre><code class="language-css">@<span class="hljs-keyword">import</span> <span class="hljs-string">'@angular/material/prebuilt-themes/deeppurple-amber.css'</span>;</code></pre>
+<pre><code class="language-css"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/material/prebuilt-themes/deeppurple-amber.css&#x27;</span>;</code></pre>
 <p>Alternatively, you can just reference the file directly. This would look something like:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;node_modules/@angular/material/prebuilt-themes/indigo-pink.css&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>&gt;</span></code></pre>
 <p>The actual path will depend on your server setup.</p>
 <p>You can also concatenate the file with the rest of your application&#39;s css.</p>
 <p>Finally, if your app&#39;s content <strong>is not</strong> placed inside of a <code>mat-sidenav-container</code> element, you
@@ -65,13 +65,13 @@ passed to the <code>angular-material-theme</code> mixin, which will output all o
 for the theme.</li>
 </ol>
 <p>A typical theme file will look something like this:</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 <span class="hljs-comment">// Plus imports for other components in your app.</span>
 
 <span class="hljs-comment">// Include the common styles for Angular Material. We include this here so that you only</span>
 <span class="hljs-comment">// have to load a single css file for Angular Material in your app.</span>
 <span class="hljs-comment">// Be sure that you only ever include this mixin once!</span>
-@<span class="hljs-keyword">include</span> mat-core();
+<span class="hljs-keyword">@include</span> mat-core();
 
 <span class="hljs-comment">// Define the palettes for your theme using the Material Design palettes available in palette.scss</span>
 <span class="hljs-comment">// (imported above). For each palette, you can optionally specify a default, lighter, and darker</span>
@@ -95,7 +95,7 @@ for the theme.</li>
 <span class="hljs-comment">// Include theme styles for core and each component used in your app.</span>
 <span class="hljs-comment">// Alternatively, you can import and @include the theme mixins for each component</span>
 <span class="hljs-comment">// that you are using.</span>
-@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$candy-app-theme</span>);</code></pre>
+<span class="hljs-keyword">@include</span> angular-material-theme(<span class="hljs-variable">$candy-app-theme</span>);</code></pre>
 <p>You only need this single Sass file; you do not need to use Sass to style the rest of your app.</p>
 <p>If you are using the Angular CLI, support for compiling Sass to css is built-in; you only have to
 add a new entry to the <code>&quot;styles&quot;</code> list in <code>angular.json</code> pointing to the theme
@@ -120,13 +120,13 @@ styles will be subject to that component&#39;s <a href="https://angular.io/docs/
 multiple times, where each inclusion is gated by an additional CSS class.</p>
 <p>Remember to only ever include the <code>@mat-core</code> mixin once; it should not be included for each
 theme.</p>
-<h5>Example of defining multiple themes:</h5><pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<h5>Example of defining multiple themes:</h5><pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 <span class="hljs-comment">// Plus imports for other components in your app.</span>
 
 <span class="hljs-comment">// Include the common styles for Angular Material. We include this here so that you only</span>
 <span class="hljs-comment">// have to load a single css file for Angular Material in your app.</span>
 <span class="hljs-comment">// **Be sure that you only ever include this mixin once!**</span>
-@<span class="hljs-keyword">include</span> mat-core();
+<span class="hljs-keyword">@include</span> mat-core();
 
 <span class="hljs-comment">// Define the default theme (same as the example above).</span>
 <span class="hljs-variable">$candy-app-primary</span>: mat-palette(<span class="hljs-variable">$mat-indigo</span>);
@@ -139,7 +139,7 @@ theme.</p>
 ));
 
 <span class="hljs-comment">// Include the default theme styles (color and default density)</span>
-@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$candy-app-theme</span>);
+<span class="hljs-keyword">@include</span> angular-material-theme(<span class="hljs-variable">$candy-app-theme</span>);
 
 
 <span class="hljs-comment">// Define an alternate dark theme.</span>
@@ -158,7 +158,7 @@ theme.</p>
 <span class="hljs-comment">// CSS class whatever you want. In this example, any component inside of an element with</span>
 <span class="hljs-comment">// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.</span>
 <span class="hljs-selector-class">.unicorn-dark-theme</span> {
-  @<span class="hljs-keyword">include</span> angular-material-color(<span class="hljs-variable">$dark-theme</span>);
+  <span class="hljs-keyword">@include</span> angular-material-color(<span class="hljs-variable">$dark-theme</span>);
 }</code></pre>
 <p>In the above example, any component inside of a parent with the <code>unicorn-dark-theme</code> class will use
 the dark theme, while other components will fall back to the default <code>$candy-app-theme</code>.</p>
@@ -176,14 +176,14 @@ an additional step is required for those components to be affected by the theme&
 (<code>.unicorn-dark-theme</code> in the example above).</p>
 <p>To do this, you can add the appropriate class to the global overlay container. For the example above,
 this would look like:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/overlay'</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/overlay&#x27;</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-comment">// ...</span>
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> UnicornCandyAppModule {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">overlayContainer: OverlayContainer</span>) {
-    overlayContainer.getContainerElement().classList.add(<span class="hljs-string">'unicorn-dark-theme'</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnicornCandyAppModule</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">overlayContainer: OverlayContainer</span>)</span> {
+    overlayContainer.getContainerElement().classList.add(<span class="hljs-string">&#x27;unicorn-dark-theme&#x27;</span>);
   }
 }</code></pre>
 
@@ -196,13 +196,13 @@ If you are only using a subset of the components (or if you want to change the t
 components), you can include component-specific theme mixins. You also will need to include
 the <code>mat-core-theme</code> mixin as well, which contains theme-specific styles for common behaviors
 (such as ripples).</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/material/theming&#x27;</span>;
 <span class="hljs-comment">// Plus imports for other components in your app.</span>
 
 <span class="hljs-comment">// Include the common styles for Angular Material. We include this here so that you only</span>
 <span class="hljs-comment">// have to load a single css file for Angular Material in your app.</span>
 <span class="hljs-comment">// **Be sure that you only ever include this mixin once!**</span>
-@<span class="hljs-keyword">include</span> mat-core();
+<span class="hljs-keyword">@include</span> mat-core();
 
 <span class="hljs-comment">// Define the theme.</span>
 <span class="hljs-variable">$candy-app-primary</span>: mat-palette(<span class="hljs-variable">$mat-indigo</span>);
@@ -215,9 +215,9 @@ the <code>mat-core-theme</code> mixin as well, which contains theme-specific sty
 ));
 
 <span class="hljs-comment">// Include the theme styles for only specified components.</span>
-@<span class="hljs-keyword">include</span> mat-core-theme(<span class="hljs-variable">$candy-app-theme</span>);
-@<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$candy-app-theme</span>);
-@<span class="hljs-keyword">include</span> mat-checkbox-theme(<span class="hljs-variable">$candy-app-theme</span>);</code></pre>
+<span class="hljs-keyword">@include</span> mat-core-theme(<span class="hljs-variable">$candy-app-theme</span>);
+<span class="hljs-keyword">@include</span> mat-button-theme(<span class="hljs-variable">$candy-app-theme</span>);
+<span class="hljs-keyword">@include</span> mat-checkbox-theme(<span class="hljs-variable">$candy-app-theme</span>);</code></pre>
 
         <h4 id="changing-styles-at-run-time" class="docs-header-link">
           <span header-link="changing-styles-at-run-time"></span>
@@ -233,10 +233,10 @@ this in the <a href="guide/duplicate-theming-styles">dedicated guide</a>.</p>
 <pre><code class="language-scss"><span class="hljs-selector-class">.alternate-button</span> {
   <span class="hljs-comment">// Extract the color configuration from the theme and generate</span>
   <span class="hljs-comment">// the color theme styles for `mat-button`.</span>
-  @<span class="hljs-keyword">include</span> mat-button-color(<span class="hljs-variable">$alternate-theme</span>);
+  <span class="hljs-keyword">@include</span> mat-button-color(<span class="hljs-variable">$alternate-theme</span>);
 }</code></pre>
 <p>Then you can use normal Angular class bindings to toggle the alternate styles.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.alternate-button</span>]=<span class="hljs-string">"isAlternateMode"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.alternate-button</span>]=<span class="hljs-string">&quot;isAlternateMode&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 <p>You can use this approach to style any component inside of the region marked with the custom
@@ -244,9 +244,9 @@ CSS class.</p>
 <h5>Swapping CSS files</h5><p>If you want to completely swap a theme without including all of the styles at once, you
 can swap the loaded theme file. The details will depend on your application, but the general
 idea looks like this:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"themeAsset"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/path/to/my/theme-name.css"</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;themeAsset&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/path/to/my/theme-name.css&quot;</span>&gt;</span></code></pre>
 <pre><code class="language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeTheme</span>(<span class="hljs-params">themeName</span>) </span>{
-  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'themeAsset'</span>).href = <span class="hljs-string">`/path/to/my/<span class="hljs-subst">${themeName}</span>.css`</span>;
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;themeAsset&#x27;</span>).href = <span class="hljs-string">`/path/to/my/<span class="hljs-subst">${themeName}</span>.css`</span>;
 }</code></pre>
 
         <h3 id="theming-your-own-components" class="docs-header-link">

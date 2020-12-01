@@ -1,25 +1,25 @@
-<span class="hljs-keyword">import</span> {FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, NgZone} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, NgZone} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
-<span class="hljs-comment">/** @title Monitoring focus with FocusMonitor */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Monitoring focus with FocusMonitor */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'focus-monitor-directives-example'</span>,
-  templateUrl: <span class="hljs-string">'focus-monitor-directives-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'focus-monitor-directives-example.css'</span>]
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-directives-example.css&#x27;</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorDirectivesExample {
-  elementOrigin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
-  subtreeOrigin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorDirectivesExample</span> </span>{
+  elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+  subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _ngZone: NgZone, <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef</span>) {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _ngZone: NgZone, <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef</span>)</span> {}
 
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
-    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">' focused'</span> : <span class="hljs-string">'blurred'</span>;
+    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">&#x27; focused&#x27;</span> : <span class="hljs-string">&#x27;blurred&#x27;</span>;
   }
 
   <span class="hljs-comment">// Workaround for the fact that (cdkFocusChange) emits outside NgZone.</span>
-  markForCheck() {
-    <span class="hljs-keyword">this</span>._ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>._cdr.markForCheck());
+  <span class="hljs-function"><span class="hljs-title">markForCheck</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>._cdr.markForCheck());
   }
 }

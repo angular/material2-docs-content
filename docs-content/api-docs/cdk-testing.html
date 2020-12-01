@@ -4085,7 +4085,7 @@ changes.</p>
 </h4><p class="docs-api-type-alias-description"><p>An async function that returns a promise when called.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AsyncFactoryFn = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;T&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AsyncFactoryFn = <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;T&gt;;</code>
 </pre>
 </div>
 
@@ -4163,8 +4163,8 @@ is equivalent to:
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> LocatorFnResult = {
     [I <span class="hljs-keyword">in</span> keyof T]: T[I] <span class="hljs-keyword">extends</span> <span class="hljs-keyword">new</span> (...args: <span class="hljs-built_in">any</span>[]) =&gt; infer C ? C : T[I] <span class="hljs-keyword">extends</span> {
-        harnessType: <span class="hljs-keyword">new</span> (...args: <span class="hljs-built_in">any</span>[]) =&gt; infer C;
-    } ? C : T[I] <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span> ? TestElement : never;
+        <span class="hljs-attr">harnessType</span>: <span class="hljs-keyword">new</span> (...args: <span class="hljs-built_in">any</span>[]) =&gt; infer C;
+    } ? C : T[I] <span class="hljs-keyword">extends</span> <span class="hljs-built_in">string</span> ? TestElement : <span class="hljs-built_in">never</span>;
 }[<span class="hljs-built_in">number</span>];</code>
 </pre>
 </div>
