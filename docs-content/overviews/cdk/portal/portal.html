@@ -91,7 +91,7 @@ portals, it must be included in the <code>entryComponents</code> of its <code>Ng
     <span class="hljs-built_in">this</span>._viewContainerRef
   );
 }</code></pre>
-<h5><code>DomPortal</code></h5><p>You can create a <code>DomPortal</code> from any native DOM element. <code>DomPortal</code> allows you to take any arbitrary DOM content and render it somewhere else. <code>DomPortal</code> moves content _as is_, so elements with Angular features like bindings or directives may no longer update if moved via <code>DomPortal</code>.</p>
+<h5><code>DomPortal</code></h5><p>You can create a <code>DomPortal</code> from any native DOM element. <code>DomPortal</code> allows you to take any arbitrary DOM content and render it somewhere else. <code>DomPortal</code> moves content <em>as is</em>, so elements with Angular features like bindings or directives may no longer update if moved via <code>DomPortal</code>.</p>
 <p>Usage:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">domPortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 <pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;domPortalContent&#x27;</span>) domPortalContent: ElementRef&lt;HTMLElement&gt;;

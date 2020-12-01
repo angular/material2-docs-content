@@ -102,7 +102,8 @@ add a new entry to the <code>&quot;styles&quot;</code> list in <code>angular.jso
 file (e.g., <code>unicorn-app-theme.scss</code>).</p>
 <p>If you&#39;re not using the Angular CLI, you can use any existing Sass tooling to build the file (such
 as gulp-sass or grunt-sass). The simplest approach is to use the <code>node-sass</code> CLI; you simply run:</p>
-<pre><code>node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css</code></pre><p>and then include the output file in your index.html.</p>
+<pre><code>node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css</code></pre>
+<p>and then include the output file in your index.html.</p>
 <p>Your custom theme file <strong>should not</strong> be imported into other SCSS files. This will duplicate styles
 in your CSS output. If you want to consume your theme definition object
 (e.g., <code>$candy-app-theme</code>) in other SCSS files, then the definition of the theme object should be
@@ -208,10 +209,10 @@ the <code>mat-core-theme</code> mixin as well, which contains theme-specific sty
 <span class="hljs-variable">$candy-app-primary</span>: mat-palette(<span class="hljs-variable">$mat-indigo</span>);
 <span class="hljs-variable">$candy-app-accent</span>:  mat-palette(<span class="hljs-variable">$mat-pink</span>, A200, A100, A400);
 <span class="hljs-variable">$candy-app-theme</span>:   mat-light-theme((
-  color: (
-    primary: <span class="hljs-variable">$candy-app-primary</span>,
-    accent: <span class="hljs-variable">$candy-app-accent</span>,
-  )
+ color: (
+   primary: <span class="hljs-variable">$candy-app-primary</span>,
+   accent: <span class="hljs-variable">$candy-app-accent</span>,
+ )
 ));
 
 <span class="hljs-comment">// Include the theme styles for only specified components.</span>
