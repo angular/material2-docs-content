@@ -387,6 +387,18 @@ and content elements as follows:</p>
 <td><code>matchesSelector(selector: string): Promise&lt;boolean&gt;</code></td>
 <td>Checks whether the element matches the given CSS selector.</td>
 </tr>
+<tr>
+<td><code>setInputValue(value: string): Promise&lt;void&gt;;</code></td>
+<td>Sets the value of a property of an input.</td>
+</tr>
+<tr>
+<td><code>selectOptions(...optionIndexes: number[]): Promise&lt;void&gt;;</code></td>
+<td>Selects the options at the specified indexes inside of a native <code>select</code> element.</td>
+</tr>
+<tr>
+<td><code>dispatchEvent(name: string, data?: Record&lt;string, EventData&gt;): Promise&lt;void&gt;;</code></td>
+<td>Dispatches an event with a particular name.</td>
+</tr>
 </tbody></table>
 <p><code>TestElement</code> is an abstraction designed to work across different test environments (Karma,
 Protractor, etc). When using harnesses, you should perform all DOM interaction via this interface.
@@ -773,6 +785,18 @@ result of the operation.</p>
 <tr>
 <td><code>matchesSelector(selector: string): Promise&lt;boolean&gt;</code></td>
 <td>Checks whether the given selector matches the element.</td>
+</tr>
+<tr>
+<td><code>setInputValue(value: string): Promise&lt;void&gt;;</code></td>
+<td>Sets the value of a property of an input.</td>
+</tr>
+<tr>
+<td><code>selectOptions(...optionIndexes: number[]): Promise&lt;void&gt;;</code></td>
+<td>Selects the options at the specified indexes inside of a native <code>select</code> element.</td>
+</tr>
+<tr>
+<td><code>dispatchEvent(name: string, data?: Record&lt;string, EventData&gt;): Promise&lt;void&gt;;</code></td>
+<td>Dispatches an event with a particular name.</td>
 </tr>
 </tbody></table>
 <p>The <code>TestElement</code> interface consists largely of methods that resemble methods
