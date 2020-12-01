@@ -1,11 +1,11 @@
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
-<span class="hljs-keyword">import</span> {MatToolbarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/toolbar'</span>;
-<span class="hljs-keyword">import</span> {ToolbarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-basic/toolbar-basic-example'</span>;
-<span class="hljs-keyword">import</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-multirow/toolbar-multirow-example'</span>;
-<span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-overview/toolbar-overview-example'</span>;
-<span class="hljs-keyword">import</span> {ToolbarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-harness/toolbar-harness-example'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatToolbarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/toolbar&#x27;</span>;
+<span class="hljs-keyword">import</span> {ToolbarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-basic/toolbar-basic-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-multirow/toolbar-multirow-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-overview/toolbar-overview-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ToolbarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-harness/toolbar-harness-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   ToolbarBasicExample,
@@ -22,14 +22,14 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ToolbarExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ToolbarExamplesModule</span> </span>{
 }

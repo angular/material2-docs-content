@@ -6,13 +6,13 @@ alternative to dialogs and menus.</p>
 <p>You can open a bottom sheet by calling the <code>open</code> method with a component to be loaded and an
 optional config object. The <code>open</code> method will return an instance of <code>MatBottomSheetRef</code>:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(SocialShareComponent, {
-  ariaLabel: <span class="hljs-string">'Share on social media'</span>
+  <span class="hljs-attr">ariaLabel</span>: <span class="hljs-string">&#x27;Share on social media&#x27;</span>
 });</code></pre>
 <p>The <code>MatBottomSheetRef</code> is a reference to the currently-opened bottom sheet and can be used to close
 it or to subscribe to events. Note that only one bottom sheet can be open at a time. Any component
 contained inside of a bottom sheet can inject the <code>MatBottomSheetRef</code> as well.</p>
-<pre><code class="language-ts">bottomSheetRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Bottom sheet has been dismissed.'</span>);
+<pre><code class="language-ts">bottomSheetRef.afterDismissed().subscribe(<span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Bottom sheet has been dismissed.&#x27;</span>);
 });
 
 bottomSheetRef.dismiss();</code></pre>
@@ -23,18 +23,18 @@ bottomSheetRef.dismiss();</code></pre>
         </h3>
       <p>If you want to pass in some data to the bottom sheet, you can do so using the <code>data</code> property:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(HobbitSheet, {
-  data: { names: [<span class="hljs-string">'Frodo'</span>, <span class="hljs-string">'Bilbo'</span>] },
+  <span class="hljs-attr">data</span>: { <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Frodo&#x27;</span>, <span class="hljs-string">&#x27;Bilbo&#x27;</span>] },
 });</code></pre>
 <p>Afterwards you can access the injected data using the <code>MAT_BOTTOM_SHEET_DATA</code> injection token:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MAT_BOTTOM_SHEET_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/bottom-sheet'</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MAT_BOTTOM_SHEET_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet&#x27;</span>;
 
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'hobbit-sheet'</span>,
-  template: <span class="hljs-string">'passed in {{ data.names }}'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;hobbit-sheet&#x27;</span>,
+  <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;passed in {{ data.names }}&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> HobbitSheet {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> data: {names: <span class="hljs-built_in">string</span>[]}</span>) { }
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HobbitSheet</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> data: {names: <span class="hljs-built_in">string</span>[]}</span>)</span> { }
 }</code></pre>
 
         <h3 id="configuring-bottom-sheet-content-via-entrycomponents" class="docs-header-link">
@@ -47,23 +47,23 @@ your bottom sheet content component.</p>
 <p>Any components that are included inside of a bottom sheet have to be added to the <code>entryComponents</code>
 inside your <code>NgModule</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     <span class="hljs-comment">// ...</span>
     MatBottomSheetModule
   ],
 
-  declarations: [
+  <span class="hljs-attr">declarations</span>: [
     AppComponent,
     ExampleBottomSheetComponent
   ],
 
-  entryComponents: [
+  <span class="hljs-attr">entryComponents</span>: [
     ExampleBottomSheetComponent
   ],
 
-  bootstrap: [AppComponent]
+  <span class="hljs-attr">bootstrap</span>: [AppComponent]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {}</code></pre>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
 
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
           <span header-link="specifying-global-configuration-defaults"></span>
@@ -72,8 +72,8 @@ inside your <code>NgModule</code>.</p>
       <p>Default bottom sheet options can be specified by providing an instance of <code>MatBottomSheetConfig</code>
 for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application&#39;s root module.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [
-    {provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: <span class="hljs-literal">false</span>}}
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
 })</code></pre>
 

@@ -1,22 +1,22 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"clearTable()"</span>&gt;</span>Clear table<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"addData()"</span>&gt;</span>Add data<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;clearTable()&quot;</span>&gt;</span>Clear table<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;addData()&quot;</span>&gt;</span>Add data<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">wrapper-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">columns</span>]=<span class="hljs-string">"displayedColumns"</span>
-               <span class="hljs-attr">matSort</span> #<span class="hljs-attr">sort</span>=<span class="hljs-string">"matSort"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">wrapper-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">columns</span>]=<span class="hljs-string">&quot;displayedColumns&quot;</span>
+               <span class="hljs-attr">matSort</span> #<span class="hljs-attr">sort</span>=<span class="hljs-string">&quot;matSort&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Custom column definition to be provided to the wrapper table. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"name"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Custom row definitions to be provided to the wrapper table. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;displayedColumns&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let row; columns: displayedColumns;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Row shown when there is no matching data that will be provided to the wrapper table. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-row"</span> *<span class="hljs-attr">matNoDataRow</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-cell"</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">"4"</span>&gt;</span>No data<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-row&quot;</span> *<span class="hljs-attr">matNoDataRow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-cell&quot;</span> <span class="hljs-attr">colspan</span>=<span class="hljs-string">&quot;4&quot;</span>&gt;</span>No data<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">wrapper-table</span>&gt;</span>

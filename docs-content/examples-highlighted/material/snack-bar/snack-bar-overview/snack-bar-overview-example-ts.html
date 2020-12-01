@@ -1,20 +1,20 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/snack-bar'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Basic snack-bar
+ * <span class="hljs-doctag">@title </span>Basic snack-bar
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'snack-bar-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'snack-bar-overview-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'snack-bar-overview-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;snack-bar-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;snack-bar-overview-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;snack-bar-overview-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarOverviewExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarOverviewExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>)</span> {}
 
-  openSnackBar(message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">this</span>._snackBar.open(message, action, {
-      duration: <span class="hljs-number">2000</span>,
+  <span class="hljs-function"><span class="hljs-title">openSnackBar</span>(<span class="hljs-params">message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span></span>)</span> {
+    <span class="hljs-built_in">this</span>._snackBar.open(message, action, {
+      <span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span>,
     });
   }
 }

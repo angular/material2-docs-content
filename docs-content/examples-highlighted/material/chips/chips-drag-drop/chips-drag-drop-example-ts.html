@@ -1,29 +1,29 @@
-<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/drag-drop&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Vegetable {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * @title Chips Drag and Drop
+ * <span class="hljs-doctag">@title </span>Chips Drag and Drop
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'chips-drag-drop-example'</span>,
-  templateUrl: <span class="hljs-string">'chips-drag-drop-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'chips-drag-drop-example.css'</span>]
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-drag-drop-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-drag-drop-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;chips-drag-drop-example.css&#x27;</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsDragDropExample {
-  vegetables: Vegetable[] = [
-    {name: <span class="hljs-string">'apple'</span>},
-    {name: <span class="hljs-string">'banana'</span>},
-    {name: <span class="hljs-string">'strawberry'</span>},
-    {name: <span class="hljs-string">'orange'</span>},
-    {name: <span class="hljs-string">'kiwi'</span>},
-    {name: <span class="hljs-string">'cherry'</span>},
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsDragDropExample</span> </span>{
+  <span class="hljs-attr">vegetables</span>: Vegetable[] = [
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;apple&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;banana&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;strawberry&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;orange&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;kiwi&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;cherry&#x27;</span>},
   ];
 
-  drop(event: CdkDragDrop&lt;Vegetable[]&gt;) {
-    moveItemInArray(<span class="hljs-keyword">this</span>.vegetables, event.previousIndex, event.currentIndex);
+  <span class="hljs-function"><span class="hljs-title">drop</span>(<span class="hljs-params">event: CdkDragDrop&lt;Vegetable[]&gt;</span>)</span> {
+    moveItemInArray(<span class="hljs-built_in">this</span>.vegetables, event.previousIndex, event.currentIndex);
   }
 }

@@ -1,16 +1,16 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {TooltipPosition} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tooltip'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {TooltipPosition} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
+ * <span class="hljs-doctag">@title </span>Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'tooltip-auto-hide-example'</span>,
-  templateUrl: <span class="hljs-string">'tooltip-auto-hide-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'tooltip-auto-hide-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tooltip-auto-hide-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tooltip-auto-hide-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;tooltip-auto-hide-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipAutoHideExample {
-  positionOptions: TooltipPosition[] = [<span class="hljs-string">'below'</span>, <span class="hljs-string">'above'</span>, <span class="hljs-string">'left'</span>, <span class="hljs-string">'right'</span>];
-  position = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">this</span>.positionOptions[<span class="hljs-number">0</span>]);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipAutoHideExample</span> </span>{
+  <span class="hljs-attr">positionOptions</span>: TooltipPosition[] = [<span class="hljs-string">&#x27;below&#x27;</span>, <span class="hljs-string">&#x27;above&#x27;</span>, <span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-string">&#x27;right&#x27;</span>];
+  position = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.positionOptions[<span class="hljs-number">0</span>]);
 }

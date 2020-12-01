@@ -1,26 +1,26 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"isOptional = !isOptional"</span>&gt;</span>
-  {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;isOptional = !isOptional&quot;</span>&gt;</span>
+  {{!isOptional ? &#x27;Enable optional steps&#x27; : &#x27;Disable optional steps&#x27;}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">linear</span> #<span class="hljs-attr">stepper</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;firstFormGroup&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;firstFormGroup&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>Fill out your name<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Last name, First name"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"firstCtrl"</span> <span class="hljs-attr">required</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Last name, First name&quot;</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;firstCtrl&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"secondFormGroup"</span> [<span class="hljs-attr">optional</span>]=<span class="hljs-string">"isOptional"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"secondFormGroup"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;secondFormGroup&quot;</span> [<span class="hljs-attr">optional</span>]=<span class="hljs-string">&quot;isOptional&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;secondFormGroup&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>Fill out your address<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"secondCtrl"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Ex. 1 Main St, New York, NY"</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;secondCtrl&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Ex. 1 Main St, New York, NY&quot;</span>
                <span class="hljs-attr">required</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -34,7 +34,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You are now done.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"stepper.reset()"</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;stepper.reset()&quot;</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>

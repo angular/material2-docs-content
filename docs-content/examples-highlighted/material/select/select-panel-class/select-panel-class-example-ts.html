@@ -1,17 +1,17 @@
-<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Select with custom panel styling
+ * <span class="hljs-doctag">@title </span>Select with custom panel styling
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'select-panel-class-example'</span>,
-  templateUrl: <span class="hljs-string">'select-panel-class-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'select-panel-class-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-panel-class-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-panel-class-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;select-panel-class-example.css&#x27;</span>],
   <span class="hljs-comment">// Encapsulation has to be disabled in order for the</span>
   <span class="hljs-comment">// component style to apply to the select panel.</span>
-  encapsulation: ViewEncapsulation.None,
+  <span class="hljs-attr">encapsulation</span>: ViewEncapsulation.None,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectPanelClassExample {
-  panelColor = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'red'</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectPanelClassExample</span> </span>{
+  panelColor = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;red&#x27;</span>);
 }

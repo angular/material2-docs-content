@@ -1,41 +1,41 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Section {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
   updated: <span class="hljs-built_in">Date</span>;
 }
 
 <span class="hljs-comment">/**
- * @title List with sections
+ * <span class="hljs-doctag">@title </span>List with sections
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'list-sections-example'</span>,
-  styleUrls: [<span class="hljs-string">'list-sections-example.css'</span>],
-  templateUrl: <span class="hljs-string">'list-sections-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;list-sections-example&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;list-sections-example.css&#x27;</span>],
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;list-sections-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ListSectionsExample {
-  folders: Section[] = [
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListSectionsExample</span> </span>{
+  <span class="hljs-attr">folders</span>: Section[] = [
     {
-      name: <span class="hljs-string">'Photos'</span>,
-      updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'1/1/16'</span>),
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Photos&#x27;</span>,
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/1/16&#x27;</span>),
     },
     {
-      name: <span class="hljs-string">'Recipes'</span>,
-      updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'1/17/16'</span>),
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Recipes&#x27;</span>,
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/17/16&#x27;</span>),
     },
     {
-      name: <span class="hljs-string">'Work'</span>,
-      updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'1/28/16'</span>),
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Work&#x27;</span>,
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/28/16&#x27;</span>),
     }
   ];
   notes: Section[] = [
     {
-      name: <span class="hljs-string">'Vacation Itinerary'</span>,
-      updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'2/20/16'</span>),
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vacation Itinerary&#x27;</span>,
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;2/20/16&#x27;</span>),
     },
     {
-      name: <span class="hljs-string">'Kitchen Remodel'</span>,
-      updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'1/18/16'</span>),
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Kitchen Remodel&#x27;</span>,
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/18/16&#x27;</span>),
     }
   ];
 }

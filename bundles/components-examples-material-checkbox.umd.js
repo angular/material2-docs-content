@@ -148,7 +148,7 @@
         return CheckboxOverviewExample;
     }());
     CheckboxOverviewExample.ɵfac = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
-    CheckboxOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 12, vars: 5, consts: [[1, "example-section"], [1, "example-margin"], [1, "example-margin", 3, "disabled"], [1, "example-list-section"], [1, "example-margin", 3, "checked", "indeterminate", "change"], [4, "ngFor", "ngForOf"], [3, "ngModel", "color", "ngModelChange"]], template: function CheckboxOverviewExample_Template(rf, ctx) {
+    CheckboxOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 12, vars: 6, consts: [[1, "example-section"], [1, "example-margin"], [1, "example-margin", 3, "disabled"], [1, "example-list-section"], [1, "example-margin", 3, "checked", "color", "indeterminate", "change"], [4, "ngFor", "ngForOf"], [3, "ngModel", "color", "ngModelChange"]], template: function CheckboxOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "section", 0);
                 i0.ɵɵelementStart(1, "mat-checkbox", 1);
@@ -176,7 +176,7 @@
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("disabled", true);
                 i0.ɵɵadvance(4);
-                i0.ɵɵproperty("checked", ctx.allComplete)("indeterminate", ctx.someComplete());
+                i0.ɵɵproperty("checked", ctx.allComplete)("color", ctx.task.color)("indeterminate", ctx.someComplete());
                 i0.ɵɵadvance(1);
                 i0.ɵɵtextInterpolate1(" ", ctx.task.name, " ");
                 i0.ɵɵadvance(3);

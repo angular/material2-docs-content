@@ -1,25 +1,25 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Expansion panel as accordion
+ * <span class="hljs-doctag">@title </span>Expansion panel as accordion
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'expansion-steps-example'</span>,
-  templateUrl: <span class="hljs-string">'expansion-steps-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'expansion-steps-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;expansion-steps-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;expansion-steps-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;expansion-steps-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExpansionStepsExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExpansionStepsExample</span> </span>{
   step = <span class="hljs-number">0</span>;
 
-  setStep(index: <span class="hljs-built_in">number</span>) {
-    <span class="hljs-keyword">this</span>.step = index;
+  <span class="hljs-function"><span class="hljs-title">setStep</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span></span>)</span> {
+    <span class="hljs-built_in">this</span>.step = index;
   }
 
-  nextStep() {
-    <span class="hljs-keyword">this</span>.step++;
+  <span class="hljs-function"><span class="hljs-title">nextStep</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.step++;
   }
 
-  prevStep() {
-    <span class="hljs-keyword">this</span>.step--;
+  <span class="hljs-function"><span class="hljs-title">prevStep</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.step--;
   }
 }

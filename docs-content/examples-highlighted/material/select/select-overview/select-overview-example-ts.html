@@ -1,21 +1,21 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-keyword">interface</span> Food {
-  value: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
   viewValue: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * @title Basic select
+ * <span class="hljs-doctag">@title </span>Basic select
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'select-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'select-overview-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-overview-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectOverviewExample {
-  foods: Food[] = [
-    {value: <span class="hljs-string">'steak-0'</span>, viewValue: <span class="hljs-string">'Steak'</span>},
-    {value: <span class="hljs-string">'pizza-1'</span>, viewValue: <span class="hljs-string">'Pizza'</span>},
-    {value: <span class="hljs-string">'tacos-2'</span>, viewValue: <span class="hljs-string">'Tacos'</span>}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectOverviewExample</span> </span>{
+  <span class="hljs-attr">foods</span>: Food[] = [
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;steak-0&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Steak&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;pizza-1&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Pizza&#x27;</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;tacos-2&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Tacos&#x27;</span>}
   ];
 }

@@ -1,24 +1,24 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/dialog'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Dialog elements
+ * <span class="hljs-doctag">@title </span>Dialog elements
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'dialog-elements-example'</span>,
-  templateUrl: <span class="hljs-string">'dialog-elements-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-elements-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-elements-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogElementsExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogElementsExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
 
-  openDialog() {
-    <span class="hljs-keyword">this</span>.dialog.open(DialogElementsExampleDialog);
+  <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dialog.open(DialogElementsExampleDialog);
   }
 }
 
 
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'dialog-elements-example-dialog'</span>,
-  templateUrl: <span class="hljs-string">'dialog-elements-example-dialog.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-elements-example-dialog&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-elements-example-dialog.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogElementsExampleDialog {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogElementsExampleDialog</span> </span>{}

@@ -1,18 +1,18 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;
-<span class="hljs-keyword">import</span> {MatIconRegistry} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconRegistry} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title SVG icons
+ * <span class="hljs-doctag">@title </span>SVG icons
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'icon-svg-example'</span>,
-  templateUrl: <span class="hljs-string">'icon-svg-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;icon-svg-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;icon-svg-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> IconSvgExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">iconRegistry: MatIconRegistry, sanitizer: DomSanitizer</span>) {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IconSvgExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">iconRegistry: MatIconRegistry, sanitizer: DomSanitizer</span>)</span> {
     iconRegistry.addSvgIcon(
-        <span class="hljs-string">'thumbs-up'</span>,
-        sanitizer.bypassSecurityTrustResourceUrl(<span class="hljs-string">'assets/img/examples/thumbup-icon.svg'</span>));
+        <span class="hljs-string">&#x27;thumbs-up&#x27;</span>,
+        sanitizer.bypassSecurityTrustResourceUrl(<span class="hljs-string">&#x27;assets/img/examples/thumbup-icon.svg&#x27;</span>));
   }
 }

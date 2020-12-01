@@ -1,23 +1,23 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-keyword">interface</span> Animal {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
   sound: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-comment">/** @title Select with form field features */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Select with form field features */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'select-hint-error-example'</span>,
-  templateUrl: <span class="hljs-string">'select-hint-error-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-hint-error-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-hint-error-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectHintErrorExample {
-  animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, Validators.required);
-  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, Validators.required);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectHintErrorExample</span> </span>{
+  animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, Validators.required);
+  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, Validators.required);
   animals: Animal[] = [
-    {name: <span class="hljs-string">'Dog'</span>, sound: <span class="hljs-string">'Woof!'</span>},
-    {name: <span class="hljs-string">'Cat'</span>, sound: <span class="hljs-string">'Meow!'</span>},
-    {name: <span class="hljs-string">'Cow'</span>, sound: <span class="hljs-string">'Moo!'</span>},
-    {name: <span class="hljs-string">'Fox'</span>, sound: <span class="hljs-string">'Wa-pa-pa-pa-pa-pa-pow!'</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Dog&#x27;</span>, <span class="hljs-attr">sound</span>: <span class="hljs-string">&#x27;Woof!&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Cat&#x27;</span>, <span class="hljs-attr">sound</span>: <span class="hljs-string">&#x27;Meow!&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Cow&#x27;</span>, <span class="hljs-attr">sound</span>: <span class="hljs-string">&#x27;Moo!&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fox&#x27;</span>, <span class="hljs-attr">sound</span>: <span class="hljs-string">&#x27;Wa-pa-pa-pa-pa-pa-pow!&#x27;</span>},
   ];
 }

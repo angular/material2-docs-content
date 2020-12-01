@@ -1,27 +1,27 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/dialog'</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
-<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/menu'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   DialogContentExample,
   DialogContentExampleDialog
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-content/dialog-content-example'</span>;
-<span class="hljs-keyword">import</span> {DialogDataExample, DialogDataExampleDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-data/dialog-data-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-content/dialog-content-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {DialogDataExample, DialogDataExampleDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-data/dialog-data-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   DialogElementsExample,
   DialogElementsExampleDialog
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-elements/dialog-elements-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   DialogOverviewExample,
   DialogOverviewExampleDialog
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-overview/dialog-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   DialogFromMenuExample,
   DialogFromMenuExampleDialog
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-from-menu/dialog-from-menu-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-from-menu/dialog-from-menu-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   DialogContentExample,
@@ -50,7 +50,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CommonModule,
     MatButtonModule,
     MatDialogModule,
@@ -58,9 +58,9 @@
     MatMenuModule,
     FormsModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogExamplesModule</span> </span>{
 }

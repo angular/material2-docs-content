@@ -1,11 +1,11 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>mat-select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">"fill"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Pokemon<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"pokemonControl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;pokemonControl&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>-- None --<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let group of pokemonGroups"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"group.name"</span>
-                  [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"group.disabled"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let pokemon of group.pokemon"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"pokemon.value"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let group of pokemonGroups&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;group.name&quot;</span>
+                  [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;group.disabled&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let pokemon of group.pokemon&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;pokemon.value&quot;</span>&gt;</span>
         {{pokemon.viewValue}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
@@ -13,16 +13,16 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>native html select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">"fill"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Cars<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">matNativeControl</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Swedish Cars"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"volvo"</span>&gt;</span>volvo<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"saab"</span>&gt;</span>Saab<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Swedish Cars&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;volvo&quot;</span>&gt;</span>volvo<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;saab&quot;</span>&gt;</span>Saab<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"German Cars"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mercedes"</span>&gt;</span>Mercedes<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"audi"</span>&gt;</span>Audi<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;German Cars&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;mercedes&quot;</span>&gt;</span>Mercedes<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;audi&quot;</span>&gt;</span>Audi<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

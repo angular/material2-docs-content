@@ -45,7 +45,7 @@ be placed inside or outside the chip-list element.</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Chip 1<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Chip 2<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">"chipList"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;chipList&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
 <p>An example of chip input with an autocomplete placed inside the chip-list element.</p>
 <div material-docs-example="chips-autocomplete"></div>
@@ -76,11 +76,11 @@ the <code>mat-chip-list-stacked</code> class, as well as the <code>aria-orientat
       <p>Default options for the chips module can be specified using the <code>MAT_CHIPS_DEFAULT_OPTIONS</code>
 injection token.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [
+  <span class="hljs-attr">providers</span>: [
     {
-      provide: MAT_CHIPS_DEFAULT_OPTIONS,
-      useValue: {
-        separatorKeyCodes: [ENTER, COMMA]
+      <span class="hljs-attr">provide</span>: MAT_CHIPS_DEFAULT_OPTIONS,
+      <span class="hljs-attr">useValue</span>: {
+        <span class="hljs-attr">separatorKeyCodes</span>: [ENTER, COMMA]
       }
     }
   ]

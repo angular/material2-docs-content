@@ -1,9 +1,9 @@
-<span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
-<span class="hljs-keyword">import</span> {CdkTreeFlatExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-flat/cdk-tree-flat-example'</span>;
-<span class="hljs-keyword">import</span> {CdkTreeNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-nested/cdk-tree-nested-example'</span>;
+<span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkTreeFlatExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-tree-flat/cdk-tree-flat-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkTreeNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-tree-nested/cdk-tree-nested-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   CdkTreeFlatExample,
@@ -16,14 +16,14 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CdkTreeModule,
     MatButtonModule,
     MatIconModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTreeExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTreeExamplesModule</span> </span>{
 }

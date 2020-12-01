@@ -1,13 +1,13 @@
-<span class="hljs-keyword">import</span> {A11yModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/select'</span>;
+<span class="hljs-keyword">import</span> {A11yModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   FocusMonitorDirectivesExample
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./focus-monitor-directives/focus-monitor-directives-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./focus-monitor-directives/focus-monitor-directives-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   FocusMonitorFocusViaExample
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./focus-monitor-focus-via/focus-monitor-focus-via-example'</span>;
-<span class="hljs-keyword">import</span> {FocusMonitorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./focus-monitor-overview/focus-monitor-overview-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./focus-monitor-focus-via/focus-monitor-focus-via-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {FocusMonitorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./focus-monitor-overview/focus-monitor-overview-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample};
 
@@ -18,14 +18,14 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     A11yModule,
     MatSelectModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkA11yExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkA11yExamplesModule</span> </span>{
 }
 

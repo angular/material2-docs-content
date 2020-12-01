@@ -1,36 +1,36 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MAT_MOMENT_DATE_FORMATS,
   MomentDateAdapter,
   MAT_MOMENT_DATE_ADAPTER_OPTIONS,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-moment-adapter'</span>;
-<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
-<span class="hljs-comment">/** @title Datepicker with different locale */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Datepicker with different locale */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'datepicker-locale-example'</span>,
-  templateUrl: <span class="hljs-string">'datepicker-locale-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'datepicker-locale-example.css'</span>],
-  providers: [
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;datepicker-locale-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-locale-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;datepicker-locale-example.css&#x27;</span>],
+  <span class="hljs-attr">providers</span>: [
     <span class="hljs-comment">// The locale would typically be provided on the root module of your application. We do it at</span>
     <span class="hljs-comment">// the component level here, due to limitations of our example generation script.</span>
-    {provide: MAT_DATE_LOCALE, useValue: <span class="hljs-string">'ja-JP'</span>},
+    {<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;ja-JP&#x27;</span>},
 
     <span class="hljs-comment">// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing</span>
     <span class="hljs-comment">// `MatMomentDateModule` in your applications root module. We provide it at the component level</span>
     <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
     {
-      provide: DateAdapter,
-      useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+      <span class="hljs-attr">provide</span>: DateAdapter,
+      <span class="hljs-attr">useClass</span>: MomentDateAdapter,
+      <span class="hljs-attr">deps</span>: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
     },
-    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+    {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MAT_MOMENT_DATE_FORMATS},
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerLocaleExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _adapter: DateAdapter&lt;<span class="hljs-built_in">any</span>&gt;</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerLocaleExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _adapter: DateAdapter&lt;<span class="hljs-built_in">any</span>&gt;</span>)</span> {}
 
-  french() {
-    <span class="hljs-keyword">this</span>._adapter.setLocale(<span class="hljs-string">'fr'</span>);
+  <span class="hljs-function"><span class="hljs-title">french</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._adapter.setLocale(<span class="hljs-string">&#x27;fr&#x27;</span>);
   }
 }

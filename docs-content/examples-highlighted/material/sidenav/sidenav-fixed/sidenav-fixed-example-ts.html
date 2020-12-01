@@ -1,20 +1,20 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
-<span class="hljs-comment">/** @title Fixed sidenav */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Fixed sidenav */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'sidenav-fixed-example'</span>,
-  templateUrl: <span class="hljs-string">'sidenav-fixed-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'sidenav-fixed-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;sidenav-fixed-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-fixed-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-fixed-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavFixedExample {
-  options: FormGroup;
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavFixedExample</span> </span>{
+  <span class="hljs-attr">options</span>: FormGroup;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>) {
-    <span class="hljs-keyword">this</span>.options = fb.group({
-      bottom: <span class="hljs-number">0</span>,
-      fixed: <span class="hljs-literal">false</span>,
-      top: <span class="hljs-number">0</span>
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>)</span> {
+    <span class="hljs-built_in">this</span>.options = fb.group({
+      <span class="hljs-attr">bottom</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">fixed</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">top</span>: <span class="hljs-number">0</span>
     });
   }
 

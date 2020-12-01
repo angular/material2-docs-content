@@ -41,15 +41,15 @@
         </h3>
       <p>Let&#39;s display a slider component in your app and verify that everything works.</p>
 <p>You need to import the <code>MatSliderModule</code> that you want to display by adding the following lines to your app.module.ts file.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> { MatSliderModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/slider'</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { MatSliderModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slider&#x27;</span>;
 …
 <span class="hljs-meta">@NgModule</span> ({....
-  imports: [...,
+  <span class="hljs-attr">imports</span>: [...,
   MatSliderModule,
 …]
 })</code></pre>
 <p>Add the <code>&lt;mat-slider&gt;</code> tag to the <code>app.component.html</code> like so:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
 <p>Run your local dev server:</p>
 <pre><code class="language-bash">ng serve</code></pre>
 <p>and point your browser to <a href="http://localhost:4200">http://localhost:4200</a></p>

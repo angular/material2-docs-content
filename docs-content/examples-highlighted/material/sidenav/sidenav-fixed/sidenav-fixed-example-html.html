@@ -1,28 +1,28 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"shouldRun"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header"</span>&gt;</span>Header<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;shouldRun&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-header&quot;</span>&gt;</span>Header<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> #<span class="hljs-attr">sidenav</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"side"</span> <span class="hljs-attr">opened</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-sidenav"</span>
-                 [<span class="hljs-attr">fixedInViewport</span>]=<span class="hljs-string">"options.value.fixed"</span> [<span class="hljs-attr">fixedTopGap</span>]=<span class="hljs-string">"options.value.top"</span>
-                 [<span class="hljs-attr">fixedBottomGap</span>]=<span class="hljs-string">"options.value.bottom"</span>&gt;</span>
-      {{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> #<span class="hljs-attr">sidenav</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;side&quot;</span> <span class="hljs-attr">opened</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-sidenav&quot;</span>
+                 [<span class="hljs-attr">fixedInViewport</span>]=<span class="hljs-string">&quot;options.value.fixed&quot;</span> [<span class="hljs-attr">fixedTopGap</span>]=<span class="hljs-string">&quot;options.value.top&quot;</span>
+                 [<span class="hljs-attr">fixedBottomGap</span>]=<span class="hljs-string">&quot;options.value.bottom&quot;</span>&gt;</span>
+      {{options.value.fixed ? &#x27;Fixed&#x27; : &#x27;Non-fixed&#x27;}} Sidenav
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"options"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"fixed"</span>&gt;</span>Fixed<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;options&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;fixed&quot;</span>&gt;</span>Fixed<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Top gap<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"top"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;top&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Bottom gap<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;bottom&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"sidenav.toggle()"</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;sidenav.toggle()&quot;</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-footer"</span>&gt;</span>Footer<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-footer&quot;</span>&gt;</span>Footer<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"!shouldRun"</span>&gt;</span>Please open on StackBlitz to see result<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!shouldRun&quot;</span>&gt;</span>Please open on StackBlitz to see result<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

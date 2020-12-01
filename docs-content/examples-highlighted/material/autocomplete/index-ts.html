@@ -1,22 +1,22 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/autocomplete'</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/form-field'</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
-<span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/slide-toggle'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   AutocompleteAutoActiveFirstOptionExample
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example'</span>;
-<span class="hljs-keyword">import</span> {AutocompleteDisplayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-display/autocomplete-display-example'</span>;
-<span class="hljs-keyword">import</span> {AutocompleteFilterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-filter/autocomplete-filter-example'</span>;
-<span class="hljs-keyword">import</span> {AutocompleteOptgroupExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-optgroup/autocomplete-optgroup-example'</span>;
-<span class="hljs-keyword">import</span> {AutocompleteOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-overview/autocomplete-overview-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {AutocompleteDisplayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-display/autocomplete-display-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {AutocompleteFilterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-filter/autocomplete-filter-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {AutocompleteOptgroupExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-optgroup/autocomplete-optgroup-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {AutocompleteOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-overview/autocomplete-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   AutocompletePlainInputExample
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-plain-input/autocomplete-plain-input-example'</span>;
-<span class="hljs-keyword">import</span> {AutocompleteSimpleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-simple/autocomplete-simple-example'</span>;
-<span class="hljs-keyword">import</span> {AutocompleteHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-harness/autocomplete-harness-example'</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-plain-input/autocomplete-plain-input-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {AutocompleteSimpleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-simple/autocomplete-simple-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {AutocompleteHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-harness/autocomplete-harness-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   AutocompleteAutoActiveFirstOptionExample,
@@ -41,7 +41,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CommonModule,
     MatAutocompleteModule,
     MatFormFieldModule,
@@ -50,9 +50,9 @@
     FormsModule,
     ReactiveFormsModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteExamplesModule</span> </span>{
 }

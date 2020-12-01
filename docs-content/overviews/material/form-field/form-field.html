@@ -57,7 +57,7 @@ placeholder. The <code>placeholder</code> will never be promoted to a label for 
 you will need to specify an empty label to prevent the <code>placeholder</code> from being promoted.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Just a placeholder"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Just a placeholder&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
 <p>If the form field control is marked with a <code>required</code> attribute, an asterisk will be appended to the
 label to indicate the fact that it is a required field. If unwanted, this can be disabled by
@@ -72,8 +72,8 @@ present in the form field control. It can also be set to <code>auto</code> to re
 <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> in your application&#39;s root module. Like the <code>floatLabel</code> input,
 the option can be either set to <code>always</code>, <code>never</code>, or <code>auto</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  providers: [
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: <span class="hljs-string">'always'</span>}}
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MAT_FORM_FIELD_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">floatLabel</span>: <span class="hljs-string">&#x27;always&#x27;</span>}}
   ]
 })</code></pre>
 

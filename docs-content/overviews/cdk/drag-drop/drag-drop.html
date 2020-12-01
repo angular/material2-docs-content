@@ -37,18 +37,18 @@ property or by wrapping the elements in an element with the <code>cdkDropListGro
 <p>Note that <code>cdkDropListConnectedTo</code> works both with a direct reference to another <code>cdkDropList</code>, or
 by referencing the <code>id</code> of another drop container:</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- This is valid --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> #<span class="hljs-attr">listOne</span>=<span class="hljs-string">"cdkDropList"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"[listTwo]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> #<span class="hljs-attr">listTwo</span>=<span class="hljs-string">"cdkDropList"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"[listOne]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> #<span class="hljs-attr">listOne</span>=<span class="hljs-string">&quot;cdkDropList&quot;</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">&quot;[listTwo]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> #<span class="hljs-attr">listTwo</span>=<span class="hljs-string">&quot;cdkDropList&quot;</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">&quot;[listOne]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-comment">&lt;!-- This is valid as well --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list-one"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"['list-two']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list-two"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"['list-one']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;list-one&quot;</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">&quot;[&#x27;list-two&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;list-two&quot;</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">&quot;[&#x27;list-one&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 <p>If you have an unknown number of connected drop lists, you can use the <code>cdkDropListGroup</code> directive
 to set up the connection automatically. Note that any new <code>cdkDropList</code> that is added under a group
 will be connected to all other lists automatically.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropListGroup</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- All lists in here will be connected. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let list of lists"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let list of lists&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 <div material-docs-example="cdk-drag-drop-connected-sorting-group"></div>
 
@@ -60,8 +60,8 @@ will be connected to all other lists automatically.</p>
       <p>You can associate some arbitrary data with both <code>cdkDrag</code> and <code>cdkDropList</code> by setting <code>cdkDragData</code>
 or <code>cdkDropListData</code>, respectively. Events fired from both directives include this data, allowing
 you to easily identify the origin of the drag or drop interaction.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">"list"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let list of lists"</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDrag</span> [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">"item"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of list"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">&quot;list&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let list of lists&quot;</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDrag</span> [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;item&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let item of list&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
 
         <h3 id="styling" class="docs-header-link">
@@ -132,14 +132,14 @@ following classes can be used for animations:</p>
   the final position inside the <code>cdkDropList</code> container.</li>
 </ul>
 <p>Example animations:</p>
-<pre><code class="language-css"><span class="hljs-comment">/* Animate items as they're being sorted. */</span>
+<pre><code class="language-css"><span class="hljs-comment">/* Animate items as they&#x27;re being sorted. */</span>
 <span class="hljs-selector-class">.cdk-drop-list-dragging</span> <span class="hljs-selector-class">.cdk-drag</span> {
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">250ms</span> <span class="hljs-built_in">cubic-bezier</span>(0, 0, 0.2, 1);
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">250ms</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">1</span>);
 }
 
 <span class="hljs-comment">/* Animate an item that has been dropped. */</span>
 <span class="hljs-selector-class">.cdk-drag-animating</span> {
-  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span> <span class="hljs-built_in">cubic-bezier</span>(0, 0, 0.2, 1);
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">1</span>);
 }</code></pre>
 
         <h3 id="customizing-the-drag-area-using-a-handle" class="docs-header-link">

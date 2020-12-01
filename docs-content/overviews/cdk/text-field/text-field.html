@@ -34,9 +34,9 @@ changes.</p>
 <p>Note: This service requires some CSS to install animation hooks when the autofill statechanges. If
 you are using Angular Material, this CSS is included as part of the <code>mat-core</code> mixin. If you are not
 using Angular Material, you should include this CSS with the <code>cdk-text-field</code> mixin.</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/cdk/text-field/text-field'</span>; 
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/cdk/text-field/text-field&#x27;</span>; 
 
-@<span class="hljs-keyword">include</span> cdk-text-field();</code></pre>
+<span class="hljs-keyword">@include</span> cdk-text-field();</code></pre>
 
         <h3 id="styling-the-autofill-state-of-an-input" class="docs-header-link">
           <span header-link="styling-the-autofill-state-of-an-input"></span>
@@ -46,10 +46,10 @@ using Angular Material, you should include this CSS with the <code>cdk-text-fiel
 autofilled <code>&lt;input&gt;</code>. To make this simpler, the CDK includes a mixin <code>cdk-text-field-autofill-color</code>
 which can be used to set these properties. It takes a <code>background</code> value as the first parameter and
 an optional <code>color</code> value as the second parameter.</p>
-<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/cdk/text-field/text-field'</span>; 
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/cdk/text-field/text-field&#x27;</span>; 
 
 <span class="hljs-comment">// Set custom-autofill inputs to have no background and red text.</span>
 <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.custom-autofill</span> {
-  @<span class="hljs-keyword">include</span> cdk-text-field-autofill-color(transparent, red);
+  <span class="hljs-keyword">@include</span> cdk-text-field-autofill-color(transparent, red);
 }</code></pre>
 </div>

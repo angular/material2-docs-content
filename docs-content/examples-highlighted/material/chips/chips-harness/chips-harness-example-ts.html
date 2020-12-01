@@ -1,14 +1,14 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Testing with MatChipsHarness
+ * <span class="hljs-doctag">@title </span>Testing with MatChipsHarness
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'chips-harness-example'</span>,
-  templateUrl: <span class="hljs-string">'chips-harness-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-harness-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-harness-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsHarnessExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsHarnessExample</span> </span>{
   isDisabled = <span class="hljs-literal">false</span>;
-  remove = jasmine.createSpy(<span class="hljs-string">'remove spy'</span>);
-  add = jasmine.createSpy(<span class="hljs-string">'add spy'</span>);
+  remove = jasmine.createSpy(<span class="hljs-string">&#x27;remove spy&#x27;</span>);
+  add = jasmine.createSpy(<span class="hljs-string">&#x27;add spy&#x27;</span>);
 }

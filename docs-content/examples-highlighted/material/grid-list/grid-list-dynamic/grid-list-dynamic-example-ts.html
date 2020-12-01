@@ -1,24 +1,24 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Tile {
-  color: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">color</span>: <span class="hljs-built_in">string</span>;
   cols: <span class="hljs-built_in">number</span>;
   rows: <span class="hljs-built_in">number</span>;
   text: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * @title Dynamic grid-list
+ * <span class="hljs-doctag">@title </span>Dynamic grid-list
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'grid-list-dynamic-example'</span>,
-  templateUrl: <span class="hljs-string">'grid-list-dynamic-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;grid-list-dynamic-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;grid-list-dynamic-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> GridListDynamicExample {
-  tiles: Tile[] = [
-    {text: <span class="hljs-string">'One'</span>, cols: <span class="hljs-number">3</span>, rows: <span class="hljs-number">1</span>, color: <span class="hljs-string">'lightblue'</span>},
-    {text: <span class="hljs-string">'Two'</span>, cols: <span class="hljs-number">1</span>, rows: <span class="hljs-number">2</span>, color: <span class="hljs-string">'lightgreen'</span>},
-    {text: <span class="hljs-string">'Three'</span>, cols: <span class="hljs-number">1</span>, rows: <span class="hljs-number">1</span>, color: <span class="hljs-string">'lightpink'</span>},
-    {text: <span class="hljs-string">'Four'</span>, cols: <span class="hljs-number">2</span>, rows: <span class="hljs-number">1</span>, color: <span class="hljs-string">'#DDBDF1'</span>},
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GridListDynamicExample</span> </span>{
+  <span class="hljs-attr">tiles</span>: Tile[] = [
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;One&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;lightblue&#x27;</span>},
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Two&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;lightgreen&#x27;</span>},
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Three&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;lightpink&#x27;</span>},
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Four&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;#DDBDF1&#x27;</span>},
   ];
 }

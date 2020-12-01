@@ -91,16 +91,16 @@ the input looks like without having to bring in the extra functionality from <co
 may want it to attach to a different container element. You can change the element that the
 autocomplete is attached to using the <code>matAutocompleteOrigin</code> directive together with the
 <code>matAutocompleteConnectedTo</code> input:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-wrapper-example"</span> <span class="hljs-attr">matAutocompleteOrigin</span> #<span class="hljs-attr">origin</span>=<span class="hljs-string">"matAutocompleteOrigin"</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;custom-wrapper-example&quot;</span> <span class="hljs-attr">matAutocompleteOrigin</span> #<span class="hljs-attr">origin</span>=<span class="hljs-string">&quot;matAutocompleteOrigin&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
     <span class="hljs-attr">matInput</span>
-    [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span>
-    [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"auto"</span>
-    [<span class="hljs-attr">matAutocompleteConnectedTo</span>]=<span class="hljs-string">"origin"</span>&gt;</span>
+    [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;myControl&quot;</span>
+    [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;auto&quot;</span>
+    [<span class="hljs-attr">matAutocompleteConnectedTo</span>]=<span class="hljs-string">&quot;origin&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let option of options&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option&quot;</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span></code></pre>
 
         <h3 id="keyboard-interaction" class="docs-header-link">

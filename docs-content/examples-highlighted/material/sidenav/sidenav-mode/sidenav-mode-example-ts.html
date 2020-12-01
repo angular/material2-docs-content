@@ -1,13 +1,13 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
-<span class="hljs-comment">/** @title Sidenav with configurable mode */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Sidenav with configurable mode */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'sidenav-mode-example'</span>,
-  templateUrl: <span class="hljs-string">'sidenav-mode-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'sidenav-mode-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;sidenav-mode-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-mode-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-mode-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavModeExample {
-  mode = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'over'</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavModeExample</span> </span>{
+  mode = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;over&#x27;</span>);
   shouldRun = [<span class="hljs-regexp">/(^|\.)plnkr\.co$/</span>, <span class="hljs-regexp">/(^|\.)stackblitz\.io$/</span>].some(<span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h.test(<span class="hljs-built_in">window</span>.location.host));
 }

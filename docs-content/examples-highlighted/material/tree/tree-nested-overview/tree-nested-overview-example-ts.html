@@ -1,38 +1,38 @@
-<span class="hljs-keyword">import</span> {NestedTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatTreeNestedDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {NestedTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTreeNestedDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree&#x27;</span>;
 
 <span class="hljs-comment">/**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
  */</span>
 <span class="hljs-keyword">interface</span> FoodNode {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
   children?: FoodNode[];
 }
 
 <span class="hljs-keyword">const</span> TREE_DATA: FoodNode[] = [
   {
-    name: <span class="hljs-string">'Fruit'</span>,
-    children: [
-      {name: <span class="hljs-string">'Apple'</span>},
-      {name: <span class="hljs-string">'Banana'</span>},
-      {name: <span class="hljs-string">'Fruit loops'</span>},
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
+    <span class="hljs-attr">children</span>: [
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>},
     ]
   }, {
-    name: <span class="hljs-string">'Vegetables'</span>,
-    children: [
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
+    <span class="hljs-attr">children</span>: [
       {
-        name: <span class="hljs-string">'Green'</span>,
-        children: [
-          {name: <span class="hljs-string">'Broccoli'</span>},
-          {name: <span class="hljs-string">'Brussels sprouts'</span>},
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
+        <span class="hljs-attr">children</span>: [
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>},
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>},
         ]
       }, {
-        name: <span class="hljs-string">'Orange'</span>,
-        children: [
-          {name: <span class="hljs-string">'Pumpkins'</span>},
-          {name: <span class="hljs-string">'Carrots'</span>},
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
+        <span class="hljs-attr">children</span>: [
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>},
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>},
         ]
       },
     ]
@@ -40,19 +40,19 @@
 ];
 
 <span class="hljs-comment">/**
- * @title Tree with nested nodes
+ * <span class="hljs-doctag">@title </span>Tree with nested nodes
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'tree-nested-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'tree-nested-overview-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'tree-nested-overview-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tree-nested-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tree-nested-overview-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;tree-nested-overview-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeNestedOverviewExample {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeNestedOverviewExample</span> </span>{
   treeControl = <span class="hljs-keyword">new</span> NestedTreeControl&lt;FoodNode&gt;(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children);
   dataSource = <span class="hljs-keyword">new</span> MatTreeNestedDataSource&lt;FoodNode&gt;();
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">this</span>.dataSource.data = TREE_DATA;
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dataSource.data = TREE_DATA;
   }
 
   hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: FoodNode</span>) =&gt;</span> !!node.children &amp;&amp; node.children.length &gt; <span class="hljs-number">0</span>;

@@ -1,27 +1,27 @@
-<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/**
- * @title Stepper overview
+ * <span class="hljs-doctag">@title </span>Stepper overview
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'stepper-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'stepper-overview-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'stepper-overview-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;stepper-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;stepper-overview-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;stepper-overview-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperOverviewExample <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
   isLinear = <span class="hljs-literal">false</span>;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
 
-  ngOnInit() {
-    <span class="hljs-keyword">this</span>.firstFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({
-      firstCtrl: [<span class="hljs-string">''</span>, Validators.required]
+  <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+      <span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
     });
-    <span class="hljs-keyword">this</span>.secondFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({
-      secondCtrl: [<span class="hljs-string">''</span>, Validators.required]
+    <span class="hljs-built_in">this</span>.secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+      <span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
     });
   }
 }

@@ -9,21 +9,21 @@
           <span header-link="example"></span>
           Example
         </h4>
-      <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Directive} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/keycodes'</span>;
+      <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Directive} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
 
 <span class="hljs-meta">@Directive</span>({
-  selector: <span class="hljs-string">'[count-arrows]'</span>
-  host: {
-    (keypress): <span class="hljs-string">'handleKeyPress($event)'</span>
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;[count-arrows]&#x27;</span>
+  <span class="hljs-attr">host</span>: {
+    (keypress): <span class="hljs-string">&#x27;handleKeyPress($event)&#x27;</span>
   }
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ArrowCounterDirective {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrowCounterDirective</span> </span>{
   arrowPressCount = <span class="hljs-number">0</span>;
 
-  handleKeyPress(event: KeyboardEvent) {
+  <span class="hljs-function"><span class="hljs-title">handleKeyPress</span>(<span class="hljs-params">event: KeyboardEvent</span>)</span> {
     <span class="hljs-keyword">if</span> ([UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW].includes(event.keyCode)) {
-      <span class="hljs-keyword">this</span>.arrowPresscount++;
+      <span class="hljs-built_in">this</span>.arrowPresscount++;
     }
   }
 }</code></pre>

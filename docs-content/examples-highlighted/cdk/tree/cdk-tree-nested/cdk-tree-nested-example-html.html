@@ -1,19 +1,19 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">"treeControl"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">&quot;treeControl&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for leaf nodes --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">"let node"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-tree-node"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-node&quot;</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- use a disabled button to provide padding for tree leaf --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     {{node.name}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">"let node; when: hasChild"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-tree-node"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'Toggle ' + node.name"</span> <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-icon-rtl-mirror"</span>&gt;</span>
-        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node; when: hasChild&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-node&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;Toggle &#x27; + node.name&quot;</span> <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-icon-rtl-mirror&quot;</span>&gt;</span>
+        {{treeControl.isExpanded(node) ? &#x27;expand_more&#x27; : &#x27;chevron_right&#x27;}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     {{node.name}}
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.example-tree-invisible</span>]=<span class="hljs-string">"!treeControl.isExpanded(node)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.example-tree-invisible</span>]=<span class="hljs-string">&quot;!treeControl.isExpanded(node)&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkTreeNodeOutlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span>

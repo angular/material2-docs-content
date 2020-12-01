@@ -1,17 +1,17 @@
-<span class="hljs-keyword">import</span> {DragDropModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/autocomplete'</span>;
-<span class="hljs-keyword">import</span> {MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/chips'</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/form-field'</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
-<span class="hljs-keyword">import</span> {ChipsAutocompleteExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-autocomplete/chips-autocomplete-example'</span>;
-<span class="hljs-keyword">import</span> {ChipsDragDropExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-drag-drop/chips-drag-drop-example'</span>;
-<span class="hljs-keyword">import</span> {ChipsInputExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-input/chips-input-example'</span>;
-<span class="hljs-keyword">import</span> {ChipsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-overview/chips-overview-example'</span>;
-<span class="hljs-keyword">import</span> {ChipsStackedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-stacked/chips-stacked-example'</span>;
-<span class="hljs-keyword">import</span> {ChipsHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-harness/chips-harness-example'</span>;
+<span class="hljs-keyword">import</span> {DragDropModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/drag-drop&#x27;</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChipsAutocompleteExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-autocomplete/chips-autocomplete-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChipsDragDropExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-drag-drop/chips-drag-drop-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChipsInputExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-input/chips-input-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChipsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-overview/chips-overview-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChipsStackedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-stacked/chips-stacked-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChipsHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-harness/chips-harness-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   ChipsAutocompleteExample,
@@ -32,7 +32,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CommonModule,
     DragDropModule,
     MatAutocompleteModule,
@@ -41,9 +41,9 @@
     MatFormFieldModule,
     ReactiveFormsModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsExamplesModule</span> </span>{
 }

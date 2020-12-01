@@ -1,24 +1,24 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ChipColor {
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
   color: ThemePalette;
 }
 
 <span class="hljs-comment">/**
- * @title Stacked chips
+ * <span class="hljs-doctag">@title </span>Stacked chips
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'chips-stacked-example'</span>,
-  templateUrl: <span class="hljs-string">'chips-stacked-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'chips-stacked-example.css'</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-stacked-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-stacked-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;chips-stacked-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsStackedExample {
-  availableColors: ChipColor[] = [
-    {name: <span class="hljs-string">'none'</span>, color: <span class="hljs-literal">undefined</span>},
-    {name: <span class="hljs-string">'Primary'</span>, color: <span class="hljs-string">'primary'</span>},
-    {name: <span class="hljs-string">'Accent'</span>, color: <span class="hljs-string">'accent'</span>},
-    {name: <span class="hljs-string">'Warn'</span>, color: <span class="hljs-string">'warn'</span>}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsStackedExample</span> </span>{
+  <span class="hljs-attr">availableColors</span>: ChipColor[] = [
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;none&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-literal">undefined</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Primary&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;primary&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Accent&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;accent&#x27;</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Warn&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;warn&#x27;</span>}
   ];
 }

@@ -1,8 +1,8 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatGridListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/grid-list'</span>;
-<span class="hljs-keyword">import</span> {GridListDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./grid-list-dynamic/grid-list-dynamic-example'</span>;
-<span class="hljs-keyword">import</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./grid-list-overview/grid-list-overview-example'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatGridListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list&#x27;</span>;
+<span class="hljs-keyword">import</span> {GridListDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-dynamic/grid-list-dynamic-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-overview/grid-list-overview-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   GridListDynamicExample,
@@ -15,13 +15,13 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [
+  <span class="hljs-attr">imports</span>: [
     CommonModule,
     MatGridListModule,
   ],
-  declarations: EXAMPLES,
-  exports: EXAMPLES,
-  entryComponents: EXAMPLES,
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> GridListExamplesModule {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GridListExamplesModule</span> </span>{
 }

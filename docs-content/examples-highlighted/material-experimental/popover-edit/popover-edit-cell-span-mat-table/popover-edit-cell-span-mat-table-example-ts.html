@@ -1,67 +1,67 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
-<span class="hljs-keyword">import</span> {NgForm} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgForm} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Person {
-  id: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">id</span>: <span class="hljs-built_in">number</span>;
   firstName: <span class="hljs-built_in">string</span>;
   middleName: <span class="hljs-built_in">string</span>;
   lastName: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-keyword">const</span> PERSON_DATA: Person[] = [
-  {id: <span class="hljs-number">1</span>, firstName: <span class="hljs-string">'Terra'</span>, middleName: <span class="hljs-string">'Maduin'</span>, lastName: <span class="hljs-string">'Branford'</span>},
-  {id: <span class="hljs-number">2</span>, firstName: <span class="hljs-string">'Locke'</span>, middleName: <span class="hljs-string">''</span>, lastName: <span class="hljs-string">'Cole'</span>},
-  {id: <span class="hljs-number">3</span>, firstName: <span class="hljs-string">'Celes'</span>, middleName: <span class="hljs-string">'Gestahl'</span>, lastName: <span class="hljs-string">'Chere'</span>},
-  {id: <span class="hljs-number">4</span>, firstName: <span class="hljs-string">'Edgar'</span>, middleName: <span class="hljs-string">'Roni'</span>, lastName: <span class="hljs-string">'Figaro'</span>},
-  {id: <span class="hljs-number">5</span>, firstName: <span class="hljs-string">'Sabin'</span>, middleName: <span class="hljs-string">'Rene'</span>, lastName: <span class="hljs-string">'Figaro'</span>},
-  {id: <span class="hljs-number">6</span>, firstName: <span class="hljs-string">'Clyde'</span>, middleName: <span class="hljs-string">'"Shadow"'</span>, lastName: <span class="hljs-string">'Arrowny'</span>},
-  {id: <span class="hljs-number">7</span>, firstName: <span class="hljs-string">'Setzer'</span>, middleName: <span class="hljs-string">''</span>, lastName: <span class="hljs-string">'Gabbiani'</span>},
-  {id: <span class="hljs-number">8</span>, firstName: <span class="hljs-string">'Cid'</span>, middleName: <span class="hljs-string">'Del Norte'</span>, lastName: <span class="hljs-string">'Marquez'</span>},
-  {id: <span class="hljs-number">9</span>, firstName: <span class="hljs-string">'Mog'</span>, middleName: <span class="hljs-string">''</span>, lastName: <span class="hljs-string">'McMoogle'</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Terra&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Maduin&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Branford&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Locke&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Cole&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Celes&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Gestahl&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Chere&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Edgar&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Roni&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Figaro&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Sabin&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Rene&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Figaro&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Clyde&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;&quot;Shadow&quot;&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Arrowny&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">7</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Setzer&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Gabbiani&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">8</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Cid&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Del Norte&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Marquez&#x27;</span>},
+  {<span class="hljs-attr">id</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Mog&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;McMoogle&#x27;</span>},
 ];
 
 <span class="hljs-comment">/**
- * @title Material Popover Edit spanning multiple columns on a Material data-table
+ * <span class="hljs-doctag">@title </span>Material Popover Edit spanning multiple columns on a Material data-table
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'popover-edit-cell-span-mat-table-example'</span>,
-  styleUrls: [<span class="hljs-string">'popover-edit-cell-span-mat-table-example.css'</span>],
-  templateUrl: <span class="hljs-string">'popover-edit-cell-span-mat-table-example.html'</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;popover-edit-cell-span-mat-table-example&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;popover-edit-cell-span-mat-table-example.css&#x27;</span>],
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;popover-edit-cell-span-mat-table-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PopoverEditCellSpanMatTableExample {
-  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'id'</span>, <span class="hljs-string">'firstName'</span>, <span class="hljs-string">'middleName'</span>, <span class="hljs-string">'lastName'</span>];
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PopoverEditCellSpanMatTableExample</span> </span>{
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;firstName&#x27;</span>, <span class="hljs-string">&#x27;middleName&#x27;</span>, <span class="hljs-string">&#x27;lastName&#x27;</span>];
   dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
 
-  readonly preservedValues = <span class="hljs-keyword">new</span> WeakMap&lt;Person, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> preservedValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;Person, <span class="hljs-built_in">any</span>&gt;();
 
-  onSubmit(person: Person, f: NgForm) {
+  <span class="hljs-function"><span class="hljs-title">onSubmit</span>(<span class="hljs-params">person: Person, f: NgForm</span>)</span> {
     <span class="hljs-keyword">if</span> (!f.valid) {
       <span class="hljs-keyword">return</span>;
     }
 
-    person.firstName = f.value[<span class="hljs-string">'firstName'</span>];
-    person.middleName = f.value[<span class="hljs-string">'middleName'</span>];
-    person.lastName = f.value[<span class="hljs-string">'lastName'</span>];
+    person.firstName = f.value[<span class="hljs-string">&#x27;firstName&#x27;</span>];
+    person.middleName = f.value[<span class="hljs-string">&#x27;middleName&#x27;</span>];
+    person.lastName = f.value[<span class="hljs-string">&#x27;lastName&#x27;</span>];
   }
 }
 
 <span class="hljs-comment">/**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * to a common data base, ExampleDatabase. It is not the data source&#x27;s responsibility to manage
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;Person&gt; {
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataSource</span>&lt;<span class="hljs-title">Person</span>&gt; </span>{
   <span class="hljs-comment">/** Stream of data that is provided to the table. */</span>
   data = <span class="hljs-keyword">new</span> BehaviorSubject&lt;Person[]&gt;(PERSON_DATA);
 
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
   connect(): Observable&lt;Person[]&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.data;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.data;
   }
 
-  disconnect() {}
+  <span class="hljs-function"><span class="hljs-title">disconnect</span>(<span class="hljs-params"></span>)</span> {}
 }
