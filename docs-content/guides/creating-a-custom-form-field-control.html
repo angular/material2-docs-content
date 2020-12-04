@@ -163,11 +163,11 @@ just set this to <code>null</code> in our component.</p>
 reference to the <code>NgControl</code> associated with your control and make it publicly available.</p>
 <p>The easy way is to add it as a public property to your constructor and let dependency injection
 handle it:</p>
-<pre><code class="language-ts"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+<pre><code class="language-ts"><span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
   ...,
   <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
   ...,
-</span>) { }</code></pre>
+</span>)</span> { }</code></pre>
 <p>Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
 <code>NG_VALUE_ACCESSOR</code> (in the <code>providers</code> part of the component&#39;s decorator, or possibly in a module
 declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> error.</p>
@@ -185,11 +185,11 @@ declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> 
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt; </span>{
-  <span class="hljs-title">constructor</span>(<span class="hljs-params">
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
     ...,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
     ...,
-  </span>) {
+  </span>)</span> {
 
     <span class="hljs-comment">// Replace the provider from above with this.</span>
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.ngControl != <span class="hljs-literal">null</span>) {
