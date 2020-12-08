@@ -38,9 +38,9 @@ remove the indeterminate state.</p>
       <p>When user clicks on the <code>mat-checkbox</code>, the default behavior is toggle <code>checked</code> value and set
 <code>indeterminate</code> to <code>false</code>. This behavior can be customized by
 <a href="https://angular.io/guide/dependency-injection">providing a new value</a>
-of <code>MAT_CHECKBOX_CLICK_ACTION</code> to the checkbox.</p>
+of <code>MAT_CHECKBOX_DEFAULT_OPTIONS</code> to the checkbox.</p>
 <pre><code>providers: [
-  {provide: MAT_CHECKBOX_CLICK_ACTION, useValue: &#39;check&#39;}
+  {provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { clickAction: &#39;noop&#39; } as MatCheckboxDefaultOptions}
 ]</code></pre>
 <p>The possible values are:</p>
 
