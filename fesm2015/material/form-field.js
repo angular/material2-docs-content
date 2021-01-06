@@ -681,10 +681,45 @@ FormFieldThemingExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldThemingExam
             }]
     }], function () { return [{ type: FormBuilder }]; }, null); })();
 
+/**
+ * @title Testing with MatFormFieldHarness
+ */
+class FormFieldHarnessExample {
+    constructor() {
+        this.requiredControl = new FormControl('Initial value', [Validators.required]);
+    }
+}
+FormFieldHarnessExample.ɵfac = function FormFieldHarnessExample_Factory(t) { return new (t || FormFieldHarnessExample)(); };
+FormFieldHarnessExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldHarnessExample, selectors: [["form-field-harness-example"]], decls: 8, vars: 1, consts: [["id", "with-errors"], [1, "custom-control"], ["matInput", "", 3, "formControl"], ["align", "start"]], template: function FormFieldHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field", 0);
+        ɵɵelementStart(1, "span", 1);
+        ɵɵtext(2, "Custom control harness");
+        ɵɵelementEnd();
+        ɵɵelement(3, "input", 2);
+        ɵɵelementStart(4, "mat-error");
+        ɵɵtext(5, "Error");
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-hint", 3);
+        ɵɵtext(7, "Hint");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(3);
+        ɵɵproperty("formControl", ctx.requiredControl);
+    } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatError, MatHint], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'form-field-harness-example',
+                templateUrl: 'form-field-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     FormFieldAppearanceExample,
     FormFieldCustomControlExample,
     FormFieldErrorExample,
+    FormFieldHarnessExample,
     FormFieldHintExample,
     FormFieldLabelExample,
     FormFieldOverviewExample,
@@ -708,6 +743,7 @@ FormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function FormField
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(FormFieldExamplesModule, { declarations: [FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
+        FormFieldHarnessExample,
         FormFieldHintExample,
         FormFieldLabelExample,
         FormFieldOverviewExample,
@@ -723,6 +759,7 @@ FormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function FormField
         ReactiveFormsModule], exports: [FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
+        FormFieldHarnessExample,
         FormFieldHintExample,
         FormFieldLabelExample,
         FormFieldOverviewExample,
@@ -752,5 +789,5 @@ FormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function FormField
  * Generated bundle index. Do not edit.
  */
 
-export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldExamplesModule, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, MyTelInput };
+export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldExamplesModule, FormFieldHarnessExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, MyTelInput };
 //# sourceMappingURL=form-field.js.map

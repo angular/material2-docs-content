@@ -2545,6 +2545,23 @@
                 "importSpecifier": "material/form-field"
             }
         },
+        "form-field-harness": {
+            "packagePath": "material/form-field/form-field-harness",
+            "title": "Testing with MatFormFieldHarness",
+            "componentName": "FormFieldHarnessExample",
+            "files": [
+                "form-field-harness-example.ts",
+                "form-field-harness-example.html",
+                "form-field-harness-example.spec.ts"
+            ],
+            "selector": "form-field-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "form-field-harness-example.ts",
+            "module": {
+                "name": "FormFieldExamplesModule",
+                "importSpecifier": "material/form-field"
+            }
+        },
         "form-field-hint": {
             "packagePath": "material/form-field/form-field-hint",
             "title": "Form field with hints",

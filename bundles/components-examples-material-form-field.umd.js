@@ -1073,10 +1073,51 @@
             }], function () { return [{ type: i1.FormBuilder }]; }, null);
     })();
 
+    /**
+     * @title Testing with MatFormFieldHarness
+     */
+    var FormFieldHarnessExample = /** @class */ (function () {
+        function FormFieldHarnessExample() {
+            this.requiredControl = new i1.FormControl('Initial value', [i1.Validators.required]);
+        }
+        return FormFieldHarnessExample;
+    }());
+    FormFieldHarnessExample.ɵfac = function FormFieldHarnessExample_Factory(t) { return new (t || FormFieldHarnessExample)(); };
+    FormFieldHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldHarnessExample, selectors: [["form-field-harness-example"]], decls: 8, vars: 1, consts: [["id", "with-errors"], [1, "custom-control"], ["matInput", "", 3, "formControl"], ["align", "start"]], template: function FormFieldHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
+                i0.ɵɵelementStart(1, "span", 1);
+                i0.ɵɵtext(2, "Custom control harness");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(3, "input", 2);
+                i0.ɵɵelementStart(4, "mat-error");
+                i0.ɵɵtext(5, "Error");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-hint", 3);
+                i0.ɵɵtext(7, "Hint");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("formControl", ctx.requiredControl);
+            }
+        }, directives: [i1$1.MatFormField, i2$1.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i1$1.MatError, i1$1.MatHint], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(FormFieldHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'form-field-harness-example',
+                        templateUrl: 'form-field-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
+        FormFieldHarnessExample,
         FormFieldHintExample,
         FormFieldLabelExample,
         FormFieldOverviewExample,
@@ -1104,6 +1145,7 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(FormFieldExamplesModule, { declarations: [FormFieldAppearanceExample,
                 FormFieldCustomControlExample,
                 FormFieldErrorExample,
+                FormFieldHarnessExample,
                 FormFieldHintExample,
                 FormFieldLabelExample,
                 FormFieldOverviewExample,
@@ -1119,6 +1161,7 @@
                 i1.ReactiveFormsModule], exports: [FormFieldAppearanceExample,
                 FormFieldCustomControlExample,
                 FormFieldErrorExample,
+                FormFieldHarnessExample,
                 FormFieldHintExample,
                 FormFieldLabelExample,
                 FormFieldOverviewExample,
@@ -1155,6 +1198,7 @@
     exports.FormFieldCustomControlExample = FormFieldCustomControlExample;
     exports.FormFieldErrorExample = FormFieldErrorExample;
     exports.FormFieldExamplesModule = FormFieldExamplesModule;
+    exports.FormFieldHarnessExample = FormFieldHarnessExample;
     exports.FormFieldHintExample = FormFieldHintExample;
     exports.FormFieldLabelExample = FormFieldLabelExample;
     exports.FormFieldOverviewExample = FormFieldOverviewExample;
