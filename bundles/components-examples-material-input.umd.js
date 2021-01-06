@@ -418,11 +418,56 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatInputHarness
+     */
+    var InputHarnessExample = /** @class */ (function () {
+        function InputHarnessExample() {
+            this.inputType = 'number';
+            this.disabled = false;
+        }
+        return InputHarnessExample;
+    }());
+    InputHarnessExample.ɵfac = function InputHarnessExample_Factory(t) { return new (t || InputHarnessExample)(); };
+    InputHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHarnessExample, selectors: [["input-harness-example"]], decls: 10, vars: 2, consts: [["matInput", "", "value", "Sushi", "name", "favorite-food"], ["matInput", "", 3, "type", "disabled"], ["matInput", ""]], template: function InputHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field");
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Favorite food");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(3, "input", 0);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "mat-form-field");
+                i0.ɵɵelement(5, "input", 1);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-form-field");
+                i0.ɵɵelementStart(7, "mat-label");
+                i0.ɵɵtext(8, "Leave a comment");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(9, "textarea", 2);
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(5);
+                i0.ɵɵproperty("type", ctx.inputType)("disabled", ctx.disabled);
+            }
+        }, directives: [i2.MatFormField, i2.MatLabel, i3.MatInput], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(InputHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'input-harness-example',
+                        templateUrl: 'input-harness-example.html'
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         InputClearableExample,
         InputErrorStateMatcherExample,
         InputErrorsExample,
         InputFormExample,
+        InputHarnessExample,
         InputHintExample,
         InputOverviewExample,
         InputPrefixSuffixExample,
@@ -446,6 +491,7 @@
                 InputErrorStateMatcherExample,
                 InputErrorsExample,
                 InputFormExample,
+                InputHarnessExample,
                 InputHintExample,
                 InputOverviewExample,
                 InputPrefixSuffixExample], imports: [i4.CommonModule,
@@ -457,6 +503,7 @@
                 InputErrorStateMatcherExample,
                 InputErrorsExample,
                 InputFormExample,
+                InputHarnessExample,
                 InputHintExample,
                 InputOverviewExample,
                 InputPrefixSuffixExample] });
@@ -489,6 +536,7 @@
     exports.InputErrorsExample = InputErrorsExample;
     exports.InputExamplesModule = InputExamplesModule;
     exports.InputFormExample = InputFormExample;
+    exports.InputHarnessExample = InputHarnessExample;
     exports.InputHintExample = InputHintExample;
     exports.InputOverviewExample = InputOverviewExample;
     exports.InputPrefixSuffixExample = InputPrefixSuffixExample;

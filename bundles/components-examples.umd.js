@@ -2762,6 +2762,23 @@
                 "importSpecifier": "material/input"
             }
         },
+        "input-harness": {
+            "packagePath": "material/input/input-harness",
+            "title": "Testing with MatInputHarness",
+            "componentName": "InputHarnessExample",
+            "files": [
+                "input-harness-example.ts",
+                "input-harness-example.html",
+                "input-harness-example.spec.ts"
+            ],
+            "selector": "input-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "input-harness-example.ts",
+            "module": {
+                "name": "InputExamplesModule",
+                "importSpecifier": "material/input"
+            }
+        },
         "input-hint": {
             "packagePath": "material/input/input-hint",
             "title": "Input with hints",
