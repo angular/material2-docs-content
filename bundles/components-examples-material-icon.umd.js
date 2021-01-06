@@ -55,7 +55,36 @@
             }], function () { return [{ type: i1.MatIconRegistry }, { type: i2.DomSanitizer }]; }, null);
     })();
 
+    /**
+     * @title Testing with MatIconHarness
+     */
+    var IconHarnessExample = /** @class */ (function () {
+        function IconHarnessExample() {
+        }
+        return IconHarnessExample;
+    }());
+    IconHarnessExample.ɵfac = function IconHarnessExample_Factory(t) { return new (t || IconHarnessExample)(); };
+    IconHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: IconHarnessExample, selectors: [["icon-harness-example"]], decls: 4, vars: 0, consts: [["fontSet", "fontIcons", "fontIcon", "fontIcon"], ["svgIcon", "svgIcons:svgIcon"], ["inline", ""]], template: function IconHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-icon", 0);
+                i0.ɵɵelement(1, "mat-icon", 1);
+                i0.ɵɵelementStart(2, "mat-icon", 2);
+                i0.ɵɵtext(3, "ligature_icon");
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatIcon], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(IconHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'icon-harness-example',
+                        templateUrl: 'icon-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
+        IconHarnessExample,
         IconOverviewExample,
         IconSvgExample,
     ];
@@ -69,8 +98,10 @@
                 i1.MatIconModule,
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
-                IconSvgExample], imports: [i1.MatIconModule], exports: [IconOverviewExample,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconHarnessExample,
+                IconOverviewExample,
+                IconSvgExample], imports: [i1.MatIconModule], exports: [IconHarnessExample,
+                IconOverviewExample,
                 IconSvgExample] });
     })();
     /*@__PURE__*/ (function () {
@@ -92,6 +123,7 @@
      */
 
     exports.IconExamplesModule = IconExamplesModule;
+    exports.IconHarnessExample = IconHarnessExample;
     exports.IconOverviewExample = IconOverviewExample;
     exports.IconSvgExample = IconSvgExample;
 

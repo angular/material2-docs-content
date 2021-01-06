@@ -359,11 +359,50 @@ InputPrefixSuffixExample.ɵcmp = ɵɵdefineComponent({ type: InputPrefixSuffixEx
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatInputHarness
+ */
+class InputHarnessExample {
+    constructor() {
+        this.inputType = 'number';
+        this.disabled = false;
+    }
+}
+InputHarnessExample.ɵfac = function InputHarnessExample_Factory(t) { return new (t || InputHarnessExample)(); };
+InputHarnessExample.ɵcmp = ɵɵdefineComponent({ type: InputHarnessExample, selectors: [["input-harness-example"]], decls: 10, vars: 2, consts: [["matInput", "", "value", "Sushi", "name", "favorite-food"], ["matInput", "", 3, "type", "disabled"], ["matInput", ""]], template: function InputHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field");
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Favorite food");
+        ɵɵelementEnd();
+        ɵɵelement(3, "input", 0);
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "mat-form-field");
+        ɵɵelement(5, "input", 1);
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-form-field");
+        ɵɵelementStart(7, "mat-label");
+        ɵɵtext(8, "Leave a comment");
+        ɵɵelementEnd();
+        ɵɵelement(9, "textarea", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(5);
+        ɵɵproperty("type", ctx.inputType)("disabled", ctx.disabled);
+    } }, directives: [MatFormField, MatLabel, MatInput], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(InputHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'input-harness-example',
+                templateUrl: 'input-harness-example.html'
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     InputClearableExample,
     InputErrorStateMatcherExample,
     InputErrorsExample,
     InputFormExample,
+    InputHarnessExample,
     InputHintExample,
     InputOverviewExample,
     InputPrefixSuffixExample,
@@ -383,6 +422,7 @@ InputExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function InputExamples
         InputErrorStateMatcherExample,
         InputErrorsExample,
         InputFormExample,
+        InputHarnessExample,
         InputHintExample,
         InputOverviewExample,
         InputPrefixSuffixExample], imports: [CommonModule,
@@ -394,6 +434,7 @@ InputExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function InputExamples
         InputErrorStateMatcherExample,
         InputErrorsExample,
         InputFormExample,
+        InputHarnessExample,
         InputHintExample,
         InputOverviewExample,
         InputPrefixSuffixExample] }); })();
@@ -418,5 +459,5 @@ InputExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function InputExamples
  * Generated bundle index. Do not edit.
  */
 
-export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputExamplesModule, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
+export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputExamplesModule, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
 //# sourceMappingURL=input.js.map

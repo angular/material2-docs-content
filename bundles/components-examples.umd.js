@@ -2645,6 +2645,23 @@
                 "importSpecifier": "material/grid-list"
             }
         },
+        "icon-harness": {
+            "packagePath": "material/icon/icon-harness",
+            "title": "Testing with MatIconHarness",
+            "componentName": "IconHarnessExample",
+            "files": [
+                "icon-harness-example.ts",
+                "icon-harness-example.html",
+                "icon-harness-example.spec.ts"
+            ],
+            "selector": "icon-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "icon-harness-example.ts",
+            "module": {
+                "name": "IconExamplesModule",
+                "importSpecifier": "material/icon"
+            }
+        },
         "icon-overview": {
             "packagePath": "material/icon/icon-overview",
             "title": "Basic icons",
@@ -2745,6 +2762,23 @@
                 "importSpecifier": "material/input"
             }
         },
+        "input-harness": {
+            "packagePath": "material/input/input-harness",
+            "title": "Testing with MatInputHarness",
+            "componentName": "InputHarnessExample",
+            "files": [
+                "input-harness-example.ts",
+                "input-harness-example.html",
+                "input-harness-example.spec.ts"
+            ],
+            "selector": "input-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "input-harness-example.ts",
+            "module": {
+                "name": "InputExamplesModule",
+                "importSpecifier": "material/input"
+            }
+        },
         "input-hint": {
             "packagePath": "material/input/input-hint",
             "title": "Input with hints",
@@ -2794,6 +2828,23 @@
             "module": {
                 "name": "InputExamplesModule",
                 "importSpecifier": "material/input"
+            }
+        },
+        "list-harness": {
+            "packagePath": "material/list/list-harness",
+            "title": "Testing with MatListHarness",
+            "componentName": "ListHarnessExample",
+            "files": [
+                "list-harness-example.ts",
+                "list-harness-example.html",
+                "list-harness-example.spec.ts"
+            ],
+            "selector": "list-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "list-harness-example.ts",
+            "module": {
+                "name": "ListExamplesModule",
+                "importSpecifier": "material/list"
             }
         },
         "list-overview": {
@@ -3009,6 +3060,23 @@
                 "importSpecifier": "material/progress-bar"
             }
         },
+        "progress-bar-harness": {
+            "packagePath": "material/progress-bar/progress-bar-harness",
+            "title": "Testing with MatProgressBarHarness",
+            "componentName": "ProgressBarHarnessExample",
+            "files": [
+                "progress-bar-harness-example.ts",
+                "progress-bar-harness-example.html",
+                "progress-bar-harness-example.spec.ts"
+            ],
+            "selector": "progress-bar-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "progress-bar-harness-example.ts",
+            "module": {
+                "name": "ProgressBarExamplesModule",
+                "importSpecifier": "material/progress-bar"
+            }
+        },
         "progress-bar-indeterminate": {
             "packagePath": "material/progress-bar/progress-bar-indeterminate",
             "title": "Indeterminate progress-bar",
@@ -3053,6 +3121,23 @@
             "selector": "progress-spinner-configurable-example",
             "additionalComponents": [],
             "primaryFile": "progress-spinner-configurable-example.ts",
+            "module": {
+                "name": "ProgressSpinnerExamplesModule",
+                "importSpecifier": "material/progress-spinner"
+            }
+        },
+        "progress-spinner-harness": {
+            "packagePath": "material/progress-spinner/progress-spinner-harness",
+            "title": "Testing with MatProgressSpinnerHarness",
+            "componentName": "ProgressSpinnerHarnessExample",
+            "files": [
+                "progress-spinner-harness-example.ts",
+                "progress-spinner-harness-example.html",
+                "progress-spinner-harness-example.spec.ts"
+            ],
+            "selector": "progress-spinner-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "progress-spinner-harness-example.ts",
             "module": {
                 "name": "ProgressSpinnerExamplesModule",
                 "importSpecifier": "material/progress-spinner"
@@ -3897,6 +3982,23 @@
                 "importSpecifier": "material/table"
             }
         },
+        "table-harness": {
+            "packagePath": "material/table/table-harness",
+            "title": "Testing with MatTableHarness",
+            "componentName": "TableHarnessExample",
+            "files": [
+                "table-harness-example.ts",
+                "table-harness-example.html",
+                "table-harness-example.spec.ts"
+            ],
+            "selector": "table-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "table-harness-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
         "table-http": {
             "packagePath": "material/table/table-http",
             "title": "Table retrieving data through HTTP",
@@ -4284,6 +4386,23 @@
             "selector": "tab-group-dynamic-example",
             "additionalComponents": [],
             "primaryFile": "tab-group-dynamic-example.ts",
+            "module": {
+                "name": "TabGroupExamplesModule",
+                "importSpecifier": "material/tabs"
+            }
+        },
+        "tab-group-harness": {
+            "packagePath": "material/tabs/tab-group-harness",
+            "title": "Testing with MatTabGroupHarness",
+            "componentName": "TabGroupHarnessExample",
+            "files": [
+                "tab-group-harness-example.ts",
+                "tab-group-harness-example.html",
+                "tab-group-harness-example.spec.ts"
+            ],
+            "selector": "tab-group-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "tab-group-harness-example.ts",
             "module": {
                 "name": "TabGroupExamplesModule",
                 "importSpecifier": "material/tabs"

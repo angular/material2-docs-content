@@ -116,8 +116,29 @@ ProgressSpinnerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinn
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatProgressSpinnerHarness
+ */
+class ProgressSpinnerHarnessExample {
+}
+ProgressSpinnerHarnessExample.ɵfac = function ProgressSpinnerHarnessExample_Factory(t) { return new (t || ProgressSpinnerHarnessExample)(); };
+ProgressSpinnerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinnerHarnessExample, selectors: [["progress-spinner-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"]], template: function ProgressSpinnerHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-progress-spinner", 0);
+        ɵɵelement(1, "mat-spinner");
+    } if (rf & 2) {
+        ɵɵproperty("value", ctx.value);
+    } }, directives: [MatProgressSpinner, MatSpinner], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-spinner-harness-example',
+                templateUrl: 'progress-spinner-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ProgressSpinnerConfigurableExample,
+    ProgressSpinnerHarnessExample,
     ProgressSpinnerOverviewExample,
 ];
 class ProgressSpinnerExamplesModule {
@@ -132,12 +153,14 @@ ProgressSpinnerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Pro
             FormsModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
+        ProgressSpinnerHarnessExample,
         ProgressSpinnerOverviewExample], imports: [CommonModule,
         MatCardModule,
         MatProgressSpinnerModule,
         MatRadioModule,
         MatSliderModule,
         FormsModule], exports: [ProgressSpinnerConfigurableExample,
+        ProgressSpinnerHarnessExample,
         ProgressSpinnerOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
         type: NgModule,
@@ -160,5 +183,5 @@ ProgressSpinnerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Pro
  * Generated bundle index. Do not edit.
  */
 
-export { ProgressSpinnerConfigurableExample, ProgressSpinnerExamplesModule, ProgressSpinnerOverviewExample };
+export { ProgressSpinnerConfigurableExample, ProgressSpinnerExamplesModule, ProgressSpinnerHarnessExample, ProgressSpinnerOverviewExample };
 //# sourceMappingURL=progress-spinner.js.map

@@ -317,6 +317,46 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatTabGroupHarness
+     */
+    var TabGroupHarnessExample = /** @class */ (function () {
+        function TabGroupHarnessExample() {
+        }
+        return TabGroupHarnessExample;
+    }());
+    TabGroupHarnessExample.ɵfac = function TabGroupHarnessExample_Factory(t) { return new (t || TabGroupHarnessExample)(); };
+    TabGroupHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupHarnessExample, selectors: [["tab-group-harness-example"]], decls: 10, vars: 0, consts: [["label", "Profile", "aria-label", "Profile tab"], [1, "test-tab-content"], ["label", "Settings", "aria-label", "Settings tab"], ["label", "FAQ", "aria-label", "FAQ tab"]], template: function TabGroupHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-tab-group");
+                i0.ɵɵelementStart(1, "mat-tab", 0);
+                i0.ɵɵelementStart(2, "span", 1);
+                i0.ɵɵtext(3, "Your personal information");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "mat-tab", 2);
+                i0.ɵɵelementStart(5, "span", 1);
+                i0.ɵɵtext(6, "Privacy settings");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(7, "mat-tab", 3);
+                i0.ɵɵelementStart(8, "span", 1);
+                i0.ɵɵtext(9, "How to update profile picture");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1$2.MatTabGroup, i1$2.MatTab], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(TabGroupHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'tab-group-harness-example',
+                        templateUrl: 'tab-group-harness-example.html'
+                    }]
+            }], null, null);
+    })();
+
     function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) {
         if (rf & 1) {
             var _r5_1 = i0.ɵɵgetCurrentView();
@@ -684,6 +724,7 @@
         TabGroupCustomLabelExample,
         TabGroupDynamicExample,
         TabGroupDynamicHeightExample,
+        TabGroupHarnessExample,
         TabGroupHeaderBelowExample,
         TabGroupLazyLoadedExample,
         TabGroupStretchedExample,
@@ -714,6 +755,7 @@
                 TabGroupCustomLabelExample,
                 TabGroupDynamicExample,
                 TabGroupDynamicHeightExample,
+                TabGroupHarnessExample,
                 TabGroupHeaderBelowExample,
                 TabGroupLazyLoadedExample,
                 TabGroupStretchedExample,
@@ -732,6 +774,7 @@
                 TabGroupCustomLabelExample,
                 TabGroupDynamicExample,
                 TabGroupDynamicHeightExample,
+                TabGroupHarnessExample,
                 TabGroupHeaderBelowExample,
                 TabGroupLazyLoadedExample,
                 TabGroupStretchedExample,
@@ -771,6 +814,7 @@
     exports.TabGroupDynamicExample = TabGroupDynamicExample;
     exports.TabGroupDynamicHeightExample = TabGroupDynamicHeightExample;
     exports.TabGroupExamplesModule = TabGroupExamplesModule;
+    exports.TabGroupHarnessExample = TabGroupHarnessExample;
     exports.TabGroupHeaderBelowExample = TabGroupHeaderBelowExample;
     exports.TabGroupLazyLoadedExample = TabGroupLazyLoadedExample;
     exports.TabGroupStretchedExample = TabGroupStretchedExample;
