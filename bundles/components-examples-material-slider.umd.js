@@ -242,9 +242,34 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatSliderHarness
+     */
+    var SliderHarnessExample = /** @class */ (function () {
+        function SliderHarnessExample() {
+        }
+        return SliderHarnessExample;
+    }());
+    SliderHarnessExample.ɵfac = function SliderHarnessExample_Factory(t) { return new (t || SliderHarnessExample)(); };
+    SliderHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50"]], template: function SliderHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-slider", 0);
+            }
+        }, directives: [i1$1.MatSlider], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SliderHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'slider-harness-example',
+                        templateUrl: 'slider-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         SliderConfigurableExample,
         SliderFormattingExample,
+        SliderHarnessExample,
         SliderOverviewExample,
     ];
     var SliderExamplesModule = /** @class */ (function () {
@@ -264,6 +289,7 @@
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
                 SliderFormattingExample,
+                SliderHarnessExample,
                 SliderOverviewExample], imports: [i6.CommonModule,
                 i4.FormsModule,
                 i1.MatCardModule,
@@ -271,6 +297,7 @@
                 i3.MatInputModule,
                 i1$1.MatSliderModule], exports: [SliderConfigurableExample,
                 SliderFormattingExample,
+                SliderHarnessExample,
                 SliderOverviewExample] });
     })();
     /*@__PURE__*/ (function () {
@@ -299,6 +326,7 @@
     exports.SliderConfigurableExample = SliderConfigurableExample;
     exports.SliderExamplesModule = SliderExamplesModule;
     exports.SliderFormattingExample = SliderFormattingExample;
+    exports.SliderHarnessExample = SliderHarnessExample;
     exports.SliderOverviewExample = SliderOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

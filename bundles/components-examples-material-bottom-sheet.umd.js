@@ -100,7 +100,52 @@
             }], function () { return [{ type: i1.MatBottomSheetRef }]; }, null);
     })();
 
+    function BottomSheetHarnessExample_ng_template_0_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, " Hello from the bottom sheet!\n");
+        }
+    }
+    /**
+     * @title Testing with MatBottomSheetHarness
+     */
+    var BottomSheetHarnessExample = /** @class */ (function () {
+        function BottomSheetHarnessExample(bottomSheet) {
+            this.bottomSheet = bottomSheet;
+        }
+        BottomSheetHarnessExample.prototype.open = function (config) {
+            return this.bottomSheet.open(this.template, config);
+        };
+        return BottomSheetHarnessExample;
+    }());
+    BottomSheetHarnessExample.ɵfac = function BottomSheetHarnessExample_Factory(t) { return new (t || BottomSheetHarnessExample)(i0.ɵɵdirectiveInject(i1.MatBottomSheet)); };
+    BottomSheetHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: BottomSheetHarnessExample, selectors: [["bottom-sheet-harness-example"]], viewQuery: function BottomSheetHarnessExample_Query(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵviewQuery(i0.TemplateRef, true);
+            }
+            if (rf & 2) {
+                var _t = void 0;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.template = _t.first);
+            }
+        }, decls: 1, vars: 0, template: function BottomSheetHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵtemplate(0, BottomSheetHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
+            }
+        }, encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(BottomSheetHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'bottom-sheet-harness-example',
+                        templateUrl: 'bottom-sheet-harness-example.html',
+                    }]
+            }], function () { return [{ type: i1.MatBottomSheet }]; }, { template: [{
+                    type: i0.ViewChild,
+                    args: [i0.TemplateRef]
+                }] });
+    })();
+
     var EXAMPLES = [
+        BottomSheetHarnessExample,
         BottomSheetOverviewExample,
         BottomSheetOverviewExampleSheet,
     ];
@@ -116,10 +161,12 @@
                 i3.MatListModule,
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetOverviewExample,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetHarnessExample,
+                BottomSheetOverviewExample,
                 BottomSheetOverviewExampleSheet], imports: [i1.MatBottomSheetModule,
                 i2.MatButtonModule,
-                i3.MatListModule], exports: [BottomSheetOverviewExample,
+                i3.MatListModule], exports: [BottomSheetHarnessExample,
+                BottomSheetOverviewExample,
                 BottomSheetOverviewExampleSheet] });
     })();
     /*@__PURE__*/ (function () {
@@ -143,6 +190,7 @@
      */
 
     exports.BottomSheetExamplesModule = BottomSheetExamplesModule;
+    exports.BottomSheetHarnessExample = BottomSheetHarnessExample;
     exports.BottomSheetOverviewExample = BottomSheetOverviewExample;
     exports.BottomSheetOverviewExampleSheet = BottomSheetOverviewExampleSheet;
 

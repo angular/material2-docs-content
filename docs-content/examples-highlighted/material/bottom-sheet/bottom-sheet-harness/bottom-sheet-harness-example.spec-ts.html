@@ -1,0 +1,57 @@
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatBottomSheetHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
+  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatBottomSheetModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet&#x27;</span>;
+<span class="hljs-keyword">import</span> {BottomSheetHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./bottom-sheet-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/overlay&#x27;</span>;
+<span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
+
+describe(<span class="hljs-string">&#x27;BottomSheetHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;BottomSheetHarnessExample&gt;;
+  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+  beforeAll(<span class="hljs-function">() =&gt;</span> {
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+  });
+
+  beforeEach(
+    waitForAsync(<span class="hljs-function">() =&gt;</span> {
+      TestBed.configureTestingModule({
+        <span class="hljs-attr">imports</span>: [MatBottomSheetModule, NoopAnimationsModule],
+        <span class="hljs-attr">declarations</span>: [BottomSheetHarnessExample]
+      }).compileComponents();
+    }));
+
+  beforeEach(<span class="hljs-function">() =&gt;</span> {
+    fixture = TestBed.createComponent(BottomSheetHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+    inject([OverlayContainer], <span class="hljs-function">() =&gt;</span> {})();
+  });
+
+  it(<span class="hljs-string">&#x27;should load harness for a bottom sheet&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    fixture.componentInstance.open();
+    <span class="hljs-keyword">const</span> bottomSheets = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatBottomSheetHarness);
+    expect(bottomSheets.length).toBe(<span class="hljs-number">1</span>);
+  });
+
+  it(<span class="hljs-string">&#x27;should be able to get aria-label of the bottom sheet&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    fixture.componentInstance.open({<span class="hljs-attr">ariaLabel</span>: <span class="hljs-string">&#x27;Confirm purchase.&#x27;</span>});
+    <span class="hljs-keyword">const</span> bottomSheet = <span class="hljs-keyword">await</span> loader.getHarness(MatBottomSheetHarness);
+    expect(<span class="hljs-keyword">await</span> bottomSheet.getAriaLabel()).toBe(<span class="hljs-string">&#x27;Confirm purchase.&#x27;</span>);
+  });
+
+  it(<span class="hljs-string">&#x27;should be able to dismiss the bottom sheet&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    fixture.componentInstance.open();
+    <span class="hljs-keyword">let</span> bottomSheets = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatBottomSheetHarness);
+
+    expect(bottomSheets.length).toBe(<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">await</span> bottomSheets[<span class="hljs-number">0</span>].dismiss();
+
+    bottomSheets = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatBottomSheetHarness);
+    expect(bottomSheets.length).toBe(<span class="hljs-number">0</span>);
+  });
+});

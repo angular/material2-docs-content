@@ -92,8 +92,55 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatGridListHarness
+     */
+    var GridListHarnessExample = /** @class */ (function () {
+        function GridListHarnessExample() {
+        }
+        return GridListHarnessExample;
+    }());
+    GridListHarnessExample.ɵfac = function GridListHarnessExample_Factory(t) { return new (t || GridListHarnessExample)(); };
+    GridListHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: GridListHarnessExample, selectors: [["grid-list-harness-example"]], decls: 14, vars: 0, consts: [["cols", "2", "rowHeight", "100px"], ["colspan", "2"]], template: function GridListHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-grid-list", 0);
+                i0.ɵɵelementStart(1, "mat-grid-tile");
+                i0.ɵɵtext(2, "Tile 1 (no header, no footer)");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-grid-tile");
+                i0.ɵɵelementStart(4, "mat-grid-tile-header");
+                i0.ɵɵtext(5, "Tile 2");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-grid-tile", 1);
+                i0.ɵɵelementStart(7, "mat-grid-tile-header");
+                i0.ɵɵtext(8, "Tile 3");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(9, "mat-grid-tile-footer");
+                i0.ɵɵtext(10, "Tile 3 footer");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(11, "mat-grid-tile");
+                i0.ɵɵelementStart(12, "mat-grid-tile-header");
+                i0.ɵɵtext(13, "Tile 4");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatGridList, i1.MatGridTile, i1.MatGridTileText, i1.MatGridTileHeaderCssMatStyler, i1.MatGridTileFooterCssMatStyler], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(GridListHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'grid-list-harness-example',
+                        templateUrl: 'grid-list-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         GridListDynamicExample,
+        GridListHarnessExample,
         GridListOverviewExample,
     ];
     var GridListExamplesModule = /** @class */ (function () {
@@ -108,8 +155,10 @@
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
+                GridListHarnessExample,
                 GridListOverviewExample], imports: [i2.CommonModule,
                 i1.MatGridListModule], exports: [GridListDynamicExample,
+                GridListHarnessExample,
                 GridListOverviewExample] });
     })();
     /*@__PURE__*/ (function () {
@@ -133,6 +182,7 @@
 
     exports.GridListDynamicExample = GridListDynamicExample;
     exports.GridListExamplesModule = GridListExamplesModule;
+    exports.GridListHarnessExample = GridListHarnessExample;
     exports.GridListOverviewExample = GridListOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

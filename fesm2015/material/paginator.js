@@ -117,8 +117,42 @@ PaginatorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorOverviewEx
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatPaginatorHarness
+ */
+class PaginatorHarnessExample {
+    constructor() {
+        this.length = 500;
+        this.pageSize = 10;
+        this.pageIndex = 0;
+        this.pageSizeOptions = [5, 10, 25];
+        this.showFirstLastButtons = true;
+    }
+    handlePageEvent(event) {
+        this.length = event.length;
+        this.pageSize = event.pageSize;
+        this.pageIndex = event.pageIndex;
+    }
+}
+PaginatorHarnessExample.ɵfac = function PaginatorHarnessExample_Factory(t) { return new (t || PaginatorHarnessExample)(); };
+PaginatorHarnessExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorHarnessExample, selectors: [["paginator-harness-example"]], decls: 1, vars: 5, consts: [[3, "length", "pageSize", "showFirstLastButtons", "pageSizeOptions", "pageIndex", "page"]], template: function PaginatorHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-paginator", 0);
+        ɵɵlistener("page", function PaginatorHarnessExample_Template_mat_paginator_page_0_listener($event) { return ctx.handlePageEvent($event); });
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("showFirstLastButtons", ctx.showFirstLastButtons)("pageSizeOptions", ctx.pageSizeOptions)("pageIndex", ctx.pageIndex);
+    } }, directives: [MatPaginator], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'paginator-harness-example',
+                templateUrl: 'paginator-harness-example.html'
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     PaginatorConfigurableExample,
+    PaginatorHarnessExample,
     PaginatorOverviewExample,
 ];
 class PaginatorExamplesModule {
@@ -131,10 +165,12 @@ PaginatorExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Paginator
             FormsModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
+        PaginatorHarnessExample,
         PaginatorOverviewExample], imports: [CommonModule,
         MatInputModule,
         MatPaginatorModule,
         FormsModule], exports: [PaginatorConfigurableExample,
+        PaginatorHarnessExample,
         PaginatorOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorExamplesModule, [{
         type: NgModule,
@@ -155,5 +191,5 @@ PaginatorExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Paginator
  * Generated bundle index. Do not edit.
  */
 
-export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorOverviewExample };
+export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorHarnessExample, PaginatorOverviewExample };
 //# sourceMappingURL=paginator.js.map

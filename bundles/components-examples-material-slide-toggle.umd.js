@@ -197,9 +197,46 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatSlideToggleHarness
+     */
+    var SlideToggleHarnessExample = /** @class */ (function () {
+        function SlideToggleHarnessExample() {
+            this.disabled = true;
+            this.ctrl = new i1.FormControl(true);
+        }
+        return SlideToggleHarnessExample;
+    }());
+    SlideToggleHarnessExample.ɵfac = function SlideToggleHarnessExample_Factory(t) { return new (t || SlideToggleHarnessExample)(); };
+    SlideToggleHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleHarnessExample, selectors: [["slide-toggle-harness-example"]], decls: 4, vars: 2, consts: [["name", "first-name", 3, "formControl"], [3, "disabled"]], template: function SlideToggleHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-slide-toggle", 0);
+                i0.ɵɵtext(1, " First\n");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "mat-slide-toggle", 1);
+                i0.ɵɵtext(3, " Second\n");
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("formControl", ctx.ctrl);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("disabled", ctx.disabled);
+            }
+        }, directives: [i2$1.MatSlideToggle, i1.NgControlStatus, i1.FormControlDirective], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SlideToggleHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'slide-toggle-harness-example',
+                        templateUrl: 'slide-toggle-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         SlideToggleConfigurableExample,
         SlideToggleFormsExample,
+        SlideToggleHarnessExample,
         SlideToggleOverviewExample,
     ];
     var SlideToggleExamplesModule = /** @class */ (function () {
@@ -220,6 +257,7 @@
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
                 SlideToggleFormsExample,
+                SlideToggleHarnessExample,
                 SlideToggleOverviewExample], imports: [i1.FormsModule,
                 i3.MatButtonModule,
                 i1$1.MatCardModule,
@@ -228,6 +266,7 @@
                 i2$1.MatSlideToggleModule,
                 i1.ReactiveFormsModule], exports: [SlideToggleConfigurableExample,
                 SlideToggleFormsExample,
+                SlideToggleHarnessExample,
                 SlideToggleOverviewExample] });
     })();
     /*@__PURE__*/ (function () {
@@ -257,6 +296,7 @@
     exports.SlideToggleConfigurableExample = SlideToggleConfigurableExample;
     exports.SlideToggleExamplesModule = SlideToggleExamplesModule;
     exports.SlideToggleFormsExample = SlideToggleFormsExample;
+    exports.SlideToggleHarnessExample = SlideToggleHarnessExample;
     exports.SlideToggleOverviewExample = SlideToggleOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

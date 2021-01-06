@@ -40,7 +40,33 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatDividerHarness
+     */
+    var DividerHarnessExample = /** @class */ (function () {
+        function DividerHarnessExample() {
+        }
+        return DividerHarnessExample;
+    }());
+    DividerHarnessExample.ɵfac = function DividerHarnessExample_Factory(t) { return new (t || DividerHarnessExample)(); };
+    DividerHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: DividerHarnessExample, selectors: [["divider-harness-example"]], decls: 2, vars: 0, consts: [["inset", "", "vertical", ""]], template: function DividerHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-divider");
+                i0.ɵɵelement(1, "mat-divider", 0);
+            }
+        }, directives: [i2.MatDivider], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DividerHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'divider-harness-example',
+                        templateUrl: 'divider-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
+        DividerHarnessExample,
         DividerOverviewExample,
     ];
     var DividerExamplesModule = /** @class */ (function () {
@@ -54,8 +80,10 @@
                 i1.MatListModule,
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [i2.MatDividerModule,
-                i1.MatListModule], exports: [DividerOverviewExample] });
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerHarnessExample,
+                DividerOverviewExample], imports: [i2.MatDividerModule,
+                i1.MatListModule], exports: [DividerHarnessExample,
+                DividerOverviewExample] });
     })();
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(DividerExamplesModule, [{
@@ -77,6 +105,7 @@
      */
 
     exports.DividerExamplesModule = DividerExamplesModule;
+    exports.DividerHarnessExample = DividerHarnessExample;
     exports.DividerOverviewExample = DividerOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

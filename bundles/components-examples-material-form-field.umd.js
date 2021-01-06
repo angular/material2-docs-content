@@ -896,42 +896,42 @@
         return FormFieldOverviewExample;
     }());
     FormFieldOverviewExample.ɵfac = function FormFieldOverviewExample_Factory(t) { return new (t || FormFieldOverviewExample)(); };
-    FormFieldOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 17, vars: 0, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", ""], ["value", "option"]], template: function FormFieldOverviewExample_Template(rf, ctx) {
+    FormFieldOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 16, vars: 0, consts: [["appearance", "fill"], ["matInput", ""], ["value", "one"], ["value", "two"]], template: function FormFieldOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelementStart(1, "mat-form-field", 1);
-                i0.ɵɵelementStart(2, "mat-label");
-                i0.ɵɵtext(3, "Input");
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Input");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(4, "input", 2);
+                i0.ɵɵelement(3, "input", 1);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(5, "br");
-                i0.ɵɵelementStart(6, "mat-form-field", 1);
-                i0.ɵɵelementStart(7, "mat-label");
-                i0.ɵɵtext(8, "Select");
+                i0.ɵɵelementStart(4, "mat-form-field", 0);
+                i0.ɵɵelementStart(5, "mat-label");
+                i0.ɵɵtext(6, "Select");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(9, "mat-select");
+                i0.ɵɵelementStart(7, "mat-select");
+                i0.ɵɵelementStart(8, "mat-option", 2);
+                i0.ɵɵtext(9, "First option");
+                i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(10, "mat-option", 3);
-                i0.ɵɵtext(11, "Option");
+                i0.ɵɵtext(11, "Second option");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(12, "br");
-                i0.ɵɵelementStart(13, "mat-form-field", 1);
-                i0.ɵɵelementStart(14, "mat-label");
-                i0.ɵɵtext(15, "Textarea");
+                i0.ɵɵelementStart(12, "mat-form-field", 0);
+                i0.ɵɵelementStart(13, "mat-label");
+                i0.ɵɵtext(14, "Textarea");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(16, "textarea", 2);
-                i0.ɵɵelementEnd();
+                i0.ɵɵelement(15, "textarea", 1);
                 i0.ɵɵelementEnd();
             }
-        }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatInput, i3$3.MatSelect, i4$2.MatOption], encapsulation: 2 });
+        }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatInput, i3$3.MatSelect, i4$2.MatOption], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(FormFieldOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'form-field-overview-example',
                         templateUrl: 'form-field-overview-example.html',
+                        styleUrls: ['form-field-overview-example.css']
                     }]
             }], null, null);
     })();
@@ -1073,10 +1073,51 @@
             }], function () { return [{ type: i1.FormBuilder }]; }, null);
     })();
 
+    /**
+     * @title Testing with MatFormFieldHarness
+     */
+    var FormFieldHarnessExample = /** @class */ (function () {
+        function FormFieldHarnessExample() {
+            this.requiredControl = new i1.FormControl('Initial value', [i1.Validators.required]);
+        }
+        return FormFieldHarnessExample;
+    }());
+    FormFieldHarnessExample.ɵfac = function FormFieldHarnessExample_Factory(t) { return new (t || FormFieldHarnessExample)(); };
+    FormFieldHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldHarnessExample, selectors: [["form-field-harness-example"]], decls: 8, vars: 1, consts: [["id", "with-errors"], [1, "custom-control"], ["matInput", "", 3, "formControl"], ["align", "start"]], template: function FormFieldHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
+                i0.ɵɵelementStart(1, "span", 1);
+                i0.ɵɵtext(2, "Custom control harness");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(3, "input", 2);
+                i0.ɵɵelementStart(4, "mat-error");
+                i0.ɵɵtext(5, "Error");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-hint", 3);
+                i0.ɵɵtext(7, "Hint");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("formControl", ctx.requiredControl);
+            }
+        }, directives: [i1$1.MatFormField, i2$1.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i1$1.MatError, i1$1.MatHint], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(FormFieldHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'form-field-harness-example',
+                        templateUrl: 'form-field-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
+        FormFieldHarnessExample,
         FormFieldHintExample,
         FormFieldLabelExample,
         FormFieldOverviewExample,
@@ -1104,6 +1145,7 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(FormFieldExamplesModule, { declarations: [FormFieldAppearanceExample,
                 FormFieldCustomControlExample,
                 FormFieldErrorExample,
+                FormFieldHarnessExample,
                 FormFieldHintExample,
                 FormFieldLabelExample,
                 FormFieldOverviewExample,
@@ -1119,6 +1161,7 @@
                 i1.ReactiveFormsModule], exports: [FormFieldAppearanceExample,
                 FormFieldCustomControlExample,
                 FormFieldErrorExample,
+                FormFieldHarnessExample,
                 FormFieldHintExample,
                 FormFieldLabelExample,
                 FormFieldOverviewExample,
@@ -1155,6 +1198,7 @@
     exports.FormFieldCustomControlExample = FormFieldCustomControlExample;
     exports.FormFieldErrorExample = FormFieldErrorExample;
     exports.FormFieldExamplesModule = FormFieldExamplesModule;
+    exports.FormFieldHarnessExample = FormFieldHarnessExample;
     exports.FormFieldHintExample = FormFieldHintExample;
     exports.FormFieldLabelExample = FormFieldLabelExample;
     exports.FormFieldOverviewExample = FormFieldOverviewExample;

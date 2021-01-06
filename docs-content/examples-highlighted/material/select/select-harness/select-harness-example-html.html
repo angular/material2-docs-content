@@ -1,0 +1,8 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite food<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let food of foods&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;food.value&quot;</span>&gt;</span>
+      {{food.viewValue}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

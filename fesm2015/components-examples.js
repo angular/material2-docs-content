@@ -1287,6 +1287,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/badge"
         }
     },
+    "bottom-sheet-harness": {
+        "packagePath": "material/bottom-sheet/bottom-sheet-harness",
+        "title": "Testing with MatBottomSheetHarness",
+        "componentName": "BottomSheetHarnessExample",
+        "files": [
+            "bottom-sheet-harness-example.ts",
+            "bottom-sheet-harness-example.html",
+            "bottom-sheet-harness-example.spec.ts"
+        ],
+        "selector": "bottom-sheet-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "bottom-sheet-harness-example.ts",
+        "module": {
+            "name": "BottomSheetExamplesModule",
+            "importSpecifier": "material/bottom-sheet"
+        }
+    },
     "bottom-sheet-overview": {
         "packagePath": "material/bottom-sheet/bottom-sheet-overview",
         "title": "Bottom Sheet Overview",
@@ -1875,6 +1892,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/datepicker"
         }
     },
+    "datepicker-harness": {
+        "packagePath": "material/datepicker/datepicker-harness",
+        "title": "Testing with MatDatepickerInputHarness",
+        "componentName": "DatepickerHarnessExample",
+        "files": [
+            "datepicker-harness-example.ts",
+            "datepicker-harness-example.html",
+            "datepicker-harness-example.spec.ts"
+        ],
+        "selector": "datepicker-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "datepicker-harness-example.ts",
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
     "datepicker-locale": {
         "packagePath": "material/datepicker/datepicker-locale",
         "title": "Datepicker with different locale",
@@ -2101,6 +2135,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/dialog"
         }
     },
+    "divider-harness": {
+        "packagePath": "material/divider/divider-harness",
+        "title": "Testing with MatDividerHarness",
+        "componentName": "DividerHarnessExample",
+        "files": [
+            "divider-harness-example.ts",
+            "divider-harness-example.html",
+            "divider-harness-example.spec.ts"
+        ],
+        "selector": "divider-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "divider-harness-example.ts",
+        "module": {
+            "name": "DividerExamplesModule",
+            "importSpecifier": "material/divider"
+        }
+    },
     "divider-overview": {
         "packagePath": "material/divider/divider-overview",
         "title": "Basic divider",
@@ -2129,6 +2180,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "expansion-expand-collapse-all-example",
         "additionalComponents": [],
         "primaryFile": "expansion-expand-collapse-all-example.ts",
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "material/expansion"
+        }
+    },
+    "expansion-harness": {
+        "packagePath": "material/expansion/expansion-harness",
+        "title": "Testing with MatExpansionPanelHarness and MatAccordionHarness",
+        "componentName": "ExpansionHarnessExample",
+        "files": [
+            "expansion-harness-example.ts",
+            "expansion-harness-example.html",
+            "expansion-harness-example.spec.ts"
+        ],
+        "selector": "expansion-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "expansion-harness-example.ts",
         "module": {
             "name": "ExpansionExamplesModule",
             "importSpecifier": "material/expansion"
@@ -2221,6 +2289,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/form-field"
         }
     },
+    "form-field-harness": {
+        "packagePath": "material/form-field/form-field-harness",
+        "title": "Testing with MatFormFieldHarness",
+        "componentName": "FormFieldHarnessExample",
+        "files": [
+            "form-field-harness-example.ts",
+            "form-field-harness-example.html",
+            "form-field-harness-example.spec.ts"
+        ],
+        "selector": "form-field-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "form-field-harness-example.ts",
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "material/form-field"
+        }
+    },
     "form-field-hint": {
         "packagePath": "material/form-field/form-field-hint",
         "title": "Form field with hints",
@@ -2261,7 +2346,8 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "FormFieldOverviewExample",
         "files": [
             "form-field-overview-example.ts",
-            "form-field-overview-example.html"
+            "form-field-overview-example.html",
+            "form-field-overview-example.css"
         ],
         "selector": "form-field-overview-example",
         "additionalComponents": [],
@@ -2316,6 +2402,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "grid-list-dynamic-example",
         "additionalComponents": [],
         "primaryFile": "grid-list-dynamic-example.ts",
+        "module": {
+            "name": "GridListExamplesModule",
+            "importSpecifier": "material/grid-list"
+        }
+    },
+    "grid-list-harness": {
+        "packagePath": "material/grid-list/grid-list-harness",
+        "title": "Testing with MatGridListHarness",
+        "componentName": "GridListHarnessExample",
+        "files": [
+            "grid-list-harness-example.ts",
+            "grid-list-harness-example.html",
+            "grid-list-harness-example.spec.ts"
+        ],
+        "selector": "grid-list-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "grid-list-harness-example.ts",
         "module": {
             "name": "GridListExamplesModule",
             "importSpecifier": "material/grid-list"
@@ -2607,6 +2710,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/list"
         }
     },
+    "menu-harness": {
+        "packagePath": "material/menu/menu-harness",
+        "title": "Testing with MatMenuHarness",
+        "componentName": "MenuHarnessExample",
+        "files": [
+            "menu-harness-example.ts",
+            "menu-harness-example.html",
+            "menu-harness-example.spec.ts"
+        ],
+        "selector": "menu-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "menu-harness-example.ts",
+        "module": {
+            "name": "MenuExamplesModule",
+            "importSpecifier": "material/menu"
+        }
+    },
     "menu-icons": {
         "packagePath": "material/menu/menu-icons",
         "title": "Menu with icons",
@@ -2683,6 +2803,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "paginator-configurable-example",
         "additionalComponents": [],
         "primaryFile": "paginator-configurable-example.ts",
+        "module": {
+            "name": "PaginatorExamplesModule",
+            "importSpecifier": "material/paginator"
+        }
+    },
+    "paginator-harness": {
+        "packagePath": "material/paginator/paginator-harness",
+        "title": "Testing with MatPaginatorHarness",
+        "componentName": "PaginatorHarnessExample",
+        "files": [
+            "paginator-harness-example.ts",
+            "paginator-harness-example.html",
+            "paginator-harness-example.spec.ts"
+        ],
+        "selector": "paginator-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "paginator-harness-example.ts",
         "module": {
             "name": "PaginatorExamplesModule",
             "importSpecifier": "material/paginator"
@@ -2852,6 +2989,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/progress-spinner"
         }
     },
+    "radio-harness": {
+        "packagePath": "material/radio/radio-harness",
+        "title": "Testing with MatRadioHarness",
+        "componentName": "RadioHarnessExample",
+        "files": [
+            "radio-harness-example.ts",
+            "radio-harness-example.html",
+            "radio-harness-example.spec.ts"
+        ],
+        "selector": "radio-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-harness-example.ts",
+        "module": {
+            "name": "RadioExamplesModule",
+            "importSpecifier": "material/radio"
+        }
+    },
     "radio-ng-model": {
         "packagePath": "material/radio/radio-ng-model",
         "title": "Radios with ngModel",
@@ -2946,6 +3100,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-form-example",
         "additionalComponents": [],
         "primaryFile": "select-form-example.ts",
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "material/select"
+        }
+    },
+    "select-harness": {
+        "packagePath": "material/select/select-harness",
+        "title": "Testing with MatSelectHarness",
+        "componentName": "SelectHarnessExample",
+        "files": [
+            "select-harness-example.ts",
+            "select-harness-example.html",
+            "select-harness-example.spec.ts"
+        ],
+        "selector": "select-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "select-harness-example.ts",
         "module": {
             "name": "SelectExamplesModule",
             "importSpecifier": "material/select"
@@ -3316,6 +3487,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/slide-toggle"
         }
     },
+    "slide-toggle-harness": {
+        "packagePath": "material/slide-toggle/slide-toggle-harness",
+        "title": "Testing with MatSlideToggleHarness",
+        "componentName": "SlideToggleHarnessExample",
+        "files": [
+            "slide-toggle-harness-example.ts",
+            "slide-toggle-harness-example.html",
+            "slide-toggle-harness-example.spec.ts"
+        ],
+        "selector": "slide-toggle-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "slide-toggle-harness-example.ts",
+        "module": {
+            "name": "SlideToggleExamplesModule",
+            "importSpecifier": "material/slide-toggle"
+        }
+    },
     "slide-toggle-overview": {
         "packagePath": "material/slide-toggle/slide-toggle-overview",
         "title": "Basic slide-toggles",
@@ -3361,6 +3549,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slider-formatting-example",
         "additionalComponents": [],
         "primaryFile": "slider-formatting-example.ts",
+        "module": {
+            "name": "SliderExamplesModule",
+            "importSpecifier": "material/slider"
+        }
+    },
+    "slider-harness": {
+        "packagePath": "material/slider/slider-harness",
+        "title": "Testing with MatSliderHarness",
+        "componentName": "SliderHarnessExample",
+        "files": [
+            "slider-harness-example.ts",
+            "slider-harness-example.html",
+            "slider-harness-example.spec.ts"
+        ],
+        "selector": "slider-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "slider-harness-example.ts",
         "module": {
             "name": "SliderExamplesModule",
             "importSpecifier": "material/slider"
@@ -3435,6 +3640,23 @@ const EXAMPLE_COMPONENTS = {
         "module": {
             "name": "SnackBarExamplesModule",
             "importSpecifier": "material/snack-bar"
+        }
+    },
+    "sort-harness": {
+        "packagePath": "material/sort/sort-harness",
+        "title": "Testing with MatSortHarness",
+        "componentName": "SortHarnessExample",
+        "files": [
+            "sort-harness-example.ts",
+            "sort-harness-example.html",
+            "sort-harness-example.spec.ts"
+        ],
+        "selector": "sort-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "sort-harness-example.ts",
+        "module": {
+            "name": "SortExamplesModule",
+            "importSpecifier": "material/sort"
         }
     },
     "sort-overview": {

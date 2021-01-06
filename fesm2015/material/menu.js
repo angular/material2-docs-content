@@ -288,7 +288,43 @@ MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selecto
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatMenuHarness
+ */
+class MenuHarnessExample {
+}
+MenuHarnessExample.ɵfac = function MenuHarnessExample_Factory(t) { return new (t || MenuHarnessExample)(); };
+MenuHarnessExample.ɵcmp = ɵɵdefineComponent({ type: MenuHarnessExample, selectors: [["menu-harness-example"]], decls: 10, vars: 2, consts: [["type", "button", 3, "matMenuTriggerFor"], ["type", "button", "disabled", "", 3, "matMenuTriggerFor"], ["settingsMenu", ""], ["mat-menu-item", ""]], template: function MenuHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "button", 0);
+        ɵɵtext(1, "Settings");
+        ɵɵelementEnd();
+        ɵɵelementStart(2, "button", 1);
+        ɵɵtext(3, "Disabled menu");
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "mat-menu", null, 2);
+        ɵɵelementStart(6, "menu", 3);
+        ɵɵtext(7, "Profile");
+        ɵɵelementEnd();
+        ɵɵelementStart(8, "menu", 3);
+        ɵɵtext(9, "Account");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = ɵɵreference(5);
+        ɵɵproperty("matMenuTriggerFor", _r0);
+        ɵɵadvance(2);
+        ɵɵproperty("matMenuTriggerFor", _r0);
+    } }, directives: [MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'menu-harness-example',
+                templateUrl: 'menu-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
+    MenuHarnessExample,
     MenuIconsExample,
     MenuOverviewExample,
     MenuPositionExample,
@@ -302,12 +338,14 @@ MenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MenuExamplesMo
             MatIconModule,
             MatMenuModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuHarnessExample,
+        MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
         MenuNestedExample], imports: [MatButtonModule,
         MatIconModule,
-        MatMenuModule], exports: [MenuIconsExample,
+        MatMenuModule], exports: [MenuHarnessExample,
+        MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
         MenuNestedExample] }); })();
@@ -329,5 +367,5 @@ MenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MenuExamplesMo
  * Generated bundle index. Do not edit.
  */
 
-export { MenuExamplesModule, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
+export { MenuExamplesModule, MenuHarnessExample, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
 //# sourceMappingURL=menu.js.map

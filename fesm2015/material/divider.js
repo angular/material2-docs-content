@@ -31,7 +31,26 @@ DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExampl
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatDividerHarness
+ */
+class DividerHarnessExample {
+}
+DividerHarnessExample.ɵfac = function DividerHarnessExample_Factory(t) { return new (t || DividerHarnessExample)(); };
+DividerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DividerHarnessExample, selectors: [["divider-harness-example"]], decls: 2, vars: 0, consts: [["inset", "", "vertical", ""]], template: function DividerHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-divider");
+        ɵɵelement(1, "mat-divider", 0);
+    } }, directives: [MatDivider], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DividerHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'divider-harness-example',
+                templateUrl: 'divider-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
+    DividerHarnessExample,
     DividerOverviewExample,
 ];
 class DividerExamplesModule {
@@ -41,8 +60,10 @@ DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExam
             MatDividerModule,
             MatListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [MatDividerModule,
-        MatListModule], exports: [DividerOverviewExample] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerHarnessExample,
+        DividerOverviewExample], imports: [MatDividerModule,
+        MatListModule], exports: [DividerHarnessExample,
+        DividerOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DividerExamplesModule, [{
         type: NgModule,
         args: [{
@@ -60,5 +81,5 @@ DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExam
  * Generated bundle index. Do not edit.
  */
 
-export { DividerExamplesModule, DividerOverviewExample };
+export { DividerExamplesModule, DividerHarnessExample, DividerOverviewExample };
 //# sourceMappingURL=divider.js.map
