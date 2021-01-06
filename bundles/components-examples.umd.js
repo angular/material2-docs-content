@@ -3326,6 +3326,23 @@
                 "importSpecifier": "material/select"
             }
         },
+        "select-harness": {
+            "packagePath": "material/select/select-harness",
+            "title": "Testing with MatSelectHarness",
+            "componentName": "SelectHarnessExample",
+            "files": [
+                "select-harness-example.ts",
+                "select-harness-example.html",
+                "select-harness-example.spec.ts"
+            ],
+            "selector": "select-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "select-harness-example.ts",
+            "module": {
+                "name": "SelectExamplesModule",
+                "importSpecifier": "material/select"
+            }
+        },
         "select-hint-error": {
             "packagePath": "material/select/select-hint-error",
             "title": "Select with form field features",

@@ -1201,11 +1201,65 @@
             }], null, null);
     })();
 
+    function SelectHarnessExample_mat_option_4_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-option", 2);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var food_r1 = ctx.$implicit;
+            i0.ɵɵproperty("value", food_r1.value);
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", food_r1.viewValue, " ");
+        }
+    }
+    /**
+     * @title Testing with MatSelectHarness
+     */
+    var SelectHarnessExample = /** @class */ (function () {
+        function SelectHarnessExample() {
+            this.foods = [
+                { value: 'steak-0', viewValue: 'Steak' },
+                { value: 'pizza-1', viewValue: 'Pizza' },
+                { value: 'tacos-2', viewValue: 'Tacos' }
+            ];
+        }
+        return SelectHarnessExample;
+    }());
+    SelectHarnessExample.ɵfac = function SelectHarnessExample_Factory(t) { return new (t || SelectHarnessExample)(); };
+    SelectHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectHarnessExample, selectors: [["select-harness-example"]], decls: 5, vars: 1, consts: [["appearance", "fill"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Favorite food");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-select");
+                i0.ɵɵtemplate(4, SelectHarnessExample_mat_option_4_Template, 2, 2, "mat-option", 1);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(4);
+                i0.ɵɵproperty("ngForOf", ctx.foods);
+            }
+        }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4.NgForOf, i4$1.MatOption], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SelectHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'select-harness-example',
+                        templateUrl: 'select-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         SelectCustomTriggerExample,
         SelectDisabledExample,
         SelectErrorStateMatcherExample,
         SelectFormExample,
+        SelectHarnessExample,
         SelectHintErrorExample,
         SelectInitialValueExample,
         SelectMultipleExample,
@@ -1230,12 +1284,14 @@
                 i6.MatInputModule,
                 i2.MatSelectModule,
                 i3.ReactiveFormsModule,
+                i1$1.MatFormFieldModule,
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SelectExamplesModule, { declarations: [SelectCustomTriggerExample,
                 SelectDisabledExample,
                 SelectErrorStateMatcherExample,
                 SelectFormExample,
+                SelectHarnessExample,
                 SelectHintErrorExample,
                 SelectInitialValueExample,
                 SelectMultipleExample,
@@ -1250,10 +1306,12 @@
                 i1.MatCheckboxModule,
                 i6.MatInputModule,
                 i2.MatSelectModule,
-                i3.ReactiveFormsModule], exports: [SelectCustomTriggerExample,
+                i3.ReactiveFormsModule,
+                i1$1.MatFormFieldModule], exports: [SelectCustomTriggerExample,
                 SelectDisabledExample,
                 SelectErrorStateMatcherExample,
                 SelectFormExample,
+                SelectHarnessExample,
                 SelectHintErrorExample,
                 SelectInitialValueExample,
                 SelectMultipleExample,
@@ -1276,6 +1334,7 @@
                             i6.MatInputModule,
                             i2.MatSelectModule,
                             i3.ReactiveFormsModule,
+                            i1$1.MatFormFieldModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
@@ -1293,6 +1352,7 @@
     exports.SelectErrorStateMatcherExample = SelectErrorStateMatcherExample;
     exports.SelectExamplesModule = SelectExamplesModule;
     exports.SelectFormExample = SelectFormExample;
+    exports.SelectHarnessExample = SelectHarnessExample;
     exports.SelectHintErrorExample = SelectHintErrorExample;
     exports.SelectInitialValueExample = SelectInitialValueExample;
     exports.SelectMultipleExample = SelectMultipleExample;

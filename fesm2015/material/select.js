@@ -4,7 +4,7 @@ import { FormControl, NgControlStatus, FormControlDirective, NgSelectOption, ɵa
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectTrigger, MatSelectModule } from '@angular/material/select';
-import { MatFormField, MatLabel, MatHint, MatError } from '@angular/material/form-field';
+import { MatFormField, MatLabel, MatHint, MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { MatOption, MatOptgroup } from '@angular/material/core';
 
 function SelectCustomTriggerExample_span_6_Template(rf, ctx) { if (rf & 1) {
@@ -1062,11 +1062,56 @@ SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValue
             }]
     }], null, null); })();
 
+function SelectHarnessExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-option", 2);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const food_r1 = ctx.$implicit;
+    ɵɵproperty("value", food_r1.value);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", food_r1.viewValue, " ");
+} }
+/**
+ * @title Testing with MatSelectHarness
+ */
+class SelectHarnessExample {
+    constructor() {
+        this.foods = [
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' }
+        ];
+    }
+}
+SelectHarnessExample.ɵfac = function SelectHarnessExample_Factory(t) { return new (t || SelectHarnessExample)(); };
+SelectHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SelectHarnessExample, selectors: [["select-harness-example"]], decls: 5, vars: 1, consts: [["appearance", "fill"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field", 0);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Favorite food");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-select");
+        ɵɵtemplate(4, SelectHarnessExample_mat_option_4_Template, 2, 2, "mat-option", 1);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(4);
+        ɵɵproperty("ngForOf", ctx.foods);
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatOption], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'select-harness-example',
+                templateUrl: 'select-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     SelectCustomTriggerExample,
     SelectDisabledExample,
     SelectErrorStateMatcherExample,
     SelectFormExample,
+    SelectHarnessExample,
     SelectHintErrorExample,
     SelectInitialValueExample,
     SelectMultipleExample,
@@ -1088,11 +1133,13 @@ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExampl
             MatInputModule,
             MatSelectModule,
             ReactiveFormsModule,
+            MatFormFieldModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SelectExamplesModule, { declarations: [SelectCustomTriggerExample,
         SelectDisabledExample,
         SelectErrorStateMatcherExample,
         SelectFormExample,
+        SelectHarnessExample,
         SelectHintErrorExample,
         SelectInitialValueExample,
         SelectMultipleExample,
@@ -1107,10 +1154,12 @@ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExampl
         MatCheckboxModule,
         MatInputModule,
         MatSelectModule,
-        ReactiveFormsModule], exports: [SelectCustomTriggerExample,
+        ReactiveFormsModule,
+        MatFormFieldModule], exports: [SelectCustomTriggerExample,
         SelectDisabledExample,
         SelectErrorStateMatcherExample,
         SelectFormExample,
+        SelectHarnessExample,
         SelectHintErrorExample,
         SelectInitialValueExample,
         SelectMultipleExample,
@@ -1131,6 +1180,7 @@ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExampl
                     MatInputModule,
                     MatSelectModule,
                     ReactiveFormsModule,
+                    MatFormFieldModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -1142,5 +1192,5 @@ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExampl
  * Generated bundle index. Do not edit.
  */
 
-export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectExamplesModule, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample };
+export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectExamplesModule, SelectFormExample, SelectHarnessExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample };
 //# sourceMappingURL=select.js.map
