@@ -3043,6 +3043,23 @@
                 "importSpecifier": "material/progress-bar"
             }
         },
+        "progress-bar-harness": {
+            "packagePath": "material/progress-bar/progress-bar-harness",
+            "title": "Testing with MatProgressBarHarness",
+            "componentName": "ProgressBarHarnessExample",
+            "files": [
+                "progress-bar-harness-example.ts",
+                "progress-bar-harness-example.html",
+                "progress-bar-harness-example.spec.ts"
+            ],
+            "selector": "progress-bar-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "progress-bar-harness-example.ts",
+            "module": {
+                "name": "ProgressBarExamplesModule",
+                "importSpecifier": "material/progress-bar"
+            }
+        },
         "progress-bar-indeterminate": {
             "packagePath": "material/progress-bar/progress-bar-indeterminate",
             "title": "Indeterminate progress-bar",

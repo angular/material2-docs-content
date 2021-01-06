@@ -194,10 +194,31 @@ ProgressBarQueryExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarQueryExam
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatProgressBarHarness
+ */
+class ProgressBarHarnessExample {
+}
+ProgressBarHarnessExample.ɵfac = function ProgressBarHarnessExample_Factory(t) { return new (t || ProgressBarHarnessExample)(); };
+ProgressBarHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarHarnessExample, selectors: [["progress-bar-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"], ["mode", "indeterminate"]], template: function ProgressBarHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-progress-bar", 0);
+        ɵɵelement(1, "mat-progress-bar", 1);
+    } if (rf & 2) {
+        ɵɵproperty("value", ctx.value);
+    } }, directives: [MatProgressBar], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressBarHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-harness-example',
+                templateUrl: 'progress-bar-harness-example.html'
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ProgressBarBufferExample,
     ProgressBarConfigurableExample,
     ProgressBarDeterminateExample,
+    ProgressBarHarnessExample,
     ProgressBarIndeterminateExample,
     ProgressBarQueryExample,
 ];
@@ -215,6 +236,7 @@ ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Progres
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
         ProgressBarConfigurableExample,
         ProgressBarDeterminateExample,
+        ProgressBarHarnessExample,
         ProgressBarIndeterminateExample,
         ProgressBarQueryExample], imports: [CommonModule,
         MatCardModule,
@@ -224,6 +246,7 @@ ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Progres
         FormsModule], exports: [ProgressBarBufferExample,
         ProgressBarConfigurableExample,
         ProgressBarDeterminateExample,
+        ProgressBarHarnessExample,
         ProgressBarIndeterminateExample,
         ProgressBarQueryExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressBarExamplesModule, [{
@@ -247,5 +270,5 @@ ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Progres
  * Generated bundle index. Do not edit.
  */
 
-export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarExamplesModule, ProgressBarIndeterminateExample, ProgressBarQueryExample };
+export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarExamplesModule, ProgressBarHarnessExample, ProgressBarIndeterminateExample, ProgressBarQueryExample };
 //# sourceMappingURL=progress-bar.js.map

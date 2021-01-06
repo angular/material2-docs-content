@@ -232,10 +232,39 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatProgressBarHarness
+     */
+    var ProgressBarHarnessExample = /** @class */ (function () {
+        function ProgressBarHarnessExample() {
+        }
+        return ProgressBarHarnessExample;
+    }());
+    ProgressBarHarnessExample.ɵfac = function ProgressBarHarnessExample_Factory(t) { return new (t || ProgressBarHarnessExample)(); };
+    ProgressBarHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarHarnessExample, selectors: [["progress-bar-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"], ["mode", "indeterminate"]], template: function ProgressBarHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-progress-bar", 0);
+                i0.ɵɵelement(1, "mat-progress-bar", 1);
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("value", ctx.value);
+            }
+        }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressBarHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-bar-harness-example',
+                        templateUrl: 'progress-bar-harness-example.html'
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ProgressBarBufferExample,
         ProgressBarConfigurableExample,
         ProgressBarDeterminateExample,
+        ProgressBarHarnessExample,
         ProgressBarIndeterminateExample,
         ProgressBarQueryExample,
     ];
@@ -257,6 +286,7 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
                 ProgressBarConfigurableExample,
                 ProgressBarDeterminateExample,
+                ProgressBarHarnessExample,
                 ProgressBarIndeterminateExample,
                 ProgressBarQueryExample], imports: [i4.CommonModule,
                 i1.MatCardModule,
@@ -266,6 +296,7 @@
                 i3.FormsModule], exports: [ProgressBarBufferExample,
                 ProgressBarConfigurableExample,
                 ProgressBarDeterminateExample,
+                ProgressBarHarnessExample,
                 ProgressBarIndeterminateExample,
                 ProgressBarQueryExample] });
     })();
@@ -296,6 +327,7 @@
     exports.ProgressBarConfigurableExample = ProgressBarConfigurableExample;
     exports.ProgressBarDeterminateExample = ProgressBarDeterminateExample;
     exports.ProgressBarExamplesModule = ProgressBarExamplesModule;
+    exports.ProgressBarHarnessExample = ProgressBarHarnessExample;
     exports.ProgressBarIndeterminateExample = ProgressBarIndeterminateExample;
     exports.ProgressBarQueryExample = ProgressBarQueryExample;
 
