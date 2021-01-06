@@ -2425,6 +2425,23 @@
                 "importSpecifier": "material/dialog"
             }
         },
+        "divider-harness": {
+            "packagePath": "material/divider/divider-harness",
+            "title": "Testing with MatDividerHarness",
+            "componentName": "DividerHarnessExample",
+            "files": [
+                "divider-harness-example.ts",
+                "divider-harness-example.html",
+                "divider-harness-example.spec.ts"
+            ],
+            "selector": "divider-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "divider-harness-example.ts",
+            "module": {
+                "name": "DividerExamplesModule",
+                "importSpecifier": "material/divider"
+            }
+        },
         "divider-overview": {
             "packagePath": "material/divider/divider-overview",
             "title": "Basic divider",
