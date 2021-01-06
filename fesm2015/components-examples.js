@@ -1892,6 +1892,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/datepicker"
         }
     },
+    "datepicker-harness": {
+        "packagePath": "material/datepicker/datepicker-harness",
+        "title": "Testing with MatDatepickerInputHarness",
+        "componentName": "DatepickerHarnessExample",
+        "files": [
+            "datepicker-harness-example.ts",
+            "datepicker-harness-example.html",
+            "datepicker-harness-example.spec.ts"
+        ],
+        "selector": "datepicker-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "datepicker-harness-example.ts",
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
     "datepicker-locale": {
         "packagePath": "material/datepicker/datepicker-locale",
         "title": "Datepicker with different locale",

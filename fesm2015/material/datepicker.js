@@ -1,6 +1,6 @@
 import { NgForOf, NgIf, JsonPipe, CommonModule } from '@angular/common';
 import { ɵɵdefineComponent, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ChangeDetectionStrategy, ɵɵdirectiveInject, ChangeDetectorRef, ɵɵtextInterpolate, Inject, ViewEncapsulation, ɵɵtemplate, ɵɵProvidersFeature, ɵɵpipe, ɵɵtextInterpolate1, ɵɵpipeBind1, ɵɵinject, ɵɵdefineInjectable, Injectable, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { FormControl, DefaultValueAccessor, NgControlStatus, FormControlDirective, FormGroup, NgControlStatusGroup, FormGroupDirective, FormControlName, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormControl, DefaultValueAccessor, NgControlStatus, FormControlDirective, FormGroup, NgControlStatusGroup, FormGroupDirective, FormControlName, NgModel, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerInput, MatDatepicker, MatDatepickerToggle, MatCalendar, MatDatepickerToggleIcon, MatDateRangeInput, MatStartDate, MatEndDate, MatDateRangePicker, DateRange, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepickerModule } from '@angular/material/datepicker';
@@ -1114,6 +1114,33 @@ DateRangePickerSelectionStrategyExample.ɵcmp = ɵɵdefineComponent({ type: Date
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatDatepickerInputHarness
+ */
+class DatepickerHarnessExample {
+    constructor() {
+        this.date = null;
+        this.minDate = null;
+    }
+}
+DatepickerHarnessExample.ɵfac = function DatepickerHarnessExample_Factory(t) { return new (t || DatepickerHarnessExample)(); };
+DatepickerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerHarnessExample, selectors: [["datepicker-harness-example"]], decls: 3, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "ngModel", "min", "ngModelChange"], ["picker", ""]], template: function DatepickerHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "input", 0);
+        ɵɵlistener("ngModelChange", function DatepickerHarnessExample_Template_input_ngModelChange_0_listener($event) { return ctx.date = $event; });
+        ɵɵelementEnd();
+        ɵɵelement(1, "mat-datepicker", null, 1);
+    } if (rf & 2) {
+        const _r0 = ɵɵreference(2);
+        ɵɵproperty("matDatepicker", _r0)("ngModel", ctx.date)("min", ctx.minDate);
+    } }, directives: [MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, NgModel, MatDatepicker], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'datepicker-harness-example',
+                templateUrl: 'datepicker-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     DatepickerApiExample,
     DatepickerColorExample,
@@ -1124,6 +1151,7 @@ const EXAMPLES = [
     DatepickerEventsExample,
     DatepickerFilterExample,
     DatepickerFormatsExample,
+    DatepickerHarnessExample,
     DatepickerLocaleExample,
     DatepickerMinMaxExample,
     DatepickerMomentExample,
@@ -1160,6 +1188,7 @@ DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Datepick
         DatepickerEventsExample,
         DatepickerFilterExample,
         DatepickerFormatsExample,
+        DatepickerHarnessExample,
         DatepickerLocaleExample,
         DatepickerMinMaxExample,
         DatepickerMomentExample,
@@ -1188,6 +1217,7 @@ DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Datepick
         DatepickerEventsExample,
         DatepickerFilterExample,
         DatepickerFormatsExample,
+        DatepickerHarnessExample,
         DatepickerLocaleExample,
         DatepickerMinMaxExample,
         DatepickerMomentExample,
@@ -1224,5 +1254,5 @@ DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Datepick
  * Generated bundle index. Do not edit.
  */
 
-export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
+export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
 //# sourceMappingURL=datepicker.js.map
