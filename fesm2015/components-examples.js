@@ -3401,6 +3401,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/slide-toggle"
         }
     },
+    "slide-toggle-harness": {
+        "packagePath": "material/slide-toggle/slide-toggle-harness",
+        "title": "Testing with MatSlideToggleHarness",
+        "componentName": "SlideToggleHarnessExample",
+        "files": [
+            "slide-toggle-harness-example.ts",
+            "slide-toggle-harness-example.html",
+            "slide-toggle-harness-example.spec.ts"
+        ],
+        "selector": "slide-toggle-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "slide-toggle-harness-example.ts",
+        "module": {
+            "name": "SlideToggleExamplesModule",
+            "importSpecifier": "material/slide-toggle"
+        }
+    },
     "slide-toggle-overview": {
         "packagePath": "material/slide-toggle/slide-toggle-overview",
         "title": "Basic slide-toggles",

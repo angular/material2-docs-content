@@ -1,5 +1,5 @@
 import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { NgControlStatus, NgModel, Validators, FormBuilder, NgControlStatusGroup, NgForm, RequiredValidator, FormGroupDirective, FormControlName, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgControlStatus, NgModel, Validators, FormBuilder, NgControlStatusGroup, NgForm, RequiredValidator, FormGroupDirective, FormControlName, FormControl, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -180,9 +180,40 @@ SlideToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleOvervi
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatSlideToggleHarness
+ */
+class SlideToggleHarnessExample {
+    constructor() {
+        this.disabled = true;
+        this.ctrl = new FormControl(true);
+    }
+}
+SlideToggleHarnessExample.ɵfac = function SlideToggleHarnessExample_Factory(t) { return new (t || SlideToggleHarnessExample)(); };
+SlideToggleHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleHarnessExample, selectors: [["slide-toggle-harness-example"]], decls: 4, vars: 2, consts: [["name", "first-name", 3, "formControl"], [3, "disabled"]], template: function SlideToggleHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-slide-toggle", 0);
+        ɵɵtext(1, " First\n");
+        ɵɵelementEnd();
+        ɵɵelementStart(2, "mat-slide-toggle", 1);
+        ɵɵtext(3, " Second\n");
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("formControl", ctx.ctrl);
+        ɵɵadvance(2);
+        ɵɵproperty("disabled", ctx.disabled);
+    } }, directives: [MatSlideToggle, NgControlStatus, FormControlDirective], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'slide-toggle-harness-example',
+                templateUrl: 'slide-toggle-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     SlideToggleConfigurableExample,
     SlideToggleFormsExample,
+    SlideToggleHarnessExample,
     SlideToggleOverviewExample,
 ];
 class SlideToggleExamplesModule {
@@ -199,6 +230,7 @@ SlideToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SlideTo
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
         SlideToggleFormsExample,
+        SlideToggleHarnessExample,
         SlideToggleOverviewExample], imports: [FormsModule,
         MatButtonModule,
         MatCardModule,
@@ -207,6 +239,7 @@ SlideToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SlideTo
         MatSlideToggleModule,
         ReactiveFormsModule], exports: [SlideToggleConfigurableExample,
         SlideToggleFormsExample,
+        SlideToggleHarnessExample,
         SlideToggleOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleExamplesModule, [{
         type: NgModule,
@@ -230,5 +263,5 @@ SlideToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SlideTo
  * Generated bundle index. Do not edit.
  */
 
-export { SlideToggleConfigurableExample, SlideToggleExamplesModule, SlideToggleFormsExample, SlideToggleOverviewExample };
+export { SlideToggleConfigurableExample, SlideToggleExamplesModule, SlideToggleFormsExample, SlideToggleHarnessExample, SlideToggleOverviewExample };
 //# sourceMappingURL=slide-toggle.js.map
