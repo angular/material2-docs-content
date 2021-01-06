@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/paginator', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/input', '@angular/material/paginator', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.paginator = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.input, global.ng.material.paginator, global.ng.material.formField));
-}(this, (function (exports, i5, i0, i3, i2, i4, i1) { 'use strict';
+}(this, (function (exports, i5, i0, i3, i2, i1, i1$1) { 'use strict';
 
     function PaginatorConfigurableExample_div_13_Template(rf, ctx) {
         if (rf & 1) {
@@ -93,7 +93,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.pageEvent);
             }
-        }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i4.MatPaginator, i5.NgIf], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+        }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i1.MatPaginator, i5.NgIf], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
                 type: i0.Component,
@@ -122,7 +122,7 @@
             if (rf & 2) {
                 i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c0$1));
             }
-        }, directives: [i4.MatPaginator], encapsulation: 2 });
+        }, directives: [i1.MatPaginator], encapsulation: 2 });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
                 type: i0.Component,
@@ -133,8 +133,48 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatPaginatorHarness
+     */
+    var PaginatorHarnessExample = /** @class */ (function () {
+        function PaginatorHarnessExample() {
+            this.length = 500;
+            this.pageSize = 10;
+            this.pageIndex = 0;
+            this.pageSizeOptions = [5, 10, 25];
+            this.showFirstLastButtons = true;
+        }
+        PaginatorHarnessExample.prototype.handlePageEvent = function (event) {
+            this.length = event.length;
+            this.pageSize = event.pageSize;
+            this.pageIndex = event.pageIndex;
+        };
+        return PaginatorHarnessExample;
+    }());
+    PaginatorHarnessExample.ɵfac = function PaginatorHarnessExample_Factory(t) { return new (t || PaginatorHarnessExample)(); };
+    PaginatorHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: PaginatorHarnessExample, selectors: [["paginator-harness-example"]], decls: 1, vars: 5, consts: [[3, "length", "pageSize", "showFirstLastButtons", "pageSizeOptions", "pageIndex", "page"]], template: function PaginatorHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-paginator", 0);
+                i0.ɵɵlistener("page", function PaginatorHarnessExample_Template_mat_paginator_page_0_listener($event) { return ctx.handlePageEvent($event); });
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("showFirstLastButtons", ctx.showFirstLastButtons)("pageSizeOptions", ctx.pageSizeOptions)("pageIndex", ctx.pageIndex);
+            }
+        }, directives: [i1.MatPaginator], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(PaginatorHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'paginator-harness-example',
+                        templateUrl: 'paginator-harness-example.html'
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         PaginatorConfigurableExample,
+        PaginatorHarnessExample,
         PaginatorOverviewExample,
     ];
     var PaginatorExamplesModule = /** @class */ (function () {
@@ -146,15 +186,17 @@
     PaginatorExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function PaginatorExamplesModule_Factory(t) { return new (t || PaginatorExamplesModule)(); }, imports: [[
                 i5.CommonModule,
                 i2.MatInputModule,
-                i4.MatPaginatorModule,
+                i1.MatPaginatorModule,
                 i3.FormsModule,
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
+                PaginatorHarnessExample,
                 PaginatorOverviewExample], imports: [i5.CommonModule,
                 i2.MatInputModule,
-                i4.MatPaginatorModule,
+                i1.MatPaginatorModule,
                 i3.FormsModule], exports: [PaginatorConfigurableExample,
+                PaginatorHarnessExample,
                 PaginatorOverviewExample] });
     })();
     /*@__PURE__*/ (function () {
@@ -164,7 +206,7 @@
                         imports: [
                             i5.CommonModule,
                             i2.MatInputModule,
-                            i4.MatPaginatorModule,
+                            i1.MatPaginatorModule,
                             i3.FormsModule,
                         ],
                         declarations: EXAMPLES,
@@ -180,6 +222,7 @@
 
     exports.PaginatorConfigurableExample = PaginatorConfigurableExample;
     exports.PaginatorExamplesModule = PaginatorExamplesModule;
+    exports.PaginatorHarnessExample = PaginatorHarnessExample;
     exports.PaginatorOverviewExample = PaginatorOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

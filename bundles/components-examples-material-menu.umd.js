@@ -321,7 +321,51 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatMenuHarness
+     */
+    var MenuHarnessExample = /** @class */ (function () {
+        function MenuHarnessExample() {
+        }
+        return MenuHarnessExample;
+    }());
+    MenuHarnessExample.ɵfac = function MenuHarnessExample_Factory(t) { return new (t || MenuHarnessExample)(); };
+    MenuHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuHarnessExample, selectors: [["menu-harness-example"]], decls: 10, vars: 2, consts: [["type", "button", 3, "matMenuTriggerFor"], ["type", "button", "disabled", "", 3, "matMenuTriggerFor"], ["settingsMenu", ""], ["mat-menu-item", ""]], template: function MenuHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "button", 0);
+                i0.ɵɵtext(1, "Settings");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "button", 1);
+                i0.ɵɵtext(3, "Disabled menu");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "mat-menu", null, 2);
+                i0.ɵɵelementStart(6, "menu", 3);
+                i0.ɵɵtext(7, "Profile");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(8, "menu", 3);
+                i0.ɵɵtext(9, "Account");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                var _r0 = i0.ɵɵreference(5);
+                i0.ɵɵproperty("matMenuTriggerFor", _r0);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("matMenuTriggerFor", _r0);
+            }
+        }, directives: [i2.MatMenuTrigger, i2.MatMenu, i2.MatMenuItem], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(MenuHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'menu-harness-example',
+                        templateUrl: 'menu-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
+        MenuHarnessExample,
         MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
@@ -339,12 +383,14 @@
                 i2.MatMenuModule,
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuHarnessExample,
+                MenuIconsExample,
                 MenuOverviewExample,
                 MenuPositionExample,
                 MenuNestedExample], imports: [i1.MatButtonModule,
                 i3.MatIconModule,
-                i2.MatMenuModule], exports: [MenuIconsExample,
+                i2.MatMenuModule], exports: [MenuHarnessExample,
+                MenuIconsExample,
                 MenuOverviewExample,
                 MenuPositionExample,
                 MenuNestedExample] });
@@ -370,6 +416,7 @@
      */
 
     exports.MenuExamplesModule = MenuExamplesModule;
+    exports.MenuHarnessExample = MenuHarnessExample;
     exports.MenuIconsExample = MenuIconsExample;
     exports.MenuNestedExample = MenuNestedExample;
     exports.MenuOverviewExample = MenuOverviewExample;

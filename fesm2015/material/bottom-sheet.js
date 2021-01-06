@@ -1,4 +1,4 @@
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, Component, ɵɵviewQuery, TemplateRef, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵtemplate, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatNavList, MatListItem, MatListModule } from '@angular/material/list';
@@ -90,7 +90,42 @@ BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetO
             }]
     }], function () { return [{ type: MatBottomSheetRef }]; }, null); })();
 
+function BottomSheetHarnessExample_ng_template_0_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, " Hello from the bottom sheet!\n");
+} }
+/**
+ * @title Testing with MatBottomSheetHarness
+ */
+class BottomSheetHarnessExample {
+    constructor(bottomSheet) {
+        this.bottomSheet = bottomSheet;
+    }
+    open(config) {
+        return this.bottomSheet.open(this.template, config);
+    }
+}
+BottomSheetHarnessExample.ɵfac = function BottomSheetHarnessExample_Factory(t) { return new (t || BottomSheetHarnessExample)(ɵɵdirectiveInject(MatBottomSheet)); };
+BottomSheetHarnessExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetHarnessExample, selectors: [["bottom-sheet-harness-example"]], viewQuery: function BottomSheetHarnessExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(TemplateRef, true);
+    } if (rf & 2) {
+        let _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.template = _t.first);
+    } }, decls: 1, vars: 0, template: function BottomSheetHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵtemplate(0, BottomSheetHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'bottom-sheet-harness-example',
+                templateUrl: 'bottom-sheet-harness-example.html',
+            }]
+    }], function () { return [{ type: MatBottomSheet }]; }, { template: [{
+            type: ViewChild,
+            args: [TemplateRef]
+        }] }); })();
+
 const EXAMPLES = [
+    BottomSheetHarnessExample,
     BottomSheetOverviewExample,
     BottomSheetOverviewExampleSheet,
 ];
@@ -102,10 +137,12 @@ BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomS
             MatButtonModule,
             MatListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetHarnessExample,
+        BottomSheetOverviewExample,
         BottomSheetOverviewExampleSheet], imports: [MatBottomSheetModule,
         MatButtonModule,
-        MatListModule], exports: [BottomSheetOverviewExample,
+        MatListModule], exports: [BottomSheetHarnessExample,
+        BottomSheetOverviewExample,
         BottomSheetOverviewExampleSheet] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetExamplesModule, [{
         type: NgModule,
@@ -125,5 +162,5 @@ BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomS
  * Generated bundle index. Do not edit.
  */
 
-export { BottomSheetExamplesModule, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet };
+export { BottomSheetExamplesModule, BottomSheetHarnessExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet };
 //# sourceMappingURL=bottom-sheet.js.map
