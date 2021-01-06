@@ -2830,6 +2830,23 @@
                 "importSpecifier": "material/input"
             }
         },
+        "list-harness": {
+            "packagePath": "material/list/list-harness",
+            "title": "Testing with MatListHarness",
+            "componentName": "ListHarnessExample",
+            "files": [
+                "list-harness-example.ts",
+                "list-harness-example.html",
+                "list-harness-example.spec.ts"
+            ],
+            "selector": "list-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "list-harness-example.ts",
+            "module": {
+                "name": "ListExamplesModule",
+                "importSpecifier": "material/list"
+            }
+        },
         "list-overview": {
             "packagePath": "material/list/list-overview",
             "title": "Basic list",

@@ -1,7 +1,7 @@
 import { NgForOf, DatePipe, CommonModule } from '@angular/common';
 import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵpipe, ɵɵadvance, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵpipeBind1, ɵɵtemplate, ɵɵelement, ɵɵproperty, ɵɵreference, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
-import { MatList, MatListItem, MatListSubheaderCssMatStyler, MatListIconCssMatStyler, MatSelectionList, MatListOption, MatListModule } from '@angular/material/list';
+import { MatList, MatListItem, MatListSubheaderCssMatStyler, MatListIconCssMatStyler, MatSelectionList, MatListOption, MatListAvatarCssMatStyler, MatListModule } from '@angular/material/list';
 import { MatDivider } from '@angular/material/divider';
 import { MatLine } from '@angular/material/core';
 
@@ -215,7 +215,54 @@ ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelecti
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatListHarness
+ */
+class ListHarnessExample {
+}
+ListHarnessExample.ɵfac = function ListHarnessExample_Factory(t) { return new (t || ListHarnessExample)(); };
+ListHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ListHarnessExample, selectors: [["list-harness-example"]], decls: 19, vars: 0, consts: [["matLine", ""], ["matListIcon", ""], ["matListAvatar", ""], ["matSubheader", ""], ["mat-list-item", ""]], template: function ListHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-list");
+        ɵɵelementStart(1, "mat-list-item");
+        ɵɵelementStart(2, "div", 0);
+        ɵɵtext(3, "Item ");
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "div", 0);
+        ɵɵtext(5, "1");
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "div", 1);
+        ɵɵtext(7, "icon");
+        ɵɵelementEnd();
+        ɵɵelementStart(8, "div", 2);
+        ɵɵtext(9, "Avatar");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "div", 3);
+        ɵɵtext(11, "Section 1");
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "a", 4);
+        ɵɵelementStart(13, "span");
+        ɵɵtext(14, "Item 2");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(15, "button", 4);
+        ɵɵtext(16, "Item 3");
+        ɵɵelementEnd();
+        ɵɵelementStart(17, "div", 3);
+        ɵɵtext(18, "Section 2");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatList, MatListItem, MatLine, MatListIconCssMatStyler, MatListAvatarCssMatStyler, MatListSubheaderCssMatStyler], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ListHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'list-harness-example',
+                templateUrl: 'list-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
+    ListHarnessExample,
     ListOverviewExample,
     ListSectionsExample,
     ListSelectionExample,
@@ -229,12 +276,14 @@ ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesMo
             MatIconModule,
             MatListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListHarnessExample,
+        ListOverviewExample,
         ListSectionsExample,
         ListSelectionExample,
         ListSingleSelectionExample], imports: [CommonModule,
         MatIconModule,
-        MatListModule], exports: [ListOverviewExample,
+        MatListModule], exports: [ListHarnessExample,
+        ListOverviewExample,
         ListSectionsExample,
         ListSelectionExample,
         ListSingleSelectionExample] }); })();
@@ -256,5 +305,5 @@ ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesMo
  * Generated bundle index. Do not edit.
  */
 
-export { ListExamplesModule, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample };
+export { ListExamplesModule, ListHarnessExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample };
 //# sourceMappingURL=list.js.map

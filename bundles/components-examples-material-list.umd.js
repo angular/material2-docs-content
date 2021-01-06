@@ -251,7 +251,61 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatListHarness
+     */
+    var ListHarnessExample = /** @class */ (function () {
+        function ListHarnessExample() {
+        }
+        return ListHarnessExample;
+    }());
+    ListHarnessExample.ɵfac = function ListHarnessExample_Factory(t) { return new (t || ListHarnessExample)(); };
+    ListHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListHarnessExample, selectors: [["list-harness-example"]], decls: 19, vars: 0, consts: [["matLine", ""], ["matListIcon", ""], ["matListAvatar", ""], ["matSubheader", ""], ["mat-list-item", ""]], template: function ListHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-list");
+                i0.ɵɵelementStart(1, "mat-list-item");
+                i0.ɵɵelementStart(2, "div", 0);
+                i0.ɵɵtext(3, "Item ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "div", 0);
+                i0.ɵɵtext(5, "1");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "div", 1);
+                i0.ɵɵtext(7, "icon");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(8, "div", 2);
+                i0.ɵɵtext(9, "Avatar");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "div", 3);
+                i0.ɵɵtext(11, "Section 1");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "a", 4);
+                i0.ɵɵelementStart(13, "span");
+                i0.ɵɵtext(14, "Item 2");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(15, "button", 4);
+                i0.ɵɵtext(16, "Item 3");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(17, "div", 3);
+                i0.ɵɵtext(18, "Section 2");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1.MatList, i1.MatListItem, i5.MatLine, i1.MatListIconCssMatStyler, i1.MatListAvatarCssMatStyler, i1.MatListSubheaderCssMatStyler], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ListHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'list-harness-example',
+                        templateUrl: 'list-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
+        ListHarnessExample,
         ListOverviewExample,
         ListSectionsExample,
         ListSelectionExample,
@@ -269,12 +323,14 @@
                 i1.MatListModule,
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListOverviewExample,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListHarnessExample,
+                ListOverviewExample,
                 ListSectionsExample,
                 ListSelectionExample,
                 ListSingleSelectionExample], imports: [i2.CommonModule,
                 i4.MatIconModule,
-                i1.MatListModule], exports: [ListOverviewExample,
+                i1.MatListModule], exports: [ListHarnessExample,
+                ListOverviewExample,
                 ListSectionsExample,
                 ListSelectionExample,
                 ListSingleSelectionExample] });
@@ -300,6 +356,7 @@
      */
 
     exports.ListExamplesModule = ListExamplesModule;
+    exports.ListHarnessExample = ListHarnessExample;
     exports.ListOverviewExample = ListOverviewExample;
     exports.ListSectionsExample = ListSectionsExample;
     exports.ListSelectionExample = ListSelectionExample;
