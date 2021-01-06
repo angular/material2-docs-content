@@ -2346,7 +2346,8 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "FormFieldOverviewExample",
         "files": [
             "form-field-overview-example.ts",
-            "form-field-overview-example.html"
+            "form-field-overview-example.html",
+            "form-field-overview-example.css"
         ],
         "selector": "form-field-overview-example",
         "additionalComponents": [],

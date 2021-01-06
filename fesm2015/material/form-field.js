@@ -522,39 +522,39 @@ FormFieldLabelExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldLabelExample,
 class FormFieldOverviewExample {
 }
 FormFieldOverviewExample.ɵfac = function FormFieldOverviewExample_Factory(t) { return new (t || FormFieldOverviewExample)(); };
-FormFieldOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 17, vars: 0, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", ""], ["value", "option"]], template: function FormFieldOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "div", 0);
-        ɵɵelementStart(1, "mat-form-field", 1);
-        ɵɵelementStart(2, "mat-label");
-        ɵɵtext(3, "Input");
+FormFieldOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 16, vars: 0, consts: [["appearance", "fill"], ["matInput", ""], ["value", "one"], ["value", "two"]], template: function FormFieldOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field", 0);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Input");
         ɵɵelementEnd();
-        ɵɵelement(4, "input", 2);
+        ɵɵelement(3, "input", 1);
         ɵɵelementEnd();
-        ɵɵelement(5, "br");
-        ɵɵelementStart(6, "mat-form-field", 1);
-        ɵɵelementStart(7, "mat-label");
-        ɵɵtext(8, "Select");
+        ɵɵelementStart(4, "mat-form-field", 0);
+        ɵɵelementStart(5, "mat-label");
+        ɵɵtext(6, "Select");
         ɵɵelementEnd();
-        ɵɵelementStart(9, "mat-select");
+        ɵɵelementStart(7, "mat-select");
+        ɵɵelementStart(8, "mat-option", 2);
+        ɵɵtext(9, "First option");
+        ɵɵelementEnd();
         ɵɵelementStart(10, "mat-option", 3);
-        ɵɵtext(11, "Option");
+        ɵɵtext(11, "Second option");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelement(12, "br");
-        ɵɵelementStart(13, "mat-form-field", 1);
-        ɵɵelementStart(14, "mat-label");
-        ɵɵtext(15, "Textarea");
+        ɵɵelementStart(12, "mat-form-field", 0);
+        ɵɵelementStart(13, "mat-label");
+        ɵɵtext(14, "Textarea");
         ɵɵelementEnd();
-        ɵɵelement(16, "textarea", 2);
+        ɵɵelement(15, "textarea", 1);
         ɵɵelementEnd();
-        ɵɵelementEnd();
-    } }, directives: [MatFormField, MatLabel, MatInput, MatSelect, MatOption], encapsulation: 2 });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatSelect, MatOption], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-overview-example',
                 templateUrl: 'form-field-overview-example.html',
+                styleUrls: ['form-field-overview-example.css']
             }]
     }], null, null); })();
 
