@@ -1,6 +1,6 @@
 import { NgForOf, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵstyleProp, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { MatGridList, MatGridTile, MatGridListModule } from '@angular/material/grid-list';
+import { MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridListModule } from '@angular/material/grid-list';
 
 function GridListDynamicExample_mat_grid_tile_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-grid-tile", 2);
@@ -74,8 +74,48 @@ GridListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: GridListOverviewExam
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatGridListHarness
+ */
+class GridListHarnessExample {
+}
+GridListHarnessExample.ɵfac = function GridListHarnessExample_Factory(t) { return new (t || GridListHarnessExample)(); };
+GridListHarnessExample.ɵcmp = ɵɵdefineComponent({ type: GridListHarnessExample, selectors: [["grid-list-harness-example"]], decls: 14, vars: 0, consts: [["cols", "2", "rowHeight", "100px"], ["colspan", "2"]], template: function GridListHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-grid-list", 0);
+        ɵɵelementStart(1, "mat-grid-tile");
+        ɵɵtext(2, "Tile 1 (no header, no footer)");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-grid-tile");
+        ɵɵelementStart(4, "mat-grid-tile-header");
+        ɵɵtext(5, "Tile 2");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-grid-tile", 1);
+        ɵɵelementStart(7, "mat-grid-tile-header");
+        ɵɵtext(8, "Tile 3");
+        ɵɵelementEnd();
+        ɵɵelementStart(9, "mat-grid-tile-footer");
+        ɵɵtext(10, "Tile 3 footer");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(11, "mat-grid-tile");
+        ɵɵelementStart(12, "mat-grid-tile-header");
+        ɵɵtext(13, "Tile 4");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'grid-list-harness-example',
+                templateUrl: 'grid-list-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     GridListDynamicExample,
+    GridListHarnessExample,
     GridListOverviewExample,
 ];
 class GridListExamplesModule {
@@ -86,8 +126,10 @@ GridListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function GridListEx
             MatGridListModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
+        GridListHarnessExample,
         GridListOverviewExample], imports: [CommonModule,
         MatGridListModule], exports: [GridListDynamicExample,
+        GridListHarnessExample,
         GridListOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(GridListExamplesModule, [{
         type: NgModule,
@@ -106,5 +148,5 @@ GridListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function GridListEx
  * Generated bundle index. Do not edit.
  */
 
-export { GridListDynamicExample, GridListExamplesModule, GridListOverviewExample };
+export { GridListDynamicExample, GridListExamplesModule, GridListHarnessExample, GridListOverviewExample };
 //# sourceMappingURL=grid-list.js.map

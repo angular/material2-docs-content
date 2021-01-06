@@ -2645,6 +2645,23 @@
                 "importSpecifier": "material/grid-list"
             }
         },
+        "grid-list-harness": {
+            "packagePath": "material/grid-list/grid-list-harness",
+            "title": "Testing with MatGridListHarness",
+            "componentName": "GridListHarnessExample",
+            "files": [
+                "grid-list-harness-example.ts",
+                "grid-list-harness-example.html",
+                "grid-list-harness-example.spec.ts"
+            ],
+            "selector": "grid-list-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "grid-list-harness-example.ts",
+            "module": {
+                "name": "GridListExamplesModule",
+                "importSpecifier": "material/grid-list"
+            }
+        },
         "grid-list-overview": {
             "packagePath": "material/grid-list/grid-list-overview",
             "title": "Basic grid-list",
