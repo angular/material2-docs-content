@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/progress-spinner'), require('@angular/material/radio'), require('@angular/material/slider')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/progress-spinner', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/progress-spinner', '@angular/material/radio', '@angular/material/slider'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.progressSpinner = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.progressSpinner, global.ng.material.radio, global.ng.material.slider));
-}(this, (function (exports, i4, i0, i3, i1, i5, i2, i6) { 'use strict';
+}(this, (function (exports, i4, i0, i3, i1, i1$1, i2, i6) { 'use strict';
 
     function ProgressSpinnerConfigurableExample_section_22_Template(rf, ctx) {
         if (rf & 1) {
@@ -94,7 +94,7 @@
                 i0.ɵɵadvance(5);
                 i0.ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value);
             }
-        }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i5.MatProgressSpinner, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+        }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressSpinner, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
                 type: i0.Component,
@@ -119,7 +119,7 @@
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-spinner");
             }
-        }, directives: [i5.MatSpinner], encapsulation: 2 });
+        }, directives: [i1$1.MatSpinner], encapsulation: 2 });
     /*@__PURE__*/ (function () {
         i0.ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
                 type: i0.Component,
@@ -130,8 +130,37 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatProgressSpinnerHarness
+     */
+    var ProgressSpinnerHarnessExample = /** @class */ (function () {
+        function ProgressSpinnerHarnessExample() {
+        }
+        return ProgressSpinnerHarnessExample;
+    }());
+    ProgressSpinnerHarnessExample.ɵfac = function ProgressSpinnerHarnessExample_Factory(t) { return new (t || ProgressSpinnerHarnessExample)(); };
+    ProgressSpinnerHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressSpinnerHarnessExample, selectors: [["progress-spinner-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"]], template: function ProgressSpinnerHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelement(0, "mat-progress-spinner", 0);
+                i0.ɵɵelement(1, "mat-spinner");
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("value", ctx.value);
+            }
+        }, directives: [i1$1.MatProgressSpinner, i1$1.MatSpinner], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'progress-spinner-harness-example',
+                        templateUrl: 'progress-spinner-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ProgressSpinnerConfigurableExample,
+        ProgressSpinnerHarnessExample,
         ProgressSpinnerOverviewExample,
     ];
     var ProgressSpinnerExamplesModule = /** @class */ (function () {
@@ -143,19 +172,21 @@
     ProgressSpinnerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ProgressSpinnerExamplesModule_Factory(t) { return new (t || ProgressSpinnerExamplesModule)(); }, imports: [[
                 i4.CommonModule,
                 i1.MatCardModule,
-                i5.MatProgressSpinnerModule,
+                i1$1.MatProgressSpinnerModule,
                 i2.MatRadioModule,
                 i6.MatSliderModule,
                 i3.FormsModule,
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
+                ProgressSpinnerHarnessExample,
                 ProgressSpinnerOverviewExample], imports: [i4.CommonModule,
                 i1.MatCardModule,
-                i5.MatProgressSpinnerModule,
+                i1$1.MatProgressSpinnerModule,
                 i2.MatRadioModule,
                 i6.MatSliderModule,
                 i3.FormsModule], exports: [ProgressSpinnerConfigurableExample,
+                ProgressSpinnerHarnessExample,
                 ProgressSpinnerOverviewExample] });
     })();
     /*@__PURE__*/ (function () {
@@ -165,7 +196,7 @@
                         imports: [
                             i4.CommonModule,
                             i1.MatCardModule,
-                            i5.MatProgressSpinnerModule,
+                            i1$1.MatProgressSpinnerModule,
                             i2.MatRadioModule,
                             i6.MatSliderModule,
                             i3.FormsModule,
@@ -183,6 +214,7 @@
 
     exports.ProgressSpinnerConfigurableExample = ProgressSpinnerConfigurableExample;
     exports.ProgressSpinnerExamplesModule = ProgressSpinnerExamplesModule;
+    exports.ProgressSpinnerHarnessExample = ProgressSpinnerHarnessExample;
     exports.ProgressSpinnerOverviewExample = ProgressSpinnerOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });

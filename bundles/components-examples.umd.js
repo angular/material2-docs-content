@@ -3109,6 +3109,23 @@
                 "importSpecifier": "material/progress-spinner"
             }
         },
+        "progress-spinner-harness": {
+            "packagePath": "material/progress-spinner/progress-spinner-harness",
+            "title": "Testing with MatProgressSpinnerHarness",
+            "componentName": "ProgressSpinnerHarnessExample",
+            "files": [
+                "progress-spinner-harness-example.ts",
+                "progress-spinner-harness-example.html",
+                "progress-spinner-harness-example.spec.ts"
+            ],
+            "selector": "progress-spinner-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "progress-spinner-harness-example.ts",
+            "module": {
+                "name": "ProgressSpinnerExamplesModule",
+                "importSpecifier": "material/progress-spinner"
+            }
+        },
         "progress-spinner-overview": {
             "packagePath": "material/progress-spinner/progress-spinner-overview",
             "title": "Basic progress-spinner",
