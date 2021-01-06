@@ -2914,6 +2914,23 @@
                 "importSpecifier": "material/list"
             }
         },
+        "menu-harness": {
+            "packagePath": "material/menu/menu-harness",
+            "title": "Testing with MatMenuHarness",
+            "componentName": "MenuHarnessExample",
+            "files": [
+                "menu-harness-example.ts",
+                "menu-harness-example.html",
+                "menu-harness-example.spec.ts"
+            ],
+            "selector": "menu-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "menu-harness-example.ts",
+            "module": {
+                "name": "MenuExamplesModule",
+                "importSpecifier": "material/menu"
+            }
+        },
         "menu-icons": {
             "packagePath": "material/menu/menu-icons",
             "title": "Menu with icons",
@@ -2990,6 +3007,23 @@
             "selector": "paginator-configurable-example",
             "additionalComponents": [],
             "primaryFile": "paginator-configurable-example.ts",
+            "module": {
+                "name": "PaginatorExamplesModule",
+                "importSpecifier": "material/paginator"
+            }
+        },
+        "paginator-harness": {
+            "packagePath": "material/paginator/paginator-harness",
+            "title": "Testing with MatPaginatorHarness",
+            "componentName": "PaginatorHarnessExample",
+            "files": [
+                "paginator-harness-example.ts",
+                "paginator-harness-example.html",
+                "paginator-harness-example.spec.ts"
+            ],
+            "selector": "paginator-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "paginator-harness-example.ts",
             "module": {
                 "name": "PaginatorExamplesModule",
                 "importSpecifier": "material/paginator"
