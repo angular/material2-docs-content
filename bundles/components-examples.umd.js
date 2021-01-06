@@ -3897,6 +3897,23 @@
                 "importSpecifier": "material/table"
             }
         },
+        "table-harness": {
+            "packagePath": "material/table/table-harness",
+            "title": "Testing with MatTableHarness",
+            "componentName": "TableHarnessExample",
+            "files": [
+                "table-harness-example.ts",
+                "table-harness-example.html",
+                "table-harness-example.spec.ts"
+            ],
+            "selector": "table-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "table-harness-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
         "table-http": {
             "packagePath": "material/table/table-http",
             "title": "Table retrieving data through HTTP",

@@ -3376,6 +3376,155 @@ const ELEMENT_DATA$f = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
+function TableHarnessExample_th_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 11);
+    ɵɵtext(1, "No.");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_td_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 12);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r15 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(element_r15.position);
+} }
+function TableHarnessExample_td_4_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
+    ɵɵtext(1, "Number of the element");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_th_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 11);
+    ɵɵtext(1, "Name");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_td_7_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 12);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r16 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(element_r16.name);
+} }
+function TableHarnessExample_td_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
+    ɵɵtext(1, "Name of the element");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_th_10_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 11);
+    ɵɵtext(1, "Weight");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_td_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 12);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r17 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(element_r17.weight);
+} }
+function TableHarnessExample_td_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
+    ɵɵtext(1, "Weight of the element");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_th_14_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 11);
+    ɵɵtext(1, "Symbol");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_td_15_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 12);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r18 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(element_r18.symbol);
+} }
+function TableHarnessExample_td_16_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 13);
+    ɵɵtext(1, "Symbol of the element");
+    ɵɵelementEnd();
+} }
+function TableHarnessExample_tr_17_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 14);
+} }
+function TableHarnessExample_tr_18_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 15);
+} }
+function TableHarnessExample_tr_19_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 16);
+} }
+/**
+ * @title Testing with MatTableHarness
+ */
+class TableHarnessExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = [
+            { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+            { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+            { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+            { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+            { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+            { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+            { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+            { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+            { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+            { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+        ];
+    }
+}
+TableHarnessExample.ɵfac = function TableHarnessExample_Factory(t) { return new (t || TableHarnessExample)(); };
+TableHarnessExample.ɵcmp = ɵɵdefineComponent({ type: TableHarnessExample, selectors: [["table-harness-example"]], decls: 20, vars: 4, consts: [["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-footer-row", "", 4, "matFooterRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-footer-row", ""], ["mat-row", ""]], template: function TableHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableHarnessExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableHarnessExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵtemplate(4, TableHarnessExample_td_4_Template, 2, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(5, 5);
+        ɵɵtemplate(6, TableHarnessExample_th_6_Template, 2, 0, "th", 2);
+        ɵɵtemplate(7, TableHarnessExample_td_7_Template, 2, 1, "td", 3);
+        ɵɵtemplate(8, TableHarnessExample_td_8_Template, 2, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(9, 6);
+        ɵɵtemplate(10, TableHarnessExample_th_10_Template, 2, 0, "th", 2);
+        ɵɵtemplate(11, TableHarnessExample_td_11_Template, 2, 1, "td", 3);
+        ɵɵtemplate(12, TableHarnessExample_td_12_Template, 2, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(13, 7);
+        ɵɵtemplate(14, TableHarnessExample_th_14_Template, 2, 0, "th", 2);
+        ɵɵtemplate(15, TableHarnessExample_td_15_Template, 2, 1, "td", 3);
+        ɵɵtemplate(16, TableHarnessExample_td_16_Template, 2, 0, "td", 4);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(17, TableHarnessExample_tr_17_Template, 1, 0, "tr", 8);
+        ɵɵtemplate(18, TableHarnessExample_tr_18_Template, 1, 0, "tr", 9);
+        ɵɵtemplate(19, TableHarnessExample_tr_19_Template, 1, 0, "tr", 10);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(17);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matFooterRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatFooterRowDef, MatRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatFooterRow, MatRow], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TableHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'table-harness-example',
+                templateUrl: 'table-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     TableBasicExample, TableFlexBasicExample,
     TableDynamicColumnsExample, TableExpandableRowsExample,
@@ -3388,7 +3537,7 @@ const EXAMPLES = [
     TableStickyFooterExample, TableStickyHeaderExample,
     TableTextColumnExample, TableTextColumnAdvancedExample,
     TableWrappedExample, WrapperTable,
-    TableReorderableExample,
+    TableReorderableExample, TableHarnessExample,
 ];
 class TableExamplesModule {
 }
@@ -3418,7 +3567,7 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
         TableWrappedExample, WrapperTable,
-        TableReorderableExample], imports: [CommonModule,
+        TableReorderableExample, TableHarnessExample], imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -3440,7 +3589,7 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
         TableWrappedExample, WrapperTable,
-        TableReorderableExample] }); })();
+        TableReorderableExample, TableHarnessExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableExamplesModule, [{
         type: NgModule,
         args: [{
@@ -3468,5 +3617,5 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
  * Generated bundle index. Do not edit.
  */
 
-export { TableBasicExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=table.js.map
