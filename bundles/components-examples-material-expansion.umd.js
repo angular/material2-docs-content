@@ -324,8 +324,44 @@
             }], null, null);
     })();
 
+    /**
+     * @title Testing with MatExpansionPanelHarness and MatAccordionHarness
+     */
+    var ExpansionHarnessExample = /** @class */ (function () {
+        function ExpansionHarnessExample() {
+        }
+        return ExpansionHarnessExample;
+    }());
+    ExpansionHarnessExample.ɵfac = function ExpansionHarnessExample_Factory(t) { return new (t || ExpansionHarnessExample)(); };
+    ExpansionHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionHarnessExample, selectors: [["expansion-harness-example"]], decls: 7, vars: 0, template: function ExpansionHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-accordion");
+                i0.ɵɵelementStart(1, "mat-expansion-panel");
+                i0.ɵɵelementStart(2, "mat-expansion-panel-header");
+                i0.ɵɵelementStart(3, "mat-panel-title");
+                i0.ɵɵtext(4, " Welcome ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "p");
+                i0.ɵɵtext(6, "I am the content!");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ExpansionHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'expansion-harness-example',
+                        templateUrl: 'expansion-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ExpansionExpandCollapseAllExample,
+        ExpansionHarnessExample,
         ExpansionOverviewExample,
         ExpansionStepsExample,
     ];
@@ -345,6 +381,7 @@
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
+                ExpansionHarnessExample,
                 ExpansionOverviewExample,
                 ExpansionStepsExample], imports: [i1.MatButtonModule,
                 i6.MatDatepickerModule,
@@ -352,6 +389,7 @@
                 i1$1.MatExpansionModule,
                 i3.MatIconModule,
                 i5.MatInputModule], exports: [ExpansionExpandCollapseAllExample,
+                ExpansionHarnessExample,
                 ExpansionOverviewExample,
                 ExpansionStepsExample] });
     })();
@@ -380,6 +418,7 @@
 
     exports.ExpansionExamplesModule = ExpansionExamplesModule;
     exports.ExpansionExpandCollapseAllExample = ExpansionExpandCollapseAllExample;
+    exports.ExpansionHarnessExample = ExpansionHarnessExample;
     exports.ExpansionOverviewExample = ExpansionOverviewExample;
     exports.ExpansionStepsExample = ExpansionStepsExample;
 

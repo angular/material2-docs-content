@@ -2151,6 +2151,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/expansion"
         }
     },
+    "expansion-harness": {
+        "packagePath": "material/expansion/expansion-harness",
+        "title": "Testing with MatExpansionPanelHarness and MatAccordionHarness",
+        "componentName": "ExpansionHarnessExample",
+        "files": [
+            "expansion-harness-example.ts",
+            "expansion-harness-example.html",
+            "expansion-harness-example.spec.ts"
+        ],
+        "selector": "expansion-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "expansion-harness-example.ts",
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "material/expansion"
+        }
+    },
     "expansion-overview": {
         "packagePath": "material/expansion/expansion-overview",
         "title": "Basic expansion panel",

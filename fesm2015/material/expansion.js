@@ -304,8 +304,37 @@ ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample,
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatExpansionPanelHarness and MatAccordionHarness
+ */
+class ExpansionHarnessExample {
+}
+ExpansionHarnessExample.ɵfac = function ExpansionHarnessExample_Factory(t) { return new (t || ExpansionHarnessExample)(); };
+ExpansionHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionHarnessExample, selectors: [["expansion-harness-example"]], decls: 7, vars: 0, template: function ExpansionHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-accordion");
+        ɵɵelementStart(1, "mat-expansion-panel");
+        ɵɵelementStart(2, "mat-expansion-panel-header");
+        ɵɵelementStart(3, "mat-panel-title");
+        ɵɵtext(4, " Welcome ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "p");
+        ɵɵtext(6, "I am the content!");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'expansion-harness-example',
+                templateUrl: 'expansion-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ExpansionExpandCollapseAllExample,
+    ExpansionHarnessExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
 ];
@@ -321,6 +350,7 @@ ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Expansion
             MatInputModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
+        ExpansionHarnessExample,
         ExpansionOverviewExample,
         ExpansionStepsExample], imports: [MatButtonModule,
         MatDatepickerModule,
@@ -328,6 +358,7 @@ ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Expansion
         MatExpansionModule,
         MatIconModule,
         MatInputModule], exports: [ExpansionExpandCollapseAllExample,
+        ExpansionHarnessExample,
         ExpansionOverviewExample,
         ExpansionStepsExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionExamplesModule, [{
@@ -351,5 +382,5 @@ ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Expansion
  * Generated bundle index. Do not edit.
  */
 
-export { ExpansionExamplesModule, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample };
+export { ExpansionExamplesModule, ExpansionExpandCollapseAllExample, ExpansionHarnessExample, ExpansionOverviewExample, ExpansionStepsExample };
 //# sourceMappingURL=expansion.js.map
