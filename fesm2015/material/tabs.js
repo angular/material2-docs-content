@@ -268,6 +268,39 @@ TabGroupDynamicHeightExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamic
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatTabGroupHarness
+ */
+class TabGroupHarnessExample {
+}
+TabGroupHarnessExample.ɵfac = function TabGroupHarnessExample_Factory(t) { return new (t || TabGroupHarnessExample)(); };
+TabGroupHarnessExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupHarnessExample, selectors: [["tab-group-harness-example"]], decls: 10, vars: 0, consts: [["label", "Profile", "aria-label", "Profile tab"], [1, "test-tab-content"], ["label", "Settings", "aria-label", "Settings tab"], ["label", "FAQ", "aria-label", "FAQ tab"]], template: function TabGroupHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-tab-group");
+        ɵɵelementStart(1, "mat-tab", 0);
+        ɵɵelementStart(2, "span", 1);
+        ɵɵtext(3, "Your personal information");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "mat-tab", 2);
+        ɵɵelementStart(5, "span", 1);
+        ɵɵtext(6, "Privacy settings");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(7, "mat-tab", 3);
+        ɵɵelementStart(8, "span", 1);
+        ɵɵtext(9, "How to update profile picture");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatTabGroup, MatTab], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'tab-group-harness-example',
+                templateUrl: 'tab-group-harness-example.html'
+            }]
+    }], null, null); })();
+
 function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
     const _r5 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tab", 5);
@@ -581,6 +614,7 @@ const EXAMPLES = [
     TabGroupCustomLabelExample,
     TabGroupDynamicExample,
     TabGroupDynamicHeightExample,
+    TabGroupHarnessExample,
     TabGroupHeaderBelowExample,
     TabGroupLazyLoadedExample,
     TabGroupStretchedExample,
@@ -607,6 +641,7 @@ TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupEx
         TabGroupCustomLabelExample,
         TabGroupDynamicExample,
         TabGroupDynamicHeightExample,
+        TabGroupHarnessExample,
         TabGroupHeaderBelowExample,
         TabGroupLazyLoadedExample,
         TabGroupStretchedExample,
@@ -625,6 +660,7 @@ TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupEx
         TabGroupCustomLabelExample,
         TabGroupDynamicExample,
         TabGroupDynamicHeightExample,
+        TabGroupHarnessExample,
         TabGroupHeaderBelowExample,
         TabGroupLazyLoadedExample,
         TabGroupStretchedExample,
@@ -653,5 +689,5 @@ TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupEx
  * Generated bundle index. Do not edit.
  */
 
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample };
+export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample };
 //# sourceMappingURL=tabs.js.map

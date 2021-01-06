@@ -4289,6 +4289,23 @@
                 "importSpecifier": "material/tabs"
             }
         },
+        "tab-group-harness": {
+            "packagePath": "material/tabs/tab-group-harness",
+            "title": "Testing with MatTabGroupHarness",
+            "componentName": "TabGroupHarnessExample",
+            "files": [
+                "tab-group-harness-example.ts",
+                "tab-group-harness-example.html",
+                "tab-group-harness-example.spec.ts"
+            ],
+            "selector": "tab-group-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "tab-group-harness-example.ts",
+            "module": {
+                "name": "TabGroupExamplesModule",
+                "importSpecifier": "material/tabs"
+            }
+        },
         "tab-group-header-below": {
             "packagePath": "material/tabs/tab-group-header-below",
             "title": "Tab group with the headers on the bottom",
