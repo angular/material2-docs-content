@@ -3468,6 +3468,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/slider"
         }
     },
+    "slider-harness": {
+        "packagePath": "material/slider/slider-harness",
+        "title": "Testing with MatSliderHarness",
+        "componentName": "SliderHarnessExample",
+        "files": [
+            "slider-harness-example.ts",
+            "slider-harness-example.html",
+            "slider-harness-example.spec.ts"
+        ],
+        "selector": "slider-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "slider-harness-example.ts",
+        "module": {
+            "name": "SliderExamplesModule",
+            "importSpecifier": "material/slider"
+        }
+    },
     "slider-overview": {
         "packagePath": "material/slider/slider-overview",
         "title": "Basic slider",

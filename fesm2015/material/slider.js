@@ -218,9 +218,27 @@ SliderOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SliderOverviewExample,
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatSliderHarness
+ */
+class SliderHarnessExample {
+}
+SliderHarnessExample.ɵfac = function SliderHarnessExample_Factory(t) { return new (t || SliderHarnessExample)(); };
+SliderHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50"]], template: function SliderHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-slider", 0);
+    } }, directives: [MatSlider], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'slider-harness-example',
+                templateUrl: 'slider-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     SliderConfigurableExample,
     SliderFormattingExample,
+    SliderHarnessExample,
     SliderOverviewExample,
 ];
 class SliderExamplesModule {
@@ -236,6 +254,7 @@ SliderExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SliderExampl
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
         SliderFormattingExample,
+        SliderHarnessExample,
         SliderOverviewExample], imports: [CommonModule,
         FormsModule,
         MatCardModule,
@@ -243,6 +262,7 @@ SliderExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SliderExampl
         MatInputModule,
         MatSliderModule], exports: [SliderConfigurableExample,
         SliderFormattingExample,
+        SliderHarnessExample,
         SliderOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SliderExamplesModule, [{
         type: NgModule,
@@ -265,5 +285,5 @@ SliderExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SliderExampl
  * Generated bundle index. Do not edit.
  */
 
-export { SliderConfigurableExample, SliderExamplesModule, SliderFormattingExample, SliderOverviewExample };
+export { SliderConfigurableExample, SliderExamplesModule, SliderFormattingExample, SliderHarnessExample, SliderOverviewExample };
 //# sourceMappingURL=slider.js.map
