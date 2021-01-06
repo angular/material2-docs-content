@@ -3556,6 +3556,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/snack-bar"
         }
     },
+    "sort-harness": {
+        "packagePath": "material/sort/sort-harness",
+        "title": "Testing with MatSortHarness",
+        "componentName": "SortHarnessExample",
+        "files": [
+            "sort-harness-example.ts",
+            "sort-harness-example.html",
+            "sort-harness-example.spec.ts"
+        ],
+        "selector": "sort-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "sort-harness-example.ts",
+        "module": {
+            "name": "SortExamplesModule",
+            "importSpecifier": "material/sort"
+        }
+    },
     "sort-overview": {
         "packagePath": "material/sort/sort-overview",
         "title": "Sorting overview",

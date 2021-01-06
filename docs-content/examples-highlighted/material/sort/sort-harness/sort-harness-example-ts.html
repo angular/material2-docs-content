@@ -1,0 +1,36 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Sort} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Testing with MatSortHarness
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;sort-harness-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sort-harness-example.html&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SortHarnessExample</span> </span>{
+  disableThirdHeader = <span class="hljs-literal">false</span>;
+  desserts = [
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Frozen yogurt&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">159</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Ice cream sandwich&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">237</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">37</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Eclair&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">262</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">6</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Cupcake&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">305</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">67</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
+    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Gingerbread&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">356</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">49</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
+  ];
+
+  sortedData = <span class="hljs-built_in">this</span>.desserts.slice();
+
+  <span class="hljs-function"><span class="hljs-title">sortData</span>(<span class="hljs-params">sort: Sort</span>)</span> {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-built_in">this</span>.desserts.slice();
+
+    <span class="hljs-keyword">if</span> (!sort.active || sort.direction === <span class="hljs-string">&#x27;&#x27;</span>) {
+      <span class="hljs-built_in">this</span>.sortedData = data;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+        <span class="hljs-keyword">const</span> aValue = (a <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.active];
+        <span class="hljs-keyword">const</span> bValue = (b <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.active];
+        <span class="hljs-keyword">return</span> (aValue &lt; bValue ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>) * (sort.direction === <span class="hljs-string">&#x27;asc&#x27;</span> ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>);
+      });
+    }
+  }
+}
