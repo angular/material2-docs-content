@@ -2903,6 +2903,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/progress-spinner"
         }
     },
+    "radio-harness": {
+        "packagePath": "material/radio/radio-harness",
+        "title": "Testing with MatRadioHarness",
+        "componentName": "RadioHarnessExample",
+        "files": [
+            "radio-harness-example.ts",
+            "radio-harness-example.html",
+            "radio-harness-example.spec.ts"
+        ],
+        "selector": "radio-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "radio-harness-example.ts",
+        "module": {
+            "name": "RadioExamplesModule",
+            "importSpecifier": "material/radio"
+        }
+    },
     "radio-ng-model": {
         "packagePath": "material/radio/radio-ng-model",
         "title": "Radios with ngModel",
