@@ -41,7 +41,29 @@ IconSvgExample.ɵcmp = ɵɵdefineComponent({ type: IconSvgExample, selectors: [[
             }]
     }], function () { return [{ type: MatIconRegistry }, { type: DomSanitizer }]; }, null); })();
 
+/**
+ * @title Testing with MatIconHarness
+ */
+class IconHarnessExample {
+}
+IconHarnessExample.ɵfac = function IconHarnessExample_Factory(t) { return new (t || IconHarnessExample)(); };
+IconHarnessExample.ɵcmp = ɵɵdefineComponent({ type: IconHarnessExample, selectors: [["icon-harness-example"]], decls: 4, vars: 0, consts: [["fontSet", "fontIcons", "fontIcon", "fontIcon"], ["svgIcon", "svgIcons:svgIcon"], ["inline", ""]], template: function IconHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-icon", 0);
+        ɵɵelement(1, "mat-icon", 1);
+        ɵɵelementStart(2, "mat-icon", 2);
+        ɵɵtext(3, "ligature_icon");
+        ɵɵelementEnd();
+    } }, directives: [MatIcon], encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'icon-harness-example',
+                templateUrl: 'icon-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
+    IconHarnessExample,
     IconOverviewExample,
     IconSvgExample,
 ];
@@ -51,8 +73,10 @@ IconExamplesModule.ɵmod = ɵɵdefineNgModule({ type: IconExamplesModule });
 IconExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function IconExamplesModule_Factory(t) { return new (t || IconExamplesModule)(); }, imports: [[
             MatIconModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
-        IconSvgExample], imports: [MatIconModule], exports: [IconOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconHarnessExample,
+        IconOverviewExample,
+        IconSvgExample], imports: [MatIconModule], exports: [IconHarnessExample,
+        IconOverviewExample,
         IconSvgExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(IconExamplesModule, [{
         type: NgModule,
@@ -70,5 +94,5 @@ IconExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function IconExamplesMo
  * Generated bundle index. Do not edit.
  */
 
-export { IconExamplesModule, IconOverviewExample, IconSvgExample };
+export { IconExamplesModule, IconHarnessExample, IconOverviewExample, IconSvgExample };
 //# sourceMappingURL=icon.js.map

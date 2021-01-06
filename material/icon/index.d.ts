@@ -1,11 +1,13 @@
 import { IconOverviewExample } from './icon-overview/icon-overview-example';
 import { IconSvgExample } from './icon-svg/icon-svg-example';
+import { IconHarnessExample } from './icon-harness/icon-harness-example';
 import * as i0 from "@angular/core";
-import * as i1 from "./icon-overview/icon-overview-example";
-import * as i2 from "./icon-svg/icon-svg-example";
-import * as i3 from "@angular/material/icon";
-export { IconOverviewExample, IconSvgExample, };
+import * as i1 from "./icon-harness/icon-harness-example";
+import * as i2 from "./icon-overview/icon-overview-example";
+import * as i3 from "./icon-svg/icon-svg-example";
+import * as i4 from "@angular/material/icon";
+export { IconHarnessExample, IconOverviewExample, IconSvgExample, };
 export declare class IconExamplesModule {
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<IconExamplesModule, [typeof i1.IconOverviewExample, typeof i2.IconSvgExample], [typeof i3.MatIconModule], [typeof i1.IconOverviewExample, typeof i2.IconSvgExample]>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<IconExamplesModule, [typeof i1.IconHarnessExample, typeof i2.IconOverviewExample, typeof i3.IconSvgExample], [typeof i4.MatIconModule], [typeof i1.IconHarnessExample, typeof i2.IconOverviewExample, typeof i3.IconSvgExample]>;
     static ɵinj: i0.ɵɵInjectorDef<IconExamplesModule>;
 }

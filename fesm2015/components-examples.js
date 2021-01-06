@@ -2338,6 +2338,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/grid-list"
         }
     },
+    "icon-harness": {
+        "packagePath": "material/icon/icon-harness",
+        "title": "Testing with MatIconHarness",
+        "componentName": "IconHarnessExample",
+        "files": [
+            "icon-harness-example.ts",
+            "icon-harness-example.html",
+            "icon-harness-example.spec.ts"
+        ],
+        "selector": "icon-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "icon-harness-example.ts",
+        "module": {
+            "name": "IconExamplesModule",
+            "importSpecifier": "material/icon"
+        }
+    },
     "icon-overview": {
         "packagePath": "material/icon/icon-overview",
         "title": "Basic icons",
