@@ -1269,6 +1269,77 @@
             }], null, null);
     })();
 
+    /** @title Datepicker action buttons */
+    var DatepickerActionsExample = /** @class */ (function () {
+        function DatepickerActionsExample() {
+        }
+        return DatepickerActionsExample;
+    }());
+    DatepickerActionsExample.ɵfac = function DatepickerActionsExample_Factory(t) { return new (t || DatepickerActionsExample)(); };
+    DatepickerActionsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerActionsExample, selectors: [["datepicker-actions-example"]], decls: 26, vars: 4, consts: [["appearance", "fill", 1, "example-form-field"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["datepicker", ""], ["mat-button", "", "matDatepickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDatepickerApply", ""], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["rangePicker", ""], ["mat-button", "", "matDateRangePickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDateRangePickerApply", ""]], template: function DatepickerActionsExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-form-field", 0);
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Choose a date");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(3, "input", 1);
+                i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+                i0.ɵɵelementStart(5, "mat-datepicker", null, 3);
+                i0.ɵɵelementStart(7, "mat-datepicker-actions");
+                i0.ɵɵelementStart(8, "button", 4);
+                i0.ɵɵtext(9, "Cancel");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "button", 5);
+                i0.ɵɵtext(11, "Apply");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "mat-form-field", 0);
+                i0.ɵɵelementStart(13, "mat-label");
+                i0.ɵɵtext(14, "Enter a date range");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(15, "mat-date-range-input", 6);
+                i0.ɵɵelement(16, "input", 7);
+                i0.ɵɵelement(17, "input", 8);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(18, "mat-datepicker-toggle", 2);
+                i0.ɵɵelementStart(19, "mat-date-range-picker", null, 9);
+                i0.ɵɵelementStart(21, "mat-date-range-picker-actions");
+                i0.ɵɵelementStart(22, "button", 10);
+                i0.ɵɵtext(23, "Cancel");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(24, "button", 11);
+                i0.ɵɵtext(25, "Apply");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                var _r0 = i0.ɵɵreference(6);
+                var _r1 = i0.ɵɵreference(20);
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("matDatepicker", _r0);
+                i0.ɵɵadvance(1);
+                i0.ɵɵproperty("for", _r0);
+                i0.ɵɵadvance(11);
+                i0.ɵɵproperty("rangePicker", _r1);
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("for", _r1);
+            }
+        }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker, i3$1.MatDatepickerActions, i5.MatButton, i3$1.MatDatepickerCancel, i3$1.MatDatepickerApply, i3$1.MatDateRangeInput, i3$1.MatStartDate, i3$1.MatEndDate, i3$1.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin-right: 20px;\n}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DatepickerActionsExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'datepicker-actions-example',
+                        templateUrl: 'datepicker-actions-example.html',
+                        styleUrls: ['datepicker-actions-example.css']
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         DatepickerApiExample,
         DatepickerColorExample,
@@ -1292,6 +1363,7 @@
         DateRangePickerFormsExample,
         DateRangePickerComparisonExample,
         DateRangePickerSelectionStrategyExample,
+        DatepickerActionsExample,
         ExampleHeader,
     ];
     var DatepickerExamplesModule = /** @class */ (function () {
@@ -1333,6 +1405,7 @@
                 DateRangePickerFormsExample,
                 DateRangePickerComparisonExample,
                 DateRangePickerSelectionStrategyExample,
+                DatepickerActionsExample,
                 ExampleHeader], imports: [i4.CommonModule,
                 i5.MatButtonModule,
                 i3$1.MatDatepickerModule,
@@ -1362,6 +1435,7 @@
                 DateRangePickerFormsExample,
                 DateRangePickerComparisonExample,
                 DateRangePickerSelectionStrategyExample,
+                DatepickerActionsExample,
                 ExampleHeader] });
     })();
     /*@__PURE__*/ (function () {
@@ -1393,6 +1467,7 @@
     exports.DateRangePickerFormsExample = DateRangePickerFormsExample;
     exports.DateRangePickerOverviewExample = DateRangePickerOverviewExample;
     exports.DateRangePickerSelectionStrategyExample = DateRangePickerSelectionStrategyExample;
+    exports.DatepickerActionsExample = DatepickerActionsExample;
     exports.DatepickerApiExample = DatepickerApiExample;
     exports.DatepickerColorExample = DatepickerColorExample;
     exports.DatepickerCustomHeaderExample = DatepickerCustomHeaderExample;

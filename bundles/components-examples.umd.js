@@ -2049,6 +2049,23 @@
                 "importSpecifier": "material/datepicker"
             }
         },
+        "datepicker-actions": {
+            "packagePath": "material/datepicker/datepicker-actions",
+            "title": "Datepicker action buttons",
+            "componentName": "DatepickerActionsExample",
+            "files": [
+                "datepicker-actions-example.ts",
+                "datepicker-actions-example.html",
+                "datepicker-actions-example.css"
+            ],
+            "selector": "datepicker-actions-example",
+            "additionalComponents": [],
+            "primaryFile": "datepicker-actions-example.ts",
+            "module": {
+                "name": "DatepickerExamplesModule",
+                "importSpecifier": "material/datepicker"
+            }
+        },
         "datepicker-api": {
             "packagePath": "material/datepicker/datepicker-api",
             "title": "Datepicker open method",

@@ -192,6 +192,32 @@ but allow selection via the calendar or vice-versa.</p>
 <div material-docs-example="datepicker-disabled"></div>
 
 
+        <h3 id="confirmation-action-buttons" class="docs-header-link">
+          <span header-link="confirmation-action-buttons"></span>
+          Confirmation action buttons
+        </h3>
+      <p>By default, clicking on a date in the calendar will select it and close the calendar popup. In some
+cases this may not be desirable, because the user doesn&#39;t have a quick way of going back if they&#39;ve
+changed their mind. If you want your users to be able to cancel their selection and to have to
+explicitly accept the value that they&#39;ve selected, you can add a <code>&lt;mat-datepicker-actions&gt;</code> element
+inside <code>&lt;mat-datepicker&gt;</code> with a &quot;Cancel&quot; and an &quot;Apply&quot; button marked with the
+<code>matDatepickerCancel</code> and <code>matDatepickerApply</code> attributes respectively. Doing so will cause the
+datepicker to only assign the value to the data model if the user presses &quot;Apply&quot;, whereas pressing
+&quot;Cancel&quot; will close popup without changing the value.</p>
+<div material-docs-example="datepicker-actions"
+                             file="datepicker-actions-example.html"
+                             region="datepicker-actions"></div>
+
+<p>The actions element is also supported for <code>&lt;mat-date-range-picker&gt;</code> where that it is called
+<code>&lt;mat-date-range-picker-actions&gt;</code> and the buttons are called <code>matDateRangePickerCancel</code> and
+<code>matDateRangePickerApply</code> respectively.</p>
+<div material-docs-example="datepicker-actions"
+                             file="datepicker-actions-example.html"
+                             region="date-range-picker-actions"></div>
+
+<div material-docs-example="datepicker-actions"></div>
+
+
         <h3 id="comparison-ranges" class="docs-header-link">
           <span header-link="comparison-ranges"></span>
           Comparison ranges

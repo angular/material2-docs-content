@@ -3,7 +3,7 @@ import { ɵɵdefineComponent, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵ
 import { FormControl, DefaultValueAccessor, NgControlStatus, FormControlDirective, FormGroup, NgControlStatusGroup, FormGroupDirective, FormControlName, NgModel, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
-import { MatDatepickerInput, MatDatepicker, MatDatepickerToggle, MatCalendar, MatDatepickerToggleIcon, MatDateRangeInput, MatStartDate, MatEndDate, MatDateRangePicker, DateRange, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDatepickerInput, MatDatepicker, MatDatepickerToggle, MatCalendar, MatDatepickerToggleIcon, MatDateRangeInput, MatStartDate, MatEndDate, MatDateRangePicker, DateRange, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepickerActions, MatDatepickerCancel, MatDatepickerApply, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatFormField, MatLabel, MatSuffix, MatError } from '@angular/material/form-field';
@@ -1141,6 +1141,69 @@ DatepickerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerHarnessEx
             }]
     }], null, null); })();
 
+/** @title Datepicker action buttons */
+class DatepickerActionsExample {
+}
+DatepickerActionsExample.ɵfac = function DatepickerActionsExample_Factory(t) { return new (t || DatepickerActionsExample)(); };
+DatepickerActionsExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerActionsExample, selectors: [["datepicker-actions-example"]], decls: 26, vars: 4, consts: [["appearance", "fill", 1, "example-form-field"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["datepicker", ""], ["mat-button", "", "matDatepickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDatepickerApply", ""], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["rangePicker", ""], ["mat-button", "", "matDateRangePickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDateRangePickerApply", ""]], template: function DatepickerActionsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field", 0);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Choose a date");
+        ɵɵelementEnd();
+        ɵɵelement(3, "input", 1);
+        ɵɵelement(4, "mat-datepicker-toggle", 2);
+        ɵɵelementStart(5, "mat-datepicker", null, 3);
+        ɵɵelementStart(7, "mat-datepicker-actions");
+        ɵɵelementStart(8, "button", 4);
+        ɵɵtext(9, "Cancel");
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "button", 5);
+        ɵɵtext(11, "Apply");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "mat-form-field", 0);
+        ɵɵelementStart(13, "mat-label");
+        ɵɵtext(14, "Enter a date range");
+        ɵɵelementEnd();
+        ɵɵelementStart(15, "mat-date-range-input", 6);
+        ɵɵelement(16, "input", 7);
+        ɵɵelement(17, "input", 8);
+        ɵɵelementEnd();
+        ɵɵelement(18, "mat-datepicker-toggle", 2);
+        ɵɵelementStart(19, "mat-date-range-picker", null, 9);
+        ɵɵelementStart(21, "mat-date-range-picker-actions");
+        ɵɵelementStart(22, "button", 10);
+        ɵɵtext(23, "Cancel");
+        ɵɵelementEnd();
+        ɵɵelementStart(24, "button", 11);
+        ɵɵtext(25, "Apply");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = ɵɵreference(6);
+        const _r1 = ɵɵreference(20);
+        ɵɵadvance(3);
+        ɵɵproperty("matDatepicker", _r0);
+        ɵɵadvance(1);
+        ɵɵproperty("for", _r0);
+        ɵɵadvance(11);
+        ɵɵproperty("rangePicker", _r1);
+        ɵɵadvance(3);
+        ɵɵproperty("for", _r1);
+    } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker, MatDatepickerActions, MatButton, MatDatepickerCancel, MatDatepickerApply, MatDateRangeInput, MatStartDate, MatEndDate, MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin-right: 20px;\n}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerActionsExample, [{
+        type: Component,
+        args: [{
+                selector: 'datepicker-actions-example',
+                templateUrl: 'datepicker-actions-example.html',
+                styleUrls: ['datepicker-actions-example.css']
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     DatepickerApiExample,
     DatepickerColorExample,
@@ -1164,6 +1227,7 @@ const EXAMPLES = [
     DateRangePickerFormsExample,
     DateRangePickerComparisonExample,
     DateRangePickerSelectionStrategyExample,
+    DatepickerActionsExample,
     ExampleHeader,
 ];
 class DatepickerExamplesModule {
@@ -1201,6 +1265,7 @@ DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Datepick
         DateRangePickerFormsExample,
         DateRangePickerComparisonExample,
         DateRangePickerSelectionStrategyExample,
+        DatepickerActionsExample,
         ExampleHeader], imports: [CommonModule,
         MatButtonModule,
         MatDatepickerModule,
@@ -1230,6 +1295,7 @@ DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Datepick
         DateRangePickerFormsExample,
         DateRangePickerComparisonExample,
         DateRangePickerSelectionStrategyExample,
+        DatepickerActionsExample,
         ExampleHeader] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerExamplesModule, [{
         type: NgModule,
@@ -1254,5 +1320,5 @@ DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Datepick
  * Generated bundle index. Do not edit.
  */
 
-export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
+export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
 //# sourceMappingURL=datepicker.js.map
