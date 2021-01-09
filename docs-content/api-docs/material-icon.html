@@ -386,6 +386,60 @@
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addSvgIconResolver
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Registers an icon resolver function with the registry. The function will be invoked with the
+name and namespace of an icon when the registry tries to resolve the URL from which to fetch
+the icon. The resolver is expected to return a <code>SafeResourceUrl</code> that points to the icon,
+an object with the icon URL and icon options, or <code>null</code> if the icon is not supported. Resolvers
+will be invoked in the order in which they have been registered.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        resolver</p>
+      <code class="docs-api-method-parameter-type">IconResolver</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Resolver function to be registered.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">addSvgIconSet
       </th>
     </tr>
@@ -1170,6 +1224,70 @@ the element the icon is contained in.</p>
 
 
 
+
+
+    
+      
+
+<h4 id="SafeResourceUrlWithIconOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="SafeResourceUrlWithIconOptions"></span>
+  <code>SafeResourceUrlWithIconOptions</code>
+</h4><p class="docs-api-interface-description"><p>Object that specifies a URL from which to fetch an icon and the options to use for it.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: IconOptions</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>url: SafeResourceUrl</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-icon-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="IconResolver" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="IconResolver"></span>
+  <code>IconResolver</code>
+</h4><p class="docs-api-type-alias-description"><p>Function that will be invoked by the icon registry when trying to resolve the
+URL from which to fetch an icon. The returned URL will be used to make a request for the icon.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> IconResolver = <span class="hljs-function">(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">namespace</span>: <span class="hljs-built_in">string</span></span>) =&gt;</span> (SafeResourceUrl | SafeResourceUrlWithIconOptions | <span class="hljs-literal">null</span>);</code>
+</pre>
+</div>
 
 
     </div>
