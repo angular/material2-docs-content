@@ -2440,6 +2440,23 @@
                 "importSpecifier": "material/dialog"
             }
         },
+        "dialog-harness": {
+            "packagePath": "material/dialog/dialog-harness",
+            "title": "Testing with MatDialogHarness",
+            "componentName": "DialogHarnessExample",
+            "files": [
+                "dialog-harness-example.ts",
+                "dialog-harness-example.html",
+                "dialog-harness-example.spec.ts"
+            ],
+            "selector": "dialog-harness-example",
+            "additionalComponents": [],
+            "primaryFile": "dialog-harness-example.ts",
+            "module": {
+                "name": "DialogExamplesModule",
+                "importSpecifier": "material/dialog"
+            }
+        },
         "dialog-overview": {
             "packagePath": "material/dialog/dialog-overview",
             "title": "Dialog Overview",

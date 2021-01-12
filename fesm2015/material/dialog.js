@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵadvance, ɵɵproperty, ɵɵtemplate, Inject, ɵɵnextContext, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵreference, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵadvance, ɵɵproperty, ɵɵtemplate, Inject, ɵɵnextContext, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵreference, ViewChild, TemplateRef, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
@@ -447,6 +447,40 @@ DialogFromMenuExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogFromMenuEx
             }]
     }], null, null); })();
 
+function DialogHarnessExample_ng_template_0_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, " Hello from the dialog!\n");
+} }
+/**
+ * @title Testing with MatDialogHarness
+ */
+class DialogHarnessExample {
+    constructor(dialog) {
+        this.dialog = dialog;
+    }
+    open(config) {
+        return this.dialog.open(this.dialogTemplate, config);
+    }
+}
+DialogHarnessExample.ɵfac = function DialogHarnessExample_Factory(t) { return new (t || DialogHarnessExample)(ɵɵdirectiveInject(MatDialog)); };
+DialogHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DialogHarnessExample, selectors: [["dialog-harness-example"]], viewQuery: function DialogHarnessExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(TemplateRef, true);
+    } if (rf & 2) {
+        let _t;
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.dialogTemplate = _t.first);
+    } }, decls: 1, vars: 0, template: function DialogHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵtemplate(0, DialogHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
+    } }, encapsulation: 2 });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'dialog-harness-example',
+                templateUrl: 'dialog-harness-example.html',
+            }]
+    }], function () { return [{ type: MatDialog }]; }, { dialogTemplate: [{
+            type: ViewChild,
+            args: [TemplateRef]
+        }] }); })();
+
 const EXAMPLES = [
     DialogContentExample,
     DialogContentExampleDialog,
@@ -456,6 +490,7 @@ const EXAMPLES = [
     DialogElementsExampleDialog,
     DialogFromMenuExample,
     DialogFromMenuExampleDialog,
+    DialogHarnessExample,
     DialogOverviewExample,
     DialogOverviewExampleDialog,
 ];
@@ -478,6 +513,7 @@ DialogExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DialogExampl
         DialogElementsExampleDialog,
         DialogFromMenuExample,
         DialogFromMenuExampleDialog,
+        DialogHarnessExample,
         DialogOverviewExample,
         DialogOverviewExampleDialog], imports: [CommonModule,
         MatButtonModule,
@@ -492,6 +528,7 @@ DialogExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DialogExampl
         DialogElementsExampleDialog,
         DialogFromMenuExample,
         DialogFromMenuExampleDialog,
+        DialogHarnessExample,
         DialogOverviewExample,
         DialogOverviewExampleDialog] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogExamplesModule, [{
@@ -515,5 +552,5 @@ DialogExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DialogExampl
  * Generated bundle index. Do not edit.
  */
 
-export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogExamplesModule, DialogFromMenuExample, DialogFromMenuExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog };
+export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogExamplesModule, DialogFromMenuExample, DialogFromMenuExampleDialog, DialogHarnessExample, DialogOverviewExample, DialogOverviewExampleDialog };
 //# sourceMappingURL=dialog.js.map

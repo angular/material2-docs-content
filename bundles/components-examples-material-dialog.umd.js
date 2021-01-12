@@ -523,6 +523,50 @@
             }], null, null);
     })();
 
+    function DialogHarnessExample_ng_template_0_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, " Hello from the dialog!\n");
+        }
+    }
+    /**
+     * @title Testing with MatDialogHarness
+     */
+    var DialogHarnessExample = /** @class */ (function () {
+        function DialogHarnessExample(dialog) {
+            this.dialog = dialog;
+        }
+        DialogHarnessExample.prototype.open = function (config) {
+            return this.dialog.open(this.dialogTemplate, config);
+        };
+        return DialogHarnessExample;
+    }());
+    DialogHarnessExample.ɵfac = function DialogHarnessExample_Factory(t) { return new (t || DialogHarnessExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
+    DialogHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogHarnessExample, selectors: [["dialog-harness-example"]], viewQuery: function DialogHarnessExample_Query(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵviewQuery(i0.TemplateRef, true);
+            }
+            if (rf & 2) {
+                var _t = void 0;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.dialogTemplate = _t.first);
+            }
+        }, decls: 1, vars: 0, template: function DialogHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵtemplate(0, DialogHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
+            }
+        }, encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(DialogHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'dialog-harness-example',
+                        templateUrl: 'dialog-harness-example.html',
+                    }]
+            }], function () { return [{ type: i1.MatDialog }]; }, { dialogTemplate: [{
+                    type: i0.ViewChild,
+                    args: [i0.TemplateRef]
+                }] });
+    })();
+
     var EXAMPLES = [
         DialogContentExample,
         DialogContentExampleDialog,
@@ -532,6 +576,7 @@
         DialogElementsExampleDialog,
         DialogFromMenuExample,
         DialogFromMenuExampleDialog,
+        DialogHarnessExample,
         DialogOverviewExample,
         DialogOverviewExampleDialog,
     ];
@@ -558,6 +603,7 @@
                 DialogElementsExampleDialog,
                 DialogFromMenuExample,
                 DialogFromMenuExampleDialog,
+                DialogHarnessExample,
                 DialogOverviewExample,
                 DialogOverviewExampleDialog], imports: [i3.CommonModule,
                 i2.MatButtonModule,
@@ -572,6 +618,7 @@
                 DialogElementsExampleDialog,
                 DialogFromMenuExample,
                 DialogFromMenuExampleDialog,
+                DialogHarnessExample,
                 DialogOverviewExample,
                 DialogOverviewExampleDialog] });
     })();
@@ -607,6 +654,7 @@
     exports.DialogExamplesModule = DialogExamplesModule;
     exports.DialogFromMenuExample = DialogFromMenuExample;
     exports.DialogFromMenuExampleDialog = DialogFromMenuExampleDialog;
+    exports.DialogHarnessExample = DialogHarnessExample;
     exports.DialogOverviewExample = DialogOverviewExample;
     exports.DialogOverviewExampleDialog = DialogOverviewExampleDialog;
 
