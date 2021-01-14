@@ -349,8 +349,8 @@
                 i0.ɵɵproperty("ngModel", ctx.durationInSeconds);
             }
         }, directives: [i2.MatFormField, i2.MatLabel, i3.NumberValueAccessor, i4.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i5.MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SnackBarComponentExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarComponentExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'snack-bar-component-example',
@@ -372,8 +372,8 @@
                 i0.ɵɵelementEnd();
             }
         }, styles: [".example-pizza-party[_ngcontent-%COMP%] {\n      color: hotpink;\n    }"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PizzaPartyComponent, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PizzaPartyComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'snack-bar-component-example-snack',
@@ -419,8 +419,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i2.MatFormField, i2.MatLabel, i4.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SnackBarOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'snack-bar-overview-example',
@@ -500,8 +500,8 @@
                 i0.ɵɵproperty("value", ctx.verticalPosition);
             }
         }, directives: [i2.MatFormField, i2.MatLabel, i3$1.MatSelect, i4$1.MatOption, i5.MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SnackBarPositionExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarPositionExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'snack-bar-position-example',
@@ -540,8 +540,8 @@
                 SnackBarOverviewExample,
                 SnackBarPositionExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SnackBarExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

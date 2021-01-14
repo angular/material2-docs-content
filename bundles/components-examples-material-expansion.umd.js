@@ -109,8 +109,8 @@
                 i0.ɵɵproperty("matDatepicker", _r0);
             }
         }, directives: [i1.MatButton, i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i4.MatFormField, i4.MatLabel, i5.MatInput, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-action-buttons[_ngcontent-%COMP%] {\n  padding-bottom: 20px;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'expansion-expand-collapse-all-example',
@@ -170,8 +170,8 @@
                 i0.ɵɵtextInterpolate1(" Currently I am ", ctx.panelOpenState ? "open" : "closed", " ");
             }
         }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription], styles: [".mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ExpansionOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExpansionOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'expansion-overview-example',
@@ -313,8 +313,8 @@
                 i0.ɵɵproperty("matDatepicker", _r0);
             }
         }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i4.MatFormField, i4.MatLabel, i5.MatInput, i1$1.MatExpansionPanelActionRow, i1.MatButton, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ExpansionStepsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExpansionStepsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'expansion-steps-example',
@@ -349,8 +349,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ExpansionHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExpansionHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'expansion-harness-example',
@@ -393,8 +393,8 @@
                 ExpansionOverviewExample,
                 ExpansionStepsExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ExpansionExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExpansionExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

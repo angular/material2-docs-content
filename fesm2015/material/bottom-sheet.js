@@ -25,7 +25,7 @@ BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOvervi
         ɵɵtext(3, "Open file");
         ɵɵelementEnd();
     } }, directives: [MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BottomSheetOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'bottom-sheet-overview-example',
@@ -82,7 +82,7 @@ BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetO
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatNavList, MatListItem, MatLine], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetOverviewExampleSheet, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BottomSheetOverviewExampleSheet, [{
         type: Component,
         args: [{
                 selector: 'bottom-sheet-overview-example-sheet',
@@ -113,7 +113,7 @@ BottomSheetHarnessExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetHarness
     } }, decls: 1, vars: 0, template: function BottomSheetHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, BottomSheetHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
     } }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BottomSheetHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'bottom-sheet-harness-example',
@@ -144,7 +144,7 @@ BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomS
         MatListModule], exports: [BottomSheetHarnessExample,
         BottomSheetOverviewExample,
         BottomSheetOverviewExampleSheet] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BottomSheetExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

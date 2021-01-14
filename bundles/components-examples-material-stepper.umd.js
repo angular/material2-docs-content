@@ -111,8 +111,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperEditableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperEditableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-editable-example',
@@ -230,8 +230,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperErrorsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperErrorsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-errors-example',
@@ -344,8 +344,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-label-position-bottom-example',
@@ -462,8 +462,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperOptionalExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperOptionalExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-optional-example',
@@ -576,8 +576,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i2.MatButton, i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-overview-example',
@@ -735,8 +735,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i3.MatHorizontalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious, i3.MatStepperIcon, i6.MatIcon], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperStatesExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperStatesExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-states-example',
@@ -858,8 +858,8 @@
                 i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
         }, directives: [i2.MatButton, i3.MatVerticalStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i3.MatStepLabel, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i3.MatStepperNext, i3.MatStepperPrevious], styles: [".mat-stepper-vertical[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperVerticalExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperVerticalExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'stepper-vertical-example',
@@ -910,8 +910,8 @@
                 StepperStatesExample,
                 StepperVerticalExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StepperExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

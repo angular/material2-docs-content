@@ -95,8 +95,8 @@
                 i0.ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value);
             }
         }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressSpinner, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-spinner-configurable-example',
@@ -120,8 +120,8 @@
                 i0.ɵɵelement(0, "mat-spinner");
             }
         }, directives: [i1$1.MatSpinner], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-spinner-overview-example',
@@ -148,8 +148,8 @@
                 i0.ɵɵproperty("value", ctx.value);
             }
         }, directives: [i1$1.MatProgressSpinner, i1$1.MatSpinner], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-spinner-harness-example',
@@ -189,8 +189,8 @@
                 ProgressSpinnerHarnessExample,
                 ProgressSpinnerOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

@@ -125,7 +125,7 @@ CdkTreeFlatExample.ɵcmp = ɵɵdefineComponent({ type: CdkTreeFlatExample, selec
         ɵɵadvance(2);
         ɵɵproperty("cdkTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [CdkTree, CdkTreeNodeDef, CdkTreeNode, CdkTreeNodePadding, MatButton, CdkTreeNodeToggle, MatIcon], styles: [".example-tree-node[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTreeFlatExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTreeFlatExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-tree-flat-example',
@@ -216,7 +216,7 @@ CdkTreeNestedExample.ɵcmp = ɵɵdefineComponent({ type: CdkTreeNestedExample, s
         ɵɵadvance(2);
         ɵɵproperty("cdkTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [CdkTree, CdkTreeNodeDef, CdkNestedTreeNode, MatButton, CdkTreeNodeToggle, MatIcon, CdkTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node[_ngcontent-%COMP%] {\n  display: block;\n}\n\n.example-tree-node[_ngcontent-%COMP%]   .example-tree-node[_ngcontent-%COMP%] {\n  padding-left: 40px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTreeNestedExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTreeNestedExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-tree-nested-example',
@@ -242,7 +242,7 @@ CdkTreeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTreeExam
         MatButtonModule,
         MatIconModule], exports: [CdkTreeFlatExample,
         CdkTreeNestedExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTreeExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTreeExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

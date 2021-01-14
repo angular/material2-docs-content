@@ -64,8 +64,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.toppingList);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i2.MatSelectTrigger, i4.NgIf, i4.NgForOf, i4$1.MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectCustomTriggerExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectCustomTriggerExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-custom-trigger-example',
@@ -142,8 +142,8 @@
                 i0.ɵɵproperty("disabled", ctx.disableSelect.value);
             }
         }, directives: [i1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectDisabledExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectDisabledExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-disabled-example',
@@ -271,8 +271,8 @@
                 i0.ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1$1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-error-state-matcher-example',
@@ -377,8 +377,8 @@
                 i0.ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
             }
         }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectFormExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectFormExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-form-example',
@@ -489,8 +489,8 @@
                 i0.ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1$1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectHintErrorExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectHintErrorExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-hint-error-example',
@@ -539,8 +539,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.toppingList);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i4$1.MatOption], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectMultipleExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectMultipleExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-multiple-example',
@@ -576,8 +576,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectNoRippleExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectNoRippleExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-no-ripple-example',
@@ -704,8 +704,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.pokemonGroups);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOptgroup], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectOptgroupExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOptgroupExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-optgroup-example',
@@ -782,8 +782,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.foods);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-overview-example',
@@ -827,8 +827,8 @@
                 i0.ɵɵproperty("formControl", ctx.panelColor);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption], styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectPanelClassExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectPanelClassExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-panel-class-example',
@@ -915,8 +915,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.states);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectResetExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectResetExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-reset-example',
@@ -966,8 +966,8 @@
                 i0.ɵɵtextInterpolate1("You selected: ", ctx.selected, "");
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectValueBindingExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectValueBindingExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-value-binding-example',
@@ -1082,8 +1082,8 @@
                 i0.ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
             }
         }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectReactiveFormExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectReactiveFormExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-reactive-form-example',
@@ -1191,8 +1191,8 @@
                 i0.ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectInitialValueExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectInitialValueExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-initial-value-example',
@@ -1244,8 +1244,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.foods);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4.NgForOf, i4$1.MatOption], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'select-harness-example',
@@ -1323,8 +1323,8 @@
                 SelectResetExample,
                 SelectValueBindingExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SelectExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

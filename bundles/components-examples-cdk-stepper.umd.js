@@ -352,8 +352,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: function () { return [CustomStepper, i1.CdkStep]; }, styles: [""] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-custom-stepper-without-form-example',
@@ -404,8 +404,8 @@
             }
         }, directives: [i2.NgTemplateOutlet, i1.CdkStepperPrevious, i2.NgForOf, i1.CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
     var ɵCustomStepper_BaseFactory = /*@__PURE__*/ i0.ɵɵgetInheritedFactory(CustomStepper);
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CustomStepper, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CustomStepper, [{
                 type: i0.Component,
                 args: [{
                         selector: 'example-custom-stepper',
@@ -489,8 +489,8 @@
                 i0.ɵɵtextInterpolate1(" ", ctx.isLinear ? "Disable linear mode" : "Enable linear mode", "\n");
             }
         }, directives: function () { return [CustomLinearStepper, i1.CdkStep, i1$1.ɵangular_packages_forms_forms_y, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-linear-stepper-with-form-example',
@@ -541,8 +541,8 @@
             }
         }, directives: [i2.NgTemplateOutlet, i1.CdkStepperPrevious, i2.NgForOf, i1.CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
     var ɵCustomLinearStepper_BaseFactory = /*@__PURE__*/ i0.ɵɵgetInheritedFactory(CustomLinearStepper);
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CustomLinearStepper, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CustomLinearStepper, [{
                 type: i0.Component,
                 args: [{
                         selector: 'example-custom-linear-stepper',
@@ -581,8 +581,8 @@
                 CdkLinearStepperWithFormExample,
                 CustomLinearStepper] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkStepperExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkStepperExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

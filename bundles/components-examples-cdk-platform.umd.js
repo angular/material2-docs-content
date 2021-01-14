@@ -81,8 +81,8 @@
                 i0.ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
             }
         }, encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPlatformOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPlatformOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-platform-overview-example',
@@ -102,8 +102,8 @@
                 i1.PlatformModule,
             ]] });
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [i1.PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPlatformExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPlatformExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

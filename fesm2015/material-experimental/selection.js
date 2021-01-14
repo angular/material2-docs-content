@@ -123,7 +123,7 @@ MatSelectionColumnExample.ɵcmp = ɵɵdefineComponent({ type: MatSelectionColumn
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, MatSelection, MatSelectionColumn, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatRowSelection], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MatSelectionColumnExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MatSelectionColumnExample, [{
         type: Component,
         args: [{
                 selector: 'mat-selection-column-example',
@@ -332,7 +332,7 @@ MatSelectionListExample.ɵcmp = ɵɵdefineComponent({ type: MatSelectionListExam
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.data)("ngForTrackBy", ctx.trackByFn);
     } }, directives: [MatSelection, MatSelectAll, NgForOf, MatCheckbox, MatSelectionToggle], pipes: [AsyncPipe], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MatSelectionListExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MatSelectionListExample, [{
         type: Component,
         args: [{
                 selector: 'mat-selection-list-example',
@@ -372,7 +372,7 @@ MatSelectionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MatSel
         ReactiveFormsModule,
         MatCheckboxModule], exports: [MatSelectionListExample,
         MatSelectionColumnExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MatSelectionExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MatSelectionExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

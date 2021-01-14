@@ -94,8 +94,8 @@
                 i0.ɵɵproperty("ngIf", ctx.pageEvent);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i1.MatPaginator, i5.NgIf], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'paginator-configurable-example',
@@ -123,8 +123,8 @@
                 i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c0$1));
             }
         }, directives: [i1.MatPaginator], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'paginator-overview-example',
@@ -162,8 +162,8 @@
                 i0.ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("showFirstLastButtons", ctx.showFirstLastButtons)("pageSizeOptions", ctx.pageSizeOptions)("pageIndex", ctx.pageIndex);
             }
         }, directives: [i1.MatPaginator], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PaginatorHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'paginator-harness-example',
@@ -199,8 +199,8 @@
                 PaginatorHarnessExample,
                 PaginatorOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PaginatorExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

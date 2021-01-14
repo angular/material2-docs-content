@@ -35,7 +35,7 @@ MdcCardFancyExample.ɵcmp = ɵɵdefineComponent({ type: MdcCardFancyExample, sel
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MdcCardFancyExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MdcCardFancyExample, [{
         type: Component,
         args: [{
                 selector: 'mdc-card-fancy-example',
@@ -56,7 +56,7 @@ MdcCardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcCardExam
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MdcCardExamplesModule, { declarations: [MdcCardFancyExample], imports: [MatButtonModule,
         MatCardModule], exports: [MdcCardFancyExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MdcCardExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MdcCardExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

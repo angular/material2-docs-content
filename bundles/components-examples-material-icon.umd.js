@@ -20,8 +20,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatIcon], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(IconOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'icon-overview-example',
@@ -51,8 +51,8 @@
                 i0.ɵɵelement(0, "mat-icon", 0);
             }
         }, directives: [i1.MatIcon], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(IconSvgExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconSvgExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'icon-svg-example',
@@ -79,8 +79,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatIcon], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(IconHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'icon-harness-example',
@@ -110,8 +110,8 @@
                 IconOverviewExample,
                 IconSvgExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(IconExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

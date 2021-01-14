@@ -93,7 +93,7 @@ SortOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SortOverviewExample, sel
         ɵɵadvance(12);
         ɵɵproperty("ngForOf", ctx.sortedData);
     } }, directives: [MatSort, MatSortHeader, NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SortOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SortOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'sort-overview-example',
@@ -194,7 +194,7 @@ SortHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SortHarnessExample, selec
         ɵɵadvance(6);
         ɵɵproperty("ngForOf", ctx.sortedData);
     } }, directives: [MatSort, MatSortHeader, NgForOf], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SortHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SortHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'sort-harness-example',
@@ -217,7 +217,7 @@ SortExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SortExamplesMo
         SortOverviewExample], imports: [CommonModule,
         MatSortModule], exports: [SortHarnessExample,
         SortOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SortExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SortExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -55,7 +55,7 @@ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewEx
         ɵɵadvance(3);
         ɵɵproperty("cdkPortalOutlet", ctx.selectedPortal);
     } }, directives: [CdkPortalOutlet], styles: [".example-portal-outlet[_ngcontent-%COMP%] {\n  margin-bottom: 10px;\n  padding: 10px;\n  border: 1px dashed black;\n  width: 250px;\n  height: 250px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPortalOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPortalOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-portal-overview-example',
@@ -75,7 +75,7 @@ ComponentPortalExample.ɵfac = function ComponentPortalExample_Factory(t) { retu
 ComponentPortalExample.ɵcmp = ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtext(0, "Hello, this is a component portal");
     } }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ComponentPortalExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ComponentPortalExample, [{
         type: Component,
         args: [{
                 selector: 'component-portal-example',
@@ -94,7 +94,7 @@ CdkPortalExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPortal
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
         ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample,
         ComponentPortalExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPortalExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPortalExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [PortalModule],

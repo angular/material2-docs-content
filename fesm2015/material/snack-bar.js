@@ -39,7 +39,7 @@ SnackBarComponentExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarComponentEx
         ɵɵadvance(3);
         ɵɵproperty("ngModel", ctx.durationInSeconds);
     } }, directives: [MatFormField, MatLabel, NumberValueAccessor, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarComponentExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SnackBarComponentExample, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-component-example',
@@ -55,7 +55,7 @@ PizzaPartyComponent.ɵcmp = ɵɵdefineComponent({ type: PizzaPartyComponent, sel
         ɵɵtext(1, " Pizza party!!! \uD83C\uDF55\n");
         ɵɵelementEnd();
     } }, styles: [".example-pizza-party[_ngcontent-%COMP%] {\n      color: hotpink;\n    }"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PizzaPartyComponent, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PizzaPartyComponent, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-component-example-snack',
@@ -101,7 +101,7 @@ SnackBarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarOverviewExam
         ɵɵtext(11, "Show snack-bar");
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatInput, MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SnackBarOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-overview-example',
@@ -176,7 +176,7 @@ SnackBarPositionExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarPositionExam
         ɵɵadvance(14);
         ɵɵproperty("value", ctx.verticalPosition);
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarPositionExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SnackBarPositionExample, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-position-example',
@@ -209,7 +209,7 @@ SnackBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SnackBarEx
         MatSnackBarModule], exports: [SnackBarComponentExample,
         SnackBarOverviewExample,
         SnackBarPositionExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SnackBarExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

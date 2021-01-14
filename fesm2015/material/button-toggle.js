@@ -38,7 +38,7 @@ ButtonToggleAppearanceExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleAp
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatButtonToggleGroup, MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-appearance-example',
@@ -84,7 +84,7 @@ ButtonToggleExclusiveExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleExc
         ɵɵadvance(15);
         ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
     } }, directives: [MatButtonToggleGroup, MatButtonToggle, MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-exclusive-example',
@@ -112,7 +112,7 @@ ButtonToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleOver
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatButtonToggleGroup, MatButtonToggle], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-overview-example',
@@ -142,7 +142,7 @@ ButtonToggleHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleHarne
     } if (rf & 2) {
         ɵɵproperty("disabled", ctx.disabled)("appearance", ctx.appearance);
     } }, directives: [MatButtonToggleGroup, MatButtonToggle], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-harness-example',
@@ -171,7 +171,7 @@ ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Button
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

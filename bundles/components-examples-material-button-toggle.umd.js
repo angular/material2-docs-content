@@ -45,8 +45,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'button-toggle-appearance-example',
@@ -99,8 +99,8 @@
                 i0.ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
             }
         }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle, i2.MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'button-toggle-exclusive-example',
@@ -134,8 +134,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ButtonToggleOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'button-toggle-overview-example',
@@ -170,8 +170,8 @@
                 i0.ɵɵproperty("disabled", ctx.disabled)("appearance", ctx.appearance);
             }
         }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ButtonToggleHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'button-toggle-harness-example',
@@ -206,8 +206,8 @@
                 ButtonToggleOverviewExample,
                 ButtonToggleHarnessExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

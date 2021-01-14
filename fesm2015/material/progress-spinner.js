@@ -90,7 +90,7 @@ ProgressSpinnerConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: ProgressS
         ɵɵadvance(5);
         ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value);
     } }, directives: [MatCard, MatCardContent, MatRadioGroup, NgControlStatus, NgModel, MatRadioButton, NgIf, MatProgressSpinner, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-configurable-example',
@@ -108,7 +108,7 @@ ProgressSpinnerOverviewExample.ɵfac = function ProgressSpinnerOverviewExample_F
 ProgressSpinnerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-spinner");
     } }, directives: [MatSpinner], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-overview-example',
@@ -128,7 +128,7 @@ ProgressSpinnerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinne
     } if (rf & 2) {
         ɵɵproperty("value", ctx.value);
     } }, directives: [MatProgressSpinner, MatSpinner], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-harness-example',
@@ -162,7 +162,7 @@ ProgressSpinnerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Pro
         FormsModule], exports: [ProgressSpinnerConfigurableExample,
         ProgressSpinnerHarnessExample,
         ProgressSpinnerOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -156,7 +156,7 @@ class ChecklistDatabase {
 }
 ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
 ChecklistDatabase.ɵprov = ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ChecklistDatabase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ChecklistDatabase, [{
         type: Injectable
     }], function () { return []; }, null); })();
 /**
@@ -296,7 +296,7 @@ TreeChecklistExample.ɵcmp = ɵɵdefineComponent({ type: TreeChecklistExample, s
         ɵɵadvance(1);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatTreeNodePadding, MatButton, MatCheckbox, MatFormField, MatLabel, MatInput, MatIcon], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 4px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeChecklistExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeChecklistExample, [{
         type: Component,
         args: [{
                 selector: 'tree-checklist-example',
@@ -377,7 +377,7 @@ class DynamicDatabase {
 }
 DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
 DynamicDatabase.ɵprov = ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDatabase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DynamicDatabase, [{
         type: Injectable,
         args: [{ providedIn: 'root' }]
     }], null, null); })();
@@ -469,7 +469,7 @@ TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selec
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon, NgIf, MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeDynamicExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'tree-dynamic-example',
@@ -564,7 +564,7 @@ TreeFlatOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeFlatOverviewExam
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeFlatOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeFlatOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'tree-flat-overview-example',
@@ -654,7 +654,7 @@ TreeHarnessExample.ɵcmp = ɵɵdefineComponent({ type: TreeHarnessExample, selec
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'tree-harness-example',
@@ -784,7 +784,7 @@ class LoadmoreDatabase {
 }
 LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
 LoadmoreDatabase.ɵprov = ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(LoadmoreDatabase, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(LoadmoreDatabase, [{
         type: Injectable
     }], null, null); })();
 /**
@@ -838,7 +838,7 @@ TreeLoadmoreExample.ɵcmp = ɵɵdefineComponent({ type: TreeLoadmoreExample, sel
         ɵɵadvance(1);
         ɵɵproperty("matTreeNodeDefWhen", ctx.isLoadMore);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeLoadmoreExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeLoadmoreExample, [{
         type: Component,
         args: [{
                 selector: 'tree-loadmore-example',
@@ -937,7 +937,7 @@ TreeNestedOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeNestedOverview
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatButton, MatNestedTreeNode, MatIcon, MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeNestedOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeNestedOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'tree-nested-overview-example',
@@ -983,7 +983,7 @@ TreeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TreeExamplesMo
         TreeHarnessExample,
         TreeLoadmoreExample,
         TreeNestedOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TreeExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

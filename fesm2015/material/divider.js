@@ -23,7 +23,7 @@ DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExampl
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatList, MatListItem, MatDivider], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DividerOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DividerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'divider-overview-example',
@@ -41,7 +41,7 @@ DividerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DividerHarnessExample,
         ɵɵelement(0, "mat-divider");
         ɵɵelement(1, "mat-divider", 0);
     } }, directives: [MatDivider], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DividerHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DividerHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'divider-harness-example',
@@ -64,7 +64,7 @@ DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExam
         DividerOverviewExample], imports: [MatDividerModule,
         MatListModule], exports: [DividerHarnessExample,
         DividerOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DividerExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DividerExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

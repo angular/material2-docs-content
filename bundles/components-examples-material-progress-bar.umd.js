@@ -18,8 +18,8 @@
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
         }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-bar-buffer-example',
@@ -149,8 +149,8 @@
                 i0.ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value)("bufferValue", ctx.bufferValue);
             }
         }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressBar, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-bar-configurable-example',
@@ -174,8 +174,8 @@
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
         }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-bar-determinate-example',
@@ -198,8 +198,8 @@
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
         }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-bar-indeterminate-example',
@@ -222,8 +222,8 @@
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
         }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-bar-query-example',
@@ -250,8 +250,8 @@
                 i0.ɵɵproperty("value", ctx.value);
             }
         }, directives: [i1$1.MatProgressBar], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'progress-bar-harness-example',
@@ -300,8 +300,8 @@
                 ProgressBarIndeterminateExample,
                 ProgressBarQueryExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

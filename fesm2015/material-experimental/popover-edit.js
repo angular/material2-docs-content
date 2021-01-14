@@ -224,7 +224,7 @@ PopoverEditCellSpanMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEd
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatButton, MatHeaderCell, MatCell, MatPopoverEdit, MatRowHoverContent, MatEditOpen, MatIcon, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-cell-span-mat-table-example',
@@ -469,7 +469,7 @@ PopoverEditMatTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMa
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatHeaderCell, MatCell, MatPopoverEdit, MatRowHoverContent, MatButton, MatEditRevert, MatEditClose, MatEditOpen, MatIcon, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-mat-table-flex-example',
@@ -931,7 +931,7 @@ PopoverEditMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTab
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatHeaderCell, MatCell, MatRowHoverContent, MatButton, MatIcon, MatCheckbox, MatPopoverEdit, NgIf, MatEditRevert, MatEditClose, MatEditOpen, MatSelectionList, NgForOf, MatListOption, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 16%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditMatTableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PopoverEditMatTableExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-mat-table-example',
@@ -1158,7 +1158,7 @@ PopoverEditTabOutMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEdit
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatHeaderCell, MatCell, MatEditOpen, MatPopoverEditTabOut, MatRowHoverContent, MatIcon, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"], changeDetection: 0 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-tab-out-mat-table-example',
@@ -1224,7 +1224,7 @@ PopoverEditExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Popover
         PopoverEditMatTableExample,
         PopoverEditMatTableFlexExample,
         PopoverEditTabOutMatTableExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PopoverEditExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

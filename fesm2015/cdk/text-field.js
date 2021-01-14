@@ -53,7 +53,7 @@ TextFieldAutofillDirectiveExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldA
         ɵɵadvance(5);
         ɵɵproperty("ngIf", ctx.lastNameAutofilled);
     } }, directives: [MatFormField, MatLabel, MatInput, CdkAutofill, NgIf, MatButton, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
         type: Component,
         args: [{
                 selector: 'text-field-autofill-directive-example',
@@ -125,7 +125,7 @@ TextFieldAutofillMonitorExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAut
         ɵɵadvance(6);
         ɵɵproperty("ngIf", ctx.lastNameAutofilled);
     } }, directives: [MatFormField, MatLabel, MatInput, NgIf, MatButton, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
         type: Component,
         args: [{
                 selector: 'text-field-autofill-monitor-example',
@@ -196,7 +196,7 @@ TextFieldAutosizeTextareaExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAu
         ɵɵadvance(17);
         ɵɵstyleProp("font-size", _r0.value);
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, MatInput, CdkTextareaAutosize], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
         type: Component,
         args: [{
                 selector: 'text-field-autosize-textarea-example',
@@ -232,7 +232,7 @@ CdkTextFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTex
         MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
         TextFieldAutosizeTextareaExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTextFieldExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTextFieldExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -13,7 +13,7 @@ IconOverviewExample.ɵcmp = ɵɵdefineComponent({ type: IconOverviewExample, sel
         ɵɵtext(1, "home");
         ɵɵelementEnd();
     } }, directives: [MatIcon], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(IconOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(IconOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'icon-overview-example',
@@ -44,7 +44,7 @@ IconSvgExample.ɵfac = function IconSvgExample_Factory(t) { return new (t || Ico
 IconSvgExample.ɵcmp = ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-icon", 0);
     } }, directives: [MatIcon], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(IconSvgExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(IconSvgExample, [{
         type: Component,
         args: [{
                 selector: 'icon-svg-example',
@@ -65,7 +65,7 @@ IconHarnessExample.ɵcmp = ɵɵdefineComponent({ type: IconHarnessExample, selec
         ɵɵtext(3, "ligature_icon");
         ɵɵelementEnd();
     } }, directives: [MatIcon], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(IconHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(IconHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'icon-harness-example',
@@ -89,7 +89,7 @@ IconExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function IconExamplesMo
         IconSvgExample], imports: [MatIconModule], exports: [IconHarnessExample,
         IconOverviewExample,
         IconSvgExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(IconExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(IconExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

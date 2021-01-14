@@ -104,7 +104,7 @@ StepperEditableExample.ɵcmp = ɵɵdefineComponent({ type: StepperEditableExampl
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatButton, MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperEditableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperEditableExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-editable-example',
@@ -211,7 +211,7 @@ StepperErrorsExample.ɵcmp = ɵɵdefineComponent({ type: StepperErrorsExample, s
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatButton, MatStepperNext, MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperErrorsExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperErrorsExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-errors-example',
@@ -313,7 +313,7 @@ StepperLabelPositionBottomExample.ɵcmp = ɵɵdefineComponent({ type: StepperLab
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatButton, MatStepperNext, MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-label-position-bottom-example',
@@ -419,7 +419,7 @@ StepperOptionalExample.ɵcmp = ɵɵdefineComponent({ type: StepperOptionalExampl
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatButton, MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperOptionalExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperOptionalExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-optional-example',
@@ -523,7 +523,7 @@ StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExampl
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatButton, MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-overview-example',
@@ -666,7 +666,7 @@ StepperStatesExample.ɵcmp = ɵɵdefineComponent({ type: StepperStatesExample, s
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatButton, MatStepperNext, MatStepperPrevious, MatStepperIcon, MatIcon], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperStatesExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperStatesExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-states-example',
@@ -777,7 +777,7 @@ StepperVerticalExample.ɵcmp = ɵɵdefineComponent({ type: StepperVerticalExampl
         ɵɵadvance(1);
         ɵɵproperty("formGroup", ctx.secondFormGroup);
     } }, directives: [MatButton, MatVerticalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [".mat-stepper-vertical[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperVerticalExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperVerticalExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-vertical-example',
@@ -822,7 +822,7 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
         StepperOverviewExample,
         StepperStatesExample,
         StepperVerticalExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

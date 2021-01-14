@@ -34,7 +34,7 @@ CdkCustomStepperWithoutFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkCustom
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: function () { return [CustomStepper, CdkStep]; }, styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-custom-stepper-without-form-example',
@@ -76,7 +76,7 @@ CustomStepper.ɵcmp = ɵɵdefineComponent({ type: CustomStepper, selectors: [["e
         ɵɵproperty("ngForOf", ctx.steps);
     } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
 const ɵCustomStepper_BaseFactory = /*@__PURE__*/ ɵɵgetInheritedFactory(CustomStepper);
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CustomStepper, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CustomStepper, [{
         type: Component,
         args: [{
                 selector: 'example-custom-stepper',
@@ -152,7 +152,7 @@ CdkLinearStepperWithFormExample.ɵcmp = ɵɵdefineComponent({ type: CdkLinearSte
         ɵɵadvance(3);
         ɵɵtextInterpolate1(" ", ctx.isLinear ? "Disable linear mode" : "Enable linear mode", "\n");
     } }, directives: function () { return [CustomLinearStepper, CdkStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-linear-stepper-with-form-example',
@@ -194,7 +194,7 @@ CustomLinearStepper.ɵcmp = ɵɵdefineComponent({ type: CustomLinearStepper, sel
         ɵɵproperty("ngForOf", ctx.steps);
     } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
 const ɵCustomLinearStepper_BaseFactory = /*@__PURE__*/ ɵɵgetInheritedFactory(CustomLinearStepper);
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CustomLinearStepper, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CustomLinearStepper, [{
         type: Component,
         args: [{
                 selector: 'example-custom-linear-stepper',
@@ -227,7 +227,7 @@ CdkStepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkStepp
         CustomStepper,
         CdkLinearStepperWithFormExample,
         CustomLinearStepper] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkStepperExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkStepperExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

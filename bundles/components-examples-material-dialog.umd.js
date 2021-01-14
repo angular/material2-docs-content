@@ -28,8 +28,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i2.MatButton], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogContentExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogContentExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-content-example',
@@ -121,8 +121,8 @@
                 i0.ɵɵproperty("mat-dialog-close", true);
             }
         }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogContentExampleDialog, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogContentExampleDialog, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-content-example-dialog',
@@ -177,8 +177,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i2.MatButton], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogDataExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogDataExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-data-example',
@@ -225,8 +225,8 @@
                 i0.ɵɵproperty("ngIf", ctx.data.animal === "lion");
             }
         }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i3.NgIf], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogDataExampleDialog, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogDataExampleDialog, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-data-example-dialog',
@@ -261,8 +261,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i2.MatButton], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogElementsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogElementsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-elements-example',
@@ -291,8 +291,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogElementsExampleDialog, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogElementsExampleDialog, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-elements-example-dialog',
@@ -366,8 +366,8 @@
                 i0.ɵɵproperty("ngIf", ctx.animal);
             }
         }, directives: [i2$1.MatFormField, i2$1.MatLabel, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i2.MatButton, i3.NgIf], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-overview-example',
@@ -423,8 +423,8 @@
                 i0.ɵɵproperty("mat-dialog-close", ctx.data.animal);
             }
         }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i2$1.MatFormField, i2$1.MatLabel, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogOverviewExampleDialog, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogOverviewExampleDialog, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-overview-example-dialog',
@@ -483,8 +483,8 @@
                 i0.ɵɵproperty("matMenuTriggerFor", _r1);
             }
         }, directives: [i2.MatButton, i3$2.MatMenuTrigger, i3$2.MatMenu, i3$2.MatMenuItem], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogFromMenuExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogFromMenuExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-from-menu-example',
@@ -513,8 +513,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogFromMenuExampleDialog, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogFromMenuExampleDialog, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-from-menu-dialog',
@@ -554,8 +554,8 @@
                 i0.ɵɵtemplate(0, DialogHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
             }
         }, encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'dialog-harness-example',
@@ -622,8 +622,8 @@
                 DialogOverviewExample,
                 DialogOverviewExampleDialog] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DialogExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DialogExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

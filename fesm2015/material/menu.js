@@ -45,7 +45,7 @@ MenuIconsExample.ɵcmp = ɵɵdefineComponent({ type: MenuIconsExample, selectors
         const _r0 = ɵɵreference(4);
         ɵɵproperty("matMenuTriggerFor", _r0);
     } }, directives: [MatButton, MatMenuTrigger, MatIcon, MatMenu, MatMenuItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuIconsExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MenuIconsExample, [{
         type: Component,
         args: [{
                 selector: 'menu-icons-example',
@@ -75,7 +75,7 @@ MenuOverviewExample.ɵcmp = ɵɵdefineComponent({ type: MenuOverviewExample, sel
         const _r0 = ɵɵreference(3);
         ɵɵproperty("matMenuTriggerFor", _r0);
     } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MenuOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'menu-overview-example',
@@ -147,7 +147,7 @@ MenuPositionExample.ɵcmp = ɵɵdefineComponent({ type: MenuPositionExample, sel
         ɵɵadvance(8);
         ɵɵproperty("matMenuTriggerFor", _r3);
     } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuPositionExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MenuPositionExample, [{
         type: Component,
         args: [{
                 selector: 'menu-position-example',
@@ -280,7 +280,7 @@ MenuNestedExample.ɵcmp = ɵɵdefineComponent({ type: MenuNestedExample, selecto
         ɵɵadvance(2);
         ɵɵproperty("matMenuTriggerFor", _r5);
     } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuNestedExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MenuNestedExample, [{
         type: Component,
         args: [{
                 selector: 'menu-nested-example',
@@ -315,7 +315,7 @@ MenuHarnessExample.ɵcmp = ɵɵdefineComponent({ type: MenuHarnessExample, selec
         ɵɵadvance(2);
         ɵɵproperty("matMenuTriggerFor", _r0);
     } }, directives: [MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MenuHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'menu-harness-example',
@@ -349,7 +349,7 @@ MenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MenuExamplesMo
         MenuOverviewExample,
         MenuPositionExample,
         MenuNestedExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MenuExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MenuExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -564,8 +564,8 @@
                 i0.ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1$1.CdkTable, i1.CdkEditable, i1$1.CdkColumnDef, i1$1.CdkHeaderCellDef, i1$1.CdkCellDef, i1$1.CdkHeaderRowDef, i1$1.CdkRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1$1.CdkHeaderCell, i1$1.CdkCell, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen, i1$1.CdkHeaderRow, i1$1.CdkRow], styles: [".example-table[_ngcontent-%COMP%]   cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-table[_ngcontent-%COMP%]   cdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPopoverEditCdkTableFlexExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPopoverEditCdkTableFlexExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-popover-edit-cdk-table-flex-example',
@@ -845,8 +845,8 @@
                 i0.ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1$1.CdkTable, i1.CdkEditable, i1$1.CdkColumnDef, i1$1.CdkHeaderCellDef, i1$1.CdkCellDef, i1$1.CdkHeaderRowDef, i1$1.CdkRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1$1.CdkHeaderCell, i1$1.CdkCell, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen, i1$1.CdkHeaderRow, i1$1.CdkRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPopoverEditCdkTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPopoverEditCdkTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-popover-edit-cdk-table-example',
@@ -1048,8 +1048,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.persons);
             }
         }, directives: [i1.CdkEditable, i2.NgForOf, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  flex: 1;\n  font-size: 14px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPopoverEditCellSpanVanillaTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPopoverEditCellSpanVanillaTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-popover-edit-cell-span-vanilla-table-example',
@@ -1210,8 +1210,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.elements);
             }
         }, directives: [i1.CdkEditable, i2.NgForOf, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditOpen, i1.CdkPopoverEditTabOut], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPopoverEditTabOutVanillaTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPopoverEditTabOutVanillaTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-popover-edit-tab-out-vanilla-table-example',
@@ -1410,8 +1410,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.elements);
             }
         }, directives: [i1.CdkEditable, i2.NgForOf, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPopoverEditVanillaTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPopoverEditVanillaTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-popover-edit-vanilla-table-example',
@@ -1454,8 +1454,8 @@
                 CdkPopoverEditTabOutVanillaTableExample,
                 CdkPopoverEditVanillaTableExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkPopoverEditExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPopoverEditExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

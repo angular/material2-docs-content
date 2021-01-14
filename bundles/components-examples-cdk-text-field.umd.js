@@ -59,8 +59,8 @@
                 i0.ɵɵproperty("ngIf", ctx.lastNameAutofilled);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i1.CdkAutofill, i4.NgIf, i5.MatButton, i1$1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'text-field-autofill-directive-example',
@@ -145,8 +145,8 @@
                 i0.ɵɵproperty("ngIf", ctx.lastNameAutofilled);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i4.NgIf, i5.MatButton, i1$1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'text-field-autofill-monitor-example',
@@ -226,8 +226,8 @@
                 i0.ɵɵstyleProp("font-size", _r0.value);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.MatOption, i2.MatInput, i1.CdkTextareaAutosize], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'text-field-autosize-textarea-example',
@@ -269,8 +269,8 @@
                 TextFieldAutofillMonitorExample,
                 TextFieldAutosizeTextareaExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CdkTextFieldExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkTextFieldExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

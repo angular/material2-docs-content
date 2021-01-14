@@ -74,7 +74,7 @@ CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOvervi
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
     } }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPlatformOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPlatformOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-platform-overview-example',
@@ -90,7 +90,7 @@ CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlat
             PlatformModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPlatformExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPlatformExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

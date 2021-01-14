@@ -165,7 +165,7 @@ SliderConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: SliderConfigurable
         ɵɵadvance(6);
         ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
     } }, directives: [MatCard, MatCardContent, MatFormField, MatLabel, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, MatCheckbox, NgIf, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderConfigurableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SliderConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'slider-configurable-example',
@@ -191,7 +191,7 @@ SliderFormattingExample.ɵcmp = ɵɵdefineComponent({ type: SliderFormattingExam
     } if (rf & 2) {
         ɵɵproperty("displayWith", ctx.formatLabel);
     } }, directives: [MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderFormattingExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SliderFormattingExample, [{
         type: Component,
         args: [{
                 selector: 'slider-formatting-example',
@@ -209,7 +209,7 @@ SliderOverviewExample.ɵfac = function SliderOverviewExample_Factory(t) { return
 SliderOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-slider");
     } }, directives: [MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SliderOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'slider-overview-example',
@@ -227,7 +227,7 @@ SliderHarnessExample.ɵfac = function SliderHarnessExample_Factory(t) { return n
 SliderHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50"]], template: function SliderHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-slider", 0);
     } }, directives: [MatSlider], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SliderHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'slider-harness-example',
@@ -264,7 +264,7 @@ SliderExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SliderExampl
         SliderFormattingExample,
         SliderHarnessExample,
         SliderOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SliderExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

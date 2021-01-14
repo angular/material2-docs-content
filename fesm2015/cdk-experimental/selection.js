@@ -123,7 +123,7 @@ CdkSelectionColumnExample.ɵcmp = ɵɵdefineComponent({ type: CdkSelectionColumn
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkSelection, CdkSelectionColumn, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow, CdkRowSelection], styles: [".example-table[_ngcontent-%COMP%] {\n  border-collapse: collapse;\n}\n\ntr.cdk-selected[_ngcontent-%COMP%] {\n  background-color: yellow;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkSelectionColumnExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkSelectionColumnExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-selection-column-example',
@@ -332,7 +332,7 @@ CdkSelectionListExample.ɵcmp = ɵɵdefineComponent({ type: CdkSelectionListExam
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.data)("ngForTrackBy", ctx.trackByFn);
     } }, directives: [CdkSelection, CdkSelectAll, NgForOf, MatCheckbox, CdkSelectionToggle], pipes: [AsyncPipe], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkSelectionListExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkSelectionListExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-selection-list-example',
@@ -372,7 +372,7 @@ CdkSelectionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkSel
         ReactiveFormsModule,
         MatCheckboxModule], exports: [CdkSelectionListExample,
         CdkSelectionColumnExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkSelectionExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkSelectionExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

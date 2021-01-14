@@ -35,7 +35,7 @@ GridListDynamicExample.ɵcmp = ɵɵdefineComponent({ type: GridListDynamicExampl
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.tiles);
     } }, directives: [MatGridList, NgForOf, MatGridTile], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListDynamicExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-dynamic-example',
@@ -65,7 +65,7 @@ GridListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: GridListOverviewExam
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatGridList, MatGridTile], styles: ["mat-grid-tile[_ngcontent-%COMP%] {\n  background: lightblue;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-overview-example',
@@ -105,7 +105,7 @@ GridListHarnessExample.ɵcmp = ɵɵdefineComponent({ type: GridListHarnessExampl
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-harness-example',
@@ -131,7 +131,7 @@ GridListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function GridListEx
         MatGridListModule], exports: [GridListDynamicExample,
         GridListHarnessExample,
         GridListOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

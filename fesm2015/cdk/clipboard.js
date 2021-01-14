@@ -35,7 +35,7 @@ CdkClipboardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkClipboardOver
         ɵɵadvance(1);
         ɵɵproperty("cdkCopyToClipboard", ctx.value);
     } }, directives: [DefaultValueAccessor, NgControlStatus, NgModel, CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkClipboardOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkClipboardOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-clipboard-overview-example',
@@ -50,7 +50,7 @@ class CdkClipboardExamplesModule {
 CdkClipboardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
 CdkClipboardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[ClipboardModule, FormsModule]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [ClipboardModule, FormsModule], exports: [CdkClipboardOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkClipboardExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkClipboardExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [ClipboardModule, FormsModule],

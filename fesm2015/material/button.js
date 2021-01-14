@@ -225,7 +225,7 @@ ButtonOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonOverviewExample,
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatButton, MatAnchor, MatDivider, MatIcon], styles: ["section[_ngcontent-%COMP%] {\n  display: table;\n}\n\n.example-label[_ngcontent-%COMP%] {\n  display: table-cell;\n  font-size: 14px;\n  margin-left: 8px;\n  min-width: 120px;\n}\n\n.example-button-row[_ngcontent-%COMP%] {\n  display: table-cell;\n  width: 490px;\n}\n\n.example-button-row[_ngcontent-%COMP%]   .mat-button-base[_ngcontent-%COMP%] {\n  margin: 8px 8px 8px 0;\n}\n\n.example-flex-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  flex-wrap: wrap;\n}\n\n.example-button-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 120px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'button-overview-example',
@@ -420,7 +420,7 @@ ButtonTypesExample.ɵcmp = ɵɵdefineComponent({ type: ButtonTypesExample, selec
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatButton, MatAnchor, MatIcon], styles: [".example-button-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%], .example-button-row[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonTypesExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonTypesExample, [{
         type: Component,
         args: [{
                 selector: 'button-types-example',
@@ -444,7 +444,7 @@ ButtonHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ButtonHarnessExample, s
         ɵɵtext(1, " Basic button\n");
         ɵɵelementEnd();
     } }, directives: [MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'button-harness-example',
@@ -472,7 +472,7 @@ ButtonExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonExampl
         MatIconModule], exports: [ButtonOverviewExample,
         ButtonTypesExample,
         ButtonHarnessExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

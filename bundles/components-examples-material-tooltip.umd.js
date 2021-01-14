@@ -53,8 +53,8 @@
                 i0.ɵɵproperty("matTooltipPosition", ctx.position.value);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i5.CdkScrollable, i1.MatButton, i2$2.MatTooltip, i8.MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipAutoHideExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipAutoHideExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-auto-hide-example',
@@ -80,8 +80,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [".example-button {\n  margin-top: 16px;\n}\n\n.example-tooltip-red {\n  background: #b71c1c;\n}\n"], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipCustomClassExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipCustomClassExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-custom-class-example',
@@ -138,8 +138,8 @@
                 i0.ɵɵproperty("matTooltipShowDelay", ctx.showDelay.value)("matTooltipHideDelay", ctx.hideDelay.value);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i1$1.MatHint, i1.MatButton, i2$2.MatTooltip], styles: [".mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%], .mat-raised-button[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipDelayExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipDelayExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-delay-example',
@@ -174,8 +174,8 @@
                 i0.ɵɵproperty("formControl", ctx.disabled);
             }
         }, directives: [i1.MatButton, i2$2.MatTooltip, i3$1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective], styles: [".example-disabled-checkbox[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipDisabledExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipDisabledExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-disabled-example',
@@ -219,8 +219,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipManualExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipManualExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-manual-example',
@@ -259,8 +259,8 @@
                 i0.ɵɵproperty("matTooltip", ctx.message.value);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i1.MatButton, i2$2.MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipMessageExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipMessageExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-message-example',
@@ -294,8 +294,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatButton, i2$2.MatTooltip], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-modified-defaults-example',
@@ -323,8 +323,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatButton, i2$2.MatTooltip], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-overview-example',
@@ -380,8 +380,8 @@
                 i0.ɵɵproperty("matTooltipPosition", ctx.position.value);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i1.MatButton, i2$2.MatTooltip, i8.MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipPositionExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipPositionExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-position-example',
@@ -414,8 +414,8 @@
                 i0.ɵɵproperty("matTooltip", ctx.message);
             }
         }, directives: [i2$2.MatTooltip], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tooltip-harness-example',
@@ -480,8 +480,8 @@
                 TooltipOverviewExample,
                 TooltipPositionExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TooltipExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TooltipExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

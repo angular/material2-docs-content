@@ -115,7 +115,7 @@ CdkTableFlexBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableFlexBasicEx
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableFlexBasicExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTableFlexBasicExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-flex-basic-example',
@@ -255,7 +255,7 @@ CdkTableBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableBasicExample, s
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTableBasicExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-basic-example',
@@ -395,7 +395,7 @@ CdkTableFixedLayoutExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableFixedLayo
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableFixedLayoutExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTableFixedLayoutExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-fixed-layout-example',
@@ -439,7 +439,7 @@ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableEx
         CdkTableFixedLayoutExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
         CdkTableFlexBasicExample,
         CdkTableFixedLayoutExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTableExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

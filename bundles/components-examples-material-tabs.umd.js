@@ -50,8 +50,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupAlignExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupAlignExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-align-example',
@@ -102,8 +102,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupAnimationsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupAnimationsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-animations-example',
@@ -175,8 +175,8 @@
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(4, 4, ctx.asyncTabs));
             }
         }, directives: [i1.NgIf, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab, i1$2.MatTabLabel], pipes: [i1.AsyncPipe], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupAsyncExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupAsyncExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-async-example',
@@ -209,8 +209,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupBasicExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupBasicExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-basic-example',
@@ -270,8 +270,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab, i1$2.MatTabLabel, i2.MatIcon], styles: [".example-tab-icon[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupCustomLabelExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupCustomLabelExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-custom-label-example',
@@ -306,8 +306,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-small-box[_ngcontent-%COMP%], .example-large-box[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box[_ngcontent-%COMP%] {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box[_ngcontent-%COMP%] {\n  height: 300px;\n  width: 300px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-dynamic-height-example',
@@ -347,8 +347,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-harness-example',
@@ -430,8 +430,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.tabs);
             }
         }, directives: [i1$3.MatFormField, i1$3.MatLabel, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i4.MatButton, i5.MatCheckbox, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupDynamicExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupDynamicExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-dynamic-example',
@@ -465,8 +465,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-header-below-example',
@@ -536,8 +536,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab, i1$2.MatTabContent], pipes: [i1.DatePipe], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-lazy-loaded-example',
@@ -570,8 +570,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-stretched-tabs[_ngcontent-%COMP%] {\n  max-width: 800px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupStretchedExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupStretchedExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-stretched-example',
@@ -637,8 +637,8 @@
                 i0.ɵɵproperty("color", _r0.value)("backgroundColor", _r1.value);
             }
         }, directives: [i1$1.MatButtonToggleGroup, i1$1.MatButtonToggle, i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-button-toggle-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupThemeExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupThemeExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-group-theme-example',
@@ -705,8 +705,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.links);
             }
         }, directives: [i1$2.MatTabNav, i1.NgForOf, i1$2.MatTabLink, i4.MatButton], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-right: 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabNavBarBasicExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabNavBarBasicExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'tab-nav-bar-basic-example',
@@ -781,8 +781,8 @@
                 TabGroupThemeExample,
                 TabNavBarBasicExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TabGroupExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

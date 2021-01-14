@@ -24,7 +24,7 @@ ListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ListOverviewExample, sel
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatList, MatListItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ListOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'list-overview-example',
@@ -122,7 +122,7 @@ ListSectionsExample.ɵcmp = ɵɵdefineComponent({ type: ListSectionsExample, sel
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.notes);
     } }, directives: [MatList, MatListSubheaderCssMatStyler, NgForOf, MatDivider, MatListItem, MatIcon, MatListIconCssMatStyler, MatLine], pipes: [DatePipe], styles: [".mat-list-icon[_ngcontent-%COMP%] {\n  color: rgba(0, 0, 0, 0.54);\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ListSectionsExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListSectionsExample, [{
         type: Component,
         args: [{
                 selector: 'list-sections-example',
@@ -163,7 +163,7 @@ ListSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSelectionExample, s
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" Options selected: ", _r0.selectedOptions.selected.length, "\n");
     } }, directives: [MatSelectionList, NgForOf, MatListOption], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ListSelectionExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListSelectionExample, [{
         type: Component,
         args: [{
                 selector: 'list-selection-example',
@@ -206,7 +206,7 @@ ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelecti
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" Option selected: ", _r0.selectedOptions.selected[0] == null ? null : _r0.selectedOptions.selected[0].value, "\n");
     } }, directives: [MatSelectionList, NgForOf, MatListOption], styles: [""] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ListSingleSelectionExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListSingleSelectionExample, [{
         type: Component,
         args: [{
                 selector: 'list-single-selection-example',
@@ -253,7 +253,7 @@ ListHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ListHarnessExample, selec
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatList, MatListItem, MatLine, MatListIconCssMatStyler, MatListAvatarCssMatStyler, MatListSubheaderCssMatStyler], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ListHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'list-harness-example',
@@ -287,7 +287,7 @@ ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesMo
         ListSectionsExample,
         ListSelectionExample,
         ListSingleSelectionExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ListExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

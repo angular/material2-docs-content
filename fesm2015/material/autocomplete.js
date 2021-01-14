@@ -55,7 +55,7 @@ AutocompleteAutoActiveFirstOptionExample.ɵcmp = ɵɵdefineComponent({ type: Aut
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(8, 3, ctx.filteredOptions));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlDirective, MatAutocomplete, NgForOf, MatOption], pipes: [AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteAutoActiveFirstOptionExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteAutoActiveFirstOptionExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-auto-active-first-option-example',
@@ -121,7 +121,7 @@ AutocompleteDisplayExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteDispl
         ɵɵadvance(2);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(8, 4, ctx.filteredOptions));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlDirective, MatAutocomplete, NgForOf, MatOption], pipes: [AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteDisplayExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteDisplayExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-display-example',
@@ -178,7 +178,7 @@ AutocompleteFilterExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteFilter
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(8, 3, ctx.filteredOptions));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlDirective, MatAutocomplete, NgForOf, MatOption], pipes: [AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteFilterExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteFilterExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-filter-example',
@@ -316,7 +316,7 @@ AutocompleteOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOptg
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(8, 3, ctx.stateGroupOptions));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlName, RequiredValidator, MatAutocomplete, NgForOf, MatOptgroup, MatOption], pipes: [AsyncPipe], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteOptgroupExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteOptgroupExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-optgroup-example',
@@ -413,7 +413,7 @@ AutocompleteOverviewExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteOver
         ɵɵadvance(3);
         ɵɵproperty("checked", ctx.stateCtrl.disabled);
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatAutocompleteTrigger, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatAutocomplete, NgForOf, MatSlideToggle, MatOption], pipes: [AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-option-img[_ngcontent-%COMP%] {\n  vertical-align: middle;\n  margin-right: 8px;\n}\n\n[dir='rtl'][_ngcontent-%COMP%]   .example-option-img[_ngcontent-%COMP%] {\n  margin-right: 0;\n  margin-left: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-overview-example',
@@ -467,7 +467,7 @@ AutocompletePlainInputExample.ɵcmp = ɵɵdefineComponent({ type: AutocompletePl
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(5, 3, ctx.filteredStreets));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlDirective, MatAutocomplete, NgForOf, MatOption], pipes: [AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompletePlainInputExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompletePlainInputExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-plain-input-example',
@@ -515,7 +515,7 @@ AutocompleteSimpleExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteSimple
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.options);
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, MatAutocompleteTrigger, NgControlStatus, FormControlDirective, MatAutocomplete, NgForOf, MatOption], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteSimpleExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteSimpleExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-simple-example',
@@ -570,7 +570,7 @@ AutocompleteHarnessExample.ɵcmp = ɵɵdefineComponent({ type: AutocompleteHarne
         ɵɵadvance(1);
         ɵɵproperty("matAutocomplete", _r0);
     } }, directives: [MatAutocomplete, NgForOf, MatAutocompleteTrigger, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'autocomplete-harness-example',
@@ -621,7 +621,7 @@ AutocompleteExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Autoco
         AutocompleteOverviewExample,
         AutocompletePlainInputExample,
         AutocompleteSimpleExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(AutocompleteExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(AutocompleteExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -40,7 +40,7 @@ InputClearableExample.ɵcmp = ɵɵdefineComponent({ type: InputClearableExample,
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.value);
     } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, NgIf, MatButton, MatSuffix, MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputClearableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputClearableExample, [{
         type: Component,
         args: [{
                 selector: 'input-clearable-example',
@@ -102,7 +102,7 @@ InputErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorStat
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatHint, NgIf, MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputErrorStateMatcherExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputErrorStateMatcherExample, [{
         type: Component,
         args: [{
                 selector: 'input-error-state-matcher-example',
@@ -155,7 +155,7 @@ InputErrorsExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorsExample, selec
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, NgIf, MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputErrorsExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputErrorsExample, [{
         type: Component,
         args: [{
                 selector: 'input-errors-example',
@@ -251,7 +251,7 @@ InputFormExample.ɵcmp = ɵɵdefineComponent({ type: InputFormExample, selectors
         ɵɵadvance(46);
         ɵɵtextInterpolate1("", _r0.value.length, " / 5");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputFormExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputFormExample, [{
         type: Component,
         args: [{
                 selector: 'input-form-example',
@@ -288,7 +288,7 @@ InputHintExample.ɵcmp = ɵɵdefineComponent({ type: InputHintExample, selectors
         ɵɵadvance(10);
         ɵɵtextInterpolate1("", _r0.value.length, " / 256");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputHintExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputHintExample, [{
         type: Component,
         args: [{
                 selector: 'input-hint-example',
@@ -319,7 +319,7 @@ InputOverviewExample.ɵcmp = ɵɵdefineComponent({ type: InputOverviewExample, s
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'input-overview-example',
@@ -350,7 +350,7 @@ InputPrefixSuffixExample.ɵcmp = ɵɵdefineComponent({ type: InputPrefixSuffixEx
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatPrefix, MatInput, MatIcon, MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputPrefixSuffixExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputPrefixSuffixExample, [{
         type: Component,
         args: [{
                 selector: 'input-prefix-suffix-example',
@@ -389,7 +389,7 @@ InputHarnessExample.ɵcmp = ɵɵdefineComponent({ type: InputHarnessExample, sel
         ɵɵadvance(5);
         ɵɵproperty("type", ctx.inputType)("disabled", ctx.disabled);
     } }, directives: [MatFormField, MatLabel, MatInput], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'input-harness-example',
@@ -438,7 +438,7 @@ InputExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function InputExamples
         InputHintExample,
         InputOverviewExample,
         InputPrefixSuffixExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(InputExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(InputExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

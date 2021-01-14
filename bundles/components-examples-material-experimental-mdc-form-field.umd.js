@@ -336,8 +336,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: function () { return [i1.MatFormField, i1.MatLabel, MyTelInput, i2.MatIcon, i1.MatSuffix, i1.MatHint]; }, encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'mdc-form-field-custom-control-example',
@@ -507,8 +507,8 @@
                 i0.ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId());
             }
         }, directives: [i3.NgControlStatusGroup, i3.FormGroupDirective, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MyTelInput, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MyTelInput, [{
                 type: i0.Component,
                 args: [{
                         selector: 'example-tel-input',
@@ -566,8 +566,8 @@
                 i2.MatIconModule,
                 i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

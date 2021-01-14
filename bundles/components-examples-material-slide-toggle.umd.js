@@ -78,8 +78,8 @@
                 i0.ɵɵproperty("color", ctx.color)("checked", ctx.checked)("disabled", ctx.disabled);
             }
         }, directives: [i1$1.MatCard, i1$1.MatCardContent, i2.MatRadioGroup, i1.NgControlStatus, i1.NgModel, i2.MatRadioButton, i4.MatCheckbox, i2$1.MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slide-toggle-configurable-example',
@@ -160,8 +160,8 @@
                 i0.ɵɵtextInterpolate1("Form Group Status: ", ctx.formGroup.status, "");
             }
         }, directives: [i2$1.MatSlideToggle, i1.NgControlStatus, i1.NgModel, i1.NgControlStatusGroup, i1.NgForm, i2$1.MatSlideToggleRequiredValidator, i1.RequiredValidator, i3.MatButton, i1.FormGroupDirective, i1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slide-toggle-forms-example',
@@ -187,8 +187,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i2$1.MatSlideToggle], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slide-toggle-overview-example',
@@ -223,8 +223,8 @@
                 i0.ɵɵproperty("disabled", ctx.disabled);
             }
         }, directives: [i2$1.MatSlideToggle, i1.NgControlStatus, i1.FormControlDirective], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SlideToggleHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slide-toggle-harness-example',
@@ -269,8 +269,8 @@
                 SlideToggleHarnessExample,
                 SlideToggleOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

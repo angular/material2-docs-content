@@ -51,7 +51,7 @@ SidenavAutosizeExample.ɵcmp = ɵɵdefineComponent({ type: SidenavAutosizeExampl
         ɵɵadvance(5);
         ɵɵproperty("ngIf", ctx.showFiller);
     } }, directives: [MatDrawerContainer, MatDrawer, NgIf, MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 500px;\n  height: 300px;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  padding: 20px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavAutosizeExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavAutosizeExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-autosize-example',
@@ -120,7 +120,7 @@ SidenavBackdropExample.ɵcmp = ɵɵdefineComponent({ type: SidenavBackdropExampl
         ɵɵadvance(2);
         ɵɵproperty("value", false);
     } }, directives: [MatDrawerContainer, MatDrawer, MatDrawerContent, MatFormField, MatLabel, MatSelect, MatOption, MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  margin: 12px;\n  border: 1px solid #555;\n}\n\nmat-drawer-content[_ngcontent-%COMP%] {\n  padding: 12px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavBackdropExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavBackdropExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-backdrop-example',
@@ -190,7 +190,7 @@ SidenavDisableCloseExample.ɵcmp = ɵɵdefineComponent({ type: SidenavDisableClo
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatSidenavContainer, MatSidenav, MatButton, MatSidenavContent], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavDisableCloseExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavDisableCloseExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-disable-close-example',
@@ -216,7 +216,7 @@ SidenavDrawerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SidenavDrawerOv
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatDrawerContainer, MatDrawer, MatDrawerContent], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  margin: 10px;\n  border: 1px solid #555;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavDrawerOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavDrawerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-drawer-overview-example',
@@ -303,7 +303,7 @@ SidenavFixedExample.ɵcmp = ɵɵdefineComponent({ type: SidenavFixedExample, sel
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatToolbar, MatSidenavContainer, MatSidenav, MatSidenavContent, NgControlStatusGroup, FormGroupDirective, MatCheckbox, NgControlStatus, FormControlName, MatFormField, MatLabel, NumberValueAccessor, DefaultValueAccessor, MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-header[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-footer[_ngcontent-%COMP%] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavFixedExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavFixedExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-fixed-example',
@@ -394,7 +394,7 @@ SidenavModeExample.ɵcmp = ɵɵdefineComponent({ type: SidenavModeExample, selec
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatSidenavContainer, MatSidenav, MatButton, MatRadioGroup, NgControlStatus, FormControlDirective, MatRadioButton, MatSidenavContent], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-radio-group[_ngcontent-%COMP%] {\n  display: block;\n  border: 1px solid #555;\n  margin: 20px;\n  padding: 10px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavModeExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavModeExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-mode-example',
@@ -470,7 +470,7 @@ SidenavOpenCloseExample.ɵcmp = ɵɵdefineComponent({ type: SidenavOpenCloseExam
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatSidenavContainer, MatSidenav, MatSidenavContent, MatCheckbox, NgControlStatus, NgModel, MatButton, NgForOf], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events[_ngcontent-%COMP%] {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavOpenCloseExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavOpenCloseExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-open-close-example',
@@ -509,7 +509,7 @@ SidenavOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SidenavOverviewExampl
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatSidenavContainer, MatSidenav, MatSidenavContent], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #eee;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-overview-example',
@@ -549,7 +549,7 @@ SidenavPositionExample.ɵcmp = ɵɵdefineComponent({ type: SidenavPositionExampl
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatSidenavContainer, MatSidenav], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavPositionExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavPositionExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-position-example',
@@ -645,7 +645,7 @@ SidenavResponsiveExample.ɵcmp = ɵɵdefineComponent({ type: SidenavResponsiveEx
         ɵɵadvance(1);
         ɵɵproperty("ngIf", !ctx.shouldRun);
     } }, directives: [NgIf, MatToolbar, MatButton, MatIcon, MatSidenavContainer, MatSidenav, MatNavList, NgForOf, MatSidenavContent, MatListItem], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-toolbar[_ngcontent-%COMP%] {\n  position: fixed;\n  \n  z-index: 2;\n}\n\nh1.example-app-name[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1 0 auto;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavResponsiveExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavResponsiveExample, [{
         type: Component,
         args: [{
                 selector: 'sidenav-responsive-example',
@@ -711,7 +711,7 @@ SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExam
         SidenavOverviewExample,
         SidenavPositionExample,
         SidenavResponsiveExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SidenavExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -34,8 +34,8 @@
                 i0.ɵɵproperty("matDatepicker", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerApiExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerApiExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-api-example',
@@ -84,8 +84,8 @@
                 i0.ɵɵproperty("for", _r1);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerColorExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerColorExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-color-example',
@@ -124,8 +124,8 @@
                 i0.ɵɵproperty("calendarHeaderComponent", ctx.exampleHeader);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2, changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerCustomHeaderExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerCustomHeaderExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-custom-header-example',
@@ -214,8 +214,8 @@
                 i0.ɵɵtextInterpolate(ctx.periodLabel);
             }
         }, directives: [i5.MatButton, i6.MatIcon], styles: [".example-header[_ngcontent-%COMP%] {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label[_ngcontent-%COMP%] {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow[_ngcontent-%COMP%]   .mat-icon[_ngcontent-%COMP%] {\n      margin: -22%;\n    }"], changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ExampleHeader, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExampleHeader, [{
                 type: i0.Component,
                 args: [{
                         selector: 'example-header',
@@ -261,8 +261,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i6.MatIcon, i3$1.MatDatepickerToggleIcon, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerCustomIconExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerCustomIconExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-custom-icon-example',
@@ -308,8 +308,8 @@
                 i0.ɵɵproperty("dateClass", ctx.dateClass);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], styles: [".example-custom-date-class {\n  background: orange;\n  border-radius: 100%;\n}\n"], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerDateClassExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerDateClassExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-date-class-example',
@@ -378,8 +378,8 @@
                 i0.ɵɵproperty("for", _r2);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerDisabledExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerDisabledExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-disabled-example',
@@ -437,8 +437,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.events);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker, i4.NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerEventsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerEventsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-events-example',
@@ -479,8 +479,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerFilterExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerFilterExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-filter-example',
@@ -540,8 +540,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerFormatsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerFormatsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-formats-example',
@@ -608,8 +608,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerLocaleExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerLocaleExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-locale-example',
@@ -663,8 +663,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerMinMaxExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerMinMaxExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-min-max-example',
@@ -708,8 +708,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerMomentExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerMomentExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-moment-example',
@@ -751,8 +751,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-overview-example',
@@ -790,8 +790,8 @@
                 i0.ɵɵproperty("startAt", ctx.startDate);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerStartViewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerStartViewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-start-view-example',
@@ -826,8 +826,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerTouchExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerTouchExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-touch-example',
@@ -890,8 +890,8 @@
                 i0.ɵɵproperty("for", _r2);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerValueExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerValueExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-value-example',
@@ -966,8 +966,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker], styles: [".example-month-picker[_ngcontent-%COMP%]   .mat-calendar-period-button[_ngcontent-%COMP%] {\n  pointer-events: none;\n}\n\n.example-month-picker[_ngcontent-%COMP%]   .mat-calendar-arrow[_ngcontent-%COMP%] {\n  display: none;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerViewsSelectionExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerViewsSelectionExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-views-selection-example',
@@ -1017,8 +1017,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i3$1.MatDateRangeInput, i3$1.MatStartDate, i3$1.MatEndDate, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDateRangePicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DateRangePickerOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'date-range-picker-overview-example',
@@ -1086,8 +1086,8 @@
                 i0.ɵɵtextInterpolate1("Selected range: ", i0.ɵɵpipeBind1(13, 6, ctx.range.value), "");
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i3$1.MatDateRangeInput, i3.NgControlStatusGroup, i3.FormGroupDirective, i3$1.MatStartDate, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlName, i3$1.MatEndDate, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDateRangePicker, i4.NgIf, i1$1.MatError], pipes: [i4.JsonPipe], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DateRangePickerFormsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerFormsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'date-range-picker-forms-example',
@@ -1152,8 +1152,8 @@
                 i0.ɵɵproperty("for", _r1);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i3$1.MatDateRangeInput, i3.NgControlStatusGroup, i3.FormGroupDirective, i3$1.MatStartDate, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlName, i3$1.MatEndDate, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin: 0 8px 16px 0;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DateRangePickerComparisonExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerComparisonExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'date-range-picker-comparison-example',
@@ -1185,8 +1185,8 @@
     }());
     FiveDayRangeSelectionStrategy.ɵfac = function FiveDayRangeSelectionStrategy_Factory(t) { return new (t || FiveDayRangeSelectionStrategy)(i0.ɵɵinject(i1.DateAdapter)); };
     FiveDayRangeSelectionStrategy.ɵprov = i0.ɵɵdefineInjectable({ token: FiveDayRangeSelectionStrategy, factory: FiveDayRangeSelectionStrategy.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(FiveDayRangeSelectionStrategy, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FiveDayRangeSelectionStrategy, [{
                 type: i0.Injectable
             }], function () { return [{ type: i1.DateAdapter }]; }, null);
     })();
@@ -1222,8 +1222,8 @@
                 i0.ɵɵproperty("for", _r0);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i3$1.MatDateRangeInput, i3$1.MatStartDate, i3$1.MatEndDate, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDateRangePicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'date-range-picker-selection-strategy-example',
@@ -1259,8 +1259,8 @@
                 i0.ɵɵproperty("matDatepicker", _r0)("ngModel", ctx.date)("min", ctx.minDate);
             }
         }, directives: [i2.MatInput, i3$1.MatDatepickerInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i3$1.MatDatepicker], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-harness-example',
@@ -1329,8 +1329,8 @@
                 i0.ɵɵproperty("for", _r1);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatInput, i3$1.MatDatepickerInput, i3$1.MatDatepickerToggle, i1$1.MatSuffix, i3$1.MatDatepicker, i3$1.MatDatepickerActions, i5.MatButton, i3$1.MatDatepickerCancel, i3$1.MatDatepickerApply, i3$1.MatDateRangeInput, i3$1.MatStartDate, i3$1.MatEndDate, i3$1.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin-right: 20px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerActionsExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerActionsExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'datepicker-actions-example',
@@ -1438,8 +1438,8 @@
                 DatepickerActionsExample,
                 ExampleHeader] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DatepickerExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

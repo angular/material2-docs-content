@@ -34,7 +34,7 @@ CdkMenuStandaloneMenuExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuStandalo
         const _r0 = ɵɵreference(3);
         ɵɵproperty("cdkMenuTriggerFor", _r0);
     } }, directives: [CdkMenuItem, CdkMenuItemTrigger, CdkMenuPanel, CdkMenu], styles: [".example-menu[_ngcontent-%COMP%] {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgba(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item[_ngcontent-%COMP%], .example-standalone-item[_ngcontent-%COMP%] {\n  background-color: transparent;\n  cursor: pointer;\n  outline: none;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item[_ngcontent-%COMP%]:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-standalone-item[_ngcontent-%COMP%] {\n  background-color: rgb(239, 239, 239);\n}\n.example-standalone-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n.example-standalone-item[aria-expanded='true'][_ngcontent-%COMP%] {\n  background-color: rgb(208, 208, 208);\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkMenuStandaloneMenuExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuStandaloneMenuExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-menu-standalone-menu-example',
@@ -105,7 +105,7 @@ CdkMenuStandaloneStatefulMenuExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenu
         const _r0 = ɵɵreference(3);
         ɵɵproperty("cdkMenuTriggerFor", _r0);
     } }, directives: [CdkMenuItem, CdkMenuItemTrigger, CdkMenuPanel, CdkMenu, CdkMenuItemCheckbox, CdkMenuGroup, CdkMenuItemRadio], styles: [".example-menu[_ngcontent-%COMP%] {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu[_ngcontent-%COMP%]   .example-menu-item[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nhr[_ngcontent-%COMP%] {\n  width: 100%;\n  color: rgba(0, 0, 0, 0.12);\n}\n\n.example-menu-item[_ngcontent-%COMP%], .example-standalone-item[_ngcontent-%COMP%] {\n  background-color: transparent;\n  cursor: pointer;\n  outline: none;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item[_ngcontent-%COMP%]:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-standalone-item[_ngcontent-%COMP%] {\n  background-color: rgb(239, 239, 239);\n}\n.example-standalone-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n.example-standalone-item[aria-expanded='true'][_ngcontent-%COMP%] {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item[role='menuitemradio'][aria-checked='true'][_ngcontent-%COMP%] {\n  background-color: rgb(225, 225, 225);\n}\n.example-menu-item[role='menuitemcheckbox'][aria-checked='true'][_ngcontent-%COMP%] {\n  background-color: rgb(225, 225, 225);\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkMenuStandaloneStatefulMenuExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuStandaloneStatefulMenuExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-menu-standalone-stateful-menu-example',
@@ -276,7 +276,7 @@ CdkMenuMenubarExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuMenubarExample,
         ɵɵadvance(2);
         ɵɵproperty("cdkMenuTriggerFor", _r4);
     } }, directives: [CdkMenuBar, CdkMenuItem, CdkMenuItemTrigger, CdkMenuPanel, CdkMenu, CdkMenuGroup, CdkMenuItemCheckbox, CdkMenuItemRadio], styles: [".example-menu-bar-item[_ngcontent-%COMP%] {\n  cursor: pointer;\n  outline: none;\n  border: none;\n\n  user-select: none;\n  min-width: 34px;\n  line-height: 26px;\n  padding: 0 16px;\n}\n\n.example-menu-bar-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu[_ngcontent-%COMP%] {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu[_ngcontent-%COMP%]   hr[_ngcontent-%COMP%] {\n  width: 100%;\n  color: rgba(0, 0, 0, 0.12);\n}\n\n.example-menu[_ngcontent-%COMP%]   .example-menu-group[_ngcontent-%COMP%] {\n  display: inline-flex;\n  flex-direction: column;\n}\n\n.example-menu[_ngcontent-%COMP%]   .example-menu-item[_ngcontent-%COMP%] {\n  background-color: transparent;\n  cursor: pointer;\n  outline: none;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item[_ngcontent-%COMP%]    > span[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: row;\n  flex: 1;\n  justify-content: flex-end;\n}\n\n.example-menu[_ngcontent-%COMP%]   .example-menu-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu[_ngcontent-%COMP%]   .example-menu-item[role='menuitemradio'][aria-checked='true'][_ngcontent-%COMP%] {\n  background-color: rgb(225, 225, 225);\n}\n.example-menu[_ngcontent-%COMP%]   .example-menu-item[role='menuitemcheckbox'][aria-checked='true'][_ngcontent-%COMP%] {\n  background-color: rgb(225, 225, 225);\n}\n.example-menu[_ngcontent-%COMP%]   .example-menu-item[_ngcontent-%COMP%]:active {\n  background-color: rgb(170, 170, 170);\n}\n\n.example-menu-bar-item[aria-expanded='true'][_ngcontent-%COMP%], .example-menu-item[aria-expanded='true'][_ngcontent-%COMP%] {\n  background-color: rgb(208, 208, 208) !important;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkMenuMenubarExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuMenubarExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-menu-menubar-example',
@@ -312,7 +312,7 @@ CdkMenuInlineExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuInlineExample, s
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [CdkMenu, CdkMenuItem], styles: [".example-menu[_ngcontent-%COMP%] {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item[_ngcontent-%COMP%] {\n  background-color: transparent;\n  cursor: pointer;\n  outline: none;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item[_ngcontent-%COMP%]:active {\n  background-color: rgb(170, 170, 170);\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkMenuInlineExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuInlineExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-menu-inline-example',
@@ -352,7 +352,7 @@ CdkMenuContextExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuContextExample,
         const _r0 = ɵɵreference(3);
         ɵɵproperty("cdkContextMenuTriggerFor", _r0);
     } }, directives: [CdkContextMenuTrigger, CdkMenuPanel, CdkMenu, CdkMenuItem], styles: [".example-menu[_ngcontent-%COMP%] {\n  display: inline-flex;\n  flex-direction: column;\n  min-width: 180px;\n  max-width: 280px;\n  background-color: rgb(255, 255, 255);\n  padding: 6px 0;\n}\n\n.example-menu-item[_ngcontent-%COMP%] {\n  background-color: transparent;\n  cursor: pointer;\n  outline: none;\n  border: none;\n\n  user-select: none;\n  min-width: 64px;\n  line-height: 36px;\n  padding: 0 16px;\n\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  flex: 1;\n}\n\n.example-menu-item[_ngcontent-%COMP%]:hover {\n  background-color: rgb(208, 208, 208);\n}\n\n.example-menu-item[_ngcontent-%COMP%]:active {\n  background-color: rgb(170, 170, 170);\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkMenuContextExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuContextExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-menu-context-example',
@@ -382,7 +382,7 @@ CdkMenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkMenuExam
         CdkMenuInlineExample,
         CdkMenuContextExample,
         CdkMenuStandaloneStatefulMenuExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkMenuExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [CdkMenuModule],

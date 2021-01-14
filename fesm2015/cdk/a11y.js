@@ -48,7 +48,7 @@ FocusMonitorDirectivesExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorDi
         ɵɵadvance(4);
         ɵɵtextInterpolate1("Focus Monitored Subtree (", ctx.subtreeOrigin, ")");
     } }, directives: [CdkMonitorFocus], styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FocusMonitorDirectivesExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FocusMonitorDirectivesExample, [{
         type: Component,
         args: [{
                 selector: 'focus-monitor-directives-example',
@@ -127,7 +127,7 @@ FocusMonitorFocusViaExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorFocu
         ɵɵadvance(3);
         ɵɵtextInterpolate1("1. Focus Monitored Element (", ctx.origin, ")");
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:focus {\n  box-shadow: 0 0 30px cyan;\n}\n\nmat-form-field[_ngcontent-%COMP%], button[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FocusMonitorFocusViaExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FocusMonitorFocusViaExample, [{
         type: Component,
         args: [{
                 selector: 'focus-monitor-focus-via-example',
@@ -203,7 +203,7 @@ FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOver
         ɵɵadvance(5);
         ɵɵtextInterpolate1("Focus Monitored Subtree (", ctx.subtreeOrigin, ")");
     } }, styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FocusMonitorOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FocusMonitorOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'focus-monitor-overview-example',
@@ -236,7 +236,7 @@ CdkA11yExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkA11yExam
         MatSelectModule], exports: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
         FocusMonitorOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkA11yExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkA11yExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

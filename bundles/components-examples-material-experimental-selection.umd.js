@@ -150,8 +150,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1.MatTable, i2.MatSelection, i2.MatSelectionColumn, i1.MatColumnDef, i1.MatHeaderCellDef, i1.MatCellDef, i1.MatHeaderRowDef, i1.MatRowDef, i1.MatHeaderCell, i1.MatCell, i1.MatHeaderRow, i1.MatRow, i2.MatRowSelection], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MatSelectionColumnExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatSelectionColumnExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'mat-selection-column-example',
@@ -377,8 +377,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.data)("ngForTrackBy", ctx.trackByFn);
             }
         }, directives: [i2.MatSelection, i2.MatSelectAll, i2$1.NgForOf, i3.MatCheckbox, i2.MatSelectionToggle], pipes: [i2$1.AsyncPipe], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MatSelectionListExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatSelectionListExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'mat-selection-list-example',
@@ -424,8 +424,8 @@
                 i3.MatCheckboxModule], exports: [MatSelectionListExample,
                 MatSelectionColumnExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MatSelectionExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatSelectionExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

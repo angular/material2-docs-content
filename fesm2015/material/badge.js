@@ -52,7 +52,7 @@ BadgeOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BadgeOverviewExample, s
         ɵɵadvance(12);
         ɵɵproperty("matBadgeHidden", ctx.hidden);
     } }, directives: [MatBadge, MatButton, MatIcon], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BadgeOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BadgeOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'badge-overview-example',
@@ -88,7 +88,7 @@ BadgeHarnessExample.ɵcmp = ɵɵdefineComponent({ type: BadgeHarnessExample, sel
         ɵɵadvance(2);
         ɵɵproperty("matBadgeDisabled", ctx.disabled);
     } }, directives: [MatButton, MatBadge], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BadgeHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BadgeHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'badge-harness-example',
@@ -113,7 +113,7 @@ BadgeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BadgeExamples
         MatButtonModule,
         MatIconModule], exports: [BadgeOverviewExample,
         BadgeHarnessExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(BadgeExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BadgeExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

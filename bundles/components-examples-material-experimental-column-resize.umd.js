@@ -167,8 +167,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1.MatDefaultEnabledColumnResizeFlex, i2.MatTable, i2.MatColumnDef, i2.MatHeaderCellDef, i2.MatCellDef, i2.MatHeaderRowDef, i2.MatRowDef, i1.MatDefaultResizable, i2.MatHeaderCell, i2.MatCell, i2.MatHeaderRow, i2.MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'default-enabled-column-resize-flex-example',
@@ -199,8 +199,8 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DefaultEnabledColumnResizeFlexExampleModule, { declarations: [DefaultEnabledColumnResizeFlexExample], imports: [i1.MatDefaultEnabledColumnResizeModule,
                 i2.MatTableModule], exports: [DefaultEnabledColumnResizeFlexExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExampleModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExampleModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
@@ -376,8 +376,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1.MatDefaultEnabledColumnResize, i2.MatTable, i2.MatColumnDef, i2.MatHeaderCellDef, i2.MatCellDef, i2.MatHeaderRowDef, i2.MatRowDef, i1.MatDefaultResizable, i2.MatHeaderCell, i2.MatCell, i2.MatHeaderRow, i2.MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DefaultEnabledColumnResizeExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultEnabledColumnResizeExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'default-enabled-column-resize-example',
@@ -408,8 +408,8 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DefaultEnabledColumnResizeExampleModule, { declarations: [DefaultEnabledColumnResizeExample], imports: [i1.MatDefaultEnabledColumnResizeModule,
                 i2.MatTableModule], exports: [DefaultEnabledColumnResizeExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DefaultEnabledColumnResizeExampleModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DefaultEnabledColumnResizeExampleModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
@@ -585,8 +585,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i2.MatTable, i1.MatColumnResize, i2.MatColumnDef, i2.MatHeaderCellDef, i2.MatCellDef, i2.MatHeaderRowDef, i2.MatRowDef, i2.MatHeaderCell, i1.MatResizable, i2.MatCell, i2.MatHeaderRow, i2.MatRow], styles: ["[_nghost-%COMP%] {\n  display: block;\n  overflow: auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(OptInColumnResizeExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(OptInColumnResizeExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'opt-in-column-resize-example',
@@ -617,8 +617,8 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(OptInColumnResizeExampleModule, { declarations: [OptInColumnResizeExample], imports: [i1.MatColumnResizeModule,
                 i2.MatTableModule], exports: [OptInColumnResizeExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(OptInColumnResizeExampleModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(OptInColumnResizeExampleModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
@@ -645,8 +645,8 @@
                 DefaultEnabledColumnResizeFlexExampleModule,
                 OptInColumnResizeExampleModule] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ColumnResizeExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ColumnResizeExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         exports: [

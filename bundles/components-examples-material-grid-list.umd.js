@@ -44,8 +44,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.tiles);
             }
         }, directives: [i1.MatGridList, i2.NgForOf, i1.MatGridTile], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(GridListDynamicExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListDynamicExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'grid-list-dynamic-example',
@@ -81,8 +81,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatGridList, i1.MatGridTile], styles: ["mat-grid-tile[_ngcontent-%COMP%] {\n  background: lightblue;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(GridListOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'grid-list-overview-example',
@@ -128,8 +128,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatGridList, i1.MatGridTile, i1.MatGridTileText, i1.MatGridTileHeaderCssMatStyler, i1.MatGridTileFooterCssMatStyler], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(GridListHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'grid-list-harness-example',
@@ -161,8 +161,8 @@
                 GridListHarnessExample,
                 GridListOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(GridListExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

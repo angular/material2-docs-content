@@ -30,8 +30,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DividerOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DividerOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'divider-overview-example',
@@ -55,8 +55,8 @@
                 i0.ɵɵelement(1, "mat-divider", 0);
             }
         }, directives: [i2.MatDivider], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DividerHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DividerHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'divider-harness-example',
@@ -85,8 +85,8 @@
                 i1.MatListModule], exports: [DividerHarnessExample,
                 DividerOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DividerExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DividerExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

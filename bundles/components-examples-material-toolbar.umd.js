@@ -38,8 +38,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatToolbar, i2.MatButton, i3.MatIcon], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ToolbarBasicExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ToolbarBasicExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'toolbar-basic-example',
@@ -90,8 +90,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatToolbar, i1.MatToolbarRow, i3.MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ToolbarMultirowExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ToolbarMultirowExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'toolbar-multirow-example',
@@ -198,8 +198,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatToolbar, i2.MatButton, i3.MatIcon, i1.MatToolbarRow], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ToolbarOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ToolbarOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'toolbar-overview-example',
@@ -245,8 +245,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatToolbar, i1.MatToolbarRow, i2.MatButton], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ToolbarHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ToolbarHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'toolbar-harness-example',
@@ -283,8 +283,8 @@
                 ToolbarMultirowExample,
                 ToolbarOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ToolbarExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ToolbarExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

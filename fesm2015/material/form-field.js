@@ -75,7 +75,7 @@ FormFieldAppearanceExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldAppearan
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatInput, MatIcon, MatSuffix, MatHint], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldAppearanceExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldAppearanceExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-appearance-example',
@@ -113,7 +113,7 @@ FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCusto
     } if (rf & 2) {
         ɵɵproperty("formGroup", ctx.form);
     } }, directives: function () { return [NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MyTelInput, NgControlStatus, FormControlName, RequiredValidator, MatIcon, MatSuffix, MatHint]; }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldCustomControlExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldCustomControlExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-custom-control-example',
@@ -299,7 +299,7 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         ɵɵproperty("formGroup", ctx.parts);
         ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId());
     } }, directives: [NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MyTelInput, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MyTelInput, [{
         type: Component,
         args: [{
                 selector: 'example-tel-input',
@@ -380,7 +380,7 @@ FormFieldErrorExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldErrorExample,
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.email.invalid);
     } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, RequiredValidator, NgControlStatus, FormControlDirective, NgIf, MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldErrorExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldErrorExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-error-example',
@@ -423,7 +423,7 @@ FormFieldHintExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldHintExample, s
         ɵɵadvance(7);
         ɵɵtextInterpolate1("", (_r0.value == null ? null : _r0.value.length) || 0, "/10");
     } }, directives: [MatFormField, MatLabel, MatInput, MatHint, MatSelect, MatOption], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldHintExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldHintExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-hint-example',
@@ -509,7 +509,7 @@ FormFieldLabelExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldLabelExample,
         ɵɵadvance(4);
         ɵɵproperty("hideRequiredMarker", ctx.hideRequiredControl.value)("floatLabel", ctx.floatLabelControl.value);
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatCheckbox, NgControlStatus, FormControlDirective, MatRadioGroup, MatRadioButton, MatFormField, MatInput, MatLabel, MatSelect, MatOption, MatIcon], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%] {\n  width: 220px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldLabelExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldLabelExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-label-example',
@@ -549,7 +549,7 @@ FormFieldOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldOverviewEx
         ɵɵelement(15, "textarea", 1);
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatInput, MatSelect, MatOption], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-overview-example',
@@ -600,7 +600,7 @@ FormFieldPrefixSuffixExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldPrefix
         ɵɵadvance(2);
         ɵɵtextInterpolate(ctx.hide ? "visibility_off" : "visibility");
     } }, directives: [MatFormField, MatLabel, MatInput, MatButton, MatSuffix, MatIcon, MatPrefix], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-right-align[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\ninput.example-right-align[_ngcontent-%COMP%]::-webkit-outer-spin-button, input.example-right-align[_ngcontent-%COMP%]::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align[_ngcontent-%COMP%] {\n  -moz-appearance: textfield;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldPrefixSuffixExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldPrefixSuffixExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-prefix-suffix-example',
@@ -672,7 +672,7 @@ FormFieldThemingExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldThemingExam
         ɵɵadvance(3);
         ɵɵproperty("ngIf", ctx.fontSizeControl.invalid);
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatInput, NumberValueAccessor, DefaultValueAccessor, MatSuffix, NgIf, MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldThemingExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldThemingExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-theming-example',
@@ -707,7 +707,7 @@ FormFieldHarnessExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldHarnessExam
         ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.requiredControl);
     } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatError, MatHint], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-harness-example',
@@ -765,7 +765,7 @@ FormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function FormField
         FormFieldOverviewExample,
         FormFieldPrefixSuffixExample,
         FormFieldThemingExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

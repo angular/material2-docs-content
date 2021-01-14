@@ -28,7 +28,7 @@ DialogContentExample.ɵcmp = ɵɵdefineComponent({ type: DialogContentExample, s
         ɵɵtext(1, "Open dialog");
         ɵɵelementEnd();
     } }, directives: [MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogContentExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogContentExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-content-example',
@@ -113,7 +113,7 @@ DialogContentExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogContentExam
         ɵɵadvance(44);
         ɵɵproperty("mat-dialog-close", true);
     } }, directives: [MatDialogTitle, MatDialogContent, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogContentExampleDialog, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogContentExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-content-example-dialog',
@@ -158,7 +158,7 @@ DialogDataExample.ɵcmp = ɵɵdefineComponent({ type: DialogDataExample, selecto
         ɵɵtext(1, "Open dialog");
         ɵɵelementEnd();
     } }, directives: [MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogDataExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogDataExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-data-example',
@@ -200,7 +200,7 @@ DialogDataExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogDataExampleDia
         ɵɵadvance(3);
         ɵɵproperty("ngIf", ctx.data.animal === "lion");
     } }, directives: [MatDialogTitle, MatDialogContent, NgIf], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogDataExampleDialog, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogDataExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-data-example-dialog',
@@ -229,7 +229,7 @@ DialogElementsExample.ɵcmp = ɵɵdefineComponent({ type: DialogElementsExample,
         ɵɵtext(1, "Launch dialog");
         ɵɵelementEnd();
     } }, directives: [MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogElementsExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogElementsExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-elements-example',
@@ -252,7 +252,7 @@ DialogElementsExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogElementsEx
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatDialogTitle, MatDialogContent, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogElementsExampleDialog, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogElementsExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-elements-example-dialog',
@@ -317,7 +317,7 @@ DialogOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExample,
         ɵɵadvance(4);
         ɵɵproperty("ngIf", ctx.animal);
     } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton, NgIf], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-overview-example',
@@ -368,7 +368,7 @@ DialogOverviewExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewEx
         ɵɵadvance(4);
         ɵɵproperty("mat-dialog-close", ctx.data.animal);
     } }, directives: [MatDialogTitle, MatDialogContent, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExampleDialog, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogOverviewExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-overview-example-dialog',
@@ -416,7 +416,7 @@ DialogFromMenuExample.ɵcmp = ɵɵdefineComponent({ type: DialogFromMenuExample,
         const _r1 = ɵɵreference(4);
         ɵɵproperty("matMenuTriggerFor", _r1);
     } }, directives: [MatButton, MatMenuTrigger, MatMenu, MatMenuItem], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogFromMenuExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogFromMenuExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-from-menu-example',
@@ -439,7 +439,7 @@ DialogFromMenuExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogFromMenuEx
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatDialogContent, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogFromMenuExampleDialog, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogFromMenuExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-from-menu-dialog',
@@ -470,7 +470,7 @@ DialogHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DialogHarnessExample, s
     } }, decls: 1, vars: 0, template: function DialogHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, DialogHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
     } }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-harness-example',
@@ -531,7 +531,7 @@ DialogExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DialogExampl
         DialogHarnessExample,
         DialogOverviewExample,
         DialogOverviewExampleDialog] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DialogExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

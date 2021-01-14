@@ -48,8 +48,8 @@
                 i0.ɵɵproperty("ngIf", ctx.showFiller);
             }
         }, directives: [i2.MatDrawerContainer, i2.MatDrawer, i1.NgIf, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 500px;\n  height: 300px;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content[_ngcontent-%COMP%] {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  padding: 20px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavAutosizeExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavAutosizeExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-autosize-example',
@@ -125,8 +125,8 @@
                 i0.ɵɵproperty("value", false);
             }
         }, directives: [i2.MatDrawerContainer, i2.MatDrawer, i2.MatDrawerContent, i2$1.MatFormField, i2$1.MatLabel, i3$1.MatSelect, i4$1.MatOption, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  margin: 12px;\n  border: 1px solid #555;\n}\n\nmat-drawer-content[_ngcontent-%COMP%] {\n  padding: 12px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavBackdropExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavBackdropExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-backdrop-example',
@@ -209,8 +209,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav, i3.MatButton, i2.MatSidenavContent], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavDisableCloseExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavDisableCloseExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-disable-close-example',
@@ -242,8 +242,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i2.MatDrawerContainer, i2.MatDrawer, i2.MatDrawerContent], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  margin: 10px;\n  border: 1px solid #555;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavDrawerOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavDrawerOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-drawer-overview-example',
@@ -340,8 +340,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i3$2.MatToolbar, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i5.MatCheckbox, i1$1.NgControlStatus, i1$1.FormControlName, i2$1.MatFormField, i2$1.MatLabel, i1$1.NumberValueAccessor, i1$1.DefaultValueAccessor, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-header[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-footer[_ngcontent-%COMP%] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavFixedExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavFixedExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-fixed-example',
@@ -442,8 +442,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav, i3.MatButton, i4.MatRadioGroup, i1$1.NgControlStatus, i1$1.FormControlDirective, i4.MatRadioButton, i2.MatSidenavContent], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-radio-group[_ngcontent-%COMP%] {\n  display: block;\n  border: 1px solid #555;\n  margin: 20px;\n  padding: 10px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavModeExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavModeExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-mode-example',
@@ -532,8 +532,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i5.MatCheckbox, i1$1.NgControlStatus, i1$1.NgModel, i3.MatButton, i1.NgForOf], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events[_ngcontent-%COMP%] {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavOpenCloseExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavOpenCloseExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-open-close-example',
@@ -581,8 +581,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #eee;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-overview-example',
@@ -631,8 +631,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavPositionExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavPositionExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-position-example',
@@ -740,8 +740,8 @@
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
             }
         }, directives: [i1.NgIf, i3$2.MatToolbar, i3.MatButton, i5$1.MatIcon, i2.MatSidenavContainer, i2.MatSidenav, i7.MatNavList, i1.NgForOf, i2.MatSidenavContent, i7.MatListItem], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-toolbar[_ngcontent-%COMP%] {\n  position: fixed;\n  \n  z-index: 2;\n}\n\nh1.example-app-name[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1 0 auto;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavResponsiveExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavResponsiveExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sidenav-responsive-example',
@@ -813,8 +813,8 @@
                 SidenavPositionExample,
                 SidenavResponsiveExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SidenavExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

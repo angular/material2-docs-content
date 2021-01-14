@@ -26,7 +26,7 @@ MdcFormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: MdcFormFiel
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: function () { return [MatFormField, MatLabel, MyTelInput, MatIcon, MatSuffix, MatHint]; }, encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
         type: Component,
         args: [{
                 selector: 'mdc-form-field-custom-control-example',
@@ -163,7 +163,7 @@ MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example
         ɵɵproperty("formGroup", ctx.parts);
         ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId());
     } }, directives: [NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MyTelInput, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MyTelInput, [{
         type: Component,
         args: [{
                 selector: 'example-tel-input',
@@ -213,7 +213,7 @@ MdcFormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcFor
         MatFormFieldModule,
         MatIconModule,
         ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

@@ -57,7 +57,7 @@ SelectCustomTriggerExample.ɵcmp = ɵɵdefineComponent({ type: SelectCustomTrigg
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.toppingList);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatSelectTrigger, NgIf, NgForOf, MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectCustomTriggerExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectCustomTriggerExample, [{
         type: Component,
         args: [{
                 selector: 'select-custom-trigger-example',
@@ -129,7 +129,7 @@ SelectDisabledExample.ɵcmp = ɵɵdefineComponent({ type: SelectDisabledExample,
         ɵɵadvance(12);
         ɵɵproperty("disabled", ctx.disableSelect.value);
     } }, directives: [MatCheckbox, NgControlStatus, FormControlDirective, MatFormField, MatLabel, MatSelect, MatOption, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectDisabledExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
         args: [{
                 selector: 'select-disabled-example',
@@ -241,7 +241,7 @@ SelectErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: SelectErrorSt
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatHint, NgIf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
         type: Component,
         args: [{
                 selector: 'select-error-state-matcher-example',
@@ -335,7 +335,7 @@ SelectFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectFormExample, selecto
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatSelect, NgControlStatus, NgModel, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectFormExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
         args: [{
                 selector: 'select-form-example',
@@ -434,7 +434,7 @@ SelectHintErrorExample.ɵcmp = ɵɵdefineComponent({ type: SelectHintErrorExampl
         ɵɵadvance(8);
         ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
     } }, directives: [MatFormField, MatLabel, MatSelect, RequiredValidator, NgControlStatus, FormControlDirective, MatOption, NgForOf, NgIf, MatHint, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectHintErrorExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
         args: [{
                 selector: 'select-hint-error-example',
@@ -475,7 +475,7 @@ SelectMultipleExample.ɵcmp = ɵɵdefineComponent({ type: SelectMultipleExample,
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.toppingList);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectMultipleExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectMultipleExample, [{
         type: Component,
         args: [{
                 selector: 'select-multiple-example',
@@ -505,7 +505,7 @@ SelectNoRippleExample.ɵcmp = ɵɵdefineComponent({ type: SelectNoRippleExample,
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectNoRippleExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectNoRippleExample, [{
         type: Component,
         args: [{
                 selector: 'select-no-ripple-example',
@@ -621,7 +621,7 @@ SelectOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: SelectOptgroupExample,
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.pokemonGroups);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOptgroup], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectOptgroupExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
         args: [{
                 selector: 'select-optgroup-example',
@@ -690,7 +690,7 @@ SelectOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SelectOverviewExample,
         ɵɵadvance(6);
         ɵɵproperty("ngForOf", ctx.foods);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'select-overview-example',
@@ -729,7 +729,7 @@ SelectPanelClassExample.ɵcmp = ɵɵdefineComponent({ type: SelectPanelClassExam
         ɵɵpropertyInterpolate1("panelClass", "example-panel-", ctx.panelColor.value, "");
         ɵɵproperty("formControl", ctx.panelColor);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption], styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectPanelClassExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectPanelClassExample, [{
         type: Component,
         args: [{
                 selector: 'select-panel-class-example',
@@ -808,7 +808,7 @@ SelectResetExample.ɵcmp = ɵɵdefineComponent({ type: SelectResetExample, selec
         ɵɵadvance(8);
         ɵɵproperty("ngForOf", ctx.states);
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectResetExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectResetExample, [{
         type: Component,
         args: [{
                 selector: 'select-reset-example',
@@ -853,7 +853,7 @@ SelectValueBindingExample.ɵcmp = ɵɵdefineComponent({ type: SelectValueBinding
         ɵɵadvance(10);
         ɵɵtextInterpolate1("You selected: ", ctx.selected, "");
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectValueBindingExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectValueBindingExample, [{
         type: Component,
         args: [{
                 selector: 'select-value-binding-example',
@@ -957,7 +957,7 @@ SelectReactiveFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectReactiveForm
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectReactiveFormExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectReactiveFormExample, [{
         type: Component,
         args: [{
                 selector: 'select-reactive-form-example',
@@ -1054,7 +1054,7 @@ SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValue
         ɵɵadvance(2);
         ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectInitialValueExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectInitialValueExample, [{
         type: Component,
         args: [{
                 selector: 'select-initial-value-example',
@@ -1098,7 +1098,7 @@ SelectHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SelectHarnessExample, s
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.foods);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatOption], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'select-harness-example',
@@ -1170,7 +1170,7 @@ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExampl
         SelectReactiveFormExample,
         SelectResetExample,
         SelectValueBindingExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SelectExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

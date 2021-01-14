@@ -32,7 +32,7 @@ ToolbarBasicExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarBasicExample, sel
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatToolbar, MatButton, MatIcon], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarBasicExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ToolbarBasicExample, [{
         type: Component,
         args: [{
                 selector: 'toolbar-basic-example',
@@ -77,7 +77,7 @@ ToolbarMultirowExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarMultirowExampl
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatToolbar, MatToolbarRow, MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarMultirowExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ToolbarMultirowExample, [{
         type: Component,
         args: [{
                 selector: 'toolbar-multirow-example',
@@ -178,7 +178,7 @@ ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExampl
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatToolbar, MatButton, MatIcon, MatToolbarRow], styles: [".example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ToolbarOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'toolbar-overview-example',
@@ -218,7 +218,7 @@ ToolbarHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarHarnessExample,
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatToolbar, MatToolbarRow, MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ToolbarHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'toolbar-harness-example',
@@ -249,7 +249,7 @@ ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExam
         ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ToolbarExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

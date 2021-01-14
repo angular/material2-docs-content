@@ -42,8 +42,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CardFancyExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CardFancyExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'card-fancy-example',
@@ -69,8 +69,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatCard], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CardOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CardOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'card-overview-example',
@@ -118,8 +118,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CardHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CardHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'card-harness-example',
@@ -151,8 +151,8 @@
                 CardOverviewExample,
                 CardHarnessExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(CardExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CardExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

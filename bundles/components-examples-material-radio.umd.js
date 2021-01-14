@@ -49,8 +49,8 @@
                 i0.ɵɵtextInterpolate1("Your favorite season is: ", ctx.favoriteSeason, "");
             }
         }, directives: [i1.MatRadioGroup, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i1.MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(RadioNgModelExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RadioNgModelExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'radio-ng-model-example',
@@ -81,8 +81,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatRadioGroup, i1.MatRadioButton], styles: [".mat-radio-button[_ngcontent-%COMP%]    ~ .mat-radio-button[_ngcontent-%COMP%] {\n  margin-left: 16px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(RadioOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RadioOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'radio-overview-example',
@@ -116,8 +116,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatRadioGroup, i1.MatRadioButton], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(RadioHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RadioHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'radio-harness-example',
@@ -153,8 +153,8 @@
                 RadioNgModelExample,
                 RadioOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(RadioExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RadioExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

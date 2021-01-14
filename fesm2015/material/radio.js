@@ -41,7 +41,7 @@ RadioNgModelExample.ɵcmp = ɵɵdefineComponent({ type: RadioNgModelExample, sel
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Your favorite season is: ", ctx.favoriteSeason, "");
     } }, directives: [MatRadioGroup, NgControlStatus, NgModel, NgForOf, MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioNgModelExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(RadioNgModelExample, [{
         type: Component,
         args: [{
                 selector: 'radio-ng-model-example',
@@ -66,7 +66,7 @@ RadioOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RadioOverviewExample, s
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatRadioGroup, MatRadioButton], styles: [".mat-radio-button[_ngcontent-%COMP%]    ~ .mat-radio-button[_ngcontent-%COMP%] {\n  margin-left: 16px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(RadioOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'radio-overview-example',
@@ -94,7 +94,7 @@ RadioHarnessExample.ɵcmp = ɵɵdefineComponent({ type: RadioHarnessExample, sel
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatRadioGroup, MatRadioButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(RadioHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'radio-harness-example',
@@ -124,7 +124,7 @@ RadioExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function RadioExamples
         FormsModule], exports: [RadioHarnessExample,
         RadioNgModelExample,
         RadioOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(RadioExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

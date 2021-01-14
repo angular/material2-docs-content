@@ -42,8 +42,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MdcCardFancyExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcCardFancyExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'mdc-card-fancy-example',
@@ -70,8 +70,8 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcCardExamplesModule, { declarations: [MdcCardFancyExample], imports: [i2.MatButtonModule,
                 i1.MatCardModule], exports: [MdcCardFancyExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MdcCardExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcCardExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

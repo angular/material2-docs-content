@@ -560,8 +560,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i7.MatButton, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatPopoverEdit, i4.MatRowHoverContent, i4.MatEditOpen, i8.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'popover-edit-cell-span-mat-table-example',
@@ -848,8 +848,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatPopoverEdit, i4.MatRowHoverContent, i7.MatButton, i4.MatEditRevert, i4.MatEditClose, i4.MatEditOpen, i8.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'popover-edit-mat-table-flex-example',
@@ -1384,8 +1384,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatRowHoverContent, i7.MatButton, i8.MatIcon, i10.MatCheckbox, i4.MatPopoverEdit, i11.NgIf, i4.MatEditRevert, i4.MatEditClose, i4.MatEditOpen, i12.MatSelectionList, i11.NgForOf, i12.MatListOption, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 16%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PopoverEditMatTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PopoverEditMatTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'popover-edit-mat-table-example',
@@ -1654,8 +1654,8 @@
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
         }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatEditOpen, i4.MatPopoverEditTabOut, i4.MatRowHoverContent, i8.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"], changeDetection: 0 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'popover-edit-tab-out-mat-table-example',
@@ -1730,8 +1730,8 @@
                 PopoverEditMatTableFlexExample,
                 PopoverEditTabOutMatTableExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PopoverEditExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PopoverEditExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

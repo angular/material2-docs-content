@@ -57,8 +57,8 @@
                 i0.ɵɵproperty("matBadgeHidden", ctx.hidden);
             }
         }, directives: [i1.MatBadge, i2.MatButton, i3.MatIcon], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(BadgeOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BadgeOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'badge-overview-example',
@@ -99,8 +99,8 @@
                 i0.ɵɵproperty("matBadgeDisabled", ctx.disabled);
             }
         }, directives: [i2.MatButton, i1.MatBadge], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(BadgeHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BadgeHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'badge-harness-example',
@@ -131,8 +131,8 @@
                 i3.MatIconModule], exports: [BadgeOverviewExample,
                 BadgeHarnessExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(BadgeExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BadgeExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

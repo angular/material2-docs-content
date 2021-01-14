@@ -172,8 +172,8 @@
                 i0.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
             }
         }, directives: [i1.MatCard, i1.MatCardContent, i2.MatFormField, i2.MatLabel, i3.MatInput, i4.NumberValueAccessor, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i5.MatCheckbox, i6.NgIf, i1$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SliderConfigurableExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderConfigurableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-configurable-example',
@@ -206,8 +206,8 @@
                 i0.ɵɵproperty("displayWith", ctx.formatLabel);
             }
         }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SliderFormattingExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderFormattingExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-formatting-example',
@@ -231,8 +231,8 @@
                 i0.ɵɵelement(0, "mat-slider");
             }
         }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SliderOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-overview-example',
@@ -256,8 +256,8 @@
                 i0.ɵɵelement(0, "mat-slider", 0);
             }
         }, directives: [i1$1.MatSlider], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SliderHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-harness-example',
@@ -300,8 +300,8 @@
                 SliderHarnessExample,
                 SliderOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SliderExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

@@ -80,7 +80,7 @@ CheckboxConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxConfigur
         ɵɵadvance(7);
         ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
     } }, directives: [MatCard, MatCardContent, MatCheckbox, NgControlStatus, NgModel, MatRadioGroup, MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxConfigurableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CheckboxConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'checkbox-configurable-example',
@@ -171,7 +171,7 @@ CheckboxOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxOverviewExam
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.task.subtasks);
     } }, directives: [MatCheckbox, NgForOf, NgControlStatus, NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CheckboxOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'checkbox-overview-example',
@@ -201,7 +201,7 @@ CheckboxHarnessExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxHarnessExampl
         ɵɵadvance(2);
         ɵɵproperty("disabled", ctx.disabled);
     } }, directives: [MatCheckbox], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CheckboxHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'checkbox-harness-example',
@@ -233,7 +233,7 @@ CheckboxExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CheckboxEx
         FormsModule], exports: [CheckboxConfigurableExample,
         CheckboxOverviewExample,
         CheckboxHarnessExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CheckboxExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

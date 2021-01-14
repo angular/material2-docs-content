@@ -88,7 +88,7 @@ PaginatorConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorConfig
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.pageEvent);
     } }, directives: [MatFormField, MatLabel, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, MatPaginator, NgIf], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorConfigurableExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PaginatorConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'paginator-configurable-example',
@@ -109,7 +109,7 @@ PaginatorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorOverviewEx
     } if (rf & 2) {
         ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", ɵɵpureFunction0(3, _c0$1));
     } }, directives: [MatPaginator], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PaginatorOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'paginator-overview-example',
@@ -142,7 +142,7 @@ PaginatorHarnessExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorHarnessExam
     } if (rf & 2) {
         ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("showFirstLastButtons", ctx.showFirstLastButtons)("pageSizeOptions", ctx.pageSizeOptions)("pageIndex", ctx.pageIndex);
     } }, directives: [MatPaginator], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PaginatorHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'paginator-harness-example',
@@ -172,7 +172,7 @@ PaginatorExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Paginator
         FormsModule], exports: [PaginatorConfigurableExample,
         PaginatorHarnessExample,
         PaginatorOverviewExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PaginatorExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

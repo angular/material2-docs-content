@@ -131,8 +131,8 @@
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(11, 6, ctx.filteredFruits));
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i1.MatChipList, i3.NgForOf, i4.DefaultValueAccessor, i5.MatAutocompleteTrigger, i1.MatChipInput, i4.NgControlStatus, i4.FormControlDirective, i5.MatAutocomplete, i1.MatChip, i3.NgIf, i6.MatIcon, i1.MatChipRemove, i7.MatOption], pipes: [i3.AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsAutocompleteExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsAutocompleteExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'chips-autocomplete-example',
@@ -192,8 +192,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.vegetables);
             }
         }, directives: [i1.MatChipList, i2.CdkDropList, i3.NgForOf, i1.MatChip, i2.CdkDrag], styles: [".example-box.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip[_ngcontent-%COMP%]   .cdk-drop-list-dragging[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsDragDropExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsDragDropExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'chips-drag-drop-example',
@@ -288,8 +288,8 @@
                 i0.ɵɵproperty("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
             }
         }, directives: [i1$1.MatFormField, i1$1.MatLabel, i1.MatChipList, i3.NgForOf, i1.MatChipInput, i1.MatChip, i3.NgIf, i6.MatIcon, i1.MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsInputExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsInputExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'chips-input-example',
@@ -326,8 +326,8 @@
                 i0.ɵɵelementEnd();
             }
         }, directives: [i1.MatChipList, i1.MatChip], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'chips-overview-example',
@@ -375,8 +375,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.availableColors);
             }
         }, directives: [i1.MatChipList, i3.NgForOf, i1.MatChip], styles: ["mat-chip[_ngcontent-%COMP%] {\n  max-width: 200px;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsStackedExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsStackedExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'chips-stacked-example',
@@ -425,8 +425,8 @@
                 i0.ɵɵproperty("disabled", ctx.isDisabled)("aria-orientation", "horizontal");
             }
         }, directives: [i1.MatChipList, i1.MatChip, i1.MatChipRemove, i1.MatChipAvatar], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'chips-harness-example',
@@ -477,8 +477,8 @@
                 ChipsStackedExample,
                 ChipsHarnessExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ChipsExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [

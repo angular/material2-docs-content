@@ -35,7 +35,7 @@ CardFancyExample.ɵcmp = ɵɵdefineComponent({ type: CardFancyExample, selectors
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CardFancyExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CardFancyExample, [{
         type: Component,
         args: [{
                 selector: 'card-fancy-example',
@@ -55,7 +55,7 @@ CardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CardOverviewExample, sel
         ɵɵtext(1, "Simple card");
         ɵɵelementEnd();
     } }, directives: [MatCard], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CardOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CardOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'card-overview-example',
@@ -97,7 +97,7 @@ CardHarnessExample.ɵcmp = ɵɵdefineComponent({ type: CardHarnessExample, selec
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatButton], encapsulation: 2 });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CardHarnessExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CardHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'card-harness-example',
@@ -123,7 +123,7 @@ CardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CardExamplesMo
         MatCardModule], exports: [CardFancyExample,
         CardOverviewExample,
         CardHarnessExample] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(CardExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CardExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [

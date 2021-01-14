@@ -102,8 +102,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.sortedData);
             }
         }, directives: [i1.MatSort, i1.MatSortHeader, i2.NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SortOverviewExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SortOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sort-overview-example',
@@ -212,8 +212,8 @@
                 i0.ɵɵproperty("ngForOf", ctx.sortedData);
             }
         }, directives: [i1.MatSort, i1.MatSortHeader, i2.NgForOf], encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SortHarnessExample, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SortHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'sort-harness-example',
@@ -242,8 +242,8 @@
                 i1.MatSortModule], exports: [SortHarnessExample,
                 SortOverviewExample] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SortExamplesModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SortExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
