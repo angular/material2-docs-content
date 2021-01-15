@@ -869,9 +869,71 @@
             }], function () { return [{ type: i1.FormBuilder }]; }, null);
     })();
 
+    function StepperHarnessExample_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "One");
+        }
+    }
+    function StepperHarnessExample_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Two");
+        }
+    }
+    function StepperHarnessExample_ng_template_12_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Three");
+        }
+    }
+    /**
+     * @title Testing with MatStepperHarness
+     */
+    var StepperHarnessExample = /** @class */ (function () {
+        function StepperHarnessExample() {
+        }
+        return StepperHarnessExample;
+    }());
+    StepperHarnessExample.ɵfac = function StepperHarnessExample_Factory(t) { return new (t || StepperHarnessExample)(); };
+    StepperHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperHarnessExample, selectors: [["stepper-harness-example"]], decls: 15, vars: 0, consts: [["matStepLabel", ""], ["matStepperNext", ""], ["optional", ""], ["matStepperPrevious", ""]], template: function StepperHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-horizontal-stepper");
+                i0.ɵɵelementStart(1, "mat-step");
+                i0.ɵɵtemplate(2, StepperHarnessExample_ng_template_2_Template, 1, 0, "ng-template", 0);
+                i0.ɵɵelementStart(3, "button", 1);
+                i0.ɵɵtext(4, "Next");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "mat-step", 2);
+                i0.ɵɵtemplate(6, StepperHarnessExample_ng_template_6_Template, 1, 0, "ng-template", 0);
+                i0.ɵɵelementStart(7, "button", 3);
+                i0.ɵɵtext(8, "Previous");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(9, "button", 1);
+                i0.ɵɵtext(10, "Next");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(11, "mat-step", 2);
+                i0.ɵɵtemplate(12, StepperHarnessExample_ng_template_12_Template, 1, 0, "ng-template", 0);
+                i0.ɵɵelementStart(13, "button", 3);
+                i0.ɵɵtext(14, "Previous");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i3.MatHorizontalStepper, i3.MatStep, i3.MatStepLabel, i3.MatStepperNext, i3.MatStepperPrevious], encapsulation: 2 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(StepperHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-harness-example',
+                        templateUrl: 'stepper-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         StepperEditableExample,
         StepperErrorsExample,
+        StepperHarnessExample,
         StepperLabelPositionBottomExample,
         StepperOptionalExample,
         StepperOverviewExample,
@@ -894,6 +956,7 @@
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
                 StepperErrorsExample,
+                StepperHarnessExample,
                 StepperLabelPositionBottomExample,
                 StepperOptionalExample,
                 StepperOverviewExample,
@@ -904,6 +967,7 @@
                 i3.MatStepperModule,
                 i1.ReactiveFormsModule], exports: [StepperEditableExample,
                 StepperErrorsExample,
+                StepperHarnessExample,
                 StepperLabelPositionBottomExample,
                 StepperOptionalExample,
                 StepperOverviewExample,
@@ -935,6 +999,7 @@
     exports.StepperEditableExample = StepperEditableExample;
     exports.StepperErrorsExample = StepperErrorsExample;
     exports.StepperExamplesModule = StepperExamplesModule;
+    exports.StepperHarnessExample = StepperHarnessExample;
     exports.StepperLabelPositionBottomExample = StepperLabelPositionBottomExample;
     exports.StepperOptionalExample = StepperOptionalExample;
     exports.StepperOverviewExample = StepperOverviewExample;
