@@ -786,9 +786,58 @@ StepperVerticalExample.ɵcmp = ɵɵdefineComponent({ type: StepperVerticalExampl
             }]
     }], function () { return [{ type: FormBuilder }]; }, null); })();
 
+function StepperHarnessExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "One");
+} }
+function StepperHarnessExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "Two");
+} }
+function StepperHarnessExample_ng_template_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "Three");
+} }
+/**
+ * @title Testing with MatStepperHarness
+ */
+class StepperHarnessExample {
+}
+StepperHarnessExample.ɵfac = function StepperHarnessExample_Factory(t) { return new (t || StepperHarnessExample)(); };
+StepperHarnessExample.ɵcmp = ɵɵdefineComponent({ type: StepperHarnessExample, selectors: [["stepper-harness-example"]], decls: 15, vars: 0, consts: [["matStepLabel", ""], ["matStepperNext", ""], ["optional", ""], ["matStepperPrevious", ""]], template: function StepperHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-horizontal-stepper");
+        ɵɵelementStart(1, "mat-step");
+        ɵɵtemplate(2, StepperHarnessExample_ng_template_2_Template, 1, 0, "ng-template", 0);
+        ɵɵelementStart(3, "button", 1);
+        ɵɵtext(4, "Next");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(5, "mat-step", 2);
+        ɵɵtemplate(6, StepperHarnessExample_ng_template_6_Template, 1, 0, "ng-template", 0);
+        ɵɵelementStart(7, "button", 3);
+        ɵɵtext(8, "Previous");
+        ɵɵelementEnd();
+        ɵɵelementStart(9, "button", 1);
+        ɵɵtext(10, "Next");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(11, "mat-step", 2);
+        ɵɵtemplate(12, StepperHarnessExample_ng_template_12_Template, 1, 0, "ng-template", 0);
+        ɵɵelementStart(13, "button", 3);
+        ɵɵtext(14, "Previous");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatHorizontalStepper, MatStep, MatStepLabel, MatStepperNext, MatStepperPrevious], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'stepper-harness-example',
+                templateUrl: 'stepper-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     StepperEditableExample,
     StepperErrorsExample,
+    StepperHarnessExample,
     StepperLabelPositionBottomExample,
     StepperOptionalExample,
     StepperOverviewExample,
@@ -807,6 +856,7 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
         StepperErrorsExample,
+        StepperHarnessExample,
         StepperLabelPositionBottomExample,
         StepperOptionalExample,
         StepperOverviewExample,
@@ -817,6 +867,7 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
         MatStepperModule,
         ReactiveFormsModule], exports: [StepperEditableExample,
         StepperErrorsExample,
+        StepperHarnessExample,
         StepperLabelPositionBottomExample,
         StepperOptionalExample,
         StepperOverviewExample,
@@ -842,5 +893,5 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
  * Generated bundle index. Do not edit.
  */
 
-export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
+export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperHarnessExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
 //# sourceMappingURL=stepper.js.map
