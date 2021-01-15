@@ -3744,6 +3744,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/stepper"
         }
     },
+    "stepper-harness": {
+        "packagePath": "material/stepper/stepper-harness",
+        "title": "Testing with MatStepperHarness",
+        "componentName": "StepperHarnessExample",
+        "files": [
+            "stepper-harness-example.ts",
+            "stepper-harness-example.html",
+            "stepper-harness-example.spec.ts"
+        ],
+        "selector": "stepper-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "stepper-harness-example.ts",
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "material/stepper"
+        }
+    },
     "stepper-label-position-bottom": {
         "packagePath": "material/stepper/stepper-label-position-bottom",
         "title": "Stepper label bottom position",
