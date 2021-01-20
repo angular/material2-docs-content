@@ -107,8 +107,8 @@
     TextFieldAutofillMonitorExample.ɵfac = function TextFieldAutofillMonitorExample_Factory(t) { return new (t || TextFieldAutofillMonitorExample)(i0.ɵɵdirectiveInject(i1.AutofillMonitor)); };
     TextFieldAutofillMonitorExample.ɵcmp = i0.ɵɵdefineComponent({ type: TextFieldAutofillMonitorExample, selectors: [["text-field-autofill-monitor-example"]], viewQuery: function TextFieldAutofillMonitorExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0, true, i0.ElementRef);
-                i0.ɵɵviewQuery(_c1, true, i0.ElementRef);
+                i0.ɵɵviewQuery(_c0, 1, i0.ElementRef);
+                i0.ɵɵviewQuery(_c1, 1, i0.ElementRef);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -179,7 +179,7 @@
     TextFieldAutosizeTextareaExample.ɵfac = function TextFieldAutosizeTextareaExample_Factory(t) { return new (t || TextFieldAutosizeTextareaExample)(i0.ɵɵdirectiveInject(i0.NgZone)); };
     TextFieldAutosizeTextareaExample.ɵcmp = i0.ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0$1, true);
+                i0.ɵɵviewQuery(_c0$1, 1);
             }
             if (rf & 2) {
                 var _t = void 0;

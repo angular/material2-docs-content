@@ -22,8 +22,8 @@ class CdkPortalOverviewExample {
 }
 CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
 CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0, true);
-        ɵɵviewQuery(_c1, true);
+        ɵɵviewQuery(_c0, 1);
+        ɵɵviewQuery(_c1, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);

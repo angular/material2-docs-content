@@ -118,8 +118,8 @@ export class TableOverviewExample {
 }
 TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
 TableOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(MatPaginator, true);
-        i0.ɵɵviewQuery(MatSort, true);
+        i0.ɵɵviewQuery(MatPaginator, 1);
+        i0.ɵɵviewQuery(MatSort, 1);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
