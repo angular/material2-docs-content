@@ -191,9 +191,9 @@ export class MyTelInput {
 MyTelInput.nextId = 0;
 MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(MAT_FORM_FIELD, 8), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
 MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], viewQuery: function MyTelInput_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0, true);
-        i0.ɵɵviewQuery(_c1, true);
-        i0.ɵɵviewQuery(_c2, true);
+        i0.ɵɵviewQuery(_c0, 1);
+        i0.ɵɵviewQuery(_c1, 1);
+        i0.ɵɵviewQuery(_c2, 1);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.areaInput = _t.first);

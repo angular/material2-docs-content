@@ -24,7 +24,7 @@ export class DialogFromMenuExample {
 }
 DialogFromMenuExample.ɵfac = function DialogFromMenuExample_Factory(t) { return new (t || DialogFromMenuExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
 DialogFromMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogFromMenuExample, selectors: [["dialog-from-menu-example"]], viewQuery: function DialogFromMenuExample_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(_c0, true);
+        i0.ɵɵviewQuery(_c0, 1);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.menuTrigger = _t.first);

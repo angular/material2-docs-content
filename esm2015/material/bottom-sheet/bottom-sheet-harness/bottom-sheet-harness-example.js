@@ -18,7 +18,7 @@ export class BottomSheetHarnessExample {
 }
 BottomSheetHarnessExample.ɵfac = function BottomSheetHarnessExample_Factory(t) { return new (t || BottomSheetHarnessExample)(i0.ɵɵdirectiveInject(i1.MatBottomSheet)); };
 BottomSheetHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: BottomSheetHarnessExample, selectors: [["bottom-sheet-harness-example"]], viewQuery: function BottomSheetHarnessExample_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(TemplateRef, true);
+        i0.ɵɵviewQuery(TemplateRef, 1);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.template = _t.first);

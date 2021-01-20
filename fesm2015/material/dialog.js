@@ -398,7 +398,7 @@ class DialogFromMenuExample {
 }
 DialogFromMenuExample.ɵfac = function DialogFromMenuExample_Factory(t) { return new (t || DialogFromMenuExample)(ɵɵdirectiveInject(MatDialog)); };
 DialogFromMenuExample.ɵcmp = ɵɵdefineComponent({ type: DialogFromMenuExample, selectors: [["dialog-from-menu-example"]], viewQuery: function DialogFromMenuExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0, true);
+        ɵɵviewQuery(_c0, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.menuTrigger = _t.first);
@@ -463,7 +463,7 @@ class DialogHarnessExample {
 }
 DialogHarnessExample.ɵfac = function DialogHarnessExample_Factory(t) { return new (t || DialogHarnessExample)(ɵɵdirectiveInject(MatDialog)); };
 DialogHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DialogHarnessExample, selectors: [["dialog-harness-example"]], viewQuery: function DialogHarnessExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(TemplateRef, true);
+        ɵɵviewQuery(TemplateRef, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.dialogTemplate = _t.first);

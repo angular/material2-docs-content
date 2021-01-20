@@ -460,7 +460,7 @@
     DialogFromMenuExample.ɵfac = function DialogFromMenuExample_Factory(t) { return new (t || DialogFromMenuExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
     DialogFromMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogFromMenuExample, selectors: [["dialog-from-menu-example"]], viewQuery: function DialogFromMenuExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0, true);
+                i0.ɵɵviewQuery(_c0, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -543,7 +543,7 @@
     DialogHarnessExample.ɵfac = function DialogHarnessExample_Factory(t) { return new (t || DialogHarnessExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
     DialogHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogHarnessExample, selectors: [["dialog-harness-example"]], viewQuery: function DialogHarnessExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i0.TemplateRef, true);
+                i0.ɵɵviewQuery(i0.TemplateRef, 1);
             }
             if (rf & 2) {
                 var _t = void 0;

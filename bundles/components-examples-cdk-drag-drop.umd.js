@@ -891,7 +891,7 @@
     CdkDragDropRootElementExample.ɵfac = function CdkDragDropRootElementExample_Factory(t) { return new (t || CdkDragDropRootElementExample)(i0.ɵɵdirectiveInject(i1$1.Overlay), i0.ɵɵdirectiveInject(i0.ViewContainerRef)); };
     CdkDragDropRootElementExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkDragDropRootElementExample, selectors: [["cdk-drag-drop-root-element-example"]], viewQuery: function CdkDragDropRootElementExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i0.TemplateRef, true);
+                i0.ɵɵviewQuery(i0.TemplateRef, 1);
             }
             if (rf & 2) {
                 var _t = void 0;

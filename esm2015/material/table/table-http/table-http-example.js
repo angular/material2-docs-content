@@ -130,8 +130,8 @@ export class TableHttpExample {
 }
 TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(i0.ɵɵdirectiveInject(i1.HttpClient)); };
 TableHttpExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
-        i0.ɵɵviewQuery(MatPaginator, true);
-        i0.ɵɵviewQuery(MatSort, true);
+        i0.ɵɵviewQuery(MatPaginator, 1);
+        i0.ɵɵviewQuery(MatSort, 1);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);

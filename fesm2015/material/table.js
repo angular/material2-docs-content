@@ -1,5 +1,5 @@
 import { NgForOf, CurrencyPipe, NgIf, DatePipe, DecimalPipe, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵcontentQuery, ɵɵstaticViewQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, ContentChild, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵlistener, ɵɵpropertyInterpolate, ɵɵattribute, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵclassProp, ɵɵpureFunction0, ɵɵreference, ɵɵpipe, ɵɵpipeBind1, ɵɵtextInterpolate, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵstyleProp, ɵɵcontentQuery, ɵɵprojectionDef, ɵɵprojection, ContentChildren, ContentChild, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -969,8 +969,8 @@ class TableHttpExample {
 }
 TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
 TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatPaginator, true);
-        ɵɵviewQuery(MatSort, true);
+        ɵɵviewQuery(MatPaginator, 1);
+        ɵɵviewQuery(MatSort, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
@@ -1296,8 +1296,8 @@ class TableOverviewExample {
 }
 TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
 TableOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatPaginator, true);
-        ɵɵviewQuery(MatSort, true);
+        ɵɵviewQuery(MatPaginator, 1);
+        ɵɵviewQuery(MatSort, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
@@ -1448,7 +1448,7 @@ class TablePaginationExample {
 }
 TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
 TablePaginationExample.ɵcmp = ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatPaginator, true);
+        ɵɵviewQuery(MatPaginator, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
@@ -1944,7 +1944,7 @@ class TableSortingExample {
 }
 TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
 TableSortingExample.ɵcmp = ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatSort, true);
+        ɵɵviewQuery(MatSort, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
@@ -3127,7 +3127,7 @@ class TableWrappedExample {
 }
 TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
 TableWrappedExample.ɵcmp = ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0$6, true);
+        ɵɵviewQuery(_c0$6, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
@@ -3184,10 +3184,10 @@ class WrapperTable {
 }
 WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
 WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        ɵɵcontentQuery(dirIndex, MatNoDataRow, true);
-        ɵɵcontentQuery(dirIndex, MatHeaderRowDef, false);
-        ɵɵcontentQuery(dirIndex, MatRowDef, false);
-        ɵɵcontentQuery(dirIndex, MatColumnDef, false);
+        ɵɵcontentQuery(dirIndex, MatNoDataRow, 1);
+        ɵɵcontentQuery(dirIndex, MatHeaderRowDef, 0);
+        ɵɵcontentQuery(dirIndex, MatRowDef, 0);
+        ɵɵcontentQuery(dirIndex, MatColumnDef, 0);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.noDataRow = _t.first);
@@ -3195,7 +3195,7 @@ WrapperTable.ɵcmp = ɵɵdefineComponent({ type: WrapperTable, selectors: [["wra
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.rowDefs = _t);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.columnDefs = _t);
     } }, viewQuery: function WrapperTable_Query(rf, ctx) { if (rf & 1) {
-        ɵɵstaticViewQuery(MatTable, true);
+        ɵɵviewQuery(MatTable, 3);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.table = _t.first);

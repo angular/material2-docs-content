@@ -1135,8 +1135,8 @@
     TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(i0.ɵɵdirectiveInject(i1$3.HttpClient)); };
     TableHttpExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i5.MatPaginator, true);
-                i0.ɵɵviewQuery(i4.MatSort, true);
+                i0.ɵɵviewQuery(i5.MatPaginator, 1);
+                i0.ɵɵviewQuery(i4.MatSort, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -1536,8 +1536,8 @@
     TableOverviewExample.ɵfac = function TableOverviewExample_Factory(t) { return new (t || TableOverviewExample)(); };
     TableOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableOverviewExample, selectors: [["table-overview-example"]], viewQuery: function TableOverviewExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i5.MatPaginator, true);
-                i0.ɵɵviewQuery(i4.MatSort, true);
+                i0.ɵɵviewQuery(i5.MatPaginator, 1);
+                i0.ɵɵviewQuery(i4.MatSort, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -1721,7 +1721,7 @@
     TablePaginationExample.ɵfac = function TablePaginationExample_Factory(t) { return new (t || TablePaginationExample)(); };
     TablePaginationExample.ɵcmp = i0.ɵɵdefineComponent({ type: TablePaginationExample, selectors: [["table-pagination-example"]], viewQuery: function TablePaginationExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i5.MatPaginator, true);
+                i0.ɵɵviewQuery(i5.MatPaginator, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -2332,7 +2332,7 @@
     TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
     TableSortingExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i4.MatSort, true);
+                i0.ɵɵviewQuery(i4.MatSort, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -3768,7 +3768,7 @@
     TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
     TableWrappedExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableWrappedExample, selectors: [["table-wrapped-example"]], viewQuery: function TableWrappedExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0$6, true);
+                i0.ɵɵviewQuery(_c0$6, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -3837,10 +3837,10 @@
     WrapperTable.ɵfac = function WrapperTable_Factory(t) { return new (t || WrapperTable)(); };
     WrapperTable.ɵcmp = i0.ɵɵdefineComponent({ type: WrapperTable, selectors: [["wrapper-table"]], contentQueries: function WrapperTable_ContentQueries(rf, ctx, dirIndex) {
             if (rf & 1) {
-                i0.ɵɵcontentQuery(dirIndex, i1$1.MatNoDataRow, true);
-                i0.ɵɵcontentQuery(dirIndex, i1$1.MatHeaderRowDef, false);
-                i0.ɵɵcontentQuery(dirIndex, i1$1.MatRowDef, false);
-                i0.ɵɵcontentQuery(dirIndex, i1$1.MatColumnDef, false);
+                i0.ɵɵcontentQuery(dirIndex, i1$1.MatNoDataRow, 1);
+                i0.ɵɵcontentQuery(dirIndex, i1$1.MatHeaderRowDef, 0);
+                i0.ɵɵcontentQuery(dirIndex, i1$1.MatRowDef, 0);
+                i0.ɵɵcontentQuery(dirIndex, i1$1.MatColumnDef, 0);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -3851,7 +3851,7 @@
             }
         }, viewQuery: function WrapperTable_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵstaticViewQuery(i1$1.MatTable, true);
+                i0.ɵɵviewQuery(i1$1.MatTable, 3);
             }
             if (rf & 2) {
                 var _t = void 0;

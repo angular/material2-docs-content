@@ -88,8 +88,8 @@ class ChipsAutocompleteExample {
 }
 ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
 ChipsAutocompleteExample.ɵcmp = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0, true);
-        ɵɵviewQuery(_c1, true);
+        ɵɵviewQuery(_c0, 1);
+        ɵɵviewQuery(_c1, 1);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.fruitInput = _t.first);

@@ -120,7 +120,7 @@
     BottomSheetHarnessExample.ɵfac = function BottomSheetHarnessExample_Factory(t) { return new (t || BottomSheetHarnessExample)(i0.ɵɵdirectiveInject(i1.MatBottomSheet)); };
     BottomSheetHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: BottomSheetHarnessExample, selectors: [["bottom-sheet-harness-example"]], viewQuery: function BottomSheetHarnessExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(i0.TemplateRef, true);
+                i0.ɵɵviewQuery(i0.TemplateRef, 1);
             }
             if (rf & 2) {
                 var _t = void 0;
