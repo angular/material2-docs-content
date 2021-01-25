@@ -35,13 +35,6 @@
   <span header-link="MatSelectHarness"></span>
   <code>MatSelectHarness</code>
   
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="" class="docs-api-class-extends-type">
-      MatFormFieldControlHarness
-    </a>
-  </span>
-  
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-select in tests.</p>
 </p>
 
@@ -107,8 +100,8 @@ mode all options will be clicked, otherwise the harness will pick the first matc
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        filter</p>
-      <code class="docs-api-method-parameter-type">OptionHarnessFilters = {}</code>
+        filter<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">OptionFilters</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -227,8 +220,8 @@ mode all options will be clicked, otherwise the harness will pick the first matc
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        filter</p>
-      <code class="docs-api-method-parameter-type">Pick&lt;OptgroupHarnessFilters, &quot;selector&quot; | &quot;labelText&quot;&gt; = {}</code>
+        filter<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">Pick&lt;OptionGroupFilters, Exclude&lt;keyof OptionGroupFilters, &quot;ancestor&quot;&gt;&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -243,7 +236,7 @@ mode all options will be clicked, otherwise the harness will pick the first matc
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatOptgroupHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;OptionGroup[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -278,8 +271,8 @@ mode all options will be clicked, otherwise the harness will pick the first matc
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        filter</p>
-      <code class="docs-api-method-parameter-type">Pick&lt;OptionHarnessFilters, &quot;text&quot; | &quot;isSelected&quot; | &quot;selector&quot;&gt; = {}</code>
+        filter<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">Pick&lt;OptionFilters, Exclude&lt;keyof OptionFilters, &quot;ancestor&quot;&gt;&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -294,7 +287,7 @@ mode all options will be clicked, otherwise the harness will pick the first matc
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatOptionHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;Option[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
