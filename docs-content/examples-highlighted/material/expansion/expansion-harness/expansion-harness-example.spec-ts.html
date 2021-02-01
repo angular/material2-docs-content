@@ -1,10 +1,13 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatExpansionPanelHarness, MatAccordionHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/expansion/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatExpansionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/expansion&#x27;</span>;
+<span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
 <span class="hljs-keyword">import</span> {ExpansionHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./expansion-harness-example&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;ExpansionHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
@@ -15,17 +18,15 @@ describe(<span class="hljs-string">&#x27;ExpansionHarnessExample&#x27;</span>, <
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
-  beforeEach(
-    waitForAsync(<span class="hljs-function">() =&gt;</span> {
-      TestBed.configureTestingModule({
-        <span class="hljs-attr">imports</span>: [MatExpansionModule],
-        <span class="hljs-attr">declarations</span>: [ExpansionHarnessExample]
-      }).compileComponents();
-      fixture = TestBed.createComponent(ExpansionHarnessExample);
-      fixture.detectChanges();
-      loader = TestbedHarnessEnvironment.loader(fixture);
-    })
-  );
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatExpansionModule, NoopAnimationsModule],
+      <span class="hljs-attr">declarations</span>: [ExpansionHarnessExample]
+    }).compileComponents();
+    fixture = TestBed.createComponent(ExpansionHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
 
   it(<span class="hljs-string">&#x27;should be able to load accordion&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> accordions = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatAccordionHarness);

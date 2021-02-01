@@ -1,9 +1,11 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatGridListHarness, MatGridTileHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatGridListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list&#x27;</span>;
 <span class="hljs-keyword">import</span> {GridListHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-harness-example&#x27;</span>;
 
@@ -15,17 +17,15 @@ describe(<span class="hljs-string">&#x27;GridListHarnessExample&#x27;</span>, <s
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
-  beforeEach(
-    waitForAsync(<span class="hljs-function">() =&gt;</span> {
-      TestBed.configureTestingModule({
-        <span class="hljs-attr">imports</span>: [MatGridListModule],
-        <span class="hljs-attr">declarations</span>: [GridListHarnessExample]
-      }).compileComponents();
-      fixture = TestBed.createComponent(GridListHarnessExample);
-      fixture.detectChanges();
-      loader = TestbedHarnessEnvironment.loader(fixture);
-    })
-  );
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatGridListModule],
+      <span class="hljs-attr">declarations</span>: [GridListHarnessExample]
+    }).compileComponents();
+    fixture = TestBed.createComponent(GridListHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
 
   it(<span class="hljs-string">&#x27;should be able to load grid-list harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> harnesses = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatGridListHarness);
