@@ -1,9 +1,11 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatStepperHarness, MatStepperNextHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
@@ -17,17 +19,15 @@ describe(<span class="hljs-string">&#x27;StepperHarnessExample&#x27;</span>, <sp
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
-  beforeEach(
-    waitForAsync(<span class="hljs-function">() =&gt;</span> {
-      TestBed.configureTestingModule({
-        <span class="hljs-attr">imports</span>: [MatStepperModule, NoopAnimationsModule, ReactiveFormsModule],
-        <span class="hljs-attr">declarations</span>: [StepperHarnessExample],
-      }).compileComponents();
-      fixture = TestBed.createComponent(StepperHarnessExample);
-      fixture.detectChanges();
-      loader = TestbedHarnessEnvironment.loader(fixture);
-    })
-  );
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatStepperModule, NoopAnimationsModule, ReactiveFormsModule],
+      <span class="hljs-attr">declarations</span>: [StepperHarnessExample],
+    }).compileComponents();
+    fixture = TestBed.createComponent(StepperHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
 
   it(<span class="hljs-string">&#x27;should load all stepper harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> steppers = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatStepperHarness);

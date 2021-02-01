@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatChipHarness, MatChipListboxHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
@@ -13,20 +13,20 @@
 describe(<span class="hljs-string">&#x27;ChipsHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;ChipsHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
-  beforeEach(
-    waitForAsync(<span class="hljs-function">() =&gt;</span> {
-      TestBed.configureTestingModule({
-        <span class="hljs-attr">imports</span>: [MatChipsModule, NoopAnimationsModule],
-        <span class="hljs-attr">declarations</span>: [ChipsHarnessExample]
-      }).compileComponents();
-      fixture = TestBed.createComponent(ChipsHarnessExample);
-      fixture.detectChanges();
-      loader = TestbedHarnessEnvironment.loader(fixture);
-    })
-  );
+
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatChipsModule, NoopAnimationsModule],
+      <span class="hljs-attr">declarations</span>: [ChipsHarnessExample]
+    }).compileComponents();
+    fixture = TestBed.createComponent(ChipsHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
 
   it(<span class="hljs-string">&#x27;should get whether a chip list is disabled&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.getHarness(MatChipListboxHarness);

@@ -1,9 +1,11 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressSpinnerHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
 <span class="hljs-keyword">import</span> {ProgressSpinnerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./progress-spinner-harness-example&#x27;</span>;
 
@@ -15,17 +17,15 @@ describe(<span class="hljs-string">&#x27;ProgressSpinnerHarnessExample&#x27;</sp
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
-  beforeEach(
-    waitForAsync(<span class="hljs-function">() =&gt;</span> {
-      TestBed.configureTestingModule({
-        <span class="hljs-attr">imports</span>: [MatProgressSpinnerModule],
-        <span class="hljs-attr">declarations</span>: [ProgressSpinnerHarnessExample]
-      }).compileComponents();
-      fixture = TestBed.createComponent(ProgressSpinnerHarnessExample);
-      fixture.detectChanges();
-      loader = TestbedHarnessEnvironment.loader(fixture);
-    })
-  );
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatProgressSpinnerModule],
+      <span class="hljs-attr">declarations</span>: [ProgressSpinnerHarnessExample]
+    }).compileComponents();
+    fixture = TestBed.createComponent(ProgressSpinnerHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
 
   it(<span class="hljs-string">&#x27;should load all progress spinner harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> progressSpinners = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatProgressSpinnerHarness);

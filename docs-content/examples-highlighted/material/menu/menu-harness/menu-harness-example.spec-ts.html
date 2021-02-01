@@ -1,12 +1,13 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatMenuHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
-  <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
 <span class="hljs-keyword">import</span> {MenuHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/overlay&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;MenuHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
@@ -17,19 +18,14 @@ describe(<span class="hljs-string">&#x27;MenuHarnessExample&#x27;</span>, <span 
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
-  beforeEach(
-    waitForAsync(<span class="hljs-function">() =&gt;</span> {
-      TestBed.configureTestingModule({
-        <span class="hljs-attr">imports</span>: [MatMenuModule, NoopAnimationsModule],
-        <span class="hljs-attr">declarations</span>: [MenuHarnessExample]
-      }).compileComponents();
-    }));
-
-  beforeEach(<span class="hljs-function">() =&gt;</span> {
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatMenuModule, NoopAnimationsModule],
+      <span class="hljs-attr">declarations</span>: [MenuHarnessExample]
+    }).compileComponents();
     fixture = TestBed.createComponent(MenuHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);
-    inject([OverlayContainer], <span class="hljs-function">() =&gt;</span> {})();
   });
 
   it(<span class="hljs-string">&#x27;should load all menu harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
