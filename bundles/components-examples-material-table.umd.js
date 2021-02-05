@@ -4065,6 +4065,157 @@
         { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
     ];
 
+    function TableRecycleRowsExample_th_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "th", 9);
+            i0.ɵɵtext(1, " No. ");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function TableRecycleRowsExample_td_3_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "td", 10);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var element_r10 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
+        }
+    }
+    function TableRecycleRowsExample_th_5_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "th", 9);
+            i0.ɵɵtext(1, " Name ");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function TableRecycleRowsExample_td_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "td", 10);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var element_r11 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
+        }
+    }
+    function TableRecycleRowsExample_th_8_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "th", 9);
+            i0.ɵɵtext(1, " Weight ");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function TableRecycleRowsExample_td_9_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "td", 10);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var element_r12 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
+        }
+    }
+    function TableRecycleRowsExample_th_11_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "th", 9);
+            i0.ɵɵtext(1, " Symbol ");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function TableRecycleRowsExample_td_12_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "td", 10);
+            i0.ɵɵtext(1);
+            i0.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var element_r13 = ctx.$implicit;
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
+        }
+    }
+    function TableRecycleRowsExample_tr_13_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelement(0, "tr", 11);
+        }
+    }
+    function TableRecycleRowsExample_tr_14_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelement(0, "tr", 12);
+        }
+    }
+    var ELEMENT_DATA$g = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Table that uses the recycle view repeater strategy.
+     */
+    var TableRecycleRowsExample = /** @class */ (function () {
+        function TableRecycleRowsExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$g;
+        }
+        return TableRecycleRowsExample;
+    }());
+    TableRecycleRowsExample.ɵfac = function TableRecycleRowsExample_Factory(t) { return new (t || TableRecycleRowsExample)(); };
+    TableRecycleRowsExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableRecycleRowsExample, selectors: [["table-recycle-rows-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "recycleRows", "", 1, "example-table", "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableRecycleRowsExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "table", 0);
+                i0.ɵɵelementContainerStart(1, 1);
+                i0.ɵɵtemplate(2, TableRecycleRowsExample_th_2_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(3, TableRecycleRowsExample_td_3_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵelementContainerStart(4, 4);
+                i0.ɵɵtemplate(5, TableRecycleRowsExample_th_5_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(6, TableRecycleRowsExample_td_6_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵelementContainerStart(7, 5);
+                i0.ɵɵtemplate(8, TableRecycleRowsExample_th_8_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(9, TableRecycleRowsExample_td_9_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵelementContainerStart(10, 6);
+                i0.ɵɵtemplate(11, TableRecycleRowsExample_th_11_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(12, TableRecycleRowsExample_td_12_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵtemplate(13, TableRecycleRowsExample_tr_13_Template, 1, 0, "tr", 7);
+                i0.ɵɵtemplate(14, TableRecycleRowsExample_tr_14_Template, 1, 0, "tr", 8);
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("dataSource", ctx.dataSource);
+                i0.ɵɵadvance(13);
+                i0.ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+                i0.ɵɵadvance(1);
+                i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+            }
+        }, directives: [i1$1.MatTable, i1$1.MatRecycleRows, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableRecycleRowsExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'table-recycle-rows-example',
+                        styleUrls: ['table-recycle-rows-example.css'],
+                        templateUrl: 'table-recycle-rows-example.html',
+                    }]
+            }], null, null);
+    })();
+
     function TableHarnessExample_th_2_Template(rf, ctx) {
         if (rf & 1) {
             i0.ɵɵelementStart(0, "th", 11);
@@ -4266,7 +4417,8 @@
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
         TableWrappedExample, WrapperTable,
-        TableReorderableExample, TableHarnessExample,
+        TableReorderableExample, TableRecycleRowsExample,
+        TableHarnessExample,
     ];
     var TableExamplesModule = /** @class */ (function () {
         function TableExamplesModule() {
@@ -4300,7 +4452,8 @@
                 TableStickyFooterExample, TableStickyHeaderExample,
                 TableTextColumnExample, TableTextColumnAdvancedExample,
                 TableWrappedExample, WrapperTable,
-                TableReorderableExample, TableHarnessExample], imports: [i2.CommonModule,
+                TableReorderableExample, TableRecycleRowsExample,
+                TableHarnessExample], imports: [i2.CommonModule,
                 i1.MatButtonModule,
                 i2$1.MatButtonToggleModule,
                 i2$2.MatCheckboxModule,
@@ -4322,7 +4475,8 @@
                 TableStickyFooterExample, TableStickyHeaderExample,
                 TableTextColumnExample, TableTextColumnAdvancedExample,
                 TableWrappedExample, WrapperTable,
-                TableReorderableExample, TableHarnessExample] });
+                TableReorderableExample, TableRecycleRowsExample,
+                TableHarnessExample] });
     })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableExamplesModule, [{
@@ -4365,6 +4519,7 @@
     exports.TableMultipleHeaderFooterExample = TableMultipleHeaderFooterExample;
     exports.TableOverviewExample = TableOverviewExample;
     exports.TablePaginationExample = TablePaginationExample;
+    exports.TableRecycleRowsExample = TableRecycleRowsExample;
     exports.TableReorderableExample = TableReorderableExample;
     exports.TableRowContextExample = TableRowContextExample;
     exports.TableSelectionExample = TableSelectionExample;

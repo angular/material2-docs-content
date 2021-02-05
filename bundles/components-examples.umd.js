@@ -1160,6 +1160,23 @@
                 "importSpecifier": "cdk/table"
             }
         },
+        "cdk-table-recycle-rows": {
+            "packagePath": "cdk/table/cdk-table-recycle-rows",
+            "title": "Table that uses the recycle view repeater strategy.",
+            "componentName": "CdkTableRecycleRowsExample",
+            "files": [
+                "cdk-table-recycle-rows-example.ts",
+                "cdk-table-recycle-rows-example.html",
+                "cdk-table-recycle-rows-example.css"
+            ],
+            "selector": "cdk-table-recycle-rows-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-table-recycle-rows-example.ts",
+            "module": {
+                "name": "CdkTableExamplesModule",
+                "importSpecifier": "cdk/table"
+            }
+        },
         "text-field-autofill-directive": {
             "packagePath": "cdk/text-field/text-field-autofill-directive",
             "title": "Monitoring autofill state with cdkAutofill",
@@ -4343,6 +4360,23 @@
             "selector": "table-pagination-example",
             "additionalComponents": [],
             "primaryFile": "table-pagination-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
+        "table-recycle-rows": {
+            "packagePath": "material/table/table-recycle-rows",
+            "title": "Table that uses the recycle view repeater strategy.",
+            "componentName": "TableRecycleRowsExample",
+            "files": [
+                "table-recycle-rows-example.ts",
+                "table-recycle-rows-example.html",
+                "table-recycle-rows-example.css"
+            ],
+            "selector": "table-recycle-rows-example",
+            "additionalComponents": [],
+            "primaryFile": "table-recycle-rows-example.ts",
             "module": {
                 "name": "TableExamplesModule",
                 "importSpecifier": "material/table"

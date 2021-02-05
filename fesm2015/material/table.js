@@ -8,7 +8,7 @@ import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSpinner, MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
-import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableDataSource, MatNoDataRow, MatFooterCellDef, MatFooterRowDef, MatFooterCell, MatFooterRow, MatTextColumn, MatTableModule } from '@angular/material/table';
+import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableDataSource, MatNoDataRow, MatFooterCellDef, MatFooterRowDef, MatFooterCell, MatFooterRow, MatTextColumn, MatRecycleRows, MatTableModule } from '@angular/material/table';
 import { moveItemInArray, CdkDropList, CdkDrag, DragDropModule } from '@angular/cdk/drag-drop';
 import { CdkTableModule } from '@angular/cdk/table';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -3376,6 +3376,127 @@ const ELEMENT_DATA$f = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
+function TableRecycleRowsExample_th_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " No. ");
+    ɵɵelementEnd();
+} }
+function TableRecycleRowsExample_td_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r10 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r10.position, " ");
+} }
+function TableRecycleRowsExample_th_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Name ");
+    ɵɵelementEnd();
+} }
+function TableRecycleRowsExample_td_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r11 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r11.name, " ");
+} }
+function TableRecycleRowsExample_th_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Weight ");
+    ɵɵelementEnd();
+} }
+function TableRecycleRowsExample_td_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r12 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r12.weight, " ");
+} }
+function TableRecycleRowsExample_th_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Symbol ");
+    ɵɵelementEnd();
+} }
+function TableRecycleRowsExample_td_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r13 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
+} }
+function TableRecycleRowsExample_tr_13_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 11);
+} }
+function TableRecycleRowsExample_tr_14_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 12);
+} }
+const ELEMENT_DATA$g = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * @title Table that uses the recycle view repeater strategy.
+ */
+class TableRecycleRowsExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$g;
+    }
+}
+TableRecycleRowsExample.ɵfac = function TableRecycleRowsExample_Factory(t) { return new (t || TableRecycleRowsExample)(); };
+TableRecycleRowsExample.ɵcmp = ɵɵdefineComponent({ type: TableRecycleRowsExample, selectors: [["table-recycle-rows-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "recycleRows", "", 1, "example-table", "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableRecycleRowsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableRecycleRowsExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableRecycleRowsExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableRecycleRowsExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableRecycleRowsExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableRecycleRowsExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableRecycleRowsExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableRecycleRowsExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableRecycleRowsExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, TableRecycleRowsExample_tr_13_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(14, TableRecycleRowsExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [MatTable, MatRecycleRows, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TableRecycleRowsExample, [{
+        type: Component,
+        args: [{
+                selector: 'table-recycle-rows-example',
+                styleUrls: ['table-recycle-rows-example.css'],
+                templateUrl: 'table-recycle-rows-example.html',
+            }]
+    }], null, null); })();
+
 function TableHarnessExample_th_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 11);
     ɵɵtext(1, "No.");
@@ -3537,7 +3658,8 @@ const EXAMPLES = [
     TableStickyFooterExample, TableStickyHeaderExample,
     TableTextColumnExample, TableTextColumnAdvancedExample,
     TableWrappedExample, WrapperTable,
-    TableReorderableExample, TableHarnessExample,
+    TableReorderableExample, TableRecycleRowsExample,
+    TableHarnessExample,
 ];
 class TableExamplesModule {
 }
@@ -3567,7 +3689,8 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
         TableWrappedExample, WrapperTable,
-        TableReorderableExample, TableHarnessExample], imports: [CommonModule,
+        TableReorderableExample, TableRecycleRowsExample,
+        TableHarnessExample], imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -3589,7 +3712,8 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
         TableWrappedExample, WrapperTable,
-        TableReorderableExample, TableHarnessExample] }); })();
+        TableReorderableExample, TableRecycleRowsExample,
+        TableHarnessExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TableExamplesModule, [{
         type: NgModule,
         args: [{
@@ -3617,5 +3741,5 @@ TableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TableExamples
  * Generated bundle index. Do not edit.
  */
 
-export { TableBasicExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=table.js.map

@@ -1,4 +1,4 @@
-import { CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow, CdkTableModule } from '@angular/cdk/table';
+import { CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow, CdkRecycleRows, CdkTableModule } from '@angular/cdk/table';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs';
@@ -423,10 +423,151 @@ class ExampleDataSource$2 extends DataSource {
     disconnect() { }
 }
 
+function CdkTableRecycleRowsExample_th_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " No. ");
+    ɵɵelementEnd();
+} }
+function CdkTableRecycleRowsExample_td_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r10 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r10.position, " ");
+} }
+function CdkTableRecycleRowsExample_th_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Name ");
+    ɵɵelementEnd();
+} }
+function CdkTableRecycleRowsExample_td_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r11 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r11.name, " ");
+} }
+function CdkTableRecycleRowsExample_th_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Weight ");
+    ɵɵelementEnd();
+} }
+function CdkTableRecycleRowsExample_td_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r12 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r12.weight, " ");
+} }
+function CdkTableRecycleRowsExample_th_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Symbol ");
+    ɵɵelementEnd();
+} }
+function CdkTableRecycleRowsExample_td_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r13 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
+} }
+function CdkTableRecycleRowsExample_tr_13_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 11);
+} }
+function CdkTableRecycleRowsExample_tr_14_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 12);
+} }
+const ELEMENT_DATA$3 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * @title Table that uses the recycle view repeater strategy.
+ */
+class CdkTableRecycleRowsExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$3();
+    }
+}
+CdkTableRecycleRowsExample.ɵfac = function CdkTableRecycleRowsExample_Factory(t) { return new (t || CdkTableRecycleRowsExample)(); };
+CdkTableRecycleRowsExample.ɵcmp = ɵɵdefineComponent({ type: CdkTableRecycleRowsExample, selectors: [["cdk-table-recycle-rows-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", "recycleRows", "", 1, "example-table", 3, "dataSource"], ["cdkColumnDef", "position"], ["class", "example-row", "cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", "", 1, "example-row"], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableRecycleRowsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, CdkTableRecycleRowsExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, CdkTableRecycleRowsExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, CdkTableRecycleRowsExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, CdkTableRecycleRowsExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, CdkTableRecycleRowsExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, CdkTableRecycleRowsExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, CdkTableRecycleRowsExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, CdkTableRecycleRowsExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, CdkTableRecycleRowsExample_tr_13_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(14, CdkTableRecycleRowsExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("cdkHeaderRowDef", ctx.displayedColumns);
+        ɵɵadvance(1);
+        ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
+    } }, directives: [CdkTable, CdkRecycleRows, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-row[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTableRecycleRowsExample, [{
+        type: Component,
+        args: [{
+                selector: 'cdk-table-recycle-rows-example',
+                styleUrls: ['cdk-table-recycle-rows-example.css'],
+                templateUrl: 'cdk-table-recycle-rows-example.html',
+            }]
+    }], null, null); })();
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+class ExampleDataSource$3 extends DataSource {
+    constructor() {
+        super(...arguments);
+        /** Stream of data that is provided to the table. */
+        this.data = new BehaviorSubject(ELEMENT_DATA$3);
+    }
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
+    connect() {
+        return this.data;
+    }
+    disconnect() { }
+}
+
 const EXAMPLES = [
     CdkTableBasicExample,
     CdkTableFlexBasicExample,
     CdkTableFixedLayoutExample,
+    CdkTableRecycleRowsExample,
 ];
 class CdkTableExamplesModule {
 }
@@ -436,9 +577,11 @@ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableEx
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
         CdkTableFlexBasicExample,
-        CdkTableFixedLayoutExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
+        CdkTableFixedLayoutExample,
+        CdkTableRecycleRowsExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
         CdkTableFlexBasicExample,
-        CdkTableFixedLayoutExample] }); })();
+        CdkTableFixedLayoutExample,
+        CdkTableRecycleRowsExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkTableExamplesModule, [{
         type: NgModule,
         args: [{
@@ -455,5 +598,5 @@ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableEx
  * Generated bundle index. Do not edit.
  */
 
-export { CdkTableBasicExample, CdkTableExamplesModule, CdkTableFixedLayoutExample, CdkTableFlexBasicExample };
+export { CdkTableBasicExample, CdkTableExamplesModule, CdkTableFixedLayoutExample, CdkTableFlexBasicExample, CdkTableRecycleRowsExample };
 //# sourceMappingURL=table.js.map
