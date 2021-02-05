@@ -195,12 +195,22 @@ directive.</p>
       <p>Right now there is no formal support for adding a selection UI to the table, but Angular Material
 does offer the right components and pieces to set this up. The following steps are one solution but
 it is not the only way to incorporate row selection in your table.</p>
-<h5>1. Add a selection model</h5><p>Get started by setting up a <code>SelectionModel</code> from <code>@angular/cdk/collections</code> that will maintain the
+
+        <h5 id="1-add-a-selection-model" class="docs-header-link">
+          <span header-link="1-add-a-selection-model"></span>
+          1. Add a selection model
+        </h5>
+      <p>Get started by setting up a <code>SelectionModel</code> from <code>@angular/cdk/collections</code> that will maintain the
 selection state.</p>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> initialSelection = [];
 <span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
 <span class="hljs-built_in">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);</code></pre>
-<h5>2. Define a selection column</h5><p>Add a column definition for displaying the row checkboxes, including a master toggle checkbox for
+
+        <h5 id="2-define-a-selection-column" class="docs-header-link">
+          <span header-link="2-define-a-selection-column"></span>
+          2. Define a selection column
+        </h5>
+      <p>Add a column definition for displaying the row checkboxes, including a master toggle checkbox for
 the header. The column name should be added to the list of displayed columns provided to the
 header and data row.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;select&quot;</span>&gt;</span>
@@ -217,7 +227,12 @@ header and data row.</p>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span></code></pre>
-<h5>3. Add event handling logic</h5><p>Implement the behavior in your component&#39;s logic to handle the header&#39;s master toggle and checking
+
+        <h5 id="3-add-event-handling-logic" class="docs-header-link">
+          <span header-link="3-add-event-handling-logic"></span>
+          3. Add event handling logic
+        </h5>
+      <p>Implement the behavior in your component&#39;s logic to handle the header&#39;s master toggle and checking
 if all rows are selected.</p>
 <pre><code class="language-js"><span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
 <span class="hljs-function"><span class="hljs-title">isAllSelected</span>(<span class="hljs-params"></span>)</span> {
@@ -232,7 +247,12 @@ if all rows are selected.</p>
       <span class="hljs-built_in">this</span>.selection.clear() :
       <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
 }</code></pre>
-<h5>4. Include overflow styling</h5><p>Finally, adjust the styling for the select column so that its overflow is not hidden. This allows
+
+        <h5 id="4-include-overflow-styling" class="docs-header-link">
+          <span header-link="4-include-overflow-styling"></span>
+          4. Include overflow styling
+        </h5>
+      <p>Finally, adjust the styling for the select column so that its overflow is not hidden. This allows
 the ripple effect to extend beyond the cell.</p>
 <pre><code class="language-css"><span class="hljs-selector-class">.mat-column-select</span> {
   <span class="hljs-attribute">overflow</span>: initial;

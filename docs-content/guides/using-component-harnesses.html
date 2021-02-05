@@ -11,17 +11,32 @@ on a component&#39;s internals.</p>
 <!-- TODO(mmalerba): add list of components that are ready -->
 
 <p>This guide discusses the advantages of using component test harnesses and shows how to use them.</p>
-<h2>Benefits of component test harnesses</h2><p>There are two primary benefits to using the Angular Material component harnesses in your tests:</p>
+
+        <h2 id="benefits-of-component-test-harnesses" class="docs-header-link">
+          <span header-link="benefits-of-component-test-harnesses"></span>
+          Benefits of component test harnesses
+        </h2>
+      <p>There are two primary benefits to using the Angular Material component harnesses in your tests:</p>
 <ol>
 <li>Harnesses make tests easier to read and understand with straightforward APIs.</li>
 <li>Harnesses make tests more robust and less likely to break when updating Angular Material.</li>
 </ol>
 <p>The following sections will illustrate these benefits in more detail.</p>
-<h2>Which kinds of tests can use harnesses?</h2><p>The Angular CDK&#39;s component harnesses are designed to work in multiple different test environments.
+
+        <h2 id="which-kinds-of-tests-can-use-harnesses" class="docs-header-link">
+          <span header-link="which-kinds-of-tests-can-use-harnesses"></span>
+          Which kinds of tests can use harnesses?
+        </h2>
+      <p>The Angular CDK&#39;s component harnesses are designed to work in multiple different test environments.
 Support currently includes Angular&#39;s Testbed environment in Karma unit tests and Protractor
 end-to-end (e2e) tests. You can also support additional environments by creating custom extensions
 of the CDK&#39;s <code>HarnessEnvironment</code> and <code>TestElement</code> classes.</p>
-<h2>Getting started</h2><p>The foundation for all test harnesses lives in <code>@angular/cdk/testing</code>. Start by importing either
+
+        <h2 id="getting-started" class="docs-header-link">
+          <span header-link="getting-started"></span>
+          Getting started
+        </h2>
+      <p>The foundation for all test harnesses lives in <code>@angular/cdk/testing</code>. Start by importing either
 <code>TestbedHarnessEnvironment</code> or <code>ProtractorHarnessEnvironment</code> based on whether you&#39;re writing a
 unit test or an e2e test. From the <code>HarnessEnvironment</code>, you can get a <code>HarnessLoader</code> instance,
 which you will use to load Angular Material component harnesses. For example, if we&#39;re writing unit
@@ -50,7 +65,12 @@ are in. </li>
 <li><code>@angular/cdk/testing/protractor</code> (not shown above) contains symbols that are used only in
 Protractor tests.</li>
 </ul>
-<h2>Loading an Angular Material harness</h2><p>The <code>HarnessLoader</code> provides two methods that can be used to load harnesses, <code>getHarness</code> and
+
+        <h2 id="loading-an-angular-material-harness" class="docs-header-link">
+          <span header-link="loading-an-angular-material-harness"></span>
+          Loading an Angular Material harness
+        </h2>
+      <p>The <code>HarnessLoader</code> provides two methods that can be used to load harnesses, <code>getHarness</code> and
 <code>getAllHarnesses</code>. The <code>getHarness</code> method gets a harness for the first instance
 of the matching component, while <code>getAllHarnesses</code> gets a list of harnesses, one
 for each instance of the corresponding component. For example, suppose <code>UserProfile</code> contains three
@@ -101,12 +121,17 @@ as <code>[mat-button]</code>)</li>
   <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
       MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>})
 });</code></pre>
-<h2>Using a harness to interact with an Angular Material component</h2><p>The Angular Material component harnesses generally expose methods to either perform actions that a
+
+        <h2 id="using-a-harness-to-interact-with-an-angular-material-component" class="docs-header-link">
+          <span header-link="using-a-harness-to-interact-with-an-angular-material-component"></span>
+          Using a harness to interact with an Angular Material component
+        </h2>
+      <p>The Angular Material component harnesses generally expose methods to either perform actions that a
 real user could perform or to inspect component state that a real user might perceive. For
 example, <code>MatButtonHarness</code> has methods to click, focus, and blur the <code>mat-button</code>, as well as
 methods to get the text of the button and its disabled state. Because <code>MatButton</code> is a very simple
 component, these harness methods might not seem very different from working directly with the DOM.
-However more complex harnesses like <code>MatSelectHarness</code> have methods like <code>open</code> and <code>isOpen</code> which
+However, more complex harnesses like <code>MatSelectHarness</code> have methods like <code>open</code> and <code>isOpen</code> which
 capture more knowledge about the component&#39;s internals.</p>
 <p>A test using the <code>MatButtonHarness</code> to interact with a <code>mat-button</code> might look like the following:</p>
 <pre><code class="language-ts">it(<span class="hljs-string">&#x27;should mark confirmed when ok button clicked&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
@@ -120,7 +145,12 @@ capture more knowledge about the component&#39;s internals.</p>
 unit tests. The CDK&#39;s component harnesses automatically invoke change detection after performing
 actions and before reading state. The harness also automatically waits for the fixture to be stable,
 which will cause the test to wait for <code>setTimeout</code>, <code>Promise</code>, etc.</p>
-<h2>Comparison with and without component harnesses</h2><p>Consider an <code>&lt;issue-report-selector&gt;</code> component that you want to test. It allows a user to
+
+        <h2 id="comparison-with-and-without-component-harnesses" class="docs-header-link">
+          <span header-link="comparison-with-and-without-component-harnesses"></span>
+          Comparison with and without component harnesses
+        </h2>
+      <p>Consider an <code>&lt;issue-report-selector&gt;</code> component that you want to test. It allows a user to
 choose an issue type and display the necessary form create report for that issue type. You need a 
 test to verify that when the user chooses an issue type the proper report displays. First consider
 what the test might look like without using component harnesses:</p>
@@ -184,9 +214,9 @@ what the test might look like without using component harnesses:</p>
 Specifically in this example, it makes the &quot;open the mat-select&quot; logic more obvious. An unfamiliar
 reader may not know what clicking on <code>.mat-select-trigger</code> does, but <code>await select.open()</code> is
 self-explanatory.</p>
-<p>The harnesses also make clear which option should be selected. Without the harness, you need a
-comment explaining what <code>options[1]</code> means, but with the <code>MatSelectHarness</code> you can use the <code>text</code>
-filter rather than the index and the code becomes self-documenting.</p>
+<p>The harnesses also make clear which option should be selected. Without the harness, you need a comment that
+explains what <code>options[1]</code> means. With <code>MatSelectHarness</code>, however, the filter API makes the code
+self-documenting.</p>
 <p>Finally, the repeated calls to <code>detectChanges</code> and <code>whenStable()</code> can obfuscate the underlying
 intent of the test. By using the harness APIs, you eliminate these calls, making the test more
 concise.</p>

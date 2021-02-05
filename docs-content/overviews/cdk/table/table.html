@@ -47,7 +47,12 @@ its definition).</p>
 bindings on the row element. Any content placed <em>inside</em> of the header row or data row template
 will be ignored, as the rendered content of the row comes from the cell templates described
 above.</p>
-<h5>Example: table with three columns</h5><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
+
+        <h5 id="example-table-with-three-columns" class="docs-header-link">
+          <span header-link="example-table-with-three-columns"></span>
+          Example: table with three columns
+        </h5>
+      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
@@ -78,7 +83,12 @@ nor use the same ordering. For example, to display the table with only <code>age
 and <code>username</code> and in that order, then the row and header definitions would be written as:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
 <p>Event and property bindings can be added directly to the row element.</p>
-<h5>Example: table with event and class binding</h5><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>
+
+        <h5 id="example-table-with-event-and-class-binding" class="docs-header-link">
+          <span header-link="example-table-with-event-and-class-binding"></span>
+          Example: table with event and class binding
+        </h5>
+      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;age&#x27;, &#x27;username&#x27;]&quot;</span>
     (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;handleHeaderRowClick(row)&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 
@@ -86,7 +96,12 @@ and <code>username</code> and in that order, then the row and header definitions
     [<span class="hljs-attr">class.can-vote</span>]=<span class="hljs-string">&quot;row.age &gt;= 18&quot;</span>
     (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;handleRowClick(row)&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
-<h5>Styling columns</h5><p>Each header and row cell will be provided a CSS class that includes its column. For example,
+
+        <h5 id="styling-columns" class="docs-header-link">
+          <span header-link="styling-columns"></span>
+          Styling columns
+        </h5>
+      <p>Each header and row cell will be provided a CSS class that includes its column. For example,
 cells that are displayed in the column <code>name</code> will be given the class <code>cdk-column-name</code>. This allows
 columns to be given styles that will match across the header and rows.</p>
 <p>Since columns can be given any string for its name, its possible that it cannot be directly applied
@@ -105,7 +120,12 @@ Whenever the data source emits data to this stream, the table will render an upd
 updates. This can be based on <em>anything</em>: websocket connections, user interaction, model updates,
 time-based intervals, etc. Most commonly, updates will be triggered by user interactions like
 sorting and pagination.</p>
-<h5><code>trackBy</code></h5><p>To improve performance, a <code>trackBy</code> function can be provided to the table similar to Angular’s
+
+        <h5 id="trackby" class="docs-header-link">
+          <span header-link="trackby"></span>
+          <code>trackBy</code>
+        </h5>
+      <p>To improve performance, a <code>trackBy</code> function can be provided to the table similar to Angular’s
 <a href="https://angular.io/api/common/NgForOf#change-propagation"><code>ngFor</code> <code>trackBy</code></a>. This informs the
 table how to uniquely identify rows to track how the data changes with each update.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;myTrackById&quot;</span>&gt;</span></code></pre>

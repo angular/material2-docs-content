@@ -79,14 +79,24 @@ portion of the data.</p>
 <p>A <code>trackBy</code> function can be specified and works the same as the <code>*ngFor</code> <code>trackBy</code>. The <code>index</code>
 passed to the tracking function will be the index in the data source, not the index in the rendered
 portion.</p>
-<h5>View recycling</h5><p>To improve rendering performance, <code>*cdkVirtualFor</code> caches previously created views after
+
+        <h5 id="view-recycling" class="docs-header-link">
+          <span header-link="view-recycling"></span>
+          View recycling
+        </h5>
+      <p>To improve rendering performance, <code>*cdkVirtualFor</code> caches previously created views after
 they are no longer needed. When a new view would normally be created, a cached view
 is reused instead. The size of the view cache can be adjusted via the <code>templateCacheSize</code>
 property; setting this size to <code>0</code> disables caching. If your templates are expensive in terms of
 memory you may wish to reduce this number to avoid spending too much memory on the template cache.</p>
 <div material-docs-example="cdk-virtual-scroll-template-cache"></div>
 
-<h5>Specifying data</h5><p><code>*cdkVirtualFor</code> accepts data from an <code>Array</code>, <code>Observable&lt;Array&gt;</code>, or <code>DataSource</code>. The
+
+        <h5 id="specifying-data" class="docs-header-link">
+          <span header-link="specifying-data"></span>
+          Specifying data
+        </h5>
+      <p><code>*cdkVirtualFor</code> accepts data from an <code>Array</code>, <code>Observable&lt;Array&gt;</code>, or <code>DataSource</code>. The
 <code>DataSource</code> for the virtual scroll is the same one used by the table and tree components. A
 <code>DataSource</code> is simply an abstract class that has two methods: <code>connect</code> and <code>disconnect</code>. The
 <code>connect</code> method will be called by the virtual scroll viewport to receive a stream that emits the

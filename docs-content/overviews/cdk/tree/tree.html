@@ -61,10 +61,20 @@ data to be used in any bindings in the node template.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
   {{node.key}}: {{node.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span></code></pre>
-<h5>Flat tree node template</h5><p>Flat tree uses each node&#39;s <code>level</code> to render the hierarchy of the nodes.
+
+        <h5 id="flat-tree-node-template" class="docs-header-link">
+          <span header-link="flat-tree-node-template"></span>
+          Flat tree node template
+        </h5>
+      <p>Flat tree uses each node&#39;s <code>level</code> to render the hierarchy of the nodes.
 The &quot;indent&quot; for a given node is accomplished by adding spacing to each node based on its level.
 Spacing can be added either by applying the <code>cdkNodePadding</code> directive or by applying custom styles.</p>
-<h5>Nested tree node template</h5><p>When using nested tree nodes, the node template must contain a <code>cdkTreeNodeOutlet</code>, which marks
+
+        <h5 id="nested-tree-node-template" class="docs-header-link">
+          <span header-link="nested-tree-node-template"></span>
+          Nested tree node template
+        </h5>
+      <p>When using nested tree nodes, the node template must contain a <code>cdkTreeNodeOutlet</code>, which marks
 where the children of the node will be rendered.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> *<span class="hljs-attr">cdkNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
   {{node.value}}
@@ -148,7 +158,12 @@ nodes should be sent to tree component based on current expansion status.</p>
         </h4>
       <p>The data source for nested tree has an option to leave the node expansion/collapsing event for each
 tree node component to handle.</p>
-<h5><code>trackBy</code></h5><p>To improve performance, a <code>trackBy</code> function can be provided to the tree similar to Angular’s
+
+        <h5 id="trackby" class="docs-header-link">
+          <span header-link="trackby"></span>
+          <code>trackBy</code>
+        </h5>
+      <p>To improve performance, a <code>trackBy</code> function can be provided to the tree similar to Angular’s
 <a href="https://angular.io/api/common/NgForOf#change-propagation"><code>ngFor</code> <code>trackBy</code></a>. This informs the
 tree how to uniquely identify nodes to track how the data changes with each update.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">&quot;treeControl&quot;</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;trackByFn&quot;</span>&gt;</span></code></pre>
