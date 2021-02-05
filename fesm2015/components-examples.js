@@ -3676,6 +3676,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/snack-bar"
         }
     },
+    "snack-bar-harness": {
+        "packagePath": "material/snack-bar/snack-bar-harness",
+        "title": "Testing with MatSnackBarHarness",
+        "componentName": "SnackBarHarnessExample",
+        "files": [
+            "snack-bar-harness-example.ts",
+            "snack-bar-harness-example.html",
+            "snack-bar-harness-example.spec.ts"
+        ],
+        "selector": "snack-bar-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "snack-bar-harness-example.ts",
+        "module": {
+            "name": "SnackBarExamplesModule",
+            "importSpecifier": "material/snack-bar"
+        }
+    },
     "snack-bar-overview": {
         "packagePath": "material/snack-bar/snack-bar-overview",
         "title": "Basic snack-bar",
