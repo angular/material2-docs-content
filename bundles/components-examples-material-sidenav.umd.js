@@ -751,11 +751,43 @@
             }], function () { return [{ type: i0.ChangeDetectorRef }, { type: i1$2.MediaMatcher }]; }, null);
     })();
 
+    /**
+     * @title Testing with MatSidenavHarness
+     */
+    var SidenavHarnessExample = /** @class */ (function () {
+        function SidenavHarnessExample() {
+        }
+        return SidenavHarnessExample;
+    }());
+    SidenavHarnessExample.ɵfac = function SidenavHarnessExample_Factory(t) { return new (t || SidenavHarnessExample)(); };
+    SidenavHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: SidenavHarnessExample, selectors: [["sidenav-harness-example"]], decls: 5, vars: 0, consts: [["mode", "side"]], template: function SidenavHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-drawer-container");
+                i0.ɵɵelementStart(1, "mat-drawer", 0);
+                i0.ɵɵtext(2, "Hello from the drawer");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-drawer-content");
+                i0.ɵɵtext(4, "Hello from the content");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i2.MatDrawerContainer, i2.MatDrawer, i2.MatDrawerContent], encapsulation: 2 });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SidenavHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'sidenav-harness-example',
+                        templateUrl: 'sidenav-harness-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         SidenavAutosizeExample,
         SidenavBackdropExample,
         SidenavDisableCloseExample,
         SidenavDrawerOverviewExample,
+        SidenavHarnessExample,
         SidenavFixedExample,
         SidenavModeExample,
         SidenavOpenCloseExample,
@@ -787,6 +819,7 @@
                 SidenavBackdropExample,
                 SidenavDisableCloseExample,
                 SidenavDrawerOverviewExample,
+                SidenavHarnessExample,
                 SidenavFixedExample,
                 SidenavModeExample,
                 SidenavOpenCloseExample,
@@ -806,6 +839,7 @@
                 SidenavBackdropExample,
                 SidenavDisableCloseExample,
                 SidenavDrawerOverviewExample,
+                SidenavHarnessExample,
                 SidenavFixedExample,
                 SidenavModeExample,
                 SidenavOpenCloseExample,
@@ -847,6 +881,7 @@
     exports.SidenavDrawerOverviewExample = SidenavDrawerOverviewExample;
     exports.SidenavExamplesModule = SidenavExamplesModule;
     exports.SidenavFixedExample = SidenavFixedExample;
+    exports.SidenavHarnessExample = SidenavHarnessExample;
     exports.SidenavModeExample = SidenavModeExample;
     exports.SidenavOpenCloseExample = SidenavOpenCloseExample;
     exports.SidenavOverviewExample = SidenavOverviewExample;

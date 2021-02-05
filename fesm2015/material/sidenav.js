@@ -654,11 +654,36 @@ SidenavResponsiveExample.ɵcmp = ɵɵdefineComponent({ type: SidenavResponsiveEx
             }]
     }], function () { return [{ type: ChangeDetectorRef }, { type: MediaMatcher }]; }, null); })();
 
+/**
+ * @title Testing with MatSidenavHarness
+ */
+class SidenavHarnessExample {
+}
+SidenavHarnessExample.ɵfac = function SidenavHarnessExample_Factory(t) { return new (t || SidenavHarnessExample)(); };
+SidenavHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SidenavHarnessExample, selectors: [["sidenav-harness-example"]], decls: 5, vars: 0, consts: [["mode", "side"]], template: function SidenavHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-drawer-container");
+        ɵɵelementStart(1, "mat-drawer", 0);
+        ɵɵtext(2, "Hello from the drawer");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-drawer-content");
+        ɵɵtext(4, "Hello from the content");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatDrawerContainer, MatDrawer, MatDrawerContent], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'sidenav-harness-example',
+                templateUrl: 'sidenav-harness-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     SidenavAutosizeExample,
     SidenavBackdropExample,
     SidenavDisableCloseExample,
     SidenavDrawerOverviewExample,
+    SidenavHarnessExample,
     SidenavFixedExample,
     SidenavModeExample,
     SidenavOpenCloseExample,
@@ -686,6 +711,7 @@ SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExam
         SidenavBackdropExample,
         SidenavDisableCloseExample,
         SidenavDrawerOverviewExample,
+        SidenavHarnessExample,
         SidenavFixedExample,
         SidenavModeExample,
         SidenavOpenCloseExample,
@@ -705,6 +731,7 @@ SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExam
         SidenavBackdropExample,
         SidenavDisableCloseExample,
         SidenavDrawerOverviewExample,
+        SidenavHarnessExample,
         SidenavFixedExample,
         SidenavModeExample,
         SidenavOpenCloseExample,
@@ -737,5 +764,5 @@ SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExam
  * Generated bundle index. Do not edit.
  */
 
-export { SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavExamplesModule, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample };
+export { SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavExamplesModule, SidenavFixedExample, SidenavHarnessExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample };
 //# sourceMappingURL=sidenav.js.map

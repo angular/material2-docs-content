@@ -3419,6 +3419,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/sidenav"
         }
     },
+    "sidenav-harness": {
+        "packagePath": "material/sidenav/sidenav-harness",
+        "title": "Testing with MatSidenavHarness",
+        "componentName": "SidenavHarnessExample",
+        "files": [
+            "sidenav-harness-example.ts",
+            "sidenav-harness-example.html",
+            "sidenav-harness-example.spec.ts"
+        ],
+        "selector": "sidenav-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "sidenav-harness-example.ts",
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "material/sidenav"
+        }
+    },
     "sidenav-mode": {
         "packagePath": "material/sidenav/sidenav-mode",
         "title": "Sidenav with configurable mode",
