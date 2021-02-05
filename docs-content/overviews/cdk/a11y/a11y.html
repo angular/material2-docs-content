@@ -1,5 +1,10 @@
 <div class="docs-markdown"><p>The <code>a11y</code> package provides a number of tools to improve accessibility, described below.</p>
-<h2>ListKeyManager</h2><p><code>ListKeyManager</code> manages the active option in a list of items based on keyboard interaction.
+
+        <h2 id="listkeymanager" class="docs-header-link">
+          <span header-link="listkeymanager"></span>
+          ListKeyManager
+        </h2>
+      <p><code>ListKeyManager</code> manages the active option in a list of items based on keyboard interaction.
 Intended to be used with components that correspond to a <code>role=&quot;menu&quot;</code> or <code>role=&quot;listbox&quot;</code> pattern.</p>
 
         <h3 id="basic-usage" class="docs-header-link">
@@ -53,7 +58,12 @@ Each item managed must implement the
   setInactiveStyles(): <span class="hljs-built_in">void</span>;
 }</code></pre>
 <p>Each item must also have an ID bound to the listbox&#39;s or menu&#39;s <code>aria-activedescendant</code>.</p>
-<h2>FocusTrap</h2><p>The <code>cdkTrapFocus</code> directive traps <kbd>Tab</kbd> key focus within an element. This is intended to
+
+        <h2 id="focustrap" class="docs-header-link">
+          <span header-link="focustrap"></span>
+          FocusTrap
+        </h2>
+      <p>The <code>cdkTrapFocus</code> directive traps <kbd>Tab</kbd> key focus within an element. This is intended to
 be used to create accessible experience for components like
 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal">modal dialogs</a>, where focus must be
 constrained.</p>
@@ -86,10 +96,20 @@ trapped. When using the tab key, focus will move through this region and wrap ar
 <p><strong>Note:</strong> If you&#39;re using <code>cdkFocusInitial</code> together with the <code>CdkTrapFocus</code> directive, nothing
 will happen unless you&#39;ve enabled the <code>cdkTrapFocusAutoCapture</code> option as well. This is due to
 <code>CdkTrapFocus</code> not capturing focus on initialization by default.</p>
-<h2>InteractivityChecker</h2><p><code>InteractivityChecker</code> is used to check the interactivity of an element, capturing disabled,
+
+        <h2 id="interactivitychecker" class="docs-header-link">
+          <span header-link="interactivitychecker"></span>
+          InteractivityChecker
+        </h2>
+      <p><code>InteractivityChecker</code> is used to check the interactivity of an element, capturing disabled,
 visible, tabbable, and focusable states for accessibility purposes. See the API docs for more
 details.</p>
-<h2>LiveAnnouncer</h2><p><code>LiveAnnouncer</code> is used to announce messages for screen-reader users using an <code>aria-live</code> region.
+
+        <h2 id="liveannouncer" class="docs-header-link">
+          <span header-link="liveannouncer"></span>
+          LiveAnnouncer
+        </h2>
+      <p><code>LiveAnnouncer</code> is used to announce messages for screen-reader users using an <code>aria-live</code> region.
 See <a href="https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-live">the W3C&#39;s WAI-ARIA</a>
 for more information on aria-live regions.</p>
 
@@ -104,7 +124,12 @@ for more information on aria-live regions.</p>
    liveAnnouncer.announce(<span class="hljs-string">&quot;Hey Google&quot;</span>);
  }
 }</code></pre>
-<h2>FocusMonitor</h2><p>The <code>FocusMonitor</code> is an injectable service that can be used to listen for changes in the focus
+
+        <h2 id="focusmonitor" class="docs-header-link">
+          <span header-link="focusmonitor"></span>
+          FocusMonitor
+        </h2>
+      <p>The <code>FocusMonitor</code> is an injectable service that can be used to listen for changes in the focus
 state of an element. It&#39;s more powerful than just listening for <code>focus</code> or <code>blur</code> events because it
 tells you how the element was focused (via mouse, keyboard, touch, or programmatically). It also
 allows listening for focus on descendant elements if desired.</p>
@@ -150,7 +175,12 @@ the host element with <code>checkChildren</code> set to <code>true</code>. Each 
 <code>cdkFocusChange</code> that will emit the new <code>FocusOrigin</code> whenever it changes.</p>
 <div material-docs-example="focus-monitor-directives"></div>
 
-<h2>Styling utilities</h2><p>The CDK <code>a11y</code> package comes with a set of CSS styles that can be used when building accessible
+
+        <h2 id="styling-utilities" class="docs-header-link">
+          <span header-link="styling-utilities"></span>
+          Styling utilities
+        </h2>
+      <p>The CDK <code>a11y</code> package comes with a set of CSS styles that can be used when building accessible
 components. To take advantage of them, you have to include the styles in your global stylesheet.
 If you&#39;re using Material together with the CDK, these styles have been included for you already.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/cdk/text-field/text-field&#x27;</span>;

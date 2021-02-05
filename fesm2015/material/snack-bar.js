@@ -1,4 +1,4 @@
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵtemplate, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatInput, MatInputModule } from '@angular/material/input';
@@ -185,8 +185,35 @@ SnackBarPositionExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarPositionExam
             }]
     }], function () { return [{ type: MatSnackBar }]; }, null); })();
 
+function SnackBarHarnessExample_ng_template_0_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "Hello from the snackbar");
+} }
+/**
+ * @title Testing with MatSnackBarHarness
+ */
+class SnackBarHarnessExample {
+    constructor(snackBar) {
+        this.snackBar = snackBar;
+    }
+    open(message, action = '', config) {
+        return this.snackBar.open(message, action, config);
+    }
+}
+SnackBarHarnessExample.ɵfac = function SnackBarHarnessExample_Factory(t) { return new (t || SnackBarHarnessExample)(ɵɵdirectiveInject(MatSnackBar)); };
+SnackBarHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarHarnessExample, selectors: [["snack-bar-harness-example"]], decls: 1, vars: 0, template: function SnackBarHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵtemplate(0, SnackBarHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
+    } }, encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SnackBarHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'snack-bar-harness-example',
+                templateUrl: 'snack-bar-harness-example.html',
+            }]
+    }], function () { return [{ type: MatSnackBar }]; }, null); })();
+
 const EXAMPLES = [
     SnackBarComponentExample,
+    SnackBarHarnessExample,
     SnackBarOverviewExample,
     SnackBarPositionExample,
 ];
@@ -201,12 +228,14 @@ SnackBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SnackBarEx
             MatSnackBarModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SnackBarExamplesModule, { declarations: [SnackBarComponentExample,
+        SnackBarHarnessExample,
         SnackBarOverviewExample,
         SnackBarPositionExample, PizzaPartyComponent], imports: [FormsModule,
         MatButtonModule,
         MatInputModule,
         MatSelectModule,
         MatSnackBarModule], exports: [SnackBarComponentExample,
+        SnackBarHarnessExample,
         SnackBarOverviewExample,
         SnackBarPositionExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SnackBarExamplesModule, [{
@@ -229,5 +258,5 @@ SnackBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SnackBarEx
  * Generated bundle index. Do not edit.
  */
 
-export { PizzaPartyComponent, SnackBarComponentExample, SnackBarExamplesModule, SnackBarOverviewExample, SnackBarPositionExample };
+export { PizzaPartyComponent, SnackBarComponentExample, SnackBarExamplesModule, SnackBarHarnessExample, SnackBarOverviewExample, SnackBarPositionExample };
 //# sourceMappingURL=snack-bar.js.map

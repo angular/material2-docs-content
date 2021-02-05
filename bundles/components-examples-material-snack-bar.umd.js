@@ -511,8 +511,43 @@
             }], function () { return [{ type: i1.MatSnackBar }]; }, null);
     })();
 
+    function SnackBarHarnessExample_ng_template_0_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Hello from the snackbar");
+        }
+    }
+    /**
+     * @title Testing with MatSnackBarHarness
+     */
+    var SnackBarHarnessExample = /** @class */ (function () {
+        function SnackBarHarnessExample(snackBar) {
+            this.snackBar = snackBar;
+        }
+        SnackBarHarnessExample.prototype.open = function (message, action, config) {
+            if (action === void 0) { action = ''; }
+            return this.snackBar.open(message, action, config);
+        };
+        return SnackBarHarnessExample;
+    }());
+    SnackBarHarnessExample.ɵfac = function SnackBarHarnessExample_Factory(t) { return new (t || SnackBarHarnessExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
+    SnackBarHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarHarnessExample, selectors: [["snack-bar-harness-example"]], decls: 1, vars: 0, template: function SnackBarHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵtemplate(0, SnackBarHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
+            }
+        }, encapsulation: 2 });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'snack-bar-harness-example',
+                        templateUrl: 'snack-bar-harness-example.html',
+                    }]
+            }], function () { return [{ type: i1.MatSnackBar }]; }, null);
+    })();
+
     var EXAMPLES = [
         SnackBarComponentExample,
+        SnackBarHarnessExample,
         SnackBarOverviewExample,
         SnackBarPositionExample,
     ];
@@ -531,12 +566,14 @@
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SnackBarExamplesModule, { declarations: [SnackBarComponentExample,
+                SnackBarHarnessExample,
                 SnackBarOverviewExample,
                 SnackBarPositionExample, PizzaPartyComponent], imports: [i3.FormsModule,
                 i5.MatButtonModule,
                 i4.MatInputModule,
                 i3$1.MatSelectModule,
                 i1.MatSnackBarModule], exports: [SnackBarComponentExample,
+                SnackBarHarnessExample,
                 SnackBarOverviewExample,
                 SnackBarPositionExample] });
     })();
@@ -565,6 +602,7 @@
     exports.PizzaPartyComponent = PizzaPartyComponent;
     exports.SnackBarComponentExample = SnackBarComponentExample;
     exports.SnackBarExamplesModule = SnackBarExamplesModule;
+    exports.SnackBarHarnessExample = SnackBarHarnessExample;
     exports.SnackBarOverviewExample = SnackBarOverviewExample;
     exports.SnackBarPositionExample = SnackBarPositionExample;
 

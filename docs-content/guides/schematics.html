@@ -1,19 +1,19 @@
-<div class="docs-markdown"><p>Angular Material comes packaged with Angular CLI schematics to make
+<div class="docs-markdown"><h1>Installation and Code Generation</h1><p>Angular Material comes packaged with Angular CLI schematics to make
 creating Material applications easier.</p>
 
-        <h3 id="install-schematics" class="docs-header-link">
+        <h2 id="install-schematics" class="docs-header-link">
           <span header-link="install-schematics"></span>
           Install Schematics
-        </h3>
+        </h2>
       <p>Schematics are included with both <code>@angular/cdk</code> and <code>@angular/material</code>. Once you install the npm
 packages, they will be available through the Angular CLI.</p>
 <p>Using the command below will install Angular Material, the <a href="https://material.angular.io/cdk">Component Dev Kit</a> (CDK),
 and <a href="https://angular.io/guide/animations">Angular Animations</a> in your project. Then it will run the
-install schematic.</p>
+installation schematic.</p>
 <pre><code>ng add @angular/material</code></pre>
 <p>In case you just want to install the <code>@angular/cdk</code>, there are also schematics for the <a href="https://material.angular.io/cdk">Component Dev Kit</a></p>
 <pre><code>ng add @angular/cdk</code></pre>
-<p>The Angular Material <code>ng add</code> schematic helps you setup an Angular CLI project that uses Material. Running <code>ng add</code> will:</p>
+<p>The Angular Material <code>ng add</code> schematic helps you set up an Angular CLI project that uses Material. Running <code>ng add</code> will:</p>
 <ul>
 <li>Ensure <a href="guide/getting-started#step-1-install-angular-material-angular-cdk-and-angular-animations">project dependencies</a> are placed in <code>package.json</code></li>
 <li>Enable the <a href="guide/getting-started#step-2-configure-animations">BrowserAnimationsModule</a> your app module</li>
@@ -27,7 +27,12 @@ install schematic.</p>
 </ul>
 </li>
 </ul>
-<h2>Component schematics</h2><p>In addition to the install schematic, Angular Material comes with multiple schematics that can be
+
+        <h2 id="component-schematics" class="docs-header-link">
+          <span header-link="component-schematics"></span>
+          Component schematics
+        </h2>
+      <p>In addition to the installation schematic, Angular Material comes with multiple schematics that can be
 used to easily generate Material Design components:</p>
 <table>
 <thead>
@@ -57,7 +62,7 @@ used to easily generate Material Design components:</p>
 <td>Component that interactively visualizes a nested folder structure by using the <code>&lt;mat-tree&gt;</code> component</td>
 </tr>
 </tbody></table>
-<p>Additionally the Angular CDK also comes with a collection of component schematics:</p>
+<p>Additionally, the Angular CDK also comes with a collection of component schematics:</p>
 <table>
 <thead>
 <tr>
@@ -71,10 +76,10 @@ used to easily generate Material Design components:</p>
 </tr>
 </tbody></table>
 
-        <h4 id="address-form-schematic" class="docs-header-link">
+        <h3 id="address-form-schematic" class="docs-header-link">
           <span header-link="address-form-schematic"></span>
           Address form schematic
-        </h4>
+        </h3>
       <p>Running the <code>address-form</code> schematic generates a new Angular component that can be used to get
 started with a Material Design form group consisting of:</p>
 <ul>
@@ -84,43 +89,43 @@ started with a Material Design form group consisting of:</p>
 </ul>
 <pre><code>ng generate @angular/material:address-form &lt;component-name&gt;</code></pre>
 
-        <h4 id="navigation-schematic" class="docs-header-link">
+        <h3 id="navigation-schematic" class="docs-header-link">
           <span header-link="navigation-schematic"></span>
           Navigation schematic
-        </h4>
+        </h3>
       <p>The <code>navigation</code> schematic will create a new component that includes
-a toolbar with the app name and a responsive side nav based on Material
+a toolbar with the app name, and a responsive side nav based on Material
 breakpoints.</p>
 <pre><code>ng generate @angular/material:navigation &lt;component-name&gt;</code></pre>
 
-        <h4 id="table-schematic" class="docs-header-link">
+        <h3 id="table-schematic" class="docs-header-link">
           <span header-link="table-schematic"></span>
           Table schematic
-        </h4>
+        </h3>
       <p>The table schematic will create a component that renders an Angular Material <code>&lt;table&gt;</code> which has
 been pre-configured with a datasource for sorting and pagination.</p>
 <pre><code>ng generate @angular/material:table &lt;component-name&gt;</code></pre>
 
-        <h4 id="dashboard-schematic" class="docs-header-link">
+        <h3 id="dashboard-schematic" class="docs-header-link">
           <span header-link="dashboard-schematic"></span>
           Dashboard schematic
-        </h4>
+        </h3>
       <p>The <code>dashboard</code> schematic will create a new component that contains
 a dynamic grid list of Material Design cards.</p>
 <pre><code>ng generate @angular/material:dashboard &lt;component-name&gt;</code></pre>
 
-        <h4 id="tree-schematic" class="docs-header-link">
+        <h3 id="tree-schematic" class="docs-header-link">
           <span header-link="tree-schematic"></span>
           Tree schematic
-        </h4>
+        </h3>
       <p>The <code>tree</code> schematic can be used to quickly generate an Angular component that uses the Angular
 Material <code>&lt;mat-tree&gt;</code> component to visualize a nested folder structure.</p>
 <pre><code>ng generate @angular/material:tree &lt;component-name&gt;</code></pre>
 
-        <h4 id="drag-and-drop-schematic" class="docs-header-link">
+        <h3 id="drag-and-drop-schematic" class="docs-header-link">
           <span header-link="drag-and-drop-schematic"></span>
           Drag and Drop schematic
-        </h4>
+        </h3>
       <p>The <code>drag-drop</code> schematic is provided by the <code>@angular/cdk</code> and can be used to generate a component
 that uses the CDK drag and drop directives.</p>
 <pre><code>ng generate @angular/cdk:drag-drop &lt;component-name&gt;</code></pre>

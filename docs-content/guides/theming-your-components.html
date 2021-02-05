@@ -1,15 +1,10 @@
-<div class="docs-markdown">
-        <h3 id="theming-your-custom-component-with-angular-materials-theming-system" class="docs-header-link">
-          <span header-link="theming-your-custom-component-with-angular-materials-theming-system"></span>
-          Theming your custom component with Angular Material&#39;s theming system
-        </h3>
-      <p>In order to style your own components with Angular Material&#39;s tooling, the component&#39;s styles must
+<div class="docs-markdown"><h1>Theming your custom component with Angular Material&#39;s theming system</h1><p>In order to style your own components with Angular Material&#39;s tooling, the component&#39;s styles must
 be defined with Sass.</p>
 
-        <h4 id="1-define-all-color-and-typography-styles-in-a-theme-file-for-the-component" class="docs-header-link">
+        <h2 id="1-define-all-color-and-typography-styles-in-a-theme-file-for-the-component" class="docs-header-link">
           <span header-link="1-define-all-color-and-typography-styles-in-a-theme-file-for-the-component"></span>
           1. Define all color and typography styles in a &quot;theme file&quot; for the component
-        </h4>
+        </h2>
       <p>First, create a Sass mixin that accepts an Angular Material color configuration and
 outputs the color-specific styles for the component. A color configuration is a Sass map.</p>
 <p>For example, if building a custom carousel component:</p>
@@ -65,17 +60,17 @@ individual theming systems (<code>color</code> and <code>typography</code>).</p>
 <p>See the <a href="https://material.angular.io/guide/typography">typography guide</a> for more information on
 typographic customization.</p>
 
-        <h4 id="2-define-all-remaining-styles-in-a-normal-component-stylesheet" class="docs-header-link">
+        <h2 id="2-define-all-remaining-styles-in-a-normal-component-stylesheet" class="docs-header-link">
           <span header-link="2-define-all-remaining-styles-in-a-normal-component-stylesheet"></span>
-          2. Define all remaining styles in a normal component stylesheet.
-        </h4>
+          2. Define all remaining styles in a normal component stylesheet
+        </h2>
       <p>Define all styles unaffected by the theme in a separate file referenced directly in the component&#39;s
 <code>styleUrl</code>.  This generally includes everything except for color and typography styles.</p>
 
-        <h4 id="3-include-the-theme-mixin-in-your-application" class="docs-header-link">
+        <h2 id="3-include-the-theme-mixin-in-your-application" class="docs-header-link">
           <span header-link="3-include-the-theme-mixin-in-your-application"></span>
           3. Include the theme mixin in your application
-        </h4>
+        </h2>
       <p>Use the Sass <code>@include</code> keyword to include a component&#39;s theme mixin wherever you&#39;re already
 including Angular Material&#39;s built-in theme mixins. </p>
 <pre><code class="language-scss"><span class="hljs-comment">// Import library functions for theme creation.</span>
@@ -100,10 +95,10 @@ including Angular Material&#39;s built-in theme mixins. </p>
 <span class="hljs-comment">// Include theme styles for your custom components.</span>
 <span class="hljs-keyword">@include</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>);</code></pre>
 
-        <h4 id="note-using-the-mat-color-function-to-extract-colors-from-a-palette" class="docs-header-link">
+        <h2 id="note-using-the-mat-color-function-to-extract-colors-from-a-palette" class="docs-header-link">
           <span header-link="note-using-the-mat-color-function-to-extract-colors-from-a-palette"></span>
           Note: using the <code>mat-color</code> function to extract colors from a palette
-        </h4>
+        </h2>
       <p>You can consume the theming functions and Material Design color palettes from
 <code>@angular/material/theming</code>. The <code>mat-color</code> Sass function extracts a specific color from a palette.
 For example:</p>

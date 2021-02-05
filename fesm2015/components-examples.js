@@ -3402,6 +3402,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/sidenav"
         }
     },
+    "sidenav-harness": {
+        "packagePath": "material/sidenav/sidenav-harness",
+        "title": "Testing with MatSidenavHarness",
+        "componentName": "SidenavHarnessExample",
+        "files": [
+            "sidenav-harness-example.ts",
+            "sidenav-harness-example.html",
+            "sidenav-harness-example.spec.ts"
+        ],
+        "selector": "sidenav-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "sidenav-harness-example.ts",
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "material/sidenav"
+        }
+    },
     "sidenav-mode": {
         "packagePath": "material/sidenav/sidenav-mode",
         "title": "Sidenav with configurable mode",
@@ -3637,6 +3654,23 @@ const EXAMPLE_COMPONENTS = {
             "PizzaPartyComponent"
         ],
         "primaryFile": "snack-bar-component-example.ts",
+        "module": {
+            "name": "SnackBarExamplesModule",
+            "importSpecifier": "material/snack-bar"
+        }
+    },
+    "snack-bar-harness": {
+        "packagePath": "material/snack-bar/snack-bar-harness",
+        "title": "Testing with MatSnackBarHarness",
+        "componentName": "SnackBarHarnessExample",
+        "files": [
+            "snack-bar-harness-example.ts",
+            "snack-bar-harness-example.html",
+            "snack-bar-harness-example.spec.ts"
+        ],
+        "selector": "snack-bar-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "snack-bar-harness-example.ts",
         "module": {
             "name": "SnackBarExamplesModule",
             "importSpecifier": "material/snack-bar"
