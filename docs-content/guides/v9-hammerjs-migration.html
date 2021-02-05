@@ -1,13 +1,13 @@
 <div class="docs-markdown"><h1>V9 HammerJS migration</h1><p>Angular Material, as of version 9, no longer requires HammerJS for any component. Components which
 previously depended on HammerJS no longer provide a <a href="https://v9.angular.io/api/platform-browser/HammerGestureConfig"><code>HAMMER_GESTURE_CONFIG</code></a> that will
 enable use of HammerJS events in templates.</p>
-<p>Additionally the <code>GestureConfig</code> export from <code>@angular/material/core</code> has been marked as
+<p>Additionally, the <code>GestureConfig</code> export from <code>@angular/material/core</code> has been marked as
 deprecated and will be removed in version 10.</p>
 
-        <h3 id="why-is-a-migration-needed" class="docs-header-link">
+        <h2 id="why-is-a-migration-needed" class="docs-header-link">
           <span header-link="why-is-a-migration-needed"></span>
           Why is a migration needed?
-        </h3>
+        </h2>
       <p>Since HammerJS previously was a requirement for a few Angular Material components, projects might
 have installed <code>HammerJS</code> exclusively for Angular Material. Since HammerJS is no longer needed when
 updating to v9, the dependency on HammerJS can be removed if it&#39;s not used directly in your
@@ -17,10 +17,10 @@ modules to set up the HammerJS event plugin. Since this is no longer the case in
 such projects need to manually configure the HammerJS event plugin in order to continue using
 these HammerJS events.</p>
 
-        <h3 id="what-does-the-migration-do" class="docs-header-link">
+        <h2 id="what-does-the-migration-do" class="docs-header-link">
           <span header-link="what-does-the-migration-do"></span>
           What does the migration do?
-        </h3>
+        </h2>
       <p>The migration automatically removes HammerJS from your project if HammerJS is not used.</p>
 <p>Additionally, Angular Material&#39;s <code>GestureConfig</code> (now deprecated) defined custom HammerJS gestures.
 If your application directly uses any of these gestures, the migration will introduce a new
@@ -35,10 +35,10 @@ deprecated Angular Material <code>GestureConfig</code>, the migration will print
 ambiguous usage. The migration cannot migrate your project automatically and manual changes
 are required. Read more <a href="#the-migration-reported-ambiguous-usage-what-should-i-do">in the dedicated section</a>.</p>
 
-        <h3 id="how-does-the-schematic-remove-hammerjs" class="docs-header-link">
+        <h2 id="how-does-the-schematic-remove-hammerjs" class="docs-header-link">
           <span header-link="how-does-the-schematic-remove-hammerjs"></span>
           How does the schematic remove HammerJS?
-        </h3>
+        </h2>
       <p>HammerJS can be set up in many ways. The migration handles the most common cases, covering
 approaches recommended by Angular Material in the past. The migration performs the following steps:</p>
 <p><em>1.</em> Remove <code>hammerjs</code> from your project <code>package.json</code>.</p>
@@ -55,10 +55,10 @@ approaches recommended by Angular Material in the past. The migration performs t
 the test setup and resolve any test issues. Read more in a
 <a href="#how-to-migrate-my-tests">dedicated section for test migration</a>.</p>
 
-        <h3 id="how-do-i-migrate-references-to-the-deprecated-gestureconfig" class="docs-header-link">
+        <h2 id="how-do-i-migrate-references-to-the-deprecated-gestureconfig" class="docs-header-link">
           <span header-link="how-do-i-migrate-references-to-the-deprecated-gestureconfig"></span>
           How do I migrate references to the deprecated <code>GestureConfig</code>?
-        </h3>
+        </h2>
       <p>The <code>GestureConfig</code> can be consumed in multiple ways. The migration covers the most common cases.
 The most common case is that an <code>NgModule</code> in your application directly provides <code>GestureConfig</code>:</p>
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> {GestureConfig} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
@@ -81,10 +81,10 @@ in combination with a different custom gesture config. These patterns cannot be 
 automatically, but the migration will report such patterns and ask you to perform manual cleanup.</p>
 <p><a name="test-migration"></a></p>
 
-        <h3 id="how-to-migrate-my-tests" class="docs-header-link">
+        <h2 id="how-to-migrate-my-tests" class="docs-header-link">
           <span header-link="how-to-migrate-my-tests"></span>
           How to migrate my tests?
-        </h3>
+        </h2>
       <p>Components in your project might use Angular Material components which previously depended
 upon HammerJS. There might be unit tests for these components which also test gesture functionality
 of the Angular Material components. For such unit tests, identify all failing gesture tests. Then
@@ -100,13 +100,13 @@ in <code>src/test.ts</code>) where <code>hammerjs</code> may be imported.</p>
 <pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;hammerjs&#x27;</span>;</code></pre>
 <p><a name="what-to-do-ambiguous-usage"></a></p>
 
-        <h3 id="the-migration-reported-ambiguous-usage-what-should-i-do" class="docs-header-link">
+        <h2 id="the-migration-reported-ambiguous-usage-what-should-i-do" class="docs-header-link">
           <span header-link="the-migration-reported-ambiguous-usage-what-should-i-do"></span>
           The migration reported ambiguous usage. What should I do?
-        </h3>
+        </h2>
       <p><strong>Case 1</strong>: It detected that a HammerJS event provided by the deprecated <code>GestureConfig</code> is
 used in a component template. This is because the migration relies on static analysis to detect
-event bindings and can never guarantee that a event binding is bound to the Hammer gesture
+event bindings and can never guarantee that an event binding is bound to the Hammer gesture
 plugin, or to an actual <code>@Output</code>. For example:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">image-rotator</span> (<span class="hljs-attr">rotate</span>)=<span class="hljs-string">&quot;onRotate()&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image-rotator</span>&gt;</span></code></pre>
 <p>In the example above, <code>rotate</code> could be an event from the deprecated <code>GestureConfig</code>, or an

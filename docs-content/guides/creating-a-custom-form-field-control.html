@@ -65,10 +65,10 @@ just a starting point for us to learn.)</p>
   }
 }</code></pre>
 
-        <h3 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link">
+        <h2 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link">
           <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
           Providing our component as a MatFormFieldControl
-        </h3>
+        </h2>
       <p>The first step is to provide our new component as an implementation of the <code>MatFormFieldControl</code>
 interface that the <code>&lt;mat-form-field&gt;</code> knows how to work with. To do this, we will have our class
 implement <code>MatFormFieldControl</code>. Since this is a generic interface, we&#39;ll need to include a type
@@ -82,7 +82,7 @@ a provider to our component so that the form field will be able to inject it as 
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt; </span>{
   ...
 }</code></pre>
-<p>This sets up our component so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
+<p>This sets up our component, so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
 various methods and properties declared by the interface we just implemented. To learn more about
 the <code>MatFormFieldControl</code> interface, see the
 <a href="https://material.angular.io/components/form-field/api">form field API documentation</a>.</p>
@@ -171,7 +171,7 @@ handle it:</p>
 </span>)</span> { }</code></pre>
 <p>Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
 <code>NG_VALUE_ACCESSOR</code> (in the <code>providers</code> part of the component&#39;s decorator, or possibly in a module
-declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> error.</p>
+declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em> error.</p>
 <p>To resolve this, remove the <code>NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
   ...,
@@ -206,7 +206,7 @@ declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> 
           <span header-link="focused"></span>
           <code>focused</code>
         </h4>
-      <p>This property indicates whether or not the form field control should be considered to be in a
+      <p>This property indicates whether the form field control should be considered to be in a
 focused state. When it is in a focused state, the form field is displayed with a solid color
 underline. For the purposes of our component, we want to consider it focused if any of the part
 inputs are focused. We can use the <code>FocusMonitor</code> from <code>@angular/cdk</code> to easily check this. We also
@@ -231,7 +231,7 @@ need to remember to emit on the <code>stateChanges</code> stream so change detec
           <code>empty</code>
         </h4>
       <p>This property indicates whether the form field control is empty. For our control, we&#39;ll consider it
-empty if all of the parts are empty.</p>
+empty if all the parts are empty.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">get</span> <span class="hljs-title">empty</span>() {
   <span class="hljs-keyword">let</span> n = <span class="hljs-built_in">this</span>.parts.value;
   <span class="hljs-keyword">return</span> !n.area &amp;&amp; !n.exchange &amp;&amp; !n.subscriber;
@@ -243,7 +243,7 @@ empty if all of the parts are empty.</p>
         </h4>
       <p>This property is used to indicate whether the label should be in the floating position. We&#39;ll
 use the same logic as <code>matInput</code> and float the placeholder when the input is focused or non-empty.
-Since the placeholder will be overlapping our control when when it&#39;s not floating, we should hide
+Since the placeholder will be overlapping our control when it&#39;s not floating, we should hide
 the <code>–</code> characters when it&#39;s not floating.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@HostBinding</span>(<span class="hljs-string">&#x27;class.floating&#x27;</span>)
 <span class="hljs-keyword">get</span> <span class="hljs-title">shouldLabelFloat</span>() {
@@ -303,7 +303,7 @@ using an <code>NgControl</code> in this example, we don&#39;t need to do anythin
           <code>controlType</code>
         </h4>
       <p>This property allows us to specify a unique string for the type of control in form field. The
-<code>&lt;mat-form-field&gt;</code> will add an additional class based on this type that can be used to easily apply
+<code>&lt;mat-form-field&gt;</code> will add a class based on this type that can be used to easily apply
 special styles to a <code>&lt;mat-form-field&gt;</code> that contains a specific type of control. In this example
 we&#39;ll use <code>example-tel-input</code> as our control type which will result in the form field adding the
 class <code>mat-form-field-type-example-tel-input</code>.</p>
@@ -380,11 +380,11 @@ to the label element id provided by the parent <code>&lt;mat-form-field&gt;</cod
           Trying it out
         </h3>
       <p>Now that we&#39;ve fully implemented the interface, we&#39;re ready to try our component out! All we need to
-do is place it inside of a <code>&lt;mat-form-field&gt;</code></p>
+do is place it inside a <code>&lt;mat-form-field&gt;</code></p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
-<p>We also get all of the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
+<p>We also get all the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
 prefix, suffix, hints, and errors (if we&#39;ve given the form field an <code>NgControl</code> and correctly report
 the error state).</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
