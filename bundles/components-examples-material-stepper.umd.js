@@ -930,6 +930,87 @@
             }], null, null);
     })();
 
+    function StepperLazyContentExample_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Step 1");
+        }
+    }
+    function StepperLazyContentExample_ng_template_3_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "p");
+            i0.ɵɵtext(1, "This content was rendered lazily");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(2, "button", 3);
+            i0.ɵɵtext(3, "Next");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function StepperLazyContentExample_ng_template_5_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Step 2");
+        }
+    }
+    function StepperLazyContentExample_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵelementStart(0, "p");
+            i0.ɵɵtext(1, "This content was also rendered lazily");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(2, "button", 2);
+            i0.ɵɵtext(3, "Back");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(4, "button", 3);
+            i0.ɵɵtext(5, "Next");
+            i0.ɵɵelementEnd();
+        }
+    }
+    function StepperLazyContentExample_ng_template_8_Template(rf, ctx) {
+        if (rf & 1) {
+            i0.ɵɵtext(0, "Step 3");
+        }
+    }
+    /**
+     * @title Stepper lazy content rendering
+     */
+    var StepperLazyContentExample = /** @class */ (function () {
+        function StepperLazyContentExample() {
+        }
+        return StepperLazyContentExample;
+    }());
+    StepperLazyContentExample.ɵfac = function StepperLazyContentExample_Factory(t) { return new (t || StepperLazyContentExample)(); };
+    StepperLazyContentExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperLazyContentExample, selectors: [["stepper-lazy-content-example"]], decls: 13, vars: 0, consts: [["matStepLabel", ""], ["matStepContent", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", "matStepperNext", ""]], template: function StepperLazyContentExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-vertical-stepper");
+                i0.ɵɵelementStart(1, "mat-step");
+                i0.ɵɵtemplate(2, StepperLazyContentExample_ng_template_2_Template, 1, 0, "ng-template", 0);
+                i0.ɵɵtemplate(3, StepperLazyContentExample_ng_template_3_Template, 4, 0, "ng-template", 1);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "mat-step");
+                i0.ɵɵtemplate(5, StepperLazyContentExample_ng_template_5_Template, 1, 0, "ng-template", 0);
+                i0.ɵɵtemplate(6, StepperLazyContentExample_ng_template_6_Template, 6, 0, "ng-template", 1);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(7, "mat-step");
+                i0.ɵɵtemplate(8, StepperLazyContentExample_ng_template_8_Template, 1, 0, "ng-template", 0);
+                i0.ɵɵelementStart(9, "p");
+                i0.ɵɵtext(10, "This content was rendered eagerly");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(11, "button", 2);
+                i0.ɵɵtext(12, "Back");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [i3.MatVerticalStepper, i3.MatStep, i3.MatStepLabel, i3.MatStepContent, i2.MatButton, i3.MatStepperPrevious, i3.MatStepperNext], styles: [""] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperLazyContentExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-lazy-content-example',
+                        templateUrl: 'stepper-lazy-content-example.html',
+                        styleUrls: ['stepper-lazy-content-example.css'],
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         StepperEditableExample,
         StepperErrorsExample,
@@ -939,6 +1020,7 @@
         StepperOverviewExample,
         StepperStatesExample,
         StepperVerticalExample,
+        StepperLazyContentExample,
     ];
     var StepperExamplesModule = /** @class */ (function () {
         function StepperExamplesModule() {
@@ -961,7 +1043,8 @@
                 StepperOptionalExample,
                 StepperOverviewExample,
                 StepperStatesExample,
-                StepperVerticalExample], imports: [i2.MatButtonModule,
+                StepperVerticalExample,
+                StepperLazyContentExample], imports: [i2.MatButtonModule,
                 i6.MatIconModule,
                 i5.MatInputModule,
                 i3.MatStepperModule,
@@ -972,7 +1055,8 @@
                 StepperOptionalExample,
                 StepperOverviewExample,
                 StepperStatesExample,
-                StepperVerticalExample] });
+                StepperVerticalExample,
+                StepperLazyContentExample] });
     })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperExamplesModule, [{
@@ -1001,6 +1085,7 @@
     exports.StepperExamplesModule = StepperExamplesModule;
     exports.StepperHarnessExample = StepperHarnessExample;
     exports.StepperLabelPositionBottomExample = StepperLabelPositionBottomExample;
+    exports.StepperLazyContentExample = StepperLazyContentExample;
     exports.StepperOptionalExample = StepperOptionalExample;
     exports.StepperOverviewExample = StepperOverviewExample;
     exports.StepperStatesExample = StepperStatesExample;

@@ -3,7 +3,7 @@ import { Validators, FormBuilder, ɵangular_packages_forms_forms_y, NgControlSta
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInput, MatInputModule } from '@angular/material/input';
-import { MatHorizontalStepper, MatStep, MatStepLabel, MatStepperNext, MatStepperPrevious, MatStepperIcon, MatVerticalStepper, MatStepperModule } from '@angular/material/stepper';
+import { MatHorizontalStepper, MatStep, MatStepLabel, MatStepperNext, MatStepperPrevious, MatStepperIcon, MatVerticalStepper, MatStepContent, MatStepperModule } from '@angular/material/stepper';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
@@ -834,6 +834,70 @@ StepperHarnessExample.ɵcmp = ɵɵdefineComponent({ type: StepperHarnessExample,
             }]
     }], null, null); })();
 
+function StepperLazyContentExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "Step 1");
+} }
+function StepperLazyContentExample_ng_template_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "p");
+    ɵɵtext(1, "This content was rendered lazily");
+    ɵɵelementEnd();
+    ɵɵelementStart(2, "button", 3);
+    ɵɵtext(3, "Next");
+    ɵɵelementEnd();
+} }
+function StepperLazyContentExample_ng_template_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "Step 2");
+} }
+function StepperLazyContentExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "p");
+    ɵɵtext(1, "This content was also rendered lazily");
+    ɵɵelementEnd();
+    ɵɵelementStart(2, "button", 2);
+    ɵɵtext(3, "Back");
+    ɵɵelementEnd();
+    ɵɵelementStart(4, "button", 3);
+    ɵɵtext(5, "Next");
+    ɵɵelementEnd();
+} }
+function StepperLazyContentExample_ng_template_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵtext(0, "Step 3");
+} }
+/**
+ * @title Stepper lazy content rendering
+ */
+class StepperLazyContentExample {
+}
+StepperLazyContentExample.ɵfac = function StepperLazyContentExample_Factory(t) { return new (t || StepperLazyContentExample)(); };
+StepperLazyContentExample.ɵcmp = ɵɵdefineComponent({ type: StepperLazyContentExample, selectors: [["stepper-lazy-content-example"]], decls: 13, vars: 0, consts: [["matStepLabel", ""], ["matStepContent", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", "matStepperNext", ""]], template: function StepperLazyContentExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-vertical-stepper");
+        ɵɵelementStart(1, "mat-step");
+        ɵɵtemplate(2, StepperLazyContentExample_ng_template_2_Template, 1, 0, "ng-template", 0);
+        ɵɵtemplate(3, StepperLazyContentExample_ng_template_3_Template, 4, 0, "ng-template", 1);
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "mat-step");
+        ɵɵtemplate(5, StepperLazyContentExample_ng_template_5_Template, 1, 0, "ng-template", 0);
+        ɵɵtemplate(6, StepperLazyContentExample_ng_template_6_Template, 6, 0, "ng-template", 1);
+        ɵɵelementEnd();
+        ɵɵelementStart(7, "mat-step");
+        ɵɵtemplate(8, StepperLazyContentExample_ng_template_8_Template, 1, 0, "ng-template", 0);
+        ɵɵelementStart(9, "p");
+        ɵɵtext(10, "This content was rendered eagerly");
+        ɵɵelementEnd();
+        ɵɵelementStart(11, "button", 2);
+        ɵɵtext(12, "Back");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } }, directives: [MatVerticalStepper, MatStep, MatStepLabel, MatStepContent, MatButton, MatStepperPrevious, MatStepperNext], styles: [""] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperLazyContentExample, [{
+        type: Component,
+        args: [{
+                selector: 'stepper-lazy-content-example',
+                templateUrl: 'stepper-lazy-content-example.html',
+                styleUrls: ['stepper-lazy-content-example.css'],
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     StepperEditableExample,
     StepperErrorsExample,
@@ -843,6 +907,7 @@ const EXAMPLES = [
     StepperOverviewExample,
     StepperStatesExample,
     StepperVerticalExample,
+    StepperLazyContentExample,
 ];
 class StepperExamplesModule {
 }
@@ -861,7 +926,8 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
         StepperOptionalExample,
         StepperOverviewExample,
         StepperStatesExample,
-        StepperVerticalExample], imports: [MatButtonModule,
+        StepperVerticalExample,
+        StepperLazyContentExample], imports: [MatButtonModule,
         MatIconModule,
         MatInputModule,
         MatStepperModule,
@@ -872,7 +938,8 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
         StepperOptionalExample,
         StepperOverviewExample,
         StepperStatesExample,
-        StepperVerticalExample] }); })();
+        StepperVerticalExample,
+        StepperLazyContentExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(StepperExamplesModule, [{
         type: NgModule,
         args: [{
@@ -893,5 +960,5 @@ StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExam
  * Generated bundle index. Do not edit.
  */
 
-export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperHarnessExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
+export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperHarnessExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
 //# sourceMappingURL=stepper.js.map

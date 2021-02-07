@@ -4144,6 +4144,23 @@
                 "importSpecifier": "material/stepper"
             }
         },
+        "stepper-lazy-content": {
+            "packagePath": "material/stepper/stepper-lazy-content",
+            "title": "Stepper lazy content rendering",
+            "componentName": "StepperLazyContentExample",
+            "files": [
+                "stepper-lazy-content-example.ts",
+                "stepper-lazy-content-example.html",
+                "stepper-lazy-content-example.css"
+            ],
+            "selector": "stepper-lazy-content-example",
+            "additionalComponents": [],
+            "primaryFile": "stepper-lazy-content-example.ts",
+            "module": {
+                "name": "StepperExamplesModule",
+                "importSpecifier": "material/stepper"
+            }
+        },
         "stepper-optional": {
             "packagePath": "material/stepper/stepper-optional",
             "title": "Stepper with optional steps",
