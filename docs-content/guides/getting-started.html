@@ -8,7 +8,8 @@
           Install Angular Material
         </h2>
       <p>Use the Angular CLI&#39;s installation <a href="https://material.angular.io/guide/schematics">schematic</a> to set up your Angular Material project by running the following command:</p>
-<pre><code class="language-bash">ng add @angular/material</code></pre>
+<pre><code class="language-bash">ng add @angular/material
+</code></pre>
 <p>The <code>ng add</code> command will install Angular Material, the <a href="https://material.angular.io/cdk/categories">Component Dev Kit (CDK)</a>, <a href="https://angular.io/guide/animations">Angular Animations</a> and ask you the following questions to determine which features to include:</p>
 <ol>
 <li><p>Choose a prebuilt theme name, or &quot;custom&quot; for a custom theme:</p>
@@ -47,11 +48,14 @@
   <span class="hljs-attr">imports</span>: [...,
   MatSliderModule,
 …]
-})</code></pre>
+})
+</code></pre>
 <p>Add the <code>&lt;mat-slider&gt;</code> tag to the <code>app.component.html</code> like so:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
 <p>Run your local dev server:</p>
-<pre><code class="language-bash">ng serve</code></pre>
+<pre><code class="language-bash">ng serve
+</code></pre>
 <p>Then point your browser to <a href="http://localhost:4200">http://localhost:4200</a></p>
 <p>You should see the material slider component on the page.</p>
 <p>In addition to the installation schematic, Angular Material comes with <a href="https://material.angular.io/guide/schematics">several schematics</a> (like nav, table, address-form, etc.) that can be used to easily generate pre-built components in your application.</p>

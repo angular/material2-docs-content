@@ -39,29 +39,35 @@ of it.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Creates a layout with a left and right sidenav and implicit content. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> <span class="hljs-attr">position</span>=<span class="hljs-string">&quot;end&quot;</span>&gt;</span>End<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Creates an empty sidenav container with no sidenavs and implicit empty content. --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
 <p>And these are examples of invalid sidenav layouts:</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Invalid because there are two `start` position sidenavs. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> <span class="hljs-attr">position</span>=<span class="hljs-string">&quot;start&quot;</span>&gt;</span>Start 2<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Invalid because there are multiple `&lt;mat-sidenav-content&gt;` elements. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>Main 2<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Invalid because the `&lt;mat-sidenav&gt;` is outside of the `&lt;mat-sidenav-container&gt;`. --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+</code></pre>
 <p>These same rules all apply to the drawer components as well.</p>
 
         <h3 id="opening-and-closing-a-sidenav" class="docs-header-link">
@@ -150,7 +156,8 @@ issues.</p>
 be explicitly set via CSS:</p>
 <pre><code class="language-css"><span class="hljs-selector-tag">mat-sidenav</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
-}</code></pre>
+}
+</code></pre>
 <p>Try to avoid percent based width as <code>resize</code> events are not (yet) supported.</p>
 
         <h3 id="fixed-position-sidenavs" class="docs-header-link">
@@ -187,7 +194,8 @@ CSS to adjust to either type of device.</p>
   <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.sidenavContainer.scrollable.elementScrolled().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-comment">/* react to scrolling */</span>);
   }
-}</code></pre>
+}
+</code></pre>
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>

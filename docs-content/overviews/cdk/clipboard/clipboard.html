@@ -6,7 +6,8 @@
         </h3>
       <p>The <code>cdkCopyToClipboard</code> directive can be used to easily add copy-on-click functionality to an
 existing element. The directive selector doubles as an <code>@Input()</code> for the text to be copied.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;avatar.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Hero avatar&quot;</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">&quot;getShortBio()&quot;</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;avatar.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Hero avatar&quot;</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">&quot;getShortBio()&quot;</span>&gt;</span>
+</code></pre>
 <div material-docs-example="cdk-clipboard-overview"></div>
 
 
@@ -23,7 +24,8 @@ directly to place it on the clipboard.</p>
   <span class="hljs-function"><span class="hljs-title">copyHeroName</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.clipboard.copy(<span class="hljs-string">&#x27;Alphonso&#x27;</span>);
   }
-}</code></pre>
+}
+</code></pre>
 <p>However, for longer text the browser needs time to fill an intermediate textarea element and copy
 the content. Directly calling <code>copy</code> may fail in this case, so you can pre-load the text by calling
 <code>beginCopy</code>. This method returns a <code>PendingCopy</code> object that has a <code>copy</code> method to finish copying
@@ -48,8 +50,10 @@ the text that was buffered. Please note, if you call <code>beginCopy</code>, you
     };
     attempt();
   }
-}</code></pre>
+}
+</code></pre>
 <p>If you&#39;re using the <code>cdkCopyToClipboard</code> you can pass in the <code>cdkCopyToClipboardAttempts</code> input
 to automatically attempt to copy some text a certain number of times.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">&quot;longText&quot;</span> [<span class="hljs-attr">cdkCopyToClipboardAttempts</span>]=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>Copy text<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">&quot;longText&quot;</span> [<span class="hljs-attr">cdkCopyToClipboardAttempts</span>]=<span class="hljs-string">&quot;5&quot;</span>&gt;</span>Copy text<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
 </div>

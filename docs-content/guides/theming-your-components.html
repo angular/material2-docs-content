@@ -18,14 +18,15 @@ outputs the color-specific styles for the component. A color configuration is a 
   <span class="hljs-comment">// Extract the palettes you need from the theme definition.</span>
   <span class="hljs-variable">$primary</span>: map-get(<span class="hljs-variable">$config</span>, primary);
   <span class="hljs-variable">$accent</span>: map-get(<span class="hljs-variable">$config</span>, accent);
-
+  
   <span class="hljs-comment">// Define any styles affected by the theme.</span>
   <span class="hljs-selector-class">.candy-carousel</span> {
     <span class="hljs-comment">// Use mat-color to extract individual colors from a palette.</span>
     <span class="hljs-attribute">background-color</span>: mat-color(<span class="hljs-variable">$primary</span>);
     <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$accent</span>, A400);
   }
-}</code></pre>
+}
+</code></pre>
 <p>Second, create another Sass mixin that accepts an Angular Material typography configuration
 and outputs typographic styles. For example:</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@mixin</span> candy-carousel-typography(<span class="hljs-variable">$config-or-theme</span>) {
@@ -39,7 +40,8 @@ and outputs typographic styles. For example:</p>
       weight: mat-font-weight(<span class="hljs-variable">$config</span>, body-<span class="hljs-number">1</span>);
     }
   }
-}</code></pre>
+}
+</code></pre>
 <p>Finally, create a mixin that accepts an Angular Material theme, and delegates to the individual
 theming system mixins based on the configurations. A theme consists of configurations for
 individual theming systems (<code>color</code> and <code>typography</code>).</p>
@@ -56,7 +58,8 @@ individual theming systems (<code>color</code> and <code>typography</code>).</p>
   <span class="hljs-keyword">@if</span> <span class="hljs-variable">$typography</span> != null {
     <span class="hljs-keyword">@include</span> candy-carousel-typography(<span class="hljs-variable">$typography</span>);
   }
-}</code></pre>
+}
+</code></pre>
 <p>See the <a href="https://material.angular.io/guide/typography">typography guide</a> for more information on
 typographic customization.</p>
 
@@ -93,7 +96,8 @@ including Angular Material&#39;s built-in theme mixins. </p>
 <span class="hljs-keyword">@include</span> angular-material-theme(<span class="hljs-variable">$theme</span>);
 
 <span class="hljs-comment">// Include theme styles for your custom components.</span>
-<span class="hljs-keyword">@include</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>);</code></pre>
+<span class="hljs-keyword">@include</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>);
+</code></pre>
 
         <h2 id="note-using-the-mat-color-function-to-extract-colors-from-a-palette" class="docs-header-link">
           <span header-link="note-using-the-mat-color-function-to-extract-colors-from-a-palette"></span>
@@ -108,15 +112,16 @@ For example:</p>
 <span class="hljs-selector-class">.candy-carousel</span> {
   <span class="hljs-comment">// Get the default hue for a palette.</span>
   <span class="hljs-attribute">color</span>: mat-color(<span class="hljs-variable">$primary</span>);
-
+  
   <span class="hljs-comment">// Get a specific hue for a palette. </span>
   <span class="hljs-comment">// See https://material.io/archive/guidelines/style/color.html#color-color-palette for hues.</span>
   <span class="hljs-attribute">background-color</span>: mat-color(<span class="hljs-variable">$accent</span>, <span class="hljs-number">300</span>);
-
+  
   <span class="hljs-comment">// Get a relative color for a hue (&#x27;lighter&#x27; or &#x27;darker&#x27;)</span>
   <span class="hljs-attribute">outline-color</span>: mat-color(<span class="hljs-variable">$accent</span>, lighter);
 
   <span class="hljs-comment">// Get a contrast color for a hue by adding `-contrast` to any other key.</span>
   <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$primary</span>, <span class="hljs-string">&#x27;100-contrast&#x27;</span>);
-}</code></pre>
+}
+</code></pre>
 </div>

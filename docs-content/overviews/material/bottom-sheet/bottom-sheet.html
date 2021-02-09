@@ -7,7 +7,8 @@ alternative to dialogs and menus.</p>
 optional config object. The <code>open</code> method will return an instance of <code>MatBottomSheetRef</code>:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(SocialShareComponent, {
   <span class="hljs-attr">ariaLabel</span>: <span class="hljs-string">&#x27;Share on social media&#x27;</span>
-});</code></pre>
+});
+</code></pre>
 <p>The <code>MatBottomSheetRef</code> is a reference to the currently-opened bottom sheet and can be used to close
 it or to subscribe to events. Note that only one bottom sheet can be open at a time. Any component
 contained inside of a bottom sheet can inject the <code>MatBottomSheetRef</code> as well.</p>
@@ -15,7 +16,8 @@ contained inside of a bottom sheet can inject the <code>MatBottomSheetRef</code>
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Bottom sheet has been dismissed.&#x27;</span>);
 });
 
-bottomSheetRef.dismiss();</code></pre>
+bottomSheetRef.dismiss();
+</code></pre>
 
         <h3 id="sharing-data-with-the-bottom-sheet-component" class="docs-header-link">
           <span header-link="sharing-data-with-the-bottom-sheet-component"></span>
@@ -24,7 +26,8 @@ bottomSheetRef.dismiss();</code></pre>
       <p>If you want to pass in some data to the bottom sheet, you can do so using the <code>data</code> property:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(HobbitSheet, {
   <span class="hljs-attr">data</span>: { <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Frodo&#x27;</span>, <span class="hljs-string">&#x27;Bilbo&#x27;</span>] },
-});</code></pre>
+});
+</code></pre>
 <p>Afterwards you can access the injected data using the <code>MAT_BOTTOM_SHEET_DATA</code> injection token:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MAT_BOTTOM_SHEET_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet&#x27;</span>;
@@ -35,7 +38,8 @@ bottomSheetRef.dismiss();</code></pre>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HobbitSheet</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> data: {names: <span class="hljs-built_in">string</span>[]}</span>)</span> { }
-}</code></pre>
+}
+</code></pre>
 
         <h3 id="configuring-bottom-sheet-content-via-entrycomponents" class="docs-header-link">
           <span header-link="configuring-bottom-sheet-content-via-entrycomponents"></span>
@@ -63,7 +67,8 @@ inside your <code>NgModule</code>.</p>
 
   <span class="hljs-attr">bootstrap</span>: [AppComponent]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
+</code></pre>
 
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
           <span header-link="specifying-global-configuration-defaults"></span>
@@ -75,7 +80,8 @@ for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application&#39;s root
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
-})</code></pre>
+})
+</code></pre>
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>

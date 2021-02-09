@@ -7,14 +7,16 @@ config object. The <code>open</code> method will return an instance of <code>Mat
 <pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.open(UserProfileComponent, {
   <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;400px&#x27;</span>,
   <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;600px&#x27;</span>,
-});</code></pre>
+});
+</code></pre>
 <p>The <code>MatDialogRef</code> provides a handle on the opened dialog. It can be used to close the dialog and to
 receive notifications when the dialog has been closed. Any notification Observables will complete when the dialog closes.</p>
 <pre><code class="language-ts">dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>); <span class="hljs-comment">// Pizza!</span>
 });
 
-dialogRef.close(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);</code></pre>
+dialogRef.close(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
+</code></pre>
 <p>Components created via <code>MatDialog</code> can <em>inject</em> <code>MatDialogRef</code> and use it to close the dialog
 in which they are contained. When closing, an optional result value can be provided. This result
 value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
@@ -25,7 +27,8 @@ value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
   <span class="hljs-function"><span class="hljs-title">closeDialog</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.dialogRef.close(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
   }
-}</code></pre>
+}
+</code></pre>
 
         <h3 id="configuring-dialog-content-via-entrycomponents" class="docs-header-link">
           <span header-link="configuring-dialog-content-via-entrycomponents"></span>
@@ -53,7 +56,8 @@ the <code>ComponentFactory</code> for it.</p>
 
   <span class="hljs-attr">bootstrap</span>: [AppComponent]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
+</code></pre>
 
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
           <span header-link="specifying-global-configuration-defaults"></span>
@@ -65,7 +69,8 @@ MAT_DIALOG_DEFAULT_OPTIONS in your application&#39;s root module.</p>
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: MAT_DIALOG_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
-})</code></pre>
+})
+</code></pre>
 
         <h3 id="sharing-data-with-the-dialog-component" class="docs-header-link">
           <span header-link="sharing-data-with-the-dialog-component"></span>
@@ -75,7 +80,8 @@ MAT_DIALOG_DEFAULT_OPTIONS in your application&#39;s root module.</p>
 option to pass information to the dialog component.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
   <span class="hljs-attr">data</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;austin&#x27;</span> },
-});</code></pre>
+});
+</code></pre>
 <p>To access the data in your dialog component, you have to use the MAT_DIALOG_DATA injection token:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
@@ -86,12 +92,14 @@ option to pass information to the dialog component.</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourDialog</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: {name: <span class="hljs-built_in">string</span>}</span>)</span> { }
-}</code></pre>
+}
+</code></pre>
 <p>Note that if you&#39;re using a template dialog (one that was opened with a <code>TemplateRef</code>), the data
 will be available implicitly in the template:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">let-data</span>&gt;</span>
   Hello, {{data.name}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
 <div material-docs-example="dialog-data"></div>
 
 
@@ -131,10 +139,12 @@ will be available implicitly in the template:</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">mat-dialog-close</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-actions</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
+</code></pre>
 <p>Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
 <p>You can control which elements are tab stops with the <code>tabindex</code> attribute</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;-1&quot;</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;-1&quot;</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
 <div material-docs-example="dialog-content"></div>
 
 

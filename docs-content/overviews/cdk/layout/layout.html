@@ -12,7 +12,8 @@
         </h4>
       <p>The <code>isMatched</code> method is used to evaluate one or more media queries against the current viewport
 size.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.isMatched(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);</code></pre>
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.isMatched(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);
+</code></pre>
 
         <h4 id="react-to-changes-to-the-viewport" class="docs-header-link">
           <span header-link="react-to-changes-to-the-viewport"></span>
@@ -27,7 +28,8 @@ media queries would have a different result.</p>
 
 layoutChanges.subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
   updateMyLayoutForOrientationChange();
-});</code></pre>
+});
+</code></pre>
 
         <h4 id="default-breakpoints" class="docs-header-link">
           <span header-link="default-breakpoints"></span>
@@ -49,7 +51,8 @@ types.</p>
       }
     });
   }
-}</code></pre>
+}
+</code></pre>
 <p>The built-in breakpoints based on <a href="https://material.io/design/layout/responsive-layout-grid.html#breakpoints">Google&#39;s Material Design
 specification</a>.
 The available values are:</p>
@@ -78,5 +81,6 @@ The <code>matchMedia</code> method can be used to get a native
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">mediaMatcher: MediaMatcher</span>)</span> {
     <span class="hljs-keyword">const</span> mediaQueryList = mediaMatcher.matchMedia(<span class="hljs-string">&#x27;(min-width: 1px)&#x27;</span>);
   }
-}</code></pre>
+}
+</code></pre>
 </div>
