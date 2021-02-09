@@ -15,7 +15,8 @@ systems have default configurations, some usage patterns may cause duplication i
   <span class="hljs-comment">// and the default density styles are generated. **Note** that this is a problem because it</span>
   <span class="hljs-comment">// means that density styles are generated *again*, even though only the color should change.</span>
   <span class="hljs-keyword">@include</span> angular-material-theme(<span class="hljs-variable">$dark-theme</span>);
-}</code></pre>
+}
+</code></pre>
 <p>To fix this, you can use the dedicated mixin for color styles for the <code>.dark-theme</code>
 selector. Replace the <code>angular-material-theme</code> mixin and include the dark theme using the
 <code>angular-material-color</code> mixin. For example:</p>
@@ -25,7 +26,8 @@ selector. Replace the <code>angular-material-theme</code> mixin and include the 
 <span class="hljs-selector-class">.dark-theme</span> {
   <span class="hljs-comment">// This mixin only generates the color styles now.</span>
   <span class="hljs-keyword">@include</span> angular-material-color(<span class="hljs-variable">$dark-theme</span>);
-}</code></pre>
+}
+</code></pre>
 <p>Typography can also be configured via Sass mixin; see <code>angular-material-typography</code>.</p>
 <p><strong>Example #2</strong></p>
 <p>Theme styles could also be duplicated if individual theme mixins are used. For example:</p>
@@ -34,13 +36,15 @@ selector. Replace the <code>angular-material-theme</code> mixin and include the 
 <span class="hljs-selector-class">.my-custom-dark-button</span> {
   <span class="hljs-comment">// This will also generate the default density styles again.</span>
   <span class="hljs-keyword">@include</span> mat-button-theme(<span class="hljs-variable">$my-theme</span>);
-}</code></pre>
+}
+</code></pre>
 <p>To avoid this duplication of styles, use the dedicated mixin for the color system and
 extract the configuration for the color system from the theme.</p>
 <pre><code class="language-scss"><span class="hljs-selector-class">.my-custom-dark-button</span> {
   <span class="hljs-comment">// This will only generate the color styles for `mat-button`.</span>
   <span class="hljs-keyword">@include</span> mat-button-color(<span class="hljs-variable">$my-theme</span>);
-}</code></pre>
+}
+</code></pre>
 
         <h2 id="disabling-duplication-warnings" class="docs-header-link">
           <span header-link="disabling-duplication-warnings"></span>
@@ -53,5 +57,6 @@ set to disable duplication warnings from Angular Material. For example:</p>
 <span class="hljs-comment">// Include themes as usual.</span>
 <span class="hljs-keyword">@include</span> angular-material-theme(<span class="hljs-variable">$light-theme</span>);
 
-...</code></pre>
+...
+</code></pre>
 </div>

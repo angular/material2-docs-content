@@ -17,22 +17,23 @@ text direction (RTL or LTR);</p>
 
   <span class="hljs-comment">/** Whether the widget is in RTL mode or not. */</span>
   <span class="hljs-keyword">private</span> isRtl: <span class="hljs-built_in">boolean</span>;
-
+  
   <span class="hljs-comment">/** Subscription to the Directionality change EventEmitter. */</span>
   <span class="hljs-keyword">private</span> _dirChangeSubscription = Subscription.EMPTY;  
-
+  
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">dir: Directionality</span>)</span> {
     <span class="hljs-built_in">this</span>.isRtl = dir.value === <span class="hljs-string">&#x27;rtl&#x27;</span>;
-
+    
     <span class="hljs-built_in">this</span>._dirChangeSubscription = dir.change.subscribe(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-built_in">this</span>.flipDirection();
     });
   }
-
+  
   <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>._dirChangeSubscription.unsubscribe();
   }
-}  </code></pre>
+}  
+</code></pre>
 
         <h3 id="the-dir-directive" class="docs-header-link">
           <span header-link="the-dir-directive"></span>

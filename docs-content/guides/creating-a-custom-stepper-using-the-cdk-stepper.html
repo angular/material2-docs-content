@@ -21,7 +21,8 @@
   onClick(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.selectedIndex = index;
   }
-}</code></pre>
+}
+</code></pre>
 <p>After we&#39;ve extended our component class from <code>CdkStepper</code> we can now access different properties from this class like <code>linear</code>, <code>selectedIndex</code> and <code>steps</code> which are defined in the <a href="https://material.angular.io/cdk/stepper/api#CdkStepper">API documentation</a>.</p>
 <p>This is the HTML template of our custom stepper component:</p>
 <p><strong>custom-stepper.component.html</strong></p>
@@ -45,7 +46,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-button&quot;</span> <span class="hljs-attr">cdkStepperNext</span>&gt;</span><span class="hljs-symbol">&amp;rarr;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+</code></pre>
 <p>In the <code>app.component.css</code> file we can now style the stepper however we want:</p>
 <p><strong>custom-stepper.component.css</strong></p>
 <pre><code class="language-css"><span class="hljs-selector-class">.example-container</span> {
@@ -80,7 +82,8 @@
 <span class="hljs-selector-class">.example-nav-button</span> {
   <span class="hljs-attribute">background</span>: transparent;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-}</code></pre>
+}
+</code></pre>
 
         <h2 id="using-our-new-custom-stepper-component" class="docs-header-link">
           <span header-link="using-our-new-custom-stepper-component"></span>
@@ -91,14 +94,16 @@
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">app-custom-stepper</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is any content of &quot;Step 1&quot;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is any content of &quot;Step 2&quot;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span>
+</code></pre>
 <p>As you can see in this example, each step needs to be wrapped inside a <code>&lt;cdk-step&gt;</code> tag.</p>
 <p>If you want to iterate over your steps and use your own custom component you can do it, for example, this way:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">app-custom-stepper</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let step of mySteps; let stepIndex = index&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">my-step-component</span> [<span class="hljs-attr">step</span>]=<span class="hljs-string">&quot;step&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-step-component</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span>
+</code></pre>
 
         <h2 id="linear-mode" class="docs-header-link">
           <span header-link="linear-mode"></span>
@@ -115,7 +120,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span> <span class="hljs-attr">editable</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;b&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;b&quot;</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span>
+</code></pre>
 <p><strong>app.component.ts</strong></p>
 <pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppComponent</span> </span>{
   completed = <span class="hljs-literal">false</span>;
@@ -123,5 +129,6 @@
   completeStep(): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.completed = <span class="hljs-literal">true</span>;
   }
-}</code></pre>
+}
+</code></pre>
 </div>

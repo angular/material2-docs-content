@@ -53,8 +53,10 @@ overlay pane. For example, to remove the padding from a dialog:</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Add this to your global stylesheet after your theme setup</span>
 <span class="hljs-selector-class">.myapp-no-padding-dialog</span> <span class="hljs-selector-class">.mat-dialog-container</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
-}</code></pre>
-<pre><code class="language-ts"><span class="hljs-built_in">this</span>.dialog.open(MyDialogComponent, {<span class="hljs-attr">panelClass</span>: <span class="hljs-string">&#x27;myapp-no-padding-dialog&#x27;</span>})</code></pre>
+}
+</code></pre>
+<pre><code class="language-ts"><span class="hljs-built_in">this</span>.dialog.open(MyDialogComponent, {<span class="hljs-attr">panelClass</span>: <span class="hljs-string">&#x27;myapp-no-padding-dialog&#x27;</span>})
+</code></pre>
 <p>Since you are adding the styles to your global stylesheet, it is a good practice to scope
 them appropriately. Try prefixing your selector with your app name or &quot;custom&quot;. Also note that
 the <code>mat-dialog-container</code>&#39;s padding is added by default via a selector with specificity of 1. The
