@@ -46,11 +46,14 @@ approaches recommended by Angular Material in the past. The migration performs t
   <span class="hljs-attr">&quot;dependencies&quot;</span>: {
     <span class="hljs-attr">&quot;hammerjs&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
   }
-}</code></pre>
+}
+</code></pre>
 <p><em>2.</em> Remove script imports to <code>hammerjs</code> in the <code>index.html</code> file.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://my-cdn.io/hammer.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://my-cdn.io/hammer.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 <p><em>3.</em> Remove <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#Import_a_module_for_its_side_effects_only">side-effect imports</a> to <code>hammerjs</code>.</p>
-<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;hammerjs&#x27;</span>;</code></pre>
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;hammerjs&#x27;</span>;
+</code></pre>
 <p>The migration cannot automatically remove HammerJS from tests. Please manually clean up
 the test setup and resolve any test issues. Read more in a
 <a href="#how-to-migrate-my-tests">dedicated section for test migration</a>.</p>
@@ -69,7 +72,8 @@ The most common case is that an <code>NgModule</code> in your application direct
     {<span class="hljs-attr">provide</span>: HAMMER_GESTURE_CONFIG, <span class="hljs-attr">useClass</span>: GestureConfig}
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
+</code></pre>
 <p>If this pattern is found in your project, it usually means that a component relies on the
 deprecated <code>GestureConfig</code> in order to use HammerJS events in the template. If this is the case,
 the migration automatically creates a new gesture config which supports the used HammerJS
@@ -97,7 +101,8 @@ reference should be changed to the new gesture config created by the migration.<
 <p>If HammerJS has been removed from your project by the migration, you might need to refactor
 the test setup that provides HammerJS. This is usually done in your test main file (usually
 in <code>src/test.ts</code>) where <code>hammerjs</code> may be imported.</p>
-<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;hammerjs&#x27;</span>;</code></pre>
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;hammerjs&#x27;</span>;
+</code></pre>
 <p><a name="what-to-do-ambiguous-usage"></a></p>
 
         <h2 id="the-migration-reported-ambiguous-usage-what-should-i-do" class="docs-header-link">
@@ -108,7 +113,8 @@ in <code>src/test.ts</code>) where <code>hammerjs</code> may be imported.</p>
 used in a component template. This is because the migration relies on static analysis to detect
 event bindings and can never guarantee that an event binding is bound to the Hammer gesture
 plugin, or to an actual <code>@Output</code>. For example:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">image-rotator</span> (<span class="hljs-attr">rotate</span>)=<span class="hljs-string">&quot;onRotate()&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image-rotator</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">image-rotator</span> (<span class="hljs-attr">rotate</span>)=<span class="hljs-string">&quot;onRotate()&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image-rotator</span>&gt;</span>
+</code></pre>
 <p>In the example above, <code>rotate</code> could be an event from the deprecated <code>GestureConfig</code>, or an
 <code>@Output</code> from <code>&lt;image-rotator&gt;</code>. The migration warns you about this to raise awareness that it
 might have <em>incorrectly kept</em> HammerJS. Please check if you can remove HammerJS from the project

@@ -118,7 +118,8 @@ it(<span class="hljs-string">&#x27;loads harnesses&#x27;</span>, <span class="hl
   <span class="hljs-keyword">const</span> dialogHarness = <span class="hljs-keyword">await</span> rootLoader.getHarness(MyDialogHarness);
 
   <span class="hljs-comment">// ... make some assertions</span>
-});</code></pre>
+});
+</code></pre>
 <p><code>ProtractorHarnessEnvironment</code> has an API that offers a single static method:</p>
 <table>
 <thead>
@@ -201,7 +202,8 @@ code. For example:</p>
     <span class="hljs-comment">// Check expectations after async click operation complete.</span>
     expect(isProgressSpinnerVisible()).toBe(<span class="hljs-literal">false</span>);
   });
-});</code></pre>
+});
+</code></pre>
 
         <h4 id="working-with-asynchronous-component-harness-methods" class="docs-header-link">
           <span header-link="working-with-asynchronous-component-harness-methods"></span>
@@ -228,7 +230,8 @@ can read multiple properties from a harness with <code>parallel</code>:</p>
   ]);
   expect(checked).toBe(<span class="hljs-literal">false</span>);
   expect(indeterminate).toBe(<span class="hljs-literal">true</span>);
-});</code></pre>
+});
+</code></pre>
 
         <h3 id="api-for-component-harness-authors" class="docs-header-link">
           <span header-link="api-for-component-harness-authors"></span>
@@ -263,11 +266,13 @@ subclass. In most cases, the <code>hostSelector</code> should be the same as the
   <span class="hljs-function"><span class="hljs-title">toggle</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.open = !<span class="hljs-built_in">this</span>.open;
   }
-}</code></pre>
+}
+</code></pre>
 <p>In this case, a minimal harness for the component would look like the following:</p>
 <pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
-}</code></pre>
+}
+</code></pre>
 <p>While <code>ComponentHarness</code> subclasses require only the <code>hostSelector</code> property, most harnesses should
 also implement a static <code>with</code> method to generate <code>HarnessPredicate</code> instances. The
 <a href="#filtering-harness-instances-with-harnesspredicate"><code>HarnessPredicate</code></a> section below covers this
@@ -320,7 +325,8 @@ and content elements as follows:</p>
 
   <span class="hljs-comment">/** Gets the content element. */</span>
   getContentElement = <span class="hljs-built_in">this</span>.locatorForOptional(<span class="hljs-string">&#x27;.my-popup-content&#x27;</span>);
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="working-with-testelement-instances" class="docs-header-link">
           <span header-link="working-with-testelement-instances"></span>
@@ -428,7 +434,8 @@ like <code>toggle</code> and <code>isOpen</code>:</p>
     <span class="hljs-keyword">const</span> content = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getContentElement();
     <span class="hljs-keyword">return</span> !!content;
   }
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="loading-harnesses-for-subcomponents" class="docs-header-link">
           <span header-link="loading-harnesses-for-subcomponents"></span>
@@ -475,7 +482,8 @@ earlier has an alternate signature that can be used for locating sub-harnesses r
 <span class="hljs-meta">@Directive</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;my-menu-item&#x27;</span>
 })
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItem</span> </span>{}</code></pre>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItem</span> </span>{}
+</code></pre>
 <p>The harness for <code>MyMenu</code> can then take advantage of other harnesses for <code>MyPopup</code> and <code>MyMenuItem</code>:</p>
 <pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu&#x27;</span>;
@@ -494,7 +502,8 @@ earlier has an alternate signature that can be used for locating sub-harnesses r
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItemHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu-item&#x27;</span>;
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="filtering-harness-instances-with-harnesspredicate" class="docs-header-link">
           <span header-link="filtering-harness-instances-with-harnesspredicate"></span>
@@ -583,7 +592,8 @@ trigger text and to filter menu items based on their text:</p>
     <span class="hljs-keyword">const</span> host = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.host();
     <span class="hljs-keyword">return</span> host.text();
   }
-}</code></pre>
+}
+</code></pre>
 <p>You can pass a <code>HarnessPredicate</code> in place of a <code>ComponentHarness</code> class to any of the APIs on
 <code>HarnessLoader</code>, <code>LocatorFactory</code>, or <code>ComponentHarness</code>. This allows test authors to easily target
 a particular component instance when creating a harness instance. It also allows the harness author
@@ -600,7 +610,8 @@ This can now easily be expanded to allow users of the harness to search for part
   }
 
   ...
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="creating-a-harnessloader-for-an-element" class="docs-header-link">
           <span header-link="creating-a-harnessloader-for-an-element"></span>
@@ -636,7 +647,8 @@ that users may want to load harnesses for. <code>MyPopupHarness</code> could add
 extending <code>ContentContainerComponentHarness</code>.</p>
 <pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ContentContainerComponentHarness</span>&lt;<span class="hljs-title">string</span>&gt; </span>{
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="accessing-elements-outside-of-the-components-host-element" class="docs-header-link">
           <span header-link="accessing-elements-outside-of-the-components-host-element"></span>
@@ -670,7 +682,8 @@ via <code>documentRootLocatorFactory()</code>:</p>
     <span class="hljs-keyword">const</span> rootLocator = <span class="hljs-built_in">this</span>.documentRootLocatorFactory();
     <span class="hljs-keyword">return</span> rootLocator.harnessLoaderFor(<span class="hljs-string">&#x27;my-popup-content&#x27;</span>);
   }
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="waiting-for-asynchronous-tasks" class="docs-header-link">
           <span header-link="waiting-for-asynchronous-tasks"></span>

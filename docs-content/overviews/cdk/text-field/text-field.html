@@ -36,7 +36,8 @@ you are using Angular Material, this CSS is included as part of the <code>mat-co
 using Angular Material, you should include this CSS with the <code>cdk-text-field</code> mixin.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/cdk/text-field/text-field&#x27;</span>; 
 
-<span class="hljs-keyword">@include</span> cdk-text-field();</code></pre>
+<span class="hljs-keyword">@include</span> cdk-text-field();
+</code></pre>
 
         <h3 id="styling-the-autofill-state-of-an-input" class="docs-header-link">
           <span header-link="styling-the-autofill-state-of-an-input"></span>
@@ -51,5 +52,6 @@ an optional <code>color</code> value as the second parameter.</p>
 <span class="hljs-comment">// Set custom-autofill inputs to have no background and red text.</span>
 <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.custom-autofill</span> {
   <span class="hljs-keyword">@include</span> cdk-text-field-autofill-color(transparent, red);
-}</code></pre>
+}
+</code></pre>
 </div>

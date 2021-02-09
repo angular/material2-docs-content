@@ -21,14 +21,16 @@ Intended to be used with components that correspond to a <code>role=&quot;menu&q
 <pre><code class="language-ts"><span class="hljs-keyword">interface</span> ListKeyManagerOption {
   disabled?: <span class="hljs-built_in">boolean</span>;
   getLabel?(): <span class="hljs-built_in">string</span>;
-}</code></pre>
+}
+</code></pre>
 
         <h3 id="wrapping" class="docs-header-link">
           <span header-link="wrapping"></span>
           Wrapping
         </h3>
       <p>Navigation through options can be made to wrap via the <code>withWrap</code> method</p>
-<pre><code class="language-ts"><span class="hljs-built_in">this</span>.keyManager = <span class="hljs-keyword">new</span> FocusKeyManager(...).withWrap();</code></pre>
+<pre><code class="language-ts"><span class="hljs-built_in">this</span>.keyManager = <span class="hljs-keyword">new</span> FocusKeyManager(...).withWrap();
+</code></pre>
 
         <h3 id="types-of-key-managers" class="docs-header-link">
           <span header-link="types-of-key-managers"></span>
@@ -44,7 +46,8 @@ Intended to be used with components that correspond to a <code>role=&quot;menu&q
 <code>FocusableOption</code> interface:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">interface</span> FocusableOption <span class="hljs-keyword">extends</span> ListKeyManagerOption {
   focus(): <span class="hljs-built_in">void</span>;
-}</code></pre>
+}
+</code></pre>
 
         <h4 id="activedescendantkeymanager" class="docs-header-link">
           <span header-link="activedescendantkeymanager"></span>
@@ -56,7 +59,8 @@ Each item managed must implement the
 <pre><code class="language-ts"><span class="hljs-keyword">interface</span> Highlightable <span class="hljs-keyword">extends</span> ListKeyManagerOption {
   setActiveStyles(): <span class="hljs-built_in">void</span>;
   setInactiveStyles(): <span class="hljs-built_in">void</span>;
-}</code></pre>
+}
+</code></pre>
 <p>Each item must also have an ID bound to the listbox&#39;s or menu&#39;s <code>aria-activedescendant</code>.</p>
 
         <h2 id="focustrap" class="docs-header-link">
@@ -75,7 +79,8 @@ constrained.</p>
         </h3>
       <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;my-inner-dialog-content&quot;</span> <span class="hljs-attr">cdkTrapFocus</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- Tab and Shift + Tab will not leave this element. --&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
 <p>This directive will not prevent focus from moving out of the trapped region due to mouse
 interaction.</p>
 
@@ -92,7 +97,8 @@ trapped. When using the tab key, focus will move through this region and wrap ar
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusRegionStart</span>&gt;</span>Focus region start<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusInitial</span>&gt;</span>Initially focused<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusRegionEnd</span>&gt;</span>Focus region end<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusRegionEnd</span>&gt;</span>Focus region end<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
 <p><strong>Note:</strong> If you&#39;re using <code>cdkFocusInitial</code> together with the <code>CdkTrapFocus</code> directive, nothing
 will happen unless you&#39;ve enabled the <code>cdkTrapFocusAutoCapture</code> option as well. This is due to
 <code>CdkTrapFocus</code> not capturing focus on initialization by default.</p>
@@ -123,7 +129,8 @@ for more information on aria-live regions.</p>
  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">liveAnnouncer: LiveAnnouncer</span>)</span> {
    liveAnnouncer.announce(<span class="hljs-string">&quot;Hey Google&quot;</span>);
  }
-}</code></pre>
+}
+</code></pre>
 
         <h2 id="focusmonitor" class="docs-header-link">
           <span header-link="focusmonitor"></span>
@@ -151,7 +158,8 @@ add <code>.cdk-${origin}-focused</code> (with <code>${origin}</code> being <code
 indicate how the element was focused.</p>
 <p>Note: currently the <code>FocusMonitor</code> emits on the observable <em>outside</em> of the Angular zone. Therefore
 if you <code>markForCheck</code> in the subscription you must put yourself back in the Angular zone.</p>
-<pre><code class="language-ts">focusMonitor.monitor(el).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-built_in">this</span>.ngZone.run(<span class="hljs-function">() =&gt;</span> <span class="hljs-comment">/* ... */</span> ));</code></pre>
+<pre><code class="language-ts">focusMonitor.monitor(el).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-built_in">this</span>.ngZone.run(<span class="hljs-function">() =&gt;</span> <span class="hljs-comment">/* ... */</span> ));
+</code></pre>
 <p>Any element that is monitored by calling <code>monitor</code> should eventually be unmonitored by calling
 <code>stopMonitoring</code> with the same element.</p>
 <div material-docs-example="focus-monitor-overview"></div>
@@ -185,7 +193,8 @@ components. To take advantage of them, you have to include the styles in your gl
 If you&#39;re using Material together with the CDK, these styles have been included for you already.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;~@angular/cdk/text-field/text-field&#x27;</span>;
 
-<span class="hljs-keyword">@include</span> cdk-a11y();</code></pre>
+<span class="hljs-keyword">@include</span> cdk-a11y();
+</code></pre>
 
         <h3 id="hiding-elements-while-keeping-them-available-for-screen-readers" class="docs-header-link">
           <span header-link="hiding-elements-while-keeping-them-available-for-screen-readers"></span>
@@ -197,7 +206,8 @@ while keeping it available for assistive technology. You can do so using the <co
 class:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;custom-checkbox&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;cdk-visually-hidden&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
 
         <h3 id="targeting-high-contrast-users" class="docs-header-link">
           <span header-link="targeting-high-contrast-users"></span>
@@ -211,5 +221,6 @@ by the CDK when high contrast mode is detected at runtime.</p>
   <span class="hljs-keyword">@include</span> cdk-high-contrast {
     <span class="hljs-attribute">outline</span>: solid <span class="hljs-number">1px</span>;
   }
-}</code></pre>
+}
+</code></pre>
 </div>

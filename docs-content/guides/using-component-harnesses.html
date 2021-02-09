@@ -53,7 +53,8 @@ describe(<span class="hljs-string">&#x27;my-component&#x27;</span>, <span class=
     fixture = TestBed.createComponent(UserProfile);
     loader = TestbedHarnessEnvironment.loader(fixture);
   });
-}</code></pre>
+}
+</code></pre>
 <p>This code creates a fixture for <code>UserProfile</code> and then creates a <code>HarnessLoader</code> for that fixture.
 The <code>HarnessLoader</code> can then locate Angular Material components inside <code>UserProfile</code> and create
 harnesses for them. Note that <code>HarnessLoader</code> and <code>TestbedHarnessEnvironment</code> are loaded from
@@ -82,7 +83,8 @@ for each instance of the corresponding component. For example, suppose <code>Use
 it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatButtonHarness); <span class="hljs-comment">// length: 3</span>
   <span class="hljs-keyword">const</span> firstButton = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness); <span class="hljs-comment">// === buttons[0]</span>
-});</code></pre>
+});
+</code></pre>
 <p>Notice the example code uses <code>async</code> and <code>await</code> syntax. All component harness APIs are
 asynchronous and return <code>Promise</code> objects. Because of this, the Angular team recommends using the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code>/<code>await</code> syntax</a>
@@ -97,30 +99,33 @@ with the following code:</p>
 <pre><code class="language-ts">it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-keyword">const</span> footerLoader = <span class="hljs-keyword">await</span> loader.getChildLoader(<span class="hljs-string">&#x27;.footer&#x27;</span>);
   <span class="hljs-keyword">const</span> footerButton = <span class="hljs-keyword">await</span> footerLoader.getHarness(MatButtonHarness);
-});</code></pre>
+});
+</code></pre>
 <p>You can also use the static <code>with</code> method implemented on all Angular Material component harnesses.
 This method creates a <code>HarnessPredicate</code>, an object that filters loaded harnesses based on the
 provided constraints. The particular constraint options vary depending on the harness class, but all
 harnesses support at least:</p>
 <ul>
-<li><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such
-as <code>[mat-button]</code>)</li>
-<li><code>ancestor</code> - CSS selector for a some ancestor element above the component in the DOM</li>
-</ul>
+<li><p><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such
+as <code>[mat-button]</code>)</p>
+</li>
+<li><p><code>ancestor</code> - CSS selector for a some ancestor element above the component in the DOM</p>
 <p>In addition to these standard options, <code>MatButtonHarness</code> also supports</p>
-<ul>
-<li><code>text</code> - String text or regular expressions that matches the text content of the button </li>
-</ul>
+</li>
+<li><p><code>text</code> - String text or regular expressions that matches the text content of the button </p>
 <p>Using this method we could locate buttons as follows in our test:</p>
 <pre><code class="language-ts">it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-  <span class="hljs-comment">// Harness for mat-button whose id is &#x27;more-info&#x27;.</span>
-  <span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#more-info&#x27;</span>}));
-  <span class="hljs-comment">// Harness for mat-button whose text is &#x27;Cancel&#x27;.</span>
-  <span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Cancel&#x27;</span>}));
-  <span class="hljs-comment">// Harness for mat-button with class &#x27;confirm&#x27; and whose text is either &#x27;Ok&#x27; or &#x27;Okay&#x27;.</span>
-  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
-      MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>})
-});</code></pre>
+<span class="hljs-comment">// Harness for mat-button whose id is &#x27;more-info&#x27;.</span>
+<span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#more-info&#x27;</span>}));
+<span class="hljs-comment">// Harness for mat-button whose text is &#x27;Cancel&#x27;.</span>
+<span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Cancel&#x27;</span>}));
+<span class="hljs-comment">// Harness for mat-button with class &#x27;confirm&#x27; and whose text is either &#x27;Ok&#x27; or &#x27;Okay&#x27;.</span>
+<span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
+    MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>})
+});
+</code></pre>
+</li>
+</ul>
 
         <h2 id="using-a-harness-to-interact-with-an-angular-material-component" class="docs-header-link">
           <span header-link="using-a-harness-to-interact-with-an-angular-material-component"></span>
@@ -140,7 +145,8 @@ capture more knowledge about the component&#39;s internals.</p>
   expect(<span class="hljs-keyword">await</span> okButton.isDisabled()).toBe(<span class="hljs-literal">false</span>);
   <span class="hljs-keyword">await</span> okButton.click();
   expect(fixture.componentInstance.confirmed).toBe(<span class="hljs-literal">true</span>);
-});</code></pre>
+});
+</code></pre>
 <p>Note that the code above does not call <code>fixture.detectChanges()</code>, something you commonly see in
 unit tests. The CDK&#39;s component harnesses automatically invoke change detection after performing
 actions and before reading state. The harness also automatically waits for the fixture to be stable,
@@ -179,7 +185,8 @@ what the test might look like without using component harnesses:</p>
     <span class="hljs-keyword">await</span> fixture.whenStable();
     expect(fixture.debugElement.query(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).not.toBeNull();
   });
-});</code></pre>
+});
+</code></pre>
 <p>The same test, using the Angular Material component harnesses might look like the following:</p>
 <pre><code class="language-ts">describe(<span class="hljs-string">&#x27;issue-report-selector&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IssueReportSelector&gt;;
@@ -204,7 +211,8 @@ what the test might look like without using component harnesses:</p>
     <span class="hljs-keyword">await</span> bugOption.click();
     expect(fixture.debugElement.query(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).not.toBeNull();
   });
-});</code></pre>
+});
+</code></pre>
 
         <h3 id="tests-that-are-easier-to-read-and-understand" class="docs-header-link">
           <span header-link="tests-that-are-easier-to-read-and-understand"></span>

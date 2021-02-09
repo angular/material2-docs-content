@@ -86,7 +86,8 @@ built upon.</p>
 <span class="hljs-comment">&lt;!-- This result here is identical to the syntax above --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">cdkPortal</span>&gt;</span>
   The content of this template is captured by the portal.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
 <p>A component can use <code>@ViewChild</code> or <code>@ViewChildren</code> to get a reference to a
 <code>CdkPortal</code>.</p>
 
@@ -99,7 +100,8 @@ portals, it must be included in the <code>entryComponents</code> of its <code>Ng
 <p>Usage:</p>
 <pre><code class="language-ts"><span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
   <span class="hljs-built_in">this</span>.userSettingsPortal = <span class="hljs-keyword">new</span> ComponentPortal(UserSettingsComponent);
-}</code></pre>
+}
+</code></pre>
 
         <h5 id="templateportal" class="docs-header-link">
           <span header-link="templateportal"></span>
@@ -107,7 +109,8 @@ portals, it must be included in the <code>entryComponents</code> of its <code>Ng
         </h5>
       <p>You can create a <code>TemplatePortal</code> from an <code>&lt;ng-template&gt;</code>. <code>TemplatePortal</code> allows you to take Angular content within one template and render it somewhere else.</p>
 <p>Usage:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">templatePortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">templatePortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
 <pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) templatePortalContent: TemplateRef&lt;unknow&gt;;
 
 <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
@@ -115,7 +118,8 @@ portals, it must be included in the <code>entryComponents</code> of its <code>Ng
     <span class="hljs-built_in">this</span>.templatePortalContent,
     <span class="hljs-built_in">this</span>._viewContainerRef
   );
-}</code></pre>
+}
+</code></pre>
 
         <h5 id="domportal" class="docs-header-link">
           <span header-link="domportal"></span>
@@ -123,11 +127,13 @@ portals, it must be included in the <code>entryComponents</code> of its <code>Ng
         </h5>
       <p>You can create a <code>DomPortal</code> from any native DOM element. <code>DomPortal</code> allows you to take any arbitrary DOM content and render it somewhere else. <code>DomPortal</code> moves content <em>as is</em>, so elements with Angular features like bindings or directives may no longer update if moved via <code>DomPortal</code>.</p>
 <p>Usage:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">domPortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> #<span class="hljs-attr">domPortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
 <pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;domPortalContent&#x27;</span>) domPortalContent: ElementRef&lt;HTMLElement&gt;;
 <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
   <span class="hljs-built_in">this</span>.domPortal = <span class="hljs-keyword">new</span> DomPortal(<span class="hljs-built_in">this</span>.domPortalContent);
-}</code></pre>
+}
+</code></pre>
 
         <h5 id="cdkportaloutlet" class="docs-header-link">
           <span header-link="cdkportaloutlet"></span>
@@ -136,5 +142,6 @@ portals, it must be included in the <code>entryComponents</code> of its <code>Ng
       <p>Used to add a portal outlet to a template. <code>CdkPortalOutlet</code> <em>is</em> a <code>PortalOutlet</code>.</p>
 <p>Usage:</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Attaches the `userSettingsPortal` from the previous example. --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalOutlet</span>]=<span class="hljs-string">&quot;userSettingsPortal&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalOutlet</span>]=<span class="hljs-string">&quot;userSettingsPortal&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
 </div>

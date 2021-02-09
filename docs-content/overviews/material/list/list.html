@@ -13,7 +13,8 @@ list component, it provides Material Design styling, but no behavior of its own.
  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span> Pepper <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span> Salt <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span> Paprika <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="navigation-lists" class="docs-header-link">
           <span header-link="navigation-lists"></span>
@@ -23,7 +24,8 @@ list component, it provides Material Design styling, but no behavior of its own.
 <p>Simple navigation lists can use the <code>mat-list-item</code> attribute on anchor tag elements directly:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-nav-list</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let link of links&quot;</span>&gt;</span> {{ link }} <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-nav-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-nav-list</span>&gt;</span>
+</code></pre>
 <p>For more complex navigation lists (e.g. with more than one target per item), wrap the anchor 
 element in an <code>&lt;mat-list-item&gt;</code>.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-nav-list</span>&gt;</span>
@@ -33,7 +35,8 @@ element in an <code>&lt;mat-list-item&gt;</code>.</p>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>info<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-nav-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-nav-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="action-lists" class="docs-header-link">
           <span header-link="action-lists"></span>
@@ -45,7 +48,8 @@ in an action list is a <code>&lt;button&gt;</code> element.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-action-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-list-item</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;save()&quot;</span>&gt;</span> Save <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-list-item</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;undo()&quot;</span>&gt;</span> Undo <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="selection-lists" class="docs-header-link">
           <span header-link="selection-lists"></span>
@@ -82,7 +86,8 @@ as shown in the example).</p>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">matLine</span>&gt;</span> {{message.subject}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">matLine</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="lists-with-icons" class="docs-header-link">
           <span header-link="lists-with-icons"></span>
@@ -98,7 +103,8 @@ as shown in the example).</p>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> -- {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="lists-with-avatars" class="docs-header-link">
           <span header-link="lists-with-avatars"></span>
@@ -114,7 +120,8 @@ as shown in the example).</p>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> -- {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="dense-lists" class="docs-header-link">
           <span header-link="dense-lists"></span>
@@ -127,7 +134,8 @@ to the main <code>mat-list</code> tag.</p>
  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span> Pepper <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span> Salt <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span> Paprika <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="lists-with-multiple-sections" class="docs-header-link">
           <span header-link="lists-with-multiple-sections"></span>
@@ -149,7 +157,8 @@ To add a divider, use <code>&lt;mat-divider&gt;</code>.</p>
       <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">matLine</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">matLine</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> {{note.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
