@@ -1,6 +1,6 @@
 import { NgIf, CommonModule } from '@angular/common';
 import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵdirectiveInject, ElementRef, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵhostProperty, ɵɵclassProp, ɵɵProvidersFeature, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵattribute, Optional, Inject, Self, ViewChild, Input, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate, ɵɵtemplate, ɵɵtextInterpolate1, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { FormGroup, FormControl, NgControlStatusGroup, FormGroupDirective, NgControlStatus, FormControlName, RequiredValidator, Validators, FormBuilder, NgControl, DefaultValueAccessor, FormControlDirective, ɵangular_packages_forms_forms_y, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, NgControlStatusGroup, FormGroupDirective, NgControlStatus, FormControlName, RequiredValidator, Validators, FormBuilder, NgControl, DefaultValueAccessor, FormControlDirective, ɵangular_packages_forms_forms_y, MinValidator, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormField, MatLabel, MatSuffix, MatHint, MAT_FORM_FIELD, MatFormFieldControl, MatError, MatPrefix, MatFormFieldModule } from '@angular/material/form-field';
@@ -671,7 +671,7 @@ FormFieldThemingExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldThemingExam
         ɵɵproperty("formControl", ctx.fontSizeControl);
         ɵɵadvance(3);
         ɵɵproperty("ngIf", ctx.fontSizeControl.invalid);
-    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatInput, NumberValueAccessor, DefaultValueAccessor, MatSuffix, NgIf, MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
+    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatInput, MinValidator, NumberValueAccessor, DefaultValueAccessor, MatSuffix, NgIf, MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(FormFieldThemingExample, [{
         type: Component,
         args: [{
