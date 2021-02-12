@@ -91,7 +91,9 @@ for the theme.</li>
     primary: <span class="hljs-variable">$candy-app-primary</span>,
     accent: <span class="hljs-variable">$candy-app-accent</span>,
     warn: <span class="hljs-variable">$candy-app-warn</span>,  
-  )
+  ),
+  typography: mat-typography-config(),
+  density: <span class="hljs-number">0</span>, // Defaults to <span class="hljs-number">0</span> if omitted, but shown for completeness.
 ));
 
 <span class="hljs-comment">// Include theme styles for core and each component used in your app.</span>
@@ -145,7 +147,8 @@ theme.</p>
   color: (
     primary: <span class="hljs-variable">$candy-app-primary</span>,
     accent: <span class="hljs-variable">$candy-app-accent</span>,
-  )
+  ),
+  typography: mat-typography-config()
 ));
 
 <span class="hljs-comment">// Include the default theme styles (color and default density)</span>
@@ -228,7 +231,8 @@ the <code>mat-core-theme</code> mixin as well, which contains theme-specific sty
  color: (
    primary: <span class="hljs-variable">$candy-app-primary</span>,
    accent: <span class="hljs-variable">$candy-app-accent</span>,
- )
+ ),
+ typography: mat-typography-config()
 ));
 
 <span class="hljs-comment">// Include the theme styles for only specified components.</span>

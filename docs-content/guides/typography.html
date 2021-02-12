@@ -118,10 +118,12 @@ creating a custom theme, you can create a custom <strong>typography configuratio
 
 <span class="hljs-comment">// Define a custom typography config that overrides the font-family as well as the</span>
 <span class="hljs-comment">// `headlines` and `body-1` levels.</span>
-<span class="hljs-variable">$custom-typography</span>: mat-typography-config(
-  <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Roboto, monospace&#x27;</span>,
-  <span class="hljs-variable">$headline</span>: mat-typography-level(<span class="hljs-number">32px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">700</span>),
-  <span class="hljs-variable">$body-1</span>: mat-typography-level(<span class="hljs-number">16px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">500</span>)
+<span class="hljs-variable">$custom-typography-theme</span>: (
+    typography: mat-typography-config(
+        <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Roboto, monospace&#x27;</span>, 
+        <span class="hljs-variable">$headline</span>: mat-typography-level(<span class="hljs-number">32px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">700</span>),
+        <span class="hljs-variable">$body-1</span>: mat-typography-level(<span class="hljs-number">16px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">500</span>)
+    )
 );
 </code></pre>
 <p>As the above example demonstrates, a typography configuration is created by using the
@@ -132,18 +134,18 @@ has to be in quotes.</p>
 <p>Once the custom typography definition is created, it can be consumed to generate styles via
 different Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).</span>
-<span class="hljs-keyword">@include</span> mat-base-typography(<span class="hljs-variable">$custom-typography</span>);
+<span class="hljs-keyword">@include</span> mat-base-typography(<span class="hljs-variable">$custom-typography-theme</span>);
 
 <span class="hljs-comment">// Override typography for a specific Angular Material components.</span>
-<span class="hljs-keyword">@include</span> mat-checkbox-typography(<span class="hljs-variable">$custom-typography</span>);
+<span class="hljs-keyword">@include</span> mat-checkbox-typography(<span class="hljs-variable">$custom-typography-theme</span>);
 
 <span class="hljs-comment">// Override typography for all Angular Material, including mat-base-typography and all components.</span>
-<span class="hljs-keyword">@include</span> angular-material-typography(<span class="hljs-variable">$custom-typography</span>);
+<span class="hljs-keyword">@include</span> angular-material-typography(<span class="hljs-variable">$custom-typography-theme</span>);
 </code></pre>
 <p>If you&#39;re using Material&#39;s theming, you can also pass in your typography config to the
 <code>mat-core</code> mixin:</p>
 <pre><code class="language-scss"><span class="hljs-comment">// Override the typography in the core CSS.</span>
-<span class="hljs-keyword">@include</span> mat-core(<span class="hljs-variable">$custom-typography</span>);
+<span class="hljs-keyword">@include</span> mat-core(<span class="hljs-variable">$custom-typography-theme</span>);
 </code></pre>
 <p>For more details about the typography functions and default config, see the
 <a href="https://github.com/angular/components/blob/master/src/material/core/typography/_typography.scss">source</a>.</p>
