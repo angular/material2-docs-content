@@ -173,6 +173,43 @@ to be applied.</p>
 <div material-docs-example="cdk-drag-drop-custom-preview"></div>
 
 
+        <h3 id="drag-preview-insertion-point" class="docs-header-link">
+          <span header-link="drag-preview-insertion-point"></span>
+          Drag preview insertion point
+        </h3>
+      <p>By default, the preview of a <code>cdkDrag</code> will be inserted into the <code>&lt;body&gt;</code> of the page in order to
+avoid issues with <code>z-index</code> and <code>overflow: hidden</code>. This may not be desireable in some cases,
+because the preview won&#39;t retain its inherited styles. You can control where the preview is inserted
+using the <code>cdkDrawPreviewContainer</code> input. The possible values are:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>global</code></td>
+<td>Default value. Preview is inserted into the <code>&lt;body&gt;</code> or the closest shadow root.</td>
+<td>Preview won&#39;t be affected by <code>z-index</code> or <code>overflow: hidden</code>. It also won&#39;t affect <code>:nth-child</code> selectors and flex layouts.</td>
+<td>Doesn&#39;t retain inherited styles.</td>
+</tr>
+<tr>
+<td><code>parent</code></td>
+<td>Preview is inserted inside the parent of the item that is being dragged.</td>
+<td>Preview inherits the same styles as the dragged item.</td>
+<td>Preview may be clipped by <code>overflow: hidden</code> or be placed under other elements due to <code>z-index</code>. Furthermore, it can affect <code>:nth-child</code> selectors and some flex layouts.</td>
+</tr>
+<tr>
+<td><code>ElementRef</code> or <code>HTMLElement</code></td>
+<td>Preview will be inserted into the specified element.</td>
+<td>Preview inherits styles from the specified container element.</td>
+<td>Preview may be clipped by <code>overflow: hidden</code> or be placed under other elements due to <code>z-index</code>. Furthermore, it can affect <code>:nth-child</code> selectors and some flex layouts.</td>
+</tr>
+</tbody></table>
+
         <h3 id="customizing-the-drag-placeholder" class="docs-header-link">
           <span header-link="customizing-the-drag-placeholder"></span>
           Customizing the drag placeholder

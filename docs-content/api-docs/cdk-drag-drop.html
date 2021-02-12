@@ -714,6 +714,32 @@ Can be used to restore the element&#39;s position for a returning user.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragPreviewContainer&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>previewContainer: PreviewContainer</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Configures the place into which the preview of the item will be inserted. Can be configured
+globally through <code>CDK_DROP_LIST</code>. Possible values:</p>
+<ul>
+<li><code>global</code> - Preview will be inserted at the bottom of the <code>&lt;body&gt;</code>. The advantage is that
+you don&#39;t have to worry about <code>overflow: hidden</code> or <code>z-index</code>, but the item won&#39;t retain
+its inherited styles.</li>
+<li><code>parent</code> - Preview will be inserted into the parent of the drag item. The advantage is that
+inherited styles will be preserved, but it may be clipped by <code>overflow: hidden</code> or not be
+visible due to <code>z-index</code>. Furthermore, the preview is going to have an effect over selectors
+like <code>:nth-child</code> and some flexbox configurations.</li>
+<li><code>ElementRef&lt;HTMLElement&gt; | HTMLElement</code> - Preview will be inserted into a specific element.
+Same advantages and disadvantages as <code>parent</code>.</li>
+</ul>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragRootElement&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>rootElementSelector: string</code>
@@ -1934,6 +1960,56 @@ While dragging this is the placeholder, otherwise it&#39;s the root element.</p>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
         <p>Template that from which to stamp out the placeholder.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withPreviewContainer
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the container into which to insert the preview element.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">PreviewContainer</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Container into which to insert the preview.</p>
 
       </p>
     </td>
@@ -3675,6 +3751,18 @@ items and drop lists within a module or a component.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previewContainer: &#39;global&#39; | &#39;parent&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>rootElementSelector: string</code>
     </p>
   </td>
@@ -3946,6 +4034,31 @@ original position in current array.</p>
       <span header-link="type_aliases"></span>
       Type aliases
     </h3>
+    
+      
+
+<h4 id="PreviewContainer" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="PreviewContainer"></span>
+  <code>PreviewContainer</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible places into which the preview of a drag item can be inserted.</p>
+<ul>
+<li><code>global</code> - Preview will be inserted at the bottom of the <code>&lt;body&gt;</code>. The advantage is that
+you don&#39;t have to worry about <code>overflow: hidden</code> or <code>z-index</code>, but the item won&#39;t retain
+its inherited styles.</li>
+<li><code>parent</code> - Preview will be inserted into the parent of the drag item. The advantage is that
+inherited styles will be preserved, but it may be clipped by <code>overflow: hidden</code> or not be
+visible due to <code>z-index</code>. Furthermore, the preview is going to have an effect over selectors
+like <code>:nth-child</code> and some flexbox configurations.</li>
+<li><code>ElementRef&lt;HTMLElement&gt; | HTMLElement</code> - Preview will be inserted into a specific element.
+Same advantages and disadvantages as <code>parent</code>.</li>
+</ul>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> PreviewContainer = <span class="hljs-string">&#x27;global&#x27;</span> | <span class="hljs-string">&#x27;parent&#x27;</span> | ElementRef&lt;HTMLElement&gt; | HTMLElement;</code>
+</pre>
+</div>
+
+
     
       
 
