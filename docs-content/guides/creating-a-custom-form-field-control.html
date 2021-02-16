@@ -223,7 +223,7 @@ need to remember to emit on the <code>stateChanges</code> stream so change detec
 
 <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef&lt;HTMLElement&gt;</span>)</span> {
   ...
-  fm.monitor(elRef.nativeElement, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
+  fm.monitor(elRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
     <span class="hljs-built_in">this</span>.focused = !!origin;
     <span class="hljs-built_in">this</span>.stateChanges.next();
   });
@@ -231,7 +231,7 @@ need to remember to emit on the <code>stateChanges</code> stream so change detec
 
 <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
   ...
-  <span class="hljs-built_in">this</span>.fm.stopMonitoring(<span class="hljs-built_in">this</span>.elRef.nativeElement);
+  <span class="hljs-built_in">this</span>.fm.stopMonitoring(<span class="hljs-built_in">this</span>.elRef);
 }
 </code></pre>
 
