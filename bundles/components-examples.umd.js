@@ -1689,6 +1689,22 @@
                 "importSpecifier": "material/button-toggle"
             }
         },
+        "button-toggle-forms": {
+            "packagePath": "material/button-toggle/button-toggle-forms",
+            "title": "Button-toggles with forms",
+            "componentName": "ButtonToggleFormsExample",
+            "files": [
+                "button-toggle-forms-example.ts",
+                "button-toggle-forms-example.html"
+            ],
+            "selector": "button-toggle-forms-example",
+            "additionalComponents": [],
+            "primaryFile": "button-toggle-forms-example.ts",
+            "module": {
+                "name": "ButtonToggleExamplesModule",
+                "importSpecifier": "material/button-toggle"
+            }
+        },
         "button-toggle-harness": {
             "packagePath": "material/button-toggle/button-toggle-harness",
             "title": "Testing with MatButtonToggleHarness",

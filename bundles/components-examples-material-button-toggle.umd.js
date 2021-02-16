@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button-toggle'), require('@angular/material/icon')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/button-toggle', ['exports', '@angular/core', '@angular/material/button-toggle', '@angular/material/icon'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.buttonToggle = {}), global.ng.core, global.ng.material.buttonToggle, global.ng.material.icon));
-}(this, (function (exports, i0, i1, i2) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/button-toggle'), require('@angular/material/icon')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/button-toggle', ['exports', '@angular/core', '@angular/forms', '@angular/material/button-toggle', '@angular/material/icon'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.buttonToggle = {}), global.ng.core, global.ng.forms, global.ng.material.buttonToggle, global.ng.material.icon));
+}(this, (function (exports, i0, i2, i1, i2$1) { 'use strict';
 
     /**
      * @title Button toggle appearance
@@ -98,7 +98,7 @@
                 i0.ɵɵadvance(15);
                 i0.ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
             }
-        }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle, i2.MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
+        }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle, i2$1.MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
                 type: i0.Component,
@@ -180,11 +180,85 @@
             }], null, null);
     })();
 
+    /**
+     * @title Button-toggles with forms
+     */
+    var ButtonToggleFormsExample = /** @class */ (function () {
+        function ButtonToggleFormsExample() {
+            this.fontStyleControl = new i2.FormControl();
+        }
+        return ButtonToggleFormsExample;
+    }());
+    ButtonToggleFormsExample.ɵfac = function ButtonToggleFormsExample_Factory(t) { return new (t || ButtonToggleFormsExample)(); };
+    ButtonToggleFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleFormsExample, selectors: [["button-toggle-forms-example"]], decls: 24, vars: 4, consts: [["aria-label", "Font Style", 3, "ngModel", "ngModelChange"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["aria-label", "Font Style", 3, "formControl"]], template: function ButtonToggleFormsExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "section");
+                i0.ɵɵelementStart(1, "h4");
+                i0.ɵɵtext(2, "Button Toggle inside of a Template-driven form");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-button-toggle-group", 0);
+                i0.ɵɵlistener("ngModelChange", function ButtonToggleFormsExample_Template_mat_button_toggle_group_ngModelChange_3_listener($event) { return ctx.fontStyle = $event; });
+                i0.ɵɵelementStart(4, "mat-button-toggle", 1);
+                i0.ɵɵtext(5, "Bold");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-button-toggle", 2);
+                i0.ɵɵtext(7, "Italic");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(8, "mat-button-toggle", 3);
+                i0.ɵɵtext(9, "Underline");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "p");
+                i0.ɵɵtext(11);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "section");
+                i0.ɵɵelementStart(13, "h4");
+                i0.ɵɵtext(14, "Button Toggle inside of a Reactive form");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(15, "mat-button-toggle-group", 4);
+                i0.ɵɵelementStart(16, "mat-button-toggle", 1);
+                i0.ɵɵtext(17, "Bold");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(18, "mat-button-toggle", 2);
+                i0.ɵɵtext(19, "Italic");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(20, "mat-button-toggle", 3);
+                i0.ɵɵtext(21, "Underline");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(22, "p");
+                i0.ɵɵtext(23);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("ngModel", ctx.fontStyle);
+                i0.ɵɵadvance(8);
+                i0.ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyle, "");
+                i0.ɵɵadvance(4);
+                i0.ɵɵproperty("formControl", ctx.fontStyleControl);
+                i0.ɵɵadvance(8);
+                i0.ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyleControl.value, "");
+            }
+        }, directives: [i1.MatButtonToggleGroup, i2.NgControlStatus, i2.NgModel, i1.MatButtonToggle, i2.FormControlDirective], encapsulation: 2 });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleFormsExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-toggle-forms-example',
+                        templateUrl: 'button-toggle-forms-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
+        ButtonToggleFormsExample,
     ];
     var ButtonToggleExamplesModule = /** @class */ (function () {
         function ButtonToggleExamplesModule() {
@@ -193,26 +267,34 @@
     }());
     ButtonToggleExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
     ButtonToggleExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
+                i2.FormsModule,
                 i1.MatButtonToggleModule,
-                i2.MatIconModule,
+                i2$1.MatIconModule,
+                i2.ReactiveFormsModule,
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
                 ButtonToggleExclusiveExample,
                 ButtonToggleOverviewExample,
-                ButtonToggleHarnessExample], imports: [i1.MatButtonToggleModule,
-                i2.MatIconModule], exports: [ButtonToggleAppearanceExample,
+                ButtonToggleHarnessExample,
+                ButtonToggleFormsExample], imports: [i2.FormsModule,
+                i1.MatButtonToggleModule,
+                i2$1.MatIconModule,
+                i2.ReactiveFormsModule], exports: [ButtonToggleAppearanceExample,
                 ButtonToggleExclusiveExample,
                 ButtonToggleOverviewExample,
-                ButtonToggleHarnessExample] });
+                ButtonToggleHarnessExample,
+                ButtonToggleFormsExample] });
     })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
+                            i2.FormsModule,
                             i1.MatButtonToggleModule,
-                            i2.MatIconModule,
+                            i2$1.MatIconModule,
+                            i2.ReactiveFormsModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
@@ -228,6 +310,7 @@
     exports.ButtonToggleAppearanceExample = ButtonToggleAppearanceExample;
     exports.ButtonToggleExamplesModule = ButtonToggleExamplesModule;
     exports.ButtonToggleExclusiveExample = ButtonToggleExclusiveExample;
+    exports.ButtonToggleFormsExample = ButtonToggleFormsExample;
     exports.ButtonToggleHarnessExample = ButtonToggleHarnessExample;
     exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
 
