@@ -1,4 +1,5 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵɵlistener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { FormControl, NgControlStatus, NgModel, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 
@@ -150,33 +151,109 @@ ButtonToggleHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleHarne
             }]
     }], null, null); })();
 
+/**
+ * @title Button-toggles with forms
+ */
+class ButtonToggleFormsExample {
+    constructor() {
+        this.fontStyleControl = new FormControl();
+    }
+}
+ButtonToggleFormsExample.ɵfac = function ButtonToggleFormsExample_Factory(t) { return new (t || ButtonToggleFormsExample)(); };
+ButtonToggleFormsExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleFormsExample, selectors: [["button-toggle-forms-example"]], decls: 24, vars: 4, consts: [["aria-label", "Font Style", 3, "ngModel", "ngModelChange"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["aria-label", "Font Style", 3, "formControl"]], template: function ButtonToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "section");
+        ɵɵelementStart(1, "h4");
+        ɵɵtext(2, "Button Toggle inside of a Template-driven form");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-button-toggle-group", 0);
+        ɵɵlistener("ngModelChange", function ButtonToggleFormsExample_Template_mat_button_toggle_group_ngModelChange_3_listener($event) { return ctx.fontStyle = $event; });
+        ɵɵelementStart(4, "mat-button-toggle", 1);
+        ɵɵtext(5, "Bold");
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-button-toggle", 2);
+        ɵɵtext(7, "Italic");
+        ɵɵelementEnd();
+        ɵɵelementStart(8, "mat-button-toggle", 3);
+        ɵɵtext(9, "Underline");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "p");
+        ɵɵtext(11);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "section");
+        ɵɵelementStart(13, "h4");
+        ɵɵtext(14, "Button Toggle inside of a Reactive form");
+        ɵɵelementEnd();
+        ɵɵelementStart(15, "mat-button-toggle-group", 4);
+        ɵɵelementStart(16, "mat-button-toggle", 1);
+        ɵɵtext(17, "Bold");
+        ɵɵelementEnd();
+        ɵɵelementStart(18, "mat-button-toggle", 2);
+        ɵɵtext(19, "Italic");
+        ɵɵelementEnd();
+        ɵɵelementStart(20, "mat-button-toggle", 3);
+        ɵɵtext(21, "Underline");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(22, "p");
+        ɵɵtext(23);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(3);
+        ɵɵproperty("ngModel", ctx.fontStyle);
+        ɵɵadvance(8);
+        ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyle, "");
+        ɵɵadvance(4);
+        ɵɵproperty("formControl", ctx.fontStyleControl);
+        ɵɵadvance(8);
+        ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyleControl.value, "");
+    } }, directives: [MatButtonToggleGroup, NgControlStatus, NgModel, MatButtonToggle, FormControlDirective], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleFormsExample, [{
+        type: Component,
+        args: [{
+                selector: 'button-toggle-forms-example',
+                templateUrl: 'button-toggle-forms-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ButtonToggleAppearanceExample,
     ButtonToggleExclusiveExample,
     ButtonToggleOverviewExample,
     ButtonToggleHarnessExample,
+    ButtonToggleFormsExample,
 ];
 class ButtonToggleExamplesModule {
 }
 ButtonToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
 ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
+            FormsModule,
             MatButtonToggleModule,
             MatIconModule,
+            ReactiveFormsModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
-        ButtonToggleHarnessExample], imports: [MatButtonToggleModule,
-        MatIconModule], exports: [ButtonToggleAppearanceExample,
+        ButtonToggleHarnessExample,
+        ButtonToggleFormsExample], imports: [FormsModule,
+        MatButtonToggleModule,
+        MatIconModule,
+        ReactiveFormsModule], exports: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
-        ButtonToggleHarnessExample] }); })();
+        ButtonToggleHarnessExample,
+        ButtonToggleFormsExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
+                    FormsModule,
                     MatButtonToggleModule,
                     MatIconModule,
+                    ReactiveFormsModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -188,5 +265,5 @@ ButtonToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Button
  * Generated bundle index. Do not edit.
  */
 
-export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleHarnessExample, ButtonToggleOverviewExample };
+export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleFormsExample, ButtonToggleHarnessExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.js.map

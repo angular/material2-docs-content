@@ -192,7 +192,7 @@ declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em>
     <span class="hljs-comment">// },</span>
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt; </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">ControlValueAccessor</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
     ...,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
@@ -223,7 +223,7 @@ need to remember to emit on the <code>stateChanges</code> stream so change detec
 
 <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef&lt;HTMLElement&gt;</span>)</span> {
   ...
-  fm.monitor(elRef.nativeElement, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
+  fm.monitor(elRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
     <span class="hljs-built_in">this</span>.focused = !!origin;
     <span class="hljs-built_in">this</span>.stateChanges.next();
   });
@@ -231,7 +231,7 @@ need to remember to emit on the <code>stateChanges</code> stream so change detec
 
 <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
   ...
-  <span class="hljs-built_in">this</span>.fm.stopMonitoring(<span class="hljs-built_in">this</span>.elRef.nativeElement);
+  <span class="hljs-built_in">this</span>.fm.stopMonitoring(<span class="hljs-built_in">this</span>.elRef);
 }
 </code></pre>
 
