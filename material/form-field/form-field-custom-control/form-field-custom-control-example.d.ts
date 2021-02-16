@@ -1,4 +1,5 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
+import { BooleanInput } from '@angular/cdk/coercion';
 import { ElementRef, OnDestroy } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, FormBuilder, FormGroup, NgControl } from '@angular/forms';
 import { MatFormField, MatFormFieldControl } from '@angular/material/form-field';
@@ -60,8 +61,8 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     registerOnTouched(fn: any): void;
     setDisabledState(isDisabled: boolean): void;
     _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
-    static ngAcceptInputType_disabled: boolean | string | null | undefined;
-    static ngAcceptInputType_required: boolean | string | null | undefined;
+    static ngAcceptInputType_disabled: BooleanInput;
+    static ngAcceptInputType_required: BooleanInput;
     static ɵfac: i0.ɵɵFactoryDef<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
 }

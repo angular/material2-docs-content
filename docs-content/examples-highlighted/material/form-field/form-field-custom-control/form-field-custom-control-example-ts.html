@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {FocusMonitor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
-<span class="hljs-keyword">import</span> {coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion&#x27;</span>;
+<span class="hljs-keyword">import</span> {BooleanInput, coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   Component,
   ElementRef,
@@ -224,6 +224,6 @@
     <span class="hljs-built_in">this</span>.onChange(<span class="hljs-built_in">this</span>.value);
   }
 
-  <span class="hljs-keyword">static</span> ngAcceptInputType_disabled: <span class="hljs-built_in">boolean</span> | <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> | <span class="hljs-literal">undefined</span>;
-  <span class="hljs-keyword">static</span> ngAcceptInputType_required: <span class="hljs-built_in">boolean</span> | <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> | <span class="hljs-literal">undefined</span>;
+  <span class="hljs-keyword">static</span> ngAcceptInputType_disabled: BooleanInput;
+  <span class="hljs-keyword">static</span> ngAcceptInputType_required: BooleanInput;
 }
