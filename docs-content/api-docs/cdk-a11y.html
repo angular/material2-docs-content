@@ -4993,11 +4993,7 @@ via <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Screenreaders will often fire fake mousedown events when a focusable element
-is activated using the keyboard. We can typically distinguish between these faked
-mousedown events and real mousedown events using the &quot;buttons&quot; property. While
-real mousedowns will indicate the mouse button that was pressed (e.g. &quot;1&quot; for
-the left mouse button), faked mousedowns will usually set the property value to 0.</p>
+      <p>Gets whether an event could be a faked <code>mousedown</code> event dispatched by a screen reader.</p>
 
     </td>
   </tr><thead>
@@ -5011,6 +5007,56 @@ the left mouse button), faked mousedowns will usually set the property value to 
       <p class="docs-api-method-parameter-name">
         event</p>
       <code class="docs-api-method-parameter-type">MouseEvent</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isFakeTouchstartFromScreenReader
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether an event could be a faked <code>touchstart</code> event dispatched by a screen reader.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        event</p>
+      <code class="docs-api-method-parameter-type">TouchEvent</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
