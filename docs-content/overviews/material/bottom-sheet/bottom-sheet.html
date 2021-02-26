@@ -45,7 +45,9 @@ bottomSheetRef.dismiss();
           <span header-link="configuring-bottom-sheet-content-via-entrycomponents"></span>
           Configuring bottom sheet content via <code>entryComponents</code>
         </h3>
-      <p>Similarly to <code>MatDialog</code>, <code>MatBottomSheet</code> instantiates components at run-time. In order for it to
+      <p><strong>You only need to specify <code>entryComponents</code> if your project uses ViewEngine. Projects
+using Angular Ivy don&#39;t need <code>entryComponents</code>.</strong></p>
+<p>Similarly to <code>MatDialog</code>, <code>MatBottomSheet</code> instantiates components at run-time. In order for it to
 work, the Angular compiler needs extra information to create the necessary <code>ComponentFactory</code> for
 your bottom sheet content component.</p>
 <p>Any components that are included inside of a bottom sheet have to be added to the <code>entryComponents</code>
