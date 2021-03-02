@@ -106,26 +106,25 @@ This method creates a <code>HarnessPredicate</code>, an object that filters load
 provided constraints. The particular constraint options vary depending on the harness class, but all
 harnesses support at least:</p>
 <ul>
-<li><p><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such
-as <code>[mat-button]</code>)</p>
-</li>
-<li><p><code>ancestor</code> - CSS selector for a some ancestor element above the component in the DOM</p>
+<li><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such
+as <code>[mat-button]</code>)</li>
+<li><code>ancestor</code> - CSS selector for a some ancestor element above the component in the DOM</li>
+</ul>
 <p>In addition to these standard options, <code>MatButtonHarness</code> also supports</p>
-</li>
-<li><p><code>text</code> - String text or regular expressions that matches the text content of the button </p>
+<ul>
+<li><code>text</code> - String text or regular expressions that matches the text content of the button </li>
+</ul>
 <p>Using this method we could locate buttons as follows in our test:</p>
 <pre><code class="language-ts">it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-<span class="hljs-comment">// Harness for mat-button whose id is &#x27;more-info&#x27;.</span>
-<span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#more-info&#x27;</span>}));
-<span class="hljs-comment">// Harness for mat-button whose text is &#x27;Cancel&#x27;.</span>
-<span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Cancel&#x27;</span>}));
-<span class="hljs-comment">// Harness for mat-button with class &#x27;confirm&#x27; and whose text is either &#x27;Ok&#x27; or &#x27;Okay&#x27;.</span>
-<span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
-    MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>})
+  <span class="hljs-comment">// Harness for mat-button whose id is &#x27;more-info&#x27;.</span>
+  <span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#more-info&#x27;</span>}));
+  <span class="hljs-comment">// Harness for mat-button whose text is &#x27;Cancel&#x27;.</span>
+  <span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Cancel&#x27;</span>}));
+  <span class="hljs-comment">// Harness for mat-button with class &#x27;confirm&#x27; and whose text is either &#x27;Ok&#x27; or &#x27;Okay&#x27;.</span>
+  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
+      MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>})
 });
 </code></pre>
-</li>
-</ul>
 
         <h2 id="using-a-harness-to-interact-with-an-angular-material-component" class="docs-header-link">
           <span header-link="using-a-harness-to-interact-with-an-angular-material-component"></span>
