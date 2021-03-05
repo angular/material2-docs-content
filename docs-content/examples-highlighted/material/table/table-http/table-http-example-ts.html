@@ -16,7 +16,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableHttpExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;created&#x27;</span>, <span class="hljs-string">&#x27;state&#x27;</span>, <span class="hljs-string">&#x27;number&#x27;</span>, <span class="hljs-string">&#x27;title&#x27;</span>];
   exampleDatabase: ExampleHttpDatabase | <span class="hljs-literal">null</span>;
-  data: GithubIssue[] = [];
+  filteredAndPagedIssues: Observable&lt;GithubIssue[]&gt;;
 
   resultsLength = <span class="hljs-number">0</span>;
   isLoadingResults = <span class="hljs-literal">true</span>;
@@ -30,10 +30,7 @@
   <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDatabase(<span class="hljs-built_in">this</span>._httpClient);
 
-    <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>
-    <span class="hljs-built_in">this</span>.sort.sortChange.subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
-
-    merge(<span class="hljs-built_in">this</span>.sort.sortChange, <span class="hljs-built_in">this</span>.paginator.page)
+    <span class="hljs-built_in">this</span>.filteredAndPagedIssues = merge(<span class="hljs-built_in">this</span>.sort.sortChange, <span class="hljs-built_in">this</span>.paginator.page)
       .pipe(
         startWith({}),
         switchMap(<span class="hljs-function">() =&gt;</span> {
@@ -55,7 +52,11 @@
           <span class="hljs-built_in">this</span>.isRateLimitReached = <span class="hljs-literal">true</span>;
           <span class="hljs-keyword">return</span> observableOf([]);
         })
-      ).subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-built_in">this</span>.data = data);
+      );
+  }
+
+  resetPaging(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>;
   }
 }
 

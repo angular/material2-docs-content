@@ -1103,7 +1103,6 @@
         function TableHttpExample(_httpClient) {
             this._httpClient = _httpClient;
             this.displayedColumns = ['created', 'state', 'number', 'title'];
-            this.data = [];
             this.resultsLength = 0;
             this.isLoadingResults = true;
             this.isRateLimitReached = false;
@@ -1111,9 +1110,7 @@
         TableHttpExample.prototype.ngAfterViewInit = function () {
             var _this = this;
             this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
-            // If the user changes the sort order, reset back to the first page.
-            this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-            rxjs.merge(this.sort.sortChange, this.paginator.page)
+            this.filteredAndPagedIssues = rxjs.merge(this.sort.sortChange, this.paginator.page)
                 .pipe(operators.startWith({}), operators.switchMap(function () {
                 _this.isLoadingResults = true;
                 return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
@@ -1128,7 +1125,10 @@
                 // Catch if the GitHub API has reached its rate limit. Return empty data.
                 _this.isRateLimitReached = true;
                 return rxjs.of([]);
-            })).subscribe(function (data) { return _this.data = data; });
+            }));
+        };
+        TableHttpExample.prototype.resetPaging = function () {
+            this.paginator.pageIndex = 0;
         };
         return TableHttpExample;
     }());
@@ -1143,12 +1143,13 @@
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
             }
-        }, decls: 19, vars: 6, consts: [[1, "example-container", "mat-elevation-z8"], ["class", "example-loading-shade", 4, "ngIf"], [1, "example-table-container"], ["mat-table", "", "matSort", "", "matSortActive", "created", "matSortDisableClear", "", "matSortDirection", "desc", 1, "example-table", 3, "dataSource"], ["matColumnDef", "number"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "title"], ["matColumnDef", "state"], ["matColumnDef", "created"], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "length", "pageSize"], [1, "example-loading-shade"], [4, "ngIf"], ["class", "example-rate-limit-reached", 4, "ngIf"], [1, "example-rate-limit-reached"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableHttpExample_Template(rf, ctx) {
+        }, decls: 19, vars: 6, consts: [[1, "example-container", "mat-elevation-z8"], ["class", "example-loading-shade", 4, "ngIf"], [1, "example-table-container"], ["mat-table", "", "matSort", "", "matSortActive", "created", "matSortDisableClear", "", "matSortDirection", "desc", 1, "example-table", 3, "dataSource", "matSortChange"], ["matColumnDef", "number"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "title"], ["matColumnDef", "state"], ["matColumnDef", "created"], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "length", "pageSize"], [1, "example-loading-shade"], [4, "ngIf"], ["class", "example-rate-limit-reached", 4, "ngIf"], [1, "example-rate-limit-reached"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableHttpExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵtemplate(1, TableHttpExample_div_1_Template, 3, 2, "div", 1);
                 i0.ɵɵelementStart(2, "div", 2);
                 i0.ɵɵelementStart(3, "table", 3);
+                i0.ɵɵlistener("matSortChange", function TableHttpExample_Template_table_matSortChange_3_listener() { return ctx.resetPaging(); });
                 i0.ɵɵelementContainerStart(4, 4);
                 i0.ɵɵtemplate(5, TableHttpExample_th_5_Template, 2, 0, "th", 5);
                 i0.ɵɵtemplate(6, TableHttpExample_td_6_Template, 2, 1, "td", 6);
@@ -1176,7 +1177,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.isLoadingResults || ctx.isRateLimitReached);
                 i0.ɵɵadvance(2);
-                i0.ɵɵproperty("dataSource", ctx.data);
+                i0.ɵɵproperty("dataSource", ctx.filteredAndPagedIssues);
                 i0.ɵɵadvance(13);
                 i0.ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
@@ -1184,7 +1185,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("length", ctx.resultsLength)("pageSize", 30);
             }
-        }, directives: [i2.NgIf, i1$1.MatTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i5.MatPaginator, i6.MatSpinner, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatSortHeader, i1$1.MatHeaderRow, i1$1.MatRow], pipes: [i2.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
+        }, directives: [i2.NgIf, i1$1.MatTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i5.MatPaginator, i6.MatSpinner, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatSortHeader, i1$1.MatHeaderRow, i1$1.MatRow], pipes: [i2.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableHttpExample, [{
                 type: i0.Component,
