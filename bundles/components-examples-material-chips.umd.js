@@ -61,16 +61,13 @@
             this.filteredFruits = this.fruitCtrl.valueChanges.pipe(operators.startWith(null), operators.map(function (fruit) { return fruit ? _this._filter(fruit) : _this.allFruits.slice(); }));
         }
         ChipsAutocompleteExample.prototype.add = function (event) {
-            var input = event.input;
-            var value = event.value;
+            var value = (event.value || '').trim();
             // Add our fruit
-            if ((value || '').trim()) {
-                this.fruits.push(value.trim());
+            if (value) {
+                this.fruits.push(value);
             }
-            // Reset the input value
-            if (input) {
-                input.value = '';
-            }
+            // Clear the input value
+            event.chipInput.clear();
             this.fruitCtrl.setValue(null);
         };
         ChipsAutocompleteExample.prototype.remove = function (fruit) {
@@ -246,16 +243,13 @@
             ];
         }
         ChipsInputExample.prototype.add = function (event) {
-            var input = event.input;
-            var value = event.value;
+            var value = (event.value || '').trim();
             // Add our fruit
-            if ((value || '').trim()) {
-                this.fruits.push({ name: value.trim() });
+            if (value) {
+                this.fruits.push({ name: value });
             }
-            // Reset the input value
-            if (input) {
-                input.value = '';
-            }
+            // Clear the input value
+            event.chipInput.clear();
         };
         ChipsInputExample.prototype.remove = function (fruit) {
             var index = this.fruits.indexOf(fruit);
