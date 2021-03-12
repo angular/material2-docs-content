@@ -58,13 +58,16 @@ class ChipsAutocompleteExample {
         this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => fruit ? this._filter(fruit) : this.allFruits.slice()));
     }
     add(event) {
-        const value = (event.value || '').trim();
+        const input = event.input;
+        const value = event.value;
         // Add our fruit
-        if (value) {
-            this.fruits.push(value);
+        if ((value || '').trim()) {
+            this.fruits.push(value.trim());
         }
-        // Clear the input value
-        event.chipInput.clear();
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
         this.fruitCtrl.setValue(null);
     }
     remove(fruit) {
@@ -217,13 +220,16 @@ class ChipsInputExample {
         ];
     }
     add(event) {
-        const value = (event.value || '').trim();
+        const input = event.input;
+        const value = event.value;
         // Add our fruit
-        if (value) {
-            this.fruits.push({ name: value });
+        if ((value || '').trim()) {
+            this.fruits.push({ name: value.trim() });
         }
-        // Clear the input value
-        event.chipInput.clear();
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
     }
     remove(fruit) {
         const index = this.fruits.indexOf(fruit);

@@ -34,15 +34,18 @@
   }
 
   add(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">const</span> value = (event.value || <span class="hljs-string">&#x27;&#x27;</span>).trim();
+    <span class="hljs-keyword">const</span> input = event.input;
+    <span class="hljs-keyword">const</span> value = event.value;
 
     <span class="hljs-comment">// Add our fruit</span>
-    <span class="hljs-keyword">if</span> (value) {
-      <span class="hljs-built_in">this</span>.fruits.push(value);
+    <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">&#x27;&#x27;</span>).trim()) {
+      <span class="hljs-built_in">this</span>.fruits.push(value.trim());
     }
 
-    <span class="hljs-comment">// Clear the input value</span>
-    event.chipInput!.clear();
+    <span class="hljs-comment">// Reset the input value</span>
+    <span class="hljs-keyword">if</span> (input) {
+      input.value = <span class="hljs-string">&#x27;&#x27;</span>;
+    }
 
     <span class="hljs-built_in">this</span>.fruitCtrl.setValue(<span class="hljs-literal">null</span>);
   }
