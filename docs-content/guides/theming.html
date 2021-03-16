@@ -90,7 +90,7 @@ for the theme.</li>
   color: (
     primary: <span class="hljs-variable">$candy-app-primary</span>,
     accent: <span class="hljs-variable">$candy-app-accent</span>,
-    warn: <span class="hljs-variable">$candy-app-warn</span>,  
+    warn: <span class="hljs-variable">$candy-app-warn</span>,
   ),
   typography: mat-typography-config(),
   density: <span class="hljs-number">0</span>, // Defaults to <span class="hljs-number">0</span> if omitted, but shown for completeness.
@@ -106,8 +106,8 @@ for the theme.</li>
 add a new entry to the <code>&quot;styles&quot;</code> list in <code>angular.json</code> pointing to the theme
 file (e.g., <code>unicorn-app-theme.scss</code>).</p>
 <p>If you&#39;re not using the Angular CLI, you can use any existing Sass tooling to build the file (such
-as gulp-sass or grunt-sass). The simplest approach is to use the <code>node-sass</code> CLI; you simply run:</p>
-<pre><code>node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css
+as gulp-sass or grunt-sass). The simplest approach is to use the <code>sass</code> CLI; you simply run:</p>
+<pre><code>sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css
 </code></pre>
 <p>Then include the output file in your index.html.</p>
 <p>Your custom theme file <strong>should not</strong> be imported into other SCSS files. This will duplicate styles
