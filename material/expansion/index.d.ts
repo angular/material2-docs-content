@@ -15,6 +15,7 @@ import * as i9 from "@angular/material/icon";
 import * as i10 from "@angular/material/input";
 export { ExpansionExpandCollapseAllExample, ExpansionHarnessExample, ExpansionOverviewExample, ExpansionStepsExample, };
 export declare class ExpansionExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<ExpansionExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<ExpansionExamplesModule, [typeof i1.ExpansionExpandCollapseAllExample, typeof i2.ExpansionHarnessExample, typeof i3.ExpansionOverviewExample, typeof i4.ExpansionStepsExample], [typeof i5.MatButtonModule, typeof i6.MatDatepickerModule, typeof i7.MatNativeDateModule, typeof i8.MatExpansionModule, typeof i9.MatIconModule, typeof i10.MatInputModule], [typeof i1.ExpansionExpandCollapseAllExample, typeof i2.ExpansionHarnessExample, typeof i3.ExpansionOverviewExample, typeof i4.ExpansionStepsExample]>;
     static ɵinj: i0.ɵɵInjectorDef<ExpansionExamplesModule>;
 }

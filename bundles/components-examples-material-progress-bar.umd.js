@@ -13,7 +13,7 @@
         return ProgressBarBufferExample;
     }());
     ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
-    ProgressBarBufferExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) {
+    ProgressBarBufferExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
@@ -77,7 +77,7 @@
         return ProgressBarConfigurableExample;
     }());
     ProgressBarConfigurableExample.ɵfac = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
-    ProgressBarConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) {
+    ProgressBarConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵelementStart(1, "mat-card-content");
@@ -169,7 +169,7 @@
         return ProgressBarDeterminateExample;
     }());
     ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
-    ProgressBarDeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) {
+    ProgressBarDeterminateExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
@@ -193,7 +193,7 @@
         return ProgressBarIndeterminateExample;
     }());
     ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
-    ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) {
+    ProgressBarIndeterminateExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
@@ -217,7 +217,7 @@
         return ProgressBarQueryExample;
     }());
     ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
-    ProgressBarQueryExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) {
+    ProgressBarQueryExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
             }
@@ -241,7 +241,7 @@
         return ProgressBarHarnessExample;
     }());
     ProgressBarHarnessExample.ɵfac = function ProgressBarHarnessExample_Factory(t) { return new (t || ProgressBarHarnessExample)(); };
-    ProgressBarHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressBarHarnessExample, selectors: [["progress-bar-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"], ["mode", "indeterminate"]], template: function ProgressBarHarnessExample_Template(rf, ctx) {
+    ProgressBarHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressBarHarnessExample, selectors: [["progress-bar-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"], ["mode", "indeterminate"]], template: function ProgressBarHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-bar", 0);
                 i0.ɵɵelement(1, "mat-progress-bar", 1);
@@ -273,8 +273,9 @@
         }
         return ProgressBarExamplesModule;
     }());
-    ProgressBarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
-    ProgressBarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
+    ProgressBarExamplesModule.ɵfac = function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); };
+    ProgressBarExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
+    ProgressBarExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i4.CommonModule,
                 i1.MatCardModule,
                 i1$1.MatProgressBarModule,
@@ -282,24 +283,6 @@
                 i6.MatSliderModule,
                 i3.FormsModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
-                ProgressBarConfigurableExample,
-                ProgressBarDeterminateExample,
-                ProgressBarHarnessExample,
-                ProgressBarIndeterminateExample,
-                ProgressBarQueryExample], imports: [i4.CommonModule,
-                i1.MatCardModule,
-                i1$1.MatProgressBarModule,
-                i2.MatRadioModule,
-                i6.MatSliderModule,
-                i3.FormsModule], exports: [ProgressBarBufferExample,
-                ProgressBarConfigurableExample,
-                ProgressBarDeterminateExample,
-                ProgressBarHarnessExample,
-                ProgressBarIndeterminateExample,
-                ProgressBarQueryExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
                 type: i0.NgModule,
@@ -317,6 +300,24 @@
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
+                ProgressBarConfigurableExample,
+                ProgressBarDeterminateExample,
+                ProgressBarHarnessExample,
+                ProgressBarIndeterminateExample,
+                ProgressBarQueryExample], imports: [i4.CommonModule,
+                i1.MatCardModule,
+                i1$1.MatProgressBarModule,
+                i2.MatRadioModule,
+                i6.MatSliderModule,
+                i3.FormsModule], exports: [ProgressBarBufferExample,
+                ProgressBarConfigurableExample,
+                ProgressBarDeterminateExample,
+                ProgressBarHarnessExample,
+                ProgressBarIndeterminateExample,
+                ProgressBarQueryExample] });
     })();
 
     /**

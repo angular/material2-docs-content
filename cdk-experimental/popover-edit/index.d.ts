@@ -15,6 +15,7 @@ import * as i8 from "@angular/forms";
 import * as i9 from "@angular/common";
 export { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample };
 export declare class CdkPopoverEditExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<CdkPopoverEditExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkPopoverEditExamplesModule, [typeof i1.CdkPopoverEditCdkTableExample, typeof i2.CdkPopoverEditCdkTableFlexExample, typeof i3.CdkPopoverEditCellSpanVanillaTableExample, typeof i4.CdkPopoverEditTabOutVanillaTableExample, typeof i5.CdkPopoverEditVanillaTableExample], [typeof i6.CdkPopoverEditModule, typeof i7.CdkTableModule, typeof i8.FormsModule, typeof i9.CommonModule], [typeof i1.CdkPopoverEditCdkTableExample, typeof i2.CdkPopoverEditCdkTableFlexExample, typeof i3.CdkPopoverEditCellSpanVanillaTableExample, typeof i4.CdkPopoverEditTabOutVanillaTableExample, typeof i5.CdkPopoverEditVanillaTableExample]>;
     static ɵinj: i0.ɵɵInjectorDef<CdkPopoverEditExamplesModule>;
 }

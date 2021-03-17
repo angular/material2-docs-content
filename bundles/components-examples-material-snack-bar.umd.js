@@ -329,7 +329,7 @@
         return SnackBarComponentExample;
     }());
     SnackBarComponentExample.ɵfac = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-    SnackBarComponentExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) {
+    SnackBarComponentExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
@@ -365,7 +365,7 @@
         return PizzaPartyComponent;
     }());
     PizzaPartyComponent.ɵfac = function PizzaPartyComponent_Factory(t) { return new (t || PizzaPartyComponent)(); };
-    PizzaPartyComponent.ɵcmp = i0.ɵɵdefineComponent({ type: PizzaPartyComponent, selectors: [["snack-bar-component-example-snack"]], decls: 2, vars: 0, consts: [[1, "example-pizza-party"]], template: function PizzaPartyComponent_Template(rf, ctx) {
+    PizzaPartyComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PizzaPartyComponent, selectors: [["snack-bar-component-example-snack"]], decls: 2, vars: 0, consts: [[1, "example-pizza-party"]], template: function PizzaPartyComponent_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "span", 0);
                 i0.ɵɵtext(1, " Pizza party!!! \uD83C\uDF55\n");
@@ -398,7 +398,7 @@
         return SnackBarOverviewExample;
     }());
     SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-    SnackBarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) {
+    SnackBarOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r2_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -449,7 +449,7 @@
         return SnackBarPositionExample;
     }());
     SnackBarPositionExample.ɵfac = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-    SnackBarPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [[3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) {
+    SnackBarPositionExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [[3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
@@ -530,7 +530,7 @@
         return SnackBarHarnessExample;
     }());
     SnackBarHarnessExample.ɵfac = function SnackBarHarnessExample_Factory(t) { return new (t || SnackBarHarnessExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-    SnackBarHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarHarnessExample, selectors: [["snack-bar-harness-example"]], decls: 1, vars: 0, template: function SnackBarHarnessExample_Template(rf, ctx) {
+    SnackBarHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SnackBarHarnessExample, selectors: [["snack-bar-harness-example"]], decls: 1, vars: 0, template: function SnackBarHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵtemplate(0, SnackBarHarnessExample_ng_template_0_Template, 1, 0, "ng-template");
             }
@@ -556,14 +556,32 @@
         }
         return SnackBarExamplesModule;
     }());
-    SnackBarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SnackBarExamplesModule });
-    SnackBarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); }, imports: [[
+    SnackBarExamplesModule.ɵfac = function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); };
+    SnackBarExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: SnackBarExamplesModule });
+    SnackBarExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i3.FormsModule,
                 i5.MatButtonModule,
                 i4.MatInputModule,
                 i3$1.MatSelectModule,
                 i1.MatSnackBarModule,
             ]] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarExamplesModule, [{
+                type: i0.NgModule,
+                args: [{
+                        imports: [
+                            i3.FormsModule,
+                            i5.MatButtonModule,
+                            i4.MatInputModule,
+                            i3$1.MatSelectModule,
+                            i1.MatSnackBarModule,
+                        ],
+                        declarations: __spreadArray(__spreadArray([], __read(EXAMPLES)), [PizzaPartyComponent]),
+                        exports: EXAMPLES,
+                        entryComponents: __spreadArray(__spreadArray([], __read(EXAMPLES)), [PizzaPartyComponent]),
+                    }]
+            }], null, null);
+    })();
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SnackBarExamplesModule, { declarations: [SnackBarComponentExample,
                 SnackBarHarnessExample,
@@ -576,23 +594,6 @@
                 SnackBarHarnessExample,
                 SnackBarOverviewExample,
                 SnackBarPositionExample] });
-    })();
-    (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarExamplesModule, [{
-                type: i0.NgModule,
-                args: [{
-                        imports: [
-                            i3.FormsModule,
-                            i5.MatButtonModule,
-                            i4.MatInputModule,
-                            i3$1.MatSelectModule,
-                            i1.MatSnackBarModule,
-                        ],
-                        declarations: __spread(EXAMPLES, [PizzaPartyComponent]),
-                        exports: EXAMPLES,
-                        entryComponents: __spread(EXAMPLES, [PizzaPartyComponent]),
-                    }]
-            }], null, null);
     })();
 
     /**

@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDatepickerInput, MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -13,8 +13,8 @@ import { MatFormField, MatLabel } from '@angular/material/form-field';
 class ExpansionExpandCollapseAllExample {
 }
 ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
-ExpansionExpandCollapseAllExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-expand-collapse-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(MatAccordion, 1);
+ExpansionExpandCollapseAllExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-expand-collapse-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(MatAccordion, 5);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.accordion = _t.first);
@@ -124,7 +124,7 @@ class ExpansionOverviewExample {
     }
 }
 ExpansionOverviewExample.ɵfac = function ExpansionOverviewExample_Factory(t) { return new (t || ExpansionOverviewExample)(); };
-ExpansionOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionOverviewExample, selectors: [["expansion-overview-example"]], decls: 17, vars: 1, consts: [["hideToggle", ""], [3, "opened", "closed"]], template: function ExpansionOverviewExample_Template(rf, ctx) { if (rf & 1) {
+ExpansionOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ExpansionOverviewExample, selectors: [["expansion-overview-example"]], decls: 17, vars: 1, consts: [["hideToggle", ""], [3, "opened", "closed"]], template: function ExpansionOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-accordion");
         ɵɵelementStart(1, "mat-expansion-panel", 0);
         ɵɵelementStart(2, "mat-expansion-panel-header");
@@ -185,7 +185,7 @@ class ExpansionStepsExample {
     }
 }
 ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
-ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
+ExpansionStepsExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
         const _r1 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-accordion", 0);
         ɵɵelementStart(1, "mat-expansion-panel", 1);
@@ -310,7 +310,7 @@ ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample,
 class ExpansionHarnessExample {
 }
 ExpansionHarnessExample.ɵfac = function ExpansionHarnessExample_Factory(t) { return new (t || ExpansionHarnessExample)(); };
-ExpansionHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionHarnessExample, selectors: [["expansion-harness-example"]], decls: 7, vars: 0, template: function ExpansionHarnessExample_Template(rf, ctx) { if (rf & 1) {
+ExpansionHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ExpansionHarnessExample, selectors: [["expansion-harness-example"]], decls: 7, vars: 0, template: function ExpansionHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-accordion");
         ɵɵelementStart(1, "mat-expansion-panel");
         ɵɵelementStart(2, "mat-expansion-panel-header");
@@ -340,8 +340,9 @@ const EXAMPLES = [
 ];
 class ExpansionExamplesModule {
 }
-ExpansionExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ExpansionExamplesModule });
-ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ExpansionExamplesModule_Factory(t) { return new (t || ExpansionExamplesModule)(); }, imports: [[
+ExpansionExamplesModule.ɵfac = function ExpansionExamplesModule_Factory(t) { return new (t || ExpansionExamplesModule)(); };
+ExpansionExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: ExpansionExamplesModule });
+ExpansionExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             MatButtonModule,
             MatDatepickerModule,
             MatNativeDateModule,
@@ -349,18 +350,6 @@ ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Expansion
             MatIconModule,
             MatInputModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
-        ExpansionHarnessExample,
-        ExpansionOverviewExample,
-        ExpansionStepsExample], imports: [MatButtonModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
-        MatExpansionModule,
-        MatIconModule,
-        MatInputModule], exports: [ExpansionExpandCollapseAllExample,
-        ExpansionHarnessExample,
-        ExpansionOverviewExample,
-        ExpansionStepsExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ExpansionExamplesModule, [{
         type: NgModule,
         args: [{
@@ -377,6 +366,18 @@ ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Expansion
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
+        ExpansionHarnessExample,
+        ExpansionOverviewExample,
+        ExpansionStepsExample], imports: [MatButtonModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatExpansionModule,
+        MatIconModule,
+        MatInputModule], exports: [ExpansionExpandCollapseAllExample,
+        ExpansionHarnessExample,
+        ExpansionOverviewExample,
+        ExpansionStepsExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

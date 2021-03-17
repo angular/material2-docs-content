@@ -1,5 +1,5 @@
 import { NgForOf, DatePipe, CommonModule } from '@angular/common';
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵpipe, ɵɵadvance, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵpipeBind1, ɵɵtemplate, ɵɵelement, ɵɵproperty, ɵɵreference, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵpipe, ɵɵadvance, ɵɵtextInterpolate, ɵɵtextInterpolate1, ɵɵpipeBind1, ɵɵtemplate, ɵɵelement, ɵɵproperty, ɵɵreference, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatList, MatListItem, MatListSubheaderCssMatStyler, MatListIconCssMatStyler, MatSelectionList, MatListOption, MatListAvatarCssMatStyler, MatListModule } from '@angular/material/list';
 import { MatDivider } from '@angular/material/divider';
@@ -11,7 +11,7 @@ import { MatLine } from '@angular/material/core';
 class ListOverviewExample {
 }
 ListOverviewExample.ɵfac = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
-ListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+ListOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-list", 0);
         ɵɵelementStart(1, "mat-list-item", 1);
         ɵɵtext(2, "Item 1");
@@ -104,7 +104,7 @@ class ListSectionsExample {
     }
 }
 ListSectionsExample.ɵfac = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
-ListSectionsExample.ɵcmp = ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
+ListSectionsExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-list");
         ɵɵelementStart(1, "div", 0);
         ɵɵtext(2, "Folders");
@@ -149,7 +149,7 @@ class ListSelectionExample {
     }
 }
 ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
-ListSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
+ListSelectionExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-selection-list", null, 0);
         ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 1);
         ɵɵelementEnd();
@@ -191,7 +191,7 @@ class ListSingleSelectionExample {
     }
 }
 ListSingleSelectionExample.ɵfac = function ListSingleSelectionExample_Factory(t) { return new (t || ListSingleSelectionExample)(); };
-ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelectionExample, selectors: [["list-single-selection-example"]], decls: 5, vars: 3, consts: [[3, "multiple"], ["shoes", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function ListSingleSelectionExample_Template(rf, ctx) { if (rf & 1) {
+ListSingleSelectionExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ListSingleSelectionExample, selectors: [["list-single-selection-example"]], decls: 5, vars: 3, consts: [[3, "multiple"], ["shoes", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function ListSingleSelectionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-selection-list", 0, 1);
         ɵɵtemplate(2, ListSingleSelectionExample_mat_list_option_2_Template, 2, 2, "mat-list-option", 2);
         ɵɵelementEnd();
@@ -221,7 +221,7 @@ ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelecti
 class ListHarnessExample {
 }
 ListHarnessExample.ɵfac = function ListHarnessExample_Factory(t) { return new (t || ListHarnessExample)(); };
-ListHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ListHarnessExample, selectors: [["list-harness-example"]], decls: 19, vars: 0, consts: [["matLine", ""], ["matListIcon", ""], ["matListAvatar", ""], ["matSubheader", ""], ["mat-list-item", ""]], template: function ListHarnessExample_Template(rf, ctx) { if (rf & 1) {
+ListHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ListHarnessExample, selectors: [["list-harness-example"]], decls: 19, vars: 0, consts: [["matLine", ""], ["matListIcon", ""], ["matListAvatar", ""], ["matSubheader", ""], ["mat-list-item", ""]], template: function ListHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-list");
         ɵɵelementStart(1, "mat-list-item");
         ɵɵelementStart(2, "div", 0);
@@ -270,23 +270,13 @@ const EXAMPLES = [
 ];
 class ListExamplesModule {
 }
-ListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ListExamplesModule });
-ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
+ListExamplesModule.ɵfac = function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); };
+ListExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: ListExamplesModule });
+ListExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatIconModule,
             MatListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListHarnessExample,
-        ListOverviewExample,
-        ListSectionsExample,
-        ListSelectionExample,
-        ListSingleSelectionExample], imports: [CommonModule,
-        MatIconModule,
-        MatListModule], exports: [ListHarnessExample,
-        ListOverviewExample,
-        ListSectionsExample,
-        ListSelectionExample,
-        ListSingleSelectionExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ListExamplesModule, [{
         type: NgModule,
         args: [{
@@ -300,6 +290,17 @@ ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesMo
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListHarnessExample,
+        ListOverviewExample,
+        ListSectionsExample,
+        ListSelectionExample,
+        ListSingleSelectionExample], imports: [CommonModule,
+        MatIconModule,
+        MatListModule], exports: [ListHarnessExample,
+        ListOverviewExample,
+        ListSectionsExample,
+        ListSelectionExample,
+        ListSingleSelectionExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

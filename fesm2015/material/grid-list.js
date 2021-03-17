@@ -1,5 +1,5 @@
 import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵstyleProp, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵstyleProp, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridListModule } from '@angular/material/grid-list';
 
 function GridListDynamicExample_mat_grid_tile_1_Template(rf, ctx) { if (rf & 1) {
@@ -27,7 +27,7 @@ class GridListDynamicExample {
     }
 }
 GridListDynamicExample.ɵfac = function GridListDynamicExample_Factory(t) { return new (t || GridListDynamicExample)(); };
-GridListDynamicExample.ɵcmp = ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
+GridListDynamicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-grid-list", 0);
         ɵɵtemplate(1, GridListDynamicExample_mat_grid_tile_1_Template, 2, 5, "mat-grid-tile", 1);
         ɵɵelementEnd();
@@ -49,7 +49,7 @@ GridListDynamicExample.ɵcmp = ɵɵdefineComponent({ type: GridListDynamicExampl
 class GridListOverviewExample {
 }
 GridListOverviewExample.ɵfac = function GridListOverviewExample_Factory(t) { return new (t || GridListOverviewExample)(); };
-GridListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: GridListOverviewExample, selectors: [["grid-list-overview-example"]], decls: 9, vars: 0, consts: [["cols", "2", "rowHeight", "2:1"]], template: function GridListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+GridListOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridListOverviewExample, selectors: [["grid-list-overview-example"]], decls: 9, vars: 0, consts: [["cols", "2", "rowHeight", "2:1"]], template: function GridListOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-grid-list", 0);
         ɵɵelementStart(1, "mat-grid-tile");
         ɵɵtext(2, "1");
@@ -80,7 +80,7 @@ GridListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: GridListOverviewExam
 class GridListHarnessExample {
 }
 GridListHarnessExample.ɵfac = function GridListHarnessExample_Factory(t) { return new (t || GridListHarnessExample)(); };
-GridListHarnessExample.ɵcmp = ɵɵdefineComponent({ type: GridListHarnessExample, selectors: [["grid-list-harness-example"]], decls: 14, vars: 0, consts: [["cols", "2", "rowHeight", "100px"], ["colspan", "2"]], template: function GridListHarnessExample_Template(rf, ctx) { if (rf & 1) {
+GridListHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridListHarnessExample, selectors: [["grid-list-harness-example"]], decls: 14, vars: 0, consts: [["cols", "2", "rowHeight", "100px"], ["colspan", "2"]], template: function GridListHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-grid-list", 0);
         ɵɵelementStart(1, "mat-grid-tile");
         ɵɵtext(2, "Tile 1 (no header, no footer)");
@@ -120,17 +120,12 @@ const EXAMPLES = [
 ];
 class GridListExamplesModule {
 }
-GridListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: GridListExamplesModule });
-GridListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function GridListExamplesModule_Factory(t) { return new (t || GridListExamplesModule)(); }, imports: [[
+GridListExamplesModule.ɵfac = function GridListExamplesModule_Factory(t) { return new (t || GridListExamplesModule)(); };
+GridListExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: GridListExamplesModule });
+GridListExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatGridListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
-        GridListHarnessExample,
-        GridListOverviewExample], imports: [CommonModule,
-        MatGridListModule], exports: [GridListDynamicExample,
-        GridListHarnessExample,
-        GridListOverviewExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListExamplesModule, [{
         type: NgModule,
         args: [{
@@ -143,6 +138,12 @@ GridListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function GridListEx
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
+        GridListHarnessExample,
+        GridListOverviewExample], imports: [CommonModule,
+        MatGridListModule], exports: [GridListDynamicExample,
+        GridListHarnessExample,
+        GridListOverviewExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

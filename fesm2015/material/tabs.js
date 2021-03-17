@@ -1,5 +1,5 @@
 import { NgIf, NgForOf, AsyncPipe, DatePipe, CommonModule } from '@angular/common';
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵɵnextContext, ɵɵtextInterpolate, ɵɵtemplate, ɵɵadvance, ɵɵtextInterpolate1, ɵɵpipe, ɵɵproperty, ɵɵpipeBind1, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelement, ɵɵreference, ɵɵpipeBind2, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵɵnextContext, ɵɵtextInterpolate, ɵɵtemplate, ɵɵadvance, ɵɵtextInterpolate1, ɵɵpipe, ɵɵproperty, ɵɵpipeBind1, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelement, ɵɵreference, ɵɵpipeBind2, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { FormControl, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
@@ -16,7 +16,7 @@ import { MatFormField, MatLabel } from '@angular/material/form-field';
 class TabGroupAlignExample {
 }
 TabGroupAlignExample.ɵfac = function TabGroupAlignExample_Factory(t) { return new (t || TabGroupAlignExample)(); };
-TabGroupAlignExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAlignExample, selectors: [["tab-group-align-example"]], decls: 21, vars: 0, consts: [["mat-align-tabs", "start"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["mat-align-tabs", "center"], ["mat-align-tabs", "end"]], template: function TabGroupAlignExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupAlignExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupAlignExample, selectors: [["tab-group-align-example"]], decls: 21, vars: 0, consts: [["mat-align-tabs", "start"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["mat-align-tabs", "center"], ["mat-align-tabs", "end"]], template: function TabGroupAlignExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵtext(2, "Content 1");
@@ -66,7 +66,7 @@ TabGroupAlignExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAlignExample, s
 class TabGroupAnimationsExample {
 }
 TabGroupAnimationsExample.ɵfac = function TabGroupAnimationsExample_Factory(t) { return new (t || TabGroupAnimationsExample)(); };
-TabGroupAnimationsExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAnimationsExample, selectors: [["tab-group-animations-example"]], decls: 18, vars: 0, consts: [["animationDuration", "0ms"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["animationDuration", "2000ms"]], template: function TabGroupAnimationsExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupAnimationsExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupAnimationsExample, selectors: [["tab-group-animations-example"]], decls: 18, vars: 0, consts: [["animationDuration", "0ms"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["animationDuration", "2000ms"]], template: function TabGroupAnimationsExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h3");
         ɵɵtext(1, "No animation");
         ɵɵelementEnd();
@@ -143,7 +143,7 @@ class TabGroupAsyncExample {
     }
 }
 TabGroupAsyncExample.ɵfac = function TabGroupAsyncExample_Factory(t) { return new (t || TabGroupAsyncExample)(); };
-TabGroupAsyncExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAsyncExample, selectors: [["tab-group-async-example"]], decls: 5, vars: 6, consts: [[4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""]], template: function TabGroupAsyncExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupAsyncExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupAsyncExample, selectors: [["tab-group-async-example"]], decls: 5, vars: 6, consts: [[4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""]], template: function TabGroupAsyncExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, TabGroupAsyncExample_ng_container_0_Template, 2, 0, "ng-container", 0);
         ɵɵpipe(1, "async");
         ɵɵelementStart(2, "mat-tab-group");
@@ -169,7 +169,7 @@ TabGroupAsyncExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAsyncExample, s
 class TabGroupBasicExample {
 }
 TabGroupBasicExample.ɵfac = function TabGroupBasicExample_Factory(t) { return new (t || TabGroupBasicExample)(); };
-TabGroupBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupBasicExample, selectors: [["tab-group-basic-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupBasicExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupBasicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupBasicExample, selectors: [["tab-group-basic-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab", 0);
         ɵɵtext(2, " Content 1 ");
@@ -214,7 +214,7 @@ function TabGroupCustomLabelExample_ng_template_8_Template(rf, ctx) { if (rf & 1
 class TabGroupCustomLabelExample {
 }
 TabGroupCustomLabelExample.ɵfac = function TabGroupCustomLabelExample_Factory(t) { return new (t || TabGroupCustomLabelExample)(); };
-TabGroupCustomLabelExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupCustomLabelExample, selectors: [["tab-group-custom-label-example"]], decls: 10, vars: 0, consts: [["mat-tab-label", ""], [1, "example-tab-icon"]], template: function TabGroupCustomLabelExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupCustomLabelExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupCustomLabelExample, selectors: [["tab-group-custom-label-example"]], decls: 10, vars: 0, consts: [["mat-tab-label", ""], [1, "example-tab-icon"]], template: function TabGroupCustomLabelExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab");
         ɵɵtemplate(2, TabGroupCustomLabelExample_ng_template_2_Template, 3, 0, "ng-template", 0);
@@ -245,7 +245,7 @@ TabGroupCustomLabelExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupCustomLab
 class TabGroupDynamicHeightExample {
 }
 TabGroupDynamicHeightExample.ɵfac = function TabGroupDynamicHeightExample_Factory(t) { return new (t || TabGroupDynamicHeightExample)(); };
-TabGroupDynamicHeightExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicHeightExample, selectors: [["tab-group-dynamic-height-example"]], decls: 7, vars: 0, consts: [["dynamicHeight", ""], ["label", "Short tab"], [1, "example-small-box", "mat-elevation-z4"], ["label", "Long tab"], [1, "example-large-box", "mat-elevation-z4"]], template: function TabGroupDynamicHeightExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupDynamicHeightExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupDynamicHeightExample, selectors: [["tab-group-dynamic-height-example"]], decls: 7, vars: 0, consts: [["dynamicHeight", ""], ["label", "Short tab"], [1, "example-small-box", "mat-elevation-z4"], ["label", "Long tab"], [1, "example-large-box", "mat-elevation-z4"]], template: function TabGroupDynamicHeightExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵelementStart(2, "div", 2);
@@ -274,7 +274,7 @@ TabGroupDynamicHeightExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamic
 class TabGroupHarnessExample {
 }
 TabGroupHarnessExample.ɵfac = function TabGroupHarnessExample_Factory(t) { return new (t || TabGroupHarnessExample)(); };
-TabGroupHarnessExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupHarnessExample, selectors: [["tab-group-harness-example"]], decls: 10, vars: 0, consts: [["label", "Profile", "aria-label", "Profile tab"], [1, "test-tab-content"], ["label", "Settings", "aria-label", "Settings tab"], ["label", "FAQ", "aria-label", "FAQ tab"]], template: function TabGroupHarnessExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupHarnessExample, selectors: [["tab-group-harness-example"]], decls: 10, vars: 0, consts: [["label", "Profile", "aria-label", "Profile tab"], [1, "test-tab-content"], ["label", "Settings", "aria-label", "Settings tab"], ["label", "FAQ", "aria-label", "FAQ tab"]], template: function TabGroupHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab", 0);
         ɵɵelementStart(2, "span", 1);
@@ -306,7 +306,7 @@ function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-tab", 5);
     ɵɵtext(1);
     ɵɵelementStart(2, "button", 6);
-    ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener() { ɵɵrestoreView(_r5); const index_r3 = ctx.index; const ctx_r4 = ɵɵnextContext(); return ctx_r4.removeTab(index_r3); });
+    ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener() { const restoredCtx = ɵɵrestoreView(_r5); const index_r3 = restoredCtx.index; const ctx_r4 = ɵɵnextContext(); return ctx_r4.removeTab(index_r3); });
     ɵɵtext(3, " Delete Tab ");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -338,7 +338,7 @@ class TabGroupDynamicExample {
     }
 }
 TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-TabGroupDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupDynamicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
         const _r6 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
@@ -382,7 +382,7 @@ TabGroupDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicExampl
 class TabGroupHeaderBelowExample {
 }
 TabGroupHeaderBelowExample.ɵfac = function TabGroupHeaderBelowExample_Factory(t) { return new (t || TabGroupHeaderBelowExample)(); };
-TabGroupHeaderBelowExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupHeaderBelowExample, selectors: [["tab-group-header-below-example"]], decls: 7, vars: 0, consts: [["headerPosition", "below"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupHeaderBelowExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupHeaderBelowExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupHeaderBelowExample, selectors: [["tab-group-header-below-example"]], decls: 7, vars: 0, consts: [["headerPosition", "below"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupHeaderBelowExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵtext(2, " Content 1 ");
@@ -439,7 +439,7 @@ class TabGroupLazyLoadedExample {
     }
 }
 TabGroupLazyLoadedExample.ɵfac = function TabGroupLazyLoadedExample_Factory(t) { return new (t || TabGroupLazyLoadedExample)(); };
-TabGroupLazyLoadedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupLazyLoadedExample, selectors: [["tab-group-lazy-loaded-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["matTabContent", ""], ["label", "Second"], ["label", "Third"]], template: function TabGroupLazyLoadedExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupLazyLoadedExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupLazyLoadedExample, selectors: [["tab-group-lazy-loaded-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["matTabContent", ""], ["label", "Second"], ["label", "Third"]], template: function TabGroupLazyLoadedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab", 0);
         ɵɵtemplate(2, TabGroupLazyLoadedExample_ng_template_2_Template, 2, 4, "ng-template", 1);
@@ -466,7 +466,7 @@ TabGroupLazyLoadedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupLazyLoaded
 class TabGroupStretchedExample {
 }
 TabGroupStretchedExample.ɵfac = function TabGroupStretchedExample_Factory(t) { return new (t || TabGroupStretchedExample)(); };
-TabGroupStretchedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupStretchedExample, selectors: [["tab-group-stretched-example"]], decls: 7, vars: 0, consts: [["mat-stretch-tabs", "", 1, "example-stretched-tabs", "mat-elevation-z4"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupStretchedExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupStretchedExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupStretchedExample, selectors: [["tab-group-stretched-example"]], decls: 7, vars: 0, consts: [["mat-stretch-tabs", "", 1, "example-stretched-tabs", "mat-elevation-z4"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupStretchedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵtext(2, " Content 1 ");
@@ -494,7 +494,7 @@ TabGroupStretchedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupStretchedEx
 class TabGroupThemeExample {
 }
 TabGroupThemeExample.ɵfac = function TabGroupThemeExample_Factory(t) { return new (t || TabGroupThemeExample)(); };
-TabGroupThemeExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["colorToggle", "matButtonToggleGroup"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], ["backgroundColorToggle", "matButtonToggleGroup"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
+TabGroupThemeExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["colorToggle", "matButtonToggleGroup"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], ["backgroundColorToggle", "matButtonToggleGroup"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div");
         ɵɵelementStart(1, "mat-button-toggle-group", 0, 1);
         ɵɵelementStart(3, "mat-button-toggle", 2);
@@ -550,7 +550,7 @@ TabGroupThemeExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupThemeExample, s
 function TabNavBarBasicExample_a_1_Template(rf, ctx) { if (rf & 1) {
     const _r3 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "a", 4);
-    ɵɵlistener("click", function TabNavBarBasicExample_a_1_Template_a_click_0_listener() { ɵɵrestoreView(_r3); const link_r1 = ctx.$implicit; const ctx_r2 = ɵɵnextContext(); return ctx_r2.activeLink = link_r1; });
+    ɵɵlistener("click", function TabNavBarBasicExample_a_1_Template_a_click_0_listener() { const restoredCtx = ɵɵrestoreView(_r3); const link_r1 = restoredCtx.$implicit; const ctx_r2 = ɵɵnextContext(); return ctx_r2.activeLink = link_r1; });
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -577,7 +577,7 @@ class TabNavBarBasicExample {
     }
 }
 TabNavBarBasicExample.ɵfac = function TabNavBarBasicExample_Factory(t) { return new (t || TabNavBarBasicExample)(); };
-TabNavBarBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabNavBarBasicExample, selectors: [["tab-nav-bar-basic-example"]], decls: 8, vars: 2, consts: [["mat-tab-nav-bar", "", 3, "backgroundColor"], ["mat-tab-link", "", 3, "active", "click", 4, "ngFor", "ngForOf"], ["mat-tab-link", "", "disabled", ""], ["mat-raised-button", "", 1, "example-action-button", 3, "click"], ["mat-tab-link", "", 3, "active", "click"]], template: function TabNavBarBasicExample_Template(rf, ctx) { if (rf & 1) {
+TabNavBarBasicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: TabNavBarBasicExample, selectors: [["tab-nav-bar-basic-example"]], decls: 8, vars: 2, consts: [["mat-tab-nav-bar", "", 3, "backgroundColor"], ["mat-tab-link", "", 3, "active", "click", 4, "ngFor", "ngForOf"], ["mat-tab-link", "", "disabled", ""], ["mat-raised-button", "", 1, "example-action-button", 3, "click"], ["mat-tab-link", "", 3, "active", "click"]], template: function TabNavBarBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "nav", 0);
         ɵɵtemplate(1, TabNavBarBasicExample_a_1_Template, 2, 2, "a", 1);
         ɵɵelementStart(2, "a", 2);
@@ -623,8 +623,9 @@ const EXAMPLES = [
 ];
 class TabGroupExamplesModule {
 }
-TabGroupExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
-TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); }, imports: [[
+TabGroupExamplesModule.ɵfac = function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); };
+TabGroupExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: TabGroupExamplesModule });
+TabGroupExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatButtonModule,
             MatButtonToggleModule,
@@ -634,6 +635,24 @@ TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupEx
             MatTabsModule,
             ReactiveFormsModule,
         ]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TabGroupExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule,
+                    MatButtonModule,
+                    MatButtonToggleModule,
+                    MatCheckboxModule,
+                    MatIconModule,
+                    MatInputModule,
+                    MatTabsModule,
+                    ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: EXAMPLES,
+            }]
+    }], null, null); })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TabGroupExamplesModule, { declarations: [TabGroupAlignExample,
         TabGroupAnimationsExample,
         TabGroupAsyncExample,
@@ -666,24 +685,6 @@ TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupEx
         TabGroupStretchedExample,
         TabGroupThemeExample,
         TabNavBarBasicExample] }); })();
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(TabGroupExamplesModule, [{
-        type: NgModule,
-        args: [{
-                imports: [
-                    CommonModule,
-                    MatButtonModule,
-                    MatButtonToggleModule,
-                    MatCheckboxModule,
-                    MatIconModule,
-                    MatInputModule,
-                    MatTabsModule,
-                    ReactiveFormsModule,
-                ],
-                declarations: EXAMPLES,
-                exports: EXAMPLES,
-                entryComponents: EXAMPLES,
-            }]
-    }], null, null); })();
 
 /**
  * Generated bundle index. Do not edit.

@@ -19,6 +19,7 @@ import * as i11 from "@angular/material/menu";
 import * as i12 from "@angular/forms";
 export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogFromMenuExample, DialogFromMenuExampleDialog, DialogHarnessExample, DialogOverviewExample, DialogOverviewExampleDialog, };
 export declare class DialogExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<DialogExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<DialogExamplesModule, [typeof i1.DialogContentExample, typeof i1.DialogContentExampleDialog, typeof i2.DialogDataExample, typeof i2.DialogDataExampleDialog, typeof i3.DialogElementsExample, typeof i3.DialogElementsExampleDialog, typeof i4.DialogFromMenuExample, typeof i4.DialogFromMenuExampleDialog, typeof i5.DialogHarnessExample, typeof i6.DialogOverviewExample, typeof i6.DialogOverviewExampleDialog], [typeof i7.CommonModule, typeof i8.MatButtonModule, typeof i9.MatDialogModule, typeof i10.MatInputModule, typeof i11.MatMenuModule, typeof i12.FormsModule], [typeof i1.DialogContentExample, typeof i1.DialogContentExampleDialog, typeof i2.DialogDataExample, typeof i2.DialogDataExampleDialog, typeof i3.DialogElementsExample, typeof i3.DialogElementsExampleDialog, typeof i4.DialogFromMenuExample, typeof i4.DialogFromMenuExampleDialog, typeof i5.DialogHarnessExample, typeof i6.DialogOverviewExample, typeof i6.DialogOverviewExampleDialog]>;
     static ɵinj: i0.ɵɵInjectorDef<DialogExamplesModule>;
 }

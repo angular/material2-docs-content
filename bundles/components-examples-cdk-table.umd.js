@@ -422,7 +422,7 @@
         return CdkTableFlexBasicExample;
     }());
     CdkTableFlexBasicExample.ɵfac = function CdkTableFlexBasicExample_Factory(t) { return new (t || CdkTableFlexBasicExample)(); };
-    CdkTableFlexBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableFlexBasicExample, selectors: [["cdk-table-flex-basic-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableFlexBasicExample_Template(rf, ctx) {
+    CdkTableFlexBasicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkTableFlexBasicExample, selectors: [["cdk-table-flex-basic-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableFlexBasicExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
@@ -473,7 +473,7 @@
     var ExampleDataSource = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spread(arguments)) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA);
             return _this;
@@ -595,7 +595,7 @@
         return CdkTableBasicExample;
     }());
     CdkTableBasicExample.ɵfac = function CdkTableBasicExample_Factory(t) { return new (t || CdkTableBasicExample)(); };
-    CdkTableBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) {
+    CdkTableBasicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
@@ -646,7 +646,7 @@
     var ExampleDataSource$1 = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spread(arguments)) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$1);
             return _this;
@@ -768,7 +768,7 @@
         return CdkTableFixedLayoutExample;
     }());
     CdkTableFixedLayoutExample.ɵfac = function CdkTableFixedLayoutExample_Factory(t) { return new (t || CdkTableFixedLayoutExample)(); };
-    CdkTableFixedLayoutExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableFixedLayoutExample, selectors: [["cdk-table-fixed-layout-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", "fixedLayout", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableFixedLayoutExample_Template(rf, ctx) {
+    CdkTableFixedLayoutExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkTableFixedLayoutExample, selectors: [["cdk-table-fixed-layout-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", "fixedLayout", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableFixedLayoutExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
@@ -819,7 +819,7 @@
     var ExampleDataSource$2 = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spread(arguments)) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$2);
             return _this;
@@ -941,7 +941,7 @@
         return CdkTableRecycleRowsExample;
     }());
     CdkTableRecycleRowsExample.ɵfac = function CdkTableRecycleRowsExample_Factory(t) { return new (t || CdkTableRecycleRowsExample)(); };
-    CdkTableRecycleRowsExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableRecycleRowsExample, selectors: [["cdk-table-recycle-rows-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", "recycleRows", "", 1, "example-table", 3, "dataSource"], ["cdkColumnDef", "position"], ["class", "example-row", "cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", "", 1, "example-row"], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableRecycleRowsExample_Template(rf, ctx) {
+    CdkTableRecycleRowsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkTableRecycleRowsExample, selectors: [["cdk-table-recycle-rows-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", "recycleRows", "", 1, "example-table", 3, "dataSource"], ["cdkColumnDef", "position"], ["class", "example-row", "cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", "", 1, "example-row"], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableRecycleRowsExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
@@ -992,7 +992,7 @@
     var ExampleDataSource$3 = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spread(arguments)) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$3);
             return _this;
@@ -1016,19 +1016,11 @@
         }
         return CdkTableExamplesModule;
     }());
-    CdkTableExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkTableExamplesModule });
-    CdkTableExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
+    CdkTableExamplesModule.ɵfac = function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); };
+    CdkTableExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkTableExamplesModule });
+    CdkTableExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i1.CdkTableModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
-                CdkTableFlexBasicExample,
-                CdkTableFixedLayoutExample,
-                CdkTableRecycleRowsExample], imports: [i1.CdkTableModule], exports: [CdkTableBasicExample,
-                CdkTableFlexBasicExample,
-                CdkTableFixedLayoutExample,
-                CdkTableRecycleRowsExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkTableExamplesModule, [{
                 type: i0.NgModule,
@@ -1041,6 +1033,15 @@
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
+                CdkTableFlexBasicExample,
+                CdkTableFixedLayoutExample,
+                CdkTableRecycleRowsExample], imports: [i1.CdkTableModule], exports: [CdkTableBasicExample,
+                CdkTableFlexBasicExample,
+                CdkTableFixedLayoutExample,
+                CdkTableRecycleRowsExample] });
     })();
 
     /**

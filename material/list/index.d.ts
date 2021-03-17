@@ -14,6 +14,7 @@ import * as i7 from "@angular/material/icon";
 import * as i8 from "@angular/material/list";
 export { ListHarnessExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, };
 export declare class ListExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<ListExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<ListExamplesModule, [typeof i1.ListHarnessExample, typeof i2.ListOverviewExample, typeof i3.ListSectionsExample, typeof i4.ListSelectionExample, typeof i5.ListSingleSelectionExample], [typeof i6.CommonModule, typeof i7.MatIconModule, typeof i8.MatListModule], [typeof i1.ListHarnessExample, typeof i2.ListOverviewExample, typeof i3.ListSectionsExample, typeof i4.ListSelectionExample, typeof i5.ListSingleSelectionExample]>;
     static ɵinj: i0.ɵɵInjectorDef<ListExamplesModule>;
 }

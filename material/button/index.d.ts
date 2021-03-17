@@ -10,6 +10,7 @@ import * as i5 from "@angular/material/divider";
 import * as i6 from "@angular/material/icon";
 export { ButtonOverviewExample, ButtonTypesExample, ButtonHarnessExample, };
 export declare class ButtonExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<ButtonExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<ButtonExamplesModule, [typeof i1.ButtonOverviewExample, typeof i2.ButtonTypesExample, typeof i3.ButtonHarnessExample], [typeof i4.MatButtonModule, typeof i5.MatDividerModule, typeof i6.MatIconModule], [typeof i1.ButtonOverviewExample, typeof i2.ButtonTypesExample, typeof i3.ButtonHarnessExample]>;
     static ɵinj: i0.ɵɵInjectorDef<ButtonExamplesModule>;
 }

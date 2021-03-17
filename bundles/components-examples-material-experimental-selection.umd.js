@@ -114,7 +114,7 @@
         return MatSelectionColumnExample;
     }());
     MatSelectionColumnExample.ɵfac = function MatSelectionColumnExample_Factory(t) { return new (t || MatSelectionColumnExample)(); };
-    MatSelectionColumnExample.ɵcmp = i0.ɵɵdefineComponent({ type: MatSelectionColumnExample, selectors: [["mat-selection-column-example"]], decls: 17, vars: 5, consts: [["mat-table", "", "matSelection", "", 1, "example-table", 3, "dataSource", "matSelectionMultiple", "matSelectionChange"], ["name", "select"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "matRowSelection", "", 3, "matRowSelectionValue", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", "", "matRowSelection", "", 3, "matRowSelectionValue"]], template: function MatSelectionColumnExample_Template(rf, ctx) {
+    MatSelectionColumnExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MatSelectionColumnExample, selectors: [["mat-selection-column-example"]], decls: 17, vars: 5, consts: [["mat-table", "", "matSelection", "", 1, "example-table", 3, "dataSource", "matSelectionMultiple", "matSelectionChange"], ["name", "select"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "matRowSelection", "", 3, "matRowSelectionValue", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", "", "matRowSelection", "", 3, "matRowSelectionValue"]], template: function MatSelectionColumnExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵtext(0);
                 i0.ɵɵelementStart(1, "table", 0);
@@ -280,7 +280,7 @@
         return MatSelectionListExample;
     }());
     MatSelectionListExample.ɵfac = function MatSelectionListExample_Factory(t) { return new (t || MatSelectionListExample)(); };
-    MatSelectionListExample.ɵcmp = i0.ɵɵdefineComponent({ type: MatSelectionListExample, selectors: [["mat-selection-list-example"]], decls: 38, vars: 30, consts: [["matSelection", "", 3, "dataSource", "matSelectionMultiple", "matSelectionChange"], ["type", "checkbox", "matSelectAll", "", 3, "checked", "indeterminate", "click"], ["allToggler", "matSelectAll"], [4, "ngFor", "ngForOf"], ["matSelectAll", "", 3, "indeterminate"], ["toggle1", "matSelectAll"], ["matSelection", "", 3, "dataSource", "matSelectionMultiple", "trackBy", "matSelectionChange"], ["toggle2", "matSelectAll"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [3, "click"], ["type", "checkbox", "matSelectionToggle", "", 3, "matSelectionToggleValue", "checked", "click"], ["toggler", "matSelectionToggle"], ["matSelectionToggle", "", 3, "matSelectionToggleValue"], ["matSelectionToggle", "", 3, "matSelectionToggleValue", "matSelectionToggleIndex"]], template: function MatSelectionListExample_Template(rf, ctx) {
+    MatSelectionListExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MatSelectionListExample, selectors: [["mat-selection-list-example"]], decls: 38, vars: 30, consts: [["matSelection", "", 3, "dataSource", "matSelectionMultiple", "matSelectionChange"], ["type", "checkbox", "matSelectAll", "", 3, "checked", "indeterminate", "click"], ["allToggler", "matSelectAll"], [4, "ngFor", "ngForOf"], ["matSelectAll", "", 3, "indeterminate"], ["toggle1", "matSelectAll"], ["matSelection", "", 3, "dataSource", "matSelectionMultiple", "trackBy", "matSelectionChange"], ["toggle2", "matSelectAll"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [3, "click"], ["type", "checkbox", "matSelectionToggle", "", 3, "matSelectionToggleValue", "checked", "click"], ["toggler", "matSelectionToggle"], ["matSelectionToggle", "", 3, "matSelectionToggleValue"], ["matSelectionToggle", "", 3, "matSelectionToggleValue", "matSelectionToggleIndex"]], template: function MatSelectionListExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r15_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "h3");
@@ -405,8 +405,9 @@
         }
         return MatSelectionExamplesModule;
     }());
-    MatSelectionExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MatSelectionExamplesModule });
-    MatSelectionExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MatSelectionExamplesModule_Factory(t) { return new (t || MatSelectionExamplesModule)(); }, imports: [[
+    MatSelectionExamplesModule.ɵfac = function MatSelectionExamplesModule_Factory(t) { return new (t || MatSelectionExamplesModule)(); };
+    MatSelectionExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: MatSelectionExamplesModule });
+    MatSelectionExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i2.MatSelectionModule,
                 i1.MatTableModule,
                 i2$1.CommonModule,
@@ -414,16 +415,6 @@
                 forms.ReactiveFormsModule,
                 i3.MatCheckboxModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MatSelectionExamplesModule, { declarations: [MatSelectionListExample,
-                MatSelectionColumnExample], imports: [i2.MatSelectionModule,
-                i1.MatTableModule,
-                i2$1.CommonModule,
-                forms.FormsModule,
-                forms.ReactiveFormsModule,
-                i3.MatCheckboxModule], exports: [MatSelectionListExample,
-                MatSelectionColumnExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MatSelectionExamplesModule, [{
                 type: i0.NgModule,
@@ -440,6 +431,16 @@
                         exports: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MatSelectionExamplesModule, { declarations: [MatSelectionListExample,
+                MatSelectionColumnExample], imports: [i2.MatSelectionModule,
+                i1.MatTableModule,
+                i2$1.CommonModule,
+                forms.FormsModule,
+                forms.ReactiveFormsModule,
+                i3.MatCheckboxModule], exports: [MatSelectionListExample,
+                MatSelectionColumnExample] });
     })();
 
     /**

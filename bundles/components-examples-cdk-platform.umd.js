@@ -17,7 +17,7 @@
         return CdkPlatformOverviewExample;
     }());
     CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(i0.ɵɵdirectiveInject(i1.Platform)); };
-    CdkPlatformOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) {
+    CdkPlatformOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2");
                 i0.ɵɵtext(1, "Platform information:");
@@ -97,11 +97,11 @@
         }
         return CdkPlatformExamplesModule;
     }());
-    CdkPlatformExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
-    CdkPlatformExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
+    CdkPlatformExamplesModule.ɵfac = function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); };
+    CdkPlatformExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
+    CdkPlatformExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i1.PlatformModule,
             ]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [i1.PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPlatformExamplesModule, [{
                 type: i0.NgModule,
@@ -115,6 +115,7 @@
                     }]
             }], null, null);
     })();
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [i1.PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
 
     /**
      * Generated bundle index. Do not edit.

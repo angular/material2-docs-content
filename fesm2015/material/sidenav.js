@@ -1,5 +1,5 @@
 import { NgIf, NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵgetCurrentView, ɵɵtemplate, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵtextInterpolate1, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵelementContainerStart, ɵɵelement, ɵɵelementContainerEnd, ɵɵdirectiveInject, ɵɵtextInterpolate, ɵɵclassProp, ɵɵstyleProp, ChangeDetectorRef, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵgetCurrentView, ɵɵtemplate, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵnextContext, ɵɵtextInterpolate1, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ViewChild, ɵɵelementContainerStart, ɵɵelement, ɵɵelementContainerEnd, ɵɵdirectiveInject, ɵɵtextInterpolate, ɵɵclassProp, ɵɵstyleProp, ChangeDetectorRef, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { FormBuilder, NgControlStatusGroup, FormGroupDirective, NgControlStatus, FormControlName, NumberValueAccessor, DefaultValueAccessor, FormControl, FormControlDirective, NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -27,7 +27,7 @@ class SidenavAutosizeExample {
     }
 }
 SidenavAutosizeExample.ɵfac = function SidenavAutosizeExample_Factory(t) { return new (t || SidenavAutosizeExample)(); };
-SidenavAutosizeExample.ɵcmp = ɵɵdefineComponent({ type: SidenavAutosizeExample, selectors: [["sidenav-autosize-example"]], decls: 11, vars: 1, consts: [["autosize", "", 1, "example-container"], ["mode", "side", 1, "example-sidenav"], ["drawer", ""], [4, "ngIf"], ["mat-raised-button", "", 3, "click"], [1, "example-sidenav-content"], ["type", "button", "mat-button", "", 3, "click"]], template: function SidenavAutosizeExample_Template(rf, ctx) { if (rf & 1) {
+SidenavAutosizeExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavAutosizeExample, selectors: [["sidenav-autosize-example"]], decls: 11, vars: 1, consts: [["autosize", "", 1, "example-container"], ["mode", "side", 1, "example-sidenav"], ["drawer", ""], [4, "ngIf"], ["mat-raised-button", "", 3, "click"], [1, "example-sidenav-content"], ["type", "button", "mat-button", "", 3, "click"]], template: function SidenavAutosizeExample_Template(rf, ctx) { if (rf & 1) {
         const _r2 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-drawer-container", 0);
         ɵɵelementStart(1, "mat-drawer", 1, 2);
@@ -64,7 +64,7 @@ SidenavAutosizeExample.ɵcmp = ɵɵdefineComponent({ type: SidenavAutosizeExampl
 class SidenavBackdropExample {
 }
 SidenavBackdropExample.ɵfac = function SidenavBackdropExample_Factory(t) { return new (t || SidenavBackdropExample)(); };
-SidenavBackdropExample.ɵcmp = ɵɵdefineComponent({ type: SidenavBackdropExample, selectors: [["sidenav-backdrop-example"]], decls: 29, vars: 4, consts: [[1, "example-container", 3, "hasBackdrop"], [3, "mode"], ["drawer", ""], ["value", "side"], ["mode", ""], ["value", "over"], ["value", "push"], ["hasBackdrop", ""], [3, "value"], ["mat-raised-button", "", 3, "click"]], template: function SidenavBackdropExample_Template(rf, ctx) { if (rf & 1) {
+SidenavBackdropExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavBackdropExample, selectors: [["sidenav-backdrop-example"]], decls: 29, vars: 4, consts: [[1, "example-container", 3, "hasBackdrop"], [3, "mode"], ["drawer", ""], ["value", "side"], ["mode", ""], ["value", "over"], ["value", "push"], ["hasBackdrop", ""], [3, "value"], ["mat-raised-button", "", 3, "click"]], template: function SidenavBackdropExample_Template(rf, ctx) { if (rf & 1) {
         const _r3 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-drawer-container", 0);
         ɵɵelementStart(1, "mat-drawer", 1, 2);
@@ -177,8 +177,8 @@ class SidenavDisableCloseExample {
     }
 }
 SidenavDisableCloseExample.ɵfac = function SidenavDisableCloseExample_Factory(t) { return new (t || SidenavDisableCloseExample)(); };
-SidenavDisableCloseExample.ɵcmp = ɵɵdefineComponent({ type: SidenavDisableCloseExample, selectors: [["sidenav-disable-close-example"]], viewQuery: function SidenavDisableCloseExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0, 1);
+SidenavDisableCloseExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavDisableCloseExample, selectors: [["sidenav-disable-close-example"]], viewQuery: function SidenavDisableCloseExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(_c0, 5);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sidenav = _t.first);
@@ -206,7 +206,7 @@ SidenavDisableCloseExample.ɵcmp = ɵɵdefineComponent({ type: SidenavDisableClo
 class SidenavDrawerOverviewExample {
 }
 SidenavDrawerOverviewExample.ɵfac = function SidenavDrawerOverviewExample_Factory(t) { return new (t || SidenavDrawerOverviewExample)(); };
-SidenavDrawerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SidenavDrawerOverviewExample, selectors: [["sidenav-drawer-overview-example"]], decls: 5, vars: 0, consts: [[1, "example-container"], ["mode", "side", "opened", ""]], template: function SidenavDrawerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+SidenavDrawerOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavDrawerOverviewExample, selectors: [["sidenav-drawer-overview-example"]], decls: 5, vars: 0, consts: [[1, "example-container"], ["mode", "side", "opened", ""]], template: function SidenavDrawerOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-drawer-container", 0);
         ɵɵelementStart(1, "mat-drawer", 1);
         ɵɵtext(2, "Drawer content");
@@ -295,7 +295,7 @@ class SidenavFixedExample {
     }
 }
 SidenavFixedExample.ɵfac = function SidenavFixedExample_Factory(t) { return new (t || SidenavFixedExample)(ɵɵdirectiveInject(FormBuilder)); };
-SidenavFixedExample.ɵcmp = ɵɵdefineComponent({ type: SidenavFixedExample, selectors: [["sidenav-fixed-example"]], decls: 2, vars: 2, consts: [[4, "ngIf"], [1, "example-header"], [1, "example-container"], ["mode", "side", "opened", "", 1, "example-sidenav", 3, "fixedInViewport", "fixedTopGap", "fixedBottomGap"], ["sidenav", ""], [3, "formGroup"], ["formControlName", "fixed"], ["matInput", "", "type", "number", "formControlName", "top"], ["matInput", "", "type", "number", "formControlName", "bottom"], ["mat-button", "", 3, "click"], [1, "example-footer"]], template: function SidenavFixedExample_Template(rf, ctx) { if (rf & 1) {
+SidenavFixedExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavFixedExample, selectors: [["sidenav-fixed-example"]], decls: 2, vars: 2, consts: [[4, "ngIf"], [1, "example-header"], [1, "example-container"], ["mode", "side", "opened", "", 1, "example-sidenav", 3, "fixedInViewport", "fixedTopGap", "fixedBottomGap"], ["sidenav", ""], [3, "formGroup"], ["formControlName", "fixed"], ["matInput", "", "type", "number", "formControlName", "top"], ["matInput", "", "type", "number", "formControlName", "bottom"], ["mat-button", "", 3, "click"], [1, "example-footer"]], template: function SidenavFixedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, SidenavFixedExample_ng_container_0_Template, 26, 5, "ng-container", 0);
         ɵɵtemplate(1, SidenavFixedExample_div_1_Template, 2, 0, "div", 0);
     } if (rf & 2) {
@@ -386,7 +386,7 @@ class SidenavModeExample {
     }
 }
 SidenavModeExample.ɵfac = function SidenavModeExample_Factory(t) { return new (t || SidenavModeExample)(); };
-SidenavModeExample.ɵcmp = ɵɵdefineComponent({ type: SidenavModeExample, selectors: [["sidenav-mode-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], [3, "mode"], ["sidenav", ""], ["mat-button", "", 3, "click"], [1, "example-radio-group", 3, "formControl"], ["value", "over"], ["value", "side"], ["value", "push"]], template: function SidenavModeExample_Template(rf, ctx) { if (rf & 1) {
+SidenavModeExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavModeExample, selectors: [["sidenav-mode-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], [3, "mode"], ["sidenav", ""], ["mat-button", "", 3, "click"], [1, "example-radio-group", 3, "formControl"], ["value", "over"], ["value", "side"], ["value", "push"]], template: function SidenavModeExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, SidenavModeExample_mat_sidenav_container_0_Template, 30, 3, "mat-sidenav-container", 0);
         ɵɵtemplate(1, SidenavModeExample_div_1_Template, 2, 0, "div", 1);
     } if (rf & 2) {
@@ -462,7 +462,7 @@ class SidenavOpenCloseExample {
     }
 }
 SidenavOpenCloseExample.ɵfac = function SidenavOpenCloseExample_Factory(t) { return new (t || SidenavOpenCloseExample)(); };
-SidenavOpenCloseExample.ɵcmp = ɵɵdefineComponent({ type: SidenavOpenCloseExample, selectors: [["sidenav-open-close-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["mode", "side", 3, "opened", "openedChange", "closed"], ["sidenav", ""], [3, "ngModel", "ngModelChange"], ["mat-button", "", 3, "click"], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function SidenavOpenCloseExample_Template(rf, ctx) { if (rf & 1) {
+SidenavOpenCloseExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavOpenCloseExample, selectors: [["sidenav-open-close-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["mode", "side", 3, "opened", "openedChange", "closed"], ["sidenav", ""], [3, "ngModel", "ngModelChange"], ["mat-button", "", 3, "click"], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function SidenavOpenCloseExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, SidenavOpenCloseExample_mat_sidenav_container_0_Template, 15, 3, "mat-sidenav-container", 0);
         ɵɵtemplate(1, SidenavOpenCloseExample_div_1_Template, 2, 0, "div", 1);
     } if (rf & 2) {
@@ -501,7 +501,7 @@ class SidenavOverviewExample {
     }
 }
 SidenavOverviewExample.ɵfac = function SidenavOverviewExample_Factory(t) { return new (t || SidenavOverviewExample)(); };
-SidenavOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SidenavOverviewExample, selectors: [["sidenav-overview-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["mode", "side", "opened", ""]], template: function SidenavOverviewExample_Template(rf, ctx) { if (rf & 1) {
+SidenavOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavOverviewExample, selectors: [["sidenav-overview-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["mode", "side", "opened", ""]], template: function SidenavOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, SidenavOverviewExample_mat_sidenav_container_0_Template, 5, 0, "mat-sidenav-container", 0);
         ɵɵtemplate(1, SidenavOverviewExample_div_1_Template, 2, 0, "div", 1);
     } if (rf & 2) {
@@ -541,7 +541,7 @@ class SidenavPositionExample {
     }
 }
 SidenavPositionExample.ɵfac = function SidenavPositionExample_Factory(t) { return new (t || SidenavPositionExample)(); };
-SidenavPositionExample.ɵcmp = ɵɵdefineComponent({ type: SidenavPositionExample, selectors: [["sidenav-position-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["opened", "", "mode", "side"], ["opened", "", "mode", "side", "position", "end"]], template: function SidenavPositionExample_Template(rf, ctx) { if (rf & 1) {
+SidenavPositionExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavPositionExample, selectors: [["sidenav-position-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["opened", "", "mode", "side"], ["opened", "", "mode", "side", "position", "end"]], template: function SidenavPositionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, SidenavPositionExample_mat_sidenav_container_0_Template, 6, 0, "mat-sidenav-container", 0);
         ɵɵtemplate(1, SidenavPositionExample_div_1_Template, 2, 0, "div", 1);
     } if (rf & 2) {
@@ -637,7 +637,7 @@ class SidenavResponsiveExample {
     }
 }
 SidenavResponsiveExample.ɵfac = function SidenavResponsiveExample_Factory(t) { return new (t || SidenavResponsiveExample)(ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(MediaMatcher)); };
-SidenavResponsiveExample.ɵcmp = ɵɵdefineComponent({ type: SidenavResponsiveExample, selectors: [["sidenav-responsive-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 3, "example-is-mobile", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["color", "primary", 1, "example-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "example-app-name"], [1, "example-sidenav-container"], ["fixedTopGap", "56", 3, "mode", "fixedInViewport"], ["snav", ""], ["mat-list-item", "", "routerLink", ".", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["mat-list-item", "", "routerLink", "."]], template: function SidenavResponsiveExample_Template(rf, ctx) { if (rf & 1) {
+SidenavResponsiveExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavResponsiveExample, selectors: [["sidenav-responsive-example"]], decls: 2, vars: 2, consts: [["class", "example-container", 3, "example-is-mobile", 4, "ngIf"], [4, "ngIf"], [1, "example-container"], ["color", "primary", 1, "example-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "example-app-name"], [1, "example-sidenav-container"], ["fixedTopGap", "56", 3, "mode", "fixedInViewport"], ["snav", ""], ["mat-list-item", "", "routerLink", ".", 4, "ngFor", "ngForOf"], [4, "ngFor", "ngForOf"], ["mat-list-item", "", "routerLink", "."]], template: function SidenavResponsiveExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, SidenavResponsiveExample_div_0_Template, 14, 8, "div", 0);
         ɵɵtemplate(1, SidenavResponsiveExample_div_1_Template, 2, 0, "div", 1);
     } if (rf & 2) {
@@ -660,7 +660,7 @@ SidenavResponsiveExample.ɵcmp = ɵɵdefineComponent({ type: SidenavResponsiveEx
 class SidenavHarnessExample {
 }
 SidenavHarnessExample.ɵfac = function SidenavHarnessExample_Factory(t) { return new (t || SidenavHarnessExample)(); };
-SidenavHarnessExample.ɵcmp = ɵɵdefineComponent({ type: SidenavHarnessExample, selectors: [["sidenav-harness-example"]], decls: 5, vars: 0, consts: [["mode", "side"]], template: function SidenavHarnessExample_Template(rf, ctx) { if (rf & 1) {
+SidenavHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SidenavHarnessExample, selectors: [["sidenav-harness-example"]], decls: 5, vars: 0, consts: [["mode", "side"]], template: function SidenavHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-drawer-container");
         ɵɵelementStart(1, "mat-drawer", 0);
         ɵɵtext(2, "Hello from the drawer");
@@ -693,8 +693,9 @@ const EXAMPLES = [
 ];
 class SidenavExamplesModule {
 }
-SidenavExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SidenavExamplesModule });
-SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExamplesModule_Factory(t) { return new (t || SidenavExamplesModule)(); }, imports: [[
+SidenavExamplesModule.ɵfac = function SidenavExamplesModule_Factory(t) { return new (t || SidenavExamplesModule)(); };
+SidenavExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: SidenavExamplesModule });
+SidenavExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             CommonModule,
             FormsModule,
             MatButtonModule,
@@ -707,6 +708,27 @@ SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExam
             MatToolbarModule,
             ReactiveFormsModule,
         ]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule,
+                    FormsModule,
+                    MatButtonModule,
+                    MatCheckboxModule,
+                    MatIconModule,
+                    MatListModule,
+                    MatRadioModule,
+                    MatSidenavModule,
+                    MatSelectModule,
+                    MatToolbarModule,
+                    ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: EXAMPLES,
+            }]
+    }], null, null); })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SidenavExamplesModule, { declarations: [SidenavAutosizeExample,
         SidenavBackdropExample,
         SidenavDisableCloseExample,
@@ -738,27 +760,6 @@ SidenavExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SidenavExam
         SidenavOverviewExample,
         SidenavPositionExample,
         SidenavResponsiveExample] }); })();
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SidenavExamplesModule, [{
-        type: NgModule,
-        args: [{
-                imports: [
-                    CommonModule,
-                    FormsModule,
-                    MatButtonModule,
-                    MatCheckboxModule,
-                    MatIconModule,
-                    MatListModule,
-                    MatRadioModule,
-                    MatSidenavModule,
-                    MatSelectModule,
-                    MatToolbarModule,
-                    ReactiveFormsModule,
-                ],
-                declarations: EXAMPLES,
-                exports: EXAMPLES,
-                entryComponents: EXAMPLES,
-            }]
-    }], null, null); })();
 
 /**
  * Generated bundle index. Do not edit.

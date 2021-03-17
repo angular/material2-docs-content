@@ -114,7 +114,7 @@
         return CdkSelectionColumnExample;
     }());
     CdkSelectionColumnExample.ɵfac = function CdkSelectionColumnExample_Factory(t) { return new (t || CdkSelectionColumnExample)(); };
-    CdkSelectionColumnExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkSelectionColumnExample, selectors: [["cdk-selection-column-example"]], decls: 17, vars: 5, consts: [["cdk-table", "", "cdkSelection", "", 1, "example-table", 3, "dataSource", "cdkSelectionMultiple", "cdkSelectionChange"], ["cdkSelectionColumnName", "select"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", "cdkRowSelection", "", 3, "cdkRowSelectionValue", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", "", "cdkRowSelection", "", 3, "cdkRowSelectionValue"]], template: function CdkSelectionColumnExample_Template(rf, ctx) {
+    CdkSelectionColumnExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkSelectionColumnExample, selectors: [["cdk-selection-column-example"]], decls: 17, vars: 5, consts: [["cdk-table", "", "cdkSelection", "", 1, "example-table", 3, "dataSource", "cdkSelectionMultiple", "cdkSelectionChange"], ["cdkSelectionColumnName", "select"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", "cdkRowSelection", "", 3, "cdkRowSelectionValue", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", "", "cdkRowSelection", "", 3, "cdkRowSelectionValue"]], template: function CdkSelectionColumnExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵtext(0);
                 i0.ɵɵelementStart(1, "table", 0);
@@ -280,7 +280,7 @@
         return CdkSelectionListExample;
     }());
     CdkSelectionListExample.ɵfac = function CdkSelectionListExample_Factory(t) { return new (t || CdkSelectionListExample)(); };
-    CdkSelectionListExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkSelectionListExample, selectors: [["cdk-selection-list-example"]], decls: 38, vars: 30, consts: [["cdkSelection", "", 3, "dataSource", "cdkSelectionMultiple", "cdkSelectionChange"], ["type", "checkbox", "cdkSelectAll", "", 3, "checked", "indeterminate", "click"], ["allToggler", "cdkSelectAll"], [4, "ngFor", "ngForOf"], ["cdkSelectAll", "", 3, "indeterminate"], ["toggle1", "cdkSelectAll"], ["cdkSelection", "", 3, "dataSource", "cdkSelectionMultiple", "trackBy", "cdkSelectionChange"], ["toggle2", "cdkSelectAll"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [3, "click"], ["type", "checkbox", "cdkSelectionToggle", "", 3, "cdkSelectionToggleValue", "checked", "click"], ["toggler", "cdkSelectionToggle"], ["cdkSelectionToggle", "", 3, "cdkSelectionToggleValue"], ["cdkSelectionToggle", "", 3, "cdkSelectionToggleValue", "cdkSelectionToggleIndex"]], template: function CdkSelectionListExample_Template(rf, ctx) {
+    CdkSelectionListExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkSelectionListExample, selectors: [["cdk-selection-list-example"]], decls: 38, vars: 30, consts: [["cdkSelection", "", 3, "dataSource", "cdkSelectionMultiple", "cdkSelectionChange"], ["type", "checkbox", "cdkSelectAll", "", 3, "checked", "indeterminate", "click"], ["allToggler", "cdkSelectAll"], [4, "ngFor", "ngForOf"], ["cdkSelectAll", "", 3, "indeterminate"], ["toggle1", "cdkSelectAll"], ["cdkSelection", "", 3, "dataSource", "cdkSelectionMultiple", "trackBy", "cdkSelectionChange"], ["toggle2", "cdkSelectAll"], [4, "ngFor", "ngForOf", "ngForTrackBy"], [3, "click"], ["type", "checkbox", "cdkSelectionToggle", "", 3, "cdkSelectionToggleValue", "checked", "click"], ["toggler", "cdkSelectionToggle"], ["cdkSelectionToggle", "", 3, "cdkSelectionToggleValue"], ["cdkSelectionToggle", "", 3, "cdkSelectionToggleValue", "cdkSelectionToggleIndex"]], template: function CdkSelectionListExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r15_1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "h3");
@@ -405,8 +405,9 @@
         }
         return CdkSelectionExamplesModule;
     }());
-    CdkSelectionExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkSelectionExamplesModule });
-    CdkSelectionExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkSelectionExamplesModule_Factory(t) { return new (t || CdkSelectionExamplesModule)(); }, imports: [[
+    CdkSelectionExamplesModule.ɵfac = function CdkSelectionExamplesModule_Factory(t) { return new (t || CdkSelectionExamplesModule)(); };
+    CdkSelectionExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkSelectionExamplesModule });
+    CdkSelectionExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i2.CdkSelectionModule,
                 i1.CdkTableModule,
                 i2$1.CommonModule,
@@ -414,16 +415,6 @@
                 forms.ReactiveFormsModule,
                 i3.MatCheckboxModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkSelectionExamplesModule, { declarations: [CdkSelectionListExample,
-                CdkSelectionColumnExample], imports: [i2.CdkSelectionModule,
-                i1.CdkTableModule,
-                i2$1.CommonModule,
-                forms.FormsModule,
-                forms.ReactiveFormsModule,
-                i3.MatCheckboxModule], exports: [CdkSelectionListExample,
-                CdkSelectionColumnExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkSelectionExamplesModule, [{
                 type: i0.NgModule,
@@ -440,6 +431,16 @@
                         exports: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkSelectionExamplesModule, { declarations: [CdkSelectionListExample,
+                CdkSelectionColumnExample], imports: [i2.CdkSelectionModule,
+                i1.CdkTableModule,
+                i2$1.CommonModule,
+                forms.FormsModule,
+                forms.ReactiveFormsModule,
+                i3.MatCheckboxModule], exports: [CdkSelectionListExample,
+                CdkSelectionColumnExample] });
     })();
 
     /**

@@ -12,6 +12,7 @@ import * as i5 from "./cdk-menu-standalone-stateful-menu/cdk-menu-standalone-sta
 import * as i6 from "@angular/cdk-experimental/menu";
 export { CdkMenuStandaloneMenuExample, CdkMenuMenubarExample, CdkMenuInlineExample, CdkMenuContextExample, CdkMenuStandaloneStatefulMenuExample, };
 export declare class CdkMenuExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<CdkMenuExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkMenuExamplesModule, [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample], [typeof i6.CdkMenuModule], [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample]>;
     static ɵinj: i0.ɵɵInjectorDef<CdkMenuExamplesModule>;
 }

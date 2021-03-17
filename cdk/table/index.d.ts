@@ -10,6 +10,7 @@ import * as i4 from "./cdk-table-recycle-rows/cdk-table-recycle-rows-example";
 import * as i5 from "@angular/cdk/table";
 export { CdkTableBasicExample, CdkTableFlexBasicExample, CdkTableFixedLayoutExample, CdkTableRecycleRowsExample, };
 export declare class CdkTableExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<CdkTableExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkTableExamplesModule, [typeof i1.CdkTableBasicExample, typeof i2.CdkTableFlexBasicExample, typeof i3.CdkTableFixedLayoutExample, typeof i4.CdkTableRecycleRowsExample], [typeof i5.CdkTableModule], [typeof i1.CdkTableBasicExample, typeof i2.CdkTableFlexBasicExample, typeof i3.CdkTableFixedLayoutExample, typeof i4.CdkTableRecycleRowsExample]>;
     static ɵinj: i0.ɵɵInjectorDef<CdkTableExamplesModule>;
 }

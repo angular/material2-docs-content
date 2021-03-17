@@ -23,6 +23,7 @@ import * as i13 from "@angular/material/slide-toggle";
 import * as i14 from "@angular/forms";
 export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, };
 export declare class AutocompleteExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<AutocompleteExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<AutocompleteExamplesModule, [typeof i1.AutocompleteAutoActiveFirstOptionExample, typeof i2.AutocompleteDisplayExample, typeof i3.AutocompleteFilterExample, typeof i4.AutocompleteHarnessExample, typeof i5.AutocompleteOptgroupExample, typeof i6.AutocompleteOverviewExample, typeof i7.AutocompletePlainInputExample, typeof i8.AutocompleteSimpleExample], [typeof i9.CommonModule, typeof i10.MatAutocompleteModule, typeof i11.MatFormFieldModule, typeof i12.MatInputModule, typeof i13.MatSlideToggleModule, typeof i14.FormsModule, typeof i14.ReactiveFormsModule], [typeof i1.AutocompleteAutoActiveFirstOptionExample, typeof i2.AutocompleteDisplayExample, typeof i3.AutocompleteFilterExample, typeof i4.AutocompleteHarnessExample, typeof i5.AutocompleteOptgroupExample, typeof i6.AutocompleteOverviewExample, typeof i7.AutocompletePlainInputExample, typeof i8.AutocompleteSimpleExample]>;
     static ɵinj: i0.ɵɵInjectorDef<AutocompleteExamplesModule>;
 }

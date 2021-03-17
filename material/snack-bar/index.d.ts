@@ -14,6 +14,7 @@ import * as i8 from "@angular/material/select";
 import * as i9 from "@angular/material/snack-bar";
 export { SnackBarComponentExample, SnackBarHarnessExample, SnackBarOverviewExample, SnackBarPositionExample, PizzaPartyComponent, };
 export declare class SnackBarExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<SnackBarExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<SnackBarExamplesModule, [typeof i1.SnackBarComponentExample, typeof i2.SnackBarHarnessExample, typeof i3.SnackBarOverviewExample, typeof i4.SnackBarPositionExample, typeof i1.PizzaPartyComponent], [typeof i5.FormsModule, typeof i6.MatButtonModule, typeof i7.MatInputModule, typeof i8.MatSelectModule, typeof i9.MatSnackBarModule], [typeof i1.SnackBarComponentExample, typeof i2.SnackBarHarnessExample, typeof i3.SnackBarOverviewExample, typeof i4.SnackBarPositionExample]>;
     static ɵinj: i0.ɵɵInjectorDef<SnackBarExamplesModule>;
 }

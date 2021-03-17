@@ -14,6 +14,7 @@ import * as i7 from "@angular/material/button-toggle";
 import * as i8 from "@angular/material/icon";
 export { ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonToggleHarnessExample, ButtonToggleFormsExample, };
 export declare class ButtonToggleExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<ButtonToggleExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<ButtonToggleExamplesModule, [typeof i1.ButtonToggleAppearanceExample, typeof i2.ButtonToggleExclusiveExample, typeof i3.ButtonToggleOverviewExample, typeof i4.ButtonToggleHarnessExample, typeof i5.ButtonToggleFormsExample], [typeof i6.FormsModule, typeof i7.MatButtonToggleModule, typeof i8.MatIconModule, typeof i6.ReactiveFormsModule], [typeof i1.ButtonToggleAppearanceExample, typeof i2.ButtonToggleExclusiveExample, typeof i3.ButtonToggleOverviewExample, typeof i4.ButtonToggleHarnessExample, typeof i5.ButtonToggleFormsExample]>;
     static ɵinj: i0.ɵɵInjectorDef<ButtonToggleExamplesModule>;
 }

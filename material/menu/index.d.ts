@@ -14,6 +14,7 @@ import * as i7 from "@angular/material/icon";
 import * as i8 from "@angular/material/menu";
 export { MenuHarnessExample, MenuIconsExample, MenuOverviewExample, MenuPositionExample, MenuNestedExample, };
 export declare class MenuExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<MenuExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<MenuExamplesModule, [typeof i1.MenuHarnessExample, typeof i2.MenuIconsExample, typeof i3.MenuOverviewExample, typeof i4.MenuPositionExample, typeof i5.MenuNestedExample], [typeof i6.MatButtonModule, typeof i7.MatIconModule, typeof i8.MatMenuModule], [typeof i1.MenuHarnessExample, typeof i2.MenuIconsExample, typeof i3.MenuOverviewExample, typeof i4.MenuPositionExample, typeof i5.MenuNestedExample]>;
     static ɵinj: i0.ɵɵInjectorDef<MenuExamplesModule>;
 }

@@ -15,6 +15,7 @@ import * as i9 from "@angular/material/radio";
 import * as i10 from "@angular/material/slide-toggle";
 export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleHarnessExample, SlideToggleOverviewExample, };
 export declare class SlideToggleExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<SlideToggleExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample], [typeof i5.FormsModule, typeof i6.MatButtonModule, typeof i7.MatCardModule, typeof i8.MatCheckboxModule, typeof i9.MatRadioModule, typeof i10.MatSlideToggleModule, typeof i5.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDef<SlideToggleExamplesModule>;
 }

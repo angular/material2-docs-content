@@ -1,5 +1,5 @@
 import { ComponentPortal, TemplatePortal, DomPortal, CdkPortalOutlet, PortalModule } from '@angular/cdk/portal';
-import { ɵɵtext, ɵɵdirectiveInject, ViewContainerRef, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelementStart, ɵɵelementEnd, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵtext, ɵɵdirectiveInject, ViewContainerRef, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelementStart, ɵɵelementEnd, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 
 const _c0 = ["templatePortalContent"];
 const _c1 = ["domPortalContent"];
@@ -21,9 +21,9 @@ class CdkPortalOverviewExample {
     }
 }
 CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
-CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(_c0, 1);
-        ɵɵviewQuery(_c1, 1);
+CdkPortalOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(_c0, 5);
+        ɵɵviewQuery(_c1, 5);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
@@ -72,7 +72,7 @@ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewEx
 class ComponentPortalExample {
 }
 ComponentPortalExample.ɵfac = function ComponentPortalExample_Factory(t) { return new (t || ComponentPortalExample)(); };
-ComponentPortalExample.ɵcmp = ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
+ComponentPortalExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtext(0, "Hello, this is a component portal");
     } }, encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ComponentPortalExample, [{
@@ -89,11 +89,9 @@ const EXAMPLES = [
 ];
 class CdkPortalExamplesModule {
 }
-CdkPortalExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
-CdkPortalExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[PortalModule]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
-        ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample,
-        ComponentPortalExample] }); })();
+CdkPortalExamplesModule.ɵfac = function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); };
+CdkPortalExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
+CdkPortalExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[PortalModule]] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPortalExamplesModule, [{
         type: NgModule,
         args: [{
@@ -103,6 +101,9 @@ CdkPortalExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPortal
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
+        ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample,
+        ComponentPortalExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵadvance, ɵɵproperty, ɵɵtemplate, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵadvance, ɵɵproperty, ɵɵtemplate, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
@@ -12,7 +12,7 @@ import { MatSlider, MatSliderModule } from '@angular/material/slider';
 class ProgressBarBufferExample {
 }
 ProgressBarBufferExample.ɵfac = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
-ProgressBarBufferExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
+ProgressBarBufferExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-progress-bar", 0);
     } }, directives: [MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressBarBufferExample, [{
@@ -65,7 +65,7 @@ class ProgressBarConfigurableExample {
     }
 }
 ProgressBarConfigurableExample.ɵfac = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
-ProgressBarConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+ProgressBarConfigurableExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-card");
         ɵɵelementStart(1, "mat-card-content");
         ɵɵelementStart(2, "h2", 0);
@@ -149,7 +149,7 @@ ProgressBarConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarCo
 class ProgressBarDeterminateExample {
 }
 ProgressBarDeterminateExample.ɵfac = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
-ProgressBarDeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
+ProgressBarDeterminateExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-progress-bar", 0);
     } }, directives: [MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressBarDeterminateExample, [{
@@ -166,7 +166,7 @@ ProgressBarDeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarDet
 class ProgressBarIndeterminateExample {
 }
 ProgressBarIndeterminateExample.ɵfac = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
-ProgressBarIndeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
+ProgressBarIndeterminateExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-progress-bar", 0);
     } }, directives: [MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
@@ -183,7 +183,7 @@ ProgressBarIndeterminateExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarI
 class ProgressBarQueryExample {
 }
 ProgressBarQueryExample.ɵfac = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
-ProgressBarQueryExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
+ProgressBarQueryExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-progress-bar", 0);
     } }, directives: [MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressBarQueryExample, [{
@@ -200,7 +200,7 @@ ProgressBarQueryExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarQueryExam
 class ProgressBarHarnessExample {
 }
 ProgressBarHarnessExample.ɵfac = function ProgressBarHarnessExample_Factory(t) { return new (t || ProgressBarHarnessExample)(); };
-ProgressBarHarnessExample.ɵcmp = ɵɵdefineComponent({ type: ProgressBarHarnessExample, selectors: [["progress-bar-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"], ["mode", "indeterminate"]], template: function ProgressBarHarnessExample_Template(rf, ctx) { if (rf & 1) {
+ProgressBarHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ProgressBarHarnessExample, selectors: [["progress-bar-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"], ["mode", "indeterminate"]], template: function ProgressBarHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-progress-bar", 0);
         ɵɵelement(1, "mat-progress-bar", 1);
     } if (rf & 2) {
@@ -224,8 +224,9 @@ const EXAMPLES = [
 ];
 class ProgressBarExamplesModule {
 }
-ProgressBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
-ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
+ProgressBarExamplesModule.ɵfac = function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); };
+ProgressBarExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
+ProgressBarExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatCardModule,
             MatProgressBarModule,
@@ -233,22 +234,6 @@ ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Progres
             MatSliderModule,
             FormsModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
-        ProgressBarConfigurableExample,
-        ProgressBarDeterminateExample,
-        ProgressBarHarnessExample,
-        ProgressBarIndeterminateExample,
-        ProgressBarQueryExample], imports: [CommonModule,
-        MatCardModule,
-        MatProgressBarModule,
-        MatRadioModule,
-        MatSliderModule,
-        FormsModule], exports: [ProgressBarBufferExample,
-        ProgressBarConfigurableExample,
-        ProgressBarDeterminateExample,
-        ProgressBarHarnessExample,
-        ProgressBarIndeterminateExample,
-        ProgressBarQueryExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ProgressBarExamplesModule, [{
         type: NgModule,
         args: [{
@@ -265,6 +250,22 @@ ProgressBarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function Progres
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
+        ProgressBarConfigurableExample,
+        ProgressBarDeterminateExample,
+        ProgressBarHarnessExample,
+        ProgressBarIndeterminateExample,
+        ProgressBarQueryExample], imports: [CommonModule,
+        MatCardModule,
+        MatProgressBarModule,
+        MatRadioModule,
+        MatSliderModule,
+        FormsModule], exports: [ProgressBarBufferExample,
+        ProgressBarConfigurableExample,
+        ProgressBarDeterminateExample,
+        ProgressBarHarnessExample,
+        ProgressBarIndeterminateExample,
+        ProgressBarQueryExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

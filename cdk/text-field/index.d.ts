@@ -12,6 +12,7 @@ import * as i7 from "@angular/material/input";
 import * as i8 from "@angular/material/select";
 export { TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, };
 export declare class CdkTextFieldExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<CdkTextFieldExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkTextFieldExamplesModule, [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample], [typeof i4.CommonModule, typeof i5.TextFieldModule, typeof i6.MatButtonModule, typeof i7.MatInputModule, typeof i8.MatSelectModule], [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample]>;
     static ɵinj: i0.ɵɵInjectorDef<CdkTextFieldExamplesModule>;
 }

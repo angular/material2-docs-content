@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵclassProp, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵclassProp, ɵsetClassMetadata, Component, ɵɵproperty, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { NgControlStatus, NgModel, NumberValueAccessor, DefaultValueAccessor, FormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -15,7 +15,7 @@ class ElevationOverviewExample {
     }
 }
 ElevationOverviewExample.ɵfac = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
-ElevationOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 4, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
+ElevationOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 4, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵtext(1, " Example\n");
         ɵɵelementEnd();
@@ -46,7 +46,7 @@ class RippleOverviewExample {
     }
 }
 RippleOverviewExample.ɵfac = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
-RippleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+RippleOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-checkbox", 0);
         ɵɵlistener("ngModelChange", function RippleOverviewExample_Template_mat_checkbox_ngModelChange_0_listener($event) { return ctx.centered = $event; });
         ɵɵtext(1, "Centered");
@@ -100,21 +100,15 @@ const EXAMPLES = [
 ];
 class CoreExamplesModule {
 }
-CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
-CoreExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
+CoreExamplesModule.ɵfac = function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); };
+CoreExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: CoreExamplesModule });
+CoreExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             MatButtonModule,
             MatCheckboxModule,
             MatInputModule,
             MatRippleModule,
             FormsModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CoreExamplesModule, { declarations: [ElevationOverviewExample,
-        RippleOverviewExample], imports: [MatButtonModule,
-        MatCheckboxModule,
-        MatInputModule,
-        MatRippleModule,
-        FormsModule], exports: [ElevationOverviewExample,
-        RippleOverviewExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CoreExamplesModule, [{
         type: NgModule,
         args: [{
@@ -130,6 +124,13 @@ CoreExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CoreExamplesMo
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CoreExamplesModule, { declarations: [ElevationOverviewExample,
+        RippleOverviewExample], imports: [MatButtonModule,
+        MatCheckboxModule,
+        MatInputModule,
+        MatRippleModule,
+        FormsModule], exports: [ElevationOverviewExample,
+        RippleOverviewExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

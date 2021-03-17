@@ -23,7 +23,7 @@
         return FocusMonitorDirectivesExample;
     }());
     FocusMonitorDirectivesExample.ɵfac = function FocusMonitorDirectivesExample_Factory(t) { return new (t || FocusMonitorDirectivesExample)(i0.ɵɵdirectiveInject(i0.NgZone), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
-    FocusMonitorDirectivesExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) {
+    FocusMonitorDirectivesExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "button", 1);
@@ -90,9 +90,9 @@
         return FocusMonitorFocusViaExample;
     }());
     FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
-    FocusMonitorFocusViaExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) {
+    FocusMonitorFocusViaExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0, 1);
+                i0.ɵɵviewQuery(_c0, 5);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -190,10 +190,10 @@
         return FocusMonitorOverviewExample;
     }());
     FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
-    FocusMonitorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) {
+    FocusMonitorOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0$1, 1);
-                i0.ɵɵviewQuery(_c1, 1);
+                i0.ɵɵviewQuery(_c0$1, 5);
+                i0.ɵɵviewQuery(_c1, 5);
             }
             if (rf & 2) {
                 var _t = void 0;
@@ -255,19 +255,12 @@
         }
         return CdkA11yExamplesModule;
     }());
-    CdkA11yExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
-    CdkA11yExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); }, imports: [[
+    CdkA11yExamplesModule.ɵfac = function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); };
+    CdkA11yExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
+    CdkA11yExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i1.A11yModule,
                 i3.MatSelectModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkA11yExamplesModule, { declarations: [FocusMonitorDirectivesExample,
-                FocusMonitorFocusViaExample,
-                FocusMonitorOverviewExample], imports: [i1.A11yModule,
-                i3.MatSelectModule], exports: [FocusMonitorDirectivesExample,
-                FocusMonitorFocusViaExample,
-                FocusMonitorOverviewExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkA11yExamplesModule, [{
                 type: i0.NgModule,
@@ -281,6 +274,14 @@
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkA11yExamplesModule, { declarations: [FocusMonitorDirectivesExample,
+                FocusMonitorFocusViaExample,
+                FocusMonitorOverviewExample], imports: [i1.A11yModule,
+                i3.MatSelectModule], exports: [FocusMonitorDirectivesExample,
+                FocusMonitorFocusViaExample,
+                FocusMonitorOverviewExample] });
     })();
 
     /**

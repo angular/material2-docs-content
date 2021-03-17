@@ -29,7 +29,7 @@
         return CdkOverlayBasicExample;
     }());
     CdkOverlayBasicExample.ɵfac = function CdkOverlayBasicExample_Factory(t) { return new (t || CdkOverlayBasicExample)(); };
-    CdkOverlayBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkOverlayBasicExample, selectors: [["cdk-overlay-basic-example"]], decls: 4, vars: 3, consts: [["type", "button", "cdkOverlayOrigin", "", 3, "click"], ["trigger", "cdkOverlayOrigin"], ["cdkConnectedOverlay", "", 3, "cdkConnectedOverlayOrigin", "cdkConnectedOverlayOpen"], [1, "example-list"]], template: function CdkOverlayBasicExample_Template(rf, ctx) {
+    CdkOverlayBasicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkOverlayBasicExample, selectors: [["cdk-overlay-basic-example"]], decls: 4, vars: 3, consts: [["type", "button", "cdkOverlayOrigin", "", 3, "click"], ["trigger", "cdkOverlayOrigin"], ["cdkConnectedOverlay", "", 3, "cdkConnectedOverlayOrigin", "cdkConnectedOverlayOpen"], [1, "example-list"]], template: function CdkOverlayBasicExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0, 1);
                 i0.ɵɵlistener("click", function CdkOverlayBasicExample_Template_button_click_0_listener() { return ctx.isOpen = !ctx.isOpen; });
@@ -62,9 +62,9 @@
         }
         return CdkOverlayExamplesModule;
     }());
-    CdkOverlayExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkOverlayExamplesModule });
-    CdkOverlayExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkOverlayExamplesModule_Factory(t) { return new (t || CdkOverlayExamplesModule)(); }, imports: [[i1.OverlayModule]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkOverlayExamplesModule, { declarations: [CdkOverlayBasicExample], imports: [i1.OverlayModule], exports: [CdkOverlayBasicExample] }); })();
+    CdkOverlayExamplesModule.ɵfac = function CdkOverlayExamplesModule_Factory(t) { return new (t || CdkOverlayExamplesModule)(); };
+    CdkOverlayExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkOverlayExamplesModule });
+    CdkOverlayExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[i1.OverlayModule]] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkOverlayExamplesModule, [{
                 type: i0.NgModule,
@@ -76,6 +76,7 @@
                     }]
             }], null, null);
     })();
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkOverlayExamplesModule, { declarations: [CdkOverlayBasicExample], imports: [i1.OverlayModule], exports: [CdkOverlayBasicExample] }); })();
 
     /**
      * Generated bundle index. Do not edit.

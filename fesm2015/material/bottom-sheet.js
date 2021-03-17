@@ -1,4 +1,4 @@
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, Component, ɵɵviewQuery, TemplateRef, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵtemplate, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, Component, ɵɵviewQuery, TemplateRef, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵtemplate, ViewChild, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatNavList, MatListItem, MatListModule } from '@angular/material/list';
@@ -16,7 +16,7 @@ class BottomSheetOverviewExample {
     }
 }
 BottomSheetOverviewExample.ɵfac = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(ɵɵdirectiveInject(MatBottomSheet)); };
-BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
+BottomSheetOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "p");
         ɵɵtext(1, "You have received a file called \"cat-picture.jpeg\".");
         ɵɵelementEnd();
@@ -42,7 +42,7 @@ class BottomSheetOverviewExampleSheet {
     }
 }
 BottomSheetOverviewExampleSheet.ɵfac = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(ɵɵdirectiveInject(MatBottomSheetRef)); };
-BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
+BottomSheetOverviewExampleSheet.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-nav-list");
         ɵɵelementStart(1, "a", 0);
         ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_1_listener($event) { return ctx.openLink($event); });
@@ -105,8 +105,8 @@ class BottomSheetHarnessExample {
     }
 }
 BottomSheetHarnessExample.ɵfac = function BottomSheetHarnessExample_Factory(t) { return new (t || BottomSheetHarnessExample)(ɵɵdirectiveInject(MatBottomSheet)); };
-BottomSheetHarnessExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetHarnessExample, selectors: [["bottom-sheet-harness-example"]], viewQuery: function BottomSheetHarnessExample_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(TemplateRef, 1);
+BottomSheetHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: BottomSheetHarnessExample, selectors: [["bottom-sheet-harness-example"]], viewQuery: function BottomSheetHarnessExample_Query(rf, ctx) { if (rf & 1) {
+        ɵɵviewQuery(TemplateRef, 5);
     } if (rf & 2) {
         let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.template = _t.first);
@@ -131,19 +131,13 @@ const EXAMPLES = [
 ];
 class BottomSheetExamplesModule {
 }
-BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
-BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
+BottomSheetExamplesModule.ɵfac = function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); };
+BottomSheetExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
+BottomSheetExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             MatBottomSheetModule,
             MatButtonModule,
             MatListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetHarnessExample,
-        BottomSheetOverviewExample,
-        BottomSheetOverviewExampleSheet], imports: [MatBottomSheetModule,
-        MatButtonModule,
-        MatListModule], exports: [BottomSheetHarnessExample,
-        BottomSheetOverviewExample,
-        BottomSheetOverviewExampleSheet] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(BottomSheetExamplesModule, [{
         type: NgModule,
         args: [{
@@ -157,6 +151,13 @@ BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomS
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetHarnessExample,
+        BottomSheetOverviewExample,
+        BottomSheetOverviewExampleSheet], imports: [MatBottomSheetModule,
+        MatButtonModule,
+        MatListModule], exports: [BottomSheetHarnessExample,
+        BottomSheetOverviewExample,
+        BottomSheetOverviewExampleSheet] }); })();
 
 /**
  * Generated bundle index. Do not edit.

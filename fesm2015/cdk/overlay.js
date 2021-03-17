@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { CdkOverlayOrigin, CdkConnectedOverlay, OverlayModule } from '@angular/cdk/overlay';
 
 function CdkOverlayBasicExample_ng_template_3_Template(rf, ctx) { if (rf & 1) {
@@ -23,7 +23,7 @@ class CdkOverlayBasicExample {
     }
 }
 CdkOverlayBasicExample.ɵfac = function CdkOverlayBasicExample_Factory(t) { return new (t || CdkOverlayBasicExample)(); };
-CdkOverlayBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkOverlayBasicExample, selectors: [["cdk-overlay-basic-example"]], decls: 4, vars: 3, consts: [["type", "button", "cdkOverlayOrigin", "", 3, "click"], ["trigger", "cdkOverlayOrigin"], ["cdkConnectedOverlay", "", 3, "cdkConnectedOverlayOrigin", "cdkConnectedOverlayOpen"], [1, "example-list"]], template: function CdkOverlayBasicExample_Template(rf, ctx) { if (rf & 1) {
+CdkOverlayBasicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkOverlayBasicExample, selectors: [["cdk-overlay-basic-example"]], decls: 4, vars: 3, consts: [["type", "button", "cdkOverlayOrigin", "", 3, "click"], ["trigger", "cdkOverlayOrigin"], ["cdkConnectedOverlay", "", 3, "cdkConnectedOverlayOrigin", "cdkConnectedOverlayOpen"], [1, "example-list"]], template: function CdkOverlayBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0, 1);
         ɵɵlistener("click", function CdkOverlayBasicExample_Template_button_click_0_listener() { return ctx.isOpen = !ctx.isOpen; });
         ɵɵtext(2);
@@ -48,9 +48,9 @@ CdkOverlayBasicExample.ɵcmp = ɵɵdefineComponent({ type: CdkOverlayBasicExampl
 const EXAMPLES = [CdkOverlayBasicExample];
 class CdkOverlayExamplesModule {
 }
-CdkOverlayExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkOverlayExamplesModule });
-CdkOverlayExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkOverlayExamplesModule_Factory(t) { return new (t || CdkOverlayExamplesModule)(); }, imports: [[OverlayModule]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkOverlayExamplesModule, { declarations: [CdkOverlayBasicExample], imports: [OverlayModule], exports: [CdkOverlayBasicExample] }); })();
+CdkOverlayExamplesModule.ɵfac = function CdkOverlayExamplesModule_Factory(t) { return new (t || CdkOverlayExamplesModule)(); };
+CdkOverlayExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: CdkOverlayExamplesModule });
+CdkOverlayExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[OverlayModule]] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkOverlayExamplesModule, [{
         type: NgModule,
         args: [{
@@ -60,6 +60,7 @@ CdkOverlayExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkOverl
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkOverlayExamplesModule, { declarations: [CdkOverlayBasicExample], imports: [OverlayModule], exports: [CdkOverlayBasicExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

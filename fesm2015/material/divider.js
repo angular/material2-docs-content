@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatList, MatListItem, MatListModule } from '@angular/material/list';
 
@@ -8,7 +8,7 @@ import { MatList, MatListItem, MatListModule } from '@angular/material/list';
 class DividerOverviewExample {
 }
 DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
-DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+DividerOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-list");
         ɵɵelementStart(1, "mat-list-item");
         ɵɵtext(2, "Item 1");
@@ -37,7 +37,7 @@ DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExampl
 class DividerHarnessExample {
 }
 DividerHarnessExample.ɵfac = function DividerHarnessExample_Factory(t) { return new (t || DividerHarnessExample)(); };
-DividerHarnessExample.ɵcmp = ɵɵdefineComponent({ type: DividerHarnessExample, selectors: [["divider-harness-example"]], decls: 2, vars: 0, consts: [["inset", "", "vertical", ""]], template: function DividerHarnessExample_Template(rf, ctx) { if (rf & 1) {
+DividerHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: DividerHarnessExample, selectors: [["divider-harness-example"]], decls: 2, vars: 0, consts: [["inset", "", "vertical", ""]], template: function DividerHarnessExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-divider");
         ɵɵelement(1, "mat-divider", 0);
     } }, directives: [MatDivider], encapsulation: 2 });
@@ -55,15 +55,12 @@ const EXAMPLES = [
 ];
 class DividerExamplesModule {
 }
-DividerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DividerExamplesModule });
-DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
+DividerExamplesModule.ɵfac = function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); };
+DividerExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: DividerExamplesModule });
+DividerExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             MatDividerModule,
             MatListModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerHarnessExample,
-        DividerOverviewExample], imports: [MatDividerModule,
-        MatListModule], exports: [DividerHarnessExample,
-        DividerOverviewExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DividerExamplesModule, [{
         type: NgModule,
         args: [{
@@ -76,6 +73,10 @@ DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExam
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerHarnessExample,
+        DividerOverviewExample], imports: [MatDividerModule,
+        MatListModule], exports: [DividerHarnessExample,
+        DividerOverviewExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

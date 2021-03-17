@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵreference, ɵɵproperty, ɵɵdefineComponent, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelement, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵreference, ɵɵproperty, ɵɵdefineComponent, ɵɵtemplate, ɵɵtemplateRefExtractor, ɵsetClassMetadata, Component, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵelement, ɵɵadvance, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { CdkMenuItem, CdkMenuItemTrigger, CdkMenuPanel, CdkMenu, CdkMenuItemCheckbox, CdkMenuGroup, CdkMenuItemRadio, CdkMenuBar, CdkContextMenuTrigger, CdkMenuModule } from '@angular/cdk-experimental/menu';
 
 function CdkMenuStandaloneMenuExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
@@ -25,7 +25,7 @@ function CdkMenuStandaloneMenuExample_ng_template_2_Template(rf, ctx) { if (rf &
 class CdkMenuStandaloneMenuExample {
 }
 CdkMenuStandaloneMenuExample.ɵfac = function CdkMenuStandaloneMenuExample_Factory(t) { return new (t || CdkMenuStandaloneMenuExample)(); };
-CdkMenuStandaloneMenuExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuStandaloneMenuExample, selectors: [["cdk-menu-standalone-menu-example"]], decls: 4, vars: 1, consts: [["cdkMenuItem", "", 1, "example-standalone-item", 3, "cdkMenuTriggerFor"], ["cdkMenuPanel", ""], ["menu", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItem", "", 1, "example-menu-item"]], template: function CdkMenuStandaloneMenuExample_Template(rf, ctx) { if (rf & 1) {
+CdkMenuStandaloneMenuExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkMenuStandaloneMenuExample, selectors: [["cdk-menu-standalone-menu-example"]], decls: 4, vars: 1, consts: [["cdkMenuItem", "", 1, "example-standalone-item", 3, "cdkMenuTriggerFor"], ["cdkMenuPanel", ""], ["menu", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItem", "", 1, "example-menu-item"]], template: function CdkMenuStandaloneMenuExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, "Click me!");
         ɵɵelementEnd();
@@ -96,7 +96,7 @@ class CdkMenuStandaloneStatefulMenuExample {
     }
 }
 CdkMenuStandaloneStatefulMenuExample.ɵfac = function CdkMenuStandaloneStatefulMenuExample_Factory(t) { return new (t || CdkMenuStandaloneStatefulMenuExample)(); };
-CdkMenuStandaloneStatefulMenuExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuStandaloneStatefulMenuExample, selectors: [["cdk-menu-standalone-stateful-menu-example"]], decls: 4, vars: 1, consts: [["cdkMenuItem", "", 1, "example-standalone-item", 3, "cdkMenuTriggerFor"], ["cdkMenuPanel", ""], ["menu", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItemCheckbox", "", 1, "example-menu-item", 3, "checked", "cdkMenuItemToggled"], ["cdkMenuGroup", "", 3, "change"], ["cdkMenuItemRadio", "", 1, "example-menu-item", 3, "checked"]], template: function CdkMenuStandaloneStatefulMenuExample_Template(rf, ctx) { if (rf & 1) {
+CdkMenuStandaloneStatefulMenuExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkMenuStandaloneStatefulMenuExample, selectors: [["cdk-menu-standalone-stateful-menu-example"]], decls: 4, vars: 1, consts: [["cdkMenuItem", "", 1, "example-standalone-item", 3, "cdkMenuTriggerFor"], ["cdkMenuPanel", ""], ["menu", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItemCheckbox", "", 1, "example-menu-item", 3, "checked", "cdkMenuItemToggled"], ["cdkMenuGroup", "", 3, "change"], ["cdkMenuItemRadio", "", 1, "example-menu-item", 3, "checked"]], template: function CdkMenuStandaloneStatefulMenuExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, "Click me!");
         ɵɵelementEnd();
@@ -248,7 +248,7 @@ function CdkMenuMenubarExample_ng_template_15_Template(rf, ctx) { if (rf & 1) {
 class CdkMenuMenubarExample {
 }
 CdkMenuMenubarExample.ɵfac = function CdkMenuMenubarExample_Factory(t) { return new (t || CdkMenuMenubarExample)(); };
-CdkMenuMenubarExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuMenubarExample, selectors: [["cdk-menu-menubar-example"]], exportAs: ["cdkMenuMenubarExample"], decls: 17, vars: 3, consts: [["cdkMenuBar", ""], ["cdkMenuItem", "", 1, "example-menu-bar-item", 3, "cdkMenuTriggerFor"], ["cdkMenuPanel", ""], ["file", "cdkMenuPanel"], ["edit", "cdkMenuPanel"], ["format", "cdkMenuPanel"], ["new", "cdkMenuPanel"], ["download", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItem", "", 1, "example-menu-item"], ["cdkMenuItem", "", 1, "example-menu-item", 3, "cdkMenuTriggerFor"], ["cdkMenuGroup", "", 1, "example-menu-group"], ["checked", "", "id", "bf", "cdkMenuItemCheckbox", "", 1, "example-menu-item"], ["id", "if", "cdkMenuItemCheckbox", "", 1, "example-menu-item"], ["id", "small", "cdkMenuItemRadio", "", 1, "example-menu-item"], ["checked", "", "id", "normal", "cdkMenuItemRadio", "", 1, "example-menu-item"], ["id", "large", "cdkMenuItemRadio", "", 1, "example-menu-item"]], template: function CdkMenuMenubarExample_Template(rf, ctx) { if (rf & 1) {
+CdkMenuMenubarExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkMenuMenubarExample, selectors: [["cdk-menu-menubar-example"]], exportAs: ["cdkMenuMenubarExample"], decls: 17, vars: 3, consts: [["cdkMenuBar", ""], ["cdkMenuItem", "", 1, "example-menu-bar-item", 3, "cdkMenuTriggerFor"], ["cdkMenuPanel", ""], ["file", "cdkMenuPanel"], ["edit", "cdkMenuPanel"], ["format", "cdkMenuPanel"], ["new", "cdkMenuPanel"], ["download", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItem", "", 1, "example-menu-item"], ["cdkMenuItem", "", 1, "example-menu-item", 3, "cdkMenuTriggerFor"], ["cdkMenuGroup", "", 1, "example-menu-group"], ["checked", "", "id", "bf", "cdkMenuItemCheckbox", "", 1, "example-menu-item"], ["id", "if", "cdkMenuItemCheckbox", "", 1, "example-menu-item"], ["id", "small", "cdkMenuItemRadio", "", 1, "example-menu-item"], ["checked", "", "id", "normal", "cdkMenuItemRadio", "", 1, "example-menu-item"], ["id", "large", "cdkMenuItemRadio", "", 1, "example-menu-item"]], template: function CdkMenuMenubarExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "button", 1);
         ɵɵtext(2, "File");
@@ -290,7 +290,7 @@ CdkMenuMenubarExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuMenubarExample,
 class CdkMenuInlineExample {
 }
 CdkMenuInlineExample.ɵfac = function CdkMenuInlineExample_Factory(t) { return new (t || CdkMenuInlineExample)(); };
-CdkMenuInlineExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuInlineExample, selectors: [["cdk-menu-inline-example"]], exportAs: ["cdkMenuInlineExample"], decls: 13, vars: 0, consts: [["cdkMenu", "", 1, "example-menu"], ["cdkMenuItem", "", 1, "example-menu-item"]], template: function CdkMenuInlineExample_Template(rf, ctx) { if (rf & 1) {
+CdkMenuInlineExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkMenuInlineExample, selectors: [["cdk-menu-inline-example"]], exportAs: ["cdkMenuInlineExample"], decls: 13, vars: 0, consts: [["cdkMenu", "", 1, "example-menu"], ["cdkMenuItem", "", 1, "example-menu-item"]], template: function CdkMenuInlineExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "button", 1);
         ɵɵtext(2, "Inbox");
@@ -343,7 +343,7 @@ function CdkMenuContextExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
 class CdkMenuContextExample {
 }
 CdkMenuContextExample.ɵfac = function CdkMenuContextExample_Factory(t) { return new (t || CdkMenuContextExample)(); };
-CdkMenuContextExample.ɵcmp = ɵɵdefineComponent({ type: CdkMenuContextExample, selectors: [["cdk-menu-context-example"]], exportAs: ["cdkMenuContextExample"], decls: 4, vars: 1, consts: [[3, "cdkContextMenuTriggerFor"], ["cdkMenuPanel", ""], ["context_menu", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItem", "", 1, "example-menu-item"]], template: function CdkMenuContextExample_Template(rf, ctx) { if (rf & 1) {
+CdkMenuContextExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkMenuContextExample, selectors: [["cdk-menu-context-example"]], exportAs: ["cdkMenuContextExample"], decls: 4, vars: 1, consts: [[3, "cdkContextMenuTriggerFor"], ["cdkMenuPanel", ""], ["context_menu", "cdkMenuPanel"], ["cdkMenu", "", 1, "example-menu", 3, "cdkMenuPanel"], ["cdkMenuItem", "", 1, "example-menu-item"]], template: function CdkMenuContextExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵtext(1, " Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It's not a story the Jedi would tell you. It's a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life\u2026 He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful\u2026 the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.\n");
         ɵɵelementEnd();
@@ -371,8 +371,17 @@ const EXAMPLES = [
 ];
 class CdkMenuExamplesModule {
 }
-CdkMenuExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkMenuExamplesModule });
-CdkMenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkMenuExamplesModule_Factory(t) { return new (t || CdkMenuExamplesModule)(); }, imports: [[CdkMenuModule]] });
+CdkMenuExamplesModule.ɵfac = function CdkMenuExamplesModule_Factory(t) { return new (t || CdkMenuExamplesModule)(); };
+CdkMenuExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: CdkMenuExamplesModule });
+CdkMenuExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[CdkMenuModule]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [CdkMenuModule],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            }]
+    }], null, null); })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkMenuExamplesModule, { declarations: [CdkMenuStandaloneMenuExample,
         CdkMenuMenubarExample,
         CdkMenuInlineExample,
@@ -382,14 +391,6 @@ CdkMenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkMenuExam
         CdkMenuInlineExample,
         CdkMenuContextExample,
         CdkMenuStandaloneStatefulMenuExample] }); })();
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkMenuExamplesModule, [{
-        type: NgModule,
-        args: [{
-                imports: [CdkMenuModule],
-                declarations: EXAMPLES,
-                exports: EXAMPLES,
-            }]
-    }], null, null); })();
 
 /**
  * Generated bundle index. Do not edit.

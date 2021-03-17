@@ -13,7 +13,7 @@
         return DividerOverviewExample;
     }());
     DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
-    DividerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) {
+    DividerOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list");
                 i0.ɵɵelementStart(1, "mat-list-item");
@@ -49,7 +49,7 @@
         return DividerHarnessExample;
     }());
     DividerHarnessExample.ɵfac = function DividerHarnessExample_Factory(t) { return new (t || DividerHarnessExample)(); };
-    DividerHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: DividerHarnessExample, selectors: [["divider-harness-example"]], decls: 2, vars: 0, consts: [["inset", "", "vertical", ""]], template: function DividerHarnessExample_Template(rf, ctx) {
+    DividerHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DividerHarnessExample, selectors: [["divider-harness-example"]], decls: 2, vars: 0, consts: [["inset", "", "vertical", ""]], template: function DividerHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-divider");
                 i0.ɵɵelement(1, "mat-divider", 0);
@@ -74,17 +74,12 @@
         }
         return DividerExamplesModule;
     }());
-    DividerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DividerExamplesModule });
-    DividerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
+    DividerExamplesModule.ɵfac = function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); };
+    DividerExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: DividerExamplesModule });
+    DividerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i2.MatDividerModule,
                 i1.MatListModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerHarnessExample,
-                DividerOverviewExample], imports: [i2.MatDividerModule,
-                i1.MatListModule], exports: [DividerHarnessExample,
-                DividerOverviewExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DividerExamplesModule, [{
                 type: i0.NgModule,
@@ -98,6 +93,12 @@
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerHarnessExample,
+                DividerOverviewExample], imports: [i2.MatDividerModule,
+                i1.MatListModule], exports: [DividerHarnessExample,
+                DividerOverviewExample] });
     })();
 
     /**

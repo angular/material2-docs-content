@@ -18,6 +18,7 @@ import * as i8 from "./cdk-virtual-scroll-template-cache/cdk-virtual-scroll-temp
 import * as i9 from "@angular/cdk/scrolling";
 export { CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, };
 export declare class CdkScrollingExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<CdkScrollingExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkScrollingExamplesModule, [typeof i1.CdkVirtualScrollContextExample, typeof i2.CdkVirtualScrollCustomStrategyExample, typeof i3.CdkVirtualScrollDataSourceExample, typeof i4.CdkVirtualScrollDlExample, typeof i5.CdkVirtualScrollFixedBufferExample, typeof i6.CdkVirtualScrollHorizontalExample, typeof i7.CdkVirtualScrollOverviewExample, typeof i8.CdkVirtualScrollTemplateCacheExample], [typeof i9.ScrollingModule], [typeof i1.CdkVirtualScrollContextExample, typeof i2.CdkVirtualScrollCustomStrategyExample, typeof i3.CdkVirtualScrollDataSourceExample, typeof i4.CdkVirtualScrollDlExample, typeof i5.CdkVirtualScrollFixedBufferExample, typeof i6.CdkVirtualScrollHorizontalExample, typeof i7.CdkVirtualScrollOverviewExample, typeof i8.CdkVirtualScrollTemplateCacheExample]>;
     static ɵinj: i0.ɵɵInjectorDef<CdkScrollingExamplesModule>;
 }

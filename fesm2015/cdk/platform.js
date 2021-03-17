@@ -1,5 +1,5 @@
 import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform, PlatformModule } from '@angular/cdk/platform';
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 
 /**
  * @title Platform overview
@@ -13,7 +13,7 @@ class CdkPlatformOverviewExample {
     }
 }
 CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
-CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
+CdkPlatformOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h2");
         ɵɵtext(1, "Platform information:");
         ɵɵelementEnd();
@@ -85,11 +85,11 @@ CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOvervi
 const EXAMPLES = [CdkPlatformOverviewExample];
 class CdkPlatformExamplesModule {
 }
-CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
-CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
+CdkPlatformExamplesModule.ɵfac = function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); };
+CdkPlatformExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
+CdkPlatformExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             PlatformModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPlatformExamplesModule, [{
         type: NgModule,
         args: [{
@@ -101,6 +101,7 @@ CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlat
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

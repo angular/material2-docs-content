@@ -34,7 +34,7 @@
         return ProgressSpinnerConfigurableExample;
     }());
     ProgressSpinnerConfigurableExample.ɵfac = function ProgressSpinnerConfigurableExample_Factory(t) { return new (t || ProgressSpinnerConfigurableExample)(); };
-    ProgressSpinnerConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressSpinnerConfigurableExample, selectors: [["progress-spinner-configurable-example"]], decls: 28, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressSpinnerConfigurableExample_Template(rf, ctx) {
+    ProgressSpinnerConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressSpinnerConfigurableExample, selectors: [["progress-spinner-configurable-example"]], decls: 28, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressSpinnerConfigurableExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
                 i0.ɵɵelementStart(1, "mat-card-content");
@@ -115,7 +115,7 @@
         return ProgressSpinnerOverviewExample;
     }());
     ProgressSpinnerOverviewExample.ɵfac = function ProgressSpinnerOverviewExample_Factory(t) { return new (t || ProgressSpinnerOverviewExample)(); };
-    ProgressSpinnerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) {
+    ProgressSpinnerOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-spinner");
             }
@@ -139,7 +139,7 @@
         return ProgressSpinnerHarnessExample;
     }());
     ProgressSpinnerHarnessExample.ɵfac = function ProgressSpinnerHarnessExample_Factory(t) { return new (t || ProgressSpinnerHarnessExample)(); };
-    ProgressSpinnerHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: ProgressSpinnerHarnessExample, selectors: [["progress-spinner-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"]], template: function ProgressSpinnerHarnessExample_Template(rf, ctx) {
+    ProgressSpinnerHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ProgressSpinnerHarnessExample, selectors: [["progress-spinner-harness-example"]], decls: 2, vars: 1, consts: [["mode", "determinate", 3, "value"]], template: function ProgressSpinnerHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelement(0, "mat-progress-spinner", 0);
                 i0.ɵɵelement(1, "mat-spinner");
@@ -168,8 +168,9 @@
         }
         return ProgressSpinnerExamplesModule;
     }());
-    ProgressSpinnerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ProgressSpinnerExamplesModule });
-    ProgressSpinnerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ProgressSpinnerExamplesModule_Factory(t) { return new (t || ProgressSpinnerExamplesModule)(); }, imports: [[
+    ProgressSpinnerExamplesModule.ɵfac = function ProgressSpinnerExamplesModule_Factory(t) { return new (t || ProgressSpinnerExamplesModule)(); };
+    ProgressSpinnerExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: ProgressSpinnerExamplesModule });
+    ProgressSpinnerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i4.CommonModule,
                 i1.MatCardModule,
                 i1$1.MatProgressSpinnerModule,
@@ -177,18 +178,6 @@
                 i6.MatSliderModule,
                 i3.FormsModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
-                ProgressSpinnerHarnessExample,
-                ProgressSpinnerOverviewExample], imports: [i4.CommonModule,
-                i1.MatCardModule,
-                i1$1.MatProgressSpinnerModule,
-                i2.MatRadioModule,
-                i6.MatSliderModule,
-                i3.FormsModule], exports: [ProgressSpinnerConfigurableExample,
-                ProgressSpinnerHarnessExample,
-                ProgressSpinnerOverviewExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
                 type: i0.NgModule,
@@ -206,6 +195,18 @@
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
+                ProgressSpinnerHarnessExample,
+                ProgressSpinnerOverviewExample], imports: [i4.CommonModule,
+                i1.MatCardModule,
+                i1$1.MatProgressSpinnerModule,
+                i2.MatRadioModule,
+                i6.MatSliderModule,
+                i3.FormsModule], exports: [ProgressSpinnerConfigurableExample,
+                ProgressSpinnerHarnessExample,
+                ProgressSpinnerOverviewExample] });
     })();
 
     /**

@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵelement, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵelement, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material-experimental/mdc-button';
 import { MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatCardModule } from '@angular/material-experimental/mdc-card';
 
@@ -8,7 +8,7 @@ import { MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, M
 class MdcCardFancyExample {
 }
 MdcCardFancyExample.ɵfac = function MdcCardFancyExample_Factory(t) { return new (t || MdcCardFancyExample)(); };
-MdcCardFancyExample.ɵcmp = ɵɵdefineComponent({ type: MdcCardFancyExample, selectors: [["mdc-card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function MdcCardFancyExample_Template(rf, ctx) { if (rf & 1) {
+MdcCardFancyExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: MdcCardFancyExample, selectors: [["mdc-card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function MdcCardFancyExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-card", 0);
         ɵɵelementStart(1, "mat-card-header");
         ɵɵelement(2, "div", 1);
@@ -49,13 +49,12 @@ const EXAMPLES = [
 ];
 class MdcCardExamplesModule {
 }
-MdcCardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MdcCardExamplesModule });
-MdcCardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcCardExamplesModule_Factory(t) { return new (t || MdcCardExamplesModule)(); }, imports: [[
+MdcCardExamplesModule.ɵfac = function MdcCardExamplesModule_Factory(t) { return new (t || MdcCardExamplesModule)(); };
+MdcCardExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: MdcCardExamplesModule });
+MdcCardExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             MatButtonModule,
             MatCardModule,
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MdcCardExamplesModule, { declarations: [MdcCardFancyExample], imports: [MatButtonModule,
-        MatCardModule], exports: [MdcCardFancyExample] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MdcCardExamplesModule, [{
         type: NgModule,
         args: [{
@@ -68,6 +67,8 @@ MdcCardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcCardExam
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(MdcCardExamplesModule, { declarations: [MdcCardFancyExample], imports: [MatButtonModule,
+        MatCardModule], exports: [MdcCardFancyExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

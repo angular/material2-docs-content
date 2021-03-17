@@ -320,7 +320,7 @@
         return MdcFormFieldCustomControlExample;
     }());
     MdcFormFieldCustomControlExample.ɵfac = function MdcFormFieldCustomControlExample_Factory(t) { return new (t || MdcFormFieldCustomControlExample)(); };
-    MdcFormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) {
+    MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
@@ -477,7 +477,7 @@
     }());
     MyTelInput.nextId = 0;
     MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i3.FormBuilder), i0.ɵɵdirectiveInject(i4.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(formField.MAT_FORM_FIELD, 8), i0.ɵɵdirectiveInject(i3.NgControl, 10)); };
-    MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) {
+    MyTelInput.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) {
             if (rf & 2) {
                 i0.ɵɵhostProperty("id", ctx.id);
                 i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
@@ -553,19 +553,14 @@
         }
         return MdcFormFieldExamplesModule;
     }());
-    MdcFormFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
-    MdcFormFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); }, imports: [[
+    MdcFormFieldExamplesModule.ɵfac = function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); };
+    MdcFormFieldExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
+    MdcFormFieldExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 common.CommonModule,
                 i1.MatFormFieldModule,
                 i2.MatIconModule,
                 i3.ReactiveFormsModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
-                i1.MatFormFieldModule,
-                i2.MatIconModule,
-                i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
                 type: i0.NgModule,
@@ -576,11 +571,17 @@
                             i2.MatIconModule,
                             i3.ReactiveFormsModule,
                         ],
-                        declarations: __spread(EXAMPLES, [MyTelInput]),
-                        exports: __spread(EXAMPLES, [MyTelInput]),
+                        declarations: __spreadArray(__spreadArray([], __read(EXAMPLES)), [MyTelInput]),
+                        exports: __spreadArray(__spreadArray([], __read(EXAMPLES)), [MyTelInput]),
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
+                i1.MatFormFieldModule,
+                i2.MatIconModule,
+                i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
     })();
 
     /**

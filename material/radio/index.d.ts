@@ -10,6 +10,7 @@ import * as i5 from "@angular/common";
 import * as i6 from "@angular/material/radio";
 export { RadioHarnessExample, RadioNgModelExample, RadioOverviewExample, };
 export declare class RadioExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<RadioExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<RadioExamplesModule, [typeof i1.RadioHarnessExample, typeof i2.RadioNgModelExample, typeof i3.RadioOverviewExample], [typeof i4.ReactiveFormsModule, typeof i5.CommonModule, typeof i6.MatRadioModule, typeof i4.FormsModule], [typeof i1.RadioHarnessExample, typeof i2.RadioNgModelExample, typeof i3.RadioOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDef<RadioExamplesModule>;
 }

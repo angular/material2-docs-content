@@ -9,6 +9,7 @@ export { DefaultEnabledColumnResizeFlexExampleModule } from './default-enabled-c
 export { OptInColumnResizeExample } from './opt-in-column-resize/opt-in-column-resize-example';
 export { OptInColumnResizeExampleModule } from './opt-in-column-resize/opt-in-column-resize-example-module';
 export declare class ColumnResizeExamplesModule {
+    static ɵfac: i0.ɵɵFactoryDef<ColumnResizeExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDefWithMeta<ColumnResizeExamplesModule, never, never, [typeof i1.DefaultEnabledColumnResizeExampleModule, typeof i2.DefaultEnabledColumnResizeFlexExampleModule, typeof i3.OptInColumnResizeExampleModule]>;
     static ɵinj: i0.ɵɵInjectorDef<ColumnResizeExamplesModule>;
 }

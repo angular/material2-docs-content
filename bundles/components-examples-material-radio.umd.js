@@ -27,7 +27,7 @@
         return RadioNgModelExample;
     }());
     RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
-    RadioNgModelExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) {
+    RadioNgModelExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "label", 0);
                 i0.ɵɵtext(1, "Pick your favorite season");
@@ -69,7 +69,7 @@
         return RadioOverviewExample;
     }());
     RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
-    RadioOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) {
+    RadioOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-radio-group", 0);
                 i0.ɵɵelementStart(1, "mat-radio-button", 1);
@@ -101,7 +101,7 @@
         return RadioHarnessExample;
     }());
     RadioHarnessExample.ɵfac = function RadioHarnessExample_Factory(t) { return new (t || RadioHarnessExample)(); };
-    RadioHarnessExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioHarnessExample, selectors: [["radio-harness-example"]], decls: 7, vars: 0, consts: [["name", "flavors"], ["value", "chocolate", "checked", "true"], ["value", "vanilla"], ["value", "strawberry"]], template: function RadioHarnessExample_Template(rf, ctx) {
+    RadioHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: RadioHarnessExample, selectors: [["radio-harness-example"]], decls: 7, vars: 0, consts: [["name", "flavors"], ["value", "chocolate", "checked", "true"], ["value", "vanilla"], ["value", "strawberry"]], template: function RadioHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-radio-group", 0);
                 i0.ɵɵelementStart(1, "mat-radio-button", 1);
@@ -136,23 +136,14 @@
         }
         return RadioExamplesModule;
     }());
-    RadioExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: RadioExamplesModule });
-    RadioExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
+    RadioExamplesModule.ɵfac = function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); };
+    RadioExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: RadioExamplesModule });
+    RadioExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                 i2.ReactiveFormsModule,
                 i3.CommonModule,
                 i1.MatRadioModule,
                 i2.FormsModule,
             ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioHarnessExample,
-                RadioNgModelExample,
-                RadioOverviewExample], imports: [i2.ReactiveFormsModule,
-                i3.CommonModule,
-                i1.MatRadioModule,
-                i2.FormsModule], exports: [RadioHarnessExample,
-                RadioNgModelExample,
-                RadioOverviewExample] });
-    })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(RadioExamplesModule, [{
                 type: i0.NgModule,
@@ -168,6 +159,16 @@
                         entryComponents: EXAMPLES,
                     }]
             }], null, null);
+    })();
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioHarnessExample,
+                RadioNgModelExample,
+                RadioOverviewExample], imports: [i2.ReactiveFormsModule,
+                i3.CommonModule,
+                i1.MatRadioModule,
+                i2.FormsModule], exports: [RadioHarnessExample,
+                RadioNgModelExample,
+                RadioOverviewExample] });
     })();
 
     /**
