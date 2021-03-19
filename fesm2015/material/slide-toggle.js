@@ -1,10 +1,17 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
-import { NgControlStatus, NgModel, Validators, FormBuilder, NgControlStatusGroup, NgForm, RequiredValidator, FormGroupDirective, FormControlName, FormControl, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButton, MatButtonModule } from '@angular/material/button';
-import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
-import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
-import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material/radio';
-import { MatSlideToggle, MatSlideToggleRequiredValidator, MatSlideToggleModule } from '@angular/material/slide-toggle';
+import * as i0 from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import * as i1$1 from '@angular/forms';
+import { Validators, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import * as i3 from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import * as i1 from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import * as i4 from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import * as i2 from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
+import * as i2$1 from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 /**
  * @title Configurable slide-toggle
@@ -17,66 +24,66 @@ class SlideToggleConfigurableExample {
     }
 }
 SlideToggleConfigurableExample.ɵfac = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
-SlideToggleConfigurableExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-card");
-        ɵɵelementStart(1, "mat-card-content");
-        ɵɵelementStart(2, "h2", 0);
-        ɵɵtext(3, "Slider configuration");
-        ɵɵelementEnd();
-        ɵɵelementStart(4, "section", 1);
-        ɵɵelementStart(5, "label", 2);
-        ɵɵtext(6, "Color:");
-        ɵɵelementEnd();
-        ɵɵelementStart(7, "mat-radio-group", 3);
-        ɵɵlistener("ngModelChange", function SlideToggleConfigurableExample_Template_mat_radio_group_ngModelChange_7_listener($event) { return ctx.color = $event; });
-        ɵɵelementStart(8, "mat-radio-button", 4);
-        ɵɵtext(9, " Primary ");
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "mat-radio-button", 5);
-        ɵɵtext(11, " Accent ");
-        ɵɵelementEnd();
-        ɵɵelementStart(12, "mat-radio-button", 6);
-        ɵɵtext(13, " Warn ");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(14, "section", 1);
-        ɵɵelementStart(15, "mat-checkbox", 7);
-        ɵɵlistener("ngModelChange", function SlideToggleConfigurableExample_Template_mat_checkbox_ngModelChange_15_listener($event) { return ctx.checked = $event; });
-        ɵɵtext(16, "Checked");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(17, "section", 1);
-        ɵɵelementStart(18, "mat-checkbox", 7);
-        ɵɵlistener("ngModelChange", function SlideToggleConfigurableExample_Template_mat_checkbox_ngModelChange_18_listener($event) { return ctx.disabled = $event; });
-        ɵɵtext(19, "Disabled");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(20, "mat-card", 8);
-        ɵɵelementStart(21, "mat-card-content");
-        ɵɵelementStart(22, "h2", 0);
-        ɵɵtext(23, "Result");
-        ɵɵelementEnd();
-        ɵɵelementStart(24, "section", 1);
-        ɵɵelementStart(25, "mat-slide-toggle", 9);
-        ɵɵtext(26, " Slide me! ");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
+SlideToggleConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-card");
+        i0.ɵɵelementStart(1, "mat-card-content");
+        i0.ɵɵelementStart(2, "h2", 0);
+        i0.ɵɵtext(3, "Slider configuration");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "section", 1);
+        i0.ɵɵelementStart(5, "label", 2);
+        i0.ɵɵtext(6, "Color:");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "mat-radio-group", 3);
+        i0.ɵɵlistener("ngModelChange", function SlideToggleConfigurableExample_Template_mat_radio_group_ngModelChange_7_listener($event) { return ctx.color = $event; });
+        i0.ɵɵelementStart(8, "mat-radio-button", 4);
+        i0.ɵɵtext(9, " Primary ");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "mat-radio-button", 5);
+        i0.ɵɵtext(11, " Accent ");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "mat-radio-button", 6);
+        i0.ɵɵtext(13, " Warn ");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "section", 1);
+        i0.ɵɵelementStart(15, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SlideToggleConfigurableExample_Template_mat_checkbox_ngModelChange_15_listener($event) { return ctx.checked = $event; });
+        i0.ɵɵtext(16, "Checked");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(17, "section", 1);
+        i0.ɵɵelementStart(18, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SlideToggleConfigurableExample_Template_mat_checkbox_ngModelChange_18_listener($event) { return ctx.disabled = $event; });
+        i0.ɵɵtext(19, "Disabled");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(20, "mat-card", 8);
+        i0.ɵɵelementStart(21, "mat-card-content");
+        i0.ɵɵelementStart(22, "h2", 0);
+        i0.ɵɵtext(23, "Result");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(24, "section", 1);
+        i0.ɵɵelementStart(25, "mat-slide-toggle", 9);
+        i0.ɵɵtext(26, " Slide me! ");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(7);
-        ɵɵproperty("ngModel", ctx.color);
-        ɵɵadvance(8);
-        ɵɵproperty("ngModel", ctx.checked);
-        ɵɵadvance(3);
-        ɵɵproperty("ngModel", ctx.disabled);
-        ɵɵadvance(7);
-        ɵɵproperty("color", ctx.color)("checked", ctx.checked)("disabled", ctx.disabled);
-    } }, directives: [MatCard, MatCardContent, MatRadioGroup, NgControlStatus, NgModel, MatRadioButton, MatCheckbox, MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SlideToggleConfigurableExample, [{
+        i0.ɵɵadvance(7);
+        i0.ɵɵproperty("ngModel", ctx.color);
+        i0.ɵɵadvance(8);
+        i0.ɵɵproperty("ngModel", ctx.checked);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("ngModel", ctx.disabled);
+        i0.ɵɵadvance(7);
+        i0.ɵɵproperty("color", ctx.color)("checked", ctx.checked)("disabled", ctx.disabled);
+    } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i1$1.NgControlStatus, i1$1.NgModel, i2.MatRadioButton, i4.MatCheckbox, i2$1.MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-configurable-example',
@@ -100,66 +107,66 @@ class SlideToggleFormsExample {
         alert(JSON.stringify(this.formGroup.value, null, 2));
     }
 }
-SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(ɵɵdirectiveInject(FormBuilder)); };
-SlideToggleFormsExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "p");
-        ɵɵtext(1, "Slide Toggle using a simple NgModel.");
-        ɵɵelementEnd();
-        ɵɵelementStart(2, "mat-slide-toggle", 0);
-        ɵɵlistener("ngModelChange", function SlideToggleFormsExample_Template_mat_slide_toggle_ngModelChange_2_listener($event) { return ctx.isChecked = $event; });
-        ɵɵtext(3);
-        ɵɵelementEnd();
-        ɵɵelementStart(4, "p");
-        ɵɵtext(5, "Slide Toggle inside of a Template-driven form");
-        ɵɵelementEnd();
-        ɵɵelementStart(6, "form", 1, 2);
-        ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener() { return ctx.onFormSubmit(); });
-        ɵɵelementStart(8, "mat-slide-toggle", 3);
-        ɵɵtext(9, "Enable Wifi");
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "mat-slide-toggle", 4);
-        ɵɵtext(11, "Accept Terms of Service");
-        ɵɵelementEnd();
-        ɵɵelementStart(12, "button", 5);
-        ɵɵtext(13, "Save Settings");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(14, "p");
-        ɵɵtext(15, "Slide Toggle inside of a Reactive form");
-        ɵɵelementEnd();
-        ɵɵelementStart(16, "form", 6);
-        ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener() { return ctx.onFormSubmit(); });
-        ɵɵelementStart(17, "mat-slide-toggle", 7);
-        ɵɵtext(18, "Enable Wifi");
-        ɵɵelementEnd();
-        ɵɵelementStart(19, "mat-slide-toggle", 8);
-        ɵɵtext(20, "Accept Terms of Service");
-        ɵɵelementEnd();
-        ɵɵelementStart(21, "p");
-        ɵɵtext(22);
-        ɵɵelementEnd();
-        ɵɵelementStart(23, "button", 5);
-        ɵɵtext(24, "Save Settings");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
+SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(i0.ɵɵdirectiveInject(i1$1.FormBuilder)); };
+SlideToggleFormsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "p");
+        i0.ɵɵtext(1, "Slide Toggle using a simple NgModel.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(2, "mat-slide-toggle", 0);
+        i0.ɵɵlistener("ngModelChange", function SlideToggleFormsExample_Template_mat_slide_toggle_ngModelChange_2_listener($event) { return ctx.isChecked = $event; });
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "p");
+        i0.ɵɵtext(5, "Slide Toggle inside of a Template-driven form");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "form", 1, 2);
+        i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener() { return ctx.onFormSubmit(); });
+        i0.ɵɵelementStart(8, "mat-slide-toggle", 3);
+        i0.ɵɵtext(9, "Enable Wifi");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "mat-slide-toggle", 4);
+        i0.ɵɵtext(11, "Accept Terms of Service");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "button", 5);
+        i0.ɵɵtext(13, "Save Settings");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "p");
+        i0.ɵɵtext(15, "Slide Toggle inside of a Reactive form");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(16, "form", 6);
+        i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener() { return ctx.onFormSubmit(); });
+        i0.ɵɵelementStart(17, "mat-slide-toggle", 7);
+        i0.ɵɵtext(18, "Enable Wifi");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(19, "mat-slide-toggle", 8);
+        i0.ɵɵtext(20, "Accept Terms of Service");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(21, "p");
+        i0.ɵɵtext(22);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(23, "button", 5);
+        i0.ɵɵtext(24, "Save Settings");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(2);
-        ɵɵproperty("ngModel", ctx.isChecked);
-        ɵɵadvance(1);
-        ɵɵtextInterpolate1("Slide Toggle Checked: ", ctx.isChecked, "");
-        ɵɵadvance(13);
-        ɵɵproperty("formGroup", ctx.formGroup);
-        ɵɵadvance(6);
-        ɵɵtextInterpolate1("Form Group Status: ", ctx.formGroup.status, "");
-    } }, directives: [MatSlideToggle, NgControlStatus, NgModel, NgControlStatusGroup, NgForm, MatSlideToggleRequiredValidator, RequiredValidator, MatButton, FormGroupDirective, FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SlideToggleFormsExample, [{
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.isChecked);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1("Slide Toggle Checked: ", ctx.isChecked, "");
+        i0.ɵɵadvance(13);
+        i0.ɵɵproperty("formGroup", ctx.formGroup);
+        i0.ɵɵadvance(6);
+        i0.ɵɵtextInterpolate1("Form Group Status: ", ctx.formGroup.status, "");
+    } }, directives: [i2$1.MatSlideToggle, i1$1.NgControlStatus, i1$1.NgModel, i1$1.NgControlStatusGroup, i1$1.NgForm, i2$1.MatSlideToggleRequiredValidator, i1$1.RequiredValidator, i3.MatButton, i1$1.FormGroupDirective, i1$1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-forms-example',
                 templateUrl: './slide-toggle-forms-example.html',
                 styleUrls: ['./slide-toggle-forms-example.css'],
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null); })();
+    }], function () { return [{ type: i1$1.FormBuilder }]; }, null); })();
 
 /**
  * @title Basic slide-toggles
@@ -167,12 +174,12 @@ SlideToggleFormsExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SlideT
 class SlideToggleOverviewExample {
 }
 SlideToggleOverviewExample.ɵfac = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
-SlideToggleOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-slide-toggle");
-        ɵɵtext(1, "Slide me!");
-        ɵɵelementEnd();
-    } }, directives: [MatSlideToggle], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SlideToggleOverviewExample, [{
+SlideToggleOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-slide-toggle");
+        i0.ɵɵtext(1, "Slide me!");
+        i0.ɵɵelementEnd();
+    } }, directives: [i2$1.MatSlideToggle], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-overview-example',
@@ -190,19 +197,19 @@ class SlideToggleHarnessExample {
     }
 }
 SlideToggleHarnessExample.ɵfac = function SlideToggleHarnessExample_Factory(t) { return new (t || SlideToggleHarnessExample)(); };
-SlideToggleHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SlideToggleHarnessExample, selectors: [["slide-toggle-harness-example"]], decls: 4, vars: 2, consts: [["name", "first-name", 3, "formControl"], [3, "disabled"]], template: function SlideToggleHarnessExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-slide-toggle", 0);
-        ɵɵtext(1, " First\n");
-        ɵɵelementEnd();
-        ɵɵelementStart(2, "mat-slide-toggle", 1);
-        ɵɵtext(3, " Second\n");
-        ɵɵelementEnd();
+SlideToggleHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SlideToggleHarnessExample, selectors: [["slide-toggle-harness-example"]], decls: 4, vars: 2, consts: [["name", "first-name", 3, "formControl"], [3, "disabled"]], template: function SlideToggleHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-slide-toggle", 0);
+        i0.ɵɵtext(1, " First\n");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(2, "mat-slide-toggle", 1);
+        i0.ɵɵtext(3, " Second\n");
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵproperty("formControl", ctx.ctrl);
-        ɵɵadvance(2);
-        ɵɵproperty("disabled", ctx.disabled);
-    } }, directives: [MatSlideToggle, NgControlStatus, FormControlDirective], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SlideToggleHarnessExample, [{
+        i0.ɵɵproperty("formControl", ctx.ctrl);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("disabled", ctx.disabled);
+    } }, directives: [i2$1.MatSlideToggle, i1$1.NgControlStatus, i1$1.FormControlDirective], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-harness-example',
@@ -219,8 +226,8 @@ const EXAMPLES = [
 class SlideToggleExamplesModule {
 }
 SlideToggleExamplesModule.ɵfac = function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); };
-SlideToggleExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
-SlideToggleExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
+SlideToggleExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
+SlideToggleExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             FormsModule,
             MatButtonModule,
             MatCardModule,
@@ -229,7 +236,7 @@ SlideToggleExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
             MatSlideToggleModule,
             ReactiveFormsModule,
         ]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SlideToggleExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -246,7 +253,7 @@ SlideToggleExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
         SlideToggleFormsExample,
         SlideToggleHarnessExample,
         SlideToggleOverviewExample], imports: [FormsModule,

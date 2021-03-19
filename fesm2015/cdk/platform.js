@@ -1,5 +1,7 @@
-import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform, PlatformModule } from '@angular/cdk/platform';
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
+import * as i1 from '@angular/cdk/platform';
+import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, PlatformModule } from '@angular/cdk/platform';
+import * as i0 from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 /**
  * @title Platform overview
@@ -12,85 +14,85 @@ class CdkPlatformOverviewExample {
         this.supportsScrollBehavior = supportsScrollBehavior();
     }
 }
-CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
-CdkPlatformOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "h2");
-        ɵɵtext(1, "Platform information:");
-        ɵɵelementEnd();
-        ɵɵelementStart(2, "p");
-        ɵɵtext(3);
-        ɵɵelementEnd();
-        ɵɵelementStart(4, "p");
-        ɵɵtext(5);
-        ɵɵelementEnd();
-        ɵɵelementStart(6, "p");
-        ɵɵtext(7);
-        ɵɵelementEnd();
-        ɵɵelementStart(8, "p");
-        ɵɵtext(9);
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "p");
-        ɵɵtext(11);
-        ɵɵelementEnd();
-        ɵɵelementStart(12, "p");
-        ɵɵtext(13);
-        ɵɵelementEnd();
-        ɵɵelementStart(14, "p");
-        ɵɵtext(15);
-        ɵɵelementEnd();
-        ɵɵelementStart(16, "p");
-        ɵɵtext(17);
-        ɵɵelementEnd();
-        ɵɵelementStart(18, "p");
-        ɵɵtext(19);
-        ɵɵelementEnd();
-        ɵɵelementStart(20, "p");
-        ɵɵtext(21);
-        ɵɵelementEnd();
-        ɵɵelementStart(22, "p");
-        ɵɵtext(23);
-        ɵɵelementEnd();
+CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(i0.ɵɵdirectiveInject(i1.Platform)); };
+CdkPlatformOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "h2");
+        i0.ɵɵtext(1, "Platform information:");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(2, "p");
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "p");
+        i0.ɵɵtext(5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "p");
+        i0.ɵɵtext(7);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(8, "p");
+        i0.ɵɵtext(9);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "p");
+        i0.ɵɵtext(11);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "p");
+        i0.ɵɵtext(13);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "p");
+        i0.ɵɵtext(15);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(16, "p");
+        i0.ɵɵtext(17);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(18, "p");
+        i0.ɵɵtext(19);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(20, "p");
+        i0.ɵɵtext(21);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(22, "p");
+        i0.ɵɵtext(23);
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(3);
-        ɵɵtextInterpolate1("Is Android: ", ctx.platform.ANDROID, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is iOS: ", ctx.platform.IOS, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is Firefox: ", ctx.platform.FIREFOX, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is Blink: ", ctx.platform.BLINK, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is Webkit: ", ctx.platform.WEBKIT, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is Trident: ", ctx.platform.TRIDENT, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is Edge: ", ctx.platform.EDGE, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Is Safari: ", ctx.platform.SAFARI, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Supported input types: ", ctx.supportedInputTypes, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Supports passive event listeners: ", ctx.supportsPassiveEventListeners, "");
-        ɵɵadvance(2);
-        ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate1("Is Android: ", ctx.platform.ANDROID, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is iOS: ", ctx.platform.IOS, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is Firefox: ", ctx.platform.FIREFOX, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is Blink: ", ctx.platform.BLINK, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is Webkit: ", ctx.platform.WEBKIT, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is Trident: ", ctx.platform.TRIDENT, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is Edge: ", ctx.platform.EDGE, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Is Safari: ", ctx.platform.SAFARI, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Supported input types: ", ctx.supportedInputTypes, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Supports passive event listeners: ", ctx.supportsPassiveEventListeners, "");
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
     } }, encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPlatformOverviewExample, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPlatformOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-platform-overview-example',
                 templateUrl: 'cdk-platform-overview-example.html',
             }]
-    }], function () { return [{ type: Platform }]; }, null); })();
+    }], function () { return [{ type: i1.Platform }]; }, null); })();
 
 const EXAMPLES = [CdkPlatformOverviewExample];
 class CdkPlatformExamplesModule {
 }
 CdkPlatformExamplesModule.ɵfac = function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); };
-CdkPlatformExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
-CdkPlatformExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
+CdkPlatformExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
+CdkPlatformExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             PlatformModule,
         ]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(CdkPlatformExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPlatformExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -101,7 +103,7 @@ CdkPlatformExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.

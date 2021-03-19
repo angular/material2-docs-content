@@ -1,37 +1,40 @@
-import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
-import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
+import * as i2 from '@angular/common';
+import { CommonModule } from '@angular/common';
+import * as i0 from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import * as i1 from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
 
 function SortOverviewExample_tr_12_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "tr");
-    ɵɵelementStart(1, "td");
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "td");
-    ɵɵtext(4);
-    ɵɵelementEnd();
-    ɵɵelementStart(5, "td");
-    ɵɵtext(6);
-    ɵɵelementEnd();
-    ɵɵelementStart(7, "td");
-    ɵɵtext(8);
-    ɵɵelementEnd();
-    ɵɵelementStart(9, "td");
-    ɵɵtext(10);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
+    i0.ɵɵelementStart(0, "tr");
+    i0.ɵɵelementStart(1, "td");
+    i0.ɵɵtext(2);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "td");
+    i0.ɵɵtext(4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(5, "td");
+    i0.ɵɵtext(6);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(7, "td");
+    i0.ɵɵtext(8);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(9, "td");
+    i0.ɵɵtext(10);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
 } if (rf & 2) {
     const dessert_r1 = ctx.$implicit;
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.name);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.calories);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.fat);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.carbs);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.protein);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.name);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.calories);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.fat);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.carbs);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.protein);
 } }
 /**
  * @title Sorting overview
@@ -67,33 +70,33 @@ class SortOverviewExample {
     }
 }
 SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
-SortOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "table", 0);
-        ɵɵlistener("matSortChange", function SortOverviewExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
-        ɵɵelementStart(1, "tr");
-        ɵɵelementStart(2, "th", 1);
-        ɵɵtext(3, "Dessert (100g)");
-        ɵɵelementEnd();
-        ɵɵelementStart(4, "th", 2);
-        ɵɵtext(5, "Calories");
-        ɵɵelementEnd();
-        ɵɵelementStart(6, "th", 3);
-        ɵɵtext(7, "Fat (g)");
-        ɵɵelementEnd();
-        ɵɵelementStart(8, "th", 4);
-        ɵɵtext(9, "Carbs (g)");
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "th", 5);
-        ɵɵtext(11, "Protein (g)");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵtemplate(12, SortOverviewExample_tr_12_Template, 11, 5, "tr", 6);
-        ɵɵelementEnd();
+SortOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 0);
+        i0.ɵɵlistener("matSortChange", function SortOverviewExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
+        i0.ɵɵelementStart(1, "tr");
+        i0.ɵɵelementStart(2, "th", 1);
+        i0.ɵɵtext(3, "Dessert (100g)");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "th", 2);
+        i0.ɵɵtext(5, "Calories");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "th", 3);
+        i0.ɵɵtext(7, "Fat (g)");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(8, "th", 4);
+        i0.ɵɵtext(9, "Carbs (g)");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "th", 5);
+        i0.ɵɵtext(11, "Protein (g)");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(12, SortOverviewExample_tr_12_Template, 11, 5, "tr", 6);
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(12);
-        ɵɵproperty("ngForOf", ctx.sortedData);
-    } }, directives: [MatSort, MatSortHeader, NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SortOverviewExample, [{
+        i0.ɵɵadvance(12);
+        i0.ɵɵproperty("ngForOf", ctx.sortedData);
+    } }, directives: [i1.MatSort, i1.MatSortHeader, i2.NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SortOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'sort-overview-example',
@@ -106,35 +109,35 @@ function compare(a, b, isAsc) {
 }
 
 function SortHarnessExample_tr_12_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "tr");
-    ɵɵelementStart(1, "td");
-    ɵɵtext(2);
-    ɵɵelementEnd();
-    ɵɵelementStart(3, "td");
-    ɵɵtext(4);
-    ɵɵelementEnd();
-    ɵɵelementStart(5, "td");
-    ɵɵtext(6);
-    ɵɵelementEnd();
-    ɵɵelementStart(7, "td");
-    ɵɵtext(8);
-    ɵɵelementEnd();
-    ɵɵelementStart(9, "td");
-    ɵɵtext(10);
-    ɵɵelementEnd();
-    ɵɵelementEnd();
+    i0.ɵɵelementStart(0, "tr");
+    i0.ɵɵelementStart(1, "td");
+    i0.ɵɵtext(2);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "td");
+    i0.ɵɵtext(4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(5, "td");
+    i0.ɵɵtext(6);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(7, "td");
+    i0.ɵɵtext(8);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(9, "td");
+    i0.ɵɵtext(10);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
 } if (rf & 2) {
     const dessert_r1 = ctx.$implicit;
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.name);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.calories);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.fat);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.carbs);
-    ɵɵadvance(2);
-    ɵɵtextInterpolate(dessert_r1.protein);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.name);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.calories);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.fat);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.carbs);
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(dessert_r1.protein);
 } }
 /**
  * @title Testing with MatSortHarness
@@ -166,35 +169,35 @@ class SortHarnessExample {
     }
 }
 SortHarnessExample.ɵfac = function SortHarnessExample_Factory(t) { return new (t || SortHarnessExample)(); };
-SortHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: SortHarnessExample, selectors: [["sort-harness-example"]], decls: 13, vars: 2, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat", 3, "disabled"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortHarnessExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "table", 0);
-        ɵɵlistener("matSortChange", function SortHarnessExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
-        ɵɵelementStart(1, "tr");
-        ɵɵelementStart(2, "th", 1);
-        ɵɵtext(3, "Dessert");
-        ɵɵelementEnd();
-        ɵɵelementStart(4, "th", 2);
-        ɵɵtext(5, "Calories");
-        ɵɵelementEnd();
-        ɵɵelementStart(6, "th", 3);
-        ɵɵtext(7, "Fat");
-        ɵɵelementEnd();
-        ɵɵelementStart(8, "th", 4);
-        ɵɵtext(9, "Carbs");
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "th", 5);
-        ɵɵtext(11, "Protein");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵtemplate(12, SortHarnessExample_tr_12_Template, 11, 5, "tr", 6);
-        ɵɵelementEnd();
+SortHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SortHarnessExample, selectors: [["sort-harness-example"]], decls: 13, vars: 2, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat", 3, "disabled"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 0);
+        i0.ɵɵlistener("matSortChange", function SortHarnessExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
+        i0.ɵɵelementStart(1, "tr");
+        i0.ɵɵelementStart(2, "th", 1);
+        i0.ɵɵtext(3, "Dessert");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "th", 2);
+        i0.ɵɵtext(5, "Calories");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "th", 3);
+        i0.ɵɵtext(7, "Fat");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(8, "th", 4);
+        i0.ɵɵtext(9, "Carbs");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "th", 5);
+        i0.ɵɵtext(11, "Protein");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(12, SortHarnessExample_tr_12_Template, 11, 5, "tr", 6);
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(6);
-        ɵɵproperty("disabled", ctx.disableThirdHeader);
-        ɵɵadvance(6);
-        ɵɵproperty("ngForOf", ctx.sortedData);
-    } }, directives: [MatSort, MatSortHeader, NgForOf], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SortHarnessExample, [{
+        i0.ɵɵadvance(6);
+        i0.ɵɵproperty("disabled", ctx.disableThirdHeader);
+        i0.ɵɵadvance(6);
+        i0.ɵɵproperty("ngForOf", ctx.sortedData);
+    } }, directives: [i1.MatSort, i1.MatSortHeader, i2.NgForOf], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SortHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'sort-harness-example',
@@ -209,12 +212,12 @@ const EXAMPLES = [
 class SortExamplesModule {
 }
 SortExamplesModule.ɵfac = function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); };
-SortExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: SortExamplesModule });
-SortExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
+SortExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: SortExamplesModule });
+SortExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatSortModule,
         ]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(SortExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SortExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -226,7 +229,7 @@ SortExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SortExamplesModule, { declarations: [SortHarnessExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SortExamplesModule, { declarations: [SortHarnessExample,
         SortOverviewExample], imports: [CommonModule,
         MatSortModule], exports: [SortHarnessExample,
         SortOverviewExample] }); })();

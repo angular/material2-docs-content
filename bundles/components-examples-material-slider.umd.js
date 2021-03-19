@@ -1,38 +1,67 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/slider'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/slider', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/input', '@angular/material/slider', '@angular/material/form-field'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.slider = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.input, global.ng.material.slider, global.ng.material.formField));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.slider = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.input, global.ng.material.slider, global.ng.material.formField));
 }(this, (function (exports, i6, i0, i4, i1, i5, i3, i1$1, i2) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i6__namespace = /*#__PURE__*/_interopNamespace(i6);
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
+    var i5__namespace = /*#__PURE__*/_interopNamespace(i5);
+    var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
+    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
+    var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
 
     function SliderConfigurableExample_mat_checkbox_24_Template(rf, ctx) {
         if (rf & 1) {
-            var _r3_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "mat-checkbox", 4);
-            i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_mat_checkbox_24_Template_mat_checkbox_ngModelChange_0_listener($event) { i0.ɵɵrestoreView(_r3_1); var ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.autoTicks = $event; });
-            i0.ɵɵtext(1, " Auto ticks ");
-            i0.ɵɵelementEnd();
+            var _r3_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "mat-checkbox", 4);
+            i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_mat_checkbox_24_Template_mat_checkbox_ngModelChange_0_listener($event) { i0__namespace.ɵɵrestoreView(_r3_1); var ctx_r2 = i0__namespace.ɵɵnextContext(); return ctx_r2.autoTicks = $event; });
+            i0__namespace.ɵɵtext(1, " Auto ticks ");
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r0 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("ngModel", ctx_r0.autoTicks);
+            var ctx_r0 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("ngModel", ctx_r0.autoTicks);
         }
     }
     function SliderConfigurableExample_mat_form_field_25_Template(rf, ctx) {
         if (rf & 1) {
-            var _r5_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "mat-form-field", 2);
-            i0.ɵɵelementStart(1, "mat-label");
-            i0.ɵɵtext(2, "Tick interval");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "input", 3);
-            i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_mat_form_field_25_Template_input_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r5_1); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.tickInterval = $event; });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            var _r5_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "mat-form-field", 2);
+            i0__namespace.ɵɵelementStart(1, "mat-label");
+            i0__namespace.ɵɵtext(2, "Tick interval");
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(3, "input", 3);
+            i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_mat_form_field_25_Template_input_ngModelChange_3_listener($event) { i0__namespace.ɵɵrestoreView(_r5_1); var ctx_r4 = i0__namespace.ɵɵnextContext(); return ctx_r4.tickInterval = $event; });
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r1 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngModel", ctx_r1.tickInterval);
+            var ctx_r1 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵadvance(3);
+            i0__namespace.ɵɵproperty("ngModel", ctx_r1.tickInterval);
         }
     }
     /**
@@ -61,119 +90,119 @@
         return SliderConfigurableExample;
     }());
     SliderConfigurableExample.ɵfac = function SliderConfigurableExample_Factory(t) { return new (t || SliderConfigurableExample)(); };
-    SliderConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 42, vars: 20, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "example-result-card"], [1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) {
+    SliderConfigurableExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 42, vars: 20, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "example-result-card"], [1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-card");
-                i0.ɵɵelementStart(1, "mat-card-content");
-                i0.ɵɵelementStart(2, "h2", 0);
-                i0.ɵɵtext(3, "Slider configuration");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(4, "section", 1);
-                i0.ɵɵelementStart(5, "mat-form-field", 2);
-                i0.ɵɵelementStart(6, "mat-label");
-                i0.ɵɵtext(7, "Value");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "input", 3);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_8_listener($event) { return ctx.value = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(9, "mat-form-field", 2);
-                i0.ɵɵelementStart(10, "mat-label");
-                i0.ɵɵtext(11, "Min value");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "input", 3);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_12_listener($event) { return ctx.min = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(13, "mat-form-field", 2);
-                i0.ɵɵelementStart(14, "mat-label");
-                i0.ɵɵtext(15, "Max value");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(16, "input", 3);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_16_listener($event) { return ctx.max = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(17, "mat-form-field", 2);
-                i0.ɵɵelementStart(18, "mat-label");
-                i0.ɵɵtext(19, "Step size");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(20, "input", 3);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_20_listener($event) { return ctx.step = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "section", 1);
-                i0.ɵɵelementStart(22, "mat-checkbox", 4);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_22_listener($event) { return ctx.showTicks = $event; });
-                i0.ɵɵtext(23, "Show ticks");
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(24, SliderConfigurableExample_mat_checkbox_24_Template, 2, 1, "mat-checkbox", 5);
-                i0.ɵɵtemplate(25, SliderConfigurableExample_mat_form_field_25_Template, 4, 1, "mat-form-field", 6);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(26, "section", 1);
-                i0.ɵɵelementStart(27, "mat-checkbox", 4);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_27_listener($event) { return ctx.thumbLabel = $event; });
-                i0.ɵɵtext(28, "Show thumb label");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(29, "section", 1);
-                i0.ɵɵelementStart(30, "mat-checkbox", 4);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_30_listener($event) { return ctx.vertical = $event; });
-                i0.ɵɵtext(31, "Vertical");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(32, "mat-checkbox", 4);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_32_listener($event) { return ctx.invert = $event; });
-                i0.ɵɵtext(33, "Inverted");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(34, "section", 1);
-                i0.ɵɵelementStart(35, "mat-checkbox", 4);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_35_listener($event) { return ctx.disabled = $event; });
-                i0.ɵɵtext(36, "Disabled");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(37, "mat-card", 7);
-                i0.ɵɵelementStart(38, "mat-card-content");
-                i0.ɵɵelementStart(39, "h2");
-                i0.ɵɵtext(40, "Result");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(41, "mat-slider", 8);
-                i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_slider_ngModelChange_41_listener($event) { return ctx.value = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "mat-card");
+                i0__namespace.ɵɵelementStart(1, "mat-card-content");
+                i0__namespace.ɵɵelementStart(2, "h2", 0);
+                i0__namespace.ɵɵtext(3, "Slider configuration");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(4, "section", 1);
+                i0__namespace.ɵɵelementStart(5, "mat-form-field", 2);
+                i0__namespace.ɵɵelementStart(6, "mat-label");
+                i0__namespace.ɵɵtext(7, "Value");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(8, "input", 3);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_8_listener($event) { return ctx.value = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(9, "mat-form-field", 2);
+                i0__namespace.ɵɵelementStart(10, "mat-label");
+                i0__namespace.ɵɵtext(11, "Min value");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(12, "input", 3);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_12_listener($event) { return ctx.min = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(13, "mat-form-field", 2);
+                i0__namespace.ɵɵelementStart(14, "mat-label");
+                i0__namespace.ɵɵtext(15, "Max value");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(16, "input", 3);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_16_listener($event) { return ctx.max = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(17, "mat-form-field", 2);
+                i0__namespace.ɵɵelementStart(18, "mat-label");
+                i0__namespace.ɵɵtext(19, "Step size");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(20, "input", 3);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_20_listener($event) { return ctx.step = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(21, "section", 1);
+                i0__namespace.ɵɵelementStart(22, "mat-checkbox", 4);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_22_listener($event) { return ctx.showTicks = $event; });
+                i0__namespace.ɵɵtext(23, "Show ticks");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(24, SliderConfigurableExample_mat_checkbox_24_Template, 2, 1, "mat-checkbox", 5);
+                i0__namespace.ɵɵtemplate(25, SliderConfigurableExample_mat_form_field_25_Template, 4, 1, "mat-form-field", 6);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(26, "section", 1);
+                i0__namespace.ɵɵelementStart(27, "mat-checkbox", 4);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_27_listener($event) { return ctx.thumbLabel = $event; });
+                i0__namespace.ɵɵtext(28, "Show thumb label");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(29, "section", 1);
+                i0__namespace.ɵɵelementStart(30, "mat-checkbox", 4);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_30_listener($event) { return ctx.vertical = $event; });
+                i0__namespace.ɵɵtext(31, "Vertical");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(32, "mat-checkbox", 4);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_32_listener($event) { return ctx.invert = $event; });
+                i0__namespace.ɵɵtext(33, "Inverted");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(34, "section", 1);
+                i0__namespace.ɵɵelementStart(35, "mat-checkbox", 4);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_35_listener($event) { return ctx.disabled = $event; });
+                i0__namespace.ɵɵtext(36, "Disabled");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(37, "mat-card", 7);
+                i0__namespace.ɵɵelementStart(38, "mat-card-content");
+                i0__namespace.ɵɵelementStart(39, "h2");
+                i0__namespace.ɵɵtext(40, "Result");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(41, "mat-slider", 8);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_slider_ngModelChange_41_listener($event) { return ctx.value = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0.ɵɵadvance(8);
-                i0.ɵɵproperty("ngModel", ctx.value);
-                i0.ɵɵadvance(4);
-                i0.ɵɵproperty("ngModel", ctx.min);
-                i0.ɵɵadvance(4);
-                i0.ɵɵproperty("ngModel", ctx.max);
-                i0.ɵɵadvance(4);
-                i0.ɵɵproperty("ngModel", ctx.step);
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngModel", ctx.showTicks);
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngIf", ctx.showTicks);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.showTicks && !ctx.autoTicks);
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngModel", ctx.thumbLabel);
-                i0.ɵɵadvance(3);
-                i0.ɵɵproperty("ngModel", ctx.vertical);
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngModel", ctx.invert);
-                i0.ɵɵadvance(3);
-                i0.ɵɵproperty("ngModel", ctx.disabled);
-                i0.ɵɵadvance(6);
-                i0.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
+                i0__namespace.ɵɵadvance(8);
+                i0__namespace.ɵɵproperty("ngModel", ctx.value);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("ngModel", ctx.min);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("ngModel", ctx.max);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("ngModel", ctx.step);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngModel", ctx.showTicks);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngIf", ctx.showTicks);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.showTicks && !ctx.autoTicks);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngModel", ctx.thumbLabel);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵproperty("ngModel", ctx.vertical);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngModel", ctx.invert);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵproperty("ngModel", ctx.disabled);
+                i0__namespace.ɵɵadvance(6);
+                i0__namespace.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
             }
-        }, directives: [i1.MatCard, i1.MatCardContent, i2.MatFormField, i2.MatLabel, i3.MatInput, i4.NumberValueAccessor, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i5.MatCheckbox, i6.NgIf, i1$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}"] });
+        }, directives: [i1__namespace.MatCard, i1__namespace.MatCardContent, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i4__namespace.NumberValueAccessor, i4__namespace.DefaultValueAccessor, i4__namespace.NgControlStatus, i4__namespace.NgModel, i5__namespace.MatCheckbox, i6__namespace.NgIf, i1__namespace$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderConfigurableExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SliderConfigurableExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-configurable-example',
@@ -198,16 +227,16 @@
         return SliderFormattingExample;
     }());
     SliderFormattingExample.ɵfac = function SliderFormattingExample_Factory(t) { return new (t || SliderFormattingExample)(); };
-    SliderFormattingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SliderFormattingExample, selectors: [["slider-formatting-example"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "1000", "min", "1", "max", "100000", 3, "displayWith"]], template: function SliderFormattingExample_Template(rf, ctx) {
+    SliderFormattingExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderFormattingExample, selectors: [["slider-formatting-example"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "1000", "min", "1", "max", "100000", 3, "displayWith"]], template: function SliderFormattingExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelement(0, "mat-slider", 0);
+                i0__namespace.ɵɵelement(0, "mat-slider", 0);
             }
             if (rf & 2) {
-                i0.ɵɵproperty("displayWith", ctx.formatLabel);
+                i0__namespace.ɵɵproperty("displayWith", ctx.formatLabel);
             }
-        }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
+        }, directives: [i1__namespace$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderFormattingExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SliderFormattingExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-formatting-example',
@@ -226,13 +255,13 @@
         return SliderOverviewExample;
     }());
     SliderOverviewExample.ɵfac = function SliderOverviewExample_Factory(t) { return new (t || SliderOverviewExample)(); };
-    SliderOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) {
+    SliderOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelement(0, "mat-slider");
+                i0__namespace.ɵɵelement(0, "mat-slider");
             }
-        }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
+        }, directives: [i1__namespace$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderOverviewExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SliderOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-overview-example',
@@ -251,13 +280,13 @@
         return SliderHarnessExample;
     }());
     SliderHarnessExample.ɵfac = function SliderHarnessExample_Factory(t) { return new (t || SliderHarnessExample)(); };
-    SliderHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50"]], template: function SliderHarnessExample_Template(rf, ctx) {
+    SliderHarnessExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50"]], template: function SliderHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelement(0, "mat-slider", 0);
+                i0__namespace.ɵɵelement(0, "mat-slider", 0);
             }
-        }, directives: [i1$1.MatSlider], encapsulation: 2 });
+        }, directives: [i1__namespace$1.MatSlider], encapsulation: 2 });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderHarnessExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SliderHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'slider-harness-example',
@@ -278,8 +307,8 @@
         return SliderExamplesModule;
     }());
     SliderExamplesModule.ɵfac = function SliderExamplesModule_Factory(t) { return new (t || SliderExamplesModule)(); };
-    SliderExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: SliderExamplesModule });
-    SliderExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
+    SliderExamplesModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: SliderExamplesModule });
+    SliderExamplesModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[
                 i6.CommonModule,
                 i4.FormsModule,
                 i1.MatCardModule,
@@ -288,7 +317,7 @@
                 i1$1.MatSliderModule,
             ]] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderExamplesModule, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SliderExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
@@ -306,7 +335,7 @@
             }], null, null);
     })();
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
                 SliderFormattingExample,
                 SliderHarnessExample,
                 SliderOverviewExample], imports: [i6.CommonModule,

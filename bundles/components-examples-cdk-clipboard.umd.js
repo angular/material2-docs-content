@@ -1,8 +1,32 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/cdk/clipboard')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/clipboard', ['exports', '@angular/core', '@angular/forms', '@angular/cdk/clipboard'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.clipboard = {}), global.ng.core, global.ng.forms, global.ng.cdk.clipboard));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.clipboard = {}), global.ng.core, global.ng.forms, global.ng.cdk.clipboard));
 }(this, (function (exports, i0, i1, i2) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
+    var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
 
     /**
      * @title Clipboard overview
@@ -22,27 +46,27 @@
         return CdkClipboardOverviewExample;
     }());
     CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
-    CdkClipboardOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) {
+    CdkClipboardOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "label", 0);
-                i0.ɵɵtext(1, "Text to be copied");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "textarea", 1);
-                i0.ɵɵlistener("ngModelChange", function CdkClipboardOverviewExample_Template_textarea_ngModelChange_2_listener($event) { return ctx.value = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "button", 2);
-                i0.ɵɵtext(4, "Copy to clipboard");
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "label", 0);
+                i0__namespace.ɵɵtext(1, "Text to be copied");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(2, "textarea", 1);
+                i0__namespace.ɵɵlistener("ngModelChange", function CdkClipboardOverviewExample_Template_textarea_ngModelChange_2_listener($event) { return ctx.value = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(3, "button", 2);
+                i0__namespace.ɵɵtext(4, "Copy to clipboard");
+                i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngModel", ctx.value);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("cdkCopyToClipboard", ctx.value);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngModel", ctx.value);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("cdkCopyToClipboard", ctx.value);
             }
-        }, directives: [i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i2.CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
+        }, directives: [i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.NgModel, i2__namespace.CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkClipboardOverviewExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkClipboardOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'cdk-clipboard-overview-example',
@@ -59,10 +83,10 @@
         return CdkClipboardExamplesModule;
     }());
     CdkClipboardExamplesModule.ɵfac = function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); };
-    CdkClipboardExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
-    CdkClipboardExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[i2.ClipboardModule, i1.FormsModule]] });
+    CdkClipboardExamplesModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
+    CdkClipboardExamplesModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[i2.ClipboardModule, i1.FormsModule]] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkClipboardExamplesModule, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkClipboardExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [i2.ClipboardModule, i1.FormsModule],
@@ -72,7 +96,7 @@
                     }]
             }], null, null);
     })();
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [i2.ClipboardModule, i1.FormsModule], exports: [CdkClipboardOverviewExample] }); })();
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [i2.ClipboardModule, i1.FormsModule], exports: [CdkClipboardOverviewExample] }); })();
 
     /**
      * Generated bundle index. Do not edit.

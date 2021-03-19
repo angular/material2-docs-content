@@ -1,17 +1,20 @@
-import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵstyleProp, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
-import { MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridListModule } from '@angular/material/grid-list';
+import * as i2 from '@angular/common';
+import { CommonModule } from '@angular/common';
+import * as i0 from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import * as i1 from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 function GridListDynamicExample_mat_grid_tile_1_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-grid-tile", 2);
-    ɵɵtext(1);
-    ɵɵelementEnd();
+    i0.ɵɵelementStart(0, "mat-grid-tile", 2);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
 } if (rf & 2) {
     const tile_r1 = ctx.$implicit;
-    ɵɵstyleProp("background", tile_r1.color);
-    ɵɵproperty("colspan", tile_r1.cols)("rowspan", tile_r1.rows);
-    ɵɵadvance(1);
-    ɵɵtextInterpolate1(" ", tile_r1.text, " ");
+    i0.ɵɵstyleProp("background", tile_r1.color);
+    i0.ɵɵproperty("colspan", tile_r1.cols)("rowspan", tile_r1.rows);
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", tile_r1.text, " ");
 } }
 /**
  * @title Dynamic grid-list
@@ -27,15 +30,15 @@ class GridListDynamicExample {
     }
 }
 GridListDynamicExample.ɵfac = function GridListDynamicExample_Factory(t) { return new (t || GridListDynamicExample)(); };
-GridListDynamicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-grid-list", 0);
-        ɵɵtemplate(1, GridListDynamicExample_mat_grid_tile_1_Template, 2, 5, "mat-grid-tile", 1);
-        ɵɵelementEnd();
+GridListDynamicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-grid-list", 0);
+        i0.ɵɵtemplate(1, GridListDynamicExample_mat_grid_tile_1_Template, 2, 5, "mat-grid-tile", 1);
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(1);
-        ɵɵproperty("ngForOf", ctx.tiles);
-    } }, directives: [MatGridList, NgForOf, MatGridTile], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListDynamicExample, [{
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", ctx.tiles);
+    } }, directives: [i1.MatGridList, i2.NgForOf, i1.MatGridTile], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-dynamic-example',
@@ -49,23 +52,23 @@ GridListDynamicExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridLis
 class GridListOverviewExample {
 }
 GridListOverviewExample.ɵfac = function GridListOverviewExample_Factory(t) { return new (t || GridListOverviewExample)(); };
-GridListOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridListOverviewExample, selectors: [["grid-list-overview-example"]], decls: 9, vars: 0, consts: [["cols", "2", "rowHeight", "2:1"]], template: function GridListOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-grid-list", 0);
-        ɵɵelementStart(1, "mat-grid-tile");
-        ɵɵtext(2, "1");
-        ɵɵelementEnd();
-        ɵɵelementStart(3, "mat-grid-tile");
-        ɵɵtext(4, "2");
-        ɵɵelementEnd();
-        ɵɵelementStart(5, "mat-grid-tile");
-        ɵɵtext(6, "3");
-        ɵɵelementEnd();
-        ɵɵelementStart(7, "mat-grid-tile");
-        ɵɵtext(8, "4");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-    } }, directives: [MatGridList, MatGridTile], styles: ["mat-grid-tile[_ngcontent-%COMP%] {\n  background: lightblue;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListOverviewExample, [{
+GridListOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: GridListOverviewExample, selectors: [["grid-list-overview-example"]], decls: 9, vars: 0, consts: [["cols", "2", "rowHeight", "2:1"]], template: function GridListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-grid-list", 0);
+        i0.ɵɵelementStart(1, "mat-grid-tile");
+        i0.ɵɵtext(2, "1");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-grid-tile");
+        i0.ɵɵtext(4, "2");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "mat-grid-tile");
+        i0.ɵɵtext(6, "3");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "mat-grid-tile");
+        i0.ɵɵtext(8, "4");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } }, directives: [i1.MatGridList, i1.MatGridTile], styles: ["mat-grid-tile[_ngcontent-%COMP%] {\n  background: lightblue;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-overview-example',
@@ -80,32 +83,32 @@ GridListOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridLi
 class GridListHarnessExample {
 }
 GridListHarnessExample.ɵfac = function GridListHarnessExample_Factory(t) { return new (t || GridListHarnessExample)(); };
-GridListHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: GridListHarnessExample, selectors: [["grid-list-harness-example"]], decls: 14, vars: 0, consts: [["cols", "2", "rowHeight", "100px"], ["colspan", "2"]], template: function GridListHarnessExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-grid-list", 0);
-        ɵɵelementStart(1, "mat-grid-tile");
-        ɵɵtext(2, "Tile 1 (no header, no footer)");
-        ɵɵelementEnd();
-        ɵɵelementStart(3, "mat-grid-tile");
-        ɵɵelementStart(4, "mat-grid-tile-header");
-        ɵɵtext(5, "Tile 2");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(6, "mat-grid-tile", 1);
-        ɵɵelementStart(7, "mat-grid-tile-header");
-        ɵɵtext(8, "Tile 3");
-        ɵɵelementEnd();
-        ɵɵelementStart(9, "mat-grid-tile-footer");
-        ɵɵtext(10, "Tile 3 footer");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(11, "mat-grid-tile");
-        ɵɵelementStart(12, "mat-grid-tile-header");
-        ɵɵtext(13, "Tile 4");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-    } }, directives: [MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListHarnessExample, [{
+GridListHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: GridListHarnessExample, selectors: [["grid-list-harness-example"]], decls: 14, vars: 0, consts: [["cols", "2", "rowHeight", "100px"], ["colspan", "2"]], template: function GridListHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-grid-list", 0);
+        i0.ɵɵelementStart(1, "mat-grid-tile");
+        i0.ɵɵtext(2, "Tile 1 (no header, no footer)");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-grid-tile");
+        i0.ɵɵelementStart(4, "mat-grid-tile-header");
+        i0.ɵɵtext(5, "Tile 2");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "mat-grid-tile", 1);
+        i0.ɵɵelementStart(7, "mat-grid-tile-header");
+        i0.ɵɵtext(8, "Tile 3");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "mat-grid-tile-footer");
+        i0.ɵɵtext(10, "Tile 3 footer");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "mat-grid-tile");
+        i0.ɵɵelementStart(12, "mat-grid-tile-header");
+        i0.ɵɵtext(13, "Tile 4");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } }, directives: [i1.MatGridList, i1.MatGridTile, i1.MatGridTileText, i1.MatGridTileHeaderCssMatStyler, i1.MatGridTileFooterCssMatStyler], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-harness-example',
@@ -121,12 +124,12 @@ const EXAMPLES = [
 class GridListExamplesModule {
 }
 GridListExamplesModule.ɵfac = function GridListExamplesModule_Factory(t) { return new (t || GridListExamplesModule)(); };
-GridListExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: GridListExamplesModule });
-GridListExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
+GridListExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: GridListExamplesModule });
+GridListExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatGridListModule,
         ]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(GridListExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(GridListExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -138,7 +141,7 @@ GridListExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
         GridListHarnessExample,
         GridListOverviewExample], imports: [CommonModule,
         MatGridListModule], exports: [GridListDynamicExample,

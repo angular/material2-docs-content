@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples', ['exports'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = {})));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = {})));
 }(this, (function (exports) { 'use strict';
 
     /*! *****************************************************************************

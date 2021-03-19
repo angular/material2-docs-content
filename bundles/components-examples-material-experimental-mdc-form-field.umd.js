@@ -1,8 +1,34 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material-experimental/mdc-form-field'), require('@angular/material/icon'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs'), require('@angular/cdk/a11y')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material-experimental/mdc-form-field', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material-experimental/mdc-form-field', '@angular/material/icon', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs', '@angular/cdk/a11y'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.materialExperimental = global.ng.componentsExamples.materialExperimental || {}, global.ng.componentsExamples.materialExperimental.mdcFormField = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.materialExperimental.mdcFormField, global.ng.material.icon, global.ng.cdk.coercion, global.ng.material.formField, global.rxjs, global.ng.cdk.a11y));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.materialExperimental = global.ng.componentsExamples.materialExperimental || {}, global.ng.componentsExamples.materialExperimental.mdcFormField = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.materialExperimental.mdcFormField, global.ng.material.icon, global.ng.cdk.coercion, global.ng.material.formField, global.rxjs, global.ng.cdk.a11y));
 }(this, (function (exports, common, i0, i3, i1, i2, coercion, formField, rxjs, i4) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
+    var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
+    var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
@@ -320,24 +346,24 @@
         return MdcFormFieldCustomControlExample;
     }());
     MdcFormFieldCustomControlExample.ɵfac = function MdcFormFieldCustomControlExample_Factory(t) { return new (t || MdcFormFieldCustomControlExample)(); };
-    MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) {
+    MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-form-field");
-                i0.ɵɵelementStart(1, "mat-label");
-                i0.ɵɵtext(2, "Phone number");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelement(3, "example-tel-input", 0);
-                i0.ɵɵelementStart(4, "mat-icon", 1);
-                i0.ɵɵtext(5, "phone");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-hint");
-                i0.ɵɵtext(7, "Include area code");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(1, "mat-label");
+                i0__namespace.ɵɵtext(2, "Phone number");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelement(3, "example-tel-input", 0);
+                i0__namespace.ɵɵelementStart(4, "mat-icon", 1);
+                i0__namespace.ɵɵtext(5, "phone");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(6, "mat-hint");
+                i0__namespace.ɵɵtext(7, "Include area code");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
             }
-        }, directives: function () { return [i1.MatFormField, i1.MatLabel, MyTelInput, i2.MatIcon, i1.MatSuffix, i1.MatHint]; }, encapsulation: 2 });
+        }, directives: function () { return [i1__namespace.MatFormField, i1__namespace.MatLabel, MyTelInput, i2__namespace.MatIcon, i1__namespace.MatSuffix, i1__namespace.MatHint]; }, encapsulation: 2 });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'mdc-form-field-custom-control-example',
@@ -476,39 +502,39 @@
         return MyTelInput;
     }());
     MyTelInput.nextId = 0;
-    MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i3.FormBuilder), i0.ɵɵdirectiveInject(i4.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(formField.MAT_FORM_FIELD, 8), i0.ɵɵdirectiveInject(i3.NgControl, 10)); };
-    MyTelInput.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) {
+    MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0__namespace.ɵɵdirectiveInject(i3__namespace.FormBuilder), i0__namespace.ɵɵdirectiveInject(i4__namespace.FocusMonitor), i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(formField.MAT_FORM_FIELD, 8), i0__namespace.ɵɵdirectiveInject(i3__namespace.NgControl, 10)); };
+    MyTelInput.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) {
             if (rf & 2) {
-                i0.ɵɵhostProperty("id", ctx.id);
-                i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
+                i0__namespace.ɵɵhostProperty("id", ctx.id);
+                i0__namespace.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
             }
-        }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: i1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) {
+        }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0__namespace.ɵɵProvidersFeature([{ provide: i1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelementStart(1, "input", 1);
-                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { return ctx._handleInput(); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "span", 2);
-                i0.ɵɵtext(3, "\u2013");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(4, "input", 3);
-                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_4_listener() { return ctx._handleInput(); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "span", 2);
-                i0.ɵɵtext(6, "\u2013");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "input", 4);
-                i0.ɵɵlistener("input", function MyTelInput_Template_input_input_7_listener() { return ctx._handleInput(); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "div", 0);
+                i0__namespace.ɵɵelementStart(1, "input", 1);
+                i0__namespace.ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { return ctx._handleInput(); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(2, "span", 2);
+                i0__namespace.ɵɵtext(3, "\u2013");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(4, "input", 3);
+                i0__namespace.ɵɵlistener("input", function MyTelInput_Template_input_input_4_listener() { return ctx._handleInput(); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(5, "span", 2);
+                i0__namespace.ɵɵtext(6, "\u2013");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(7, "input", 4);
+                i0__namespace.ɵɵlistener("input", function MyTelInput_Template_input_input_7_listener() { return ctx._handleInput(); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0.ɵɵproperty("formGroup", ctx.parts);
-                i0.ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId());
+                i0__namespace.ɵɵproperty("formGroup", ctx.parts);
+                i0__namespace.ɵɵattribute("aria-labelledby", ctx._formField == null ? null : ctx._formField.getLabelId());
             }
-        }, directives: [i3.NgControlStatusGroup, i3.FormGroupDirective, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
+        }, directives: [i3__namespace.NgControlStatusGroup, i3__namespace.FormGroupDirective, i3__namespace.DefaultValueAccessor, i3__namespace.NgControlStatus, i3__namespace.FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MyTelInput, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(MyTelInput, [{
                 type: i0.Component,
                 args: [{
                         selector: 'example-tel-input',
@@ -521,12 +547,12 @@
                         }
                     }]
             }], function () {
-            return [{ type: i3.FormBuilder }, { type: i4.FocusMonitor }, { type: i0.ElementRef }, { type: i1.MatFormField, decorators: [{
+            return [{ type: i3__namespace.FormBuilder }, { type: i4__namespace.FocusMonitor }, { type: i0__namespace.ElementRef }, { type: i1__namespace.MatFormField, decorators: [{
                             type: i0.Optional
                         }, {
                             type: i0.Inject,
                             args: [formField.MAT_FORM_FIELD]
-                        }] }, { type: i3.NgControl, decorators: [{
+                        }] }, { type: i3__namespace.NgControl, decorators: [{
                             type: i0.Optional
                         }, {
                             type: i0.Self
@@ -554,15 +580,15 @@
         return MdcFormFieldExamplesModule;
     }());
     MdcFormFieldExamplesModule.ɵfac = function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); };
-    MdcFormFieldExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
-    MdcFormFieldExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
+    MdcFormFieldExamplesModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
+    MdcFormFieldExamplesModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[
                 common.CommonModule,
                 i1.MatFormFieldModule,
                 i2.MatIconModule,
                 i3.ReactiveFormsModule,
             ]] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
@@ -578,7 +604,7 @@
             }], null, null);
     })();
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
                 i1.MatFormFieldModule,
                 i2.MatIconModule,
                 i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });

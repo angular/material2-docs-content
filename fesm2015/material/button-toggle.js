@@ -1,7 +1,11 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵɵlistener, ɵɵdefineNgModule, ɵɵdefineInjector, NgModule, ɵɵsetNgModuleScope } from '@angular/core';
-import { FormControl, NgControlStatus, NgModel, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonToggleGroup, MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatIcon, MatIconModule } from '@angular/material/icon';
+import * as i0 from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import * as i2$1 from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import * as i1 from '@angular/material/button-toggle';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import * as i2 from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 /**
  * @title Button toggle appearance
@@ -9,37 +13,37 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 class ButtonToggleAppearanceExample {
 }
 ButtonToggleAppearanceExample.ɵfac = function ButtonToggleAppearanceExample_Factory(t) { return new (t || ButtonToggleAppearanceExample)(); };
-ButtonToggleAppearanceExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "p");
-        ɵɵtext(1, " Default appearance: ");
-        ɵɵelementStart(2, "mat-button-toggle-group", 0);
-        ɵɵelementStart(3, "mat-button-toggle", 1);
-        ɵɵtext(4, "Bold");
-        ɵɵelementEnd();
-        ɵɵelementStart(5, "mat-button-toggle", 2);
-        ɵɵtext(6, "Italic");
-        ɵɵelementEnd();
-        ɵɵelementStart(7, "mat-button-toggle", 3);
-        ɵɵtext(8, "Underline");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(9, "p");
-        ɵɵtext(10, " Legacy appearance: ");
-        ɵɵelementStart(11, "mat-button-toggle-group", 4);
-        ɵɵelementStart(12, "mat-button-toggle", 1);
-        ɵɵtext(13, "Bold");
-        ɵɵelementEnd();
-        ɵɵelementStart(14, "mat-button-toggle", 2);
-        ɵɵtext(15, "Italic");
-        ɵɵelementEnd();
-        ɵɵelementStart(16, "mat-button-toggle", 3);
-        ɵɵtext(17, "Underline");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-    } }, directives: [MatButtonToggleGroup, MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
+ButtonToggleAppearanceExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "p");
+        i0.ɵɵtext(1, " Default appearance: ");
+        i0.ɵɵelementStart(2, "mat-button-toggle-group", 0);
+        i0.ɵɵelementStart(3, "mat-button-toggle", 1);
+        i0.ɵɵtext(4, "Bold");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "mat-button-toggle", 2);
+        i0.ɵɵtext(6, "Italic");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "mat-button-toggle", 3);
+        i0.ɵɵtext(8, "Underline");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "p");
+        i0.ɵɵtext(10, " Legacy appearance: ");
+        i0.ɵɵelementStart(11, "mat-button-toggle-group", 4);
+        i0.ɵɵelementStart(12, "mat-button-toggle", 1);
+        i0.ɵɵtext(13, "Bold");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "mat-button-toggle", 2);
+        i0.ɵɵtext(15, "Italic");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(16, "mat-button-toggle", 3);
+        i0.ɵɵtext(17, "Underline");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-appearance-example',
@@ -54,38 +58,38 @@ ButtonToggleAppearanceExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: 
 class ButtonToggleExclusiveExample {
 }
 ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
-ButtonToggleExclusiveExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
-        ɵɵelementStart(2, "mat-button-toggle", 1);
-        ɵɵelementStart(3, "mat-icon");
-        ɵɵtext(4, "format_align_left");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(5, "mat-button-toggle", 2);
-        ɵɵelementStart(6, "mat-icon");
-        ɵɵtext(7, "format_align_center");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(8, "mat-button-toggle", 3);
-        ɵɵelementStart(9, "mat-icon");
-        ɵɵtext(10, "format_align_right");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(11, "mat-button-toggle", 4);
-        ɵɵelementStart(12, "mat-icon");
-        ɵɵtext(13, "format_align_justify");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(14, "div", 5);
-        ɵɵtext(15);
-        ɵɵelementEnd();
+ButtonToggleExclusiveExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
+        i0.ɵɵelementStart(2, "mat-button-toggle", 1);
+        i0.ɵɵelementStart(3, "mat-icon");
+        i0.ɵɵtext(4, "format_align_left");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "mat-button-toggle", 2);
+        i0.ɵɵelementStart(6, "mat-icon");
+        i0.ɵɵtext(7, "format_align_center");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(8, "mat-button-toggle", 3);
+        i0.ɵɵelementStart(9, "mat-icon");
+        i0.ɵɵtext(10, "format_align_right");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "mat-button-toggle", 4);
+        i0.ɵɵelementStart(12, "mat-icon");
+        i0.ɵɵtext(13, "format_align_justify");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "div", 5);
+        i0.ɵɵtext(15);
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r0 = ɵɵreference(1);
-        ɵɵadvance(15);
-        ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
-    } }, directives: [MatButtonToggleGroup, MatButtonToggle, MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
+        const _r0 = i0.ɵɵreference(1);
+        i0.ɵɵadvance(15);
+        i0.ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
+    } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle, i2.MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-exclusive-example',
@@ -100,20 +104,20 @@ ButtonToggleExclusiveExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: B
 class ButtonToggleOverviewExample {
 }
 ButtonToggleOverviewExample.ɵfac = function ButtonToggleOverviewExample_Factory(t) { return new (t || ButtonToggleOverviewExample)(); };
-ButtonToggleOverviewExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-button-toggle-group", 0);
-        ɵɵelementStart(1, "mat-button-toggle", 1);
-        ɵɵtext(2, "Bold");
-        ɵɵelementEnd();
-        ɵɵelementStart(3, "mat-button-toggle", 2);
-        ɵɵtext(4, "Italic");
-        ɵɵelementEnd();
-        ɵɵelementStart(5, "mat-button-toggle", 3);
-        ɵɵtext(6, "Underline");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-    } }, directives: [MatButtonToggleGroup, MatButtonToggle], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleOverviewExample, [{
+ButtonToggleOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-button-toggle-group", 0);
+        i0.ɵɵelementStart(1, "mat-button-toggle", 1);
+        i0.ɵɵtext(2, "Bold");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-button-toggle", 2);
+        i0.ɵɵtext(4, "Italic");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "mat-button-toggle", 3);
+        i0.ɵɵtext(6, "Underline");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-overview-example',
@@ -131,19 +135,19 @@ class ButtonToggleHarnessExample {
     }
 }
 ButtonToggleHarnessExample.ɵfac = function ButtonToggleHarnessExample_Factory(t) { return new (t || ButtonToggleHarnessExample)(); };
-ButtonToggleHarnessExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ButtonToggleHarnessExample, selectors: [["button-toggle-harness-example"]], decls: 5, vars: 2, consts: [[3, "disabled", "appearance"], ["value", "1"], ["value", "2"]], template: function ButtonToggleHarnessExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-button-toggle-group", 0);
-        ɵɵelementStart(1, "mat-button-toggle", 1);
-        ɵɵtext(2, "One");
-        ɵɵelementEnd();
-        ɵɵelementStart(3, "mat-button-toggle", 2);
-        ɵɵtext(4, "Two");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
+ButtonToggleHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonToggleHarnessExample, selectors: [["button-toggle-harness-example"]], decls: 5, vars: 2, consts: [[3, "disabled", "appearance"], ["value", "1"], ["value", "2"]], template: function ButtonToggleHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-button-toggle-group", 0);
+        i0.ɵɵelementStart(1, "mat-button-toggle", 1);
+        i0.ɵɵtext(2, "One");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-button-toggle", 2);
+        i0.ɵɵtext(4, "Two");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵproperty("disabled", ctx.disabled)("appearance", ctx.appearance);
-    } }, directives: [MatButtonToggleGroup, MatButtonToggle], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleHarnessExample, [{
+        i0.ɵɵproperty("disabled", ctx.disabled)("appearance", ctx.appearance);
+    } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleHarnessExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-harness-example',
@@ -160,57 +164,57 @@ class ButtonToggleFormsExample {
     }
 }
 ButtonToggleFormsExample.ɵfac = function ButtonToggleFormsExample_Factory(t) { return new (t || ButtonToggleFormsExample)(); };
-ButtonToggleFormsExample.ɵcmp = /*@__PURE__*/ ɵɵdefineComponent({ type: ButtonToggleFormsExample, selectors: [["button-toggle-forms-example"]], decls: 24, vars: 4, consts: [["aria-label", "Font Style", 3, "ngModel", "ngModelChange"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["aria-label", "Font Style", 3, "formControl"]], template: function ButtonToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "section");
-        ɵɵelementStart(1, "h4");
-        ɵɵtext(2, "Button Toggle inside of a Template-driven form");
-        ɵɵelementEnd();
-        ɵɵelementStart(3, "mat-button-toggle-group", 0);
-        ɵɵlistener("ngModelChange", function ButtonToggleFormsExample_Template_mat_button_toggle_group_ngModelChange_3_listener($event) { return ctx.fontStyle = $event; });
-        ɵɵelementStart(4, "mat-button-toggle", 1);
-        ɵɵtext(5, "Bold");
-        ɵɵelementEnd();
-        ɵɵelementStart(6, "mat-button-toggle", 2);
-        ɵɵtext(7, "Italic");
-        ɵɵelementEnd();
-        ɵɵelementStart(8, "mat-button-toggle", 3);
-        ɵɵtext(9, "Underline");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(10, "p");
-        ɵɵtext(11);
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(12, "section");
-        ɵɵelementStart(13, "h4");
-        ɵɵtext(14, "Button Toggle inside of a Reactive form");
-        ɵɵelementEnd();
-        ɵɵelementStart(15, "mat-button-toggle-group", 4);
-        ɵɵelementStart(16, "mat-button-toggle", 1);
-        ɵɵtext(17, "Bold");
-        ɵɵelementEnd();
-        ɵɵelementStart(18, "mat-button-toggle", 2);
-        ɵɵtext(19, "Italic");
-        ɵɵelementEnd();
-        ɵɵelementStart(20, "mat-button-toggle", 3);
-        ɵɵtext(21, "Underline");
-        ɵɵelementEnd();
-        ɵɵelementEnd();
-        ɵɵelementStart(22, "p");
-        ɵɵtext(23);
-        ɵɵelementEnd();
-        ɵɵelementEnd();
+ButtonToggleFormsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonToggleFormsExample, selectors: [["button-toggle-forms-example"]], decls: 24, vars: 4, consts: [["aria-label", "Font Style", 3, "ngModel", "ngModelChange"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["aria-label", "Font Style", 3, "formControl"]], template: function ButtonToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "section");
+        i0.ɵɵelementStart(1, "h4");
+        i0.ɵɵtext(2, "Button Toggle inside of a Template-driven form");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-button-toggle-group", 0);
+        i0.ɵɵlistener("ngModelChange", function ButtonToggleFormsExample_Template_mat_button_toggle_group_ngModelChange_3_listener($event) { return ctx.fontStyle = $event; });
+        i0.ɵɵelementStart(4, "mat-button-toggle", 1);
+        i0.ɵɵtext(5, "Bold");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(6, "mat-button-toggle", 2);
+        i0.ɵɵtext(7, "Italic");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(8, "mat-button-toggle", 3);
+        i0.ɵɵtext(9, "Underline");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "p");
+        i0.ɵɵtext(11);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "section");
+        i0.ɵɵelementStart(13, "h4");
+        i0.ɵɵtext(14, "Button Toggle inside of a Reactive form");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(15, "mat-button-toggle-group", 4);
+        i0.ɵɵelementStart(16, "mat-button-toggle", 1);
+        i0.ɵɵtext(17, "Bold");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(18, "mat-button-toggle", 2);
+        i0.ɵɵtext(19, "Italic");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(20, "mat-button-toggle", 3);
+        i0.ɵɵtext(21, "Underline");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(22, "p");
+        i0.ɵɵtext(23);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(3);
-        ɵɵproperty("ngModel", ctx.fontStyle);
-        ɵɵadvance(8);
-        ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyle, "");
-        ɵɵadvance(4);
-        ɵɵproperty("formControl", ctx.fontStyleControl);
-        ɵɵadvance(8);
-        ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyleControl.value, "");
-    } }, directives: [MatButtonToggleGroup, NgControlStatus, NgModel, MatButtonToggle, FormControlDirective], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleFormsExample, [{
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("ngModel", ctx.fontStyle);
+        i0.ɵɵadvance(8);
+        i0.ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyle, "");
+        i0.ɵɵadvance(4);
+        i0.ɵɵproperty("formControl", ctx.fontStyleControl);
+        i0.ɵɵadvance(8);
+        i0.ɵɵtextInterpolate1("Chosen value is ", ctx.fontStyleControl.value, "");
+    } }, directives: [i1.MatButtonToggleGroup, i2$1.NgControlStatus, i2$1.NgModel, i1.MatButtonToggle, i2$1.FormControlDirective], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleFormsExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-forms-example',
@@ -228,14 +232,14 @@ const EXAMPLES = [
 class ButtonToggleExamplesModule {
 }
 ButtonToggleExamplesModule.ɵfac = function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); };
-ButtonToggleExamplesModule.ɵmod = /*@__PURE__*/ ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
-ButtonToggleExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [[
+ButtonToggleExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
+ButtonToggleExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             FormsModule,
             MatButtonToggleModule,
             MatIconModule,
             ReactiveFormsModule,
         ]] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(ButtonToggleExamplesModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -249,7 +253,7 @@ ButtonToggleExamplesModule.ɵinj = /*@__PURE__*/ ɵɵdefineInjector({ imports: [
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,

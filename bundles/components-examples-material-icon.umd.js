@@ -1,8 +1,32 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/icon'), require('@angular/platform-browser')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/icon', ['exports', '@angular/core', '@angular/material/icon', '@angular/platform-browser'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.icon = {}), global.ng.core, global.ng.material.icon, global.ng.platformBrowser));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.icon = {}), global.ng.core, global.ng.material.icon, global.ng.platformBrowser));
 }(this, (function (exports, i0, i1, i2) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
+    var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
 
     /**
      * @title Basic icons
@@ -13,15 +37,15 @@
         return IconOverviewExample;
     }());
     IconOverviewExample.ɵfac = function IconOverviewExample_Factory(t) { return new (t || IconOverviewExample)(); };
-    IconOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: IconOverviewExample, selectors: [["icon-overview-example"]], decls: 2, vars: 0, consts: [["aria-hidden", "false", "aria-label", "Example home icon"]], template: function IconOverviewExample_Template(rf, ctx) {
+    IconOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: IconOverviewExample, selectors: [["icon-overview-example"]], decls: 2, vars: 0, consts: [["aria-hidden", "false", "aria-label", "Example home icon"]], template: function IconOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-icon", 0);
-                i0.ɵɵtext(1, "home");
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "mat-icon", 0);
+                i0__namespace.ɵɵtext(1, "home");
+                i0__namespace.ɵɵelementEnd();
             }
-        }, directives: [i1.MatIcon], encapsulation: 2 });
+        }, directives: [i1__namespace.MatIcon], encapsulation: 2 });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconOverviewExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconOverviewExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'icon-overview-example',
@@ -45,20 +69,20 @@
         }
         return IconSvgExample;
     }());
-    IconSvgExample.ɵfac = function IconSvgExample_Factory(t) { return new (t || IconSvgExample)(i0.ɵɵdirectiveInject(i1.MatIconRegistry), i0.ɵɵdirectiveInject(i2.DomSanitizer)); };
-    IconSvgExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) {
+    IconSvgExample.ɵfac = function IconSvgExample_Factory(t) { return new (t || IconSvgExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.MatIconRegistry), i0__namespace.ɵɵdirectiveInject(i2__namespace.DomSanitizer)); };
+    IconSvgExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelement(0, "mat-icon", 0);
+                i0__namespace.ɵɵelement(0, "mat-icon", 0);
             }
-        }, directives: [i1.MatIcon], encapsulation: 2 });
+        }, directives: [i1__namespace.MatIcon], encapsulation: 2 });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconSvgExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconSvgExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'icon-svg-example',
                         templateUrl: 'icon-svg-example.html',
                     }]
-            }], function () { return [{ type: i1.MatIconRegistry }, { type: i2.DomSanitizer }]; }, null);
+            }], function () { return [{ type: i1__namespace.MatIconRegistry }, { type: i2__namespace.DomSanitizer }]; }, null);
     })();
 
     /**
@@ -70,17 +94,17 @@
         return IconHarnessExample;
     }());
     IconHarnessExample.ɵfac = function IconHarnessExample_Factory(t) { return new (t || IconHarnessExample)(); };
-    IconHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: IconHarnessExample, selectors: [["icon-harness-example"]], decls: 4, vars: 0, consts: [["fontSet", "fontIcons", "fontIcon", "fontIcon"], ["svgIcon", "svgIcons:svgIcon"], ["inline", ""]], template: function IconHarnessExample_Template(rf, ctx) {
+    IconHarnessExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: IconHarnessExample, selectors: [["icon-harness-example"]], decls: 4, vars: 0, consts: [["fontSet", "fontIcons", "fontIcon", "fontIcon"], ["svgIcon", "svgIcons:svgIcon"], ["inline", ""]], template: function IconHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelement(0, "mat-icon", 0);
-                i0.ɵɵelement(1, "mat-icon", 1);
-                i0.ɵɵelementStart(2, "mat-icon", 2);
-                i0.ɵɵtext(3, "ligature_icon");
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelement(0, "mat-icon", 0);
+                i0__namespace.ɵɵelement(1, "mat-icon", 1);
+                i0__namespace.ɵɵelementStart(2, "mat-icon", 2);
+                i0__namespace.ɵɵtext(3, "ligature_icon");
+                i0__namespace.ɵɵelementEnd();
             }
-        }, directives: [i1.MatIcon], encapsulation: 2 });
+        }, directives: [i1__namespace.MatIcon], encapsulation: 2 });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconHarnessExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconHarnessExample, [{
                 type: i0.Component,
                 args: [{
                         selector: 'icon-harness-example',
@@ -100,12 +124,12 @@
         return IconExamplesModule;
     }());
     IconExamplesModule.ɵfac = function IconExamplesModule_Factory(t) { return new (t || IconExamplesModule)(); };
-    IconExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: IconExamplesModule });
-    IconExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
+    IconExamplesModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: IconExamplesModule });
+    IconExamplesModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[
                 i1.MatIconModule,
             ]] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconExamplesModule, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconExamplesModule, [{
                 type: i0.NgModule,
                 args: [{
                         imports: [
@@ -118,7 +142,7 @@
             }], null, null);
     })();
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconHarnessExample,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconHarnessExample,
                 IconOverviewExample,
                 IconSvgExample], imports: [i1.MatIconModule], exports: [IconHarnessExample,
                 IconOverviewExample,
