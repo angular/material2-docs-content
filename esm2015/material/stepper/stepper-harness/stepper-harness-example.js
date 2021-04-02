@@ -40,7 +40,7 @@ StepperHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Stepp
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-    } }, directives: [i1.MatHorizontalStepper, i1.MatStep, i1.MatStepLabel, i1.MatStepperNext, i1.MatStepperPrevious], encapsulation: 2 });
+    } }, directives: [i1.MatStepper, i1.MatStep, i1.MatStepLabel, i1.MatStepperNext, i1.MatStepperPrevious], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperHarnessExample, [{
         type: Component,
         args: [{

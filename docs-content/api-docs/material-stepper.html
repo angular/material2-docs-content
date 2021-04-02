@@ -435,233 +435,18 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
     
       
 
-<h4 id="MatStepper" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatStepper"></span>
-  <code>MatStepper</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/stepper/api#CdkStepper" class="docs-api-class-extends-type">
-      CdkStepper
-    </a>
-  </span>
-  
-</h4><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matStepper]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Theme color for all of the steps in stepper.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples should be disabled for the step headers.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>linear: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the validity of previous steps should be checked or not.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>selected: CdkStep | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The step that is selected.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>selectedIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The index of the selected step.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>animationDone: EventEmitter&lt;void&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the current step is done transitioning in.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>orientation: StepperOrientation</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>steps: QueryList&lt;MatStep&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Steps that belong to the current stepper, excluding ones from nested steppers.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">next
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects and focuses the next step in list.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">previous
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects and focuses the previous step in list.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">reset
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the stepper to its initial state. Note that this includes clearing form data.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
 <h4 id="MatHorizontalStepper" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatHorizontalStepper"></span>
   <code>MatHorizontalStepper</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="components/stepper/api#MatStepper" class="docs-api-class-extends-type">
-      MatStepper
-    </a>
-  </span>
   
 </h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-horizontal-stepper</span>
   
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matHorizontalStepper</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v13.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -673,52 +458,24 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Theme color for all of the steps in stepper.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples should be disabled for the step headers.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>labelPosition: &#39;bottom&#39; | &#39;end&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the label should display in bottom or end position.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
       <code>linear: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the validity of previous steps should be checked or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>orientation: StepperOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
 </td>
 </tr>
 
@@ -757,20 +514,6 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>animationDone: EventEmitter&lt;void&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the current step is done transitioning in.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
       <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
     </p>
   </td>
@@ -784,11 +527,46 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>orientation: StepperOrientation</code>
+      <code>animationDone: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
-</td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>labelPosition: &#39;bottom&#39; | &#39;end&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -800,8 +578,7 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
       <code>steps: QueryList&lt;MatStep&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Steps that belong to the current stepper, excluding ones from nested steppers.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -872,20 +649,236 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
   <span header-link="MatVerticalStepper"></span>
   <code>MatVerticalStepper</code>
   
+</h4><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-vertical-stepper</span>
+  
+</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v13.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>linear: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the validity of previous steps should be checked or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>orientation: StepperOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selected: CdkStep | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The step that is selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selectedIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The index of the selected step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>animationDone: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>labelPosition: &#39;bottom&#39; | &#39;end&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>steps: QueryList&lt;MatStep&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">next
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects and focuses the next step in list.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">previous
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects and focuses the previous step in list.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">reset
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Resets the stepper to its initial state. Note that this includes clearing form data.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatStepper" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepper"></span>
+  <code>MatStepper</code>
+  
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
-    <a href="components/stepper/api#MatStepper" class="docs-api-class-extends-type">
-      MatStepper
+    <a href="cdk/stepper/api#CdkStepper" class="docs-api-class-extends-type">
+      CdkStepper
     </a>
   </span>
   
 </h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
+    <span class="docs-api-class-selector-name">mat-stepper</span>
+  
     <span class="docs-api-class-selector-name">mat-vertical-stepper</span>
   
+    <span class="docs-api-class-selector-name">mat-horizontal-stepper</span>
+  
+    <span class="docs-api-class-selector-name">[matStepper]</span>
+  
 </p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matVerticalStepper</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+<span class="docs-api-class-export-name">matStepper, matVerticalStepper, matHorizontalStepper</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -925,10 +918,39 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: &#39;bottom&#39; | &#39;end&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the label should display in bottom or end position.
+Only applies in the <code>horizontal</code> orientation.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>linear: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the validity of previous steps should be checked or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>orientation: StepperOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
 </td>
 </tr>
 
@@ -985,19 +1007,6 @@ Will be cleared if <code>aria-label</code> is set at the same time.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>orientation: StepperOrientation</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Orientation of the stepper.</p>
 </td>
 </tr>
 

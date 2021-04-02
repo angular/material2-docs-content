@@ -56,7 +56,7 @@ StepperLazyContentExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-    } }, directives: [i1.MatVerticalStepper, i1.MatStep, i1.MatStepLabel, i1.MatStepContent, i2.MatButton, i1.MatStepperPrevious, i1.MatStepperNext], styles: [""] });
+    } }, directives: [i1.MatStepper, i1.MatStep, i1.MatStepLabel, i1.MatStepContent, i2.MatButton, i1.MatStepperPrevious, i1.MatStepperNext], styles: [""] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperLazyContentExample, [{
         type: Component,
         args: [{
