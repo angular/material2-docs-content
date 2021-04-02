@@ -1277,6 +1277,7 @@ pointer down before starting to drag the element.</p>
     container: DropListRef;
     previousContainer: DropListRef;
     distance: Point;
+    dropPoint: Point;
     isPointerOverContainer: boolean;
 }&gt;</code>
     </p>
@@ -1294,6 +1295,7 @@ pointer down before starting to drag the element.</p>
       <code>ended: Subject&lt;{
     source: DragRef;
     distance: Point;
+    dropPoint: Point;
 }&gt;</code>
     </p>
   </td>
@@ -2229,6 +2231,7 @@ moves their pointer close to the edges is disabled.</p>
     previousContainer: DropListRef;
     isPointerOverContainer: boolean;
     distance: Point;
+    dropPoint: Point;
 }&gt;</code>
     </p>
   </td>
@@ -2529,6 +2532,19 @@ connected, the user will be allowed to transfer items between them.</p>
       <p class="docs-api-method-parameter-description">
         <p>Distance the user has dragged since the start of the dragging sequence.</p>
 
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dropPoint</p>
+      <code class="docs-api-method-parameter-type">Point</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
       </p>
     </td>
   </tr>
@@ -3226,6 +3242,22 @@ considers them to have changed the drag direction.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropPoint: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Position where the pointer was when the item was dropped</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>source: CdkDrag&lt;T&gt;</code>
     </p>
   </td>
@@ -3401,6 +3433,22 @@ drop container by moving it into another one.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Distance in pixels that the user has dragged since the drag sequence started.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropPoint: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Position where the pointer was when the item was dropped</p>
 </td>
 </tr>
 
