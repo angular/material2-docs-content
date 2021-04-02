@@ -19,7 +19,7 @@
   selectable = <span class="hljs-literal">true</span>;
   removable = <span class="hljs-literal">true</span>;
   addOnBlur = <span class="hljs-literal">true</span>;
-  <span class="hljs-keyword">readonly</span> separatorKeysCodes: <span class="hljs-built_in">number</span>[] = [ENTER, COMMA];
+  <span class="hljs-keyword">readonly</span> separatorKeysCodes = [ENTER, COMMA] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>;
   fruits: Fruit[] = [
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lemon&#x27;</span>},
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lime&#x27;</span>},
