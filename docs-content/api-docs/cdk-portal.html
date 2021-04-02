@@ -546,6 +546,7 @@ directly attached to it, enabling declarative use.</p>
     portal.setAttachedHost(this);
     element.parentNode!.insertBefore(anchorNode, element);
     this._getRootNode().appendChild(element);
+    this._attachedPortal = portal;
     super.setDisposeFn(() =&gt; {
         if (anchorNode.parentNode) {
             anchorNode.parentNode!.replaceChild(element, anchorNode);
@@ -957,6 +958,7 @@ directly attached to it, enabling declarative use.</p>
     portal.setAttachedHost(this);
     element.parentNode!.insertBefore(anchorNode, element);
     this._getRootNode().appendChild(element);
+    this._attachedPortal = portal;
     super.setDisposeFn(() =&gt; {
         if (anchorNode.parentNode) {
             anchorNode.parentNode!.replaceChild(element, anchorNode);
@@ -2689,6 +2691,7 @@ application context.</p>
     const anchorNode = this._document.createComment(&#39;dom-portal&#39;);
     element.parentNode!.insertBefore(anchorNode, element);
     this.outletElement.appendChild(element);
+    this._attachedPortal = portal;
     super.setDisposeFn(() =&gt; {
         if (anchorNode.parentNode) {
             anchorNode.parentNode.replaceChild(element, anchorNode);
@@ -3063,6 +3066,7 @@ application context.</p>
     const anchorNode = this._document.createComment(&#39;dom-portal&#39;);
     element.parentNode!.insertBefore(anchorNode, element);
     this.outletElement.appendChild(element);
+    this._attachedPortal = portal;
     super.setDisposeFn(() =&gt; {
         if (anchorNode.parentNode) {
             anchorNode.parentNode.replaceChild(element, anchorNode);
