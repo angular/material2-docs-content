@@ -18,8 +18,8 @@
   <span class="hljs-keyword">private</span> _pageSize = <span class="hljs-number">100</span>;
   <span class="hljs-keyword">private</span> _cachedData = <span class="hljs-built_in">Array</span>.from&lt;<span class="hljs-built_in">string</span>&gt;({<span class="hljs-attr">length</span>: <span class="hljs-built_in">this</span>._length});
   <span class="hljs-keyword">private</span> _fetchedPages = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>&lt;<span class="hljs-built_in">number</span>&gt;();
-  <span class="hljs-keyword">private</span> _dataStream = <span class="hljs-keyword">new</span> BehaviorSubject&lt;(<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>)[]&gt;(<span class="hljs-built_in">this</span>._cachedData);
-  <span class="hljs-keyword">private</span> _subscription = <span class="hljs-keyword">new</span> Subscription();
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _dataStream = <span class="hljs-keyword">new</span> BehaviorSubject&lt;(<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>)[]&gt;(<span class="hljs-built_in">this</span>._cachedData);
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _subscription = <span class="hljs-keyword">new</span> Subscription();
 
   connect(collectionViewer: CollectionViewer): Observable&lt;(<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>)[]&gt; {
     <span class="hljs-built_in">this</span>._subscription.add(collectionViewer.viewChange.subscribe(<span class="hljs-function"><span class="hljs-params">range</span> =&gt;</span> {

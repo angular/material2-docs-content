@@ -12,8 +12,8 @@ export declare class MyDataSource extends DataSource<string | undefined> {
     private _pageSize;
     private _cachedData;
     private _fetchedPages;
-    private _dataStream;
-    private _subscription;
+    private readonly _dataStream;
+    private readonly _subscription;
     connect(collectionViewer: CollectionViewer): Observable<(string | undefined)[]>;
     disconnect(): void;
     private _getPageForIndex;
