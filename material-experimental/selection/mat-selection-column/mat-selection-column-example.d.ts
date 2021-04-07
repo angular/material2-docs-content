@@ -11,8 +11,8 @@ export declare class MatSelectionColumnExample implements OnDestroy {
     selected: string[];
     ngOnDestroy(): void;
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
-    static ɵfac: i0.ɵɵFactoryDef<MatSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<MatSelectionColumnExample, "mat-selection-column-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionColumnExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionColumnExample, "mat-selection-column-example", never, {}, {}, never, never>;
 }
 interface PeriodicElement {
     name: string;

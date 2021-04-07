@@ -9,6 +9,6 @@ export declare class TabNavBarBasicExample {
     background: ThemePalette;
     toggleBackground(): void;
     addLink(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TabNavBarBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabNavBarBasicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never>;
 }

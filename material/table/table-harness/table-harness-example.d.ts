@@ -10,6 +10,6 @@ export declare class TableHarnessExample {
         weight: number;
         symbol: string;
     }[];
-    static ɵfac: i0.ɵɵFactoryDef<TableHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableHarnessExample, "table-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never>;
 }

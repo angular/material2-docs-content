@@ -15,6 +15,6 @@ export declare class SortOverviewExample {
     sortedData: Dessert[];
     constructor();
     sortData(sort: Sort): void;
-    static ɵfac: i0.ɵɵFactoryDef<SortOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SortOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never>;
 }

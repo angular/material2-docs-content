@@ -11,6 +11,6 @@ export interface PeriodicElement {
 export declare class TableRecycleRowsExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<TableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never>;
 }

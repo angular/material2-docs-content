@@ -41,7 +41,7 @@ export declare class LoadmoreDatabase {
     /** Expand a node whose children are not loaded */
     loadMore(item: string, onlyFirstTime?: boolean): void;
     private _generateNode;
-    static ɵfac: i0.ɵɵFactoryDef<LoadmoreDatabase, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<LoadmoreDatabase, never>;
     static ɵprov: i0.ɵɵInjectableDef<LoadmoreDatabase>;
 }
 /**
@@ -63,6 +63,6 @@ export declare class TreeLoadmoreExample {
     /** Load more nodes from data source */
     loadMore(item: string): void;
     loadChildren(node: LoadmoreFlatNode): void;
-    static ɵfac: i0.ɵɵFactoryDef<TreeLoadmoreExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeLoadmoreExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never>;
 }

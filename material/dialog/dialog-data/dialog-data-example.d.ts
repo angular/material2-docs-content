@@ -10,12 +10,12 @@ export declare class DialogDataExample {
     dialog: MatDialog;
     constructor(dialog: MatDialog);
     openDialog(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DialogDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DialogDataExample, "dialog-data-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExample, "dialog-data-example", never, {}, {}, never, never>;
 }
 export declare class DialogDataExampleDialog {
     data: DialogData;
     constructor(data: DialogData);
-    static ɵfac: i0.ɵɵFactoryDef<DialogDataExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExampleDialog, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never>;
 }

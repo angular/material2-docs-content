@@ -10,6 +10,6 @@ export interface ExampleTab {
 export declare class TabGroupAsyncExample {
     asyncTabs: Observable<ExampleTab[]>;
     constructor();
-    static ɵfac: i0.ɵɵFactoryDef<TabGroupAsyncExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TabGroupAsyncExample, "tab-group-async-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupAsyncExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAsyncExample, "tab-group-async-example", never, {}, {}, never, never>;
 }

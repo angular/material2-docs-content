@@ -15,6 +15,6 @@ export declare class AutocompleteDisplayExample implements OnInit {
     ngOnInit(): void;
     displayFn(user: User): string;
     private _filter;
-    static ɵfac: i0.ɵɵFactoryDef<AutocompleteDisplayExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompleteDisplayExample, "autocomplete-display-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteDisplayExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteDisplayExample, "autocomplete-display-example", never, {}, {}, never, never>;
 }

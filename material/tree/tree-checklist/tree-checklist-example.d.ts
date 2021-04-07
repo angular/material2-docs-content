@@ -36,7 +36,7 @@ export declare class ChecklistDatabase {
     /** Add an item to to-do list */
     insertItem(parent: TodoItemNode, name: string): void;
     updateItem(node: TodoItemNode, name: string): void;
-    static ɵfac: i0.ɵɵFactoryDef<ChecklistDatabase, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChecklistDatabase, never>;
     static ɵprov: i0.ɵɵInjectableDef<ChecklistDatabase>;
 }
 /**
@@ -83,6 +83,6 @@ export declare class TreeChecklistExample {
     addNewItem(node: TodoItemFlatNode): void;
     /** Save the node to database */
     saveNode(node: TodoItemFlatNode, itemValue: string): void;
-    static ɵfac: i0.ɵɵFactoryDef<TreeChecklistExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeChecklistExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never>;
 }

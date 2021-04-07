@@ -10,6 +10,6 @@ export declare class StepperErrorsExample implements OnInit {
     secondFormGroup: FormGroup;
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<StepperErrorsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<StepperErrorsExample, "stepper-errors-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<StepperErrorsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperErrorsExample, "stepper-errors-example", never, {}, {}, never, never>;
 }

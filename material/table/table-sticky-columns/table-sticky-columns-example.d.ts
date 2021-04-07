@@ -5,8 +5,8 @@ import * as i0 from "@angular/core";
 export declare class TableStickyColumnsExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<TableStickyColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyColumnsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never>;
 }
 export interface PeriodicElement {
     name: string;

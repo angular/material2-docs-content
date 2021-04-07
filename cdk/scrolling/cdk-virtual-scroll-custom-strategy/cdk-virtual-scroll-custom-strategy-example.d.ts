@@ -6,6 +6,6 @@ export declare class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollS
 /** @title Virtual scroll with a custom strategy */
 export declare class CdkVirtualScrollCustomStrategyExample {
     items: string[];
-    static ɵfac: i0.ɵɵFactoryDef<CdkVirtualScrollCustomStrategyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkVirtualScrollCustomStrategyExample, "cdk-virtual-scroll-custom-strategy-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollCustomStrategyExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollCustomStrategyExample, "cdk-virtual-scroll-custom-strategy-example", never, {}, {}, never, never>;
 }

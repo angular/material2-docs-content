@@ -11,6 +11,6 @@ export declare class AutocompleteAutoActiveFirstOptionExample implements OnInit 
     filteredOptions: Observable<string[]>;
     ngOnInit(): void;
     private _filter;
-    static ɵfac: i0.ɵɵFactoryDef<AutocompleteAutoActiveFirstOptionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompleteAutoActiveFirstOptionExample, "autocomplete-auto-active-first-option-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteAutoActiveFirstOptionExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteAutoActiveFirstOptionExample, "autocomplete-auto-active-first-option-example", never, {}, {}, never, never>;
 }

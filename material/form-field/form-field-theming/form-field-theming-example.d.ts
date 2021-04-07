@@ -7,6 +7,6 @@ export declare class FormFieldThemingExample {
     fontSizeControl: FormControl;
     constructor(fb: FormBuilder);
     getFontSize(): number;
-    static ɵfac: i0.ɵɵFactoryDef<FormFieldThemingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldThemingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never>;
 }

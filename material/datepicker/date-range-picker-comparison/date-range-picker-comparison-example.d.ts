@@ -5,6 +5,6 @@ export declare class DateRangePickerComparisonExample {
     campaignOne: FormGroup;
     campaignTwo: FormGroup;
     constructor();
-    static ɵfac: i0.ɵɵFactoryDef<DateRangePickerComparisonExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DateRangePickerComparisonExample, "date-range-picker-comparison-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DateRangePickerComparisonExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerComparisonExample, "date-range-picker-comparison-example", never, {}, {}, never, never>;
 }

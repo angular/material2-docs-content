@@ -8,6 +8,6 @@ export declare class RippleOverviewExample {
     unbounded: boolean;
     radius: number;
     color: string;
-    static ɵfac: i0.ɵɵFactoryDef<RippleOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<RippleOverviewExample, "ripple-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<RippleOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RippleOverviewExample, "ripple-overview-example", never, {}, {}, never, never>;
 }

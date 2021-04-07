@@ -20,7 +20,7 @@ import * as i12 from "@angular/material/form-field";
 import * as i13 from "@angular/forms";
 export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ChipsHarnessExample, };
 export declare class ChipsExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<ChipsExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample], [typeof i7.CommonModule, typeof i8.DragDropModule, typeof i9.MatAutocompleteModule, typeof i10.MatChipsModule, typeof i11.MatIconModule, typeof i12.MatFormFieldModule, typeof i13.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<ChipsExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample], [typeof i7.CommonModule, typeof i8.DragDropModule, typeof i9.MatAutocompleteModule, typeof i10.MatChipsModule, typeof i11.MatIconModule, typeof i12.MatFormFieldModule, typeof i13.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<ChipsExamplesModule>;
 }

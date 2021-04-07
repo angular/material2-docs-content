@@ -8,7 +8,7 @@ import * as i4 from "@angular/material/button";
 import * as i5 from "@angular/material/icon";
 export { BadgeOverviewExample, BadgeHarnessExample };
 export declare class BadgeExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<BadgeExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<BadgeExamplesModule, [typeof i1.BadgeOverviewExample, typeof i2.BadgeHarnessExample], [typeof i3.MatBadgeModule, typeof i4.MatButtonModule, typeof i5.MatIconModule], [typeof i1.BadgeOverviewExample, typeof i2.BadgeHarnessExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<BadgeExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BadgeExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<BadgeExamplesModule, [typeof i1.BadgeOverviewExample, typeof i2.BadgeHarnessExample], [typeof i3.MatBadgeModule, typeof i4.MatButtonModule, typeof i5.MatIconModule], [typeof i1.BadgeOverviewExample, typeof i2.BadgeHarnessExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<BadgeExamplesModule>;
 }

@@ -6,6 +6,6 @@ import * as i0 from "@angular/core";
 export declare class ButtonToggleFormsExample {
     fontStyleControl: FormControl;
     fontStyle?: string;
-    static ɵfac: i0.ɵɵFactoryDef<ButtonToggleFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ButtonToggleFormsExample, "button-toggle-forms-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleFormsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleFormsExample, "button-toggle-forms-example", never, {}, {}, never, never>;
 }

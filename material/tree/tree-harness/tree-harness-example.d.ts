@@ -36,7 +36,7 @@ export declare class TreeHarnessExample {
     }>;
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
-    static ɵfac: i0.ɵɵFactoryDef<TreeHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never>;
 }
 export {};

@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
 export declare class BadgeOverviewExample {
     hidden: boolean;
     toggleBadgeVisibility(): void;
-    static ɵfac: i0.ɵɵFactoryDef<BadgeOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<BadgeOverviewExample, "badge-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BadgeOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BadgeOverviewExample, "badge-overview-example", never, {}, {}, never, never>;
 }

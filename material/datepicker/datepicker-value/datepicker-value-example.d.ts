@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
 export declare class DatepickerValueExample {
     date: FormControl;
     serializedDate: FormControl;
-    static ɵfac: i0.ɵɵFactoryDef<DatepickerValueExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DatepickerValueExample, "datepicker-value-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerValueExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerValueExample, "datepicker-value-example", never, {}, {}, never, never>;
 }

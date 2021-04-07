@@ -398,7 +398,7 @@
         };
         return CustomStepper;
     }(i1.CdkStepper));
-    CustomStepper.ɵfac = function CustomStepper_Factory(t) { return ɵCustomStepper_BaseFactory(t || CustomStepper); };
+    CustomStepper.ɵfac = /*@__PURE__*/ function () { var ɵCustomStepper_BaseFactory; return function CustomStepper_Factory(t) { return (ɵCustomStepper_BaseFactory || (ɵCustomStepper_BaseFactory = i0__namespace.ɵɵgetInheritedFactory(CustomStepper)))(t || CustomStepper); }; }();
     CustomStepper.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: CustomStepper, selectors: [["example-custom-stepper"]], features: [i0__namespace.ɵɵProvidersFeature([{ provide: i1.CdkStepper, useExisting: CustomStepper }]), i0__namespace.ɵɵInheritDefinitionFeature], decls: 11, vars: 4, consts: [[1, "example-container"], [3, "ngTemplateOutlet"], [1, "example-step-navigation-bar"], ["cdkStepperPrevious", "", 1, "example-nav-button"], ["class", "example-step", 3, "example-active", "click", 4, "ngFor", "ngForOf"], ["cdkStepperNext", "", 1, "example-nav-button"], [1, "example-step", 3, "click"]], template: function CustomStepper_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "section", 0);
@@ -428,7 +428,6 @@
                 i0__namespace.ɵɵproperty("ngForOf", ctx.steps);
             }
         }, directives: [i2__namespace.NgTemplateOutlet, i1__namespace.CdkStepperPrevious, i2__namespace.NgForOf, i1__namespace.CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
-    var ɵCustomStepper_BaseFactory = /*@__PURE__*/ i0__namespace.ɵɵgetInheritedFactory(CustomStepper);
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CustomStepper, [{
                 type: i0.Component,
@@ -535,7 +534,7 @@
         };
         return CustomLinearStepper;
     }(i1.CdkStepper));
-    CustomLinearStepper.ɵfac = function CustomLinearStepper_Factory(t) { return ɵCustomLinearStepper_BaseFactory(t || CustomLinearStepper); };
+    CustomLinearStepper.ɵfac = /*@__PURE__*/ function () { var ɵCustomLinearStepper_BaseFactory; return function CustomLinearStepper_Factory(t) { return (ɵCustomLinearStepper_BaseFactory || (ɵCustomLinearStepper_BaseFactory = i0__namespace.ɵɵgetInheritedFactory(CustomLinearStepper)))(t || CustomLinearStepper); }; }();
     CustomLinearStepper.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: CustomLinearStepper, selectors: [["example-custom-linear-stepper"]], features: [i0__namespace.ɵɵProvidersFeature([{ provide: i1.CdkStepper, useExisting: CustomLinearStepper }]), i0__namespace.ɵɵInheritDefinitionFeature], decls: 11, vars: 4, consts: [[1, "example-container"], [3, "ngTemplateOutlet"], [1, "example-step-navigation-bar"], ["cdkStepperPrevious", "", 1, "example-nav-button"], ["class", "example-step", 3, "example-active", "click", 4, "ngFor", "ngForOf"], ["cdkStepperNext", "", 1, "example-nav-button"], [1, "example-step", 3, "click"]], template: function CustomLinearStepper_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "section", 0);
@@ -565,7 +564,6 @@
                 i0__namespace.ɵɵproperty("ngForOf", ctx.steps);
             }
         }, directives: [i2__namespace.NgTemplateOutlet, i1__namespace.CdkStepperPrevious, i2__namespace.NgForOf, i1__namespace.CdkStepperNext], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}"] });
-    var ɵCustomLinearStepper_BaseFactory = /*@__PURE__*/ i0__namespace.ɵɵgetInheritedFactory(CustomLinearStepper);
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CustomLinearStepper, [{
                 type: i0.Component,

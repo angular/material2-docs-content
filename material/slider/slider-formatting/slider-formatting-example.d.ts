@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class SliderFormattingExample {
     formatLabel(value: number): string | number;
-    static ɵfac: i0.ɵɵFactoryDef<SliderFormattingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SliderFormattingExample, "slider-formatting-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SliderFormattingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderFormattingExample, "slider-formatting-example", never, {}, {}, never, never>;
 }

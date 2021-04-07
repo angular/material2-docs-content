@@ -9,7 +9,7 @@ import * as i4 from "@angular/material/button";
 import * as i5 from "@angular/material/card";
 export { CardFancyExample, CardOverviewExample, CardHarnessExample, };
 export declare class CardExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<CardExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<CardExamplesModule, [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample], [typeof i4.MatButtonModule, typeof i5.MatCardModule], [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<CardExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CardExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CardExamplesModule, [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample], [typeof i4.MatButtonModule, typeof i5.MatCardModule], [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<CardExamplesModule>;
 }

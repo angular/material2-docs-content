@@ -7,10 +7,10 @@ export declare class DialogContentExample {
     dialog: MatDialog;
     constructor(dialog: MatDialog);
     openDialog(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DialogContentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DialogContentExample, "dialog-content-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DialogContentExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExample, "dialog-content-example", never, {}, {}, never, never>;
 }
 export declare class DialogContentExampleDialog {
-    static ɵfac: i0.ɵɵFactoryDef<DialogContentExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DialogContentExampleDialog, "dialog-content-example-dialog", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DialogContentExampleDialog, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExampleDialog, "dialog-content-example-dialog", never, {}, {}, never, never>;
 }

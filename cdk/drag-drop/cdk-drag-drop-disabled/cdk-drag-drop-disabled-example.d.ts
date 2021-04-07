@@ -9,6 +9,6 @@ export declare class CdkDragDropDisabledExample {
         disabled: boolean;
     }[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropDisabledExample, "cdk-drag-drop-disabled-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDisabledExample, "cdk-drag-drop-disabled-example", never, {}, {}, never, never>;
 }

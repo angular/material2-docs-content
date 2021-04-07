@@ -5,6 +5,6 @@ export declare class CdkVirtualScrollDlExample {
         name: string;
         capital: string;
     }[];
-    static ɵfac: i0.ɵɵFactoryDef<CdkVirtualScrollDlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkVirtualScrollDlExample, "cdk-virtual-scroll-dl-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollDlExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollDlExample, "cdk-virtual-scroll-dl-example", never, {}, {}, never, never>;
 }

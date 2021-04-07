@@ -11,6 +11,6 @@ export declare class StepperOptionalExample implements OnInit {
     isOptional: boolean;
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<StepperOptionalExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<StepperOptionalExample, "stepper-optional-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<StepperOptionalExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperOptionalExample, "stepper-optional-example", never, {}, {}, never, never>;
 }

@@ -6,6 +6,6 @@ import * as i0 from "@angular/core";
 export declare class CdkDragDropSortingExample {
     movies: string[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropSortingExample, "cdk-drag-drop-sorting-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropSortingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortingExample, "cdk-drag-drop-sorting-example", never, {}, {}, never, never>;
 }

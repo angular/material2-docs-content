@@ -9,6 +9,6 @@ export declare class SnackBarPositionExample {
     verticalPosition: MatSnackBarVerticalPosition;
     constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
-    static ɵfac: i0.ɵɵFactoryDef<SnackBarPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SnackBarPositionExample, "snack-bar-position-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarPositionExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarPositionExample, "snack-bar-position-example", never, {}, {}, never, never>;
 }

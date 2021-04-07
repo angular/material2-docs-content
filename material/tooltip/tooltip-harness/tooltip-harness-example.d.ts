@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class TooltipHarnessExample {
     message: string;
-    static ɵfac: i0.ɵɵFactoryDef<TooltipHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipHarnessExample, "tooltip-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipHarnessExample, "tooltip-harness-example", never, {}, {}, never, never>;
 }

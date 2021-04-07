@@ -8,10 +8,10 @@ export declare class SnackBarComponentExample {
     durationInSeconds: number;
     constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
-    static ɵfac: i0.ɵɵFactoryDef<SnackBarComponentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarComponentExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never>;
 }
 export declare class PizzaPartyComponent {
-    static ɵfac: i0.ɵɵFactoryDef<PizzaPartyComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PizzaPartyComponent, "snack-bar-component-example-snack", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PizzaPartyComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyComponent, "snack-bar-component-example-snack", never, {}, {}, never, never>;
 }

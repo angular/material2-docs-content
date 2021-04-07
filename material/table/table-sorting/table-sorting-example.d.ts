@@ -16,6 +16,6 @@ export declare class TableSortingExample implements AfterViewInit {
     dataSource: MatTableDataSource<PeriodicElement>;
     sort: MatSort;
     ngAfterViewInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TableSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableSortingExample, "table-sorting-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableSortingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never>;
 }

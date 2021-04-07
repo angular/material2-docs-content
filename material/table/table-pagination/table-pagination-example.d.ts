@@ -10,8 +10,8 @@ export declare class TablePaginationExample implements AfterViewInit {
     dataSource: MatTableDataSource<PeriodicElement>;
     paginator: MatPaginator;
     ngAfterViewInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TablePaginationExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never>;
 }
 export interface PeriodicElement {
     name: string;

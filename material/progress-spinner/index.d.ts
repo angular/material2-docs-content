@@ -13,7 +13,7 @@ import * as i8 from "@angular/material/slider";
 import * as i9 from "@angular/forms";
 export { ProgressSpinnerConfigurableExample, ProgressSpinnerHarnessExample, ProgressSpinnerOverviewExample, };
 export declare class ProgressSpinnerExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<ProgressSpinnerExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ProgressSpinnerExamplesModule, [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample], [typeof i4.CommonModule, typeof i5.MatCardModule, typeof i6.MatProgressSpinnerModule, typeof i7.MatRadioModule, typeof i8.MatSliderModule, typeof i9.FormsModule], [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<ProgressSpinnerExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ProgressSpinnerExamplesModule, [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample], [typeof i4.CommonModule, typeof i5.MatCardModule, typeof i6.MatProgressSpinnerModule, typeof i7.MatRadioModule, typeof i8.MatSliderModule, typeof i9.FormsModule], [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<ProgressSpinnerExamplesModule>;
 }

@@ -8,7 +8,7 @@ import * as i4 from "@angular/material/button";
 import * as i5 from "@angular/material/icon";
 export { CdkTreeFlatExample, CdkTreeNestedExample, };
 export declare class CdkTreeExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<CdkTreeExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkTreeExamplesModule, [typeof i1.CdkTreeFlatExample, typeof i2.CdkTreeNestedExample], [typeof i3.CdkTreeModule, typeof i4.MatButtonModule, typeof i5.MatIconModule], [typeof i1.CdkTreeFlatExample, typeof i2.CdkTreeNestedExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<CdkTreeExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkTreeExamplesModule, [typeof i1.CdkTreeFlatExample, typeof i2.CdkTreeNestedExample], [typeof i3.CdkTreeModule, typeof i4.MatButtonModule, typeof i5.MatIconModule], [typeof i1.CdkTreeFlatExample, typeof i2.CdkTreeNestedExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<CdkTreeExamplesModule>;
 }

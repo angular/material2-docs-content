@@ -20,6 +20,6 @@ export declare class SortHarnessExample {
         protein: number;
     }[];
     sortData(sort: Sort): void;
-    static ɵfac: i0.ɵɵFactoryDef<SortHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SortHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never>;
 }

@@ -8,7 +8,7 @@ interface Food {
  */
 export declare class SelectOverviewExample {
     foods: Food[];
-    static ɵfac: i0.ɵɵFactoryDef<SelectOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectOverviewExample, "select-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOverviewExample, "select-overview-example", never, {}, {}, never, never>;
 }
 export {};

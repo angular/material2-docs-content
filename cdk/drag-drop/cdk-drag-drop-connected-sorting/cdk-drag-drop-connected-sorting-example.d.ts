@@ -7,6 +7,6 @@ export declare class CdkDragDropConnectedSortingExample {
     todo: string[];
     done: string[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropConnectedSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropConnectedSortingExample, "cdk-drag-drop-connected-sorting-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropConnectedSortingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingExample, "cdk-drag-drop-connected-sorting-example", never, {}, {}, never, never>;
 }

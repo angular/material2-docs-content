@@ -21,7 +21,7 @@ export declare class DynamicDatabase {
     initialData(): DynamicFlatNode[];
     getChildren(node: string): string[] | undefined;
     isExpandable(node: string): boolean;
-    static ɵfac: i0.ɵɵFactoryDef<DynamicDatabase, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DynamicDatabase, never>;
     static ɵprov: i0.ɵɵInjectableDef<DynamicDatabase>;
 }
 /**
@@ -57,6 +57,6 @@ export declare class TreeDynamicExample {
     getLevel: (node: DynamicFlatNode) => number;
     isExpandable: (node: DynamicFlatNode) => boolean;
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
-    static ɵfac: i0.ɵɵFactoryDef<TreeDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never>;
 }

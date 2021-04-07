@@ -7,8 +7,8 @@ import { Subject } from 'rxjs';
 import * as i0 from "@angular/core";
 /** @title Form field with custom telephone number input control. */
 export declare class MdcFormFieldCustomControlExample {
-    static ɵfac: i0.ɵɵFactoryDef<MdcFormFieldCustomControlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<MdcFormFieldCustomControlExample, "mdc-form-field-custom-control-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdcFormFieldCustomControlExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MdcFormFieldCustomControlExample, "mdc-form-field-custom-control-example", never, {}, {}, never, never>;
 }
 /** Data structure for holding telephone number. */
 export declare class MyTel {
@@ -57,6 +57,6 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     _handleInput(): void;
     static ngAcceptInputType_disabled: BooleanInput;
     static ngAcceptInputType_required: BooleanInput;
-    static ɵfac: i0.ɵɵFactoryDef<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
 }

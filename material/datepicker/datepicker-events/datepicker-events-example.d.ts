@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
 export declare class DatepickerEventsExample {
     events: string[];
     addEvent(type: string, event: MatDatepickerInputEvent<Date>): void;
-    static ɵfac: i0.ɵɵFactoryDef<DatepickerEventsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DatepickerEventsExample, "datepicker-events-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerEventsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerEventsExample, "datepicker-events-example", never, {}, {}, never, never>;
 }

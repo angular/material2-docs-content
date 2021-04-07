@@ -8,6 +8,6 @@ export declare class ProgressSpinnerConfigurableExample {
     color: ThemePalette;
     mode: ProgressSpinnerMode;
     value: number;
-    static ɵfac: i0.ɵɵFactoryDef<ProgressSpinnerConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ProgressSpinnerConfigurableExample, "progress-spinner-configurable-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerConfigurableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerConfigurableExample, "progress-spinner-configurable-example", never, {}, {}, never, never>;
 }

@@ -18,7 +18,7 @@ export declare class SelectReactiveFormExample {
     foodControl: FormControl;
     carControl: FormControl;
     constructor();
-    static ɵfac: i0.ɵɵFactoryDef<SelectReactiveFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectReactiveFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never>;
 }
 export {};

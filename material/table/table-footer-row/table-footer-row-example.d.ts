@@ -11,6 +11,6 @@ export declare class TableFooterRowExample {
     transactions: Transaction[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
-    static ɵfac: i0.ɵɵFactoryDef<TableFooterRowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableFooterRowExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never>;
 }

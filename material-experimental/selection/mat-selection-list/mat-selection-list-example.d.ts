@@ -16,6 +16,6 @@ export declare class MatSelectionListExample implements OnDestroy {
     trackByFn(index: number, value: string): number;
     changeElementName(): void;
     reset(): void;
-    static ɵfac: i0.ɵɵFactoryDef<MatSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<MatSelectionListExample, "mat-selection-list-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionListExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionListExample, "mat-selection-list-example", never, {}, {}, never, never>;
 }

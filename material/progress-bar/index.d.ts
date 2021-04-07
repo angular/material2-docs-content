@@ -19,7 +19,7 @@ import * as i11 from "@angular/material/slider";
 import * as i12 from "@angular/forms";
 export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarHarnessExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, };
 export declare class ProgressBarExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<ProgressBarExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ProgressBarExamplesModule, [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample], [typeof i7.CommonModule, typeof i8.MatCardModule, typeof i9.MatProgressBarModule, typeof i10.MatRadioModule, typeof i11.MatSliderModule, typeof i12.FormsModule], [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<ProgressBarExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ProgressBarExamplesModule, [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample], [typeof i7.CommonModule, typeof i8.MatCardModule, typeof i9.MatProgressBarModule, typeof i10.MatRadioModule, typeof i11.MatSliderModule, typeof i12.FormsModule], [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<ProgressBarExamplesModule>;
 }

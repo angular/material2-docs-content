@@ -7,6 +7,6 @@ export declare class ExpansionStepsExample {
     setStep(index: number): void;
     nextStep(): void;
     prevStep(): void;
-    static ɵfac: i0.ɵɵFactoryDef<ExpansionStepsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ExpansionStepsExample, "expansion-steps-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ExpansionStepsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ExpansionStepsExample, "expansion-steps-example", never, {}, {}, never, never>;
 }

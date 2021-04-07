@@ -7,11 +7,11 @@ export declare class FiveDayRangeSelectionStrategy<D> implements MatDateRangeSel
     selectionFinished(date: D | null): DateRange<D>;
     createPreview(activeDate: D | null): DateRange<D>;
     private _createFiveDayRange;
-    static ɵfac: i0.ɵɵFactoryDef<FiveDayRangeSelectionStrategy<any>, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FiveDayRangeSelectionStrategy<any>, never>;
     static ɵprov: i0.ɵɵInjectableDef<FiveDayRangeSelectionStrategy<any>>;
 }
 /** @title Date range picker with custom a selection strategy */
 export declare class DateRangePickerSelectionStrategyExample {
-    static ɵfac: i0.ɵɵFactoryDef<DateRangePickerSelectionStrategyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DateRangePickerSelectionStrategyExample, "date-range-picker-selection-strategy-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DateRangePickerSelectionStrategyExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerSelectionStrategyExample, "date-range-picker-selection-strategy-example", never, {}, {}, never, never>;
 }

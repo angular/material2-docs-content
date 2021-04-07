@@ -11,6 +11,6 @@ export declare class SelectErrorStateMatcherExample {
     selectFormControl: FormControl;
     nativeSelectFormControl: FormControl;
     matcher: MyErrorStateMatcher;
-    static ɵfac: i0.ɵɵFactoryDef<SelectErrorStateMatcherExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectErrorStateMatcherExample, "select-error-state-matcher-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectErrorStateMatcherExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectErrorStateMatcherExample, "select-error-state-matcher-example", never, {}, {}, never, never>;
 }

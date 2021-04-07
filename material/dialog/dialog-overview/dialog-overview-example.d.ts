@@ -13,14 +13,14 @@ export declare class DialogOverviewExample {
     name: string;
     constructor(dialog: MatDialog);
     openDialog(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DialogOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never>;
 }
 export declare class DialogOverviewExampleDialog {
     dialogRef: MatDialogRef<DialogOverviewExampleDialog>;
     data: DialogData;
     constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: DialogData);
     onNoClick(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DialogOverviewExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExampleDialog, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never>;
 }

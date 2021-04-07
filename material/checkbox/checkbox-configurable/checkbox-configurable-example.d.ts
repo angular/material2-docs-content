@@ -7,6 +7,6 @@ export declare class CheckboxConfigurableExample {
     indeterminate: boolean;
     labelPosition: 'before' | 'after';
     disabled: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<CheckboxConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxConfigurableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never, never>;
 }

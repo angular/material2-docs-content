@@ -6,6 +6,6 @@ import * as i0 from "@angular/core";
 export declare class SlideToggleHarnessExample {
     disabled: boolean;
     ctrl: FormControl;
-    static ɵfac: i0.ɵɵFactoryDef<SlideToggleHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never>;
 }

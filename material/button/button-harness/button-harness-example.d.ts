@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class ButtonHarnessExample {
     clicked: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<ButtonHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never>;
 }

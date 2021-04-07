@@ -15,6 +15,6 @@ export declare class CdkPopoverEditTabOutVanillaTableExample {
     readonly elements: PeriodicElement[];
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkPopoverEditTabOutVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditTabOutVanillaTableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never, never>;
 }

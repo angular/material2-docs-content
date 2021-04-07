@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
  */
 export declare class TooltipDisabledExample {
     disabled: FormControl;
-    static ɵfac: i0.ɵɵFactoryDef<TooltipDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipDisabledExample, "tooltip-disabled-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDisabledExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDisabledExample, "tooltip-disabled-example", never, {}, {}, never, never>;
 }

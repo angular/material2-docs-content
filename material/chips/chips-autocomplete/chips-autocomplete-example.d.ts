@@ -23,6 +23,6 @@ export declare class ChipsAutocompleteExample {
     remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
     private _filter;
-    static ɵfac: i0.ɵɵFactoryDef<ChipsAutocompleteExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAutocompleteExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never>;
 }

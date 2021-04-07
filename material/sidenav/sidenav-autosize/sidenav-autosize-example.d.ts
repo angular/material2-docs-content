@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class SidenavAutosizeExample {
     showFiller: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<SidenavAutosizeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SidenavAutosizeExample, "sidenav-autosize-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SidenavAutosizeExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavAutosizeExample, "sidenav-autosize-example", never, {}, {}, never, never>;
 }

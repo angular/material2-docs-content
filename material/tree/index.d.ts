@@ -20,7 +20,7 @@ import * as i12 from "@angular/material/progress-bar";
 import * as i13 from "@angular/material/tree";
 export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeHarnessExample, TreeLoadmoreExample, TreeNestedOverviewExample, };
 export declare class TreeExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<TreeExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample], [typeof i7.CommonModule, typeof i8.MatButtonModule, typeof i9.MatCheckboxModule, typeof i10.MatIconModule, typeof i11.MatInputModule, typeof i12.MatProgressBarModule, typeof i13.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<TreeExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample], [typeof i7.CommonModule, typeof i8.MatButtonModule, typeof i9.MatCheckboxModule, typeof i10.MatIconModule, typeof i11.MatInputModule, typeof i12.MatProgressBarModule, typeof i13.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<TreeExamplesModule>;
 }

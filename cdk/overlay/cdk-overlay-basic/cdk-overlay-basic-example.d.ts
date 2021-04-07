@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class CdkOverlayBasicExample {
     isOpen: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<CdkOverlayBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkOverlayBasicExample, "cdk-overlay-basic-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkOverlayBasicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkOverlayBasicExample, "cdk-overlay-basic-example", never, {}, {}, never, never>;
 }

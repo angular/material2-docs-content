@@ -7,6 +7,6 @@ export declare class SelectHarnessExample {
         value: string;
         viewValue: string;
     }[];
-    static ɵfac: i0.ɵɵFactoryDef<SelectHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never>;
 }

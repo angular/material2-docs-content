@@ -13,8 +13,8 @@ export interface PeriodicElement {
 export declare class CdkTableRecycleRowsExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
-    static ɵfac: i0.ɵɵFactoryDef<CdkTableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTableRecycleRowsExample, "cdk-table-recycle-rows-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableRecycleRowsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableRecycleRowsExample, "cdk-table-recycle-rows-example", never, {}, {}, never, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

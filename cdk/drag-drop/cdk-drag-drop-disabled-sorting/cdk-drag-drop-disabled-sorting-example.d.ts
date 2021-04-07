@@ -7,6 +7,6 @@ export declare class CdkDragDropDisabledSortingExample {
     items: string[];
     basket: string[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropDisabledSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropDisabledSortingExample, "cdk-drag-drop-disabled-sorting-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropDisabledSortingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDisabledSortingExample, "cdk-drag-drop-disabled-sorting-example", never, {}, {}, never, never>;
 }

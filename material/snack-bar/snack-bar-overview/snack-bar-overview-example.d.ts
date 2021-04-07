@@ -7,6 +7,6 @@ export declare class SnackBarOverviewExample {
     private _snackBar;
     constructor(_snackBar: MatSnackBar);
     openSnackBar(message: string, action: string): void;
-    static ɵfac: i0.ɵɵFactoryDef<SnackBarOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never>;
 }

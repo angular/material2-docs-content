@@ -11,6 +11,6 @@ export declare class CdkDragDropEnterPredicateExample {
     evenPredicate(item: CdkDrag<number>): boolean;
     /** Predicate function that doesn't allow items to be dropped into a list. */
     noReturnPredicate(): boolean;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropEnterPredicateExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropEnterPredicateExample, "cdk-drag-drop-enter-predicate-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropEnterPredicateExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropEnterPredicateExample, "cdk-drag-drop-enter-predicate-example", never, {}, {}, never, never>;
 }

@@ -20,6 +20,6 @@ export declare class TableOverviewExample implements AfterViewInit {
     constructor();
     ngAfterViewInit(): void;
     applyFilter(event: Event): void;
-    static ɵfac: i0.ɵɵFactoryDef<TableOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableOverviewExample, "table-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableOverviewExample, "table-overview-example", never, {}, {}, never, never>;
 }

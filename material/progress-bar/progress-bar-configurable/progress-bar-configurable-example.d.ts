@@ -9,6 +9,6 @@ export declare class ProgressBarConfigurableExample {
     mode: ProgressBarMode;
     value: number;
     bufferValue: number;
-    static ɵfac: i0.ɵɵFactoryDef<ProgressBarConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ProgressBarConfigurableExample, "progress-bar-configurable-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarConfigurableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressBarConfigurableExample, "progress-bar-configurable-example", never, {}, {}, never, never>;
 }

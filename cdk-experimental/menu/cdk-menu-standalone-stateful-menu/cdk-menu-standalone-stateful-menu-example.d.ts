@@ -6,6 +6,6 @@ export declare class CdkMenuStandaloneStatefulMenuExample {
     italic: boolean;
     size: string | undefined;
     onSizeChange(item: CdkMenuItem): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkMenuStandaloneStatefulMenuExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkMenuStandaloneStatefulMenuExample, "cdk-menu-standalone-stateful-menu-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuStandaloneStatefulMenuExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuStandaloneStatefulMenuExample, "cdk-menu-standalone-stateful-menu-example", never, {}, {}, never, never>;
 }

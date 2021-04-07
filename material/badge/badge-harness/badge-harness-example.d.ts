@@ -6,6 +6,6 @@ export declare class BadgeHarnessExample {
     simpleContent: string;
     overlap: boolean;
     disabled: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<BadgeHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<BadgeHarnessExample, "badge-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BadgeHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BadgeHarnessExample, "badge-harness-example", never, {}, {}, never, never>;
 }

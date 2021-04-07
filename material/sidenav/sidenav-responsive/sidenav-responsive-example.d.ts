@@ -10,6 +10,6 @@ export declare class SidenavResponsiveExample implements OnDestroy {
     constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher);
     ngOnDestroy(): void;
     shouldRun: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<SidenavResponsiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SidenavResponsiveExample, "sidenav-responsive-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SidenavResponsiveExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavResponsiveExample, "sidenav-responsive-example", never, {}, {}, never, never>;
 }

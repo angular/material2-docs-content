@@ -10,6 +10,6 @@ export declare class FocusMonitorDirectivesExample {
     constructor(_ngZone: NgZone, _cdr: ChangeDetectorRef);
     formatOrigin(origin: FocusOrigin): string;
     markForCheck(): void;
-    static ɵfac: i0.ɵɵFactoryDef<FocusMonitorDirectivesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorDirectivesExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never, never>;
 }

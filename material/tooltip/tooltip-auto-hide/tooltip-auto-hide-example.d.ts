@@ -7,6 +7,6 @@ import * as i0 from "@angular/core";
 export declare class TooltipAutoHideExample {
     positionOptions: TooltipPosition[];
     position: FormControl;
-    static ɵfac: i0.ɵɵFactoryDef<TooltipAutoHideExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipAutoHideExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never>;
 }

@@ -12,6 +12,6 @@ export declare class CdkDragDropCustomPreviewExample {
         title: string;
         poster: string;
     }[]>): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropCustomPreviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropCustomPreviewExample, "cdk-drag-drop-custom-preview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropCustomPreviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropCustomPreviewExample, "cdk-drag-drop-custom-preview-example", never, {}, {}, never, never>;
 }

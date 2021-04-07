@@ -5,6 +5,6 @@ export declare class SidenavFixedExample {
     options: FormGroup;
     constructor(fb: FormBuilder);
     shouldRun: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<SidenavFixedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SidenavFixedExample, "sidenav-fixed-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SidenavFixedExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavFixedExample, "sidenav-fixed-example", never, {}, {}, never, never>;
 }

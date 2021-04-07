@@ -11,6 +11,6 @@ export interface PeriodicElement {
 export declare class TableBasicExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<TableBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableBasicExample, "table-basic-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableBasicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never>;
 }

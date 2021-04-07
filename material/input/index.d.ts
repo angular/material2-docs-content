@@ -22,7 +22,7 @@ import * as i12 from "@angular/material/input";
 import * as i13 from "@angular/forms";
 export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, };
 export declare class InputExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<InputExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<InputExamplesModule, [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample], [typeof i9.CommonModule, typeof i10.MatButtonModule, typeof i11.MatIconModule, typeof i12.MatInputModule, typeof i13.FormsModule, typeof i13.ReactiveFormsModule], [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<InputExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<InputExamplesModule, [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample], [typeof i9.CommonModule, typeof i10.MatButtonModule, typeof i11.MatIconModule, typeof i12.MatInputModule, typeof i13.FormsModule, typeof i13.ReactiveFormsModule], [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<InputExamplesModule>;
 }

@@ -18,6 +18,6 @@ export declare class AutocompleteOptgroupExample implements OnInit {
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
     private _filterGroup;
-    static ɵfac: i0.ɵɵFactoryDef<AutocompleteOptgroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompleteOptgroupExample, "autocomplete-optgroup-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteOptgroupExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteOptgroupExample, "autocomplete-optgroup-example", never, {}, {}, never, never>;
 }

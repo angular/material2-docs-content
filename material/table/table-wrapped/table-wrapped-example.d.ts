@@ -19,8 +19,8 @@ export declare class TableWrappedExample implements AfterViewInit {
     ngAfterViewInit(): void;
     clearTable(): void;
     addData(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TableWrappedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableWrappedExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never>;
 }
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
@@ -35,6 +35,6 @@ export declare class WrapperTable<T> implements AfterContentInit {
     columns: string[];
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"]>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"]>;
 }

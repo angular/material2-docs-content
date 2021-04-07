@@ -11,6 +11,6 @@ export declare class StepperVerticalExample implements OnInit {
     secondFormGroup: FormGroup;
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<StepperVerticalExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<StepperVerticalExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never>;
 }

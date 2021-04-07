@@ -8,8 +8,8 @@ import * as i0 from "@angular/core";
 /** @title Form field with custom telephone number input control. */
 export declare class FormFieldCustomControlExample {
     form: FormGroup;
-    static ɵfac: i0.ɵɵFactoryDef<FormFieldCustomControlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldCustomControlExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never>;
 }
 /** Data structure for holding telephone number. */
 export declare class MyTel {
@@ -63,6 +63,6 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
     static ngAcceptInputType_disabled: BooleanInput;
     static ngAcceptInputType_required: BooleanInput;
-    static ɵfac: i0.ɵɵFactoryDef<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
 }

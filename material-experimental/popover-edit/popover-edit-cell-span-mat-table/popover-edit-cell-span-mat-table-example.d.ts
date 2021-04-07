@@ -16,8 +16,8 @@ export declare class PopoverEditCellSpanMatTableExample {
     dataSource: ExampleDataSource;
     readonly preservedValues: WeakMap<Person, any>;
     onSubmit(person: Person, f: NgForm): void;
-    static ɵfac: i0.ɵɵFactoryDef<PopoverEditCellSpanMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditCellSpanMatTableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

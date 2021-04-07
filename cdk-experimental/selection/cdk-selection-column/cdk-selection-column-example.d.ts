@@ -11,8 +11,8 @@ export declare class CdkSelectionColumnExample implements OnDestroy {
     selected: string[];
     ngOnDestroy(): void;
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionColumnExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never>;
 }
 interface PeriodicElement {
     name: string;

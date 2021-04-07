@@ -9,6 +9,6 @@ export interface ChipColor {
  */
 export declare class ChipsStackedExample {
     availableColors: ChipColor[];
-    static ɵfac: i0.ɵɵFactoryDef<ChipsStackedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsStackedExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never, never>;
 }

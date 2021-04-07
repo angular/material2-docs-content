@@ -35,8 +35,8 @@ export declare class PopoverEditMatTableExample {
     onSubmitFantasyCounterparts(element: PeriodicElement, f: NgForm): void;
     goodJob(element: PeriodicElement): void;
     badJob(element: PeriodicElement): void;
-    static ɵfac: i0.ɵɵFactoryDef<PopoverEditMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditMatTableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

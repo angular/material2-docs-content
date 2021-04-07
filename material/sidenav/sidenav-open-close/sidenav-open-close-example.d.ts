@@ -4,6 +4,6 @@ export declare class SidenavOpenCloseExample {
     events: string[];
     opened: boolean;
     shouldRun: boolean;
-    static ɵfac: i0.ɵɵFactoryDef<SidenavOpenCloseExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SidenavOpenCloseExample, "sidenav-open-close-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SidenavOpenCloseExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavOpenCloseExample, "sidenav-open-close-example", never, {}, {}, never, never>;
 }

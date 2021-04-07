@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class InputClearableExample {
     value: string;
-    static ɵfac: i0.ɵɵFactoryDef<InputClearableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<InputClearableExample, "input-clearable-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputClearableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputClearableExample, "input-clearable-example", never, {}, {}, never, never>;
 }

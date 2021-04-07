@@ -12,7 +12,7 @@ import * as i7 from "@angular/material/radio";
 import * as i8 from "@angular/forms";
 export { CheckboxConfigurableExample, CheckboxOverviewExample, CheckboxHarnessExample, };
 export declare class CheckboxExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<CheckboxExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<CheckboxExamplesModule, [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample], [typeof i4.CommonModule, typeof i5.MatCardModule, typeof i6.MatCheckboxModule, typeof i7.MatRadioModule, typeof i8.FormsModule], [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<CheckboxExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CheckboxExamplesModule, [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample], [typeof i4.CommonModule, typeof i5.MatCardModule, typeof i6.MatCheckboxModule, typeof i7.MatRadioModule, typeof i8.FormsModule], [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<CheckboxExamplesModule>;
 }

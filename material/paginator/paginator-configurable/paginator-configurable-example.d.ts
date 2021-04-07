@@ -9,6 +9,6 @@ export declare class PaginatorConfigurableExample {
     pageSizeOptions: number[];
     pageEvent: PageEvent;
     setPageSizeOptions(setPageSizeOptionsInput: string): void;
-    static ɵfac: i0.ɵɵFactoryDef<PaginatorConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PaginatorConfigurableExample, "paginator-configurable-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorConfigurableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorConfigurableExample, "paginator-configurable-example", never, {}, {}, never, never>;
 }

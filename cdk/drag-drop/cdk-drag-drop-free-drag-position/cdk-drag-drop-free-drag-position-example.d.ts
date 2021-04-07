@@ -8,6 +8,6 @@ export declare class CdkDragDropFreeDragPositionExample {
         y: number;
     };
     changePosition(): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropFreeDragPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropFreeDragPositionExample, "cdk-drag-drop-free-drag-position-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropFreeDragPositionExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropFreeDragPositionExample, "cdk-drag-drop-free-drag-position-example", never, {}, {}, never, never>;
 }

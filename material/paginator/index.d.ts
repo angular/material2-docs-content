@@ -11,7 +11,7 @@ import * as i6 from "@angular/material/paginator";
 import * as i7 from "@angular/forms";
 export { PaginatorConfigurableExample, PaginatorHarnessExample, PaginatorOverviewExample, };
 export declare class PaginatorExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<PaginatorExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PaginatorExamplesModule, [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample], [typeof i4.CommonModule, typeof i5.MatInputModule, typeof i6.MatPaginatorModule, typeof i7.FormsModule], [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<PaginatorExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<PaginatorExamplesModule, [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample], [typeof i4.CommonModule, typeof i5.MatInputModule, typeof i6.MatPaginatorModule, typeof i7.FormsModule], [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<PaginatorExamplesModule>;
 }

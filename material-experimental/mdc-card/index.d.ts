@@ -5,7 +5,7 @@ import * as i2 from "@angular/material-experimental/mdc-button";
 import * as i3 from "@angular/material-experimental/mdc-card";
 export { MdcCardFancyExample, };
 export declare class MdcCardExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<MdcCardExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<MdcCardExamplesModule, [typeof i1.MdcCardFancyExample], [typeof i2.MatButtonModule, typeof i3.MatCardModule], [typeof i1.MdcCardFancyExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<MdcCardExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdcCardExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<MdcCardExamplesModule, [typeof i1.MdcCardFancyExample], [typeof i2.MatButtonModule, typeof i3.MatCardModule], [typeof i1.MdcCardFancyExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<MdcCardExamplesModule>;
 }

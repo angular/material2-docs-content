@@ -10,6 +10,6 @@ export declare class PaginatorHarnessExample {
     pageSizeOptions: number[];
     showFirstLastButtons: boolean;
     handlePageEvent(event: PageEvent): void;
-    static ɵfac: i0.ɵɵFactoryDef<PaginatorHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<PaginatorHarnessExample, "paginator-harness-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorHarnessExample, "paginator-harness-example", never, {}, {}, never, never>;
 }

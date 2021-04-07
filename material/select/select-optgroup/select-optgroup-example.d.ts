@@ -13,7 +13,7 @@ interface PokemonGroup {
 export declare class SelectOptgroupExample {
     pokemonControl: FormControl;
     pokemonGroups: PokemonGroup[];
-    static ɵfac: i0.ɵɵFactoryDef<SelectOptgroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never>;
 }
 export {};

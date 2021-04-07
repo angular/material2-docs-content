@@ -3,6 +3,6 @@ import * as i0 from "@angular/core";
  * @title Basic buttons
  */
 export declare class ButtonOverviewExample {
-    static ɵfac: i0.ɵɵFactoryDef<ButtonOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never>;
 }

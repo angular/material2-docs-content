@@ -4,8 +4,8 @@ import * as i0 from "@angular/core";
 /** @title Virtual scroll with a custom data source */
 export declare class CdkVirtualScrollDataSourceExample {
     ds: MyDataSource;
-    static ɵfac: i0.ɵɵFactoryDef<CdkVirtualScrollDataSourceExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkVirtualScrollDataSourceExample, "cdk-virtual-scroll-data-source-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollDataSourceExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollDataSourceExample, "cdk-virtual-scroll-data-source-example", never, {}, {}, never, never>;
 }
 export declare class MyDataSource extends DataSource<string | undefined> {
     private _length;

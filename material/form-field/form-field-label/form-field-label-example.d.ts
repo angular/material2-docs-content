@@ -6,6 +6,6 @@ export declare class FormFieldLabelExample {
     hideRequiredControl: FormControl;
     floatLabelControl: FormControl;
     constructor(fb: FormBuilder);
-    static ɵfac: i0.ɵɵFactoryDef<FormFieldLabelExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldLabelExample, "form-field-label-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldLabelExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldLabelExample, "form-field-label-example", never, {}, {}, never, never>;
 }

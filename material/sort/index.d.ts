@@ -7,7 +7,7 @@ import * as i3 from "@angular/common";
 import * as i4 from "@angular/material/sort";
 export { SortHarnessExample, SortOverviewExample };
 export declare class SortExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDef<SortExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<SortExamplesModule, [typeof i1.SortHarnessExample, typeof i2.SortOverviewExample], [typeof i3.CommonModule, typeof i4.MatSortModule], [typeof i1.SortHarnessExample, typeof i2.SortOverviewExample]>;
-    static ɵinj: i0.ɵɵInjectorDef<SortExamplesModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SortExamplesModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SortExamplesModule, [typeof i1.SortHarnessExample, typeof i2.SortOverviewExample], [typeof i3.CommonModule, typeof i4.MatSortModule], [typeof i1.SortHarnessExample, typeof i2.SortOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<SortExamplesModule>;
 }

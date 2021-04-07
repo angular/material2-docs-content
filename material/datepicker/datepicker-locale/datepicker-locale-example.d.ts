@@ -5,6 +5,6 @@ export declare class DatepickerLocaleExample {
     private _adapter;
     constructor(_adapter: DateAdapter<any>);
     french(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DatepickerLocaleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DatepickerLocaleExample, "datepicker-locale-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerLocaleExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerLocaleExample, "datepicker-locale-example", never, {}, {}, never, never>;
 }

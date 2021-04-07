@@ -6,6 +6,6 @@ import * as i0 from "@angular/core";
 export declare class TooltipDelayExample {
     showDelay: FormControl;
     hideDelay: FormControl;
-    static ɵfac: i0.ɵɵFactoryDef<TooltipDelayExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipDelayExample, "tooltip-delay-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDelayExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDelayExample, "tooltip-delay-example", never, {}, {}, never, never>;
 }

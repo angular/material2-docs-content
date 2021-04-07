@@ -16,7 +16,7 @@ export declare class SelectInitialValueExample {
     selectedFood: string;
     selectedCar: string;
     selectCar(event: Event): void;
-    static ɵfac: i0.ɵɵFactoryDef<SelectInitialValueExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectInitialValueExample, "select-initial-value-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectInitialValueExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectInitialValueExample, "select-initial-value-example", never, {}, {}, never, never>;
 }
 export {};

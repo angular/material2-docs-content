@@ -16,6 +16,6 @@ export declare class CdkSelectionListExample implements OnDestroy {
     trackByFn(index: number, value: string): number;
     changeElementName(): void;
     reset(): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionListExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never>;
 }

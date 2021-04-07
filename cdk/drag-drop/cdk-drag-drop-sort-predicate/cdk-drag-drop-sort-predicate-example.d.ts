@@ -11,6 +11,6 @@ export declare class CdkDragDropSortPredicateExample {
      * sorted into even indices and odd numbers at odd indices.
      */
     sortPredicate(index: number, item: CdkDrag<number>): boolean;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropSortPredicateExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropSortPredicateExample, "cdk-drag-drop-sort-predicate-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropSortPredicateExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortPredicateExample, "cdk-drag-drop-sort-predicate-example", never, {}, {}, never, never>;
 }

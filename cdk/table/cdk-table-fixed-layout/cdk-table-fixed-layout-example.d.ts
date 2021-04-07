@@ -13,8 +13,8 @@ export interface PeriodicElement {
 export declare class CdkTableFixedLayoutExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
-    static ɵfac: i0.ɵɵFactoryDef<CdkTableFixedLayoutExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableFixedLayoutExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

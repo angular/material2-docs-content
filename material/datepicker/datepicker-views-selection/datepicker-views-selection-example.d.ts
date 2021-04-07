@@ -18,6 +18,6 @@ export declare class DatepickerViewsSelectionExample {
     date: FormControl;
     chosenYearHandler(normalizedYear: Moment): void;
     chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<Moment>): void;
-    static ɵfac: i0.ɵɵFactoryDef<DatepickerViewsSelectionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerViewsSelectionExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never, never>;
 }
