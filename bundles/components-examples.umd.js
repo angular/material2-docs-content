@@ -4211,6 +4211,23 @@
                 "importSpecifier": "material/stepper"
             }
         },
+        "stepper-responsive": {
+            "packagePath": "material/stepper/stepper-responsive",
+            "title": "Stepper responsive",
+            "componentName": "StepperResponsiveExample",
+            "files": [
+                "stepper-responsive-example.ts",
+                "stepper-responsive-example.html",
+                "stepper-responsive-example.css"
+            ],
+            "selector": "stepper-responsive-example",
+            "additionalComponents": [],
+            "primaryFile": "stepper-responsive-example.ts",
+            "module": {
+                "name": "StepperExamplesModule",
+                "importSpecifier": "material/stepper"
+            }
+        },
         "stepper-states": {
             "packagePath": "material/stepper/stepper-states",
             "title": "Stepper with customized states",

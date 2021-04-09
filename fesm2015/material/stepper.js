@@ -2,6 +2,8 @@ import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import * as i1 from '@angular/forms';
 import { Validators, ReactiveFormsModule } from '@angular/forms';
+import * as i3$1 from '@angular/common';
+import { CommonModule } from '@angular/common';
 import * as i2 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i6 from '@angular/material/icon';
@@ -12,6 +14,8 @@ import * as i3 from '@angular/material/stepper';
 import { MatStepperModule } from '@angular/material/stepper';
 import * as i4 from '@angular/material/form-field';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import * as i2$1 from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
 
 function StepperEditableExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtext(0, "Fill out your name");
@@ -904,6 +908,140 @@ StepperLazyContentExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
             }]
     }], null, null); })();
 
+function StepperResponsiveExample_div_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtext(1, "Make your screen smaller to see a vertical stepper");
+    i0.ɵɵelementEnd();
+} }
+function StepperResponsiveExample_div_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div");
+    i0.ɵɵtext(1, "Make your screen larger to see a horizontal stepper");
+    i0.ɵɵelementEnd();
+} }
+function StepperResponsiveExample_ng_template_38_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵtext(0, "Done");
+} }
+/**
+ * @title Stepper responsive
+ */
+class StepperResponsiveExample {
+    constructor(_formBuilder, breakpointObserver) {
+        this._formBuilder = _formBuilder;
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', Validators.required]
+        });
+        this.thirdFormGroup = this._formBuilder.group({
+            thirdCtrl: ['', Validators.required]
+        });
+        this.stepperOrientation = breakpointObserver.observe('(min-width: 800px)')
+            .pipe(map(({ matches }) => matches ? 'horizontal' : 'vertical'));
+    }
+}
+StepperResponsiveExample.ɵfac = function StepperResponsiveExample_Factory(t) { return new (t || StepperResponsiveExample)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i2$1.BreakpointObserver)); };
+StepperResponsiveExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: StepperResponsiveExample, selectors: [["stepper-responsive-example"]], decls: 44, vars: 14, consts: [[3, "ngSwitch"], [4, "ngSwitchCase"], [1, "example-stepper", 3, "orientation"], ["label", "Fill out your name", 3, "stepControl"], [3, "formGroup"], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["label", "Fill out your address", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["label", "Fill out your phone number", 3, "stepControl"], ["matInput", "", "formControlName", "thirdCtrl", "placeholder", "Ex. 12345678", "required", ""], ["matStepLabel", ""]], template: function StepperResponsiveExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementContainerStart(0, 0);
+        i0.ɵɵpipe(1, "async");
+        i0.ɵɵtemplate(2, StepperResponsiveExample_div_2_Template, 2, 0, "div", 1);
+        i0.ɵɵtemplate(3, StepperResponsiveExample_div_3_Template, 2, 0, "div", 1);
+        i0.ɵɵelementContainerEnd();
+        i0.ɵɵelementStart(4, "mat-stepper", 2);
+        i0.ɵɵpipe(5, "async");
+        i0.ɵɵelementStart(6, "mat-step", 3);
+        i0.ɵɵelementStart(7, "form", 4);
+        i0.ɵɵelementStart(8, "mat-form-field");
+        i0.ɵɵelementStart(9, "mat-label");
+        i0.ɵɵtext(10, "Name");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(11, "input", 5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "div");
+        i0.ɵɵelementStart(13, "button", 6);
+        i0.ɵɵtext(14, "Next");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(15, "mat-step", 7);
+        i0.ɵɵelementStart(16, "form", 4);
+        i0.ɵɵelementStart(17, "mat-form-field");
+        i0.ɵɵelementStart(18, "mat-label");
+        i0.ɵɵtext(19, "Address");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(20, "input", 8);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(21, "div");
+        i0.ɵɵelementStart(22, "button", 9);
+        i0.ɵɵtext(23, "Back");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(24, "button", 6);
+        i0.ɵɵtext(25, "Next");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(26, "mat-step", 10);
+        i0.ɵɵelementStart(27, "form", 4);
+        i0.ɵɵelementStart(28, "mat-form-field");
+        i0.ɵɵelementStart(29, "mat-label");
+        i0.ɵɵtext(30, "Phone number");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(31, "input", 11);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(32, "div");
+        i0.ɵɵelementStart(33, "button", 9);
+        i0.ɵɵtext(34, "Back");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(35, "button", 6);
+        i0.ɵɵtext(36, "Next");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(37, "mat-step");
+        i0.ɵɵtemplate(38, StepperResponsiveExample_ng_template_38_Template, 1, 0, "ng-template", 12);
+        i0.ɵɵelementStart(39, "p");
+        i0.ɵɵtext(40, "You are now done.");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(41, "div");
+        i0.ɵɵelementStart(42, "button", 9);
+        i0.ɵɵtext(43, "Back");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("ngSwitch", i0.ɵɵpipeBind1(1, 10, ctx.stepperOrientation));
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngSwitchCase", "horizontal");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngSwitchCase", "vertical");
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("orientation", i0.ɵɵpipeBind1(5, 12, ctx.stepperOrientation));
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("stepControl", ctx.firstFormGroup);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("formGroup", ctx.firstFormGroup);
+        i0.ɵɵadvance(8);
+        i0.ɵɵproperty("stepControl", ctx.secondFormGroup);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
+        i0.ɵɵadvance(10);
+        i0.ɵɵproperty("stepControl", ctx.thirdFormGroup);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("formGroup", ctx.thirdFormGroup);
+    } }, directives: [i3$1.NgSwitch, i3$1.NgSwitchCase, i3.MatStepper, i3.MatStep, i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.FormGroupDirective, i4.MatFormField, i4.MatLabel, i5.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i2.MatButton, i3.MatStepperNext, i3.MatStepperPrevious, i3.MatStepLabel], pipes: [i3$1.AsyncPipe], styles: [".example-stepper[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperResponsiveExample, [{
+        type: Component,
+        args: [{
+                selector: 'stepper-responsive-example',
+                templateUrl: 'stepper-responsive-example.html',
+                styleUrls: ['stepper-responsive-example.css'],
+            }]
+    }], function () { return [{ type: i1.FormBuilder }, { type: i2$1.BreakpointObserver }]; }, null); })();
+
 const EXAMPLES = [
     StepperEditableExample,
     StepperErrorsExample,
@@ -914,6 +1052,7 @@ const EXAMPLES = [
     StepperStatesExample,
     StepperVerticalExample,
     StepperLazyContentExample,
+    StepperResponsiveExample,
 ];
 class StepperExamplesModule {
 }
@@ -925,6 +1064,7 @@ StepperExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             MatInputModule,
             MatStepperModule,
             ReactiveFormsModule,
+            CommonModule,
         ]] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperExamplesModule, [{
         type: NgModule,
@@ -935,6 +1075,7 @@ StepperExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                     MatInputModule,
                     MatStepperModule,
                     ReactiveFormsModule,
+                    CommonModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -949,11 +1090,13 @@ StepperExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
         StepperOverviewExample,
         StepperStatesExample,
         StepperVerticalExample,
-        StepperLazyContentExample], imports: [MatButtonModule,
+        StepperLazyContentExample,
+        StepperResponsiveExample], imports: [MatButtonModule,
         MatIconModule,
         MatInputModule,
         MatStepperModule,
-        ReactiveFormsModule], exports: [StepperEditableExample,
+        ReactiveFormsModule,
+        CommonModule], exports: [StepperEditableExample,
         StepperErrorsExample,
         StepperHarnessExample,
         StepperLabelPositionBottomExample,
@@ -961,11 +1104,12 @@ StepperExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
         StepperOverviewExample,
         StepperStatesExample,
         StepperVerticalExample,
-        StepperLazyContentExample] }); })();
+        StepperLazyContentExample,
+        StepperResponsiveExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperHarnessExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
+export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperHarnessExample, StepperLabelPositionBottomExample, StepperLazyContentExample, StepperOptionalExample, StepperOverviewExample, StepperResponsiveExample, StepperStatesExample, StepperVerticalExample };
 //# sourceMappingURL=stepper.js.map
