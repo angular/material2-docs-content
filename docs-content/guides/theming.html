@@ -365,6 +365,77 @@ passed to <code>define-palette</code>.</p>
 }
 </code></pre>
 
+        <h2 id="strong-focus-indicators" class="docs-header-link">
+          <span header-link="strong-focus-indicators"></span>
+          Strong focus indicators
+        </h2>
+      <p>By default, most components indicate browser focus by changing their background color as described
+by the Material Design specification. This behavior, however, can fall short of accessibility
+requirements, such as <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG</a>, which require a stronger indication of browser focus.</p>
+<p>Angular Material supports rendering highly visible outlines on focused elements. Applications can
+enable these strong focus indicators via two Sass mixins:
+<code>strong-focus-indicators</code> and <code>strong-focus-indicators-theme</code>.</p>
+<p>The <code>strong-focus-indicators</code> mixin emits structal indicator styles for all components. This mixin
+should be included exactly once in an application, similar to the <code>core</code> mixin described above.</p>
+<p>The <code>strong-focus-indicators-theme</code> mixin emits only the indicator&#39;s color styles. This mixin should
+be included once per theme, similar to the theme mixins described above. Additionally, you can use
+this mixin to change the color of the focus indicators in situations in which the default color
+would not contrast sufficiently with the background color.</p>
+<p>The following example includes strong focus indicator styles in an application alongside the rest of
+the custom theme API.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.core();
+<span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
+
+<span class="hljs-variable">$my-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
+
+<span class="hljs-variable">$my-theme</span>: mat.define-light-theme((
+ color: (
+   primary: <span class="hljs-variable">$my-primary</span>,
+   accent: <span class="hljs-variable">$my-accent</span>,
+ )
+));
+
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
+<span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(<span class="hljs-variable">$my-theme</span>);
+</code></pre>
+
+        <h3 id="customizing-strong-focus-indicators" class="docs-header-link">
+          <span header-link="customizing-strong-focus-indicators"></span>
+          Customizing strong focus indicators
+        </h3>
+      <p>You can pass a configuration map to <code>strong-focus-indicators</code> to customize the appearance of the
+indicators. This configuration includes <code>border-style</code>, <code>border-width</code>, and <code>border-radius</code>.</p>
+<p>You also can customize the color of indicators with <code>strong-focus-indicators-theme</code>. This mixin
+accepts either a theme, as described earlier in this guide, or a CSS color value. When providing a
+theme, the indicators will use the default hue of the primary palette.</p>
+<p>The following example includes strong focus indicator styles with custom settings alongside the rest
+of the custom theme API.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.core();
+<span class="hljs-keyword">@include</span> mat.strong-focus-indicators((
+  <span class="hljs-attribute">border-style</span>: dotted,
+  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">4px</span>,
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>,
+));
+
+<span class="hljs-variable">$my-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
+
+<span class="hljs-variable">$my-theme</span>: mat.define-light-theme((
+ color: (
+   primary: <span class="hljs-variable">$my-primary</span>,
+   accent: <span class="hljs-variable">$my-accent</span>,
+ )
+));
+
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
+<span class="hljs-keyword">@include</span> mat.strong-focus-indicators-theme(purple);
+</code></pre>
+
         <h2 id="theming-and-style-encapsulation" class="docs-header-link">
           <span header-link="theming-and-style-encapsulation"></span>
           Theming and style encapsulation
