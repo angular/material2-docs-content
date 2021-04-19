@@ -74,7 +74,9 @@ scroll event subscriptions.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Returns an observable that emits whenever any of the
-scrollable ancestors of an element are scrolled.</p>
+scrollable ancestors of an element are scrolled.
+@param elementOrElementRef Element whose ancestors to listen for.
+@param auditTimeInMs Time to throttle the scroll events.</p>
 
     </td>
   </tr><thead>
@@ -91,8 +93,7 @@ scrollable ancestors of an element are scrolled.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Element whose ancestors to listen for.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -105,8 +106,7 @@ scrollable ancestors of an element are scrolled.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Time to throttle the scroll events.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -138,7 +138,8 @@ scrollable ancestors of an element are scrolled.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deregisters a Scrollable reference and unsubscribes from its scroll event observable.</p>
+      <p>Deregisters a Scrollable reference and unsubscribes from its scroll event observable.
+@param scrollable Scrollable instance to be deregistered.</p>
 
     </td>
   </tr><thead>
@@ -155,8 +156,7 @@ scrollable ancestors of an element are scrolled.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Scrollable instance to be deregistered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -224,7 +224,8 @@ scrollable ancestors of an element are scrolled.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Registers a scrollable instance with the service and listens for its scrolled events. When the
-scrollable is scrolled, the service emits the event to its scrolled observable.</p>
+scrollable is scrolled, the service emits the event to its scrolled observable.
+@param scrollable Scrollable instance to be registered.</p>
 
     </td>
   </tr><thead>
@@ -241,8 +242,7 @@ scrollable is scrolled, the service emits the event to its scrolled observable.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Scrollable instance to be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -466,7 +466,8 @@ used instead of directly checking scrollLeft or scrollTop, since browsers are no
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param from The edge to measure from.</p>
 
     </td>
   </tr><thead>
@@ -483,8 +484,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -520,7 +520,8 @@ in an RTL context.</p>
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param options specified the offsets to scroll to.</p>
 
     </td>
   </tr><thead>
@@ -537,8 +538,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1227,7 +1227,9 @@ not rendered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the current scroll offset from the start of the viewport (in pixels).</p>
+      <p>Gets the current scroll offset from the start of the viewport (in pixels).
+@param from The edge to measure the offset from. Defaults to &#39;top&#39; in vertical mode and &#39;start&#39;
+    in horizontal mode.</p>
 
     </td>
   </tr><thead>
@@ -1244,9 +1246,7 @@ not rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The edge to measure the offset from. Defaults to &#39;top&#39; in vertical mode and &#39;start&#39;
-    in horizontal mode.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1282,7 +1282,8 @@ not rendered.</p>
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param options specified the offsets to scroll to.</p>
 
     </td>
   </tr><thead>
@@ -1299,8 +1300,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1318,7 +1318,9 @@ in an RTL context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scrolls to the offset for the given index.</p>
+      <p>Scrolls to the offset for the given index.
+@param index The index of the element to scroll to.
+@param behavior The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
 
     </td>
   </tr><thead>
@@ -1335,8 +1337,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The index of the element to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1349,8 +1350,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1370,7 +1370,9 @@ in an RTL context.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Scrolls to the given offset from the start of the viewport. Please note that this is not always
 the same as setting <code>scrollTop</code> or <code>scrollLeft</code>. In a horizontal viewport with right-to-left
-direction, this would be the equivalent of setting a fictional <code>scrollRight</code> property.</p>
+direction, this would be the equivalent of setting a fictional <code>scrollRight</code> property.
+@param offset The offset to scroll to.
+@param behavior The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
 
     </td>
   </tr><thead>
@@ -1387,8 +1389,7 @@ direction, this would be the equivalent of setting a fictional <code>scrollRight
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The offset to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1401,8 +1402,7 @@ direction, this would be the equivalent of setting a fictional <code>scrollRight
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1560,7 +1560,8 @@ rendered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to a viewport.</p>
+      <p>Attaches this scroll strategy to a viewport.
+@param viewport The viewport to attach this strategy to.</p>
 
     </td>
   </tr><thead>
@@ -1577,8 +1578,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The viewport to attach this strategy to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1613,7 +1613,9 @@ rendered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scroll to the offset for the given index.</p>
+      <p>Scroll to the offset for the given index.
+@param index The index of the element to scroll to.
+@param behavior The ScrollBehavior to use when scrolling.</p>
 
     </td>
   </tr><thead>
@@ -1630,8 +1632,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The index of the element to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1644,8 +1645,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1663,7 +1663,10 @@ rendered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Update the item size and buffer size.</p>
+      <p>Update the item size and buffer size.
+@param itemSize The size of the items in the virtually scrolling list.
+@param minBufferPx The minimum amount of buffer (in pixels) before needing to render more
+@param maxBufferPx The amount of buffer (in pixels) to render when rendering more.</p>
 
     </td>
   </tr><thead>
@@ -1680,8 +1683,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The size of the items in the virtually scrolling list.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1694,8 +1696,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The minimum amount of buffer (in pixels) before needing to render more</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1708,8 +1709,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The amount of buffer (in pixels) to render when rendering more.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1811,7 +1811,8 @@ rendered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to a viewport.</p>
+      <p>Attaches this scroll strategy to a viewport.
+@param viewport The viewport to attach this strategy to.</p>
 
     </td>
   </tr><thead>
@@ -1828,8 +1829,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The viewport to attach this strategy to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1932,7 +1932,9 @@ rendered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Scroll to the offset for the given index.</p>
+      <p>Scroll to the offset for the given index.
+@param index The index of the element to scroll to.
+@param behavior The ScrollBehavior to use when scrolling.</p>
 
     </td>
   </tr><thead>
@@ -1949,8 +1951,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The index of the element to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1963,8 +1964,7 @@ rendered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The ScrollBehavior to use when scrolling.</p>
-
+        
       </p>
     </td>
   </tr>

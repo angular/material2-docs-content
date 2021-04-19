@@ -1179,7 +1179,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>chipInput: MatChipInput</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Reference to the chip input that emitted the event.</p>
+  <td class="docs-api-property-description"><p>Reference to the chip input that emitted the event.
+@breaking-change 13.0.0 This property will be made required.</p>
 </td>
 </tr>
 
@@ -1207,7 +1208,9 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>input: HTMLInputElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The native <code>&lt;input&gt;</code> element that the event is being fired for.</p>
+  <td class="docs-api-property-description"><p>The native <code>&lt;input&gt;</code> element that the event is being fired for.
+@deprecated Use <code>MatChipInputEvent#chipInput.inputElement</code> instead.
+@breaking-change 13.0.0 This property will be removed.</p>
 </td>
 </tr>
 

@@ -269,7 +269,12 @@ though.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clamp the given date between min and max dates.</p>
+      <p>Clamp the given date between min and max dates.
+@param date The date to clamp.
+@param min The minimum value to allow. If null or omitted no min is enforced.
+@param max The maximum value to allow. If null or omitted no max is enforced.
+@returns <code>min</code> if <code>date</code> is less than <code>min</code>, <code>max</code> if date is greater than <code>max</code>,
+    otherwise <code>date</code>.</p>
 
     </td>
   </tr><thead>
@@ -286,8 +291,7 @@ though.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to clamp.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -300,8 +304,7 @@ though.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The minimum value to allow. If null or omitted no min is enforced.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -314,8 +317,7 @@ though.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The maximum value to allow. If null or omitted no max is enforced.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -393,7 +395,11 @@ though.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Compares two dates.</p>
+      <p>Compares two dates.
+@param first The first date to compare.
+@param second The second date to compare.
+@returns 0 if the dates are equal, a number less than 0 if the first date is earlier,
+    a number greater than 0 if the first date is later.</p>
 
     </td>
   </tr><thead>
@@ -410,8 +416,7 @@ though.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The first date to compare.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -424,8 +429,7 @@ though.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The second date to compare.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -954,7 +958,9 @@ invalid date for all other values.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Given a potential date object, returns that same date object if it is
-a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
+a valid date, or <code>null</code> if it&#39;s not a valid date.
+@param obj The object to check.
+@returns A date or <code>null</code>.</p>
 
     </td>
   </tr><thead>
@@ -971,8 +977,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The object to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1223,7 +1228,11 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Checks if two dates are equal.</p>
+      <p>Checks if two dates are equal.
+@param first The first date to check.
+@param second The second date to check.
+@returns Whether the two dates are equal.
+    Null dates are considered equal to other null dates.</p>
 
     </td>
   </tr><thead>
@@ -1240,8 +1249,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The first date to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1254,8 +1262,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The second date to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1289,7 +1296,8 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the locale used for all dates.</p>
+      <p>Sets the locale used for all dates.
+@param locale The new locale.</p>
 
     </td>
   </tr><thead>
@@ -1306,8 +1314,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The new locale.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1996,7 +2003,10 @@ events will display the proper options as active on arrow key events.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Adds the given number of days to the date. Days are counted as if moving one cell on the
-calendar for each day.</p>
+calendar for each day.
+@param date The date to add days to.
+@param days The number of days to add (may be negative).
+@returns A new date equal to the given one with the specified number of days added.</p>
 
     </td>
   </tr><thead>
@@ -2013,8 +2023,7 @@ calendar for each day.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to add days to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2027,8 +2036,7 @@ calendar for each day.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The number of days to add (may be negative).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2063,7 +2071,10 @@ calendar for each day.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Adds the given number of months to the date. Months are counted as if flipping a page on the
 calendar for each month and then finding the closest date in the new month. For example when
-adding 1 month to Jan 31, 2017, the resulting date will be Feb 28, 2017.</p>
+adding 1 month to Jan 31, 2017, the resulting date will be Feb 28, 2017.
+@param date The date to add months to.
+@param months The number of months to add (may be negative).
+@returns A new date equal to the given one with the specified number of months added.</p>
 
     </td>
   </tr><thead>
@@ -2080,8 +2091,7 @@ adding 1 month to Jan 31, 2017, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to add months to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2094,8 +2104,7 @@ adding 1 month to Jan 31, 2017, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The number of months to add (may be negative).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2130,7 +2139,10 @@ adding 1 month to Jan 31, 2017, the resulting date will be Feb 28, 2017.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Adds the given number of years to the date. Years are counted as if flipping 12 pages on the
 calendar for each year and then finding the closest date in the new month. For example when
-adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
+adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.
+@param date The date to add years to.
+@param years The number of years to add (may be negative).
+@returns A new date equal to the given one with the specified number of years added.</p>
 
     </td>
   </tr><thead>
@@ -2147,8 +2159,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to add years to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2161,8 +2172,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The number of years to add (may be negative).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2195,7 +2205,12 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clamp the given date between min and max dates.</p>
+      <p>Clamp the given date between min and max dates.
+@param date The date to clamp.
+@param min The minimum value to allow. If null or omitted no min is enforced.
+@param max The maximum value to allow. If null or omitted no max is enforced.
+@returns <code>min</code> if <code>date</code> is less than <code>min</code>, <code>max</code> if date is greater than <code>max</code>,
+    otherwise <code>date</code>.</p>
 
     </td>
   </tr><thead>
@@ -2212,8 +2227,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to clamp.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2226,8 +2240,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The minimum value to allow. If null or omitted no min is enforced.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2240,8 +2253,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The maximum value to allow. If null or omitted no max is enforced.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2275,7 +2287,9 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clones the given date.</p>
+      <p>Clones the given date.
+@param date The date to clone
+@returns A new date equal to the given date.</p>
 
     </td>
   </tr><thead>
@@ -2292,8 +2306,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to clone</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2326,7 +2339,11 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Compares two dates.</p>
+      <p>Compares two dates.
+@param first The first date to compare.
+@param second The second date to compare.
+@returns 0 if the dates are equal, a number less than 0 if the first date is earlier,
+    a number greater than 0 if the first date is later.</p>
 
     </td>
   </tr><thead>
@@ -2343,8 +2360,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The first date to compare.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2357,8 +2373,7 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The second date to compare.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2393,7 +2408,11 @@ adding 1 year to Feb 29, 2016, the resulting date will be Feb 28, 2017.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates a date with the given year, month, and date. Does not allow over/under-flow of the
-month and date.</p>
+month and date.
+@param year The full year of the date. (e.g. 89 means the year 89, not the year 1989).
+@param month The month of the date (0-indexed, 0 = January). Must be an integer 0 - 11.
+@param date The date of month of the date. Must be an integer 1 - length of the given month.
+@returns The new date, or null if invalid.</p>
 
     </td>
   </tr><thead>
@@ -2410,8 +2429,7 @@ month and date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The full year of the date. (e.g. 89 means the year 89, not the year 1989).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2424,8 +2442,7 @@ month and date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The month of the date (0-indexed, 0 = January). Must be an integer 0 - 11.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2438,8 +2455,7 @@ month and date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date of month of the date. Must be an integer 1 - length of the given month.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2478,7 +2494,10 @@ string). The default implementation does not allow any deserialization, it simpl
 the given value is already a valid date object or null. The <code>&lt;mat-datepicker&gt;</code> will call this
 method on all of its <code>@Input()</code> properties that accept dates. It is therefore possible to
 support passing values from your backend directly to these properties by overriding this method
-to also deserialize the format used by your backend.</p>
+to also deserialize the format used by your backend.
+@param value The value to be deserialized into a date object.
+@returns The deserialized date object, either a valid date, null if the value can be
+    deserialized into a null date (e.g. the empty string), or an invalid date.</p>
 
     </td>
   </tr><thead>
@@ -2495,8 +2514,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The value to be deserialized into a date object.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2530,7 +2548,10 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Formats a date as a string according to the given format.</p>
+      <p>Formats a date as a string according to the given format.
+@param date The value to format.
+@param displayFormat The format to use to display the date as a string.
+@returns The formatted date string.</p>
 
     </td>
   </tr><thead>
@@ -2547,8 +2568,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The value to format.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2561,8 +2581,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The format to use to display the date as a string.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2595,7 +2614,9 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the date of the month component of the given date.</p>
+      <p>Gets the date of the month component of the given date.
+@param date The date to extract the date of the month from.
+@returns The month component (1-indexed, 1 = first of month).</p>
 
     </td>
   </tr><thead>
@@ -2612,8 +2633,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to extract the date of the month from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2646,7 +2666,8 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a list of names for the dates of the month.</p>
+      <p>Gets a list of names for the dates of the month.
+@returns An ordered list of all date of the month names, starting with &#39;1&#39;.</p>
 
     </td>
   </tr><thead>
@@ -2678,7 +2699,9 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the day of the week component of the given date.</p>
+      <p>Gets the day of the week component of the given date.
+@param date The date to extract the day of the week from.
+@returns The month component (0-indexed, 0 = Sunday).</p>
 
     </td>
   </tr><thead>
@@ -2695,8 +2718,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to extract the day of the week from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2729,7 +2751,9 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a list of names for the days of the week.</p>
+      <p>Gets a list of names for the days of the week.
+@param style The naming style (e.g. long = &#39;Sunday&#39;, short = &#39;Sun&#39;, narrow = &#39;S&#39;).
+@returns An ordered list of all weekday names, starting with Sunday.</p>
 
     </td>
   </tr><thead>
@@ -2746,8 +2770,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The naming style (e.g. long = &#39;Sunday&#39;, short = &#39;Sun&#39;, narrow = &#39;S&#39;).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2780,7 +2803,8 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the first day of the week.</p>
+      <p>Gets the first day of the week.
+@returns The first day of the week (0-indexed, 0 = Sunday).</p>
 
     </td>
   </tr><thead>
@@ -2812,7 +2836,9 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the month component of the given date.</p>
+      <p>Gets the month component of the given date.
+@param date The date to extract the month from.
+@returns The month component (0-indexed, 0 = January).</p>
 
     </td>
   </tr><thead>
@@ -2829,8 +2855,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to extract the month from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2863,7 +2888,9 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a list of names for the months.</p>
+      <p>Gets a list of names for the months.
+@param style The naming style (e.g. long = &#39;January&#39;, short = &#39;Jan&#39;, narrow = &#39;J&#39;).
+@returns An ordered list of all month names, starting with January.</p>
 
     </td>
   </tr><thead>
@@ -2880,8 +2907,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The naming style (e.g. long = &#39;January&#39;, short = &#39;Jan&#39;, narrow = &#39;J&#39;).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2914,7 +2940,9 @@ to also deserialize the format used by your backend.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the number of days in the month of the given date.</p>
+      <p>Gets the number of days in the month of the given date.
+@param date The date whose month should be checked.
+@returns The number of days in the month of the given date.</p>
 
     </td>
   </tr><thead>
@@ -2931,8 +2959,7 @@ to also deserialize the format used by your backend.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date whose month should be checked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2966,7 +2993,9 @@ to also deserialize the format used by your backend.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Given a potential date object, returns that same date object if it is
-a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
+a valid date, or <code>null</code> if it&#39;s not a valid date.
+@param obj The object to check.
+@returns A date or <code>null</code>.</p>
 
     </td>
   </tr><thead>
@@ -2983,8 +3012,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The object to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3017,7 +3045,9 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the year component of the given date.</p>
+      <p>Gets the year component of the given date.
+@param date The date to extract the year from.
+@returns The year component.</p>
 
     </td>
   </tr><thead>
@@ -3034,8 +3064,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to extract the year from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3068,7 +3097,9 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the name for the year of the given date.</p>
+      <p>Gets the name for the year of the given date.
+@param date The date to get the year name for.
+@returns The name of the given year (e.g. &#39;2017&#39;).</p>
 
     </td>
   </tr><thead>
@@ -3085,8 +3116,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to get the year name for.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3119,7 +3149,8 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets date instance that is not valid.</p>
+      <p>Gets date instance that is not valid.
+@returns An invalid date.</p>
 
     </td>
   </tr><thead>
@@ -3151,7 +3182,9 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Checks whether the given object is considered a date instance by this DateAdapter.</p>
+      <p>Checks whether the given object is considered a date instance by this DateAdapter.
+@param obj The object to check
+@returns Whether the object is a date instance.</p>
 
     </td>
   </tr><thead>
@@ -3168,8 +3201,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The object to check</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3202,7 +3234,9 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Checks whether the given date is valid.</p>
+      <p>Checks whether the given date is valid.
+@param date The date to check.
+@returns Whether the date is valid.</p>
 
     </td>
   </tr><thead>
@@ -3219,8 +3253,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3253,7 +3286,11 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Parses a date from a user-provided value.</p>
+      <p>Parses a date from a user-provided value.
+@param value The value to parse.
+@param parseFormat The expected format of the value being parsed
+    (type is implementation-dependent).
+@returns The parsed date.</p>
 
     </td>
   </tr><thead>
@@ -3270,8 +3307,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The value to parse.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3284,9 +3320,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The expected format of the value being parsed
-    (type is implementation-dependent).</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3319,7 +3353,11 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Checks if two dates are equal.</p>
+      <p>Checks if two dates are equal.
+@param first The first date to check.
+@param second The second date to check.
+@returns Whether the two dates are equal.
+    Null dates are considered equal to other null dates.</p>
 
     </td>
   </tr><thead>
@@ -3336,8 +3374,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The first date to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3350,8 +3387,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The second date to check.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3385,7 +3421,8 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the locale used for all dates.</p>
+      <p>Sets the locale used for all dates.
+@param locale The new locale.</p>
 
     </td>
   </tr><thead>
@@ -3402,8 +3439,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The new locale.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3423,7 +3459,9 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets the RFC 3339 compatible string (<a href="https://tools.ietf.org/html/rfc3339">https://tools.ietf.org/html/rfc3339</a>) for the given date.
 This method is used to generate date strings that are compatible with native HTML attributes
-such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input&gt;</code>.</p>
+such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input&gt;</code>.
+@param date The date to get the ISO date string for.
+@returns The ISO date string date string.</p>
 
     </td>
   </tr><thead>
@@ -3440,8 +3478,7 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The date to get the ISO date string for.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3474,7 +3511,8 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets today&#39;s date.</p>
+      <p>Gets today&#39;s date.
+@returns Today&#39;s date.</p>
 
     </td>
   </tr><thead>

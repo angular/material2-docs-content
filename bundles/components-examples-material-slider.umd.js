@@ -90,7 +90,7 @@
         return SliderConfigurableExample;
     }());
     SliderConfigurableExample.ɵfac = function SliderConfigurableExample_Factory(t) { return new (t || SliderConfigurableExample)(); };
-    SliderConfigurableExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 42, vars: 20, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "example-result-card"], [1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) {
+    SliderConfigurableExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 49, vars: 23, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "example-result-card"], [1, "example-label-container"], ["id", "example-name-label", 1, "example-name-label"], [1, "example-value-label"], ["aria-labelledby", "example-name-label", 1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "mat-card");
                 i0__namespace.ɵɵelementStart(1, "mat-card-content");
@@ -168,8 +168,18 @@
                 i0__namespace.ɵɵelementStart(39, "h2");
                 i0__namespace.ɵɵtext(40, "Result");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(41, "mat-slider", 8);
-                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_slider_ngModelChange_41_listener($event) { return ctx.value = $event; });
+                i0__namespace.ɵɵelement(41, "br");
+                i0__namespace.ɵɵelement(42, "br");
+                i0__namespace.ɵɵelementStart(43, "div", 8);
+                i0__namespace.ɵɵelementStart(44, "label", 9);
+                i0__namespace.ɵɵtext(45, "Max Value");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(46, "label", 10);
+                i0__namespace.ɵɵtext(47);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(48, "mat-slider", 11);
+                i0__namespace.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_slider_ngModelChange_48_listener($event) { return ctx.value = $event; });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
@@ -197,10 +207,14 @@
                 i0__namespace.ɵɵproperty("ngModel", ctx.invert);
                 i0__namespace.ɵɵadvance(3);
                 i0__namespace.ɵɵproperty("ngModel", ctx.disabled);
-                i0__namespace.ɵɵadvance(6);
+                i0__namespace.ɵɵadvance(8);
+                i0__namespace.ɵɵclassMap(ctx.vertical ? "example-label-vertical" : "example-label-horizontal");
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵtextInterpolate(ctx.value);
+                i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
             }
-        }, directives: [i1__namespace.MatCard, i1__namespace.MatCardContent, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i4__namespace.NumberValueAccessor, i4__namespace.DefaultValueAccessor, i4__namespace.NgControlStatus, i4__namespace.NgModel, i5__namespace.MatCheckbox, i6__namespace.NgIf, i1__namespace$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}"] });
+        }, directives: [i1__namespace.MatCard, i1__namespace.MatCardContent, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i4__namespace.NumberValueAccessor, i4__namespace.DefaultValueAccessor, i4__namespace.NgControlStatus, i4__namespace.NgModel, i5__namespace.MatCheckbox, i6__namespace.NgIf, i1__namespace$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   .example-label-container.example-label-horizontal[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  margin: 0 0 12px 16px;\n  max-width: 284px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   .example-label-container.example-label-vertical[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  max-width: 68px;\n  height: 48px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   .example-value-label[_ngcontent-%COMP%] {\n  font-weight: 600;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SliderConfigurableExample, [{
                 type: i0.Component,
@@ -227,7 +241,7 @@
         return SliderFormattingExample;
     }());
     SliderFormattingExample.ɵfac = function SliderFormattingExample_Factory(t) { return new (t || SliderFormattingExample)(); };
-    SliderFormattingExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderFormattingExample, selectors: [["slider-formatting-example"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "1000", "min", "1", "max", "100000", 3, "displayWith"]], template: function SliderFormattingExample_Template(rf, ctx) {
+    SliderFormattingExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderFormattingExample, selectors: [["slider-formatting-example"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "1000", "step", "1000", "min", "0", "max", "100000", "aria-label", "units", 3, "displayWith"]], template: function SliderFormattingExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelement(0, "mat-slider", 0);
             }
@@ -255,9 +269,9 @@
         return SliderOverviewExample;
     }());
     SliderOverviewExample.ɵfac = function SliderOverviewExample_Factory(t) { return new (t || SliderOverviewExample)(); };
-    SliderOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) {
+    SliderOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, consts: [["aria-label", "unit(s)"]], template: function SliderOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵelement(0, "mat-slider");
+                i0__namespace.ɵɵelement(0, "mat-slider", 0);
             }
         }, directives: [i1__namespace$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
     (function () {
@@ -280,7 +294,7 @@
         return SliderHarnessExample;
     }());
     SliderHarnessExample.ɵfac = function SliderHarnessExample_Factory(t) { return new (t || SliderHarnessExample)(); };
-    SliderHarnessExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50"]], template: function SliderHarnessExample_Template(rf, ctx) {
+    SliderHarnessExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SliderHarnessExample, selectors: [["slider-harness-example"]], decls: 1, vars: 0, consts: [["value", "50", "aria-label", "unit(s)"]], template: function SliderHarnessExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelement(0, "mat-slider", 0);
             }

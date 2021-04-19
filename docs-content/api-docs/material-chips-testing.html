@@ -53,7 +53,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the list of chips inside the chip list.</p>
+      <p>Gets the list of chips inside the chip list.
+@param filter Optionally filters which chips are included.</p>
 
     </td>
   </tr><thead>
@@ -70,8 +71,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which chips are included.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -105,7 +105,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the <code>MatChipInput</code> inside the chip list.</p>
+      <p>Gets the <code>MatChipInput</code> inside the chip list.
+@param filter Optionally filters which chip input is included.</p>
 
     </td>
   </tr><thead>
@@ -122,8 +123,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which chip input is included.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -153,7 +153,12 @@
       <th colspan="2" class="docs-api-method-name-cell">getOrientation
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the orientation of the chip list.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -212,7 +217,12 @@
       <th colspan="2" class="docs-api-method-name-cell">isDisabled
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is disabled.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -238,7 +248,12 @@
       <th colspan="2" class="docs-api-method-name-cell">isInvalid
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is invalid.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -264,7 +279,12 @@
       <th colspan="2" class="docs-api-method-name-cell">isMultiple
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is in multi selection mode.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -290,7 +310,12 @@
       <th colspan="2" class="docs-api-method-name-cell">isRequired
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is required.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -322,7 +347,11 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects a chip inside the chip list.</p>
+      <p>Selects a chip inside the chip list.
+@param filter An optional filter to apply to the child chips.
+   All the chips matching the filter will be selected.
+@deprecated Use <code>MatChipListboxHarness.selectChips</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>
@@ -339,9 +368,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>An optional filter to apply to the child chips.
-   All the chips matching the filter will be selected.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -399,7 +426,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the remove button inside of a chip.</p>
+      <p>Gets the remove button inside of a chip.
+@param filter Optionally filters which chips are included.</p>
 
     </td>
   </tr><thead>
@@ -416,8 +444,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which chips are included.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -586,7 +613,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deselects the given chip. Only applies if it&#39;s selectable.</p>
+      <p>Deselects the given chip. Only applies if it&#39;s selectable.
+@deprecated Use <code>MatChipOptionHarness.deselect</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>
@@ -622,7 +651,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the chip is selected.</p>
+      <p>Whether the chip is selected.
+@deprecated Use <code>MatChipOptionHarness.isSelected</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>
@@ -657,7 +688,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects the given chip. Only applies if it&#39;s selectable.</p>
+      <p>Selects the given chip. Only applies if it&#39;s selectable.
+@deprecated Use <code>MatChipOptionHarness.select</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>
@@ -693,7 +726,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggles the selected state of the given chip. Only applies if it&#39;s selectable.</p>
+      <p>Toggles the selected state of the given chip. Only applies if it&#39;s selectable.
+@deprecated Use <code>MatChipOptionHarness.toggle</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>
@@ -1269,7 +1304,8 @@ keypresses that correspond to the given value.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the remove button inside of a chip.</p>
+      <p>Gets the remove button inside of a chip.
+@param filter Optionally filters which chips are included.</p>
 
     </td>
   </tr><thead>
@@ -1286,8 +1322,7 @@ keypresses that correspond to the given value.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which chips are included.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1571,7 +1606,8 @@ keypresses that correspond to the given value.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the list of chips inside the chip list.</p>
+      <p>Gets the list of chips inside the chip list.
+@param filter Optionally filters which chips are included.</p>
 
     </td>
   </tr><thead>
@@ -1588,8 +1624,7 @@ keypresses that correspond to the given value.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which chips are included.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1619,7 +1654,12 @@ keypresses that correspond to the given value.</p>
       <th colspan="2" class="docs-api-method-name-cell">getOrientation
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the orientation of the chip list.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1678,7 +1718,12 @@ keypresses that correspond to the given value.</p>
       <th colspan="2" class="docs-api-method-name-cell">isDisabled
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is disabled.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1704,7 +1749,12 @@ keypresses that correspond to the given value.</p>
       <th colspan="2" class="docs-api-method-name-cell">isInvalid
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is invalid.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1730,7 +1780,12 @@ keypresses that correspond to the given value.</p>
       <th colspan="2" class="docs-api-method-name-cell">isMultiple
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is in multi selection mode.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1756,7 +1811,12 @@ keypresses that correspond to the given value.</p>
       <th colspan="2" class="docs-api-method-name-cell">isRequired
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the chip list is required.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1786,7 +1846,9 @@ keypresses that correspond to the given value.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects a chip inside the chip list.</p>
+      <p>Selects a chip inside the chip list.
+@param filter An optional filter to apply to the child chips.
+   All the chips matching the filter will be selected.</p>
 
     </td>
   </tr><thead>
@@ -1803,9 +1865,7 @@ keypresses that correspond to the given value.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>An optional filter to apply to the child chips.
-   All the chips matching the filter will be selected.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1871,7 +1931,9 @@ keypresses that correspond to the given value.</p>
       <code>selected: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Only find chip instances whose selected state matches the given value.</p>
+  <td class="docs-api-property-description"><p>Only find chip instances whose selected state matches the given value.
+@deprecated Use <code>MatChipOptionHarness</code> together with <code>ChipOptionHarnessFilters</code>.
+@breaking-change 12.0.0</p>
 </td>
 </tr>
 
