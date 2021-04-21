@@ -555,7 +555,10 @@ directly attached to it, enabling declarative use.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.</p>
+  <td class="docs-api-property-description"><p>Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.
+@param portal Portal to be attached.
+@deprecated To be turned into a method.
+@breaking-change 10.0.0</p>
 </td>
 </tr>
 
@@ -709,6 +712,8 @@ directly attached to it, enabling declarative use.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Attach the given ComponentPortal to this PortalOutlet using the ComponentFactoryResolver.</p>
+<p>@param portal Portal to be attached to the portal outlet.
+@returns Reference to the created component.</p>
 
     </td>
   </tr><thead>
@@ -725,8 +730,7 @@ directly attached to it, enabling declarative use.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached to the portal outlet.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -759,7 +763,9 @@ directly attached to it, enabling declarative use.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given TemplatePortal to this PortalHost as an embedded View.</p>
+      <p>Attach the given TemplatePortal to this PortalHost as an embedded View.
+@param portal Portal to be attached.
+@returns Reference to the created embedded view.</p>
 
     </td>
   </tr><thead>
@@ -776,8 +782,7 @@ directly attached to it, enabling declarative use.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -967,7 +972,10 @@ directly attached to it, enabling declarative use.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.</p>
+  <td class="docs-api-property-description"><p>Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.
+@param portal Portal to be attached.
+@deprecated To be turned into a method.
+@breaking-change 10.0.0</p>
 </td>
 </tr>
 
@@ -1121,6 +1129,8 @@ directly attached to it, enabling declarative use.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Attach the given ComponentPortal to this PortalOutlet using the ComponentFactoryResolver.</p>
+<p>@param portal Portal to be attached to the portal outlet.
+@returns Reference to the created component.</p>
 
     </td>
   </tr><thead>
@@ -1137,8 +1147,7 @@ directly attached to it, enabling declarative use.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached to the portal outlet.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1171,7 +1180,9 @@ directly attached to it, enabling declarative use.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given TemplatePortal to this PortalHost as an embedded View.</p>
+      <p>Attach the given TemplatePortal to this PortalHost as an embedded View.
+@param portal Portal to be attached.
+@returns Reference to the created embedded view.</p>
 
     </td>
   </tr><thead>
@@ -1188,8 +1199,7 @@ directly attached to it, enabling declarative use.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2700,7 +2710,10 @@ application context.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Attaches a DOM portal by transferring its content into the outlet.</p>
+  <td class="docs-api-property-description"><p>Attaches a DOM portal by transferring its content into the outlet.
+@param portal Portal to be attached.
+@deprecated To be turned into a method.
+@breaking-change 10.0.0</p>
 </td>
 </tr>
 
@@ -2853,7 +2866,9 @@ application context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.</p>
+      <p>Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.
+@param portal Portal to be attached
+@returns Reference to the created component.</p>
 
     </td>
   </tr><thead>
@@ -2870,8 +2885,7 @@ application context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2904,7 +2918,9 @@ application context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches a template portal to the DOM as an embedded view.</p>
+      <p>Attaches a template portal to the DOM as an embedded view.
+@param portal Portal to be attached.
+@returns Reference to the created embedded view.</p>
 
     </td>
   </tr><thead>
@@ -2921,8 +2937,7 @@ application context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3075,7 +3090,10 @@ application context.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Attaches a DOM portal by transferring its content into the outlet.</p>
+  <td class="docs-api-property-description"><p>Attaches a DOM portal by transferring its content into the outlet.
+@param portal Portal to be attached.
+@deprecated To be turned into a method.
+@breaking-change 10.0.0</p>
 </td>
 </tr>
 
@@ -3228,7 +3246,9 @@ application context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.</p>
+      <p>Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.
+@param portal Portal to be attached
+@returns Reference to the created component.</p>
 
     </td>
   </tr><thead>
@@ -3245,8 +3265,7 @@ application context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3279,7 +3298,9 @@ application context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches a template portal to the DOM as an embedded view.</p>
+      <p>Attaches a template portal to the DOM as an embedded view.
+@param portal Portal to be attached.
+@returns Reference to the created embedded view.</p>
 
     </td>
   </tr><thead>
@@ -3296,8 +3317,7 @@ application context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Portal to be attached.</p>
-
+        
       </p>
     </td>
   </tr>

@@ -291,7 +291,11 @@ message element.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a focus-trapped region around the given element.</p>
+      <p>Creates a focus-trapped region around the given element.
+@param element The element around which focus will be trapped.
+@param deferCaptureElements Defers the creation of focus-capturing elements to be done
+    manually by the user.
+@returns The created focus trap instance.</p>
 
     </td>
   </tr><thead>
@@ -308,8 +312,7 @@ message element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The element around which focus will be trapped.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -322,9 +325,7 @@ message element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Defers the creation of focus-capturing elements to be done
-    manually by the user.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -373,7 +374,10 @@ message element.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a focus-trapped region around the given element.</p>
+      <p>Creates a focus-trapped region around the given element.
+@param element The element around which focus will be trapped.
+@param config The focus trap configuration.
+@returns The created focus trap instance.</p>
 
     </td>
   </tr><thead>
@@ -390,8 +394,7 @@ message element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The element around which focus will be trapped.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -404,8 +407,7 @@ message element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The focus trap configuration.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -438,7 +440,13 @@ message element.</p>
           </div>create
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@deprecated Pass a config object instead of the <code>deferCaptureElements</code> flag.
+@breaking-change 11.0.0</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -515,6 +523,8 @@ tabbable.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets whether an element is disabled.</p>
+<p>@param element Element to be checked.
+@returns Whether the element is disabled.</p>
 
     </td>
   </tr><thead>
@@ -531,8 +541,7 @@ tabbable.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Element to be checked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -566,6 +575,9 @@ tabbable.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets whether an element can be focused by the user.</p>
+<p>@param element Element to be checked.
+@param config The config object with options to customize this method&#39;s behavior
+@returns Whether the element is focusable.</p>
 
     </td>
   </tr><thead>
@@ -582,8 +594,7 @@ tabbable.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Element to be checked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -596,8 +607,7 @@ tabbable.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The config object with options to customize this method&#39;s behavior</p>
-
+        
       </p>
     </td>
   </tr>
@@ -632,6 +642,8 @@ tabbable.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets whether an element can be reached via Tab key.
 Assumes that the element has already been checked with isFocusable.</p>
+<p>@param element Element to be checked.
+@returns Whether the element is tabbable.</p>
 
     </td>
   </tr><thead>
@@ -648,8 +660,7 @@ Assumes that the element has already been checked with isFocusable.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Element to be checked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -685,6 +696,7 @@ Assumes that the element has already been checked with isFocusable.</p>
       <p>Gets whether an element is visible for the purposes of interactivity.</p>
 <p>This will capture states like <code>display: none</code> and <code>visibility: hidden</code>, but not things like
 being clipped by an <code>overflow: hidden</code> parent or being outside the viewport.</p>
+<p>@returns Whether the element is visible.</p>
 
     </td>
   </tr><thead>
@@ -751,7 +763,9 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Announces a message to screenreaders.</p>
+      <p>Announces a message to screenreaders.
+@param message Message to be announced to the screenreader.
+@returns Promise that will be resolved when the message is added to the DOM.</p>
 
     </td>
   </tr><thead>
@@ -768,8 +782,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Message to be announced to the screenreader.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -804,7 +817,10 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Announces a message to screenreaders.</p>
+      <p>Announces a message to screenreaders.
+@param message Message to be announced to the screenreader.
+@param politeness The politeness of the announcer element.
+@returns Promise that will be resolved when the message is added to the DOM.</p>
 
     </td>
   </tr><thead>
@@ -821,8 +837,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Message to be announced to the screenreader.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -835,8 +850,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The politeness of the announcer element.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -871,7 +885,12 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Announces a message to screenreaders.</p>
+      <p>Announces a message to screenreaders.
+@param message Message to be announced to the screenreader.
+@param duration Time in milliseconds after which to clear out the announcer element. Note
+  that this takes effect after the message has been added to the DOM, which can be up to
+  100ms after <code>announce</code> has been called.
+@returns Promise that will be resolved when the message is added to the DOM.</p>
 
     </td>
   </tr><thead>
@@ -888,8 +907,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Message to be announced to the screenreader.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -902,10 +920,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Time in milliseconds after which to clear out the announcer element. Note
-  that this takes effect after the message has been added to the DOM, which can be up to
-  100ms after <code>announce</code> has been called.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -940,7 +955,13 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Announces a message to screenreaders.</p>
+      <p>Announces a message to screenreaders.
+@param message Message to be announced to the screenreader.
+@param politeness The politeness of the announcer element.
+@param duration Time in milliseconds after which to clear out the announcer element. Note
+  that this takes effect after the message has been added to the DOM, which can be up to
+  100ms after <code>announce</code> has been called.
+@returns Promise that will be resolved when the message is added to the DOM.</p>
 
     </td>
   </tr><thead>
@@ -957,8 +978,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Message to be announced to the screenreader.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -971,8 +991,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The politeness of the announcer element.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -985,10 +1004,7 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Time in milliseconds after which to clear out the announcer element. Note
-  that this takes effect after the message has been added to the DOM, which can be up to
-  100ms after <code>announce</code> has been called.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1056,7 +1072,10 @@ through the page landmarks.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the element via the specified focus origin.</p>
+      <p>Focuses the element via the specified focus origin.
+@param element Element to focus.
+@param origin Focus origin.
+@param options Options that can be used to configure the focus behavior.</p>
 
     </td>
   </tr><thead>
@@ -1073,8 +1092,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Element to focus.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1087,8 +1105,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Focus origin.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1101,8 +1118,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Options that can be used to configure the focus behavior.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1120,7 +1136,10 @@ through the page landmarks.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the element via the specified focus origin.</p>
+      <p>Focuses the element via the specified focus origin.
+@param element Element to focus.
+@param origin Focus origin.
+@param options Options that can be used to configure the focus behavior.</p>
 
     </td>
   </tr><thead>
@@ -1137,8 +1156,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Element to focus.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1151,8 +1169,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Focus origin.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1165,8 +1182,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Options that can be used to configure the focus behavior.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1184,7 +1200,11 @@ through the page landmarks.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Monitors focus on an element and applies appropriate CSS classes.</p>
+      <p>Monitors focus on an element and applies appropriate CSS classes.
+@param element The element to monitor
+@param checkChildren Whether to count the element as focused when its children are focused.
+@returns An observable that emits when the focus state of the element changes.
+    When the element is blurred, null will be emitted.</p>
 
     </td>
   </tr><thead>
@@ -1201,8 +1221,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The element to monitor</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1215,8 +1234,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether to count the element as focused when its children are focused.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1250,7 +1268,11 @@ through the page landmarks.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Monitors focus on an element and applies appropriate CSS classes.</p>
+      <p>Monitors focus on an element and applies appropriate CSS classes.
+@param element The element to monitor
+@param checkChildren Whether to count the element as focused when its children are focused.
+@returns An observable that emits when the focus state of the element changes.
+    When the element is blurred, null will be emitted.</p>
 
     </td>
   </tr><thead>
@@ -1267,8 +1289,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The element to monitor</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1281,8 +1302,7 @@ through the page landmarks.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether to count the element as focused when its children are focused.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1627,7 +1647,8 @@ when focus is shifted off of the list.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the active item depending on the key event passed in.</p>
+      <p>Sets the active item depending on the key event passed in.
+@param event Keyboard event to be used for determining which element should be active.</p>
 
     </td>
   </tr><thead>
@@ -1644,8 +1665,7 @@ when focus is shifted off of the list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Keyboard event to be used for determining which element should be active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1665,7 +1685,8 @@ when focus is shifted off of the list.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the active item to the item at the specified index and adds the
 active styles to the newly active item. Also removes active styles
-from the previously active item.</p>
+from the previously active item.
+@param index Index of the item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -1682,8 +1703,7 @@ from the previously active item.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Index of the item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1703,7 +1723,8 @@ from the previously active item.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the active item to the item to the specified one and adds the
 active styles to the it. Also removes active styles from the
-previously active item.</p>
+previously active item.
+@param item Item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -1720,8 +1741,7 @@ previously active item.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1808,7 +1828,8 @@ previously active item.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the predicate function that determines which items should be skipped by the
-list key manager.</p>
+list key manager.
+@param predicate Function that determines whether the given item should be skipped.</p>
 
     </td>
   </tr><thead>
@@ -1825,8 +1846,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Function that determines whether the given item should be skipped.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1858,7 +1878,8 @@ list key manager.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows setting the active without any other effects.</p>
+      <p>Allows setting the active without any other effects.
+@param index Index of the item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -1875,8 +1896,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Index of the item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1894,7 +1914,8 @@ list key manager.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows setting the active item without any other effects.</p>
+      <p>Allows setting the active item without any other effects.
+@param item Item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -1911,8 +1932,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1981,7 +2001,8 @@ as the user is pressing the arrow keys. Defaults to not allowing any modifier ke
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures the key manager to activate the first and last items
-respectively when the Home or End key is pressed.</p>
+respectively when the Home or End key is pressed.
+@param enabled Whether pressing the Home or End key activates the first/last item.</p>
 
     </td>
   </tr><thead>
@@ -1998,8 +2019,7 @@ respectively when the Home or End key is pressed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether pressing the Home or End key activates the first/last item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2032,7 +2052,8 @@ respectively when the Home or End key is pressed.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures the key manager to move the selection horizontally.
-Passing in <code>null</code> will disable horizontal movement.</p>
+Passing in <code>null</code> will disable horizontal movement.
+@param direction Direction in which the selection can be moved.</p>
 
     </td>
   </tr><thead>
@@ -2049,8 +2070,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Direction in which the selection can be moved.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2082,7 +2102,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Turns on typeahead mode which allows users to set the active item by typing.</p>
+      <p>Turns on typeahead mode which allows users to set the active item by typing.
+@param debounceInterval Time to wait after the last keystroke before setting the active item.</p>
 
     </td>
   </tr><thead>
@@ -2099,8 +2120,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Time to wait after the last keystroke before setting the active item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2132,7 +2152,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Configures whether the key manager should be able to move the selection vertically.</p>
+      <p>Configures whether the key manager should be able to move the selection vertically.
+@param enabled Whether vertical selection should be enabled.</p>
 
     </td>
   </tr><thead>
@@ -2149,8 +2170,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether vertical selection should be enabled.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2183,7 +2203,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures wrapping mode, which determines whether the active item will wrap to
-the other end of list when there are no more items in the given direction.</p>
+the other end of list when there are no more items in the given direction.
+@param shouldWrap Whether the list should wrap when reaching the end.</p>
 
     </td>
   </tr><thead>
@@ -2200,8 +2221,7 @@ the other end of list when there are no more items in the given direction.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the list should wrap when reaching the end.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2346,7 +2366,8 @@ when focus is shifted off of the list.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the active item depending on the key event passed in.</p>
+      <p>Sets the active item depending on the key event passed in.
+@param event Keyboard event to be used for determining which element should be active.</p>
 
     </td>
   </tr><thead>
@@ -2363,8 +2384,7 @@ when focus is shifted off of the list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Keyboard event to be used for determining which element should be active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2383,7 +2403,8 @@ when focus is shifted off of the list.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the active item to the item at the specified
-index and focuses the newly active item.</p>
+index and focuses the newly active item.
+@param index Index of the item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -2400,8 +2421,7 @@ index and focuses the newly active item.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Index of the item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2419,7 +2439,8 @@ index and focuses the newly active item.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the active item to the item that is specified and focuses it.</p>
+      <p>Sets the active item to the item that is specified and focuses it.
+@param item Item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -2436,8 +2457,7 @@ index and focuses the newly active item.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2472,7 +2492,8 @@ index and focuses the newly active item.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the focus origin that will be passed in to the items for any subsequent <code>focus</code> calls.</p>
+      <p>Sets the focus origin that will be passed in to the items for any subsequent <code>focus</code> calls.
+@param origin Focus origin to be used when focusing items.</p>
 
     </td>
   </tr><thead>
@@ -2489,8 +2510,7 @@ index and focuses the newly active item.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Focus origin to be used when focusing items.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2574,7 +2594,8 @@ index and focuses the newly active item.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the predicate function that determines which items should be skipped by the
-list key manager.</p>
+list key manager.
+@param predicate Function that determines whether the given item should be skipped.</p>
 
     </td>
   </tr><thead>
@@ -2591,8 +2612,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Function that determines whether the given item should be skipped.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2624,7 +2644,8 @@ list key manager.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows setting the active without any other effects.</p>
+      <p>Allows setting the active without any other effects.
+@param index Index of the item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -2641,8 +2662,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Index of the item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2660,7 +2680,8 @@ list key manager.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows setting the active item without any other effects.</p>
+      <p>Allows setting the active item without any other effects.
+@param item Item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -2677,8 +2698,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2747,7 +2767,8 @@ as the user is pressing the arrow keys. Defaults to not allowing any modifier ke
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures the key manager to activate the first and last items
-respectively when the Home or End key is pressed.</p>
+respectively when the Home or End key is pressed.
+@param enabled Whether pressing the Home or End key activates the first/last item.</p>
 
     </td>
   </tr><thead>
@@ -2764,8 +2785,7 @@ respectively when the Home or End key is pressed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether pressing the Home or End key activates the first/last item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2798,7 +2818,8 @@ respectively when the Home or End key is pressed.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures the key manager to move the selection horizontally.
-Passing in <code>null</code> will disable horizontal movement.</p>
+Passing in <code>null</code> will disable horizontal movement.
+@param direction Direction in which the selection can be moved.</p>
 
     </td>
   </tr><thead>
@@ -2815,8 +2836,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Direction in which the selection can be moved.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2848,7 +2868,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Turns on typeahead mode which allows users to set the active item by typing.</p>
+      <p>Turns on typeahead mode which allows users to set the active item by typing.
+@param debounceInterval Time to wait after the last keystroke before setting the active item.</p>
 
     </td>
   </tr><thead>
@@ -2865,8 +2886,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Time to wait after the last keystroke before setting the active item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2898,7 +2918,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Configures whether the key manager should be able to move the selection vertically.</p>
+      <p>Configures whether the key manager should be able to move the selection vertically.
+@param enabled Whether vertical selection should be enabled.</p>
 
     </td>
   </tr><thead>
@@ -2915,8 +2936,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether vertical selection should be enabled.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -2949,7 +2969,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures wrapping mode, which determines whether the active item will wrap to
-the other end of list when there are no more items in the given direction.</p>
+the other end of list when there are no more items in the given direction.
+@param shouldWrap Whether the list should wrap when reaching the end.</p>
 
     </td>
   </tr><thead>
@@ -2966,8 +2987,7 @@ the other end of list when there are no more items in the given direction.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the list should wrap when reaching the end.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3107,7 +3127,8 @@ when focus is shifted off of the list.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the active item depending on the key event passed in.</p>
+      <p>Sets the active item depending on the key event passed in.
+@param event Keyboard event to be used for determining which element should be active.</p>
 
     </td>
   </tr><thead>
@@ -3124,8 +3145,7 @@ when focus is shifted off of the list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Keyboard event to be used for determining which element should be active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3143,7 +3163,8 @@ when focus is shifted off of the list.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the active item to the item at the index specified.</p>
+      <p>Sets the active item to the item at the index specified.
+@param index The index of the item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -3160,8 +3181,7 @@ when focus is shifted off of the list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The index of the item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3179,7 +3199,8 @@ when focus is shifted off of the list.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the active item to the specified item.</p>
+      <p>Sets the active item to the specified item.
+@param item The item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -3196,8 +3217,7 @@ when focus is shifted off of the list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3284,7 +3304,8 @@ when focus is shifted off of the list.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the predicate function that determines which items should be skipped by the
-list key manager.</p>
+list key manager.
+@param predicate Function that determines whether the given item should be skipped.</p>
 
     </td>
   </tr><thead>
@@ -3301,8 +3322,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Function that determines whether the given item should be skipped.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3334,7 +3354,8 @@ list key manager.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows setting the active without any other effects.</p>
+      <p>Allows setting the active without any other effects.
+@param index Index of the item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -3351,8 +3372,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Index of the item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3370,7 +3390,8 @@ list key manager.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows setting the active item without any other effects.</p>
+      <p>Allows setting the active item without any other effects.
+@param item Item to be set as active.</p>
 
     </td>
   </tr><thead>
@@ -3387,8 +3408,7 @@ list key manager.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Item to be set as active.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3457,7 +3477,8 @@ as the user is pressing the arrow keys. Defaults to not allowing any modifier ke
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures the key manager to activate the first and last items
-respectively when the Home or End key is pressed.</p>
+respectively when the Home or End key is pressed.
+@param enabled Whether pressing the Home or End key activates the first/last item.</p>
 
     </td>
   </tr><thead>
@@ -3474,8 +3495,7 @@ respectively when the Home or End key is pressed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether pressing the Home or End key activates the first/last item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3508,7 +3528,8 @@ respectively when the Home or End key is pressed.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures the key manager to move the selection horizontally.
-Passing in <code>null</code> will disable horizontal movement.</p>
+Passing in <code>null</code> will disable horizontal movement.
+@param direction Direction in which the selection can be moved.</p>
 
     </td>
   </tr><thead>
@@ -3525,8 +3546,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Direction in which the selection can be moved.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3558,7 +3578,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Turns on typeahead mode which allows users to set the active item by typing.</p>
+      <p>Turns on typeahead mode which allows users to set the active item by typing.
+@param debounceInterval Time to wait after the last keystroke before setting the active item.</p>
 
     </td>
   </tr><thead>
@@ -3575,8 +3596,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Time to wait after the last keystroke before setting the active item.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3608,7 +3628,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Configures whether the key manager should be able to move the selection vertically.</p>
+      <p>Configures whether the key manager should be able to move the selection vertically.
+@param enabled Whether vertical selection should be enabled.</p>
 
     </td>
   </tr><thead>
@@ -3625,8 +3646,7 @@ Passing in <code>null</code> will disable horizontal movement.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether vertical selection should be enabled.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3659,7 +3679,8 @@ Passing in <code>null</code> will disable horizontal movement.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Configures wrapping mode, which determines whether the active item will wrap to
-the other end of list when there are no more items in the given direction.</p>
+the other end of list when there are no more items in the given direction.
+@param shouldWrap Whether the list should wrap when reaching the end.</p>
 
     </td>
   </tr><thead>
@@ -3676,8 +3697,7 @@ the other end of list when there are no more items in the given direction.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the list should wrap when reaching the end.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3755,7 +3775,9 @@ See FocusTrapInertStrategy.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Inserts the anchors into the DOM. This is usually done automatically
-in the constructor, but can be deferred for cases like directives with <code>*ngIf</code>.</p>
+in the constructor, but can be deferred for cases like directives with <code>*ngIf</code>.
+@returns Whether the focus trap managed to attach successfully. This may not be the case
+if the target element isn&#39;t currently in the DOM.</p>
 
     </td>
   </tr><thead>
@@ -3805,7 +3827,8 @@ if the target element isn&#39;t currently in the DOM.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the first tabbable element within the focus trap region.</p>
+      <p>Focuses the first tabbable element within the focus trap region.
+@returns Whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -3840,7 +3863,9 @@ if the target element isn&#39;t currently in the DOM.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for the zone to stabilize, then focuses
-the first tabbable element within the focus trap region.</p>
+the first tabbable element within the focus trap region.
+@returns Returns a promise that resolves with a boolean, depending
+on whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -3873,7 +3898,8 @@ on whether focus was moved successfully.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the element that should be focused when the focus trap is initialized.</p>
+      <p>Focuses the element that should be focused when the focus trap is initialized.
+@returns Whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -3908,7 +3934,9 @@ on whether focus was moved successfully.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for the zone to stabilize, then either focuses the first element that the
-user specified, or the first tabbable element.</p>
+user specified, or the first tabbable element.
+@returns Returns a promise that resolves with a boolean, depending
+on whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -3941,7 +3969,8 @@ on whether focus was moved successfully.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the last tabbable element within the focus trap region.</p>
+      <p>Focuses the last tabbable element within the focus trap region.
+@returns Whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -3976,7 +4005,9 @@ on whether focus was moved successfully.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for the zone to stabilize, then focuses
-the last tabbable element within the focus trap region.</p>
+the last tabbable element within the focus trap region.
+@returns Returns a promise that resolves with a boolean, depending
+on whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4193,7 +4224,9 @@ Things like <code>tabIndex &gt; 0</code>, flex <code>order</code>, and shadow ro
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Inserts the anchors into the DOM. This is usually done automatically
-in the constructor, but can be deferred for cases like directives with <code>*ngIf</code>.</p>
+in the constructor, but can be deferred for cases like directives with <code>*ngIf</code>.
+@returns Whether the focus trap managed to attach successfully. This may not be the case
+if the target element isn&#39;t currently in the DOM.</p>
 
     </td>
   </tr><thead>
@@ -4243,7 +4276,8 @@ if the target element isn&#39;t currently in the DOM.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the first tabbable element within the focus trap region.</p>
+      <p>Focuses the first tabbable element within the focus trap region.
+@returns Whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4278,7 +4312,9 @@ if the target element isn&#39;t currently in the DOM.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for the zone to stabilize, then focuses
-the first tabbable element within the focus trap region.</p>
+the first tabbable element within the focus trap region.
+@returns Returns a promise that resolves with a boolean, depending
+on whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4311,7 +4347,8 @@ on whether focus was moved successfully.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the element that should be focused when the focus trap is initialized.</p>
+      <p>Focuses the element that should be focused when the focus trap is initialized.
+@returns Whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4346,7 +4383,9 @@ on whether focus was moved successfully.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for the zone to stabilize, then either focuses the first element that the
-user specified, or the first tabbable element.</p>
+user specified, or the first tabbable element.
+@returns Returns a promise that resolves with a boolean, depending
+on whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4379,7 +4418,8 @@ on whether focus was moved successfully.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the last tabbable element within the focus trap region.</p>
+      <p>Focuses the last tabbable element within the focus trap region.
+@returns Whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4414,7 +4454,9 @@ on whether focus was moved successfully.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Waits for the zone to stabilize, then focuses
-the last tabbable element within the focus trap region.</p>
+the last tabbable element within the focus trap region.
+@returns Returns a promise that resolves with a boolean, depending
+on whether focus was moved successfully.</p>
 
     </td>
   </tr><thead>
@@ -4478,7 +4520,8 @@ on whether focus was moved successfully.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggles the<code>tabindex</code> of both anchors to either trap Tab focus or allow it to escape.</p>
+      <p>Toggles the<code>tabindex</code> of both anchors to either trap Tab focus or allow it to escape.
+@param enabled: Whether the anchors should trap Tab.</p>
 
     </td>
   </tr><thead>
@@ -4495,8 +4538,7 @@ on whether focus was moved successfully.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the anchors should trap Tab.</p>
-
+        
       </p>
     </td>
   </tr>

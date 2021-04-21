@@ -57,7 +57,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon by URL in the default namespace.</p>
+      <p>Registers an icon by URL in the default namespace.
+@param iconName Name under which the icon should be registered.
+@param url</p>
 
     </td>
   </tr><thead>
@@ -74,8 +76,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Name under which the icon should be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -133,7 +134,10 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon by URL in the specified namespace.</p>
+      <p>Registers an icon by URL in the specified namespace.
+@param namespace Namespace in which the icon should be registered.
+@param iconName Name under which the icon should be registered.
+@param url</p>
 
     </td>
   </tr><thead>
@@ -150,8 +154,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Namespace in which the icon should be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -164,8 +167,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Name under which the icon should be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -223,7 +225,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon using an HTML string in the default namespace.</p>
+      <p>Registers an icon using an HTML string in the default namespace.
+@param iconName Name under which the icon should be registered.
+@param literal SVG source of the icon.</p>
 
     </td>
   </tr><thead>
@@ -240,8 +244,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Name under which the icon should be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -254,8 +257,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>SVG source of the icon.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -300,7 +302,10 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon using an HTML string in the specified namespace.</p>
+      <p>Registers an icon using an HTML string in the specified namespace.
+@param namespace Namespace in which the icon should be registered.
+@param iconName Name under which the icon should be registered.
+@param literal SVG source of the icon.</p>
 
     </td>
   </tr><thead>
@@ -317,8 +322,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Namespace in which the icon should be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -331,8 +335,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Name under which the icon should be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -345,8 +348,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>SVG source of the icon.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -395,7 +397,8 @@
 name and namespace of an icon when the registry tries to resolve the URL from which to fetch
 the icon. The resolver is expected to return a <code>SafeResourceUrl</code> that points to the icon,
 an object with the icon URL and icon options, or <code>null</code> if the icon is not supported. Resolvers
-will be invoked in the order in which they have been registered.</p>
+will be invoked in the order in which they have been registered.
+@param resolver Resolver function to be registered.</p>
 
     </td>
   </tr><thead>
@@ -412,8 +415,7 @@ will be invoked in the order in which they have been registered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Resolver function to be registered.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -445,7 +447,8 @@ will be invoked in the order in which they have been registered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon set by URL in the default namespace.</p>
+      <p>Registers an icon set by URL in the default namespace.
+@param url</p>
 
     </td>
   </tr><thead>
@@ -507,7 +510,9 @@ will be invoked in the order in which they have been registered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon set by URL in the specified namespace.</p>
+      <p>Registers an icon set by URL in the specified namespace.
+@param namespace Namespace in which to register the icon set.
+@param url</p>
 
     </td>
   </tr><thead>
@@ -524,8 +529,7 @@ will be invoked in the order in which they have been registered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Namespace in which to register the icon set.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -583,7 +587,8 @@ will be invoked in the order in which they have been registered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon set using an HTML string in the default namespace.</p>
+      <p>Registers an icon set using an HTML string in the default namespace.
+@param literal SVG source of the icon set.</p>
 
     </td>
   </tr><thead>
@@ -600,8 +605,7 @@ will be invoked in the order in which they have been registered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>SVG source of the icon set.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -646,7 +650,9 @@ will be invoked in the order in which they have been registered.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an icon set using an HTML string in the specified namespace.</p>
+      <p>Registers an icon set using an HTML string in the specified namespace.
+@param namespace Namespace in which to register the icon set.
+@param literal SVG source of the icon set.</p>
 
     </td>
   </tr><thead>
@@ -663,8 +669,7 @@ will be invoked in the order in which they have been registered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Namespace in which to register the icon set.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -677,8 +682,7 @@ will be invoked in the order in which they have been registered.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>SVG source of the icon set.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -808,6 +812,8 @@ have a fontSet input value, and is not loading an icon by name or URL.</p>
       <p>Returns an Observable that produces the icon (as an <code>&lt;svg&gt;</code> DOM element) with the given name
 and namespace. The icon must have been previously registered with addIcon or addIconSet;
 if not, the Observable will throw an error.</p>
+<p>@param name Name of the icon to be retrieved.
+@param namespace Namespace in which to look for the icon.</p>
 
     </td>
   </tr><thead>
@@ -824,8 +830,7 @@ if not, the Observable will throw an error.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Name of the icon to be retrieved.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -838,8 +843,7 @@ if not, the Observable will throw an error.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Namespace in which to look for the icon.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -875,6 +879,7 @@ if not, the Observable will throw an error.</p>
 The response from the URL may be cached so this will not always cause an HTTP request, but
 the produced element will always be a new copy of the originally fetched icon. (That is,
 it will not contain any modifications made to elements previously returned).</p>
+<p>@param safeUrl URL from which to fetch the SVG icon.</p>
 
     </td>
   </tr><thead>
@@ -891,8 +896,7 @@ it will not contain any modifications made to elements previously returned).</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>URL from which to fetch the SVG icon.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -927,6 +931,8 @@ it will not contain any modifications made to elements previously returned).</p>
       <p>Defines an alias for a CSS class name to be used for icon fonts. Creating an matIcon
 component with the alias as the fontSet input will cause the class name to be applied
 to the <code>&lt;mat-icon&gt;</code> element.</p>
+<p>@param alias Alias for the font.
+@param className Class name override to be used instead of the alias.</p>
 
     </td>
   </tr><thead>
@@ -943,8 +949,7 @@ to the <code>&lt;mat-icon&gt;</code> element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Alias for the font.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -957,8 +962,7 @@ to the <code>&lt;mat-icon&gt;</code> element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Class name override to be used instead of the alias.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -992,6 +996,7 @@ to the <code>&lt;mat-icon&gt;</code> element.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets the CSS class name to be used for icon fonts when an <code>&lt;mat-icon&gt;</code> component does not
 have a fontSet input value, and is not loading an icon by name or URL.</p>
+<p>@param className</p>
 
     </td>
   </tr><thead>

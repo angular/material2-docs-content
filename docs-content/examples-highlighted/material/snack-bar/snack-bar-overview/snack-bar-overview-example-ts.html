@@ -13,8 +13,6 @@
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">openSnackBar</span>(<span class="hljs-params">message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._snackBar.open(message, action, {
-      <span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span>,
-    });
+    <span class="hljs-built_in">this</span>._snackBar.open(message, action);
   }
 }

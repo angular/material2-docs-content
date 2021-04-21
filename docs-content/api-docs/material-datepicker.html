@@ -419,7 +419,8 @@ components if the labels have changed after initialization.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the datepicker-input is disabled.</p>
+</td>
 </tr>
 
 
@@ -474,7 +475,8 @@ components if the labels have changed after initialization.</p>
       <code>value: D | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The value of the input.</p>
+</td>
 </tr>
 
 
@@ -487,7 +489,8 @@ components if the labels have changed after initialization.</p>
       <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when a <code>change</code> event is fired on this <code>&lt;input&gt;</code>.</p>
+</td>
 </tr>
 
 
@@ -500,7 +503,8 @@ components if the labels have changed after initialization.</p>
       <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when an <code>input</code> event is fired on this <code>&lt;input&gt;</code>.</p>
+</td>
 </tr>
 
 
@@ -512,7 +516,8 @@ components if the labels have changed after initialization.</p>
       <code>stateChanges: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the internal state has changed</p>
+</td>
 </tr>
 
 
@@ -532,7 +537,8 @@ components if the labels have changed after initialization.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the element that the datepicker popup should be connected to.</p>
+      <p>Gets the element that the datepicker popup should be connected to.
+@return The element to connect the popup to.</p>
 
     </td>
   </tr><thead>
@@ -624,7 +630,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@docs-private</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -654,7 +665,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">validate
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@docs-private</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -722,7 +738,8 @@ components if the labels have changed after initialization.</p>
       <code>calendarHeaderComponent: ComponentType&lt;any&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>An input indicating the type of the custom header component for the calendar, if set.</p>
+</td>
 </tr>
 
 
@@ -735,7 +752,8 @@ components if the labels have changed after initialization.</p>
       <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Color palette to use on the datepicker&#39;s calendar.</p>
+</td>
 </tr>
 
 
@@ -748,7 +766,8 @@ components if the labels have changed after initialization.</p>
       <code>dateClass: MatCalendarCellClassFunction&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Function that can be used to add custom CSS classes to dates.</p>
+</td>
 </tr>
 
 
@@ -761,7 +780,8 @@ components if the labels have changed after initialization.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the datepicker pop-up should be disabled.</p>
+</td>
 </tr>
 
 
@@ -774,7 +794,8 @@ components if the labels have changed after initialization.</p>
       <code>opened: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the calendar is open.</p>
+</td>
 </tr>
 
 
@@ -787,7 +808,9 @@ components if the labels have changed after initialization.</p>
       <code>panelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Classes to be passed to the date picker panel.
+Supports string and string array values, similar to <code>ngClass</code>.</p>
+</td>
 </tr>
 
 
@@ -800,7 +823,10 @@ components if the labels have changed after initialization.</p>
       <code>restoreFocus: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether to restore focus to the previously-focused element when the calendar is closed.
+Note that automatic focus restoration is an accessibility feature and it is recommended that
+you provide your own equivalent, if you decide to turn it off.</p>
+</td>
 </tr>
 
 
@@ -813,7 +839,8 @@ components if the labels have changed after initialization.</p>
       <code>startAt: D | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The date to open the calendar to initially.</p>
+</td>
 </tr>
 
 
@@ -826,7 +853,8 @@ components if the labels have changed after initialization.</p>
       <code>startView: &#39;month&#39; | &#39;year&#39; | &#39;multi-year&#39;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The view that the calendar should start in.</p>
+</td>
 </tr>
 
 
@@ -839,7 +867,9 @@ components if the labels have changed after initialization.</p>
       <code>touchUi: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather
+than a popup and elements have more padding to allow for bigger touch targets.</p>
+</td>
 </tr>
 
 
@@ -852,7 +882,8 @@ components if the labels have changed after initialization.</p>
       <code>xPosition: DatepickerDropdownPositionX</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Preferred position of the datepicker in the X axis.</p>
+</td>
 </tr>
 
 
@@ -865,7 +896,8 @@ components if the labels have changed after initialization.</p>
       <code>yPosition: DatepickerDropdownPositionY</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Preferred position of the datepicker in the Y axis.</p>
+</td>
 </tr>
 
 
@@ -878,7 +910,8 @@ components if the labels have changed after initialization.</p>
       <code>closedStream: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the datepicker has been closed.</p>
+</td>
 </tr>
 
 
@@ -891,7 +924,9 @@ components if the labels have changed after initialization.</p>
       <code>monthSelected: EventEmitter&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits selected month in year view.
+This doesn&#39;t imply a change on the selected date.</p>
+</td>
 </tr>
 
 
@@ -904,7 +939,8 @@ components if the labels have changed after initialization.</p>
       <code>openedStream: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the datepicker has been opened.</p>
+</td>
 </tr>
 
 
@@ -917,7 +953,8 @@ components if the labels have changed after initialization.</p>
       <code>viewChanged: EventEmitter&lt;MatCalendarView&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the current view changes.</p>
+</td>
 </tr>
 
 
@@ -930,7 +967,9 @@ components if the labels have changed after initialization.</p>
       <code>yearSelected: EventEmitter&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits selected year in multiyear view.
+This doesn&#39;t imply a change on the selected date.</p>
+</td>
 </tr>
 
 
@@ -942,7 +981,8 @@ components if the labels have changed after initialization.</p>
       <code>datepickerInput: C</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The input element this datepicker is associated with.</p>
+</td>
 </tr>
 
 
@@ -954,7 +994,8 @@ components if the labels have changed after initialization.</p>
       <code>id: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The id for the datepicker calendar.</p>
+</td>
 </tr>
 
 
@@ -966,7 +1007,8 @@ components if the labels have changed after initialization.</p>
       <code>stateChanges: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the datepicker&#39;s state changes.</p>
+</td>
 </tr>
 
 
@@ -984,7 +1026,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">close
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Close the calendar.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -996,7 +1043,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">open
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Open the calendar.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -1008,7 +1060,13 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerActions
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Registers a portal containing action buttons with the datepicker.
+@param portal Portal to be registered.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1038,7 +1096,14 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerInput
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Register an input with this datepicker.
+@param input The datepicker input to register with this datepicker.
+@returns Selection model that the input should hook itself up to.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1082,7 +1147,13 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">removeActions
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Removes a portal containing action buttons from the datepicker.
+@param portal Portal to be removed.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1112,7 +1183,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">select
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects the given date</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1165,7 +1241,8 @@ components if the labels have changed after initialization.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the datepicker-input is disabled.</p>
+</td>
 </tr>
 
 
@@ -1191,7 +1268,8 @@ components if the labels have changed after initialization.</p>
       <code>value: D | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The value of the input.</p>
+</td>
 </tr>
 
 
@@ -1204,7 +1282,8 @@ components if the labels have changed after initialization.</p>
       <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when a <code>change</code> event is fired on this <code>&lt;input&gt;</code>.</p>
+</td>
 </tr>
 
 
@@ -1217,7 +1296,8 @@ components if the labels have changed after initialization.</p>
       <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when an <code>input</code> event is fired on this <code>&lt;input&gt;</code>.</p>
+</td>
 </tr>
 
 
@@ -1241,7 +1321,8 @@ components if the labels have changed after initialization.</p>
       <code>ngControl: NgControl</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>@docs-private</p>
+</td>
 </tr>
 
 
@@ -1271,7 +1352,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">focus
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the input.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -1314,7 +1400,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">isEmpty
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the input is empty.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1340,7 +1431,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@docs-private</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1382,7 +1478,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">validate
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@docs-private</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1449,7 +1550,8 @@ components if the labels have changed after initialization.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the datepicker-input is disabled.</p>
+</td>
 </tr>
 
 
@@ -1475,7 +1577,8 @@ components if the labels have changed after initialization.</p>
       <code>value: D | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The value of the input.</p>
+</td>
 </tr>
 
 
@@ -1488,7 +1591,8 @@ components if the labels have changed after initialization.</p>
       <code>dateChange: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when a <code>change</code> event is fired on this <code>&lt;input&gt;</code>.</p>
+</td>
 </tr>
 
 
@@ -1501,7 +1605,8 @@ components if the labels have changed after initialization.</p>
       <code>dateInput: EventEmitter&lt;MatDatepickerInputEvent&lt;D, S&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when an <code>input</code> event is fired on this <code>&lt;input&gt;</code>.</p>
+</td>
 </tr>
 
 
@@ -1525,7 +1630,8 @@ components if the labels have changed after initialization.</p>
       <code>ngControl: NgControl</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>@docs-private</p>
+</td>
 </tr>
 
 
@@ -1555,7 +1661,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">focus
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the input.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -1567,7 +1678,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">isEmpty
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the input is empty.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1593,7 +1709,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@docs-private</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1635,7 +1756,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">validate
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>@docs-private</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1908,7 +2034,8 @@ components if the labels have changed after initialization.</p>
       <code>calendarHeaderComponent: ComponentType&lt;any&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>An input indicating the type of the custom header component for the calendar, if set.</p>
+</td>
 </tr>
 
 
@@ -1921,7 +2048,8 @@ components if the labels have changed after initialization.</p>
       <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Color palette to use on the datepicker&#39;s calendar.</p>
+</td>
 </tr>
 
 
@@ -1934,7 +2062,8 @@ components if the labels have changed after initialization.</p>
       <code>dateClass: MatCalendarCellClassFunction&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Function that can be used to add custom CSS classes to dates.</p>
+</td>
 </tr>
 
 
@@ -1947,7 +2076,8 @@ components if the labels have changed after initialization.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the datepicker pop-up should be disabled.</p>
+</td>
 </tr>
 
 
@@ -1960,7 +2090,8 @@ components if the labels have changed after initialization.</p>
       <code>opened: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the calendar is open.</p>
+</td>
 </tr>
 
 
@@ -1973,7 +2104,9 @@ components if the labels have changed after initialization.</p>
       <code>panelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Classes to be passed to the date picker panel.
+Supports string and string array values, similar to <code>ngClass</code>.</p>
+</td>
 </tr>
 
 
@@ -1986,7 +2119,10 @@ components if the labels have changed after initialization.</p>
       <code>restoreFocus: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether to restore focus to the previously-focused element when the calendar is closed.
+Note that automatic focus restoration is an accessibility feature and it is recommended that
+you provide your own equivalent, if you decide to turn it off.</p>
+</td>
 </tr>
 
 
@@ -1999,7 +2135,8 @@ components if the labels have changed after initialization.</p>
       <code>startAt: D | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The date to open the calendar to initially.</p>
+</td>
 </tr>
 
 
@@ -2012,7 +2149,8 @@ components if the labels have changed after initialization.</p>
       <code>startView: &#39;month&#39; | &#39;year&#39; | &#39;multi-year&#39;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The view that the calendar should start in.</p>
+</td>
 </tr>
 
 
@@ -2025,7 +2163,9 @@ components if the labels have changed after initialization.</p>
       <code>touchUi: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the calendar UI is in touch mode. In touch mode the calendar opens in a dialog rather
+than a popup and elements have more padding to allow for bigger touch targets.</p>
+</td>
 </tr>
 
 
@@ -2038,7 +2178,8 @@ components if the labels have changed after initialization.</p>
       <code>xPosition: DatepickerDropdownPositionX</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Preferred position of the datepicker in the X axis.</p>
+</td>
 </tr>
 
 
@@ -2051,7 +2192,8 @@ components if the labels have changed after initialization.</p>
       <code>yPosition: DatepickerDropdownPositionY</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Preferred position of the datepicker in the Y axis.</p>
+</td>
 </tr>
 
 
@@ -2064,7 +2206,8 @@ components if the labels have changed after initialization.</p>
       <code>closedStream: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the datepicker has been closed.</p>
+</td>
 </tr>
 
 
@@ -2077,7 +2220,9 @@ components if the labels have changed after initialization.</p>
       <code>monthSelected: EventEmitter&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits selected month in year view.
+This doesn&#39;t imply a change on the selected date.</p>
+</td>
 </tr>
 
 
@@ -2090,7 +2235,8 @@ components if the labels have changed after initialization.</p>
       <code>openedStream: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the datepicker has been opened.</p>
+</td>
 </tr>
 
 
@@ -2103,7 +2249,8 @@ components if the labels have changed after initialization.</p>
       <code>viewChanged: EventEmitter&lt;MatCalendarView&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the current view changes.</p>
+</td>
 </tr>
 
 
@@ -2116,7 +2263,9 @@ components if the labels have changed after initialization.</p>
       <code>yearSelected: EventEmitter&lt;D&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits selected year in multiyear view.
+This doesn&#39;t imply a change on the selected date.</p>
+</td>
 </tr>
 
 
@@ -2128,7 +2277,8 @@ components if the labels have changed after initialization.</p>
       <code>datepickerInput: C</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The input element this datepicker is associated with.</p>
+</td>
 </tr>
 
 
@@ -2140,7 +2290,8 @@ components if the labels have changed after initialization.</p>
       <code>id: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The id for the datepicker calendar.</p>
+</td>
 </tr>
 
 
@@ -2152,7 +2303,8 @@ components if the labels have changed after initialization.</p>
       <code>stateChanges: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Emits when the datepicker&#39;s state changes.</p>
+</td>
 </tr>
 
 
@@ -2170,7 +2322,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">close
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Close the calendar.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -2182,7 +2339,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">open
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Open the calendar.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -2194,7 +2356,13 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerActions
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Registers a portal containing action buttons with the datepicker.
+@param portal Portal to be registered.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -2224,7 +2392,14 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">registerInput
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Register an input with this datepicker.
+@param input The datepicker input to register with this datepicker.
+@returns Selection model that the input should hook itself up to.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -2268,7 +2443,13 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">removeActions
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Removes a portal containing action buttons from the datepicker.
+@param portal Portal to be removed.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -2298,7 +2479,12 @@ components if the labels have changed after initialization.</p>
       <th colspan="2" class="docs-api-method-name-cell">select
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects the given date</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -2987,6 +3173,11 @@ calendar popup. For consistency, we always use MatDatepickerInputEvent instead.<
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Called when the user has activated a new date (e.g. by hovering over
 it or moving focus) and the calendar tries to display a date range.</p>
+<p>@param activeDate Date that the user has activated. Will be null if the user moved
+   focus to an element that&#39;s no a calendar cell.
+@param currentRange Range that is currently shown in the calendar.
+@param event DOM event that caused the preview to be changed. Will be either a
+   <code>mouseenter</code>/<code>mouseleave</code> or <code>focus</code>/<code>blur</code> depending on how the user is navigating.</p>
 
     </td>
   </tr><thead>
@@ -3003,9 +3194,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Date that the user has activated. Will be null if the user moved
-   focus to an element that&#39;s no a calendar cell.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3018,8 +3207,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Range that is currently shown in the calendar.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3032,9 +3220,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>DOM event that caused the preview to be changed. Will be either a
-   <code>mouseenter</code>/<code>mouseleave</code> or <code>focus</code>/<code>blur</code> depending on how the user is navigating.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3066,7 +3252,11 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Called when the user has finished selecting a value.</p>
+      <p>Called when the user has finished selecting a value.
+@param date Date that was selected. Will be null if the user cleared the selection.
+@param currentRange Range that is currently show in the calendar.
+@param event DOM event that triggered the selection. Currently only corresponds to a <code>click</code>
+   event, but it may get expanded in the future.</p>
 
     </td>
   </tr><thead>
@@ -3083,8 +3273,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Date that was selected. Will be null if the user cleared the selection.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3097,8 +3286,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Range that is currently show in the calendar.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -3111,9 +3299,7 @@ it or moving focus) and the calendar tries to display a date range.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>DOM event that triggered the selection. Currently only corresponds to a <code>click</code>
-   event, but it may get expanded in the future.</p>
-
+        
       </p>
     </td>
   </tr>

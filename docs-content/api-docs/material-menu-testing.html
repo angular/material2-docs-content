@@ -87,7 +87,12 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clicks an item in the menu, and optionally continues clicking items in subsequent sub-menus.</p>
+      <p>Clicks an item in the menu, and optionally continues clicking items in subsequent sub-menus.
+@param itemFilter A filter used to represent which item in the menu should be clicked. The
+    first matching menu item will be clicked.
+@param subItemFilters A list of filters representing the items to click in any subsequent
+    sub-menus. The first item in the sub-menu matching the corresponding filter in
+    <code>subItemFilters</code> will be clicked.</p>
 
     </td>
   </tr><thead>
@@ -104,9 +109,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>A filter used to represent which item in the menu should be clicked. The
-    first matching menu item will be clicked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -119,10 +122,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>A list of filters representing the items to click in any subsequent
-    sub-menus. The first item in the sub-menu matching the corresponding filter in
-    <code>subItemFilters</code> will be clicked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -422,7 +422,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a list of <code>MatMenuItemHarness</code> representing the items in the menu.</p>
+      <p>Gets a list of <code>MatMenuItemHarness</code> representing the items in the menu.
+@param filters Optionally filters which menu items are included.</p>
 
     </td>
   </tr><thead>
@@ -439,8 +440,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which menu items are included.</p>
-
+        
       </p>
     </td>
   </tr>
