@@ -82,9 +82,7 @@ class SnackBarOverviewExample {
         this._snackBar = _snackBar;
     }
     openSnackBar(message, action) {
-        this._snackBar.open(message, action, {
-            duration: 2000,
-        });
+        this._snackBar.open(message, action);
     }
 }
 SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
@@ -126,8 +124,7 @@ class SnackBarPositionExample {
         this.verticalPosition = 'bottom';
     }
     openSnackBar() {
-        this._snackBar.open('Cannonball!!', 'End now', {
-            duration: 500,
+        this._snackBar.open('Cannonball!!', 'Splash', {
             horizontalPosition: this.horizontalPosition,
             verticalPosition: this.verticalPosition,
         });

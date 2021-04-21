@@ -420,9 +420,7 @@
             this._snackBar = _snackBar;
         }
         SnackBarOverviewExample.prototype.openSnackBar = function (message, action) {
-            this._snackBar.open(message, action, {
-                duration: 2000,
-            });
+            this._snackBar.open(message, action);
         };
         return SnackBarOverviewExample;
     }());
@@ -469,8 +467,7 @@
             this.verticalPosition = 'bottom';
         }
         SnackBarPositionExample.prototype.openSnackBar = function () {
-            this._snackBar.open('Cannonball!!', 'End now', {
-                duration: 500,
+            this._snackBar.open('Cannonball!!', 'Splash', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
             });
