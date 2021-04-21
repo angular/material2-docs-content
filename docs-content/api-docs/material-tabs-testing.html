@@ -93,7 +93,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the list of tabs in the tab group.</p>
+      <p>Gets the list of tabs in the tab group.
+@param filter Optionally filters which tabs are included.</p>
 
     </td>
   </tr><thead>
@@ -110,8 +111,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which tabs are included.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -178,7 +178,9 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects a tab in this tab group.</p>
+      <p>Selects a tab in this tab group.
+@param filter An optional filter to apply to the child tabs. The first tab matching the filter
+    will be selected.</p>
 
     </td>
   </tr><thead>
@@ -195,9 +197,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>An optional filter to apply to the child tabs. The first tab matching the filter
-    will be selected.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -735,7 +735,9 @@
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets a <code>HarnessLoader</code> that can be used to load harnesses for components within the tab&#39;s
-content area.</p>
+content area.
+@deprecated Use <code>getHarness</code> or <code>getChildLoader</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>
@@ -791,7 +793,9 @@ content area.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clicks a link inside the nav bar.</p>
+      <p>Clicks a link inside the nav bar.
+@param filter An optional filter to apply to the child link. The first link matching the filter
+    will be clicked.</p>
 
     </td>
   </tr><thead>
@@ -808,9 +812,7 @@ content area.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>An optional filter to apply to the child link. The first link matching the filter
-    will be clicked.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -878,7 +880,8 @@ content area.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the list of links in the nav bar.</p>
+      <p>Gets the list of links in the nav bar.
+@param filter Optionally filters which links are included.</p>
 
     </td>
   </tr><thead>
@@ -895,8 +898,7 @@ content area.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which links are included.</p>
-
+        
       </p>
     </td>
   </tr>

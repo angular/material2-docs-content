@@ -129,7 +129,8 @@ used instead of directly checking scrollLeft or scrollTop, since browsers are no
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param from The edge to measure from.</p>
 
     </td>
   </tr><thead>
@@ -146,8 +147,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -183,7 +183,8 @@ in an RTL context.</p>
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param options specified the offsets to scroll to.</p>
 
     </td>
   </tr><thead>
@@ -200,8 +201,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -412,7 +412,9 @@ starts or end.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Open the drawer.</p>
+      <p>Open the drawer.
+@param openedVia Whether the drawer was opened by a key press, mouse click or programmatically.
+Used for focus management after the sidenav is closed.</p>
 
     </td>
   </tr><thead>
@@ -429,9 +431,7 @@ starts or end.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the drawer was opened by a key press, mouse click or programmatically.
-Used for focus management after the sidenav is closed.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -465,7 +465,10 @@ Used for focus management after the sidenav is closed.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggle this drawer.</p>
+      <p>Toggle this drawer.
+@param isOpen Whether the drawer should be open.
+@param openedVia Whether the drawer was opened by a key press, mouse click or programmatically.
+Used for focus management after the sidenav is closed.</p>
 
     </td>
   </tr><thead>
@@ -482,8 +485,7 @@ Used for focus management after the sidenav is closed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the drawer should be open.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -496,9 +498,7 @@ Used for focus management after the sidenav is closed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the drawer was opened by a key press, mouse click or programmatically.
-Used for focus management after the sidenav is closed.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -794,7 +794,8 @@ used instead of directly checking scrollLeft or scrollTop, since browsers are no
 about what scrollLeft means in RTL. The values returned by this method are normalized such that
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param from The edge to measure from.</p>
 
     </td>
   </tr><thead>
@@ -811,8 +812,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The edge to measure from.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -848,7 +848,8 @@ in an RTL context.</p>
 method, since browsers are not consistent about what scrollLeft means in RTL. For this method
 left and right always refer to the left and right side of the scrolling container irrespective
 of the layout direction. start and end refer to left and right in an LTR context and vice-versa
-in an RTL context.</p>
+in an RTL context.
+@param options specified the offsets to scroll to.</p>
 
     </td>
   </tr><thead>
@@ -865,8 +866,7 @@ in an RTL context.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>specified the offsets to scroll to.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1127,7 +1127,9 @@ starts or end.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Open the drawer.</p>
+      <p>Open the drawer.
+@param openedVia Whether the drawer was opened by a key press, mouse click or programmatically.
+Used for focus management after the sidenav is closed.</p>
 
     </td>
   </tr><thead>
@@ -1144,9 +1146,7 @@ starts or end.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the drawer was opened by a key press, mouse click or programmatically.
-Used for focus management after the sidenav is closed.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1180,7 +1180,10 @@ Used for focus management after the sidenav is closed.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggle this drawer.</p>
+      <p>Toggle this drawer.
+@param isOpen Whether the drawer should be open.
+@param openedVia Whether the drawer was opened by a key press, mouse click or programmatically.
+Used for focus management after the sidenav is closed.</p>
 
     </td>
   </tr><thead>
@@ -1197,8 +1200,7 @@ Used for focus management after the sidenav is closed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the drawer should be open.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -1211,9 +1213,7 @@ Used for focus management after the sidenav is closed.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Whether the drawer was opened by a key press, mouse click or programmatically.
-Used for focus management after the sidenav is closed.</p>
-
+        
       </p>
     </td>
   </tr>

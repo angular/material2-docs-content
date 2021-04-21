@@ -474,7 +474,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the description text of the panel.</p>
+      <p>Gets the description text of the panel.
+@returns Description text or <code>null</code> if no description is set up.</p>
 
     </td>
   </tr><thead>
@@ -587,7 +588,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the title text of the panel.</p>
+      <p>Gets the title text of the panel.
+@returns Title text or <code>null</code> if no title is set up.</p>
 
     </td>
   </tr><thead>
@@ -857,7 +859,10 @@ header. This method will not work if the panel is disabled.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets a <code>HarnessLoader</code> that can be used to load harnesses for
-components within the panel&#39;s content area.</p>
+components within the panel&#39;s content area.
+@deprecated Use either <code>getChildLoader(MatExpansionPanelSection.CONTENT)</code>, <code>getHarness</code> or
+   <code>getAllHarnesses</code> instead.
+@breaking-change 12.0.0</p>
 
     </td>
   </tr><thead>

@@ -114,7 +114,10 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Opens a snackbar with a message and an optional action.</p>
+      <p>Opens a snackbar with a message and an optional action.
+@param message The message to show in the snackbar.
+@param action The label for the snackbar action.
+@param config Additional configuration options for the snackbar.</p>
 
     </td>
   </tr><thead>
@@ -131,8 +134,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The message to show in the snackbar.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -145,8 +147,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>The label for the snackbar action.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -159,8 +160,7 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Additional configuration options for the snackbar.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -194,6 +194,8 @@
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates and dispatches a snack bar with a custom component for the content, removing any
 currently opened snack bars.</p>
+<p>@param component Component to be instantiated.
+@param config Extra configuration for the snack bar.</p>
 
     </td>
   </tr><thead>
@@ -210,8 +212,7 @@ currently opened snack bars.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Component to be instantiated.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -224,8 +225,7 @@ currently opened snack bars.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Extra configuration for the snack bar.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -259,6 +259,8 @@ currently opened snack bars.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates and dispatches a snack bar with a custom template for the content, removing any
 currently opened snack bars.</p>
+<p>@param template Template to be instantiated.
+@param config Extra configuration for the snack bar.</p>
 
     </td>
   </tr><thead>
@@ -275,8 +277,7 @@ currently opened snack bars.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Template to be instantiated.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -289,8 +290,7 @@ currently opened snack bars.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Extra configuration for the snack bar.</p>
-
+        
       </p>
     </td>
   </tr>
@@ -723,7 +723,9 @@ injection. Note: this does not affect where the snackbar is inserted in the DOM.
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Marks the snackbar action clicked.</p>
+      <p>Marks the snackbar action clicked.
+@deprecated Use <code>dismissWithAction</code> instead.
+@breaking-change 8.0.0</p>
 
     </td>
   </tr></table>

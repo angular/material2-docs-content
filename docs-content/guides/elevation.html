@@ -1,34 +1,29 @@
-<div class="docs-markdown"><h1>Setting Element Elevation</h1><p>Angular Material&#39;s elevation classes and mixins allow you to add separation between elements along
-the z-axis. All material design elements have resting elevations. In addition, some elements may
-change their elevation in response to user interaction. The
-<a href="https://material.io/design/environment/elevation.html">Material Design spec</a>
-explains how to best use elevation.</p>
-<p>Angular Material provides two ways to control the elevation of elements: predefined CSS classes
-and mixins.</p>
+<div class="docs-markdown"><h1>Applying Elevation</h1><p><a href="https://material.io/design/environment/elevation.html">The Material Design specification</a> gives guidance on expressing elevation on
+UI elements by adding shadows. Angular Material provides CSS classes and Sass mixins for adding
+these shadows.</p>
 
-        <h2 id="predefined-css-classes" class="docs-header-link">
-          <span header-link="predefined-css-classes"></span>
-          Predefined CSS classes
+        <h2 id="elevation-css-classes" class="docs-header-link">
+          <span header-link="elevation-css-classes"></span>
+          Elevation CSS classes
         </h2>
-      <p>The easiest way to add elevation to an element is to simply add one of the predefined CSS classes
-<code>mat-elevation-z#</code> where <code>#</code> is the elevation number you want, 0-24. Dynamic elevation can be
-achieved by switching elevation classes:</p>
+      <p>The <code>core-theme</code> Sass mixin, described in the [theming guide][], emits CSS classes for applying
+elevation. These classes follow the pattern <code>mat-elevation-z#</code>, where <code>#</code> is the elevation number
+you want, from 0 to 24. These predefined classes use the CSS <code>box-shadow</code> settings defined by the
+Material Design specification.</p>
+<p>You can dynamically change elevation on an element by swapping elevation CSS classes.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.mat-elevation-z2</span>]=<span class="hljs-string">&quot;!isActive&quot;</span> [<span class="hljs-attr">class.mat-elevation-z8</span>]=<span class="hljs-string">&quot;isActive&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <div material-docs-example="elevation-overview"></div>
 
 
-        <h2 id="mixins" class="docs-header-link">
-          <span header-link="mixins"></span>
-          Mixins
+        <h2 id="elevation-sass-mixins" class="docs-header-link">
+          <span header-link="elevation-sass-mixins"></span>
+          Elevation Sass mixins
         </h2>
-      <p>Elevations can also be added in CSS via the <code>elevation</code> mixin, which takes a number 0-24
-indicating the elevation of the element as well as optional arguments for the elevation shadow&#39;s
-color tone and opacity.</p>
-<p>Since an elevation shadow consists of multiple shadow components of varying opacities, the
-<code>$opacity</code> argument of the mixin is considered a factor by which to scale these initial values
-rather than an absolute value.</p>
-<p>In order to use the mixin, you must import <code>~@angular/material</code>:</p>
+      <p>In addition to the predefined CSS classes, you can apply elevation styles using the <code>elevation</code>
+Sass mixin. This mixin accepts a <code>$zValue</code> and an optional <code>$color</code>. The <code>$zValue</code> is a number from
+0 to 24, representing the semantic elevation of the element, that controls the intensity of the
+box-shadow. You can use the <code>$color</code> parameter to further customize the shadow appearance.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
 
 <span class="hljs-selector-class">.my-class-with-default-shadow</span> {
@@ -41,12 +36,26 @@ rather than an absolute value.</p>
   <span class="hljs-keyword">@include</span> mat.elevation(<span class="hljs-number">2</span>, <span class="hljs-number">#e91e63</span>, <span class="hljs-number">0.8</span>);
 }
 </code></pre>
-<p>For convenience, you can use the <code>elevation-transition</code> mixin to add a transition when the
-elevation changes:</p>
+
+        <h3 id="overridable-elevation" class="docs-header-link">
+          <span header-link="overridable-elevation"></span>
+          Overridable elevation
+        </h3>
+      <p>When authoring a component, you may want to specify a default elevation that the component consumer
+can override. You can accomplish this by using the <code>overridable-elevation</code> Sass mixin. This behaves
+identically to the <code>elevation</code> mixin, except that the styles only apply when the element does not
+have a CSS class matching the pattern <code>mat-elevation-z#</code>, as described in
+<a href="#elevation-css-classes">Elevation CSS classes</a> above.</p>
+
+        <h3 id="animating-elevation" class="docs-header-link">
+          <span header-link="animating-elevation"></span>
+          Animating elevation
+        </h3>
+      <p>You can use the <code>elevation-transition</code> mixin to add a transition when elevation changes.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
 
 <span class="hljs-selector-class">.my-class</span> {
-  <span class="hljs-keyword">@include</span> mat.elevation-transition;
+  <span class="hljs-keyword">@include</span> mat.elevation-transition();
   <span class="hljs-keyword">@include</span> mat.elevation(<span class="hljs-number">2</span>);
 
   &amp;<span class="hljs-selector-pseudo">:active</span> {

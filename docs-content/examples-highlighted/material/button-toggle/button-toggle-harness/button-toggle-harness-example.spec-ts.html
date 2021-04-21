@@ -32,7 +32,7 @@ describe(<span class="hljs-string">&#x27;ButtonToggleHarnessExample&#x27;</span>
     expect(groups.length).toBe(<span class="hljs-number">1</span>);
   });
 
-  it(<span class="hljs-string">&#x27;should load the the toggles inside the group&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  it(<span class="hljs-string">&#x27;should load the toggles inside the group&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> group = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonToggleGroupHarness);
     <span class="hljs-keyword">const</span> toggles = <span class="hljs-keyword">await</span> group.getToggles();
     expect(toggles.length).toBe(<span class="hljs-number">2</span>);
