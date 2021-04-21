@@ -69,7 +69,7 @@ SelectDisabledExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
         i0.ɵɵproperty("disabled", ctx.disableSelect.value);
         i0.ɵɵadvance(12);
         i0.ɵɵproperty("disabled", ctx.disableSelect.value);
-    } }, directives: [i1.MatCheckbox, i2.NgControlStatus, i2.FormControlDirective, i3.MatFormField, i3.MatLabel, i4.MatSelect, i5.MatOption, i6.MatInput, i2.NgSelectOption, i2.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+    } }, directives: [i1.MatCheckbox, i2.NgControlStatus, i2.FormControlDirective, i3.MatFormField, i3.MatLabel, i4.MatSelect, i5.MatOption, i6.MatInput, i2.NgSelectOption, i2.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
         args: [{

@@ -114,7 +114,7 @@ SelectOptgroupExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
         i0.ɵɵproperty("formControl", ctx.pokemonControl);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngForOf", ctx.pokemonGroups);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.MatOption, i5.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i4.MatOptgroup], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.MatOption, i5.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i4.MatOptgroup], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
         args: [{

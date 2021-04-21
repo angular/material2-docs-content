@@ -42,7 +42,7 @@ export declare class LoadmoreDatabase {
     loadMore(item: string, onlyFirstTime?: boolean): void;
     private _generateNode;
     static ɵfac: i0.ɵɵFactoryDeclaration<LoadmoreDatabase, never>;
-    static ɵprov: i0.ɵɵInjectableDef<LoadmoreDatabase>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<LoadmoreDatabase>;
 }
 /**
  * @title Tree with partially loaded data

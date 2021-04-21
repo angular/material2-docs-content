@@ -170,7 +170,7 @@
                 i0__namespace.ɵɵadvance(12);
                 i0__namespace.ɵɵproperty("disabled", ctx.disableSelect.value);
             }
-        }, directives: [i1__namespace$1.MatCheckbox, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace$1.MatOption, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+        }, directives: [i1__namespace$1.MatCheckbox, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace$1.MatOption, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectDisabledExample, [{
                 type: i0.Component,
@@ -299,7 +299,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
             }
-        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i1__namespace.MatHint, i4__namespace.NgIf, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z, i1__namespace.MatError], encapsulation: 2 });
+        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i1__namespace.MatHint, i4__namespace.NgIf, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba, i1__namespace.MatError], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
                 type: i0.Component,
@@ -405,7 +405,7 @@
                 i0__namespace.ɵɵadvance(2);
                 i0__namespace.ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
             }
-        }, directives: [i3__namespace.ɵangular_packages_forms_forms_ba, i3__namespace.NgControlStatusGroup, i3__namespace.NgForm, i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.NgModel, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z, i4__namespace$1.MatOption], encapsulation: 2 });
+        }, directives: [i3__namespace.ɵangular_packages_forms_forms_bb, i3__namespace.NgControlStatusGroup, i3__namespace.NgForm, i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.NgModel, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba, i4__namespace$1.MatOption], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectFormExample, [{
                 type: i0.Component,
@@ -517,7 +517,7 @@
                 i0__namespace.ɵɵadvance(8);
                 i0__namespace.ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
             }
-        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.RequiredValidator, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i4__namespace.NgForOf, i4__namespace.NgIf, i1__namespace.MatHint, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z, i1__namespace.MatError], encapsulation: 2 });
+        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.RequiredValidator, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i4__namespace.NgForOf, i4__namespace.NgIf, i1__namespace.MatHint, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba, i1__namespace.MatError], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectHintErrorExample, [{
                 type: i0.Component,
@@ -732,7 +732,7 @@
                 i0__namespace.ɵɵadvance(3);
                 i0__namespace.ɵɵproperty("ngForOf", ctx.pokemonGroups);
             }
-        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z, i4__namespace$1.MatOptgroup], encapsulation: 2 });
+        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba, i4__namespace$1.MatOptgroup], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectOptgroupExample, [{
                 type: i0.Component,
@@ -810,7 +810,7 @@
                 i0__namespace.ɵɵadvance(6);
                 i0__namespace.ɵɵproperty("ngForOf", ctx.foods);
             }
-        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z, i4__namespace$1.MatOption], encapsulation: 2 });
+        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba, i4__namespace$1.MatOption], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectOverviewExample, [{
                 type: i0.Component,
@@ -943,7 +943,7 @@
                 i0__namespace.ɵɵadvance(8);
                 i0__namespace.ɵɵproperty("ngForOf", ctx.states);
             }
-        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectResetExample, [{
                 type: i0.Component,
@@ -1110,7 +1110,7 @@
                 i0__namespace.ɵɵadvance(2);
                 i0__namespace.ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
             }
-        }, directives: [i3__namespace.ɵangular_packages_forms_forms_ba, i3__namespace.NgControlStatusGroup, i3__namespace.FormGroupDirective, i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+        }, directives: [i3__namespace.ɵangular_packages_forms_forms_bb, i3__namespace.NgControlStatusGroup, i3__namespace.FormGroupDirective, i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i3__namespace.NgControlStatus, i3__namespace.FormControlDirective, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.SelectControlValueAccessor, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectReactiveFormExample, [{
                 type: i0.Component,
@@ -1219,7 +1219,7 @@
                 i0__namespace.ɵɵadvance(2);
                 i0__namespace.ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
             }
-        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+        }, directives: [i1__namespace.MatFormField, i1__namespace.MatLabel, i2__namespace.MatSelect, i4__namespace$1.MatOption, i4__namespace.NgForOf, i6__namespace.MatInput, i3__namespace.NgSelectOption, i3__namespace.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(SelectInitialValueExample, [{
                 type: i0.Component,

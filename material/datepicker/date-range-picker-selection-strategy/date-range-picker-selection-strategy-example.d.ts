@@ -8,7 +8,7 @@ export declare class FiveDayRangeSelectionStrategy<D> implements MatDateRangeSel
     createPreview(activeDate: D | null): DateRange<D>;
     private _createFiveDayRange;
     static ɵfac: i0.ɵɵFactoryDeclaration<FiveDayRangeSelectionStrategy<any>, never>;
-    static ɵprov: i0.ɵɵInjectableDef<FiveDayRangeSelectionStrategy<any>>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<FiveDayRangeSelectionStrategy<any>>;
 }
 /** @title Date range picker with custom a selection strategy */
 export declare class DateRangePickerSelectionStrategyExample {

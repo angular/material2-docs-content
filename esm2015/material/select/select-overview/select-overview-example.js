@@ -66,7 +66,7 @@ SelectOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } if (rf & 2) {
         i0.ɵɵadvance(6);
         i0.ɵɵproperty("ngForOf", ctx.foods);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgForOf, i4.MatInput, i5.NgSelectOption, i5.ɵangular_packages_forms_forms_z, i6.MatOption], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgForOf, i4.MatInput, i5.NgSelectOption, i5.ɵangular_packages_forms_forms_ba, i6.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
         args: [{

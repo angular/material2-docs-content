@@ -91,7 +91,7 @@ SelectFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectFor
         i0.ɵɵproperty("ngForOf", ctx.cars);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatSelect, i1.NgControlStatus, i1.NgModel, i4.NgForOf, i5.MatInput, i1.SelectControlValueAccessor, i1.NgSelectOption, i1.ɵangular_packages_forms_forms_z, i6.MatOption], encapsulation: 2 });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatSelect, i1.NgControlStatus, i1.NgModel, i4.NgForOf, i5.MatInput, i1.SelectControlValueAccessor, i1.NgSelectOption, i1.ɵangular_packages_forms_forms_ba, i6.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
         args: [{
