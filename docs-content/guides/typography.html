@@ -102,7 +102,7 @@ table below.</p>
         </h3>
       <p>You can define a typography level with the <code>define-typography-config</code> Sass function. This function
 accepts, in order, CSS values for <code>font-size</code>, <code>line-height</code>, <code>font-weight</code>, <code>font-family</code>, and
-<code>letter-spacing</code>. You can also specify the parameters by name, as demonstrated in the example below. </p>
+<code>letter-spacing</code>. You can also specify the parameters by name, as demonstrated in the example below.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-custom-level</span>: mat.define-typography-level(
@@ -156,7 +156,7 @@ typography styles.</p>
 mixin, as described in the <a href="https://material.angular.io/guide/theming">theming guide</a>. Because the <code>core</code> mixin always emits
 typography styles, specifying a typography config to a theme mixin results in duplicate typography
 CSS. You should only provide a typography config when applying your theme if you need to specify
-multiple typography styles that are conditionally applied based on your application&#39;s behavior. </p>
+multiple typography styles that are conditionally applied based on your application&#39;s behavior.</p>
 <p>The following example shows a typical theme definition and a &quot;kids theme&quot; that only applies when
 the <code>&quot;.kids-theme&quot;</code> CSS class is present. You can <a href="https://material.angular.io/guide/theming#defining-multiple-themes">see the theming guide for more guidance on
 defining multiple themes</a>.</p>
@@ -183,7 +183,7 @@ defining multiple themes</a>.</p>
     // Specify <span class="hljs-string">&quot;Comic Sans&quot;</span> as the default font family for all levels.
     <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
   );
-  
+
   <span class="hljs-variable">$kids-theme</span>: mat.define-light-theme((
    color: (
      primary: <span class="hljs-variable">$my-primary</span>,
@@ -191,7 +191,7 @@ defining multiple themes</a>.</p>
    ),
    typography: <span class="hljs-variable">$kids-typography</span>,
   ));
-  
+
   <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$kids-theme</span>);
 }
 </code></pre>
@@ -216,7 +216,7 @@ typography styles only for the button component.</p>
       <p>In addition to styles shared between components, the <code>core</code> mixin includes CSS classes for styling
 your application. These CSS classes correspond to the typography levels in your typography config.
 This mixin also emits styles for native header elements scoped within the <code>.mat-typography</code> CSS
-class. The table below lists the the CSS classes emitted and the native elements styled.</p>
+class. The table below lists the CSS classes emitted and the native elements styled.</p>
 <table>
 <thead>
 <tr>
@@ -301,14 +301,14 @@ typography level. The <code>.mat-h5</code> style uses the <code>body-1</code> le
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This header will *not* be styled because it is outside `.mat-typography` --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Top header<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    
+
   <span class="hljs-comment">&lt;!-- This paragraph will be styled as `body-1` via the `.mat-body` CSS class applied --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-body&quot;</span>&gt;</span>Introductory text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  
+
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-typography&quot;</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- This header will be styled as `title` because it is inside `.mat-typography` --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Inner header<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-    
+
     <span class="hljs-comment">&lt;!-- This paragraph will be styled as `body-1` because it is inside `.mat-typography` --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Some inner text<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
