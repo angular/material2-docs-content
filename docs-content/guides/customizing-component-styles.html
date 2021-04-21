@@ -1,82 +1,112 @@
-<div class="docs-markdown"><h1>Customizing Angular Material component styles</h1>
-        <h2 id="styling-concepts" class="docs-header-link">
-          <span header-link="styling-concepts"></span>
-          Styling concepts
+<div class="docs-markdown"><h1>Customizing Angular Material component styles</h1><p>Angular Material supports customizing component styles via Sass API as described in the <a href="https://material.angular.io/guide/theming">theming
+guide</a>. This document provides guidance on defining custom CSS rules that directly style
+Angular Material components.</p>
+
+        <h2 id="targeting-custom-styles" class="docs-header-link">
+          <span header-link="targeting-custom-styles"></span>
+          Targeting custom styles
         </h2>
-      <p>There are 3 questions to keep in mind while customizing the styles of Angular Material
-components:</p>
-<ol>
-<li>Are your styles encapsulated?</li>
-<li>Are your styles more specific than the defaults?</li>
-<li>Is the component a child of your component, or does it exist elsewhere in the DOM?</li>
-</ol>
+      
+        <h3 id="component-host-elements" class="docs-header-link">
+          <span header-link="component-host-elements"></span>
+          Component host elements
+        </h3>
+      <p>For any Angular Material component, you can safely define custom CSS for a component&#39;s host element
+that affect the positioning or layout of that component, such as <code>margin</code>, <code>position</code>, <code>top</code>,
+<code>left</code>, <code>transform</code>, and <code>z-index</code>. You should apply such styles by defining a custom CSS
+class and applying that class to the component&#39;s host element.</p>
+<p>Avoid defining custom styles that would affect the size or internal layout of the component, such as
+<code>padding</code>, <code>height</code>, <code>width</code>, or <code>overflow</code>. You can specify <code>display: none</code> to hide a component,
+but avoid specifying any other <code>display</code> value. Overriding these properties can break components
+in unexpected ways as the internal styles change between releases.</p>
+
+        <h3 id="internal-component-elements" class="docs-header-link">
+          <span header-link="internal-component-elements"></span>
+          Internal component elements
+        </h3>
+      <p>Avoid any custom styles or overrides on internal elements within a Angular Material components.
+The DOM structure and CSS classes applied for each component may change at any time, causing custom
+styles to break.</p>
+
+        <h2 id="applying-styles-to-angular-material-components" class="docs-header-link">
+          <span header-link="applying-styles-to-angular-material-components"></span>
+          Applying styles to Angular Material components
+        </h2>
+      <p>While Angular Material does not support defining custom styles or CSS overrides on components&#39;
+internal elements, you might choose to do this anyway. There are three points to consider while
+customizing styles for Angular Material components: view encapsulation, CSS specificity, and
+rendering location.</p>
 
         <h3 id="view-encapsulation" class="docs-header-link">
           <span header-link="view-encapsulation"></span>
           View encapsulation
         </h3>
-      <p>By default, Angular component styles are scoped to affect the component&#39;s view. This means that
-the styles you write will affect all the elements in your component template. They will <em>not</em>
-affect elements that are children of other components within your template. You can read more
-about view encapsulation in the
+      <p>By default, Angular scopes component styles to exclusively affect that component&#39;s view. This means
+that the styles you author affect only the elements directly within your component template.
+Encapsulated styles do <em>not</em> affect elements that are children of other components within your
+template. You can read more about view encapsulation in the
 <a href="https://angular.io/guide/component-styles#view-encapsulation">Angular documentation</a>. You may
-also wish to take a look at
+also wish to review
 <a href="https://blog.angular.io/the-state-of-css-in-angular-4a52d4bd2700"><em>The State of CSS in Angular</em></a>
 on the Angular blog.</p>
 
-        <h3 id="selector-specificity" class="docs-header-link">
-          <span header-link="selector-specificity"></span>
-          Selector specificity
+        <h4 id="bypassing-encapsulation" class="docs-header-link">
+          <span header-link="bypassing-encapsulation"></span>
+          Bypassing encapsulation
+        </h4>
+      <p>Angular Material disables style encapsulation for all components in the library. However, the
+default style encapsulation in your own components still prevents custom styles from leaking into
+Angular Material components.</p>
+<p>If your component enables view encapsulation, your component styles will only
+affect the elements explicitly defined in your template. To affect descendants of components used
+in your template, you can use one of the following approaches:</p>
+<ol>
+<li>Define custom styles in a global stylesheet declared in the <code>styles</code> array of your <code>angular.json</code>
+configuration file.</li>
+<li>Disable view encapsulation for your component. This approach effectively turns your component
+styles into global CSS.</li>
+<li>Apply the deprecated <code>::ng-deep</code> pseudo-class to a CSS rule. Any CSS rule with <code>::ng-deep</code>
+becomes a global style. <a href="https://angular.io/guide/component-styles#deprecated-deep--and-ng-deep">See the Angular documentation for more on <code>::ng-deep</code></a>.</li>
+</ol>
+<p>All of these approaches involve creating global CSS that isn&#39;t affected by style encapsulation.
+Global CSS affects all elements in your application. Global CSS class names may collide with class
+names defined by components. Global CSS is often a source of hard-to-diagnose bugs and is generally
+difficult to maintain.</p>
+
+        <h3 id="css-specificity" class="docs-header-link">
+          <span header-link="css-specificity"></span>
+          CSS specificity
         </h3>
       <p>Each CSS declaration has a level of <em>specificity</em> based on the type and number of selectors used.
-More specific styles will take precedence over less specific styles. Angular Material uses the
-least specific selectors possible for its components in order to make it easy to override them.
-You can read more about specificity and how it is calculated on the
+More specific styles take precedence over less specific styles. Angular Material generally attempts
+to use the least specific selectors possible. However, Angular Material may change component style
+specificity at any time, making custom overrides brittle and prone to breaking.</p>
+<p>You can read more about specificity and how it is calculated on the
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN web docs</a>.</p>
 
-        <h3 id="component-location" class="docs-header-link">
-          <span header-link="component-location"></span>
-          Component location
+        <h3 id="rendering-location" class="docs-header-link">
+          <span header-link="rendering-location"></span>
+          Rendering location
         </h3>
-      <p>Some Angular Material components, specifically overlay-based one&#39;s like MatDialog, MatSnackbar, etc.,
-do not exist as children of your component. Often they are injected elsewhere in the DOM. This is
-important to keep in mind, since even using high specificity and shadow-piercing selectors will
-not target elements that are not direct children of your component. Global styles are recommended
-for targeting such components.</p>
+      <p>Some Angular Material components render elements that are not direct DOM descendants of the
+component&#39;s host element. In particular, overlay-based components such as <code>MatDialog</code>, <code>MatMenu</code>,
+<code>MatTooltip</code>, etc. render into an overlay container element directly on the document body. Because
+these components render elements outside of your application&#39;s components, component-specific styles
+will not apply to these elements. You can define styles for these elements as global styles.</p>
 
-        <h2 id="styling-overlay-components" class="docs-header-link">
+        <h4 id="styling-overlay-components" class="docs-header-link">
           <span header-link="styling-overlay-components"></span>
           Styling overlay components
-        </h2>
-      <p>Overlay-based components have a <code>panelClass</code> property (or similar) that can be used to target the
-overlay pane. For example, to remove the padding from a dialog:</p>
-<pre><code class="language-scss"><span class="hljs-comment">// Add this to your global stylesheet after your theme setup</span>
-<span class="hljs-selector-class">.myapp-no-padding-dialog</span> <span class="hljs-selector-class">.mat-dialog-container</span> {
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        </h4>
+      <p>Overlay-based components have a <code>panelClass</code> property, or similar, that let you target the
+overlay pane. The following example shows how to add an <code>outline</code> style with <code>MatDialog</code>.</p>
+<pre><code class="language-scss"><span class="hljs-comment">// Add this to your global stylesheet after including theme mixins.</span>
+<span class="hljs-selector-class">.my-outlined-dialog</span> {
+  <span class="hljs-attribute">outline</span>: <span class="hljs-number">2px</span> solid purple;
 }
 </code></pre>
-<pre><code class="language-ts"><span class="hljs-built_in">this</span>.dialog.open(MyDialogComponent, {<span class="hljs-attr">panelClass</span>: <span class="hljs-string">&#x27;myapp-no-padding-dialog&#x27;</span>})
+<pre><code class="language-ts"><span class="hljs-built_in">this</span>.dialog.open(MyDialogComponent, {<span class="hljs-attr">panelClass</span>: <span class="hljs-string">&#x27;my-outlined-dialog&#x27;</span>})
 </code></pre>
-<p>Since you are adding the styles to your global stylesheet, it is a good practice to scope
-them appropriately. Try prefixing your selector with your app name or &quot;custom&quot;. Also note that
-the <code>mat-dialog-container</code>&#39;s padding is added by default via a selector with specificity of 1. The
-customizing styles have a specificity of 2, so they will always take precedence.</p>
-
-        <h2 id="styling-other-components" class="docs-header-link">
-          <span header-link="styling-other-components"></span>
-          Styling other components
-        </h2>
-      <p>If your component has view encapsulation turned on (default), your component styles will only
-affect the top level children in your template. HTML elements belonging to child components cannot
-be targeted by your component styles unless you do one of the following:</p>
-<ul>
-<li>Add the overriding style to your global stylesheet. Scope the selectors so that it only affects
-the specific elements you need it to.</li>
-<li>Turn view encapsulation off on your component. If you do this, be sure to scope your styles
-appropriately, or else you may end up incidentally targeting other components elsewhere in your
-application.</li>
-<li>Use a deprecated shadow-piercing descendant combinator to force styles to apply to all the child
-elements. Read more about this deprecated solution in the
-<a href="https://angular.io/guide/component-styles#deprecated-deep--and-ng-deep">Angular documentation</a>.</li>
-</ul>
+<p>You should always apply an application-specific prefix to global CSS classes to avoid naming
+collisions.</p>
 </div>
