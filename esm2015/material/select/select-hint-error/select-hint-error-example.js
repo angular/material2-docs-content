@@ -97,7 +97,7 @@ SelectHintErrorExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sele
         i0.ɵɵproperty("formControl", ctx.selectFormControl);
         i0.ɵɵadvance(8);
         i0.ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4.MatOption, i5.NgForOf, i5.NgIf, i1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i1.MatError], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4.MatOption, i5.NgForOf, i5.NgIf, i1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i1.MatError], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
         args: [{

@@ -107,7 +107,7 @@ InputErrorStateMatcherExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ typ
         i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("email") && !ctx.emailFormControl.hasError("required"));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i2.MatHint, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i2.MatHint, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputErrorStateMatcherExample, [{
         type: Component,
         args: [{
@@ -160,7 +160,7 @@ InputErrorsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: InputErr
         i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("email") && !ctx.emailFormControl.hasError("required"));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputErrorsExample, [{
         type: Component,
         args: [{
@@ -256,7 +256,7 @@ InputFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: InputFormE
         const _r0 = i0.ɵɵreference(44);
         i0.ɵɵadvance(46);
         i0.ɵɵtextInterpolate1("", _r0.value.length, " / 5");
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputFormExample, [{
         type: Component,
         args: [{
@@ -293,7 +293,7 @@ InputHintExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: InputHintE
         const _r0 = i0.ɵɵreference(5);
         i0.ɵɵadvance(10);
         i0.ɵɵtextInterpolate1("", _r0.value.length, " / 256");
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputHintExample, [{
         type: Component,
         args: [{
@@ -324,7 +324,7 @@ InputOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: InputO
         i0.ɵɵelement(8, "textarea", 3);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputOverviewExample, [{
         type: Component,
         args: [{
@@ -355,7 +355,7 @@ InputPrefixSuffixExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: In
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i2.MatPrefix, i3.MatInput, i6.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i2.MatPrefix, i3.MatInput, i6.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(InputPrefixSuffixExample, [{
         type: Component,
         args: [{

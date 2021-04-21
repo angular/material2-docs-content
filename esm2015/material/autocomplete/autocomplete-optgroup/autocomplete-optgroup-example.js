@@ -136,7 +136,7 @@ AutocompleteOptgroupExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type:
         i0.ɵɵproperty("matAutocomplete", _r0);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(8, 3, ctx.stateGroupOptions));
-    } }, directives: [i1.ɵangular_packages_forms_forms_ba, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i4.MatAutocomplete, i5.NgForOf, i6.MatOptgroup, i6.MatOption], pipes: [i5.AsyncPipe], encapsulation: 2 });
+    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i4.MatAutocomplete, i5.NgForOf, i6.MatOptgroup, i6.MatOption], pipes: [i5.AsyncPipe], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(AutocompleteOptgroupExample, [{
         type: Component,
         args: [{

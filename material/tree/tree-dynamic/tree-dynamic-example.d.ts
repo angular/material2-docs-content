@@ -22,7 +22,7 @@ export declare class DynamicDatabase {
     getChildren(node: string): string[] | undefined;
     isExpandable(node: string): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<DynamicDatabase, never>;
-    static ɵprov: i0.ɵɵInjectableDef<DynamicDatabase>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<DynamicDatabase>;
 }
 /**
  * File database, it can build a tree structured Json object from string.

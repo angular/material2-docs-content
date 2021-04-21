@@ -135,7 +135,7 @@ SelectDisabledExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
         i0.ɵɵproperty("disabled", ctx.disableSelect.value);
         i0.ɵɵadvance(12);
         i0.ɵɵproperty("disabled", ctx.disableSelect.value);
-    } }, directives: [i1$1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+    } }, directives: [i1$1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
         args: [{
@@ -247,7 +247,7 @@ SelectErrorStateMatcherExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ ty
         i0.ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("required"));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i1.MatError], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i1.MatError], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
         type: Component,
         args: [{
@@ -341,7 +341,7 @@ SelectFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectFor
         i0.ɵɵproperty("ngForOf", ctx.cars);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
-    } }, directives: [i3.ɵangular_packages_forms_forms_ba, i3.NgControlStatusGroup, i3.NgForm, i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i4$1.MatOption], encapsulation: 2 });
+    } }, directives: [i3.ɵangular_packages_forms_forms_bb, i3.NgControlStatusGroup, i3.NgForm, i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
         args: [{
@@ -440,7 +440,7 @@ SelectHintErrorExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sele
         i0.ɵɵproperty("formControl", ctx.selectFormControl);
         i0.ɵɵadvance(8);
         i0.ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i1.MatError], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i1.MatError], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
         args: [{
@@ -627,7 +627,7 @@ SelectOptgroupExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
         i0.ɵɵproperty("formControl", ctx.pokemonControl);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngForOf", ctx.pokemonGroups);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i4$1.MatOptgroup], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i4$1.MatOptgroup], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
         args: [{
@@ -696,7 +696,7 @@ SelectOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } if (rf & 2) {
         i0.ɵɵadvance(6);
         i0.ɵɵproperty("ngForOf", ctx.foods);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z, i4$1.MatOption], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
         args: [{
@@ -814,7 +814,7 @@ SelectResetExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectRe
     } if (rf & 2) {
         i0.ɵɵadvance(8);
         i0.ɵɵproperty("ngForOf", ctx.states);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectResetExample, [{
         type: Component,
         args: [{
@@ -963,7 +963,7 @@ SelectReactiveFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
         i0.ɵɵproperty("ngForOf", ctx.cars);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
-    } }, directives: [i3.ɵangular_packages_forms_forms_ba, i3.NgControlStatusGroup, i3.FormGroupDirective, i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+    } }, directives: [i3.ɵangular_packages_forms_forms_bb, i3.NgControlStatusGroup, i3.FormGroupDirective, i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectReactiveFormExample, [{
         type: Component,
         args: [{
@@ -1060,7 +1060,7 @@ SelectInitialValueExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
         i0.ɵɵproperty("ngForOf", ctx.cars);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_z], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectInitialValueExample, [{
         type: Component,
         args: [{

@@ -512,7 +512,7 @@
                 i0__namespace.ɵɵadvance(3);
                 i0__namespace.ɵɵtextInterpolate1(" ", ctx.isLinear ? "Disable linear mode" : "Enable linear mode", "\n");
             }
-        }, directives: function () { return [CustomLinearStepper, i1__namespace.CdkStep, i1__namespace$1.ɵangular_packages_forms_forms_ba, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i1__namespace$1.RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
+        }, directives: function () { return [CustomLinearStepper, i1__namespace.CdkStep, i1__namespace$1.ɵangular_packages_forms_forms_bb, i1__namespace$1.NgControlStatusGroup, i1__namespace$1.FormGroupDirective, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.FormControlName, i1__namespace$1.RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
                 type: i0.Component,

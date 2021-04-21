@@ -37,7 +37,7 @@ export declare class ChecklistDatabase {
     insertItem(parent: TodoItemNode, name: string): void;
     updateItem(node: TodoItemNode, name: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChecklistDatabase, never>;
-    static ɵprov: i0.ɵɵInjectableDef<ChecklistDatabase>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<ChecklistDatabase>;
 }
 /**
  * @title Tree with checkboxes
