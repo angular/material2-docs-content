@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk-experimental/selection'), require('@angular/cdk/table'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/checkbox'), require('rxjs')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk-experimental/selection', ['exports', '@angular/cdk-experimental/selection', '@angular/cdk/table', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/checkbox', 'rxjs'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdkExperimental = global.ng.componentsExamples.cdkExperimental || {}, global.ng.componentsExamples.cdkExperimental.selection = {}), global.ng.cdkExperimental.selection, global.ng.cdk.table, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.checkbox, global.rxjs));
-}(this, (function (exports, i2, i1, i2$1, i0, forms, i3, rxjs) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk-experimental/selection'), require('@angular/cdk/table'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/checkbox')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk-experimental/selection', ['exports', '@angular/cdk-experimental/selection', '@angular/cdk/table', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/checkbox'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdkExperimental = global.ng.componentsExamples.cdkExperimental || {}, global.ng.componentsExamples.cdkExperimental.selection = {}), global.ng.cdkExperimental.selection, global.ng.cdk.table, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.checkbox));
+}(this, (function (exports, i2, i1, i2$1, i0, forms, i3) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -125,15 +125,10 @@
      */
     var CdkSelectionColumnExample = /** @class */ (function () {
         function CdkSelectionColumnExample() {
-            this._destroyed = new rxjs.ReplaySubject(1);
             this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA;
             this.selected = [];
         }
-        CdkSelectionColumnExample.prototype.ngOnDestroy = function () {
-            this._destroyed.next();
-            this._destroyed.complete();
-        };
         CdkSelectionColumnExample.prototype.selectionChanged = function (event) {
             this.selected = event.after.map(function (select) { return select.value.name; });
         };
@@ -280,21 +275,16 @@
      */
     var CdkSelectionListExample = /** @class */ (function () {
         function CdkSelectionListExample() {
-            this._destroyed = new rxjs.ReplaySubject(1);
             this.data = ELEMENT_NAMES;
             this.selected1 = [];
             this.selected2 = [];
             this.selected3 = [];
             this.selected4 = [];
         }
-        CdkSelectionListExample.prototype.ngOnDestroy = function () {
-            this._destroyed.next();
-            this._destroyed.complete();
-        };
         CdkSelectionListExample.prototype.getCurrentSelected = function (event) {
             return event.after.map(function (select) { return select.value; });
         };
-        CdkSelectionListExample.prototype.trackByFn = function (index, value) {
+        CdkSelectionListExample.prototype.trackByFn = function (index) {
             return index;
         };
         CdkSelectionListExample.prototype.changeElementName = function () {

@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/material-experimental/selection'), require('@angular/material/table'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/checkbox'), require('rxjs')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material-experimental/selection', ['exports', '@angular/material-experimental/selection', '@angular/material/table', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/checkbox', 'rxjs'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.materialExperimental = global.ng.componentsExamples.materialExperimental || {}, global.ng.componentsExamples.materialExperimental.selection = {}), global.ng.materialExperimental.selection, global.ng.material.table, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.checkbox, global.rxjs));
-}(this, (function (exports, i2, i1, i2$1, i0, forms, i3, rxjs) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/material-experimental/selection'), require('@angular/material/table'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/checkbox')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material-experimental/selection', ['exports', '@angular/material-experimental/selection', '@angular/material/table', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/checkbox'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.materialExperimental = global.ng.componentsExamples.materialExperimental || {}, global.ng.componentsExamples.materialExperimental.selection = {}), global.ng.materialExperimental.selection, global.ng.material.table, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.checkbox));
+}(this, (function (exports, i2, i1, i2$1, i0, forms, i3) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -125,15 +125,10 @@
      */
     var MatSelectionColumnExample = /** @class */ (function () {
         function MatSelectionColumnExample() {
-            this._destroyed = new rxjs.ReplaySubject(1);
             this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
             this.dataSource = ELEMENT_DATA;
             this.selected = [];
         }
-        MatSelectionColumnExample.prototype.ngOnDestroy = function () {
-            this._destroyed.next();
-            this._destroyed.complete();
-        };
         MatSelectionColumnExample.prototype.selectionChanged = function (event) {
             this.selected = event.after.map(function (select) { return select.value.name; });
         };
@@ -280,17 +275,12 @@
      */
     var MatSelectionListExample = /** @class */ (function () {
         function MatSelectionListExample() {
-            this._destroyed = new rxjs.ReplaySubject(1);
             this.data = ELEMENT_NAMES;
             this.selected1 = [];
             this.selected2 = [];
             this.selected3 = [];
             this.selected4 = [];
         }
-        MatSelectionListExample.prototype.ngOnDestroy = function () {
-            this._destroyed.next();
-            this._destroyed.complete();
-        };
         MatSelectionListExample.prototype.getCurrentSelected = function (event) {
             return event.after.map(function (select) { return select.value; });
         };

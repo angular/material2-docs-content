@@ -1,6 +1,5 @@
-<span class="hljs-keyword">import</span> {Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/selection&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReplaySubject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Table that uses `matSelectionColumn` which allows users to select rows.
@@ -10,17 +9,10 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;mat-selection-column-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;mat-selection-column-example.css&#x27;</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionColumnExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _destroyed = <span class="hljs-keyword">new</span> ReplaySubject(<span class="hljs-number">1</span>);
-
-  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;select&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionColumnExample</span> </span>{
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;select&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
   dataSource = ELEMENT_DATA;
   selected: <span class="hljs-built_in">string</span>[] = [];
-
-  <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._destroyed.next();
-    <span class="hljs-built_in">this</span>._destroyed.complete();
-  }
 
   <span class="hljs-function"><span class="hljs-title">selectionChanged</span>(<span class="hljs-params">event: SelectionChange&lt;PeriodicElement&gt;</span>)</span> {
     <span class="hljs-built_in">this</span>.selected = event.after.map(<span class="hljs-function">(<span class="hljs-params">select</span>) =&gt;</span> select.value.name);
