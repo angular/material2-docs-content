@@ -9,7 +9,6 @@ import { Component, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i3 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ReplaySubject } from 'rxjs';
 
 function MatSelectionColumnExample_th_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 10);
@@ -81,14 +80,9 @@ function MatSelectionColumnExample_tr_16_Template(rf, ctx) { if (rf & 1) {
  */
 class MatSelectionColumnExample {
     constructor() {
-        this._destroyed = new ReplaySubject(1);
         this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA;
         this.selected = [];
-    }
-    ngOnDestroy() {
-        this._destroyed.next();
-        this._destroyed.complete();
     }
     selectionChanged(event) {
         this.selected = event.after.map((select) => select.value.name);
@@ -218,16 +212,11 @@ function MatSelectionListExample_li_33_Template(rf, ctx) { if (rf & 1) {
  */
 class MatSelectionListExample {
     constructor() {
-        this._destroyed = new ReplaySubject(1);
         this.data = ELEMENT_NAMES;
         this.selected1 = [];
         this.selected2 = [];
         this.selected3 = [];
         this.selected4 = [];
-    }
-    ngOnDestroy() {
-        this._destroyed.next();
-        this._destroyed.complete();
     }
     getCurrentSelected(event) {
         return event.after.map((select) => select.value);

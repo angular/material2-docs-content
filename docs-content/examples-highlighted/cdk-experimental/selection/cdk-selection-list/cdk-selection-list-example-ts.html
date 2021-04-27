@@ -1,6 +1,5 @@
 <span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReplaySubject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>CDK Selection on a simple list.
@@ -9,26 +8,18 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-selection-list-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-selection-list-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkSelectionListExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _destroyed = <span class="hljs-keyword">new</span> ReplaySubject(<span class="hljs-number">1</span>);
-
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkSelectionListExample</span> </span>{
   data = ELEMENT_NAMES;
-
   selected1: <span class="hljs-built_in">string</span>[] = [];
   selected2: <span class="hljs-built_in">string</span>[] = [];
   selected3: <span class="hljs-built_in">string</span>[] = [];
   selected4: <span class="hljs-built_in">string</span>[] = [];
 
-  <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._destroyed.next();
-    <span class="hljs-built_in">this</span>._destroyed.complete();
-  }
-
   <span class="hljs-function"><span class="hljs-title">getCurrentSelected</span>(<span class="hljs-params">event: SelectionChange&lt;<span class="hljs-built_in">string</span>&gt;</span>)</span> {
     <span class="hljs-keyword">return</span> event.after.map(<span class="hljs-function">(<span class="hljs-params">select</span>) =&gt;</span> select.value);
   }
 
-  <span class="hljs-function"><span class="hljs-title">trackByFn</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span>, value: <span class="hljs-built_in">string</span></span>)</span> {
+  <span class="hljs-function"><span class="hljs-title">trackByFn</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span></span>)</span> {
     <span class="hljs-keyword">return</span> index;
   }
 
