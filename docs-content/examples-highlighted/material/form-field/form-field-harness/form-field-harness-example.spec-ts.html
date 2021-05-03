@@ -47,7 +47,7 @@ describe(<span class="hljs-string">&#x27;FormFieldHarnessExample&#x27;</span>, <
     expect(<span class="hljs-keyword">await</span> formField.getTextHints()).toEqual([<span class="hljs-string">&#x27;Hint&#x27;</span>]);
 
     fixture.componentInstance.requiredControl.setValue(<span class="hljs-string">&#x27;&#x27;</span>);
-    <span class="hljs-keyword">await</span> (<span class="hljs-keyword">await</span> formField.getControl())?.blur();
+    <span class="hljs-keyword">await</span> ((<span class="hljs-keyword">await</span> formField.getControl() <span class="hljs-keyword">as</span> MatInputHarness))?.blur();
     expect(<span class="hljs-keyword">await</span> formField.getTextErrors()).toEqual([<span class="hljs-string">&#x27;Error&#x27;</span>]);
     expect(<span class="hljs-keyword">await</span> formField.getTextHints()).toEqual([]);
   });
