@@ -39,5 +39,9 @@ This will allow you to change the following:</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>The <code>aria-label</code>s for next page, previous page, first page and last page buttons can be set in <code>MatPaginatorIntl</code>.</p>
+      <p>The paginator uses <code>role=&quot;group&quot;</code> to semantically group its child controls. You must add an
+<code>aria-label</code> or <code>aria-labelledby</code> attribute to <code>&lt;mat-paginator&gt;</code> with a label that describes
+the content controlled by the pagination control.</p>
+<p>You can set the <code>aria-label</code> attributes for the button and select controls within the paginator in 
+<code>MatPaginatorIntl</code>.</p>
 </div>
