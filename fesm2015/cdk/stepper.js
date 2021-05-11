@@ -154,7 +154,7 @@ CdkLinearStepperWithFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ t
         i0.ɵɵproperty("formGroup", ctx.secondFormGroup);
         i0.ɵɵadvance(3);
         i0.ɵɵtextInterpolate1(" ", ctx.isLinear ? "Disable linear mode" : "Enable linear mode", "\n");
-    } }, directives: function () { return [CustomLinearStepper, i1.CdkStep, i1$1.ɵangular_packages_forms_forms_bb, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
+    } }, directives: function () { return [CustomLinearStepper, i1.CdkStep, i1$1.ɵNgNoValidate, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.RequiredValidator]; }, styles: [".example-toggle-linear-button[_ngcontent-%COMP%] {\n  margin-left: 10px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkLinearStepperWithFormExample, [{
         type: Component,
         args: [{

@@ -146,7 +146,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
             }
-        }, directives: [i1__namespace.ɵangular_packages_forms_forms_bb, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlDirective, i2__namespace.MatHint, i4__namespace.NgIf, i2__namespace.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlDirective, i2__namespace.MatHint, i4__namespace.NgIf, i2__namespace.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(InputErrorStateMatcherExample, [{
                 type: i0.Component,
@@ -209,7 +209,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
             }
-        }, directives: [i1__namespace.ɵangular_packages_forms_forms_bb, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlDirective, i4__namespace.NgIf, i2__namespace.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlDirective, i4__namespace.NgIf, i2__namespace.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(InputErrorsExample, [{
                 type: i0.Component,
@@ -313,7 +313,7 @@
                 i0__namespace.ɵɵadvance(46);
                 i0__namespace.ɵɵtextInterpolate1("", _r0.value.length, " / 5");
             }
-        }, directives: [i1__namespace.ɵangular_packages_forms_forms_bb, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i2__namespace.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
+        }, directives: [i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i2__namespace.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(InputFormExample, [{
                 type: i0.Component,
@@ -358,7 +358,7 @@
                 i0__namespace.ɵɵadvance(10);
                 i0__namespace.ɵɵtextInterpolate1("", _r0.value.length, " / 256");
             }
-        }, directives: [i1__namespace.ɵangular_packages_forms_forms_bb, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i2__namespace.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput, i2__namespace.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(InputHintExample, [{
                 type: i0.Component,
@@ -396,7 +396,7 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
             }
-        }, directives: [i1__namespace.ɵangular_packages_forms_forms_bb, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i3__namespace.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(InputOverviewExample, [{
                 type: i0.Component,
@@ -434,7 +434,7 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
             }
-        }, directives: [i1__namespace.ɵangular_packages_forms_forms_bb, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i2__namespace.MatPrefix, i3__namespace.MatInput, i6__namespace.MatIcon, i2__namespace.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.NgForm, i2__namespace.MatFormField, i2__namespace.MatLabel, i2__namespace.MatPrefix, i3__namespace.MatInput, i6__namespace.MatIcon, i2__namespace.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(InputPrefixSuffixExample, [{
                 type: i0.Component,

@@ -134,7 +134,7 @@ StepperResponsiveExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: St
         i0.ɵɵproperty("stepControl", ctx.thirdFormGroup);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("formGroup", ctx.thirdFormGroup);
-    } }, directives: [i3.NgSwitch, i3.NgSwitchCase, i4.MatStepper, i4.MatStep, i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.FormGroupDirective, i5.MatFormField, i5.MatLabel, i6.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i7.MatButton, i4.MatStepperNext, i4.MatStepperPrevious, i4.MatStepLabel], pipes: [i3.AsyncPipe], styles: [".example-stepper[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+    } }, directives: [i3.NgSwitch, i3.NgSwitchCase, i4.MatStepper, i4.MatStep, i1.ɵNgNoValidate, i1.NgControlStatusGroup, i1.FormGroupDirective, i5.MatFormField, i5.MatLabel, i6.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i7.MatButton, i4.MatStepperNext, i4.MatStepperPrevious, i4.MatStepLabel], pipes: [i3.AsyncPipe], styles: [".example-stepper[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(StepperResponsiveExample, [{
         type: Component,
         args: [{
