@@ -69,7 +69,7 @@ FormFieldThemingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: For
         i0.ɵɵproperty("formControl", ctx.fontSizeControl);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("ngIf", ctx.fontSizeControl.invalid);
-    } }, directives: [i1.ɵangular_packages_forms_forms_bb, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i2.MatLabel, i3.MatSelect, i1.NgControlStatus, i1.FormControlDirective, i4.MatOption, i5.MatInput, i1.MinValidator, i1.NumberValueAccessor, i1.DefaultValueAccessor, i2.MatSuffix, i6.NgIf, i2.MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
+    } }, directives: [i1.ɵNgNoValidate, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i2.MatLabel, i3.MatSelect, i1.NgControlStatus, i1.FormControlDirective, i4.MatOption, i5.MatInput, i1.MinValidator, i1.NumberValueAccessor, i1.DefaultValueAccessor, i2.MatSuffix, i6.NgIf, i2.MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldThemingExample, [{
         type: Component,
         args: [{

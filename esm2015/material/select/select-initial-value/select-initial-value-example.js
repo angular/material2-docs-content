@@ -94,7 +94,7 @@ SelectInitialValueExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
         i0.ɵɵproperty("ngForOf", ctx.cars);
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.MatOption, i4.NgForOf, i5.MatInput, i6.NgSelectOption, i6.ɵangular_packages_forms_forms_ba], encapsulation: 2 });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.MatOption, i4.NgForOf, i5.MatInput, i6.NgSelectOption, i6.ɵNgSelectMultipleOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectInitialValueExample, [{
         type: Component,
         args: [{
