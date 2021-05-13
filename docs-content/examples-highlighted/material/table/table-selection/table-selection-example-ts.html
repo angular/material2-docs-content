@@ -44,9 +44,12 @@
 
   <span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
   <span class="hljs-function"><span class="hljs-title">masterToggle</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.isAllSelected() ?
-        <span class="hljs-built_in">this</span>.selection.clear() :
-        <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.isAllSelected()) {
+      <span class="hljs-built_in">this</span>.selection.clear();
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-built_in">this</span>.selection.select(...this.dataSource.data);
   }
 
   <span class="hljs-comment">/** The label for the checkbox on the passed row */</span>
