@@ -1,15 +1,12 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">&quot;treeControl&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree&quot;</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for leaf nodes --&gt;</span>
+  <span class="hljs-comment">&lt;!-- There is inline padding applied to this node using styles.
+    This padding value depends on the mat-icon-button width. --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span> <span class="hljs-attr">matTreeNodeToggle</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-tree-node&quot;</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- use a disabled button to provide padding for tree leaf --&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       {{node.name}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-nested-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">&quot;let node; when: hasChild&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-tree-node&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matTreeNodeToggle</span>
                 [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;Toggle &#x27; + node.name&quot;</span>&gt;</span>
@@ -19,9 +16,11 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
         {{node.name}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> [<span class="hljs-attr">class.example-tree-invisible</span>]=<span class="hljs-string">&quot;!treeControl.isExpanded(node)&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- There is inline padding applied to this div using styles.
+          This padding value depends on the mat-icon-button width.  --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.example-tree-invisible</span>]=<span class="hljs-string">&quot;!treeControl.isExpanded(node)&quot;</span>
+          <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;group&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matTreeNodeOutlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-nested-tree-node</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree</span>&gt;</span>

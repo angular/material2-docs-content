@@ -858,36 +858,31 @@ TreeLoadmoreExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeLoa
 
 function TreeNestedOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-tree-node", 3);
-    i0.ɵɵelementStart(1, "li", 4);
-    i0.ɵɵelement(2, "button", 5);
-    i0.ɵɵtext(3);
-    i0.ɵɵelementEnd();
+    i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const node_r2 = ctx.$implicit;
-    i0.ɵɵadvance(3);
+    i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate1(" ", node_r2.name, " ");
 } }
 function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-nested-tree-node");
-    i0.ɵɵelementStart(1, "li");
-    i0.ɵɵelementStart(2, "div", 4);
-    i0.ɵɵelementStart(3, "button", 6);
-    i0.ɵɵelementStart(4, "mat-icon", 7);
+    i0.ɵɵelementStart(1, "div", 4);
+    i0.ɵɵelementStart(2, "button", 5);
+    i0.ɵɵelementStart(3, "mat-icon", 6);
+    i0.ɵɵtext(4);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
     i0.ɵɵtext(5);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementEnd();
-    i0.ɵɵtext(6);
-    i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(7, "ul");
-    i0.ɵɵelementContainer(8, 8);
-    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(6, "div", 7);
+    i0.ɵɵelementContainer(7, 8);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const node_r3 = ctx.$implicit;
     const ctx_r1 = i0.ɵɵnextContext();
-    i0.ɵɵadvance(3);
+    i0.ɵɵadvance(2);
     i0.ɵɵattribute("aria-label", "Toggle " + node_r3.name);
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
@@ -935,16 +930,16 @@ class TreeNestedOverviewExample {
     }
 }
 TreeNestedOverviewExample.ɵfac = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
-TreeNestedOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
+TreeNestedOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["role", "group"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-tree", 0);
-        i0.ɵɵtemplate(1, TreeNestedOverviewExample_mat_tree_node_1_Template, 4, 1, "mat-tree-node", 1);
-        i0.ɵɵtemplate(2, TreeNestedOverviewExample_mat_nested_tree_node_2_Template, 9, 5, "mat-nested-tree-node", 2);
+        i0.ɵɵtemplate(1, TreeNestedOverviewExample_mat_tree_node_1_Template, 2, 1, "mat-tree-node", 1);
+        i0.ɵɵtemplate(2, TreeNestedOverviewExample_mat_nested_tree_node_2_Template, 8, 5, "mat-nested-tree-node", 2);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-    } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i2.MatButton, i1.MatNestedTreeNode, i3$1.MatIcon, i1.MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
+    } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i1.MatNestedTreeNode, i2.MatButton, i3$1.MatIcon, i1.MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n\n.example-tree[_ngcontent-%COMP%]   .mat-nested-tree-node[_ngcontent-%COMP%]   div[role=group][_ngcontent-%COMP%] {\n  padding-left: 40px;\n}\n\n\n.example-tree[_ngcontent-%COMP%]   div[role=group][_ngcontent-%COMP%]    > .mat-tree-node[_ngcontent-%COMP%] {\n  padding-left: 40px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TreeNestedOverviewExample, [{
         type: Component,
         args: [{
