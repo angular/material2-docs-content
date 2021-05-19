@@ -11,7 +11,7 @@ export declare class TableHttpExample implements AfterViewInit {
     private _httpClient;
     displayedColumns: string[];
     exampleDatabase: ExampleHttpDatabase | null;
-    filteredAndPagedIssues: Observable<GithubIssue[]>;
+    data: GithubIssue[];
     resultsLength: number;
     isLoadingResults: boolean;
     isRateLimitReached: boolean;
@@ -19,7 +19,6 @@ export declare class TableHttpExample implements AfterViewInit {
     sort: MatSort;
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
-    resetPaging(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never>;
 }
