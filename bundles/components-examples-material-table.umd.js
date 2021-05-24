@@ -2511,7 +2511,7 @@
         /** The label for the checkbox on the passed row */
         TableSelectionExample.prototype.checkboxLabel = function (row) {
             if (!row) {
-                return (this.isAllSelected() ? 'select' : 'deselect') + " all";
+                return (this.isAllSelected() ? 'deselect' : 'select') + " all";
             }
             return (this.selection.isSelected(row) ? 'deselect' : 'select') + " row " + (row.position + 1);
         };

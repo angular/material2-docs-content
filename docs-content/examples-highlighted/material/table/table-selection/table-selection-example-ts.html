@@ -55,7 +55,7 @@
   <span class="hljs-comment">/** The label for the checkbox on the passed row */</span>
   checkboxLabel(row?: PeriodicElement): <span class="hljs-built_in">string</span> {
     <span class="hljs-keyword">if</span> (!row) {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.isAllSelected() ? <span class="hljs-string">&#x27;select&#x27;</span> : <span class="hljs-string">&#x27;deselect&#x27;</span>}</span> all`</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.isAllSelected() ? <span class="hljs-string">&#x27;deselect&#x27;</span> : <span class="hljs-string">&#x27;select&#x27;</span>}</span> all`</span>;
     }
     <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.selection.isSelected(row) ? <span class="hljs-string">&#x27;deselect&#x27;</span> : <span class="hljs-string">&#x27;select&#x27;</span>}</span> row <span class="hljs-subst">${row.position + <span class="hljs-number">1</span>}</span>`</span>;
   }
