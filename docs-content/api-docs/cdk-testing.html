@@ -4193,7 +4193,16 @@ changes.
         </div>parallel
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Resolves the given list of async values in parallel (i.e. via Promise.all) while batching change
+detection over the entire operation such that change detection occurs exactly once before
+resolving the values and once after.
+@param values A getter for the async values to resolve in parallel with batched change detection.
+@return The resolved values.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -4222,7 +4231,8 @@ changes.
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>The resolved values.</p>
+
       </p>
     </td>
   </tr></table>
