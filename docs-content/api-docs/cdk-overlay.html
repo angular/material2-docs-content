@@ -75,9 +75,7 @@ of re-usable components rather than developers building end-user applications.</
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates an overlay.
-@param config Configuration applied to the overlay.
-@returns Reference to the created overlay.</p>
+      <p>Creates an overlay.</p>
 
     </td>
   </tr><thead>
@@ -128,8 +126,7 @@ of re-usable components rather than developers building end-user applications.</
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets a position builder that can be used, via fluent API,
-to construct and configure a position strategy.
-@returns An overlay position builder.</p>
+to construct and configure a position strategy.</p>
 
     </td>
   </tr><thead>
@@ -179,8 +176,7 @@ to construct and configure a position strategy.
     <td colspan="2" class="docs-api-method-description-cell">
       <p>This method returns the overlay container element. It will lazily
 create the element the first time  it is called to facilitate using
-the container in non-browser environments.
-@returns the container element</p>
+the container in non-browser environments.</p>
 
     </td>
   </tr><thead>
@@ -240,8 +236,7 @@ Fullscreen mode
     <td colspan="2" class="docs-api-method-description-cell">
       <p>This method returns the overlay container element. It will lazily
 create the element the first time  it is called to facilitate using
-the container in non-browser environments.
-@returns the container element</p>
+the container in non-browser environments.</p>
 
     </td>
   </tr><thead>
@@ -321,8 +316,7 @@ Only that element and its children are visible when in fullscreen mode.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a flexible position strategy.
-@param origin Origin relative to which to position the overlay.</p>
+      <p>Creates a flexible position strategy.</p>
 
     </td>
   </tr><thead>
@@ -404,12 +398,7 @@ Only that element and its children are visible when in fullscreen mode.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a relative position strategy.
-@param elementRef
-@param originPos
-@param overlayPos
-@deprecated Use <code>flexibleConnectedTo</code> instead.
-@breaking-change 8.0.0</p>
+      <p>Creates a relative position strategy.</p>
 
     </td>
   </tr><thead>
@@ -514,8 +503,7 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
       <code>close: (config?: CloseScrollStrategyConfig) =&gt; new CloseScrollStrategy(this._scrollDispatcher, this._ngZone, this._viewportRuler, config)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Close the overlay as soon as the user scrolls.
-@param config Configuration to be used inside the scroll strategy.</p>
+  <td class="docs-api-property-description"><p>Close the overlay as soon as the user scrolls.</p>
 </td>
 </tr>
 
@@ -541,9 +529,7 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
       <code>reposition: (config?: RepositionScrollStrategyConfig) =&gt; new RepositionScrollStrategy(this._scrollDispatcher, this._viewportRuler, this._ngZone, config)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Update the overlay&#39;s position on scroll.
-@param config Configuration to be used inside the scroll strategy.
-Allows debouncing the reposition calls.</p>
+  <td class="docs-api-property-description"><p>Update the overlay&#39;s position on scroll.</p>
 </td>
 </tr>
 
@@ -1559,8 +1545,7 @@ required around the overlay pane.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches an overlay from a portal.
-@returns The portal detachment result.</p>
+      <p>Detaches an overlay from a portal.</p>
 
     </td>
   </tr><thead>
@@ -2053,8 +2038,7 @@ element to become blurry.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the bottom position of the overlay. Clears any previously set vertical position.
-@param value New bottom offset.</p>
+      <p>Sets the bottom position of the overlay. Clears any previously set vertical position.</p>
 
     </td>
   </tr><thead>
@@ -2105,7 +2089,6 @@ element to become blurry.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Centers the overlay horizontally with an optional offset.
 Clears any previously set horizontal position.</p>
-<p>@param offset Overlay offset from the horizontal center.</p>
 
     </td>
   </tr><thead>
@@ -2156,7 +2139,6 @@ Clears any previously set horizontal position.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Centers the overlay vertically with an optional offset.
 Clears any previously set vertical position.</p>
-<p>@param offset Overlay offset from the vertical center.</p>
 
     </td>
   </tr><thead>
@@ -2205,8 +2187,7 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the left position of the overlay. Clears any previously set horizontal position.
-@param value New left offset.</p>
+      <p>Sets the left position of the overlay. Clears any previously set horizontal position.</p>
 
     </td>
   </tr><thead>
@@ -2255,8 +2236,7 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the right position of the overlay. Clears any previously set horizontal position.
-@param value New right offset.</p>
+      <p>Sets the right position of the overlay. Clears any previously set horizontal position.</p>
 
     </td>
   </tr><thead>
@@ -2305,8 +2285,7 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the top position of the overlay. Clears any previously set vertical position.
-@param value New top offset.</p>
+      <p>Sets the top position of the overlay. Clears any previously set vertical position.</p>
 
     </td>
   </tr><thead>
@@ -2357,10 +2336,7 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the overlay height and clears any previously set height.
-@param value New height for the overlay
-@deprecated Pass the <code>height</code> through the <code>OverlayConfig</code>.
-@breaking-change 8.0.0</p>
+      <p>Sets the overlay height and clears any previously set height.</p>
 
     </td>
   </tr><thead>
@@ -2411,10 +2387,7 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the overlay width and clears any previously set width.
-@param value New width for the overlay
-@deprecated Pass the <code>width</code> through the <code>OverlayConfig</code>.
-@breaking-change 8.0.0</p>
+      <p>Sets the overlay width and clears any previously set width.</p>
 
     </td>
   </tr><thead>
@@ -2589,8 +2562,7 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the origin element, relative to which to position the overlay.
-@param origin Reference to the new origin element.</p>
+      <p>Sets the origin element, relative to which to position the overlay.</p>
 
     </td>
   </tr><thead>
@@ -2639,8 +2611,7 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the layout direction so the overlay&#39;s position can be adjusted to match.
-@param dir New layout direction.</p>
+      <p>Sets the layout direction so the overlay&#39;s position can be adjusted to match.</p>
 
     </td>
   </tr><thead>
@@ -2689,9 +2660,7 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Adds a new preferred fallback position.
-@param originPos
-@param overlayPos</p>
+      <p>Adds a new preferred fallback position.</p>
 
     </td>
   </tr><thead>
@@ -2781,8 +2750,7 @@ allows one to re-align the panel without changing the orientation of the panel.<
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets whether the overlay&#39;s position should be locked in after it is positioned
 initially. When an overlay is locked in, it won&#39;t attempt to reposition itself
-when the position is re-applied (e.g. when the user scrolls away).
-@param isLocked Whether the overlay should locked in.</p>
+when the position is re-applied (e.g. when the user scrolls away).</p>
 
     </td>
   </tr><thead>
@@ -2831,8 +2799,7 @@ when the position is re-applied (e.g. when the user scrolls away).
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets an offset for the overlay&#39;s connection point on the x-axis
-@param offset New offset in the X axis.</p>
+      <p>Sets an offset for the overlay&#39;s connection point on the x-axis</p>
 
     </td>
   </tr><thead>
@@ -2881,8 +2848,7 @@ when the position is re-applied (e.g. when the user scrolls away).
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets an offset for the overlay&#39;s connection point on the y-axis
-@param  offset New offset in the Y axis.</p>
+      <p>Sets an offset for the overlay&#39;s connection point on the y-axis</p>
 
     </td>
   </tr><thead>
@@ -2931,8 +2897,7 @@ when the position is re-applied (e.g. when the user scrolls away).
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Overwrites the current set of positions with an array of new ones.
-@param positions Position pairs to be set on the strategy.</p>
+      <p>Overwrites the current set of positions with an array of new ones.</p>
 
     </td>
   </tr><thead>
@@ -3157,8 +3122,7 @@ allows one to re-align the panel without changing the orientation of the panel.<
       <p>Sets the origin, relative to which to position the overlay.
 Using an element origin is useful for building components that need to be positioned
 relatively to a trigger (e.g. dropdown menus or tooltips), whereas using a point can be
-used for cases like contextual menus which open relative to the user&#39;s pointer.
-@param origin Reference to the new origin.</p>
+used for cases like contextual menus which open relative to the user&#39;s pointer.</p>
 
     </td>
   </tr><thead>
@@ -3207,8 +3171,7 @@ used for cases like contextual menus which open relative to the user&#39;s point
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the default offset for the overlay&#39;s connection point on the x-axis.
-@param offset New offset in the X axis.</p>
+      <p>Sets the default offset for the overlay&#39;s connection point on the x-axis.</p>
 
     </td>
   </tr><thead>
@@ -3257,8 +3220,7 @@ used for cases like contextual menus which open relative to the user&#39;s point
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the default offset for the overlay&#39;s connection point on the y-axis.
-@param offset New offset in the Y axis.</p>
+      <p>Sets the default offset for the overlay&#39;s connection point on the y-axis.</p>
 
     </td>
   </tr><thead>
@@ -3407,8 +3369,7 @@ used for cases like contextual menus which open relative to the user&#39;s point
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sets whether the overlay&#39;s position should be locked in after it is positioned
 initially. When an overlay is locked in, it won&#39;t attempt to reposition itself
-when the position is re-applied (e.g. when the user scrolls away).
-@param isLocked Whether the overlay should locked in.</p>
+when the position is re-applied (e.g. when the user scrolls away).</p>
 
     </td>
   </tr><thead>
@@ -3457,8 +3418,7 @@ when the position is re-applied (e.g. when the user scrolls away).
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Adds new preferred positions.
-@param positions List of positions options for this overlay.</p>
+      <p>Adds new preferred positions.</p>
 
     </td>
   </tr><thead>
@@ -3610,9 +3570,7 @@ Scrollable must be an ancestor element of the strategy&#39;s origin element.</p>
       <p>Configures that the position strategy should set a <code>transform-origin</code> on some elements
 inside the overlay, depending on the current position that is being applied. This is
 useful for the cases where the origin of an animation can change depending on the
-alignment of the overlay.
-@param selector CSS selector that will be used to find the target
-   elements onto which to set the transform origin.</p>
+alignment of the overlay.</p>
 
     </td>
   </tr><thead>
@@ -3661,8 +3619,7 @@ alignment of the overlay.
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets a minimum distance the overlay may be positioned to the edge of the viewport.
-@param margin Required margin between the overlay and the viewport edge in pixels.</p>
+      <p>Sets a minimum distance the overlay may be positioned to the edge of the viewport.</p>
 
     </td>
   </tr><thead>
