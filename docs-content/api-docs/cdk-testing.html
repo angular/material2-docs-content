@@ -160,27 +160,7 @@ cases where it is needed to fully flush animation events.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates an asynchronous locator function that can be used to find a <code>ComponentHarness</code> instance
-or element under the host element of this <code>ComponentHarness</code>.
-@param queries A list of queries specifying which harnesses and elements to search for:</p>
-<ul>
-<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
-<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
-given class.</li>
-<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
-predicate.
-@return An asynchronous locator function that searches for and returns a <code>Promise</code> for the
-first element or harness matching the given search criteria. Matches are ordered first by
-order in the DOM, and second by order in the queries list. If no matches are found, the
-<code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
-each query.</li>
-</ul>
-<p>e.g. Given the following DOM: <code>&lt;div id=&quot;d1&quot; /&gt;&lt;div id=&quot;d2&quot; /&gt;</code>, and assuming
-<code>DivHarness.hostSelector === &#39;div&#39;</code>:</p>
-<ul>
-<li><code>await ch.locatorFor(DivHarness, &#39;div&#39;)()</code> gets a <code>DivHarness</code> instance for <code>#d1</code></li>
-<li><code>await ch.locatorFor(&#39;div&#39;, DivHarness)()</code> gets a <code>TestElement</code> instance for <code>#d1</code></li>
-<li><code>await ch.locatorFor(&#39;span&#39;)()</code> throws because the <code>Promise</code> rejects.</li>
-</ul>
+or element under the host element of this <code>ComponentHarness</code>.</p>
 
     </td>
   </tr><thead>
@@ -255,42 +235,7 @@ each query.</li>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates an asynchronous locator function that can be used to find <code>ComponentHarness</code> instances
-or elements under the host element of this <code>ComponentHarness</code>.
-@param queries A list of queries specifying which harnesses and elements to search for:</p>
-<ul>
-<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
-<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
-given class.</li>
-<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
-predicate.
-@return An asynchronous locator function that searches for and returns a <code>Promise</code> for all
-elements and harnesses matching the given search criteria. Matches are ordered first by
-order in the DOM, and second by order in the queries list. If an element matches more than
-one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
-an element matches multiple <code>string</code> selectors, only one <code>TestElement</code> instance is returned
-for that element. The type that the <code>Promise</code> resolves to is an array where each element is
-the union of all result types for each query.</li>
-</ul>
-<p>e.g. Given the following DOM: <code>&lt;div id=&quot;d1&quot; /&gt;&lt;div id=&quot;d2&quot; /&gt;</code>, and assuming
-<code>DivHarness.hostSelector === &#39;div&#39;</code> and <code>IdIsD1Harness.hostSelector === &#39;#d1&#39;</code>:</p>
-<ul>
-<li><code>await ch.locatorForAll(DivHarness, &#39;div&#39;)()</code> gets <code>[
-  DivHarness, // for #d1
-  TestElement, // for #d1
-  DivHarness, // for #d2
-  TestElement // for #d2
-]</code></li>
-<li><code>await ch.locatorForAll(&#39;div&#39;, &#39;#d1&#39;)()</code> gets <code>[
-  TestElement, // for #d1
-  TestElement // for #d2
-]</code></li>
-<li><code>await ch.locatorForAll(DivHarness, IdIsD1Harness)()</code> gets <code>[
-  DivHarness, // for #d1
-  IdIsD1Harness, // for #d1
-  DivHarness // for #d2
-]</code></li>
-<li><code>await ch.locatorForAll(&#39;span&#39;)()</code> gets <code>[]</code>.</li>
-</ul>
+or elements under the host element of this <code>ComponentHarness</code>.</p>
 
     </td>
   </tr><thead>
@@ -380,27 +325,7 @@ the union of all result types for each query.</li>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates an asynchronous locator function that can be used to find a <code>ComponentHarness</code> instance
-or element under the host element of this <code>ComponentHarness</code>.
-@param queries A list of queries specifying which harnesses and elements to search for:</p>
-<ul>
-<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
-<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
-given class.</li>
-<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
-predicate.
-@return An asynchronous locator function that searches for and returns a <code>Promise</code> for the
-first element or harness matching the given search criteria. Matches are ordered first by
-order in the DOM, and second by order in the queries list. If no matches are found, the
-<code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
-result types for each query or null.</li>
-</ul>
-<p>e.g. Given the following DOM: <code>&lt;div id=&quot;d1&quot; /&gt;&lt;div id=&quot;d2&quot; /&gt;</code>, and assuming
-<code>DivHarness.hostSelector === &#39;div&#39;</code>:</p>
-<ul>
-<li><code>await ch.locatorForOptional(DivHarness, &#39;div&#39;)()</code> gets a <code>DivHarness</code> instance for <code>#d1</code></li>
-<li><code>await ch.locatorForOptional(&#39;div&#39;, DivHarness)()</code> gets a <code>TestElement</code> instance for <code>#d1</code></li>
-<li><code>await ch.locatorForOptional(&#39;span&#39;)()</code> gets <code>null</code>.</li>
-</ul>
+or element under the host element of this <code>ComponentHarness</code>.</p>
 
     </td>
   </tr><thead>
@@ -805,10 +730,7 @@ filter instances of the class.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Adds a predicate function to be run against candidate harnesses.
-@param description A description of this predicate that may be used in error messages.
-@param predicate An async predicate function.
-@return this (for method chaining).</p>
+      <p>Adds a predicate function to be run against candidate harnesses.</p>
 
     </td>
   </tr><thead>
@@ -857,11 +779,7 @@ filter instances of the class.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Adds a predicate function that depends on an option value to be run against candidate
-harnesses. If the option value is undefined, the predicate will be ignored.
-@param name The name of the option (may be used in error messages).
-@param option The option value.
-@param predicate The predicate function to run if the option value is not undefined.
-@return this (for method chaining).</p>
+harnesses. If the option value is undefined, the predicate will be ignored.</p>
 
     </td>
   </tr><thead>
@@ -924,10 +842,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Evaluates whether the given harness satisfies this predicate.
-@param harness The harness to check
-@return A promise that resolves to true if the harness satisfies this predicate,
-  and resolves to false otherwise.</p>
+      <p>Evaluates whether the given harness satisfies this predicate.</p>
 
     </td>
   </tr><thead>
@@ -980,9 +895,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Filters a list of harnesses on this predicate.
-@param harnesses The list of harnesses to filter.
-@return A list of harnesses that satisfy this predicate.</p>
+      <p>Filters a list of harnesses on this predicate.</p>
 
     </td>
   </tr><thead>
@@ -1948,9 +1861,7 @@ instantiate <code>ComponentHarness</code>es.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Searches for all elements with the given selector under the current instances&#39;s root element,
 and returns an array of <code>HarnessLoader</code>s, one for each matching element, rooted at that
-element.
-@param selector The selector for the root element of the new <code>HarnessLoader</code>
-@return A list of <code>HarnessLoader</code>s, one for each matching element, rooted at that element.</p>
+element.</p>
 
     </td>
   </tr><thead>
@@ -2003,9 +1914,7 @@ element.
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Searches for all instances of the component corresponding to the given harness type under the
-<code>HarnessLoader</code>&#39;s root element, and returns a list <code>ComponentHarness</code> for each instance.
-@param query A query for a harness to create
-@return A list instances of the given harness type.</p>
+<code>HarnessLoader</code>&#39;s root element, and returns a list <code>ComponentHarness</code> for each instance.</p>
 
     </td>
   </tr><thead>
@@ -2059,10 +1968,7 @@ element.
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Searches for an element with the given selector under the current instances&#39;s root element,
 and returns a <code>HarnessLoader</code> rooted at the matching element. If multiple elements match the
-selector, the first is used. If no elements match, an error is thrown.
-@param selector The selector for the root element of the new <code>HarnessLoader</code>
-@return A <code>HarnessLoader</code> rooted at the element matching the given selector.
-@throws If a matching element can&#39;t be found.</p>
+selector, the first is used. If no elements match, an error is thrown.</p>
 
     </td>
   </tr><thead>
@@ -2117,10 +2023,7 @@ selector, the first is used. If no elements match, an error is thrown.
       <p>Searches for an instance of the component corresponding to the given harness type under the
 <code>HarnessLoader</code>&#39;s root element, and returns a <code>ComponentHarness</code> for that instance. If multiple
 matching components are found, a harness for the first one is returned. If no matching
-component is found, an error is thrown.
-@param query A query for a harness to create
-@return An instance of the given harness type
-@throws If a matching component instance can&#39;t be found.</p>
+component is found, an error is thrown.</p>
 
     </td>
   </tr><thead>
@@ -2276,10 +2179,7 @@ cases where it is needed to fully flush animation events.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessLoader</code> instance for an element under the root of this <code>LocatorFactory</code>.
-@param selector The selector for the root element.
-@return A <code>HarnessLoader</code> rooted at the first element matching the given selector.
-@throws If no matching element is found for the given selector.</p>
+      <p>Gets a <code>HarnessLoader</code> instance for an element under the root of this <code>LocatorFactory</code>.</p>
 
     </td>
   </tr><thead>
@@ -2331,9 +2231,7 @@ cases where it is needed to fully flush animation events.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a list of <code>HarnessLoader</code> instances, one for each matching element.
-@param selector The selector for the root element.
-@return A list of <code>HarnessLoader</code>, one rooted at each element matching the given selector.</p>
+      <p>Gets a list of <code>HarnessLoader</code> instances, one for each matching element.</p>
 
     </td>
   </tr><thead>
@@ -2385,10 +2283,7 @@ cases where it is needed to fully flush animation events.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessLoader</code> instance for an element under the root of this <code>LocatorFactory</code>
-@param selector The selector for the root element.
-@return A <code>HarnessLoader</code> rooted at the first element matching the given selector, or null if
-    no matching element is found.</p>
+      <p>Gets a <code>HarnessLoader</code> instance for an element under the root of this <code>LocatorFactory</code></p>
 
     </td>
   </tr><thead>
@@ -2440,27 +2335,7 @@ cases where it is needed to fully flush animation events.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates an asynchronous locator function that can be used to find a <code>ComponentHarness</code> instance
-or element under the root element of this <code>LocatorFactory</code>.
-@param queries A list of queries specifying which harnesses and elements to search for:</p>
-<ul>
-<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
-<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
-given class.</li>
-<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
-predicate.
-@return An asynchronous locator function that searches for and returns a <code>Promise</code> for the
-first element or harness matching the given search criteria. Matches are ordered first by
-order in the DOM, and second by order in the queries list. If no matches are found, the
-<code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
-each query.</li>
-</ul>
-<p>e.g. Given the following DOM: <code>&lt;div id=&quot;d1&quot; /&gt;&lt;div id=&quot;d2&quot; /&gt;</code>, and assuming
-<code>DivHarness.hostSelector === &#39;div&#39;</code>:</p>
-<ul>
-<li><code>await lf.locatorFor(DivHarness, &#39;div&#39;)()</code> gets a <code>DivHarness</code> instance for <code>#d1</code></li>
-<li><code>await lf.locatorFor(&#39;div&#39;, DivHarness)()</code> gets a <code>TestElement</code> instance for <code>#d1</code></li>
-<li><code>await lf.locatorFor(&#39;span&#39;)()</code> throws because the <code>Promise</code> rejects.</li>
-</ul>
+or element under the root element of this <code>LocatorFactory</code>.</p>
 
     </td>
   </tr><thead>
@@ -2535,42 +2410,7 @@ each query.</li>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates an asynchronous locator function that can be used to find <code>ComponentHarness</code> instances
-or elements under the root element of this <code>LocatorFactory</code>.
-@param queries A list of queries specifying which harnesses and elements to search for:</p>
-<ul>
-<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
-<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
-given class.</li>
-<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
-predicate.
-@return An asynchronous locator function that searches for and returns a <code>Promise</code> for all
-elements and harnesses matching the given search criteria. Matches are ordered first by
-order in the DOM, and second by order in the queries list. If an element matches more than
-one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
-an element matches multiple <code>string</code> selectors, only one <code>TestElement</code> instance is returned
-for that element. The type that the <code>Promise</code> resolves to is an array where each element is
-the union of all result types for each query.</li>
-</ul>
-<p>e.g. Given the following DOM: <code>&lt;div id=&quot;d1&quot; /&gt;&lt;div id=&quot;d2&quot; /&gt;</code>, and assuming
-<code>DivHarness.hostSelector === &#39;div&#39;</code> and <code>IdIsD1Harness.hostSelector === &#39;#d1&#39;</code>:</p>
-<ul>
-<li><code>await lf.locatorForAll(DivHarness, &#39;div&#39;)()</code> gets <code>[
-  DivHarness, // for #d1
-  TestElement, // for #d1
-  DivHarness, // for #d2
-  TestElement // for #d2
-]</code></li>
-<li><code>await lf.locatorForAll(&#39;div&#39;, &#39;#d1&#39;)()</code> gets <code>[
-  TestElement, // for #d1
-  TestElement // for #d2
-]</code></li>
-<li><code>await lf.locatorForAll(DivHarness, IdIsD1Harness)()</code> gets <code>[
-  DivHarness, // for #d1
-  IdIsD1Harness, // for #d1
-  DivHarness // for #d2
-]</code></li>
-<li><code>await lf.locatorForAll(&#39;span&#39;)()</code> gets <code>[]</code>.</li>
-</ul>
+or elements under the root element of this <code>LocatorFactory</code>.</p>
 
     </td>
   </tr><thead>
@@ -2660,27 +2500,7 @@ the union of all result types for each query.</li>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Creates an asynchronous locator function that can be used to find a <code>ComponentHarness</code> instance
-or element under the root element of this <code>LocatorFactory</code>.
-@param queries A list of queries specifying which harnesses and elements to search for:</p>
-<ul>
-<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
-<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
-given class.</li>
-<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
-predicate.
-@return An asynchronous locator function that searches for and returns a <code>Promise</code> for the
-first element or harness matching the given search criteria. Matches are ordered first by
-order in the DOM, and second by order in the queries list. If no matches are found, the
-<code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
-result types for each query or null.</li>
-</ul>
-<p>e.g. Given the following DOM: <code>&lt;div id=&quot;d1&quot; /&gt;&lt;div id=&quot;d2&quot; /&gt;</code>, and assuming
-<code>DivHarness.hostSelector === &#39;div&#39;</code>:</p>
-<ul>
-<li><code>await lf.locatorForOptional(DivHarness, &#39;div&#39;)()</code> gets a <code>DivHarness</code> instance for <code>#d1</code></li>
-<li><code>await lf.locatorForOptional(&#39;div&#39;, DivHarness)()</code> gets a <code>TestElement</code> instance for <code>#d1</code></li>
-<li><code>await lf.locatorForOptional(&#39;span&#39;)()</code> gets <code>null</code>.</li>
-</ul>
+or element under the root element of this <code>LocatorFactory</code>.</p>
 
     </td>
   </tr><thead>
@@ -2754,12 +2574,7 @@ result types for each query or null.</li>
         </div>rootHarnessLoader
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>@return A <code>HarnessLoader</code> rooted at the root element of this <code>LocatorFactory</code>.</p>
-
-    </td>
-  </tr><thead>
+  </thead><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -3160,8 +2975,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Dispatches an event with a particular name.
-@param name Name of the event to be dispatched.</p>
+      <p>Dispatches an event with a particular name.</p>
 
     </td>
   </tr><thead>
@@ -3649,10 +3463,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Right clicks on the element at the specified coordinates relative to the top-left of it.
-@param relativeX Coordinate within the element, along the X-axis at which to click.
-@param relativeY Coordinate within the element, along the Y-axis at which to click.
-@param modifiers Modifier keys held while clicking</p>
+      <p>Right clicks on the element at the specified coordinates relative to the top-left of it.</p>
 
     </td>
   </tr><thead>
@@ -3887,8 +3698,7 @@ and attempts to add the string to the Element&#39;s value.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the text from the element.
-@param options Options that affect what text is included.</p>
+      <p>Gets the text from the element.</p>
 
     </td>
   </tr><thead>
@@ -4098,8 +3908,7 @@ detection is done.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Allows a test <code>HarnessEnvironment</code> to install its own handler for auto change detection status
-changes.
-@param handler The handler for the auto change detection status.</p>
+changes.</p>
 
     </td>
   </tr><thead>
@@ -4155,9 +3964,7 @@ changes.
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Disables the harness system&#39;s auto change detection for the duration of the given function.
-@param fn The function to disable auto change detection for.
-@return The result of the given function.</p>
+      <p>Disables the harness system&#39;s auto change detection for the duration of the given function.</p>
 
     </td>
   </tr><thead>
@@ -4197,9 +4004,7 @@ changes.
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Resolves the given list of async values in parallel (i.e. via Promise.all) while batching change
 detection over the entire operation such that change detection occurs exactly once before
-resolving the values and once after.
-@param values A getter for the async values to resolve in parallel with batched change detection.
-@return The resolved values.</p>
+resolving the values and once after.</p>
 
     </td>
   </tr><thead>

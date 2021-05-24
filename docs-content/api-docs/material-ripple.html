@@ -204,8 +204,7 @@ Defaults to the directive&#39;s host element.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Launches a manual ripple using the specified ripple configuration.
-@param config Configuration for the manual ripple.</p>
+      <p>Launches a manual ripple using the specified ripple configuration.</p>
 
     </td>
   </tr><thead>
@@ -254,10 +253,7 @@ Defaults to the directive&#39;s host element.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Launches a manual ripple at the specified coordinates within the element.
-@param x Coordinate within the element, along the X axis at which to fade-in the ripple.
-@param y Coordinate within the element, along the Y axis at which to fade-in the ripple.
-@param config Optional ripple configuration for the manual ripple.</p>
+      <p>Launches a manual ripple at the specified coordinates within the element.</p>
 
     </td>
   </tr><thead>
@@ -433,9 +429,9 @@ Defaults to the directive&#39;s host element.</p>
       <code>animation: RippleAnimationConfig</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Configuration for the animation duration of the ripples. There are two phases with different
-durations for the ripples. The animation durations will be overwritten if the
-<code>NoopAnimationsModule</code> is being used.</p>
+  <td class="docs-api-property-description"><p>Default configuration for the animation duration of the ripples. There are two phases with
+different durations for the ripples: <code>enter</code> and <code>leave</code>. The durations will be overwritten
+by the value of <code>matRippleAnimation</code> or if the <code>NoopAnimationsModule</code> is included.</p>
 </td>
 </tr>
 
