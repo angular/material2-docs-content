@@ -147,6 +147,7 @@ class MyTelInput {
         this.ngControl = ngControl;
         this.stateChanges = new Subject();
         this.focused = false;
+        this.touched = false;
         this.controlType = 'example-tel-input';
         this.id = `example-tel-input-${MyTelInput.nextId++}`;
         this.onChange = (_) => { };
@@ -166,13 +167,6 @@ class MyTelInput {
                 null,
                 [Validators.required, Validators.minLength(4), Validators.maxLength(4)]
             ]
-        });
-        _focusMonitor.monitor(_elementRef, true).subscribe(origin => {
-            if (this.focused && !origin) {
-                this.onTouched();
-            }
-            this.focused = !!origin;
-            this.stateChanges.next();
         });
         if (this.ngControl != null) {
             this.ngControl.valueAccessor = this;
@@ -220,7 +214,25 @@ class MyTelInput {
         this.stateChanges.next();
     }
     get errorState() {
-        return this.parts.invalid && this.parts.dirty;
+        return this.parts.invalid && this.touched;
+    }
+    ngOnDestroy() {
+        this.stateChanges.complete();
+        this._focusMonitor.stopMonitoring(this._elementRef);
+    }
+    onFocusIn(event) {
+        if (!this.focused) {
+            this.focused = true;
+            this.stateChanges.next();
+        }
+    }
+    onFocusOut(event) {
+        if (!this._elementRef.nativeElement.contains(event.relatedTarget)) {
+            this.touched = true;
+            this.focused = false;
+            this.onTouched();
+            this.stateChanges.next();
+        }
     }
     autoFocusNext(control, nextElement) {
         if (!control.errors && nextElement) {
@@ -231,10 +243,6 @@ class MyTelInput {
         if (control.value.length < 1) {
             this._focusMonitor.focusVia(prevElement, 'program');
         }
-    }
-    ngOnDestroy() {
-        this.stateChanges.complete();
-        this._focusMonitor.stopMonitoring(this._elementRef);
     }
     setDescribedByIds(ids) {
         const controlElement = this._elementRef.nativeElement
@@ -286,9 +294,10 @@ MyTelInput.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MyTelInput, sele
     } }, hostVars: 3, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
         i0.ɵɵhostProperty("id", ctx.id);
         i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
-    } }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0.ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup", "focusin", "focusout"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
         const _r3 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵlistener("focusin", function MyTelInput_Template_div_focusin_0_listener($event) { return ctx.onFocusIn($event); })("focusout", function MyTelInput_Template_div_focusout_0_listener($event) { return ctx.onFocusOut($event); });
         i0.ɵɵelementStart(1, "input", 1, 2);
         i0.ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { i0.ɵɵrestoreView(_r3); const _r1 = i0.ɵɵreference(6); return ctx._handleInput(ctx.parts.controls.area, _r1); });
         i0.ɵɵelementEnd();
