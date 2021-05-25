@@ -20,6 +20,8 @@ import { takeUntil } from 'rxjs/operators';
 import { MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import * as _rollupMoment from 'moment';
 import _rollupMoment__default from 'moment';
+import 'moment/locale/ja';
+import 'moment/locale/fr';
 
 /** @title Datepicker open method */
 class DatepickerApiExample {

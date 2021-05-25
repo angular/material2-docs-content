@@ -1,4 +1,6 @@
 import { DateAdapter } from '@angular/material/core';
+import 'moment/locale/ja';
+import 'moment/locale/fr';
 import * as i0 from "@angular/core";
 /** @title Datepicker with different locale */
 export declare class DatepickerLocaleExample {
