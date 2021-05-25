@@ -3997,6 +3997,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/table"
         }
     },
+    "table-column-styling": {
+        "packagePath": "material/table/table-column-styling",
+        "title": "Styling columns using their auto-generated column names",
+        "componentName": "TableColumnStylingExample",
+        "files": [
+            "table-column-styling-example.ts",
+            "table-column-styling-example.html",
+            "table-column-styling-example.css"
+        ],
+        "selector": "table-column-styling-example",
+        "additionalComponents": [],
+        "primaryFile": "table-column-styling-example.ts",
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "material/table"
+        }
+    },
     "table-dynamic-columns": {
         "packagePath": "material/table/table-dynamic-columns",
         "title": "Table dynamically changing the columns displayed",
@@ -4196,6 +4213,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-reorderable-example",
         "additionalComponents": [],
         "primaryFile": "table-reorderable-example.ts",
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "material/table"
+        }
+    },
+    "table-row-binding": {
+        "packagePath": "material/table/table-row-binding",
+        "title": "Binding event handlers and properties to the table rows.",
+        "componentName": "TableRowBindingExample",
+        "files": [
+            "table-row-binding-example.ts",
+            "table-row-binding-example.html",
+            "table-row-binding-example.css"
+        ],
+        "selector": "table-row-binding-example",
+        "additionalComponents": [],
+        "primaryFile": "table-row-binding-example.ts",
         "module": {
             "name": "TableExamplesModule",
             "importSpecifier": "material/table"

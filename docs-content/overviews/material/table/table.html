@@ -114,6 +114,25 @@ functionality by extending a different base class, the <code>DataSource</code> b
 implemented instead (<code>MyCustomDataSource extends SomeOtherBaseClass implements DataSource</code>) to
 respect Typescript&#39;s restriction to only implement one base class.</p>
 
+        <h3 id="styling-columns" class="docs-header-link">
+          <span header-link="styling-columns"></span>
+          Styling Columns
+        </h3>
+      <p>Each table cell has an automatically generated class based on which column it appears in. The format for this
+generated class is <code>mat-column-NAME</code>. For example, cells in a column named &quot;symbol&quot; can be targeted with the
+selector <code>.mat-column-symbol</code>.</p>
+<div material-docs-example="table-column-styling"></div>
+
+
+        <h3 id="row-templates" class="docs-header-link">
+          <span header-link="row-templates"></span>
+          Row Templates
+        </h3>
+      <p>Event handlers and property binding on the row templates will be applied to each row rendered by the table. For example,
+adding a <code>(click)</code> handler to the row template will cause each individual row to call the handler when clicked.</p>
+<div material-docs-example="table-row-binding"></div>
+
+
         <h3 id="features" class="docs-header-link">
           <span header-link="features"></span>
           Features
