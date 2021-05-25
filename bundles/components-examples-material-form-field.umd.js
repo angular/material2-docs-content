@@ -993,7 +993,7 @@
         return FormFieldPrefixSuffixExample;
     }());
     FormFieldPrefixSuffixExample.ɵfac = function FormFieldPrefixSuffixExample_Factory(t) { return new (t || FormFieldPrefixSuffixExample)(); };
-    FormFieldPrefixSuffixExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: FormFieldPrefixSuffixExample, selectors: [["form-field-prefix-suffix-example"]], decls: 16, vars: 4, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", "", 3, "type"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], ["matInput", "", "type", "number", 1, "example-right-align"], ["matPrefix", ""], ["matSuffix", ""]], template: function FormFieldPrefixSuffixExample_Template(rf, ctx) {
+    FormFieldPrefixSuffixExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: FormFieldPrefixSuffixExample, selectors: [["form-field-prefix-suffix-example"]], decls: 16, vars: 4, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", "", 3, "type"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], ["appearance", "fill", "floatLabel", "always"], ["matInput", "", "type", "number", "placeholder", "0", 1, "example-right-align"], ["matPrefix", ""], ["matSuffix", ""]], template: function FormFieldPrefixSuffixExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "div", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
@@ -1008,15 +1008,15 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(8, "mat-form-field", 1);
+                i0__namespace.ɵɵelementStart(8, "mat-form-field", 4);
                 i0__namespace.ɵɵelementStart(9, "mat-label");
                 i0__namespace.ɵɵtext(10, "Amount");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(11, "input", 4);
-                i0__namespace.ɵɵelementStart(12, "span", 5);
+                i0__namespace.ɵɵelement(11, "input", 5);
+                i0__namespace.ɵɵelementStart(12, "span", 6);
                 i0__namespace.ɵɵtext(13, "$\u00A0");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(14, "span", 6);
+                i0__namespace.ɵɵelementStart(14, "span", 7);
                 i0__namespace.ɵɵtext(15, ".00");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
