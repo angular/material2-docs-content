@@ -8,16 +8,22 @@
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./paginator-configurable/paginator-configurable-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {PaginatorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./paginator-overview/paginator-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {PaginatorHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./paginator-harness/paginator-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  PaginatorIntlExample,
+  PaginatorIntlExampleModule,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./paginator-intl/paginator-intl-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   PaginatorConfigurableExample,
   PaginatorHarnessExample,
+  PaginatorIntlExample,
   PaginatorOverviewExample,
 };
 
 <span class="hljs-keyword">const</span> EXAMPLES = [
   PaginatorConfigurableExample,
   PaginatorHarnessExample,
+  <span class="hljs-comment">// PaginatorIntlExample is imported through it&#x27;s own example module.</span>
   PaginatorOverviewExample,
 ];
 
@@ -26,6 +32,7 @@
     CommonModule,
     MatInputModule,
     MatPaginatorModule,
+    PaginatorIntlExampleModule,
     FormsModule,
   ],
   <span class="hljs-attr">declarations</span>: EXAMPLES,

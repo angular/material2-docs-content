@@ -1,14 +1,15 @@
 import * as i5 from '@angular/common';
 import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
-import { Component, NgModule } from '@angular/core';
+import { Component, Injectable, NgModule } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import * as i2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import * as i1$1 from '@angular/material/paginator';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import * as i1 from '@angular/material/form-field';
+import { Subject } from 'rxjs';
 
 function PaginatorConfigurableExample_div_13_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div");
@@ -34,7 +35,7 @@ function PaginatorConfigurableExample_div_13_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate1("Page index: ", ctx_r0.pageEvent.pageIndex, "");
 } }
-const _c0$1 = function () { return { updateOn: "blur" }; };
+const _c0$2 = function () { return { updateOn: "blur" }; };
 /**
  * @title Configurable paginator
  */
@@ -87,7 +88,7 @@ PaginatorConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type
         i0.ɵɵadvance(4);
         i0.ɵɵproperty("ngModel", ctx.pageSize);
         i0.ɵɵadvance(4);
-        i0.ɵɵproperty("ngModel", ctx.pageSizeOptions)("ngModelOptions", i0.ɵɵpureFunction0(8, _c0$1));
+        i0.ɵɵproperty("ngModel", ctx.pageSizeOptions)("ngModelOptions", i0.ɵɵpureFunction0(8, _c0$2));
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("pageSizeOptions", ctx.pageSizeOptions);
         i0.ɵɵadvance(1);
@@ -102,7 +103,7 @@ PaginatorConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type
             }]
     }], null, null); })();
 
-const _c0 = function () { return [5, 10, 25, 100]; };
+const _c0$1 = function () { return [5, 10, 25, 100]; };
 /**
  * @title Paginator
  */
@@ -112,7 +113,7 @@ PaginatorOverviewExample.ɵfac = function PaginatorOverviewExample_Factory(t) { 
 PaginatorOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 4, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "mat-paginator", 0);
     } if (rf & 2) {
-        i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c0));
+        i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c0$1));
     } }, directives: [i1$1.MatPaginator], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
         type: Component,
@@ -155,9 +156,74 @@ PaginatorHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Pag
             }]
     }], null, null); })();
 
+const _c0 = function () { return [10, 50, 100]; };
+class MyCustomPaginatorIntl {
+    constructor() {
+        this.changes = new Subject();
+        // For internationalization, the `$localize` function from
+        // the `@angular/localize` package can be used.
+        this.firstPageLabel = $localize `First page`;
+        this.itemsPerPageLabel = $localize `Items per page:`;
+        this.lastPageLabel = $localize `Last page`;
+        // You can set labels to an arbitrary string too, or dynamically compute
+        // it through other third-party internationalization libraries.
+        this.nextPageLabel = 'Next page';
+        this.previousPageLabel = 'Previous page';
+    }
+    getRangeLabel(page, pageSize, length) {
+        if (length === 0) {
+            return $localize `Page 1 of 1`;
+        }
+        const amountPages = Math.ceil(length / pageSize);
+        return $localize `Page ${page + 1} of ${amountPages}`;
+    }
+}
+MyCustomPaginatorIntl.ɵfac = function MyCustomPaginatorIntl_Factory(t) { return new (t || MyCustomPaginatorIntl)(); };
+MyCustomPaginatorIntl.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: MyCustomPaginatorIntl, factory: MyCustomPaginatorIntl.ɵfac });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MyCustomPaginatorIntl, [{
+        type: Injectable
+    }], null, null); })();
+/**
+ * @title Paginator internationalization
+ */
+class PaginatorIntlExample {
+}
+PaginatorIntlExample.ɵfac = function PaginatorIntlExample_Factory(t) { return new (t || PaginatorIntlExample)(); };
+PaginatorIntlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PaginatorIntlExample, selectors: [["paginator-intl-example"]], decls: 1, vars: 3, consts: [[3, "length", "pageSizeOptions"]], template: function PaginatorIntlExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "mat-paginator", 0);
+    } if (rf & 2) {
+        i0.ɵɵproperty("length", 0)("pageSizeOptions", i0.ɵɵpureFunction0(2, _c0));
+    } }, directives: [i1$1.MatPaginator], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorIntlExample, [{
+        type: Component,
+        args: [{
+                selector: 'paginator-intl-example',
+                templateUrl: 'paginator-intl-example.html',
+            }]
+    }], null, null); })();
+class PaginatorIntlExampleModule {
+}
+PaginatorIntlExampleModule.ɵfac = function PaginatorIntlExampleModule_Factory(t) { return new (t || PaginatorIntlExampleModule)(); };
+PaginatorIntlExampleModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: PaginatorIntlExampleModule });
+PaginatorIntlExampleModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+        { provide: MatPaginatorIntl, useClass: MyCustomPaginatorIntl }
+    ], imports: [[MatPaginatorModule]] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorIntlExampleModule, [{
+        type: NgModule,
+        args: [{
+                imports: [MatPaginatorModule],
+                declarations: [PaginatorIntlExample],
+                providers: [
+                    { provide: MatPaginatorIntl, useClass: MyCustomPaginatorIntl }
+                ]
+            }]
+    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PaginatorIntlExampleModule, { declarations: [PaginatorIntlExample], imports: [MatPaginatorModule] }); })();
+
 const EXAMPLES = [
     PaginatorConfigurableExample,
     PaginatorHarnessExample,
+    // PaginatorIntlExample is imported through it's own example module.
     PaginatorOverviewExample,
 ];
 class PaginatorExamplesModule {
@@ -168,6 +234,7 @@ PaginatorExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [
             CommonModule,
             MatInputModule,
             MatPaginatorModule,
+            PaginatorIntlExampleModule,
             FormsModule,
         ]] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorExamplesModule, [{
@@ -177,6 +244,7 @@ PaginatorExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [
                     CommonModule,
                     MatInputModule,
                     MatPaginatorModule,
+                    PaginatorIntlExampleModule,
                     FormsModule,
                 ],
                 declarations: EXAMPLES,
@@ -186,16 +254,19 @@ PaginatorExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [
     }], null, null); })();
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
         PaginatorHarnessExample,
+        // PaginatorIntlExample is imported through it's own example module.
         PaginatorOverviewExample], imports: [CommonModule,
         MatInputModule,
         MatPaginatorModule,
+        PaginatorIntlExampleModule,
         FormsModule], exports: [PaginatorConfigurableExample,
         PaginatorHarnessExample,
+        // PaginatorIntlExample is imported through it's own example module.
         PaginatorOverviewExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorHarnessExample, PaginatorOverviewExample };
+export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorHarnessExample, PaginatorIntlExample, PaginatorOverviewExample };
 //# sourceMappingURL=paginator.js.map

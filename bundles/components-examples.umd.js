@@ -3207,6 +3207,22 @@
                 "importSpecifier": "material/paginator"
             }
         },
+        "paginator-intl": {
+            "packagePath": "material/paginator/paginator-intl",
+            "title": "Paginator internationalization",
+            "componentName": "PaginatorIntlExample",
+            "files": [
+                "paginator-intl-example.ts",
+                "paginator-intl-example.html"
+            ],
+            "selector": "paginator-intl-example",
+            "additionalComponents": [],
+            "primaryFile": "paginator-intl-example.ts",
+            "module": {
+                "name": "PaginatorExamplesModule",
+                "importSpecifier": "material/paginator"
+            }
+        },
         "paginator-overview": {
             "packagePath": "material/paginator/paginator-overview",
             "title": "Paginator",
