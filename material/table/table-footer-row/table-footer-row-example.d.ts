@@ -1,5 +1,5 @@
 import * as i0 from "@angular/core";
-export interface Transaction {
+interface Transaction {
     item: string;
     cost: number;
 }
@@ -14,3 +14,4 @@ export declare class TableFooterRowExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFooterRowExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never>;
 }
+export {};

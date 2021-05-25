@@ -101,11 +101,23 @@ for detecting when an input becomes autofilled and changing the appearance of th
           Accessibility
         </h3>
       <p>The <code>matInput</code> directive works with native <code>&lt;input&gt;</code> to provide an accessible experience.</p>
-<p>If the containing <code>&lt;mat-form-field&gt;</code> has a label it will automatically be used as the <code>aria-label</code>
+
+        <h4 id="aria-attributes" class="docs-header-link">
+          <span header-link="aria-attributes"></span>
+          Aria attributes
+        </h4>
+      <p>If the containing <code>&lt;mat-form-field&gt;</code> has a label it will automatically be used as the <code>aria-label</code>
 for the <code>&lt;input&gt;</code>. However, if there&#39;s no label specified in the form field, <code>aria-label</code>,
 <code>aria-labelledby</code> or <code>&lt;label for=...&gt;</code> should be added.</p>
-<p>Any <code>mat-error</code> and <code>mat-hint</code> are automatically added to the input&#39;s <code>aria-describedby</code> list, and
+
+        <h4 id="errors-and-hints" class="docs-header-link">
+          <span header-link="errors-and-hints"></span>
+          Errors and hints
+        </h4>
+      <p>Any <code>mat-error</code> and <code>mat-hint</code> are automatically added to the input&#39;s <code>aria-describedby</code> list, and
 <code>aria-invalid</code> is automatically updated based on the input&#39;s validity state.</p>
+<p>When conveying an error, be sure to not rely soley on color. In the message itself, you can use an
+icon or text such as &quot;Error:&quot; to indicate the message is an error message.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
           <span header-link="troubleshooting"></span>

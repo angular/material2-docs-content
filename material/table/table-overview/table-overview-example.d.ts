@@ -7,7 +7,7 @@ export interface UserData {
     id: string;
     name: string;
     progress: string;
-    color: string;
+    fruit: string;
 }
 /**
  * @title Data table with sorting, pagination, and filtering.
