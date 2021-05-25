@@ -27,7 +27,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import * as i1$2 from '@angular/material/form-field';
 import * as i1$3 from '@angular/common/http';
 import { merge, of } from 'rxjs';
-import { startWith, switchMap, map, catchError } from 'rxjs/operators';
+import { startWith, switchMap, catchError, map } from 'rxjs/operators';
 import { SelectionModel } from '@angular/cdk/collections';
 
 function TableFlexBasicExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
@@ -964,18 +964,20 @@ class TableHttpExample {
         merge(this.sort.sortChange, this.paginator.page)
             .pipe(startWith({}), switchMap(() => {
             this.isLoadingResults = true;
-            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex)
+                .pipe(catchError(() => of(null)));
         }), map(data => {
             // Flip flag to show that loading has finished.
             this.isLoadingResults = false;
-            this.isRateLimitReached = false;
+            this.isRateLimitReached = data === null;
+            if (data === null) {
+                return [];
+            }
+            // Only refresh the result length if there is new data. In case of rate
+            // limit errors, we do not want to reset the paginator to zero, as that
+            // would prevent users from re-triggering requests.
             this.resultsLength = data.total_count;
             return data.items;
-        }), catchError(() => {
-            this.isLoadingResults = false;
-            // Catch if the GitHub API has reached its rate limit. Return empty data.
-            this.isRateLimitReached = true;
-            return of([]);
         })).subscribe(data => this.data = data);
     }
 }
@@ -1025,7 +1027,7 @@ TableHttpExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableHttpE
         i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("length", ctx.resultsLength)("pageSize", 30);
-    } }, directives: [i2.NgIf, i1.MatTable, i4.MatSort, i1.MatColumnDef, i1.MatHeaderCellDef, i1.MatCellDef, i1.MatHeaderRowDef, i1.MatRowDef, i5.MatPaginator, i6.MatSpinner, i1.MatHeaderCell, i1.MatCell, i4.MatSortHeader, i1.MatHeaderRow, i1.MatRow], pipes: [i2.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
+    } }, directives: [i2.NgIf, i1.MatTable, i4.MatSort, i1.MatColumnDef, i1.MatHeaderCellDef, i1.MatCellDef, i1.MatHeaderRowDef, i1.MatRowDef, i5.MatPaginator, i6.MatSpinner, i1.MatHeaderCell, i1.MatCell, i4.MatSortHeader, i1.MatHeaderRow, i1.MatRow], pipes: [i2.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableHttpExample, [{
         type: Component,
         args: [{

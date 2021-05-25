@@ -1151,18 +1151,20 @@
             rxjs.merge(this.sort.sortChange, this.paginator.page)
                 .pipe(operators.startWith({}), operators.switchMap(function () {
                 _this.isLoadingResults = true;
-                return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+                return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex)
+                    .pipe(operators.catchError(function () { return rxjs.of(null); }));
             }), operators.map(function (data) {
                 // Flip flag to show that loading has finished.
                 _this.isLoadingResults = false;
-                _this.isRateLimitReached = false;
+                _this.isRateLimitReached = data === null;
+                if (data === null) {
+                    return [];
+                }
+                // Only refresh the result length if there is new data. In case of rate
+                // limit errors, we do not want to reset the paginator to zero, as that
+                // would prevent users from re-triggering requests.
                 _this.resultsLength = data.total_count;
                 return data.items;
-            }), operators.catchError(function () {
-                _this.isLoadingResults = false;
-                // Catch if the GitHub API has reached its rate limit. Return empty data.
-                _this.isRateLimitReached = true;
-                return rxjs.of([]);
             })).subscribe(function (data) { return _this.data = data; });
         };
         return TableHttpExample;
@@ -1219,7 +1221,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("length", ctx.resultsLength)("pageSize", 30);
             }
-        }, directives: [i2__namespace.NgIf, i1__namespace.MatTable, i4__namespace.MatSort, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i5__namespace.MatPaginator, i6__namespace.MatSpinner, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i4__namespace.MatSortHeader, i1__namespace.MatHeaderRow, i1__namespace.MatRow], pipes: [i2__namespace.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
+        }, directives: [i2__namespace.NgIf, i1__namespace.MatTable, i4__namespace.MatSort, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i5__namespace.MatPaginator, i6__namespace.MatSpinner, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i4__namespace.MatSortHeader, i1__namespace.MatHeaderRow, i1__namespace.MatRow], pipes: [i2__namespace.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TableHttpExample, [{
                 type: i0.Component,

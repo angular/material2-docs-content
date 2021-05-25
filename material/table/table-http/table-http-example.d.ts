@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, SortDirection } from '@angular/material/sort';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 /**
@@ -36,5 +36,5 @@ export interface GithubIssue {
 export declare class ExampleHttpDatabase {
     private _httpClient;
     constructor(_httpClient: HttpClient);
-    getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi>;
+    getRepoIssues(sort: string, order: SortDirection, page: number): Observable<GithubApi>;
 }
