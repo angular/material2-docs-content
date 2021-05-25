@@ -24,10 +24,10 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!-- Color Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;color&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Color <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span> [<span class="hljs-attr">style.color</span>]=<span class="hljs-string">&quot;row.color&quot;</span>&gt;</span> {{row.color}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Fruit Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;fruit&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Fruit <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.fruit}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;displayedColumns&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
@@ -41,3 +41,4 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> [<span class="hljs-attr">pageSizeOptions</span>]=<span class="hljs-string">&quot;[5, 10, 25, 100]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-paginator</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+

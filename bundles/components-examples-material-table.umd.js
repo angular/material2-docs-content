@@ -1221,7 +1221,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("length", ctx.resultsLength)("pageSize", 30);
             }
-        }, directives: [i2__namespace.NgIf, i1__namespace.MatTable, i4__namespace.MatSort, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i5__namespace.MatPaginator, i6__namespace.MatSpinner, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i4__namespace.MatSortHeader, i1__namespace.MatHeaderRow, i1__namespace.MatRow], pipes: [i2__namespace.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
+        }, directives: [i2__namespace.NgIf, i1__namespace.MatTable, i4__namespace.MatSort, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i5__namespace.MatPaginator, i6__namespace.MatSpinner, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i4__namespace.MatSortHeader, i1__namespace.MatHeaderRow, i1__namespace.MatRow], pipes: [i2__namespace.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TableHttpExample, [{
                 type: i0.Component,
@@ -1422,7 +1422,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("matFooterRowDef", i0__namespace.ɵɵpureFunction0(7, _c1$3));
             }
-        }, directives: [i1__namespace.MatTable, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatFooterCellDef, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i1__namespace.MatFooterRowDef, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i1__namespace.MatFooterCell, i1__namespace.MatHeaderRow, i1__namespace.MatRow, i1__namespace.MatFooterRow], pipes: [i2__namespace.CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-first-header-row[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  border-bottom: none;\n}\n\n.example-second-header-row[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n\n.example-first-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.example-second-footer-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  color: #900000;\n}"] });
+        }, directives: [i1__namespace.MatTable, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatFooterCellDef, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i1__namespace.MatFooterRowDef, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i1__namespace.MatFooterCell, i1__namespace.MatHeaderRow, i1__namespace.MatRow, i1__namespace.MatFooterRow], pipes: [i2__namespace.CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-first-header-row[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  border-bottom: none;\n}\n\n.example-second-header-row[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n\n.example-first-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.example-second-footer-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  font-style: italic;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TableMultipleHeaderFooterExample, [{
                 type: i0.Component,
@@ -1436,14 +1436,14 @@
 
     function TableOverviewExample_th_8_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 15);
+            i0__namespace.ɵɵelementStart(0, "th", 14);
             i0__namespace.ɵɵtext(1, " ID ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableOverviewExample_td_9_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 16);
+            i0__namespace.ɵɵelementStart(0, "td", 15);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -1455,14 +1455,14 @@
     }
     function TableOverviewExample_th_11_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 15);
+            i0__namespace.ɵɵelementStart(0, "th", 14);
             i0__namespace.ɵɵtext(1, " Progress ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableOverviewExample_td_12_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 16);
+            i0__namespace.ɵɵelementStart(0, "td", 15);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -1474,14 +1474,14 @@
     }
     function TableOverviewExample_th_14_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 15);
+            i0__namespace.ɵɵelementStart(0, "th", 14);
             i0__namespace.ɵɵtext(1, " Name ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableOverviewExample_td_15_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 16);
+            i0__namespace.ɵɵelementStart(0, "td", 15);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -1493,38 +1493,37 @@
     }
     function TableOverviewExample_th_17_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 15);
-            i0__namespace.ɵɵtext(1, " Color ");
+            i0__namespace.ɵɵelementStart(0, "th", 14);
+            i0__namespace.ɵɵtext(1, " Fruit ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableOverviewExample_td_18_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 16);
+            i0__namespace.ɵɵelementStart(0, "td", 15);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
             var row_r15 = ctx.$implicit;
-            i0__namespace.ɵɵstyleProp("color", row_r15.color);
             i0__namespace.ɵɵadvance(1);
-            i0__namespace.ɵɵtextInterpolate1(" ", row_r15.color, " ");
+            i0__namespace.ɵɵtextInterpolate1(" ", row_r15.fruit, " ");
         }
     }
     function TableOverviewExample_tr_19_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "tr", 17);
+            i0__namespace.ɵɵelement(0, "tr", 16);
         }
     }
     function TableOverviewExample_tr_20_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "tr", 18);
+            i0__namespace.ɵɵelement(0, "tr", 17);
         }
     }
     function TableOverviewExample_tr_21_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "tr", 19);
-            i0__namespace.ɵɵelementStart(1, "td", 20);
+            i0__namespace.ɵɵelementStart(0, "tr", 18);
+            i0__namespace.ɵɵelementStart(1, "td", 19);
             i0__namespace.ɵɵtext(2);
             i0__namespace.ɵɵelementEnd();
             i0__namespace.ɵɵelementEnd();
@@ -1538,9 +1537,8 @@
     }
     var _c0$4 = function () { return [5, 10, 25, 100]; };
     /** Constants used to fill up our data base. */
-    var COLORS = [
-        'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
-        'aqua', 'blue', 'navy', 'black', 'gray'
+    var FRUITS = [
+        'blueberry', 'lychee', 'kiwi', 'mango', 'peach', 'lime', 'pomegranate', 'pineapple'
     ];
     var NAMES = [
         'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
@@ -1551,7 +1549,7 @@
      */
     var TableOverviewExample = /** @class */ (function () {
         function TableOverviewExample() {
-            this.displayedColumns = ['id', 'name', 'progress', 'color'];
+            this.displayedColumns = ['id', 'name', 'progress', 'fruit'];
             // Create 100 users
             var users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
             // Assign the data to the data source for the table to render
@@ -1581,7 +1579,7 @@
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.paginator = _t.first);
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.sort = _t.first);
             }
-        }, decls: 23, vars: 5, consts: [["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], ["input", ""], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableOverviewExample_Template(rf, ctx) {
+        }, decls: 23, vars: 5, consts: [["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], ["input", ""], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "fruit"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "mat-form-field");
                 i0__namespace.ɵɵelementStart(1, "mat-label");
@@ -1607,13 +1605,13 @@
                 i0__namespace.ɵɵelementContainerEnd();
                 i0__namespace.ɵɵelementContainerStart(16, 9);
                 i0__namespace.ɵɵtemplate(17, TableOverviewExample_th_17_Template, 2, 0, "th", 5);
-                i0__namespace.ɵɵtemplate(18, TableOverviewExample_td_18_Template, 2, 3, "td", 10);
+                i0__namespace.ɵɵtemplate(18, TableOverviewExample_td_18_Template, 2, 1, "td", 6);
                 i0__namespace.ɵɵelementContainerEnd();
-                i0__namespace.ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 11);
-                i0__namespace.ɵɵtemplate(20, TableOverviewExample_tr_20_Template, 1, 0, "tr", 12);
-                i0__namespace.ɵɵtemplate(21, TableOverviewExample_tr_21_Template, 3, 1, "tr", 13);
+                i0__namespace.ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 10);
+                i0__namespace.ɵɵtemplate(20, TableOverviewExample_tr_20_Template, 1, 0, "tr", 11);
+                i0__namespace.ɵɵtemplate(21, TableOverviewExample_tr_21_Template, 3, 1, "tr", 12);
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(22, "mat-paginator", 14);
+                i0__namespace.ɵɵelement(22, "mat-paginator", 13);
                 i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
@@ -1651,7 +1649,7 @@
             id: id.toString(),
             name: name,
             progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
+            fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))]
         };
     }
 

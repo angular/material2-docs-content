@@ -1,5 +1,10 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {Transaction} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../table-footer-row/table-footer-row-example&#x27;</span>;
+
+<span class="hljs-keyword">interface</span> Transaction {
+  <span class="hljs-attr">item</span>: <span class="hljs-built_in">string</span>;
+  cost: <span class="hljs-built_in">number</span>;
+}
+
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Table with multiple header and footer rows

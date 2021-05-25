@@ -1,5 +1,8 @@
-import { Transaction } from '../table-footer-row/table-footer-row-example';
 import * as i0 from "@angular/core";
+interface Transaction {
+    item: string;
+    cost: number;
+}
 /**
  * @title Table with multiple header and footer rows
  */
@@ -11,3 +14,4 @@ export declare class TableMultipleHeaderFooterExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableMultipleHeaderFooterExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never, never>;
 }
+export {};
