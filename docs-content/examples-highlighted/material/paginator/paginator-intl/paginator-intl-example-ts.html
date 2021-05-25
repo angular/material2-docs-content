@@ -1,0 +1,45 @@
+<span class="hljs-keyword">import</span> {Component, Injectable, NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatPaginatorIntl, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
+<span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+
+<span class="hljs-meta">@Injectable</span>()
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyCustomPaginatorIntl</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatPaginatorIntl</span> </span>{
+  changes = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
+
+  <span class="hljs-comment">// For internationalization, the `$localize` function from</span>
+  <span class="hljs-comment">// the `@angular/localize` package can be used.</span>
+  firstPageLabel = $localize<span class="hljs-string">`First page`</span>;
+  itemsPerPageLabel = $localize<span class="hljs-string">`Items per page:`</span>;
+  lastPageLabel = $localize<span class="hljs-string">`Last page`</span>;
+
+  <span class="hljs-comment">// You can set labels to an arbitrary string too, or dynamically compute</span>
+  <span class="hljs-comment">// it through other third-party internationalization libraries.</span>
+  nextPageLabel = <span class="hljs-string">&#x27;Next page&#x27;</span>;
+  previousPageLabel = <span class="hljs-string">&#x27;Previous page&#x27;</span>;
+
+  getRangeLabel(page: <span class="hljs-built_in">number</span>, <span class="hljs-attr">pageSize</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">length</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">if</span> (length === <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> $localize<span class="hljs-string">`Page 1 of 1`</span>;
+    }
+    <span class="hljs-keyword">const</span> amountPages = <span class="hljs-built_in">Math</span>.ceil(length / pageSize);
+    <span class="hljs-keyword">return</span> $localize<span class="hljs-string">`Page <span class="hljs-subst">${page + <span class="hljs-number">1</span>}</span> of <span class="hljs-subst">${amountPages}</span>`</span>;
+  }
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Paginator internationalization
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;paginator-intl-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;paginator-intl-example.html&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorIntlExample</span> </span>{}
+
+<span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [MatPaginatorModule],
+  <span class="hljs-attr">declarations</span>: [PaginatorIntlExample],
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MatPaginatorIntl, <span class="hljs-attr">useClass</span>: MyCustomPaginatorIntl}
+  ]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorIntlExampleModule</span> </span>{}
