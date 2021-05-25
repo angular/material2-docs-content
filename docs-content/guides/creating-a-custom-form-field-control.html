@@ -217,21 +217,27 @@ declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em>
       <p>This property indicates whether the form field control should be considered to be in a
 focused state. When it is in a focused state, the form field is displayed with a solid color
 underline. For the purposes of our component, we want to consider it focused if any of the part
-inputs are focused. We can use the <code>FocusMonitor</code> from <code>@angular/cdk</code> to easily check this. We also
-need to remember to emit on the <code>stateChanges</code> stream so change detection can happen.</p>
+inputs are focused. We can use the <code>focusin</code> and <code>focusout</code> events to easily check this. We also
+need to remember to emit on the <code>stateChanges</code> when the focused stated changes stream so change
+detection can happen.</p>
+<p>In addition to updating the focused state, we use the <code>focusin</code> and <code>focusout</code> methods to update the
+internal touched state of our component, which we&#39;ll use to determine the error state.</p>
 <pre><code class="language-ts">focused = <span class="hljs-literal">false</span>;
 
-<span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef&lt;HTMLElement&gt;</span>)</span> {
-  ...
-  fm.monitor(elRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
-    <span class="hljs-built_in">this</span>.focused = !!origin;
+<span class="hljs-function"><span class="hljs-title">onFocusIn</span>(<span class="hljs-params">event: FocusEvent</span>)</span> {
+  <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.focused) {
+    <span class="hljs-built_in">this</span>.focused = <span class="hljs-literal">true</span>;
     <span class="hljs-built_in">this</span>.stateChanges.next();
-  });
+  }
 }
 
-<span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
-  ...
-  <span class="hljs-built_in">this</span>.fm.stopMonitoring(<span class="hljs-built_in">this</span>.elRef);
+<span class="hljs-function"><span class="hljs-title">onFocusOut</span>(<span class="hljs-params">event: FocusEvent</span>)</span> {
+  <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>._elementRef.nativeElement.contains(event.relatedTarget <span class="hljs-keyword">as</span> Element)) {
+    <span class="hljs-built_in">this</span>.touched = <span class="hljs-literal">true</span>;
+    <span class="hljs-built_in">this</span>.focused = <span class="hljs-literal">false</span>;
+    <span class="hljs-built_in">this</span>.onTouched();
+    <span class="hljs-built_in">this</span>.stateChanges.next();
+  }
 }
 </code></pre>
 
@@ -308,9 +314,11 @@ make up our component.</p>
           <span header-link="errorstate"></span>
           <code>errorState</code>
         </h4>
-      <p>This property indicates whether the associated <code>NgControl</code> is in an error state. Since we&#39;re not
-using an <code>NgControl</code> in this example, we don&#39;t need to do anything other than just set it to <code>false</code>.</p>
-<pre><code class="language-ts">errorState = <span class="hljs-literal">false</span>;
+      <p>This property indicates whether the associated <code>NgControl</code> is in an error state. In this example,
+we show an error if the input is invalid and our component has been touched.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">get</span> <span class="hljs-title">errorState</span>(): <span class="hljs-title">boolean</span> {
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.parts.invalid &amp;&amp; <span class="hljs-built_in">this</span>.touched;
+}
 </code></pre>
 
         <h4 id="controltype" class="docs-header-link">

@@ -478,13 +478,13 @@
     /** Custom `MatFormFieldControl` for telephone number input. */
     var MyTelInput = /** @class */ (function () {
         function MyTelInput(formBuilder, _focusMonitor, _elementRef, _formField, ngControl) {
-            var _this = this;
             this._focusMonitor = _focusMonitor;
             this._elementRef = _elementRef;
             this._formField = _formField;
             this.ngControl = ngControl;
             this.stateChanges = new rxjs.Subject();
             this.focused = false;
+            this.touched = false;
             this.controlType = 'example-tel-input';
             this.id = "example-tel-input-" + MyTelInput.nextId++;
             this.onChange = function (_) { };
@@ -504,13 +504,6 @@
                     null,
                     [i1$1.Validators.required, i1$1.Validators.minLength(4), i1$1.Validators.maxLength(4)]
                 ]
-            });
-            _focusMonitor.monitor(_elementRef, true).subscribe(function (origin) {
-                if (_this.focused && !origin) {
-                    _this.onTouched();
-                }
-                _this.focused = !!origin;
-                _this.stateChanges.next();
             });
             if (this.ngControl != null) {
                 this.ngControl.valueAccessor = this;
@@ -583,11 +576,29 @@
         });
         Object.defineProperty(MyTelInput.prototype, "errorState", {
             get: function () {
-                return this.parts.invalid && this.parts.dirty;
+                return this.parts.invalid && this.touched;
             },
             enumerable: false,
             configurable: true
         });
+        MyTelInput.prototype.ngOnDestroy = function () {
+            this.stateChanges.complete();
+            this._focusMonitor.stopMonitoring(this._elementRef);
+        };
+        MyTelInput.prototype.onFocusIn = function (event) {
+            if (!this.focused) {
+                this.focused = true;
+                this.stateChanges.next();
+            }
+        };
+        MyTelInput.prototype.onFocusOut = function (event) {
+            if (!this._elementRef.nativeElement.contains(event.relatedTarget)) {
+                this.touched = true;
+                this.focused = false;
+                this.onTouched();
+                this.stateChanges.next();
+            }
+        };
         MyTelInput.prototype.autoFocusNext = function (control, nextElement) {
             if (!control.errors && nextElement) {
                 this._focusMonitor.focusVia(nextElement, 'program');
@@ -597,10 +608,6 @@
             if (control.value.length < 1) {
                 this._focusMonitor.focusVia(prevElement, 'program');
             }
-        };
-        MyTelInput.prototype.ngOnDestroy = function () {
-            this.stateChanges.complete();
-            this._focusMonitor.stopMonitoring(this._elementRef);
         };
         MyTelInput.prototype.setDescribedByIds = function (ids) {
             var controlElement = this._elementRef.nativeElement
@@ -658,10 +665,11 @@
                 i0__namespace.ɵɵhostProperty("id", ctx.id);
                 i0__namespace.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
             }
-        }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0__namespace.ɵɵProvidersFeature([{ provide: i1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) {
+        }, inputs: { userAriaDescribedBy: ["aria-describedby", "userAriaDescribedBy"], placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [i0__namespace.ɵɵProvidersFeature([{ provide: i1.MatFormFieldControl, useExisting: MyTelInput }])], decls: 11, vars: 2, consts: [["role", "group", 1, "example-tel-input-container", 3, "formGroup", "focusin", "focusout"], ["formControlName", "area", "size", "3", "maxLength", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], ["area", ""], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "maxLength", "3", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["exchange", ""], ["formControlName", "subscriber", "maxLength", "4", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input", "keyup.backspace"], ["subscriber", ""]], template: function MyTelInput_Template(rf, ctx) {
             if (rf & 1) {
                 var _r3_1 = i0__namespace.ɵɵgetCurrentView();
                 i0__namespace.ɵɵelementStart(0, "div", 0);
+                i0__namespace.ɵɵlistener("focusin", function MyTelInput_Template_div_focusin_0_listener($event) { return ctx.onFocusIn($event); })("focusout", function MyTelInput_Template_div_focusout_0_listener($event) { return ctx.onFocusOut($event); });
                 i0__namespace.ɵɵelementStart(1, "input", 1, 2);
                 i0__namespace.ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { i0__namespace.ɵɵrestoreView(_r3_1); var _r1 = i0__namespace.ɵɵreference(6); return ctx._handleInput(ctx.parts.controls.area, _r1); });
                 i0__namespace.ɵɵelementEnd();
