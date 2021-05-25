@@ -100,7 +100,7 @@ appending to document.body).</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>forceStabilize
       </th>
@@ -121,7 +121,7 @@ cases where it is needed to fully flush animation events.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -394,7 +394,7 @@ or element under the host element of this <code>ComponentHarness</code>.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>waitForTasksOutsideAngular
       </th>
@@ -438,7 +438,7 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -484,7 +484,7 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -530,7 +530,7 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -576,7 +576,7 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -622,7 +622,7 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getRootHarnessLoader
       </th>
@@ -656,7 +656,7 @@ searching for content contained by this harness.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -835,7 +835,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>evaluate
       </th>
@@ -888,7 +888,7 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>filter
       </th>
@@ -964,6 +964,73 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Gets the selector used to find candidate elements.</p>
 
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div><div class="docs-api-modifier-method-marker">
+          async
+        </div>stringMatches
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks if the specified nullable string value matches the given pattern.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">string | Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        pattern</p>
+      <code class="docs-api-method-parameter-type">string | RegExp</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the value matches the pattern.</p>
+
+      </p>
     </td>
   </tr></table>
 
@@ -1210,7 +1277,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>forceStabilize
       </th>
@@ -1239,7 +1306,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -1285,7 +1352,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -1331,7 +1398,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllRawElements
       </th>
@@ -1382,7 +1449,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -1459,7 +1526,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -1505,7 +1572,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>harnessLoaderFor
       </th>
@@ -1551,7 +1618,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>harnessLoaderForAll
       </th>
@@ -1597,7 +1664,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>harnessLoaderForOptional
       </th>
@@ -1775,7 +1842,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>rootHarnessLoader
       </th>
@@ -1803,7 +1870,7 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>waitForTasksOutsideAngular
       </th>
@@ -1852,7 +1919,7 @@ instantiate <code>ComponentHarness</code>es.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -1906,7 +1973,7 @@ element.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -1959,7 +2026,7 @@ element.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -2013,7 +2080,7 @@ selector, the first is used. If no elements match, an error is thrown.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -2136,7 +2203,7 @@ their <code>ComponentHarness</code> subclass.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>forceStabilize
       </th>
@@ -2172,7 +2239,7 @@ cases where it is needed to fully flush animation events.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>harnessLoaderFor
       </th>
@@ -2224,7 +2291,7 @@ cases where it is needed to fully flush animation events.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>harnessLoaderForAll
       </th>
@@ -2276,7 +2343,7 @@ cases where it is needed to fully flush animation events.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>harnessLoaderForOptional
       </th>
@@ -2569,7 +2636,7 @@ or element under the root element of this <code>LocatorFactory</code>.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>rootHarnessLoader
       </th>
@@ -2598,7 +2665,7 @@ or element under the root element of this <code>LocatorFactory</code>.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>waitForTasksOutsideAngular
       </th>
@@ -2846,7 +2913,7 @@ interface through which the ComponentHarness interacts with the component&#39;s 
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>blur
       </th>
@@ -2880,7 +2947,7 @@ interface through which the ComponentHarness interacts with the component&#39;s 
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>clear
       </th>
@@ -2914,7 +2981,7 @@ interface through which the ComponentHarness interacts with the component&#39;s 
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>click
       </th>
@@ -2968,7 +3035,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>dispatchEvent
       </th>
@@ -3033,7 +3100,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>focus
       </th>
@@ -3067,7 +3134,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAttribute
       </th>
@@ -3118,7 +3185,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getCssValue
       </th>
@@ -3169,7 +3236,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getDimensions
       </th>
@@ -3202,7 +3269,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getProperty
       </th>
@@ -3253,7 +3320,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>hasClass
       </th>
@@ -3304,7 +3371,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>hover
       </th>
@@ -3338,7 +3405,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isFocused
       </th>
@@ -3371,7 +3438,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>matchesSelector
       </th>
@@ -3422,7 +3489,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>mouseAway
       </th>
@@ -3456,7 +3523,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>rightClick
       </th>
@@ -3534,7 +3601,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>selectOptions
       </th>
@@ -3586,7 +3653,7 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>sendKeys
       </th>
@@ -3639,7 +3706,7 @@ and attempts to add the string to the Element&#39;s value.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>setInputValue
       </th>
@@ -3691,7 +3758,7 @@ and attempts to add the string to the Element&#39;s value.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>text
       </th>
@@ -3957,7 +4024,7 @@ changes.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>manualChangeDetection
       </th>
@@ -3995,7 +4062,7 @@ changes.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>parallel
       </th>

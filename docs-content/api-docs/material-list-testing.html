@@ -36,7 +36,27 @@
   <code>MatActionListHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-action-list in tests.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: &#39;mat-action-list.mat-list&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatActionList</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -548,7 +568,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -576,6 +596,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatActionListHarness</code> that meets
+certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ActionListHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatActionListHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -587,7 +660,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatActionListItemHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with an action list item.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: `${MatActionListHarness.hostSelector} .mat-list-item`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListItem</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -597,7 +690,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>blur
       </th>
@@ -631,7 +724,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>click
       </th>
@@ -665,7 +758,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>focus
       </th>
@@ -699,7 +792,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -745,7 +838,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -791,7 +884,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -837,7 +930,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -1038,7 +1131,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -1071,7 +1164,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isFocused
       </th>
@@ -1099,6 +1192,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatActionListItemHarness</code> that
+meets certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ActionListItemHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatActionListItemHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -1110,7 +1256,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatListHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-list in tests.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: &#39;.mat-list:not(mat-action-list)&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatList</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -1622,7 +1788,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -1650,6 +1816,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatListHarness</code> that meets certain
+criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ListHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatListHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -1661,7 +1880,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatListItemHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a list item.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: `${MatListHarness.hostSelector} .mat-list-item`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListItem</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -1671,7 +1910,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -1717,7 +1956,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -1763,7 +2002,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -1809,7 +2048,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -2010,7 +2249,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -2038,6 +2277,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatListItemHarness</code> that meets
+certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ListItemHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatListItemHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -2049,7 +2341,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatNavListHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-nav-list in tests.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: &#39;.mat-nav-list&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatNavList</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -2561,7 +2873,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -2589,6 +2901,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatNavListHarness</code> that meets
+certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">NavListHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatNavListHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -2600,7 +2965,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatNavListItemHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a nav list item.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: `${MatNavListHarness.hostSelector} .mat-list-item`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListItem</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -2610,7 +2995,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>blur
       </th>
@@ -2644,7 +3029,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>click
       </th>
@@ -2678,7 +3063,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>focus
       </th>
@@ -2712,7 +3097,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -2758,7 +3143,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -2804,7 +3189,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -2850,7 +3235,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -2927,7 +3312,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHref
       </th>
@@ -3084,7 +3469,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -3117,7 +3502,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isFocused
       </th>
@@ -3145,6 +3530,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatNavListItemHarness</code> that
+meets certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">NavListItemHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatNavListItemHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -3156,7 +3594,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatSelectionListHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-selection-list in tests.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: &#39;.mat-selection-list&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatSelectionList</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -3166,7 +3624,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>deselectItems
       </th>
@@ -3733,7 +4191,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -3766,7 +4224,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isDisabled
       </th>
@@ -3799,7 +4257,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>selectItems
       </th>
@@ -3859,6 +4317,59 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatSelectionListHarness</code> that meets
+certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">SelectionListHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatSelectionListHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -3870,7 +4381,27 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   <code>MatListOptionHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a list option.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>statichostSelector: &#39;.mat-list-option&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListOption</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -3880,7 +4411,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>blur
       </th>
@@ -3914,7 +4445,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>deselect
       </th>
@@ -3934,7 +4465,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>focus
       </th>
@@ -3968,7 +4499,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllChildLoaders
       </th>
@@ -4014,7 +4545,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getAllHarnesses
       </th>
@@ -4060,7 +4591,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getCheckboxPosition
       </th>
@@ -4093,7 +4624,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getChildLoader
       </th>
@@ -4139,7 +4670,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
       </th>
@@ -4340,7 +4871,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>host
       </th>
@@ -4373,7 +4904,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isDisabled
       </th>
@@ -4406,7 +4937,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isFocused
       </th>
@@ -4439,7 +4970,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>isSelected
       </th>
@@ -4472,7 +5003,7 @@ nothing if it is already unchecked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>select
       </th>
@@ -4492,7 +5023,7 @@ nothing if it is already checked.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>toggle
       </th>
@@ -4501,6 +5032,59 @@ nothing if it is already checked.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Toggles the checked state of the checkbox.</p>
 
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatListOptionHarness</code> that
+meets certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ListOptionHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatListOptionHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
     </td>
   </tr></table>
 
