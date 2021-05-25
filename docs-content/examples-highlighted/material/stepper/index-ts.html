@@ -1,9 +1,10 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperEditableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-editable/stepper-editable-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperErrorsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-errors/stepper-errors-example&#x27;</span>;
@@ -15,6 +16,7 @@
 <span class="hljs-keyword">import</span> {StepperStatesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-states/stepper-states-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperVerticalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-vertical/stepper-vertical-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-harness/stepper-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {StepperIntlExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-intl/stepper-intl-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperLazyContentExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-lazy-content/stepper-lazy-content-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {StepperResponsiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./stepper-responsive/stepper-responsive-example&#x27;</span>;
 
@@ -22,6 +24,7 @@
   StepperEditableExample,
   StepperErrorsExample,
   StepperHarnessExample,
+  StepperIntlExample,
   StepperLabelPositionBottomExample,
   StepperOptionalExample,
   StepperOverviewExample,
@@ -35,6 +38,7 @@
   StepperEditableExample,
   StepperErrorsExample,
   StepperHarnessExample,
+  StepperIntlExample,
   StepperLabelPositionBottomExample,
   StepperOptionalExample,
   StepperOverviewExample,
@@ -46,9 +50,11 @@
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [
+    FormsModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
+    MatRadioModule,
     MatStepperModule,
     ReactiveFormsModule,
     CommonModule,

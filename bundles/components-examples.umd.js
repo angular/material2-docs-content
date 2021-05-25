@@ -4159,6 +4159,23 @@
                 "importSpecifier": "material/stepper"
             }
         },
+        "stepper-intl": {
+            "packagePath": "material/stepper/stepper-intl",
+            "title": "Stepper that uses the MatStepperIntl service",
+            "componentName": "StepperIntlExample",
+            "files": [
+                "stepper-intl-example.ts",
+                "stepper-intl-example.html",
+                "stepper-intl-example.css"
+            ],
+            "selector": "stepper-intl-example",
+            "additionalComponents": [],
+            "primaryFile": "stepper-intl-example.ts",
+            "module": {
+                "name": "StepperExamplesModule",
+                "importSpecifier": "material/stepper"
+            }
+        },
         "stepper-label-position-bottom": {
             "packagePath": "material/stepper/stepper-label-position-bottom",
             "title": "Stepper label bottom position",

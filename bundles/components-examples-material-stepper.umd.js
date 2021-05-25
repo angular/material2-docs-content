@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/stepper'), require('@angular/material/form-field'), require('@angular/cdk/stepper'), require('rxjs/operators'), require('@angular/cdk/layout')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/stepper', ['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/material/button', '@angular/material/icon', '@angular/material/input', '@angular/material/stepper', '@angular/material/form-field', '@angular/cdk/stepper', 'rxjs/operators', '@angular/cdk/layout'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.stepper = {}), global.ng.core, global.ng.forms, global.ng.common, global.ng.material.button, global.ng.material.icon, global.ng.material.input, global.ng.material.stepper, global.ng.material.formField, global.ng.cdk.stepper, global.rxjs.operators, global.ng.cdk.layout));
-}(this, (function (exports, i0, i1, i3$1, i2, i6, i5, i3, i4, stepper, operators, i2$1) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/radio'), require('@angular/material/stepper'), require('@angular/material/form-field'), require('@angular/cdk/stepper'), require('rxjs/operators'), require('@angular/cdk/layout')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/stepper', ['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/material/button', '@angular/material/icon', '@angular/material/input', '@angular/material/radio', '@angular/material/stepper', '@angular/material/form-field', '@angular/cdk/stepper', 'rxjs/operators', '@angular/cdk/layout'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.stepper = {}), global.ng.core, global.ng.forms, global.ng.common, global.ng.material.button, global.ng.material.icon, global.ng.material.input, global.ng.material.radio, global.ng.material.stepper, global.ng.material.formField, global.ng.cdk.stepper, global.rxjs.operators, global.ng.cdk.layout));
+}(this, (function (exports, i0, i1, i3$1, i2, i6, i5, i3, i2$1, i4, stepper, operators, i2$2) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -31,8 +31,9 @@
     var i6__namespace = /*#__PURE__*/_interopNamespace(i6);
     var i5__namespace = /*#__PURE__*/_interopNamespace(i5);
     var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
-    var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
     var i2__namespace$1 = /*#__PURE__*/_interopNamespace(i2$1);
+    var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
+    var i2__namespace$2 = /*#__PURE__*/_interopNamespace(i2$2);
 
     function StepperEditableExample_ng_template_6_Template(rf, ctx) {
         if (rf & 1) {
@@ -140,7 +141,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i2__namespace.MatButton, i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace.MatButton, i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperEditableExample, [{
                 type: i0.Component,
@@ -259,7 +260,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperErrorsExample, [{
                 type: i0.Component,
@@ -373,7 +374,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
                 type: i0.Component,
@@ -491,7 +492,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i2__namespace.MatButton, i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace.MatButton, i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperOptionalExample, [{
                 type: i0.Component,
@@ -605,7 +606,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i2__namespace.MatButton, i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace.MatButton, i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperOverviewExample, [{
                 type: i0.Component,
@@ -764,7 +765,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious, i3__namespace.MatStepperIcon, i6__namespace.MatIcon], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious, i2__namespace$1.MatStepperIcon, i6__namespace.MatIcon], styles: [".mat-stepper-horizontal[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperStatesExample, [{
                 type: i0.Component,
@@ -887,7 +888,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
             }
-        }, directives: [i2__namespace.MatButton, i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i3__namespace.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], styles: [".mat-stepper-vertical[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i2__namespace.MatButton, i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], styles: [".mat-stepper-vertical[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperVerticalExample, [{
                 type: i0.Component,
@@ -949,7 +950,7 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
             }
-        }, directives: [i3__namespace.MatStepper, i3__namespace.MatStep, i3__namespace.MatStepLabel, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious], encapsulation: 2 });
+        }, directives: [i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i2__namespace$1.MatStepLabel, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious], encapsulation: 2 });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperHarnessExample, [{
                 type: i0.Component,
@@ -958,6 +959,470 @@
                         templateUrl: 'stepper-harness-example.html',
                     }]
             }], null, null);
+    })();
+
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+    /* global Reflect, Promise */
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b)
+                if (Object.prototype.hasOwnProperty.call(b, p))
+                    d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    function __extends(d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    }
+    var __assign = function () {
+        __assign = Object.assign || function __assign(t) {
+            for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i];
+                for (var p in s)
+                    if (Object.prototype.hasOwnProperty.call(s, p))
+                        t[p] = s[p];
+            }
+            return t;
+        };
+        return __assign.apply(this, arguments);
+    };
+    function __rest(s, e) {
+        var t = {};
+        for (var p in s)
+            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+                t[p] = s[p];
+        if (s != null && typeof Object.getOwnPropertySymbols === "function")
+            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+                if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                    t[p[i]] = s[p[i]];
+            }
+        return t;
+    }
+    function __decorate(decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+            r = Reflect.decorate(decorators, target, key, desc);
+        else
+            for (var i = decorators.length - 1; i >= 0; i--)
+                if (d = decorators[i])
+                    r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    }
+    function __param(paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); };
+    }
+    function __metadata(metadataKey, metadataValue) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+            return Reflect.metadata(metadataKey, metadataValue);
+    }
+    function __awaiter(thisArg, _arguments, P, generator) {
+        function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+        return new (P || (P = Promise))(function (resolve, reject) {
+            function fulfilled(value) { try {
+                step(generator.next(value));
+            }
+            catch (e) {
+                reject(e);
+            } }
+            function rejected(value) { try {
+                step(generator["throw"](value));
+            }
+            catch (e) {
+                reject(e);
+            } }
+            function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+            step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+    }
+    function __generator(thisArg, body) {
+        var _ = { label: 0, sent: function () { if (t[0] & 1)
+                throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
+        function verb(n) { return function (v) { return step([n, v]); }; }
+        function step(op) {
+            if (f)
+                throw new TypeError("Generator is already executing.");
+            while (_)
+                try {
+                    if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
+                        return t;
+                    if (y = 0, t)
+                        op = [op[0] & 2, t.value];
+                    switch (op[0]) {
+                        case 0:
+                        case 1:
+                            t = op;
+                            break;
+                        case 4:
+                            _.label++;
+                            return { value: op[1], done: false };
+                        case 5:
+                            _.label++;
+                            y = op[1];
+                            op = [0];
+                            continue;
+                        case 7:
+                            op = _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                        default:
+                            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                                _ = 0;
+                                continue;
+                            }
+                            if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) {
+                                _.label = op[1];
+                                break;
+                            }
+                            if (op[0] === 6 && _.label < t[1]) {
+                                _.label = t[1];
+                                t = op;
+                                break;
+                            }
+                            if (t && _.label < t[2]) {
+                                _.label = t[2];
+                                _.ops.push(op);
+                                break;
+                            }
+                            if (t[2])
+                                _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                    }
+                    op = body.call(thisArg, _);
+                }
+                catch (e) {
+                    op = [6, e];
+                    y = 0;
+                }
+                finally {
+                    f = t = 0;
+                }
+            if (op[0] & 5)
+                throw op[1];
+            return { value: op[0] ? op[1] : void 0, done: true };
+        }
+    }
+    var __createBinding = Object.create ? (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
+        Object.defineProperty(o, k2, { enumerable: true, get: function () { return m[k]; } });
+    }) : (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
+        o[k2] = m[k];
+    });
+    function __exportStar(m, o) {
+        for (var p in m)
+            if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
+                __createBinding(o, m, p);
+    }
+    function __values(o) {
+        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+        if (m)
+            return m.call(o);
+        if (o && typeof o.length === "number")
+            return {
+                next: function () {
+                    if (o && i >= o.length)
+                        o = void 0;
+                    return { value: o && o[i++], done: !o };
+                }
+            };
+        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    }
+    function __read(o, n) {
+        var m = typeof Symbol === "function" && o[Symbol.iterator];
+        if (!m)
+            return o;
+        var i = m.call(o), r, ar = [], e;
+        try {
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
+                ar.push(r.value);
+        }
+        catch (error) {
+            e = { error: error };
+        }
+        finally {
+            try {
+                if (r && !r.done && (m = i["return"]))
+                    m.call(i);
+            }
+            finally {
+                if (e)
+                    throw e.error;
+            }
+        }
+        return ar;
+    }
+    /** @deprecated */
+    function __spread() {
+        for (var ar = [], i = 0; i < arguments.length; i++)
+            ar = ar.concat(__read(arguments[i]));
+        return ar;
+    }
+    /** @deprecated */
+    function __spreadArrays() {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++)
+            s += arguments[i].length;
+        for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+                r[k] = a[j];
+        return r;
+    }
+    function __spreadArray(to, from) {
+        for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+            to[j] = from[i];
+        return to;
+    }
+    function __await(v) {
+        return this instanceof __await ? (this.v = v, this) : new __await(v);
+    }
+    function __asyncGenerator(thisArg, _arguments, generator) {
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
+        var g = generator.apply(thisArg, _arguments || []), i, q = [];
+        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+        function verb(n) { if (g[n])
+            i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n, v) { try {
+            step(g[n](v));
+        }
+        catch (e) {
+            settle(q[0][3], e);
+        } }
+        function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+        function fulfill(value) { resume("next", value); }
+        function reject(value) { resume("throw", value); }
+        function settle(f, v) { if (f(v), q.shift(), q.length)
+            resume(q[0][0], q[0][1]); }
+    }
+    function __asyncDelegator(o) {
+        var i, p;
+        return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+        function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    }
+    function __asyncValues(o) {
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
+        var m = o[Symbol.asyncIterator], i;
+        return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+        function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function (v) { resolve({ value: v, done: d }); }, reject); }
+    }
+    function __makeTemplateObject(cooked, raw) {
+        if (Object.defineProperty) {
+            Object.defineProperty(cooked, "raw", { value: raw });
+        }
+        else {
+            cooked.raw = raw;
+        }
+        return cooked;
+    }
+    ;
+    var __setModuleDefault = Object.create ? (function (o, v) {
+        Object.defineProperty(o, "default", { enumerable: true, value: v });
+    }) : function (o, v) {
+        o["default"] = v;
+    };
+    function __importStar(mod) {
+        if (mod && mod.__esModule)
+            return mod;
+        var result = {};
+        if (mod != null)
+            for (var k in mod)
+                if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+                    __createBinding(result, mod, k);
+        __setModuleDefault(result, mod);
+        return result;
+    }
+    function __importDefault(mod) {
+        return (mod && mod.__esModule) ? mod : { default: mod };
+    }
+    function __classPrivateFieldGet(receiver, privateMap) {
+        if (!privateMap.has(receiver)) {
+            throw new TypeError("attempted to get private field on non-instance");
+        }
+        return privateMap.get(receiver);
+    }
+    function __classPrivateFieldSet(receiver, privateMap, value) {
+        if (!privateMap.has(receiver)) {
+            throw new TypeError("attempted to set private field on non-instance");
+        }
+        privateMap.set(receiver, value);
+        return value;
+    }
+
+    function StepperIntlExample_mat_radio_button_3_Template(rf, ctx) {
+        if (rf & 1) {
+            i0__namespace.ɵɵelementStart(0, "mat-radio-button", 15);
+            i0__namespace.ɵɵtext(1);
+            i0__namespace.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var optionalLabelTextChoice_r4 = ctx.$implicit;
+            i0__namespace.ɵɵproperty("value", optionalLabelTextChoice_r4);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵtextInterpolate1(" ", optionalLabelTextChoice_r4, " ");
+        }
+    }
+    function StepperIntlExample_ng_template_8_Template(rf, ctx) {
+        if (rf & 1) {
+            i0__namespace.ɵɵtext(0, "Fill out your name");
+        }
+    }
+    function StepperIntlExample_ng_template_28_Template(rf, ctx) {
+        if (rf & 1) {
+            i0__namespace.ɵɵtext(0, "Done");
+        }
+    }
+    var StepperIntl = /** @class */ (function (_super) {
+        __extends(StepperIntl, _super);
+        function StepperIntl() {
+            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            // the default optional label text, if unspecified is "Optional"
+            _this.optionalLabel = 'Optional Label';
+            return _this;
+        }
+        return StepperIntl;
+    }(i2$1.MatStepperIntl));
+    StepperIntl.ɵfac = /*@__PURE__*/ function () { var ɵStepperIntl_BaseFactory; return function StepperIntl_Factory(t) { return (ɵStepperIntl_BaseFactory || (ɵStepperIntl_BaseFactory = i0__namespace.ɵɵgetInheritedFactory(StepperIntl)))(t || StepperIntl); }; }();
+    StepperIntl.ɵprov = /*@__PURE__*/ i0__namespace.ɵɵdefineInjectable({ token: StepperIntl, factory: StepperIntl.ɵfac });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperIntl, [{
+                type: i0.Injectable
+            }], null, null);
+    })();
+    /**
+     * @title Stepper that uses the MatStepperIntl service
+     */
+    var StepperIntlExample = /** @class */ (function () {
+        function StepperIntlExample(_formBuilder, _matStepperIntl) {
+            this._formBuilder = _formBuilder;
+            this._matStepperIntl = _matStepperIntl;
+            this.optionalLabelTextChoices = ['Option 1', 'Option 2', 'Option 3'];
+        }
+        StepperIntlExample.prototype.updateOptionalLabel = function () {
+            this._matStepperIntl.optionalLabel = this.optionalLabelText;
+            // Required for the optional label text to be updated
+            // Notifies the MatStepperIntl service that a change has been made
+            this._matStepperIntl.changes.next();
+        };
+        StepperIntlExample.prototype.ngOnInit = function () {
+            this.firstFormGroup = this._formBuilder.group({
+                firstCtrl: ['', i1.Validators.required]
+            });
+            this.secondFormGroup = this._formBuilder.group({
+                secondCtrl: ['', i1.Validators.required]
+            });
+        };
+        return StepperIntlExample;
+    }());
+    StepperIntlExample.ɵfac = function StepperIntlExample_Factory(t) { return new (t || StepperIntlExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.FormBuilder), i0__namespace.ɵɵdirectiveInject(i2__namespace$1.MatStepperIntl)); };
+    StepperIntlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: StepperIntlExample, selectors: [["stepper-intl-example"]], features: [i0__namespace.ɵɵProvidersFeature([{ provide: i2$1.MatStepperIntl, useClass: StepperIntl }])], decls: 36, vars: 6, consts: [["for", "demo-optional-label-group"], ["id", "demo-optional-label-group", 1, "demo-radio-group", 3, "ngModel", "ngModelChange"], ["class", "demo-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "demo-stepper"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], [1, "demo-form-field"], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["label", "Fill out your address", "optional", "", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY"], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"], [1, "demo-radio-button", 3, "value"]], template: function StepperIntlExample_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r5_1 = i0__namespace.ɵɵgetCurrentView();
+                i0__namespace.ɵɵelementStart(0, "label", 0);
+                i0__namespace.ɵɵtext(1, "Pick the text for the optional label");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(2, "mat-radio-group", 1);
+                i0__namespace.ɵɵlistener("ngModelChange", function StepperIntlExample_Template_mat_radio_group_ngModelChange_2_listener($event) { return ctx.optionalLabelText = $event; })("ngModelChange", function StepperIntlExample_Template_mat_radio_group_ngModelChange_2_listener() { return ctx.updateOptionalLabel(); });
+                i0__namespace.ɵɵtemplate(3, StepperIntlExample_mat_radio_button_3_Template, 2, 2, "mat-radio-button", 2);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(4, "mat-horizontal-stepper", 3, 4);
+                i0__namespace.ɵɵelementStart(6, "mat-step", 5);
+                i0__namespace.ɵɵelementStart(7, "form", 6);
+                i0__namespace.ɵɵtemplate(8, StepperIntlExample_ng_template_8_Template, 1, 0, "ng-template", 7);
+                i0__namespace.ɵɵelementStart(9, "mat-form-field", 8);
+                i0__namespace.ɵɵelementStart(10, "mat-label");
+                i0__namespace.ɵɵtext(11, "Name");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelement(12, "input", 9);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(13, "div");
+                i0__namespace.ɵɵelementStart(14, "button", 10);
+                i0__namespace.ɵɵtext(15, "Next");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(16, "mat-step", 11);
+                i0__namespace.ɵɵelementStart(17, "form", 6);
+                i0__namespace.ɵɵelementStart(18, "mat-form-field");
+                i0__namespace.ɵɵelementStart(19, "mat-label");
+                i0__namespace.ɵɵtext(20, "Address");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelement(21, "input", 12);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(22, "div");
+                i0__namespace.ɵɵelementStart(23, "button", 13);
+                i0__namespace.ɵɵtext(24, "Back");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(25, "button", 10);
+                i0__namespace.ɵɵtext(26, "Next");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(27, "mat-step");
+                i0__namespace.ɵɵtemplate(28, StepperIntlExample_ng_template_28_Template, 1, 0, "ng-template", 7);
+                i0__namespace.ɵɵelementStart(29, "p");
+                i0__namespace.ɵɵtext(30, "You are now done.");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(31, "div");
+                i0__namespace.ɵɵelementStart(32, "button", 13);
+                i0__namespace.ɵɵtext(33, "Back");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(34, "button", 14);
+                i0__namespace.ɵɵlistener("click", function StepperIntlExample_Template_button_click_34_listener() { i0__namespace.ɵɵrestoreView(_r5_1); var _r1 = i0__namespace.ɵɵreference(5); return _r1.reset(); });
+                i0__namespace.ɵɵtext(35, "Reset");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngModel", ctx.optionalLabelText);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngForOf", ctx.optionalLabelTextChoices);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵproperty("stepControl", ctx.firstFormGroup);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("formGroup", ctx.firstFormGroup);
+                i0__namespace.ɵɵadvance(9);
+                i0__namespace.ɵɵproperty("stepControl", ctx.secondFormGroup);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("formGroup", ctx.secondFormGroup);
+            }
+        }, directives: [i3__namespace.MatRadioGroup, i1__namespace.NgControlStatus, i1__namespace.NgModel, i3__namespace$1.NgForOf, i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i2__namespace$1.MatStepLabel, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious, i3__namespace.MatRadioButton], styles: [".demo-stepper[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.demo-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}\n\n.demo-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.demo-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperIntlExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'stepper-intl-example',
+                        templateUrl: 'stepper-intl-example.html',
+                        styleUrls: ['stepper-intl-example.css'],
+                        providers: [{ provide: i2$1.MatStepperIntl, useClass: StepperIntl }]
+                    }]
+            }], function () { return [{ type: i1__namespace.FormBuilder }, { type: i2__namespace$1.MatStepperIntl }]; }, null);
     })();
 
     function StepperLazyContentExample_ng_template_2_Template(rf, ctx) {
@@ -1029,7 +1494,7 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
             }
-        }, directives: [i3__namespace.MatStepper, i3__namespace.MatStep, i3__namespace.MatStepLabel, i3__namespace.MatStepContent, i2__namespace.MatButton, i3__namespace.MatStepperPrevious, i3__namespace.MatStepperNext], styles: [""] });
+        }, directives: [i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i2__namespace$1.MatStepLabel, i2__namespace$1.MatStepContent, i2__namespace.MatButton, i2__namespace$1.MatStepperPrevious, i2__namespace$1.MatStepperNext], styles: [""] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperLazyContentExample, [{
                 type: i0.Component,
@@ -1083,7 +1548,7 @@
         }
         return StepperResponsiveExample;
     }());
-    StepperResponsiveExample.ɵfac = function StepperResponsiveExample_Factory(t) { return new (t || StepperResponsiveExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.FormBuilder), i0__namespace.ɵɵdirectiveInject(i2__namespace$1.BreakpointObserver)); };
+    StepperResponsiveExample.ɵfac = function StepperResponsiveExample_Factory(t) { return new (t || StepperResponsiveExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.FormBuilder), i0__namespace.ɵɵdirectiveInject(i2__namespace$2.BreakpointObserver)); };
     StepperResponsiveExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: StepperResponsiveExample, selectors: [["stepper-responsive-example"]], decls: 44, vars: 14, consts: [[3, "ngSwitch"], [4, "ngSwitchCase"], [1, "example-stepper", 3, "orientation"], ["label", "Fill out your name", 3, "stepControl"], [3, "formGroup"], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["label", "Fill out your address", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["label", "Fill out your phone number", 3, "stepControl"], ["matInput", "", "formControlName", "thirdCtrl", "placeholder", "Ex. 12345678", "required", ""], ["matStepLabel", ""]], template: function StepperResponsiveExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementContainerStart(0, 0);
@@ -1178,7 +1643,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("formGroup", ctx.thirdFormGroup);
             }
-        }, directives: [i3__namespace$1.NgSwitch, i3__namespace$1.NgSwitchCase, i3__namespace.MatStepper, i3__namespace.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i3__namespace.MatStepperNext, i3__namespace.MatStepperPrevious, i3__namespace.MatStepLabel], pipes: [i3__namespace$1.AsyncPipe], styles: [".example-stepper[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
+        }, directives: [i3__namespace$1.NgSwitch, i3__namespace$1.NgSwitchCase, i2__namespace$1.MatStepper, i2__namespace$1.MatStep, i1__namespace.ɵNgNoValidate, i1__namespace.NgControlStatusGroup, i1__namespace.FormGroupDirective, i4__namespace.MatFormField, i4__namespace.MatLabel, i5__namespace.MatInput, i1__namespace.DefaultValueAccessor, i1__namespace.NgControlStatus, i1__namespace.FormControlName, i1__namespace.RequiredValidator, i2__namespace.MatButton, i2__namespace$1.MatStepperNext, i2__namespace$1.MatStepperPrevious, i2__namespace$1.MatStepLabel], pipes: [i3__namespace$1.AsyncPipe], styles: [".example-stepper[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperResponsiveExample, [{
                 type: i0.Component,
@@ -1187,13 +1652,14 @@
                         templateUrl: 'stepper-responsive-example.html',
                         styleUrls: ['stepper-responsive-example.css'],
                     }]
-            }], function () { return [{ type: i1__namespace.FormBuilder }, { type: i2__namespace$1.BreakpointObserver }]; }, null);
+            }], function () { return [{ type: i1__namespace.FormBuilder }, { type: i2__namespace$2.BreakpointObserver }]; }, null);
     })();
 
     var EXAMPLES = [
         StepperEditableExample,
         StepperErrorsExample,
         StepperHarnessExample,
+        StepperIntlExample,
         StepperLabelPositionBottomExample,
         StepperOptionalExample,
         StepperOverviewExample,
@@ -1210,10 +1676,12 @@
     StepperExamplesModule.ɵfac = function StepperExamplesModule_Factory(t) { return new (t || StepperExamplesModule)(); };
     StepperExamplesModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: StepperExamplesModule });
     StepperExamplesModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[
+                i1.FormsModule,
                 i2.MatButtonModule,
                 i6.MatIconModule,
                 i5.MatInputModule,
-                i3.MatStepperModule,
+                i3.MatRadioModule,
+                i2$1.MatStepperModule,
                 i1.ReactiveFormsModule,
                 i3$1.CommonModule,
             ]] });
@@ -1222,10 +1690,12 @@
                 type: i0.NgModule,
                 args: [{
                         imports: [
+                            i1.FormsModule,
                             i2.MatButtonModule,
                             i6.MatIconModule,
                             i5.MatInputModule,
-                            i3.MatStepperModule,
+                            i3.MatRadioModule,
+                            i2$1.MatStepperModule,
                             i1.ReactiveFormsModule,
                             i3$1.CommonModule,
                         ],
@@ -1239,20 +1709,24 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
                 StepperErrorsExample,
                 StepperHarnessExample,
+                StepperIntlExample,
                 StepperLabelPositionBottomExample,
                 StepperOptionalExample,
                 StepperOverviewExample,
                 StepperStatesExample,
                 StepperVerticalExample,
                 StepperLazyContentExample,
-                StepperResponsiveExample], imports: [i2.MatButtonModule,
+                StepperResponsiveExample], imports: [i1.FormsModule,
+                i2.MatButtonModule,
                 i6.MatIconModule,
                 i5.MatInputModule,
-                i3.MatStepperModule,
+                i3.MatRadioModule,
+                i2$1.MatStepperModule,
                 i1.ReactiveFormsModule,
                 i3$1.CommonModule], exports: [StepperEditableExample,
                 StepperErrorsExample,
                 StepperHarnessExample,
+                StepperIntlExample,
                 StepperLabelPositionBottomExample,
                 StepperOptionalExample,
                 StepperOverviewExample,
@@ -1270,6 +1744,7 @@
     exports.StepperErrorsExample = StepperErrorsExample;
     exports.StepperExamplesModule = StepperExamplesModule;
     exports.StepperHarnessExample = StepperHarnessExample;
+    exports.StepperIntlExample = StepperIntlExample;
     exports.StepperLabelPositionBottomExample = StepperLabelPositionBottomExample;
     exports.StepperLazyContentExample = StepperLazyContentExample;
     exports.StepperOptionalExample = StepperOptionalExample;

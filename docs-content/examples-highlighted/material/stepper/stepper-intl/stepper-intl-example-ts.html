@@ -1,0 +1,46 @@
+<span class="hljs-keyword">import</span> {Component, Injectable, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatStepperIntl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
+
+<span class="hljs-meta">@Injectable</span>()
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperIntl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MatStepperIntl</span> </span>{
+  <span class="hljs-comment">// the default optional label text, if unspecified is &quot;Optional&quot;</span>
+  optionalLabel = <span class="hljs-string">&#x27;Optional Label&#x27;</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Stepper that uses the MatStepperIntl service
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;stepper-intl-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;stepper-intl-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;stepper-intl-example.css&#x27;</span>],
+  <span class="hljs-attr">providers</span>: [{ <span class="hljs-attr">provide</span>: MatStepperIntl, <span class="hljs-attr">useClass</span>: StepperIntl }]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperIntlExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
+  <span class="hljs-attr">firstFormGroup</span>: FormGroup;
+  secondFormGroup: FormGroup;
+  optionalLabelText: <span class="hljs-built_in">string</span>;
+  optionalLabelTextChoices: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Option 1&#x27;</span>, <span class="hljs-string">&#x27;Option 2&#x27;</span>, <span class="hljs-string">&#x27;Option 3&#x27;</span>];
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">private</span> _formBuilder: FormBuilder,
+    <span class="hljs-keyword">private</span> _matStepperIntl: MatStepperIntl
+  </span>)</span> {}
+
+  <span class="hljs-function"><span class="hljs-title">updateOptionalLabel</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._matStepperIntl.optionalLabel = <span class="hljs-built_in">this</span>.optionalLabelText;
+    <span class="hljs-comment">// Required for the optional label text to be updated</span>
+    <span class="hljs-comment">// Notifies the MatStepperIntl service that a change has been made</span>
+    <span class="hljs-built_in">this</span>._matStepperIntl.changes.next();
+  }
+
+  <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+      <span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
+    });
+    <span class="hljs-built_in">this</span>.secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+      <span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
+    });
+  }
+}
