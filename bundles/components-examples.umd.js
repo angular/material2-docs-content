@@ -4363,6 +4363,23 @@
                 "importSpecifier": "material/table"
             }
         },
+        "table-dynamic-array-data": {
+            "packagePath": "material/table/table-dynamic-array-data",
+            "title": "Adding and removing data when using an array-based datasource.",
+            "componentName": "TableDynamicArrayDataExample",
+            "files": [
+                "table-dynamic-array-data-example.ts",
+                "table-dynamic-array-data-example.html",
+                "table-dynamic-array-data-example.css"
+            ],
+            "selector": "table-dynamic-array-data-example",
+            "additionalComponents": [],
+            "primaryFile": "table-dynamic-array-data-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
         "table-dynamic-columns": {
             "packagePath": "material/table/table-dynamic-columns",
             "title": "Table dynamically changing the columns displayed",
@@ -4375,6 +4392,23 @@
             "selector": "table-dynamic-columns-example",
             "additionalComponents": [],
             "primaryFile": "table-dynamic-columns-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
+        "table-dynamic-observable-data": {
+            "packagePath": "material/table/table-dynamic-observable-data",
+            "title": "Adding and removing data when using an observable-based datasource.",
+            "componentName": "TableDynamicObservableDataExample",
+            "files": [
+                "table-dynamic-observable-data-example.ts",
+                "table-dynamic-observable-data-example.html",
+                "table-dynamic-observable-data-example.css"
+            ],
+            "selector": "table-dynamic-observable-data-example",
+            "additionalComponents": [],
+            "primaryFile": "table-dynamic-observable-data-example.ts",
             "module": {
                 "name": "TableExamplesModule",
                 "importSpecifier": "material/table"
