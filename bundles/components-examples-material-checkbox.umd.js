@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/checkbox', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.checkbox = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio));
-}(this, (function (exports, i2, i0, i3, i1, i1$1, i4) { 'use strict';
+}(this, (function (exports, i2, i0, i1$2, i1, i1$1, i4) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -26,7 +26,7 @@
 
     var i2__namespace = /*#__PURE__*/_interopNamespace(i2);
     var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
-    var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
+    var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
     var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
     var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
@@ -109,7 +109,7 @@
                 i0__namespace.ɵɵadvance(7);
                 i0__namespace.ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
             }
-        }, directives: [i1__namespace.MatCard, i1__namespace.MatCardContent, i1__namespace$1.MatCheckbox, i3__namespace.NgControlStatus, i3__namespace.NgModel, i4__namespace.MatRadioGroup, i4__namespace.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+        }, directives: [i1__namespace.MatCard, i1__namespace.MatCardContent, i1__namespace$1.MatCheckbox, i1__namespace$2.NgControlStatus, i1__namespace$2.NgModel, i4__namespace.MatRadioGroup, i4__namespace.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CheckboxConfigurableExample, [{
                 type: i0.Component,
@@ -117,6 +117,41 @@
                         selector: 'checkbox-configurable-example',
                         templateUrl: 'checkbox-configurable-example.html',
                         styleUrls: ['checkbox-configurable-example.css'],
+                    }]
+            }], null, null);
+    })();
+
+    /**
+     * @title Testing with MatCheckboxHarness
+     */
+    var CheckboxHarnessExample = /** @class */ (function () {
+        function CheckboxHarnessExample() {
+            this.disabled = true;
+        }
+        return CheckboxHarnessExample;
+    }());
+    CheckboxHarnessExample.ɵfac = function CheckboxHarnessExample_Factory(t) { return new (t || CheckboxHarnessExample)(); };
+    CheckboxHarnessExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: CheckboxHarnessExample, selectors: [["checkbox-harness-example"]], decls: 4, vars: 2, consts: [["required", "", "name", "first-name", "value", "first-value", "aria-label", "First checkbox", 3, "checked"], ["indeterminate", "true", "aria-label", "Second checkbox", 3, "disabled"]], template: function CheckboxHarnessExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵelementStart(0, "mat-checkbox", 0);
+                i0__namespace.ɵɵtext(1, " First\n");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(2, "mat-checkbox", 1);
+                i0__namespace.ɵɵtext(3, " Second\n");
+                i0__namespace.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0__namespace.ɵɵproperty("checked", true);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("disabled", ctx.disabled);
+            }
+        }, directives: [i1__namespace$1.MatCheckbox], encapsulation: 2 });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CheckboxHarnessExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'checkbox-harness-example',
+                        templateUrl: 'checkbox-harness-example.html',
                     }]
             }], null, null);
     })();
@@ -209,7 +244,7 @@
                 i0__namespace.ɵɵadvance(3);
                 i0__namespace.ɵɵproperty("ngForOf", ctx.task.subtasks);
             }
-        }, directives: [i1__namespace$1.MatCheckbox, i2__namespace.NgForOf, i3__namespace.NgControlStatus, i3__namespace.NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
+        }, directives: [i1__namespace$1.MatCheckbox, i2__namespace.NgForOf, i1__namespace$2.NgControlStatus, i1__namespace$2.NgModel], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}\n\nul[_ngcontent-%COMP%] {\n  list-style-type: none;\n  margin-top: 4px;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CheckboxOverviewExample, [{
                 type: i0.Component,
@@ -221,45 +256,72 @@
             }], null, null);
     })();
 
-    /**
-     * @title Testing with MatCheckboxHarness
-     */
-    var CheckboxHarnessExample = /** @class */ (function () {
-        function CheckboxHarnessExample() {
-            this.disabled = true;
+    /** @title Checkboxes with reactive forms */
+    var CheckboxReactiveFormsExample = /** @class */ (function () {
+        function CheckboxReactiveFormsExample(fb) {
+            this.toppings = fb.group({
+                pepperoni: false,
+                extracheese: false,
+                mushroom: false
+            });
         }
-        return CheckboxHarnessExample;
+        return CheckboxReactiveFormsExample;
     }());
-    CheckboxHarnessExample.ɵfac = function CheckboxHarnessExample_Factory(t) { return new (t || CheckboxHarnessExample)(); };
-    CheckboxHarnessExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: CheckboxHarnessExample, selectors: [["checkbox-harness-example"]], decls: 4, vars: 2, consts: [["required", "", "name", "first-name", "value", "first-value", "aria-label", "First checkbox", 3, "checked"], ["indeterminate", "true", "aria-label", "Second checkbox", 3, "disabled"]], template: function CheckboxHarnessExample_Template(rf, ctx) {
+    CheckboxReactiveFormsExample.ɵfac = function CheckboxReactiveFormsExample_Factory(t) { return new (t || CheckboxReactiveFormsExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace$2.FormBuilder)); };
+    CheckboxReactiveFormsExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: CheckboxReactiveFormsExample, selectors: [["checkbox-reactive-forms-example"]], decls: 17, vars: 5, consts: [[1, "example-section", 3, "formGroup"], ["formControlName", "pepperoni"], ["formControlName", "extracheese"], ["formControlName", "mushroom"]], template: function CheckboxReactiveFormsExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "mat-checkbox", 0);
-                i0__namespace.ɵɵtext(1, " First\n");
+                i0__namespace.ɵɵelementStart(0, "section", 0);
+                i0__namespace.ɵɵelementStart(1, "h4");
+                i0__namespace.ɵɵtext(2, "Select your toppings:");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(2, "mat-checkbox", 1);
-                i0__namespace.ɵɵtext(3, " Second\n");
+                i0__namespace.ɵɵelementStart(3, "p");
+                i0__namespace.ɵɵelementStart(4, "mat-checkbox", 1);
+                i0__namespace.ɵɵtext(5, "Pepperoni");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(6, "p");
+                i0__namespace.ɵɵelementStart(7, "mat-checkbox", 2);
+                i0__namespace.ɵɵtext(8, "Extra Cheese");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(9, "p");
+                i0__namespace.ɵɵelementStart(10, "mat-checkbox", 3);
+                i0__namespace.ɵɵtext(11, "Mushroom");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(12, "section", 0);
+                i0__namespace.ɵɵelementStart(13, "h4");
+                i0__namespace.ɵɵtext(14, "You chose:");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtext(15);
+                i0__namespace.ɵɵpipe(16, "json");
                 i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0__namespace.ɵɵproperty("checked", true);
-                i0__namespace.ɵɵadvance(2);
-                i0__namespace.ɵɵproperty("disabled", ctx.disabled);
+                i0__namespace.ɵɵproperty("formGroup", ctx.toppings);
+                i0__namespace.ɵɵadvance(12);
+                i0__namespace.ɵɵproperty("formGroup", ctx.toppings);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵtextInterpolate1(" ", i0__namespace.ɵɵpipeBind1(16, 3, ctx.toppings.value), "\n");
             }
-        }, directives: [i1__namespace$1.MatCheckbox], encapsulation: 2 });
+        }, directives: [i1__namespace$2.NgControlStatusGroup, i1__namespace$2.FormGroupDirective, i1__namespace$1.MatCheckbox, i1__namespace$2.NgControlStatus, i1__namespace$2.FormControlName], pipes: [i2__namespace.JsonPipe], styles: [".example-section[_ngcontent-%COMP%] {\n  margin: 12px 0;\n}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CheckboxHarnessExample, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CheckboxReactiveFormsExample, [{
                 type: i0.Component,
                 args: [{
-                        selector: 'checkbox-harness-example',
-                        templateUrl: 'checkbox-harness-example.html',
+                        selector: 'checkbox-reactive-forms-example',
+                        templateUrl: 'checkbox-reactive-forms-example.html',
+                        styleUrls: ['checkbox-reactive-forms-example.css']
                     }]
-            }], null, null);
+            }], function () { return [{ type: i1__namespace$2.FormBuilder }]; }, null);
     })();
 
     var EXAMPLES = [
         CheckboxConfigurableExample,
         CheckboxOverviewExample,
         CheckboxHarnessExample,
+        CheckboxReactiveFormsExample,
     ];
     var CheckboxExamplesModule = /** @class */ (function () {
         function CheckboxExamplesModule() {
@@ -273,7 +335,8 @@
                 i1.MatCardModule,
                 i1$1.MatCheckboxModule,
                 i4.MatRadioModule,
-                i3.FormsModule,
+                i1$2.FormsModule,
+                i1$2.ReactiveFormsModule,
             ]] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CheckboxExamplesModule, [{
@@ -284,7 +347,8 @@
                             i1.MatCardModule,
                             i1$1.MatCheckboxModule,
                             i4.MatRadioModule,
-                            i3.FormsModule,
+                            i1$2.FormsModule,
+                            i1$2.ReactiveFormsModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
@@ -295,13 +359,16 @@
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
                 CheckboxOverviewExample,
-                CheckboxHarnessExample], imports: [i2.CommonModule,
+                CheckboxHarnessExample,
+                CheckboxReactiveFormsExample], imports: [i2.CommonModule,
                 i1.MatCardModule,
                 i1$1.MatCheckboxModule,
                 i4.MatRadioModule,
-                i3.FormsModule], exports: [CheckboxConfigurableExample,
+                i1$2.FormsModule,
+                i1$2.ReactiveFormsModule], exports: [CheckboxConfigurableExample,
                 CheckboxOverviewExample,
-                CheckboxHarnessExample] });
+                CheckboxHarnessExample,
+                CheckboxReactiveFormsExample] });
     })();
 
     /**
@@ -312,6 +379,7 @@
     exports.CheckboxExamplesModule = CheckboxExamplesModule;
     exports.CheckboxHarnessExample = CheckboxHarnessExample;
     exports.CheckboxOverviewExample = CheckboxOverviewExample;
+    exports.CheckboxReactiveFormsExample = CheckboxReactiveFormsExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

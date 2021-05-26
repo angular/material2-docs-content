@@ -1,5 +1,6 @@
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatRippleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button-toggle&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
@@ -42,6 +43,7 @@
 <span class="hljs-keyword">import</span> {TableReorderableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./table-reorderable/table-reorderable-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TableRecycleRowsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./table-recycle-rows/table-recycle-rows-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TableHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./table-harness/table-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {TableWithRipplesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./table-with-ripples/table-with-ripples-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TableColumnStylingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./table-column-styling/table-column-styling-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TableRowBindingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./table-row-binding/table-row-binding-example&#x27;</span>;
 
@@ -59,7 +61,7 @@
   TableWrappedExample,        WrapperTable,
   TableReorderableExample,    TableRecycleRowsExample,
   TableHarnessExample,        TableColumnStylingExample,
-  TableRowBindingExample
+  TableRowBindingExample,     TableWithRipplesExample,
 };
 
 <span class="hljs-keyword">const</span> EXAMPLES = [
@@ -76,7 +78,7 @@
   TableWrappedExample,        WrapperTable,
   TableReorderableExample,    TableRecycleRowsExample,
   TableHarnessExample,        TableColumnStylingExample,
-  TableRowBindingExample
+  TableRowBindingExample,     TableWithRipplesExample,
 ];
 
 <span class="hljs-meta">@NgModule</span>({
@@ -89,6 +91,7 @@
     MatInputModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
+    MatRippleModule,
     MatSortModule,
     MatTableModule,
     CdkTableModule,

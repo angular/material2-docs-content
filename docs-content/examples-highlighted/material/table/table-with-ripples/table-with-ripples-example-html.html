@@ -1,0 +1,9 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-elevation-z8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;displayedColumns&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> <span class="hljs-attr">matRipple</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let row; columns: displayedColumns;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>

@@ -1575,6 +1575,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/checkbox"
         }
     },
+    "checkbox-reactive-forms": {
+        "packagePath": "material/checkbox/checkbox-reactive-forms",
+        "title": "Checkboxes with reactive forms",
+        "componentName": "CheckboxReactiveFormsExample",
+        "files": [
+            "checkbox-reactive-forms-example.ts",
+            "checkbox-reactive-forms-example.html",
+            "checkbox-reactive-forms-example.css"
+        ],
+        "selector": "checkbox-reactive-forms-example",
+        "additionalComponents": [],
+        "primaryFile": "checkbox-reactive-forms-example.ts",
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "material/checkbox"
+        }
+    },
     "chips-autocomplete": {
         "packagePath": "material/chips/chips-autocomplete",
         "title": "Chips Autocomplete",
@@ -4383,6 +4400,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-text-column-example",
         "additionalComponents": [],
         "primaryFile": "table-text-column-example.ts",
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "material/table"
+        }
+    },
+    "table-with-ripples": {
+        "packagePath": "material/table/table-with-ripples",
+        "title": "Tables with Material Design ripples.",
+        "componentName": "TableWithRipplesExample",
+        "files": [
+            "table-with-ripples-example.ts",
+            "table-with-ripples-example.html",
+            "table-with-ripples-example.css"
+        ],
+        "selector": "table-with-ripples-example",
+        "additionalComponents": [],
+        "primaryFile": "table-with-ripples-example.ts",
         "module": {
             "name": "TableExamplesModule",
             "importSpecifier": "material/table"

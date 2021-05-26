@@ -401,4 +401,16 @@ selectors. For example, <code>&lt;table mat-table&gt;</code> becomes <code>&lt;m
 </code></pre>
 <p>Note that this approach means you cannot include certain native-table features such colspan/rowspan
 or have columns that resize themselves based on their content.</p>
+
+        <h3 id="tables-with-matripple" class="docs-header-link">
+          <span header-link="tables-with-matripple"></span>
+          Tables with <code>MatRipple</code>
+        </h3>
+      <p>By default, <code>MatTable</code> does not set up Material Design ripples for rows. A ripple effect can be
+added to table rows by using the <code>MatRipple</code> directive from <code>@angular/material/core</code>. Due to
+limitations in browsers, ripples cannot be applied native <code>th</code> or <code>tr</code> elements. The recommended
+approach for setting up ripples is using the non-native <code>display: flex</code> variant of <code>MatTable</code>.</p>
+<!--- example(table-with-ripples) -->
+
+<p>More details about ripples on native table rows and their limitations can be found <a href="https://github.com/angular/components/issues/11883#issuecomment-634942981">in this issue</a>.</p>
 </div>
