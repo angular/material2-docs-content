@@ -4737,6 +4737,23 @@
                 "importSpecifier": "material/table"
             }
         },
+        "table-with-ripples": {
+            "packagePath": "material/table/table-with-ripples",
+            "title": "Tables with Material Design ripples.",
+            "componentName": "TableWithRipplesExample",
+            "files": [
+                "table-with-ripples-example.ts",
+                "table-with-ripples-example.html",
+                "table-with-ripples-example.css"
+            ],
+            "selector": "table-with-ripples-example",
+            "additionalComponents": [],
+            "primaryFile": "table-with-ripples-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
         "table-wrapped": {
             "packagePath": "material/table/table-wrapped",
             "title": "Table example that shows how to wrap a table component for definition and behavior reuse.",
