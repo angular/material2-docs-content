@@ -1,0 +1,11 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;toppings&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Select your toppings:<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;pepperoni&quot;</span>&gt;</span>Pepperoni<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;extracheese&quot;</span>&gt;</span>Extra Cheese<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;mushroom&quot;</span>&gt;</span>Mushroom<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;toppings&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>You chose:<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+  {{toppings.value | json}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>

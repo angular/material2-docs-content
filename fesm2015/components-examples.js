@@ -1575,6 +1575,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/checkbox"
         }
     },
+    "checkbox-reactive-forms": {
+        "packagePath": "material/checkbox/checkbox-reactive-forms",
+        "title": "Checkboxes with reactive forms",
+        "componentName": "CheckboxReactiveFormsExample",
+        "files": [
+            "checkbox-reactive-forms-example.ts",
+            "checkbox-reactive-forms-example.html",
+            "checkbox-reactive-forms-example.css"
+        ],
+        "selector": "checkbox-reactive-forms-example",
+        "additionalComponents": [],
+        "primaryFile": "checkbox-reactive-forms-example.ts",
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "material/checkbox"
+        }
+    },
     "chips-autocomplete": {
         "packagePath": "material/chips/chips-autocomplete",
         "title": "Chips Autocomplete",
