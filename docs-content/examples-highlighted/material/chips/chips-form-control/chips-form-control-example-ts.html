@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Chips with form control
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-form-control-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-form-control-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;chips-form-control-example.css&#x27;</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsFormControlExample</span> </span>{
+  keywords = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>]);
+  formControl = <span class="hljs-keyword">new</span> FormControl();
+
+  <span class="hljs-function"><span class="hljs-title">addKeywordFromInput</span>(<span class="hljs-params">event: MatChipInputEvent</span>)</span> {
+    <span class="hljs-keyword">if</span> (event.value) {
+      <span class="hljs-built_in">this</span>.keywords.add(event.value);
+      event.chipInput!.clear();
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">removeKeyword</span>(<span class="hljs-params">keyword: <span class="hljs-built_in">string</span></span>)</span> {
+    <span class="hljs-built_in">this</span>.keywords.delete(keyword);
+  }
+}

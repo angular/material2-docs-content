@@ -17,6 +17,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { startWith, map } from 'rxjs/operators';
 import * as i7 from '@angular/material/core';
+import * as i1$2 from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 const _c0 = ["fruitInput"];
 const _c1 = ["auto"];
@@ -383,6 +385,81 @@ ChipsHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsHa
             }]
     }], null, null); })();
 
+function ChipsFormControlExample_mat_chip_12_Template(rf, ctx) { if (rf & 1) {
+    const _r4 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "mat-chip", 7);
+    i0.ɵɵlistener("removed", function ChipsFormControlExample_mat_chip_12_Template_mat_chip_removed_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r4); const keyword_r2 = restoredCtx.$implicit; const ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.removeKeyword(keyword_r2); });
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const keyword_r2 = ctx.$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", keyword_r2, " ");
+} }
+/**
+ * @title Chips with form control
+ */
+class ChipsFormControlExample {
+    constructor() {
+        this.keywords = new Set(['angular', 'how-to', 'tutorial']);
+        this.formControl = new FormControl();
+    }
+    addKeywordFromInput(event) {
+        if (event.value) {
+            this.keywords.add(event.value);
+            event.chipInput.clear();
+        }
+    }
+    removeKeyword(keyword) {
+        this.keywords.delete(keyword);
+    }
+}
+ChipsFormControlExample.ɵfac = function ChipsFormControlExample_Factory(t) { return new (t || ChipsFormControlExample)(); };
+ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsFormControlExample, selectors: [["chips-form-control-example"]], decls: 14, vars: 4, consts: [[1, "example-button-container"], ["mat-raised-button", "", 3, "click"], [1, "example-chip-list"], ["aria-label", "Video keywords", "multiple", "", 3, "formControl"], ["chipList", ""], [3, "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New keyword...", 3, "matChipInputFor", "matChipInputTokenEnd"], [3, "removed"]], template: function ChipsFormControlExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "div", 0);
+        i0.ɵɵelementStart(1, "button", 1);
+        i0.ɵɵlistener("click", function ChipsFormControlExample_Template_button_click_1_listener() { return ctx.formControl.disable(); });
+        i0.ɵɵtext(2, "Disable form control");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "button", 1);
+        i0.ɵɵlistener("click", function ChipsFormControlExample_Template_button_click_3_listener() { return ctx.formControl.enable(); });
+        i0.ɵɵtext(4, "Enable form control");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "p");
+        i0.ɵɵtext(6);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "mat-form-field", 2);
+        i0.ɵɵelementStart(8, "mat-label");
+        i0.ɵɵtext(9, "Video keywords");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "mat-chip-list", 3, 4);
+        i0.ɵɵtemplate(12, ChipsFormControlExample_mat_chip_12_Template, 2, 1, "mat-chip", 5);
+        i0.ɵɵelementStart(13, "input", 6);
+        i0.ɵɵlistener("matChipInputTokenEnd", function ChipsFormControlExample_Template_input_matChipInputTokenEnd_13_listener($event) { return ctx.addKeywordFromInput($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(11);
+        i0.ɵɵadvance(6);
+        i0.ɵɵtextInterpolate1(" Selected keywords: ", ctx.formControl.value, "\n");
+        i0.ɵɵadvance(4);
+        i0.ɵɵproperty("formControl", ctx.formControl);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngForOf", ctx.keywords);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matChipInputFor", _r0);
+    } }, directives: [i1$2.MatButton, i1.MatFormField, i1.MatLabel, i1$1.MatChipList, i4.NgControlStatus, i4.FormControlDirective, i3.NgForOf, i1$1.MatChipInput, i1$1.MatChip], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-button-container[_ngcontent-%COMP%]    > button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsFormControlExample, [{
+        type: Component,
+        args: [{
+                selector: 'chips-form-control-example',
+                templateUrl: 'chips-form-control-example.html',
+                styleUrls: ['chips-form-control-example.css'],
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ChipsAutocompleteExample,
     ChipsDragDropExample,
@@ -390,6 +467,7 @@ const EXAMPLES = [
     ChipsOverviewExample,
     ChipsStackedExample,
     ChipsHarnessExample,
+    ChipsFormControlExample,
 ];
 class ChipsExamplesModule {
 }
@@ -399,6 +477,7 @@ ChipsExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             CommonModule,
             DragDropModule,
             MatAutocompleteModule,
+            MatButtonModule,
             MatChipsModule,
             MatIconModule,
             MatFormFieldModule,
@@ -411,6 +490,7 @@ ChipsExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
                     CommonModule,
                     DragDropModule,
                     MatAutocompleteModule,
+                    MatButtonModule,
                     MatChipsModule,
                     MatIconModule,
                     MatFormFieldModule,
@@ -426,9 +506,11 @@ ChipsExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
         ChipsInputExample,
         ChipsOverviewExample,
         ChipsStackedExample,
-        ChipsHarnessExample], imports: [CommonModule,
+        ChipsHarnessExample,
+        ChipsFormControlExample], imports: [CommonModule,
         DragDropModule,
         MatAutocompleteModule,
+        MatButtonModule,
         MatChipsModule,
         MatIconModule,
         MatFormFieldModule,
@@ -437,11 +519,12 @@ ChipsExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
         ChipsInputExample,
         ChipsOverviewExample,
         ChipsStackedExample,
-        ChipsHarnessExample] }); })();
+        ChipsHarnessExample,
+        ChipsFormControlExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
+export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsFormControlExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
 //# sourceMappingURL=chips.js.map

@@ -1941,6 +1941,23 @@
                 "importSpecifier": "material/chips"
             }
         },
+        "chips-form-control": {
+            "packagePath": "material/chips/chips-form-control",
+            "title": "Chips with form control",
+            "componentName": "ChipsFormControlExample",
+            "files": [
+                "chips-form-control-example.ts",
+                "chips-form-control-example.html",
+                "chips-form-control-example.css"
+            ],
+            "selector": "chips-form-control-example",
+            "additionalComponents": [],
+            "primaryFile": "chips-form-control-example.ts",
+            "module": {
+                "name": "ChipsExamplesModule",
+                "importSpecifier": "material/chips"
+            }
+        },
         "chips-harness": {
             "packagePath": "material/chips/chips-harness",
             "title": "Testing with MatChipsHarness",
@@ -2286,6 +2303,23 @@
             "selector": "datepicker-harness-example",
             "additionalComponents": [],
             "primaryFile": "datepicker-harness-example.ts",
+            "module": {
+                "name": "DatepickerExamplesModule",
+                "importSpecifier": "material/datepicker"
+            }
+        },
+        "datepicker-inline-calendar": {
+            "packagePath": "material/datepicker/datepicker-inline-calendar",
+            "title": "Datepicker inline calendar example",
+            "componentName": "DatepickerInlineCalendarExample",
+            "files": [
+                "datepicker-inline-calendar-example.ts",
+                "datepicker-inline-calendar-example.html",
+                "datepicker-inline-calendar-example.css"
+            ],
+            "selector": "datepicker-inline-calendar-example",
+            "additionalComponents": [],
+            "primaryFile": "datepicker-inline-calendar-example.ts",
             "module": {
                 "name": "DatepickerExamplesModule",
                 "importSpecifier": "material/datepicker"
@@ -4409,6 +4443,23 @@
             "selector": "table-footer-row-example",
             "additionalComponents": [],
             "primaryFile": "table-footer-row-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
+        "table-generated-columns": {
+            "packagePath": "material/table/table-generated-columns",
+            "title": "Table with columns defined using ngFor instead of statically written in the template.",
+            "componentName": "TableGeneratedColumnsExample",
+            "files": [
+                "table-generated-columns-example.ts",
+                "table-generated-columns-example.html",
+                "table-generated-columns-example.css"
+            ],
+            "selector": "table-generated-columns-example",
+            "additionalComponents": [],
+            "primaryFile": "table-generated-columns-example.ts",
             "module": {
                 "name": "TableExamplesModule",
                 "importSpecifier": "material/table"
