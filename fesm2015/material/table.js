@@ -24,6 +24,7 @@ import * as i1 from '@angular/material/table';
 import { MatTableDataSource, MatNoDataRow, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable, MatTableModule } from '@angular/material/table';
 import * as i2$5 from '@angular/cdk/drag-drop';
 import { moveItemInArray, DragDropModule } from '@angular/cdk/drag-drop';
+import * as i3 from '@angular/cdk/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import * as i1$2 from '@angular/material/form-field';
@@ -94,7 +95,7 @@ function TableFlexBasicExample_mat_header_row_13_Template(rf, ctx) { if (rf & 1)
 function TableFlexBasicExample_mat_row_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "mat-row");
 } }
-const ELEMENT_DATA$j = [
+const ELEMENT_DATA$k = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -112,7 +113,7 @@ const ELEMENT_DATA$j = [
 class TableFlexBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$j;
+        this.dataSource = ELEMENT_DATA$k;
     }
 }
 TableFlexBasicExample.ɵfac = function TableFlexBasicExample_Factory(t) { return new (t || TableFlexBasicExample)(); };
@@ -215,7 +216,7 @@ function TableBasicExample_tr_13_Template(rf, ctx) { if (rf & 1) {
 function TableBasicExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 12);
 } }
-const ELEMENT_DATA$i = [
+const ELEMENT_DATA$j = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -233,7 +234,7 @@ const ELEMENT_DATA$i = [
 class TableBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$i;
+        this.dataSource = ELEMENT_DATA$j;
     }
 }
 TableBasicExample.ɵfac = function TableBasicExample_Factory(t) { return new (t || TableBasicExample)(); };
@@ -308,7 +309,7 @@ function TableDynamicColumnsExample_tr_8_Template(rf, ctx) { if (rf & 1) {
 function TableDynamicColumnsExample_tr_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 11);
 } }
-const ELEMENT_DATA$h = [
+const ELEMENT_DATA$i = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -327,7 +328,7 @@ class TableDynamicColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
         this.columnsToDisplay = this.displayedColumns.slice();
-        this.data = ELEMENT_DATA$h;
+        this.data = ELEMENT_DATA$i;
     }
     addColumn() {
         const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
@@ -480,7 +481,7 @@ const _c0$6 = function () { return ["expandedDetail"]; };
  */
 class TableExpandableRowsExample {
     constructor() {
-        this.dataSource = ELEMENT_DATA$g;
+        this.dataSource = ELEMENT_DATA$h;
         this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
     }
 }
@@ -527,7 +528,7 @@ TableExpandableRowsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
                 ],
             }]
     }], null, null); })();
-const ELEMENT_DATA$g = [
+const ELEMENT_DATA$h = [
     {
         position: 1,
         name: 'Hydrogen',
@@ -683,7 +684,7 @@ function TableFilteringExample_tr_20_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(2);
     i0.ɵɵtextInterpolate1("No data matching the filter \"", _r0.value, "\"");
 } }
-const ELEMENT_DATA$f = [
+const ELEMENT_DATA$g = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -701,7 +702,7 @@ const ELEMENT_DATA$f = [
 class TableFilteringExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$f);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$g);
     }
     applyFilter(event) {
         const filterValue = event.target.value;
@@ -1454,7 +1455,7 @@ const _c0$3 = function () { return [5, 10, 20]; };
 class TablePaginationExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$f);
     }
     ngAfterViewInit() {
         this.dataSource.paginator = this.paginator;
@@ -1511,7 +1512,7 @@ TablePaginationExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Tabl
             type: ViewChild,
             args: [MatPaginator]
         }] }); })();
-const ELEMENT_DATA$e = [
+const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1787,7 +1788,7 @@ function TableSelectionExample_tr_17_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r24); const row_r22 = restoredCtx.$implicit; const ctx_r23 = i0.ɵɵnextContext(); return ctx_r23.selection.toggle(row_r22); });
     i0.ɵɵelementEnd();
 } }
-const ELEMENT_DATA$d = [
+const ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1805,7 +1806,7 @@ const ELEMENT_DATA$d = [
 class TableSelectionExample {
     constructor() {
         this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
         this.selection = new SelectionModel(true, []);
     }
     /** Whether the number of selected elements matches the total number of rows. */
@@ -1934,7 +1935,7 @@ function TableSortingExample_tr_13_Template(rf, ctx) { if (rf & 1) {
 function TableSortingExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 12);
 } }
-const ELEMENT_DATA$c = [
+const ELEMENT_DATA$d = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1952,7 +1953,7 @@ const ELEMENT_DATA$c = [
 class TableSortingExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
     }
     ngAfterViewInit() {
         this.dataSource.sort = this.sort;
@@ -2082,7 +2083,7 @@ function TableStickyColumnsExample_tr_18_Template(rf, ctx) { if (rf & 1) {
 class TableStickyColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-        this.dataSource = ELEMENT_DATA$b;
+        this.dataSource = ELEMENT_DATA$c;
     }
 }
 TableStickyColumnsExample.ɵfac = function TableStickyColumnsExample_Factory(t) { return new (t || TableStickyColumnsExample)(); };
@@ -2129,7 +2130,7 @@ TableStickyColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: T
                 templateUrl: 'table-sticky-columns-example.html',
             }]
     }], null, null); })();
-const ELEMENT_DATA$b = [
+const ELEMENT_DATA$c = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -2315,7 +2316,7 @@ const _c2$1 = function () { return ["position", "symbol"]; };
 class TableStickyComplexFlexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$a;
+        this.dataSource = ELEMENT_DATA$b;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -2402,7 +2403,7 @@ TableStickyComplexFlexExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ typ
                 templateUrl: 'table-sticky-complex-flex-example.html',
             }]
     }], function () { return []; }, null); })();
-const ELEMENT_DATA$a = [
+const ELEMENT_DATA$b = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -2588,7 +2589,7 @@ const _c2 = function () { return ["position", "symbol"]; };
 class TableStickyComplexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$9;
+        this.dataSource = ELEMENT_DATA$a;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -2675,7 +2676,7 @@ TableStickyComplexExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: T
                 templateUrl: 'table-sticky-complex-example.html',
             }]
     }], function () { return []; }, null); })();
-const ELEMENT_DATA$9 = [
+const ELEMENT_DATA$a = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -2867,7 +2868,7 @@ function TableStickyHeaderExample_tr_15_Template(rf, ctx) { if (rf & 1) {
 class TableStickyHeaderExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$8;
+        this.dataSource = ELEMENT_DATA$9;
     }
 }
 TableStickyHeaderExample.ɵfac = function TableStickyHeaderExample_Factory(t) { return new (t || TableStickyHeaderExample)(); };
@@ -2910,7 +2911,7 @@ TableStickyHeaderExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Ta
                 templateUrl: 'table-sticky-header-example.html',
             }]
     }], null, null); })();
-const ELEMENT_DATA$8 = [
+const ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -2929,7 +2930,7 @@ function TableTextColumnAdvancedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
 function TableTextColumnAdvancedExample_tr_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 8);
 } }
-const ELEMENT_DATA$7 = [
+const ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -2947,7 +2948,7 @@ const ELEMENT_DATA$7 = [
 class TableTextColumnAdvancedExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$7);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$8);
         this.decimalPipe = new DecimalPipe('en-US');
         /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
         this.getWeight = (data) => {
@@ -2992,7 +2993,7 @@ function TableTextColumnExample_tr_5_Template(rf, ctx) { if (rf & 1) {
 function TableTextColumnExample_tr_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 8);
 } }
-const ELEMENT_DATA$6 = [
+const ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3011,7 +3012,7 @@ const ELEMENT_DATA$6 = [
 class TableTextColumnExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$6;
+        this.dataSource = ELEMENT_DATA$7;
     }
 }
 TableTextColumnExample.ɵfac = function TableTextColumnExample_Factory(t) { return new (t || TableTextColumnExample)(); };
@@ -3111,7 +3112,7 @@ function WrapperTable_td_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r8.symbol, " ");
 } }
 const _c1 = ["*"];
-const ELEMENT_DATA$5 = [
+const ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3129,7 +3130,7 @@ const ELEMENT_DATA$5 = [
 class TableWrappedExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$5);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$6);
     }
     ngAfterViewInit() {
         this.dataSource.sort = this.sort;
@@ -3138,7 +3139,7 @@ class TableWrappedExample {
         this.dataSource.data = [];
     }
     addData() {
-        this.dataSource.data = ELEMENT_DATA$5;
+        this.dataSource.data = ELEMENT_DATA$6;
     }
 }
 TableWrappedExample.ɵfac = function TableWrappedExample_Factory(t) { return new (t || TableWrappedExample)(); };
@@ -3335,7 +3336,7 @@ function TableReorderableExample_tr_14_Template(rf, ctx) { if (rf & 1) {
 class TableReorderableExample {
     constructor() {
         this.columns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$4;
+        this.dataSource = ELEMENT_DATA$5;
     }
     drop(event) {
         moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
@@ -3379,7 +3380,7 @@ TableReorderableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Tab
                 styleUrls: ['./table-reorderable-example.css']
             }]
     }], null, null); })();
-const ELEMENT_DATA$4 = [
+const ELEMENT_DATA$5 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3454,7 +3455,7 @@ function TableRecycleRowsExample_tr_13_Template(rf, ctx) { if (rf & 1) {
 function TableRecycleRowsExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 12);
 } }
-const ELEMENT_DATA$3 = [
+const ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3472,7 +3473,7 @@ const ELEMENT_DATA$3 = [
 class TableRecycleRowsExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$3;
+        this.dataSource = ELEMENT_DATA$4;
     }
 }
 TableRecycleRowsExample.ɵfac = function TableRecycleRowsExample_Factory(t) { return new (t || TableRecycleRowsExample)(); };
@@ -3682,7 +3683,7 @@ function TableWithRipplesExample_mat_header_row_4_Template(rf, ctx) { if (rf & 1
 function TableWithRipplesExample_mat_row_5_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "mat-row", 8);
 } }
-const ELEMENT_DATA$2 = [
+const ELEMENT_DATA$3 = [
     { name: 'Hydrogen' },
     { name: 'Helium' },
     { name: 'Lithium' },
@@ -3700,7 +3701,7 @@ const ELEMENT_DATA$2 = [
 class TableWithRipplesExample {
     constructor() {
         this.displayedColumns = ['name'];
-        this.dataSource = ELEMENT_DATA$2;
+        this.dataSource = ELEMENT_DATA$3;
     }
 }
 TableWithRipplesExample.ɵfac = function TableWithRipplesExample_Factory(t) { return new (t || TableWithRipplesExample)(); };
@@ -3791,7 +3792,7 @@ function TableColumnStylingExample_tr_13_Template(rf, ctx) { if (rf & 1) {
 function TableColumnStylingExample_tr_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 12);
 } }
-const ELEMENT_DATA$1 = [
+const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3809,7 +3810,7 @@ const ELEMENT_DATA$1 = [
 class TableColumnStylingExample {
     constructor() {
         this.displayedColumns = ['demo-position', 'demo-name', 'demo-weight', 'demo-symbol'];
-        this.dataSource = ELEMENT_DATA$1;
+        this.dataSource = ELEMENT_DATA$2;
     }
 }
 TableColumnStylingExample.ɵfac = function TableColumnStylingExample_Factory(t) { return new (t || TableColumnStylingExample)(); };
@@ -3933,7 +3934,7 @@ function TableRowBindingExample_li_20_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate1(" Clicked on ", clickedRow_r19.name, " ");
 } }
-const ELEMENT_DATA = [
+const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3951,7 +3952,7 @@ const ELEMENT_DATA = [
 class TableRowBindingExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA;
+        this.dataSource = ELEMENT_DATA$1;
         this.clickedRows = new Set();
     }
 }
@@ -4006,6 +4007,108 @@ TableRowBindingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Tabl
             }]
     }], null, null); })();
 
+function TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "mat-header-cell");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const column_r3 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", column_r3.header, " ");
+} }
+function TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "mat-cell");
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const row_r7 = ctx.$implicit;
+    const column_r3 = i0.ɵɵnextContext().$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate1(" ", column_r3.cell(row_r7), " ");
+} }
+function TableGeneratedColumnsExample_ng_container_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementContainerStart(0, 4);
+    i0.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template, 2, 1, "mat-header-cell", 5);
+    i0.ɵɵtemplate(2, TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template, 2, 1, "mat-cell", 6);
+    i0.ɵɵelementContainerEnd();
+} if (rf & 2) {
+    const column_r3 = ctx.$implicit;
+    i0.ɵɵproperty("cdkColumnDef", column_r3.columnDef);
+} }
+function TableGeneratedColumnsExample_mat_header_row_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "mat-header-row");
+} }
+function TableGeneratedColumnsExample_mat_row_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "mat-row");
+} }
+const ELEMENT_DATA = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * @title Table with columns defined using ngFor instead of statically written in the template.
+ */
+class TableGeneratedColumnsExample {
+    constructor() {
+        this.columns = [
+            {
+                columnDef: 'position',
+                header: 'No.',
+                cell: (element) => `${element.position}`
+            },
+            {
+                columnDef: 'name',
+                header: 'Name',
+                cell: (element) => `${element.name}`
+            },
+            {
+                columnDef: 'weight',
+                header: 'Weight',
+                cell: (element) => `${element.weight}`
+            },
+            {
+                columnDef: 'symbol',
+                header: 'Symbol',
+                cell: (element) => `${element.symbol}`
+            }
+        ];
+        this.dataSource = ELEMENT_DATA;
+        this.displayedColumns = this.columns.map(c => c.columnDef);
+    }
+}
+TableGeneratedColumnsExample.ɵfac = function TableGeneratedColumnsExample_Factory(t) { return new (t || TableGeneratedColumnsExample)(); };
+TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "cdkColumnDef", 4, "ngFor", "ngForOf"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "cdkColumnDef"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"]], template: function TableGeneratedColumnsExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "table", 0);
+        i0.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
+        i0.ɵɵtemplate(2, TableGeneratedColumnsExample_mat_header_row_2_Template, 1, 0, "mat-header-row", 2);
+        i0.ɵɵtemplate(3, TableGeneratedColumnsExample_mat_row_3_Template, 1, 0, "mat-row", 3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵproperty("dataSource", ctx.dataSource);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngForOf", ctx.columns);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
+    } }, directives: [i1.MatTable, i2.NgForOf, i1.MatHeaderRowDef, i1.MatRowDef, i3.CdkColumnDef, i3.CdkHeaderCellDef, i3.CdkCellDef, i1.MatHeaderCell, i1.MatCell, i1.MatHeaderRow, i1.MatRow], styles: [".demo-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableGeneratedColumnsExample, [{
+        type: Component,
+        args: [{
+                selector: 'table-generated-columns-example',
+                styleUrls: ['table-generated-columns-example.css'],
+                templateUrl: 'table-generated-columns-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     TableBasicExample, TableFlexBasicExample,
     TableDynamicColumnsExample, TableExpandableRowsExample,
@@ -4021,6 +4124,7 @@ const EXAMPLES = [
     TableReorderableExample, TableRecycleRowsExample,
     TableHarnessExample, TableColumnStylingExample,
     TableRowBindingExample, TableWithRipplesExample,
+    TableGeneratedColumnsExample,
 ];
 class TableExamplesModule {
 }
@@ -4077,7 +4181,8 @@ TableExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
         TableWrappedExample, WrapperTable,
         TableReorderableExample, TableRecycleRowsExample,
         TableHarnessExample, TableColumnStylingExample,
-        TableRowBindingExample, TableWithRipplesExample], imports: [CommonModule,
+        TableRowBindingExample, TableWithRipplesExample,
+        TableGeneratedColumnsExample], imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -4102,11 +4207,12 @@ TableExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
         TableWrappedExample, WrapperTable,
         TableReorderableExample, TableRecycleRowsExample,
         TableHarnessExample, TableColumnStylingExample,
-        TableRowBindingExample, TableWithRipplesExample] }); })();
+        TableRowBindingExample, TableWithRipplesExample,
+        TableGeneratedColumnsExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { TableBasicExample, TableColumnStylingExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableColumnStylingExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=table.js.map

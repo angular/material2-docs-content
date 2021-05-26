@@ -4448,6 +4448,23 @@
                 "importSpecifier": "material/table"
             }
         },
+        "table-generated-columns": {
+            "packagePath": "material/table/table-generated-columns",
+            "title": "Table with columns defined using ngFor instead of statically written in the template.",
+            "componentName": "TableGeneratedColumnsExample",
+            "files": [
+                "table-generated-columns-example.ts",
+                "table-generated-columns-example.html",
+                "table-generated-columns-example.css"
+            ],
+            "selector": "table-generated-columns-example",
+            "additionalComponents": [],
+            "primaryFile": "table-generated-columns-example.ts",
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
         "table-harness": {
             "packagePath": "material/table/table-harness",
             "title": "Testing with MatTableHarness",
