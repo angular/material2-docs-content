@@ -1,11 +1,13 @@
 import * as i4 from '@angular/common';
 import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
-import { Component, ChangeDetectionStrategy, Inject, ViewEncapsulation, Injectable, NgModule } from '@angular/core';
+import { Component, Injectable, ChangeDetectionStrategy, Inject, ViewEncapsulation, NgModule } from '@angular/core';
 import * as i3$1 from '@angular/forms';
-import { FormControl, FormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
-import * as i5 from '@angular/material/button';
+import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import * as i4$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
+import * as i1$2 from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import * as i1$1 from '@angular/material/core';
 import { MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import * as i3 from '@angular/material/datepicker';
@@ -22,6 +24,282 @@ import * as _rollupMoment from 'moment';
 import _rollupMoment__default from 'moment';
 import 'moment/locale/ja';
 import 'moment/locale/fr';
+
+/** @title Date range picker comparison ranges */
+class DateRangePickerComparisonExample {
+    constructor() {
+        const today = new Date();
+        const month = today.getMonth();
+        const year = today.getFullYear();
+        this.campaignOne = new FormGroup({
+            start: new FormControl(new Date(year, month, 13)),
+            end: new FormControl(new Date(year, month, 16))
+        });
+        this.campaignTwo = new FormGroup({
+            start: new FormControl(new Date(year, month, 15)),
+            end: new FormControl(new Date(year, month, 19))
+        });
+    }
+}
+DateRangePickerComparisonExample.ɵfac = function DateRangePickerComparisonExample_Factory(t) { return new (t || DateRangePickerComparisonExample)(); };
+DateRangePickerComparisonExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerComparisonExample, selectors: [["date-range-picker-comparison-example"]], decls: 18, vars: 10, consts: [["appearance", "fill", 1, "example-form-field"], [3, "formGroup", "rangePicker", "comparisonStart", "comparisonEnd"], ["matStartDate", "", "placeholder", "Start date", "formControlName", "start"], ["matEndDate", "", "placeholder", "End date", "formControlName", "end"], ["matSuffix", "", 3, "for"], ["campaignOnePicker", ""], ["campaignTwoPicker", ""]], template: function DateRangePickerComparisonExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
+        i0.ɵɵelementStart(1, "mat-label");
+        i0.ɵɵtext(2, "First campaign");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+        i0.ɵɵelement(4, "input", 2);
+        i0.ɵɵelement(5, "input", 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "mat-form-field", 0);
+        i0.ɵɵelementStart(10, "mat-label");
+        i0.ɵɵtext(11, "Second campaign");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "mat-date-range-input", 1);
+        i0.ɵɵelement(13, "input", 2);
+        i0.ɵɵelement(14, "input", 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(15, "mat-datepicker-toggle", 4);
+        i0.ɵɵelement(16, "mat-date-range-picker", null, 6);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(8);
+        const _r1 = i0.ɵɵreference(17);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("formGroup", ctx.campaignOne)("rangePicker", _r0)("comparisonStart", ctx.campaignTwo.value.start)("comparisonEnd", ctx.campaignTwo.value.end);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("for", _r0);
+        i0.ɵɵadvance(6);
+        i0.ɵɵproperty("formGroup", ctx.campaignTwo)("rangePicker", _r1)("comparisonStart", ctx.campaignOne.value.start)("comparisonEnd", ctx.campaignOne.value.end);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("for", _r1);
+    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3$1.NgControlStatusGroup, i3$1.FormGroupDirective, i3.MatStartDate, i3$1.DefaultValueAccessor, i3$1.NgControlStatus, i3$1.FormControlName, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin: 0 8px 16px 0;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerComparisonExample, [{
+        type: Component,
+        args: [{
+                selector: 'date-range-picker-comparison-example',
+                templateUrl: 'date-range-picker-comparison-example.html',
+                styleUrls: ['date-range-picker-comparison-example.css'],
+            }]
+    }], function () { return []; }, null); })();
+
+function DateRangePickerFormsExample_mat_error_9_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "mat-error");
+    i0.ɵɵtext(1, "Invalid start date");
+    i0.ɵɵelementEnd();
+} }
+function DateRangePickerFormsExample_mat_error_10_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "mat-error");
+    i0.ɵɵtext(1, "Invalid end date");
+    i0.ɵɵelementEnd();
+} }
+/** @title Date range picker forms integration */
+class DateRangePickerFormsExample {
+    constructor() {
+        this.range = new FormGroup({
+            start: new FormControl(),
+            end: new FormControl()
+        });
+    }
+}
+DateRangePickerFormsExample.ɵfac = function DateRangePickerFormsExample_Factory(t) { return new (t || DateRangePickerFormsExample)(); };
+DateRangePickerFormsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerFormsExample, selectors: [["date-range-picker-forms-example"]], decls: 14, vars: 8, consts: [["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"]], template: function DateRangePickerFormsExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
+        i0.ɵɵelementStart(1, "mat-label");
+        i0.ɵɵtext(2, "Enter a date range");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+        i0.ɵɵelement(4, "input", 2);
+        i0.ɵɵelement(5, "input", 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
+        i0.ɵɵtemplate(9, DateRangePickerFormsExample_mat_error_9_Template, 2, 0, "mat-error", 6);
+        i0.ɵɵtemplate(10, DateRangePickerFormsExample_mat_error_10_Template, 2, 0, "mat-error", 6);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "p");
+        i0.ɵɵtext(12);
+        i0.ɵɵpipe(13, "json");
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(8);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("formGroup", ctx.range)("rangePicker", _r0);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("for", _r0);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("ngIf", ctx.range.controls.start.hasError("matStartDateInvalid"));
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.range.controls.end.hasError("matEndDateInvalid"));
+        i0.ɵɵadvance(2);
+        i0.ɵɵtextInterpolate1("Selected range: ", i0.ɵɵpipeBind1(13, 6, ctx.range.value), "");
+    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3$1.NgControlStatusGroup, i3$1.FormGroupDirective, i3.MatStartDate, i3$1.DefaultValueAccessor, i3$1.NgControlStatus, i3$1.FormControlName, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker, i4.NgIf, i1.MatError], pipes: [i4.JsonPipe], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerFormsExample, [{
+        type: Component,
+        args: [{
+                selector: 'date-range-picker-forms-example',
+                templateUrl: 'date-range-picker-forms-example.html',
+            }]
+    }], null, null); })();
+
+/** @title Basic date range picker */
+class DateRangePickerOverviewExample {
+}
+DateRangePickerOverviewExample.ɵfac = function DateRangePickerOverviewExample_Factory(t) { return new (t || DateRangePickerOverviewExample)(); };
+DateRangePickerOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerOverviewExample, selectors: [["date-range-picker-overview-example"]], decls: 9, vars: 2, consts: [["appearance", "fill"], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
+        i0.ɵɵelementStart(1, "mat-label");
+        i0.ɵɵtext(2, "Enter a date range");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+        i0.ɵɵelement(4, "input", 2);
+        i0.ɵɵelement(5, "input", 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(8);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("rangePicker", _r0);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("for", _r0);
+    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3.MatStartDate, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerOverviewExample, [{
+        type: Component,
+        args: [{
+                selector: 'date-range-picker-overview-example',
+                templateUrl: 'date-range-picker-overview-example.html',
+            }]
+    }], null, null); })();
+
+class FiveDayRangeSelectionStrategy {
+    constructor(_dateAdapter) {
+        this._dateAdapter = _dateAdapter;
+    }
+    selectionFinished(date) {
+        return this._createFiveDayRange(date);
+    }
+    createPreview(activeDate) {
+        return this._createFiveDayRange(activeDate);
+    }
+    _createFiveDayRange(date) {
+        if (date) {
+            const start = this._dateAdapter.addCalendarDays(date, -2);
+            const end = this._dateAdapter.addCalendarDays(date, 2);
+            return new DateRange(start, end);
+        }
+        return new DateRange(null, null);
+    }
+}
+FiveDayRangeSelectionStrategy.ɵfac = function FiveDayRangeSelectionStrategy_Factory(t) { return new (t || FiveDayRangeSelectionStrategy)(i0.ɵɵinject(i1$1.DateAdapter)); };
+FiveDayRangeSelectionStrategy.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: FiveDayRangeSelectionStrategy, factory: FiveDayRangeSelectionStrategy.ɵfac });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FiveDayRangeSelectionStrategy, [{
+        type: Injectable
+    }], function () { return [{ type: i1$1.DateAdapter }]; }, null); })();
+/** @title Date range picker with custom a selection strategy */
+class DateRangePickerSelectionStrategyExample {
+}
+DateRangePickerSelectionStrategyExample.ɵfac = function DateRangePickerSelectionStrategyExample_Factory(t) { return new (t || DateRangePickerSelectionStrategyExample)(); };
+DateRangePickerSelectionStrategyExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerSelectionStrategyExample, selectors: [["date-range-picker-selection-strategy-example"]], features: [i0.ɵɵProvidersFeature([{
+                provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
+                useClass: FiveDayRangeSelectionStrategy
+            }])], decls: 9, vars: 2, consts: [["appearance", "fill"], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerSelectionStrategyExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
+        i0.ɵɵelementStart(1, "mat-label");
+        i0.ɵɵtext(2, "Enter a date range");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
+        i0.ɵɵelement(4, "input", 2);
+        i0.ɵɵelement(5, "input", 3);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
+        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(8);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("rangePicker", _r0);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("for", _r0);
+    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3.MatStartDate, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
+        type: Component,
+        args: [{
+                selector: 'date-range-picker-selection-strategy-example',
+                templateUrl: 'date-range-picker-selection-strategy-example.html',
+                providers: [{
+                        provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
+                        useClass: FiveDayRangeSelectionStrategy
+                    }]
+            }]
+    }], null, null); })();
+
+/** @title Datepicker action buttons */
+class DatepickerActionsExample {
+}
+DatepickerActionsExample.ɵfac = function DatepickerActionsExample_Factory(t) { return new (t || DatepickerActionsExample)(); };
+DatepickerActionsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DatepickerActionsExample, selectors: [["datepicker-actions-example"]], decls: 26, vars: 4, consts: [["appearance", "fill", 1, "example-form-field"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["datepicker", ""], ["mat-button", "", "matDatepickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDatepickerApply", ""], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["rangePicker", ""], ["mat-button", "", "matDateRangePickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDateRangePickerApply", ""]], template: function DatepickerActionsExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
+        i0.ɵɵelementStart(1, "mat-label");
+        i0.ɵɵtext(2, "Choose a date");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(3, "input", 1);
+        i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
+        i0.ɵɵelementStart(5, "mat-datepicker", null, 3);
+        i0.ɵɵelementStart(7, "mat-datepicker-actions");
+        i0.ɵɵelementStart(8, "button", 4);
+        i0.ɵɵtext(9, "Cancel");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "button", 5);
+        i0.ɵɵtext(11, "Apply");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(12, "mat-form-field", 0);
+        i0.ɵɵelementStart(13, "mat-label");
+        i0.ɵɵtext(14, "Enter a date range");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(15, "mat-date-range-input", 6);
+        i0.ɵɵelement(16, "input", 7);
+        i0.ɵɵelement(17, "input", 8);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(18, "mat-datepicker-toggle", 2);
+        i0.ɵɵelementStart(19, "mat-date-range-picker", null, 9);
+        i0.ɵɵelementStart(21, "mat-date-range-picker-actions");
+        i0.ɵɵelementStart(22, "button", 10);
+        i0.ɵɵtext(23, "Cancel");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(24, "button", 11);
+        i0.ɵɵtext(25, "Apply");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(6);
+        const _r1 = i0.ɵɵreference(20);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("matDatepicker", _r0);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("for", _r0);
+        i0.ɵɵadvance(11);
+        i0.ɵɵproperty("rangePicker", _r1);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("for", _r1);
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i3.MatDatepickerActions, i4$1.MatButton, i3.MatDatepickerCancel, i3.MatDatepickerApply, i3.MatDateRangeInput, i3.MatStartDate, i3.MatEndDate, i3.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin-right: 20px;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerActionsExample, [{
+        type: Component,
+        args: [{
+                selector: 'datepicker-actions-example',
+                templateUrl: 'datepicker-actions-example.html',
+                styleUrls: ['datepicker-actions-example.css']
+            }]
+    }], null, null); })();
 
 /** @title Datepicker open method */
 class DatepickerApiExample {
@@ -44,7 +322,7 @@ DatepickerApiExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Datepi
         const _r0 = i0.ɵɵreference(5);
         i0.ɵɵadvance(3);
         i0.ɵɵproperty("matDatepicker", _r0);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepicker, i4$1.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerApiExample, [{
         type: Component,
         args: [{
@@ -200,7 +478,7 @@ ExampleHeader.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ExampleHeader
     } if (rf & 2) {
         i0.ɵɵadvance(10);
         i0.ɵɵtextInterpolate(ctx.periodLabel);
-    } }, directives: [i5.MatButton, i6.MatIcon], styles: [".example-header[_ngcontent-%COMP%] {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label[_ngcontent-%COMP%] {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow[_ngcontent-%COMP%]   .mat-icon[_ngcontent-%COMP%] {\n      margin: -22%;\n    }"], changeDetection: 0 });
+    } }, directives: [i4$1.MatButton, i6.MatIcon], styles: [".example-header[_ngcontent-%COMP%] {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label[_ngcontent-%COMP%] {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow[_ngcontent-%COMP%]   .mat-icon[_ngcontent-%COMP%] {\n      margin: -22%;\n    }"], changeDetection: 0 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ExampleHeader, [{
         type: Component,
         args: [{
@@ -536,6 +814,59 @@ DatepickerFormatsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Da
             }]
     }], null, null); })();
 
+/**
+ * @title Testing with MatDatepickerInputHarness
+ */
+class DatepickerHarnessExample {
+    constructor() {
+        this.date = null;
+        this.minDate = null;
+    }
+}
+DatepickerHarnessExample.ɵfac = function DatepickerHarnessExample_Factory(t) { return new (t || DatepickerHarnessExample)(); };
+DatepickerHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DatepickerHarnessExample, selectors: [["datepicker-harness-example"]], decls: 3, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "ngModel", "min", "ngModelChange"], ["picker", ""]], template: function DatepickerHarnessExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "input", 0);
+        i0.ɵɵlistener("ngModelChange", function DatepickerHarnessExample_Template_input_ngModelChange_0_listener($event) { return ctx.date = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(1, "mat-datepicker", null, 1);
+    } if (rf & 2) {
+        const _r0 = i0.ɵɵreference(2);
+        i0.ɵɵproperty("matDatepicker", _r0)("ngModel", ctx.date)("min", ctx.minDate);
+    } }, directives: [i2.MatInput, i3.MatDatepickerInput, i3$1.DefaultValueAccessor, i3$1.NgControlStatus, i3$1.NgModel, i3.MatDatepicker], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerHarnessExample, [{
+        type: Component,
+        args: [{
+                selector: 'datepicker-harness-example',
+                templateUrl: 'datepicker-harness-example.html',
+            }]
+    }], null, null); })();
+
+/** @title Datepicker inline calendar example */
+class DatepickerInlineCalendarExample {
+}
+DatepickerInlineCalendarExample.ɵfac = function DatepickerInlineCalendarExample_Factory(t) { return new (t || DatepickerInlineCalendarExample)(); };
+DatepickerInlineCalendarExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DatepickerInlineCalendarExample, selectors: [["datepicker-inline-calendar-example"]], decls: 4, vars: 1, consts: [[1, "demo-inline-calendar-card"], [3, "selectedChange"]], template: function DatepickerInlineCalendarExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-card", 0);
+        i0.ɵɵelementStart(1, "mat-calendar", 1);
+        i0.ɵɵlistener("selectedChange", function DatepickerInlineCalendarExample_Template_mat_calendar_selectedChange_1_listener($event) { return ctx.selected = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(2, "p");
+        i0.ɵɵtext(3);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(3);
+        i0.ɵɵtextInterpolate1("Selected date: ", ctx.selected, "");
+    } }, directives: [i1$2.MatCard, i3.MatCalendar], styles: [".demo-inline-calendar-card[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerInlineCalendarExample, [{
+        type: Component,
+        args: [{
+                selector: 'datepicker-inline-calendar-example',
+                templateUrl: 'datepicker-inline-calendar-example.html',
+                styleUrls: ['datepicker-inline-calendar-example.css'],
+            }]
+    }], null, null); })();
+
 /** @title Datepicker with different locale */
 class DatepickerLocaleExample {
     constructor(_adapter) {
@@ -578,7 +909,7 @@ DatepickerLocaleExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Dat
         i0.ɵɵproperty("matDatepicker", _r0);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("for", _r0);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i4$1.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerLocaleExample, [{
         type: Component,
         args: [{
@@ -911,309 +1242,6 @@ DatepickerViewsSelectionExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ t
             }]
     }], null, null); })();
 
-/** @title Basic date range picker */
-class DateRangePickerOverviewExample {
-}
-DateRangePickerOverviewExample.ɵfac = function DateRangePickerOverviewExample_Factory(t) { return new (t || DateRangePickerOverviewExample)(); };
-DateRangePickerOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerOverviewExample, selectors: [["date-range-picker-overview-example"]], decls: 9, vars: 2, consts: [["appearance", "fill"], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field", 0);
-        i0.ɵɵelementStart(1, "mat-label");
-        i0.ɵɵtext(2, "Enter a date range");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
-        i0.ɵɵelement(4, "input", 2);
-        i0.ɵɵelement(5, "input", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
-        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(8);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("rangePicker", _r0);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("for", _r0);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3.MatStartDate, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerOverviewExample, [{
-        type: Component,
-        args: [{
-                selector: 'date-range-picker-overview-example',
-                templateUrl: 'date-range-picker-overview-example.html',
-            }]
-    }], null, null); })();
-
-function DateRangePickerFormsExample_mat_error_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-error");
-    i0.ɵɵtext(1, "Invalid start date");
-    i0.ɵɵelementEnd();
-} }
-function DateRangePickerFormsExample_mat_error_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-error");
-    i0.ɵɵtext(1, "Invalid end date");
-    i0.ɵɵelementEnd();
-} }
-/** @title Date range picker forms integration */
-class DateRangePickerFormsExample {
-    constructor() {
-        this.range = new FormGroup({
-            start: new FormControl(),
-            end: new FormControl()
-        });
-    }
-}
-DateRangePickerFormsExample.ɵfac = function DateRangePickerFormsExample_Factory(t) { return new (t || DateRangePickerFormsExample)(); };
-DateRangePickerFormsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerFormsExample, selectors: [["date-range-picker-forms-example"]], decls: 14, vars: 8, consts: [["appearance", "fill"], [3, "formGroup", "rangePicker"], ["matStartDate", "", "formControlName", "start", "placeholder", "Start date"], ["matEndDate", "", "formControlName", "end", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"]], template: function DateRangePickerFormsExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field", 0);
-        i0.ɵɵelementStart(1, "mat-label");
-        i0.ɵɵtext(2, "Enter a date range");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
-        i0.ɵɵelement(4, "input", 2);
-        i0.ɵɵelement(5, "input", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
-        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
-        i0.ɵɵtemplate(9, DateRangePickerFormsExample_mat_error_9_Template, 2, 0, "mat-error", 6);
-        i0.ɵɵtemplate(10, DateRangePickerFormsExample_mat_error_10_Template, 2, 0, "mat-error", 6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "p");
-        i0.ɵɵtext(12);
-        i0.ɵɵpipe(13, "json");
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(8);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("formGroup", ctx.range)("rangePicker", _r0);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("for", _r0);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("ngIf", ctx.range.controls.start.hasError("matStartDateInvalid"));
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("ngIf", ctx.range.controls.end.hasError("matEndDateInvalid"));
-        i0.ɵɵadvance(2);
-        i0.ɵɵtextInterpolate1("Selected range: ", i0.ɵɵpipeBind1(13, 6, ctx.range.value), "");
-    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3$1.NgControlStatusGroup, i3$1.FormGroupDirective, i3.MatStartDate, i3$1.DefaultValueAccessor, i3$1.NgControlStatus, i3$1.FormControlName, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker, i4.NgIf, i1.MatError], pipes: [i4.JsonPipe], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerFormsExample, [{
-        type: Component,
-        args: [{
-                selector: 'date-range-picker-forms-example',
-                templateUrl: 'date-range-picker-forms-example.html',
-            }]
-    }], null, null); })();
-
-/** @title Date range picker comparison ranges */
-class DateRangePickerComparisonExample {
-    constructor() {
-        const today = new Date();
-        const month = today.getMonth();
-        const year = today.getFullYear();
-        this.campaignOne = new FormGroup({
-            start: new FormControl(new Date(year, month, 13)),
-            end: new FormControl(new Date(year, month, 16))
-        });
-        this.campaignTwo = new FormGroup({
-            start: new FormControl(new Date(year, month, 15)),
-            end: new FormControl(new Date(year, month, 19))
-        });
-    }
-}
-DateRangePickerComparisonExample.ɵfac = function DateRangePickerComparisonExample_Factory(t) { return new (t || DateRangePickerComparisonExample)(); };
-DateRangePickerComparisonExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerComparisonExample, selectors: [["date-range-picker-comparison-example"]], decls: 18, vars: 10, consts: [["appearance", "fill", 1, "example-form-field"], [3, "formGroup", "rangePicker", "comparisonStart", "comparisonEnd"], ["matStartDate", "", "placeholder", "Start date", "formControlName", "start"], ["matEndDate", "", "placeholder", "End date", "formControlName", "end"], ["matSuffix", "", 3, "for"], ["campaignOnePicker", ""], ["campaignTwoPicker", ""]], template: function DateRangePickerComparisonExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field", 0);
-        i0.ɵɵelementStart(1, "mat-label");
-        i0.ɵɵtext(2, "First campaign");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
-        i0.ɵɵelement(4, "input", 2);
-        i0.ɵɵelement(5, "input", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
-        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "mat-form-field", 0);
-        i0.ɵɵelementStart(10, "mat-label");
-        i0.ɵɵtext(11, "Second campaign");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(12, "mat-date-range-input", 1);
-        i0.ɵɵelement(13, "input", 2);
-        i0.ɵɵelement(14, "input", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(15, "mat-datepicker-toggle", 4);
-        i0.ɵɵelement(16, "mat-date-range-picker", null, 6);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(8);
-        const _r1 = i0.ɵɵreference(17);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("formGroup", ctx.campaignOne)("rangePicker", _r0)("comparisonStart", ctx.campaignTwo.value.start)("comparisonEnd", ctx.campaignTwo.value.end);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("for", _r0);
-        i0.ɵɵadvance(6);
-        i0.ɵɵproperty("formGroup", ctx.campaignTwo)("rangePicker", _r1)("comparisonStart", ctx.campaignOne.value.start)("comparisonEnd", ctx.campaignOne.value.end);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("for", _r1);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3$1.NgControlStatusGroup, i3$1.FormGroupDirective, i3.MatStartDate, i3$1.DefaultValueAccessor, i3$1.NgControlStatus, i3$1.FormControlName, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin: 0 8px 16px 0;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerComparisonExample, [{
-        type: Component,
-        args: [{
-                selector: 'date-range-picker-comparison-example',
-                templateUrl: 'date-range-picker-comparison-example.html',
-                styleUrls: ['date-range-picker-comparison-example.css'],
-            }]
-    }], function () { return []; }, null); })();
-
-class FiveDayRangeSelectionStrategy {
-    constructor(_dateAdapter) {
-        this._dateAdapter = _dateAdapter;
-    }
-    selectionFinished(date) {
-        return this._createFiveDayRange(date);
-    }
-    createPreview(activeDate) {
-        return this._createFiveDayRange(activeDate);
-    }
-    _createFiveDayRange(date) {
-        if (date) {
-            const start = this._dateAdapter.addCalendarDays(date, -2);
-            const end = this._dateAdapter.addCalendarDays(date, 2);
-            return new DateRange(start, end);
-        }
-        return new DateRange(null, null);
-    }
-}
-FiveDayRangeSelectionStrategy.ɵfac = function FiveDayRangeSelectionStrategy_Factory(t) { return new (t || FiveDayRangeSelectionStrategy)(i0.ɵɵinject(i1$1.DateAdapter)); };
-FiveDayRangeSelectionStrategy.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: FiveDayRangeSelectionStrategy, factory: FiveDayRangeSelectionStrategy.ɵfac });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FiveDayRangeSelectionStrategy, [{
-        type: Injectable
-    }], function () { return [{ type: i1$1.DateAdapter }]; }, null); })();
-/** @title Date range picker with custom a selection strategy */
-class DateRangePickerSelectionStrategyExample {
-}
-DateRangePickerSelectionStrategyExample.ɵfac = function DateRangePickerSelectionStrategyExample_Factory(t) { return new (t || DateRangePickerSelectionStrategyExample)(); };
-DateRangePickerSelectionStrategyExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DateRangePickerSelectionStrategyExample, selectors: [["date-range-picker-selection-strategy-example"]], features: [i0.ɵɵProvidersFeature([{
-                provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
-                useClass: FiveDayRangeSelectionStrategy
-            }])], decls: 9, vars: 2, consts: [["appearance", "fill"], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DateRangePickerSelectionStrategyExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field", 0);
-        i0.ɵɵelementStart(1, "mat-label");
-        i0.ɵɵtext(2, "Enter a date range");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-date-range-input", 1);
-        i0.ɵɵelement(4, "input", 2);
-        i0.ɵɵelement(5, "input", 3);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(6, "mat-datepicker-toggle", 4);
-        i0.ɵɵelement(7, "mat-date-range-picker", null, 5);
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(8);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("rangePicker", _r0);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("for", _r0);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i3.MatDateRangeInput, i3.MatStartDate, i3.MatEndDate, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDateRangePicker], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
-        type: Component,
-        args: [{
-                selector: 'date-range-picker-selection-strategy-example',
-                templateUrl: 'date-range-picker-selection-strategy-example.html',
-                providers: [{
-                        provide: MAT_DATE_RANGE_SELECTION_STRATEGY,
-                        useClass: FiveDayRangeSelectionStrategy
-                    }]
-            }]
-    }], null, null); })();
-
-/**
- * @title Testing with MatDatepickerInputHarness
- */
-class DatepickerHarnessExample {
-    constructor() {
-        this.date = null;
-        this.minDate = null;
-    }
-}
-DatepickerHarnessExample.ɵfac = function DatepickerHarnessExample_Factory(t) { return new (t || DatepickerHarnessExample)(); };
-DatepickerHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DatepickerHarnessExample, selectors: [["datepicker-harness-example"]], decls: 3, vars: 3, consts: [["matInput", "", 3, "matDatepicker", "ngModel", "min", "ngModelChange"], ["picker", ""]], template: function DatepickerHarnessExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "input", 0);
-        i0.ɵɵlistener("ngModelChange", function DatepickerHarnessExample_Template_input_ngModelChange_0_listener($event) { return ctx.date = $event; });
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(1, "mat-datepicker", null, 1);
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(2);
-        i0.ɵɵproperty("matDatepicker", _r0)("ngModel", ctx.date)("min", ctx.minDate);
-    } }, directives: [i2.MatInput, i3.MatDatepickerInput, i3$1.DefaultValueAccessor, i3$1.NgControlStatus, i3$1.NgModel, i3.MatDatepicker], encapsulation: 2 });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerHarnessExample, [{
-        type: Component,
-        args: [{
-                selector: 'datepicker-harness-example',
-                templateUrl: 'datepicker-harness-example.html',
-            }]
-    }], null, null); })();
-
-/** @title Datepicker action buttons */
-class DatepickerActionsExample {
-}
-DatepickerActionsExample.ɵfac = function DatepickerActionsExample_Factory(t) { return new (t || DatepickerActionsExample)(); };
-DatepickerActionsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DatepickerActionsExample, selectors: [["datepicker-actions-example"]], decls: 26, vars: 4, consts: [["appearance", "fill", 1, "example-form-field"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["datepicker", ""], ["mat-button", "", "matDatepickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDatepickerApply", ""], [3, "rangePicker"], ["matStartDate", "", "placeholder", "Start date"], ["matEndDate", "", "placeholder", "End date"], ["rangePicker", ""], ["mat-button", "", "matDateRangePickerCancel", ""], ["mat-raised-button", "", "color", "primary", "matDateRangePickerApply", ""]], template: function DatepickerActionsExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field", 0);
-        i0.ɵɵelementStart(1, "mat-label");
-        i0.ɵɵtext(2, "Choose a date");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(3, "input", 1);
-        i0.ɵɵelement(4, "mat-datepicker-toggle", 2);
-        i0.ɵɵelementStart(5, "mat-datepicker", null, 3);
-        i0.ɵɵelementStart(7, "mat-datepicker-actions");
-        i0.ɵɵelementStart(8, "button", 4);
-        i0.ɵɵtext(9, "Cancel");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "button", 5);
-        i0.ɵɵtext(11, "Apply");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(12, "mat-form-field", 0);
-        i0.ɵɵelementStart(13, "mat-label");
-        i0.ɵɵtext(14, "Enter a date range");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(15, "mat-date-range-input", 6);
-        i0.ɵɵelement(16, "input", 7);
-        i0.ɵɵelement(17, "input", 8);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelement(18, "mat-datepicker-toggle", 2);
-        i0.ɵɵelementStart(19, "mat-date-range-picker", null, 9);
-        i0.ɵɵelementStart(21, "mat-date-range-picker-actions");
-        i0.ɵɵelementStart(22, "button", 10);
-        i0.ɵɵtext(23, "Cancel");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(24, "button", 11);
-        i0.ɵɵtext(25, "Apply");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementEnd();
-    } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(6);
-        const _r1 = i0.ɵɵreference(20);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("matDatepicker", _r0);
-        i0.ɵɵadvance(1);
-        i0.ɵɵproperty("for", _r0);
-        i0.ɵɵadvance(11);
-        i0.ɵɵproperty("rangePicker", _r1);
-        i0.ɵɵadvance(3);
-        i0.ɵɵproperty("for", _r1);
-    } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i3.MatDatepickerActions, i5.MatButton, i3.MatDatepickerCancel, i3.MatDatepickerApply, i3.MatDateRangeInput, i3.MatStartDate, i3.MatEndDate, i3.MatDateRangePicker], styles: [".example-form-field[_ngcontent-%COMP%] {\n  margin-right: 20px;\n}"] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DatepickerActionsExample, [{
-        type: Component,
-        args: [{
-                selector: 'datepicker-actions-example',
-                templateUrl: 'datepicker-actions-example.html',
-                styleUrls: ['datepicker-actions-example.css']
-            }]
-    }], null, null); })();
-
 const EXAMPLES = [
     DatepickerApiExample,
     DatepickerColorExample,
@@ -1225,6 +1253,7 @@ const EXAMPLES = [
     DatepickerFilterExample,
     DatepickerFormatsExample,
     DatepickerHarnessExample,
+    DatepickerInlineCalendarExample,
     DatepickerLocaleExample,
     DatepickerMinMaxExample,
     DatepickerMomentExample,
@@ -1247,6 +1276,7 @@ DatepickerExamplesModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: Dat
 DatepickerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [[
             CommonModule,
             MatButtonModule,
+            MatCardModule,
             MatDatepickerModule,
             MatInputModule,
             MatIconModule,
@@ -1260,6 +1290,7 @@ DatepickerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: 
                 imports: [
                     CommonModule,
                     MatButtonModule,
+                    MatCardModule,
                     MatDatepickerModule,
                     MatInputModule,
                     MatIconModule,
@@ -1282,6 +1313,7 @@ DatepickerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: 
         DatepickerFilterExample,
         DatepickerFormatsExample,
         DatepickerHarnessExample,
+        DatepickerInlineCalendarExample,
         DatepickerLocaleExample,
         DatepickerMinMaxExample,
         DatepickerMomentExample,
@@ -1297,6 +1329,7 @@ DatepickerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: 
         DatepickerActionsExample,
         ExampleHeader], imports: [CommonModule,
         MatButtonModule,
+        MatCardModule,
         MatDatepickerModule,
         MatInputModule,
         MatIconModule,
@@ -1312,6 +1345,7 @@ DatepickerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: 
         DatepickerFilterExample,
         DatepickerFormatsExample,
         DatepickerHarnessExample,
+        DatepickerInlineCalendarExample,
         DatepickerLocaleExample,
         DatepickerMinMaxExample,
         DatepickerMomentExample,
@@ -1331,5 +1365,5 @@ DatepickerExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: 
  * Generated bundle index. Do not edit.
  */
 
-export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
+export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerInlineCalendarExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
 //# sourceMappingURL=datepicker.js.map

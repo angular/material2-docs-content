@@ -1993,6 +1993,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/datepicker"
         }
     },
+    "datepicker-inline-calendar": {
+        "packagePath": "material/datepicker/datepicker-inline-calendar",
+        "title": "Datepicker inline calendar example",
+        "componentName": "DatepickerInlineCalendarExample",
+        "files": [
+            "datepicker-inline-calendar-example.ts",
+            "datepicker-inline-calendar-example.html",
+            "datepicker-inline-calendar-example.css"
+        ],
+        "selector": "datepicker-inline-calendar-example",
+        "additionalComponents": [],
+        "primaryFile": "datepicker-inline-calendar-example.ts",
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
     "datepicker-locale": {
         "packagePath": "material/datepicker/datepicker-locale",
         "title": "Datepicker with different locale",

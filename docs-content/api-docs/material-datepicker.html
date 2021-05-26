@@ -2070,6 +2070,346 @@ This doesn&#39;t imply a change on the selected date.</p>
     
       
 
+<h4 id="MatCalendar" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCalendar"></span>
+  <code>MatCalendar</code>
+  
+</h4><p class="docs-api-class-description"><p>A calendar that is used as part of the datepicker.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-calendar</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matCalendar</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>comparisonEnd: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>End of the comparison range.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>comparisonStart: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Start of the comparison range.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dateClass: MatCalendarCellClassFunction&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function that can be used to add custom CSS classes to dates.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dateFilter: (date: D) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function used to filter which dates are selectable.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>headerComponent: ComponentType&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>An input indicating the type of the header component, if set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>maxDate: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The maximum selectable date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>minDate: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The minimum selectable date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selected: DateRange&lt;D&gt; | D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The currently selected date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>startAt: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A date representing the period (month or year) to start the calendar in.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>startView: MatCalendarView</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the calendar should be started in month or year view.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>monthSelected: EventEmitter&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits the month chosen in year view.
+This doesn&#39;t imply a change on the selected date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectedChange: EventEmitter&lt;D | null&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the currently selected date changes.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>viewChanged: EventEmitter&lt;MatCalendarView&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the current view changes.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>yearSelected: EventEmitter&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits the year chosen in multiyear view.
+This doesn&#39;t imply a change on the selected date.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>activeDate: D</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The current active date. This determines which time period is shown and which date is
+highlighted when using keyboard navigation.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>currentView: MatCalendarView</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the calendar is in month view.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>monthView: MatMonthView&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the current month view component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>multiYearView: MatMultiYearView&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the current multi-year view component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stateChanges: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits whenever there is a state change that the header may need to respond to.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>yearView: MatYearView&lt;D&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the current year view component.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusActiveCell
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the active date.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateTodaysDate
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Updates today&#39;s date after an update of the active date</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
 <h4 id="MatDatepicker" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatDatepicker"></span>
   <code>MatDatepicker</code>
