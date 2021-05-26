@@ -19,24 +19,33 @@ underline, floating label, and hint messages.</p>
           Form field appearance variants
         </h3>
       <p>The <code>mat-form-field</code> supports 4 different appearance variants which can be set via the <code>appearance</code>
-input. The <code>legacy</code> appearance is the default style that the <code>mat-form-field</code> has traditionally had.
-It shows the input box with an underline underneath it. The <code>standard</code> appearance is a slightly
-updated version of the <code>legacy</code> appearance that has spacing that is more consistent with the <code>fill</code>
-and <code>outline</code> appearances. The <code>fill</code> appearance displays the form field with a filled background
-box in addition to the underline. Finally the <code>outline</code> appearance shows the form field with a
-border all the way around, not just an underline.</p>
-<p>There are a couple differences to be aware of between the <code>legacy</code> appearance and the newer
-<code>standard</code>, <code>fill</code>, and <code>outline</code> appearances. The <code>matPrefix</code> and <code>matSuffix</code> elements are center
-aligned by default for the newer appearances. The Material Design spec shows this as being the
-standard way to align prefix and suffix icons in the newer appearance variants. We do not recommend
-using text prefix and suffixes in the <code>fill</code> and <code>outline</code> variants because the label and input do not have the same
-alignment. It is therefore impossible to align the prefix or suffix in a way that looks good when
-compared with both the label and input text.</p>
+input. The <code>fill</code> an <code>outline</code> appearances implement the current version of the spec. The <code>fill</code>
+appearance displays the form field with a filled background box and an underline, while the
+<code>outline</code> appearance shows the form field with a border all the way around.</p>
+<p>The <code>legacy</code> and <code>standard</code> appearances implement an older version of the spec where
+<code>mat-form-field</code> was shown with an underline beneath it. We recommend not using these appearances as
+they do not  match the current spec.</p>
+<p>There are a couple differences in behavior to be aware of between the different appearances.</p>
+<p>We recommend that text prefix and suffixes in the <code>fill</code> and <code>outline</code> appearances only be used in
+conjunction with the <code>floatLabel=&quot;always&quot;</code> option. This is because the resting label and the input
+value do not have  the same alignment, and it is therefore impossible to align the prefix or suffix
+in a way that looks good when compared with both. In the <code>standard</code> and <code>legacy</code> appearances, the 
+resting label and input value align, so this isn&#39;t an issue. We plan to improve support for text
+prefix and suffixes in the future so they can be used without <code>floatLabel=&quot;always&quot;</code>.</p>
 <p>The second important difference is that the <code>standard</code>, <code>fill</code>, and <code>outline</code> appearances do not
 promote placeholders to labels. For the <code>legacy</code> appearance specifying
 <code>&lt;input placeholder=&quot;placeholder&quot;&gt;</code> will result in a floating label being added to the
 <code>mat-form-field</code>. For the newer variants it will just add a normal placeholder to the input. If you
-want a floating label, add a <code>&lt;mat-label&gt;</code> to the <code>mat-form-field</code>.</p>
+want a floating label, add a <code>&lt;mat-label&gt;</code> to the <code>mat-form-field</code> instead.</p>
+<p>Out of the box, if you do not specify an <code>appearance</code> for the <code>&lt;mat-form-field&gt;</code> it will default to
+<code>legacy</code>. However, this can be configured using a global provider to choose a different default
+appearance for your app.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MAT_FORM_FIELD_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">appearance</span>: <span class="hljs-string">&#x27;fill&#x27;</span>}}
+  ]
+})
+</code></pre>
 <div material-docs-example="form-field-appearance"></div>
 
 
@@ -45,10 +54,9 @@ want a floating label, add a <code>&lt;mat-label&gt;</code> to the <code>mat-for
           Floating label
         </h3>
       <p>The floating label is a text label displayed on top of the form field control when
-the control does not contain any text or when <code>&lt;select matNativeControl&gt;</code> does not show any option text. 
-By default, when text is present the floating label
-floats above the form field control. The label for a form field can be specified by adding a
-<code>mat-label</code> element.</p>
+the control does not contain any text or when <code>&lt;select matNativeControl&gt;</code> does not show any option
+text. By default, when text is present the floating label floats above the form field control. The
+label for a form field can be specified by adding a <code>mat-label</code> element.</p>
 <p>In the legacy version of the <code>&lt;mat-form-field&gt;</code> (one that has no <code>appearance</code> attribute or has
 <code>appearance=&quot;legacy&quot;</code>) if a label is not specified, the <code>placeholder</code> attribute on the form control
 is promoted to a label. If a label is specified, the <code>placeholder</code> will be displayed as a normal
