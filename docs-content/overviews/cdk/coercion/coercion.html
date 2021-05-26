@@ -1,7 +1,61 @@
-<div class="docs-markdown">
-        <h3 id="coercion" class="docs-header-link">
-          <span header-link="coercion"></span>
-          Coercion
+<div class="docs-markdown"><p>Utility functions for coercing <code>@Input</code>s into specific types.</p>
+
+        <h3 id="example" class="docs-header-link">
+          <span header-link="example"></span>
+          Example
         </h3>
-      <p>Utility functions for coercing <code>@Input</code>s into specific types.</p>
+      <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Directive, ElementRef, HostListener} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  coerceBooleanProperty,
+  BooleanInput,
+  NumberInput,
+  coerceNumberProperty,
+  coerceElement,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion&#x27;</span>;
+
+<span class="hljs-meta">@Directive</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;my-button&#x27;</span>,
+  <span class="hljs-attr">host</span>: {
+    <span class="hljs-string">&#x27;[disabled]&#x27;</span>: <span class="hljs-string">&#x27;disabled&#x27;</span>,
+    <span class="hljs-string">&#x27;(click)&#x27;</span>: <span class="hljs-string">&#x27;greet()&#x27;</span>,
+  }
+})
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyButton</span> </span>{
+  <span class="hljs-comment">// Using `coerceBooleanProperty` allows for the disabled value of a button to be set as</span>
+  <span class="hljs-comment">// `&lt;my-button disabled&gt;&lt;/my-button&gt;` instead of `&lt;my-button [disabled]=&quot;true&quot;&gt;&lt;/my-button&gt;`.</span>
+  <span class="hljs-comment">// It also allows for a string to be passed like `&lt;my-button disabled=&quot;true&quot;&gt;&lt;/my-button&gt;`.</span>
+  <span class="hljs-meta">@Input</span>()
+  <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled; }
+  <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: <span class="hljs-built_in">any</span></span>) {
+    <span class="hljs-built_in">this</span>._disabled = coerceBooleanProperty(value);
+  }
+  <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;
+
+  <span class="hljs-comment">// `coerceNumberProperty` turns any value coming in from the view into a number, allowing the</span>
+  <span class="hljs-comment">// consumer to use a shorthand string while storing the parsed number in memory. E.g. the consumer can write:</span>
+  <span class="hljs-comment">// `&lt;my-button greetDelay=&quot;500&quot;&gt;&lt;/my-button&gt;` instead of `&lt;my-button [greetDelay]=&quot;500&quot;&gt;&lt;/my-button&gt;`.</span>
+  <span class="hljs-comment">// The second parameter specifies a fallback value to be used if the value can&#x27;t be</span>
+  <span class="hljs-comment">// parsed to a number.</span>
+  <span class="hljs-meta">@Input</span>()
+  <span class="hljs-keyword">get</span> <span class="hljs-title">greetDelay</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._greetDelay; }
+  <span class="hljs-keyword">set</span> <span class="hljs-title">greetDelay</span>(<span class="hljs-params">value: <span class="hljs-built_in">any</span></span>) {
+    <span class="hljs-built_in">this</span>._greetDelay = coerceNumberProperty(value, <span class="hljs-number">0</span>);
+  }
+  <span class="hljs-keyword">private</span> _greetDelay = <span class="hljs-number">0</span>;
+
+  <span class="hljs-function"><span class="hljs-title">greet</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> alert(<span class="hljs-string">&#x27;Hello!&#x27;</span>), <span class="hljs-built_in">this</span>.greetDelay);
+  }
+
+  <span class="hljs-comment">// `coerceElement` allows you to accept either an `ElementRef`</span>
+  <span class="hljs-comment">// or a raw DOM node and to always return a DOM node.</span>
+  getElement(elementOrRef: ElementRef&lt;HTMLElement&gt; | HTMLElement): HTMLElement {
+    <span class="hljs-keyword">return</span> coerceElement(elementOrRef);
+  }
+
+  <span class="hljs-comment">// Required so that the template type checker can infer the type of the coerced inputs.</span>
+  <span class="hljs-keyword">static</span> ngAcceptInputType_disabled: BooleanInput;
+  <span class="hljs-keyword">static</span> ngAcceptInputType_greetDelay: NumberInput;
+}
+</code></pre>
 </div>
