@@ -709,7 +709,7 @@ class FormFieldHarnessExample {
     }
 }
 FormFieldHarnessExample.ɵfac = function FormFieldHarnessExample_Factory(t) { return new (t || FormFieldHarnessExample)(); };
-FormFieldHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FormFieldHarnessExample, selectors: [["form-field-harness-example"]], decls: 8, vars: 1, consts: [["id", "with-errors"], [1, "custom-control"], ["matInput", "", 3, "formControl"], ["align", "start"]], template: function FormFieldHarnessExample_Template(rf, ctx) { if (rf & 1) {
+FormFieldHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FormFieldHarnessExample, selectors: [["form-field-harness-example"]], decls: 8, vars: 1, consts: [["id", "with-errors", "appearance", "fill"], [1, "custom-control"], ["matInput", "", 3, "formControl"], ["align", "start"]], template: function FormFieldHarnessExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelementStart(1, "span", 1);
         i0.ɵɵtext(2, "Custom control harness");
