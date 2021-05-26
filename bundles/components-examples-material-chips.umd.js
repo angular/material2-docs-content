@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/drag-drop'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/autocomplete'), require('@angular/material/chips'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/cdk/keycodes'), require('rxjs/operators'), require('@angular/material/core')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/chips', ['exports', '@angular/cdk/drag-drop', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/autocomplete', '@angular/material/chips', '@angular/material/form-field', '@angular/material/icon', '@angular/cdk/keycodes', 'rxjs/operators', '@angular/material/core'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.chips = {}), global.ng.cdk.dragDrop, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.autocomplete, global.ng.material.chips, global.ng.material.formField, global.ng.material.icon, global.ng.cdk.keycodes, global.rxjs.operators, global.ng.material.core));
-}(this, (function (exports, i2, i3, i0, i4, i5, i1$1, i1, i6, keycodes, operators, i7) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/drag-drop'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/autocomplete'), require('@angular/material/chips'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/cdk/keycodes'), require('rxjs/operators'), require('@angular/material/core'), require('@angular/material/button')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/chips', ['exports', '@angular/cdk/drag-drop', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/autocomplete', '@angular/material/chips', '@angular/material/form-field', '@angular/material/icon', '@angular/cdk/keycodes', 'rxjs/operators', '@angular/material/core', '@angular/material/button'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.chips = {}), global.ng.cdk.dragDrop, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.autocomplete, global.ng.material.chips, global.ng.material.formField, global.ng.material.icon, global.ng.cdk.keycodes, global.rxjs.operators, global.ng.material.core, global.ng.material.button));
+}(this, (function (exports, i2, i3, i0, i4, i5, i1$1, i1, i6, keycodes, operators, i7, i1$2) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -33,6 +33,7 @@
     var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var i6__namespace = /*#__PURE__*/_interopNamespace(i6);
     var i7__namespace = /*#__PURE__*/_interopNamespace(i7);
+    var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
 
     var _c0 = ["fruitInput"];
     var _c1 = ["auto"];
@@ -459,6 +460,90 @@
             }], null, null);
     })();
 
+    function ChipsFormControlExample_mat_chip_12_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r4_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "mat-chip", 7);
+            i0__namespace.ɵɵlistener("removed", function ChipsFormControlExample_mat_chip_12_Template_mat_chip_removed_0_listener() { var restoredCtx = i0__namespace.ɵɵrestoreView(_r4_1); var keyword_r2 = restoredCtx.$implicit; var ctx_r3 = i0__namespace.ɵɵnextContext(); return ctx_r3.removeKeyword(keyword_r2); });
+            i0__namespace.ɵɵtext(1);
+            i0__namespace.ɵɵelementEnd();
+        }
+        if (rf & 2) {
+            var keyword_r2 = ctx.$implicit;
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵtextInterpolate1(" ", keyword_r2, " ");
+        }
+    }
+    /**
+     * @title Chips with form control
+     */
+    var ChipsFormControlExample = /** @class */ (function () {
+        function ChipsFormControlExample() {
+            this.keywords = new Set(['angular', 'how-to', 'tutorial']);
+            this.formControl = new i4.FormControl();
+        }
+        ChipsFormControlExample.prototype.addKeywordFromInput = function (event) {
+            if (event.value) {
+                this.keywords.add(event.value);
+                event.chipInput.clear();
+            }
+        };
+        ChipsFormControlExample.prototype.removeKeyword = function (keyword) {
+            this.keywords.delete(keyword);
+        };
+        return ChipsFormControlExample;
+    }());
+    ChipsFormControlExample.ɵfac = function ChipsFormControlExample_Factory(t) { return new (t || ChipsFormControlExample)(); };
+    ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ChipsFormControlExample, selectors: [["chips-form-control-example"]], decls: 14, vars: 4, consts: [[1, "example-button-container"], ["mat-raised-button", "", 3, "click"], [1, "example-chip-list"], ["aria-label", "Video keywords", "multiple", "", 3, "formControl"], ["chipList", ""], [3, "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New keyword...", 3, "matChipInputFor", "matChipInputTokenEnd"], [3, "removed"]], template: function ChipsFormControlExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵelementStart(0, "div", 0);
+                i0__namespace.ɵɵelementStart(1, "button", 1);
+                i0__namespace.ɵɵlistener("click", function ChipsFormControlExample_Template_button_click_1_listener() { return ctx.formControl.disable(); });
+                i0__namespace.ɵɵtext(2, "Disable form control");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(3, "button", 1);
+                i0__namespace.ɵɵlistener("click", function ChipsFormControlExample_Template_button_click_3_listener() { return ctx.formControl.enable(); });
+                i0__namespace.ɵɵtext(4, "Enable form control");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(5, "p");
+                i0__namespace.ɵɵtext(6);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(7, "mat-form-field", 2);
+                i0__namespace.ɵɵelementStart(8, "mat-label");
+                i0__namespace.ɵɵtext(9, "Video keywords");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(10, "mat-chip-list", 3, 4);
+                i0__namespace.ɵɵtemplate(12, ChipsFormControlExample_mat_chip_12_Template, 2, 1, "mat-chip", 5);
+                i0__namespace.ɵɵelementStart(13, "input", 6);
+                i0__namespace.ɵɵlistener("matChipInputTokenEnd", function ChipsFormControlExample_Template_input_matChipInputTokenEnd_13_listener($event) { return ctx.addKeywordFromInput($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                var _r0 = i0__namespace.ɵɵreference(11);
+                i0__namespace.ɵɵadvance(6);
+                i0__namespace.ɵɵtextInterpolate1(" Selected keywords: ", ctx.formControl.value, "\n");
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("formControl", ctx.formControl);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngForOf", ctx.keywords);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("matChipInputFor", _r0);
+            }
+        }, directives: [i1__namespace$2.MatButton, i1__namespace.MatFormField, i1__namespace.MatLabel, i1__namespace$1.MatChipList, i4__namespace.NgControlStatus, i4__namespace.FormControlDirective, i3__namespace.NgForOf, i1__namespace$1.MatChipInput, i1__namespace$1.MatChip], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-button-container[_ngcontent-%COMP%]    > button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(ChipsFormControlExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'chips-form-control-example',
+                        templateUrl: 'chips-form-control-example.html',
+                        styleUrls: ['chips-form-control-example.css'],
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ChipsAutocompleteExample,
         ChipsDragDropExample,
@@ -466,6 +551,7 @@
         ChipsOverviewExample,
         ChipsStackedExample,
         ChipsHarnessExample,
+        ChipsFormControlExample,
     ];
     var ChipsExamplesModule = /** @class */ (function () {
         function ChipsExamplesModule() {
@@ -478,6 +564,7 @@
                 i3.CommonModule,
                 i2.DragDropModule,
                 i5.MatAutocompleteModule,
+                i1$2.MatButtonModule,
                 i1$1.MatChipsModule,
                 i6.MatIconModule,
                 i1.MatFormFieldModule,
@@ -491,6 +578,7 @@
                             i3.CommonModule,
                             i2.DragDropModule,
                             i5.MatAutocompleteModule,
+                            i1$2.MatButtonModule,
                             i1$1.MatChipsModule,
                             i6.MatIconModule,
                             i1.MatFormFieldModule,
@@ -508,9 +596,11 @@
                 ChipsInputExample,
                 ChipsOverviewExample,
                 ChipsStackedExample,
-                ChipsHarnessExample], imports: [i3.CommonModule,
+                ChipsHarnessExample,
+                ChipsFormControlExample], imports: [i3.CommonModule,
                 i2.DragDropModule,
                 i5.MatAutocompleteModule,
+                i1$2.MatButtonModule,
                 i1$1.MatChipsModule,
                 i6.MatIconModule,
                 i1.MatFormFieldModule,
@@ -519,7 +609,8 @@
                 ChipsInputExample,
                 ChipsOverviewExample,
                 ChipsStackedExample,
-                ChipsHarnessExample] });
+                ChipsHarnessExample,
+                ChipsFormControlExample] });
     })();
 
     /**
@@ -529,6 +620,7 @@
     exports.ChipsAutocompleteExample = ChipsAutocompleteExample;
     exports.ChipsDragDropExample = ChipsDragDropExample;
     exports.ChipsExamplesModule = ChipsExamplesModule;
+    exports.ChipsFormControlExample = ChipsFormControlExample;
     exports.ChipsHarnessExample = ChipsHarnessExample;
     exports.ChipsInputExample = ChipsInputExample;
     exports.ChipsOverviewExample = ChipsOverviewExample;

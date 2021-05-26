@@ -1626,6 +1626,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/chips"
         }
     },
+    "chips-form-control": {
+        "packagePath": "material/chips/chips-form-control",
+        "title": "Chips with form control",
+        "componentName": "ChipsFormControlExample",
+        "files": [
+            "chips-form-control-example.ts",
+            "chips-form-control-example.html",
+            "chips-form-control-example.css"
+        ],
+        "selector": "chips-form-control-example",
+        "additionalComponents": [],
+        "primaryFile": "chips-form-control-example.ts",
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
     "chips-harness": {
         "packagePath": "material/chips/chips-harness",
         "title": "Testing with MatChipsHarness",
