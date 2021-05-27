@@ -24,7 +24,6 @@ import * as i1 from '@angular/material/table';
 import { MatTableDataSource, MatNoDataRow, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable, MatTableModule } from '@angular/material/table';
 import * as i2$5 from '@angular/cdk/drag-drop';
 import { moveItemInArray, DragDropModule } from '@angular/cdk/drag-drop';
-import * as i3 from '@angular/cdk/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import * as i1$2 from '@angular/material/form-field';
@@ -4319,8 +4318,8 @@ class ExampleDataSource extends DataSource {
     }
 }
 
-function TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-header-cell");
+function TableGeneratedColumnsExample_ng_container_1_th_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "th", 7);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -4328,8 +4327,8 @@ function TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template(
     i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate1(" ", column_r3.header, " ");
 } }
-function TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "mat-cell");
+function TableGeneratedColumnsExample_ng_container_1_td_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "td", 8);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -4340,12 +4339,12 @@ function TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template(rf, ctx
 } }
 function TableGeneratedColumnsExample_ng_container_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementContainerStart(0, 4);
-    i0.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template, 2, 1, "mat-header-cell", 5);
-    i0.ɵɵtemplate(2, TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template, 2, 1, "mat-cell", 6);
+    i0.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_th_1_Template, 2, 1, "th", 5);
+    i0.ɵɵtemplate(2, TableGeneratedColumnsExample_ng_container_1_td_2_Template, 2, 1, "td", 6);
     i0.ɵɵelementContainerEnd();
 } if (rf & 2) {
     const column_r3 = ctx.$implicit;
-    i0.ɵɵproperty("cdkColumnDef", column_r3.columnDef);
+    i0.ɵɵproperty("matColumnDef", column_r3.columnDef);
 } }
 function TableGeneratedColumnsExample_mat_header_row_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "mat-header-row");
@@ -4397,7 +4396,7 @@ class TableGeneratedColumnsExample {
     }
 }
 TableGeneratedColumnsExample.ɵfac = function TableGeneratedColumnsExample_Factory(t) { return new (t || TableGeneratedColumnsExample)(); };
-TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "cdkColumnDef", 4, "ngFor", "ngForOf"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "cdkColumnDef"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"]], template: function TableGeneratedColumnsExample_Template(rf, ctx) { if (rf & 1) {
+TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""]], template: function TableGeneratedColumnsExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "table", 0);
         i0.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
         i0.ɵɵtemplate(2, TableGeneratedColumnsExample_mat_header_row_2_Template, 1, 0, "mat-header-row", 2);
@@ -4411,7 +4410,7 @@ TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type
         i0.ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [i1.MatTable, i2.NgForOf, i1.MatHeaderRowDef, i1.MatRowDef, i3.CdkColumnDef, i3.CdkHeaderCellDef, i3.CdkCellDef, i1.MatHeaderCell, i1.MatCell, i1.MatHeaderRow, i1.MatRow], styles: [".demo-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+    } }, directives: [i1.MatTable, i2.NgForOf, i1.MatHeaderRowDef, i1.MatRowDef, i1.MatColumnDef, i1.MatHeaderCellDef, i1.MatCellDef, i1.MatHeaderCell, i1.MatCell, i1.MatHeaderRow, i1.MatRow], styles: [".demo-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TableGeneratedColumnsExample, [{
         type: Component,
         args: [{
