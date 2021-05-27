@@ -1,11 +1,11 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-elevation-z8 demo-table&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let column of columns&quot;</span> [<span class="hljs-attr">cdkColumnDef</span>]=<span class="hljs-string">&quot;column.columnDef&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let column of columns&quot;</span> [<span class="hljs-attr">matColumnDef</span>]=<span class="hljs-string">&quot;column.columnDef&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
       {{column.header}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span>
       {{column.cell(row)}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;displayedColumns&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>

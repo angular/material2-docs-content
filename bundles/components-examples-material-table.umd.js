@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/core'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/progress-spinner'), require('@angular/material/sort'), require('@angular/material/table'), require('@angular/cdk/drag-drop'), require('@angular/cdk/table'), require('@angular/animations'), require('@angular/material/form-field'), require('rxjs'), require('rxjs/operators'), require('@angular/common/http'), require('@angular/cdk/collections')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/table', ['exports', '@angular/common', '@angular/core', '@angular/material/core', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/paginator', '@angular/material/progress-spinner', '@angular/material/sort', '@angular/material/table', '@angular/cdk/drag-drop', '@angular/cdk/table', '@angular/animations', '@angular/material/form-field', 'rxjs', 'rxjs/operators', '@angular/common/http', '@angular/cdk/collections'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.table = {}), global.ng.common, global.ng.core, global.ng.material.core, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.paginator, global.ng.material.progressSpinner, global.ng.material.sort, global.ng.material.table, global.ng.cdk.dragDrop, global.ng.cdk.table, global.ng.animations, global.ng.material.formField, global.rxjs, global.rxjs.operators, global.ng.common.http, global.ng.cdk.collections));
-}(this, (function (exports, i2, i0, i2$6, i1$1, i2$4, i2$2, i2$3, i2$1, i5, i6, i4, i1, i2$5, i3, animations, i1$2, rxjs, operators, i1$3, collections) { 'use strict';
+}(this, (function (exports, i2, i0, i2$6, i1$1, i2$4, i2$2, i2$3, i2$1, i5, i6, i4, i1, i2$5, table, animations, i1$2, rxjs, operators, i1$3, collections) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -37,7 +37,6 @@
     var i4__namespace = /*#__PURE__*/_interopNamespace(i4);
     var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
     var i2__namespace$5 = /*#__PURE__*/_interopNamespace(i2$5);
-    var i3__namespace = /*#__PURE__*/_interopNamespace(i3);
     var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
     var i1__namespace$3 = /*#__PURE__*/_interopNamespace(i1$3);
 
@@ -5555,9 +5554,9 @@
         return ExampleDataSource;
     }(collections.DataSource));
 
-    function TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template(rf, ctx) {
+    function TableGeneratedColumnsExample_ng_container_1_th_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "mat-header-cell");
+            i0__namespace.ɵɵelementStart(0, "th", 7);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -5567,9 +5566,9 @@
             i0__namespace.ɵɵtextInterpolate1(" ", column_r3.header, " ");
         }
     }
-    function TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template(rf, ctx) {
+    function TableGeneratedColumnsExample_ng_container_1_td_2_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "mat-cell");
+            i0__namespace.ɵɵelementStart(0, "td", 8);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -5583,13 +5582,13 @@
     function TableGeneratedColumnsExample_ng_container_1_Template(rf, ctx) {
         if (rf & 1) {
             i0__namespace.ɵɵelementContainerStart(0, 4);
-            i0__namespace.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_mat_header_cell_1_Template, 2, 1, "mat-header-cell", 5);
-            i0__namespace.ɵɵtemplate(2, TableGeneratedColumnsExample_ng_container_1_mat_cell_2_Template, 2, 1, "mat-cell", 6);
+            i0__namespace.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_th_1_Template, 2, 1, "th", 5);
+            i0__namespace.ɵɵtemplate(2, TableGeneratedColumnsExample_ng_container_1_td_2_Template, 2, 1, "td", 6);
             i0__namespace.ɵɵelementContainerEnd();
         }
         if (rf & 2) {
             var column_r3 = ctx.$implicit;
-            i0__namespace.ɵɵproperty("cdkColumnDef", column_r3.columnDef);
+            i0__namespace.ɵɵproperty("matColumnDef", column_r3.columnDef);
         }
     }
     function TableGeneratedColumnsExample_mat_header_row_2_Template(rf, ctx) {
@@ -5647,7 +5646,7 @@
         return TableGeneratedColumnsExample;
     }());
     TableGeneratedColumnsExample.ɵfac = function TableGeneratedColumnsExample_Factory(t) { return new (t || TableGeneratedColumnsExample)(); };
-    TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "cdkColumnDef", 4, "ngFor", "ngForOf"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "cdkColumnDef"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"]], template: function TableGeneratedColumnsExample_Template(rf, ctx) {
+    TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""]], template: function TableGeneratedColumnsExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "table", 0);
                 i0__namespace.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
@@ -5664,7 +5663,7 @@
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
             }
-        }, directives: [i1__namespace.MatTable, i2__namespace.NgForOf, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i3__namespace.CdkColumnDef, i3__namespace.CdkHeaderCellDef, i3__namespace.CdkCellDef, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i1__namespace.MatHeaderRow, i1__namespace.MatRow], styles: [".demo-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        }, directives: [i1__namespace.MatTable, i2__namespace.NgForOf, i1__namespace.MatHeaderRowDef, i1__namespace.MatRowDef, i1__namespace.MatColumnDef, i1__namespace.MatHeaderCellDef, i1__namespace.MatCellDef, i1__namespace.MatHeaderCell, i1__namespace.MatCell, i1__namespace.MatHeaderRow, i1__namespace.MatRow], styles: [".demo-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TableGeneratedColumnsExample, [{
                 type: i0.Component,
@@ -5728,7 +5727,7 @@
                 i2$6.MatRippleModule,
                 i4.MatSortModule,
                 i1.MatTableModule,
-                i3.CdkTableModule,
+                table.CdkTableModule,
                 i2$5.DragDropModule,
             ]] });
     (function () {
@@ -5747,7 +5746,7 @@
                             i2$6.MatRippleModule,
                             i4.MatSortModule,
                             i1.MatTableModule,
-                            i3.CdkTableModule,
+                            table.CdkTableModule,
                             i2$5.DragDropModule,
                         ],
                         declarations: EXAMPLES,
@@ -5798,7 +5797,7 @@
                 i2$6.MatRippleModule,
                 i4.MatSortModule,
                 i1.MatTableModule,
-                i3.CdkTableModule,
+                table.CdkTableModule,
                 i2$5.DragDropModule], exports: [TableBasicExample,
                 TableColumnStylingExample,
                 TableDynamicArrayDataExample,
