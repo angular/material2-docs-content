@@ -4,14 +4,17 @@
           <span header-link="breakpointobserver"></span>
           BreakpointObserver
         </h3>
-      <p><code>BreakpointObserver</code>  is a utility for evaluating media queries and reacting to changes in the results of those queries.</p>
+      <p>A layout <strong>breakpoint</strong> is viewport size threshold at which a layout shift can occur. The viewport
+size ranges between breakpoints correspond to different standard screen sizes. </p>
+<p><code>BreakpointObserver</code> lets you evaluate media queries to determine the current screen size and
+react to changes when the viewport size crosses a breakpoint.</p>
 
-        <h4 id="evaluate-against-the-current-viewport" class="docs-header-link">
-          <span header-link="evaluate-against-the-current-viewport"></span>
-          Evaluate against the current viewport
+        <h4 id="check-the-current-viewport-size" class="docs-header-link">
+          <span header-link="check-the-current-viewport-size"></span>
+          Check the current viewport size
         </h4>
-      <p>The <code>isMatched</code> method is used to evaluate one or more media queries against the current viewport
-size.</p>
+      <p>You can use the <code>isMatched</code> method to evaluate one or more media queries against the current
+viewport size.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.isMatched(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);
 </code></pre>
 
@@ -19,8 +22,8 @@ size.</p>
           <span header-link="react-to-changes-to-the-viewport"></span>
           React to changes to the viewport
         </h4>
-      <p>The <code>observe</code> method is used to get an observable stream that will emit whenever one of the given
-media queries would have a different result.</p>
+      <p>You can use the <code>observe</code> method to get an observable stream that emits whenever the viewport size
+crosses a breakpoint.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">const</span> layoutChanges = breakpointObserver.observe([
   <span class="hljs-string">&#x27;(orientation: portrait)&#x27;</span>,
   <span class="hljs-string">&#x27;(orientation: landscape)&#x27;</span>,
@@ -31,49 +34,95 @@ layoutChanges.subscribe(<span class="hljs-function"><span class="hljs-params">re
 });
 </code></pre>
 
-        <h4 id="default-breakpoints" class="docs-header-link">
-          <span header-link="default-breakpoints"></span>
-          Default breakpoints
+        <h4 id="predefined-breakpoints" class="docs-header-link">
+          <span header-link="predefined-breakpoints"></span>
+          Predefined breakpoints
         </h4>
-      <p>A set of default media queries are available corresponding to breakpoints for different device
-types.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {BreakpointObserver, Breakpoints} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/layout&#x27;</span>;
-
-<span class="hljs-meta">@Component</span>({...})
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">breakpointObserver: BreakpointObserver</span>)</span> {
-    breakpointObserver.observe([
-      Breakpoints.HandsetLandscape,
-      Breakpoints.HandsetPortrait
-    ]).subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-      <span class="hljs-keyword">if</span> (result.matches) {
-        <span class="hljs-built_in">this</span>.activateHandsetLayout();
-      }
-    });
+      <p>The built-in <code>Breakpoints</code> constant offers the following predefined breakpoints for convenience,
+<a href="https://material.io/archive/guidelines/layout/responsive-ui.html">originally drawn from the Material Design
+specification</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Breakpoint name</th>
+<th>Media query</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>XSmall</code></td>
+<td><code>(max-width: 599.98px)</code></td>
+</tr>
+<tr>
+<td><code>Small</code></td>
+<td><code>(min-width: 600px) and (max-width: 959.98px)</code></td>
+</tr>
+<tr>
+<td><code>Medium</code></td>
+<td><code>(min-width: 960px) and (max-width: 1279.98px)</code></td>
+</tr>
+<tr>
+<td><code>Large</code></td>
+<td><code>(min-width: 1280px) and (max-width: 1919.98px)</code></td>
+</tr>
+<tr>
+<td><code>XLarge</code></td>
+<td><code>(min-width: 1920px)</code></td>
+</tr>
+<tr>
+<td><code>Handset</code></td>
+<td><code>(max-width: 599.98px) and (orientation: portrait), (max-width: 959.98px) and (orientation: landscape)</code></td>
+</tr>
+<tr>
+<td><code>Tablet</code></td>
+<td><code>(min-width: 600px) and (max-width: 839.98px) and (orientation: portrait), (min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape)</code></td>
+</tr>
+<tr>
+<td><code>Web</code></td>
+<td><code>(min-width: 840px) and (orientation: portrait), (min-width: 1280px) and (orientation: landscape)</code></td>
+</tr>
+<tr>
+<td><code>HandsetPortrait</code></td>
+<td><code>(max-width: 599.98px) and (orientation: portrait)</code></td>
+</tr>
+<tr>
+<td><code>TabletPortrait</code></td>
+<td><code>(min-width: 600px) and (max-width: 839.98px) and (orientation: portrait)</code></td>
+</tr>
+<tr>
+<td><code>WebPortrait</code></td>
+<td><code>(min-width: 840px) and (orientation: portrait)</code></td>
+</tr>
+<tr>
+<td><code>HandsetLandscape</code></td>
+<td><code>(max-width: 959.98px) and (orientation: landscape)</code></td>
+</tr>
+<tr>
+<td><code>TabletLandscape</code></td>
+<td><code>(min-width: 960px) and (max-width: 1279.98px) and (orientation: landscape)</code></td>
+</tr>
+<tr>
+<td><code>WebLandscape</code></td>
+<td><code>(min-width: 1280px) and (orientation: landscape)</code></td>
+</tr>
+</tbody></table>
+<p>You can use these predefined breakpoints with <code>BreakpointObserver</code>.</p>
+<pre><code class="language-ts">breakpointObserver.observe([
+  Breakpoints.HandsetLandscape,
+  Breakpoints.HandsetPortrait
+]).subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+  <span class="hljs-keyword">if</span> (result.matches) {
+    <span class="hljs-built_in">this</span>.activateHandsetLayout();
   }
-}
+});
 </code></pre>
-<p>The built-in breakpoints based on <a href="https://material.io/design/layout/responsive-layout-grid.html#breakpoints">Google&#39;s Material Design
-specification</a>.
-The available values are:</p>
-<ul>
-<li>Handset</li>
-<li>Tablet</li>
-<li>Web</li>
-<li>HandsetPortrait</li>
-<li>TabletPortrait</li>
-<li>WebPortrait</li>
-<li>HandsetLandscape</li>
-<li>TabletLandscape</li>
-<li>WebLandscape</li>
-</ul>
 
         <h3 id="mediamatcher" class="docs-header-link">
           <span header-link="mediamatcher"></span>
           MediaMatcher
         </h3>
-      <p><code>MediaMatcher</code> is a lower-level utility that wraps the native <code>matchMedia</code>. This service normalizes
-browser differences and serves as a convenient API that can be replaced with a fake in unit tests.
+      <p><code>MediaMatcher</code> is a low-level utility that wraps the native <code>matchMedia</code>. This service
+normalizes browser differences and serves as a convenient API that can be replaced with a fake in
+unit tests.
 The <code>matchMedia</code> method can be used to get a native
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList"><code>MediaQueryList</code></a>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
