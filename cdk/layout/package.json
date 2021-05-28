@@ -1,0 +1,9 @@
+{
+  "name": "@angular/components-examples/cdk/layout",
+  "main": "../../bundles/components-examples-cdk-layout.umd.js",
+  "fesm2015": "../../fesm2015/cdk/layout.js",
+  "esm2015": "../../esm2015/cdk/layout/layout_public_index.js",
+  "typings": "./layout_public_index.d.ts",
+  "module": "../../fesm2015/cdk/layout.js",
+  "es2015": "../../fesm2015/cdk/layout.js"
+}

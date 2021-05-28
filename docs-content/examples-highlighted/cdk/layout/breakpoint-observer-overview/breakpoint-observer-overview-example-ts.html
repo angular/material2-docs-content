@@ -1,0 +1,45 @@
+<span class="hljs-keyword">import</span> {BreakpointObserver, Breakpoints} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/layout&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {takeUntil} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Respond to viewport changes with BreakpointObserver */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;breakpoint-observer-overview-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;breakpoint-observer-overview-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;breakpoint-observer-overview-example.css&#x27;</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BreakpointObserverOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
+  destroyed = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
+  currentScreenSize: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">// Create a map to display breakpoint names for demonstration purposes.</span>
+  displayNameMap = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
+    [Breakpoints.XSmall, <span class="hljs-string">&#x27;XSmall&#x27;</span>],
+    [Breakpoints.Small, <span class="hljs-string">&#x27;Small&#x27;</span>],
+    [Breakpoints.Medium, <span class="hljs-string">&#x27;Medium&#x27;</span>],
+    [Breakpoints.Large, <span class="hljs-string">&#x27;Large&#x27;</span>],
+    [Breakpoints.XLarge, <span class="hljs-string">&#x27;XLarge&#x27;</span>],
+  ]);
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">breakpointObserver: BreakpointObserver</span>)</span> {
+    breakpointObserver.observe([
+      Breakpoints.XSmall,
+      Breakpoints.Small,
+      Breakpoints.Medium,
+      Breakpoints.Large,
+      Breakpoints.XLarge,
+    ]).pipe(takeUntil(<span class="hljs-built_in">this</span>.destroyed)).subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> query <span class="hljs-keyword">of</span> <span class="hljs-built_in">Object</span>.keys(result.breakpoints)) {
+          <span class="hljs-keyword">if</span> (result.breakpoints[query]) {
+            <span class="hljs-built_in">this</span>.currentScreenSize = <span class="hljs-built_in">this</span>.displayNameMap.get(query) ?? <span class="hljs-string">&#x27;Unknown&#x27;</span>;
+          }
+        }
+    });
+  }
+
+  <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.destroyed.next();
+    <span class="hljs-built_in">this</span>.destroyed.complete();
+  }
+}
