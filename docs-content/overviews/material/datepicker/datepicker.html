@@ -339,7 +339,7 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
   </tbody>
 </table>
 
-<p><code>MatMomentDateModule</code></p>
+<p><code>MatMomentDateModule</code> (installed via <code>@angular/material-moment-adapter</code>)</p>
 <table>
   <tbody>
   <tr>
@@ -364,8 +364,9 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
 <p><em>Please note: <code>MatNativeDateModule</code> is based off the functionality available in JavaScript&#39;s
 native <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code> object</a>.
 Thus it is not suitable for many locales. One of the biggest shortcomings of the native <code>Date</code>
-object is the inability to set the parse format. We highly recommend using the <code>MomentDateAdapter</code>
-or a custom <code>DateAdapter</code> that works with the formatting/parsing library of your choice.</em></p>
+object is the inability to set the parse format. We strongly recommend using an adapter based on
+a more robust formatting and parsing library. You can use the <code>MomentDateAdapter</code>
+or a custom <code>DateAdapter</code> that works with the library of your choice.</em></p>
 <p>These modules include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [MatDatepickerModule, MatNativeDateModule],
