@@ -564,6 +564,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/drag-drop"
         }
     },
+    "breakpoint-observer-overview": {
+        "packagePath": "cdk/layout/breakpoint-observer-overview",
+        "title": "Respond to viewport changes with BreakpointObserver",
+        "componentName": "BreakpointObserverOverviewExample",
+        "files": [
+            "breakpoint-observer-overview-example.ts",
+            "breakpoint-observer-overview-example.html",
+            "breakpoint-observer-overview-example.css"
+        ],
+        "selector": "breakpoint-observer-overview-example",
+        "additionalComponents": [],
+        "primaryFile": "breakpoint-observer-overview-example.ts",
+        "module": {
+            "name": "CdkLayoutExamplesModule",
+            "importSpecifier": "cdk/layout"
+        }
+    },
     "cdk-overlay-basic": {
         "packagePath": "cdk/overlay/cdk-overlay-basic",
         "title": "Overlay basic example",
