@@ -610,12 +610,12 @@ const ELEMENT_DATA$j = [
 ];
 
 function TableFilteringExample_th_7_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 12);
+    i0.ɵɵelementStart(0, "th", 13);
     i0.ɵɵtext(1, " No. ");
     i0.ɵɵelementEnd();
 } }
 function TableFilteringExample_td_8_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 13);
+    i0.ɵɵelementStart(0, "td", 14);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -624,12 +624,12 @@ function TableFilteringExample_td_8_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r12.position, " ");
 } }
 function TableFilteringExample_th_10_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 12);
+    i0.ɵɵelementStart(0, "th", 13);
     i0.ɵɵtext(1, " Name ");
     i0.ɵɵelementEnd();
 } }
 function TableFilteringExample_td_11_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 13);
+    i0.ɵɵelementStart(0, "td", 14);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -638,12 +638,12 @@ function TableFilteringExample_td_11_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r13.name, " ");
 } }
 function TableFilteringExample_th_13_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 12);
+    i0.ɵɵelementStart(0, "th", 13);
     i0.ɵɵtext(1, " Weight ");
     i0.ɵɵelementEnd();
 } }
 function TableFilteringExample_td_14_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 13);
+    i0.ɵɵelementStart(0, "td", 14);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -652,12 +652,12 @@ function TableFilteringExample_td_14_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r14.weight, " ");
 } }
 function TableFilteringExample_th_16_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 12);
+    i0.ɵɵelementStart(0, "th", 13);
     i0.ɵɵtext(1, " Symbol ");
     i0.ɵɵelementEnd();
 } }
 function TableFilteringExample_td_17_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 13);
+    i0.ɵɵelementStart(0, "td", 14);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -666,14 +666,14 @@ function TableFilteringExample_td_17_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r15.symbol, " ");
 } }
 function TableFilteringExample_tr_18_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "tr", 14);
-} }
-function TableFilteringExample_tr_19_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 15);
 } }
+function TableFilteringExample_tr_19_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "tr", 16);
+} }
 function TableFilteringExample_tr_20_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "tr", 16);
-    i0.ɵɵelementStart(1, "td", 17);
+    i0.ɵɵelementStart(0, "tr", 17);
+    i0.ɵɵelementStart(1, "td", 18);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -709,35 +709,35 @@ class TableFilteringExample {
     }
 }
 TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
-TableFilteringExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 21, vars: 3, consts: [["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["input", ""], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field");
+TableFilteringExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 21, vars: 3, consts: [["appearance", "standard"], ["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["input", ""], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelementStart(1, "mat-label");
         i0.ɵɵtext(2, "Filter");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "input", 0, 1);
+        i0.ɵɵelementStart(3, "input", 1, 2);
         i0.ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "table", 2);
-        i0.ɵɵelementContainerStart(6, 3);
-        i0.ɵɵtemplate(7, TableFilteringExample_th_7_Template, 2, 0, "th", 4);
-        i0.ɵɵtemplate(8, TableFilteringExample_td_8_Template, 2, 1, "td", 5);
+        i0.ɵɵelementStart(5, "table", 3);
+        i0.ɵɵelementContainerStart(6, 4);
+        i0.ɵɵtemplate(7, TableFilteringExample_th_7_Template, 2, 0, "th", 5);
+        i0.ɵɵtemplate(8, TableFilteringExample_td_8_Template, 2, 1, "td", 6);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(9, 6);
-        i0.ɵɵtemplate(10, TableFilteringExample_th_10_Template, 2, 0, "th", 4);
-        i0.ɵɵtemplate(11, TableFilteringExample_td_11_Template, 2, 1, "td", 5);
+        i0.ɵɵelementContainerStart(9, 7);
+        i0.ɵɵtemplate(10, TableFilteringExample_th_10_Template, 2, 0, "th", 5);
+        i0.ɵɵtemplate(11, TableFilteringExample_td_11_Template, 2, 1, "td", 6);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(12, 7);
-        i0.ɵɵtemplate(13, TableFilteringExample_th_13_Template, 2, 0, "th", 4);
-        i0.ɵɵtemplate(14, TableFilteringExample_td_14_Template, 2, 1, "td", 5);
+        i0.ɵɵelementContainerStart(12, 8);
+        i0.ɵɵtemplate(13, TableFilteringExample_th_13_Template, 2, 0, "th", 5);
+        i0.ɵɵtemplate(14, TableFilteringExample_td_14_Template, 2, 1, "td", 6);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(15, 8);
-        i0.ɵɵtemplate(16, TableFilteringExample_th_16_Template, 2, 0, "th", 4);
-        i0.ɵɵtemplate(17, TableFilteringExample_td_17_Template, 2, 1, "td", 5);
+        i0.ɵɵelementContainerStart(15, 9);
+        i0.ɵɵtemplate(16, TableFilteringExample_th_16_Template, 2, 0, "th", 5);
+        i0.ɵɵtemplate(17, TableFilteringExample_td_17_Template, 2, 1, "td", 6);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵtemplate(18, TableFilteringExample_tr_18_Template, 1, 0, "tr", 9);
-        i0.ɵɵtemplate(19, TableFilteringExample_tr_19_Template, 1, 0, "tr", 10);
-        i0.ɵɵtemplate(20, TableFilteringExample_tr_20_Template, 3, 1, "tr", 11);
+        i0.ɵɵtemplate(18, TableFilteringExample_tr_18_Template, 1, 0, "tr", 10);
+        i0.ɵɵtemplate(19, TableFilteringExample_tr_19_Template, 1, 0, "tr", 11);
+        i0.ɵɵtemplate(20, TableFilteringExample_tr_20_Template, 3, 1, "tr", 12);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵadvance(5);
@@ -1203,12 +1203,12 @@ TableMultipleHeaderFooterExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ 
     }], null, null); })();
 
 function TableOverviewExample_th_8_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 14);
+    i0.ɵɵelementStart(0, "th", 15);
     i0.ɵɵtext(1, " ID ");
     i0.ɵɵelementEnd();
 } }
 function TableOverviewExample_td_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 15);
+    i0.ɵɵelementStart(0, "td", 16);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1217,12 +1217,12 @@ function TableOverviewExample_td_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", row_r12.id, " ");
 } }
 function TableOverviewExample_th_11_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 14);
+    i0.ɵɵelementStart(0, "th", 15);
     i0.ɵɵtext(1, " Progress ");
     i0.ɵɵelementEnd();
 } }
 function TableOverviewExample_td_12_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 15);
+    i0.ɵɵelementStart(0, "td", 16);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1231,12 +1231,12 @@ function TableOverviewExample_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", row_r13.progress, "% ");
 } }
 function TableOverviewExample_th_14_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 14);
+    i0.ɵɵelementStart(0, "th", 15);
     i0.ɵɵtext(1, " Name ");
     i0.ɵɵelementEnd();
 } }
 function TableOverviewExample_td_15_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 15);
+    i0.ɵɵelementStart(0, "td", 16);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1245,12 +1245,12 @@ function TableOverviewExample_td_15_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", row_r14.name, " ");
 } }
 function TableOverviewExample_th_17_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 14);
+    i0.ɵɵelementStart(0, "th", 15);
     i0.ɵɵtext(1, " Fruit ");
     i0.ɵɵelementEnd();
 } }
 function TableOverviewExample_td_18_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 15);
+    i0.ɵɵelementStart(0, "td", 16);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1259,14 +1259,14 @@ function TableOverviewExample_td_18_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", row_r15.fruit, " ");
 } }
 function TableOverviewExample_tr_19_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "tr", 16);
-} }
-function TableOverviewExample_tr_20_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "tr", 17);
 } }
+function TableOverviewExample_tr_20_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "tr", 18);
+} }
 function TableOverviewExample_tr_21_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "tr", 18);
-    i0.ɵɵelementStart(1, "td", 19);
+    i0.ɵɵelementStart(0, "tr", 19);
+    i0.ɵɵelementStart(1, "td", 20);
     i0.ɵɵtext(2);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
@@ -1316,38 +1316,38 @@ TableOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableO
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
-    } }, decls: 23, vars: 5, consts: [["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], ["input", ""], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "fruit"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field");
+    } }, decls: 23, vars: 5, consts: [["appearance", "standard"], ["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], ["input", ""], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "fruit"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["class", "mat-row", 4, "matNoDataRow"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""], [1, "mat-row"], ["colspan", "4", 1, "mat-cell"]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelementStart(1, "mat-label");
         i0.ɵɵtext(2, "Filter");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "input", 0, 1);
+        i0.ɵɵelementStart(3, "input", 1, 2);
         i0.ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(5, "div", 2);
-        i0.ɵɵelementStart(6, "table", 3);
-        i0.ɵɵelementContainerStart(7, 4);
-        i0.ɵɵtemplate(8, TableOverviewExample_th_8_Template, 2, 0, "th", 5);
-        i0.ɵɵtemplate(9, TableOverviewExample_td_9_Template, 2, 1, "td", 6);
+        i0.ɵɵelementStart(5, "div", 3);
+        i0.ɵɵelementStart(6, "table", 4);
+        i0.ɵɵelementContainerStart(7, 5);
+        i0.ɵɵtemplate(8, TableOverviewExample_th_8_Template, 2, 0, "th", 6);
+        i0.ɵɵtemplate(9, TableOverviewExample_td_9_Template, 2, 1, "td", 7);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(10, 7);
-        i0.ɵɵtemplate(11, TableOverviewExample_th_11_Template, 2, 0, "th", 5);
-        i0.ɵɵtemplate(12, TableOverviewExample_td_12_Template, 2, 1, "td", 6);
+        i0.ɵɵelementContainerStart(10, 8);
+        i0.ɵɵtemplate(11, TableOverviewExample_th_11_Template, 2, 0, "th", 6);
+        i0.ɵɵtemplate(12, TableOverviewExample_td_12_Template, 2, 1, "td", 7);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(13, 8);
-        i0.ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 5);
-        i0.ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 1, "td", 6);
+        i0.ɵɵelementContainerStart(13, 9);
+        i0.ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 6);
+        i0.ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 1, "td", 7);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(16, 9);
-        i0.ɵɵtemplate(17, TableOverviewExample_th_17_Template, 2, 0, "th", 5);
-        i0.ɵɵtemplate(18, TableOverviewExample_td_18_Template, 2, 1, "td", 6);
+        i0.ɵɵelementContainerStart(16, 10);
+        i0.ɵɵtemplate(17, TableOverviewExample_th_17_Template, 2, 0, "th", 6);
+        i0.ɵɵtemplate(18, TableOverviewExample_td_18_Template, 2, 1, "td", 7);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 10);
-        i0.ɵɵtemplate(20, TableOverviewExample_tr_20_Template, 1, 0, "tr", 11);
-        i0.ɵɵtemplate(21, TableOverviewExample_tr_21_Template, 3, 1, "tr", 12);
+        i0.ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 11);
+        i0.ɵɵtemplate(20, TableOverviewExample_tr_20_Template, 1, 0, "tr", 12);
+        i0.ɵɵtemplate(21, TableOverviewExample_tr_21_Template, 3, 1, "tr", 13);
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(22, "mat-paginator", 13);
+        i0.ɵɵelement(22, "mat-paginator", 14);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵadvance(6);

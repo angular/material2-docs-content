@@ -75,46 +75,46 @@ SidenavAutosizeExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Side
 class SidenavBackdropExample {
 }
 SidenavBackdropExample.ɵfac = function SidenavBackdropExample_Factory(t) { return new (t || SidenavBackdropExample)(); };
-SidenavBackdropExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SidenavBackdropExample, selectors: [["sidenav-backdrop-example"]], decls: 29, vars: 4, consts: [[1, "example-container", 3, "hasBackdrop"], [3, "mode"], ["drawer", ""], ["value", "side"], ["mode", ""], ["value", "over"], ["value", "push"], ["hasBackdrop", ""], [3, "value"], ["mat-raised-button", "", 3, "click"]], template: function SidenavBackdropExample_Template(rf, ctx) { if (rf & 1) {
+SidenavBackdropExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SidenavBackdropExample, selectors: [["sidenav-backdrop-example"]], decls: 29, vars: 4, consts: [[1, "example-container", 3, "hasBackdrop"], [3, "mode"], ["drawer", ""], ["appearance", "fill"], ["value", "side"], ["mode", ""], ["value", "over"], ["value", "push"], ["hasBackdrop", ""], [3, "value"], ["mat-raised-button", "", 3, "click"]], template: function SidenavBackdropExample_Template(rf, ctx) { if (rf & 1) {
         const _r3 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-drawer-container", 0);
         i0.ɵɵelementStart(1, "mat-drawer", 1, 2);
         i0.ɵɵtext(3, "I'm a drawer");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "mat-drawer-content");
-        i0.ɵɵelementStart(5, "mat-form-field");
+        i0.ɵɵelementStart(5, "mat-form-field", 3);
         i0.ɵɵelementStart(6, "mat-label");
         i0.ɵɵtext(7, "Sidenav mode");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(8, "mat-select", 3, 4);
-        i0.ɵɵelementStart(10, "mat-option", 3);
+        i0.ɵɵelementStart(8, "mat-select", 4, 5);
+        i0.ɵɵelementStart(10, "mat-option", 4);
         i0.ɵɵtext(11, "Side");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(12, "mat-option", 5);
+        i0.ɵɵelementStart(12, "mat-option", 6);
         i0.ɵɵtext(13, "Over");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(14, "mat-option", 6);
+        i0.ɵɵelementStart(14, "mat-option", 7);
         i0.ɵɵtext(15, "Push");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(16, "mat-form-field");
+        i0.ɵɵelementStart(16, "mat-form-field", 3);
         i0.ɵɵelementStart(17, "mat-label");
         i0.ɵɵtext(18, "Has backdrop");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(19, "mat-select", null, 7);
+        i0.ɵɵelementStart(19, "mat-select", null, 8);
         i0.ɵɵelementStart(21, "mat-option");
         i0.ɵɵtext(22, "Unset");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(23, "mat-option", 8);
+        i0.ɵɵelementStart(23, "mat-option", 9);
         i0.ɵɵtext(24, "True");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(25, "mat-option", 8);
+        i0.ɵɵelementStart(25, "mat-option", 9);
         i0.ɵɵtext(26, "False");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(27, "button", 9);
+        i0.ɵɵelementStart(27, "button", 10);
         i0.ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { i0.ɵɵrestoreView(_r3); const _r0 = i0.ɵɵreference(2); return _r0.toggle(); });
         i0.ɵɵtext(28, "Toggle drawer");
         i0.ɵɵelementEnd();
@@ -253,30 +253,30 @@ function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(11, "p");
-    i0.ɵɵelementStart(12, "mat-form-field");
+    i0.ɵɵelementStart(12, "mat-form-field", 7);
     i0.ɵɵelementStart(13, "mat-label");
     i0.ɵɵtext(14, "Top gap");
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(15, "input", 7);
+    i0.ɵɵelement(15, "input", 8);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(16, "p");
-    i0.ɵɵelementStart(17, "mat-form-field");
+    i0.ɵɵelementStart(17, "mat-form-field", 7);
     i0.ɵɵelementStart(18, "mat-label");
     i0.ɵɵtext(19, "Bottom gap");
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(20, "input", 8);
+    i0.ɵɵelement(20, "input", 9);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementStart(21, "p");
-    i0.ɵɵelementStart(22, "button", 9);
+    i0.ɵɵelementStart(22, "button", 10);
     i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { i0.ɵɵrestoreView(_r4); const _r2 = i0.ɵɵreference(5); return _r2.toggle(); });
     i0.ɵɵtext(23, "Toggle");
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(24, "mat-toolbar", 10);
+    i0.ɵɵelementStart(24, "mat-toolbar", 11);
     i0.ɵɵtext(25, "Footer");
     i0.ɵɵelementEnd();
     i0.ɵɵelementContainerEnd();
@@ -306,7 +306,7 @@ class SidenavFixedExample {
     }
 }
 SidenavFixedExample.ɵfac = function SidenavFixedExample_Factory(t) { return new (t || SidenavFixedExample)(i0.ɵɵdirectiveInject(i1$1.FormBuilder)); };
-SidenavFixedExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SidenavFixedExample, selectors: [["sidenav-fixed-example"]], decls: 2, vars: 2, consts: [[4, "ngIf"], [1, "example-header"], [1, "example-container"], ["mode", "side", "opened", "", 1, "example-sidenav", 3, "fixedInViewport", "fixedTopGap", "fixedBottomGap"], ["sidenav", ""], [3, "formGroup"], ["formControlName", "fixed"], ["matInput", "", "type", "number", "formControlName", "top"], ["matInput", "", "type", "number", "formControlName", "bottom"], ["mat-button", "", 3, "click"], [1, "example-footer"]], template: function SidenavFixedExample_Template(rf, ctx) { if (rf & 1) {
+SidenavFixedExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SidenavFixedExample, selectors: [["sidenav-fixed-example"]], decls: 2, vars: 2, consts: [[4, "ngIf"], [1, "example-header"], [1, "example-container"], ["mode", "side", "opened", "", 1, "example-sidenav", 3, "fixedInViewport", "fixedTopGap", "fixedBottomGap"], ["sidenav", ""], [3, "formGroup"], ["formControlName", "fixed"], ["appearance", "fill"], ["matInput", "", "type", "number", "formControlName", "top"], ["matInput", "", "type", "number", "formControlName", "bottom"], ["mat-button", "", 3, "click"], [1, "example-footer"]], template: function SidenavFixedExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtemplate(0, SidenavFixedExample_ng_container_0_Template, 26, 5, "ng-container", 0);
         i0.ɵɵtemplate(1, SidenavFixedExample_div_1_Template, 2, 0, "div", 0);
     } if (rf & 2) {

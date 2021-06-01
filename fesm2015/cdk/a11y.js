@@ -89,7 +89,7 @@ FocusMonitorFocusViaExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type:
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.monitoredEl = _t.first);
-    } }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["appearance", "fill"], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) { if (rf & 1) {
         const _r3 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "button", null, 1);
@@ -99,30 +99,30 @@ FocusMonitorFocusViaExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type:
         i0.ɵɵtext(6, "2. Not Monitored");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "mat-form-field");
+        i0.ɵɵelementStart(7, "mat-form-field", 3);
         i0.ɵɵelementStart(8, "mat-label");
         i0.ɵɵtext(9, "Simulated focus origin");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "mat-select", 3, 4);
-        i0.ɵɵelementStart(12, "mat-option", 3);
+        i0.ɵɵelementStart(10, "mat-select", 4, 5);
+        i0.ɵɵelementStart(12, "mat-option", 4);
         i0.ɵɵtext(13, "Mouse");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(14, "mat-option", 5);
+        i0.ɵɵelementStart(14, "mat-option", 6);
         i0.ɵɵtext(15, "Keyboard");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(16, "mat-option", 6);
+        i0.ɵɵelementStart(16, "mat-option", 7);
         i0.ɵɵtext(17, "Touch");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(18, "mat-option", 7);
+        i0.ɵɵelementStart(18, "mat-option", 8);
         i0.ɵɵtext(19, "Programmatic");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(20, "button", 8);
+        i0.ɵɵelementStart(20, "button", 9);
         i0.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener() { i0.ɵɵrestoreView(_r3); const _r0 = i0.ɵɵreference(2); const _r2 = i0.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
         i0.ɵɵtext(21, " Focus button #1\n");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(22, "button", 8);
+        i0.ɵɵelementStart(22, "button", 9);
         i0.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener() { i0.ɵɵrestoreView(_r3); const _r1 = i0.ɵɵreference(5); const _r2 = i0.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
         i0.ɵɵtext(23, " Focus button #2\n");
         i0.ɵɵelementEnd();

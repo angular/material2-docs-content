@@ -28,28 +28,28 @@ function TextFieldAutofillDirectiveExample_mat_hint_10_Template(rf, ctx) { if (r
 class TextFieldAutofillDirectiveExample {
 }
 TextFieldAutofillDirectiveExample.ɵfac = function TextFieldAutofillDirectiveExample_Factory(t) { return new (t || TextFieldAutofillDirectiveExample)(); };
-TextFieldAutofillDirectiveExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [[3, "submit"], ["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
+TextFieldAutofillDirectiveExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [[3, "submit"], ["appearance", "fill"], ["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "form", 0);
         i0.ɵɵlistener("submit", function TextFieldAutofillDirectiveExample_Template_form_submit_0_listener($event) { return $event.preventDefault(); });
-        i0.ɵɵelementStart(1, "mat-form-field");
+        i0.ɵɵelementStart(1, "mat-form-field", 1);
         i0.ɵɵelementStart(2, "mat-label");
         i0.ɵɵtext(3, "First name");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(4, "input", 1);
+        i0.ɵɵelementStart(4, "input", 2);
         i0.ɵɵlistener("cdkAutofill", function TextFieldAutofillDirectiveExample_Template_input_cdkAutofill_4_listener($event) { return ctx.firstNameAutofilled = $event.isAutofilled; });
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(5, TextFieldAutofillDirectiveExample_mat_hint_5_Template, 2, 0, "mat-hint", 2);
+        i0.ɵɵtemplate(5, TextFieldAutofillDirectiveExample_mat_hint_5_Template, 2, 0, "mat-hint", 3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(6, "mat-form-field");
+        i0.ɵɵelementStart(6, "mat-form-field", 1);
         i0.ɵɵelementStart(7, "mat-label");
         i0.ɵɵtext(8, "Last name");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "input", 1);
+        i0.ɵɵelementStart(9, "input", 2);
         i0.ɵɵlistener("cdkAutofill", function TextFieldAutofillDirectiveExample_Template_input_cdkAutofill_9_listener($event) { return ctx.lastNameAutofilled = $event.isAutofilled; });
         i0.ɵɵelementEnd();
-        i0.ɵɵtemplate(10, TextFieldAutofillDirectiveExample_mat_hint_10_Template, 2, 0, "mat-hint", 2);
+        i0.ɵɵtemplate(10, TextFieldAutofillDirectiveExample_mat_hint_10_Template, 2, 0, "mat-hint", 3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "button", 3);
+        i0.ɵɵelementStart(11, "button", 4);
         i0.ɵɵtext(12, "Submit");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -104,24 +104,24 @@ TextFieldAutofillMonitorExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ t
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.firstName = _t.first);
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.lastName = _t.first);
-    } }, decls: 15, vars: 2, consts: [[3, "submit"], ["matInput", ""], ["first", ""], [4, "ngIf"], ["last", ""], ["mat-raised-button", ""]], template: function TextFieldAutofillMonitorExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 15, vars: 2, consts: [[3, "submit"], ["appearance", "fill"], ["matInput", ""], ["first", ""], [4, "ngIf"], ["last", ""], ["mat-raised-button", ""]], template: function TextFieldAutofillMonitorExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "form", 0);
         i0.ɵɵlistener("submit", function TextFieldAutofillMonitorExample_Template_form_submit_0_listener($event) { return $event.preventDefault(); });
-        i0.ɵɵelementStart(1, "mat-form-field");
+        i0.ɵɵelementStart(1, "mat-form-field", 1);
         i0.ɵɵelementStart(2, "mat-label");
         i0.ɵɵtext(3, "First name");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(4, "input", 1, 2);
-        i0.ɵɵtemplate(6, TextFieldAutofillMonitorExample_mat_hint_6_Template, 2, 0, "mat-hint", 3);
+        i0.ɵɵelement(4, "input", 2, 3);
+        i0.ɵɵtemplate(6, TextFieldAutofillMonitorExample_mat_hint_6_Template, 2, 0, "mat-hint", 4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "mat-form-field");
+        i0.ɵɵelementStart(7, "mat-form-field", 1);
         i0.ɵɵelementStart(8, "mat-label");
         i0.ɵɵtext(9, "Last name");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(10, "input", 1, 4);
-        i0.ɵɵtemplate(12, TextFieldAutofillMonitorExample_mat_hint_12_Template, 2, 0, "mat-hint", 3);
+        i0.ɵɵelement(10, "input", 2, 5);
+        i0.ɵɵtemplate(12, TextFieldAutofillMonitorExample_mat_hint_12_Template, 2, 0, "mat-hint", 4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(13, "button", 5);
+        i0.ɵɵelementStart(13, "button", 6);
         i0.ɵɵtext(14, "Submit");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -164,38 +164,38 @@ TextFieldAutosizeTextareaExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ 
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.autosize = _t.first);
-    } }, decls: 22, vars: 2, consts: [["value", "16px", 3, "selectionChange"], ["fontSize", ""], ["value", "10px"], ["value", "12px"], ["value", "14px"], ["value", "16px"], ["value", "18px"], ["value", "20px"], ["matInput", "", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "1", "cdkAutosizeMaxRows", "5"], ["autosize", "cdkTextareaAutosize"]], template: function TextFieldAutosizeTextareaExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field");
+    } }, decls: 22, vars: 2, consts: [["appearance", "fill"], ["value", "16px", 3, "selectionChange"], ["fontSize", ""], ["value", "10px"], ["value", "12px"], ["value", "14px"], ["value", "16px"], ["value", "18px"], ["value", "20px"], ["matInput", "", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "1", "cdkAutosizeMaxRows", "5"], ["autosize", "cdkTextareaAutosize"]], template: function TextFieldAutosizeTextareaExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelementStart(1, "mat-label");
         i0.ɵɵtext(2, "Font size");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(3, "mat-select", 0, 1);
+        i0.ɵɵelementStart(3, "mat-select", 1, 2);
         i0.ɵɵlistener("selectionChange", function TextFieldAutosizeTextareaExample_Template_mat_select_selectionChange_3_listener() { return ctx.triggerResize(); });
-        i0.ɵɵelementStart(5, "mat-option", 2);
+        i0.ɵɵelementStart(5, "mat-option", 3);
         i0.ɵɵtext(6, "10px");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "mat-option", 3);
+        i0.ɵɵelementStart(7, "mat-option", 4);
         i0.ɵɵtext(8, "12px");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "mat-option", 4);
+        i0.ɵɵelementStart(9, "mat-option", 5);
         i0.ɵɵtext(10, "14px");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(11, "mat-option", 5);
+        i0.ɵɵelementStart(11, "mat-option", 6);
         i0.ɵɵtext(12, "16px");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(13, "mat-option", 6);
+        i0.ɵɵelementStart(13, "mat-option", 7);
         i0.ɵɵtext(14, "18px");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(15, "mat-option", 7);
+        i0.ɵɵelementStart(15, "mat-option", 8);
         i0.ɵɵtext(16, "20px");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(17, "mat-form-field");
+        i0.ɵɵelementStart(17, "mat-form-field", 0);
         i0.ɵɵelementStart(18, "mat-label");
         i0.ɵɵtext(19, "Autosize textarea");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(20, "textarea", 8, 9);
+        i0.ɵɵelement(20, "textarea", 9, 10);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         const _r0 = i0.ɵɵreference(4);

@@ -346,14 +346,14 @@
         return MdcFormFieldCustomControlExample;
     }());
     MdcFormFieldCustomControlExample.ɵfac = function MdcFormFieldCustomControlExample_Factory(t) { return new (t || MdcFormFieldCustomControlExample)(); };
-    MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) {
+    MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["appearance", "fill"], ["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(0, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-label");
                 i0__namespace.ɵɵtext(2, "Phone number");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(3, "example-tel-input", 0);
-                i0__namespace.ɵɵelementStart(4, "mat-icon", 1);
+                i0__namespace.ɵɵelement(3, "example-tel-input", 1);
+                i0__namespace.ɵɵelementStart(4, "mat-icon", 2);
                 i0__namespace.ɵɵtext(5, "phone");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementStart(6, "mat-hint");

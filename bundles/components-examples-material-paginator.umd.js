@@ -77,36 +77,36 @@
         return PaginatorConfigurableExample;
     }());
     PaginatorConfigurableExample.ɵfac = function PaginatorConfigurableExample_Factory(t) { return new (t || PaginatorConfigurableExample)(); };
-    PaginatorConfigurableExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: PaginatorConfigurableExample, selectors: [["paginator-configurable-example"]], decls: 14, vars: 9, consts: [["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], ["matInput", "", "placeholder", "Ex. 10,25,50", 3, "ngModel", "ngModelOptions", "ngModelChange"], [3, "length", "pageSize", "pageSizeOptions", "page"], [4, "ngIf"]], template: function PaginatorConfigurableExample_Template(rf, ctx) {
+    PaginatorConfigurableExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: PaginatorConfigurableExample, selectors: [["paginator-configurable-example"]], decls: 14, vars: 9, consts: [["appearance", "fill"], ["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], ["matInput", "", "placeholder", "Ex. 10,25,50", 3, "ngModel", "ngModelOptions", "ngModelChange"], [3, "length", "pageSize", "pageSizeOptions", "page"], [4, "ngIf"]], template: function PaginatorConfigurableExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(0, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-label");
                 i0__namespace.ɵɵtext(2, "List length");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(3, "input", 0);
+                i0__namespace.ɵɵelementStart(3, "input", 1);
                 i0__namespace.ɵɵlistener("ngModelChange", function PaginatorConfigurableExample_Template_input_ngModelChange_3_listener($event) { return ctx.length = $event; });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(4, "mat-form-field");
+                i0__namespace.ɵɵelementStart(4, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(5, "mat-label");
                 i0__namespace.ɵɵtext(6, "Page size");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(7, "input", 0);
+                i0__namespace.ɵɵelementStart(7, "input", 1);
                 i0__namespace.ɵɵlistener("ngModelChange", function PaginatorConfigurableExample_Template_input_ngModelChange_7_listener($event) { return ctx.pageSize = $event; });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(8, "mat-form-field");
+                i0__namespace.ɵɵelementStart(8, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(9, "mat-label");
                 i0__namespace.ɵɵtext(10, "Page size options");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(11, "input", 1);
+                i0__namespace.ɵɵelementStart(11, "input", 2);
                 i0__namespace.ɵɵlistener("ngModelChange", function PaginatorConfigurableExample_Template_input_ngModelChange_11_listener($event) { return ctx.setPageSizeOptions($event); });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(12, "mat-paginator", 2);
+                i0__namespace.ɵɵelementStart(12, "mat-paginator", 3);
                 i0__namespace.ɵɵlistener("page", function PaginatorConfigurableExample_Template_mat_paginator_page_12_listener($event) { return ctx.pageEvent = $event; });
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵtemplate(13, PaginatorConfigurableExample_div_13_Template, 9, 3, "div", 3);
+                i0__namespace.ɵɵtemplate(13, PaginatorConfigurableExample_div_13_Template, 9, 3, "div", 4);
             }
             if (rf & 2) {
                 i0__namespace.ɵɵadvance(3);

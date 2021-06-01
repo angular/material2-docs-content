@@ -16,13 +16,13 @@ import { Subject } from 'rxjs';
 class MdcFormFieldCustomControlExample {
 }
 MdcFormFieldCustomControlExample.ɵfac = function MdcFormFieldCustomControlExample_Factory(t) { return new (t || MdcFormFieldCustomControlExample)(); };
-MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-form-field");
+MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MdcFormFieldCustomControlExample, selectors: [["mdc-form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["appearance", "fill"], ["required", ""], ["matSuffix", ""]], template: function MdcFormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelementStart(1, "mat-label");
         i0.ɵɵtext(2, "Phone number");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(3, "example-tel-input", 0);
-        i0.ɵɵelementStart(4, "mat-icon", 1);
+        i0.ɵɵelement(3, "example-tel-input", 1);
+        i0.ɵɵelementStart(4, "mat-icon", 2);
         i0.ɵɵtext(5, "phone");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(6, "mat-hint");

@@ -124,7 +124,7 @@
                 var _t = void 0;
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.monitoredEl = _t.first);
             }
-        }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) {
+        }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["appearance", "fill"], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r3_1 = i0__namespace.ɵɵgetCurrentView();
                 i0__namespace.ɵɵelementStart(0, "div", 0);
@@ -135,30 +135,30 @@
                 i0__namespace.ɵɵtext(6, "2. Not Monitored");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(7, "mat-form-field");
+                i0__namespace.ɵɵelementStart(7, "mat-form-field", 3);
                 i0__namespace.ɵɵelementStart(8, "mat-label");
                 i0__namespace.ɵɵtext(9, "Simulated focus origin");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(10, "mat-select", 3, 4);
-                i0__namespace.ɵɵelementStart(12, "mat-option", 3);
+                i0__namespace.ɵɵelementStart(10, "mat-select", 4, 5);
+                i0__namespace.ɵɵelementStart(12, "mat-option", 4);
                 i0__namespace.ɵɵtext(13, "Mouse");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(14, "mat-option", 5);
+                i0__namespace.ɵɵelementStart(14, "mat-option", 6);
                 i0__namespace.ɵɵtext(15, "Keyboard");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(16, "mat-option", 6);
+                i0__namespace.ɵɵelementStart(16, "mat-option", 7);
                 i0__namespace.ɵɵtext(17, "Touch");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(18, "mat-option", 7);
+                i0__namespace.ɵɵelementStart(18, "mat-option", 8);
                 i0__namespace.ɵɵtext(19, "Programmatic");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(20, "button", 8);
+                i0__namespace.ɵɵelementStart(20, "button", 9);
                 i0__namespace.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener() { i0__namespace.ɵɵrestoreView(_r3_1); var _r0 = i0__namespace.ɵɵreference(2); var _r2 = i0__namespace.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
                 i0__namespace.ɵɵtext(21, " Focus button #1\n");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(22, "button", 8);
+                i0__namespace.ɵɵelementStart(22, "button", 9);
                 i0__namespace.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener() { i0__namespace.ɵɵrestoreView(_r3_1); var _r1 = i0__namespace.ɵɵreference(5); var _r2 = i0__namespace.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
                 i0__namespace.ɵɵtext(23, " Focus button #2\n");
                 i0__namespace.ɵɵelementEnd();

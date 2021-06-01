@@ -358,17 +358,17 @@
         return SnackBarComponentExample;
     }());
     SnackBarComponentExample.ɵfac = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.MatSnackBar)); };
-    SnackBarComponentExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) {
+    SnackBarComponentExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["appearance", "fill"], ["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(0, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-label");
                 i0__namespace.ɵɵtext(2, "Snack bar duration (seconds)");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(3, "input", 0);
+                i0__namespace.ɵɵelementStart(3, "input", 1);
                 i0__namespace.ɵɵlistener("ngModelChange", function SnackBarComponentExample_Template_input_ngModelChange_3_listener($event) { return ctx.durationInSeconds = $event; });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(4, "button", 1);
+                i0__namespace.ɵɵelementStart(4, "button", 2);
                 i0__namespace.ɵɵlistener("click", function SnackBarComponentExample_Template_button_click_4_listener() { return ctx.openSnackBar(); });
                 i0__namespace.ɵɵtext(5, " Pizza party\n");
                 i0__namespace.ɵɵelementEnd();
@@ -425,22 +425,22 @@
         return SnackBarOverviewExample;
     }());
     SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.MatSnackBar)); };
-    SnackBarOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) {
+    SnackBarOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["appearance", "fill"], ["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r2_1 = i0__namespace.ɵɵgetCurrentView();
-                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(0, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-label");
                 i0__namespace.ɵɵtext(2, "Message");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(3, "input", 0, 1);
+                i0__namespace.ɵɵelement(3, "input", 1, 2);
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(5, "mat-form-field");
+                i0__namespace.ɵɵelementStart(5, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(6, "mat-label");
                 i0__namespace.ɵɵtext(7, "Action");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(8, "input", 2, 3);
+                i0__namespace.ɵɵelement(8, "input", 3, 4);
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(10, "button", 4);
+                i0__namespace.ɵɵelementStart(10, "button", 5);
                 i0__namespace.ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_10_listener() { i0__namespace.ɵɵrestoreView(_r2_1); var _r0 = i0__namespace.ɵɵreference(4); var _r1 = i0__namespace.ɵɵreference(9); return ctx.openSnackBar(_r0.value, _r1.value); });
                 i0__namespace.ɵɵtext(11, "Show snack-bar");
                 i0__namespace.ɵɵelementEnd();
@@ -475,46 +475,46 @@
         return SnackBarPositionExample;
     }());
     SnackBarPositionExample.ɵfac = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.MatSnackBar)); };
-    SnackBarPositionExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [[3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) {
+    SnackBarPositionExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [["appearance", "fill"], [3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) {
             if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(0, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-label");
                 i0__namespace.ɵɵtext(2, "Horizontal position");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(3, "mat-select", 0);
+                i0__namespace.ɵɵelementStart(3, "mat-select", 1);
                 i0__namespace.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_3_listener($event) { return ctx.horizontalPosition = $event; });
-                i0__namespace.ɵɵelementStart(4, "mat-option", 1);
+                i0__namespace.ɵɵelementStart(4, "mat-option", 2);
                 i0__namespace.ɵɵtext(5, "Start");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(6, "mat-option", 2);
+                i0__namespace.ɵɵelementStart(6, "mat-option", 3);
                 i0__namespace.ɵɵtext(7, "Center");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(8, "mat-option", 3);
+                i0__namespace.ɵɵelementStart(8, "mat-option", 4);
                 i0__namespace.ɵɵtext(9, "End");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(10, "mat-option", 4);
+                i0__namespace.ɵɵelementStart(10, "mat-option", 5);
                 i0__namespace.ɵɵtext(11, "Left");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(12, "mat-option", 5);
+                i0__namespace.ɵɵelementStart(12, "mat-option", 6);
                 i0__namespace.ɵɵtext(13, "Right");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(14, "mat-form-field");
+                i0__namespace.ɵɵelementStart(14, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(15, "mat-label");
                 i0__namespace.ɵɵtext(16, "Vertical position");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(17, "mat-select", 0);
+                i0__namespace.ɵɵelementStart(17, "mat-select", 1);
                 i0__namespace.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_17_listener($event) { return ctx.verticalPosition = $event; });
-                i0__namespace.ɵɵelementStart(18, "mat-option", 6);
+                i0__namespace.ɵɵelementStart(18, "mat-option", 7);
                 i0__namespace.ɵɵtext(19, "Top");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(20, "mat-option", 7);
+                i0__namespace.ɵɵelementStart(20, "mat-option", 8);
                 i0__namespace.ɵɵtext(21, "Bottom");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(22, "button", 8);
+                i0__namespace.ɵɵelementStart(22, "button", 9);
                 i0__namespace.ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_22_listener() { return ctx.openSnackBar(); });
                 i0__namespace.ɵɵtext(23, " Pool party!\n");
                 i0__namespace.ɵɵelementEnd();

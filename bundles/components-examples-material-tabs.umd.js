@@ -391,9 +391,9 @@
     function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) {
         if (rf & 1) {
             var _r5_1 = i0__namespace.ɵɵgetCurrentView();
-            i0__namespace.ɵɵelementStart(0, "mat-tab", 5);
+            i0__namespace.ɵɵelementStart(0, "mat-tab", 6);
             i0__namespace.ɵɵtext(1);
-            i0__namespace.ɵɵelementStart(2, "button", 6);
+            i0__namespace.ɵɵelementStart(2, "button", 7);
             i0__namespace.ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener() { var restoredCtx = i0__namespace.ɵɵrestoreView(_r5_1); var index_r3 = restoredCtx.index; var ctx_r4 = i0__namespace.ɵɵnextContext(); return ctx_r4.removeTab(index_r3); });
             i0__namespace.ɵɵtext(3, " Delete Tab ");
             i0__namespace.ɵɵelementEnd();
@@ -429,27 +429,27 @@
         return TabGroupDynamicExample;
     }());
     TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-    TabGroupDynamicExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) {
+    TabGroupDynamicExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["appearance", "fill"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r6_1 = i0__namespace.ɵɵgetCurrentView();
-                i0__namespace.ɵɵelementStart(0, "mat-form-field");
+                i0__namespace.ɵɵelementStart(0, "mat-form-field", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-label");
                 i0__namespace.ɵɵtext(2, "Selected tab index");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(3, "input", 0);
+                i0__namespace.ɵɵelement(3, "input", 1);
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementStart(4, "div");
-                i0__namespace.ɵɵelementStart(5, "button", 1);
+                i0__namespace.ɵɵelementStart(5, "button", 2);
                 i0__namespace.ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener() { i0__namespace.ɵɵrestoreView(_r6_1); var _r0 = i0__namespace.ɵɵreference(8); return ctx.addTab(_r0.checked); });
                 i0__namespace.ɵɵtext(6, " Add new tab ");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(7, "mat-checkbox", null, 2);
+                i0__namespace.ɵɵelementStart(7, "mat-checkbox", null, 3);
                 i0__namespace.ɵɵtext(9, " Select tab after adding ");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(10, "mat-tab-group", 3);
+                i0__namespace.ɵɵelementStart(10, "mat-tab-group", 4);
                 i0__namespace.ɵɵlistener("selectedIndexChange", function TabGroupDynamicExample_Template_mat_tab_group_selectedIndexChange_10_listener($event) { return ctx.selected.setValue($event); });
-                i0__namespace.ɵɵtemplate(11, TabGroupDynamicExample_mat_tab_11_Template, 4, 3, "mat-tab", 4);
+                i0__namespace.ɵɵtemplate(11, TabGroupDynamicExample_mat_tab_11_Template, 4, 3, "mat-tab", 5);
                 i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {

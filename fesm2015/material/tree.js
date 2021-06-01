@@ -41,13 +41,13 @@ function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     const _r9 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-tree-node", 6);
     i0.ɵɵelement(1, "button", 4);
-    i0.ɵɵelementStart(2, "mat-form-field");
+    i0.ɵɵelementStart(2, "mat-form-field", 7);
     i0.ɵɵelementStart(3, "mat-label");
     i0.ɵɵtext(4, "New item...");
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(5, "input", 7, 8);
+    i0.ɵɵelement(5, "input", 8, 9);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(7, "button", 9);
+    i0.ɵɵelementStart(7, "button", 10);
     i0.ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_7_listener() { const restoredCtx = i0.ɵɵrestoreView(_r9); const node_r6 = restoredCtx.$implicit; const _r7 = i0.ɵɵreference(6); const ctx_r8 = i0.ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
     i0.ɵɵtext(8, "Save");
     i0.ɵɵelementEnd();
@@ -56,16 +56,16 @@ function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
 function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
     const _r12 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-tree-node", 6);
-    i0.ɵɵelementStart(1, "button", 10);
-    i0.ɵɵelementStart(2, "mat-icon", 11);
+    i0.ɵɵelementStart(1, "button", 11);
+    i0.ɵɵelementStart(2, "mat-icon", 12);
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd();
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(4, "mat-checkbox", 12);
+    i0.ɵɵelementStart(4, "mat-checkbox", 13);
     i0.ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener() { const restoredCtx = i0.ɵɵrestoreView(_r12); const node_r10 = restoredCtx.$implicit; const ctx_r11 = i0.ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
     i0.ɵɵtext(5);
     i0.ɵɵelementEnd();
-    i0.ɵɵelementStart(6, "button", 13);
+    i0.ɵɵelementStart(6, "button", 14);
     i0.ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener() { const restoredCtx = i0.ɵɵrestoreView(_r12); const node_r10 = restoredCtx.$implicit; const ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
     i0.ɵɵelementStart(7, "mat-icon");
     i0.ɵɵtext(8, "add");
@@ -291,7 +291,7 @@ class TreeChecklistExample {
     }
 }
 TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(i0.ɵɵdirectiveInject(ChecklistDatabase)); };
-TreeChecklistExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [i0.ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
+TreeChecklistExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [i0.ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["appearance", "fill"], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-tree", 0);
         i0.ɵɵtemplate(1, TreeChecklistExample_mat_tree_node_1_Template, 4, 2, "mat-tree-node", 1);
         i0.ɵɵtemplate(2, TreeChecklistExample_mat_tree_node_2_Template, 9, 0, "mat-tree-node", 2);

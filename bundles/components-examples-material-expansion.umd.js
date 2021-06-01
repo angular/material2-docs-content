@@ -49,7 +49,7 @@
                 var _t = void 0;
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.accordion = _t.first);
             }
-        }, decls: 48, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["disabled", ""], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) {
+        }, decls: 48, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["appearance", "fill"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["disabled", ""], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r1_1 = i0__namespace.ɵɵgetCurrentView();
                 i0__namespace.ɵɵelementStart(0, "div", 0);
@@ -75,20 +75,20 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(14, "mat-form-field");
+                i0__namespace.ɵɵelementStart(14, "mat-form-field", 3);
                 i0__namespace.ɵɵelementStart(15, "mat-label");
                 i0__namespace.ɵɵtext(16, "First name");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(17, "input", 3);
+                i0__namespace.ɵɵelement(17, "input", 4);
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(18, "mat-form-field");
+                i0__namespace.ɵɵelementStart(18, "mat-form-field", 3);
                 i0__namespace.ɵɵelementStart(19, "mat-label");
                 i0__namespace.ɵɵtext(20, "Age");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(21, "input", 4);
+                i0__namespace.ɵɵelement(21, "input", 5);
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(22, "mat-expansion-panel", 5);
+                i0__namespace.ɵɵelementStart(22, "mat-expansion-panel", 6);
                 i0__namespace.ɵɵelementStart(23, "mat-expansion-panel-header");
                 i0__namespace.ɵɵelementStart(24, "mat-panel-title");
                 i0__namespace.ɵɵtext(25, " Destination ");
@@ -100,11 +100,11 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(30, "mat-form-field");
+                i0__namespace.ɵɵelementStart(30, "mat-form-field", 3);
                 i0__namespace.ɵɵelementStart(31, "mat-label");
                 i0__namespace.ɵɵtext(32, "Country");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(33, "input", 3);
+                i0__namespace.ɵɵelement(33, "input", 4);
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementStart(34, "mat-expansion-panel");
@@ -119,15 +119,15 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(42, "mat-form-field");
+                i0__namespace.ɵɵelementStart(42, "mat-form-field", 3);
                 i0__namespace.ɵɵelementStart(43, "mat-label");
                 i0__namespace.ɵɵtext(44, "Date");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(45, "input", 6);
+                i0__namespace.ɵɵelementStart(45, "input", 7);
                 i0__namespace.ɵɵlistener("focus", function ExpansionExpandCollapseAllExample_Template_input_focus_45_listener() { i0__namespace.ɵɵrestoreView(_r1_1); var _r0 = i0__namespace.ɵɵreference(47); return _r0.open(); });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(46, "mat-datepicker", null, 7);
+                i0__namespace.ɵɵelement(46, "mat-datepicker", null, 8);
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
             }
@@ -228,7 +228,7 @@
         return ExpansionStepsExample;
     }());
     ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
-    ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) {
+    ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["appearance", "fill"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) {
             if (rf & 1) {
                 var _r1_1 = i0__namespace.ɵɵgetCurrentView();
                 i0__namespace.ɵɵelementStart(0, "mat-accordion", 0);
@@ -245,20 +245,20 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(9, "mat-form-field");
+                i0__namespace.ɵɵelementStart(9, "mat-form-field", 2);
                 i0__namespace.ɵɵelementStart(10, "mat-label");
                 i0__namespace.ɵɵtext(11, "First name");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(12, "input", 2);
+                i0__namespace.ɵɵelement(12, "input", 3);
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(13, "mat-form-field");
+                i0__namespace.ɵɵelementStart(13, "mat-form-field", 2);
                 i0__namespace.ɵɵelementStart(14, "mat-label");
                 i0__namespace.ɵɵtext(15, "Age");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(16, "input", 3);
+                i0__namespace.ɵɵelement(16, "input", 4);
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementStart(17, "mat-action-row");
-                i0__namespace.ɵɵelementStart(18, "button", 4);
+                i0__namespace.ɵɵelementStart(18, "button", 5);
                 i0__namespace.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_18_listener() { return ctx.nextStep(); });
                 i0__namespace.ɵɵtext(19, "Next");
                 i0__namespace.ɵɵelementEnd();
@@ -277,18 +277,18 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(28, "mat-form-field");
+                i0__namespace.ɵɵelementStart(28, "mat-form-field", 2);
                 i0__namespace.ɵɵelementStart(29, "mat-label");
                 i0__namespace.ɵɵtext(30, "Country");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(31, "input", 2);
+                i0__namespace.ɵɵelement(31, "input", 3);
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementStart(32, "mat-action-row");
-                i0__namespace.ɵɵelementStart(33, "button", 5);
+                i0__namespace.ɵɵelementStart(33, "button", 6);
                 i0__namespace.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_33_listener() { return ctx.prevStep(); });
                 i0__namespace.ɵɵtext(34, "Previous");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(35, "button", 4);
+                i0__namespace.ɵɵelementStart(35, "button", 5);
                 i0__namespace.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_35_listener() { return ctx.nextStep(); });
                 i0__namespace.ɵɵtext(36, "Next");
                 i0__namespace.ɵɵelementEnd();
@@ -307,21 +307,21 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(45, "mat-form-field");
+                i0__namespace.ɵɵelementStart(45, "mat-form-field", 2);
                 i0__namespace.ɵɵelementStart(46, "mat-label");
                 i0__namespace.ɵɵtext(47, "Date");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(48, "input", 6);
+                i0__namespace.ɵɵelementStart(48, "input", 7);
                 i0__namespace.ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_48_listener() { i0__namespace.ɵɵrestoreView(_r1_1); var _r0 = i0__namespace.ɵɵreference(50); return _r0.open(); });
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(49, "mat-datepicker", null, 7);
+                i0__namespace.ɵɵelement(49, "mat-datepicker", null, 8);
                 i0__namespace.ɵɵelementStart(51, "mat-action-row");
-                i0__namespace.ɵɵelementStart(52, "button", 5);
+                i0__namespace.ɵɵelementStart(52, "button", 6);
                 i0__namespace.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_52_listener() { return ctx.prevStep(); });
                 i0__namespace.ɵɵtext(53, "Previous");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(54, "button", 4);
+                i0__namespace.ɵɵelementStart(54, "button", 5);
                 i0__namespace.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_54_listener() { return ctx.nextStep(); });
                 i0__namespace.ɵɵtext(55, "End");
                 i0__namespace.ɵɵelementEnd();

@@ -24,7 +24,7 @@ ExpansionExpandCollapseAllExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.accordion = _t.first);
-    } }, decls: 48, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["disabled", ""], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 48, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["appearance", "fill"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["disabled", ""], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
         const _r1 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "button", 1);
@@ -49,20 +49,20 @@ ExpansionExpandCollapseAllExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(14, "mat-form-field");
+        i0.ɵɵelementStart(14, "mat-form-field", 3);
         i0.ɵɵelementStart(15, "mat-label");
         i0.ɵɵtext(16, "First name");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(17, "input", 3);
+        i0.ɵɵelement(17, "input", 4);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(18, "mat-form-field");
+        i0.ɵɵelementStart(18, "mat-form-field", 3);
         i0.ɵɵelementStart(19, "mat-label");
         i0.ɵɵtext(20, "Age");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(21, "input", 4);
+        i0.ɵɵelement(21, "input", 5);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(22, "mat-expansion-panel", 5);
+        i0.ɵɵelementStart(22, "mat-expansion-panel", 6);
         i0.ɵɵelementStart(23, "mat-expansion-panel-header");
         i0.ɵɵelementStart(24, "mat-panel-title");
         i0.ɵɵtext(25, " Destination ");
@@ -74,11 +74,11 @@ ExpansionExpandCollapseAllExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(30, "mat-form-field");
+        i0.ɵɵelementStart(30, "mat-form-field", 3);
         i0.ɵɵelementStart(31, "mat-label");
         i0.ɵɵtext(32, "Country");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(33, "input", 3);
+        i0.ɵɵelement(33, "input", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(34, "mat-expansion-panel");
@@ -93,15 +93,15 @@ ExpansionExpandCollapseAllExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(42, "mat-form-field");
+        i0.ɵɵelementStart(42, "mat-form-field", 3);
         i0.ɵɵelementStart(43, "mat-label");
         i0.ɵɵtext(44, "Date");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(45, "input", 6);
+        i0.ɵɵelementStart(45, "input", 7);
         i0.ɵɵlistener("focus", function ExpansionExpandCollapseAllExample_Template_input_focus_45_listener() { i0.ɵɵrestoreView(_r1); const _r0 = i0.ɵɵreference(47); return _r0.open(); });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(46, "mat-datepicker", null, 7);
+        i0.ɵɵelement(46, "mat-datepicker", null, 8);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -191,7 +191,7 @@ class ExpansionStepsExample {
     }
 }
 ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
-ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
+ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["appearance", "fill"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
         const _r1 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-accordion", 0);
         i0.ɵɵelementStart(1, "mat-expansion-panel", 1);
@@ -207,20 +207,20 @@ ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Expan
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(9, "mat-form-field");
+        i0.ɵɵelementStart(9, "mat-form-field", 2);
         i0.ɵɵelementStart(10, "mat-label");
         i0.ɵɵtext(11, "First name");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(12, "input", 2);
+        i0.ɵɵelement(12, "input", 3);
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(13, "mat-form-field");
+        i0.ɵɵelementStart(13, "mat-form-field", 2);
         i0.ɵɵelementStart(14, "mat-label");
         i0.ɵɵtext(15, "Age");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(16, "input", 3);
+        i0.ɵɵelement(16, "input", 4);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(17, "mat-action-row");
-        i0.ɵɵelementStart(18, "button", 4);
+        i0.ɵɵelementStart(18, "button", 5);
         i0.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_18_listener() { return ctx.nextStep(); });
         i0.ɵɵtext(19, "Next");
         i0.ɵɵelementEnd();
@@ -239,18 +239,18 @@ ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Expan
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(28, "mat-form-field");
+        i0.ɵɵelementStart(28, "mat-form-field", 2);
         i0.ɵɵelementStart(29, "mat-label");
         i0.ɵɵtext(30, "Country");
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(31, "input", 2);
+        i0.ɵɵelement(31, "input", 3);
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(32, "mat-action-row");
-        i0.ɵɵelementStart(33, "button", 5);
+        i0.ɵɵelementStart(33, "button", 6);
         i0.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_33_listener() { return ctx.prevStep(); });
         i0.ɵɵtext(34, "Previous");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(35, "button", 4);
+        i0.ɵɵelementStart(35, "button", 5);
         i0.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_35_listener() { return ctx.nextStep(); });
         i0.ɵɵtext(36, "Next");
         i0.ɵɵelementEnd();
@@ -269,21 +269,21 @@ ExpansionStepsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Expan
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(45, "mat-form-field");
+        i0.ɵɵelementStart(45, "mat-form-field", 2);
         i0.ɵɵelementStart(46, "mat-label");
         i0.ɵɵtext(47, "Date");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(48, "input", 6);
+        i0.ɵɵelementStart(48, "input", 7);
         i0.ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_48_listener() { i0.ɵɵrestoreView(_r1); const _r0 = i0.ɵɵreference(50); return _r0.open(); });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelement(49, "mat-datepicker", null, 7);
+        i0.ɵɵelement(49, "mat-datepicker", null, 8);
         i0.ɵɵelementStart(51, "mat-action-row");
-        i0.ɵɵelementStart(52, "button", 5);
+        i0.ɵɵelementStart(52, "button", 6);
         i0.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_52_listener() { return ctx.prevStep(); });
         i0.ɵɵtext(53, "Previous");
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(54, "button", 4);
+        i0.ɵɵelementStart(54, "button", 5);
         i0.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_54_listener() { return ctx.nextStep(); });
         i0.ɵɵtext(55, "End");
         i0.ɵɵelementEnd();

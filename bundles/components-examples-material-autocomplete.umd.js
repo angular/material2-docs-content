@@ -65,7 +65,7 @@
         return AutocompleteAutoActiveFirstOptionExample;
     }());
     AutocompleteAutoActiveFirstOptionExample.ɵfac = function AutocompleteAutoActiveFirstOptionExample_Factory(t) { return new (t || AutocompleteAutoActiveFirstOptionExample)(); };
-    AutocompleteAutoActiveFirstOptionExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 9, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) {
+    AutocompleteAutoActiveFirstOptionExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 9, vars: 5, consts: [[1, "example-form"], ["appearance", "fill", 1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "form", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
@@ -139,7 +139,7 @@
         return AutocompleteDisplayExample;
     }());
     AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
-    AutocompleteDisplayExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 9, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) {
+    AutocompleteDisplayExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 9, vars: 6, consts: [[1, "example-form"], ["appearance", "fill", 1, "example-full-width"], ["type", "text", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "form", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
@@ -208,7 +208,7 @@
         return AutocompleteFilterExample;
     }());
     AutocompleteFilterExample.ɵfac = function AutocompleteFilterExample_Factory(t) { return new (t || AutocompleteFilterExample)(); };
-    AutocompleteFilterExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 9, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) {
+    AutocompleteFilterExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 9, vars: 5, consts: [[1, "example-form"], ["appearance", "fill", 1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "form", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
@@ -244,7 +244,7 @@
 
     function AutocompleteOptgroupExample_mat_optgroup_7_mat_option_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "mat-option", 6);
+            i0__namespace.ɵɵelementStart(0, "mat-option", 7);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -257,8 +257,8 @@
     }
     function AutocompleteOptgroupExample_mat_optgroup_7_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "mat-optgroup", 4);
-            i0__namespace.ɵɵtemplate(1, AutocompleteOptgroupExample_mat_optgroup_7_mat_option_1_Template, 2, 2, "mat-option", 5);
+            i0__namespace.ɵɵelementStart(0, "mat-optgroup", 5);
+            i0__namespace.ɵɵtemplate(1, AutocompleteOptgroupExample_mat_optgroup_7_mat_option_1_Template, 2, 2, "mat-option", 6);
             i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
@@ -358,16 +358,16 @@
         return AutocompleteOptgroupExample;
     }());
     AutocompleteOptgroupExample.ɵfac = function AutocompleteOptgroupExample_Factory(t) { return new (t || AutocompleteOptgroupExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace.FormBuilder)); };
-    AutocompleteOptgroupExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 9, vars: 5, consts: [[3, "formGroup"], ["type", "text", "matInput", "", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], ["autoGroup", "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) {
+    AutocompleteOptgroupExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 9, vars: 5, consts: [[3, "formGroup"], ["appearance", "fill"], ["type", "text", "matInput", "", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], ["autoGroup", "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "form", 0);
-                i0__namespace.ɵɵelementStart(1, "mat-form-field");
+                i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
                 i0__namespace.ɵɵelementStart(2, "mat-label");
                 i0__namespace.ɵɵtext(3, "States Group");
                 i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelement(4, "input", 1);
-                i0__namespace.ɵɵelementStart(5, "mat-autocomplete", null, 2);
-                i0__namespace.ɵɵtemplate(7, AutocompleteOptgroupExample_mat_optgroup_7_Template, 2, 2, "mat-optgroup", 3);
+                i0__namespace.ɵɵelement(4, "input", 2);
+                i0__namespace.ɵɵelementStart(5, "mat-autocomplete", null, 3);
+                i0__namespace.ɵɵtemplate(7, AutocompleteOptgroupExample_mat_optgroup_7_Template, 2, 2, "mat-optgroup", 4);
                 i0__namespace.ɵɵpipe(8, "async");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
@@ -459,7 +459,7 @@
         return AutocompleteOverviewExample;
     }());
     AutocompleteOverviewExample.ɵfac = function AutocompleteOverviewExample_Factory(t) { return new (t || AutocompleteOverviewExample)(); };
-    AutocompleteOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 12, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "aria-label", "State", 3, "matAutocomplete", "formControl"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) {
+    AutocompleteOverviewExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 12, vars: 6, consts: [[1, "example-form"], ["appearance", "fill", 1, "example-full-width"], ["matInput", "", "aria-label", "State", 3, "matAutocomplete", "formControl"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "form", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
@@ -589,7 +589,7 @@
         return AutocompleteSimpleExample;
     }());
     AutocompleteSimpleExample.ɵfac = function AutocompleteSimpleExample_Factory(t) { return new (t || AutocompleteSimpleExample)(); };
-    AutocompleteSimpleExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 8, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) {
+    AutocompleteSimpleExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 8, vars: 3, consts: [[1, "example-form"], ["appearance", "fill", 1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "form", 0);
                 i0__namespace.ɵɵelementStart(1, "mat-form-field", 1);
