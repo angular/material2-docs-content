@@ -2,7 +2,7 @@
   {{!isOptional ? &#x27;Enable optional steps&#x27; : &#x27;Disable optional steps&#x27;}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">linear</span> #<span class="hljs-attr">stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">linear</span> #<span class="hljs-attr">stepper</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;firstFormGroup&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;firstFormGroup&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>Fill out your name<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
@@ -37,4 +37,4 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;stepper.reset()&quot;</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-stepper</span>&gt;</span>

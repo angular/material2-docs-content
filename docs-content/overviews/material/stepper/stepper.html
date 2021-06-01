@@ -7,15 +7,12 @@ styling.</p>
           <span header-link="stepper-variants"></span>
           Stepper variants
         </h3>
-      <p>There are two stepper components: <code>mat-horizontal-stepper</code> and <code>mat-vertical-stepper</code>. They
-can be used the same way. The only difference is the orientation of stepper.</p>
+      <p>There are two stepper variants: <code>horizontal</code> and <code>vertical</code>. You can switch between the two using
+the <code>orientation</code> attribute.</p>
 <div material-docs-example="stepper-overview"></div>
 
 <div material-docs-example="stepper-vertical"></div>
 
-<p><code>mat-horizontal-stepper</code> selector can be used to create a horizontal stepper, and
-<code>mat-vertical-stepper</code> can be used to create a vertical stepper. <code>mat-step</code> components need to be
-placed inside either one of the two stepper components.</p>
 
         <h3 id="labels" class="docs-header-link">
           <span header-link="labels"></span>
@@ -37,7 +34,7 @@ placed inside either one of the two stepper components.</p>
           <span header-link="label-position"></span>
           Label position
         </h4>
-      <p>For <code>mat-horizontal-stepper</code> it&#39;s possible to define the position of the label. <code>end</code> is the
+      <p>For a horizontal <code>mat-stepper</code> it&#39;s possible to define the position of the label. <code>end</code> is the
 default value, while <code>bottom</code> will place it under the step icon instead of at its side.
 This behaviour is controlled by <code>labelPosition</code> property.</p>
 <div material-docs-example="stepper-label-position-bottom"
@@ -60,10 +57,10 @@ This behaviour is controlled by <code>labelPosition</code> property.</p>
           <span header-link="linear-stepper"></span>
           Linear stepper
         </h3>
-      <p>The <code>linear</code> attribute can be set on <code>mat-horizontal-stepper</code> and <code>mat-vertical-stepper</code> to create
-a linear stepper that requires the user to complete previous steps before proceeding to following
-steps. For each <code>mat-step</code>, the <code>stepControl</code> attribute can be set to the top level
-<code>AbstractControl</code> that is used to check the validity of the step.</p>
+      <p>The <code>linear</code> attribute can be set on <code>mat-stepper</code> to create a linear stepper that requires the
+user to complete previous steps before proceeding to following steps. For each <code>mat-step</code>, the
+<code>stepControl</code> attribute can be set to the top level <code>AbstractControl</code> that is used to check the
+validity of the step.</p>
 <p>There are two possible approaches. One is using a single form for stepper, and the other is
 using a different form for each step.</p>
 <p>Alternatively, if you don&#39;t want to use the Angular forms, you can pass in the <code>completed</code> property
@@ -78,7 +75,7 @@ both <code>completed</code> and <code>stepControl</code> are set, the <code>step
 set to <code>type=&quot;button&quot;</code> in order to prevent submission of the form before all steps
 are completed.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">&quot;formArray&quot;</span> <span class="hljs-attr">linear</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">&quot;formArray&quot;</span> <span class="hljs-attr">linear</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">&quot;0&quot;</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;formArray.get([0])&quot;</span>&gt;</span>
       ...
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -93,7 +90,7 @@ are completed.</p>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
     ...
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-stepper</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
 
@@ -101,7 +98,7 @@ are completed.</p>
           <span header-link="using-a-different-form-for-each-step"></span>
           Using a different form for each step
         </h4>
-      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-vertical-stepper</span> <span class="hljs-attr">linear</span>&gt;</span>
+      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">orientation</span>=<span class="hljs-string">&quot;vertical&quot;</span> <span class="hljs-attr">linear</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;formGroup1&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup1&quot;</span>&gt;</span>
       ...
@@ -112,7 +109,7 @@ are completed.</p>
       ...
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-stepper</span>&gt;</span>
 </code></pre>
 
         <h3 id="types-of-steps" class="docs-header-link">
