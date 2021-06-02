@@ -1,0 +1,29 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">cdk-accordion</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-accordion-item</span>
+    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let item of items; let index = index;&quot;</span>
+    #<span class="hljs-attr">accordionItem</span>=<span class="hljs-string">&quot;cdkAccordionItem&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-item&quot;</span>
+    <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;button&quot;</span>
+    <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span>
+    [<span class="hljs-attr">attr.id</span>]=<span class="hljs-string">&quot;&#x27;accordion-header-&#x27; + index&quot;</span>
+    [<span class="hljs-attr">attr.aria-expanded</span>]=<span class="hljs-string">&quot;accordionItem.expanded&quot;</span>
+    [<span class="hljs-attr">attr.aria-controls</span>]=<span class="hljs-string">&quot;&#x27;accordion-body-&#x27; + index&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-item-header&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;accordionItem.toggle()&quot;</span>&gt;</span>
+      {{ item }}
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-item-description&quot;</span>&gt;</span>
+        Click to {{ accordionItem.expanded ? &#x27;close&#x27; : &#x27;open&#x27; }}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-accordion-item-body&quot;</span>
+      <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;region&quot;</span>
+      [<span class="hljs-attr">style.display</span>]=<span class="hljs-string">&quot;accordionItem.expanded ? &#x27;&#x27; : &#x27;none&#x27;&quot;</span>
+      [<span class="hljs-attr">attr.id</span>]=<span class="hljs-string">&quot;&#x27;accordion-body-&#x27; + index&quot;</span>
+      [<span class="hljs-attr">attr.aria-labelledby</span>]=<span class="hljs-string">&quot;&#x27;accordion-header-&#x27; + index&quot;</span>&gt;</span>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+      excepturi incidunt ipsum deleniti labore, tempore non nam doloribus blanditiis
+      veritatis illo autem iure aliquid ullam rem tenetur deserunt velit culpa?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-accordion-item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">cdk-accordion</span>&gt;</span>
+
