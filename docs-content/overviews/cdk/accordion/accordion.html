@@ -1,0 +1,17 @@
+<div class="docs-markdown"><p>An accordion is a component with one or more expandable sections. CDK accordion provides a
+foundation upon which you can build your own custom accordion component. CDK accordion provides
+logic for the accordion interaction pattern without any styles. You can customize the accordion&#39;s
+appearance based on your application&#39;s needs.</p>
+<div material-docs-example="cdk-accordion-overview"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>The CDK accordion doesn&#39;t come with any accessibility treatment, because it doesn&#39;t have control
+over its markup. We recommend to set the accordion trigger element as a <code>role=&quot;button&quot;</code> while
+the body container as a <code>role=&quot;region&quot;</code>. Furthermore, the trigger should have <code>aria-controls</code>
+pointing to the body and <code>aria-expanded</code> based on the expanded state, while the body should have
+an <code>aria-labelledby</code> that points to the header. See the example above for a sample implementation.</p>
+</div>

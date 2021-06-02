@@ -573,6 +573,23 @@
                 "importSpecifier": "cdk/a11y"
             }
         },
+        "cdk-accordion-overview": {
+            "packagePath": "cdk/accordion/cdk-accordion-overview",
+            "title": "Accordion overview",
+            "componentName": "CdkAccordionOverviewExample",
+            "files": [
+                "cdk-accordion-overview-example.ts",
+                "cdk-accordion-overview-example.html",
+                "cdk-accordion-overview-example.css"
+            ],
+            "selector": "cdk-accordion-overview-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-accordion-overview-example.ts",
+            "module": {
+                "name": "CdkAccordionExamplesModule",
+                "importSpecifier": "cdk/accordion"
+            }
+        },
         "cdk-clipboard-overview": {
             "packagePath": "cdk/clipboard/cdk-clipboard-overview",
             "title": "Clipboard overview",

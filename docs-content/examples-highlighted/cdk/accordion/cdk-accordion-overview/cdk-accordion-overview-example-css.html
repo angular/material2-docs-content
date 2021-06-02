@@ -1,0 +1,44 @@
+<span class="hljs-selector-class">.example-accordion</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">500px</span>;
+}
+
+<span class="hljs-selector-class">.example-accordion-item</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span> <span class="hljs-number">#ccc</span>;
+}
+
+<span class="hljs-selector-class">.example-accordion-item</span> + <span class="hljs-selector-class">.example-accordion-item</span> {
+  <span class="hljs-attribute">border-top</span>: none;
+}
+
+<span class="hljs-selector-class">.example-accordion-item-header</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-content</span>: center;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+}
+
+<span class="hljs-selector-class">.example-accordion-item-description</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.85em</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#999</span>;
+}
+
+<span class="hljs-selector-class">.example-accordion-item-header</span>,
+<span class="hljs-selector-class">.example-accordion-item-body</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span>;
+}
+
+<span class="hljs-selector-class">.example-accordion-item-header</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#eee</span>;
+}
+
+<span class="hljs-selector-class">.example-accordion-item</span><span class="hljs-selector-pseudo">:first</span>-child {
+  <span class="hljs-attribute">border-top-left-radius</span>: <span class="hljs-number">4px</span>;
+  <span class="hljs-attribute">border-top-right-radius</span>: <span class="hljs-number">4px</span>;
+}
+
+<span class="hljs-selector-class">.example-accordion-item</span><span class="hljs-selector-pseudo">:last-child</span> {
+  <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">4px</span>;
+  <span class="hljs-attribute">border-bottom-right-radius</span>: <span class="hljs-number">4px</span>;
+}
