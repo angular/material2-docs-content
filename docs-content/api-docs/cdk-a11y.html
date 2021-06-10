@@ -30,6 +30,76 @@
     
       
 
+<h4 id="InputModalityDetector" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="InputModalityDetector"></span>
+  <code>InputModalityDetector</code>
+  
+</h4><p class="docs-api-class-description"><p>Service that detects the user&#39;s input modality.</p>
+<p>This service does not update the input modality when a user navigates with a screen reader
+(e.g. linear navigation with VoiceOver, object navigation / browse mode with NVDA, virtual PC
+cursor mode with JAWS). This is in part due to technical limitations (i.e. keyboard events do not
+fire as expected in these modes) but is also arguably the correct behavior. Navigating with a
+screen reader is akin to visually scanning a page, and should not be interpreted as actual user
+input interaction.</p>
+<p>When a user is not navigating but <em>interacting</em> with a screen reader, this service attempts to
+update the input modality to keyboard, but in general this service&#39;s behavior is largely
+undefined.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>modalityChanged: Observable&lt;InputModality&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the input modality changes.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>modalityDetected: Observable&lt;InputModality&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits whenever an input modality is detected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>mostRecentModality: InputModality</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The most recently detected input modality.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="HighContrastModeDetector" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="HighContrastModeDetector"></span>
   <code>HighContrastModeDetector</code>
@@ -4711,6 +4781,40 @@ on whether focus was moved successfully.</p>
     
       
 
+<h4 id="InputModalityDetectorOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="InputModalityDetectorOptions"></span>
+  <code>InputModalityDetectorOptions</code>
+</h4><p class="docs-api-interface-description"><p>Options to configure the behavior of the InputModalityDetector.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ignoreKeys: number[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Keys to ignore when detecting keyboard input modality.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="RegisteredMessage" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="RegisteredMessage"></span>
   <code>RegisteredMessage</code>
@@ -5271,6 +5375,20 @@ via <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"
     
       
 
+<h4 id="InputModality" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="InputModality"></span>
+  <code>InputModality</code>
+</h4><p class="docs-api-type-alias-description"><p>The input modalities detected by this service. Null is used if the input modality is unknown.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> InputModality = <span class="hljs-string">&#x27;keyboard&#x27;</span> | <span class="hljs-string">&#x27;mouse&#x27;</span> | <span class="hljs-string">&#x27;touch&#x27;</span> | <span class="hljs-literal">null</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
 <h4 id="ListKeyManagerModifierKey" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="ListKeyManagerModifierKey"></span>
   <code>ListKeyManagerModifierKey</code>
@@ -5313,6 +5431,47 @@ via <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"
       <span header-link="constants"></span>
       Constants
     </h3>
+    
+      
+
+<h4 id="INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS"></span>
+  <code>INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Default options for the InputModalityDetector.</p>
+<p>Modifier keys are ignored by default (i.e. when pressed won&#39;t cause the service to detect
+keyboard input modality) for two reasons:</p>
+<ol>
+<li>Modifier keys are commonly used with mouse to perform actions such as &#39;right click&#39; or &#39;open
+in new tab&#39;, and are thus less representative of actual keyboard interaction.</li>
+<li>VoiceOver triggers some keyboard events when linearly navigating with Control + Option (but
+confusingly not with Caps Lock). Thus, to have parity with other screen readers, we ignore
+these keys so as to not update the input modality.</li>
+</ol>
+<p>Note that we do not by default ignore the right Meta key on Safari because it has the same key
+code as the ContextMenu key on other browsers. When we switch to using event.key, we can
+distinguish between the two.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS: InputModalityDetectorOptions;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="INPUT_MODALITY_DETECTOR_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="INPUT_MODALITY_DETECTOR_OPTIONS"></span>
+  <code>INPUT_MODALITY_DETECTOR_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Injectable options for the InputModalityDetector. These are shallowly merged with the default
+options.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> INPUT_MODALITY_DETECTOR_OPTIONS: InjectionToken&lt;InputModalityDetectorOptions&gt;;</code>
+</pre>
+</div>
+
+
     
       
 
@@ -5392,19 +5551,6 @@ via <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> LIVE_ANNOUNCER_DEFAULT_OPTIONS: InjectionToken&lt;LiveAnnouncerDefaultOptions&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="TOUCH_BUFFER_MS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="TOUCH_BUFFER_MS"></span>
-  <code>TOUCH_BUFFER_MS</code>
-</h4><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> TOUCH_BUFFER_MS: <span class="hljs-number">650</span>;</code>
 </pre>
 </div>
 
