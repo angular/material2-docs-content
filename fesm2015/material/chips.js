@@ -21,7 +21,6 @@ import * as i1$2 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 
 const _c0 = ["fruitInput"];
-const _c1 = ["auto"];
 function ChipsAutocompleteExample_mat_chip_5_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-icon", 11);
     i0.ɵɵtext(1, "cancel");
@@ -96,11 +95,9 @@ class ChipsAutocompleteExample {
 ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
 ChipsAutocompleteExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
         i0.ɵɵviewQuery(_c0, 5);
-        i0.ɵɵviewQuery(_c1, 5);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.fruitInput = _t.first);
-        i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.matAutocomplete = _t.first);
     } }, decls: 12, vars: 8, consts: [["appearance", "fill", 1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], ["fruitInput", ""], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-form-field", 0);
         i0.ɵɵelementStart(1, "mat-label");
@@ -138,9 +135,6 @@ ChipsAutocompleteExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Ch
     }], function () { return []; }, { fruitInput: [{
             type: ViewChild,
             args: ['fruitInput']
-        }], matAutocomplete: [{
-            type: ViewChild,
-            args: ['auto']
         }] }); })();
 
 function ChipsDragDropExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {

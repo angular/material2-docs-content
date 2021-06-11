@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {COMMA, ENTER} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component, ElementRef, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatAutocompleteSelectedEvent, MatAutocomplete} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatAutocompleteSelectedEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
@@ -25,7 +25,6 @@
   allFruits: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-string">&#x27;Lemon&#x27;</span>, <span class="hljs-string">&#x27;Lime&#x27;</span>, <span class="hljs-string">&#x27;Orange&#x27;</span>, <span class="hljs-string">&#x27;Strawberry&#x27;</span>];
 
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;fruitInput&#x27;</span>) fruitInput: ElementRef&lt;HTMLInputElement&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;auto&#x27;</span>) matAutocomplete: MatAutocomplete;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.filteredFruits = <span class="hljs-built_in">this</span>.fruitCtrl.valueChanges.pipe(

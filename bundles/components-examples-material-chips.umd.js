@@ -36,7 +36,6 @@
     var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
 
     var _c0 = ["fruitInput"];
-    var _c1 = ["auto"];
     function ChipsAutocompleteExample_mat_chip_5_mat_icon_2_Template(rf, ctx) {
         if (rf & 1) {
             i0__namespace.ɵɵelementStart(0, "mat-icon", 11);
@@ -122,12 +121,10 @@
     ChipsAutocompleteExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵviewQuery(_c0, 5);
-                i0__namespace.ɵɵviewQuery(_c1, 5);
             }
             if (rf & 2) {
                 var _t = void 0;
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.fruitInput = _t.first);
-                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.matAutocomplete = _t.first);
             }
         }, decls: 12, vars: 8, consts: [["appearance", "fill", 1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], ["fruitInput", ""], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) {
             if (rf & 1) {
@@ -170,9 +167,6 @@
             }], function () { return []; }, { fruitInput: [{
                     type: i0.ViewChild,
                     args: ['fruitInput']
-                }], matAutocomplete: [{
-                    type: i0.ViewChild,
-                    args: ['auto']
                 }] });
     })();
 
