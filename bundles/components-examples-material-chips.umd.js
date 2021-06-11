@@ -113,7 +113,7 @@
         };
         ChipsAutocompleteExample.prototype._filter = function (value) {
             var filterValue = value.toLowerCase();
-            return this.allFruits.filter(function (fruit) { return fruit.toLowerCase().indexOf(filterValue) === 0; });
+            return this.allFruits.filter(function (fruit) { return fruit.toLowerCase().includes(filterValue); });
         };
         return ChipsAutocompleteExample;
     }());

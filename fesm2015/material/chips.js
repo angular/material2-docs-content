@@ -89,7 +89,7 @@ class ChipsAutocompleteExample {
     }
     _filter(value) {
         const filterValue = value.toLowerCase();
-        return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+        return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
     }
 }
 ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };

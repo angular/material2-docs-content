@@ -38,7 +38,7 @@ class AutocompleteAutoActiveFirstOptionExample {
     }
     _filter(value) {
         const filterValue = value.toLowerCase();
-        return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+        return this.options.filter(option => option.toLowerCase().includes(filterValue));
     }
 }
 AutocompleteAutoActiveFirstOptionExample.ɵfac = function AutocompleteAutoActiveFirstOptionExample_Factory(t) { return new (t || AutocompleteAutoActiveFirstOptionExample)(); };
@@ -102,7 +102,7 @@ class AutocompleteDisplayExample {
     }
     _filter(name) {
         const filterValue = name.toLowerCase();
-        return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);
+        return this.options.filter(option => option.name.toLowerCase().includes(filterValue));
     }
 }
 AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
@@ -216,7 +216,7 @@ function AutocompleteOptgroupExample_mat_optgroup_7_Template(rf, ctx) { if (rf &
 } }
 const _filter = (opt, value) => {
     const filterValue = value.toLowerCase();
-    return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
+    return opt.filter(item => item.toLowerCase().includes(filterValue));
 };
 /**
  * @title Option groups autocomplete
@@ -389,7 +389,7 @@ class AutocompleteOverviewExample {
     }
     _filterStates(value) {
         const filterValue = value.toLowerCase();
-        return this.states.filter(state => state.name.toLowerCase().indexOf(filterValue) === 0);
+        return this.states.filter(state => state.name.toLowerCase().includes(filterValue));
     }
 }
 AutocompleteOverviewExample.ɵfac = function AutocompleteOverviewExample_Factory(t) { return new (t || AutocompleteOverviewExample)(); };
