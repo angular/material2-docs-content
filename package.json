@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "12.1.0-next.0-sha-27f5ca91b",
+  "version": "12.1.0-next.0-sha-10725496d",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -19,13 +19,13 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "12.1.0-next.0-sha-27f5ca91b",
-    "@angular/cdk-experimental": "12.1.0-next.0-sha-27f5ca91b",
+    "@angular/cdk": "12.1.0-next.0-sha-10725496d",
+    "@angular/cdk-experimental": "12.1.0-next.0-sha-10725496d",
     "@angular/core": "^12.0.0 || ^13.0.0-0",
     "@angular/common": "^12.0.0 || ^13.0.0-0",
-    "@angular/material": "12.1.0-next.0-sha-27f5ca91b",
-    "@angular/material-experimental": "12.1.0-next.0-sha-27f5ca91b",
-    "@angular/material-moment-adapter": "12.1.0-next.0-sha-27f5ca91b"
+    "@angular/material": "12.1.0-next.0-sha-10725496d",
+    "@angular/material-experimental": "12.1.0-next.0-sha-10725496d",
+    "@angular/material-moment-adapter": "12.1.0-next.0-sha-10725496d"
   },
   "dependencies": {
     "tslib": "^2.2.0"

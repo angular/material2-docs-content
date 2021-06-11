@@ -228,10 +228,12 @@ MdcFormFieldExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [CommonModule,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample,
+        MyTelInput], imports: [CommonModule,
         MatFormFieldModule,
         MatIconModule,
-        ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] }); })();
+        ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample,
+        MyTelInput] }); })();
 
 /**
  * Generated bundle index. Do not edit.

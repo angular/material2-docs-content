@@ -607,10 +607,12 @@
             }], null, null);
     })();
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample,
+                MyTelInput], imports: [common.CommonModule,
                 i1.MatFormFieldModule,
                 i2.MatIconModule,
-                i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
+                i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample,
+                MyTelInput] });
     })();
 
     /**
