@@ -1,6 +1,6 @@
 import { ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MatAutocompleteSelectedEvent, MatAutocomplete } from '@angular/material/autocomplete';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
@@ -17,7 +17,6 @@ export declare class ChipsAutocompleteExample {
     fruits: string[];
     allFruits: string[];
     fruitInput: ElementRef<HTMLInputElement>;
-    matAutocomplete: MatAutocomplete;
     constructor();
     add(event: MatChipInputEvent): void;
     remove(fruit: string): void;

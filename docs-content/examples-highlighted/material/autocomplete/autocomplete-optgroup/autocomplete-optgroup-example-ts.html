@@ -11,7 +11,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> _filter = (opt: <span class="hljs-built_in">string</span>[], <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] =&gt; {
   <span class="hljs-keyword">const</span> filterValue = value.toLowerCase();
 
-  <span class="hljs-keyword">return</span> opt.filter(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.toLowerCase().indexOf(filterValue) === <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> opt.filter(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.toLowerCase().includes(filterValue));
 };
 
 <span class="hljs-comment">/**

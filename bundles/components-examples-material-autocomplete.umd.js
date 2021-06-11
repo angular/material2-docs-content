@@ -60,7 +60,7 @@
         };
         AutocompleteAutoActiveFirstOptionExample.prototype._filter = function (value) {
             var filterValue = value.toLowerCase();
-            return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
+            return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
         };
         return AutocompleteAutoActiveFirstOptionExample;
     }());
@@ -134,7 +134,7 @@
         };
         AutocompleteDisplayExample.prototype._filter = function (name) {
             var filterValue = name.toLowerCase();
-            return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
+            return this.options.filter(function (option) { return option.name.toLowerCase().includes(filterValue); });
         };
         return AutocompleteDisplayExample;
     }());
@@ -270,7 +270,7 @@
     }
     var _filter = function (opt, value) {
         var filterValue = value.toLowerCase();
-        return opt.filter(function (item) { return item.toLowerCase().indexOf(filterValue) === 0; });
+        return opt.filter(function (item) { return item.toLowerCase().includes(filterValue); });
     };
     /**
      * @title Option groups autocomplete
@@ -454,7 +454,7 @@
         }
         AutocompleteOverviewExample.prototype._filterStates = function (value) {
             var filterValue = value.toLowerCase();
-            return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(filterValue) === 0; });
+            return this.states.filter(function (state) { return state.name.toLowerCase().includes(filterValue); });
         };
         return AutocompleteOverviewExample;
     }());
