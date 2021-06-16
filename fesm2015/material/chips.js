@@ -57,7 +57,6 @@ function ChipsAutocompleteExample_mat_option_10_Template(rf, ctx) { if (rf & 1) 
  */
 class ChipsAutocompleteExample {
     constructor() {
-        this.visible = true;
         this.selectable = true;
         this.removable = true;
         this.separatorKeysCodes = [ENTER, COMMA];
@@ -209,7 +208,6 @@ function ChipsInputExample_mat_chip_5_Template(rf, ctx) { if (rf & 1) {
  */
 class ChipsInputExample {
     constructor() {
-        this.visible = true;
         this.selectable = true;
         this.removable = true;
         this.addOnBlur = true;
