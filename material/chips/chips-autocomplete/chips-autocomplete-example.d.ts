@@ -8,7 +8,6 @@ import * as i0 from "@angular/core";
  * @title Chips Autocomplete
  */
 export declare class ChipsAutocompleteExample {
-    visible: boolean;
     selectable: boolean;
     removable: boolean;
     separatorKeysCodes: number[];

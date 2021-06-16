@@ -7,7 +7,6 @@ export interface Fruit {
  * @title Chips with input
  */
 export declare class ChipsInputExample {
-    visible: boolean;
     selectable: boolean;
     removable: boolean;
     addOnBlur: boolean;

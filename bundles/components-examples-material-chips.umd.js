@@ -81,7 +81,6 @@
     var ChipsAutocompleteExample = /** @class */ (function () {
         function ChipsAutocompleteExample() {
             var _this = this;
-            this.visible = true;
             this.selectable = true;
             this.removable = true;
             this.separatorKeysCodes = [keycodes.ENTER, keycodes.COMMA];
@@ -256,7 +255,6 @@
      */
     var ChipsInputExample = /** @class */ (function () {
         function ChipsInputExample() {
-            this.visible = true;
             this.selectable = true;
             this.removable = true;
             this.addOnBlur = true;
