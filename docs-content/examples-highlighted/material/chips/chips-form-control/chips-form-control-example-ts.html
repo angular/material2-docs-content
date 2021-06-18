@@ -12,7 +12,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsFormControlExample</span> </span>{
   keywords = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>]);
-  formControl = <span class="hljs-keyword">new</span> FormControl();
+  formControl = <span class="hljs-keyword">new</span> FormControl([<span class="hljs-string">&#x27;angular&#x27;</span>]);
 
   <span class="hljs-function"><span class="hljs-title">addKeywordFromInput</span>(<span class="hljs-params">event: MatChipInputEvent</span>)</span> {
     <span class="hljs-keyword">if</span> (event.value) {

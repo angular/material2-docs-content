@@ -555,7 +555,7 @@
                 i0__namespace.ɵɵelement(0, "mat-paginator", 0);
             }
             if (rf & 2) {
-                i0__namespace.ɵɵproperty("length", 0)("pageSizeOptions", i0__namespace.ɵɵpureFunction0(2, _c0));
+                i0__namespace.ɵɵproperty("length", 200)("pageSizeOptions", i0__namespace.ɵɵpureFunction0(2, _c0));
             }
         }, directives: [i1__namespace$1.MatPaginator], encapsulation: 2 });
     (function () {

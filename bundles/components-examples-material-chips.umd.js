@@ -452,16 +452,17 @@
             }], null, null);
     })();
 
-    function ChipsFormControlExample_mat_chip_12_Template(rf, ctx) {
+    function ChipsFormControlExample_mat_chip_15_Template(rf, ctx) {
         if (rf & 1) {
             var _r4_1 = i0__namespace.ɵɵgetCurrentView();
             i0__namespace.ɵɵelementStart(0, "mat-chip", 7);
-            i0__namespace.ɵɵlistener("removed", function ChipsFormControlExample_mat_chip_12_Template_mat_chip_removed_0_listener() { var restoredCtx = i0__namespace.ɵɵrestoreView(_r4_1); var keyword_r2 = restoredCtx.$implicit; var ctx_r3 = i0__namespace.ɵɵnextContext(); return ctx_r3.removeKeyword(keyword_r2); });
+            i0__namespace.ɵɵlistener("removed", function ChipsFormControlExample_mat_chip_15_Template_mat_chip_removed_0_listener() { var restoredCtx = i0__namespace.ɵɵrestoreView(_r4_1); var keyword_r2 = restoredCtx.$implicit; var ctx_r3 = i0__namespace.ɵɵnextContext(); return ctx_r3.removeKeyword(keyword_r2); });
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
             var keyword_r2 = ctx.$implicit;
+            i0__namespace.ɵɵproperty("selected", keyword_r2)("value", keyword_r2);
             i0__namespace.ɵɵadvance(1);
             i0__namespace.ɵɵtextInterpolate1(" ", keyword_r2, " ");
         }
@@ -472,7 +473,7 @@
     var ChipsFormControlExample = /** @class */ (function () {
         function ChipsFormControlExample() {
             this.keywords = new Set(['angular', 'how-to', 'tutorial']);
-            this.formControl = new i4.FormControl();
+            this.formControl = new i4.FormControl(['angular']);
         }
         ChipsFormControlExample.prototype.addKeywordFromInput = function (event) {
             if (event.value) {
@@ -486,7 +487,7 @@
         return ChipsFormControlExample;
     }());
     ChipsFormControlExample.ɵfac = function ChipsFormControlExample_Factory(t) { return new (t || ChipsFormControlExample)(); };
-    ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ChipsFormControlExample, selectors: [["chips-form-control-example"]], decls: 14, vars: 4, consts: [[1, "example-button-container"], ["mat-raised-button", "", 3, "click"], ["appearance", "fill", 1, "example-chip-list"], ["aria-label", "Video keywords", "multiple", "", 3, "formControl"], ["chipList", ""], [3, "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New keyword...", 3, "matChipInputFor", "matChipInputTokenEnd"], [3, "removed"]], template: function ChipsFormControlExample_Template(rf, ctx) {
+    ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ChipsFormControlExample, selectors: [["chips-form-control-example"]], decls: 21, vars: 4, consts: [[1, "example-button-container"], ["mat-raised-button", "", 3, "click"], ["appearance", "fill", 1, "example-chip-list"], ["aria-label", "Video keywords", "multiple", "", 3, "formControl"], ["chipList", ""], [3, "selected", "value", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New keyword...", 3, "matChipInputFor", "matChipInputTokenEnd"], [3, "selected", "value", "removed"]], template: function ChipsFormControlExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "div", 0);
                 i0__namespace.ɵɵelementStart(1, "button", 1);
@@ -499,30 +500,41 @@
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementStart(5, "p");
-                i0__namespace.ɵɵtext(6);
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(7, "mat-form-field", 2);
-                i0__namespace.ɵɵelementStart(8, "mat-label");
-                i0__namespace.ɵɵtext(9, "Video keywords");
-                i0__namespace.ɵɵelementEnd();
-                i0__namespace.ɵɵelementStart(10, "mat-chip-list", 3, 4);
-                i0__namespace.ɵɵtemplate(12, ChipsFormControlExample_mat_chip_12_Template, 2, 1, "mat-chip", 5);
-                i0__namespace.ɵɵelementStart(13, "input", 6);
-                i0__namespace.ɵɵlistener("matChipInputTokenEnd", function ChipsFormControlExample_Template_input_matChipInputTokenEnd_13_listener($event) { return ctx.addKeywordFromInput($event); });
+                i0__namespace.ɵɵelementStart(6, "i");
+                i0__namespace.ɵɵtext(7, "Select a focused chip by pressing ");
+                i0__namespace.ɵɵelementStart(8, "code");
+                i0__namespace.ɵɵtext(9, "SPACE");
                 i0__namespace.ɵɵelementEnd();
                 i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(10, "mat-form-field", 2);
+                i0__namespace.ɵɵelementStart(11, "mat-label");
+                i0__namespace.ɵɵtext(12, "Video keywords");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(13, "mat-chip-list", 3, 4);
+                i0__namespace.ɵɵtemplate(15, ChipsFormControlExample_mat_chip_15_Template, 2, 3, "mat-chip", 5);
+                i0__namespace.ɵɵelementStart(16, "input", 6);
+                i0__namespace.ɵɵlistener("matChipInputTokenEnd", function ChipsFormControlExample_Template_input_matChipInputTokenEnd_16_listener($event) { return ctx.addKeywordFromInput($event); });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(17, "p");
+                i0__namespace.ɵɵelementStart(18, "b");
+                i0__namespace.ɵɵtext(19, "The following keywords are selected:");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtext(20);
                 i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                var _r0 = i0__namespace.ɵɵreference(11);
-                i0__namespace.ɵɵadvance(6);
-                i0__namespace.ɵɵtextInterpolate1(" Selected keywords: ", ctx.formControl.value, "\n");
-                i0__namespace.ɵɵadvance(4);
+                var _r0 = i0__namespace.ɵɵreference(14);
+                i0__namespace.ɵɵadvance(13);
                 i0__namespace.ɵɵproperty("formControl", ctx.formControl);
                 i0__namespace.ɵɵadvance(2);
                 i0__namespace.ɵɵproperty("ngForOf", ctx.keywords);
                 i0__namespace.ɵɵadvance(1);
                 i0__namespace.ɵɵproperty("matChipInputFor", _r0);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵtextInterpolate1(" ", ctx.formControl.value, "\n");
             }
         }, directives: [i1__namespace$2.MatButton, i1__namespace.MatFormField, i1__namespace.MatLabel, i1__namespace$1.MatChipList, i4__namespace.NgControlStatus, i4__namespace.FormControlDirective, i3__namespace.NgForOf, i1__namespace$1.MatChipInput, i1__namespace$1.MatChip], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-button-container[_ngcontent-%COMP%]    > button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
     (function () {
