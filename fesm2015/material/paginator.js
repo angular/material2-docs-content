@@ -192,7 +192,7 @@ PaginatorIntlExample.ɵfac = function PaginatorIntlExample_Factory(t) { return n
 PaginatorIntlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PaginatorIntlExample, selectors: [["paginator-intl-example"]], decls: 1, vars: 3, consts: [[3, "length", "pageSizeOptions"]], template: function PaginatorIntlExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "mat-paginator", 0);
     } if (rf & 2) {
-        i0.ɵɵproperty("length", 0)("pageSizeOptions", i0.ɵɵpureFunction0(2, _c0));
+        i0.ɵɵproperty("length", 200)("pageSizeOptions", i0.ɵɵpureFunction0(2, _c0));
     } }, directives: [i1$1.MatPaginator], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorIntlExample, [{
         type: Component,
