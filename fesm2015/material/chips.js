@@ -377,14 +377,15 @@ ChipsHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsHa
             }]
     }], null, null); })();
 
-function ChipsFormControlExample_mat_chip_12_Template(rf, ctx) { if (rf & 1) {
+function ChipsFormControlExample_mat_chip_15_Template(rf, ctx) { if (rf & 1) {
     const _r4 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "mat-chip", 7);
-    i0.ɵɵlistener("removed", function ChipsFormControlExample_mat_chip_12_Template_mat_chip_removed_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r4); const keyword_r2 = restoredCtx.$implicit; const ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.removeKeyword(keyword_r2); });
+    i0.ɵɵlistener("removed", function ChipsFormControlExample_mat_chip_15_Template_mat_chip_removed_0_listener() { const restoredCtx = i0.ɵɵrestoreView(_r4); const keyword_r2 = restoredCtx.$implicit; const ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.removeKeyword(keyword_r2); });
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const keyword_r2 = ctx.$implicit;
+    i0.ɵɵproperty("selected", keyword_r2)("value", keyword_r2);
     i0.ɵɵadvance(1);
     i0.ɵɵtextInterpolate1(" ", keyword_r2, " ");
 } }
@@ -394,7 +395,7 @@ function ChipsFormControlExample_mat_chip_12_Template(rf, ctx) { if (rf & 1) {
 class ChipsFormControlExample {
     constructor() {
         this.keywords = new Set(['angular', 'how-to', 'tutorial']);
-        this.formControl = new FormControl();
+        this.formControl = new FormControl(['angular']);
     }
     addKeywordFromInput(event) {
         if (event.value) {
@@ -407,7 +408,7 @@ class ChipsFormControlExample {
     }
 }
 ChipsFormControlExample.ɵfac = function ChipsFormControlExample_Factory(t) { return new (t || ChipsFormControlExample)(); };
-ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsFormControlExample, selectors: [["chips-form-control-example"]], decls: 14, vars: 4, consts: [[1, "example-button-container"], ["mat-raised-button", "", 3, "click"], [1, "example-chip-list"], ["aria-label", "Video keywords", "multiple", "", 3, "formControl"], ["chipList", ""], [3, "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New keyword...", 3, "matChipInputFor", "matChipInputTokenEnd"], [3, "removed"]], template: function ChipsFormControlExample_Template(rf, ctx) { if (rf & 1) {
+ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsFormControlExample, selectors: [["chips-form-control-example"]], decls: 21, vars: 4, consts: [[1, "example-button-container"], ["mat-raised-button", "", 3, "click"], [1, "example-chip-list"], ["aria-label", "Video keywords", "multiple", "", 3, "formControl"], ["chipList", ""], [3, "selected", "value", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New keyword...", 3, "matChipInputFor", "matChipInputTokenEnd"], [3, "selected", "value", "removed"]], template: function ChipsFormControlExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 0);
         i0.ɵɵelementStart(1, "button", 1);
         i0.ɵɵlistener("click", function ChipsFormControlExample_Template_button_click_1_listener() { return ctx.formControl.disable(); });
@@ -419,29 +420,40 @@ ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Chi
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(5, "p");
-        i0.ɵɵtext(6);
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "mat-form-field", 2);
-        i0.ɵɵelementStart(8, "mat-label");
-        i0.ɵɵtext(9, "Video keywords");
-        i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(10, "mat-chip-list", 3, 4);
-        i0.ɵɵtemplate(12, ChipsFormControlExample_mat_chip_12_Template, 2, 1, "mat-chip", 5);
-        i0.ɵɵelementStart(13, "input", 6);
-        i0.ɵɵlistener("matChipInputTokenEnd", function ChipsFormControlExample_Template_input_matChipInputTokenEnd_13_listener($event) { return ctx.addKeywordFromInput($event); });
+        i0.ɵɵelementStart(6, "i");
+        i0.ɵɵtext(7, "Select a focused chip by pressing ");
+        i0.ɵɵelementStart(8, "code");
+        i0.ɵɵtext(9, "SPACE");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(10, "mat-form-field", 2);
+        i0.ɵɵelementStart(11, "mat-label");
+        i0.ɵɵtext(12, "Video keywords");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(13, "mat-chip-list", 3, 4);
+        i0.ɵɵtemplate(15, ChipsFormControlExample_mat_chip_15_Template, 2, 3, "mat-chip", 5);
+        i0.ɵɵelementStart(16, "input", 6);
+        i0.ɵɵlistener("matChipInputTokenEnd", function ChipsFormControlExample_Template_input_matChipInputTokenEnd_16_listener($event) { return ctx.addKeywordFromInput($event); });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(17, "p");
+        i0.ɵɵelementStart(18, "b");
+        i0.ɵɵtext(19, "The following keywords are selected:");
+        i0.ɵɵelementEnd();
+        i0.ɵɵtext(20);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
-        const _r0 = i0.ɵɵreference(11);
-        i0.ɵɵadvance(6);
-        i0.ɵɵtextInterpolate1(" Selected keywords: ", ctx.formControl.value, "\n");
-        i0.ɵɵadvance(4);
+        const _r0 = i0.ɵɵreference(14);
+        i0.ɵɵadvance(13);
         i0.ɵɵproperty("formControl", ctx.formControl);
         i0.ɵɵadvance(2);
         i0.ɵɵproperty("ngForOf", ctx.keywords);
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("matChipInputFor", _r0);
+        i0.ɵɵadvance(4);
+        i0.ɵɵtextInterpolate1(" ", ctx.formControl.value, "\n");
     } }, directives: [i1$2.MatButton, i1.MatFormField, i1.MatLabel, i1$1.MatChipList, i4.NgControlStatus, i4.FormControlDirective, i3.NgForOf, i1$1.MatChipInput, i1$1.MatChip], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-button-container[_ngcontent-%COMP%]    > button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsFormControlExample, [{
         type: Component,
