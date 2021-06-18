@@ -5,6 +5,40 @@ import { Component, ChangeDetectionStrategy, ViewEncapsulation, NgModule } from 
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
+function CdkVirtualScrollAppendOnlyExample_div_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 2);
+    i0.ɵɵtext(1);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const item_r1 = ctx.$implicit;
+    i0.ɵɵadvance(1);
+    i0.ɵɵtextInterpolate(item_r1);
+} }
+/** @title Virtual scroll with view recycling disabled. */
+class CdkVirtualScrollAppendOnlyExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+    }
+}
+CdkVirtualScrollAppendOnlyExample.ɵfac = function CdkVirtualScrollAppendOnlyExample_Factory(t) { return new (t || CdkVirtualScrollAppendOnlyExample)(); };
+CdkVirtualScrollAppendOnlyExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: CdkVirtualScrollAppendOnlyExample, selectors: [["cdk-virtual-scroll-append-only-example"]], decls: 2, vars: 1, consts: [["appendOnly", "", "itemSize", "50", 1, "example-viewport"], ["class", "example-item", 4, "cdkVirtualFor", "cdkVirtualForOf"], [1, "example-item"]], template: function CdkVirtualScrollAppendOnlyExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "cdk-virtual-scroll-viewport", 0);
+        i0.ɵɵtemplate(1, CdkVirtualScrollAppendOnlyExample_div_1_Template, 2, 1, "div", 1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("cdkVirtualForOf", ctx.items);
+    } }, directives: [i1.CdkVirtualScrollViewport, i1.CdkFixedSizeVirtualScroll, i1.CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkVirtualScrollAppendOnlyExample, [{
+        type: Component,
+        args: [{
+                selector: 'cdk-virtual-scroll-append-only-example',
+                styleUrls: ['cdk-virtual-scroll-append-only-example.css'],
+                templateUrl: 'cdk-virtual-scroll-append-only-example.html',
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            }]
+    }], null, null); })();
+
 function CdkVirtualScrollContextExample_div_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "div");
     i0.ɵɵelementStart(1, "div", 2);
@@ -426,6 +460,7 @@ CdkVirtualScrollTemplateCacheExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponen
     }], null, null); })();
 
 const EXAMPLES = [
+    CdkVirtualScrollAppendOnlyExample,
     CdkVirtualScrollContextExample,
     CdkVirtualScrollCustomStrategyExample,
     CdkVirtualScrollDataSourceExample,
@@ -449,14 +484,16 @@ CdkScrollingExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollAppendOnlyExample,
+        CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
         CdkVirtualScrollDlExample,
         CdkVirtualScrollFixedBufferExample,
         CdkVirtualScrollHorizontalExample,
         CdkVirtualScrollOverviewExample,
-        CdkVirtualScrollTemplateCacheExample], imports: [ScrollingModule], exports: [CdkVirtualScrollContextExample,
+        CdkVirtualScrollTemplateCacheExample], imports: [ScrollingModule], exports: [CdkVirtualScrollAppendOnlyExample,
+        CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
         CdkVirtualScrollDlExample,
@@ -469,5 +506,5 @@ CdkScrollingExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports
  * Generated bundle index. Do not edit.
  */
 
-export { CdkScrollingExamplesModule, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample };
+export { CdkScrollingExamplesModule, CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample };
 //# sourceMappingURL=scrolling.js.map

@@ -166,4 +166,14 @@ simplest way to provide it is to use the <code>itemSize</code> directive on the 
 custom strategy by creating a class that implements the <code>VirtualScrollStrategy</code> interface and
 providing it as the <code>VIRTUAL_SCROLL_STRATEGY</code> on the component containing your viewport.</p>
 <div material-docs-example="cdk-virtual-scroll-custom-strategy"></div>
+
+
+        <h3 id="append-only-mode" class="docs-header-link">
+          <span header-link="append-only-mode"></span>
+          Append only mode
+        </h3>
+      <p>Virtual scroll viewports that render nontrivial items may find it more performant to simply append
+to the list as the user scrolls without removing rendered views. The <code>appendOnly</code> input ensures
+views that are already rendered persist in the DOM after they scroll out of view.</p>
+<div material-docs-example="cdk-virtual-scroll-append-only"></div>
 </div>

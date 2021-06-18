@@ -968,6 +968,23 @@
                 "importSpecifier": "cdk/portal"
             }
         },
+        "cdk-virtual-scroll-append-only": {
+            "packagePath": "cdk/scrolling/cdk-virtual-scroll-append-only",
+            "title": "Virtual scroll with view recycling disabled.",
+            "componentName": "CdkVirtualScrollAppendOnlyExample",
+            "files": [
+                "cdk-virtual-scroll-append-only-example.ts",
+                "cdk-virtual-scroll-append-only-example.html",
+                "cdk-virtual-scroll-append-only-example.css"
+            ],
+            "selector": "cdk-virtual-scroll-append-only-example",
+            "additionalComponents": [],
+            "primaryFile": "cdk-virtual-scroll-append-only-example.ts",
+            "module": {
+                "name": "CdkScrollingExamplesModule",
+                "importSpecifier": "cdk/scrolling"
+            }
+        },
         "cdk-virtual-scroll-context": {
             "packagePath": "cdk/scrolling/cdk-virtual-scroll-context",
             "title": "Virtual scroll context variables",
