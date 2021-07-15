@@ -4346,11 +4346,11 @@ function TableGeneratedColumnsExample_ng_container_1_Template(rf, ctx) { if (rf 
     const column_r3 = ctx.$implicit;
     i0.ɵɵproperty("matColumnDef", column_r3.columnDef);
 } }
-function TableGeneratedColumnsExample_mat_header_row_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "mat-header-row");
+function TableGeneratedColumnsExample_tr_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "tr", 9);
 } }
-function TableGeneratedColumnsExample_mat_row_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "mat-row");
+function TableGeneratedColumnsExample_tr_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "tr", 10);
 } }
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -4396,11 +4396,11 @@ class TableGeneratedColumnsExample {
     }
 }
 TableGeneratedColumnsExample.ɵfac = function TableGeneratedColumnsExample_Factory(t) { return new (t || TableGeneratedColumnsExample)(); };
-TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""]], template: function TableGeneratedColumnsExample_Template(rf, ctx) { if (rf & 1) {
+TableGeneratedColumnsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableGeneratedColumnsExample, selectors: [["table-generated-columns-example"]], decls: 4, vars: 4, consts: [["mat-table", "", 1, "mat-elevation-z8", "demo-table", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableGeneratedColumnsExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "table", 0);
         i0.ɵɵtemplate(1, TableGeneratedColumnsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
-        i0.ɵɵtemplate(2, TableGeneratedColumnsExample_mat_header_row_2_Template, 1, 0, "mat-header-row", 2);
-        i0.ɵɵtemplate(3, TableGeneratedColumnsExample_mat_row_3_Template, 1, 0, "mat-row", 3);
+        i0.ɵɵtemplate(2, TableGeneratedColumnsExample_tr_2_Template, 1, 0, "tr", 2);
+        i0.ɵɵtemplate(3, TableGeneratedColumnsExample_tr_3_Template, 1, 0, "tr", 3);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵproperty("dataSource", ctx.dataSource);
