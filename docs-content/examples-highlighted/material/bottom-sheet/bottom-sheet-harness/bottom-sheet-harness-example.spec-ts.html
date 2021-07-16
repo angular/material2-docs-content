@@ -15,7 +15,9 @@ describe(<span class="hljs-string">&#x27;BottomSheetHarnessExample&#x27;</span>,
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
-    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+    });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {

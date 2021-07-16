@@ -158,10 +158,10 @@
 
     function CheckboxOverviewExample_li_11_Template(rf, ctx) {
         if (rf & 1) {
-            var _r4_1 = i0__namespace.ɵɵgetCurrentView();
+            var _r3_1 = i0__namespace.ɵɵgetCurrentView();
             i0__namespace.ɵɵelementStart(0, "li");
             i0__namespace.ɵɵelementStart(1, "mat-checkbox", 6);
-            i0__namespace.ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { var subtask_r1 = ctx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { i0__namespace.ɵɵrestoreView(_r4_1); var ctx_r3 = i0__namespace.ɵɵnextContext(); return ctx_r3.updateAllComplete(); });
+            i0__namespace.ɵɵlistener("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener($event) { var restoredCtx = i0__namespace.ɵɵrestoreView(_r3_1); var subtask_r1 = restoredCtx.$implicit; return subtask_r1.completed = $event; })("ngModelChange", function CheckboxOverviewExample_li_11_Template_mat_checkbox_ngModelChange_1_listener() { i0__namespace.ɵɵrestoreView(_r3_1); var ctx_r4 = i0__namespace.ɵɵnextContext(); return ctx_r4.updateAllComplete(); });
             i0__namespace.ɵɵtext(2);
             i0__namespace.ɵɵelementEnd();
             i0__namespace.ɵɵelementEnd();

@@ -46,9 +46,10 @@
     }
     function CdkTreeFlatExample_cdk_tree_node_2_Template(rf, ctx) {
         if (rf & 1) {
+            var _r5_1 = i0__namespace.ɵɵgetCurrentView();
             i0__namespace.ɵɵelementStart(0, "cdk-tree-node", 3);
             i0__namespace.ɵɵelementStart(1, "button", 5);
-            i0__namespace.ɵɵlistener("click", function CdkTreeFlatExample_cdk_tree_node_2_Template_button_click_1_listener() { var node_r3 = ctx.$implicit; return node_r3.isExpanded = !node_r3.isExpanded; });
+            i0__namespace.ɵɵlistener("click", function CdkTreeFlatExample_cdk_tree_node_2_Template_button_click_1_listener() { var restoredCtx = i0__namespace.ɵɵrestoreView(_r5_1); var node_r3 = restoredCtx.$implicit; return node_r3.isExpanded = !node_r3.isExpanded; });
             i0__namespace.ɵɵelementStart(2, "mat-icon", 6);
             i0__namespace.ɵɵtext(3);
             i0__namespace.ɵɵelementEnd();
