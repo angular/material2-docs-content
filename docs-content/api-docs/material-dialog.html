@@ -585,10 +585,10 @@ Stays fixed to the bottom when scrolling.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>autoFocus: boolean</code>
+      <code>autoFocus: AutoFocusTarget | string | boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the dialog should focus the first focusable element on open.</p>
+  <td class="docs-api-property-description"><p>Where the dialog should focus on open.</p>
 </td>
 </tr>
 
@@ -1440,6 +1440,20 @@ content will be rendered.</p>
       <span header-link="type_aliases"></span>
       Type aliases
     </h3>
+    
+      
+
+<h4 id="AutoFocusTarget" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AutoFocusTarget"></span>
+  <code>AutoFocusTarget</code>
+</h4><p class="docs-api-type-alias-description"><p>Options for where to set focus to automatically on dialog open</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AutoFocusTarget = <span class="hljs-string">&#x27;dialog&#x27;</span> | <span class="hljs-string">&#x27;first-tabbable&#x27;</span> | <span class="hljs-string">&#x27;first-heading&#x27;</span>;</code>
+</pre>
+</div>
+
+
     
       
 
