@@ -127,6 +127,18 @@ updates. This can be based on <em>anything</em>: websocket connections, user int
 time-based intervals, etc. Most commonly, updates will be triggered by user interactions like
 sorting and pagination.</p>
 
+        <h5 id="fixedlayout" class="docs-header-link">
+          <span header-link="fixedlayout"></span>
+          <code>fixedLayout</code>
+        </h5>
+      <p>The CDK table measures the dimensions of sticky elements before applying the styles that make them
+&quot;stick&quot;. Because native tables derive column widths from the content within each cell, these
+dimensions are re-checked when the underlying data changes.</p>
+<p>Enabling <code>fixedLayout</code> will enforce uniform column widths, so the table can reliably cache and reuse
+them when calculating sticky styles. This can reduce rendering latency for large native tables.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">fixedLayout</span>&gt;</span>
+</code></pre>
+
         <h5 id="trackby" class="docs-header-link">
           <span header-link="trackby"></span>
           <code>trackBy</code>
@@ -135,6 +147,17 @@ sorting and pagination.</p>
 <a href="https://angular.io/api/common/NgForOf#change-propagation"><code>ngFor</code> <code>trackBy</code></a>. This informs the
 table how to uniquely identify rows to track how the data changes with each update.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;myTrackById&quot;</span>&gt;</span>
+</code></pre>
+
+        <h5 id="recyclerows" class="docs-header-link">
+          <span header-link="recyclerows"></span>
+          <code>recycleRows</code>
+        </h5>
+      <p>By default, <code>CdkTable</code> creates and destroys an internal Angular view for each row. This allows rows 
+to participate in animations and to toggle between different row templates with <code>cdkRowDefWhen</code>. If 
+you don&#39;t need these features, you can instruct the table to cache and recycle rows by specifying 
+<code>recycleRows</code>.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span> <span class="hljs-attr">recycleRows</span>&gt;</span>
 </code></pre>
 
         <h3 id="alternate-html-to-using-native-table" class="docs-header-link">
