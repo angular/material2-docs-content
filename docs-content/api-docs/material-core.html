@@ -65,19 +65,13 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v14.0.0 or later">
+        Deprecated
+      </div><p class="docs-api-property-name">
       <code>useUtcForDisplay: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether to use <code>timeZone: &#39;utc&#39;</code> with <code>Intl.DateTimeFormat</code> when formatting dates.
-Without this <code>Intl.DateTimeFormat</code> sometimes chooses the wrong timeZone, which can throw off
-the result. (e.g. in the en-US locale <code>new Date(1800, 7, 14).toLocaleDateString()</code>
-will produce <code>&#39;8/13/1800&#39;</code>.</p>
-<p>TODO(mmalerba): drop this variable. It&#39;s not being used in the code right now. We&#39;re now
-getting the string representation of a Date object from its utc representation. We&#39;re keeping
-it here for sometime, just for precaution, in case we decide to revert some of these changes
-though.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
