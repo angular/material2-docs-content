@@ -222,12 +222,57 @@ ButtonToggleFormsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Bu
             }]
     }], null, null); })();
 
+/**
+ * @title Button toggle selection mode
+ */
+class ButtonToggleModeExample {
+}
+ButtonToggleModeExample.ɵfac = function ButtonToggleModeExample_Factory(t) { return new (t || ButtonToggleModeExample)(); };
+ButtonToggleModeExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ButtonToggleModeExample, selectors: [["button-toggle-mode-example"]], decls: 18, vars: 0, consts: [["name", "favoriteColor", "aria-label", "Favorite Color"], ["value", "red"], ["value", "green"], ["value", "blue"], ["name", "ingredients", "aria-label", "Ingredients", "multiple", ""], ["value", "flour"], ["value", "eggs"], ["value", "sugar"]], template: function ButtonToggleModeExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "h3");
+        i0.ɵɵtext(1, "Single selection");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(2, "mat-button-toggle-group", 0);
+        i0.ɵɵelementStart(3, "mat-button-toggle", 1);
+        i0.ɵɵtext(4, "Red");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(5, "mat-button-toggle", 2);
+        i0.ɵɵtext(6, "Green");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "mat-button-toggle", 3);
+        i0.ɵɵtext(8, "Blue");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "h3");
+        i0.ɵɵtext(10, "Multiple selection");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "mat-button-toggle-group", 4);
+        i0.ɵɵelementStart(12, "mat-button-toggle", 5);
+        i0.ɵɵtext(13, "Flour");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(14, "mat-button-toggle", 6);
+        i0.ɵɵtext(15, "Eggs");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(16, "mat-button-toggle", 7);
+        i0.ɵɵtext(17, "Sugar");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } }, directives: [i1.MatButtonToggleGroup, i1.MatButtonToggle], encapsulation: 2 });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ButtonToggleModeExample, [{
+        type: Component,
+        args: [{
+                selector: 'button-toggle-mode-example',
+                templateUrl: 'button-toggle-mode-example.html',
+            }]
+    }], null, null); })();
+
 const EXAMPLES = [
     ButtonToggleAppearanceExample,
     ButtonToggleExclusiveExample,
     ButtonToggleOverviewExample,
     ButtonToggleHarnessExample,
     ButtonToggleFormsExample,
+    ButtonToggleModeExample,
 ];
 class ButtonToggleExamplesModule {
 }
@@ -257,18 +302,20 @@ ButtonToggleExamplesModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
-        ButtonToggleFormsExample], imports: [FormsModule,
+        ButtonToggleFormsExample,
+        ButtonToggleModeExample], imports: [FormsModule,
         MatButtonToggleModule,
         MatIconModule,
         ReactiveFormsModule], exports: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
-        ButtonToggleFormsExample] }); })();
+        ButtonToggleFormsExample,
+        ButtonToggleModeExample] }); })();
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleFormsExample, ButtonToggleHarnessExample, ButtonToggleOverviewExample };
+export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleFormsExample, ButtonToggleHarnessExample, ButtonToggleModeExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.js.map

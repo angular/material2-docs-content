@@ -1458,6 +1458,22 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/button-toggle"
         }
     },
+    "button-toggle-mode": {
+        "packagePath": "material/button-toggle/button-toggle-mode",
+        "title": "Button toggle selection mode",
+        "componentName": "ButtonToggleModeExample",
+        "files": [
+            "button-toggle-mode-example.ts",
+            "button-toggle-mode-example.html"
+        ],
+        "selector": "button-toggle-mode-example",
+        "additionalComponents": [],
+        "primaryFile": "button-toggle-mode-example.ts",
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "material/button-toggle"
+        }
+    },
     "button-toggle-overview": {
         "packagePath": "material/button-toggle/button-toggle-overview",
         "title": "Basic button-toggles",

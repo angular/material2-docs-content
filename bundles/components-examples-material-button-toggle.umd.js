@@ -278,12 +278,64 @@
             }], null, null);
     })();
 
+    /**
+     * @title Button toggle selection mode
+     */
+    var ButtonToggleModeExample = /** @class */ (function () {
+        function ButtonToggleModeExample() {
+        }
+        return ButtonToggleModeExample;
+    }());
+    ButtonToggleModeExample.ɵfac = function ButtonToggleModeExample_Factory(t) { return new (t || ButtonToggleModeExample)(); };
+    ButtonToggleModeExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: ButtonToggleModeExample, selectors: [["button-toggle-mode-example"]], decls: 18, vars: 0, consts: [["name", "favoriteColor", "aria-label", "Favorite Color"], ["value", "red"], ["value", "green"], ["value", "blue"], ["name", "ingredients", "aria-label", "Ingredients", "multiple", ""], ["value", "flour"], ["value", "eggs"], ["value", "sugar"]], template: function ButtonToggleModeExample_Template(rf, ctx) {
+            if (rf & 1) {
+                i0__namespace.ɵɵelementStart(0, "h3");
+                i0__namespace.ɵɵtext(1, "Single selection");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(2, "mat-button-toggle-group", 0);
+                i0__namespace.ɵɵelementStart(3, "mat-button-toggle", 1);
+                i0__namespace.ɵɵtext(4, "Red");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(5, "mat-button-toggle", 2);
+                i0__namespace.ɵɵtext(6, "Green");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(7, "mat-button-toggle", 3);
+                i0__namespace.ɵɵtext(8, "Blue");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(9, "h3");
+                i0__namespace.ɵɵtext(10, "Multiple selection");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(11, "mat-button-toggle-group", 4);
+                i0__namespace.ɵɵelementStart(12, "mat-button-toggle", 5);
+                i0__namespace.ɵɵtext(13, "Flour");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(14, "mat-button-toggle", 6);
+                i0__namespace.ɵɵtext(15, "Eggs");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(16, "mat-button-toggle", 7);
+                i0__namespace.ɵɵtext(17, "Sugar");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+            }
+        }, directives: [i1__namespace.MatButtonToggleGroup, i1__namespace.MatButtonToggle], encapsulation: 2 });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(ButtonToggleModeExample, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'button-toggle-mode-example',
+                        templateUrl: 'button-toggle-mode-example.html',
+                    }]
+            }], null, null);
+    })();
+
     var EXAMPLES = [
         ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
         ButtonToggleFormsExample,
+        ButtonToggleModeExample,
     ];
     var ButtonToggleExamplesModule = /** @class */ (function () {
         function ButtonToggleExamplesModule() {
@@ -319,14 +371,16 @@
                 ButtonToggleExclusiveExample,
                 ButtonToggleOverviewExample,
                 ButtonToggleHarnessExample,
-                ButtonToggleFormsExample], imports: [i2$1.FormsModule,
+                ButtonToggleFormsExample,
+                ButtonToggleModeExample], imports: [i2$1.FormsModule,
                 i1.MatButtonToggleModule,
                 i2.MatIconModule,
                 i2$1.ReactiveFormsModule], exports: [ButtonToggleAppearanceExample,
                 ButtonToggleExclusiveExample,
                 ButtonToggleOverviewExample,
                 ButtonToggleHarnessExample,
-                ButtonToggleFormsExample] });
+                ButtonToggleFormsExample,
+                ButtonToggleModeExample] });
     })();
 
     /**
@@ -338,6 +392,7 @@
     exports.ButtonToggleExclusiveExample = ButtonToggleExclusiveExample;
     exports.ButtonToggleFormsExample = ButtonToggleFormsExample;
     exports.ButtonToggleHarnessExample = ButtonToggleHarnessExample;
+    exports.ButtonToggleModeExample = ButtonToggleModeExample;
     exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
