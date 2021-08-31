@@ -1865,6 +1865,22 @@
                 "importSpecifier": "material/button"
             }
         },
+        "card-actions": {
+            "packagePath": "material/card/card-actions",
+            "title": "Card with actions alignment option",
+            "componentName": "CardActionsExample",
+            "files": [
+                "card-actions-example.ts",
+                "card-actions-example.html"
+            ],
+            "selector": "card-actions-example",
+            "additionalComponents": [],
+            "primaryFile": "card-actions-example.ts",
+            "module": {
+                "name": "CardExamplesModule",
+                "importSpecifier": "material/card"
+            }
+        },
         "card-fancy": {
             "packagePath": "material/card/card-fancy",
             "title": "Card with multiple sections",
@@ -1877,6 +1893,23 @@
             "selector": "card-fancy-example",
             "additionalComponents": [],
             "primaryFile": "card-fancy-example.ts",
+            "module": {
+                "name": "CardExamplesModule",
+                "importSpecifier": "material/card"
+            }
+        },
+        "card-footer": {
+            "packagePath": "material/card/card-footer",
+            "title": "Card with footer",
+            "componentName": "CardFooterExample",
+            "files": [
+                "card-footer-example.ts",
+                "card-footer-example.html",
+                "card-footer-example.css"
+            ],
+            "selector": "card-footer-example",
+            "additionalComponents": [],
+            "primaryFile": "card-footer-example.ts",
             "module": {
                 "name": "CardExamplesModule",
                 "importSpecifier": "material/card"
@@ -1899,6 +1932,23 @@
                 "importSpecifier": "material/card"
             }
         },
+        "card-media-size": {
+            "packagePath": "material/card/card-media-size",
+            "title": "Card with media size",
+            "componentName": "CardMediaSizeExample",
+            "files": [
+                "card-media-size-example.ts",
+                "card-media-size-example.html",
+                "card-media-size-example.css"
+            ],
+            "selector": "card-media-size-example",
+            "additionalComponents": [],
+            "primaryFile": "card-media-size-example.ts",
+            "module": {
+                "name": "CardExamplesModule",
+                "importSpecifier": "material/card"
+            }
+        },
         "card-overview": {
             "packagePath": "material/card/card-overview",
             "title": "Basic cards",
@@ -1910,6 +1960,23 @@
             "selector": "card-overview-example",
             "additionalComponents": [],
             "primaryFile": "card-overview-example.ts",
+            "module": {
+                "name": "CardExamplesModule",
+                "importSpecifier": "material/card"
+            }
+        },
+        "card-subtitle": {
+            "packagePath": "material/card/card-subtitle",
+            "title": "Card with sub-title",
+            "componentName": "CardSubtitleExample",
+            "files": [
+                "card-subtitle-example.ts",
+                "card-subtitle-example.html",
+                "card-subtitle-example.css"
+            ],
+            "selector": "card-subtitle-example",
+            "additionalComponents": [],
+            "primaryFile": "card-subtitle-example.ts",
             "module": {
                 "name": "CardExamplesModule",
                 "importSpecifier": "material/card"
