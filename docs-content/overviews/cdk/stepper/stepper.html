@@ -93,10 +93,11 @@ resetting it will call <code>reset</code> on the underlying form control which c
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>The CDK stepper is treated as a tabbed view for accessibility purposes, so it is given
-<code>role=&quot;tablist&quot;</code> by default. The header of step that can be clicked to select the step
-is given <code>role=&quot;tab&quot;</code>, and the content that can be expanded upon selection is given
-<code>role=&quot;tabpanel&quot;</code>. <code>aria-selected</code> attribute of step header and <code>aria-expanded</code> attribute of
-step content is automatically set based on step selection change.</p>
-<p>The stepper and each step should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+      <p>Apart from the built-in keyboard support, the stepper doesn&#39;t apply any treatment. When implementing
+your own component, it is recommended that the stepper is treated as a tabbed view for accessibility
+purposes by giving it a <code>role=&quot;tablist&quot;</code>. The header of step that can be clicked to select the step
+should be given <code>role=&quot;tab&quot;</code>, and the content that can be expanded upon selection should be given
+<code>role=&quot;tabpanel&quot;</code>. Furthermore, the step header should have an <code>aria-selected</code> attribute that
+reflects its selected state and the associated content element should have <code>aria-expanded</code>.</p>
+<p>You can refer to the <a href="https://github.com/angular/components/tree/master/src/material/stepper">Angular Material stepper</a> as an example of an accessible implementation.</p>
 </div>
