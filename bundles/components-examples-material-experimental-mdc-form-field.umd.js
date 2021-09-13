@@ -265,7 +265,7 @@
                     ar[i] = from[i];
                 }
             }
-        return to.concat(ar || from);
+        return to.concat(ar || Array.prototype.slice.call(from));
     }
     function __await(v) {
         return this instanceof __await ? (this.v = v, this) : new __await(v);
@@ -613,12 +613,10 @@
             }], null, null);
     })();
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample,
-                MyTelInput], imports: [common.CommonModule,
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(MdcFormFieldExamplesModule, { declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [common.CommonModule,
                 i1.MatFormFieldModule,
                 i2.MatIconModule,
-                i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample,
-                MyTelInput] });
+                i3.ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
     })();
 
     /**

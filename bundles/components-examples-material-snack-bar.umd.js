@@ -268,7 +268,7 @@
                     ar[i] = from[i];
                 }
             }
-        return to.concat(ar || from);
+        return to.concat(ar || Array.prototype.slice.call(from));
     }
     function __await(v) {
         return this instanceof __await ? (this.v = v, this) : new __await(v);
@@ -621,8 +621,7 @@
         (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(SnackBarExamplesModule, { declarations: [SnackBarComponentExample,
                 SnackBarHarnessExample,
                 SnackBarOverviewExample,
-                SnackBarPositionExample,
-                PizzaPartyComponent], imports: [i3.FormsModule,
+                SnackBarPositionExample, PizzaPartyComponent], imports: [i3.FormsModule,
                 i5.MatButtonModule,
                 i4.MatInputModule,
                 i3$1.MatSelectModule,
