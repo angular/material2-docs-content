@@ -39,5 +39,8 @@ progress-spinners use the theme&#39;s primary color. This can be changed to <cod
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>Each progress spinner should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+      <p><code>MatProgressSpinner</code> implements the ARIA <code>role=&quot;progressbar&quot;</code> pattern. By default, the spinner
+sets <code>aria-valuemin</code> to <code>0</code> and <code>aria-valuemax</code> to <code>100</code>. Avoid changing these values, as this may
+cause incompatiblity with some assitive technology.</p>
+<p>Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for each spinner.</p>
 </div>

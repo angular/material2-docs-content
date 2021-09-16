@@ -562,12 +562,18 @@ value can be anything that is accepted by <code>ngClass</code>.</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>The <code>MatDatepickerInput</code> and <code>MatDatepickerToggle</code> directives add the <code>aria-haspopup</code> attribute to
-the native input and toggle button elements respectively, and they trigger a calendar dialog with
-<code>role=&quot;dialog&quot;</code>.</p>
-<p><code>MatDatepickerIntl</code> includes strings that are used for <code>aria-label</code>s. The datepicker input
-should have a placeholder or be given a meaningful label via <code>aria-label</code>, <code>aria-labelledby</code> or
+      <p>The <code>MatDatepicker</code> pop-up uses the <code>role=&quot;dialog&quot;</code> interaction pattern. This dialog then contains
+multiple controls, the most prominent being the calendar itself. This calendar implements the
+<code>role=&quot;grid&quot;</code> interaction pattern.</p>
+<p>The <code>MatDatepickerInput</code> and <code>MatDatepickerToggle</code> directives both apply the <code>aria-haspopup</code>
+attribute to the native input and button elements, respectively.</p>
+<p><code>MatDatepickerIntl</code> includes strings that are used for <code>aria-label</code> attributes. Always provide
+the datepicker text input a meaningful label via <code>&lt;mat-label&gt;</code>, <code>aria-label</code>, <code>aria-labelledby</code> or
 <code>MatDatepickerIntl</code>.</p>
+<p><code>MatDatepickerInput</code> adds <kbd>>Alt</kbd> + <kbd>Down Arrow</kbd> as a keyboard short to open the
+datepicker pop-up. However, ChromeOS intercepts this key combination at the OS level such that the
+browser only receives a <code>PageDown</code> key event. Because of this behavior, you should always include an
+additional means of opening the pop-up, such as <code>MatDatepickerToggle</code>.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
           <span header-link="keyboard-interaction"></span>
@@ -582,11 +588,11 @@ should have a placeholder or be given a meaningful label via <code>aria-label</c
 </tr>
 </thead>
 <tbody><tr>
-<td><code>ALT</code> + <code>DOWN_ARROW</code></td>
+<td><kbd>ALT</kbd> + <kbd>DOWN_ARROW</kbd></td>
 <td>Open the calendar pop-up</td>
 </tr>
 <tr>
-<td><code>ESCAPE</code></td>
+<td><kbd>ESCAPE</kbd></td>
 <td>Close the calendar pop-up</td>
 </tr>
 </tbody></table>
@@ -599,47 +605,47 @@ should have a placeholder or be given a meaningful label via <code>aria-label</c
 </tr>
 </thead>
 <tbody><tr>
-<td><code>LEFT_ARROW</code></td>
+<td><kbd>LEFT_ARROW</kbd></td>
 <td>Go to previous day</td>
 </tr>
 <tr>
-<td><code>RIGHT_ARROW</code></td>
+<td><kbd>RIGHT_ARROW</kbd></td>
 <td>Go to next day</td>
 </tr>
 <tr>
-<td><code>UP_ARROW</code></td>
+<td><kbd>UP_ARROW</kbd></td>
 <td>Go to same day in the previous week</td>
 </tr>
 <tr>
-<td><code>DOWN_ARROW</code></td>
+<td><kbd>DOWN_ARROW</kbd></td>
 <td>Go to same day in the next week</td>
 </tr>
 <tr>
-<td><code>HOME</code></td>
+<td><kbd>HOME</kbd></td>
 <td>Go to the first day of the month</td>
 </tr>
 <tr>
-<td><code>END</code></td>
+<td><kbd>END</kbd></td>
 <td>Go to the last day of the month</td>
 </tr>
 <tr>
-<td><code>PAGE_UP</code></td>
+<td><kbd>PAGE_UP</kbd></td>
 <td>Go to the same day in the previous month</td>
 </tr>
 <tr>
-<td><code>ALT</code> + <code>PAGE_UP</code></td>
+<td><kbd>ALT</kbd> + <kbd>PAGE_UP</kbd></td>
 <td>Go to the same day in the previous year</td>
 </tr>
 <tr>
-<td><code>PAGE_DOWN</code></td>
+<td><kbd>PAGE_DOWN</kbd></td>
 <td>Go to the same day in the next month</td>
 </tr>
 <tr>
-<td><code>ALT</code> + <code>PAGE_DOWN</code></td>
+<td><kbd>ALT</kbd> + <kbd>PAGE_DOWN</kbd></td>
 <td>Go to the same day in the next year</td>
 </tr>
 <tr>
-<td><code>ENTER</code></td>
+<td><kbd>ENTER</kbd></td>
 <td>Select current date</td>
 </tr>
 </tbody></table>
@@ -652,47 +658,47 @@ should have a placeholder or be given a meaningful label via <code>aria-label</c
 </tr>
 </thead>
 <tbody><tr>
-<td><code>LEFT_ARROW</code></td>
+<td><kbd>LEFT_ARROW</kbd></td>
 <td>Go to previous month</td>
 </tr>
 <tr>
-<td><code>RIGHT_ARROW</code></td>
+<td><kbd>RIGHT_ARROW</kbd></td>
 <td>Go to next month</td>
 </tr>
 <tr>
-<td><code>UP_ARROW</code></td>
+<td><kbd>UP_ARROW</kbd></td>
 <td>Go up a row (back 4 months)</td>
 </tr>
 <tr>
-<td><code>DOWN_ARROW</code></td>
+<td><kbd>DOWN_ARROW</kbd></td>
 <td>Go down a row (forward 4 months)</td>
 </tr>
 <tr>
-<td><code>HOME</code></td>
+<td><kbd>HOME</kbd></td>
 <td>Go to the first month of the year</td>
 </tr>
 <tr>
-<td><code>END</code></td>
+<td><kbd>END</kbd></td>
 <td>Go to the last month of the year</td>
 </tr>
 <tr>
-<td><code>PAGE_UP</code></td>
+<td><kbd>PAGE_UP</kbd></td>
 <td>Go to the same month in the previous year</td>
 </tr>
 <tr>
-<td><code>ALT</code> + <code>PAGE_UP</code></td>
+<td><kbd>ALT</kbd> + <kbd>PAGE_UP</kbd></td>
 <td>Go to the same month 10 years back</td>
 </tr>
 <tr>
-<td><code>PAGE_DOWN</code></td>
+<td><kbd>PAGE_DOWN</kbd></td>
 <td>Go to the same month in the next year</td>
 </tr>
 <tr>
-<td><code>ALT</code> + <code>PAGE_DOWN</code></td>
+<td><kbd>ALT</kbd> + <kbd>PAGE_DOWN</kbd></td>
 <td>Go to the same month 10 years forward</td>
 </tr>
 <tr>
-<td><code>ENTER</code></td>
+<td><kbd>ENTER</kbd></td>
 <td>Select current month</td>
 </tr>
 </tbody></table>
@@ -705,47 +711,47 @@ should have a placeholder or be given a meaningful label via <code>aria-label</c
 </tr>
 </thead>
 <tbody><tr>
-<td><code>LEFT_ARROW</code></td>
+<td><kbd>LEFT_ARROW</kbd></td>
 <td>Go to previous year</td>
 </tr>
 <tr>
-<td><code>RIGHT_ARROW</code></td>
+<td><kbd>RIGHT_ARROW</kbd></td>
 <td>Go to next year</td>
 </tr>
 <tr>
-<td><code>UP_ARROW</code></td>
+<td><kbd>UP_ARROW</kbd></td>
 <td>Go up a row (back 4 years)</td>
 </tr>
 <tr>
-<td><code>DOWN_ARROW</code></td>
+<td><kbd>DOWN_ARROW</kbd></td>
 <td>Go down a row (forward 4 years)</td>
 </tr>
 <tr>
-<td><code>HOME</code></td>
+<td><kbd>HOME</kbd></td>
 <td>Go to the first year in the current range</td>
 </tr>
 <tr>
-<td><code>END</code></td>
+<td><kbd>END</kbd></td>
 <td>Go to the last year in the current range</td>
 </tr>
 <tr>
-<td><code>PAGE_UP</code></td>
+<td><kbd>PAGE_UP</kbd></td>
 <td>Go back 24 years</td>
 </tr>
 <tr>
-<td><code>ALT</code> + <code>PAGE_UP</code></td>
+<td><kbd>ALT</kbd> + <kbd>PAGE_UP</kbd></td>
 <td>Go back 240 years</td>
 </tr>
 <tr>
-<td><code>PAGE_DOWN</code></td>
+<td><kbd>PAGE_DOWN</kbd></td>
 <td>Go forward 24 years</td>
 </tr>
 <tr>
-<td><code>ALT</code> + <code>PAGE_DOWN</code></td>
+<td><kbd>ALT</kbd> + <kbd>PAGE_DOWN</kbd></td>
 <td>Go forward 240 years</td>
 </tr>
 <tr>
-<td><code>ENTER</code></td>
+<td><kbd>ENTER</kbd></td>
 <td>Select current year</td>
 </tr>
 </tbody></table>

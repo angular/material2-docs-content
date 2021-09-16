@@ -32,15 +32,6 @@ would make that impossible (e.g., radio-buttons inside of table cells). The radi
       <p><code>&lt;mat-radio-group&gt;</code> is compatible with <code>@angular/forms</code> and supports both <code>FormsModule</code>
 and <code>ReactiveFormsModule</code>.</p>
 
-        <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
-          Accessibility
-        </h3>
-      <p>The <code>&lt;mat-radio-button&gt;</code> uses an internal <code>&lt;input type=&quot;radio&quot;&gt;</code> to provide an accessible experience.
-This internal radio button receives focus and is automatically labelled by the text content of the
-<code>&lt;mat-radio-button&gt;</code> element.</p>
-<p>Radio button groups should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
-
         <h3 id="default-color-configuration" class="docs-header-link">
           <span header-link="default-color-configuration"></span>
           Default Color Configuration
@@ -51,4 +42,24 @@ This internal radio button receives focus and is automatically labelled by the t
     useValue: { color: &#39;accent&#39; },
 }]
 </code></pre>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p><code>MatRadioButton</code> uses an internal <code>&lt;input type=&quot;radio&quot;&gt;</code> to provide an accessible experience.
+This internal radio button receives focus and is automatically labelled by the text content of the
+<code>&lt;mat-radio-button&gt;</code> element. Avoid adding other interactive controls into the content of
+<code>&lt;mat-radio-button&gt;</code>, as this degrades the experience for users of assistive technology.</p>
+<p>Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for radio buttons without
+descriptive text content. For dynamic labels and descriptions, <code>MatRadioButton</code> provides input
+properties for binding <code>aria-label</code>, <code>aria-labelledby</code>, and <code>aria-describedby</code>. This means that you
+should not use the <code>attr.</code> prefix when binding these properties, as demonstrated below.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">aria-label</span>]=<span class="hljs-string">&quot;getMultipleChoiceAnswer()&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+</code></pre>
+<p>Prefer placing all radio buttons inside of a <code>&lt;mat-radio-group&gt;</code> rather than creating standalone
+radio buttons because groups are easier to use exclusively with a keyboard. </p>
+<p>You should provide an accessible label for all <code>&lt;mat-radio-group&gt;</code> elements via <code>aria-label</code> or
+<code>aria-labelledby</code>. </p>
 </div>

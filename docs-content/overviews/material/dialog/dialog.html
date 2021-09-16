@@ -154,48 +154,68 @@ will be available implicitly in the template:</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>By default, each dialog has <code>role=&quot;dialog&quot;</code> on the root element. The role can be changed to
-<code>alertdialog</code> via the <code>MatDialogConfig</code> when opening.</p>
-<p>The <code>aria-label</code>, <code>aria-labelledby</code>, and <code>aria-describedby</code> attributes can all be set to the
-dialog element via the <code>MatDialogConfig</code> as well. Each dialog should typically have a label
-set via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
-<p>When a dialog is opened, it will move focus to the first focusable element that it can find. In
-order to prevent users from tabbing into elements in the background, the Material dialog uses
-a <a href="https://material.angular.io/cdk/a11y/overview#focustrap">focus trap</a> to contain focus
-within itself. Once a dialog is closed, it will return focus to the element that was focused
-before the dialog was opened.</p>
-<p>If you&#39;re adding a close button that doesn&#39;t have text (e.g. a purely icon-based button), make sure
-that it has a meaningful <code>aria-label</code> so that users with assistive technology know what it is used
-for.</p>
-
-        <h4 id="focus-management" class="docs-header-link">
-          <span header-link="focus-management"></span>
-          Focus management
-        </h4>
-      <p>By default, the first tabbable element within the dialog will receive focus upon open. This can
-be configured by setting the <code>cdkFocusInitial</code> attribute on another focusable element.</p>
-<p>Tabbing through the elements of the dialog will keep focus inside of the dialog element,
-wrapping back to the first tabbable element when reaching the end of the tab sequence.</p>
-
-        <h4 id="focus-restoration" class="docs-header-link">
-          <span header-link="focus-restoration"></span>
-          Focus Restoration
-        </h4>
-      <p>Upon closing, the dialog returns focus to the element that had focus when the dialog opened.
-In some cases, however, this previously focused element no longer exists in the DOM, such as
-menu items. To manually restore focus to an appropriate element in such cases, you can disable 
-<code>restoreFocus</code> in <code>MatDialogConfig</code> and pass it into the <code>open</code> method.
-Then you can return focus manually by subscribing to the <code>afterClosed</code> observable on <code>MatDialogRef</code>.</p>
-<div material-docs-example="dialog-from-menu"
-                             file="dialog-from-menu-example.ts"
-                             region="focus-restoration"></div>
-
+      <p><code>MatDialog</code> creates modal dialogs that implements the ARIA <code>role=&quot;dialog&quot;</code> pattern by default.
+You can change the dialog&#39;s role to <code>alertdialog</code> via <code>MatDialogConfig</code>.</p>
+<p>You should provide a an accessible label to this root dialog element by setting the <code>ariaLabel</code> or
+<code>ariaLabelledBy</code> properties of <code>MatDialogConfig</code>. You can additionally specify a description element
+ID via the <code>ariaDescribedBy</code> property of <code>MatDialogConfig</code>.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
         </h4>
-      <p>By default pressing the escape key will close the dialog. While this behavior can
-be turned off via the <code>disableClose</code> option, users should generally avoid doing so
-as it breaks the expected interaction pattern for screen-reader users.</p>
+      <p>By default, the escape key closes <code>MatDialog</code>. While you can disable this behavior via
+the <code>disableClose</code> property of <code>MatDialogConfig</code>, doing this breaks the expected interaction
+pattern for the ARIA <code>role=&quot;dialog&quot;</code> pattern.</p>
+
+        <h4 id="focus-management" class="docs-header-link">
+          <span header-link="focus-management"></span>
+          Focus management
+        </h4>
+      <p>When opened, <code>MatDialog</code> traps browser focus such that it cannot escape the root
+<code>role=&quot;dialog&quot;</code> element. By default, the first tabbable element in the dialog receives focus.
+You can customize which element receives focus with the <code>autoFocus</code> property of
+<code>MatDialogConfig</code>, which supports the following values.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>first-tabbable</code></td>
+<td>Focus the first tabbable element. This is the default setting.</td>
+</tr>
+<tr>
+<td><code>first-header</code></td>
+<td>Focus the first header element (<code>role=&quot;heading&quot;</code>, <code>h1</code> through <code>h6</code>)</td>
+</tr>
+<tr>
+<td><code>dialog</code></td>
+<td>Focus the root <code>role=&quot;dialog&quot;</code> element.</td>
+</tr>
+<tr>
+<td>Any CSS selector</td>
+<td>Focus the first element matching the given selector.</td>
+</tr>
+</tbody></table>
+<p>While the default setting applies the best behavior for most applications, special cases may benefit
+from these alternatives. Always test your application to verify the behavior that works best for
+your users.</p>
+
+        <h4 id="focus-restoration" class="docs-header-link">
+          <span header-link="focus-restoration"></span>
+          Focus restoration
+        </h4>
+      <p>When closed, <code>MatDialog</code> restores focus to the element that previously held focus when the
+dialog opened. However, if that previously focused element no longer exists, you must
+add additional handling to return focus to an element that makes sense for the user&#39;s workflow.
+Opening a dialog from a menu is one common pattern that causes this situation. The menu
+closes upon clicking an item, thus the focused menu item is no longer in the DOM when the bottom
+sheet attempts to restore focus.</p>
+<p>You can add handling for this situation with the <code>afterClosed()</code> observable from <code>MatDialogRef</code>.</p>
+<div material-docs-example="dialog-from-menu"
+                             file="dialog-from-menu-example.ts"
+                             region="focus-restoration"></div>
 </div>

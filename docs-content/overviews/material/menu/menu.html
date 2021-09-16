@@ -117,6 +117,14 @@ with a different set of data, depending on the trigger that opened it:</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>Menu triggers or menu items without text or labels should be given a meaningful label via
-<code>aria-label</code> or <code>aria-labelledby</code>.</p>
+      <p>Angular Material&#39;s menu component consists of two connected parts: the trigger and the pop-up menu.</p>
+<p>The menu trigger is a standard button element augmented with <code>aria-haspopup</code>, <code>aria-expanded</code>, and
+<code>aria-controls</code> to create the relationship to the pop-up panel.</p>
+<p>The pop-up menu implements the <code>role=&quot;menu&quot;</code> pattern, handling keyboard interaction and focus
+management. Upon opening, the trigger will focus the first focusable menu item. Upon close, the menu
+will return focus to its trigger. Avoid creating a menu in which all items are disabled, instead
+hiding or disabling the menu trigger. </p>
+<p>Angular Material does not support the <code>menuitemcheckbox</code> or <code>menuitemradio</code> roles.</p>
+<p>Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for any menu
+triggers or menu items without descriptive text content.</p>
 </div>

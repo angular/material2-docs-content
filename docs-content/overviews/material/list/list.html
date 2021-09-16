@@ -164,25 +164,30 @@ To add a divider, use <code>&lt;mat-divider&gt;</code>.</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>The type of list used in any given situation depends on how the end-user will be interacting with it.</p>
+      <p>Angular Material offers multiple varieties of list so that you can choose the type that best applies
+to your use-case.</p>
 
         <h4 id="navigation" class="docs-header-link">
           <span header-link="navigation"></span>
           Navigation
         </h4>
-      <p>When the list-items navigate somewhere, <code>&lt;mat-nav-list&gt;</code> should be used with <code>&lt;a mat-list-item&gt;</code>
-elements as the list items. The nav-list will be rendered using <code>role=&quot;navigation&quot;</code> and can be
-given an <code>aria-label</code> to give context on the set of navigation options presented. Additional
-interactive content, such as buttons, should <em>not</em> be added inside the anchors.</p>
+      <p>You should use <code>MatNavList</code> when every item in the list is an anchor that navigate to another URL.
+The root <code>&lt;mat-nav-list&gt;</code> element sets <code>role=&quot;navigation&quot;</code> and should contain only anchor elements
+with the <code>mat-list-item</code> attribute. You should not nest any interactive elements inside these
+anchors, including buttons and checkboxes. </p>
+<p>Always provide an accessible label for the <code>&lt;mat-nav-list&gt;</code> element via <code>aria-label</code> or
+<code>aria-labelledby</code>.</p>
 
         <h4 id="selection" class="docs-header-link">
           <span header-link="selection"></span>
           Selection
         </h4>
-      <p>When the list is primarily used to select one or more values, a <code>&lt;mat-selection-list&gt;</code> should be
-used with <code>&lt;mat-list-option&gt;</code>, which map to <code>role=&quot;listbox&quot;</code> and <code>role=&quot;option&quot;</code>, respectively. The
-list should be given an <code>aria-label</code> that describes the value or values being selected. Each option
-should <em>not</em> contain any additional interactive elements, such as buttons.</p>
+      <p>You should use <code>MatSelectionList</code> and <code>MatListOption</code> for lists that allow the user to select one
+or more values. This list variant uses the <code>role=&quot;listbox&quot;</code> interaction pattern, handling all
+associated keyboard input and focus management. You should not nest any interactive elements inside
+these options, including buttons and anchors. </p>
+<p>Always provide an accessible label for the <code>&lt;mat-selection-list&gt;</code> element via <code>aria-label</code> or
+<code>aria-labelledby</code> that describes the selection being made.</p>
 
         <h4 id="custom-scenarios" class="docs-header-link">
           <span header-link="custom-scenarios"></span>

@@ -159,11 +159,19 @@ explicit size using CSS. We recommend a specificity of at least 1 element + 1 cl
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>If a floating label is specified, it will be automatically used as the label for the form
+      <p>By itself, <code>MatFormField</code> does not apply any additional accessibility treatment to a control.
+However, several of the form field&#39;s optional features interact with the control contained within
+the form field.</p>
+<p>When you provide a label via <code>&lt;mat-label&gt;</code>, <code>MatFormField</code> automatically associates this label with
+the field&#39;s control via a native <code>&lt;label&gt;</code> element, using the <code>for</code> attribute to reference the
+control&#39;s ID.</p>
+<p>If a floating label is specified, it will be automatically used as the label for the form
 field control. If no floating label is specified, the user should label the form field control
 themselves using <code>aria-label</code>, <code>aria-labelledby</code> or <code>&lt;label for=...&gt;</code>.</p>
-<p>Any errors and hints added to the form field are automatically added to the form field control&#39;s
-<code>aria-describedby</code> set.</p>
+<p>When you provide informational text via <code>&lt;mat-hint&gt;</code> or <code>&lt;mat-error&gt;</code>, <code>MatFormField</code> automatically
+adds these elements&#39; IDs to the control&#39;s <code>aria-describedby</code> attribute. Additionally, <code>MatError</code>
+applies <code>aria-live=&quot;polite&quot;</code> by default such that assistive technology will announce errors when
+they appear.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
           <span header-link="troubleshooting"></span>

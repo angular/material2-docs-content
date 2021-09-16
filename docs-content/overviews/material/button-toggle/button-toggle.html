@@ -35,21 +35,28 @@ be configured globally using the <code>MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS</code> 
       <p><code>&lt;mat-button-toggle-group&gt;</code> is compatible with <code>@angular/forms</code> and supports both <code>FormsModule</code>
 and <code>ReactiveFormsModule</code>.</p>
 
-        <h3 id="accessibility" class="docs-header-link">
-          <span header-link="accessibility"></span>
-          Accessibility
-        </h3>
-      <p>The button-toggles internally use native <code>button</code> elements with <code>aria-pressed</code> to convey
-their toggled state. The button-toggle-group surrounding the individual buttons applies
-<code>role=&quot;group&quot;</code> to convey the association between the individual toggles.</p>
-<p>For button toggles containing only icons, each button toggle should be given a meaningful label via
-<code>aria-label</code> or <code>aria-labelledby</code>.</p>
-<p>For button toggle groups, each group should be given a meaningful label via <code>aria-label</code> or
-<code>aria-labelledby</code>.</p>
-
         <h3 id="orientation" class="docs-header-link">
           <span header-link="orientation"></span>
           Orientation
         </h3>
       <p>The button-toggles can be rendered in a vertical orientation by adding the <code>vertical</code> attribute.</p>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p><code>MatButtonToggle</code> internally uses native <code>button</code> elements with <code>aria-pressed</code> to convey toggle
+state. If a toggle contains only an icon, you should specify a meaningful label via <code>aria-label</code>
+or <code>aria-labelledby</code>. For dynamic labels, <code>MatButtonToggle</code> provides input properties for binding
+<code>aria-label</code> and <code>aria-labelledby</code>. This means that you should not use the <code>attr.</code> prefix when
+binding these properties, as demonstrated below.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> [<span class="hljs-attr">aria-label</span>]=<span class="hljs-string">&quot;alertsEnabled ? &#x27;Disable alerts&#x27; : &#x27;Enable alerts&#x27;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>notifications<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+</code></pre>
+<p>The <code>MatButtonToggleGroup</code> surrounding the individual buttons applies
+<code>role=&quot;group&quot;</code> to convey the association between the individual toggles. Each
+<code>&lt;mat-button-toggle-group&gt;</code> element should be given a label with <code>aria-label</code> or <code>aria-labelledby</code>
+that communicates the collective meaning of all toggles. For example, if you have toggles for
+&quot;Bold&quot;, &quot;Italic&quot;, and &quot;Underline&quot;, you might label the parent group &quot;Font styles&quot;.</p>
 </div>
