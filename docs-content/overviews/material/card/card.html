@@ -93,19 +93,19 @@ This element can contain:</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>Cards can be used in a wide variety of scenarios and can contain many different types of content.
-Due to this dynamic nature, the appropriate accessibility treatment depends on how <code>&lt;mat-card&gt;</code> is
-used.</p>
+      <p>Cards serve a wide variety of scenarios and may contain many different types of content.
+Due to this flexible nature, the appropriate accessibility treatment depends on how you use
+<code>&lt;mat-card&gt;</code>.</p>
 
         <h4 id="group-region-and-landmarks" class="docs-header-link">
           <span header-link="group-region-and-landmarks"></span>
           Group, region, and landmarks
         </h4>
       <p>There are several ARIA roles that communicate that a portion of the UI represents some semantically
-meaningful whole. Depending on what the content of the card means to your application,
-<a href="https://www.w3.org/TR/wai-aria/#group"><code>role=&quot;group&quot;</code></a>, <a href="https://www.w3.org/TR/wai-aria/#region"><code>role=&quot;region&quot;</code></a>, or <a href="https://www.w3.org/TR/wai-aria/#landmark">one of the landmark roles</a> should typically be
-applied to the <code>&lt;mat-card&gt;</code> element.</p>
-<p>A role is not necessary when the card is used as a purely decorative container that does not
+meaningful whole. Depending on what the content of the card means to your application, you can apply
+one of <a href="https://www.w3.org/TR/wai-aria/#group"><code>role=&quot;group&quot;</code></a>, <a href="https://www.w3.org/TR/wai-aria/#region"><code>role=&quot;region&quot;</code></a>, or
+<a href="https://www.w3.org/TR/wai-aria/#landmark">one of the landmark roles</a> to the <code>&lt;mat-card&gt;</code> element.</p>
+<p>You do not need to apply a role when using a card as a purely decorative container that does not
 convey a meaningful grouping of related content for a single subject. In these cases, the content
 of the card should follow standard practices for document content.</p>
 
@@ -114,9 +114,14 @@ of the card should follow standard practices for document content.</p>
           Focus
         </h4>
       <p>Depending on how cards are used, it may be appropriate to apply a <code>tabindex</code> to the <code>&lt;mat-card&gt;</code>
-element. If cards are a primary mechanism through which user interacts with the application,
-<code>tabindex=&quot;0&quot;</code> is appropriate. If attention can be sent to the card, but it&#39;s not part of the
-document flow, <code>tabindex=&quot;-1&quot;</code> is appropriate.</p>
-<p>If the card acts as a purely decorative container, it does not need to be tabbable. In this case,
-the card content should follow normal best practices for tab order.</p>
+element. </p>
+<ul>
+<li>If cards are a primary mechanism through which user interacts with the application, <code>tabindex=&quot;0&quot;</code>
+may be appropriate. </li>
+<li>If attention can be sent to the card, but it&#39;s not part of the document flow, <code>tabindex=&quot;-1&quot;</code> may
+be appropriate.</li>
+<li>If the card acts as a purely decorative container, it does not need to be tabbable. In this case,
+the card content should follow normal best practices for tab order.</li>
+</ul>
+<p>Always test your application to verify the behavior that works best for your users.</p>
 </div>

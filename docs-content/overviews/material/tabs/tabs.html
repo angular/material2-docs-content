@@ -100,24 +100,30 @@ duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injec
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p><code>&lt;mat-tab-group&gt;</code> and <code>&lt;mat-nav-tab-bar&gt;</code> use different interaction patterns. The
-<code>&lt;mat-tab-group&gt;</code> component combines <code>tablist</code>, <code>tab</code>, and <code>tabpanel</code> into a single component with
-the appropriate keyboard shortcuts. The <code>&lt;mat-nav-tab-bar&gt;</code>, however, use a <em>navigation</em> interaction
-pattern by using a <code>&lt;nav&gt;</code> element with anchor elements as the &quot;tabs&quot;. The difference
-between these two patterns comes from the fact one updates the page URL while the other does not.</p>
+      <p><code>MatTabGroup</code> and <code>MatTabNavBar</code> implement different interaction patterns for different use-cases.
+You should choose the component that works best for your application.</p>
+<p><code>MatTabGroup</code> combines <code>tablist</code>, <code>tab</code>, and <code>tabpanel</code> into a single component with
+handling for keyboard inputs and focus management. You should use this component for switching
+between content within a single page. </p>
+<p><code>MatTabNavBar</code>, implements a navigation interaction pattern by using a <code>&lt;nav&gt;</code> element with anchor
+elements as the &quot;tabs&quot;. You should use this component when you want your cross-page navigation to
+look like a tabbed interface. As a rule of thumb, you should consider <code>MatTabNavBar</code> if changing
+tabs would change the browser URL.</p>
 
         <h4 id="labels-1" class="docs-header-link">
           <span header-link="labels-1"></span>
           Labels
         </h4>
-      <p>Tabs without text or labels should be given a meaningful label via <code>aria-label</code> or
-<code>aria-labelledby</code>. For <code>MatTabNav</code>, the <code>&lt;nav&gt;</code> element should have a label as well.</p>
+      <p>Always provide an accessible label via <code>aria-label</code> or <code>aria-describedby</code> for tabs without
+descriptive text content.</p>
+<p>When using <code>MatTabNavGroup</code>, you should also specify a label for the <code>&lt;nav&gt;</code> element. </p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
         </h4>
-      <table>
+      <p><code>MatTabGroup</code> implements the following keyboard interactions.</p>
+<table>
 <thead>
 <tr>
 <th>Shortcut</th>
@@ -145,4 +151,6 @@ between these two patterns comes from the fact one updates the page URL while th
 <td>Switch to focused tab</td>
 </tr>
 </tbody></table>
+<p><code>MatTabNavBar</code> does not add additional keyboard handling, deferring to the native behavior of
+anchor elements.</p>
 </div>

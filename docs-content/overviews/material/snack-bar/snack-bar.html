@@ -2,32 +2,32 @@
 <div material-docs-example="snack-bar-overview"></div>
 
 
-        <h3 id="opening-a-snack-bar" class="docs-header-link">
-          <span header-link="opening-a-snack-bar"></span>
-          Opening a snack-bar
+        <h3 id="opening-a-snackbar" class="docs-header-link">
+          <span header-link="opening-a-snackbar"></span>
+          Opening a snackbar
         </h3>
-      <p>A snack-bar can contain either a string message or a given component.</p>
+      <p>A snackbar can contain either a string message or a given component.</p>
 <pre><code class="language-ts"><span class="hljs-comment">// Simple message.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackBar.open(<span class="hljs-string">&#x27;Message archived&#x27;</span>);
 
 <span class="hljs-comment">// Simple message with an action.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackBar.open(<span class="hljs-string">&#x27;Message archived&#x27;</span>, <span class="hljs-string">&#x27;Undo&#x27;</span>);
 
-<span class="hljs-comment">// Load the given component into the snack-bar.</span>
+<span class="hljs-comment">// Load the given component into the snackbar.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackbar.openFromComponent(MessageArchivedComponent);
 </code></pre>
-<p>In either case, a <code>MatSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to
-receive notification of when the snack-bar is dismissed. For simple messages with an action, the
+<p>In either case, a <code>MatSnackBarRef</code> is returned. This can be used to dismiss the snackbar or to
+receive notification of when the snackbar is dismissed. For simple messages with an action, the
 <code>MatSnackBarRef</code> exposes an observable for when the action is triggered.
-If you want to close a custom snack-bar that was opened via <code>openFromComponent</code>, from within the
+If you want to close a custom snackbar that was opened via <code>openFromComponent</code>, from within the
 component itself, you can inject the <code>MatSnackBarRef</code>.</p>
 <pre><code class="language-ts">snackBarRef.afterDismissed().subscribe(<span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;The snack-bar was dismissed&#x27;</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;The snackbar was dismissed&#x27;</span>);
 });
 
 
 snackBarRef.onAction().subscribe(<span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;The snack-bar action was triggered!&#x27;</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;The snackbar action was triggered!&#x27;</span>);
 });
 
 snackBarRef.dismiss();
@@ -37,21 +37,21 @@ snackBarRef.dismiss();
           <span header-link="dismissal"></span>
           Dismissal
         </h3>
-      <p>A snack-bar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MatSnackBarRef</code>
+      <p>A snackbar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MatSnackBarRef</code>
 returned from the call to <code>open</code>.</p>
-<p>Only one snack-bar can ever be opened at one time. If a new snackbar is opened while a previous
+<p>Only one snackbar can ever be opened at one time. If a new snackbar is opened while a previous
 message is still showing, the older message will be automatically dismissed.</p>
-<p>A snack-bar can also be given a duration via the optional configuration object:</p>
+<p>A snackbar can also be given a duration via the optional configuration object:</p>
 <pre><code class="language-ts">snackbar.open(<span class="hljs-string">&#x27;Message archived&#x27;</span>, <span class="hljs-string">&#x27;Undo&#x27;</span>, {
   <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>
 });
 </code></pre>
 
-        <h3 id="sharing-data-with-a-custom-snack-bar" class="docs-header-link">
-          <span header-link="sharing-data-with-a-custom-snack-bar"></span>
-          Sharing data with a custom snack-bar
+        <h3 id="sharing-data-with-a-custom-snackbar" class="docs-header-link">
+          <span header-link="sharing-data-with-a-custom-snackbar"></span>
+          Sharing data with a custom snackbar
         </h3>
-      <p>You can share data with the custom snack-bar, that you opened via the <code>openFromComponent</code> method,
+      <p>You can share data with the custom snackbar, that you opened via the <code>openFromComponent</code> method,
 by passing it through the <code>data</code> property.</p>
 <pre><code class="language-ts">snackbar.openFromComponent(MessageArchivedComponent, {
   <span class="hljs-attr">data</span>: <span class="hljs-string">&#x27;some data&#x27;</span>
@@ -62,7 +62,7 @@ by passing it through the <code>data</code> property.</p>
 <span class="hljs-keyword">import</span> {MAT_SNACK_BAR_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;your-snack-bar&#x27;</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;your-snackbar&#x27;</span>,
   <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;passed in {{ data }}&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageArchivedComponent</span> </span>{
@@ -87,17 +87,17 @@ by passing it through the <code>data</code> property.</p>
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>Snack-bar messages are announced via an <code>aria-live</code> region. By default, the <code>polite</code> setting is
-used. While <code>polite</code> is recommended, this can be customized by setting the <code>politeness</code> property of
-the <code>MatSnackBarConfig</code>.</p>
-<p>Focus is not moved to the snack-bar element as that would be disruptive to a user in the middle of a workflow. 
-It is recommended that, for any action offered in the snack-bar, the application offers the user an 
-alternative way to perform the action.
-Alternative interactions are typically keyboard shortcuts or menu options. When the action is
-performed in this way, the snack-bar should be dismissed. A snack-bar can contain a single action. 
-&quot;Dismiss&quot; or &quot;cancel&quot; actions are optional.</p>
-<p>Snack-bars that have an action available should not be given a <code>duration</code>, as to accommodate
-screen-reader users that want to navigate to the snack-bar element to activate the action. If the
-user has manually moved their focus within the snackbar, focus should be placed somewhere sensible
-based on the application context when the snack-bar is dismissed.</p>
+      <p><code>MatSnackBar</code> announces messages via an <code>aria-live</code> region. While announcements use the <code>polite</code>
+setting by default, you can customize this by setting the <code>politeness</code> property of
+<code>MatSnackBarConfig</code>.</p>
+<p><code>MatSnackBar</code> does not move focus to the snackbar element. Moving focus like this would disrupt
+users in the middle of a workflow. For any action offered in the snackbar, your application should
+provide an alternative way to perform the action. Alternative interactions are typically keyboard
+shortcuts or menu options. You should dismiss the snackbar once the user performs its corresponding
+action. A snackbar can contain a single action with an additional optional &quot;dismiss&quot; or &quot;cancel&quot;
+action.</p>
+<p>Avoid setting a <code>duration</code> for snackbars that have an action available, as screen reader users may
+want to navigate to the snackbar element to activate the action. If the user has manually moved
+their focus within the snackbar, you should return focus somewhere that makes sense in the context
+of the user&#39;s workflow.</p>
 </div>
