@@ -65,9 +65,32 @@ approach this to the consuming app.</p>
           Accessibility
         </h3>
       <p>Angular Material uses native <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements to ensure an accessible experience by
-default. The <code>&lt;button&gt;</code> element should be used for any interaction that <em>performs an action on the
-current page</em>. The <code>&lt;a&gt;</code> element should be used for any interaction that <em>navigates to another
-view</em>.</p>
-<p>Buttons or links containing only icons (such as <code>mat-fab</code>, <code>mat-mini-fab</code>, and <code>mat-icon-button</code>)
-should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+default. A <code>&lt;button&gt;</code> element should be used for any interaction that <em>performs an action on the
+current page</em>. An <code>&lt;a&gt;</code> element should be used for any interaction that <em>navigates to another
+URL</em>. All standard accessibility best practices for buttons and anchors apply to <code>MatButton</code>.</p>
+
+        <h4 id="disabling-anchors" class="docs-header-link">
+          <span header-link="disabling-anchors"></span>
+          Disabling anchors
+        </h4>
+      <p><code>MatAnchor</code> supports disabling an anchor in addition to the features provided by the native
+<code>&lt;a&gt;</code> element. When you disable an anchor, the component sets <code>aria-disabled=&quot;true&quot;</code> and
+<code>tabindex=&quot;-1&quot;</code>. Always test disabled anchors in your application to ensure compatibility
+with any assistive technology your application supports.</p>
+
+        <h4 id="buttons-with-icons" class="docs-header-link">
+          <span header-link="buttons-with-icons"></span>
+          Buttons with icons
+        </h4>
+      <p>Buttons or links containing only icons (such as <code>mat-fab</code>, <code>mat-mini-fab</code>, and <code>mat-icon-button</code>)
+should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>. <a href="https://material.angular.io/components/icon">See the documentation
+for <code>MatIcon</code></a> for more
+information on using icons in buttons.</p>
+
+        <h4 id="toggle-buttons" class="docs-header-link">
+          <span header-link="toggle-buttons"></span>
+          Toggle buttons
+        </h4>
+      <p><a href="https://material.angular.io/components/button-toggle">See the documentation for <code>MatButtonToggle</code></a>
+for information on stateful toggle buttons.</p>
 </div>

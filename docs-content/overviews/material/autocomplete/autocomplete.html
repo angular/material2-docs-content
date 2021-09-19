@@ -108,14 +108,38 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
         </h3>
-      <ul>
-<li><kbd>Down Arrow</kbd>: Next option becomes active</li>
-<li><kbd>Up Arrow</kbd>: Previous option becomes active</li>
-<li><kbd>Enter</kbd>: Selects currently active item</li>
-<li><kbd>Escape</kbd>: Closes the autocomplete panel</li>
-<li><kbd>Alt + Up Arrow</kbd>: Closes the autocomplete panel</li>
-<li><kbd>Alt + Down Arrow</kbd>: Open the autocomplete panel if there are any matching options.</li>
-</ul>
+      <table>
+<thead>
+<tr>
+<th>Keyboard shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>Down Arrow</kbd></td>
+<td>Navigate to the next option.</td>
+</tr>
+<tr>
+<td><kbd>Up Arrow</kbd></td>
+<td>Navigate to the previous option.</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd></td>
+<td>Select the active option.</td>
+</tr>
+<tr>
+<td><kbd>Escape</kbd></td>
+<td>Close the autocomplete panel.</td>
+</tr>
+<tr>
+<td><kbd>Alt</kbd> + <kbd>Up Arrow</kbd></td>
+<td>Close the autocomplete panel.</td>
+</tr>
+<tr>
+<td><kbd>Alt</kbd> + <kbd>Down Arrow</kbd></td>
+<td>Open the autocomplete panel if there are any matching options.</td>
+</tr>
+</tbody></table>
 
         <h3 id="option-groups" class="docs-header-link">
           <span header-link="option-groups"></span>
@@ -136,8 +160,8 @@ autocomplete is attached to using the <code>matAutocompleteOrigin</code> directi
 pattern, you should <em>not</em> put other interactive controls, such as buttons or checkboxes, inside
 an autocomplete option. Nesting interactive controls like this interferes with most assistive
 technology.</p>
-<p>Always provide an accessible label for the autocomplete. This can be done
-via <code>&lt;mat-label&gt;</code> inside of <code>&lt;mat-form-field&gt;</code>, a native <code>&lt;label&gt;</code> element, the <code>aria-label</code>
+<p>Always provide an accessible label for the autocomplete. This can be done by using a
+<code>&lt;mat-label&gt;</code> inside of <code>&lt;mat-form-field&gt;</code>, a native <code>&lt;label&gt;</code> element, the <code>aria-label</code>
 attribute, or the <code>aria-labelledby</code> attribute.</p>
 <p><code>MatAutocomplete</code> preserves focus on the text trigger, using <code>aria-activedescendant</code> to support
 navigation though the autocomplete options.</p>
