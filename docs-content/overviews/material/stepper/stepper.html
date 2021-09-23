@@ -284,4 +284,25 @@ is given <code>role=&quot;tab&quot;</code>, and the content that can be expanded
 <code>role=&quot;tabpanel&quot;</code>. <code>aria-selected</code> attribute of step header and <code>aria-expanded</code> attribute of
 step content is automatically set based on step selection change.</p>
 <p>The stepper and each step should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+<p>Prefer verticl steppers when building for small screen sizes, as horizontal
+steppers typically take up significantly more horizontal space thus introduce
+horizontal scrolling. Applications with multiple scrolling dimensions make
+content harder to consume for some users. See the <a href="#responsive-stepper">Responsive Stepper section</a>
+above for an example on building a stepper that adjusts its layout based on
+viewport size.</p>
+
+        <h4 id="forms" class="docs-header-link">
+          <span header-link="forms"></span>
+          Forms
+        </h4>
+      <p>Steppers often contain forms and form controls. If validation errors inside of a
+stepper&#39;s form prevents moving to another step, make sure that your form
+controls communicate error messages to assistive technology. This helps the user
+know why they can&#39;t advance to another step. You can accomplish this by using
+<code>&lt;mat-error&gt;</code> with <code>&lt;mat-form-field&gt;</code>, or by using an ARIA live region.</p>
+<p>When a step contains a forms validation error, <code>MatStepper</code> will display the
+error in the step&#39;s header if specified. See the <a href="#error-state">Error State section</a>
+for an example of a stepper with an error message. For non-linear steppers, you
+should use an ARIA live region to announce error messages when users navigate
+away from a step with an error message.</p>
 </div>
