@@ -128,11 +128,7 @@ ChipsAutocompleteExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Ch
     } }, directives: [i1.MatFormField, i1.MatLabel, i1$1.MatChipList, i3.NgForOf, i4.DefaultValueAccessor, i5.MatAutocompleteTrigger, i1$1.MatChipInput, i4.NgControlStatus, i4.FormControlDirective, i5.MatAutocomplete, i1$1.MatChip, i3.NgIf, i1$1.MatChipRemove, i6.MatIcon, i7.MatOption], pipes: [i3.AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsAutocompleteExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-autocomplete-example',
-                templateUrl: 'chips-autocomplete-example.html',
-                styleUrls: ['chips-autocomplete-example.css'],
-            }]
+        args: [{ selector: 'chips-autocomplete-example', template: "<mat-form-field class=\"example-chip-list\" appearance=\"fill\">\n  <mat-label>Favorite Fruits</mat-label>\n  <mat-chip-list #chipList aria-label=\"Fruit selection\">\n    <mat-chip\n      *ngFor=\"let fruit of fruits\"\n      [selectable]=\"selectable\"\n      [removable]=\"removable\"\n      (removed)=\"remove(fruit)\">\n      {{fruit}}\n      <button matChipRemove *ngIf=\"removable\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n    </mat-chip>\n    <input\n      placeholder=\"New fruit...\"\n      #fruitInput\n      [formControl]=\"fruitCtrl\"\n      [matAutocomplete]=\"auto\"\n      [matChipInputFor]=\"chipList\"\n      [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n      (matChipInputTokenEnd)=\"add($event)\">\n  </mat-chip-list>\n  <mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\">\n    <mat-option *ngFor=\"let fruit of filteredFruits | async\" [value]=\"fruit\">\n      {{fruit}}\n    </mat-option>\n  </mat-autocomplete>\n</mat-form-field>\n", styles: [".example-chip-list {\n  width: 100%;\n}\n"] }]
     }], function () { return []; }, { fruitInput: [{
             type: ViewChild,
             args: ['fruitInput']
@@ -177,11 +173,7 @@ ChipsDragDropExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsD
     } }, directives: [i1$1.MatChipList, i2.CdkDropList, i3.NgForOf, i1$1.MatChip, i2.CdkDrag], styles: [".example-box.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip[_ngcontent-%COMP%]   .cdk-drop-list-dragging[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsDragDropExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-drag-drop-example',
-                templateUrl: 'chips-drag-drop-example.html',
-                styleUrls: ['chips-drag-drop-example.css']
-            }]
+        args: [{ selector: 'chips-drag-drop-example', template: "<mat-chip-list\n  class=\"example-chip\"\n  cdkDropList \n  cdkDropListOrientation=\"horizontal\"\n  (cdkDropListDropped)=\"drop($event)\">\n  <mat-chip\n    class=\"example-box\"\n    cdkDrag\n    *ngFor=\"let vegetable of vegetables\">\n    {{vegetable.name}}\n  </mat-chip>\n</mat-chip-list>\n", styles: [".example-box.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip .cdk-drop-list-dragging {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"] }]
     }], null, null); })();
 
 function ChipsInputExample_mat_chip_5_button_2_Template(rf, ctx) { if (rf & 1) {
@@ -260,11 +252,7 @@ ChipsInputExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsInpu
     } }, directives: [i1.MatFormField, i1.MatLabel, i1$1.MatChipList, i3.NgForOf, i1$1.MatChipInput, i1$1.MatChip, i3.NgIf, i1$1.MatChipRemove, i6.MatIcon], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsInputExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-input-example',
-                templateUrl: 'chips-input-example.html',
-                styleUrls: ['chips-input-example.css'],
-            }]
+        args: [{ selector: 'chips-input-example', template: "<mat-form-field class=\"example-chip-list\" appearance=\"fill\">\n  <mat-label>Favorite Fruits</mat-label>\n  <mat-chip-list #chipList aria-label=\"Fruit selection\">\n    <mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\"\n             [removable]=\"removable\" (removed)=\"remove(fruit)\">\n      {{fruit.name}}\n      <button matChipRemove *ngIf=\"removable\">\n        <mat-icon>cancel</mat-icon>\n      </button>\n    </mat-chip>\n    <input placeholder=\"New fruit...\"\n           [matChipInputFor]=\"chipList\"\n           [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\"\n           [matChipInputAddOnBlur]=\"addOnBlur\"\n           (matChipInputTokenEnd)=\"add($event)\">\n  </mat-chip-list>\n</mat-form-field>\n", styles: [".example-chip-list {\n  width: 100%;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -291,10 +279,7 @@ ChipsOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsO
     } }, directives: [i1$1.MatChipList, i1$1.MatChip], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-overview-example',
-                templateUrl: 'chips-overview-example.html',
-            }]
+        args: [{ selector: 'chips-overview-example', template: "<mat-chip-list aria-label=\"Fish selection\">\n  <mat-chip>One fish</mat-chip>\n  <mat-chip>Two fish</mat-chip>\n  <mat-chip color=\"primary\" selected>Primary fish</mat-chip>\n  <mat-chip color=\"accent\" selected>Accent fish</mat-chip>\n</mat-chip-list>\n" }]
     }], null, null); })();
 
 function ChipsStackedExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {
@@ -331,11 +316,7 @@ ChipsStackedExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsSt
     } }, directives: [i1$1.MatChipList, i3.NgForOf, i1$1.MatChip], styles: ["mat-chip[_ngcontent-%COMP%] {\n  max-width: 200px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsStackedExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-stacked-example',
-                templateUrl: 'chips-stacked-example.html',
-                styleUrls: ['chips-stacked-example.css'],
-            }]
+        args: [{ selector: 'chips-stacked-example', template: "<mat-chip-list class=\"mat-chip-list-stacked\" aria-label=\"Color selection\">\n  <mat-chip *ngFor=\"let chip of availableColors\" selected [color]=\"chip.color\">\n    {{chip.name}}\n  </mat-chip>\n</mat-chip-list>\n", styles: ["mat-chip {\n  max-width: 200px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -375,10 +356,7 @@ ChipsHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: ChipsHa
     } }, directives: [i1$1.MatChipList, i1$1.MatChip, i1$1.MatChipRemove, i1$1.MatChipAvatar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-harness-example',
-                templateUrl: 'chips-harness-example.html',
-            }]
+        args: [{ selector: 'chips-harness-example', template: "<mat-chip-list\n    [disabled]=\"isDisabled\"\n    [aria-orientation]=\"'horizontal'\">\n  <mat-chip (removed)=\"remove()\">Chip 1</mat-chip>\n  <mat-chip (removed)=\"remove()\">Chip 2 <span matChipRemove>remove_icon</span></mat-chip>\n  <mat-chip (removed)=\"remove()\"><mat-chip-avatar>C</mat-chip-avatar>Chip 4</mat-chip>\n</mat-chip-list>\n" }]
     }], null, null); })();
 
 function ChipsFormControlExample_mat_chip_15_Template(rf, ctx) { if (rf & 1) {
@@ -461,11 +439,7 @@ ChipsFormControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Chi
     } }, directives: [i1$2.MatButton, i1.MatFormField, i1.MatLabel, i1$1.MatChipList, i4.NgControlStatus, i4.FormControlDirective, i3.NgForOf, i1$1.MatChipInput, i1$1.MatChip], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-button-container[_ngcontent-%COMP%]    > button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ChipsFormControlExample, [{
         type: Component,
-        args: [{
-                selector: 'chips-form-control-example',
-                templateUrl: 'chips-form-control-example.html',
-                styleUrls: ['chips-form-control-example.css'],
-            }]
+        args: [{ selector: 'chips-form-control-example', template: "<div class=\"example-button-container\">\n  <button mat-raised-button (click)=\"formControl.disable()\">Disable form control</button>\n  <button mat-raised-button (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n\n<p>\n  <i>Select a focused chip by pressing <code>SPACE</code></i>\n</p>\n\n<mat-form-field class=\"example-chip-list\" appearance=\"fill\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-list #chipList aria-label=\"Video keywords\" multiple [formControl]=\"formControl\">\n    <mat-chip\n        *ngFor=\"let keyword of keywords\"\n        [selected]=\"keyword\"\n        [value]=\"keyword\"\n        (removed)=\"removeKeyword(keyword)\">\n      {{keyword}}\n    </mat-chip>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"chipList\"\n      (matChipInputTokenEnd)=\"addKeywordFromInput($event)\">\n  </mat-chip-list>\n</mat-form-field>\n\n<p>\n  <b>The following keywords are selected:</b> {{formControl.value}}\n</p>\n", styles: [".example-chip-list {\n  width: 100%;\n}\n\n.example-button-container > button {\n  margin: 0 12px;\n}\n"] }]
     }], null, null); })();
 
 const EXAMPLES = [

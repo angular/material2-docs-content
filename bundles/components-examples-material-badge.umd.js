@@ -85,10 +85,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(BadgeOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'badge-overview-example',
-                        templateUrl: 'badge-overview-example.html',
-                    }]
+                args: [{ selector: 'badge-overview-example', template: "<p>\n<!-- #docregion mat-badge-overlap -->\n  <span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span>\n<!-- #enddocregion mat-badge-overlap -->\n</p>\n\n<p>\n<!-- #docregion mat-badge-size -->\n    <span matBadge=\"1\" matBadgeSize=\"large\">Text with large badge</span>\n<!-- #enddocregion mat-badge-size -->\n</p>\n\n<p>\n  Button with a badge on the left\n<!-- #docregion mat-badge-position -->\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">\n    Action\n  </button>\n<!-- #enddocregion mat-badge-position -->\n</p>\n\n<p>\n    Button toggles badge visibility\n<!-- #docregion mat-badge-hide -->\n    <button mat-raised-button matBadge=\"7\" [matBadgeHidden]=\"hidden\" (click)=\"toggleBadgeVisibility()\">\n        Hide\n    </button>\n<!-- #enddocregion mat-badge-hide -->\n</p>\n\n<p>\n  Icon with a badge\n<!-- #docregion mat-badge-color -->\n  <mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon>\n<!-- #enddocregion mat-badge-color -->\n    <!-- Include text description of the icon's meaning for screen-readers -->\n    <span class=\"cdk-visually-hidden\">\n      Example with a home icon with overlaid badge showing the number 15\n    </span>\n</p>\n\n\n" }]
             }], null, null);
     })();
 
@@ -127,10 +124,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(BadgeHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'badge-harness-example',
-                        templateUrl: 'badge-harness-example.html',
-                    }]
+                args: [{ selector: 'badge-harness-example', template: "<button mat-button id=\"simple\" [matBadge]=\"simpleContent\">Simple</button>\n<button mat-button\n    id=\"overlapping\"\n    matBadge=\"O\"\n    [matBadgeOverlap]=\"overlap\">Overlapping</button>\n<button\n    mat-button\n    id=\"disabled\"\n    matBadge=\"D\"\n    [matBadgeDisabled]=\"disabled\">Disabled</button>\n" }]
             }], null, null);
     })();
 

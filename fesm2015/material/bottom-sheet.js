@@ -31,10 +31,7 @@ BottomSheetOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
     } }, directives: [i2.MatButton], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BottomSheetOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'bottom-sheet-overview-example',
-                templateUrl: 'bottom-sheet-overview-example.html',
-            }]
+        args: [{ selector: 'bottom-sheet-overview-example', template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n" }]
     }], function () { return [{ type: i1.MatBottomSheet }]; }, null); })();
 class BottomSheetOverviewExampleSheet {
     constructor(_bottomSheetRef) {
@@ -88,10 +85,7 @@ BottomSheetOverviewExampleSheet.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ t
     } }, directives: [i3.MatNavList, i3.MatListItem, i4.MatLine], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BottomSheetOverviewExampleSheet, [{
         type: Component,
-        args: [{
-                selector: 'bottom-sheet-overview-example-sheet',
-                templateUrl: 'bottom-sheet-overview-example-sheet.html',
-            }]
+        args: [{ selector: 'bottom-sheet-overview-example-sheet', template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n" }]
     }], function () { return [{ type: i1.MatBottomSheetRef }]; }, null); })();
 
 function BottomSheetHarnessExample_ng_template_0_Template(rf, ctx) { if (rf & 1) {
@@ -119,10 +113,7 @@ BottomSheetHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: B
     } }, encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(BottomSheetHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'bottom-sheet-harness-example',
-                templateUrl: 'bottom-sheet-harness-example.html',
-            }]
+        args: [{ selector: 'bottom-sheet-harness-example', template: "<ng-template>\n  Hello from the bottom sheet!\n</ng-template>\n" }]
     }], function () { return [{ type: i1.MatBottomSheet }]; }, { template: [{
             type: ViewChild,
             args: [TemplateRef]

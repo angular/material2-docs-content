@@ -87,10 +87,7 @@ FormFieldAppearanceExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.MatIcon, i1.MatSuffix, i1.MatHint], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldAppearanceExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-appearance-example',
-                templateUrl: 'form-field-appearance-example.html',
-            }]
+        args: [{ selector: 'form-field-appearance-example', template: "<p>\n  <mat-form-field appearance=\"legacy\">\n    <mat-label>Legacy form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"standard\">\n    <mat-label>Standard form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Fill form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n<p>\n  <mat-form-field appearance=\"outline\">\n    <mat-label>Outline form field</mat-label>\n    <input matInput placeholder=\"Placeholder\">\n    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>\n    <mat-hint>Hint</mat-hint>\n  </mat-form-field>\n</p>\n" }]
     }], null, null); })();
 
 const _c0 = ["area"];
@@ -125,10 +122,7 @@ FormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ typ
     } }, directives: function () { return [i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i1.MatFormField, i1.MatLabel, MyTelInput, i1$1.NgControlStatus, i1$1.FormControlName, i1$1.RequiredValidator, i3.MatIcon, i1.MatSuffix, i1.MatHint]; }, encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldCustomControlExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-custom-control-example',
-                templateUrl: 'form-field-custom-control-example.html',
-            }]
+        args: [{ selector: 'form-field-custom-control-example', template: "<div [formGroup]=\"form\">\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Phone number</mat-label>\n    <example-tel-input formControlName=\"tel\" required></example-tel-input>\n    <mat-icon matSuffix>phone</mat-icon>\n    <mat-hint>Include area code</mat-hint>\n  </mat-form-field>\n</div>\n" }]
     }], null, null); })();
 /** Data structure for holding telephone number. */
 class MyTel {
@@ -320,16 +314,10 @@ MyTelInput.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MyTelInput, sele
     } }, directives: [i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MyTelInput, [{
         type: Component,
-        args: [{
-                selector: 'example-tel-input',
-                templateUrl: 'example-tel-input-example.html',
-                styleUrls: ['example-tel-input-example.css'],
-                providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
-                host: {
+        args: [{ selector: 'example-tel-input', providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }], host: {
                     '[class.example-floating]': 'shouldLabelFloat',
                     '[id]': 'id',
-                }
-            }]
+                }, template: "<div role=\"group\" class=\"example-tel-input-container\"\n     [formGroup]=\"parts\"\n     [attr.aria-labelledby]=\"_formField?.getLabelId()\"\n     (focusin)=\"onFocusIn($event)\"\n     (focusout)=\"onFocusOut($event)\">\n  <input class=\"example-tel-input-element\"\n         formControlName=\"area\" size=\"3\"\n         maxLength=\"3\"\n         aria-label=\"Area code\"\n         (input)=\"_handleInput(parts.controls.area, exchange)\"\n         #area>\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\"\n         formControlName=\"exchange\"\n         maxLength=\"3\"\n         size=\"3\"\n         aria-label=\"Exchange code\"\n         (input)=\"_handleInput(parts.controls.exchange, subscriber)\"\n         (keyup.backspace)=\"autoFocusPrev(parts.controls.exchange, area)\"\n         #exchange>\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\"\n         formControlName=\"subscriber\"\n         maxLength=\"4\"\n         size=\"4\"\n         aria-label=\"Subscriber number\"\n         (input)=\"_handleInput(parts.controls.subscriber)\"\n         (keyup.backspace)=\"autoFocusPrev(parts.controls.subscriber, exchange)\"\n         #subscriber>\n</div>\n", styles: [".example-tel-input-container {\n  display: flex;\n}\n\n.example-tel-input-element {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n:host.example-floating .example-tel-input-spacer {\n  opacity: 1;\n}\n"] }]
     }], function () { return [{ type: i1$1.FormBuilder }, { type: i4.FocusMonitor }, { type: i0.ElementRef }, { type: i1.MatFormField, decorators: [{
                 type: Optional
             }, {
@@ -401,11 +389,7 @@ FormFieldErrorExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FormF
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i1$1.DefaultValueAccessor, i1$1.RequiredValidator, i1$1.NgControlStatus, i1$1.FormControlDirective, i4$1.NgIf, i1.MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldErrorExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-error-example',
-                templateUrl: 'form-field-error-example.html',
-                styleUrls: ['form-field-error-example.css'],
-            }]
+        args: [{ selector: 'form-field-error-example', template: "<div class=\"example-container\">\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Enter your email</mat-label>\n    <input matInput placeholder=\"pat@example.com\" [formControl]=\"email\" required>\n    <mat-error *ngIf=\"email.invalid\">{{getErrorMessage()}}</mat-error>\n  </mat-form-field>\n</div>\n", styles: [".example-container .mat-form-field + .mat-form-field {\n  margin-left: 8px;\n}\n"] }]
     }], null, null); })();
 
 /** @title Form field with hints */
@@ -444,11 +428,7 @@ FormFieldHintExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FormFi
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i1.MatHint, i3$1.MatSelect, i4$2.MatOption], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldHintExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-hint-example',
-                templateUrl: 'form-field-hint-example.html',
-                styleUrls: ['form-field-hint-example.css'],
-            }]
+        args: [{ selector: 'form-field-hint-example', template: "<div class=\"example-container\">\n  <mat-form-field hintLabel=\"Max 10 characters\" appearance=\"fill\">\n    <mat-label>Enter some input</mat-label>\n    <input matInput #input maxlength=\"10\" placeholder=\"Ex. Nougat\">\n    <mat-hint align=\"end\">{{input.value?.length || 0}}/10</mat-hint>\n  </mat-form-field>\n\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Select me</mat-label>\n    <mat-select>\n      <mat-option value=\"option\">Option</mat-option>\n    </mat-select>\n    <mat-hint align=\"end\">Here's the dropdown arrow ^</mat-hint>\n  </mat-form-field>\n</div>\n", styles: [".example-container .mat-form-field + .mat-form-field {\n  margin-left: 8px;\n}\n"] }]
     }], null, null); })();
 
 /** @title Form field with label */
@@ -530,11 +510,7 @@ FormFieldLabelExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: FormF
     } }, directives: [i1$1.ɵNgNoValidate, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i2$1.MatCheckbox, i1$1.NgControlStatus, i1$1.FormControlDirective, i3$2.MatRadioGroup, i3$2.MatRadioButton, i1.MatFormField, i2.MatInput, i1.MatLabel, i3$1.MatSelect, i4$2.MatOption, i3.MatIcon], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%] {\n  width: 220px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldLabelExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-label-example',
-                templateUrl: 'form-field-label-example.html',
-                styleUrls: ['form-field-label-example.css'],
-            }]
+        args: [{ selector: 'form-field-label-example', template: "<div class=\"example-container\">\n  <form [formGroup]=\"options\">\n    <mat-checkbox [formControl]=\"hideRequiredControl\">Hide required marker</mat-checkbox>\n    <div>\n      <label>Float label: </label>\n      <mat-radio-group [formControl]=\"floatLabelControl\">\n        <mat-radio-button value=\"auto\">Auto</mat-radio-button>\n        <mat-radio-button value=\"always\">Always</mat-radio-button>\n      </mat-radio-group>\n    </div>\n\n    <mat-form-field appearance=\"fill\"\n        [hideRequiredMarker]=\"hideRequiredControl.value\"\n        [floatLabel]=\"floatLabelControl.value\">\n      <input matInput placeholder=\"Simple placeholder\" required>\n    </mat-form-field>\n\n    <mat-form-field appearance=\"fill\" [floatLabel]=\"floatLabelControl.value\">\n      <mat-label>Both a label and a placeholder</mat-label>\n      <input matInput placeholder=\"Simple placeholder\">\n    </mat-form-field>\n\n    <mat-form-field appearance=\"fill\"\n        [hideRequiredMarker]=\"hideRequiredControl.value\"\n        [floatLabel]=\"floatLabelControl.value\">\n      <mat-select required>\n        <mat-option>-- None --</mat-option>\n        <mat-option value=\"option\">Option</mat-option>\n      </mat-select>\n      <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>\n    </mat-form-field>\n  </form>\n</div>\n", styles: [".example-container .mat-form-field + .mat-form-field {\n  margin-left: 8px;\n}\n\n.example-container .mat-form-field {\n  width: 220px;\n}\n\n.example-container form {\n  margin-bottom: 20px;\n}\n\n.example-container form > * {\n  margin: 5px 0;\n}\n\n.example-container .mat-radio-button {\n  margin: 0 12px;\n}\n"] }]
     }], function () { return [{ type: i1$1.FormBuilder }]; }, null); })();
 
 /** @title Simple form field */
@@ -570,11 +546,7 @@ FormFieldOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Fo
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3$1.MatSelect, i4$2.MatOption], styles: ["[_nghost-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-overview-example',
-                templateUrl: 'form-field-overview-example.html',
-                styleUrls: ['form-field-overview-example.css']
-            }]
+        args: [{ selector: 'form-field-overview-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Input</mat-label>\n  <input matInput>\n</mat-form-field>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Select</mat-label>\n  <mat-select>\n    <mat-option value=\"one\">First option</mat-option>\n    <mat-option value=\"two\">Second option</mat-option>\n  </mat-select>\n</mat-form-field>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Textarea</mat-label>\n  <textarea matInput></textarea>\n</mat-form-field>\n", styles: [":host {\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}\n"] }]
     }], null, null); })();
 
 /** @title Form field with prefix & suffix */
@@ -621,11 +593,7 @@ FormFieldPrefixSuffixExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3$3.MatButton, i1.MatSuffix, i3.MatIcon, i1.MatPrefix], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-right-align[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\ninput.example-right-align[_ngcontent-%COMP%]::-webkit-outer-spin-button, input.example-right-align[_ngcontent-%COMP%]::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align[_ngcontent-%COMP%] {\n  -moz-appearance: textfield;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldPrefixSuffixExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-prefix-suffix-example',
-                templateUrl: 'form-field-prefix-suffix-example.html',
-                styleUrls: ['form-field-prefix-suffix-example.css'],
-            }]
+        args: [{ selector: 'form-field-prefix-suffix-example', template: "<div class=\"example-container\">\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Enter your password</mat-label>\n    <input matInput [type]=\"hide ? 'password' : 'text'\">\n    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\" [attr.aria-pressed]=\"hide\">\n      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n    </button>\n  </mat-form-field>\n\n  <mat-form-field appearance=\"fill\" floatLabel=\"always\">\n    <mat-label>Amount</mat-label>\n    <input matInput type=\"number\" class=\"example-right-align\" placeholder=\"0\">\n    <span matPrefix>$&nbsp;</span>\n    <span matSuffix>.00</span>\n  </mat-form-field>\n</div>\n", styles: [".example-container .mat-form-field + .mat-form-field {\n  margin-left: 8px;\n}\n\n.example-right-align {\n  text-align: right;\n}\n\ninput.example-right-align::-webkit-outer-spin-button,\ninput.example-right-align::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align {\n  -moz-appearance: textfield;\n}\n"] }]
     }], null, null); })();
 
 function FormFieldThemingExample_mat_error_17_Template(rf, ctx) { if (rf & 1) {
@@ -693,11 +661,7 @@ FormFieldThemingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: For
     } }, directives: [i1$1.ɵNgNoValidate, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i1.MatFormField, i1.MatLabel, i3$1.MatSelect, i1$1.NgControlStatus, i1$1.FormControlDirective, i4$2.MatOption, i2.MatInput, i1$1.MinValidator, i1$1.NumberValueAccessor, i1$1.DefaultValueAccessor, i1.MatSuffix, i4$1.NgIf, i1.MatError], styles: [".example-container[_ngcontent-%COMP%]   .mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldThemingExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-theming-example',
-                templateUrl: 'form-field-theming-example.html',
-                styleUrls: ['form-field-theming-example.css'],
-            }]
+        args: [{ selector: 'form-field-theming-example', template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\">\n  <mat-form-field appearance=\"fill\" [color]=\"colorControl.value\">\n    <mat-label>Color</mat-label>\n    <mat-select [formControl]=\"colorControl\">\n      <mat-option value=\"primary\">Primary</mat-option>\n      <mat-option value=\"accent\">Accent</mat-option>\n      <mat-option value=\"warn\">Warn</mat-option>\n    </mat-select>\n  </mat-form-field>\n\n  <mat-form-field appearance=\"fill\" [color]=\"colorControl.value\">\n    <mat-label>Font size</mat-label>\n    <input matInput type=\"number\" placeholder=\"Ex. 12\" [formControl]=\"fontSizeControl\" min=\"10\">\n    <span matSuffix>px</span>\n    <mat-error *ngIf=\"fontSizeControl.invalid\">Min size: 10px</mat-error>\n  </mat-form-field>\n</form>\n", styles: [".example-container .mat-form-field + .mat-form-field {\n  margin-left: 8px;\n}\n"] }]
     }], function () { return [{ type: i1$1.FormBuilder }]; }, null); })();
 
 /**
@@ -728,10 +692,7 @@ FormFieldHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: For
     } }, directives: [i1.MatFormField, i2.MatInput, i1$1.DefaultValueAccessor, i1$1.NgControlStatus, i1$1.FormControlDirective, i1.MatError, i1.MatHint], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(FormFieldHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'form-field-harness-example',
-                templateUrl: 'form-field-harness-example.html',
-            }]
+        args: [{ selector: 'form-field-harness-example', template: "<mat-form-field id=\"with-errors\" appearance=\"fill\">\n  <span class=\"custom-control\">Custom control harness</span>\n  <input matInput [formControl]=\"requiredControl\">\n\n  <mat-error>Error</mat-error>\n  <mat-hint align=\"start\">Hint</mat-hint>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

@@ -47,10 +47,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'icon-overview-example',
-                        templateUrl: 'icon-overview-example.html',
-                    }]
+                args: [{ selector: 'icon-overview-example', template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\">home</mat-icon>\n" }]
             }], null, null);
     })();
 
@@ -78,10 +75,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconSvgExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'icon-svg-example',
-                        templateUrl: 'icon-svg-example.html',
-                    }]
+                args: [{ selector: 'icon-svg-example', template: "<mat-icon svgIcon=\"thumbs-up\" aria-hidden=\"false\" aria-label=\"Example thumbs up SVG icon\"></mat-icon>\n" }]
             }], function () { return [{ type: i1__namespace.MatIconRegistry }, { type: i2__namespace.DomSanitizer }]; }, null);
     })();
 
@@ -106,10 +100,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(IconHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'icon-harness-example',
-                        templateUrl: 'icon-harness-example.html',
-                    }]
+                args: [{ selector: 'icon-harness-example', template: "<mat-icon fontSet=\"fontIcons\" fontIcon=\"fontIcon\"></mat-icon>\n<mat-icon svgIcon=\"svgIcons:svgIcon\"></mat-icon>\n<mat-icon inline>ligature_icon</mat-icon>\n" }]
             }], null, null);
     })();
 

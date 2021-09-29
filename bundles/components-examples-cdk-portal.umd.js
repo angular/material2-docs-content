@@ -93,11 +93,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkPortalOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-portal-overview-example',
-                        templateUrl: 'cdk-portal-overview-example.html',
-                        styleUrls: ['cdk-portal-overview-example.css'],
-                    }]
+                args: [{ selector: 'cdk-portal-overview-example', template: "<h2>The portal outlet is below:</h2>\n<div class=\"example-portal-outlet\">\n  <ng-template [cdkPortalOutlet]=\"selectedPortal\"></ng-template>\n</div>\n<ng-template #templatePortalContent>Hello, this is a template portal</ng-template>\n\n<button (click)=\"selectedPortal = componentPortal\">Render component portal</button>\n<button (click)=\"selectedPortal = templatePortal\">Render template portal</button>\n<button (click)=\"selectedPortal = domPortal\">Render DOM portal</button>\n\n<div #domPortalContent>Hello, this is a DOM portal</div>\n", styles: [".example-portal-outlet {\n  margin-bottom: 10px;\n  padding: 10px;\n  border: 1px dashed black;\n  width: 250px;\n  height: 250px;\n}\n"] }]
             }], function () { return [{ type: i0__namespace.ViewContainerRef }]; }, { templatePortalContent: [{
                     type: i0.ViewChild,
                     args: ['templatePortalContent']

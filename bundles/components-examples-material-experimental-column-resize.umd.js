@@ -194,11 +194,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DefaultEnabledColumnResizeFlexExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'default-enabled-column-resize-flex-example',
-                        templateUrl: 'default-enabled-column-resize-flex-example.html',
-                        styleUrls: ['default-enabled-column-resize-flex-example.css'],
-                    }]
+                args: [{ selector: 'default-enabled-column-resize-flex-example', template: "<mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8 example-table\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\" sticky>\n    <mat-header-cell *matHeaderCellDef [matResizableMaxWidthPx]=\"100\"> No. </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\" sticky>\n    <mat-header-cell *matHeaderCellDef [matResizableMinWidthPx]=\"150\"> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n  </ng-container>\n\n  <!-- Weight Column (not resizable) -->\n  <ng-container matColumnDef=\"weight\">\n    <mat-header-cell *matHeaderCellDef disableResize> Weight (Not resizable) </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n</mat-table>\n", styles: [":host {\n  display: block;\n  overflow: auto;\n}\n"] }]
             }], null, null);
     })();
 
@@ -404,11 +400,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DefaultEnabledColumnResizeExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'default-enabled-column-resize-example',
-                        templateUrl: 'default-enabled-column-resize-example.html',
-                        styleUrls: ['default-enabled-column-resize-example.css'],
-                    }]
+                args: [{ selector: 'default-enabled-column-resize-example', template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8 example-table\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\" sticky>\n    <th mat-header-cell *matHeaderCellDef [matResizableMaxWidthPx]=\"100\"> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\" sticky>\n    <th mat-header-cell *matHeaderCellDef [matResizableMinWidthPx]=\"150\"> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column (not resizable) -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef disableResize> Weight (Not resizable) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n", styles: [":host {\n  display: block;\n  overflow: auto;\n}\n"] }]
             }], null, null);
     })();
 
@@ -614,11 +606,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(OptInColumnResizeExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'opt-in-column-resize-example',
-                        templateUrl: 'opt-in-column-resize-example.html',
-                        styleUrls: ['opt-in-column-resize-example.css'],
-                    }]
+                args: [{ selector: 'opt-in-column-resize-example', template: "<table mat-table columnResize [dataSource]=\"dataSource\" class=\"mat-elevation-z8 example-table\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\" sticky>\n    <th mat-header-cell *matHeaderCellDef resizable [matResizableMaxWidthPx]=\"100\"> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\" sticky>\n    <th mat-header-cell *matHeaderCellDef resizable [matResizableMinWidthPx]=\"150\"> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column (not resizable) -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight (Not resizable) </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef resizable> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n", styles: [":host {\n  display: block;\n  overflow: auto;\n}\n"] }]
             }], null, null);
     })();
 

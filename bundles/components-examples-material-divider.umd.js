@@ -57,10 +57,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DividerOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'divider-overview-example',
-                        templateUrl: 'divider-overview-example.html',
-                    }]
+                args: [{ selector: 'divider-overview-example', template: "<mat-list>\n  <mat-list-item>Item 1</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item>Item 2</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item>Item 3</mat-list-item>\n</mat-list>\n" }]
             }], null, null);
     })();
 
@@ -82,10 +79,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DividerHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'divider-harness-example',
-                        templateUrl: 'divider-harness-example.html',
-                    }]
+                args: [{ selector: 'divider-harness-example', template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n" }]
             }], null, null);
     })();
 

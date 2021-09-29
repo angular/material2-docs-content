@@ -47,11 +47,7 @@ SnackBarComponentExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sn
     } }, directives: [i2.MatFormField, i2.MatLabel, i3.NumberValueAccessor, i4.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i5.MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarComponentExample, [{
         type: Component,
-        args: [{
-                selector: 'snack-bar-component-example',
-                templateUrl: 'snack-bar-component-example.html',
-                styleUrls: ['snack-bar-component-example.css'],
-            }]
+        args: [{ selector: 'snack-bar-component-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Snack bar duration (seconds)</mat-label>\n  <input type=\"number\" [(ngModel)]=\"durationInSeconds\" matInput>\n</mat-form-field>\n\n<button mat-stroked-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">\n  Pizza party\n</button>\n", styles: [".mat-form-field {\n  margin-right: 8px;\n}\n"] }]
     }], function () { return [{ type: i1.MatSnackBar }]; }, null); })();
 class PizzaPartyComponent {
 }
@@ -63,15 +59,11 @@ PizzaPartyComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: PizzaPa
     } }, styles: [".example-pizza-party[_ngcontent-%COMP%] {\n      color: hotpink;\n    }"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PizzaPartyComponent, [{
         type: Component,
-        args: [{
-                selector: 'snack-bar-component-example-snack',
-                templateUrl: 'snack-bar-component-example-snack.html',
-                styles: [`
+        args: [{ selector: 'snack-bar-component-example-snack', styles: [`
     .example-pizza-party {
       color: hotpink;
     }
-  `],
-            }]
+  `], template: "<span class=\"example-pizza-party\">\n  Pizza party!!! \uD83C\uDF55\n</span>\n" }]
     }], null, null); })();
 
 /**
@@ -107,11 +99,7 @@ SnackBarOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sna
     } }, directives: [i2.MatFormField, i2.MatLabel, i4.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'snack-bar-overview-example',
-                templateUrl: 'snack-bar-overview-example.html',
-                styleUrls: ['snack-bar-overview-example.css'],
-            }]
+        args: [{ selector: 'snack-bar-overview-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Message</mat-label>\n  <input matInput value=\"Disco party!\" #message>\n</mat-form-field>\n\n<mat-form-field appearance=\"fill\">\n  <mat-label>Action</mat-label>\n  <input matInput value=\"Dance\" #action>\n</mat-form-field>\n\n<button mat-stroked-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
     }], function () { return [{ type: i1.MatSnackBar }]; }, null); })();
 
 /**
@@ -181,11 +169,7 @@ SnackBarPositionExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sna
     } }, directives: [i2.MatFormField, i2.MatLabel, i3$1.MatSelect, i4$1.MatOption, i5.MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarPositionExample, [{
         type: Component,
-        args: [{
-                selector: 'snack-bar-position-example',
-                templateUrl: 'snack-bar-position-example.html',
-                styleUrls: ['snack-bar-position-example.css'],
-            }]
+        args: [{ selector: 'snack-bar-position-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Horizontal position</mat-label>\n  <mat-select [(value)]=\"horizontalPosition\">\n    <mat-option value=\"start\">Start</mat-option>\n    <mat-option value=\"center\">Center</mat-option>\n    <mat-option value=\"end\">End</mat-option>\n    <mat-option value=\"left\">Left</mat-option>\n    <mat-option value=\"right\">Right</mat-option>\n  </mat-select>\n</mat-form-field>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Vertical position</mat-label>\n  <mat-select [(value)]=\"verticalPosition\">\n    <mat-option value=\"top\">Top</mat-option>\n    <mat-option value=\"bottom\">Bottom</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button mat-stroked-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">\n  Pool party!\n</button>\n", styles: [".mat-form-field {\n  margin-right: 8px;\n}\n"] }]
     }], function () { return [{ type: i1.MatSnackBar }]; }, null); })();
 
 function SnackBarHarnessExample_ng_template_0_Template(rf, ctx) { if (rf & 1) {
@@ -208,10 +192,7 @@ SnackBarHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Snac
     } }, encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SnackBarHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'snack-bar-harness-example',
-                templateUrl: 'snack-bar-harness-example.html',
-            }]
+        args: [{ selector: 'snack-bar-harness-example', template: "<ng-template>Hello from the snackbar</ng-template>\n" }]
     }], function () { return [{ type: i1.MatSnackBar }]; }, null); })();
 
 const EXAMPLES = [

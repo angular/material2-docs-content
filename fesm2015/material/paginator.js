@@ -96,11 +96,7 @@ PaginatorConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i1$1.MatPaginator, i5.NgIf], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
         type: Component,
-        args: [{
-                selector: 'paginator-configurable-example',
-                templateUrl: 'paginator-configurable-example.html',
-                styleUrls: ['paginator-configurable-example.css'],
-            }]
+        args: [{ selector: 'paginator-configurable-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>List length</mat-label>\n  <input matInput [(ngModel)]=\"length\" type=\"number\">\n</mat-form-field>\n\n<mat-form-field appearance=\"fill\">\n  <mat-label>Page size</mat-label>\n  <input matInput [(ngModel)]=\"pageSize\" type=\"number\">\n</mat-form-field>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Page size options</mat-label>\n  <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"\n         [ngModelOptions]=\"{updateOn: 'blur'}\" placeholder=\"Ex. 10,25,50\">\n</mat-form-field>\n\n<mat-paginator [length]=\"length\"\n               [pageSize]=\"pageSize\"\n               [pageSizeOptions]=\"pageSizeOptions\"\n               (page)=\"pageEvent = $event\"\n               aria-label=\"Select page\">\n</mat-paginator>\n\n<div *ngIf=\"pageEvent\">\n  <h5>Page Change Event Properties</h5>\n  <div>List length: {{pageEvent.length}}</div>\n  <div>Page size: {{pageEvent.pageSize}}</div>\n  <div>Page index: {{pageEvent.pageIndex}}</div>\n</div>\n", styles: [".mat-form-field {\n  margin-right: 12px;\n}\n"] }]
     }], null, null); })();
 
 const _c0$1 = function () { return [5, 10, 25, 100]; };
@@ -117,10 +113,7 @@ PaginatorOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Pa
     } }, directives: [i1$1.MatPaginator], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'paginator-overview-example',
-                templateUrl: 'paginator-overview-example.html',
-            }]
+        args: [{ selector: 'paginator-overview-example', template: "<mat-paginator [length]=\"100\"\n              [pageSize]=\"10\"\n              [pageSizeOptions]=\"[5, 10, 25, 100]\"\n              aria-label=\"Select page\">\n</mat-paginator>\n" }]
     }], null, null); })();
 
 /**
@@ -150,10 +143,7 @@ PaginatorHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Pag
     } }, directives: [i1$1.MatPaginator], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'paginator-harness-example',
-                templateUrl: 'paginator-harness-example.html'
-            }]
+        args: [{ selector: 'paginator-harness-example', template: "<mat-paginator\n    (page)=\"handlePageEvent($event)\"\n    [length]=\"length\"\n    [pageSize]=\"pageSize\"\n    [showFirstLastButtons]=\"showFirstLastButtons\"\n    [pageSizeOptions]=\"pageSizeOptions\"\n    [pageIndex]=\"pageIndex\"\n    aria-label=\"Select page\">\n</mat-paginator>\n" }]
     }], null, null); })();
 
 const _c0 = function () { return [10, 50, 100]; };
@@ -196,10 +186,7 @@ PaginatorIntlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Pagina
     } }, directives: [i1$1.MatPaginator], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PaginatorIntlExample, [{
         type: Component,
-        args: [{
-                selector: 'paginator-intl-example',
-                templateUrl: 'paginator-intl-example.html',
-            }]
+        args: [{ selector: 'paginator-intl-example', template: "<mat-paginator [length]=\"200\" [pageSizeOptions]=\"[10, 50, 100]\" aria-label=\"Select page\">\n</mat-paginator>\n" }]
     }], null, null); })();
 class PaginatorIntlExampleModule {
 }

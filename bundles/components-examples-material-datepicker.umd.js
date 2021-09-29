@@ -98,11 +98,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DateRangePickerComparisonExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'date-range-picker-comparison-example',
-                        templateUrl: 'date-range-picker-comparison-example.html',
-                        styleUrls: ['date-range-picker-comparison-example.css'],
-                    }]
+                args: [{ selector: 'date-range-picker-comparison-example', template: "<mat-form-field class=\"example-form-field\" appearance=\"fill\">\n  <mat-label>First campaign</mat-label>\n  <mat-date-range-input\n    [formGroup]=\"campaignOne\"\n    [rangePicker]=\"campaignOnePicker\"\n    [comparisonStart]=\"campaignTwo.value.start\"\n    [comparisonEnd]=\"campaignTwo.value.end\">\n    <input matStartDate placeholder=\"Start date\" formControlName=\"start\">\n    <input matEndDate placeholder=\"End date\" formControlName=\"end\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matSuffix [for]=\"campaignOnePicker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>\n</mat-form-field>\n\n<mat-form-field class=\"example-form-field\" appearance=\"fill\">\n  <mat-label>Second campaign</mat-label>\n  <mat-date-range-input\n    [formGroup]=\"campaignTwo\"\n    [rangePicker]=\"campaignTwoPicker\"\n    [comparisonStart]=\"campaignOne.value.start\"\n    [comparisonEnd]=\"campaignOne.value.end\">\n    <input matStartDate placeholder=\"Start date\" formControlName=\"start\">\n    <input matEndDate placeholder=\"End date\" formControlName=\"end\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matSuffix [for]=\"campaignTwoPicker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>\n</mat-form-field>\n", styles: [".example-form-field {\n  margin: 0 8px 16px 0;\n}\n"] }]
             }], function () { return []; }, null);
     })();
 
@@ -168,10 +164,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DateRangePickerFormsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'date-range-picker-forms-example',
-                        templateUrl: 'date-range-picker-forms-example.html',
-                    }]
+                args: [{ selector: 'date-range-picker-forms-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [formGroup]=\"range\" [rangePicker]=\"picker\">\n    <input matStartDate formControlName=\"start\" placeholder=\"Start date\">\n    <input matEndDate formControlName=\"end\" placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #picker></mat-date-range-picker>\n\n  <mat-error *ngIf=\"range.controls.start.hasError('matStartDateInvalid')\">Invalid start date</mat-error>\n  <mat-error *ngIf=\"range.controls.end.hasError('matEndDateInvalid')\">Invalid end date</mat-error>\n</mat-form-field>\n\n<p>Selected range: {{range.value | json}}</p>\n" }]
             }], null, null);
     })();
 
@@ -207,10 +200,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DateRangePickerOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'date-range-picker-overview-example',
-                        templateUrl: 'date-range-picker-overview-example.html',
-                    }]
+                args: [{ selector: 'date-range-picker-overview-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [rangePicker]=\"picker\">\n    <input matStartDate placeholder=\"Start date\">\n    <input matEndDate placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #picker></mat-date-range-picker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -276,14 +266,10 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DateRangePickerSelectionStrategyExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'date-range-picker-selection-strategy-example',
-                        templateUrl: 'date-range-picker-selection-strategy-example.html',
-                        providers: [{
+                args: [{ selector: 'date-range-picker-selection-strategy-example', providers: [{
                                 provide: i3$1.MAT_DATE_RANGE_SELECTION_STRATEGY,
                                 useClass: FiveDayRangeSelectionStrategy
-                            }]
-                    }]
+                            }], template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [rangePicker]=\"picker\">\n    <input matStartDate placeholder=\"Start date\">\n    <input matEndDate placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-date-range-picker #picker></mat-date-range-picker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -350,11 +336,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerActionsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-actions-example',
-                        templateUrl: 'datepicker-actions-example.html',
-                        styleUrls: ['datepicker-actions-example.css']
-                    }]
+                args: [{ selector: 'datepicker-actions-example', template: "<mat-form-field appearance=\"fill\" class=\"example-form-field\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"datepicker\">\n  <mat-datepicker-toggle matSuffix [for]=\"datepicker\"></mat-datepicker-toggle>\n<!-- #docregion datepicker-actions -->\n  <mat-datepicker #datepicker>\n    <mat-datepicker-actions>\n      <button mat-button matDatepickerCancel>Cancel</button>\n      <button mat-raised-button color=\"primary\" matDatepickerApply>Apply</button>\n    </mat-datepicker-actions>\n  </mat-datepicker>\n<!-- #enddocregion datepicker-actions -->\n</mat-form-field>\n\n<mat-form-field appearance=\"fill\" class=\"example-form-field\">\n  <mat-label>Enter a date range</mat-label>\n  <mat-date-range-input [rangePicker]=\"rangePicker\">\n    <input matStartDate placeholder=\"Start date\">\n    <input matEndDate placeholder=\"End date\">\n  </mat-date-range-input>\n  <mat-datepicker-toggle matSuffix [for]=\"rangePicker\"></mat-datepicker-toggle>\n<!-- #docregion date-range-picker-actions -->\n  <mat-date-range-picker #rangePicker>\n    <mat-date-range-picker-actions>\n      <button mat-button matDateRangePickerCancel>Cancel</button>\n      <button mat-raised-button color=\"primary\" matDateRangePickerApply>Apply</button>\n    </mat-date-range-picker-actions>\n  </mat-date-range-picker>\n<!-- #enddocregion date-range-picker-actions -->\n</mat-form-field>\n", styles: [".example-form-field {\n  margin-right: 20px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -389,11 +371,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerApiExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-api-example',
-                        templateUrl: 'datepicker-api-example.html',
-                        styleUrls: ['datepicker-api-example.css'],
-                    }]
+                args: [{ selector: 'datepicker-api-example', template: "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n<button mat-raised-button (click)=\"picker.open()\">Open</button>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -439,11 +417,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerColorExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-color-example',
-                        templateUrl: 'datepicker-color-example.html',
-                        styleUrls: ['datepicker-color-example.css'],
-                    }]
+                args: [{ selector: 'datepicker-color-example', template: "<mat-form-field color=\"accent\" appearance=\"fill\">\n  <mat-label>Inherited calendar color</mat-label>\n  <input matInput [matDatepicker]=\"picker1\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n  <mat-datepicker #picker1></mat-datepicker>\n</mat-form-field>\n\n<mat-form-field color=\"accent\" appearance=\"fill\">\n  <mat-label>Custom calendar color</mat-label>\n  <input matInput [matDatepicker]=\"picker2\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n  <mat-datepicker #picker2 color=\"primary\"></mat-datepicker>\n</mat-form-field>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -479,11 +453,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerCustomHeaderExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-custom-header-example',
-                        templateUrl: 'datepicker-custom-header-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'datepicker-custom-header-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Custom calendar header</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
     /** Custom header component for datepicker. */
@@ -616,10 +586,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerCustomIconExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-custom-icon-example',
-                        templateUrl: 'datepicker-custom-icon-example.html',
-                    }]
+                args: [{ selector: 'datepicker-custom-icon-example', template: "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\">\n    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>\n  </mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -663,12 +630,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerDateClassExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-date-class-example',
-                        templateUrl: 'datepicker-date-class-example.html',
-                        styleUrls: ['datepicker-date-class-example.css'],
-                        encapsulation: i0.ViewEncapsulation.None,
-                    }]
+                args: [{ selector: 'datepicker-date-class-example', encapsulation: i0.ViewEncapsulation.None, template: "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker [dateClass]=\"dateClass\" #picker></mat-datepicker>\n</mat-form-field>\n", styles: [".example-custom-date-class {\n  background: orange;\n  border-radius: 100%;\n}\n"] }]
             }], null, null);
     })();
 
@@ -733,10 +695,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerDisabledExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-disabled-example',
-                        templateUrl: 'datepicker-disabled-example.html',
-                    }]
+                args: [{ selector: 'datepicker-disabled-example', template: "<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Completely disabled</mat-label>\n    <input matInput [matDatepicker]=\"dp1\" disabled>\n    <mat-datepicker-toggle matSuffix [for]=\"dp1\"></mat-datepicker-toggle>\n    <mat-datepicker #dp1></mat-datepicker>\n  </mat-form-field>\n</p>\n\n<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Popup disabled</mat-label>\n    <input matInput [matDatepicker]=\"dp2\">\n    <mat-datepicker-toggle matSuffix [for]=\"dp2\" disabled></mat-datepicker-toggle>\n    <mat-datepicker #dp2></mat-datepicker>\n  </mat-form-field>\n</p>\n\n<p>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Input disabled</mat-label>\n    <input matInput [matDatepicker]=\"dp3\" disabled>\n    <mat-datepicker-toggle matSuffix [for]=\"dp3\"></mat-datepicker-toggle>\n    <mat-datepicker #dp3 disabled=\"false\"></mat-datepicker>\n  </mat-form-field>\n</p>\n" }]
             }], null, null);
     })();
 
@@ -792,11 +751,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerEventsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-events-example',
-                        templateUrl: 'datepicker-events-example.html',
-                        styleUrls: ['datepicker-events-example.css'],
-                    }]
+                args: [{ selector: 'datepicker-events-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Input & change events</mat-label>\n  <input matInput [matDatepicker]=\"picker\"\n         (dateInput)=\"addEvent('input', $event)\" (dateChange)=\"addEvent('change', $event)\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n\n<div class=\"example-events\">\n  <div *ngFor=\"let e of events\">{{e}}</div>\n</div>\n", styles: [".example-events {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}\n"] }]
             }], null, null);
     })();
 
@@ -834,10 +789,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerFilterExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-filter-example',
-                        templateUrl: 'datepicker-filter-example.html',
-                    }]
+                args: [{ selector: 'datepicker-filter-example', template: "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepickerFilter]=\"myFilter\" [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -895,10 +847,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerFormatsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-formats-example',
-                        templateUrl: 'datepicker-formats-example.html',
-                        providers: [
+                args: [{ selector: 'datepicker-formats-example', providers: [
                             // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                             // application's root module. We provide it at the component level here, due to limitations of
                             // our example generation script.
@@ -908,8 +857,7 @@
                                 deps: [i1$1.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
                             },
                             { provide: i1$1.MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
-                        ],
-                    }]
+                        ], template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Verbose datepicker</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -939,10 +887,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-harness-example',
-                        templateUrl: 'datepicker-harness-example.html',
-                    }]
+                args: [{ selector: 'datepicker-harness-example', template: "<input\n    matInput\n    [matDatepicker]=\"picker\"\n    [(ngModel)]=\"date\"\n    [min]=\"minDate\">\n<mat-datepicker #picker></mat-datepicker>\n" }]
             }], null, null);
     })();
 
@@ -972,11 +917,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerInlineCalendarExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-inline-calendar-example',
-                        templateUrl: 'datepicker-inline-calendar-example.html',
-                        styleUrls: ['datepicker-inline-calendar-example.css'],
-                    }]
+                args: [{ selector: 'datepicker-inline-calendar-example', template: "<mat-card class=\"demo-inline-calendar-card\">\n  <mat-calendar (selectedChange)=\"selected = $event\"></mat-calendar>\n</mat-card>\n<p>Selected date: {{selected}}</p>\n", styles: [".demo-inline-calendar-card {\n  width: 300px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -1030,11 +971,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerLocaleExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-locale-example',
-                        templateUrl: 'datepicker-locale-example.html',
-                        styleUrls: ['datepicker-locale-example.css'],
-                        providers: [
+                args: [{ selector: 'datepicker-locale-example', providers: [
                             // The locale would typically be provided on the root module of your application. We do it at
                             // the component level here, due to limitations of our example generation script.
                             { provide: i1$1.MAT_DATE_LOCALE, useValue: 'ja-JP' },
@@ -1047,8 +984,7 @@
                                 deps: [i1$1.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
                             },
                             { provide: i1$1.MAT_DATE_FORMATS, useValue: materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
-                        ],
-                    }]
+                        ], template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Different locale</mat-label>\n  <input matInput [matDatepicker]=\"dp\">\n  <mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n\n<button mat-button (click)=\"french()\">Dynamically switch to French</button>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace$1.DateAdapter }]; }, null);
     })();
 
@@ -1085,10 +1021,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerMinMaxExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-min-max-example',
-                        templateUrl: 'datepicker-min-max-example.html',
-                    }]
+                args: [{ selector: 'datepicker-min-max-example', template: "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [min]=\"minDate\" [max]=\"maxDate\" [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n" }]
             }], function () { return []; }, null);
     })();
 
@@ -1130,17 +1063,13 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerMomentExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-moment-example',
-                        templateUrl: 'datepicker-moment-example.html',
-                        providers: [
+                args: [{ selector: 'datepicker-moment-example', providers: [
                             // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
                             // `MatMomentDateModule` in your applications root module. We provide it at the component level
                             // here, due to limitations of our example generation script.
                             { provide: i1$1.DateAdapter, useClass: materialMomentAdapter.MomentDateAdapter, deps: [i1$1.MAT_DATE_LOCALE] },
                             { provide: i1$1.MAT_DATE_FORMATS, useValue: materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
-                        ],
-                    }]
+                        ], template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Moment.js datepicker</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -1173,10 +1102,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-overview-example',
-                        templateUrl: 'datepicker-overview-example.html',
-                    }]
+                args: [{ selector: 'datepicker-overview-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n<!-- #docregion toggle -->\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n<!-- #enddocregion toggle -->\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -1212,10 +1138,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerStartViewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-start-view-example',
-                        templateUrl: 'datepicker-start-view-example.html',
-                    }]
+                args: [{ selector: 'datepicker-start-view-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -1248,10 +1171,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerTouchExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-touch-example',
-                        templateUrl: 'datepicker-touch-example.html',
-                    }]
+                args: [{ selector: 'datepicker-touch-example', template: "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n  <mat-label>Choose a date</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n  <mat-datepicker touchUi #picker></mat-datepicker>\n</mat-form-field>\n" }]
             }], null, null);
     })();
 
@@ -1312,11 +1232,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerValueExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-value-example',
-                        templateUrl: 'datepicker-value-example.html',
-                        styleUrls: ['datepicker-value-example.css'],
-                    }]
+                args: [{ selector: 'datepicker-value-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Angular forms</mat-label>\n  <input matInput [matDatepicker]=\"picker1\" [formControl]=\"date\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n  <mat-datepicker #picker1></mat-datepicker>\n</mat-form-field>\n\n<mat-form-field appearance=\"fill\">\n  <mat-label>Angular forms (w/ deserialization)</mat-label>\n  <input matInput [matDatepicker]=\"picker2\"\n         [formControl]=\"serializedDate\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n  <mat-datepicker #picker2></mat-datepicker>\n</mat-form-field>\n\n<mat-form-field appearance=\"fill\">\n  <mat-label>Value binding</mat-label>\n  <input matInput [matDatepicker]=\"picker3\" [value]=\"date.value\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker3\"></mat-datepicker-toggle>\n  <mat-datepicker #picker3></mat-datepicker>\n</mat-form-field>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -1388,11 +1304,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DatepickerViewsSelectionExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'datepicker-views-selection-example',
-                        templateUrl: 'datepicker-views-selection-example.html',
-                        styleUrls: ['datepicker-views-selection-example.css'],
-                        providers: [
+                args: [{ selector: 'datepicker-views-selection-example', providers: [
                             // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                             // application's root module. We provide it at the component level here, due to limitations of
                             // our example generation script.
@@ -1402,8 +1314,7 @@
                                 deps: [i1$1.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
                             },
                             { provide: i1$1.MAT_DATE_FORMATS, useValue: MY_FORMATS },
-                        ],
-                    }]
+                        ], template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Month and Year</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp\n                  startView=\"multi-year\"\n                  (yearSelected)=\"chosenYearHandler($event)\"\n                  (monthSelected)=\"chosenMonthHandler($event, dp)\"\n                  panelClass=\"example-month-picker\">\n  </mat-datepicker>\n</mat-form-field>\n", styles: [".example-month-picker .mat-calendar-period-button {\n  pointer-events: none;\n}\n\n.example-month-picker .mat-calendar-arrow {\n  display: none;\n}\n"] }]
             }], null, null);
     })();
 

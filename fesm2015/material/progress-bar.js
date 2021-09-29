@@ -24,10 +24,7 @@ ProgressBarBufferExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Pr
     } }, directives: [i1.MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-bar-buffer-example',
-                templateUrl: 'progress-bar-buffer-example.html',
-            }]
+        args: [{ selector: 'progress-bar-buffer-example', template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>\n" }]
     }], null, null); })();
 
 function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
@@ -143,11 +140,7 @@ ProgressBarConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ ty
     } }, directives: [i1$1.MatCard, i1$1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1.MatProgressBar, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-bar-configurable-example',
-                templateUrl: 'progress-bar-configurable-example.html',
-                styleUrls: ['progress-bar-configurable-example.css'],
-            }]
+        args: [{ selector: 'progress-bar-configurable-example', template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress bar configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Color:</label>\n      <mat-radio-group [(ngModel)]=\"color\">\n        <mat-radio-button class=\"example-margin\" value=\"primary\">\n          Primary\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"accent\">\n          Accent\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"warn\">\n          Warn\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"buffer\">\n          Buffer\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"query\">\n          Query\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\" *ngIf=\"mode === 'determinate' || mode === 'buffer'\">\n      <label class=\"example-margin\">Progress:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider>\n    </section>\n    <section class=\"example-section\" *ngIf=\"mode === 'buffer'\">\n      <label class=\"example-margin\">Buffer:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></mat-slider>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-progress-bar\n          class=\"example-margin\"\n          [color]=\"color\"\n          [mode]=\"mode\"\n          [value]=\"value\"\n          [bufferValue]=\"bufferValue\">\n      </mat-progress-bar>\n    </section>\n  </mat-card-content>\n</mat-card>\n", styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -161,10 +154,7 @@ ProgressBarDeterminateExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ typ
     } }, directives: [i1.MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-bar-determinate-example',
-                templateUrl: 'progress-bar-determinate-example.html',
-            }]
+        args: [{ selector: 'progress-bar-determinate-example', template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n" }]
     }], null, null); })();
 
 /**
@@ -178,10 +168,7 @@ ProgressBarIndeterminateExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ t
     } }, directives: [i1.MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-bar-indeterminate-example',
-                templateUrl: 'progress-bar-indeterminate-example.html',
-            }]
+        args: [{ selector: 'progress-bar-indeterminate-example', template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>\n" }]
     }], null, null); })();
 
 /**
@@ -195,10 +182,7 @@ ProgressBarQueryExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Pro
     } }, directives: [i1.MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-bar-query-example',
-                templateUrl: 'progress-bar-query-example.html',
-            }]
+        args: [{ selector: 'progress-bar-query-example', template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>\n" }]
     }], null, null); })();
 
 /**
@@ -215,10 +199,7 @@ ProgressBarHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: P
     } }, directives: [i1.MatProgressBar], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressBarHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-bar-harness-example',
-                templateUrl: 'progress-bar-harness-example.html'
-            }]
+        args: [{ selector: 'progress-bar-harness-example', template: "<mat-progress-bar mode=\"determinate\" [value]=\"value\"></mat-progress-bar>\n<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

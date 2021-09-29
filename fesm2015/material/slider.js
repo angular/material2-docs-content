@@ -188,11 +188,7 @@ SliderConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
     } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatFormField, i2.MatLabel, i3.MatInput, i4.NumberValueAccessor, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i5.MatCheckbox, i6.NgIf, i1$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 0 8px 16px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}\n\n.mat-card[_ngcontent-%COMP%]    + .mat-card[_ngcontent-%COMP%] {\n  margin-top: 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  margin: 0 8px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   .example-label-container.example-label-horizontal[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  margin: 0 0 12px 16px;\n  max-width: 284px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   .example-label-container.example-label-vertical[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  max-width: 68px;\n  height: 48px;\n}\n\n.example-result-card[_ngcontent-%COMP%]   .example-value-label[_ngcontent-%COMP%] {\n  font-weight: 600;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderConfigurableExample, [{
         type: Component,
-        args: [{
-                selector: 'slider-configurable-example',
-                templateUrl: 'slider-configurable-example.html',
-                styleUrls: ['slider-configurable-example.css'],
-            }]
+        args: [{ selector: 'slider-configurable-example', template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-form-field class=\"example-margin\" appearance=\"fill\">\n        <mat-label>Value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"value\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin\" appearance=\"fill\">\n        <mat-label>Min value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"min\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin\" appearance=\"fill\">\n        <mat-label>Max value</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"max\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin\" appearance=\"fill\">\n        <mat-label>Step size</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"step\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">\n        Auto ticks\n      </mat-checkbox>\n      <mat-form-field class=\"example-margin\" appearance=\"fill\" *ngIf=\"showTicks && !autoTicks\">\n        <mat-label>Tick interval</mat-label>\n        <input matInput type=\"number\" [(ngModel)]=\"tickInterval\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"example-result-card\">\n  <mat-card-content>\n    <h2>Result</h2>\n    <br>\n    <br>\n\n    <div class=\"example-label-container\" [class]=\"vertical ? 'example-label-vertical' : 'example-label-horizontal'\">\n      <label id=\"example-name-label\" class=\"example-name-label\">Max Value</label>\n      <label class=\"example-value-label\">{{value}}</label>\n    </div>\n    <mat-slider\n        class=\"example-margin\"\n        [disabled]=\"disabled\"\n        [invert]=\"invert\"\n        [max]=\"max\"\n        [min]=\"min\"\n        [step]=\"step\"\n        [thumbLabel]=\"thumbLabel\"\n        [tickInterval]=\"getSliderTickInterval()\"\n        [(ngModel)]=\"value\"\n        [vertical]=\"vertical\"\n        aria-labelledby=\"example-name-label\">\n    </mat-slider>\n  </mat-card-content>\n</mat-card>\n", styles: [".example-h2 {\n  margin: 0 8px 16px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 8px;\n}\n\n.mat-slider-horizontal {\n  width: 300px;\n}\n\n.mat-slider-vertical {\n  height: 300px;\n}\n\n.mat-card + .mat-card {\n  margin-top: 8px;\n}\n\n.example-result-card h2 {\n  margin: 0 8px;\n}\n\n.example-result-card .example-label-container.example-label-horizontal {\n  display: flex;\n  justify-content: space-between;\n  margin: 0 0 12px 16px;\n  max-width: 284px;\n}\n\n.example-result-card .example-label-container.example-label-vertical {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  max-width: 68px;\n  height: 48px;\n}\n\n.example-result-card .example-value-label {\n  font-weight: 600;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -214,11 +210,7 @@ SliderFormattingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sli
     } }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderFormattingExample, [{
         type: Component,
-        args: [{
-                selector: 'slider-formatting-example',
-                templateUrl: 'slider-formatting-example.html',
-                styleUrls: ['slider-formatting-example.css'],
-            }]
+        args: [{ selector: 'slider-formatting-example', template: "<mat-slider\n  thumbLabel\n  [displayWith]=\"formatLabel\"\n  tickInterval=\"1000\"\n  step=\"1000\"\n  min=\"0\"\n  max=\"100000\"\n  aria-label=\"units\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -232,11 +224,7 @@ SliderOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Slide
     } }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'slider-overview-example',
-                templateUrl: 'slider-overview-example.html',
-                styleUrls: ['slider-overview-example.css'],
-            }]
+        args: [{ selector: 'slider-overview-example', template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -250,10 +238,7 @@ SliderHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Slider
     } }, directives: [i1$1.MatSlider], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SliderHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'slider-harness-example',
-                templateUrl: 'slider-harness-example.html',
-            }]
+        args: [{ selector: 'slider-harness-example', template: "<mat-slider value=\"50\" aria-label=\"unit(s)\"></mat-slider>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

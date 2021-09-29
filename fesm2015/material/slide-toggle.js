@@ -85,11 +85,7 @@ SlideToggleConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ ty
     } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i1$1.NgControlStatus, i1$1.NgModel, i2.MatRadioButton, i4.MatCheckbox, i2$1.MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
         type: Component,
-        args: [{
-                selector: 'slide-toggle-configurable-example',
-                templateUrl: 'slide-toggle-configurable-example.html',
-                styleUrls: ['slide-toggle-configurable-example.css'],
-            }]
+        args: [{ selector: 'slide-toggle-configurable-example', template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Color:</label>\n      <mat-radio-group [(ngModel)]=\"color\">\n        <mat-radio-button class=\"example-margin\" value=\"primary\">\n          Primary\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"accent\">\n          Accent\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"warn\">\n          Warn\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"result\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-slide-toggle\n          class=\"example-margin\"\n          [color]=\"color\"\n          [checked]=\"checked\"\n          [disabled]=\"disabled\">\n        Slide me!\n      </mat-slide-toggle>\n    </section>\n  </mat-card-content>\n</mat-card>\n", styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 10px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -161,11 +157,7 @@ SlideToggleFormsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sli
     } }, directives: [i2$1.MatSlideToggle, i1$1.NgControlStatus, i1$1.NgModel, i1$1.NgControlStatusGroup, i1$1.NgForm, i2$1.MatSlideToggleRequiredValidator, i1$1.RequiredValidator, i3.MatButton, i1$1.FormGroupDirective, i1$1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
         type: Component,
-        args: [{
-                selector: 'slide-toggle-forms-example',
-                templateUrl: './slide-toggle-forms-example.html',
-                styleUrls: ['./slide-toggle-forms-example.css'],
-            }]
+        args: [{ selector: 'slide-toggle-forms-example', template: "<p>Slide Toggle using a simple NgModel.</p>\n\n<mat-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>\n\n<p>Slide Toggle inside of a Template-driven form</p>\n\n<form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit()\" ngNativeValidate>\n\n  <mat-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</mat-slide-toggle>\n  <mat-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</mat-slide-toggle>\n\n  <button mat-raised-button type=\"submit\">Save Settings</button>\n</form>\n\n<p>Slide Toggle inside of a Reactive form</p>\n\n<form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit()\" ngNativeValidate>\n\n  <mat-slide-toggle formControlName=\"enableWifi\">Enable Wifi</mat-slide-toggle>\n  <mat-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</mat-slide-toggle>\n\n  <p>Form Group Status: {{formGroup.status}}</p>\n\n  <button mat-raised-button type=\"submit\">Save Settings</button>\n</form>\n", styles: [".example-form mat-slide-toggle {\n  margin: 8px 0;\n  display: block;\n}\n"] }]
     }], function () { return [{ type: i1$1.FormBuilder }]; }, null); })();
 
 /**
@@ -181,10 +173,7 @@ SlideToggleOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
     } }, directives: [i2$1.MatSlideToggle], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'slide-toggle-overview-example',
-                templateUrl: 'slide-toggle-overview-example.html',
-            }]
+        args: [{ selector: 'slide-toggle-overview-example', template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>\n" }]
     }], null, null); })();
 
 /**
@@ -211,10 +200,7 @@ SlideToggleHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
     } }, directives: [i2$1.MatSlideToggle, i1$1.NgControlStatus, i1$1.FormControlDirective], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SlideToggleHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'slide-toggle-harness-example',
-                templateUrl: 'slide-toggle-harness-example.html',
-            }]
+        args: [{ selector: 'slide-toggle-harness-example', template: "<mat-slide-toggle\n    [formControl]=\"ctrl\"\n    name=\"first-name\">\n  First\n</mat-slide-toggle>\n<mat-slide-toggle [disabled]=\"disabled\">\n  Second\n</mat-slide-toggle>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

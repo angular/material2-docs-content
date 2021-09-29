@@ -40,11 +40,7 @@ CdkClipboardOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type:
     } }, directives: [i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i2.CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkClipboardOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'cdk-clipboard-overview-example',
-                templateUrl: 'cdk-clipboard-overview-example.html',
-                styleUrls: ['cdk-clipboard-overview-example.css'],
-            }]
+        args: [{ selector: 'cdk-clipboard-overview-example', template: "<label for=\"clipboard-example-textarea\">Text to be copied</label>\n<textarea id=\"clipboard-example-textarea\" cols=\"30\" rows=\"10\" [(ngModel)]=\"value\"></textarea>\n<button [cdkCopyToClipboard]=\"value\">Copy to clipboard</button>\n", styles: ["textarea {\n  display: block;\n  margin: 4px 0 8px;\n}\n"] }]
     }], null, null); })();
 
 const EXAMPLES = [CdkClipboardOverviewExample];

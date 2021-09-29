@@ -17,10 +17,7 @@ IconOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: IconOve
     } }, directives: [i1.MatIcon], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'icon-overview-example',
-                templateUrl: 'icon-overview-example.html',
-            }]
+        args: [{ selector: 'icon-overview-example', template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\">home</mat-icon>\n" }]
     }], null, null); })();
 
 const THUMBUP_ICON = `
@@ -48,10 +45,7 @@ IconSvgExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: IconSvgExamp
     } }, directives: [i1.MatIcon], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconSvgExample, [{
         type: Component,
-        args: [{
-                selector: 'icon-svg-example',
-                templateUrl: 'icon-svg-example.html',
-            }]
+        args: [{ selector: 'icon-svg-example', template: "<mat-icon svgIcon=\"thumbs-up\" aria-hidden=\"false\" aria-label=\"Example thumbs up SVG icon\"></mat-icon>\n" }]
     }], function () { return [{ type: i1.MatIconRegistry }, { type: i2.DomSanitizer }]; }, null); })();
 
 /**
@@ -69,10 +63,7 @@ IconHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: IconHarn
     } }, directives: [i1.MatIcon], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(IconHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'icon-harness-example',
-                templateUrl: 'icon-harness-example.html',
-            }]
+        args: [{ selector: 'icon-harness-example', template: "<mat-icon fontSet=\"fontIcons\" fontIcon=\"fontIcon\"></mat-icon>\n<mat-icon svgIcon=\"svgIcons:svgIcon\"></mat-icon>\n<mat-icon inline>ligature_icon</mat-icon>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

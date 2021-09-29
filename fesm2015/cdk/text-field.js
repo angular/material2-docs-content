@@ -61,11 +61,7 @@ TextFieldAutofillDirectiveExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i1$1.CdkAutofill, i4.NgIf, i5.MatButton, i1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
         type: Component,
-        args: [{
-                selector: 'text-field-autofill-directive-example',
-                templateUrl: './text-field-autofill-directive-example.html',
-                styleUrls: ['./text-field-autofill-directive-example.css'],
-            }]
+        args: [{ selector: 'text-field-autofill-directive-example', template: "<form (submit)=\"$event.preventDefault()\">\n  <mat-form-field appearance=\"fill\">\n    <mat-label>First name</mat-label>\n    <input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Last name</mat-label>\n    <input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
     }], null, null); })();
 
 const _c0$1 = ["first"];
@@ -133,11 +129,7 @@ TextFieldAutofillMonitorExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ t
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatInput, i4.NgIf, i5.MatButton, i1.MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
         type: Component,
-        args: [{
-                selector: 'text-field-autofill-monitor-example',
-                templateUrl: './text-field-autofill-monitor-example.html',
-                styleUrls: ['./text-field-autofill-monitor-example.css'],
-            }]
+        args: [{ selector: 'text-field-autofill-monitor-example', template: "<form (submit)=\"$event.preventDefault()\">\n  <mat-form-field appearance=\"fill\">\n    <mat-label>First name</mat-label>\n    <input matInput #first>\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Last name</mat-label>\n    <input matInput #last>\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
     }], function () { return [{ type: i1$1.AutofillMonitor }]; }, { firstName: [{
             type: ViewChild,
             args: ['first', { read: ElementRef }]
@@ -204,11 +196,7 @@ TextFieldAutosizeTextareaExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ 
     } }, directives: [i1.MatFormField, i1.MatLabel, i2$1.MatSelect, i3.MatOption, i2.MatInput, i1$1.CdkTextareaAutosize], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
         type: Component,
-        args: [{
-                selector: 'text-field-autosize-textarea-example',
-                templateUrl: './text-field-autosize-textarea-example.html',
-                styleUrls: ['./text-field-autosize-textarea-example.css'],
-            }]
+        args: [{ selector: 'text-field-autosize-textarea-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Font size</mat-label>\n  <mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\">\n    <mat-option value=\"10px\">10px</mat-option>\n    <mat-option value=\"12px\">12px</mat-option>\n    <mat-option value=\"14px\">14px</mat-option>\n    <mat-option value=\"16px\">16px</mat-option>\n    <mat-option value=\"18px\">18px</mat-option>\n    <mat-option value=\"20px\">20px</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<mat-form-field [style.fontSize]=\"fontSize.value\" appearance=\"fill\">\n  <mat-label>Autosize textarea</mat-label>\n  <textarea matInput\n            cdkTextareaAutosize\n            #autosize=\"cdkTextareaAutosize\"\n            cdkAutosizeMinRows=\"1\"\n            cdkAutosizeMaxRows=\"5\"></textarea>\n</mat-form-field>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
     }], function () { return [{ type: i0.NgZone }]; }, { autosize: [{
             type: ViewChild,
             args: ['autosize']

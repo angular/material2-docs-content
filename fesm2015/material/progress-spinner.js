@@ -99,11 +99,7 @@ ProgressSpinnerConfigurableExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent(
     } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressSpinner, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-spinner-configurable-example',
-                templateUrl: 'progress-spinner-configurable-example.html',
-                styleUrls: ['progress-spinner-configurable-example.css'],
-            }]
+        args: [{ selector: 'progress-spinner-configurable-example', template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress spinner configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Color:</label>\n      <mat-radio-group [(ngModel)]=\"color\">\n        <mat-radio-button class=\"example-margin\" value=\"primary\">\n          Primary\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"accent\">\n          Accent\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"warn\">\n          Warn\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\" *ngIf=\"mode === 'determinate'\">\n      <label class=\"example-margin\">Progress:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider>\n    </section>\n  </mat-card-content>\n</mat-card>\n<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <mat-progress-spinner\n        class=\"example-margin\"\n        [color]=\"color\"\n        [mode]=\"mode\"\n        [value]=\"value\">\n    </mat-progress-spinner>\n  </mat-card-content>\n</mat-card>\n", styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -117,10 +113,7 @@ ProgressSpinnerOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ ty
     } }, directives: [i1$1.MatSpinner], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-spinner-overview-example',
-                templateUrl: 'progress-spinner-overview-example.html',
-            }]
+        args: [{ selector: 'progress-spinner-overview-example', template: "<mat-spinner></mat-spinner>\n" }]
     }], null, null); })();
 
 /**
@@ -137,10 +130,7 @@ ProgressSpinnerHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ typ
     } }, directives: [i1$1.MatProgressSpinner, i1$1.MatSpinner], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(ProgressSpinnerHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'progress-spinner-harness-example',
-                templateUrl: 'progress-spinner-harness-example.html',
-            }]
+        args: [{ selector: 'progress-spinner-harness-example', template: "<mat-progress-spinner mode=\"determinate\" [value]=\"value\"></mat-progress-spinner>\n<mat-spinner></mat-spinner>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

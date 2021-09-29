@@ -28,10 +28,7 @@ DividerOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Divi
     } }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DividerOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'divider-overview-example',
-                templateUrl: 'divider-overview-example.html',
-            }]
+        args: [{ selector: 'divider-overview-example', template: "<mat-list>\n  <mat-list-item>Item 1</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item>Item 2</mat-list-item>\n  <mat-divider></mat-divider>\n  <mat-list-item>Item 3</mat-list-item>\n</mat-list>\n" }]
     }], null, null); })();
 
 /**
@@ -46,10 +43,7 @@ DividerHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Divid
     } }, directives: [i2.MatDivider], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DividerHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'divider-harness-example',
-                templateUrl: 'divider-harness-example.html',
-            }]
+        args: [{ selector: 'divider-harness-example', template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

@@ -59,11 +59,7 @@ CdkPortalOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Cd
     } }, directives: [i1.CdkPortalOutlet], styles: [".example-portal-outlet[_ngcontent-%COMP%] {\n  margin-bottom: 10px;\n  padding: 10px;\n  border: 1px dashed black;\n  width: 250px;\n  height: 250px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CdkPortalOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'cdk-portal-overview-example',
-                templateUrl: 'cdk-portal-overview-example.html',
-                styleUrls: ['cdk-portal-overview-example.css'],
-            }]
+        args: [{ selector: 'cdk-portal-overview-example', template: "<h2>The portal outlet is below:</h2>\n<div class=\"example-portal-outlet\">\n  <ng-template [cdkPortalOutlet]=\"selectedPortal\"></ng-template>\n</div>\n<ng-template #templatePortalContent>Hello, this is a template portal</ng-template>\n\n<button (click)=\"selectedPortal = componentPortal\">Render component portal</button>\n<button (click)=\"selectedPortal = templatePortal\">Render template portal</button>\n<button (click)=\"selectedPortal = domPortal\">Render DOM portal</button>\n\n<div #domPortalContent>Hello, this is a DOM portal</div>\n", styles: [".example-portal-outlet {\n  margin-bottom: 10px;\n  padding: 10px;\n  border: 1px dashed black;\n  width: 250px;\n  height: 250px;\n}\n"] }]
     }], function () { return [{ type: i0.ViewContainerRef }]; }, { templatePortalContent: [{
             type: ViewChild,
             args: ['templatePortalContent']

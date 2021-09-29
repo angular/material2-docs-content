@@ -68,11 +68,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkClipboardOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-clipboard-overview-example',
-                        templateUrl: 'cdk-clipboard-overview-example.html',
-                        styleUrls: ['cdk-clipboard-overview-example.css'],
-                    }]
+                args: [{ selector: 'cdk-clipboard-overview-example', template: "<label for=\"clipboard-example-textarea\">Text to be copied</label>\n<textarea id=\"clipboard-example-textarea\" cols=\"30\" rows=\"10\" [(ngModel)]=\"value\"></textarea>\n<button [cdkCopyToClipboard]=\"value\">Copy to clipboard</button>\n", styles: ["textarea {\n  display: block;\n  margin: 4px 0 8px;\n}\n"] }]
             }], null, null);
     })();
 

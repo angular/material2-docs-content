@@ -145,11 +145,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperEditableExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-editable-example',
-                        templateUrl: 'stepper-editable-example.html',
-                        styleUrls: ['stepper-editable-example.css']
-                    }]
+                args: [{ selector: 'stepper-editable-example', template: "<button mat-raised-button (click)=\"isEditable = !isEditable\">\n  {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}\n</button>\n\n<mat-stepper linear #stepper>\n<!-- #docregion editable -->\n  <mat-step [stepControl]=\"firstFormGroup\" [editable]=\"isEditable\">\n<!-- #enddocregion editable -->\n    <form [formGroup]=\"firstFormGroup\">\n<!-- #docregion step-label -->\n      <ng-template matStepLabel>Fill out your name</ng-template>\n<!-- #enddocregion step-label -->\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput formControlName=\"firstCtrl\" placeholder=\"Last name, First name\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\" [editable]=\"isEditable\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".mat-stepper-horizontal {\n  margin-top: 8px;\n}\n\n.mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -264,14 +260,9 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperErrorsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-errors-example',
-                        templateUrl: 'stepper-errors-example.html',
-                        styleUrls: ['stepper-errors-example.css'],
-                        providers: [{
+                args: [{ selector: 'stepper-errors-example', providers: [{
                                 provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
-                            }]
-                    }]
+                            }], template: "<mat-stepper #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\" errorMessage=\"Name is required.\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <p>Go to a different step to see the error state</p>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\" errorMessage=\"Address is required.\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput placeholder=\"Ex. 1 Main St, New York, NY\" formControlName=\"secondCtrl\"\n               required>\n      </mat-form-field>\n      <div>\n        <p>Go to a different step to see the error state</p>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -378,11 +369,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-label-position-bottom-example',
-                        templateUrl: 'stepper-label-position-bottom-example.html',
-                        styleUrls: ['stepper-label-position-bottom-example.css'],
-                    }]
+                args: [{ selector: 'stepper-label-position-bottom-example', template: "<!-- #docregion label-position -->\n<mat-stepper labelPosition=\"bottom\" #stepper>\n<!-- #enddocregion label-position -->\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\" optional>\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n<!-- #docregion buttons -->\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n<!-- #enddocregion buttons -->\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -496,11 +483,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperOptionalExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-optional-example',
-                        templateUrl: 'stepper-optional-example.html',
-                        styleUrls: ['stepper-optional-example.css']
-                    }]
+                args: [{ selector: 'stepper-optional-example', template: "<button mat-raised-button (click)=\"isOptional = !isOptional\">\n  {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}\n</button>\n\n<mat-stepper linear #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <!-- #docregion optional -->\n  <mat-step [stepControl]=\"secondFormGroup\" [optional]=\"isOptional\">\n  <!-- #enddocregion optional -->\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".mat-stepper-horizontal {\n  margin-top: 8px;\n}\n\n.mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -610,11 +593,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-overview-example',
-                        templateUrl: 'stepper-overview-example.html',
-                        styleUrls: ['stepper-overview-example.css'],
-                    }]
+                args: [{ selector: 'stepper-overview-example', template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">\n  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}\n</button>\n<mat-stepper [linear]=\"isLinear\" #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <!-- #docregion label -->\n  <mat-step [stepControl]=\"secondFormGroup\" label=\"Fill out your address\">\n  <!-- #enddocregion label -->\n    <form [formGroup]=\"secondFormGroup\">\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".mat-stepper-horizontal {\n  margin-top: 8px;\n}\n\n.mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -769,14 +748,9 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperStatesExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-states-example',
-                        templateUrl: 'stepper-states-example.html',
-                        styleUrls: ['stepper-states-example.css'],
-                        providers: [{
+                args: [{ selector: 'stepper-states-example', providers: [{
                                 provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
-                            }]
-                    }]
+                            }], template: "<mat-stepper #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n\n<!-- #docregion states -->\n<mat-stepper>\n<!-- #docregion label -->\n  <mat-step label=\"Step 1\" state=\"phone\">\n    <p>Put down your phones.</p>\n    <div>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n<!-- #enddocregion label -->\n  <mat-step label=\"Step 2\" state=\"chat\">\n    <p>Socialize with each other.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Step 3\">\n    <p>You're welcome.</p>\n  </mat-step>\n\n  <!-- Icon overrides. -->\n<!-- #docregion override-icons -->\n  <ng-template matStepperIcon=\"phone\">\n    <mat-icon>call_end</mat-icon>\n  </ng-template>\n  <ng-template matStepperIcon=\"chat\">\n    <mat-icon>forum</mat-icon>\n  </ng-template>\n</mat-stepper>\n<!-- #enddocregion override-icons -->\n<!-- #enddocregion states -->\n", styles: [".mat-stepper-horizontal {\n  margin-top: 8px;\n}\n\n.mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -892,11 +866,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperVerticalExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-vertical-example',
-                        templateUrl: 'stepper-vertical-example.html',
-                        styleUrls: ['stepper-vertical-example.css']
-                    }]
+                args: [{ selector: 'stepper-vertical-example', template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">\n  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}\n</button>\n<mat-stepper orientation=\"vertical\" [linear]=\"isLinear\" #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".mat-stepper-vertical {\n  margin-top: 8px;\n}\n\n.mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }]; }, null);
     })();
 
@@ -954,10 +924,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-harness-example',
-                        templateUrl: 'stepper-harness-example.html',
-                    }]
+                args: [{ selector: 'stepper-harness-example', template: "<mat-stepper>\n  <mat-step>\n    <ng-template matStepLabel>One</ng-template>\n    <button matStepperNext>Next</button>\n  </mat-step>\n  <mat-step optional>\n    <ng-template matStepLabel>Two</ng-template>\n    <button matStepperPrevious>Previous</button>\n    <button matStepperNext>Next</button>\n  </mat-step>\n  <mat-step optional>\n    <ng-template matStepLabel>Three</ng-template>\n    <button matStepperPrevious>Previous</button>\n  </mat-step>\n</mat-stepper>\n" }]
             }], null, null);
     })();
 
@@ -1305,7 +1272,7 @@
     var StepperIntl = /** @class */ (function (_super) {
         __extends(StepperIntl, _super);
         function StepperIntl() {
-            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
             // the default optional label text, if unspecified is "Optional"
             _this.optionalLabel = 'Optional Label';
             return _this;
@@ -1425,12 +1392,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperIntlExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-intl-example',
-                        templateUrl: 'stepper-intl-example.html',
-                        styleUrls: ['stepper-intl-example.css'],
-                        providers: [{ provide: i2$1.MatStepperIntl, useClass: StepperIntl }]
-                    }]
+                args: [{ selector: 'stepper-intl-example', providers: [{ provide: i2$1.MatStepperIntl, useClass: StepperIntl }], template: "<label for=\"demo-optional-label-group\">Pick the text for the optional label</label>\n<mat-radio-group\n  id=\"demo-optional-label-group\"\n  class=\"demo-radio-group\"\n  [(ngModel)]=\"optionalLabelText\"\n  (ngModelChange)=\"updateOptionalLabel()\">\n  <mat-radio-button\n    class=\"demo-radio-button\"\n    *ngFor=\"let optionalLabelTextChoice of optionalLabelTextChoices\"\n    [value]=\"optionalLabelTextChoice\">\n    {{optionalLabelTextChoice}}\n  </mat-radio-button>\n</mat-radio-group>\n<mat-stepper class=\"demo-stepper\" #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field class=\"demo-form-field\" appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input\n          matInput\n          placeholder=\"Last name, First name\"\n          formControlName=\"firstCtrl\"\n          required\n        />\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step\n    [stepControl]=\"secondFormGroup\"\n    label=\"Fill out your address\"\n    optional>\n    <form [formGroup]=\"secondFormGroup\">\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input\n          matInput\n          formControlName=\"secondCtrl\"\n          placeholder=\"Ex. 1 Main St, New York, NY\"\n        />\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".demo-stepper {\n  margin-top: 8px;\n}\n\n.demo-form-field {\n  margin-top: 16px;\n}\n\n.demo-radio-group {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.demo-radio-button {\n  margin: 5px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }, { type: i2__namespace$1.MatStepperIntl }]; }, null);
     })();
 
@@ -1507,11 +1469,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperLazyContentExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-lazy-content-example',
-                        templateUrl: 'stepper-lazy-content-example.html',
-                        styleUrls: ['stepper-lazy-content-example.css'],
-                    }]
+                args: [{ selector: 'stepper-lazy-content-example', template: "<mat-stepper orientation=\"vertical\">\n  <mat-step>\n    <ng-template matStepLabel>Step 1</ng-template>\n    <ng-template matStepContent>\n      <p>This content was rendered lazily</p>\n      <button mat-button matStepperNext>Next</button>\n    </ng-template>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Step 2</ng-template>\n    <ng-template matStepContent>\n      <p>This content was also rendered lazily</p>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button matStepperNext>Next</button>\n    </ng-template>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Step 3</ng-template>\n    <p>This content was rendered eagerly</p>\n    <button mat-button matStepperPrevious>Back</button>\n  </mat-step>\n</mat-stepper>\n", styles: ["/** No CSS for this example */\n"] }]
             }], null, null);
     })();
 
@@ -1656,11 +1614,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(StepperResponsiveExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'stepper-responsive-example',
-                        templateUrl: 'stepper-responsive-example.html',
-                        styleUrls: ['stepper-responsive-example.css'],
-                    }]
+                args: [{ selector: 'stepper-responsive-example', template: "<ng-container [ngSwitch]=\"stepperOrientation | async\">\n  <div *ngSwitchCase=\"'horizontal'\">Make your screen smaller to see a vertical stepper</div>\n  <div *ngSwitchCase=\"'vertical'\">Make your screen larger to see a horizontal stepper</div>\n</ng-container>\n\n<mat-stepper\n  class=\"example-stepper\"\n  [orientation]=\"(stepperOrientation | async)!\">\n  <mat-step [stepControl]=\"firstFormGroup\" label=\"Fill out your name\">\n    <form [formGroup]=\"firstFormGroup\">\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\" label=\"Fill out your address\">\n    <form [formGroup]=\"secondFormGroup\">\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Address</mat-label>\n        <input matInput formControlName=\"secondCtrl\" placeholder=\"Ex. 1 Main St, New York, NY\"\n               required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"thirdFormGroup\" label=\"Fill out your phone number\">\n    <form [formGroup]=\"thirdFormGroup\">\n      <mat-form-field appearance=\"fill\">\n        <mat-label>Phone number</mat-label>\n        <input matInput formControlName=\"thirdCtrl\" placeholder=\"Ex. 12345678\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    <p>You are now done.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n    </div>\n  </mat-step>\n</mat-stepper>\n", styles: [".example-stepper {\n  margin-top: 8px;\n}\n\n.mat-form-field {\n  margin-top: 16px;\n}\n"] }]
             }], function () { return [{ type: i1__namespace.FormBuilder }, { type: i2__namespace$2.BreakpointObserver }]; }, null);
     })();
 

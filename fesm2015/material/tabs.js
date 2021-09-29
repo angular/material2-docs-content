@@ -62,11 +62,7 @@ TabGroupAlignExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabGro
     } }, directives: [i1.MatTabGroup, i1.MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupAlignExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-align-example',
-                templateUrl: 'tab-group-align-example.html',
-                styleUrls: ['tab-group-align-example.css'],
-            }]
+        args: [{ selector: 'tab-group-align-example', template: "<!-- #docregion align-start -->\n<mat-tab-group mat-align-tabs=\"start\">\n<!-- #enddocregion align-start -->\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<mat-tab-group mat-align-tabs=\"center\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<mat-tab-group mat-align-tabs=\"end\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n", styles: [".mat-tab-group {\n  margin-bottom: 48px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -107,11 +103,7 @@ TabGroupAnimationsExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: T
     } }, directives: [i1.MatTabGroup, i1.MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupAnimationsExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-animations-example',
-                templateUrl: 'tab-group-animations-example.html',
-                styleUrls: ['tab-group-animations-example.css'],
-            }]
+        args: [{ selector: 'tab-group-animations-example', template: "<h3>No animation</h3>\n\n<mat-tab-group animationDuration=\"0ms\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<h3>Very slow animation</h3>\n<!-- #docregion slow-animation-duration -->\n<mat-tab-group animationDuration=\"2000ms\">\n<!-- #enddocregion slow-animation-duration -->\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n", styles: [".mat-tab-group {\n  margin-bottom: 48px;\n}\n"] }]
     }], null, null); })();
 
 function TabGroupAsyncExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
@@ -166,10 +158,7 @@ TabGroupAsyncExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabGro
     } }, directives: [i1$1.NgIf, i1.MatTabGroup, i1$1.NgForOf, i1.MatTab, i1.MatTabLabel], pipes: [i1$1.AsyncPipe], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupAsyncExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-async-example',
-                templateUrl: 'tab-group-async-example.html',
-            }]
+        args: [{ selector: 'tab-group-async-example', template: "<ng-container *ngIf=\"(asyncTabs | async) === null\">\n  Loading tabs...\n</ng-container>\n\n<mat-tab-group>\n  <mat-tab *ngFor=\"let tab of asyncTabs | async\">\n    <ng-template mat-tab-label>{{tab.label}}</ng-template>\n    {{tab.content}}\n  </mat-tab>\n</mat-tab-group>\n" }]
     }], function () { return []; }, null); })();
 
 /**
@@ -193,10 +182,7 @@ TabGroupBasicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabGro
     } }, directives: [i1.MatTabGroup, i1.MatTab], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupBasicExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-basic-example',
-                templateUrl: 'tab-group-basic-example.html',
-            }]
+        args: [{ selector: 'tab-group-basic-example', template: "<mat-tab-group>\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n" }]
     }], null, null); })();
 
 function TabGroupCustomLabelExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
@@ -241,11 +227,7 @@ TabGroupCustomLabelExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
     } }, directives: [i1.MatTabGroup, i1.MatTab, i1.MatTabLabel, i2.MatIcon], styles: [".example-tab-icon[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupCustomLabelExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-custom-label-example',
-                templateUrl: 'tab-group-custom-label-example.html',
-                styleUrls: ['tab-group-custom-label-example.css'],
-            }]
+        args: [{ selector: 'tab-group-custom-label-example', template: "<mat-tab-group>\n  <mat-tab>\n<!-- #docregion label-directive -->\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      First\n    </ng-template>\n<!-- #enddocregion label-directive -->\n    Content 1\n  </mat-tab>\n\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      Second\n    </ng-template>\n    Content 2\n  </mat-tab>\n\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      Third\n    </ng-template>\n\n    Content 3\n  </mat-tab>\n</mat-tab-group>\n", styles: [".example-tab-icon {\n  margin-right: 8px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -270,11 +252,7 @@ TabGroupDynamicHeightExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type
     } }, directives: [i1.MatTabGroup, i1.MatTab], styles: [".example-small-box[_ngcontent-%COMP%], .example-large-box[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box[_ngcontent-%COMP%] {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box[_ngcontent-%COMP%] {\n  height: 300px;\n  width: 300px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-dynamic-height-example',
-                templateUrl: 'tab-group-dynamic-height-example.html',
-                styleUrls: ['tab-group-dynamic-height-example.css'],
-            }]
+        args: [{ selector: 'tab-group-dynamic-height-example', template: "<!-- #docregion dynamic-height -->\n<mat-tab-group dynamicHeight>\n<!-- #enddocregion dynamic-height -->\n  <mat-tab label=\"Short tab\">\n    <div class=\"example-small-box mat-elevation-z4\">\n      Small content\n    </div>\n  </mat-tab>\n  <mat-tab label=\"Long tab\">\n    <div class=\"example-large-box mat-elevation-z4\">\n      Large content\n    </div>\n  </mat-tab>\n</mat-tab-group>\n", styles: [".example-small-box, .example-large-box {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box {\n  height: 300px;\n  width: 300px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -304,10 +282,7 @@ TabGroupHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabG
     } }, directives: [i1.MatTabGroup, i1.MatTab], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-harness-example',
-                templateUrl: 'tab-group-harness-example.html'
-            }]
+        args: [{ selector: 'tab-group-harness-example', template: "<mat-tab-group>\n  <mat-tab label=\"Profile\" aria-label=\"Profile tab\">\n    <span class=\"test-tab-content\">Your personal information</span>\n  </mat-tab>\n  <mat-tab label=\"Settings\" aria-label=\"Settings tab\">\n    <span class=\"test-tab-content\">Privacy settings</span>\n  </mat-tab>\n  <mat-tab label=\"FAQ\" aria-label=\"FAQ tab\">\n    <span class=\"test-tab-content\">How to update profile picture</span>\n  </mat-tab>\n</mat-tab-group>\n" }]
     }], null, null); })();
 
 function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
@@ -378,11 +353,7 @@ TabGroupDynamicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabG
     } }, directives: [i1$2.MatFormField, i1$2.MatLabel, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i4.MatButton, i5.MatCheckbox, i1.MatTabGroup, i1$1.NgForOf, i1.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupDynamicExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-dynamic-example',
-                templateUrl: 'tab-group-dynamic-example.html',
-                styleUrls: ['tab-group-dynamic-example.css'],
-            }]
+        args: [{ selector: 'tab-group-dynamic-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Selected tab index</mat-label>\n  <input matInput type=\"number\" [formControl]=\"selected\">\n</mat-form-field>\n\n<div>\n  <button mat-raised-button\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  <mat-tab *ngFor=\"let tab of tabs; let index = index\" [label]=\"tab\">\n    Contents for {{tab}} tab\n\n    <button mat-raised-button\n            class=\"example-delete-tab-button\"\n            [disabled]=\"tabs.length === 1\"\n            (click)=\"removeTab(index)\">\n      Delete Tab\n    </button>\n  </mat-tab>\n</mat-tab-group>\n", styles: [".example-input-label,\n.example-add-tab-button,\n.example-delete-tab-button {\n  margin: 8px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -406,10 +377,7 @@ TabGroupHeaderBelowExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
     } }, directives: [i1.MatTabGroup, i1.MatTab], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-header-below-example',
-                templateUrl: 'tab-group-header-below-example.html',
-            }]
+        args: [{ selector: 'tab-group-header-below-example', template: "<mat-tab-group headerPosition=\"below\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n" }]
     }], null, null); })();
 
 function TabGroupLazyLoadedExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
@@ -463,10 +431,7 @@ TabGroupLazyLoadedExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: T
     } }, directives: [i1.MatTabGroup, i1.MatTab, i1.MatTabContent], pipes: [i1$1.DatePipe], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-lazy-loaded-example',
-                templateUrl: 'tab-group-lazy-loaded-example.html',
-            }]
+        args: [{ selector: 'tab-group-lazy-loaded-example', template: "<mat-tab-group>\n<!-- #docregion mat-tab-content -->\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n<!-- #enddocregion mat-tab-content -->\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n" }]
     }], null, null); })();
 
 /**
@@ -490,11 +455,7 @@ TabGroupStretchedExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Ta
     } }, directives: [i1.MatTabGroup, i1.MatTab], styles: [".example-stretched-tabs[_ngcontent-%COMP%] {\n  max-width: 800px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupStretchedExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-stretched-example',
-                templateUrl: 'tab-group-stretched-example.html',
-                styleUrls: ['tab-group-stretched-example.css'],
-            }]
+        args: [{ selector: 'tab-group-stretched-example', template: "<mat-tab-group mat-stretch-tabs class=\"example-stretched-tabs mat-elevation-z4\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n", styles: [".example-stretched-tabs {\n  max-width: 800px;\n}\n"] }]
     }], null, null); })();
 
 /**
@@ -549,11 +510,7 @@ TabGroupThemeExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabGro
     } }, directives: [i1$3.MatButtonToggleGroup, i1$3.MatButtonToggle, i1.MatTabGroup, i1.MatTab], styles: [".example-button-toggle-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin: 16px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabGroupThemeExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-group-theme-example',
-                templateUrl: 'tab-group-theme-example.html',
-                styleUrls: ['tab-group-theme-example.css'],
-            }]
+        args: [{ selector: 'tab-group-theme-example', template: "<div>\n  <mat-button-toggle-group #colorToggle=\"matButtonToggleGroup\"\n                           value=\"primary\"\n                           aria-label=\"Change color\">\n    <mat-button-toggle value=\"primary\"> Primary </mat-button-toggle>\n    <mat-button-toggle value=\"accent\"> Accent </mat-button-toggle>\n  </mat-button-toggle-group>\n  <span class=\"example-button-toggle-label\"> Color </span>\n</div>\n\n<div>\n  <mat-button-toggle-group #backgroundColorToggle=\"matButtonToggleGroup\"\n                           value=\"primary\"\n                           aria-label=\"Change color\">\n    <mat-button-toggle value=\"primary\"> Primary </mat-button-toggle>\n    <mat-button-toggle value=\"accent\"> Accent </mat-button-toggle>\n  </mat-button-toggle-group>\n  <span class=\"example-button-toggle-label\"> Background Color </span>\n</div>\n\n<mat-tab-group [color]=\"colorToggle.value\" [backgroundColor]=\"backgroundColorToggle.value\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n", styles: [".example-button-toggle-label {\n  display: inline-block;\n  margin: 16px;\n}\n"] }]
     }], null, null); })();
 
 function TabNavBarBasicExample_a_1_Template(rf, ctx) { if (rf & 1) {
@@ -608,11 +565,7 @@ TabNavBarBasicExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TabNa
     } }, directives: [i1.MatTabNav, i1$1.NgForOf, i1.MatTabLink, i4.MatButton], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-right: 8px;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(TabNavBarBasicExample, [{
         type: Component,
-        args: [{
-                selector: 'tab-nav-bar-basic-example',
-                templateUrl: 'tab-nav-bar-basic-example.html',
-                styleUrls: ['tab-nav-bar-basic-example.css'],
-            }]
+        args: [{ selector: 'tab-nav-bar-basic-example', template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [backgroundColor]=\"background\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<!-- #enddocregion mat-tab-nav -->\n\n<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">\n  Toggle background\n</button>\n<button mat-raised-button class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n", styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"] }]
     }], null, null); })();
 
 const EXAMPLES = [

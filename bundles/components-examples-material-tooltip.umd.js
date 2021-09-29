@@ -88,11 +88,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipAutoHideExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-auto-hide-example',
-                        templateUrl: 'tooltip-auto-hide-example.html',
-                        styleUrls: ['tooltip-auto-hide-example.css'],
-                    }]
+                args: [{ selector: 'tooltip-auto-hide-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Tooltip position</mat-label>\n  <mat-select [formControl]=\"position\">\n    <mat-option *ngFor=\"let positionOption of positionOptions\" [value]=\"positionOption\">\n      {{positionOption}}\n    </mat-option>\n  </mat-select>\n</mat-form-field>\n\n<div class=\"example-container\" cdkScrollable>\n  <button mat-raised-button #tooltip=\"matTooltip\"\n          matTooltip=\"Info about the action\"\n          [matTooltipPosition]=\"position.value\"\n          matTooltipHideDelay=\"100000\"\n          aria-label=\"Button that displays a tooltip that hides when scrolled out of the container\"\n          class=\"example-button\">\n    Action\n  </button>\n</div>\n", styles: [".example-button {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}\n"] }]
             }], null, null);
     })();
 
@@ -115,14 +111,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipCustomClassExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-custom-class-example',
-                        templateUrl: 'tooltip-custom-class-example.html',
-                        styleUrls: ['tooltip-custom-class-example.css'],
-                        // Need to remove view encapsulation so that the custom tooltip style defined in
-                        // `tooltip-custom-class-example.css` will not be scoped to this component's view.
-                        encapsulation: i0.ViewEncapsulation.None,
-                    }]
+                args: [{ selector: 'tooltip-custom-class-example', encapsulation: i0.ViewEncapsulation.None, template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        matTooltipClass=\"example-tooltip-red\"\n        aria-label=\"Button that shows a red tooltip\"\n        class=\"example-button\">\n  Red-tooltip Action\n</button>\n", styles: [".example-button {\n  margin-top: 16px;\n}\n\n.example-tooltip-red {\n  background: #b71c1c;\n}\n"] }]
             }], null, null);
     })();
 
@@ -173,11 +162,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipDelayExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-delay-example',
-                        templateUrl: 'tooltip-delay-example.html',
-                        styleUrls: ['tooltip-delay-example.css'],
-                    }]
+                args: [{ selector: 'tooltip-delay-example', template: "<mat-form-field class=\"example-user-input\" appearance=\"fill\">\n  <mat-label>Show delay</mat-label>\n  <input matInput type=\"number\" [formControl]=\"showDelay\"\n         aria-label=\"Adds a delay between hovering over the button and displaying the tooltip\">\n  <mat-hint>milliseconds</mat-hint>\n</mat-form-field>\n\n<mat-form-field class=\"example-user-input\" appearance=\"fill\">\n  <mat-label>Hide delay</mat-label>\n  <input matInput type=\"number\" [formControl]=\"hideDelay\"\n         aria-label=\"Adds a delay between hovering away from the button and hiding the tooltip\">\n  <mat-hint>milliseconds</mat-hint>\n</mat-form-field>\n\n<button mat-raised-button matTooltip=\"Info about the action\"\n        [matTooltipShowDelay]=\"showDelay.value\"\n        [matTooltipHideDelay]=\"hideDelay.value\"\n        aria-label=\"Button that displays a tooltip with a customized delay in showing and hiding\">\n  Action\n</button>\n", styles: [".mat-form-field + .mat-form-field,\n.mat-raised-button {\n  margin-left: 8px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -209,11 +194,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipDisabledExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-disabled-example',
-                        templateUrl: 'tooltip-disabled-example.html',
-                        styleUrls: ['tooltip-disabled-example.css'],
-                    }]
+                args: [{ selector: 'tooltip-disabled-example', template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipDisabled]=\"disabled.value\"\n        aria-label=\"Button that displays a tooltip that can be programmatically disabled\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"disabled\" class=\"example-disabled-checkbox\">\n  Tooltip disabled\n</mat-checkbox>\n", styles: [".example-disabled-checkbox {\n  margin-left: 8px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -254,11 +235,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipManualExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-manual-example',
-                        templateUrl: 'tooltip-manual-example.html',
-                        styleUrls: ['tooltip-manual-example.css'],
-                    }]
+                args: [{ selector: 'tooltip-manual-example', template: "<div>\n  <span> Click the following buttons to... </span>\n  <button mat-button\n          (click)=\"tooltip.show()\"\n          aria-label=\"Show tooltip on the button at the end of this section\"\n          class=\"example-action-button\">\n    show\n  </button>\n  <button mat-button\n          (click)=\"tooltip.hide()\"\n          aria-label=\"Hide tooltip on the button at the end of this section\"\n          class=\"example-action-button\">\n    hide\n  </button>\n  <button mat-button\n          (click)=\"tooltip.toggle()\"\n          aria-label=\"Show/Hide tooltip on the button at the end of this section\"\n          class=\"example-action-button\">\n    toggle show/hide\n  </button>\n</div>\n\n<button mat-raised-button #tooltip=\"matTooltip\"\n        matTooltip=\"Info about the action\"\n        matTooltipPosition=\"right\"\n        aria-tooltip=\"Button that displays and hides a tooltip triggered by other buttons\">\n  Action\n</button>", styles: [".example-action-button {\n  margin-top: 16px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -294,11 +271,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipMessageExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-message-example',
-                        templateUrl: 'tooltip-message-example.html',
-                        styleUrls: ['tooltip-message-example.css'],
-                    }]
+                args: [{ selector: 'tooltip-message-example', template: "<mat-form-field class=\"example-user-input\" appearance=\"fill\">\n  <mat-label>Tooltip message</mat-label>\n  <input matInput [formControl]=\"message\">\n</mat-form-field>\n\n<button mat-raised-button\n        [matTooltip]=\"message.value\"\n        aria-label=\"Button that displays a tooltip with a custom message\">\n  Action\n</button>\n", styles: [".example-user-input {\n  margin-right: 8px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -329,13 +302,9 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-modified-defaults-example',
-                        templateUrl: 'tooltip-modified-defaults-example.html',
-                        providers: [
+                args: [{ selector: 'tooltip-modified-defaults-example', providers: [
                             { provide: i2$1.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
-                        ],
-                    }]
+                        ], template: "<button mat-raised-button\n        matTooltip=\"By default, I delay\"\n        aria-label=\"Button that displays a tooltip that has custom delays through a default config\">\n  Button with delay-default tooltip\n</button>\n" }]
             }], null, null);
     })();
 
@@ -358,10 +327,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-overview-example',
-                        templateUrl: 'tooltip-overview-example.html',
-                    }]
+                args: [{ selector: 'tooltip-overview-example', template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        aria-label=\"Button that displays a tooltip when focused or hovered over\">\n  Action\n</button>\n" }]
             }], null, null);
     })();
 
@@ -415,11 +381,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipPositionExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-position-example',
-                        templateUrl: 'tooltip-position-example.html',
-                        styleUrls: ['tooltip-position-example.css'],
-                    }]
+                args: [{ selector: 'tooltip-position-example', template: "<mat-form-field class=\"example-user-input\" appearance=\"fill\">\n  <mat-label>Tooltip position</mat-label>\n  <mat-select [formControl]=\"position\">\n    <mat-option *ngFor=\"let positionOption of positionOptions\" [value]=\"positionOption\">\n      {{positionOption}}\n    </mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipPosition]=\"position.value\"\n        aria-label=\"Button that displays a tooltip in various positions\">\n  Action\n</button>\n", styles: [".example-user-input {\n  margin-right: 8px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -449,10 +411,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(TooltipHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'tooltip-harness-example',
-                        templateUrl: 'tooltip-harness-example.html',
-                    }]
+                args: [{ selector: 'tooltip-harness-example', template: "<button [matTooltip]=\"message\" id=\"one\">Trigger 1</button>\n<button matTooltip=\"Static message\" id=\"two\">Trigger 2</button>\n" }]
             }], null, null);
     })();
 

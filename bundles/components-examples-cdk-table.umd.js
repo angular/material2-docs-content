@@ -488,11 +488,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkTableFlexBasicExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-table-flex-basic-example',
-                        styleUrls: ['cdk-table-flex-basic-example.css'],
-                        templateUrl: 'cdk-table-flex-basic-example.html',
-                    }]
+                args: [{ selector: 'cdk-table-flex-basic-example', template: "<cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <cdk-header-cell *cdkHeaderCellDef> No. </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </cdk-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <cdk-header-cell *cdkHeaderCellDef> Name </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </cdk-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </cdk-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <cdk-header-cell *cdkHeaderCellDef> Symbol </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </cdk-cell>\n  </ng-container>\n\n  <cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row>\n  <cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row>\n</cdk-table>\n", styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\ncdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\ncdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"] }]
             }], null, null);
     })();
     /**
@@ -505,7 +501,7 @@
     var ExampleDataSource$3 = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$3);
             return _this;
@@ -661,11 +657,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkTableBasicExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-table-basic-example',
-                        styleUrls: ['cdk-table-basic-example.css'],
-                        templateUrl: 'cdk-table-basic-example.html',
-                    }]
+                args: [{ selector: 'cdk-table-basic-example', template: "<table cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n", styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"] }]
             }], null, null);
     })();
     /**
@@ -678,7 +670,7 @@
     var ExampleDataSource$2 = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$2);
             return _this;
@@ -834,11 +826,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkTableFixedLayoutExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-table-fixed-layout-example',
-                        styleUrls: ['cdk-table-fixed-layout-example.css'],
-                        templateUrl: 'cdk-table-fixed-layout-example.html',
-                    }]
+                args: [{ selector: 'cdk-table-fixed-layout-example', template: "<table cdk-table [dataSource]=\"dataSource\" fixedLayout>\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n", styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"] }]
             }], null, null);
     })();
     /**
@@ -851,7 +839,7 @@
     var ExampleDataSource$1 = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$1);
             return _this;
@@ -1007,11 +995,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkTableRecycleRowsExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-table-recycle-rows-example',
-                        styleUrls: ['cdk-table-recycle-rows-example.css'],
-                        templateUrl: 'cdk-table-recycle-rows-example.html',
-                    }]
+                args: [{ selector: 'cdk-table-recycle-rows-example', template: "<table class=\"example-table\" cdk-table recycleRows [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th class=\"example-row\" cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th class=\"example-row\" cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th class=\"example-row\" cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th class=\"example-row\" cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n", styles: [".example-table {\n  width: 100%;\n}\n\n.example-row {\n  text-align: left;\n}\n"] }]
             }], null, null);
     })();
     /**
@@ -1024,7 +1008,7 @@
     var ExampleDataSource = /** @class */ (function (_super) {
         __extends(ExampleDataSource, _super);
         function ExampleDataSource() {
-            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
             /** Stream of data that is provided to the table. */
             _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA);
             return _this;

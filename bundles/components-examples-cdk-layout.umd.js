@@ -411,11 +411,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(BreakpointObserverOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'breakpoint-observer-overview-example',
-                        templateUrl: 'breakpoint-observer-overview-example.html',
-                        styleUrls: ['breakpoint-observer-overview-example.css']
-                    }]
+                args: [{ selector: 'breakpoint-observer-overview-example', template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] }]
             }], function () { return [{ type: i1__namespace.BreakpointObserver }]; }, null);
     })();
 

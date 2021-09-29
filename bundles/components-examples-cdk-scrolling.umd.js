@@ -61,12 +61,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollAppendOnlyExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-append-only-example',
-                        styleUrls: ['cdk-virtual-scroll-append-only-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-append-only-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-append-only-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport appendOnly itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -144,12 +139,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollContextExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-context-example',
-                        styleUrls: ['cdk-virtual-scroll-context-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-context-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-context-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport [itemSize]=\"18 * 7\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items;\n                       let index = index;\n                       let count = count;\n                       let first = first;\n                       let last = last;\n                       let even = even;\n                       let odd = odd;\" [class.example-alternate]=\"odd\">\n    <div class=\"example-item-detail\">Item: {{item}}</div>\n    <div class=\"example-item-detail\">Index: {{index}}</div>\n    <div class=\"example-item-detail\">Count: {{count}}</div>\n    <div class=\"example-item-detail\">First: {{first ? 'Yes' : 'No'}}</div>\n    <div class=\"example-item-detail\">Last: {{last ? 'Yes' : 'No'}}</div>\n    <div class=\"example-item-detail\">Even: {{even ? 'Yes' : 'No'}}</div>\n    <div class=\"example-item-detail\">Odd: {{odd ? 'Yes' : 'No'}}</div>\n  </div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail {\n  height: 18px;\n}\n\n.example-alternate {\n  background: rgba(127, 127, 127, 0.3);\n}\n"] }]
             }], null, null);
     })();
 
@@ -512,13 +502,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollCustomStrategyExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-custom-strategy-example',
-                        styleUrls: ['cdk-virtual-scroll-custom-strategy-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-custom-strategy-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                        providers: [{ provide: i1.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }]
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-custom-strategy-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, providers: [{ provide: i1.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }], template: "<cdk-virtual-scroll-viewport class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -556,18 +540,13 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollDataSourceExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-data-source-example',
-                        styleUrls: ['cdk-virtual-scroll-data-source-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-data-source-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-data-source-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of ds\" class=\"example-item\">{{item || 'Loading...'}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
             }], null, null);
     })();
     var MyDataSource = /** @class */ (function (_super) {
         __extends(MyDataSource, _super);
         function MyDataSource() {
-            var _this = _super.apply(this, __spreadArray([], __read(arguments))) || this;
+            var _this = _super.apply(this, __spreadArray([], __read(arguments), false)) || this;
             _this._length = 100000;
             _this._pageSize = 100;
             _this._cachedData = Array.from({ length: _this._length });
@@ -603,7 +582,7 @@
             setTimeout(function () {
                 var _a;
                 (_a = _this._cachedData).splice.apply(_a, __spreadArray([page * _this._pageSize, _this._pageSize], __read(Array.from({ length: _this._pageSize })
-                    .map(function (_, i) { return "Item #" + (page * _this._pageSize + i); }))));
+                    .map(function (_, i) { return "Item #" + (page * _this._pageSize + i); })), false));
                 _this._dataStream.next(_this._cachedData);
             }, Math.random() * 1000 + 200);
         };
@@ -704,12 +683,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollDlExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-dl-example',
-                        styleUrls: ['cdk-virtual-scroll-dl-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-dl-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-dl-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport class=\"example-viewport\" itemSize=\"60\">\n  <dl class=\"example-dl\">\n    <ng-container *cdkVirtualFor=\"let state of states\">\n      <dt class=\"example-dt\">{{state.name}}</dt>\n      <dd class=\"example-dd\">{{state.capital}}</dd>\n    </ng-container>\n  </dl>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd {\n  height: 30px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -747,12 +721,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollFixedBufferExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-fixed-buffer-example',
-                        styleUrls: ['cdk-virtual-scroll-fixed-buffer-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-fixed-buffer-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-fixed-buffer-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport itemSize=\"50\" minBufferPx=\"200\" maxBufferPx=\"400\"\n                             class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -792,13 +761,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollHorizontalExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-horizontal-example',
-                        styleUrls: ['cdk-virtual-scroll-horizontal-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-horizontal-example.html',
-                        encapsulation: i0.ViewEncapsulation.None,
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-horizontal-example', encapsulation: i0.ViewEncapsulation.None, changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<div class=\"cdk-virtual-scroll-data-source-example\">\n  <cdk-virtual-scroll-viewport orientation=\"horizontal\" itemSize=\"50\" class=\"example-viewport\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n</div>\n", styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"] }]
             }], null, null);
     })();
 
@@ -836,12 +799,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-overview-example',
-                        styleUrls: ['cdk-virtual-scroll-overview-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-overview-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-overview-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
             }], null, null);
     })();
 
@@ -879,12 +837,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(CdkVirtualScrollTemplateCacheExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'cdk-virtual-scroll-template-cache-example',
-                        styleUrls: ['cdk-virtual-scroll-template-cache-example.css'],
-                        templateUrl: 'cdk-virtual-scroll-template-cache-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    }]
+                args: [{ selector: 'cdk-virtual-scroll-template-cache-example', changeDetection: i0.ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items; templateCacheSize: 0\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
             }], null, null);
     })();
 

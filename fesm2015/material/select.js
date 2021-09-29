@@ -66,11 +66,7 @@ SelectCustomTriggerExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: 
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i2.MatSelectTrigger, i4.NgIf, i4.NgForOf, i4$1.MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectCustomTriggerExample, [{
         type: Component,
-        args: [{
-                selector: 'select-custom-trigger-example',
-                templateUrl: 'select-custom-trigger-example.html',
-                styleUrls: ['select-custom-trigger-example.css'],
-            }]
+        args: [{ selector: 'select-custom-trigger-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Toppings</mat-label>\n  <mat-select [formControl]=\"toppings\" multiple>\n    <mat-select-trigger>\n      {{toppings.value ? toppings.value[0] : ''}}\n      <span *ngIf=\"toppings.value?.length > 1\" class=\"example-additional-selection\">\n        (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})\n      </span>\n    </mat-select-trigger>\n    <mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option>\n  </mat-select>\n</mat-form-field>\n", styles: [".example-additional-selection {\n  opacity: 0.75;\n  font-size: 0.75em;\n}\n"] }]
     }], null, null); })();
 
 /** @title Disabled select */
@@ -138,10 +134,7 @@ SelectDisabledExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } }, directives: [i1$1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵNgSelectMultipleOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
-        args: [{
-                selector: 'select-disabled-example',
-                templateUrl: 'select-disabled-example.html',
-            }]
+        args: [{ selector: 'select-disabled-example', template: "<p>\n  <mat-checkbox [formControl]=\"disableSelect\">Disable select</mat-checkbox>\n</p>\n\n<h4>mat-select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Choose an option</mat-label>\n  <mat-select [disabled]=\"disableSelect.value\">\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\" disabled>Option 2 (disabled)</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Choose an option</mat-label>\n  <select matNativeControl [disabled]=\"disableSelect.value\">\n    <option value=\"\" selected></option>\n    <option value=\"volvo\">Volvo</option>\n    <option value=\"saab\" disabled>Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n</mat-form-field>\n\n" }]
     }], null, null); })();
 
 function SelectErrorStateMatcherExample_mat_error_14_Template(rf, ctx) { if (rf & 1) {
@@ -250,10 +243,7 @@ SelectErrorStateMatcherExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ ty
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵNgSelectMultipleOption, i1.MatError], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
         type: Component,
-        args: [{
-                selector: 'select-error-state-matcher-example',
-                templateUrl: 'select-error-state-matcher-example.html',
-            }]
+        args: [{ selector: 'select-error-state-matcher-example', template: "<h4>mat-select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Choose one</mat-label>\n  <mat-select [formControl]=\"selected\" [errorStateMatcher]=\"matcher\">\n    <mat-option>Clear</mat-option>\n    <mat-option value=\"valid\">Valid option</mat-option>\n    <mat-option value=\"invalid\">Invalid option</mat-option>\n  </mat-select>\n  <mat-hint>Errors appear instantly!</mat-hint>\n  <mat-error *ngIf=\"selected.hasError('required')\">You must make a selection</mat-error>\n  <mat-error *ngIf=\"selected.hasError('pattern') && !selected.hasError('required')\">\n    Your selection is invalid\n  </mat-error>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field class=\"demo-full-width\" appearance=\"fill\">\n  <mat-label>Choose one</mat-label>\n  <select matNativeControl [formControl]=\"nativeSelectFormControl\" [errorStateMatcher]=\"matcher\">\n    <option value=\"\"></option>\n    <option value=\"valid\" selected>Valid option</option>\n    <option value=\"invalid\">Invalid option</option>\n  </select>\n  <mat-error *ngIf=\"nativeSelectFormControl.hasError('required')\">You must make a selection</mat-error>\n  <mat-error *ngIf=\"nativeSelectFormControl.hasError('pattern') && !nativeSelectFormControl.hasError('required')\">\n    Your selection is invalid\n  </mat-error>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 function SelectFormExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
@@ -344,10 +334,7 @@ SelectFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectFor
     } }, directives: [i3.ɵNgNoValidate, i3.NgControlStatusGroup, i3.NgForm, i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵNgSelectMultipleOption, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
-        args: [{
-                selector: 'select-form-example',
-                templateUrl: 'select-form-example.html',
-            }]
+        args: [{ selector: 'select-form-example', template: "<form>\n  <h4>mat-select</h4>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Favorite food</mat-label>\n    <mat-select [(ngModel)]=\"selectedValue\" name=\"food\">\n      <mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">\n        {{food.viewValue}}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n  <p> Selected food: {{selectedValue}} </p>\n  <h4>native html select</h4>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Favorite car</mat-label>\n    <select matNativeControl [(ngModel)]=\"selectedCar\" name=\"car\">\n      <option value=\"\" selected></option>\n      <option *ngFor=\"let car of cars\" [value]=\"car.value\">\n        {{car.viewValue}}\n      </option>\n    </select>\n  </mat-form-field>\n  <p> Selected car: {{selectedCar}} </p>\n</form>\n" }]
     }], null, null); })();
 
 function SelectHintErrorExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
@@ -443,10 +430,7 @@ SelectHintErrorExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sele
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵNgSelectMultipleOption, i1.MatError], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
-        args: [{
-                selector: 'select-hint-error-example',
-                templateUrl: 'select-hint-error-example.html',
-            }]
+        args: [{ selector: 'select-hint-error-example', template: "<h4>mat select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Favorite animal</mat-label>\n  <mat-select [formControl]=\"animalControl\" required>\n    <mat-option>--</mat-option>\n    <mat-option *ngFor=\"let animal of animals\" [value]=\"animal\">\n      {{animal.name}}\n    </mat-option>\n  </mat-select>\n  <mat-error *ngIf=\"animalControl.hasError('required')\">Please choose an animal</mat-error>\n  <mat-hint>{{animalControl.value?.sound}}</mat-hint>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Select your car (required)</mat-label>\n  <select matNativeControl required [formControl]=\"selectFormControl\">\n    <option label=\"--select something --\"></option>\n    <option value=\"saab\">Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n  <mat-error *ngIf=\"selectFormControl.hasError('required')\">\n    This field is required\n  </mat-error>\n  <mat-hint>You can pick up your favorite car here</mat-hint>\n</mat-form-field>\n\n" }]
     }], null, null); })();
 
 function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
@@ -484,10 +468,7 @@ SelectMultipleExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectMultipleExample, [{
         type: Component,
-        args: [{
-                selector: 'select-multiple-example',
-                templateUrl: 'select-multiple-example.html',
-            }]
+        args: [{ selector: 'select-multiple-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Toppings</mat-label>\n  <mat-select [formControl]=\"toppings\" multiple>\n    <mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option>\n  </mat-select>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 /** @title Select with no option ripple */
@@ -514,10 +495,7 @@ SelectNoRippleExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectNoRippleExample, [{
         type: Component,
-        args: [{
-                selector: 'select-no-ripple-example',
-                templateUrl: 'select-no-ripple-example.html',
-            }]
+        args: [{ selector: 'select-no-ripple-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Select an option</mat-label>\n  <mat-select disableRipple>\n    <mat-option value=\"1\">Option 1</mat-option>\n    <mat-option value=\"2\">Option 2</mat-option>\n    <mat-option value=\"3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 function SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template(rf, ctx) { if (rf & 1) {
@@ -630,10 +608,7 @@ SelectOptgroupExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵNgSelectMultipleOption, i4$1.MatOptgroup], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
-        args: [{
-                selector: 'select-optgroup-example',
-                templateUrl: 'select-optgroup-example.html',
-            }]
+        args: [{ selector: 'select-optgroup-example', template: "<h4>mat-select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Pokemon</mat-label>\n  <mat-select [formControl]=\"pokemonControl\">\n    <mat-option>-- None --</mat-option>\n    <mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\"\n                  [disabled]=\"group.disabled\">\n      <mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">\n        {{pokemon.viewValue}}\n      </mat-option>\n    </mat-optgroup>\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Cars</mat-label>\n  <select matNativeControl>\n    <optgroup label=\"Swedish Cars\">\n      <option value=\"volvo\">volvo</option>\n      <option value=\"saab\">Saab</option>\n    </optgroup>\n    <optgroup label=\"German Cars\">\n      <option value=\"mercedes\">Mercedes</option>\n      <option value=\"audi\">Audi</option>\n    </optgroup>\n  </select>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
@@ -699,10 +674,7 @@ SelectOverviewExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Selec
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵNgSelectMultipleOption, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
-        args: [{
-                selector: 'select-overview-example',
-                templateUrl: 'select-overview-example.html',
-            }]
+        args: [{ selector: 'select-overview-example', template: "<h4>Basic mat-select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Favorite food</mat-label>\n  <mat-select>\n    <mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">\n      {{food.viewValue}}\n    </mat-option>\n  </mat-select>\n</mat-form-field>\n\n<h4>Basic native select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Cars</mat-label>\n  <select matNativeControl required>\n    <option value=\"volvo\">Volvo</option>\n    <option value=\"saab\">Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 /**
@@ -738,14 +710,7 @@ SelectPanelClassExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Sel
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption], styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectPanelClassExample, [{
         type: Component,
-        args: [{
-                selector: 'select-panel-class-example',
-                templateUrl: 'select-panel-class-example.html',
-                styleUrls: ['select-panel-class-example.css'],
-                // Encapsulation has to be disabled in order for the
-                // component style to apply to the select panel.
-                encapsulation: ViewEncapsulation.None,
-            }]
+        args: [{ selector: 'select-panel-class-example', encapsulation: ViewEncapsulation.None, template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Panel color</mat-label>\n  <mat-select [formControl]=\"panelColor\"\n              panelClass=\"example-panel-{{panelColor.value}}\">\n    <mat-option value=\"red\">Red</mat-option>\n    <mat-option value=\"green\">Green</mat-option>\n    <mat-option value=\"blue\">Blue</mat-option>\n  </mat-select>\n</mat-form-field>\n", styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"] }]
     }], null, null); })();
 
 function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
@@ -817,10 +782,7 @@ SelectResetExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: SelectRe
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵNgSelectMultipleOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectResetExample, [{
         type: Component,
-        args: [{
-                selector: 'select-reset-example',
-                templateUrl: 'select-reset-example.html',
-            }]
+        args: [{ selector: 'select-reset-example', template: "<h4>mat-select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>State</mat-label>\n  <mat-select>\n    <mat-option>None</mat-option>\n    <mat-option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<h4>native html select</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Select your car</mat-label>\n  <select matNativeControl id=\"mySelectId\">\n    <option value=\"\" disabled selected></option>\n    <option value=\"volvo\">Volvo</option>\n    <option value=\"saab\">Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 /** @title Select with 2-way value binding */
@@ -862,10 +824,7 @@ SelectValueBindingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectValueBindingExample, [{
         type: Component,
-        args: [{
-                selector: 'select-value-binding-example',
-                templateUrl: 'select-value-binding-example.html',
-            }]
+        args: [{ selector: 'select-value-binding-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Select an option</mat-label>\n  <mat-select [(value)]=\"selected\">\n    <mat-option>None</mat-option>\n    <mat-option value=\"option1\">Option 1</mat-option>\n    <mat-option value=\"option2\">Option 2</mat-option>\n    <mat-option value=\"option3\">Option 3</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<p>You selected: {{selected}}</p>\n" }]
     }], null, null); })();
 
 function SelectReactiveFormExample_mat_option_9_Template(rf, ctx) { if (rf & 1) {
@@ -966,10 +925,7 @@ SelectReactiveFormExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
     } }, directives: [i3.ɵNgNoValidate, i3.NgControlStatusGroup, i3.FormGroupDirective, i1.MatFormField, i1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵNgSelectMultipleOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectReactiveFormExample, [{
         type: Component,
-        args: [{
-                selector: 'select-reactive-form-example',
-                templateUrl: 'select-reactive-form-example.html',
-            }]
+        args: [{ selector: 'select-reactive-form-example', template: "<form [formGroup]=\"form\">\n  <h4>mat-select</h4>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Favorite Food</mat-label>\n    <mat-select [formControl]=\"foodControl\" name=\"food\">\n      <mat-option>None</mat-option>\n      <mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">\n        {{food.viewValue}}\n      </mat-option>\n    </mat-select>\n  </mat-form-field>\n  <p>Selected: {{foodControl.value}}</p>\n  <h4>Native select</h4>\n  <mat-form-field appearance=\"fill\">\n    <mat-label>Favorite Car</mat-label>\n    <select matNativeControl [formControl]=\"carControl\" name=\"car\">\n      <option value=\"\">None</option>\n      <option *ngFor=\"let car of cars\" [value]=\"car.value\">\n        {{car.viewValue}}\n      </option>\n    </select>\n  </mat-form-field>\n  <p>Selected: {{carControl.value}}</p>\n</form>\n" }]
     }], function () { return []; }, null); })();
 
 function SelectInitialValueExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
@@ -1063,10 +1019,7 @@ SelectInitialValueExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: S
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵNgSelectMultipleOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectInitialValueExample, [{
         type: Component,
-        args: [{
-                selector: 'select-initial-value-example',
-                templateUrl: 'select-initial-value-example.html',
-            }]
+        args: [{ selector: 'select-initial-value-example', template: "<h4>Basic mat-select with initial value</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Favorite Food</mat-label>\n  <mat-select [(value)]=\"selectedFood\">\n    <mat-option></mat-option>\n    <mat-option [value]=\"option.value\" *ngFor=\"let option of foods\">{{ option.viewValue }}</mat-option>\n  </mat-select>\n</mat-form-field>\n<p>You selected: {{selectedFood}}</p>\n\n<h4>Basic native select with initial value</h4>\n<mat-form-field appearance=\"fill\">\n  <mat-label>Favorite Car</mat-label>\n  <select matNativeControl (change)=\"selectCar($event)\">\n    <option value=\"\"></option>\n    <option *ngFor=\"let option of cars\" [value]=\"option.value\"\n            [selected]=\"selectedCar === option.value\">{{ option.viewValue }}</option>\n  </select>\n</mat-form-field>\n<p>You selected: {{selectedCar}}</p>\n" }]
     }], null, null); })();
 
 function SelectHarnessExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
@@ -1107,10 +1060,7 @@ SelectHarnessExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Select
     } }, directives: [i1.MatFormField, i1.MatLabel, i2.MatSelect, i4.NgForOf, i4$1.MatOption], encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(SelectHarnessExample, [{
         type: Component,
-        args: [{
-                selector: 'select-harness-example',
-                templateUrl: 'select-harness-example.html',
-            }]
+        args: [{ selector: 'select-harness-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Favorite food</mat-label>\n  <mat-select>\n    <mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">\n      {{food.viewValue}}\n    </mat-option>\n  </mat-select>\n</mat-form-field>\n" }]
     }], null, null); })();
 
 const EXAMPLES = [

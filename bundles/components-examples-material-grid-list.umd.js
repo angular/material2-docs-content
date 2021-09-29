@@ -71,10 +71,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(GridListDynamicExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'grid-list-dynamic-example',
-                        templateUrl: 'grid-list-dynamic-example.html',
-                    }]
+                args: [{ selector: 'grid-list-dynamic-example', template: "<mat-grid-list cols=\"4\" rowHeight=\"100px\">\n  <mat-grid-tile\n      *ngFor=\"let tile of tiles\"\n      [colspan]=\"tile.cols\"\n      [rowspan]=\"tile.rows\"\n      [style.background]=\"tile.color\">\n    {{tile.text}}\n  </mat-grid-tile>\n</mat-grid-list>\n" }]
             }], null, null);
     })();
 
@@ -108,11 +105,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(GridListOverviewExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'grid-list-overview-example',
-                        styleUrls: ['grid-list-overview-example.css'],
-                        templateUrl: 'grid-list-overview-example.html',
-                    }]
+                args: [{ selector: 'grid-list-overview-example', template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\">\n  <mat-grid-tile>1</mat-grid-tile>\n  <mat-grid-tile>2</mat-grid-tile>\n  <mat-grid-tile>3</mat-grid-tile>\n  <mat-grid-tile>4</mat-grid-tile>\n</mat-grid-list>\n", styles: ["mat-grid-tile {\n  background: lightblue;\n}\n"] }]
             }], null, null);
     })();
 
@@ -155,10 +148,7 @@
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(GridListHarnessExample, [{
                 type: i0.Component,
-                args: [{
-                        selector: 'grid-list-harness-example',
-                        templateUrl: 'grid-list-harness-example.html',
-                    }]
+                args: [{ selector: 'grid-list-harness-example', template: "<mat-grid-list cols=\"2\" rowHeight=\"100px\">\n  <mat-grid-tile>Tile 1 (no header, no footer)</mat-grid-tile>\n  <mat-grid-tile>\n    <mat-grid-tile-header>Tile 2</mat-grid-tile-header>\n  </mat-grid-tile>\n  <mat-grid-tile colspan=\"2\">\n    <mat-grid-tile-header>Tile 3</mat-grid-tile-header>\n    <mat-grid-tile-footer>Tile 3 footer</mat-grid-tile-footer>\n  </mat-grid-tile>\n  <mat-grid-tile>\n    <mat-grid-tile-header>Tile 4</mat-grid-tile-header>\n  </mat-grid-tile>\n</mat-grid-list>\n" }]
             }], null, null);
     })();
 

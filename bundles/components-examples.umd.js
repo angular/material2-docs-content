@@ -5574,7 +5574,7 @@
             this.selectorName = selector;
             this.indexFilename = primaryFile;
             this.description = title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
-            this.componentNames = __spreadArray([componentName], __read(additionalComponents));
+            this.componentNames = __spreadArray([componentName], __read(additionalComponents), false);
         }
         return ExampleData;
     }());

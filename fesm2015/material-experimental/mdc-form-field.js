@@ -32,10 +32,7 @@ MdcFormFieldCustomControlExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ 
     } }, directives: function () { return [i1.MatFormField, i1.MatLabel, MyTelInput, i2.MatIcon, i1.MatSuffix, i1.MatHint]; }, encapsulation: 2 });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MdcFormFieldCustomControlExample, [{
         type: Component,
-        args: [{
-                selector: 'mdc-form-field-custom-control-example',
-                templateUrl: 'form-field-custom-control-example.html',
-            }]
+        args: [{ selector: 'mdc-form-field-custom-control-example', template: "<mat-form-field appearance=\"fill\">\n  <mat-label>Phone number</mat-label>\n  <example-tel-input required></example-tel-input>\n  <mat-icon matSuffix>phone</mat-icon>\n  <mat-hint>Include area code</mat-hint>\n</mat-form-field>\n" }]
     }], null, null); })();
 /** Data structure for holding telephone number. */
 class MyTel {
@@ -169,16 +166,10 @@ MyTelInput.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: MyTelInput, sele
     } }, directives: [i3.NgControlStatusGroup, i3.FormGroupDirective, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MyTelInput, [{
         type: Component,
-        args: [{
-                selector: 'example-tel-input',
-                templateUrl: 'example-tel-input-example.html',
-                styleUrls: ['example-tel-input-example.css'],
-                providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
-                host: {
+        args: [{ selector: 'example-tel-input', providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }], host: {
                     '[class.example-floating]': 'shouldLabelFloat',
                     '[id]': 'id',
-                }
-            }]
+                }, template: "<div role=\"group\" class=\"example-tel-input-container\"\n     [formGroup]=\"parts\"\n     [attr.aria-labelledby]=\"_formField?.getLabelId()\">\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"area\" size=\"3\"\n    aria-label=\"Area code\"\n    (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"exchange\"\n    size=\"3\"\n    aria-label=\"Exchange code\"\n    (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input\n    class=\"example-tel-input-element\"\n    formControlName=\"subscriber\"\n    size=\"4\"\n    aria-label=\"Subscriber number\"\n    (input)=\"_handleInput()\">\n</div>\n", styles: [".example-tel-input-container {\n  display: flex;\n}\n\n.example-tel-input-element {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n:host.example-floating .example-tel-input-spacer {\n  opacity: 1;\n}\n"] }]
     }], function () { return [{ type: i3.FormBuilder }, { type: i4.FocusMonitor }, { type: i0.ElementRef }, { type: i1.MatFormField, decorators: [{
                 type: Optional
             }, {
