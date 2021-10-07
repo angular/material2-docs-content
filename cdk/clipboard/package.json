@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/clipboard",
-  "main": "../../bundles/components-examples-cdk-clipboard.umd.js",
-  "fesm2015": "../../fesm2015/cdk/clipboard.js",
-  "esm2015": "../../esm2015/cdk/clipboard/clipboard_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/clipboard.mjs",
+  "fesm2015": "../../fesm2015/cdk/clipboard.mjs",
+  "esm2020": "../../esm2020/cdk/clipboard/clipboard_public_index.mjs",
   "typings": "./clipboard_public_index.d.ts",
-  "module": "../../fesm2015/cdk/clipboard.js",
-  "es2015": "../../fesm2015/cdk/clipboard.js"
+  "module": "../../fesm2015/cdk/clipboard.mjs",
+  "es2020": "../../fesm2020/cdk/clipboard.mjs"
 }

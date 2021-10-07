@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/tabs",
-  "main": "../../bundles/components-examples-material-tabs.umd.js",
-  "fesm2015": "../../fesm2015/material/tabs.js",
-  "esm2015": "../../esm2015/material/tabs/tabs_public_index.js",
+  "fesm2020": "../../fesm2020/material/tabs.mjs",
+  "fesm2015": "../../fesm2015/material/tabs.mjs",
+  "esm2020": "../../esm2020/material/tabs/tabs_public_index.mjs",
   "typings": "./tabs_public_index.d.ts",
-  "module": "../../fesm2015/material/tabs.js",
-  "es2015": "../../fesm2015/material/tabs.js"
+  "module": "../../fesm2015/material/tabs.mjs",
+  "es2020": "../../fesm2020/material/tabs.mjs"
 }

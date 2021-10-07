@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/layout",
-  "main": "../../bundles/components-examples-cdk-layout.umd.js",
-  "fesm2015": "../../fesm2015/cdk/layout.js",
-  "esm2015": "../../esm2015/cdk/layout/layout_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/layout.mjs",
+  "fesm2015": "../../fesm2015/cdk/layout.mjs",
+  "esm2020": "../../esm2020/cdk/layout/layout_public_index.mjs",
   "typings": "./layout_public_index.d.ts",
-  "module": "../../fesm2015/cdk/layout.js",
-  "es2015": "../../fesm2015/cdk/layout.js"
+  "module": "../../fesm2015/cdk/layout.mjs",
+  "es2020": "../../fesm2020/cdk/layout.mjs"
 }

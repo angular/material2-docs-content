@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/stepper",
-  "main": "../../bundles/components-examples-material-stepper.umd.js",
-  "fesm2015": "../../fesm2015/material/stepper.js",
-  "esm2015": "../../esm2015/material/stepper/stepper_public_index.js",
+  "fesm2020": "../../fesm2020/material/stepper.mjs",
+  "fesm2015": "../../fesm2015/material/stepper.mjs",
+  "esm2020": "../../esm2020/material/stepper/stepper_public_index.mjs",
   "typings": "./stepper_public_index.d.ts",
-  "module": "../../fesm2015/material/stepper.js",
-  "es2015": "../../fesm2015/material/stepper.js"
+  "module": "../../fesm2015/material/stepper.mjs",
+  "es2020": "../../fesm2020/material/stepper.mjs"
 }

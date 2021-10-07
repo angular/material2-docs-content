@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/list",
-  "main": "../../bundles/components-examples-material-list.umd.js",
-  "fesm2015": "../../fesm2015/material/list.js",
-  "esm2015": "../../esm2015/material/list/list_public_index.js",
+  "fesm2020": "../../fesm2020/material/list.mjs",
+  "fesm2015": "../../fesm2015/material/list.mjs",
+  "esm2020": "../../esm2020/material/list/list_public_index.mjs",
   "typings": "./list_public_index.d.ts",
-  "module": "../../fesm2015/material/list.js",
-  "es2015": "../../fesm2015/material/list.js"
+  "module": "../../fesm2015/material/list.mjs",
+  "es2020": "../../fesm2020/material/list.mjs"
 }

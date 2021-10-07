@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/toolbar",
-  "main": "../../bundles/components-examples-material-toolbar.umd.js",
-  "fesm2015": "../../fesm2015/material/toolbar.js",
-  "esm2015": "../../esm2015/material/toolbar/toolbar_public_index.js",
+  "fesm2020": "../../fesm2020/material/toolbar.mjs",
+  "fesm2015": "../../fesm2015/material/toolbar.mjs",
+  "esm2020": "../../esm2020/material/toolbar/toolbar_public_index.mjs",
   "typings": "./toolbar_public_index.d.ts",
-  "module": "../../fesm2015/material/toolbar.js",
-  "es2015": "../../fesm2015/material/toolbar.js"
+  "module": "../../fesm2015/material/toolbar.mjs",
+  "es2020": "../../fesm2020/material/toolbar.mjs"
 }

@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/table",
-  "main": "../../bundles/components-examples-cdk-table.umd.js",
-  "fesm2015": "../../fesm2015/cdk/table.js",
-  "esm2015": "../../esm2015/cdk/table/table_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/table.mjs",
+  "fesm2015": "../../fesm2015/cdk/table.mjs",
+  "esm2020": "../../esm2020/cdk/table/table_public_index.mjs",
   "typings": "./table_public_index.d.ts",
-  "module": "../../fesm2015/cdk/table.js",
-  "es2015": "../../fesm2015/cdk/table.js"
+  "module": "../../fesm2015/cdk/table.mjs",
+  "es2020": "../../fesm2020/cdk/table.mjs"
 }

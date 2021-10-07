@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/portal",
-  "main": "../../bundles/components-examples-cdk-portal.umd.js",
-  "fesm2015": "../../fesm2015/cdk/portal.js",
-  "esm2015": "../../esm2015/cdk/portal/portal_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/portal.mjs",
+  "fesm2015": "../../fesm2015/cdk/portal.mjs",
+  "esm2020": "../../esm2020/cdk/portal/portal_public_index.mjs",
   "typings": "./portal_public_index.d.ts",
-  "module": "../../fesm2015/cdk/portal.js",
-  "es2015": "../../fesm2015/cdk/portal.js"
+  "module": "../../fesm2015/cdk/portal.mjs",
+  "es2020": "../../fesm2020/cdk/portal.mjs"
 }

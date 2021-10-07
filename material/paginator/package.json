@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/paginator",
-  "main": "../../bundles/components-examples-material-paginator.umd.js",
-  "fesm2015": "../../fesm2015/material/paginator.js",
-  "esm2015": "../../esm2015/material/paginator/paginator_public_index.js",
+  "fesm2020": "../../fesm2020/material/paginator.mjs",
+  "fesm2015": "../../fesm2015/material/paginator.mjs",
+  "esm2020": "../../esm2020/material/paginator/paginator_public_index.mjs",
   "typings": "./paginator_public_index.d.ts",
-  "module": "../../fesm2015/material/paginator.js",
-  "es2015": "../../fesm2015/material/paginator.js"
+  "module": "../../fesm2015/material/paginator.mjs",
+  "es2020": "../../fesm2020/material/paginator.mjs"
 }

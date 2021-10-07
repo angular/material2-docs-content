@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/menu",
-  "main": "../../bundles/components-examples-material-menu.umd.js",
-  "fesm2015": "../../fesm2015/material/menu.js",
-  "esm2015": "../../esm2015/material/menu/menu_public_index.js",
+  "fesm2020": "../../fesm2020/material/menu.mjs",
+  "fesm2015": "../../fesm2015/material/menu.mjs",
+  "esm2020": "../../esm2020/material/menu/menu_public_index.mjs",
   "typings": "./menu_public_index.d.ts",
-  "module": "../../fesm2015/material/menu.js",
-  "es2015": "../../fesm2015/material/menu.js"
+  "module": "../../fesm2015/material/menu.mjs",
+  "es2020": "../../fesm2020/material/menu.mjs"
 }

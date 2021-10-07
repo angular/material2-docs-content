@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/sort",
-  "main": "../../bundles/components-examples-material-sort.umd.js",
-  "fesm2015": "../../fesm2015/material/sort.js",
-  "esm2015": "../../esm2015/material/sort/sort_public_index.js",
+  "fesm2020": "../../fesm2020/material/sort.mjs",
+  "fesm2015": "../../fesm2015/material/sort.mjs",
+  "esm2020": "../../esm2020/material/sort/sort_public_index.mjs",
   "typings": "./sort_public_index.d.ts",
-  "module": "../../fesm2015/material/sort.js",
-  "es2015": "../../fesm2015/material/sort.js"
+  "module": "../../fesm2015/material/sort.mjs",
+  "es2020": "../../fesm2020/material/sort.mjs"
 }

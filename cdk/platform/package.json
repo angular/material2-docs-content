@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/platform",
-  "main": "../../bundles/components-examples-cdk-platform.umd.js",
-  "fesm2015": "../../fesm2015/cdk/platform.js",
-  "esm2015": "../../esm2015/cdk/platform/platform_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/platform.mjs",
+  "fesm2015": "../../fesm2015/cdk/platform.mjs",
+  "esm2020": "../../esm2020/cdk/platform/platform_public_index.mjs",
   "typings": "./platform_public_index.d.ts",
-  "module": "../../fesm2015/cdk/platform.js",
-  "es2015": "../../fesm2015/cdk/platform.js"
+  "module": "../../fesm2015/cdk/platform.mjs",
+  "es2020": "../../fesm2020/cdk/platform.mjs"
 }
