@@ -34,7 +34,7 @@ changes.</p>
 <p>Note: This service requires some CSS to install animation hooks when the autofill statechanges. If
 you are using Angular Material, this CSS is included as part of the <code>mat-core</code> mixin. If you are not
 using Angular Material, you should include this CSS with the <code>text-field-autofill</code> mixin.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/cdk&#x27;</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/cdk&#x27;</span>;
 
 <span class="hljs-keyword">@include</span> cdk.text-field-autofill();
 </code></pre>
@@ -47,7 +47,7 @@ using Angular Material, you should include this CSS with the <code>text-field-au
 autofilled <code>&lt;input&gt;</code>. To make this simpler, the CDK includes a mixin <code>text-field-autofill-color</code>
 which can be used to set these properties. It takes a <code>background</code> value as the first parameter and
 an optional <code>color</code> value as the second parameter.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/cdk&#x27;</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/cdk&#x27;</span>;
 
 <span class="hljs-comment">// Set custom autofill inputs to have no background and red text.</span>
 <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.custom-autofill</span> {

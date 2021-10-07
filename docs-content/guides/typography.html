@@ -103,7 +103,7 @@ table below.</p>
       <p>You can define a typography level with the <code>define-typography-config</code> Sass function. This function
 accepts, in order, CSS values for <code>font-size</code>, <code>line-height</code>, <code>font-weight</code>, <code>font-family</code>, and
 <code>letter-spacing</code>. You can also specify the parameters by name, as demonstrated in the example below.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-custom-level</span>: mat.define-typography-level(
   <span class="hljs-variable">$font-family</span>: Roboto,
@@ -123,7 +123,7 @@ config as a Sass map. This map contains the styles for each level, keyed by name
 a typography config with the <code>define-typography-config</code> Sass function. Every parameter for
 <code>define-typography-config</code> is optional; the styles for a level will default to Material Design&#39;s
 baseline if unspecified.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-custom-typography-config</span>: mat.define-typography-config(
   <span class="hljs-variable">$display-4</span>: mat.define-typography-level(<span class="hljs-number">112px</span>, <span class="hljs-number">112px</span>, <span class="hljs-number">300</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.05em</span>),
@@ -136,7 +136,7 @@ baseline if unspecified.</p>
 </code></pre>
 <p>To customize component typography for your entire application, you can pass your custom typography
 config to the <code>core</code> mixin described in the <a href="https://material.angular.io/guide/theming">theming guide</a>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-custom-typography</span>: mat.define-typography-config(
   <span class="hljs-variable">$headline</span>:  mat.define-typography-level(<span class="hljs-number">3rem</span>, <span class="hljs-number">1</span>, <span class="hljs-number">700</span>),
@@ -160,7 +160,7 @@ multiple typography styles that are conditionally applied based on your applicat
 <p>The following example shows a typical theme definition and a &quot;kids theme&quot; that only applies when
 the <code>&quot;.kids-theme&quot;</code> CSS class is present. You can <a href="https://material.angular.io/guide/theming#defining-multiple-themes">see the theming guide for more guidance on
 defining multiple themes</a>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 
@@ -198,7 +198,7 @@ defining multiple themes</a>.</p>
 <p>Each component also has a <code>typography</code> mixin that emits only the typography styles for that
 component, based on a provided typography config. The following example demonstrates applying
 typography styles only for the button component.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$kids-typography</span>: mat.define-typography-config(
   // Specify <span class="hljs-string">&quot;Comic Sans&quot;</span> as the default font family for all levels.
@@ -351,7 +351,7 @@ accepts a typography config and a level.</p>
 </tbody></table>
 <p>Additionally, you can use the <code>typography-level</code> Sass mixin to directly emit the CSS styles for a
 given typography level.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-comment">// Use the default configuration.</span>
 <span class="hljs-variable">$my-typography</span>: mat.define-typography-config();

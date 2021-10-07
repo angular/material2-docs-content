@@ -15,7 +15,7 @@ customize components. Angular Material provides APIs for reading values from thi
 returns a Sass map containing the theme&#39;s primary, accent, and warn palettes, as well as a flag
 indicating whether dark mode is set.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;sass:map&#x27;</span>;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$color-config</span>:    mat.get-color-config(<span class="hljs-variable">$theme</span>);
 <span class="hljs-variable">$primary-palette</span>: map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">&#x27;primary&#x27;</span>);
@@ -32,7 +32,7 @@ indicating whether dark mode is set.</p>
       <p>To read typography values from a theme, you can use the <code>get-typography-config</code> Sass function. See
 the <a href="https://material.angular.io/guide/typography#typography-config">Typography guide</a> for more information about the typography config data
 structure and for APIs for reading values from this config.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$typography-config</span>: mat.get-typography-config(<span class="hljs-variable">$theme</span>);
 <span class="hljs-variable">$my-font-family</span>: mat.font-family(<span class="hljs-variable">$typography-config</span>);
@@ -113,7 +113,7 @@ theme passed into the mixins.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// _carousel-theme.scss</span>
 
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;sass:map&#x27;</span>;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-comment">// Get the color config from the theme.</span>
@@ -148,7 +148,7 @@ have a config specified.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// _carousel-theme.scss</span>
 
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;sass:map&#x27;</span>;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-comment">// Get the color config from the theme.</span>
@@ -191,7 +191,7 @@ have a config specified.</p>
         </h3>
       <p>Now that you&#39;ve defined the carousel component&#39;s theme mixin, you can include this mixin along with
 the other theme mixins in your application.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;./path/to/carousel-theme&#x27;</span> as carousel;
 
 <span class="hljs-keyword">@include</span> mat.core();
