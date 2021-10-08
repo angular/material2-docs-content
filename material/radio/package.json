@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/radio",
-  "main": "../../bundles/components-examples-material-radio.umd.js",
-  "fesm2015": "../../fesm2015/material/radio.js",
-  "esm2015": "../../esm2015/material/radio/radio_public_index.js",
+  "fesm2020": "../../fesm2020/material/radio.mjs",
+  "fesm2015": "../../fesm2015/material/radio.mjs",
+  "esm2020": "../../esm2020/material/radio/radio_public_index.mjs",
   "typings": "./radio_public_index.d.ts",
-  "module": "../../fesm2015/material/radio.js",
-  "es2015": "../../fesm2015/material/radio.js"
+  "module": "../../fesm2015/material/radio.mjs",
+  "es2020": "../../fesm2020/material/radio.mjs"
 }

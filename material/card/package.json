@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/card",
-  "main": "../../bundles/components-examples-material-card.umd.js",
-  "fesm2015": "../../fesm2015/material/card.js",
-  "esm2015": "../../esm2015/material/card/card_public_index.js",
+  "fesm2020": "../../fesm2020/material/card.mjs",
+  "fesm2015": "../../fesm2015/material/card.mjs",
+  "esm2020": "../../esm2020/material/card/card_public_index.mjs",
   "typings": "./card_public_index.d.ts",
-  "module": "../../fesm2015/material/card.js",
-  "es2015": "../../fesm2015/material/card.js"
+  "module": "../../fesm2015/material/card.mjs",
+  "es2020": "../../fesm2020/material/card.mjs"
 }

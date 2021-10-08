@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/chips",
-  "main": "../../bundles/components-examples-material-chips.umd.js",
-  "fesm2015": "../../fesm2015/material/chips.js",
-  "esm2015": "../../esm2015/material/chips/chips_public_index.js",
+  "fesm2020": "../../fesm2020/material/chips.mjs",
+  "fesm2015": "../../fesm2015/material/chips.mjs",
+  "esm2020": "../../esm2020/material/chips/chips_public_index.mjs",
   "typings": "./chips_public_index.d.ts",
-  "module": "../../fesm2015/material/chips.js",
-  "es2015": "../../fesm2015/material/chips.js"
+  "module": "../../fesm2015/material/chips.mjs",
+  "es2020": "../../fesm2020/material/chips.mjs"
 }

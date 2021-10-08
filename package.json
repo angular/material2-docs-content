@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
+  "version": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -13,29 +13,494 @@
     "material design",
     "components"
   ],
+  "exports": {
+    "./fesm2020": {
+      "default": "./fesm2020"
+    },
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/index.mjs",
+      "es2020": "./fesm2020/components-examples.mjs",
+      "es2015": "./fesm2015/components-examples.mjs",
+      "node": "./fesm2015/components-examples.mjs",
+      "default": "./fesm2020/components-examples.mjs"
+    },
+    "./cdk-experimental/menu": {
+      "types": "./cdk-experimental/menu/menu_public_index.d.ts",
+      "esm2020": "./esm2020/cdk-experimental/menu/menu_public_index.mjs",
+      "es2020": "./fesm2020/cdk-experimental/menu.mjs",
+      "es2015": "./fesm2015/cdk-experimental/menu.mjs",
+      "node": "./fesm2015/cdk-experimental/menu.mjs",
+      "default": "./fesm2020/cdk-experimental/menu.mjs"
+    },
+    "./cdk-experimental/popover-edit": {
+      "types": "./cdk-experimental/popover-edit/popover-edit_public_index.d.ts",
+      "esm2020": "./esm2020/cdk-experimental/popover-edit/popover-edit_public_index.mjs",
+      "es2020": "./fesm2020/cdk-experimental/popover-edit.mjs",
+      "es2015": "./fesm2015/cdk-experimental/popover-edit.mjs",
+      "node": "./fesm2015/cdk-experimental/popover-edit.mjs",
+      "default": "./fesm2020/cdk-experimental/popover-edit.mjs"
+    },
+    "./cdk-experimental/selection": {
+      "types": "./cdk-experimental/selection/selection_public_index.d.ts",
+      "esm2020": "./esm2020/cdk-experimental/selection/selection_public_index.mjs",
+      "es2020": "./fesm2020/cdk-experimental/selection.mjs",
+      "es2015": "./fesm2015/cdk-experimental/selection.mjs",
+      "node": "./fesm2015/cdk-experimental/selection.mjs",
+      "default": "./fesm2020/cdk-experimental/selection.mjs"
+    },
+    "./cdk/a11y": {
+      "types": "./cdk/a11y/a11y_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/a11y/a11y_public_index.mjs",
+      "es2020": "./fesm2020/cdk/a11y.mjs",
+      "es2015": "./fesm2015/cdk/a11y.mjs",
+      "node": "./fesm2015/cdk/a11y.mjs",
+      "default": "./fesm2020/cdk/a11y.mjs"
+    },
+    "./cdk/accordion": {
+      "types": "./cdk/accordion/accordion_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/accordion/accordion_public_index.mjs",
+      "es2020": "./fesm2020/cdk/accordion.mjs",
+      "es2015": "./fesm2015/cdk/accordion.mjs",
+      "node": "./fesm2015/cdk/accordion.mjs",
+      "default": "./fesm2020/cdk/accordion.mjs"
+    },
+    "./cdk/clipboard": {
+      "types": "./cdk/clipboard/clipboard_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/clipboard/clipboard_public_index.mjs",
+      "es2020": "./fesm2020/cdk/clipboard.mjs",
+      "es2015": "./fesm2015/cdk/clipboard.mjs",
+      "node": "./fesm2015/cdk/clipboard.mjs",
+      "default": "./fesm2020/cdk/clipboard.mjs"
+    },
+    "./cdk/drag-drop": {
+      "types": "./cdk/drag-drop/drag-drop_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/drag-drop/drag-drop_public_index.mjs",
+      "es2020": "./fesm2020/cdk/drag-drop.mjs",
+      "es2015": "./fesm2015/cdk/drag-drop.mjs",
+      "node": "./fesm2015/cdk/drag-drop.mjs",
+      "default": "./fesm2020/cdk/drag-drop.mjs"
+    },
+    "./cdk/layout": {
+      "types": "./cdk/layout/layout_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/layout/layout_public_index.mjs",
+      "es2020": "./fesm2020/cdk/layout.mjs",
+      "es2015": "./fesm2015/cdk/layout.mjs",
+      "node": "./fesm2015/cdk/layout.mjs",
+      "default": "./fesm2020/cdk/layout.mjs"
+    },
+    "./cdk/overlay": {
+      "types": "./cdk/overlay/overlay_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/overlay/overlay_public_index.mjs",
+      "es2020": "./fesm2020/cdk/overlay.mjs",
+      "es2015": "./fesm2015/cdk/overlay.mjs",
+      "node": "./fesm2015/cdk/overlay.mjs",
+      "default": "./fesm2020/cdk/overlay.mjs"
+    },
+    "./cdk/platform": {
+      "types": "./cdk/platform/platform_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/platform/platform_public_index.mjs",
+      "es2020": "./fesm2020/cdk/platform.mjs",
+      "es2015": "./fesm2015/cdk/platform.mjs",
+      "node": "./fesm2015/cdk/platform.mjs",
+      "default": "./fesm2020/cdk/platform.mjs"
+    },
+    "./cdk/portal": {
+      "types": "./cdk/portal/portal_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/portal/portal_public_index.mjs",
+      "es2020": "./fesm2020/cdk/portal.mjs",
+      "es2015": "./fesm2015/cdk/portal.mjs",
+      "node": "./fesm2015/cdk/portal.mjs",
+      "default": "./fesm2020/cdk/portal.mjs"
+    },
+    "./cdk/scrolling": {
+      "types": "./cdk/scrolling/scrolling_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/scrolling/scrolling_public_index.mjs",
+      "es2020": "./fesm2020/cdk/scrolling.mjs",
+      "es2015": "./fesm2015/cdk/scrolling.mjs",
+      "node": "./fesm2015/cdk/scrolling.mjs",
+      "default": "./fesm2020/cdk/scrolling.mjs"
+    },
+    "./cdk/stepper": {
+      "types": "./cdk/stepper/stepper_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/stepper/stepper_public_index.mjs",
+      "es2020": "./fesm2020/cdk/stepper.mjs",
+      "es2015": "./fesm2015/cdk/stepper.mjs",
+      "node": "./fesm2015/cdk/stepper.mjs",
+      "default": "./fesm2020/cdk/stepper.mjs"
+    },
+    "./cdk/table": {
+      "types": "./cdk/table/table_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/table/table_public_index.mjs",
+      "es2020": "./fesm2020/cdk/table.mjs",
+      "es2015": "./fesm2015/cdk/table.mjs",
+      "node": "./fesm2015/cdk/table.mjs",
+      "default": "./fesm2020/cdk/table.mjs"
+    },
+    "./cdk/text-field": {
+      "types": "./cdk/text-field/text-field_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/text-field/text-field_public_index.mjs",
+      "es2020": "./fesm2020/cdk/text-field.mjs",
+      "es2015": "./fesm2015/cdk/text-field.mjs",
+      "node": "./fesm2015/cdk/text-field.mjs",
+      "default": "./fesm2020/cdk/text-field.mjs"
+    },
+    "./cdk/tree": {
+      "types": "./cdk/tree/tree_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/tree/tree_public_index.mjs",
+      "es2020": "./fesm2020/cdk/tree.mjs",
+      "es2015": "./fesm2015/cdk/tree.mjs",
+      "node": "./fesm2015/cdk/tree.mjs",
+      "default": "./fesm2020/cdk/tree.mjs"
+    },
+    "./material-experimental/column-resize": {
+      "types": "./material-experimental/column-resize/column-resize_public_index.d.ts",
+      "esm2020": "./esm2020/material-experimental/column-resize/column-resize_public_index.mjs",
+      "es2020": "./fesm2020/material-experimental/column-resize.mjs",
+      "es2015": "./fesm2015/material-experimental/column-resize.mjs",
+      "node": "./fesm2015/material-experimental/column-resize.mjs",
+      "default": "./fesm2020/material-experimental/column-resize.mjs"
+    },
+    "./material-experimental/mdc-card": {
+      "types": "./material-experimental/mdc-card/mdc-card_public_index.d.ts",
+      "esm2020": "./esm2020/material-experimental/mdc-card/mdc-card_public_index.mjs",
+      "es2020": "./fesm2020/material-experimental/mdc-card.mjs",
+      "es2015": "./fesm2015/material-experimental/mdc-card.mjs",
+      "node": "./fesm2015/material-experimental/mdc-card.mjs",
+      "default": "./fesm2020/material-experimental/mdc-card.mjs"
+    },
+    "./material-experimental/mdc-form-field": {
+      "types": "./material-experimental/mdc-form-field/mdc-form-field_public_index.d.ts",
+      "esm2020": "./esm2020/material-experimental/mdc-form-field/mdc-form-field_public_index.mjs",
+      "es2020": "./fesm2020/material-experimental/mdc-form-field.mjs",
+      "es2015": "./fesm2015/material-experimental/mdc-form-field.mjs",
+      "node": "./fesm2015/material-experimental/mdc-form-field.mjs",
+      "default": "./fesm2020/material-experimental/mdc-form-field.mjs"
+    },
+    "./material-experimental/popover-edit": {
+      "types": "./material-experimental/popover-edit/popover-edit_public_index.d.ts",
+      "esm2020": "./esm2020/material-experimental/popover-edit/popover-edit_public_index.mjs",
+      "es2020": "./fesm2020/material-experimental/popover-edit.mjs",
+      "es2015": "./fesm2015/material-experimental/popover-edit.mjs",
+      "node": "./fesm2015/material-experimental/popover-edit.mjs",
+      "default": "./fesm2020/material-experimental/popover-edit.mjs"
+    },
+    "./material-experimental/selection": {
+      "types": "./material-experimental/selection/selection_public_index.d.ts",
+      "esm2020": "./esm2020/material-experimental/selection/selection_public_index.mjs",
+      "es2020": "./fesm2020/material-experimental/selection.mjs",
+      "es2015": "./fesm2015/material-experimental/selection.mjs",
+      "node": "./fesm2015/material-experimental/selection.mjs",
+      "default": "./fesm2020/material-experimental/selection.mjs"
+    },
+    "./material/autocomplete": {
+      "types": "./material/autocomplete/autocomplete_public_index.d.ts",
+      "esm2020": "./esm2020/material/autocomplete/autocomplete_public_index.mjs",
+      "es2020": "./fesm2020/material/autocomplete.mjs",
+      "es2015": "./fesm2015/material/autocomplete.mjs",
+      "node": "./fesm2015/material/autocomplete.mjs",
+      "default": "./fesm2020/material/autocomplete.mjs"
+    },
+    "./material/badge": {
+      "types": "./material/badge/badge_public_index.d.ts",
+      "esm2020": "./esm2020/material/badge/badge_public_index.mjs",
+      "es2020": "./fesm2020/material/badge.mjs",
+      "es2015": "./fesm2015/material/badge.mjs",
+      "node": "./fesm2015/material/badge.mjs",
+      "default": "./fesm2020/material/badge.mjs"
+    },
+    "./material/bottom-sheet": {
+      "types": "./material/bottom-sheet/bottom-sheet_public_index.d.ts",
+      "esm2020": "./esm2020/material/bottom-sheet/bottom-sheet_public_index.mjs",
+      "es2020": "./fesm2020/material/bottom-sheet.mjs",
+      "es2015": "./fesm2015/material/bottom-sheet.mjs",
+      "node": "./fesm2015/material/bottom-sheet.mjs",
+      "default": "./fesm2020/material/bottom-sheet.mjs"
+    },
+    "./material/button": {
+      "types": "./material/button/button_public_index.d.ts",
+      "esm2020": "./esm2020/material/button/button_public_index.mjs",
+      "es2020": "./fesm2020/material/button.mjs",
+      "es2015": "./fesm2015/material/button.mjs",
+      "node": "./fesm2015/material/button.mjs",
+      "default": "./fesm2020/material/button.mjs"
+    },
+    "./material/button-toggle": {
+      "types": "./material/button-toggle/button-toggle_public_index.d.ts",
+      "esm2020": "./esm2020/material/button-toggle/button-toggle_public_index.mjs",
+      "es2020": "./fesm2020/material/button-toggle.mjs",
+      "es2015": "./fesm2015/material/button-toggle.mjs",
+      "node": "./fesm2015/material/button-toggle.mjs",
+      "default": "./fesm2020/material/button-toggle.mjs"
+    },
+    "./material/card": {
+      "types": "./material/card/card_public_index.d.ts",
+      "esm2020": "./esm2020/material/card/card_public_index.mjs",
+      "es2020": "./fesm2020/material/card.mjs",
+      "es2015": "./fesm2015/material/card.mjs",
+      "node": "./fesm2015/material/card.mjs",
+      "default": "./fesm2020/material/card.mjs"
+    },
+    "./material/checkbox": {
+      "types": "./material/checkbox/checkbox_public_index.d.ts",
+      "esm2020": "./esm2020/material/checkbox/checkbox_public_index.mjs",
+      "es2020": "./fesm2020/material/checkbox.mjs",
+      "es2015": "./fesm2015/material/checkbox.mjs",
+      "node": "./fesm2015/material/checkbox.mjs",
+      "default": "./fesm2020/material/checkbox.mjs"
+    },
+    "./material/chips": {
+      "types": "./material/chips/chips_public_index.d.ts",
+      "esm2020": "./esm2020/material/chips/chips_public_index.mjs",
+      "es2020": "./fesm2020/material/chips.mjs",
+      "es2015": "./fesm2015/material/chips.mjs",
+      "node": "./fesm2015/material/chips.mjs",
+      "default": "./fesm2020/material/chips.mjs"
+    },
+    "./material/core": {
+      "types": "./material/core/core_public_index.d.ts",
+      "esm2020": "./esm2020/material/core/core_public_index.mjs",
+      "es2020": "./fesm2020/material/core.mjs",
+      "es2015": "./fesm2015/material/core.mjs",
+      "node": "./fesm2015/material/core.mjs",
+      "default": "./fesm2020/material/core.mjs"
+    },
+    "./material/datepicker": {
+      "types": "./material/datepicker/datepicker_public_index.d.ts",
+      "esm2020": "./esm2020/material/datepicker/datepicker_public_index.mjs",
+      "es2020": "./fesm2020/material/datepicker.mjs",
+      "es2015": "./fesm2015/material/datepicker.mjs",
+      "node": "./fesm2015/material/datepicker.mjs",
+      "default": "./fesm2020/material/datepicker.mjs"
+    },
+    "./material/dialog": {
+      "types": "./material/dialog/dialog_public_index.d.ts",
+      "esm2020": "./esm2020/material/dialog/dialog_public_index.mjs",
+      "es2020": "./fesm2020/material/dialog.mjs",
+      "es2015": "./fesm2015/material/dialog.mjs",
+      "node": "./fesm2015/material/dialog.mjs",
+      "default": "./fesm2020/material/dialog.mjs"
+    },
+    "./material/divider": {
+      "types": "./material/divider/divider_public_index.d.ts",
+      "esm2020": "./esm2020/material/divider/divider_public_index.mjs",
+      "es2020": "./fesm2020/material/divider.mjs",
+      "es2015": "./fesm2015/material/divider.mjs",
+      "node": "./fesm2015/material/divider.mjs",
+      "default": "./fesm2020/material/divider.mjs"
+    },
+    "./material/expansion": {
+      "types": "./material/expansion/expansion_public_index.d.ts",
+      "esm2020": "./esm2020/material/expansion/expansion_public_index.mjs",
+      "es2020": "./fesm2020/material/expansion.mjs",
+      "es2015": "./fesm2015/material/expansion.mjs",
+      "node": "./fesm2015/material/expansion.mjs",
+      "default": "./fesm2020/material/expansion.mjs"
+    },
+    "./material/form-field": {
+      "types": "./material/form-field/form-field_public_index.d.ts",
+      "esm2020": "./esm2020/material/form-field/form-field_public_index.mjs",
+      "es2020": "./fesm2020/material/form-field.mjs",
+      "es2015": "./fesm2015/material/form-field.mjs",
+      "node": "./fesm2015/material/form-field.mjs",
+      "default": "./fesm2020/material/form-field.mjs"
+    },
+    "./material/grid-list": {
+      "types": "./material/grid-list/grid-list_public_index.d.ts",
+      "esm2020": "./esm2020/material/grid-list/grid-list_public_index.mjs",
+      "es2020": "./fesm2020/material/grid-list.mjs",
+      "es2015": "./fesm2015/material/grid-list.mjs",
+      "node": "./fesm2015/material/grid-list.mjs",
+      "default": "./fesm2020/material/grid-list.mjs"
+    },
+    "./material/icon": {
+      "types": "./material/icon/icon_public_index.d.ts",
+      "esm2020": "./esm2020/material/icon/icon_public_index.mjs",
+      "es2020": "./fesm2020/material/icon.mjs",
+      "es2015": "./fesm2015/material/icon.mjs",
+      "node": "./fesm2015/material/icon.mjs",
+      "default": "./fesm2020/material/icon.mjs"
+    },
+    "./material/input": {
+      "types": "./material/input/input_public_index.d.ts",
+      "esm2020": "./esm2020/material/input/input_public_index.mjs",
+      "es2020": "./fesm2020/material/input.mjs",
+      "es2015": "./fesm2015/material/input.mjs",
+      "node": "./fesm2015/material/input.mjs",
+      "default": "./fesm2020/material/input.mjs"
+    },
+    "./material/list": {
+      "types": "./material/list/list_public_index.d.ts",
+      "esm2020": "./esm2020/material/list/list_public_index.mjs",
+      "es2020": "./fesm2020/material/list.mjs",
+      "es2015": "./fesm2015/material/list.mjs",
+      "node": "./fesm2015/material/list.mjs",
+      "default": "./fesm2020/material/list.mjs"
+    },
+    "./material/menu": {
+      "types": "./material/menu/menu_public_index.d.ts",
+      "esm2020": "./esm2020/material/menu/menu_public_index.mjs",
+      "es2020": "./fesm2020/material/menu.mjs",
+      "es2015": "./fesm2015/material/menu.mjs",
+      "node": "./fesm2015/material/menu.mjs",
+      "default": "./fesm2020/material/menu.mjs"
+    },
+    "./material/paginator": {
+      "types": "./material/paginator/paginator_public_index.d.ts",
+      "esm2020": "./esm2020/material/paginator/paginator_public_index.mjs",
+      "es2020": "./fesm2020/material/paginator.mjs",
+      "es2015": "./fesm2015/material/paginator.mjs",
+      "node": "./fesm2015/material/paginator.mjs",
+      "default": "./fesm2020/material/paginator.mjs"
+    },
+    "./material/progress-bar": {
+      "types": "./material/progress-bar/progress-bar_public_index.d.ts",
+      "esm2020": "./esm2020/material/progress-bar/progress-bar_public_index.mjs",
+      "es2020": "./fesm2020/material/progress-bar.mjs",
+      "es2015": "./fesm2015/material/progress-bar.mjs",
+      "node": "./fesm2015/material/progress-bar.mjs",
+      "default": "./fesm2020/material/progress-bar.mjs"
+    },
+    "./material/progress-spinner": {
+      "types": "./material/progress-spinner/progress-spinner_public_index.d.ts",
+      "esm2020": "./esm2020/material/progress-spinner/progress-spinner_public_index.mjs",
+      "es2020": "./fesm2020/material/progress-spinner.mjs",
+      "es2015": "./fesm2015/material/progress-spinner.mjs",
+      "node": "./fesm2015/material/progress-spinner.mjs",
+      "default": "./fesm2020/material/progress-spinner.mjs"
+    },
+    "./material/radio": {
+      "types": "./material/radio/radio_public_index.d.ts",
+      "esm2020": "./esm2020/material/radio/radio_public_index.mjs",
+      "es2020": "./fesm2020/material/radio.mjs",
+      "es2015": "./fesm2015/material/radio.mjs",
+      "node": "./fesm2015/material/radio.mjs",
+      "default": "./fesm2020/material/radio.mjs"
+    },
+    "./material/select": {
+      "types": "./material/select/select_public_index.d.ts",
+      "esm2020": "./esm2020/material/select/select_public_index.mjs",
+      "es2020": "./fesm2020/material/select.mjs",
+      "es2015": "./fesm2015/material/select.mjs",
+      "node": "./fesm2015/material/select.mjs",
+      "default": "./fesm2020/material/select.mjs"
+    },
+    "./material/sidenav": {
+      "types": "./material/sidenav/sidenav_public_index.d.ts",
+      "esm2020": "./esm2020/material/sidenav/sidenav_public_index.mjs",
+      "es2020": "./fesm2020/material/sidenav.mjs",
+      "es2015": "./fesm2015/material/sidenav.mjs",
+      "node": "./fesm2015/material/sidenav.mjs",
+      "default": "./fesm2020/material/sidenav.mjs"
+    },
+    "./material/slide-toggle": {
+      "types": "./material/slide-toggle/slide-toggle_public_index.d.ts",
+      "esm2020": "./esm2020/material/slide-toggle/slide-toggle_public_index.mjs",
+      "es2020": "./fesm2020/material/slide-toggle.mjs",
+      "es2015": "./fesm2015/material/slide-toggle.mjs",
+      "node": "./fesm2015/material/slide-toggle.mjs",
+      "default": "./fesm2020/material/slide-toggle.mjs"
+    },
+    "./material/slider": {
+      "types": "./material/slider/slider_public_index.d.ts",
+      "esm2020": "./esm2020/material/slider/slider_public_index.mjs",
+      "es2020": "./fesm2020/material/slider.mjs",
+      "es2015": "./fesm2015/material/slider.mjs",
+      "node": "./fesm2015/material/slider.mjs",
+      "default": "./fesm2020/material/slider.mjs"
+    },
+    "./material/snack-bar": {
+      "types": "./material/snack-bar/snack-bar_public_index.d.ts",
+      "esm2020": "./esm2020/material/snack-bar/snack-bar_public_index.mjs",
+      "es2020": "./fesm2020/material/snack-bar.mjs",
+      "es2015": "./fesm2015/material/snack-bar.mjs",
+      "node": "./fesm2015/material/snack-bar.mjs",
+      "default": "./fesm2020/material/snack-bar.mjs"
+    },
+    "./material/sort": {
+      "types": "./material/sort/sort_public_index.d.ts",
+      "esm2020": "./esm2020/material/sort/sort_public_index.mjs",
+      "es2020": "./fesm2020/material/sort.mjs",
+      "es2015": "./fesm2015/material/sort.mjs",
+      "node": "./fesm2015/material/sort.mjs",
+      "default": "./fesm2020/material/sort.mjs"
+    },
+    "./material/stepper": {
+      "types": "./material/stepper/stepper_public_index.d.ts",
+      "esm2020": "./esm2020/material/stepper/stepper_public_index.mjs",
+      "es2020": "./fesm2020/material/stepper.mjs",
+      "es2015": "./fesm2015/material/stepper.mjs",
+      "node": "./fesm2015/material/stepper.mjs",
+      "default": "./fesm2020/material/stepper.mjs"
+    },
+    "./material/table": {
+      "types": "./material/table/table_public_index.d.ts",
+      "esm2020": "./esm2020/material/table/table_public_index.mjs",
+      "es2020": "./fesm2020/material/table.mjs",
+      "es2015": "./fesm2015/material/table.mjs",
+      "node": "./fesm2015/material/table.mjs",
+      "default": "./fesm2020/material/table.mjs"
+    },
+    "./material/tabs": {
+      "types": "./material/tabs/tabs_public_index.d.ts",
+      "esm2020": "./esm2020/material/tabs/tabs_public_index.mjs",
+      "es2020": "./fesm2020/material/tabs.mjs",
+      "es2015": "./fesm2015/material/tabs.mjs",
+      "node": "./fesm2015/material/tabs.mjs",
+      "default": "./fesm2020/material/tabs.mjs"
+    },
+    "./material/toolbar": {
+      "types": "./material/toolbar/toolbar_public_index.d.ts",
+      "esm2020": "./esm2020/material/toolbar/toolbar_public_index.mjs",
+      "es2020": "./fesm2020/material/toolbar.mjs",
+      "es2015": "./fesm2015/material/toolbar.mjs",
+      "node": "./fesm2015/material/toolbar.mjs",
+      "default": "./fesm2020/material/toolbar.mjs"
+    },
+    "./material/tooltip": {
+      "types": "./material/tooltip/tooltip_public_index.d.ts",
+      "esm2020": "./esm2020/material/tooltip/tooltip_public_index.mjs",
+      "es2020": "./fesm2020/material/tooltip.mjs",
+      "es2015": "./fesm2015/material/tooltip.mjs",
+      "node": "./fesm2015/material/tooltip.mjs",
+      "default": "./fesm2020/material/tooltip.mjs"
+    },
+    "./material/tree": {
+      "types": "./material/tree/tree_public_index.d.ts",
+      "esm2020": "./esm2020/material/tree/tree_public_index.mjs",
+      "es2020": "./fesm2020/material/tree.mjs",
+      "es2015": "./fesm2015/material/tree.mjs",
+      "node": "./fesm2015/material/tree.mjs",
+      "default": "./fesm2020/material/tree.mjs"
+    }
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/angular/components/issues"
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
-    "@angular/cdk-experimental": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
+    "@angular/cdk": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
+    "@angular/cdk-experimental": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
     "@angular/core": "^13.0.0-0 || ^14.0.0-0",
     "@angular/common": "^13.0.0-0 || ^14.0.0-0",
-    "@angular/material": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
-    "@angular/material-experimental": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
-    "@angular/material-moment-adapter": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
-    "@angular/material-luxon-adapter": "13.0.0-next.7+9.sha-b9f761a.with-local-changes",
-    "@angular/material-date-fns-adapter": "13.0.0-next.7+9.sha-b9f761a.with-local-changes"
+    "@angular/material": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
+    "@angular/material-experimental": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
+    "@angular/material-moment-adapter": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
+    "@angular/material-luxon-adapter": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes",
+    "@angular/material-date-fns-adapter": "13.0.0-next.7+31.sha-ccf3f46.with-local-changes"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "main": "./bundles/components-examples.umd.js",
-  "fesm2015": "./fesm2015/components-examples.js",
-  "esm2015": "./esm2015/index.js",
+  "fesm2020": "./fesm2020/components-examples.mjs",
+  "fesm2015": "./fesm2015/components-examples.mjs",
+  "esm2020": "./esm2020/index.mjs",
   "typings": "./index.d.ts",
-  "module": "./fesm2015/components-examples.js",
-  "es2015": "./fesm2015/components-examples.js"
+  "module": "./fesm2015/components-examples.mjs",
+  "es2020": "./fesm2020/components-examples.mjs",
+  "type": "module"
 }

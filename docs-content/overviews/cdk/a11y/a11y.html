@@ -189,7 +189,7 @@ the host element with <code>checkChildren</code> set to <code>true</code>. Each 
           Styling utilities
         </h3>
       <p>The <code>cdk/a11y</code> package comes with Sass mixins that produce styles useful for building
-accessible experiences. </p>
+accessible experiences.</p>
 
         <h4 id="hiding-elements-in-an-accessible-way" class="docs-header-link">
           <span header-link="hiding-elements-in-an-accessible-way"></span>
@@ -201,7 +201,7 @@ visually hide an element while keeping it available to assistive technology. You
 the <code>a11y-visually-hidden</code> Sass mixin, which emits the <code>.cdk-visually-hidden</code> CSS class.</p>
 <p>If you&#39;re using Angular Material, this class is included automatically by Angular Material&#39;s theming
 system. Otherwise, you can include this mixin in a global stylesheet.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/cdk&#x27;</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/cdk&#x27;</span>;
 
 <span class="hljs-keyword">@include</span> cdk.a11y-visually-hidden();
 </code></pre>
@@ -219,7 +219,7 @@ system. Otherwise, you can include this mixin in a global stylesheet.</p>
 contrast mode. To create a high contrast style, define your style inside the <code>high-contrast</code> mixin.</p>
 <p>The mixin works by targeting a CSS class which is added to the <code>body</code> by the CDK when high contrast
 mode is detected at runtime, via the <code>HighContrastModeDetector</code> service.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/cdk&#x27;</span>;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/cdk&#x27;</span>;
 
 <span class="hljs-selector-tag">button</span> {
   <span class="hljs-keyword">@include</span> cdk.high-contrast() {

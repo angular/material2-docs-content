@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/overlay",
-  "main": "../../bundles/components-examples-cdk-overlay.umd.js",
-  "fesm2015": "../../fesm2015/cdk/overlay.js",
-  "esm2015": "../../esm2015/cdk/overlay/overlay_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/overlay.mjs",
+  "fesm2015": "../../fesm2015/cdk/overlay.mjs",
+  "esm2020": "../../esm2020/cdk/overlay/overlay_public_index.mjs",
   "typings": "./overlay_public_index.d.ts",
-  "module": "../../fesm2015/cdk/overlay.js",
-  "es2015": "../../fesm2015/cdk/overlay.js"
+  "module": "../../fesm2015/cdk/overlay.mjs",
+  "es2020": "../../fesm2020/cdk/overlay.mjs"
 }

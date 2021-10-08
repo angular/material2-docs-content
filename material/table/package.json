@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/table",
-  "main": "../../bundles/components-examples-material-table.umd.js",
-  "fesm2015": "../../fesm2015/material/table.js",
-  "esm2015": "../../esm2015/material/table/table_public_index.js",
+  "fesm2020": "../../fesm2020/material/table.mjs",
+  "fesm2015": "../../fesm2015/material/table.mjs",
+  "esm2020": "../../esm2020/material/table/table_public_index.mjs",
   "typings": "./table_public_index.d.ts",
-  "module": "../../fesm2015/material/table.js",
-  "es2015": "../../fesm2015/material/table.js"
+  "module": "../../fesm2015/material/table.mjs",
+  "es2020": "../../fesm2020/material/table.mjs"
 }

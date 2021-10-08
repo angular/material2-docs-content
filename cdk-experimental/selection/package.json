@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk-experimental/selection",
-  "main": "../../bundles/components-examples-cdk-experimental-selection.umd.js",
-  "fesm2015": "../../fesm2015/cdk-experimental/selection.js",
-  "esm2015": "../../esm2015/cdk-experimental/selection/selection_public_index.js",
+  "fesm2020": "../../fesm2020/cdk-experimental/selection.mjs",
+  "fesm2015": "../../fesm2015/cdk-experimental/selection.mjs",
+  "esm2020": "../../esm2020/cdk-experimental/selection/selection_public_index.mjs",
   "typings": "./selection_public_index.d.ts",
-  "module": "../../fesm2015/cdk-experimental/selection.js",
-  "es2015": "../../fesm2015/cdk-experimental/selection.js"
+  "module": "../../fesm2015/cdk-experimental/selection.mjs",
+  "es2020": "../../fesm2020/cdk-experimental/selection.mjs"
 }

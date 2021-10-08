@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/divider",
-  "main": "../../bundles/components-examples-material-divider.umd.js",
-  "fesm2015": "../../fesm2015/material/divider.js",
-  "esm2015": "../../esm2015/material/divider/divider_public_index.js",
+  "fesm2020": "../../fesm2020/material/divider.mjs",
+  "fesm2015": "../../fesm2015/material/divider.mjs",
+  "esm2020": "../../esm2020/material/divider/divider_public_index.mjs",
   "typings": "./divider_public_index.d.ts",
-  "module": "../../fesm2015/material/divider.js",
-  "es2015": "../../fesm2015/material/divider.js"
+  "module": "../../fesm2015/material/divider.mjs",
+  "es2020": "../../fesm2020/material/divider.mjs"
 }

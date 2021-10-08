@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/bottom-sheet",
-  "main": "../../bundles/components-examples-material-bottom-sheet.umd.js",
-  "fesm2015": "../../fesm2015/material/bottom-sheet.js",
-  "esm2015": "../../esm2015/material/bottom-sheet/bottom-sheet_public_index.js",
+  "fesm2020": "../../fesm2020/material/bottom-sheet.mjs",
+  "fesm2015": "../../fesm2015/material/bottom-sheet.mjs",
+  "esm2020": "../../esm2020/material/bottom-sheet/bottom-sheet_public_index.mjs",
   "typings": "./bottom-sheet_public_index.d.ts",
-  "module": "../../fesm2015/material/bottom-sheet.js",
-  "es2015": "../../fesm2015/material/bottom-sheet.js"
+  "module": "../../fesm2015/material/bottom-sheet.mjs",
+  "es2020": "../../fesm2020/material/bottom-sheet.mjs"
 }

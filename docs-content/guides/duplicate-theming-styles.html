@@ -3,7 +3,7 @@ configurations for the <code>color</code>, <code>density</code> and <code>typogr
 systems have default configurations, some usage patterns may cause duplication in the CSS output.</p>
 <p>Below are examples of patterns that generate duplicative theme styles:</p>
 <p><strong>Example #1</strong></p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$light-theme</span>: mat.define-light-theme((color: ...));
 <span class="hljs-variable">$dark-theme</span>: mat.define-dark-theme((color: ...));
@@ -22,7 +22,7 @@ systems have default configurations, some usage patterns may cause duplication i
 <p>To fix this, you can use the dedicated mixin for color styles for the <code>.dark-theme</code>
 selector. Replace the <code>all-component-themes</code> mixin and include the dark theme using the
 <code>all-component-colors</code> mixin. For example:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 ...
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$light-theme</span>);
@@ -35,7 +35,7 @@ selector. Replace the <code>all-component-themes</code> mixin and include the da
 <p>Typography can also be configured via Sass mixin; see <code>all-component-typographies</code>.</p>
 <p><strong>Example #2</strong></p>
 <p>Theme styles could also be duplicated if individual theme mixins are used. For example:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
 
@@ -46,7 +46,7 @@ selector. Replace the <code>all-component-themes</code> mixin and include the da
 </code></pre>
 <p>To avoid this duplication of styles, use the dedicated mixin for the color system and
 extract the configuration for the color system from the theme.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-selector-class">.my-custom-dark-button</span> {
   <span class="hljs-comment">// This will only generate the color styles for `mat-button`.</span>
@@ -60,7 +60,7 @@ extract the configuration for the color system from the theme.</p>
         </h2>
       <p>If your application intentionally duplicates styles, a global Sass variable can be
 set to disable duplication warnings from Angular Material. For example:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 mat.<span class="hljs-variable">$theme-ignore-duplication-warnings</span>: true;
 

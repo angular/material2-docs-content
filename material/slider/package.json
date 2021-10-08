@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/material/slider",
-  "main": "../../bundles/components-examples-material-slider.umd.js",
-  "fesm2015": "../../fesm2015/material/slider.js",
-  "esm2015": "../../esm2015/material/slider/slider_public_index.js",
+  "fesm2020": "../../fesm2020/material/slider.mjs",
+  "fesm2015": "../../fesm2015/material/slider.mjs",
+  "esm2020": "../../esm2020/material/slider/slider_public_index.mjs",
   "typings": "./slider_public_index.d.ts",
-  "module": "../../fesm2015/material/slider.js",
-  "es2015": "../../fesm2015/material/slider.js"
+  "module": "../../fesm2015/material/slider.mjs",
+  "es2020": "../../fesm2020/material/slider.mjs"
 }

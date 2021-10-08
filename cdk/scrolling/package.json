@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/scrolling",
-  "main": "../../bundles/components-examples-cdk-scrolling.umd.js",
-  "fesm2015": "../../fesm2015/cdk/scrolling.js",
-  "esm2015": "../../esm2015/cdk/scrolling/scrolling_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/scrolling.mjs",
+  "fesm2015": "../../fesm2015/cdk/scrolling.mjs",
+  "esm2020": "../../esm2020/cdk/scrolling/scrolling_public_index.mjs",
   "typings": "./scrolling_public_index.d.ts",
-  "module": "../../fesm2015/cdk/scrolling.js",
-  "es2015": "../../fesm2015/cdk/scrolling.js"
+  "module": "../../fesm2015/cdk/scrolling.mjs",
+  "es2020": "../../fesm2020/cdk/scrolling.mjs"
 }

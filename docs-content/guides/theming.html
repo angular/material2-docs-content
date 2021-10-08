@@ -68,7 +68,7 @@ spec. See the <a href="https://material.io/archive/guidelines/style/color.html#c
 distinct <em>accent</em> hues numbered as <code>A100</code>, <code>A200</code>, <code>A400</code>, and <code>A700</code>. Angular Material does not
 require these hues, but you can use these hues when defining a theme as described in
 <a href="#defining-a-theme">Defining a theme</a> below.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-palette</span>: mat.<span class="hljs-variable">$indigo-palette</span>;
 </code></pre>
@@ -102,7 +102,7 @@ typography CSS styles.</p>
 features used by multiple components, such as ripples. The <code>core</code> mixin must be included exactly
 once for your application, even if you define multiple themes. Including the <code>core</code> mixin multiple
 times will result in duplicate CSS in your application.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 </code></pre>
@@ -119,7 +119,7 @@ warn palette. The <code>define-palette</code> Sass function accepts a color pale
 represent, in order: the &quot;default&quot; hue, a &quot;lighter&quot; hue, a &quot;darker&quot; hue, and a &quot;text&quot; hue.
 Components use these hues to choose the most appropriate color for different parts of
 themselves.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
 <span class="hljs-variable">$my-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
@@ -130,7 +130,7 @@ themselves.</p>
 <p>You can construct a theme by calling either <code>define-light-theme</code> or <code>define-dark-theme</code> with
 the result from <code>define-palette</code>. The choice of a light versus a dark theme determines the
 background and foreground colors used throughout the components.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
 <span class="hljs-variable">$my-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
@@ -160,7 +160,7 @@ This theme mixin will only emit color or typography styles if you provided a cor
 configuration to <code>define-light-theme</code> or <code>define-dark-theme</code>.</p>
 <p>Apply the styles for each of the components used in your application by including each of their
 theme Sass mixins.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 
@@ -189,7 +189,7 @@ Sass mixins that includes styles for all components in the library: <code>all-co
 <code>all-component-typographies</code>, and <code>all-component-themes</code>. These mixins behave the same as individual
 component mixins, except they emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular
 Material. Unless your application uses every single component, this will produce unnecessary CSS.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 
@@ -269,7 +269,7 @@ manage loading of multiple CSS assets. The downside, however, is that your CSS w
 styles than necessary.</p>
 <p>To control which theme applies when, <code>@include</code> the mixins only within a context specified via
 CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-rules/mixin">documentation for Sass mixins</a> for further background.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 
@@ -324,7 +324,7 @@ file. The approach for this loading depends on your application.</p>
 in your application. The CSS rule declaration in which you include a Sass mixin determines its scope.
 The example below shows how to customize the color of all buttons inside elements marked with the
 <code>.my-special-section</code> CSS class.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-selector-class">.my-special-section</span> {
  <span class="hljs-variable">$special-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$orange-palette</span>);
@@ -344,7 +344,7 @@ The example below shows how to customize the color of all buttons inside element
       <p>You can use the <code>get-color-from-palette</code> function to get specific hues from a palette by their
 number identifier. You can also access the contrast color for a particular hue by suffixing the
 hue&#39;s number idenfier with <code>-contrast</code>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
 
@@ -355,7 +355,7 @@ hue&#39;s number idenfier with <code>-contrast</code>.</p>
 </code></pre>
 <p>You can also reference colors using the <code>&quot;default&quot;</code>, <code>&quot;lighter&quot;</code>, <code>&quot;darker&quot;</code>, and <code>&quot;text&quot;</code> colors
 passed to <code>define-palette</code>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
 
@@ -383,7 +383,7 @@ this mixin to change the color of the focus indicators in situations in which th
 would not contrast sufficiently with the background color.</p>
 <p>The following example includes strong focus indicator styles in an application alongside the rest of
 the custom theme API.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
@@ -413,7 +413,7 @@ accepts either a theme, as described earlier in this guide, or a CSS color value
 theme, the indicators will use the default hue of the primary palette.</p>
 <p>The following example includes strong focus indicator styles with custom settings alongside the rest
 of the custom theme API.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;~@angular/material&#x27;</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators((

@@ -1,9 +1,9 @@
 {
   "name": "@angular/components-examples/cdk/tree",
-  "main": "../../bundles/components-examples-cdk-tree.umd.js",
-  "fesm2015": "../../fesm2015/cdk/tree.js",
-  "esm2015": "../../esm2015/cdk/tree/tree_public_index.js",
+  "fesm2020": "../../fesm2020/cdk/tree.mjs",
+  "fesm2015": "../../fesm2015/cdk/tree.mjs",
+  "esm2020": "../../esm2020/cdk/tree/tree_public_index.mjs",
   "typings": "./tree_public_index.d.ts",
-  "module": "../../fesm2015/cdk/tree.js",
-  "es2015": "../../fesm2015/cdk/tree.js"
+  "module": "../../fesm2015/cdk/tree.mjs",
+  "es2020": "../../fesm2020/cdk/tree.mjs"
 }
