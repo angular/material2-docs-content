@@ -1,5 +1,6 @@
+<span class="hljs-keyword">import</span> {LiveAnnouncer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 <span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSort, Sort} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
@@ -34,9 +35,24 @@
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
 
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _liveAnnouncer: LiveAnnouncer</span>)</span> {}
+
   <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
 
   <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.dataSource.sort = <span class="hljs-built_in">this</span>.sort;
+  }
+
+  <span class="hljs-comment">/** Announce the change in sort state for assistive technology. */</span>
+  <span class="hljs-function"><span class="hljs-title">announceSortChange</span>(<span class="hljs-params">sortState: Sort</span>)</span> {
+    <span class="hljs-comment">// This example uses English messages. If your application supports</span>
+    <span class="hljs-comment">// multiple language, you would internationalize these strings.</span>
+    <span class="hljs-comment">// Furthermore, you can customize the message to add additional</span>
+    <span class="hljs-comment">// details about the values being sorted.</span>
+    <span class="hljs-keyword">if</span> (sortState.direction) {
+      <span class="hljs-built_in">this</span>._liveAnnouncer.announce(<span class="hljs-string">`Sorted <span class="hljs-subst">${sortState.direction}</span>ending`</span>);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">this</span>._liveAnnouncer.announce(<span class="hljs-string">&#x27;Sorting cleared&#x27;</span>);
+    }
   }
 }

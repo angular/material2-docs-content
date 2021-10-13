@@ -108,7 +108,12 @@ between content within a single page. </p>
 <p><code>MatTabNavBar</code>, implements a navigation interaction pattern by using a <code>&lt;nav&gt;</code> element with anchor
 elements as the &quot;tabs&quot;. You should use this component when you want your cross-page navigation to
 look like a tabbed interface. As a rule of thumb, you should consider <code>MatTabNavBar</code> if changing
-tabs would change the browser URL.</p>
+tabs would change the browser URL. For all navigation, including with <code>MatTabNavBar</code>, always move
+browser focus to an element at the beginning of the content to which the user is navgating.
+Furthermore, consider placing your <code>&lt;router-outlet&gt;</code> inside of a
+<a href="https://www.w3.org/TR/wai-aria-1.1/#dfn-landmark">landmark region</a> appropriate to the page.</p>
+<p>Avoid mixing both <code>MatTabGroup</code> and <code>MatTabNavBar</code> in your application. The inconsistent interaction
+patterns applied between the components may confuse users.</p>
 
         <h4 id="labels-1" class="docs-header-link">
           <span header-link="labels-1"></span>
@@ -116,7 +121,7 @@ tabs would change the browser URL.</p>
         </h4>
       <p>Always provide an accessible label via <code>aria-label</code> or <code>aria-describedby</code> for tabs without
 descriptive text content.</p>
-<p>When using <code>MatTabNavGroup</code>, you should also specify a label for the <code>&lt;nav&gt;</code> element. </p>
+<p>When using <code>MatTabNavGroup</code>, always specify a label for the <code>&lt;nav&gt;</code> element.</p>
 
         <h4 id="keyboard-interaction" class="docs-header-link">
           <span header-link="keyboard-interaction"></span>

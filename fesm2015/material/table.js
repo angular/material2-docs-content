@@ -31,6 +31,7 @@ import * as i1$3 from '@angular/common/http';
 import { merge, of, ReplaySubject } from 'rxjs';
 import { startWith, switchMap, catchError, map } from 'rxjs/operators';
 import { SelectionModel, DataSource } from '@angular/cdk/collections';
+import * as i1$4 from '@angular/cdk/a11y';
 
 function TableFlexBasicExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "mat-header-cell");
@@ -1873,12 +1874,12 @@ TableSelectionExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: Table
     }], null, null); })();
 
 function TableSortingExample_th_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 9);
+    i0.ɵɵelementStart(0, "th", 12);
     i0.ɵɵtext(1, " No. ");
     i0.ɵɵelementEnd();
 } }
 function TableSortingExample_td_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 10);
+    i0.ɵɵelementStart(0, "td", 13);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1887,12 +1888,12 @@ function TableSortingExample_td_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r10.position, " ");
 } }
 function TableSortingExample_th_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 9);
+    i0.ɵɵelementStart(0, "th", 14);
     i0.ɵɵtext(1, " Name ");
     i0.ɵɵelementEnd();
 } }
 function TableSortingExample_td_6_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 10);
+    i0.ɵɵelementStart(0, "td", 13);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1901,12 +1902,12 @@ function TableSortingExample_td_6_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r11.name, " ");
 } }
 function TableSortingExample_th_8_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 9);
+    i0.ɵɵelementStart(0, "th", 15);
     i0.ɵɵtext(1, " Weight ");
     i0.ɵɵelementEnd();
 } }
 function TableSortingExample_td_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 10);
+    i0.ɵɵelementStart(0, "td", 13);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1915,12 +1916,12 @@ function TableSortingExample_td_9_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r12.weight, " ");
 } }
 function TableSortingExample_th_11_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "th", 9);
+    i0.ɵɵelementStart(0, "th", 16);
     i0.ɵɵtext(1, " Symbol ");
     i0.ɵɵelementEnd();
 } }
 function TableSortingExample_td_12_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "td", 10);
+    i0.ɵɵelementStart(0, "td", 13);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -1929,10 +1930,10 @@ function TableSortingExample_td_12_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵtextInterpolate1(" ", element_r13.symbol, " ");
 } }
 function TableSortingExample_tr_13_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "tr", 11);
+    i0.ɵɵelement(0, "tr", 17);
 } }
 function TableSortingExample_tr_14_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "tr", 12);
+    i0.ɵɵelement(0, "tr", 18);
 } }
 const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -1950,40 +1951,55 @@ const ELEMENT_DATA$f = [
  * @title Table with sorting
  */
 class TableSortingExample {
-    constructor() {
+    constructor(_liveAnnouncer) {
+        this._liveAnnouncer = _liveAnnouncer;
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$f);
     }
     ngAfterViewInit() {
         this.dataSource.sort = this.sort;
     }
+    /** Announce the change in sort state for assistive technology. */
+    announceSortChange(sortState) {
+        // This example uses English messages. If your application supports
+        // multiple language, you would internationalize these strings.
+        // Furthermore, you can customize the message to add additional
+        // details about the values being sorted.
+        if (sortState.direction) {
+            this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+        }
+        else {
+            this._liveAnnouncer.announce('Sorting cleared');
+        }
+    }
 }
-TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
+TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(i0.ɵɵdirectiveInject(i1$4.LiveAnnouncer)); };
 TableSortingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) { if (rf & 1) {
         i0.ɵɵviewQuery(MatSort, 5);
     } if (rf & 2) {
         let _t;
         i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
-    } }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource", "matSortChange"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by number", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by name", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by weight", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by symbol", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by number"], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by name"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by weight"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by symbol"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "table", 0);
+        i0.ɵɵlistener("matSortChange", function TableSortingExample_Template_table_matSortChange_0_listener($event) { return ctx.announceSortChange($event); });
         i0.ɵɵelementContainerStart(1, 1);
         i0.ɵɵtemplate(2, TableSortingExample_th_2_Template, 2, 0, "th", 2);
         i0.ɵɵtemplate(3, TableSortingExample_td_3_Template, 2, 1, "td", 3);
         i0.ɵɵelementContainerEnd();
         i0.ɵɵelementContainerStart(4, 4);
-        i0.ɵɵtemplate(5, TableSortingExample_th_5_Template, 2, 0, "th", 2);
+        i0.ɵɵtemplate(5, TableSortingExample_th_5_Template, 2, 0, "th", 5);
         i0.ɵɵtemplate(6, TableSortingExample_td_6_Template, 2, 1, "td", 3);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(7, 5);
-        i0.ɵɵtemplate(8, TableSortingExample_th_8_Template, 2, 0, "th", 2);
+        i0.ɵɵelementContainerStart(7, 6);
+        i0.ɵɵtemplate(8, TableSortingExample_th_8_Template, 2, 0, "th", 7);
         i0.ɵɵtemplate(9, TableSortingExample_td_9_Template, 2, 1, "td", 3);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵelementContainerStart(10, 6);
-        i0.ɵɵtemplate(11, TableSortingExample_th_11_Template, 2, 0, "th", 2);
+        i0.ɵɵelementContainerStart(10, 8);
+        i0.ɵɵtemplate(11, TableSortingExample_th_11_Template, 2, 0, "th", 9);
         i0.ɵɵtemplate(12, TableSortingExample_td_12_Template, 2, 1, "td", 3);
         i0.ɵɵelementContainerEnd();
-        i0.ɵɵtemplate(13, TableSortingExample_tr_13_Template, 1, 0, "tr", 7);
-        i0.ɵɵtemplate(14, TableSortingExample_tr_14_Template, 1, 0, "tr", 8);
+        i0.ɵɵtemplate(13, TableSortingExample_tr_13_Template, 1, 0, "tr", 10);
+        i0.ɵɵtemplate(14, TableSortingExample_tr_14_Template, 1, 0, "tr", 11);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         i0.ɵɵproperty("dataSource", ctx.dataSource);
@@ -1999,7 +2015,7 @@ TableSortingExample.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: TableSo
                 styleUrls: ['table-sorting-example.css'],
                 templateUrl: 'table-sorting-example.html',
             }]
-    }], null, { sort: [{
+    }], function () { return [{ type: i1$4.LiveAnnouncer }]; }, { sort: [{
             type: ViewChild,
             args: [MatSort]
         }] }); })();

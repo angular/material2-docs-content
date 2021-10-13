@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/core'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/progress-spinner'), require('@angular/material/sort'), require('@angular/material/table'), require('@angular/cdk/drag-drop'), require('@angular/cdk/table'), require('@angular/animations'), require('@angular/material/form-field'), require('rxjs'), require('rxjs/operators'), require('@angular/common/http'), require('@angular/cdk/collections')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/table', ['exports', '@angular/common', '@angular/core', '@angular/material/core', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/paginator', '@angular/material/progress-spinner', '@angular/material/sort', '@angular/material/table', '@angular/cdk/drag-drop', '@angular/cdk/table', '@angular/animations', '@angular/material/form-field', 'rxjs', 'rxjs/operators', '@angular/common/http', '@angular/cdk/collections'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.table = {}), global.ng.common, global.ng.core, global.ng.material.core, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.paginator, global.ng.material.progressSpinner, global.ng.material.sort, global.ng.material.table, global.ng.cdk.dragDrop, global.ng.cdk.table, global.ng.animations, global.ng.material.formField, global.rxjs, global.rxjs.operators, global.ng.common.http, global.ng.cdk.collections));
-}(this, (function (exports, i2, i0, i2$6, i1$1, i2$4, i2$2, i2$3, i2$1, i5, i6, i4, i1, i2$5, table, animations, i1$2, rxjs, operators, i1$3, collections) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/core'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/progress-spinner'), require('@angular/material/sort'), require('@angular/material/table'), require('@angular/cdk/drag-drop'), require('@angular/cdk/table'), require('@angular/animations'), require('@angular/material/form-field'), require('rxjs'), require('rxjs/operators'), require('@angular/common/http'), require('@angular/cdk/collections'), require('@angular/cdk/a11y')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/table', ['exports', '@angular/common', '@angular/core', '@angular/material/core', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/paginator', '@angular/material/progress-spinner', '@angular/material/sort', '@angular/material/table', '@angular/cdk/drag-drop', '@angular/cdk/table', '@angular/animations', '@angular/material/form-field', 'rxjs', 'rxjs/operators', '@angular/common/http', '@angular/cdk/collections', '@angular/cdk/a11y'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.table = {}), global.ng.common, global.ng.core, global.ng.material.core, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.paginator, global.ng.material.progressSpinner, global.ng.material.sort, global.ng.material.table, global.ng.cdk.dragDrop, global.ng.cdk.table, global.ng.animations, global.ng.material.formField, global.rxjs, global.rxjs.operators, global.ng.common.http, global.ng.cdk.collections, global.ng.cdk.a11y));
+}(this, (function (exports, i2, i0, i2$6, i1$1, i2$4, i2$2, i2$3, i2$1, i5, i6, i4, i1, i2$5, table, animations, i1$2, rxjs, operators, i1$3, collections, i1$4) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) return e;
@@ -39,6 +39,7 @@
     var i2__namespace$5 = /*#__PURE__*/_interopNamespace(i2$5);
     var i1__namespace$2 = /*#__PURE__*/_interopNamespace(i1$2);
     var i1__namespace$3 = /*#__PURE__*/_interopNamespace(i1$3);
+    var i1__namespace$4 = /*#__PURE__*/_interopNamespace(i1$4);
 
     function TableFlexBasicExample_mat_header_cell_2_Template(rf, ctx) {
         if (rf & 1) {
@@ -2576,14 +2577,14 @@
 
     function TableSortingExample_th_2_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 9);
+            i0__namespace.ɵɵelementStart(0, "th", 12);
             i0__namespace.ɵɵtext(1, " No. ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableSortingExample_td_3_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 10);
+            i0__namespace.ɵɵelementStart(0, "td", 13);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -2595,14 +2596,14 @@
     }
     function TableSortingExample_th_5_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 9);
+            i0__namespace.ɵɵelementStart(0, "th", 14);
             i0__namespace.ɵɵtext(1, " Name ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableSortingExample_td_6_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 10);
+            i0__namespace.ɵɵelementStart(0, "td", 13);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -2614,14 +2615,14 @@
     }
     function TableSortingExample_th_8_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 9);
+            i0__namespace.ɵɵelementStart(0, "th", 15);
             i0__namespace.ɵɵtext(1, " Weight ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableSortingExample_td_9_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 10);
+            i0__namespace.ɵɵelementStart(0, "td", 13);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -2633,14 +2634,14 @@
     }
     function TableSortingExample_th_11_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "th", 9);
+            i0__namespace.ɵɵelementStart(0, "th", 16);
             i0__namespace.ɵɵtext(1, " Symbol ");
             i0__namespace.ɵɵelementEnd();
         }
     }
     function TableSortingExample_td_12_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelementStart(0, "td", 10);
+            i0__namespace.ɵɵelementStart(0, "td", 13);
             i0__namespace.ɵɵtext(1);
             i0__namespace.ɵɵelementEnd();
         }
@@ -2652,12 +2653,12 @@
     }
     function TableSortingExample_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "tr", 11);
+            i0__namespace.ɵɵelement(0, "tr", 17);
         }
     }
     function TableSortingExample_tr_14_Template(rf, ctx) {
         if (rf & 1) {
-            i0__namespace.ɵɵelement(0, "tr", 12);
+            i0__namespace.ɵɵelement(0, "tr", 18);
         }
     }
     var ELEMENT_DATA$f = [
@@ -2676,16 +2677,30 @@
      * @title Table with sorting
      */
     var TableSortingExample = /** @class */ (function () {
-        function TableSortingExample() {
+        function TableSortingExample(_liveAnnouncer) {
+            this._liveAnnouncer = _liveAnnouncer;
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new i1.MatTableDataSource(ELEMENT_DATA$f);
         }
         TableSortingExample.prototype.ngAfterViewInit = function () {
             this.dataSource.sort = this.sort;
         };
+        /** Announce the change in sort state for assistive technology. */
+        TableSortingExample.prototype.announceSortChange = function (sortState) {
+            // This example uses English messages. If your application supports
+            // multiple language, you would internationalize these strings.
+            // Furthermore, you can customize the message to add additional
+            // details about the values being sorted.
+            if (sortState.direction) {
+                this._liveAnnouncer.announce("Sorted " + sortState.direction + "ending");
+            }
+            else {
+                this._liveAnnouncer.announce('Sorting cleared');
+            }
+        };
         return TableSortingExample;
     }());
-    TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(); };
+    TableSortingExample.ɵfac = function TableSortingExample_Factory(t) { return new (t || TableSortingExample)(i0__namespace.ɵɵdirectiveInject(i1__namespace$4.LiveAnnouncer)); };
     TableSortingExample.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: TableSortingExample, selectors: [["table-sorting-example"]], viewQuery: function TableSortingExample_Query(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵviewQuery(i4.MatSort, 5);
@@ -2694,27 +2709,28 @@
                 var _t = void 0;
                 i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.sort = _t.first);
             }
-        }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) {
+        }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource", "matSortChange"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by number", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by name", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by weight", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by symbol", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by number"], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by name"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by weight"], ["mat-header-cell", "", "mat-sort-header", "", "sortActionDescription", "Sort by symbol"], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) {
             if (rf & 1) {
                 i0__namespace.ɵɵelementStart(0, "table", 0);
+                i0__namespace.ɵɵlistener("matSortChange", function TableSortingExample_Template_table_matSortChange_0_listener($event) { return ctx.announceSortChange($event); });
                 i0__namespace.ɵɵelementContainerStart(1, 1);
                 i0__namespace.ɵɵtemplate(2, TableSortingExample_th_2_Template, 2, 0, "th", 2);
                 i0__namespace.ɵɵtemplate(3, TableSortingExample_td_3_Template, 2, 1, "td", 3);
                 i0__namespace.ɵɵelementContainerEnd();
                 i0__namespace.ɵɵelementContainerStart(4, 4);
-                i0__namespace.ɵɵtemplate(5, TableSortingExample_th_5_Template, 2, 0, "th", 2);
+                i0__namespace.ɵɵtemplate(5, TableSortingExample_th_5_Template, 2, 0, "th", 5);
                 i0__namespace.ɵɵtemplate(6, TableSortingExample_td_6_Template, 2, 1, "td", 3);
                 i0__namespace.ɵɵelementContainerEnd();
-                i0__namespace.ɵɵelementContainerStart(7, 5);
-                i0__namespace.ɵɵtemplate(8, TableSortingExample_th_8_Template, 2, 0, "th", 2);
+                i0__namespace.ɵɵelementContainerStart(7, 6);
+                i0__namespace.ɵɵtemplate(8, TableSortingExample_th_8_Template, 2, 0, "th", 7);
                 i0__namespace.ɵɵtemplate(9, TableSortingExample_td_9_Template, 2, 1, "td", 3);
                 i0__namespace.ɵɵelementContainerEnd();
-                i0__namespace.ɵɵelementContainerStart(10, 6);
-                i0__namespace.ɵɵtemplate(11, TableSortingExample_th_11_Template, 2, 0, "th", 2);
+                i0__namespace.ɵɵelementContainerStart(10, 8);
+                i0__namespace.ɵɵtemplate(11, TableSortingExample_th_11_Template, 2, 0, "th", 9);
                 i0__namespace.ɵɵtemplate(12, TableSortingExample_td_12_Template, 2, 1, "td", 3);
                 i0__namespace.ɵɵelementContainerEnd();
-                i0__namespace.ɵɵtemplate(13, TableSortingExample_tr_13_Template, 1, 0, "tr", 7);
-                i0__namespace.ɵɵtemplate(14, TableSortingExample_tr_14_Template, 1, 0, "tr", 8);
+                i0__namespace.ɵɵtemplate(13, TableSortingExample_tr_13_Template, 1, 0, "tr", 10);
+                i0__namespace.ɵɵtemplate(14, TableSortingExample_tr_14_Template, 1, 0, "tr", 11);
                 i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
@@ -2733,7 +2749,7 @@
                         styleUrls: ['table-sorting-example.css'],
                         templateUrl: 'table-sorting-example.html',
                     }]
-            }], null, { sort: [{
+            }], function () { return [{ type: i1__namespace$4.LiveAnnouncer }]; }, { sort: [{
                     type: i0.ViewChild,
                     args: [i4.MatSort]
                 }] });
