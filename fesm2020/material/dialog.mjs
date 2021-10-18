@@ -53,8 +53,8 @@ class DialogDataExample {
     openDialog() {
         this.dialog.open(DialogDataExampleDialog, {
             data: {
-                animal: 'panda'
-            }
+                animal: 'panda',
+            },
         });
     }
 }
@@ -115,7 +115,7 @@ class DialogOverviewExample {
     openDialog() {
         const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '250px',
-            data: { name: this.name, animal: this.animal }
+            data: { name: this.name, animal: this.animal },
         });
         dialogRef.afterClosed().subscribe(result => {
             console.log('The dialog was closed');

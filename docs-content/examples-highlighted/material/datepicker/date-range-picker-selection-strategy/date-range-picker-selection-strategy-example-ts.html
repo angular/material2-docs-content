@@ -33,9 +33,11 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;date-range-picker-selection-strategy-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;date-range-picker-selection-strategy-example.html&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [{
-    <span class="hljs-attr">provide</span>: MAT_DATE_RANGE_SELECTION_STRATEGY,
-    <span class="hljs-attr">useClass</span>: FiveDayRangeSelectionStrategy
-  }]
+  <span class="hljs-attr">providers</span>: [
+    {
+      <span class="hljs-attr">provide</span>: MAT_DATE_RANGE_SELECTION_STRATEGY,
+      <span class="hljs-attr">useClass</span>: FiveDayRangeSelectionStrategy,
+    },
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRangePickerSelectionStrategyExample</span> </span>{}

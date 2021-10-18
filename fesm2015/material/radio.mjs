@@ -46,37 +46,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'radio-harness-example', template: "<mat-radio-group name=\"flavors\">\n  <mat-radio-button value=\"chocolate\" checked=\"true\">Chocolate</mat-radio-button>\n  <mat-radio-button value=\"vanilla\">Vanilla</mat-radio-button>\n  <mat-radio-button value=\"strawberry\">Strawberry</mat-radio-button>\n</mat-radio-group>\n" }]
         }] });
 
-const EXAMPLES = [
-    RadioHarnessExample,
-    RadioNgModelExample,
-    RadioOverviewExample,
-];
+const EXAMPLES = [RadioHarnessExample, RadioNgModelExample, RadioOverviewExample];
 class RadioExamplesModule {
 }
 RadioExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: RadioExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-RadioExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: RadioExamplesModule, declarations: [RadioHarnessExample,
-        RadioNgModelExample,
-        RadioOverviewExample], imports: [ReactiveFormsModule,
-        CommonModule,
-        MatRadioModule,
-        FormsModule], exports: [RadioHarnessExample,
-        RadioNgModelExample,
-        RadioOverviewExample] });
-RadioExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: RadioExamplesModule, imports: [[
-            ReactiveFormsModule,
-            CommonModule,
-            MatRadioModule,
-            FormsModule,
-        ]] });
+RadioExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: RadioExamplesModule, declarations: [RadioHarnessExample, RadioNgModelExample, RadioOverviewExample], imports: [ReactiveFormsModule, CommonModule, MatRadioModule, FormsModule], exports: [RadioHarnessExample, RadioNgModelExample, RadioOverviewExample] });
+RadioExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: RadioExamplesModule, imports: [[ReactiveFormsModule, CommonModule, MatRadioModule, FormsModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: RadioExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        ReactiveFormsModule,
-                        CommonModule,
-                        MatRadioModule,
-                        FormsModule,
-                    ],
+                    imports: [ReactiveFormsModule, CommonModule, MatRadioModule, FormsModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

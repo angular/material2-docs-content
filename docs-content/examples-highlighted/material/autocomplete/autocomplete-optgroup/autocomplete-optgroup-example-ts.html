@@ -21,83 +21,117 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;autocomplete-optgroup-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./autocomplete-optgroup-example.html&#x27;</span>,
 })
-
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteOptgroupExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
   <span class="hljs-attr">stateForm</span>: FormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
     <span class="hljs-attr">stateGroup</span>: <span class="hljs-string">&#x27;&#x27;</span>,
   });
 
-  stateGroups: StateGroup[] = [{
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;A&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Alabama&#x27;</span>, <span class="hljs-string">&#x27;Alaska&#x27;</span>, <span class="hljs-string">&#x27;Arizona&#x27;</span>, <span class="hljs-string">&#x27;Arkansas&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;C&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;California&#x27;</span>, <span class="hljs-string">&#x27;Colorado&#x27;</span>, <span class="hljs-string">&#x27;Connecticut&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;D&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Delaware&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;F&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Florida&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;G&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Georgia&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;H&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Hawaii&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;I&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Idaho&#x27;</span>, <span class="hljs-string">&#x27;Illinois&#x27;</span>, <span class="hljs-string">&#x27;Indiana&#x27;</span>, <span class="hljs-string">&#x27;Iowa&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;K&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Kansas&#x27;</span>, <span class="hljs-string">&#x27;Kentucky&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;L&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Louisiana&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;M&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Maine&#x27;</span>, <span class="hljs-string">&#x27;Maryland&#x27;</span>, <span class="hljs-string">&#x27;Massachusetts&#x27;</span>, <span class="hljs-string">&#x27;Michigan&#x27;</span>,
-      <span class="hljs-string">&#x27;Minnesota&#x27;</span>, <span class="hljs-string">&#x27;Mississippi&#x27;</span>, <span class="hljs-string">&#x27;Missouri&#x27;</span>, <span class="hljs-string">&#x27;Montana&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;N&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Nebraska&#x27;</span>, <span class="hljs-string">&#x27;Nevada&#x27;</span>, <span class="hljs-string">&#x27;New Hampshire&#x27;</span>, <span class="hljs-string">&#x27;New Jersey&#x27;</span>,
-      <span class="hljs-string">&#x27;New Mexico&#x27;</span>, <span class="hljs-string">&#x27;New York&#x27;</span>, <span class="hljs-string">&#x27;North Carolina&#x27;</span>, <span class="hljs-string">&#x27;North Dakota&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;O&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Ohio&#x27;</span>, <span class="hljs-string">&#x27;Oklahoma&#x27;</span>, <span class="hljs-string">&#x27;Oregon&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;P&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Pennsylvania&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;R&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Rhode Island&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;S&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;South Carolina&#x27;</span>, <span class="hljs-string">&#x27;South Dakota&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;T&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Tennessee&#x27;</span>, <span class="hljs-string">&#x27;Texas&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;U&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Utah&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;V&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Vermont&#x27;</span>, <span class="hljs-string">&#x27;Virginia&#x27;</span>]
-  }, {
-    <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;W&#x27;</span>,
-    <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Washington&#x27;</span>, <span class="hljs-string">&#x27;West Virginia&#x27;</span>, <span class="hljs-string">&#x27;Wisconsin&#x27;</span>, <span class="hljs-string">&#x27;Wyoming&#x27;</span>]
-  }];
+  stateGroups: StateGroup[] = [
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;A&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Alabama&#x27;</span>, <span class="hljs-string">&#x27;Alaska&#x27;</span>, <span class="hljs-string">&#x27;Arizona&#x27;</span>, <span class="hljs-string">&#x27;Arkansas&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;C&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;California&#x27;</span>, <span class="hljs-string">&#x27;Colorado&#x27;</span>, <span class="hljs-string">&#x27;Connecticut&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;D&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Delaware&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;F&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Florida&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;G&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Georgia&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;H&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Hawaii&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;I&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Idaho&#x27;</span>, <span class="hljs-string">&#x27;Illinois&#x27;</span>, <span class="hljs-string">&#x27;Indiana&#x27;</span>, <span class="hljs-string">&#x27;Iowa&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;K&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Kansas&#x27;</span>, <span class="hljs-string">&#x27;Kentucky&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;L&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Louisiana&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;M&#x27;</span>,
+      <span class="hljs-attr">names</span>: [
+        <span class="hljs-string">&#x27;Maine&#x27;</span>,
+        <span class="hljs-string">&#x27;Maryland&#x27;</span>,
+        <span class="hljs-string">&#x27;Massachusetts&#x27;</span>,
+        <span class="hljs-string">&#x27;Michigan&#x27;</span>,
+        <span class="hljs-string">&#x27;Minnesota&#x27;</span>,
+        <span class="hljs-string">&#x27;Mississippi&#x27;</span>,
+        <span class="hljs-string">&#x27;Missouri&#x27;</span>,
+        <span class="hljs-string">&#x27;Montana&#x27;</span>,
+      ],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;N&#x27;</span>,
+      <span class="hljs-attr">names</span>: [
+        <span class="hljs-string">&#x27;Nebraska&#x27;</span>,
+        <span class="hljs-string">&#x27;Nevada&#x27;</span>,
+        <span class="hljs-string">&#x27;New Hampshire&#x27;</span>,
+        <span class="hljs-string">&#x27;New Jersey&#x27;</span>,
+        <span class="hljs-string">&#x27;New Mexico&#x27;</span>,
+        <span class="hljs-string">&#x27;New York&#x27;</span>,
+        <span class="hljs-string">&#x27;North Carolina&#x27;</span>,
+        <span class="hljs-string">&#x27;North Dakota&#x27;</span>,
+      ],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;O&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Ohio&#x27;</span>, <span class="hljs-string">&#x27;Oklahoma&#x27;</span>, <span class="hljs-string">&#x27;Oregon&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;P&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Pennsylvania&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;R&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Rhode Island&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;S&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;South Carolina&#x27;</span>, <span class="hljs-string">&#x27;South Dakota&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;T&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Tennessee&#x27;</span>, <span class="hljs-string">&#x27;Texas&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;U&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Utah&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;V&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Vermont&#x27;</span>, <span class="hljs-string">&#x27;Virginia&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">letter</span>: <span class="hljs-string">&#x27;W&#x27;</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Washington&#x27;</span>, <span class="hljs-string">&#x27;West Virginia&#x27;</span>, <span class="hljs-string">&#x27;Wisconsin&#x27;</span>, <span class="hljs-string">&#x27;Wyoming&#x27;</span>],
+    },
+  ];
 
   stateGroupOptions: Observable&lt;StateGroup[]&gt;;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.stateGroupOptions = <span class="hljs-built_in">this</span>.stateForm.get(<span class="hljs-string">&#x27;stateGroup&#x27;</span>)!.valueChanges
-      .pipe(
-        startWith(<span class="hljs-string">&#x27;&#x27;</span>),
-        map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-built_in">this</span>._filterGroup(value))
-      );
+    <span class="hljs-built_in">this</span>.stateGroupOptions = <span class="hljs-built_in">this</span>.stateForm.get(<span class="hljs-string">&#x27;stateGroup&#x27;</span>)!.valueChanges.pipe(
+      startWith(<span class="hljs-string">&#x27;&#x27;</span>),
+      map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-built_in">this</span>._filterGroup(value)),
+    );
   }
 
   <span class="hljs-keyword">private</span> _filterGroup(value: <span class="hljs-built_in">string</span>): StateGroup[] {

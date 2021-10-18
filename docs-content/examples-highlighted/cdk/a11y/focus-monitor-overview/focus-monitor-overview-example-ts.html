@@ -6,14 +6,14 @@
   ElementRef,
   NgZone,
   OnDestroy,
-  ViewChild
+  ViewChild,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Monitoring focus with FocusMonitor */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-overview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-overview-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-overview-example.css&#x27;</span>]
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-overview-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span>, <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;element&#x27;</span>) element: ElementRef&lt;HTMLElement&gt;;
@@ -22,21 +22,25 @@
   elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
   subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
-              <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef,
-              <span class="hljs-keyword">private</span> _ngZone: NgZone</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
+    <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef,
+    <span class="hljs-keyword">private</span> _ngZone: NgZone,
+  </span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._focusMonitor.monitor(<span class="hljs-built_in">this</span>.element)
-        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> {
-          <span class="hljs-built_in">this</span>.elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(origin);
-          <span class="hljs-built_in">this</span>._cdr.markForCheck();
-        }));
-    <span class="hljs-built_in">this</span>._focusMonitor.monitor(<span class="hljs-built_in">this</span>.subtree, <span class="hljs-literal">true</span>)
-        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> {
-          <span class="hljs-built_in">this</span>.subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(origin);
-          <span class="hljs-built_in">this</span>._cdr.markForCheck();
-        }));
+    <span class="hljs-built_in">this</span>._focusMonitor.monitor(<span class="hljs-built_in">this</span>.element).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span>
+      <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(origin);
+        <span class="hljs-built_in">this</span>._cdr.markForCheck();
+      }),
+    );
+    <span class="hljs-built_in">this</span>._focusMonitor.monitor(<span class="hljs-built_in">this</span>.subtree, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span>
+      <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(origin);
+        <span class="hljs-built_in">this</span>._cdr.markForCheck();
+      }),
+    );
   }
 
   <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {

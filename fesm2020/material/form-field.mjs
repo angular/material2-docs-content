@@ -37,7 +37,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 class FormFieldCustomControlExample {
     constructor() {
         this.form = new FormGroup({
-            tel: new FormControl(new MyTel('', '', ''))
+            tel: new FormControl(new MyTel('', '', '')),
         });
     }
 }
@@ -72,25 +72,16 @@ class MyTelInput {
         this._required = false;
         this._disabled = false;
         this.parts = formBuilder.group({
-            area: [
-                null,
-                [Validators.required, Validators.minLength(3), Validators.maxLength(3)]
-            ],
-            exchange: [
-                null,
-                [Validators.required, Validators.minLength(3), Validators.maxLength(3)]
-            ],
-            subscriber: [
-                null,
-                [Validators.required, Validators.minLength(4), Validators.maxLength(4)]
-            ]
+            area: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
+            exchange: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
+            subscriber: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
         });
         if (this.ngControl != null) {
             this.ngControl.valueAccessor = this;
         }
     }
     get empty() {
-        const { value: { area, exchange, subscriber } } = this.parts;
+        const { value: { area, exchange, subscriber }, } = this.parts;
         return !area && !exchange && !subscriber;
     }
     get shouldLabelFloat() {
@@ -120,7 +111,7 @@ class MyTelInput {
     }
     get value() {
         if (this.parts.valid) {
-            const { value: { area, exchange, subscriber } } = this.parts;
+            const { value: { area, exchange, subscriber }, } = this.parts;
             return new MyTel(area, exchange, subscriber);
         }
         return null;
@@ -162,8 +153,7 @@ class MyTelInput {
         }
     }
     setDescribedByIds(ids) {
-        const controlElement = this._elementRef.nativeElement
-            .querySelector('.example-tel-input-container');
+        const controlElement = this._elementRef.nativeElement.querySelector('.example-tel-input-container');
         controlElement.setAttribute('aria-describedby', ids.join(' '));
     }
     onContainerClick() {

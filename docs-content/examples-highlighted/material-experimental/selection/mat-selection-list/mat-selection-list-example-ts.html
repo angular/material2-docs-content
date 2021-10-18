@@ -16,7 +16,7 @@
   selected4: <span class="hljs-built_in">string</span>[] = [];
 
   <span class="hljs-function"><span class="hljs-title">getCurrentSelected</span>(<span class="hljs-params">event: SelectionChange&lt;<span class="hljs-built_in">string</span>&gt;</span>)</span> {
-    <span class="hljs-keyword">return</span> event.after.map(<span class="hljs-function">(<span class="hljs-params">select</span>) =&gt;</span> select.value);
+    <span class="hljs-keyword">return</span> event.after.map(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.value);
   }
 
   <span class="hljs-function"><span class="hljs-title">trackByFn</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span>, value: <span class="hljs-built_in">string</span></span>)</span> {
@@ -33,12 +33,47 @@
 }
 
 <span class="hljs-keyword">const</span> ELEMENT_NAMES = [
-  <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,   <span class="hljs-string">&#x27;Helium&#x27;</span>,   <span class="hljs-string">&#x27;Lithium&#x27;</span>,  <span class="hljs-string">&#x27;Beryllium&#x27;</span>, <span class="hljs-string">&#x27;Boron&#x27;</span>,     <span class="hljs-string">&#x27;Carbon&#x27;</span>,   <span class="hljs-string">&#x27;Nitrogen&#x27;</span>,
-  <span class="hljs-string">&#x27;Oxygen&#x27;</span>,     <span class="hljs-string">&#x27;Fluorine&#x27;</span>, <span class="hljs-string">&#x27;Neon&#x27;</span>,     <span class="hljs-string">&#x27;Sodium&#x27;</span>,    <span class="hljs-string">&#x27;Magnesium&#x27;</span>, <span class="hljs-string">&#x27;Aluminum&#x27;</span>, <span class="hljs-string">&#x27;Silicon&#x27;</span>,
-  <span class="hljs-string">&#x27;Phosphorus&#x27;</span>, <span class="hljs-string">&#x27;Sulfur&#x27;</span>,   <span class="hljs-string">&#x27;Chlorine&#x27;</span>, <span class="hljs-string">&#x27;Argon&#x27;</span>,     <span class="hljs-string">&#x27;Potassium&#x27;</span>, <span class="hljs-string">&#x27;Calcium&#x27;</span>,
+  <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,
+  <span class="hljs-string">&#x27;Helium&#x27;</span>,
+  <span class="hljs-string">&#x27;Lithium&#x27;</span>,
+  <span class="hljs-string">&#x27;Beryllium&#x27;</span>,
+  <span class="hljs-string">&#x27;Boron&#x27;</span>,
+  <span class="hljs-string">&#x27;Carbon&#x27;</span>,
+  <span class="hljs-string">&#x27;Nitrogen&#x27;</span>,
+  <span class="hljs-string">&#x27;Oxygen&#x27;</span>,
+  <span class="hljs-string">&#x27;Fluorine&#x27;</span>,
+  <span class="hljs-string">&#x27;Neon&#x27;</span>,
+  <span class="hljs-string">&#x27;Sodium&#x27;</span>,
+  <span class="hljs-string">&#x27;Magnesium&#x27;</span>,
+  <span class="hljs-string">&#x27;Aluminum&#x27;</span>,
+  <span class="hljs-string">&#x27;Silicon&#x27;</span>,
+  <span class="hljs-string">&#x27;Phosphorus&#x27;</span>,
+  <span class="hljs-string">&#x27;Sulfur&#x27;</span>,
+  <span class="hljs-string">&#x27;Chlorine&#x27;</span>,
+  <span class="hljs-string">&#x27;Argon&#x27;</span>,
+  <span class="hljs-string">&#x27;Potassium&#x27;</span>,
+  <span class="hljs-string">&#x27;Calcium&#x27;</span>,
 ];
 
 <span class="hljs-keyword">const</span> ELEMENT_SYMBOLS = [
-  <span class="hljs-string">&#x27;H&#x27;</span>,  <span class="hljs-string">&#x27;He&#x27;</span>, <span class="hljs-string">&#x27;Li&#x27;</span>, <span class="hljs-string">&#x27;Be&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>, <span class="hljs-string">&#x27;N&#x27;</span>,  <span class="hljs-string">&#x27;O&#x27;</span>,  <span class="hljs-string">&#x27;F&#x27;</span>, <span class="hljs-string">&#x27;Ne&#x27;</span>,
-  <span class="hljs-string">&#x27;Na&#x27;</span>, <span class="hljs-string">&#x27;Mg&#x27;</span>, <span class="hljs-string">&#x27;Al&#x27;</span>, <span class="hljs-string">&#x27;Si&#x27;</span>, <span class="hljs-string">&#x27;P&#x27;</span>, <span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-string">&#x27;Cl&#x27;</span>, <span class="hljs-string">&#x27;Ar&#x27;</span>, <span class="hljs-string">&#x27;K&#x27;</span>, <span class="hljs-string">&#x27;Ca&#x27;</span>
+  <span class="hljs-string">&#x27;H&#x27;</span>,
+  <span class="hljs-string">&#x27;He&#x27;</span>,
+  <span class="hljs-string">&#x27;Li&#x27;</span>,
+  <span class="hljs-string">&#x27;Be&#x27;</span>,
+  <span class="hljs-string">&#x27;B&#x27;</span>,
+  <span class="hljs-string">&#x27;C&#x27;</span>,
+  <span class="hljs-string">&#x27;N&#x27;</span>,
+  <span class="hljs-string">&#x27;O&#x27;</span>,
+  <span class="hljs-string">&#x27;F&#x27;</span>,
+  <span class="hljs-string">&#x27;Ne&#x27;</span>,
+  <span class="hljs-string">&#x27;Na&#x27;</span>,
+  <span class="hljs-string">&#x27;Mg&#x27;</span>,
+  <span class="hljs-string">&#x27;Al&#x27;</span>,
+  <span class="hljs-string">&#x27;Si&#x27;</span>,
+  <span class="hljs-string">&#x27;P&#x27;</span>,
+  <span class="hljs-string">&#x27;S&#x27;</span>,
+  <span class="hljs-string">&#x27;Cl&#x27;</span>,
+  <span class="hljs-string">&#x27;Ar&#x27;</span>,
+  <span class="hljs-string">&#x27;K&#x27;</span>,
+  <span class="hljs-string">&#x27;Ca&#x27;</span>,
 ];

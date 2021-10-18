@@ -38,7 +38,7 @@ class ListSectionsExample {
             {
                 name: 'Work',
                 updated: new Date('1/28/16'),
-            }
+            },
         ];
         this.notes = [
             {
@@ -48,7 +48,7 @@ class ListSectionsExample {
             {
                 name: 'Kitchen Remodel',
                 updated: new Date('1/18/16'),
-            }
+            },
         ];
     }
 }
@@ -115,26 +115,16 @@ ListExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", vers
         ListOverviewExample,
         ListSectionsExample,
         ListSelectionExample,
-        ListSingleSelectionExample], imports: [CommonModule,
-        MatIconModule,
-        MatListModule], exports: [ListHarnessExample,
+        ListSingleSelectionExample], imports: [CommonModule, MatIconModule, MatListModule], exports: [ListHarnessExample,
         ListOverviewExample,
         ListSectionsExample,
         ListSelectionExample,
         ListSingleSelectionExample] });
-ListExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ListExamplesModule, imports: [[
-            CommonModule,
-            MatIconModule,
-            MatListModule,
-        ]] });
+ListExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ListExamplesModule, imports: [[CommonModule, MatIconModule, MatListModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ListExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CommonModule,
-                        MatIconModule,
-                        MatListModule,
-                    ],
+                    imports: [CommonModule, MatIconModule, MatListModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

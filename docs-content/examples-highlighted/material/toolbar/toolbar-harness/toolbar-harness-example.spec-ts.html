@@ -16,14 +16,14 @@ describe(<span class="hljs-string">&#x27;ToolbarHarnessExample&#x27;</span>, <sp
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatToolbarModule, MatIconModule],
-      <span class="hljs-attr">declarations</span>: [ToolbarHarnessExample]
+      <span class="hljs-attr">declarations</span>: [ToolbarHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(ToolbarHarnessExample);
     fixture.detectChanges();
@@ -54,9 +54,6 @@ describe(<span class="hljs-string">&#x27;ToolbarHarnessExample&#x27;</span>, <sp
     <span class="hljs-keyword">const</span> toolbars = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatToolbarHarness);
 
     expect(<span class="hljs-keyword">await</span> toolbars[<span class="hljs-number">0</span>].getRowsAsText()).toEqual([<span class="hljs-string">&#x27;My App&#x27;</span>]);
-    expect(<span class="hljs-keyword">await</span> toolbars[<span class="hljs-number">1</span>].getRowsAsText()).toEqual([
-      <span class="hljs-string">&#x27;Row 1&#x27;</span>,
-      <span class="hljs-string">&#x27;Row 2 Button 1  Button 2&#x27;</span>
-    ]);
+    expect(<span class="hljs-keyword">await</span> toolbars[<span class="hljs-number">1</span>].getRowsAsText()).toEqual([<span class="hljs-string">&#x27;Row 1&#x27;</span>, <span class="hljs-string">&#x27;Row 2 Button 1  Button 2&#x27;</span>]);
   });
 });

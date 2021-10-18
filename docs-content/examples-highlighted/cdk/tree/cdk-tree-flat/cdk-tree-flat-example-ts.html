@@ -2,53 +2,62 @@
 <span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
-
 <span class="hljs-keyword">const</span> TREE_DATA: ExampleFlatNode[] = [
   {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  }, {
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>,
     <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  }
+  },
 ];
 
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
@@ -69,7 +78,9 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTreeFlatExample</span> </span>{
   treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;ExampleFlatNode&gt;(
-      <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable);
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level,
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable,
+  );
 
   dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(TREE_DATA);
 

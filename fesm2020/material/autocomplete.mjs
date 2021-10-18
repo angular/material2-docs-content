@@ -44,15 +44,10 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 class AutocompleteDisplayExample {
     constructor() {
         this.myControl = new FormControl();
-        this.options = [
-            { name: 'Mary' },
-            { name: 'Shelley' },
-            { name: 'Igor' }
-        ];
+        this.options = [{ name: 'Mary' }, { name: 'Shelley' }, { name: 'Igor' }];
     }
     ngOnInit() {
-        this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name), map(name => name ? this._filter(name) : this.options.slice()));
+        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => (typeof value === 'string' ? value : value.name)), map(name => (name ? this._filter(name) : this.options.slice())));
     }
     displayFn(user) {
         return user && user.name ? user.name : '';
@@ -78,8 +73,7 @@ class AutocompleteFilterExample {
         this.options = ['One', 'Two', 'Three'];
     }
     ngOnInit() {
-        this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(value => this._filter(value)));
+        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
     }
     _filter(value) {
         const filterValue = value.toLowerCase();
@@ -106,70 +100,105 @@ class AutocompleteOptgroupExample {
         this.stateForm = this._formBuilder.group({
             stateGroup: '',
         });
-        this.stateGroups = [{
+        this.stateGroups = [
+            {
                 letter: 'A',
-                names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
-            }, {
+                names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas'],
+            },
+            {
                 letter: 'C',
-                names: ['California', 'Colorado', 'Connecticut']
-            }, {
+                names: ['California', 'Colorado', 'Connecticut'],
+            },
+            {
                 letter: 'D',
-                names: ['Delaware']
-            }, {
+                names: ['Delaware'],
+            },
+            {
                 letter: 'F',
-                names: ['Florida']
-            }, {
+                names: ['Florida'],
+            },
+            {
                 letter: 'G',
-                names: ['Georgia']
-            }, {
+                names: ['Georgia'],
+            },
+            {
                 letter: 'H',
-                names: ['Hawaii']
-            }, {
+                names: ['Hawaii'],
+            },
+            {
                 letter: 'I',
-                names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
-            }, {
+                names: ['Idaho', 'Illinois', 'Indiana', 'Iowa'],
+            },
+            {
                 letter: 'K',
-                names: ['Kansas', 'Kentucky']
-            }, {
+                names: ['Kansas', 'Kentucky'],
+            },
+            {
                 letter: 'L',
-                names: ['Louisiana']
-            }, {
+                names: ['Louisiana'],
+            },
+            {
                 letter: 'M',
-                names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
-                    'Minnesota', 'Mississippi', 'Missouri', 'Montana']
-            }, {
+                names: [
+                    'Maine',
+                    'Maryland',
+                    'Massachusetts',
+                    'Michigan',
+                    'Minnesota',
+                    'Mississippi',
+                    'Missouri',
+                    'Montana',
+                ],
+            },
+            {
                 letter: 'N',
-                names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
-                    'New Mexico', 'New York', 'North Carolina', 'North Dakota']
-            }, {
+                names: [
+                    'Nebraska',
+                    'Nevada',
+                    'New Hampshire',
+                    'New Jersey',
+                    'New Mexico',
+                    'New York',
+                    'North Carolina',
+                    'North Dakota',
+                ],
+            },
+            {
                 letter: 'O',
-                names: ['Ohio', 'Oklahoma', 'Oregon']
-            }, {
+                names: ['Ohio', 'Oklahoma', 'Oregon'],
+            },
+            {
                 letter: 'P',
-                names: ['Pennsylvania']
-            }, {
+                names: ['Pennsylvania'],
+            },
+            {
                 letter: 'R',
-                names: ['Rhode Island']
-            }, {
+                names: ['Rhode Island'],
+            },
+            {
                 letter: 'S',
-                names: ['South Carolina', 'South Dakota']
-            }, {
+                names: ['South Carolina', 'South Dakota'],
+            },
+            {
                 letter: 'T',
-                names: ['Tennessee', 'Texas']
-            }, {
+                names: ['Tennessee', 'Texas'],
+            },
+            {
                 letter: 'U',
-                names: ['Utah']
-            }, {
+                names: ['Utah'],
+            },
+            {
                 letter: 'V',
-                names: ['Vermont', 'Virginia']
-            }, {
+                names: ['Vermont', 'Virginia'],
+            },
+            {
                 letter: 'W',
-                names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
-            }];
+                names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming'],
+            },
+        ];
     }
     ngOnInit() {
-        this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
-            .pipe(startWith(''), map(value => this._filterGroup(value)));
+        this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges.pipe(startWith(''), map(value => this._filterGroup(value)));
     }
     _filterGroup(value) {
         if (value) {
@@ -198,29 +227,28 @@ class AutocompleteOverviewExample {
                 name: 'Arkansas',
                 population: '2.978M',
                 // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg',
             },
             {
                 name: 'California',
                 population: '39.14M',
                 // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg',
             },
             {
                 name: 'Florida',
                 population: '20.27M',
                 // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg',
             },
             {
                 name: 'Texas',
                 population: '27.47M',
                 // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
-            }
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg',
+            },
         ];
-        this.filteredStates = this.stateCtrl.valueChanges
-            .pipe(startWith(''), map(state => state ? this._filterStates(state) : this.states.slice()));
+        this.filteredStates = this.stateCtrl.valueChanges.pipe(startWith(''), map(state => (state ? this._filterStates(state) : this.states.slice())));
     }
     _filterStates(value) {
         const filterValue = value.toLowerCase();

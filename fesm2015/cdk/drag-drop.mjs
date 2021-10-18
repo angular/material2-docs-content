@@ -37,19 +37,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
  */
 class CdkDragDropConnectedSortingGroupExample {
     constructor() {
-        this.todo = [
-            'Get to work',
-            'Pick up groceries',
-            'Go home',
-            'Fall asleep'
-        ];
-        this.done = [
-            'Get up',
-            'Brush teeth',
-            'Take a shower',
-            'Check e-mail',
-            'Walk dog'
-        ];
+        this.todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+        this.done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
     }
     drop(event) {
         if (event.previousContainer === event.container) {
@@ -72,19 +61,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
  */
 class CdkDragDropConnectedSortingExample {
     constructor() {
-        this.todo = [
-            'Get to work',
-            'Pick up groceries',
-            'Go home',
-            'Fall asleep'
-        ];
-        this.done = [
-            'Get up',
-            'Brush teeth',
-            'Take a shower',
-            'Check e-mail',
-            'Walk dog'
-        ];
+        this.todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
+        this.done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
     }
     drop(event) {
         if (event.previousContainer === event.container) {
@@ -116,7 +94,7 @@ class CdkDragDropCustomPlaceholderExample {
             'Episode VI - Return of the Jedi',
             'Episode VII - The Force Awakens',
             'Episode VIII - The Last Jedi',
-            'Episode IX – The Rise of Skywalker'
+            'Episode IX – The Rise of Skywalker',
         ];
     }
     drop(event) {
@@ -139,40 +117,40 @@ class CdkDragDropCustomPreviewExample {
         this.movies = [
             {
                 title: 'Episode I - The Phantom Menace',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg',
             },
             {
                 title: 'Episode II - Attack of the Clones',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg',
             },
             {
                 title: 'Episode III - Revenge of the Sith',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/9/93/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/9/93/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.jpg',
             },
             {
                 title: 'Episode IV - A New Hope',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg',
             },
             {
                 title: 'Episode V - The Empire Strikes Back',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg',
             },
             {
                 title: 'Episode VI - Return of the Jedi',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg',
             },
             {
                 title: 'Episode VII - The Force Awakens',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg',
             },
             {
                 title: 'Episode VIII - The Last Jedi',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg'
+                poster: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg',
             },
             {
                 title: 'Episode IX – The Rise of Skywalker',
-                poster: 'https://upload.wikimedia.org/wikipedia/en/a/af/Star_Wars_The_Rise_of_Skywalker_poster.jpg'
-            }
+                poster: 'https://upload.wikimedia.org/wikipedia/en/a/af/Star_Wars_The_Rise_of_Skywalker_poster.jpg',
+            },
         ];
     }
     // tslint:enable:max-line-length
@@ -204,18 +182,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
  */
 class CdkDragDropDisabledSortingExample {
     constructor() {
-        this.items = [
-            'Carrots',
-            'Tomatoes',
-            'Onions',
-            'Apples',
-            'Avocados'
-        ];
-        this.basket = [
-            'Oranges',
-            'Bananas',
-            'Cucumbers'
-        ];
+        this.items = ['Carrots', 'Tomatoes', 'Onions', 'Apples', 'Avocados'];
+        this.basket = ['Oranges', 'Bananas', 'Cucumbers'];
     }
     drop(event) {
         if (event.previousContainer === event.container) {
@@ -241,7 +209,7 @@ class CdkDragDropDisabledExample {
         this.items = [
             { value: 'I can be dragged', disabled: false },
             { value: 'I cannot be dragged', disabled: true },
-            { value: 'I can also be dragged', disabled: false }
+            { value: 'I can also be dragged', disabled: false },
         ];
     }
     drop(event) {
@@ -327,7 +295,7 @@ class CdkDragDropHorizontalSortingExample {
             'Iron age',
             'Middle ages',
             'Early modern period',
-            'Long nineteenth century'
+            'Long nineteenth century',
         ];
     }
     drop(event) {
@@ -365,7 +333,7 @@ class CdkDragDropRootElementExample {
         this._portal = new TemplatePortal(this._dialogTemplate, this._viewContainerRef);
         this._overlayRef = this._overlay.create({
             positionStrategy: this._overlay.position().global().centerHorizontally().centerVertically(),
-            hasBackdrop: true
+            hasBackdrop: true,
         });
         this._overlayRef.backdropClick().subscribe(() => this._overlayRef.detach());
     }
@@ -400,7 +368,7 @@ class CdkDragDropSortingExample {
             'Episode VI - Return of the Jedi',
             'Episode VII - The Force Awakens',
             'Episode VIII - The Last Jedi',
-            'Episode IX – The Rise of Skywalker'
+            'Episode IX – The Rise of Skywalker',
         ];
     }
     drop(event) {
@@ -477,9 +445,7 @@ CdkDragDropExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0
         CdkDragDropOverviewExample,
         CdkDragDropRootElementExample,
         CdkDragDropSortingExample,
-        CdkDragDropSortPredicateExample], imports: [DragDropModule,
-        OverlayModule,
-        CommonModule], exports: [CdkDragDropAxisLockExample,
+        CdkDragDropSortPredicateExample], imports: [DragDropModule, OverlayModule, CommonModule], exports: [CdkDragDropAxisLockExample,
         CdkDragDropBoundaryExample,
         CdkDragDropConnectedSortingExample,
         CdkDragDropConnectedSortingGroupExample,
@@ -496,19 +462,11 @@ CdkDragDropExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0
         CdkDragDropRootElementExample,
         CdkDragDropSortingExample,
         CdkDragDropSortPredicateExample] });
-CdkDragDropExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkDragDropExamplesModule, imports: [[
-            DragDropModule,
-            OverlayModule,
-            CommonModule,
-        ]] });
+CdkDragDropExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkDragDropExamplesModule, imports: [[DragDropModule, OverlayModule, CommonModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkDragDropExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        DragDropModule,
-                        OverlayModule,
-                        CommonModule,
-                    ],
+                    imports: [DragDropModule, OverlayModule, CommonModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

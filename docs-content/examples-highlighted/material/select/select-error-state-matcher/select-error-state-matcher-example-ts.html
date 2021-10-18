@@ -16,15 +16,9 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-error-state-matcher-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectErrorStateMatcherExample</span> </span>{
-  selected = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [
-    Validators.required,
-    Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>),
-  ]);
+  selected = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [Validators.required, Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>)]);
 
-  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [
-    Validators.required,
-    Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>),
-  ]);
+  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [Validators.required, Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>)]);
 
   nativeSelectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [
     Validators.required,

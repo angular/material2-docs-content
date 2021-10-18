@@ -27,7 +27,7 @@
   <span class="hljs-attr">host</span>: {
     <span class="hljs-string">&#x27;[class.example-floating]&#x27;</span>: <span class="hljs-string">&#x27;shouldLabelFloat&#x27;</span>,
     <span class="hljs-string">&#x27;[id]&#x27;</span>: <span class="hljs-string">&#x27;id&#x27;</span>,
-  }
+  },
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
   <span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
@@ -42,17 +42,23 @@
   onTouched = <span class="hljs-function">() =&gt;</span> {};
 
   <span class="hljs-keyword">get</span> <span class="hljs-title">empty</span>() {
-    <span class="hljs-keyword">const</span> {<span class="hljs-attr">value</span>: {area, exchange, subscriber}} = <span class="hljs-built_in">this</span>.parts;
+    <span class="hljs-keyword">const</span> {
+      <span class="hljs-attr">value</span>: {area, exchange, subscriber},
+    } = <span class="hljs-built_in">this</span>.parts;
 
     <span class="hljs-keyword">return</span> !area &amp;&amp; !exchange &amp;&amp; !subscriber;
   }
 
-  <span class="hljs-keyword">get</span> <span class="hljs-title">shouldLabelFloat</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.focused || !<span class="hljs-built_in">this</span>.empty; }
+  <span class="hljs-keyword">get</span> <span class="hljs-title">shouldLabelFloat</span>() {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.focused || !<span class="hljs-built_in">this</span>.empty;
+  }
 
   <span class="hljs-meta">@Input</span>(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>) userAriaDescribedBy: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> <span class="hljs-title">placeholder</span>(): <span class="hljs-title">string</span> { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._placeholder; }
+  <span class="hljs-keyword">get</span> <span class="hljs-title">placeholder</span>(): <span class="hljs-title">string</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._placeholder;
+  }
   <span class="hljs-keyword">set</span> <span class="hljs-title">placeholder</span>(<span class="hljs-params">value: <span class="hljs-built_in">string</span></span>) {
     <span class="hljs-built_in">this</span>._placeholder = value;
     <span class="hljs-built_in">this</span>.stateChanges.next();
@@ -60,7 +66,9 @@
   <span class="hljs-keyword">private</span> _placeholder: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> <span class="hljs-title">required</span>(): <span class="hljs-title">boolean</span> { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._required; }
+  <span class="hljs-keyword">get</span> <span class="hljs-title">required</span>(): <span class="hljs-title">boolean</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._required;
+  }
   <span class="hljs-keyword">set</span> <span class="hljs-title">required</span>(<span class="hljs-params">value: <span class="hljs-built_in">boolean</span></span>) {
     <span class="hljs-built_in">this</span>._required = coerceBooleanProperty(value);
     <span class="hljs-built_in">this</span>.stateChanges.next();
@@ -68,7 +76,9 @@
   <span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;
 
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>(): <span class="hljs-title">boolean</span> { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled; }
+  <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>(): <span class="hljs-title">boolean</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled;
+  }
   <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: <span class="hljs-built_in">boolean</span></span>) {
     <span class="hljs-built_in">this</span>._disabled = coerceBooleanProperty(value);
     <span class="hljs-built_in">this</span>._disabled ? <span class="hljs-built_in">this</span>.parts.disable() : <span class="hljs-built_in">this</span>.parts.enable();
@@ -79,7 +89,9 @@
   <span class="hljs-meta">@Input</span>()
   <span class="hljs-keyword">get</span> <span class="hljs-title">value</span>(): <span class="hljs-title">MyTel</span> | <span class="hljs-title">null</span> {
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.parts.valid) {
-      <span class="hljs-keyword">const</span> {<span class="hljs-attr">value</span>: {area, exchange, subscriber}} = <span class="hljs-built_in">this</span>.parts;
+      <span class="hljs-keyword">const</span> {
+        <span class="hljs-attr">value</span>: {area, exchange, subscriber},
+      } = <span class="hljs-built_in">this</span>.parts;
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area, exchange, subscriber);
     }
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
@@ -95,8 +107,8 @@
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,
-    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl</span>)</span> {
-
+    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
+  </span>)</span> {
     <span class="hljs-built_in">this</span>.parts = formBuilder.group({
       <span class="hljs-attr">area</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
       <span class="hljs-attr">exchange</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
@@ -122,8 +134,9 @@
   }
 
   <span class="hljs-function"><span class="hljs-title">setDescribedByIds</span>(<span class="hljs-params">ids: <span class="hljs-built_in">string</span>[]</span>)</span> {
-    <span class="hljs-keyword">const</span> controlElement = <span class="hljs-built_in">this</span>._elementRef.nativeElement
-      .querySelector(<span class="hljs-string">&#x27;.example-tel-input-container&#x27;</span>)!;
+    <span class="hljs-keyword">const</span> controlElement = <span class="hljs-built_in">this</span>._elementRef.nativeElement.querySelector(
+      <span class="hljs-string">&#x27;.example-tel-input-container&#x27;</span>,
+    )!;
     controlElement.setAttribute(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>, ids.join(<span class="hljs-string">&#x27; &#x27;</span>));
   }
 

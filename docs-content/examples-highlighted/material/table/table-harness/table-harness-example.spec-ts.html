@@ -15,14 +15,14 @@ describe(<span class="hljs-string">&#x27;TableHarnessExample&#x27;</span>, <span
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatTableModule],
-      <span class="hljs-attr">declarations</span>: [TableHarnessExample]
+      <span class="hljs-attr">declarations</span>: [TableHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(TableHarnessExample);
     fixture.detectChanges();
@@ -49,12 +49,13 @@ describe(<span class="hljs-string">&#x27;TableHarnessExample&#x27;</span>, <span
     <span class="hljs-keyword">const</span> headerRows = <span class="hljs-keyword">await</span> table.getHeaderRows();
     <span class="hljs-keyword">const</span> footerRows = <span class="hljs-keyword">await</span> table.getFooterRows();
     <span class="hljs-keyword">const</span> rows = <span class="hljs-keyword">await</span> table.getRows();
-    <span class="hljs-keyword">const</span> headerCells = (<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> headerRows.map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.getCells())))
-      .map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.length);
-    <span class="hljs-keyword">const</span> footerCells = (<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> footerRows.map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.getCells())))
-      .map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.length);
-    <span class="hljs-keyword">const</span> cells = (<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> rows.map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.getCells())))
-      .map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.length);
+    <span class="hljs-keyword">const</span> headerCells = (<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> headerRows.map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.getCells()))).map(
+      <span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.length,
+    );
+    <span class="hljs-keyword">const</span> footerCells = (<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> footerRows.map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.getCells()))).map(
+      <span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.length,
+    );
+    <span class="hljs-keyword">const</span> cells = (<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> rows.map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.getCells()))).map(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> row.length);
 
     expect(headerCells).toEqual([<span class="hljs-number">4</span>]);
     expect(cells).toEqual([<span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>]);

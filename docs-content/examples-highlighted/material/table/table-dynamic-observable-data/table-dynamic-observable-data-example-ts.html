@@ -38,10 +38,7 @@
 
   <span class="hljs-function"><span class="hljs-title">addData</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">const</span> randomElementIndex = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * ELEMENT_DATA.length);
-    <span class="hljs-built_in">this</span>.dataToDisplay = [
-      ...this.dataToDisplay,
-      ELEMENT_DATA[randomElementIndex]
-    ];
+    <span class="hljs-built_in">this</span>.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA[randomElementIndex]];
     <span class="hljs-built_in">this</span>.dataSource.setData(<span class="hljs-built_in">this</span>.dataToDisplay);
   }
 

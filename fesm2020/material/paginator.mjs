@@ -111,17 +111,13 @@ class PaginatorIntlExampleModule {
 }
 PaginatorIntlExampleModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: PaginatorIntlExampleModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 PaginatorIntlExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: PaginatorIntlExampleModule, declarations: [PaginatorIntlExample], imports: [MatPaginatorModule] });
-PaginatorIntlExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: PaginatorIntlExampleModule, providers: [
-        { provide: MatPaginatorIntl, useClass: MyCustomPaginatorIntl }
-    ], imports: [[MatPaginatorModule]] });
+PaginatorIntlExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: PaginatorIntlExampleModule, providers: [{ provide: MatPaginatorIntl, useClass: MyCustomPaginatorIntl }], imports: [[MatPaginatorModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: PaginatorIntlExampleModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [MatPaginatorModule],
                     declarations: [PaginatorIntlExample],
-                    providers: [
-                        { provide: MatPaginatorIntl, useClass: MyCustomPaginatorIntl }
-                    ]
+                    providers: [{ provide: MatPaginatorIntl, useClass: MyCustomPaginatorIntl }],
                 }]
         }] });
 

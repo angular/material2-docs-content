@@ -172,78 +172,87 @@ const ELEMENT_DATA$j = [
         weight: 1.0079,
         symbol: 'H',
         description: `Hydrogen is a chemical element with symbol H and atomic number 1. With a standard
-        atomic weight of 1.008, hydrogen is the lightest element on the periodic table.`
-    }, {
+        atomic weight of 1.008, hydrogen is the lightest element on the periodic table.`,
+    },
+    {
         position: 2,
         name: 'Helium',
         weight: 4.0026,
         symbol: 'He',
         description: `Helium is a chemical element with symbol He and atomic number 2. It is a
         colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas
-        group in the periodic table. Its boiling point is the lowest among all the elements.`
-    }, {
+        group in the periodic table. Its boiling point is the lowest among all the elements.`,
+    },
+    {
         position: 3,
         name: 'Lithium',
         weight: 6.941,
         symbol: 'Li',
         description: `Lithium is a chemical element with symbol Li and atomic number 3. It is a soft,
         silvery-white alkali metal. Under standard conditions, it is the lightest metal and the
-        lightest solid element.`
-    }, {
+        lightest solid element.`,
+    },
+    {
         position: 4,
         name: 'Beryllium',
         weight: 9.0122,
         symbol: 'Be',
         description: `Beryllium is a chemical element with symbol Be and atomic number 4. It is a
         relatively rare element in the universe, usually occurring as a product of the spallation of
-        larger atomic nuclei that have collided with cosmic rays.`
-    }, {
+        larger atomic nuclei that have collided with cosmic rays.`,
+    },
+    {
         position: 5,
         name: 'Boron',
         weight: 10.811,
         symbol: 'B',
         description: `Boron is a chemical element with symbol B and atomic number 5. Produced entirely
         by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a
-        low-abundance element in the Solar system and in the Earth's crust.`
-    }, {
+        low-abundance element in the Solar system and in the Earth's crust.`,
+    },
+    {
         position: 6,
         name: 'Carbon',
         weight: 12.0107,
         symbol: 'C',
         description: `Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic
         and tetravalent—making four electrons available to form covalent chemical bonds. It belongs
-        to group 14 of the periodic table.`
-    }, {
+        to group 14 of the periodic table.`,
+    },
+    {
         position: 7,
         name: 'Nitrogen',
         weight: 14.0067,
         symbol: 'N',
         description: `Nitrogen is a chemical element with symbol N and atomic number 7. It was first
-        discovered and isolated by Scottish physician Daniel Rutherford in 1772.`
-    }, {
+        discovered and isolated by Scottish physician Daniel Rutherford in 1772.`,
+    },
+    {
         position: 8,
         name: 'Oxygen',
         weight: 15.9994,
         symbol: 'O',
         description: `Oxygen is a chemical element with symbol O and atomic number 8. It is a member of
          the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing
-         agent that readily forms oxides with most elements as well as with other compounds.`
-    }, {
+         agent that readily forms oxides with most elements as well as with other compounds.`,
+    },
+    {
         position: 9,
         name: 'Fluorine',
         weight: 18.9984,
         symbol: 'F',
         description: `Fluorine is a chemical element with symbol F and atomic number 9. It is the
         lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard
-        conditions.`
-    }, {
+        conditions.`,
+    },
+    {
         position: 10,
         name: 'Neon',
         weight: 20.1797,
         symbol: 'Ne',
         description: `Neon is a chemical element with symbol Ne and atomic number 10. It is a noble gas.
         Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about
-        two-thirds the density of air.`
+        two-thirds the density of air.`,
     },
 ];
 
@@ -321,12 +330,11 @@ class TableHttpExample {
     ngAfterViewInit() {
         this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
         // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 0));
         merge(this.sort.sortChange, this.paginator.page)
             .pipe(startWith({}), switchMap(() => {
             this.isLoadingResults = true;
-            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex)
-                .pipe(catchError(() => of(null)));
+            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex).pipe(catchError(() => of(null)));
         }), map(data => {
             // Flip flag to show that loading has finished.
             this.isLoadingResults = false;
@@ -339,7 +347,8 @@ class TableHttpExample {
             // would prevent users from re-triggering requests.
             this.resultsLength = data.total_count;
             return data.items;
-        })).subscribe(data => this.data = data);
+        }))
+            .subscribe(data => (this.data = data));
     }
 }
 TableHttpExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: TableHttpExample, deps: [{ token: i1$3.HttpClient }], target: i0.ɵɵFactoryTarget.Component });
@@ -395,11 +404,35 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 
 /** Constants used to fill up our data base. */
 const FRUITS = [
-    'blueberry', 'lychee', 'kiwi', 'mango', 'peach', 'lime', 'pomegranate', 'pineapple'
+    'blueberry',
+    'lychee',
+    'kiwi',
+    'mango',
+    'peach',
+    'lime',
+    'pomegranate',
+    'pineapple',
 ];
 const NAMES = [
-    'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
-    'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
+    'Maia',
+    'Asher',
+    'Olivia',
+    'Atticus',
+    'Amelia',
+    'Jack',
+    'Charlotte',
+    'Theodore',
+    'Isla',
+    'Oliver',
+    'Isabella',
+    'Jasper',
+    'Cora',
+    'Levi',
+    'Violet',
+    'Arthur',
+    'Mia',
+    'Thomas',
+    'Elizabeth',
 ];
 /**
  * @title Data table with sorting, pagination, and filtering.
@@ -438,13 +471,15 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             }] } });
 /** Builds and returns a new User. */
 function createNewUser(id) {
-    const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
+    const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
+        ' ' +
+        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
+        '.';
     return {
         id: id.toString(),
         name: name,
         progress: Math.round(Math.random() * 100).toString(),
-        fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))]
+        fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
     };
 }
 
@@ -611,7 +646,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
  */
 class TableStickyColumnsExample {
     constructor() {
-        this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
+        this.displayedColumns = [
+            'name',
+            'position',
+            'weight',
+            'symbol',
+            'position',
+            'weight',
+            'symbol',
+            'star',
+        ];
         this.dataSource = ELEMENT_DATA$e;
     }
 }
@@ -887,11 +931,13 @@ WrapperTable.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "1
 WrapperTable.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.0-next.15", type: WrapperTable, selector: "wrapper-table", inputs: { columns: "columns", dataSource: "dataSource" }, queries: [{ propertyName: "noDataRow", first: true, predicate: MatNoDataRow, descendants: true }, { propertyName: "headerRowDefs", predicate: MatHeaderRowDef }, { propertyName: "rowDefs", predicate: MatRowDef }, { propertyName: "columnDefs", predicate: MatColumnDef }], viewQueries: [{ propertyName: "table", first: true, predicate: MatTable, descendants: true, static: true }], ngImport: i0, template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <ng-content></ng-content>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Color Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n</table>\n", styles: ["\n    table {\n      width: 100%;\n    }\n  "], components: [{ type: i1.MatTable, selector: "mat-table, table[mat-table]", exportAs: ["matTable"] }, { type: i3$1.MatSortHeader, selector: "[mat-sort-header]", inputs: ["disabled", "mat-sort-header", "arrowPosition", "start", "sortActionDescription", "disableClear"], exportAs: ["matSortHeader"] }], directives: [{ type: i1.MatColumnDef, selector: "[matColumnDef]", inputs: ["sticky", "matColumnDef"] }, { type: i1.MatHeaderCellDef, selector: "[matHeaderCellDef]" }, { type: i1.MatHeaderCell, selector: "mat-header-cell, th[mat-header-cell]" }, { type: i1.MatCellDef, selector: "[matCellDef]" }, { type: i1.MatCell, selector: "mat-cell, td[mat-cell]" }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: WrapperTable, decorators: [{
             type: Component,
-            args: [{ selector: 'wrapper-table', styles: [`
+            args: [{ selector: 'wrapper-table', styles: [
+                        `
     table {
       width: 100%;
     }
-  `], template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <ng-content></ng-content>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Color Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n</table>\n" }]
+  `,
+                    ], template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <ng-content></ng-content>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Color Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n</table>\n" }]
         }], propDecorators: { headerRowDefs: [{
                 type: ContentChildren,
                 args: [MatHeaderRowDef]
@@ -1147,10 +1193,7 @@ class TableDynamicObservableDataExample {
     }
     addData() {
         const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA$1.length);
-        this.dataToDisplay = [
-            ...this.dataToDisplay,
-            ELEMENT_DATA$1[randomElementIndex]
-        ];
+        this.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA$1[randomElementIndex]];
         this.dataSource.setData(this.dataToDisplay);
     }
     removeData() {
@@ -1200,23 +1243,23 @@ class TableGeneratedColumnsExample {
             {
                 columnDef: 'position',
                 header: 'No.',
-                cell: (element) => `${element.position}`
+                cell: (element) => `${element.position}`,
             },
             {
                 columnDef: 'name',
                 header: 'Name',
-                cell: (element) => `${element.name}`
+                cell: (element) => `${element.name}`,
             },
             {
                 columnDef: 'weight',
                 header: 'Weight',
-                cell: (element) => `${element.weight}`
+                cell: (element) => `${element.weight}`,
             },
             {
                 columnDef: 'symbol',
                 header: 'Symbol',
-                cell: (element) => `${element.symbol}`
-            }
+                cell: (element) => `${element.symbol}`,
+            },
         ];
         this.dataSource = ELEMENT_DATA;
         this.displayedColumns = this.columns.map(c => c.columnDef);

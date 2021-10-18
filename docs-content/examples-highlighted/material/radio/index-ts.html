@@ -6,28 +6,14 @@
 <span class="hljs-keyword">import</span> {RadioOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./radio-overview/radio-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {RadioHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./radio-harness/radio-harness-example&#x27;</span>;
 
-<span class="hljs-keyword">export</span> {
-  RadioHarnessExample,
-  RadioNgModelExample,
-  RadioOverviewExample,
-};
+<span class="hljs-keyword">export</span> {RadioHarnessExample, RadioNgModelExample, RadioOverviewExample};
 
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  RadioHarnessExample,
-  RadioNgModelExample,
-  RadioOverviewExample,
-];
+<span class="hljs-keyword">const</span> EXAMPLES = [RadioHarnessExample, RadioNgModelExample, RadioOverviewExample];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    ReactiveFormsModule,
-    CommonModule,
-    MatRadioModule,
-    FormsModule,
-  ],
+  <span class="hljs-attr">imports</span>: [ReactiveFormsModule, CommonModule, MatRadioModule, FormsModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RadioExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RadioExamplesModule</span> </span>{}

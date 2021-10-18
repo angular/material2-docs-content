@@ -37,10 +37,7 @@ class MyErrorStateMatcher {
 /** @title Input with a custom ErrorStateMatcher */
 class InputErrorStateMatcherExample {
     constructor() {
-        this.emailFormControl = new FormControl('', [
-            Validators.required,
-            Validators.email,
-        ]);
+        this.emailFormControl = new FormControl('', [Validators.required, Validators.email]);
         this.matcher = new MyErrorStateMatcher();
     }
 }
@@ -56,10 +53,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
  */
 class InputErrorsExample {
     constructor() {
-        this.emailFormControl = new FormControl('', [
-            Validators.required,
-            Validators.email,
-        ]);
+        this.emailFormControl = new FormControl('', [Validators.required, Validators.email]);
     }
 }
 InputErrorsExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: InputErrorsExample, deps: [], target: i0.ɵɵFactoryTarget.Component });

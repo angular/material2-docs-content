@@ -10,21 +10,20 @@
 <span class="hljs-keyword">import</span> {SnackBarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./snack-bar-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
 
-
 describe(<span class="hljs-string">&#x27;SnackBarHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;SnackBarHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatSnackBarModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [SnackBarHarnessExample]
+      <span class="hljs-attr">declarations</span>: [SnackBarHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(SnackBarHarnessExample);
     fixture.detectChanges();

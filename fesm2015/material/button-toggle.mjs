@@ -102,30 +102,17 @@ ButtonToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
         ButtonToggleFormsExample,
-        ButtonToggleModeExample], imports: [FormsModule,
-        MatButtonToggleModule,
-        MatIconModule,
-        ReactiveFormsModule], exports: [ButtonToggleAppearanceExample,
+        ButtonToggleModeExample], imports: [FormsModule, MatButtonToggleModule, MatIconModule, ReactiveFormsModule], exports: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
         ButtonToggleFormsExample,
         ButtonToggleModeExample] });
-ButtonToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonToggleExamplesModule, imports: [[
-            FormsModule,
-            MatButtonToggleModule,
-            MatIconModule,
-            ReactiveFormsModule,
-        ]] });
+ButtonToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonToggleExamplesModule, imports: [[FormsModule, MatButtonToggleModule, MatIconModule, ReactiveFormsModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonToggleExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        FormsModule,
-                        MatButtonToggleModule,
-                        MatIconModule,
-                        ReactiveFormsModule,
-                    ],
+                    imports: [FormsModule, MatButtonToggleModule, MatIconModule, ReactiveFormsModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

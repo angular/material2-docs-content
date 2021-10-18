@@ -60,19 +60,12 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 class DefaultEnabledColumnResizeFlexExampleModule {
 }
 DefaultEnabledColumnResizeFlexExampleModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeFlexExampleModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-DefaultEnabledColumnResizeFlexExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeFlexExampleModule, declarations: [DefaultEnabledColumnResizeFlexExample], imports: [MatDefaultEnabledColumnResizeModule,
-        MatTableModule], exports: [DefaultEnabledColumnResizeFlexExample] });
-DefaultEnabledColumnResizeFlexExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeFlexExampleModule, imports: [[
-            MatDefaultEnabledColumnResizeModule,
-            MatTableModule,
-        ]] });
+DefaultEnabledColumnResizeFlexExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeFlexExampleModule, declarations: [DefaultEnabledColumnResizeFlexExample], imports: [MatDefaultEnabledColumnResizeModule, MatTableModule], exports: [DefaultEnabledColumnResizeFlexExample] });
+DefaultEnabledColumnResizeFlexExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeFlexExampleModule, imports: [[MatDefaultEnabledColumnResizeModule, MatTableModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeFlexExampleModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatDefaultEnabledColumnResizeModule,
-                        MatTableModule,
-                    ],
+                    imports: [MatDefaultEnabledColumnResizeModule, MatTableModule],
                     declarations: [DefaultEnabledColumnResizeFlexExample],
                     exports: [DefaultEnabledColumnResizeFlexExample],
                 }]
@@ -133,19 +126,12 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 class DefaultEnabledColumnResizeExampleModule {
 }
 DefaultEnabledColumnResizeExampleModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeExampleModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-DefaultEnabledColumnResizeExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeExampleModule, declarations: [DefaultEnabledColumnResizeExample], imports: [MatDefaultEnabledColumnResizeModule,
-        MatTableModule], exports: [DefaultEnabledColumnResizeExample] });
-DefaultEnabledColumnResizeExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeExampleModule, imports: [[
-            MatDefaultEnabledColumnResizeModule,
-            MatTableModule,
-        ]] });
+DefaultEnabledColumnResizeExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeExampleModule, declarations: [DefaultEnabledColumnResizeExample], imports: [MatDefaultEnabledColumnResizeModule, MatTableModule], exports: [DefaultEnabledColumnResizeExample] });
+DefaultEnabledColumnResizeExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeExampleModule, imports: [[MatDefaultEnabledColumnResizeModule, MatTableModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DefaultEnabledColumnResizeExampleModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatDefaultEnabledColumnResizeModule,
-                        MatTableModule,
-                    ],
+                    imports: [MatDefaultEnabledColumnResizeModule, MatTableModule],
                     declarations: [DefaultEnabledColumnResizeExample],
                     exports: [DefaultEnabledColumnResizeExample],
                 }]
@@ -206,19 +192,12 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 class OptInColumnResizeExampleModule {
 }
 OptInColumnResizeExampleModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: OptInColumnResizeExampleModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-OptInColumnResizeExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: OptInColumnResizeExampleModule, declarations: [OptInColumnResizeExample], imports: [MatColumnResizeModule,
-        MatTableModule], exports: [OptInColumnResizeExample] });
-OptInColumnResizeExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: OptInColumnResizeExampleModule, imports: [[
-            MatColumnResizeModule,
-            MatTableModule,
-        ]] });
+OptInColumnResizeExampleModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: OptInColumnResizeExampleModule, declarations: [OptInColumnResizeExample], imports: [MatColumnResizeModule, MatTableModule], exports: [OptInColumnResizeExample] });
+OptInColumnResizeExampleModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: OptInColumnResizeExampleModule, imports: [[MatColumnResizeModule, MatTableModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: OptInColumnResizeExampleModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatColumnResizeModule,
-                        MatTableModule,
-                    ],
+                    imports: [MatColumnResizeModule, MatTableModule],
                     declarations: [OptInColumnResizeExample],
                     exports: [OptInColumnResizeExample],
                 }]

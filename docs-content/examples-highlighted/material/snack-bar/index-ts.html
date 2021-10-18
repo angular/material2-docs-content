@@ -6,7 +6,7 @@
 <span class="hljs-keyword">import</span> {MatSnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   PizzaPartyComponent,
-  SnackBarComponentExample
+  SnackBarComponentExample,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./snack-bar-component/snack-bar-component-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {SnackBarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./snack-bar-overview/snack-bar-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {SnackBarPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./snack-bar-position/snack-bar-position-example&#x27;</span>;
@@ -28,16 +28,9 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    FormsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatSnackBarModule,
-  ],
+  <span class="hljs-attr">imports</span>: [FormsModule, MatButtonModule, MatInputModule, MatSelectModule, MatSnackBarModule],
   <span class="hljs-attr">declarations</span>: [...EXAMPLES, PizzaPartyComponent],
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: [...EXAMPLES, PizzaPartyComponent],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarExamplesModule</span> </span>{}

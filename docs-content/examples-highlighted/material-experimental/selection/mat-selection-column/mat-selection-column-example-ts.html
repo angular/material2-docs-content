@@ -15,7 +15,7 @@
   selected: <span class="hljs-built_in">string</span>[] = [];
 
   <span class="hljs-function"><span class="hljs-title">selectionChanged</span>(<span class="hljs-params">event: SelectionChange&lt;PeriodicElement&gt;</span>)</span> {
-    <span class="hljs-built_in">this</span>.selected = event.after.map(<span class="hljs-function">(<span class="hljs-params">select</span>) =&gt;</span> select.value.name);
+    <span class="hljs-built_in">this</span>.selected = event.after.map(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.value.name);
   }
 }
 

@@ -16,14 +16,14 @@ describe(<span class="hljs-string">&#x27;SlideToggleHarnessExample&#x27;</span>,
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatSlideToggleModule, ReactiveFormsModule],
-      <span class="hljs-attr">declarations</span>: [SlideToggleHarnessExample]
+      <span class="hljs-attr">declarations</span>: [SlideToggleHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(SlideToggleHarnessExample);
     fixture.detectChanges();
@@ -37,7 +37,8 @@ describe(<span class="hljs-string">&#x27;SlideToggleHarnessExample&#x27;</span>,
 
   it(<span class="hljs-string">&#x27;should load slide-toggle with name&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> slideToggles = <span class="hljs-keyword">await</span> loader.getAllHarnesses(
-      MatSlideToggleHarness.with({<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;first-name&#x27;</span>}));
+      MatSlideToggleHarness.with({<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;first-name&#x27;</span>}),
+    );
     expect(slideToggles.length).toBe(<span class="hljs-number">1</span>);
     expect(<span class="hljs-keyword">await</span> slideToggles[<span class="hljs-number">0</span>].getLabelText()).toBe(<span class="hljs-string">&#x27;First&#x27;</span>);
   });

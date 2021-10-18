@@ -39,11 +39,13 @@ PizzaPartyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", vers
 PizzaPartyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.0-next.15", type: PizzaPartyComponent, selector: "snack-bar-component-example-snack", ngImport: i0, template: "<span class=\"example-pizza-party\">\n  Pizza party!!! \uD83C\uDF55\n</span>\n", styles: ["\n    .example-pizza-party {\n      color: hotpink;\n    }\n  "] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: PizzaPartyComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'snack-bar-component-example-snack', styles: [`
+            args: [{ selector: 'snack-bar-component-example-snack', styles: [
+                        `
     .example-pizza-party {
       color: hotpink;
     }
-  `], template: "<span class=\"example-pizza-party\">\n  Pizza party!!! \uD83C\uDF55\n</span>\n" }]
+  `,
+                    ], template: "<span class=\"example-pizza-party\">\n  Pizza party!!! \uD83C\uDF55\n</span>\n" }]
         }] });
 
 /**
@@ -117,31 +119,15 @@ SnackBarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", v
 SnackBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SnackBarExamplesModule, declarations: [SnackBarComponentExample,
         SnackBarHarnessExample,
         SnackBarOverviewExample,
-        SnackBarPositionExample, PizzaPartyComponent], imports: [FormsModule,
-        MatButtonModule,
-        MatInputModule,
-        MatSelectModule,
-        MatSnackBarModule], exports: [SnackBarComponentExample,
+        SnackBarPositionExample, PizzaPartyComponent], imports: [FormsModule, MatButtonModule, MatInputModule, MatSelectModule, MatSnackBarModule], exports: [SnackBarComponentExample,
         SnackBarHarnessExample,
         SnackBarOverviewExample,
         SnackBarPositionExample] });
-SnackBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SnackBarExamplesModule, imports: [[
-            FormsModule,
-            MatButtonModule,
-            MatInputModule,
-            MatSelectModule,
-            MatSnackBarModule,
-        ]] });
+SnackBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SnackBarExamplesModule, imports: [[FormsModule, MatButtonModule, MatInputModule, MatSelectModule, MatSnackBarModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SnackBarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        FormsModule,
-                        MatButtonModule,
-                        MatInputModule,
-                        MatSelectModule,
-                        MatSnackBarModule,
-                    ],
+                    imports: [FormsModule, MatButtonModule, MatInputModule, MatSelectModule, MatSnackBarModule],
                     declarations: [...EXAMPLES, PizzaPartyComponent],
                     exports: EXAMPLES,
                     entryComponents: [...EXAMPLES, PizzaPartyComponent],

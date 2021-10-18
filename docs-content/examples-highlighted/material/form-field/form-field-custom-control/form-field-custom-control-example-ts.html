@@ -8,7 +8,7 @@
   OnDestroy,
   Optional,
   Self,
-  ViewChild
+  ViewChild,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   AbstractControl,
@@ -17,7 +17,7 @@
   FormControl,
   FormGroup,
   NgControl,
-  Validators
+  Validators,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
@@ -29,17 +29,13 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldCustomControlExample</span> </span>{
   <span class="hljs-attr">form</span>: FormGroup = <span class="hljs-keyword">new</span> FormGroup({
-    <span class="hljs-attr">tel</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>))
+    <span class="hljs-attr">tel</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)),
   });
 }
 
 <span class="hljs-comment">/** Data structure for holding telephone number. */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTel</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> area: <span class="hljs-built_in">string</span>,
-    <span class="hljs-keyword">public</span> exchange: <span class="hljs-built_in">string</span>,
-    <span class="hljs-keyword">public</span> subscriber: <span class="hljs-built_in">string</span>
-  </span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> area: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> exchange: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> subscriber: <span class="hljs-built_in">string</span></span>)</span> {}
 }
 
 <span class="hljs-comment">/** Custom `MatFormFieldControl` for telephone number input. */</span>
@@ -47,14 +43,13 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-tel-input&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;example-tel-input-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;example-tel-input-example.css&#x27;</span>],
-  <span class="hljs-attr">providers</span>: [{ <span class="hljs-attr">provide</span>: MatFormFieldControl, <span class="hljs-attr">useExisting</span>: MyTelInput }],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatFormFieldControl, <span class="hljs-attr">useExisting</span>: MyTelInput}],
   <span class="hljs-attr">host</span>: {
     <span class="hljs-string">&#x27;[class.example-floating]&#x27;</span>: <span class="hljs-string">&#x27;shouldLabelFloat&#x27;</span>,
     <span class="hljs-string">&#x27;[id]&#x27;</span>: <span class="hljs-string">&#x27;id&#x27;</span>,
-  }
+  },
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span>
-  <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
   <span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;area&#x27;</span>) areaInput: HTMLInputElement;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;exchange&#x27;</span>) exchangeInput: HTMLInputElement;
@@ -71,7 +66,7 @@
 
   <span class="hljs-keyword">get</span> <span class="hljs-title">empty</span>() {
     <span class="hljs-keyword">const</span> {
-      <span class="hljs-attr">value</span>: { area, exchange, subscriber }
+      <span class="hljs-attr">value</span>: {area, exchange, subscriber},
     } = <span class="hljs-built_in">this</span>.parts;
 
     <span class="hljs-keyword">return</span> !area &amp;&amp; !exchange &amp;&amp; !subscriber;
@@ -118,15 +113,15 @@
   <span class="hljs-keyword">get</span> <span class="hljs-title">value</span>(): <span class="hljs-title">MyTel</span> | <span class="hljs-title">null</span> {
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.parts.valid) {
       <span class="hljs-keyword">const</span> {
-        <span class="hljs-attr">value</span>: { area, exchange, subscriber }
+        <span class="hljs-attr">value</span>: {area, exchange, subscriber},
       } = <span class="hljs-built_in">this</span>.parts;
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area, exchange, subscriber);
     }
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
   <span class="hljs-keyword">set</span> <span class="hljs-title">value</span>(<span class="hljs-params">tel: MyTel | <span class="hljs-literal">null</span></span>) {
-    <span class="hljs-keyword">const</span> { area, exchange, subscriber } = tel || <span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>);
-    <span class="hljs-built_in">this</span>.parts.setValue({ area, exchange, subscriber });
+    <span class="hljs-keyword">const</span> {area, exchange, subscriber} = tel || <span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>);
+    <span class="hljs-built_in">this</span>.parts.setValue({area, exchange, subscriber});
     <span class="hljs-built_in">this</span>.stateChanges.next();
   }
 
@@ -139,21 +134,12 @@
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,
-    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl</span>)</span> {
-
+    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
+  </span>)</span> {
     <span class="hljs-built_in">this</span>.parts = formBuilder.group({
-      <span class="hljs-attr">area</span>: [
-        <span class="hljs-literal">null</span>,
-        [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]
-      ],
-      <span class="hljs-attr">exchange</span>: [
-        <span class="hljs-literal">null</span>,
-        [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]
-      ],
-      <span class="hljs-attr">subscriber</span>: [
-        <span class="hljs-literal">null</span>,
-        [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]
-      ]
+      <span class="hljs-attr">area</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+      <span class="hljs-attr">exchange</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+      <span class="hljs-attr">subscriber</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]],
     });
 
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.ngControl != <span class="hljs-literal">null</span>) {
@@ -195,8 +181,9 @@
   }
 
   <span class="hljs-function"><span class="hljs-title">setDescribedByIds</span>(<span class="hljs-params">ids: <span class="hljs-built_in">string</span>[]</span>)</span> {
-    <span class="hljs-keyword">const</span> controlElement = <span class="hljs-built_in">this</span>._elementRef.nativeElement
-      .querySelector(<span class="hljs-string">&#x27;.example-tel-input-container&#x27;</span>)!;
+    <span class="hljs-keyword">const</span> controlElement = <span class="hljs-built_in">this</span>._elementRef.nativeElement.querySelector(
+      <span class="hljs-string">&#x27;.example-tel-input-container&#x27;</span>,
+    )!;
     controlElement.setAttribute(<span class="hljs-string">&#x27;aria-describedby&#x27;</span>, ids.join(<span class="hljs-string">&#x27; &#x27;</span>));
   }
 

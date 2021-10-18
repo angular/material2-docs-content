@@ -42,31 +42,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'badge-harness-example', template: "<button mat-button id=\"simple\" [matBadge]=\"simpleContent\">Simple</button>\n<button mat-button\n    id=\"overlapping\"\n    matBadge=\"O\"\n    [matBadgeOverlap]=\"overlap\">Overlapping</button>\n<button\n    mat-button\n    id=\"disabled\"\n    matBadge=\"D\"\n    [matBadgeDisabled]=\"disabled\">Disabled</button>\n" }]
         }] });
 
-const EXAMPLES = [
-    BadgeOverviewExample,
-    BadgeHarnessExample
-];
+const EXAMPLES = [BadgeOverviewExample, BadgeHarnessExample];
 class BadgeExamplesModule {
 }
 BadgeExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BadgeExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-BadgeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BadgeExamplesModule, declarations: [BadgeOverviewExample,
-        BadgeHarnessExample], imports: [MatBadgeModule,
-        MatButtonModule,
-        MatIconModule], exports: [BadgeOverviewExample,
-        BadgeHarnessExample] });
-BadgeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BadgeExamplesModule, imports: [[
-            MatBadgeModule,
-            MatButtonModule,
-            MatIconModule,
-        ]] });
+BadgeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BadgeExamplesModule, declarations: [BadgeOverviewExample, BadgeHarnessExample], imports: [MatBadgeModule, MatButtonModule, MatIconModule], exports: [BadgeOverviewExample, BadgeHarnessExample] });
+BadgeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BadgeExamplesModule, imports: [[MatBadgeModule, MatButtonModule, MatIconModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BadgeExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatBadgeModule,
-                        MatButtonModule,
-                        MatIconModule,
-                    ],
+                    imports: [MatBadgeModule, MatButtonModule, MatIconModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

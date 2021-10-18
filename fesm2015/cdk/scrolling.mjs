@@ -94,8 +94,7 @@ class MyDataSource extends DataSource {
         this._fetchedPages.add(page);
         // Use `setTimeout` to simulate fetching data from server.
         setTimeout(() => {
-            this._cachedData.splice(page * this._pageSize, this._pageSize, ...Array.from({ length: this._pageSize })
-                .map((_, i) => `Item #${page * this._pageSize + i}`));
+            this._cachedData.splice(page * this._pageSize, this._pageSize, ...Array.from({ length: this._pageSize }).map((_, i) => `Item #${page * this._pageSize + i}`));
             this._dataStream.next(this._cachedData);
         }, Math.random() * 1000 + 200);
     }

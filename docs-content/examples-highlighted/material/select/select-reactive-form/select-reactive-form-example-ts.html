@@ -23,12 +23,12 @@
   foods: Food[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;steak-0&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Steak&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;pizza-1&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Pizza&#x27;</span>},
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;tacos-2&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Tacos&#x27;</span>}
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;tacos-2&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Tacos&#x27;</span>},
   ];
   cars: Car[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;volvo&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Volvo&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;saab&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Saab&#x27;</span>},
-    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;mercedes&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Mercedes&#x27;</span>}
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;mercedes&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Mercedes&#x27;</span>},
   ];
   foodControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.foods[<span class="hljs-number">2</span>].value);
   carControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.cars[<span class="hljs-number">1</span>].value);
@@ -36,7 +36,7 @@
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.form = <span class="hljs-keyword">new</span> FormGroup({
       <span class="hljs-attr">food</span>: <span class="hljs-built_in">this</span>.foodControl,
-      <span class="hljs-attr">car</span>: <span class="hljs-built_in">this</span>.carControl
+      <span class="hljs-attr">car</span>: <span class="hljs-built_in">this</span>.carControl,
     });
   }
 }

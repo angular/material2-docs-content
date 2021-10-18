@@ -36,20 +36,15 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             type: Component,
             args: [{
                     selector: 'component-portal-example',
-                    template: 'Hello, this is a component portal'
+                    template: 'Hello, this is a component portal',
                 }]
         }] });
 
-const EXAMPLES = [
-    CdkPortalOverviewExample,
-    ComponentPortalExample,
-];
+const EXAMPLES = [CdkPortalOverviewExample, ComponentPortalExample];
 class CdkPortalExamplesModule {
 }
 CdkPortalExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPortalExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkPortalExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPortalExamplesModule, declarations: [CdkPortalOverviewExample,
-        ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample,
-        ComponentPortalExample] });
+CdkPortalExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPortalExamplesModule, declarations: [CdkPortalOverviewExample, ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample, ComponentPortalExample] });
 CdkPortalExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPortalExamplesModule, imports: [[PortalModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPortalExamplesModule, decorators: [{
             type: NgModule,

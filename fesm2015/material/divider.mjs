@@ -29,28 +29,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'divider-harness-example', template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n" }]
         }] });
 
-const EXAMPLES = [
-    DividerHarnessExample,
-    DividerOverviewExample,
-];
+const EXAMPLES = [DividerHarnessExample, DividerOverviewExample];
 class DividerExamplesModule {
 }
 DividerExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DividerExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-DividerExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DividerExamplesModule, declarations: [DividerHarnessExample,
-        DividerOverviewExample], imports: [MatDividerModule,
-        MatListModule], exports: [DividerHarnessExample,
-        DividerOverviewExample] });
-DividerExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DividerExamplesModule, imports: [[
-            MatDividerModule,
-            MatListModule,
-        ]] });
+DividerExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DividerExamplesModule, declarations: [DividerHarnessExample, DividerOverviewExample], imports: [MatDividerModule, MatListModule], exports: [DividerHarnessExample, DividerOverviewExample] });
+DividerExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DividerExamplesModule, imports: [[MatDividerModule, MatListModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: DividerExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatDividerModule,
-                        MatListModule,
-                    ],
+                    imports: [MatDividerModule, MatListModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

@@ -39,8 +39,7 @@ class FocusMonitorFocusViaExample {
         this.origin = this.formatOrigin(null);
     }
     ngAfterViewInit() {
-        this.focusMonitor.monitor(this.monitoredEl)
-            .subscribe(origin => this._ngZone.run(() => {
+        this.focusMonitor.monitor(this.monitoredEl).subscribe(origin => this._ngZone.run(() => {
             this.origin = this.formatOrigin(origin);
             this._cdr.markForCheck();
         }));
@@ -72,13 +71,11 @@ class FocusMonitorOverviewExample {
         this.subtreeOrigin = this.formatOrigin(null);
     }
     ngAfterViewInit() {
-        this._focusMonitor.monitor(this.element)
-            .subscribe(origin => this._ngZone.run(() => {
+        this._focusMonitor.monitor(this.element).subscribe(origin => this._ngZone.run(() => {
             this.elementOrigin = this.formatOrigin(origin);
             this._cdr.markForCheck();
         }));
-        this._focusMonitor.monitor(this.subtree, true)
-            .subscribe(origin => this._ngZone.run(() => {
+        this._focusMonitor.monitor(this.subtree, true).subscribe(origin => this._ngZone.run(() => {
             this.subtreeOrigin = this.formatOrigin(origin);
             this._cdr.markForCheck();
         }));
@@ -114,21 +111,14 @@ class CdkA11yExamplesModule {
 CdkA11yExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkA11yExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 CdkA11yExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkA11yExamplesModule, declarations: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
-        FocusMonitorOverviewExample], imports: [A11yModule,
-        MatSelectModule], exports: [FocusMonitorDirectivesExample,
+        FocusMonitorOverviewExample], imports: [A11yModule, MatSelectModule], exports: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
         FocusMonitorOverviewExample] });
-CdkA11yExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkA11yExamplesModule, imports: [[
-            A11yModule,
-            MatSelectModule,
-        ]] });
+CdkA11yExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkA11yExamplesModule, imports: [[A11yModule, MatSelectModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkA11yExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        A11yModule,
-                        MatSelectModule,
-                    ],
+                    imports: [A11yModule, MatSelectModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

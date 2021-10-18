@@ -72,24 +72,14 @@ class BottomSheetExamplesModule {
 BottomSheetExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BottomSheetExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 BottomSheetExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BottomSheetExamplesModule, declarations: [BottomSheetHarnessExample,
         BottomSheetOverviewExample,
-        BottomSheetOverviewExampleSheet], imports: [MatBottomSheetModule,
-        MatButtonModule,
-        MatListModule], exports: [BottomSheetHarnessExample,
+        BottomSheetOverviewExampleSheet], imports: [MatBottomSheetModule, MatButtonModule, MatListModule], exports: [BottomSheetHarnessExample,
         BottomSheetOverviewExample,
         BottomSheetOverviewExampleSheet] });
-BottomSheetExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BottomSheetExamplesModule, imports: [[
-            MatBottomSheetModule,
-            MatButtonModule,
-            MatListModule,
-        ]] });
+BottomSheetExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BottomSheetExamplesModule, imports: [[MatBottomSheetModule, MatButtonModule, MatListModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: BottomSheetExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatBottomSheetModule,
-                        MatButtonModule,
-                        MatListModule,
-                    ],
+                    imports: [MatBottomSheetModule, MatButtonModule, MatListModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

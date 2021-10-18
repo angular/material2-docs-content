@@ -2,15 +2,12 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   CdkPortalOverviewExample,
-  ComponentPortalExample
+  ComponentPortalExample,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-portal-overview/cdk-portal-overview-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {CdkPortalOverviewExample, ComponentPortalExample};
 
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  CdkPortalOverviewExample,
-  ComponentPortalExample,
-];
+<span class="hljs-keyword">const</span> EXAMPLES = [CdkPortalOverviewExample, ComponentPortalExample];
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [PortalModule],
@@ -18,5 +15,4 @@
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPortalExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPortalExamplesModule</span> </span>{}

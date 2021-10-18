@@ -15,14 +15,14 @@ describe(<span class="hljs-string">&#x27;ProgressSpinnerHarnessExample&#x27;</sp
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatProgressSpinnerModule],
-      <span class="hljs-attr">declarations</span>: [ProgressSpinnerHarnessExample]
+      <span class="hljs-attr">declarations</span>: [ProgressSpinnerHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(ProgressSpinnerHarnessExample);
     fixture.detectChanges();
@@ -36,19 +36,17 @@ describe(<span class="hljs-string">&#x27;ProgressSpinnerHarnessExample&#x27;</sp
 
   it(<span class="hljs-string">&#x27;should get the value&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     fixture.componentInstance.value = <span class="hljs-number">50</span>;
-    <span class="hljs-keyword">const</span> [
-      determinate,
-      impliedIndeterminate
-    ] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatProgressSpinnerHarness);
+    <span class="hljs-keyword">const</span> [determinate, impliedIndeterminate] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(
+      MatProgressSpinnerHarness,
+    );
     expect(<span class="hljs-keyword">await</span> determinate.getValue()).toBe(<span class="hljs-number">50</span>);
     expect(<span class="hljs-keyword">await</span> impliedIndeterminate.getValue()).toBe(<span class="hljs-literal">null</span>);
   });
 
   it(<span class="hljs-string">&#x27;should get the mode&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> [
-      determinate,
-      impliedIndeterminate
-    ] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatProgressSpinnerHarness);
+    <span class="hljs-keyword">const</span> [determinate, impliedIndeterminate] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(
+      MatProgressSpinnerHarness,
+    );
     expect(<span class="hljs-keyword">await</span> determinate.getMode()).toBe(<span class="hljs-string">&#x27;determinate&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> impliedIndeterminate.getMode()).toBe(<span class="hljs-string">&#x27;indeterminate&#x27;</span>);
   });

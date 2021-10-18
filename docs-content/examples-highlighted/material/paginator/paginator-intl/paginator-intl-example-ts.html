@@ -38,8 +38,6 @@
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [MatPaginatorModule],
   <span class="hljs-attr">declarations</span>: [PaginatorIntlExample],
-  <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MatPaginatorIntl, <span class="hljs-attr">useClass</span>: MyCustomPaginatorIntl}
-  ]
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatPaginatorIntl, <span class="hljs-attr">useClass</span>: MyCustomPaginatorIntl}],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorIntlExampleModule</span> </span>{}

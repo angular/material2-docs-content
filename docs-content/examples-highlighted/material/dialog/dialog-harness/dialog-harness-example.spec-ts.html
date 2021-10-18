@@ -16,19 +16,21 @@ describe(<span class="hljs-string">&#x27;DialogHarnessExample&#x27;</span>, <spa
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
-  beforeEach(waitForAsync(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatDialogModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [DialogHarnessExample]
-    }).compileComponents();
-    fixture = TestBed.createComponent(DialogHarnessExample);
-    fixture.detectChanges();
-    loader = TestbedHarnessEnvironment.documentRootLoader(fixture);
-  }));
+  beforeEach(
+    waitForAsync(<span class="hljs-keyword">async</span> () =&gt; {
+      <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+        <span class="hljs-attr">imports</span>: [MatDialogModule, NoopAnimationsModule],
+        <span class="hljs-attr">declarations</span>: [DialogHarnessExample],
+      }).compileComponents();
+      fixture = TestBed.createComponent(DialogHarnessExample);
+      fixture.detectChanges();
+      loader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+    }),
+  );
 
   it(<span class="hljs-string">&#x27;should load harness for dialog&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     fixture.componentInstance.open();
@@ -53,7 +55,6 @@ describe(<span class="hljs-string">&#x27;DialogHarnessExample&#x27;</span>, <spa
     expect(<span class="hljs-keyword">await</span> dialogs[<span class="hljs-number">0</span>].getRole()).toBe(<span class="hljs-string">&#x27;alertdialog&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> dialogs[<span class="hljs-number">1</span>].getRole()).toBe(<span class="hljs-string">&#x27;dialog&#x27;</span>);
   });
-
 
   it(<span class="hljs-string">&#x27;should be able to close dialog&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     fixture.componentInstance.open({<span class="hljs-attr">disableClose</span>: <span class="hljs-literal">true</span>});

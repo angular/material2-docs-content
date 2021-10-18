@@ -13,47 +13,57 @@ const TREE_DATA$1 = [
         name: 'Fruit',
         expandable: true,
         level: 0,
-    }, {
+    },
+    {
         name: 'Apple',
         expandable: false,
         level: 1,
-    }, {
+    },
+    {
         name: 'Banana',
         expandable: false,
         level: 1,
-    }, {
+    },
+    {
         name: 'Fruit loops',
         expandable: false,
         level: 1,
-    }, {
+    },
+    {
         name: 'Vegetables',
         expandable: true,
         level: 0,
-    }, {
+    },
+    {
         name: 'Green',
         expandable: true,
         level: 1,
-    }, {
+    },
+    {
         name: 'Broccoli',
         expandable: false,
         level: 2,
-    }, {
+    },
+    {
         name: 'Brussels sprouts',
         expandable: false,
         level: 2,
-    }, {
+    },
+    {
         name: 'Orange',
         expandable: true,
         level: 1,
-    }, {
+    },
+    {
         name: 'Pumpkins',
         expandable: false,
         level: 2,
-    }, {
+    },
+    {
         name: 'Carrots',
         expandable: false,
         level: 2,
-    }
+    },
 ];
 /**
  * @title Tree with flat nodes
@@ -94,28 +104,20 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 const TREE_DATA = [
     {
         name: 'Fruit',
-        children: [
-            { name: 'Apple' },
-            { name: 'Banana' },
-            { name: 'Fruit loops' },
-        ]
-    }, {
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+    },
+    {
         name: 'Vegetables',
         children: [
             {
                 name: 'Green',
-                children: [
-                    { name: 'Broccoli' },
-                    { name: 'Brussels sprouts' },
-                ]
-            }, {
-                name: 'Orange',
-                children: [
-                    { name: 'Pumpkins' },
-                    { name: 'Carrots' },
-                ]
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
             },
-        ]
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
     },
 ];
 /**
@@ -135,31 +137,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'cdk-tree-nested-example', template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'Toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n", styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"] }]
         }] });
 
-const EXAMPLES = [
-    CdkTreeFlatExample,
-    CdkTreeNestedExample,
-];
+const EXAMPLES = [CdkTreeFlatExample, CdkTreeNestedExample];
 class CdkTreeExamplesModule {
 }
 CdkTreeExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTreeExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkTreeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTreeExamplesModule, declarations: [CdkTreeFlatExample,
-        CdkTreeNestedExample], imports: [CdkTreeModule,
-        MatButtonModule,
-        MatIconModule], exports: [CdkTreeFlatExample,
-        CdkTreeNestedExample] });
-CdkTreeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTreeExamplesModule, imports: [[
-            CdkTreeModule,
-            MatButtonModule,
-            MatIconModule,
-        ]] });
+CdkTreeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTreeExamplesModule, declarations: [CdkTreeFlatExample, CdkTreeNestedExample], imports: [CdkTreeModule, MatButtonModule, MatIconModule], exports: [CdkTreeFlatExample, CdkTreeNestedExample] });
+CdkTreeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTreeExamplesModule, imports: [[CdkTreeModule, MatButtonModule, MatIconModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTreeExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CdkTreeModule,
-                        MatButtonModule,
-                        MatIconModule,
-                    ],
+                    imports: [CdkTreeModule, MatButtonModule, MatIconModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

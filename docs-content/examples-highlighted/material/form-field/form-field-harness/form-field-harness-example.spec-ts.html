@@ -19,14 +19,14 @@ describe(<span class="hljs-string">&#x27;FormFieldHarnessExample&#x27;</span>, <
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [FormFieldHarnessExample]
+      <span class="hljs-attr">declarations</span>: [FormFieldHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(FormFieldHarnessExample);
     fixture.detectChanges();
@@ -40,7 +40,7 @@ describe(<span class="hljs-string">&#x27;FormFieldHarnessExample&#x27;</span>, <
 
   it(<span class="hljs-string">&#x27;should be able to get control of form-field&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> formField = <span class="hljs-keyword">await</span> loader.getHarness(MatFormFieldHarness);
-    expect(<span class="hljs-keyword">await</span> formField.getControl() <span class="hljs-keyword">instanceof</span> MatInputHarness).toBe(<span class="hljs-literal">true</span>);
+    expect((<span class="hljs-keyword">await</span> formField.getControl()) <span class="hljs-keyword">instanceof</span> MatInputHarness).toBe(<span class="hljs-literal">true</span>);
   });
 
   it(<span class="hljs-string">&#x27;should be able to get error messages and hints of form-field&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
@@ -49,7 +49,7 @@ describe(<span class="hljs-string">&#x27;FormFieldHarnessExample&#x27;</span>, <
     expect(<span class="hljs-keyword">await</span> formField.getTextHints()).toEqual([<span class="hljs-string">&#x27;Hint&#x27;</span>]);
 
     fixture.componentInstance.requiredControl.setValue(<span class="hljs-string">&#x27;&#x27;</span>);
-    <span class="hljs-keyword">await</span> ((<span class="hljs-keyword">await</span> formField.getControl() <span class="hljs-keyword">as</span> MatInputHarness))?.blur();
+    <span class="hljs-keyword">await</span> ((<span class="hljs-keyword">await</span> formField.getControl()) <span class="hljs-keyword">as</span> MatInputHarness)?.blur();
     expect(<span class="hljs-keyword">await</span> formField.getTextErrors()).toEqual([<span class="hljs-string">&#x27;Error&#x27;</span>]);
     expect(<span class="hljs-keyword">await</span> formField.getTextHints()).toEqual([]);
   });

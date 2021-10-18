@@ -28,7 +28,7 @@
     <span class="hljs-built_in">this</span>._portal = <span class="hljs-keyword">new</span> TemplatePortal(<span class="hljs-built_in">this</span>._dialogTemplate, <span class="hljs-built_in">this</span>._viewContainerRef);
     <span class="hljs-built_in">this</span>._overlayRef = <span class="hljs-built_in">this</span>._overlay.create({
       <span class="hljs-attr">positionStrategy</span>: <span class="hljs-built_in">this</span>._overlay.position().global().centerHorizontally().centerVertically(),
-      <span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">true</span>
+      <span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">true</span>,
     });
     <span class="hljs-built_in">this</span>._overlayRef.backdropClick().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>._overlayRef.detach());
   }

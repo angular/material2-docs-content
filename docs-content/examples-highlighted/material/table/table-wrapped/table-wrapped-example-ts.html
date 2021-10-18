@@ -16,7 +16,7 @@
   MatNoDataRow,
   MatRowDef,
   MatTable,
-  MatTableDataSource
+  MatTableDataSource,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
@@ -73,11 +73,13 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;wrapper-table&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;wrapper-table.html&#x27;</span>,
-  <span class="hljs-attr">styles</span>: [<span class="hljs-string">`
+  <span class="hljs-attr">styles</span>: [
+    <span class="hljs-string">`
     table {
       width: 100%;
     }
-  `</span>]
+  `</span>,
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WrapperTable</span>&lt;<span class="hljs-title">T</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">AfterContentInit</span> </span>{
   <span class="hljs-meta">@ContentChildren</span>(MatHeaderRowDef) headerRowDefs: QueryList&lt;MatHeaderRowDef&gt;;

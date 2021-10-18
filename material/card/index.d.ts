@@ -17,7 +17,7 @@ import * as i8 from "@angular/material/button";
 import * as i9 from "@angular/material/card";
 import * as i10 from "@angular/material/divider";
 import * as i11 from "@angular/material/progress-bar";
-export { CardFancyExample, CardOverviewExample, CardHarnessExample, CardActionsExample, CardMediaSizeExample, CardSubtitleExample, CardFooterExample };
+export { CardFancyExample, CardOverviewExample, CardHarnessExample, CardActionsExample, CardMediaSizeExample, CardSubtitleExample, CardFooterExample, };
 export declare class CardExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<CardExamplesModule, [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample, typeof i4.CardActionsExample, typeof i5.CardMediaSizeExample, typeof i6.CardSubtitleExample, typeof i7.CardFooterExample], [typeof i8.MatButtonModule, typeof i9.MatCardModule, typeof i10.MatDividerModule, typeof i11.MatProgressBarModule], [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample, typeof i4.CardActionsExample, typeof i5.CardMediaSizeExample, typeof i6.CardSubtitleExample, typeof i7.CardFooterExample]>;

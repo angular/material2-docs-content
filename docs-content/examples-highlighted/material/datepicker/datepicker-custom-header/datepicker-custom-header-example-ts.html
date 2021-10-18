@@ -3,7 +3,7 @@
   ChangeDetectorRef,
   Component,
   Inject,
-  OnDestroy
+  OnDestroy,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCalendar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
@@ -23,7 +23,8 @@
 <span class="hljs-comment">/** Custom header component for datepicker. */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-header&#x27;</span>,
-  <span class="hljs-attr">styles</span>: [<span class="hljs-string">`
+  <span class="hljs-attr">styles</span>: [
+    <span class="hljs-string">`
     .example-header {
       display: flex;
       align-items: center;
@@ -40,7 +41,8 @@
     .example-double-arrow .mat-icon {
       margin: -22%;
     }
-  `</span>],
+  `</span>,
+  ],
   <span class="hljs-attr">template</span>: <span class="hljs-string">`
     &lt;div class=&quot;example-header&quot;&gt;
       &lt;button mat-icon-button class=&quot;example-double-arrow&quot; (click)=&quot;previousClicked(&#x27;year&#x27;)&quot;&gt;
@@ -66,11 +68,12 @@
   <span class="hljs-keyword">private</span> _destroyed = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-      <span class="hljs-keyword">private</span> _calendar: MatCalendar&lt;D&gt;, <span class="hljs-keyword">private</span> _dateAdapter: DateAdapter&lt;D&gt;,
-      <span class="hljs-meta">@Inject</span>(MAT_DATE_FORMATS) <span class="hljs-keyword">private</span> _dateFormats: MatDateFormats, cdr: ChangeDetectorRef</span>)</span> {
-    _calendar.stateChanges
-        .pipe(takeUntil(<span class="hljs-built_in">this</span>._destroyed))
-        .subscribe(<span class="hljs-function">() =&gt;</span> cdr.markForCheck());
+    <span class="hljs-keyword">private</span> _calendar: MatCalendar&lt;D&gt;,
+    <span class="hljs-keyword">private</span> _dateAdapter: DateAdapter&lt;D&gt;,
+    <span class="hljs-meta">@Inject</span>(MAT_DATE_FORMATS) <span class="hljs-keyword">private</span> _dateFormats: MatDateFormats,
+    cdr: ChangeDetectorRef,
+  </span>)</span> {
+    _calendar.stateChanges.pipe(takeUntil(<span class="hljs-built_in">this</span>._destroyed)).subscribe(<span class="hljs-function">() =&gt;</span> cdr.markForCheck());
   }
 
   <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
@@ -80,19 +83,21 @@
 
   <span class="hljs-keyword">get</span> <span class="hljs-title">periodLabel</span>() {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._dateAdapter
-        .format(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-built_in">this</span>._dateFormats.display.monthYearLabel)
-        .toLocaleUpperCase();
+      .format(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-built_in">this</span>._dateFormats.display.monthYearLabel)
+      .toLocaleUpperCase();
   }
 
   <span class="hljs-function"><span class="hljs-title">previousClicked</span>(<span class="hljs-params">mode: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._calendar.activeDate = mode === <span class="hljs-string">&#x27;month&#x27;</span> ?
-        <span class="hljs-built_in">this</span>._dateAdapter.addCalendarMonths(<span class="hljs-built_in">this</span>._calendar.activeDate, -<span class="hljs-number">1</span>) :
-        <span class="hljs-built_in">this</span>._dateAdapter.addCalendarYears(<span class="hljs-built_in">this</span>._calendar.activeDate, -<span class="hljs-number">1</span>);
+    <span class="hljs-built_in">this</span>._calendar.activeDate =
+      mode === <span class="hljs-string">&#x27;month&#x27;</span>
+        ? <span class="hljs-built_in">this</span>._dateAdapter.addCalendarMonths(<span class="hljs-built_in">this</span>._calendar.activeDate, -<span class="hljs-number">1</span>)
+        : <span class="hljs-built_in">this</span>._dateAdapter.addCalendarYears(<span class="hljs-built_in">this</span>._calendar.activeDate, -<span class="hljs-number">1</span>);
   }
 
   <span class="hljs-function"><span class="hljs-title">nextClicked</span>(<span class="hljs-params">mode: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._calendar.activeDate = mode === <span class="hljs-string">&#x27;month&#x27;</span> ?
-        <span class="hljs-built_in">this</span>._dateAdapter.addCalendarMonths(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-number">1</span>) :
-        <span class="hljs-built_in">this</span>._dateAdapter.addCalendarYears(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">this</span>._calendar.activeDate =
+      mode === <span class="hljs-string">&#x27;month&#x27;</span>
+        ? <span class="hljs-built_in">this</span>._dateAdapter.addCalendarMonths(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-number">1</span>)
+        : <span class="hljs-built_in">this</span>._dateAdapter.addCalendarYears(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-number">1</span>);
   }
 }

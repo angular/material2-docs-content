@@ -5,7 +5,7 @@
   TemplateRef,
   ViewChild,
   ViewContainerRef,
-  ElementRef
+  ElementRef,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/**
@@ -25,20 +25,17 @@
   templatePortal: TemplatePortal&lt;<span class="hljs-built_in">any</span>&gt;;
   domPortal: DomPortal&lt;<span class="hljs-built_in">any</span>&gt;;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _viewContainerRef: ViewContainerRef</span>)</span> { }
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _viewContainerRef: ViewContainerRef</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.componentPortal = <span class="hljs-keyword">new</span> ComponentPortal(ComponentPortalExample);
-    <span class="hljs-built_in">this</span>.templatePortal = <span class="hljs-keyword">new</span> TemplatePortal(
-      <span class="hljs-built_in">this</span>.templatePortalContent,
-      <span class="hljs-built_in">this</span>._viewContainerRef
-    );
+    <span class="hljs-built_in">this</span>.templatePortal = <span class="hljs-keyword">new</span> TemplatePortal(<span class="hljs-built_in">this</span>.templatePortalContent, <span class="hljs-built_in">this</span>._viewContainerRef);
     <span class="hljs-built_in">this</span>.domPortal = <span class="hljs-keyword">new</span> DomPortal(<span class="hljs-built_in">this</span>.domPortalContent);
   }
 }
 
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;component-portal-example&#x27;</span>,
-  <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;Hello, this is a component portal&#x27;</span>
+  <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;Hello, this is a component portal&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComponentPortalExample</span> </span>{ }
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComponentPortalExample</span> </span>{}

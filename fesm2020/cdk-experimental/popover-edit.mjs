@@ -304,29 +304,16 @@ CdkPopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.
         CdkPopoverEditCdkTableFlexExample,
         CdkPopoverEditCellSpanVanillaTableExample,
         CdkPopoverEditTabOutVanillaTableExample,
-        CdkPopoverEditVanillaTableExample], imports: [CdkPopoverEditModule,
-        CdkTableModule,
-        FormsModule,
-        CommonModule], exports: [CdkPopoverEditCdkTableExample,
+        CdkPopoverEditVanillaTableExample], imports: [CdkPopoverEditModule, CdkTableModule, FormsModule, CommonModule], exports: [CdkPopoverEditCdkTableExample,
         CdkPopoverEditCdkTableFlexExample,
         CdkPopoverEditCellSpanVanillaTableExample,
         CdkPopoverEditTabOutVanillaTableExample,
         CdkPopoverEditVanillaTableExample] });
-CdkPopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPopoverEditExamplesModule, imports: [[
-            CdkPopoverEditModule,
-            CdkTableModule,
-            FormsModule,
-            CommonModule,
-        ]] });
+CdkPopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPopoverEditExamplesModule, imports: [[CdkPopoverEditModule, CdkTableModule, FormsModule, CommonModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkPopoverEditExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CdkPopoverEditModule,
-                        CdkTableModule,
-                        FormsModule,
-                        CommonModule,
-                    ],
+                    imports: [CdkPopoverEditModule, CdkTableModule, FormsModule, CommonModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

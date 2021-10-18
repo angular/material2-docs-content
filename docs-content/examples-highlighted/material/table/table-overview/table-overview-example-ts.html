@@ -12,11 +12,35 @@
 
 <span class="hljs-comment">/** Constants used to fill up our data base. */</span>
 <span class="hljs-keyword">const</span> FRUITS: <span class="hljs-built_in">string</span>[] = [
-  <span class="hljs-string">&#x27;blueberry&#x27;</span>, <span class="hljs-string">&#x27;lychee&#x27;</span>, <span class="hljs-string">&#x27;kiwi&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;peach&#x27;</span>, <span class="hljs-string">&#x27;lime&#x27;</span>, <span class="hljs-string">&#x27;pomegranate&#x27;</span>, <span class="hljs-string">&#x27;pineapple&#x27;</span>
+  <span class="hljs-string">&#x27;blueberry&#x27;</span>,
+  <span class="hljs-string">&#x27;lychee&#x27;</span>,
+  <span class="hljs-string">&#x27;kiwi&#x27;</span>,
+  <span class="hljs-string">&#x27;mango&#x27;</span>,
+  <span class="hljs-string">&#x27;peach&#x27;</span>,
+  <span class="hljs-string">&#x27;lime&#x27;</span>,
+  <span class="hljs-string">&#x27;pomegranate&#x27;</span>,
+  <span class="hljs-string">&#x27;pineapple&#x27;</span>,
 ];
 <span class="hljs-keyword">const</span> NAMES: <span class="hljs-built_in">string</span>[] = [
-  <span class="hljs-string">&#x27;Maia&#x27;</span>, <span class="hljs-string">&#x27;Asher&#x27;</span>, <span class="hljs-string">&#x27;Olivia&#x27;</span>, <span class="hljs-string">&#x27;Atticus&#x27;</span>, <span class="hljs-string">&#x27;Amelia&#x27;</span>, <span class="hljs-string">&#x27;Jack&#x27;</span>, <span class="hljs-string">&#x27;Charlotte&#x27;</span>, <span class="hljs-string">&#x27;Theodore&#x27;</span>, <span class="hljs-string">&#x27;Isla&#x27;</span>, <span class="hljs-string">&#x27;Oliver&#x27;</span>,
-  <span class="hljs-string">&#x27;Isabella&#x27;</span>, <span class="hljs-string">&#x27;Jasper&#x27;</span>, <span class="hljs-string">&#x27;Cora&#x27;</span>, <span class="hljs-string">&#x27;Levi&#x27;</span>, <span class="hljs-string">&#x27;Violet&#x27;</span>, <span class="hljs-string">&#x27;Arthur&#x27;</span>, <span class="hljs-string">&#x27;Mia&#x27;</span>, <span class="hljs-string">&#x27;Thomas&#x27;</span>, <span class="hljs-string">&#x27;Elizabeth&#x27;</span>
+  <span class="hljs-string">&#x27;Maia&#x27;</span>,
+  <span class="hljs-string">&#x27;Asher&#x27;</span>,
+  <span class="hljs-string">&#x27;Olivia&#x27;</span>,
+  <span class="hljs-string">&#x27;Atticus&#x27;</span>,
+  <span class="hljs-string">&#x27;Amelia&#x27;</span>,
+  <span class="hljs-string">&#x27;Jack&#x27;</span>,
+  <span class="hljs-string">&#x27;Charlotte&#x27;</span>,
+  <span class="hljs-string">&#x27;Theodore&#x27;</span>,
+  <span class="hljs-string">&#x27;Isla&#x27;</span>,
+  <span class="hljs-string">&#x27;Oliver&#x27;</span>,
+  <span class="hljs-string">&#x27;Isabella&#x27;</span>,
+  <span class="hljs-string">&#x27;Jasper&#x27;</span>,
+  <span class="hljs-string">&#x27;Cora&#x27;</span>,
+  <span class="hljs-string">&#x27;Levi&#x27;</span>,
+  <span class="hljs-string">&#x27;Violet&#x27;</span>,
+  <span class="hljs-string">&#x27;Arthur&#x27;</span>,
+  <span class="hljs-string">&#x27;Mia&#x27;</span>,
+  <span class="hljs-string">&#x27;Thomas&#x27;</span>,
+  <span class="hljs-string">&#x27;Elizabeth&#x27;</span>,
 ];
 
 <span class="hljs-comment">/**
@@ -59,13 +83,16 @@
 
 <span class="hljs-comment">/** Builds and returns a new User. */</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createNewUser</span>(<span class="hljs-params">id: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">UserData</span> </span>{
-  <span class="hljs-keyword">const</span> name = NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] + <span class="hljs-string">&#x27; &#x27;</span> +
-    NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) + <span class="hljs-string">&#x27;.&#x27;</span>;
+  <span class="hljs-keyword">const</span> name =
+    NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] +
+    <span class="hljs-string">&#x27; &#x27;</span> +
+    NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) +
+    <span class="hljs-string">&#x27;.&#x27;</span>;
 
   <span class="hljs-keyword">return</span> {
     <span class="hljs-attr">id</span>: id.toString(),
     <span class="hljs-attr">name</span>: name,
     <span class="hljs-attr">progress</span>: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>).toString(),
-    <span class="hljs-attr">fruit</span>: FRUITS[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (FRUITS.length - <span class="hljs-number">1</span>))]
+    <span class="hljs-attr">fruit</span>: FRUITS[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (FRUITS.length - <span class="hljs-number">1</span>))],
   };
 }

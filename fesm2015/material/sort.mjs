@@ -28,12 +28,18 @@ class SortOverviewExample {
         this.sortedData = data.sort((a, b) => {
             const isAsc = sort.direction === 'asc';
             switch (sort.active) {
-                case 'name': return compare(a.name, b.name, isAsc);
-                case 'calories': return compare(a.calories, b.calories, isAsc);
-                case 'fat': return compare(a.fat, b.fat, isAsc);
-                case 'carbs': return compare(a.carbs, b.carbs, isAsc);
-                case 'protein': return compare(a.protein, b.protein, isAsc);
-                default: return 0;
+                case 'name':
+                    return compare(a.name, b.name, isAsc);
+                case 'calories':
+                    return compare(a.calories, b.calories, isAsc);
+                case 'fat':
+                    return compare(a.fat, b.fat, isAsc);
+                case 'carbs':
+                    return compare(a.carbs, b.carbs, isAsc);
+                case 'protein':
+                    return compare(a.protein, b.protein, isAsc);
+                default:
+                    return 0;
             }
         });
     }
@@ -84,28 +90,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'sort-harness-example', template: "<table matSort (matSortChange)=\"sortData($event)\">\n  <tr>\n    <th mat-sort-header=\"name\">Dessert</th>\n    <th mat-sort-header=\"calories\">Calories</th>\n    <th mat-sort-header=\"fat\" [disabled]=\"disableThirdHeader\">Fat</th>\n    <th mat-sort-header=\"carbs\">Carbs</th>\n    <th mat-sort-header=\"protein\">Protein</th>\n  </tr>\n\n  <tr *ngFor=\"let dessert of sortedData\">\n    <td>{{dessert.name}}</td>\n    <td>{{dessert.calories}}</td>\n    <td>{{dessert.fat}}</td>\n    <td>{{dessert.carbs}}</td>\n    <td>{{dessert.protein}}</td>\n  </tr>\n</table>\n" }]
         }] });
 
-const EXAMPLES = [
-    SortHarnessExample,
-    SortOverviewExample,
-];
+const EXAMPLES = [SortHarnessExample, SortOverviewExample];
 class SortExamplesModule {
 }
 SortExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SortExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-SortExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SortExamplesModule, declarations: [SortHarnessExample,
-        SortOverviewExample], imports: [CommonModule,
-        MatSortModule], exports: [SortHarnessExample,
-        SortOverviewExample] });
-SortExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SortExamplesModule, imports: [[
-            CommonModule,
-            MatSortModule,
-        ]] });
+SortExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SortExamplesModule, declarations: [SortHarnessExample, SortOverviewExample], imports: [CommonModule, MatSortModule], exports: [SortHarnessExample, SortOverviewExample] });
+SortExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SortExamplesModule, imports: [[CommonModule, MatSortModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: SortExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CommonModule,
-                        MatSortModule,
-                    ],
+                    imports: [CommonModule, MatSortModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

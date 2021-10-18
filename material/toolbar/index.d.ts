@@ -10,7 +10,7 @@ import * as i4 from "./toolbar-overview/toolbar-overview-example";
 import * as i5 from "@angular/material/button";
 import * as i6 from "@angular/material/icon";
 import * as i7 from "@angular/material/toolbar";
-export { ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample, };
+export { ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample };
 export declare class ToolbarExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<ToolbarExamplesModule, [typeof i1.ToolbarBasicExample, typeof i2.ToolbarHarnessExample, typeof i3.ToolbarMultirowExample, typeof i4.ToolbarOverviewExample], [typeof i5.MatButtonModule, typeof i6.MatIconModule, typeof i7.MatToolbarModule], [typeof i1.ToolbarBasicExample, typeof i2.ToolbarHarnessExample, typeof i3.ToolbarMultirowExample, typeof i4.ToolbarOverviewExample]>;

@@ -10,28 +10,20 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-drag-drop-disabled-sorting-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDragDropDisabledSortingExample</span> </span>{
-  items = [
-    <span class="hljs-string">&#x27;Carrots&#x27;</span>,
-    <span class="hljs-string">&#x27;Tomatoes&#x27;</span>,
-    <span class="hljs-string">&#x27;Onions&#x27;</span>,
-    <span class="hljs-string">&#x27;Apples&#x27;</span>,
-    <span class="hljs-string">&#x27;Avocados&#x27;</span>
-  ];
+  items = [<span class="hljs-string">&#x27;Carrots&#x27;</span>, <span class="hljs-string">&#x27;Tomatoes&#x27;</span>, <span class="hljs-string">&#x27;Onions&#x27;</span>, <span class="hljs-string">&#x27;Apples&#x27;</span>, <span class="hljs-string">&#x27;Avocados&#x27;</span>];
 
-  basket = [
-    <span class="hljs-string">&#x27;Oranges&#x27;</span>,
-    <span class="hljs-string">&#x27;Bananas&#x27;</span>,
-    <span class="hljs-string">&#x27;Cucumbers&#x27;</span>
-  ];
+  basket = [<span class="hljs-string">&#x27;Oranges&#x27;</span>, <span class="hljs-string">&#x27;Bananas&#x27;</span>, <span class="hljs-string">&#x27;Cucumbers&#x27;</span>];
 
   <span class="hljs-function"><span class="hljs-title">drop</span>(<span class="hljs-params">event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;</span>)</span> {
     <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } <span class="hljs-keyword">else</span> {
-      transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
     }
   }
 }
