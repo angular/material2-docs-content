@@ -38,7 +38,7 @@ class SlideToggleFormsExample {
         this.isChecked = true;
         this.formGroup = formBuilder.group({
             enableWifi: '',
-            acceptTerms: ['', Validators.requiredTrue]
+            acceptTerms: ['', Validators.requiredTrue],
         });
     }
     onFormSubmit() {

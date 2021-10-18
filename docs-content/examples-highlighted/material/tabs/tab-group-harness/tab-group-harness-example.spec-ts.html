@@ -16,14 +16,14 @@ describe(<span class="hljs-string">&#x27;TabGroupHarnessExample&#x27;</span>, <s
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatTabsModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [TabGroupHarnessExample]
+      <span class="hljs-attr">declarations</span>: [TabGroupHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(TabGroupHarnessExample);
     fixture.detectChanges();
@@ -36,9 +36,11 @@ describe(<span class="hljs-string">&#x27;TabGroupHarnessExample&#x27;</span>, <s
   });
 
   it(<span class="hljs-string">&#x27;should load harness for tab-group with selected tab label&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> tabGroups = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatTabGroupHarness.with({
-      <span class="hljs-attr">selectedTabLabel</span>: <span class="hljs-string">&#x27;Profile&#x27;</span>,
-    }));
+    <span class="hljs-keyword">const</span> tabGroups = <span class="hljs-keyword">await</span> loader.getAllHarnesses(
+      MatTabGroupHarness.with({
+        <span class="hljs-attr">selectedTabLabel</span>: <span class="hljs-string">&#x27;Profile&#x27;</span>,
+      }),
+    );
     expect(tabGroups.length).toBe(<span class="hljs-number">1</span>);
   });
 

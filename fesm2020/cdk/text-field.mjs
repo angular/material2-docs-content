@@ -30,10 +30,12 @@ class TextFieldAutofillMonitorExample {
         this._autofill = _autofill;
     }
     ngAfterViewInit() {
-        this._autofill.monitor(this.firstName)
-            .subscribe(e => this.firstNameAutofilled = e.isAutofilled);
-        this._autofill.monitor(this.lastName)
-            .subscribe(e => this.lastNameAutofilled = e.isAutofilled);
+        this._autofill
+            .monitor(this.firstName)
+            .subscribe(e => (this.firstNameAutofilled = e.isAutofilled));
+        this._autofill
+            .monitor(this.lastName)
+            .subscribe(e => (this.lastNameAutofilled = e.isAutofilled));
     }
     ngOnDestroy() {
         this._autofill.stopMonitoring(this.firstName);
@@ -60,8 +62,7 @@ class TextFieldAutosizeTextareaExample {
     }
     triggerResize() {
         // Wait for changes to be applied, then trigger textarea resize.
-        this._ngZone.onStable.pipe(take(1))
-            .subscribe(() => this.autosize.resizeToFitContent(true));
+        this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize.resizeToFitContent(true));
     }
 }
 TextFieldAutosizeTextareaExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: TextFieldAutosizeTextareaExample, deps: [{ token: i0.NgZone }], target: i0.ɵɵFactoryTarget.Component });
@@ -84,30 +85,14 @@ class CdkTextFieldExamplesModule {
 CdkTextFieldExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTextFieldExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 CdkTextFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTextFieldExamplesModule, declarations: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
-        TextFieldAutosizeTextareaExample], imports: [CommonModule,
-        TextFieldModule,
-        MatButtonModule,
-        MatInputModule,
-        MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
+        TextFieldAutosizeTextareaExample], imports: [CommonModule, TextFieldModule, MatButtonModule, MatInputModule, MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
         TextFieldAutosizeTextareaExample] });
-CdkTextFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTextFieldExamplesModule, imports: [[
-            CommonModule,
-            TextFieldModule,
-            MatButtonModule,
-            MatInputModule,
-            MatSelectModule,
-        ]] });
+CdkTextFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTextFieldExamplesModule, imports: [[CommonModule, TextFieldModule, MatButtonModule, MatInputModule, MatSelectModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTextFieldExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CommonModule,
-                        TextFieldModule,
-                        MatButtonModule,
-                        MatInputModule,
-                        MatSelectModule,
-                    ],
+                    imports: [CommonModule, TextFieldModule, MatButtonModule, MatInputModule, MatSelectModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

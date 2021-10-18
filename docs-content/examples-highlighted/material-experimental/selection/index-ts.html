@@ -8,15 +8,9 @@
 <span class="hljs-keyword">import</span> {MatSelectionColumnExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./mat-selection-column/mat-selection-column-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSelectionListExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./mat-selection-list/mat-selection-list-example&#x27;</span>;
 
-<span class="hljs-keyword">export</span> {
-  MatSelectionListExample,
-  MatSelectionColumnExample,
-};
+<span class="hljs-keyword">export</span> {MatSelectionListExample, MatSelectionColumnExample};
 
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  MatSelectionListExample,
-  MatSelectionColumnExample,
-];
+<span class="hljs-keyword">const</span> EXAMPLES = [MatSelectionListExample, MatSelectionColumnExample];
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [
@@ -30,5 +24,4 @@
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionExamplesModule</span> </span>{}

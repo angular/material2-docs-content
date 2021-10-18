@@ -35,10 +35,10 @@ class CdkLinearStepperWithFormExample {
         this._formBuilder = _formBuilder;
         this.isLinear = true;
         this.firstFormGroup = this._formBuilder.group({
-            firstControl: ['', Validators.required]
+            firstControl: ['', Validators.required],
         });
         this.secondFormGroup = this._formBuilder.group({
-            secondControl: ['', Validators.required]
+            secondControl: ['', Validators.required],
         });
     }
     toggleLinearity() {
@@ -68,7 +68,7 @@ const EXAMPLES = [
     CdkCustomStepperWithoutFormExample,
     CustomStepper,
     CdkLinearStepperWithFormExample,
-    CustomLinearStepper
+    CustomLinearStepper,
 ];
 class CdkStepperExamplesModule {
 }
@@ -76,25 +76,15 @@ CdkStepperExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0",
 CdkStepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkStepperExamplesModule, declarations: [CdkCustomStepperWithoutFormExample,
         CustomStepper,
         CdkLinearStepperWithFormExample,
-        CustomLinearStepper], imports: [CdkStepperModule,
-        CommonModule,
-        ReactiveFormsModule], exports: [CdkCustomStepperWithoutFormExample,
+        CustomLinearStepper], imports: [CdkStepperModule, CommonModule, ReactiveFormsModule], exports: [CdkCustomStepperWithoutFormExample,
         CustomStepper,
         CdkLinearStepperWithFormExample,
         CustomLinearStepper] });
-CdkStepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkStepperExamplesModule, imports: [[
-            CdkStepperModule,
-            CommonModule,
-            ReactiveFormsModule,
-        ]] });
+CdkStepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkStepperExamplesModule, imports: [[CdkStepperModule, CommonModule, ReactiveFormsModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkStepperExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CdkStepperModule,
-                        CommonModule,
-                        ReactiveFormsModule,
-                    ],
+                    imports: [CdkStepperModule, CommonModule, ReactiveFormsModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

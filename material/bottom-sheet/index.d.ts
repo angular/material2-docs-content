@@ -6,7 +6,7 @@ import * as i2 from "./bottom-sheet-overview/bottom-sheet-overview-example";
 import * as i3 from "@angular/material/bottom-sheet";
 import * as i4 from "@angular/material/button";
 import * as i5 from "@angular/material/list";
-export { BottomSheetHarnessExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, };
+export { BottomSheetHarnessExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet };
 export declare class BottomSheetExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<BottomSheetExamplesModule, [typeof i1.BottomSheetHarnessExample, typeof i2.BottomSheetOverviewExample, typeof i2.BottomSheetOverviewExampleSheet], [typeof i3.MatBottomSheetModule, typeof i4.MatButtonModule, typeof i5.MatListModule], [typeof i1.BottomSheetHarnessExample, typeof i2.BottomSheetOverviewExample, typeof i2.BottomSheetOverviewExampleSheet]>;

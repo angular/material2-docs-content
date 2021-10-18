@@ -10,28 +10,30 @@
 <span class="hljs-keyword">import</span> {MatIconHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser&#x27;</span>;
 
-
 describe(<span class="hljs-string">&#x27;IconHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IconHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatIconModule],
-      <span class="hljs-attr">declarations</span>: [IconHarnessExample]
+      <span class="hljs-attr">declarations</span>: [IconHarnessExample],
     }).compileComponents();
     <span class="hljs-keyword">const</span> registry = TestBed.inject(MatIconRegistry);
     <span class="hljs-keyword">const</span> sanitizer = TestBed.inject(DomSanitizer);
 
     <span class="hljs-comment">// We use `bypassSecurityTrustHtml` exclusively for testing here.</span>
-    registry.addSvgIconLiteralInNamespace(<span class="hljs-string">&#x27;svgIcons&#x27;</span>, <span class="hljs-string">&#x27;svgIcon&#x27;</span>,
-      sanitizer.bypassSecurityTrustHtml(<span class="hljs-string">&#x27;&lt;svg&gt;&lt;/svg&gt;&#x27;</span>));
+    registry.addSvgIconLiteralInNamespace(
+      <span class="hljs-string">&#x27;svgIcons&#x27;</span>,
+      <span class="hljs-string">&#x27;svgIcon&#x27;</span>,
+      sanitizer.bypassSecurityTrustHtml(<span class="hljs-string">&#x27;&lt;svg&gt;&lt;/svg&gt;&#x27;</span>),
+    );
 
     fixture = TestBed.createComponent(IconHarnessExample);
     fixture.detectChanges();

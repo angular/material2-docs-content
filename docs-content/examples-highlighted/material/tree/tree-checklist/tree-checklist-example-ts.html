@@ -30,14 +30,10 @@
     <span class="hljs-attr">Fruits</span>: {
       <span class="hljs-attr">Apple</span>: <span class="hljs-literal">null</span>,
       <span class="hljs-attr">Berries</span>: [<span class="hljs-string">&#x27;Blueberry&#x27;</span>, <span class="hljs-string">&#x27;Raspberry&#x27;</span>],
-      <span class="hljs-attr">Orange</span>: <span class="hljs-literal">null</span>
-    }
+      <span class="hljs-attr">Orange</span>: <span class="hljs-literal">null</span>,
+    },
   },
-  <span class="hljs-attr">Reminders</span>: [
-    <span class="hljs-string">&#x27;Cook dinner&#x27;</span>,
-    <span class="hljs-string">&#x27;Read the Material Design spec&#x27;</span>,
-    <span class="hljs-string">&#x27;Upgrade Application to Angular&#x27;</span>
-  ]
+  <span class="hljs-attr">Reminders</span>: [<span class="hljs-string">&#x27;Cook dinner&#x27;</span>, <span class="hljs-string">&#x27;Read the Material Design spec&#x27;</span>, <span class="hljs-string">&#x27;Upgrade Application to Angular&#x27;</span>],
 };
 
 <span class="hljs-comment">/**
@@ -49,7 +45,9 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChecklistDatabase</span> </span>{
   dataChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;TodoItemNode[]&gt;([]);
 
-  <span class="hljs-keyword">get</span> <span class="hljs-title">data</span>(): <span class="hljs-title">TodoItemNode</span>[] { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.dataChange.value; }
+  <span class="hljs-keyword">get</span> <span class="hljs-title">data</span>(): <span class="hljs-title">TodoItemNode</span>[] {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.dataChange.value;
+  }
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.initialize();
@@ -107,7 +105,7 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tree-checklist-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tree-checklist-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;tree-checklist-example.css&#x27;</span>],
-  <span class="hljs-attr">providers</span>: [ChecklistDatabase]
+  <span class="hljs-attr">providers</span>: [ChecklistDatabase],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeChecklistExample</span> </span>{
   <span class="hljs-comment">/** Map from flat node to nested node. This helps us finding the nested node to be modified */</span>
@@ -132,8 +130,12 @@
   checklistSelection = <span class="hljs-keyword">new</span> SelectionModel&lt;TodoItemFlatNode&gt;(<span class="hljs-literal">true</span> <span class="hljs-comment">/* multiple */</span>);
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _database: ChecklistDatabase</span>)</span> {
-    <span class="hljs-built_in">this</span>.treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(<span class="hljs-built_in">this</span>.transformer, <span class="hljs-built_in">this</span>.getLevel,
-      <span class="hljs-built_in">this</span>.isExpandable, <span class="hljs-built_in">this</span>.getChildren);
+    <span class="hljs-built_in">this</span>.treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(
+      <span class="hljs-built_in">this</span>.transformer,
+      <span class="hljs-built_in">this</span>.getLevel,
+      <span class="hljs-built_in">this</span>.isExpandable,
+      <span class="hljs-built_in">this</span>.getChildren,
+    );
     <span class="hljs-built_in">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;TodoItemFlatNode&gt;(<span class="hljs-built_in">this</span>.getLevel, <span class="hljs-built_in">this</span>.isExpandable);
     <span class="hljs-built_in">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-built_in">this</span>.treeControl, <span class="hljs-built_in">this</span>.treeFlattener);
 
@@ -157,23 +159,24 @@
    */</span>
   transformer = <span class="hljs-function">(<span class="hljs-params">node: TodoItemNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
     <span class="hljs-keyword">const</span> existingNode = <span class="hljs-built_in">this</span>.nestedNodeMap.get(node);
-    <span class="hljs-keyword">const</span> flatNode = existingNode &amp;&amp; existingNode.item === node.item
-        ? existingNode
-        : <span class="hljs-keyword">new</span> TodoItemFlatNode();
+    <span class="hljs-keyword">const</span> flatNode =
+      existingNode &amp;&amp; existingNode.item === node.item ? existingNode : <span class="hljs-keyword">new</span> TodoItemFlatNode();
     flatNode.item = node.item;
     flatNode.level = level;
     flatNode.expandable = !!node.children?.length;
     <span class="hljs-built_in">this</span>.flatNodeMap.set(flatNode, node);
     <span class="hljs-built_in">this</span>.nestedNodeMap.set(node, flatNode);
     <span class="hljs-keyword">return</span> flatNode;
-  }
+  };
 
   <span class="hljs-comment">/** Whether all the descendants of the node are selected. */</span>
   descendantsAllSelected(node: TodoItemFlatNode): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-built_in">this</span>.treeControl.getDescendants(node);
-    <span class="hljs-keyword">const</span> descAllSelected = descendants.length &gt; <span class="hljs-number">0</span> &amp;&amp; descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> {
-      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.checklistSelection.isSelected(child);
-    });
+    <span class="hljs-keyword">const</span> descAllSelected =
+      descendants.length &gt; <span class="hljs-number">0</span> &amp;&amp;
+      descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.checklistSelection.isSelected(child);
+      });
     <span class="hljs-keyword">return</span> descAllSelected;
   }
 
@@ -216,9 +219,11 @@
   checkRootNodeSelection(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> nodeSelected = <span class="hljs-built_in">this</span>.checklistSelection.isSelected(node);
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-built_in">this</span>.treeControl.getDescendants(node);
-    <span class="hljs-keyword">const</span> descAllSelected = descendants.length &gt; <span class="hljs-number">0</span> &amp;&amp; descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> {
-      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.checklistSelection.isSelected(child);
-    });
+    <span class="hljs-keyword">const</span> descAllSelected =
+      descendants.length &gt; <span class="hljs-number">0</span> &amp;&amp;
+      descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.checklistSelection.isSelected(child);
+      });
     <span class="hljs-keyword">if</span> (nodeSelected &amp;&amp; !descAllSelected) {
       <span class="hljs-built_in">this</span>.checklistSelection.deselect(node);
     } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!nodeSelected &amp;&amp; descAllSelected) {

@@ -17,10 +17,7 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./input-error-state-matcher-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputErrorStateMatcherExample</span> </span>{
-  emailFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, [
-    Validators.required,
-    Validators.email,
-  ]);
+  emailFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.email]);
 
   matcher = <span class="hljs-keyword">new</span> MyErrorStateMatcher();
 }

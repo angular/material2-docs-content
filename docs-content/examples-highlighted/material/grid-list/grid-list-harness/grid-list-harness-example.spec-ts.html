@@ -15,14 +15,14 @@ describe(<span class="hljs-string">&#x27;GridListHarnessExample&#x27;</span>, <s
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatGridListModule],
-      <span class="hljs-attr">declarations</span>: [GridListHarnessExample]
+      <span class="hljs-attr">declarations</span>: [GridListHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(GridListHarnessExample);
     fixture.detectChanges();

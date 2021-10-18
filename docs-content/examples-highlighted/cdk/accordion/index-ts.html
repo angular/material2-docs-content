@@ -1,24 +1,16 @@
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkAccordionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/accordion&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  CdkAccordionOverviewExample,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-accordion-overview/cdk-accordion-overview-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkAccordionOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-accordion-overview/cdk-accordion-overview-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {CdkAccordionOverviewExample};
 
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  CdkAccordionOverviewExample,
-];
+<span class="hljs-keyword">const</span> EXAMPLES = [CdkAccordionOverviewExample];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    CommonModule,
-    CdkAccordionModule
-  ],
+  <span class="hljs-attr">imports</span>: [CommonModule, CdkAccordionModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkAccordionExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkAccordionExamplesModule</span> </span>{}

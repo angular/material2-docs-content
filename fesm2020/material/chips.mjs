@@ -31,7 +31,7 @@ class ChipsAutocompleteExample {
         this.fruitCtrl = new FormControl();
         this.fruits = ['Lemon'];
         this.allFruits = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
-        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => fruit ? this._filter(fruit) : this.allFruits.slice()));
+        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => (fruit ? this._filter(fruit) : this.allFruits.slice())));
     }
     add(event) {
         const value = (event.value || '').trim();
@@ -103,11 +103,7 @@ class ChipsInputExample {
         this.removable = true;
         this.addOnBlur = true;
         this.separatorKeysCodes = [ENTER, COMMA];
-        this.fruits = [
-            { name: 'Lemon' },
-            { name: 'Lime' },
-            { name: 'Apple' },
-        ];
+        this.fruits = [{ name: 'Lemon' }, { name: 'Lime' }, { name: 'Apple' }];
     }
     add(event) {
         const value = (event.value || '').trim();
@@ -153,7 +149,7 @@ class ChipsStackedExample {
             { name: 'none', color: undefined },
             { name: 'Primary', color: 'primary' },
             { name: 'Accent', color: 'accent' },
-            { name: 'Warn', color: 'warn' }
+            { name: 'Warn', color: 'warn' },
         ];
     }
 }

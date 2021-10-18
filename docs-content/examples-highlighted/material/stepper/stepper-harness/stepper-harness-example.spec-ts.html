@@ -17,7 +17,7 @@ describe(<span class="hljs-string">&#x27;StepperHarnessExample&#x27;</span>, <sp
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
@@ -45,9 +45,11 @@ describe(<span class="hljs-string">&#x27;StepperHarnessExample&#x27;</span>, <sp
   it(<span class="hljs-string">&#x27;should be able to get the template-based label of a step&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> stepper = <span class="hljs-keyword">await</span> loader.getHarness(MatStepperHarness);
     <span class="hljs-keyword">const</span> steps = <span class="hljs-keyword">await</span> stepper.getSteps();
-    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> {
-      <span class="hljs-keyword">return</span> steps.map(<span class="hljs-function"><span class="hljs-params">step</span> =&gt;</span> step.getLabel());
-    })).toEqual([<span class="hljs-string">&#x27;One&#x27;</span>, <span class="hljs-string">&#x27;Two&#x27;</span>, <span class="hljs-string">&#x27;Three&#x27;</span>]);
+    expect(
+      <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-keyword">return</span> steps.map(<span class="hljs-function"><span class="hljs-params">step</span> =&gt;</span> step.getLabel());
+      }),
+    ).toEqual([<span class="hljs-string">&#x27;One&#x27;</span>, <span class="hljs-string">&#x27;Two&#x27;</span>, <span class="hljs-string">&#x27;Three&#x27;</span>]);
   });
 
   it(<span class="hljs-string">&#x27;should go forward when pressing the next button&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
@@ -61,7 +63,7 @@ describe(<span class="hljs-string">&#x27;StepperHarnessExample&#x27;</span>, <sp
     expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> steps.map(<span class="hljs-function"><span class="hljs-params">step</span> =&gt;</span> step.isSelected()))).toEqual([
       <span class="hljs-literal">false</span>,
       <span class="hljs-literal">true</span>,
-      <span class="hljs-literal">false</span>
+      <span class="hljs-literal">false</span>,
     ]);
 
     <span class="hljs-keyword">await</span> nextButton.click();
@@ -69,7 +71,7 @@ describe(<span class="hljs-string">&#x27;StepperHarnessExample&#x27;</span>, <sp
     expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> steps.map(<span class="hljs-function"><span class="hljs-params">step</span> =&gt;</span> step.isSelected()))).toEqual([
       <span class="hljs-literal">false</span>,
       <span class="hljs-literal">false</span>,
-      <span class="hljs-literal">true</span>
+      <span class="hljs-literal">true</span>,
     ]);
   });
 });

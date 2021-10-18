@@ -16,14 +16,14 @@ describe(<span class="hljs-string">&#x27;RadioHarnessExample&#x27;</span>, <span
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatRadioModule, ReactiveFormsModule],
-      <span class="hljs-attr">declarations</span>: [RadioHarnessExample]
+      <span class="hljs-attr">declarations</span>: [RadioHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(RadioHarnessExample);
     fixture.detectChanges();
@@ -51,8 +51,9 @@ describe(<span class="hljs-string">&#x27;RadioHarnessExample&#x27;</span>, <span
   });
 
   it(<span class="hljs-string">&#x27;should get label text of buttons&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> [firstRadio, secondRadio, thirdRadio] =
-      <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatRadioButtonHarness);
+    <span class="hljs-keyword">const</span> [firstRadio, secondRadio, thirdRadio] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(
+      MatRadioButtonHarness,
+    );
     expect(<span class="hljs-keyword">await</span> firstRadio.getLabelText()).toBe(<span class="hljs-string">&#x27;Chocolate&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> secondRadio.getLabelText()).toBe(<span class="hljs-string">&#x27;Vanilla&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> thirdRadio.getLabelText()).toBe(<span class="hljs-string">&#x27;Strawberry&#x27;</span>);

@@ -20,7 +20,7 @@ class MatSelectionColumnExample {
         this.selected = [];
     }
     selectionChanged(event) {
-        this.selected = event.after.map((select) => select.value.name);
+        this.selected = event.after.map(select => select.value.name);
     }
 }
 MatSelectionColumnExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MatSelectionColumnExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -64,7 +64,7 @@ class MatSelectionListExample {
         this.selected4 = [];
     }
     getCurrentSelected(event) {
-        return event.after.map((select) => select.value);
+        return event.after.map(select => select.value);
     }
     trackByFn(index, value) {
         return index;
@@ -83,30 +83,60 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'mat-selection-list-example', template: "<h3><code>native input</code></h3>\nSelected: {{selected1}}\n<ul matSelection [dataSource]=\"data\" [matSelectionMultiple]=\"true\" (matSelectionChange)=\"selected1 = getCurrentSelected($event)\">\n  <input type=\"checkbox\" matSelectAll #allToggler=\"matSelectAll\"\n      [checked]=\"allToggler.checked | async\"\n      [indeterminate]=\"allToggler.indeterminate | async\"\n      (click)=\"allToggler.toggle($event)\">\n  <li *ngFor=\"let item of data\">\n    <input type=\"checkbox\" matSelectionToggle #toggler=\"matSelectionToggle\" [matSelectionToggleValue]=\"item\"\n      [checked]=\"toggler.checked | async\" (click)=\"toggler.toggle()\">\n    {{item}}\n  </li>\n</ul>\n\n<h3><code>mat-checkbox</code></h3>\nSelected: {{selected2}}\n<ul matSelection [dataSource]=\"data\" [matSelectionMultiple]=\"true\" (matSelectionChange)=\"selected2 = getCurrentSelected($event)\">\n  <mat-checkbox matSelectAll #toggle1=\"matSelectAll\" [indeterminate]=\"toggle1.indeterminate | async\"></mat-checkbox>\n  <li *ngFor=\"let item of data\">\n    <mat-checkbox matSelectionToggle [matSelectionToggleValue]=\"item\"></mat-checkbox>\n    {{item}}\n  </li>\n</ul>\n\n<h3><code>Single select with mat-checkbox</code></h3>\nSelected: {{selected3}}\n<ul matSelection [dataSource]=\"data\" [matSelectionMultiple]=\"false\" (matSelectionChange)=\"selected3 = getCurrentSelected($event)\">\n  <li *ngFor=\"let item of data\">\n    <mat-checkbox matSelectionToggle [matSelectionToggleValue]=\"item\"></mat-checkbox>\n    {{item}}\n  </li>\n</ul>\n\n<h3><code>with trackBy</code></h3>\nSelected: {{selected4}}\n<ul matSelection [dataSource]=\"data\" [matSelectionMultiple]=\"true\" [trackBy]=\"trackByFn\" (matSelectionChange)=\"selected4 = getCurrentSelected($event)\">\n  <mat-checkbox matSelectAll #toggle2=\"matSelectAll\" [indeterminate]=\"toggle2.indeterminate | async\"></mat-checkbox>\n  <li *ngFor=\"let item of data; index as i; trackBy: trackByFn\">\n    <mat-checkbox matSelectionToggle [matSelectionToggleValue]=\"item\" [matSelectionToggleIndex]=\"i\"></mat-checkbox>\n    {{item}}\n  </li>\n</ul>\n\n<button (click)=\"changeElementName()\">Change element names and the already selected stays</button>\n<button (click)=\"reset()\">reset</button>\n" }]
         }] });
 const ELEMENT_NAMES = [
-    'Hydrogen', 'Helium', 'Lithium', 'Beryllium', 'Boron', 'Carbon', 'Nitrogen',
-    'Oxygen', 'Fluorine', 'Neon', 'Sodium', 'Magnesium', 'Aluminum', 'Silicon',
-    'Phosphorus', 'Sulfur', 'Chlorine', 'Argon', 'Potassium', 'Calcium',
+    'Hydrogen',
+    'Helium',
+    'Lithium',
+    'Beryllium',
+    'Boron',
+    'Carbon',
+    'Nitrogen',
+    'Oxygen',
+    'Fluorine',
+    'Neon',
+    'Sodium',
+    'Magnesium',
+    'Aluminum',
+    'Silicon',
+    'Phosphorus',
+    'Sulfur',
+    'Chlorine',
+    'Argon',
+    'Potassium',
+    'Calcium',
 ];
 const ELEMENT_SYMBOLS = [
-    'H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne',
-    'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca'
+    'H',
+    'He',
+    'Li',
+    'Be',
+    'B',
+    'C',
+    'N',
+    'O',
+    'F',
+    'Ne',
+    'Na',
+    'Mg',
+    'Al',
+    'Si',
+    'P',
+    'S',
+    'Cl',
+    'Ar',
+    'K',
+    'Ca',
 ];
 
-const EXAMPLES = [
-    MatSelectionListExample,
-    MatSelectionColumnExample,
-];
+const EXAMPLES = [MatSelectionListExample, MatSelectionColumnExample];
 class MatSelectionExamplesModule {
 }
 MatSelectionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MatSelectionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-MatSelectionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MatSelectionExamplesModule, declarations: [MatSelectionListExample,
-        MatSelectionColumnExample], imports: [MatSelectionModule,
+MatSelectionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MatSelectionExamplesModule, declarations: [MatSelectionListExample, MatSelectionColumnExample], imports: [MatSelectionModule,
         MatTableModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        MatCheckboxModule], exports: [MatSelectionListExample,
-        MatSelectionColumnExample] });
+        MatCheckboxModule], exports: [MatSelectionListExample, MatSelectionColumnExample] });
 MatSelectionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MatSelectionExamplesModule, imports: [[
             MatSelectionModule,
             MatTableModule,

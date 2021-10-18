@@ -67,25 +67,15 @@ ToolbarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", ve
 ToolbarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ToolbarExamplesModule, declarations: [ToolbarBasicExample,
         ToolbarHarnessExample,
         ToolbarMultirowExample,
-        ToolbarOverviewExample], imports: [MatButtonModule,
-        MatIconModule,
-        MatToolbarModule], exports: [ToolbarBasicExample,
+        ToolbarOverviewExample], imports: [MatButtonModule, MatIconModule, MatToolbarModule], exports: [ToolbarBasicExample,
         ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample] });
-ToolbarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ToolbarExamplesModule, imports: [[
-            MatButtonModule,
-            MatIconModule,
-            MatToolbarModule,
-        ]] });
+ToolbarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ToolbarExamplesModule, imports: [[MatButtonModule, MatIconModule, MatToolbarModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ToolbarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatIconModule,
-                        MatToolbarModule,
-                    ],
+                    imports: [MatButtonModule, MatIconModule, MatToolbarModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

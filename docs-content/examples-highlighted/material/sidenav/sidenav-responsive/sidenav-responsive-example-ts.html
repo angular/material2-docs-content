@@ -12,12 +12,15 @@
 
   fillerNav = <span class="hljs-built_in">Array</span>.from({<span class="hljs-attr">length</span>: <span class="hljs-number">50</span>}, <span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Nav Item <span class="hljs-subst">${i + <span class="hljs-number">1</span>}</span>`</span>);
 
-  fillerContent = <span class="hljs-built_in">Array</span>.from({<span class="hljs-attr">length</span>: <span class="hljs-number">50</span>}, <span class="hljs-function">() =&gt;</span>
+  fillerContent = <span class="hljs-built_in">Array</span>.from(
+    {<span class="hljs-attr">length</span>: <span class="hljs-number">50</span>},
+    <span class="hljs-function">() =&gt;</span>
       <span class="hljs-string">`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`</span>);
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`</span>,
+  );
 
   <span class="hljs-keyword">private</span> _mobileQueryListener: <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">void</span>;
 

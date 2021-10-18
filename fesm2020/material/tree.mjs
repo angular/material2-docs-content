@@ -39,14 +39,10 @@ const TREE_DATA$2 = {
         Fruits: {
             Apple: null,
             Berries: ['Blueberry', 'Raspberry'],
-            Orange: null
-        }
+            Orange: null,
+        },
     },
-    Reminders: [
-        'Cook dinner',
-        'Read the Material Design spec',
-        'Upgrade Application to Angular'
-    ]
+    Reminders: ['Cook dinner', 'Read the Material Design spec', 'Upgrade Application to Angular'],
 };
 /**
  * Checklist database, it can build a tree structured Json object.
@@ -58,7 +54,9 @@ class ChecklistDatabase {
         this.dataChange = new BehaviorSubject([]);
         this.initialize();
     }
-    get data() { return this.dataChange.value; }
+    get data() {
+        return this.dataChange.value;
+    }
     initialize() {
         // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
         //     file node as children.
@@ -129,9 +127,7 @@ class TreeChecklistExample {
          */
         this.transformer = (node, level) => {
             const existingNode = this.nestedNodeMap.get(node);
-            const flatNode = existingNode && existingNode.item === node.item
-                ? existingNode
-                : new TodoItemFlatNode();
+            const flatNode = existingNode && existingNode.item === node.item ? existingNode : new TodoItemFlatNode();
             flatNode.item = node.item;
             flatNode.level = level;
             flatNode.expandable = !!node.children?.length;
@@ -149,9 +145,10 @@ class TreeChecklistExample {
     /** Whether all the descendants of the node are selected. */
     descendantsAllSelected(node) {
         const descendants = this.treeControl.getDescendants(node);
-        const descAllSelected = descendants.length > 0 && descendants.every(child => {
-            return this.checklistSelection.isSelected(child);
-        });
+        const descAllSelected = descendants.length > 0 &&
+            descendants.every(child => {
+                return this.checklistSelection.isSelected(child);
+            });
         return descAllSelected;
     }
     /** Whether part of the descendants are selected */
@@ -188,9 +185,10 @@ class TreeChecklistExample {
     checkRootNodeSelection(node) {
         const nodeSelected = this.checklistSelection.isSelected(node);
         const descendants = this.treeControl.getDescendants(node);
-        const descAllSelected = descendants.length > 0 && descendants.every(child => {
-            return this.checklistSelection.isSelected(child);
-        });
+        const descAllSelected = descendants.length > 0 &&
+            descendants.every(child => {
+                return this.checklistSelection.isSelected(child);
+            });
         if (nodeSelected && !descAllSelected) {
             this.checklistSelection.deselect(node);
         }
@@ -251,7 +249,7 @@ class DynamicDatabase {
             ['Fruits', ['Apple', 'Orange', 'Banana']],
             ['Vegetables', ['Tomato', 'Potato', 'Onion']],
             ['Apple', ['Fuji', 'Macintosh']],
-            ['Onion', ['Yellow', 'White', 'Purple']]
+            ['Onion', ['Yellow', 'White', 'Purple']],
         ]);
         this.rootLevelNodes = ['Fruits', 'Vegetables'];
     }
@@ -285,7 +283,9 @@ class DynamicDataSource {
         this._database = _database;
         this.dataChange = new BehaviorSubject([]);
     }
-    get data() { return this.dataChange.value; }
+    get data() {
+        return this.dataChange.value;
+    }
     set data(value) {
         this._treeControl.dataNodes = value;
         this.dataChange.next(value);
@@ -306,7 +306,10 @@ class DynamicDataSource {
             change.added.forEach(node => this.toggleNode(node, true));
         }
         if (change.removed) {
-            change.removed.slice().reverse().forEach(node => this.toggleNode(node, false));
+            change.removed
+                .slice()
+                .reverse()
+                .forEach(node => this.toggleNode(node, false));
         }
     }
     /**
@@ -315,7 +318,8 @@ class DynamicDataSource {
     toggleNode(node, expand) {
         const children = this._database.getChildren(node.item);
         const index = this.data.indexOf(node);
-        if (!children || index < 0) { // If no children, or cannot find the node, no op
+        if (!children || index < 0) {
+            // If no children, or cannot find the node, no op
             return;
         }
         node.isLoading = true;
@@ -326,8 +330,7 @@ class DynamicDataSource {
             }
             else {
                 let count = 0;
-                for (let i = index + 1; i < this.data.length
-                    && this.data[i].level > node.level; i++, count++) { }
+                for (let i = index + 1; i < this.data.length && this.data[i].level > node.level; i++, count++) { }
                 this.data.splice(index + 1, count);
             }
             // notify the change
@@ -359,28 +362,20 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 const TREE_DATA$1 = [
     {
         name: 'Fruit',
-        children: [
-            { name: 'Apple' },
-            { name: 'Banana' },
-            { name: 'Fruit loops' },
-        ]
-    }, {
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+    },
+    {
         name: 'Vegetables',
         children: [
             {
                 name: 'Green',
-                children: [
-                    { name: 'Broccoli' },
-                    { name: 'Brussels sprouts' },
-                ]
-            }, {
-                name: 'Orange',
-                children: [
-                    { name: 'Pumpkins' },
-                    { name: 'Carrots' },
-                ]
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
             },
-        ]
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
     },
 ];
 /**
@@ -412,23 +407,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 const FLAT_TREE_DATA = [
     {
         name: 'Flat Group 1',
-        children: [
-            { name: 'Flat Leaf 1.1' },
-            { name: 'Flat Leaf 1.2' },
-            { name: 'Flat Leaf 1.3' },
-        ]
-    }, {
+        children: [{ name: 'Flat Leaf 1.1' }, { name: 'Flat Leaf 1.2' }, { name: 'Flat Leaf 1.3' }],
+    },
+    {
         name: 'Flat Group 2',
         children: [
             {
                 name: 'Flat Group 2.1',
-                children: [
-                    { name: 'Flat Leaf 2.1.1' },
-                    { name: 'Flat Leaf 2.1.2' },
-                    { name: 'Flat Leaf 2.1.3' },
-                ]
-            }
-        ]
+                children: [{ name: 'Flat Leaf 2.1.1' }, { name: 'Flat Leaf 2.1.2' }, { name: 'Flat Leaf 2.1.3' }],
+            },
+        ],
     },
 ];
 /**
@@ -519,8 +507,7 @@ class LoadmoreDatabase {
             return;
         }
         const newChildrenNumber = parent.children.length + this.batchNumber;
-        const nodes = children.slice(0, newChildrenNumber)
-            .map(name => this._generateNode(name));
+        const nodes = children.slice(0, newChildrenNumber).map(name => this._generateNode(name));
         if (newChildrenNumber < children.length) {
             // Need a new load more node
             nodes.push(new LoadmoreNode(LOAD_MORE, false, item));
@@ -589,28 +576,20 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 const TREE_DATA = [
     {
         name: 'Fruit',
-        children: [
-            { name: 'Apple' },
-            { name: 'Banana' },
-            { name: 'Fruit loops' },
-        ]
-    }, {
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+    },
+    {
         name: 'Vegetables',
         children: [
             {
                 name: 'Green',
-                children: [
-                    { name: 'Broccoli' },
-                    { name: 'Brussels sprouts' },
-                ]
-            }, {
-                name: 'Orange',
-                children: [
-                    { name: 'Pumpkins' },
-                    { name: 'Carrots' },
-                ]
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
             },
-        ]
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
     },
 ];
 /**

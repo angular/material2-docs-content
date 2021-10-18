@@ -51,14 +51,8 @@ class MyErrorStateMatcher {
 /** @title Select with a custom ErrorStateMatcher */
 class SelectErrorStateMatcherExample {
     constructor() {
-        this.selected = new FormControl('valid', [
-            Validators.required,
-            Validators.pattern('valid'),
-        ]);
-        this.selectFormControl = new FormControl('valid', [
-            Validators.required,
-            Validators.pattern('valid'),
-        ]);
+        this.selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
+        this.selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
         this.nativeSelectFormControl = new FormControl('valid', [
             Validators.required,
             Validators.pattern('valid'),
@@ -81,12 +75,12 @@ class SelectFormExample {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
+            { value: 'tacos-2', viewValue: 'Tacos' },
         ];
         this.cars = [
             { value: 'volvo', viewValue: 'Volvo' },
             { value: 'saab', viewValue: 'Saab' },
-            { value: 'mercedes', viewValue: 'Mercedes' }
+            { value: 'mercedes', viewValue: 'Mercedes' },
         ];
     }
 }
@@ -151,16 +145,16 @@ class SelectOptgroupExample {
                 pokemon: [
                     { value: 'bulbasaur-0', viewValue: 'Bulbasaur' },
                     { value: 'oddish-1', viewValue: 'Oddish' },
-                    { value: 'bellsprout-2', viewValue: 'Bellsprout' }
-                ]
+                    { value: 'bellsprout-2', viewValue: 'Bellsprout' },
+                ],
             },
             {
                 name: 'Water',
                 pokemon: [
                     { value: 'squirtle-3', viewValue: 'Squirtle' },
                     { value: 'psyduck-4', viewValue: 'Psyduck' },
-                    { value: 'horsea-5', viewValue: 'Horsea' }
-                ]
+                    { value: 'horsea-5', viewValue: 'Horsea' },
+                ],
             },
             {
                 name: 'Fire',
@@ -168,16 +162,16 @@ class SelectOptgroupExample {
                 pokemon: [
                     { value: 'charmander-6', viewValue: 'Charmander' },
                     { value: 'vulpix-7', viewValue: 'Vulpix' },
-                    { value: 'flareon-8', viewValue: 'Flareon' }
-                ]
+                    { value: 'flareon-8', viewValue: 'Flareon' },
+                ],
             },
             {
                 name: 'Psychic',
                 pokemon: [
                     { value: 'mew-9', viewValue: 'Mew' },
                     { value: 'mewtwo-10', viewValue: 'Mewtwo' },
-                ]
-            }
+                ],
+            },
         ];
     }
 }
@@ -196,7 +190,7 @@ class SelectOverviewExample {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
+            { value: 'tacos-2', viewValue: 'Tacos' },
         ];
     }
 }
@@ -226,13 +220,56 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
 class SelectResetExample {
     constructor() {
         this.states = [
-            'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
-            'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-            'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-            'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
-            'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
-            'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+            'Alabama',
+            'Alaska',
+            'Arizona',
+            'Arkansas',
+            'California',
+            'Colorado',
+            'Connecticut',
+            'Delaware',
+            'Florida',
+            'Georgia',
+            'Hawaii',
+            'Idaho',
+            'Illinois',
+            'Indiana',
+            'Iowa',
+            'Kansas',
+            'Kentucky',
+            'Louisiana',
+            'Maine',
+            'Maryland',
+            'Massachusetts',
+            'Michigan',
+            'Minnesota',
+            'Mississippi',
+            'Missouri',
+            'Montana',
+            'Nebraska',
+            'Nevada',
+            'New Hampshire',
+            'New Jersey',
+            'New Mexico',
+            'New York',
+            'North Carolina',
+            'North Dakota',
+            'Ohio',
+            'Oklahoma',
+            'Oregon',
+            'Pennsylvania',
+            'Rhode Island',
+            'South Carolina',
+            'South Dakota',
+            'Tennessee',
+            'Texas',
+            'Utah',
+            'Vermont',
+            'Virginia',
+            'Washington',
+            'West Virginia',
+            'Wisconsin',
+            'Wyoming',
         ];
     }
 }
@@ -264,18 +301,18 @@ class SelectReactiveFormExample {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
+            { value: 'tacos-2', viewValue: 'Tacos' },
         ];
         this.cars = [
             { value: 'volvo', viewValue: 'Volvo' },
             { value: 'saab', viewValue: 'Saab' },
-            { value: 'mercedes', viewValue: 'Mercedes' }
+            { value: 'mercedes', viewValue: 'Mercedes' },
         ];
         this.foodControl = new FormControl(this.foods[2].value);
         this.carControl = new FormControl(this.cars[1].value);
         this.form = new FormGroup({
             food: this.foodControl,
-            car: this.carControl
+            car: this.carControl,
         });
     }
 }
@@ -294,12 +331,12 @@ class SelectInitialValueExample {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
+            { value: 'tacos-2', viewValue: 'Tacos' },
         ];
         this.cars = [
             { value: 'ford', viewValue: 'Ford' },
             { value: 'chevrolet', viewValue: 'Chevrolet' },
-            { value: 'dodge', viewValue: 'Dodge' }
+            { value: 'dodge', viewValue: 'Dodge' },
         ];
         this.selectedFood = this.foods[2].value;
         this.selectedCar = this.cars[0].value;
@@ -323,7 +360,7 @@ class SelectHarnessExample {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
-            { value: 'tacos-2', viewValue: 'Tacos' }
+            { value: 'tacos-2', viewValue: 'Tacos' },
         ];
     }
 }

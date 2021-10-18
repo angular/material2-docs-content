@@ -14,28 +14,20 @@
 <span class="hljs-keyword">const</span> TREE_DATA: FoodNode[] = [
   {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
-    <span class="hljs-attr">children</span>: [
-      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>},
-      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>},
-      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>},
-    ]
-  }, {
+    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>}],
+  },
+  {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
     <span class="hljs-attr">children</span>: [
       {
         <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
-        <span class="hljs-attr">children</span>: [
-          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>},
-          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>},
-        ]
-      }, {
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
-        <span class="hljs-attr">children</span>: [
-          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>},
-          {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>},
-        ]
+        <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>}],
       },
-    ]
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
+        <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>}],
+      },
+    ],
   },
 ];
 
@@ -61,13 +53,19 @@
       <span class="hljs-attr">name</span>: node.name,
       <span class="hljs-attr">level</span>: level,
     };
-  }
+  };
 
   treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;ExampleFlatNode&gt;(
-      <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable);
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level,
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable,
+  );
 
   treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(
-      <span class="hljs-built_in">this</span>._transformer, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children);
+    <span class="hljs-built_in">this</span>._transformer,
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level,
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable,
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children,
+  );
 
   dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-built_in">this</span>.treeControl, <span class="hljs-built_in">this</span>.treeFlattener);
 

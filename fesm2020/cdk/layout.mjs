@@ -17,13 +17,16 @@ class BreakpointObserverOverviewExample {
             [Breakpoints.Large, 'Large'],
             [Breakpoints.XLarge, 'XLarge'],
         ]);
-        breakpointObserver.observe([
+        breakpointObserver
+            .observe([
             Breakpoints.XSmall,
             Breakpoints.Small,
             Breakpoints.Medium,
             Breakpoints.Large,
             Breakpoints.XLarge,
-        ]).pipe(takeUntil(this.destroyed)).subscribe(result => {
+        ])
+            .pipe(takeUntil(this.destroyed))
+            .subscribe(result => {
             for (const query of Object.keys(result.breakpoints)) {
                 if (result.breakpoints[query]) {
                     this.currentScreenSize = this.displayNameMap.get(query) ?? 'Unknown';
@@ -43,22 +46,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'breakpoint-observer-overview-example', template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] }]
         }], ctorParameters: function () { return [{ type: i1.BreakpointObserver }]; } });
 
-const EXAMPLES = [
-    BreakpointObserverOverviewExample,
-];
+const EXAMPLES = [BreakpointObserverOverviewExample];
 class CdkLayoutExamplesModule {
 }
 CdkLayoutExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkLayoutExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 CdkLayoutExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkLayoutExamplesModule, declarations: [BreakpointObserverOverviewExample], imports: [LayoutModule], exports: [BreakpointObserverOverviewExample] });
-CdkLayoutExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkLayoutExamplesModule, imports: [[
-            LayoutModule,
-        ]] });
+CdkLayoutExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkLayoutExamplesModule, imports: [[LayoutModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkLayoutExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        LayoutModule,
-                    ],
+                    imports: [LayoutModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

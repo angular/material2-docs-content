@@ -209,15 +209,11 @@ CdkTableExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         CdkTableFlexBasicExample,
         CdkTableFixedLayoutExample,
         CdkTableRecycleRowsExample] });
-CdkTableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, imports: [[
-            CdkTableModule,
-        ]] });
+CdkTableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, imports: [[CdkTableModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CdkTableModule,
-                    ],
+                    imports: [CdkTableModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

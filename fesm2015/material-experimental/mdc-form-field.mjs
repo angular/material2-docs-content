@@ -62,21 +62,29 @@ class MyTelInput {
         }
     }
     get empty() {
-        const { value: { area, exchange, subscriber } } = this.parts;
+        const { value: { area, exchange, subscriber }, } = this.parts;
         return !area && !exchange && !subscriber;
     }
-    get shouldLabelFloat() { return this.focused || !this.empty; }
-    get placeholder() { return this._placeholder; }
+    get shouldLabelFloat() {
+        return this.focused || !this.empty;
+    }
+    get placeholder() {
+        return this._placeholder;
+    }
     set placeholder(value) {
         this._placeholder = value;
         this.stateChanges.next();
     }
-    get required() { return this._required; }
+    get required() {
+        return this._required;
+    }
     set required(value) {
         this._required = coerceBooleanProperty(value);
         this.stateChanges.next();
     }
-    get disabled() { return this._disabled; }
+    get disabled() {
+        return this._disabled;
+    }
     set disabled(value) {
         this._disabled = coerceBooleanProperty(value);
         this._disabled ? this.parts.disable() : this.parts.enable();
@@ -84,7 +92,7 @@ class MyTelInput {
     }
     get value() {
         if (this.parts.valid) {
-            const { value: { area, exchange, subscriber } } = this.parts;
+            const { value: { area, exchange, subscriber }, } = this.parts;
             return new MyTel(area, exchange, subscriber);
         }
         return null;
@@ -99,8 +107,7 @@ class MyTelInput {
         this._focusMonitor.stopMonitoring(this._elementRef);
     }
     setDescribedByIds(ids) {
-        const controlElement = this._elementRef.nativeElement
-            .querySelector('.example-tel-input-container');
+        const controlElement = this._elementRef.nativeElement.querySelector('.example-tel-input-container');
         controlElement.setAttribute('aria-describedby', ids.join(' '));
     }
     onContainerClick(event) {
@@ -157,31 +164,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
                 type: Input
             }] } });
 
-const EXAMPLES = [
-    MdcFormFieldCustomControlExample,
-];
+const EXAMPLES = [MdcFormFieldCustomControlExample];
 class MdcFormFieldExamplesModule {
 }
 MdcFormFieldExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MdcFormFieldExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-MdcFormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MdcFormFieldExamplesModule, declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [CommonModule,
-        MatFormFieldModule,
-        MatIconModule,
-        ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
-MdcFormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MdcFormFieldExamplesModule, imports: [[
-            CommonModule,
-            MatFormFieldModule,
-            MatIconModule,
-            ReactiveFormsModule,
-        ]] });
+MdcFormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MdcFormFieldExamplesModule, declarations: [MdcFormFieldCustomControlExample, MyTelInput], imports: [CommonModule, MatFormFieldModule, MatIconModule, ReactiveFormsModule], exports: [MdcFormFieldCustomControlExample, MyTelInput] });
+MdcFormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MdcFormFieldExamplesModule, imports: [[CommonModule, MatFormFieldModule, MatIconModule, ReactiveFormsModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MdcFormFieldExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        CommonModule,
-                        MatFormFieldModule,
-                        MatIconModule,
-                        ReactiveFormsModule,
-                    ],
+                    imports: [CommonModule, MatFormFieldModule, MatIconModule, ReactiveFormsModule],
                     declarations: [...EXAMPLES, MyTelInput],
                     exports: [...EXAMPLES, MyTelInput],
                     entryComponents: EXAMPLES,

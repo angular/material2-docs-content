@@ -56,8 +56,8 @@ class CheckboxOverviewExample {
             subtasks: [
                 { name: 'Primary', completed: false, color: 'primary' },
                 { name: 'Accent', completed: false, color: 'accent' },
-                { name: 'Warn', completed: false, color: 'warn' }
-            ]
+                { name: 'Warn', completed: false, color: 'warn' },
+            ],
         };
         this.allComplete = false;
     }
@@ -75,7 +75,7 @@ class CheckboxOverviewExample {
         if (this.task.subtasks == null) {
             return;
         }
-        this.task.subtasks.forEach(t => t.completed = completed);
+        this.task.subtasks.forEach(t => (t.completed = completed));
     }
 }
 CheckboxOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CheckboxOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -91,7 +91,7 @@ class CheckboxReactiveFormsExample {
         this.toppings = fb.group({
             pepperoni: false,
             extracheese: false,
-            mushroom: false
+            mushroom: false,
         });
     }
 }

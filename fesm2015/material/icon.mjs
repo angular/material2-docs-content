@@ -54,28 +54,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'icon-harness-example', template: "<mat-icon fontSet=\"fontIcons\" fontIcon=\"fontIcon\"></mat-icon>\n<mat-icon svgIcon=\"svgIcons:svgIcon\"></mat-icon>\n<mat-icon inline>ligature_icon</mat-icon>\n" }]
         }] });
 
-const EXAMPLES = [
-    IconHarnessExample,
-    IconOverviewExample,
-    IconSvgExample,
-];
+const EXAMPLES = [IconHarnessExample, IconOverviewExample, IconSvgExample];
 class IconExamplesModule {
 }
 IconExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: IconExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-IconExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: IconExamplesModule, declarations: [IconHarnessExample,
-        IconOverviewExample,
-        IconSvgExample], imports: [MatIconModule], exports: [IconHarnessExample,
-        IconOverviewExample,
-        IconSvgExample] });
-IconExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: IconExamplesModule, imports: [[
-            MatIconModule,
-        ]] });
+IconExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: IconExamplesModule, declarations: [IconHarnessExample, IconOverviewExample, IconSvgExample], imports: [MatIconModule], exports: [IconHarnessExample, IconOverviewExample, IconSvgExample] });
+IconExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: IconExamplesModule, imports: [[MatIconModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: IconExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatIconModule,
-                    ],
+                    imports: [MatIconModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

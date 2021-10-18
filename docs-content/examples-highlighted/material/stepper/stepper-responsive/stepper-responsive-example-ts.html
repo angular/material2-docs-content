@@ -15,18 +15,19 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperResponsiveExample</span> </span>{
   firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-    <span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
+    <span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
   });
   secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-    <span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
+    <span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
   });
   thirdFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-    <span class="hljs-attr">thirdCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
+    <span class="hljs-attr">thirdCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
   });
   stepperOrientation: Observable&lt;StepperOrientation&gt;;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder, breakpointObserver: BreakpointObserver</span>)</span> {
-    <span class="hljs-built_in">this</span>.stepperOrientation = breakpointObserver.observe(<span class="hljs-string">&#x27;(min-width: 800px)&#x27;</span>)
-      .pipe(map(<span class="hljs-function">(<span class="hljs-params">{matches}</span>) =&gt;</span> matches ? <span class="hljs-string">&#x27;horizontal&#x27;</span> : <span class="hljs-string">&#x27;vertical&#x27;</span>));
+    <span class="hljs-built_in">this</span>.stepperOrientation = breakpointObserver
+      .observe(<span class="hljs-string">&#x27;(min-width: 800px)&#x27;</span>)
+      .pipe(map(<span class="hljs-function">(<span class="hljs-params">{matches}</span>) =&gt;</span> (matches ? <span class="hljs-string">&#x27;horizontal&#x27;</span> : <span class="hljs-string">&#x27;vertical&#x27;</span>)));
   }
 }

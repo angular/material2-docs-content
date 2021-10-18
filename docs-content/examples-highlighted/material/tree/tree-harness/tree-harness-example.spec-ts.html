@@ -16,14 +16,14 @@ describe(<span class="hljs-string">&#x27;TreeHarnessExample&#x27;</span>, <span 
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatTreeModule, MatIconModule],
-      <span class="hljs-attr">declarations</span>: [TreeHarnessExample]
+      <span class="hljs-attr">declarations</span>: [TreeHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(TreeHarnessExample);
     fixture.detectChanges();
@@ -54,14 +54,11 @@ describe(<span class="hljs-string">&#x27;TreeHarnessExample&#x27;</span>, <span 
     expect(<span class="hljs-keyword">await</span> secondGroup.isExpanded()).toBe(<span class="hljs-literal">false</span>);
   });
 
-  it (<span class="hljs-string">&#x27;should correctly get tree structure&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  it(<span class="hljs-string">&#x27;should correctly get tree structure&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> tree = <span class="hljs-keyword">await</span> loader.getHarness(MatTreeHarness);
 
     expect(<span class="hljs-keyword">await</span> tree.getTreeStructure()).toEqual({
-      <span class="hljs-attr">children</span>: [
-        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 1&#x27;</span>},
-        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 2&#x27;</span>}
-      ]
+      <span class="hljs-attr">children</span>: [{<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 1&#x27;</span>}, {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 2&#x27;</span>}],
     });
 
     <span class="hljs-keyword">const</span> firstGroup = (<span class="hljs-keyword">await</span> tree.getNodes({<span class="hljs-attr">text</span>: <span class="hljs-regexp">/Flat Group 1/</span>}))[<span class="hljs-number">0</span>];
@@ -71,14 +68,10 @@ describe(<span class="hljs-string">&#x27;TreeHarnessExample&#x27;</span>, <span 
       <span class="hljs-attr">children</span>: [
         {
           <span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 1&#x27;</span>,
-          <span class="hljs-attr">children</span>: [
-            {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.1&#x27;</span>},
-            {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.2&#x27;</span>},
-            {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.3&#x27;</span>}
-          ]
+          <span class="hljs-attr">children</span>: [{<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.1&#x27;</span>}, {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.2&#x27;</span>}, {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Leaf 1.3&#x27;</span>}],
         },
-        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 2&#x27;</span>}
-      ]
+        {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Flat Group 2&#x27;</span>},
+      ],
     });
   });
 });

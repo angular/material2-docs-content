@@ -115,7 +115,7 @@ const EXAMPLES = [
     CardActionsExample,
     CardMediaSizeExample,
     CardSubtitleExample,
-    CardFooterExample
+    CardFooterExample,
 ];
 class CardExamplesModule {
 }
@@ -126,31 +126,18 @@ CardExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", vers
         CardActionsExample,
         CardMediaSizeExample,
         CardSubtitleExample,
-        CardFooterExample], imports: [MatButtonModule,
-        MatCardModule,
-        MatDividerModule,
-        MatProgressBarModule], exports: [CardFancyExample,
+        CardFooterExample], imports: [MatButtonModule, MatCardModule, MatDividerModule, MatProgressBarModule], exports: [CardFancyExample,
         CardOverviewExample,
         CardHarnessExample,
         CardActionsExample,
         CardMediaSizeExample,
         CardSubtitleExample,
         CardFooterExample] });
-CardExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CardExamplesModule, imports: [[
-            MatButtonModule,
-            MatCardModule,
-            MatDividerModule,
-            MatProgressBarModule
-        ]] });
+CardExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CardExamplesModule, imports: [[MatButtonModule, MatCardModule, MatDividerModule, MatProgressBarModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: CardExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatCardModule,
-                        MatDividerModule,
-                        MatProgressBarModule
-                    ],
+                    imports: [MatButtonModule, MatCardModule, MatDividerModule, MatProgressBarModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

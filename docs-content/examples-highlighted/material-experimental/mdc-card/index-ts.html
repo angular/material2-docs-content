@@ -3,22 +3,14 @@
 <span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/mdc-card&#x27;</span>;
 <span class="hljs-keyword">import</span> {MdcCardFancyExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./mdc-card-fancy/mdc-card-fancy-example&#x27;</span>;
 
-<span class="hljs-keyword">export</span> {
-  MdcCardFancyExample,
-};
+<span class="hljs-keyword">export</span> {MdcCardFancyExample};
 
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  MdcCardFancyExample,
-];
+<span class="hljs-keyword">const</span> EXAMPLES = [MdcCardFancyExample];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    MatButtonModule,
-    MatCardModule,
-  ],
+  <span class="hljs-attr">imports</span>: [MatButtonModule, MatCardModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MdcCardExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MdcCardExamplesModule</span> </span>{}

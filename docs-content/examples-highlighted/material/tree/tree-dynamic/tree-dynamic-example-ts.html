@@ -6,8 +6,12 @@
 
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DynamicFlatNode</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> item: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> level = <span class="hljs-number">1</span>, <span class="hljs-keyword">public</span> expandable = <span class="hljs-literal">false</span>,
-              <span class="hljs-keyword">public</span> isLoading = <span class="hljs-literal">false</span></span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">public</span> item: <span class="hljs-built_in">string</span>,
+    <span class="hljs-keyword">public</span> level = <span class="hljs-number">1</span>,
+    <span class="hljs-keyword">public</span> expandable = <span class="hljs-literal">false</span>,
+    <span class="hljs-keyword">public</span> isLoading = <span class="hljs-literal">false</span>,
+  </span>)</span> {}
 }
 
 <span class="hljs-comment">/**
@@ -20,7 +24,7 @@
     [<span class="hljs-string">&#x27;Fruits&#x27;</span>, [<span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-string">&#x27;Orange&#x27;</span>, <span class="hljs-string">&#x27;Banana&#x27;</span>]],
     [<span class="hljs-string">&#x27;Vegetables&#x27;</span>, [<span class="hljs-string">&#x27;Tomato&#x27;</span>, <span class="hljs-string">&#x27;Potato&#x27;</span>, <span class="hljs-string">&#x27;Onion&#x27;</span>]],
     [<span class="hljs-string">&#x27;Apple&#x27;</span>, [<span class="hljs-string">&#x27;Fuji&#x27;</span>, <span class="hljs-string">&#x27;Macintosh&#x27;</span>]],
-    [<span class="hljs-string">&#x27;Onion&#x27;</span>, [<span class="hljs-string">&#x27;Yellow&#x27;</span>, <span class="hljs-string">&#x27;White&#x27;</span>, <span class="hljs-string">&#x27;Purple&#x27;</span>]]
+    [<span class="hljs-string">&#x27;Onion&#x27;</span>, [<span class="hljs-string">&#x27;Yellow&#x27;</span>, <span class="hljs-string">&#x27;White&#x27;</span>, <span class="hljs-string">&#x27;Purple&#x27;</span>]],
   ]);
 
   rootLevelNodes: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Fruits&#x27;</span>, <span class="hljs-string">&#x27;Vegetables&#x27;</span>];
@@ -46,22 +50,27 @@
  * structure.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DynamicDataSource</span> <span class="hljs-title">implements</span> <span class="hljs-title">DataSource</span>&lt;<span class="hljs-title">DynamicFlatNode</span>&gt; </span>{
-
   dataChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;DynamicFlatNode[]&gt;([]);
 
-  <span class="hljs-keyword">get</span> <span class="hljs-title">data</span>(): <span class="hljs-title">DynamicFlatNode</span>[] { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.dataChange.value; }
+  <span class="hljs-keyword">get</span> <span class="hljs-title">data</span>(): <span class="hljs-title">DynamicFlatNode</span>[] {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.dataChange.value;
+  }
   <span class="hljs-keyword">set</span> <span class="hljs-title">data</span>(<span class="hljs-params">value: DynamicFlatNode[]</span>) {
     <span class="hljs-built_in">this</span>._treeControl.dataNodes = value;
     <span class="hljs-built_in">this</span>.dataChange.next(value);
   }
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _treeControl: FlatTreeControl&lt;DynamicFlatNode&gt;,
-              <span class="hljs-keyword">private</span> _database: DynamicDatabase</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">private</span> _treeControl: FlatTreeControl&lt;DynamicFlatNode&gt;,
+    <span class="hljs-keyword">private</span> _database: DynamicDatabase,
+  </span>)</span> {}
 
   connect(collectionViewer: CollectionViewer): Observable&lt;DynamicFlatNode[]&gt; {
     <span class="hljs-built_in">this</span>._treeControl.expansionModel.changed.subscribe(<span class="hljs-function"><span class="hljs-params">change</span> =&gt;</span> {
-      <span class="hljs-keyword">if</span> ((change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;).added ||
-        (change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;).removed) {
+      <span class="hljs-keyword">if</span> (
+        (change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;).added ||
+        (change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;).removed
+      ) {
         <span class="hljs-built_in">this</span>.handleTreeControl(change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;);
       }
     });
@@ -77,7 +86,10 @@
       change.added.forEach(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> <span class="hljs-built_in">this</span>.toggleNode(node, <span class="hljs-literal">true</span>));
     }
     <span class="hljs-keyword">if</span> (change.removed) {
-      change.removed.slice().reverse().forEach(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> <span class="hljs-built_in">this</span>.toggleNode(node, <span class="hljs-literal">false</span>));
+      change.removed
+        .slice()
+        .reverse()
+        .forEach(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> <span class="hljs-built_in">this</span>.toggleNode(node, <span class="hljs-literal">false</span>));
     }
   }
 
@@ -87,7 +99,8 @@
   <span class="hljs-function"><span class="hljs-title">toggleNode</span>(<span class="hljs-params">node: DynamicFlatNode, expand: <span class="hljs-built_in">boolean</span></span>)</span> {
     <span class="hljs-keyword">const</span> children = <span class="hljs-built_in">this</span>._database.getChildren(node.item);
     <span class="hljs-keyword">const</span> index = <span class="hljs-built_in">this</span>.data.indexOf(node);
-    <span class="hljs-keyword">if</span> (!children || index &lt; <span class="hljs-number">0</span>) { <span class="hljs-comment">// If no children, or cannot find the node, no op</span>
+    <span class="hljs-keyword">if</span> (!children || index &lt; <span class="hljs-number">0</span>) {
+      <span class="hljs-comment">// If no children, or cannot find the node, no op</span>
       <span class="hljs-keyword">return</span>;
     }
 
@@ -95,13 +108,17 @@
 
     <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-keyword">if</span> (expand) {
-        <span class="hljs-keyword">const</span> nodes = children.map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span>
-          <span class="hljs-keyword">new</span> DynamicFlatNode(name, node.level + <span class="hljs-number">1</span>, <span class="hljs-built_in">this</span>._database.isExpandable(name)));
+        <span class="hljs-keyword">const</span> nodes = children.map(
+          <span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-keyword">new</span> DynamicFlatNode(name, node.level + <span class="hljs-number">1</span>, <span class="hljs-built_in">this</span>._database.isExpandable(name)),
+        );
         <span class="hljs-built_in">this</span>.data.splice(index + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, ...nodes);
       } <span class="hljs-keyword">else</span> {
         <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = index + <span class="hljs-number">1</span>; i &lt; <span class="hljs-built_in">this</span>.data.length
-          &amp;&amp; <span class="hljs-built_in">this</span>.data[i].level &gt; node.level; i++, count++) {}
+        <span class="hljs-keyword">for</span> (
+          <span class="hljs-keyword">let</span> i = index + <span class="hljs-number">1</span>;
+          i &lt; <span class="hljs-built_in">this</span>.data.length &amp;&amp; <span class="hljs-built_in">this</span>.data[i].level &gt; node.level;
+          i++, count++
+        ) {}
         <span class="hljs-built_in">this</span>.data.splice(index + <span class="hljs-number">1</span>, count);
       }
 
@@ -118,7 +135,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tree-dynamic-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tree-dynamic-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;tree-dynamic-example.css&#x27;</span>]
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;tree-dynamic-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeDynamicExample</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">database: DynamicDatabase</span>)</span> {

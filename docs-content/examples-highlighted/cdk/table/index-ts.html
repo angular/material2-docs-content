@@ -2,9 +2,7 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkTableFlexBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-table-flex-basic/cdk-table-flex-basic-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkTableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-table-basic/cdk-table-basic-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  CdkTableFixedLayoutExample,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-table-fixed-layout/cdk-table-fixed-layout-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkTableFixedLayoutExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-table-fixed-layout/cdk-table-fixed-layout-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkTableRecycleRowsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-table-recycle-rows/cdk-table-recycle-rows-example&#x27;</span>;
 <span class="hljs-keyword">export</span> {
   CdkTableBasicExample,
@@ -21,12 +19,9 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    CdkTableModule,
-  ],
+  <span class="hljs-attr">imports</span>: [CdkTableModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTableExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTableExamplesModule</span> </span>{}

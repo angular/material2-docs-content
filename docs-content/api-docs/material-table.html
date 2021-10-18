@@ -1751,7 +1751,7 @@ data objects match to this filter string, provide a custom function for filterPr
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>filterPredicate: ((data: T, filter: string) =&gt; boolean)</code>
+      <code>filterPredicate: (data: T, filter: string) =&gt; boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Checks if a data object matches the data source&#39;s filter string. By default, each data object
@@ -1817,7 +1817,7 @@ emitted by the MatSort will trigger an update to the table&#39;s rendered data.<
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>sortData: ((data: T[], sort: MatSort) =&gt; T[])</code>
+      <code>sortData: (data: T[], sort: MatSort) =&gt; T[]</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Gets a sorted copy of the data array based on the state of the MatSort. Called
@@ -1834,7 +1834,7 @@ of data ordering.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>sortingDataAccessor: ((data: T, sortHeaderId: string) =&gt; string | number)</code>
+      <code>sortingDataAccessor: (data: T, sortHeaderId: string) =&gt; string | number</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Data accessor function that is used for accessing data properties for sorting through

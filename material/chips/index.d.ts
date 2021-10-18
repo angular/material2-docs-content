@@ -21,7 +21,7 @@ import * as i12 from "@angular/material/chips";
 import * as i13 from "@angular/material/icon";
 import * as i14 from "@angular/material/form-field";
 import * as i15 from "@angular/forms";
-export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ChipsHarnessExample, ChipsFormControlExample };
+export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ChipsHarnessExample, ChipsFormControlExample, };
 export declare class ChipsExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsExamplesModule, never>;
     static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample], [typeof i8.CommonModule, typeof i9.DragDropModule, typeof i10.MatAutocompleteModule, typeof i11.MatButtonModule, typeof i12.MatChipsModule, typeof i13.MatIconModule, typeof i14.MatFormFieldModule, typeof i15.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample]>;

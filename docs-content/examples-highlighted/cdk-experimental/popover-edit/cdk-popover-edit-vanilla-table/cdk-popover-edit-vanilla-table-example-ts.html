@@ -46,13 +46,17 @@
   <span class="hljs-keyword">readonly</span> elements = ELEMENT_DATA;
 
   <span class="hljs-function"><span class="hljs-title">onSubmitName</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) { <span class="hljs-keyword">return</span>; }
+    <span class="hljs-keyword">if</span> (!f.valid) {
+      <span class="hljs-keyword">return</span>;
+    }
 
     element.name = f.value.name;
   }
 
   <span class="hljs-function"><span class="hljs-title">onSubmitWeight</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) { <span class="hljs-keyword">return</span>; }
+    <span class="hljs-keyword">if</span> (!f.valid) {
+      <span class="hljs-keyword">return</span>;
+    }
 
     element.weight = f.value.weight;
   }

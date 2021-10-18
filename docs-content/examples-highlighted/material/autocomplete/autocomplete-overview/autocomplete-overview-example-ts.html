@@ -26,34 +26,33 @@
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Arkansas&#x27;</span>,
       <span class="hljs-attr">population</span>: <span class="hljs-string">&#x27;2.978M&#x27;</span>,
       <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg</span>
-      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg&#x27;</span>
+      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg&#x27;</span>,
     },
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;California&#x27;</span>,
       <span class="hljs-attr">population</span>: <span class="hljs-string">&#x27;39.14M&#x27;</span>,
       <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_California.svg</span>
-      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg&#x27;</span>
+      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg&#x27;</span>,
     },
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Florida&#x27;</span>,
       <span class="hljs-attr">population</span>: <span class="hljs-string">&#x27;20.27M&#x27;</span>,
       <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg</span>
-      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg&#x27;</span>
+      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg&#x27;</span>,
     },
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Texas&#x27;</span>,
       <span class="hljs-attr">population</span>: <span class="hljs-string">&#x27;27.47M&#x27;</span>,
       <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg</span>
-      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg&#x27;</span>
-    }
+      <span class="hljs-attr">flag</span>: <span class="hljs-string">&#x27;https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg&#x27;</span>,
+    },
   ];
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.filteredStates = <span class="hljs-built_in">this</span>.stateCtrl.valueChanges
-      .pipe(
-        startWith(<span class="hljs-string">&#x27;&#x27;</span>),
-        map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state ? <span class="hljs-built_in">this</span>._filterStates(state) : <span class="hljs-built_in">this</span>.states.slice())
-      );
+    <span class="hljs-built_in">this</span>.filteredStates = <span class="hljs-built_in">this</span>.stateCtrl.valueChanges.pipe(
+      startWith(<span class="hljs-string">&#x27;&#x27;</span>),
+      map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> (state ? <span class="hljs-built_in">this</span>._filterStates(state) : <span class="hljs-built_in">this</span>.states.slice())),
+    );
   }
 
   <span class="hljs-keyword">private</span> _filterStates(value: <span class="hljs-built_in">string</span>): State[] {

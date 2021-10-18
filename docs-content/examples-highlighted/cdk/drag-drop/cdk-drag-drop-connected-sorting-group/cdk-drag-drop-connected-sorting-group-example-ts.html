@@ -10,29 +10,20 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-drag-drop-connected-sorting-group-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDragDropConnectedSortingGroupExample</span> </span>{
-  todo = [
-    <span class="hljs-string">&#x27;Get to work&#x27;</span>,
-    <span class="hljs-string">&#x27;Pick up groceries&#x27;</span>,
-    <span class="hljs-string">&#x27;Go home&#x27;</span>,
-    <span class="hljs-string">&#x27;Fall asleep&#x27;</span>
-  ];
+  todo = [<span class="hljs-string">&#x27;Get to work&#x27;</span>, <span class="hljs-string">&#x27;Pick up groceries&#x27;</span>, <span class="hljs-string">&#x27;Go home&#x27;</span>, <span class="hljs-string">&#x27;Fall asleep&#x27;</span>];
 
-  done = [
-    <span class="hljs-string">&#x27;Get up&#x27;</span>,
-    <span class="hljs-string">&#x27;Brush teeth&#x27;</span>,
-    <span class="hljs-string">&#x27;Take a shower&#x27;</span>,
-    <span class="hljs-string">&#x27;Check e-mail&#x27;</span>,
-    <span class="hljs-string">&#x27;Walk dog&#x27;</span>
-  ];
+  done = [<span class="hljs-string">&#x27;Get up&#x27;</span>, <span class="hljs-string">&#x27;Brush teeth&#x27;</span>, <span class="hljs-string">&#x27;Take a shower&#x27;</span>, <span class="hljs-string">&#x27;Check e-mail&#x27;</span>, <span class="hljs-string">&#x27;Walk dog&#x27;</span>];
 
   <span class="hljs-function"><span class="hljs-title">drop</span>(<span class="hljs-params">event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;</span>)</span> {
     <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } <span class="hljs-keyword">else</span> {
-      transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
     }
   }
 }

@@ -15,14 +15,14 @@ describe(<span class="hljs-string">&#x27;AutocompleteHarnessExample&#x27;</span>
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatAutocompleteModule],
-      <span class="hljs-attr">declarations</span>: [AutocompleteHarnessExample]
+      <span class="hljs-attr">declarations</span>: [AutocompleteHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(AutocompleteHarnessExample);
     fixture.detectChanges();
@@ -30,10 +30,9 @@ describe(<span class="hljs-string">&#x27;AutocompleteHarnessExample&#x27;</span>
   });
 
   it(<span class="hljs-string">&#x27;should load all autocomplete harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-      <span class="hljs-keyword">const</span> autocompletes = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatAutocompleteHarness);
-      expect(autocompletes.length).toBe(<span class="hljs-number">2</span>);
-    }
-  );
+    <span class="hljs-keyword">const</span> autocompletes = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatAutocompleteHarness);
+    expect(autocompletes.length).toBe(<span class="hljs-number">2</span>);
+  });
 
   it(<span class="hljs-string">&#x27;should get disabled state&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> enabled = <span class="hljs-keyword">await</span> loader.getHarness(MatAutocompleteHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#plain&#x27;</span>}));

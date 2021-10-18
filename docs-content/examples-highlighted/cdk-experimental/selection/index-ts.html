@@ -8,15 +8,9 @@
 <span class="hljs-keyword">import</span> {CdkSelectionColumnExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-selection-column/cdk-selection-column-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkSelectionListExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-selection-list/cdk-selection-list-example&#x27;</span>;
 
-<span class="hljs-keyword">export</span> {
-  CdkSelectionColumnExample,
-  CdkSelectionListExample,
-};
+<span class="hljs-keyword">export</span> {CdkSelectionColumnExample, CdkSelectionListExample};
 
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  CdkSelectionListExample,
-  CdkSelectionColumnExample,
-];
+<span class="hljs-keyword">const</span> EXAMPLES = [CdkSelectionListExample, CdkSelectionColumnExample];
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [
@@ -26,10 +20,8 @@
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-
   ],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkSelectionExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkSelectionExamplesModule</span> </span>{}

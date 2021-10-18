@@ -46,34 +46,16 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15",
             args: [{ selector: 'button-harness-example', template: "<button id=\"basic\" type=\"button\" mat-button (click)=\"clicked = true\">\n  Basic button\n</button>\n" }]
         }] });
 
-const EXAMPLES = [
-    ButtonOverviewExample,
-    ButtonTypesExample,
-    ButtonHarnessExample,
-];
+const EXAMPLES = [ButtonOverviewExample, ButtonTypesExample, ButtonHarnessExample];
 class ButtonExamplesModule {
 }
 ButtonExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ButtonExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonExamplesModule, declarations: [ButtonOverviewExample,
-        ButtonTypesExample,
-        ButtonHarnessExample], imports: [MatButtonModule,
-        MatDividerModule,
-        MatIconModule], exports: [ButtonOverviewExample,
-        ButtonTypesExample,
-        ButtonHarnessExample] });
-ButtonExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonExamplesModule, imports: [[
-            MatButtonModule,
-            MatDividerModule,
-            MatIconModule,
-        ]] });
+ButtonExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonExamplesModule, declarations: [ButtonOverviewExample, ButtonTypesExample, ButtonHarnessExample], imports: [MatButtonModule, MatDividerModule, MatIconModule], exports: [ButtonOverviewExample, ButtonTypesExample, ButtonHarnessExample] });
+ButtonExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonExamplesModule, imports: [[MatButtonModule, MatDividerModule, MatIconModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: ButtonExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatDividerModule,
-                        MatIconModule,
-                    ],
+                    imports: [MatButtonModule, MatDividerModule, MatIconModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

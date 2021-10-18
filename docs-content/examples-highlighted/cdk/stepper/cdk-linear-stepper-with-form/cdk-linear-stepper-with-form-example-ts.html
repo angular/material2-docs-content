@@ -6,7 +6,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-linear-stepper-with-form-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./cdk-linear-stepper-with-form-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./cdk-linear-stepper-with-form-example.css&#x27;</span>]
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./cdk-linear-stepper-with-form-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkLinearStepperWithFormExample</span> </span>{
   isLinear = <span class="hljs-literal">true</span>;
@@ -14,16 +14,16 @@
   secondFormGroup: FormGroup;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _formBuilder: FormBuilder</span>)</span> {
-      <span class="hljs-built_in">this</span>.firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-          <span class="hljs-attr">firstControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
-      });
-      <span class="hljs-built_in">this</span>.secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-          <span class="hljs-attr">secondControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required]
-      });
+    <span class="hljs-built_in">this</span>.firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+      <span class="hljs-attr">firstControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
+    });
+    <span class="hljs-built_in">this</span>.secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+      <span class="hljs-attr">secondControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
+    });
   }
 
   <span class="hljs-function"><span class="hljs-title">toggleLinearity</span>(<span class="hljs-params"></span>)</span> {
-      <span class="hljs-built_in">this</span>.isLinear = !<span class="hljs-built_in">this</span>.isLinear;
+    <span class="hljs-built_in">this</span>.isLinear = !<span class="hljs-built_in">this</span>.isLinear;
   }
 }
 
@@ -32,7 +32,7 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-custom-linear-stepper&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./example-custom-linear-stepper.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./example-custom-linear-stepper.css&#x27;</span>],
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomLinearStepper}]
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomLinearStepper}],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomLinearStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CdkStepper</span> </span>{
   selectStepByIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {

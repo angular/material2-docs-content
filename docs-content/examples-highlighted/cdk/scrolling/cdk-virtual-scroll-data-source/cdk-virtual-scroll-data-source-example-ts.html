@@ -22,13 +22,15 @@
   <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _subscription = <span class="hljs-keyword">new</span> Subscription();
 
   connect(collectionViewer: CollectionViewer): Observable&lt;(<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>)[]&gt; {
-    <span class="hljs-built_in">this</span>._subscription.add(collectionViewer.viewChange.subscribe(<span class="hljs-function"><span class="hljs-params">range</span> =&gt;</span> {
-      <span class="hljs-keyword">const</span> startPage = <span class="hljs-built_in">this</span>._getPageForIndex(range.start);
-      <span class="hljs-keyword">const</span> endPage = <span class="hljs-built_in">this</span>._getPageForIndex(range.end - <span class="hljs-number">1</span>);
-      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = startPage; i &lt;= endPage; i++) {
-        <span class="hljs-built_in">this</span>._fetchPage(i);
-      }
-    }));
+    <span class="hljs-built_in">this</span>._subscription.add(
+      collectionViewer.viewChange.subscribe(<span class="hljs-function"><span class="hljs-params">range</span> =&gt;</span> {
+        <span class="hljs-keyword">const</span> startPage = <span class="hljs-built_in">this</span>._getPageForIndex(range.start);
+        <span class="hljs-keyword">const</span> endPage = <span class="hljs-built_in">this</span>._getPageForIndex(range.end - <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = startPage; i &lt;= endPage; i++) {
+          <span class="hljs-built_in">this</span>._fetchPage(i);
+        }
+      }),
+    );
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._dataStream;
   }
 
@@ -48,9 +50,11 @@
 
     <span class="hljs-comment">// Use `setTimeout` to simulate fetching data from server.</span>
     <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-      <span class="hljs-built_in">this</span>._cachedData.splice(page * <span class="hljs-built_in">this</span>._pageSize, <span class="hljs-built_in">this</span>._pageSize,
-          ...Array.from({<span class="hljs-attr">length</span>: <span class="hljs-built_in">this</span>._pageSize})
-              .map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${page * <span class="hljs-built_in">this</span>._pageSize + i}</span>`</span>));
+      <span class="hljs-built_in">this</span>._cachedData.splice(
+        page * <span class="hljs-built_in">this</span>._pageSize,
+        <span class="hljs-built_in">this</span>._pageSize,
+        ...Array.from({<span class="hljs-attr">length</span>: <span class="hljs-built_in">this</span>._pageSize}).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${page * <span class="hljs-built_in">this</span>._pageSize + i}</span>`</span>),
+      );
       <span class="hljs-built_in">this</span>._dataStream.next(<span class="hljs-built_in">this</span>._cachedData);
     }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span> + <span class="hljs-number">200</span>);
   }

@@ -7,12 +7,7 @@
 <span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-overview/toolbar-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {ToolbarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-harness/toolbar-harness-example&#x27;</span>;
 
-<span class="hljs-keyword">export</span> {
-  ToolbarBasicExample,
-  ToolbarHarnessExample,
-  ToolbarMultirowExample,
-  ToolbarOverviewExample,
-};
+<span class="hljs-keyword">export</span> {ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample};
 
 <span class="hljs-keyword">const</span> EXAMPLES = [
   ToolbarBasicExample,
@@ -22,14 +17,9 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule,
-  ],
+  <span class="hljs-attr">imports</span>: [MatButtonModule, MatIconModule, MatToolbarModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
   <span class="hljs-attr">entryComponents</span>: EXAMPLES,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ToolbarExamplesModule</span> </span>{
-}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ToolbarExamplesModule</span> </span>{}

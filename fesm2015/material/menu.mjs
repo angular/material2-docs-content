@@ -81,26 +81,16 @@ MenuExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", vers
         MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
-        MenuNestedExample], imports: [MatButtonModule,
-        MatIconModule,
-        MatMenuModule], exports: [MenuHarnessExample,
+        MenuNestedExample], imports: [MatButtonModule, MatIconModule, MatMenuModule], exports: [MenuHarnessExample,
         MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
         MenuNestedExample] });
-MenuExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MenuExamplesModule, imports: [[
-            MatButtonModule,
-            MatIconModule,
-            MatMenuModule,
-        ]] });
+MenuExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MenuExamplesModule, imports: [[MatButtonModule, MatIconModule, MatMenuModule]] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0-next.15", ngImport: i0, type: MenuExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatIconModule,
-                        MatMenuModule,
-                    ],
+                    imports: [MatButtonModule, MatIconModule, MatMenuModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: EXAMPLES,

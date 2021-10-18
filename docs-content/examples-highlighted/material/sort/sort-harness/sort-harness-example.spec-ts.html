@@ -16,14 +16,14 @@ describe(<span class="hljs-string">&#x27;SortHarnessExample&#x27;</span>, <span 
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
     TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>}
+      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
     });
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatSortModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [SortHarnessExample]
+      <span class="hljs-attr">declarations</span>: [SortHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(SortHarnessExample);
     fixture.detectChanges();

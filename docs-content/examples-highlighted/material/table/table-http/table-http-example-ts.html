@@ -31,7 +31,7 @@
     <span class="hljs-built_in">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDatabase(<span class="hljs-built_in">this</span>._httpClient);
 
     <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>
-    <span class="hljs-built_in">this</span>.sort.sortChange.subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">this</span>.sort.sortChange.subscribe(<span class="hljs-function">() =&gt;</span> (<span class="hljs-built_in">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>));
 
     merge(<span class="hljs-built_in">this</span>.sort.sortChange, <span class="hljs-built_in">this</span>.paginator.page)
       .pipe(
@@ -39,8 +39,10 @@
         switchMap(<span class="hljs-function">() =&gt;</span> {
           <span class="hljs-built_in">this</span>.isLoadingResults = <span class="hljs-literal">true</span>;
           <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.exampleDatabase!.getRepoIssues(
-              <span class="hljs-built_in">this</span>.sort.active, <span class="hljs-built_in">this</span>.sort.direction, <span class="hljs-built_in">this</span>.paginator.pageIndex)
-            .pipe(catchError(<span class="hljs-function">() =&gt;</span> observableOf(<span class="hljs-literal">null</span>)));
+            <span class="hljs-built_in">this</span>.sort.active,
+            <span class="hljs-built_in">this</span>.sort.direction,
+            <span class="hljs-built_in">this</span>.paginator.pageIndex,
+          ).pipe(catchError(<span class="hljs-function">() =&gt;</span> observableOf(<span class="hljs-literal">null</span>)));
         }),
         map(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
           <span class="hljs-comment">// Flip flag to show that loading has finished.</span>
@@ -56,8 +58,9 @@
           <span class="hljs-comment">// would prevent users from re-triggering requests.</span>
           <span class="hljs-built_in">this</span>.resultsLength = data.total_count;
           <span class="hljs-keyword">return</span> data.items;
-        })
-      ).subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-built_in">this</span>.data = data);
+        }),
+      )
+      .subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> (<span class="hljs-built_in">this</span>.data = data));
   }
 }
 
@@ -79,8 +82,9 @@
 
   getRepoIssues(sort: <span class="hljs-built_in">string</span>, <span class="hljs-attr">order</span>: SortDirection, <span class="hljs-attr">page</span>: <span class="hljs-built_in">number</span>): Observable&lt;GithubApi&gt; {
     <span class="hljs-keyword">const</span> href = <span class="hljs-string">&#x27;https://api.github.com/search/issues&#x27;</span>;
-    <span class="hljs-keyword">const</span> requestUrl =
-        <span class="hljs-string">`<span class="hljs-subst">${href}</span>?q=repo:angular/components&amp;sort=<span class="hljs-subst">${sort}</span>&amp;order=<span class="hljs-subst">${order}</span>&amp;page=<span class="hljs-subst">${page + <span class="hljs-number">1</span>}</span>`</span>;
+    <span class="hljs-keyword">const</span> requestUrl = <span class="hljs-string">`<span class="hljs-subst">${href}</span>?q=repo:angular/components&amp;sort=<span class="hljs-subst">${sort}</span>&amp;order=<span class="hljs-subst">${order}</span>&amp;page=<span class="hljs-subst">${
+      page + <span class="hljs-number">1</span>
+    }</span>`</span>;
 
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._httpClient.get&lt;GithubApi&gt;(requestUrl);
   }

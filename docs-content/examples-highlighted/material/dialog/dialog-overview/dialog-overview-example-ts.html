@@ -14,7 +14,6 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-overview-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogOverviewExample</span> </span>{
-
   <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span>;
   name: <span class="hljs-built_in">string</span>;
 
@@ -23,7 +22,7 @@
   openDialog(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogOverviewExampleDialog, {
       <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;250px&#x27;</span>,
-      <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-built_in">this</span>.name, <span class="hljs-attr">animal</span>: <span class="hljs-built_in">this</span>.animal}
+      <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-built_in">this</span>.name, <span class="hljs-attr">animal</span>: <span class="hljs-built_in">this</span>.animal},
     });
 
     dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
@@ -31,7 +30,6 @@
       <span class="hljs-built_in">this</span>.animal = result;
     });
   }
-
 }
 
 <span class="hljs-meta">@Component</span>({
@@ -39,13 +37,12 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-overview-example-dialog.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogOverviewExampleDialog</span> </span>{
-
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
     <span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogOverviewExampleDialog&gt;,
-    <span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData</span>)</span> {}
+    <span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData,
+  </span>)</span> {}
 
   onNoClick(): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.dialogRef.close();
   }
-
 }

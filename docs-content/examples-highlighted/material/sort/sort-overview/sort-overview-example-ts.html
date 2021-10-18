@@ -42,12 +42,18 @@
     <span class="hljs-built_in">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
       <span class="hljs-keyword">const</span> isAsc = sort.direction === <span class="hljs-string">&#x27;asc&#x27;</span>;
       <span class="hljs-keyword">switch</span> (sort.active) {
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-keyword">return</span> compare(a.name, b.name, isAsc);
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;calories&#x27;</span>: <span class="hljs-keyword">return</span> compare(a.calories, b.calories, isAsc);
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;fat&#x27;</span>: <span class="hljs-keyword">return</span> compare(a.fat, b.fat, isAsc);
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;carbs&#x27;</span>: <span class="hljs-keyword">return</span> compare(a.carbs, b.carbs, isAsc);
-        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;protein&#x27;</span>: <span class="hljs-keyword">return</span> compare(a.protein, b.protein, isAsc);
-        <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;name&#x27;</span>:
+          <span class="hljs-keyword">return</span> compare(a.name, b.name, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;calories&#x27;</span>:
+          <span class="hljs-keyword">return</span> compare(a.calories, b.calories, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;fat&#x27;</span>:
+          <span class="hljs-keyword">return</span> compare(a.fat, b.fat, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;carbs&#x27;</span>:
+          <span class="hljs-keyword">return</span> compare(a.carbs, b.carbs, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;protein&#x27;</span>:
+          <span class="hljs-keyword">return</span> compare(a.protein, b.protein, isAsc);
+        <span class="hljs-keyword">default</span>:
+          <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
       }
     });
   }

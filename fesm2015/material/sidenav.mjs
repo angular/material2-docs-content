@@ -87,7 +87,7 @@ class SidenavFixedExample {
         this.options = fb.group({
             bottom: 0,
             fixed: false,
-            top: 0
+            top: 0,
         });
     }
 }
