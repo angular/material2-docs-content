@@ -112,7 +112,7 @@ using Angular Ivy don&#39;t need <code>entryComponents</code>.</p>
 <p>Usage:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">templatePortalContent</span>&gt;</span>Some content here<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 </code></pre>
-<pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) templatePortalContent: TemplateRef&lt;unknow&gt;;
+<pre><code class="language-ts"><span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;templatePortalContent&#x27;</span>) templatePortalContent: TemplateRef&lt;unknown&gt;;
 
 <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
   <span class="hljs-built_in">this</span>.templatePortal = <span class="hljs-keyword">new</span> TemplatePortal(
