@@ -16,9 +16,7 @@ describe(<span class="hljs-string">&#x27;InputHarnessExample&#x27;</span>, <span
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeAll(<span class="hljs-function">() =&gt;</span> {
-    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting(), {
-      <span class="hljs-attr">teardown</span>: {<span class="hljs-attr">destroyAfterEach</span>: <span class="hljs-literal">true</span>},
-    });
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
   });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
