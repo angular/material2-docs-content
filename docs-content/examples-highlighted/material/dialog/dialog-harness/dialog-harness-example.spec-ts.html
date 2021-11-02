@@ -1,11 +1,7 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {ComponentFixture, TestBed, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDialogHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
 <span class="hljs-keyword">import</span> {DialogHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
@@ -13,10 +9,6 @@
 describe(<span class="hljs-string">&#x27;DialogHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;DialogHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
-
-  beforeAll(<span class="hljs-function">() =&gt;</span> {
-    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
-  });
 
   beforeEach(
     waitForAsync(<span class="hljs-keyword">async</span> () =&gt; {

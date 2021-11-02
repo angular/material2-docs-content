@@ -1,21 +1,13 @@
-<span class="hljs-keyword">import</span> {TestBed, ComponentFixture} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {ComponentFixture, TestBed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressSpinnerHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser-dynamic/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
 <span class="hljs-keyword">import</span> {ProgressSpinnerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./progress-spinner-harness-example&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;ProgressSpinnerHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;ProgressSpinnerHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
-
-  beforeAll(<span class="hljs-function">() =&gt;</span> {
-    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
-  });
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
