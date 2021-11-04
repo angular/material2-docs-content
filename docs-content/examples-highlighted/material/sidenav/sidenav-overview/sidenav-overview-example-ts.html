@@ -7,5 +7,5 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-overview-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavOverviewExample</span> </span>{
-  shouldRun = [<span class="hljs-regexp">/(^|\.)plnkr\.co$/</span>, <span class="hljs-regexp">/(^|\.)stackblitz\.io$/</span>].some(<span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h.test(<span class="hljs-built_in">window</span>.location.host));
+  shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.test(<span class="hljs-built_in">window</span>.location.host);
 }
