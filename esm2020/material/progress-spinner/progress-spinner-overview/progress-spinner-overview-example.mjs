@@ -6,9 +6,9 @@ import * as i1 from "@angular/material/progress-spinner";
  */
 export class ProgressSpinnerOverviewExample {
 }
-ProgressSpinnerOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: ProgressSpinnerOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ProgressSpinnerOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.0", type: ProgressSpinnerOverviewExample, selector: "progress-spinner-overview-example", ngImport: i0, template: "<mat-spinner></mat-spinner>\n", components: [{ type: i1.MatSpinner, selector: "mat-spinner", inputs: ["color"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: ProgressSpinnerOverviewExample, decorators: [{
+ProgressSpinnerOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: ProgressSpinnerOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ProgressSpinnerOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.0.1", type: ProgressSpinnerOverviewExample, selector: "progress-spinner-overview-example", ngImport: i0, template: "<mat-spinner></mat-spinner>\n", components: [{ type: i1.MatSpinner, selector: "mat-spinner", inputs: ["color"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: ProgressSpinnerOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'progress-spinner-overview-example', template: "<mat-spinner></mat-spinner>\n" }]
         }] });

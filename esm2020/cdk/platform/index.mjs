@@ -6,10 +6,10 @@ export { CdkPlatformOverviewExample };
 const EXAMPLES = [CdkPlatformOverviewExample];
 export class CdkPlatformExamplesModule {
 }
-CdkPlatformExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CdkPlatformExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkPlatformExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CdkPlatformExamplesModule, declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] });
-CdkPlatformExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CdkPlatformExamplesModule, imports: [[PlatformModule]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CdkPlatformExamplesModule, decorators: [{
+CdkPlatformExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CdkPlatformExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkPlatformExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CdkPlatformExamplesModule, declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] });
+CdkPlatformExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CdkPlatformExamplesModule, imports: [[PlatformModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CdkPlatformExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [PlatformModule],

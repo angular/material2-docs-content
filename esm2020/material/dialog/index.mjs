@@ -28,8 +28,8 @@ const EXAMPLES = [
 ];
 export class DialogExamplesModule {
 }
-DialogExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: DialogExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: DialogExamplesModule, declarations: [DialogContentExample,
+DialogExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: DialogExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: DialogExamplesModule, declarations: [DialogContentExample,
         DialogContentExampleDialog,
         DialogDataExample,
         DialogDataExampleDialog,
@@ -55,7 +55,7 @@ DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ve
         DialogHarnessExample,
         DialogOverviewExample,
         DialogOverviewExampleDialog] });
-DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: DialogExamplesModule, imports: [[
+DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: DialogExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
             MatDialogModule,
@@ -63,7 +63,7 @@ DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", ve
             MatMenuModule,
             FormsModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: DialogExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: DialogExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
