@@ -11,10 +11,10 @@ export { ElevationOverviewExample, RippleOverviewExample };
 const EXAMPLES = [ElevationOverviewExample, RippleOverviewExample];
 export class CoreExamplesModule {
 }
-CoreExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CoreExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CoreExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CoreExamplesModule, declarations: [ElevationOverviewExample, RippleOverviewExample], imports: [MatButtonModule, MatCheckboxModule, MatInputModule, MatRippleModule, FormsModule], exports: [ElevationOverviewExample, RippleOverviewExample] });
-CoreExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CoreExamplesModule, imports: [[MatButtonModule, MatCheckboxModule, MatInputModule, MatRippleModule, FormsModule]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: CoreExamplesModule, decorators: [{
+CoreExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CoreExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CoreExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CoreExamplesModule, declarations: [ElevationOverviewExample, RippleOverviewExample], imports: [MatButtonModule, MatCheckboxModule, MatInputModule, MatRippleModule, FormsModule], exports: [ElevationOverviewExample, RippleOverviewExample] });
+CoreExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CoreExamplesModule, imports: [[MatButtonModule, MatCheckboxModule, MatInputModule, MatRippleModule, FormsModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: CoreExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [MatButtonModule, MatCheckboxModule, MatInputModule, MatRippleModule, FormsModule],

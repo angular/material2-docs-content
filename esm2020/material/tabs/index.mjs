@@ -39,8 +39,8 @@ const EXAMPLES = [
 ];
 export class TabGroupExamplesModule {
 }
-TabGroupExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: TabGroupExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: TabGroupExamplesModule, declarations: [TabGroupAlignExample,
+TabGroupExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: TabGroupExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: TabGroupExamplesModule, declarations: [TabGroupAlignExample,
         TabGroupAnimationsExample,
         TabGroupAsyncExample,
         TabGroupBasicExample,
@@ -72,7 +72,7 @@ TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         TabGroupStretchedExample,
         TabGroupThemeExample,
         TabNavBarBasicExample] });
-TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: TabGroupExamplesModule, imports: [[
+TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: TabGroupExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
             MatButtonToggleModule,
@@ -82,7 +82,7 @@ TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", 
             MatTabsModule,
             ReactiveFormsModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: TabGroupExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: TabGroupExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

@@ -19,8 +19,8 @@ const EXAMPLES = [
 ];
 export class SlideToggleExamplesModule {
 }
-SlideToggleExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: SlideToggleExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-SlideToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: SlideToggleExamplesModule, declarations: [SlideToggleConfigurableExample,
+SlideToggleExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: SlideToggleExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+SlideToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: SlideToggleExamplesModule, declarations: [SlideToggleConfigurableExample,
         SlideToggleFormsExample,
         SlideToggleHarnessExample,
         SlideToggleOverviewExample], imports: [FormsModule,
@@ -33,7 +33,7 @@ SlideToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0
         SlideToggleFormsExample,
         SlideToggleHarnessExample,
         SlideToggleOverviewExample] });
-SlideToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: SlideToggleExamplesModule, imports: [[
+SlideToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: SlideToggleExamplesModule, imports: [[
             FormsModule,
             MatButtonModule,
             MatCardModule,
@@ -42,7 +42,7 @@ SlideToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0
             MatSlideToggleModule,
             ReactiveFormsModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.0", ngImport: i0, type: SlideToggleExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImport: i0, type: SlideToggleExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
