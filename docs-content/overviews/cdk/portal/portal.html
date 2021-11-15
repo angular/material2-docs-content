@@ -95,9 +95,7 @@ built upon.</p>
           <span header-link="componentportal"></span>
           <code>ComponentPortal</code>
         </h5>
-      <p>Used to create a portal from a component type. When a component is dynamically created using
-portals, it must be included in the <code>entryComponents</code> of its <code>NgModule</code>if your project uses ViewEngine. Projects
-using Angular Ivy don&#39;t need <code>entryComponents</code>.</p>
+      <p>Used to create a portal from a component type.</p>
 <p>Usage:</p>
 <pre><code class="language-ts"><span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
   <span class="hljs-built_in">this</span>.userSettingsPortal = <span class="hljs-keyword">new</span> ComponentPortal(UserSettingsComponent);
