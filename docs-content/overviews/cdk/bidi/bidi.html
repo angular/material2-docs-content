@@ -1,5 +1,5 @@
 <div class="docs-markdown"><p>The <code>bidi</code> package provides a common system for components to get and respond to change in the
-application&#39;s LTR/RTL layout direction. </p>
+application&#39;s LTR/RTL layout direction.</p>
 
         <h3 id="directionality" class="docs-header-link">
           <span header-link="directionality"></span>
@@ -12,27 +12,27 @@ text direction (RTL or LTR);</p>
           <span header-link="example"></span>
           Example
         </h4>
-      <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({ ... }) 
+      <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({ ... })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyWidget</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
 
   <span class="hljs-comment">/** Whether the widget is in RTL mode or not. */</span>
   <span class="hljs-keyword">private</span> isRtl: <span class="hljs-built_in">boolean</span>;
-  
+
   <span class="hljs-comment">/** Subscription to the Directionality change EventEmitter. */</span>
-  <span class="hljs-keyword">private</span> _dirChangeSubscription = Subscription.EMPTY;  
-  
+  <span class="hljs-keyword">private</span> _dirChangeSubscription = Subscription.EMPTY;
+
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">dir: Directionality</span>)</span> {
     <span class="hljs-built_in">this</span>.isRtl = dir.value === <span class="hljs-string">&#x27;rtl&#x27;</span>;
-    
+
     <span class="hljs-built_in">this</span>._dirChangeSubscription = dir.change.subscribe(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-built_in">this</span>.flipDirection();
     });
   }
-  
+
   <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>._dirChangeSubscription.unsubscribe();
   }
-}  
+}
 </code></pre>
 
         <h3 id="the-dir-directive" class="docs-header-link">
@@ -43,4 +43,15 @@ text direction (RTL or LTR);</p>
 directive has the same API as Directionality and provides itself <em>as</em> <code>Directionality</code>. By doing
 this, any component that injects <code>Directionality</code> will get the closest ancestor layout direction
 context.</p>
+
+        <h3 id="interpreting-the-auto-value" class="docs-header-link">
+          <span header-link="interpreting-the-auto-value"></span>
+          Interpreting the <code>auto</code> value
+        </h3>
+      <p>The CDK also supports the native <code>auto</code> value for the <code>dir</code> attribute, however there&#39;s a difference
+in how it is interpreted. Some parts of the CDK, like overlays and keyboard navigation, need to know
+if the element is in an RTL or LTR layout in order to work correctly. For performance reasons, we
+resolve the <code>auto</code> value by looking at the browser&#39;s language (<code>navigator.language</code>) and matching
+it against a set of known RTL locales. This differs from the way the browser handles it, which is
+based on the text content of the element.</p>
 </div>
