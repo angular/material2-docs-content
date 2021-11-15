@@ -3660,7 +3660,8 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Sends the given string to the input as a series of key presses. Also fires input events
-and attempts to add the string to the Element&#39;s value.</p>
+and attempts to add the string to the Element&#39;s value. Note that some environments cannot
+reproduce native browser behavior for keyboard shortcuts such as Tab, Ctrl + A, etc.</p>
 
     </td>
   </tr><thead>

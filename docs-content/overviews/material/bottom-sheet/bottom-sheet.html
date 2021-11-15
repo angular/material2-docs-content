@@ -41,37 +41,6 @@ bottomSheetRef.dismiss();
 }
 </code></pre>
 
-        <h3 id="configuring-bottom-sheet-content-via-entrycomponents" class="docs-header-link">
-          <span header-link="configuring-bottom-sheet-content-via-entrycomponents"></span>
-          Configuring bottom sheet content via <code>entryComponents</code>
-        </h3>
-      <p><strong>You only need to specify <code>entryComponents</code> if your project uses ViewEngine. Projects
-using Angular Ivy don&#39;t need <code>entryComponents</code>.</strong></p>
-<p>Similarly to <code>MatDialog</code>, <code>MatBottomSheet</code> instantiates components at run-time. In order for it to
-work, the Angular compiler needs extra information to create the necessary <code>ComponentFactory</code> for
-your bottom sheet content component.</p>
-<p>Any components that are included inside of a bottom sheet have to be added to the <code>entryComponents</code>
-inside your <code>NgModule</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    <span class="hljs-comment">// ...</span>
-    MatBottomSheetModule
-  ],
-
-  <span class="hljs-attr">declarations</span>: [
-    AppComponent,
-    ExampleBottomSheetComponent
-  ],
-
-  <span class="hljs-attr">entryComponents</span>: [
-    ExampleBottomSheetComponent
-  ],
-
-  <span class="hljs-attr">bootstrap</span>: [AppComponent]
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
-</code></pre>
-
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
           <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
