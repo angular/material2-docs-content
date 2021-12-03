@@ -662,7 +662,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImpor
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
                 }]
         }] });
 
