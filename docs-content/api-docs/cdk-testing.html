@@ -176,7 +176,15 @@ or element under the host element of this <code>ComponentHarness</code>.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
       </p>
     </td>
   </tr>
@@ -251,7 +259,15 @@ or elements under the host element of this <code>ComponentHarness</code>.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
       </p>
     </td>
   </tr>
@@ -341,7 +357,15 @@ or element under the host element of this <code>ComponentHarness</code>.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
       </p>
     </td>
   </tr>
@@ -746,7 +770,8 @@ filter instances of the class.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A description of this predicate that may be used in error messages.</p>
+
       </p>
     </td>
   </tr>
@@ -759,7 +784,8 @@ filter instances of the class.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>An async predicate function.</p>
+
       </p>
     </td>
   </tr>
@@ -795,7 +821,8 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The name of the option (may be used in error messages).</p>
+
       </p>
     </td>
   </tr>
@@ -808,7 +835,8 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The option value.</p>
+
       </p>
     </td>
   </tr>
@@ -821,7 +849,8 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The predicate function to run if the option value is not undefined.</p>
+
       </p>
     </td>
   </tr>
@@ -858,7 +887,8 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The harness to check</p>
+
       </p>
     </td>
   </tr>
@@ -911,7 +941,8 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The list of harnesses to filter.</p>
+
       </p>
     </td>
   </tr>
@@ -999,7 +1030,9 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The nullable string value to check, or a Promise resolving to the
+  nullable string value.</p>
+
       </p>
     </td>
   </tr>
@@ -1012,7 +1045,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The pattern the value is expected to match. If <code>pattern</code> is a string,
+  <code>value</code> is expected to match exactly. If <code>pattern</code> is a regex, a partial match is
+  allowed. If <code>pattern</code> is <code>null</code>, the value is expected to be <code>null</code>.</p>
+
       </p>
     </td>
   </tr>
@@ -1944,7 +1980,8 @@ element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element of the new <code>HarnessLoader</code></p>
+
       </p>
     </td>
   </tr>
@@ -1997,7 +2034,8 @@ element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A query for a harness to create</p>
+
       </p>
     </td>
   </tr>
@@ -2051,7 +2089,8 @@ selector, the first is used. If no elements match, an error is thrown.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element of the new <code>HarnessLoader</code></p>
+
       </p>
     </td>
   </tr>
@@ -2106,7 +2145,8 @@ component is found, an error is thrown.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A query for a harness to create</p>
+
       </p>
     </td>
   </tr>
@@ -2262,7 +2302,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element.</p>
+
       </p>
     </td>
   </tr>
@@ -2314,7 +2355,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element.</p>
+
       </p>
     </td>
   </tr>
@@ -2366,7 +2408,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element.</p>
+
       </p>
     </td>
   </tr>
@@ -2418,7 +2461,15 @@ or element under the root element of this <code>LocatorFactory</code>.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
       </p>
     </td>
   </tr>
@@ -2493,7 +2544,15 @@ or elements under the root element of this <code>LocatorFactory</code>.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
       </p>
     </td>
   </tr>
@@ -2583,7 +2642,15 @@ or element under the root element of this <code>LocatorFactory</code>.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
       </p>
     </td>
   </tr>
@@ -3058,7 +3125,8 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Name of the event to be dispatched.</p>
+
       </p>
     </td>
   </tr>
@@ -3546,7 +3614,8 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Coordinate within the element, along the X-axis at which to click.</p>
+
       </p>
     </td>
   </tr>
@@ -3559,7 +3628,8 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Coordinate within the element, along the Y-axis at which to click.</p>
+
       </p>
     </td>
   </tr>
@@ -3572,7 +3642,8 @@ the element is clicked at a specific location, consider using <code>click(&#39;c
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Modifier keys held while clicking</p>
+
       </p>
     </td>
   </tr>
@@ -3782,7 +3853,8 @@ reproduce native browser behavior for keyboard shortcuts such as Tab, Ctrl + A, 
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Options that affect what text is included.</p>
+
       </p>
     </td>
   </tr>
@@ -3992,7 +4064,8 @@ changes.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The handler for the auto change detection status.</p>
+
       </p>
     </td>
   </tr>
@@ -4048,7 +4121,8 @@ changes.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The function to disable auto change detection for.</p>
+
       </p>
     </td>
   </tr>
@@ -4088,7 +4162,8 @@ resolving the values and once after.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A getter for the async values to resolve in parallel with batched change detection.</p>
+
       </p>
     </td>
   </tr>

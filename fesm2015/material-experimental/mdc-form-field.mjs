@@ -176,7 +176,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.0.1", ngImpor
                     imports: [CommonModule, MatFormFieldModule, MatIconModule, ReactiveFormsModule],
                     declarations: [...EXAMPLES, MyTelInput],
                     exports: [...EXAMPLES, MyTelInput],
-                    entryComponents: EXAMPLES,
                 }]
         }] });
 
