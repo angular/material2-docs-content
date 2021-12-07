@@ -1,10 +1,9 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-chip-list&quot;</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Fruits<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> #<span class="hljs-attr">chipList</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Fruit selection&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let fruit of fruits&quot;</span> [<span class="hljs-attr">selectable</span>]=<span class="hljs-string">&quot;selectable&quot;</span>
-             [<span class="hljs-attr">removable</span>]=<span class="hljs-string">&quot;removable&quot;</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(fruit)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let fruit of fruits&quot;</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(fruit)&quot;</span>&gt;</span>
       {{fruit.name}}
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;removable&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
