@@ -26,7 +26,7 @@
   <span class="hljs-comment">// It also allows for a string to be passed like `&lt;my-button disabled=&quot;true&quot;&gt;&lt;/my-button&gt;`.</span>
   <span class="hljs-meta">@Input</span>()
   <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled; }
-  <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: <span class="hljs-built_in">any</span></span>) {
+  <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: BooleanInput</span>) {
     <span class="hljs-built_in">this</span>._disabled = coerceBooleanProperty(value);
   }
   <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;
@@ -38,7 +38,7 @@
   <span class="hljs-comment">// parsed to a number.</span>
   <span class="hljs-meta">@Input</span>()
   <span class="hljs-keyword">get</span> <span class="hljs-title">greetDelay</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._greetDelay; }
-  <span class="hljs-keyword">set</span> <span class="hljs-title">greetDelay</span>(<span class="hljs-params">value: <span class="hljs-built_in">any</span></span>) {
+  <span class="hljs-keyword">set</span> <span class="hljs-title">greetDelay</span>(<span class="hljs-params">value: NumberInput</span>) {
     <span class="hljs-built_in">this</span>._greetDelay = coerceNumberProperty(value, <span class="hljs-number">0</span>);
   }
   <span class="hljs-keyword">private</span> _greetDelay = <span class="hljs-number">0</span>;
@@ -52,10 +52,6 @@
   getElement(elementOrRef: ElementRef&lt;HTMLElement&gt; | HTMLElement): HTMLElement {
     <span class="hljs-keyword">return</span> coerceElement(elementOrRef);
   }
-
-  <span class="hljs-comment">// Required so that the template type checker can infer the type of the coerced inputs.</span>
-  <span class="hljs-keyword">static</span> ngAcceptInputType_disabled: BooleanInput;
-  <span class="hljs-keyword">static</span> ngAcceptInputType_greetDelay: NumberInput;
 }
 </code></pre>
 </div>

@@ -39,10 +39,10 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     set placeholder(value: string);
     private _placeholder;
     get required(): boolean;
-    set required(value: boolean);
+    set required(value: BooleanInput);
     private _required;
     get disabled(): boolean;
-    set disabled(value: boolean);
+    set disabled(value: BooleanInput);
     private _disabled;
     get value(): MyTel | null;
     set value(tel: MyTel | null);
@@ -55,8 +55,6 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     registerOnTouched(fn: any): void;
     setDisabledState(isDisabled: boolean): void;
     _handleInput(): void;
-    static ngAcceptInputType_disabled: BooleanInput;
-    static ngAcceptInputType_required: BooleanInput;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
     static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
 }
