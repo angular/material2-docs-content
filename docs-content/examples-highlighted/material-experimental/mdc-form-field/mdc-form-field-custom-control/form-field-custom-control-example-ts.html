@@ -69,7 +69,7 @@
   <span class="hljs-keyword">get</span> <span class="hljs-title">required</span>(): <span class="hljs-title">boolean</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._required;
   }
-  <span class="hljs-keyword">set</span> <span class="hljs-title">required</span>(<span class="hljs-params">value: <span class="hljs-built_in">boolean</span></span>) {
+  <span class="hljs-keyword">set</span> <span class="hljs-title">required</span>(<span class="hljs-params">value: BooleanInput</span>) {
     <span class="hljs-built_in">this</span>._required = coerceBooleanProperty(value);
     <span class="hljs-built_in">this</span>.stateChanges.next();
   }
@@ -79,7 +79,7 @@
   <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>(): <span class="hljs-title">boolean</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled;
   }
-  <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: <span class="hljs-built_in">boolean</span></span>) {
+  <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: BooleanInput</span>) {
     <span class="hljs-built_in">this</span>._disabled = coerceBooleanProperty(value);
     <span class="hljs-built_in">this</span>._disabled ? <span class="hljs-built_in">this</span>.parts.disable() : <span class="hljs-built_in">this</span>.parts.enable();
     <span class="hljs-built_in">this</span>.stateChanges.next();
@@ -165,7 +165,4 @@
   _handleInput(): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.onChange(<span class="hljs-built_in">this</span>.value);
   }
-
-  <span class="hljs-keyword">static</span> ngAcceptInputType_disabled: BooleanInput;
-  <span class="hljs-keyword">static</span> ngAcceptInputType_required: BooleanInput;
 }
