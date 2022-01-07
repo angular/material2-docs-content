@@ -101,16 +101,16 @@ automatically trigger an update to the rows each time a new data array is emitte
       <p>For most real-world applications, providing the table a <code>DataSource</code> instance will be the best way to
 manage data. The <code>DataSource</code> is meant to serve as a place to encapsulate any sorting, filtering,
 pagination, and data retrieval logic specific to the application.</p>
-<p>A <code>DataSource</code> is simply a class that has at a minimum the following methods: <code>connect</code> and 
-<code>disconnect</code>. The <code>connect</code> method will be called by the table to provide an <code>Observable</code> that emits 
+<p>A <code>DataSource</code> is simply a class that has at a minimum the following methods: <code>connect</code> and
+<code>disconnect</code>. The <code>connect</code> method will be called by the table to provide an <code>Observable</code> that emits
 the data array that should be rendered. The table will call <code>disconnect</code> when the table is destroyed,
-which may be the right time to clean up any subscriptions that may have been registered in the 
-<code>connect</code> method. </p>
+which may be the right time to clean up any subscriptions that may have been registered in the
+<code>connect</code> method.</p>
 <p>Although Angular Material provides a ready-made table <code>DataSource</code> class, <code>MatTableDataSource</code>, you may
-want to create your own custom <code>DataSource</code> class for more complex use cases. This can be done by 
-extending the abstract <code>DataSource</code> class with a custom <code>DataSource</code> class that then implements the 
-<code>connect</code> and <code>disconnect</code> methods. For use cases where the custom <code>DataSource</code> must also inherit 
-functionality by extending a different base class, the <code>DataSource</code> base class can be 
+want to create your own custom <code>DataSource</code> class for more complex use cases. This can be done by
+extending the abstract <code>DataSource</code> class with a custom <code>DataSource</code> class that then implements the
+<code>connect</code> and <code>disconnect</code> methods. For use cases where the custom <code>DataSource</code> must also inherit
+functionality by extending a different base class, the <code>DataSource</code> base class can be
 implemented instead (<code>MyCustomDataSource extends SomeOtherBaseClass implements DataSource</code>) to
 respect Typescript&#39;s restriction to only implement one base class.</p>
 
@@ -339,8 +339,6 @@ rendered footer rows.</p>
 To do this, add the <code>sticky</code> or <code>stickyEnd</code> directive to the <code>ng-container</code> column definition.</p>
 <!--- example(table-sticky-columns) -->
 
-<p>This feature is supported by Chrome, Firefox, Safari, and Edge. It is not supported in IE, but
-it does fail gracefully so that the rows simply do not stick.</p>
 <p>Note that on Safari mobile when using the flex-based table, a cell stuck in more than one direction
 will struggle to stay in the correct position as you scroll. For example, if a header row is stuck
 to the top and the first column is stuck, then the top-left-most cell will appear jittery as you
