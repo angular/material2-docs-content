@@ -219,6 +219,22 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.1.0", ngImpor
             args: [{ selector: 'tab-nav-bar-basic-example', template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [backgroundColor]=\"background\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<!-- #enddocregion mat-tab-nav -->\n\n<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">\n  Toggle background\n</button>\n<button mat-raised-button class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n", styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"] }]
         }] });
 
+/**
+ * @title Use of the tab nav bar with the dedicated panel component.
+ */
+class TabNavBarWithPanelExample {
+    constructor() {
+        this.links = ['First', 'Second', 'Third'];
+        this.activeLink = this.links[0];
+    }
+}
+TabNavBarWithPanelExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.1.0", ngImport: i0, type: TabNavBarWithPanelExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+TabNavBarWithPanelExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.1.0", type: TabNavBarWithPanelExample, selector: "tab-nav-bar-with-panel-example", ngImport: i0, template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [tabPanel]=\"tabPanel\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>\n<!-- #enddocregion mat-tab-nav -->\n", styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"], components: [{ type: i1.MatTabNav, selector: "[mat-tab-nav-bar]", inputs: ["color"], exportAs: ["matTabNavBar", "matTabNav"] }, { type: i1.MatTabNavPanel, selector: "mat-tab-nav-panel", inputs: ["id"], exportAs: ["matTabNavPanel"] }], directives: [{ type: i2.NgForOf, selector: "[ngFor][ngForOf]", inputs: ["ngForOf", "ngForTrackBy", "ngForTemplate"] }, { type: i1.MatTabLink, selector: "[mat-tab-link], [matTabLink]", inputs: ["disabled", "disableRipple", "tabIndex"], exportAs: ["matTabLink"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.1.0", ngImport: i0, type: TabNavBarWithPanelExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'tab-nav-bar-with-panel-example', template: "<!-- #docregion mat-tab-nav -->\n<nav mat-tab-nav-bar [tabPanel]=\"tabPanel\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>\n<!-- #enddocregion mat-tab-nav -->\n", styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"] }]
+        }] });
+
 const EXAMPLES = [
     TabGroupAlignExample,
     TabGroupAnimationsExample,
@@ -233,6 +249,7 @@ const EXAMPLES = [
     TabGroupStretchedExample,
     TabGroupThemeExample,
     TabNavBarBasicExample,
+    TabNavBarWithPanelExample,
 ];
 class TabGroupExamplesModule {
 }
@@ -249,7 +266,8 @@ TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         TabGroupLazyLoadedExample,
         TabGroupStretchedExample,
         TabGroupThemeExample,
-        TabNavBarBasicExample], imports: [CommonModule,
+        TabNavBarBasicExample,
+        TabNavBarWithPanelExample], imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -268,7 +286,8 @@ TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         TabGroupLazyLoadedExample,
         TabGroupStretchedExample,
         TabGroupThemeExample,
-        TabNavBarBasicExample] });
+        TabNavBarBasicExample,
+        TabNavBarWithPanelExample] });
 TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.1.0", ngImport: i0, type: TabGroupExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
@@ -301,5 +320,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.1.0", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample };
+export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TabNavBarWithPanelExample };
 //# sourceMappingURL=tabs.mjs.map

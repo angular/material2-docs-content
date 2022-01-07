@@ -4895,6 +4895,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tabs"
         }
     },
+    "tab-nav-bar-with-panel": {
+        "packagePath": "material/tabs/tab-nav-bar-with-panel",
+        "title": "Use of the tab nav bar with the dedicated panel component.",
+        "componentName": "TabNavBarWithPanelExample",
+        "files": [
+            "tab-nav-bar-with-panel-example.ts",
+            "tab-nav-bar-with-panel-example.html",
+            "tab-nav-bar-with-panel-example.css"
+        ],
+        "selector": "tab-nav-bar-with-panel-example",
+        "additionalComponents": [],
+        "primaryFile": "tab-nav-bar-with-panel-example.ts",
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "material/tabs"
+        }
+    },
     "toolbar-basic": {
         "packagePath": "material/toolbar/toolbar-basic",
         "title": "Basic toolbar",

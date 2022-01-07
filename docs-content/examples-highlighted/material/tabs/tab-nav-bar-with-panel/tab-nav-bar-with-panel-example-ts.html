@@ -1,0 +1,14 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Use of the tab nav bar with the dedicated panel component.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tab-nav-bar-with-panel-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tab-nav-bar-with-panel-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;tab-nav-bar-with-panel-example.css&#x27;</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabNavBarWithPanelExample</span> </span>{
+  links = [<span class="hljs-string">&#x27;First&#x27;</span>, <span class="hljs-string">&#x27;Second&#x27;</span>, <span class="hljs-string">&#x27;Third&#x27;</span>];
+  activeLink = <span class="hljs-built_in">this</span>.links[<span class="hljs-number">0</span>];
+}
