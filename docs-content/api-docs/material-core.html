@@ -1609,7 +1609,7 @@ counted by checking the query list&#39;s length.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>value: any</code>
+      <code>value: T</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The form value of the option.</p>
@@ -1623,7 +1623,7 @@ counted by checking the query list&#39;s length.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>onSelectionChange: EventEmitter&lt;MatOptionSelectionChange&gt;</code>
+      <code>onSelectionChange: EventEmitter&lt;MatOptionSelectionChange&lt;T&gt;&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the option is selected or deselected.</p>
@@ -3524,7 +3524,7 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: _MatOptionBase</code>
+      <code>source: _MatOptionBase&lt;T&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the option that emitted the event.</p>
