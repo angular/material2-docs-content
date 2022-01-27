@@ -173,18 +173,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0-rc.1", ng
         }] });
 
 /**
- * @title Tab group that keeps its content inside the DOM when it's off-screen.
- */
-class TabGroupPreserveContentExample {
-}
-TabGroupPreserveContentExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.0-rc.1", ngImport: i0, type: TabGroupPreserveContentExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-TabGroupPreserveContentExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.2.0-rc.1", type: TabGroupPreserveContentExample, selector: "tab-group-preserve-content-example", ngImport: i0, template: "<p>Start the video in the first tab and navigate to the second one to see how it keeps playing.</p>\n\n<mat-tab-group [preserveContent]=\"true\">\n  <mat-tab label=\"First\">\n    <iframe\n      width=\"560\"\n      height=\"315\"\n      src=\"https://www.youtube.com/embed/B-lipaiZII8\"\n      frameborder=\"0\"\n      allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n      allowfullscreen></iframe>\n  </mat-tab>\n  <mat-tab label=\"Second\">Note how the video from the previous tab is still playing.</mat-tab>\n</mat-tab-group>\n", components: [{ type: i1.MatTabGroup, selector: "mat-tab-group", inputs: ["color", "disableRipple"], exportAs: ["matTabGroup"] }, { type: i1.MatTab, selector: "mat-tab", inputs: ["disabled", "label", "aria-label", "aria-labelledby", "labelClass", "bodyClass"], exportAs: ["matTab"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0-rc.1", ngImport: i0, type: TabGroupPreserveContentExample, decorators: [{
-            type: Component,
-            args: [{ selector: 'tab-group-preserve-content-example', template: "<p>Start the video in the first tab and navigate to the second one to see how it keeps playing.</p>\n\n<mat-tab-group [preserveContent]=\"true\">\n  <mat-tab label=\"First\">\n    <iframe\n      width=\"560\"\n      height=\"315\"\n      src=\"https://www.youtube.com/embed/B-lipaiZII8\"\n      frameborder=\"0\"\n      allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"\n      allowfullscreen></iframe>\n  </mat-tab>\n  <mat-tab label=\"Second\">Note how the video from the previous tab is still playing.</mat-tab>\n</mat-tab-group>\n" }]
-        }] });
-
-/**
  * @title Tab group with stretched labels
  */
 class TabGroupStretchedExample {
@@ -262,7 +250,6 @@ const EXAMPLES = [
     TabGroupThemeExample,
     TabNavBarBasicExample,
     TabNavBarWithPanelExample,
-    TabGroupPreserveContentExample,
 ];
 class TabGroupExamplesModule {
 }
@@ -280,8 +267,7 @@ TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         TabGroupStretchedExample,
         TabGroupThemeExample,
         TabNavBarBasicExample,
-        TabNavBarWithPanelExample,
-        TabGroupPreserveContentExample], imports: [CommonModule,
+        TabNavBarWithPanelExample], imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -301,8 +287,7 @@ TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         TabGroupStretchedExample,
         TabGroupThemeExample,
         TabNavBarBasicExample,
-        TabNavBarWithPanelExample,
-        TabGroupPreserveContentExample] });
+        TabNavBarWithPanelExample] });
 TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.2.0-rc.1", ngImport: i0, type: TabGroupExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
@@ -335,5 +320,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0-rc.1", ng
  * Generated bundle index. Do not edit.
  */
 
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupPreserveContentExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TabNavBarWithPanelExample };
+export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TabNavBarWithPanelExample };
 //# sourceMappingURL=tabs.mjs.map
