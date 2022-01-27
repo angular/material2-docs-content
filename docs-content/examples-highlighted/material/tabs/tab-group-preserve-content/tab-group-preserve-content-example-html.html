@@ -1,0 +1,14 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Start the video in the first tab and navigate to the second one to see how it keeps playing.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> [<span class="hljs-attr">preserveContent</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;First&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;560&quot;</span>
+      <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;315&quot;</span>
+      <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://www.youtube.com/embed/B-lipaiZII8&quot;</span>
+      <span class="hljs-attr">frameborder</span>=<span class="hljs-string">&quot;0&quot;</span>
+      <span class="hljs-attr">allow</span>=<span class="hljs-string">&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot;</span>
+      <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Second&quot;</span>&gt;</span>Note how the video from the previous tab is still playing.<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
