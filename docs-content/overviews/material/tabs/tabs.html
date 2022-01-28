@@ -96,6 +96,18 @@ duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injec
                              region="slow-animation-duration"></div>
 
 
+        <h3 id="keeping-the-tab-content-inside-the-dom-while-its-off-screen" class="docs-header-link">
+          <span header-link="keeping-the-tab-content-inside-the-dom-while-its-off-screen"></span>
+          Keeping the tab content inside the DOM while it&#39;s off-screen
+        </h3>
+      <p>By default the <code>&lt;mat-tab-group&gt;</code> will remove the content of off-screen tabs from the DOM until they
+come into the view. This is optimal for most cases since it keeps the DOM size smaller, but it
+isn&#39;t great for others like when a tab has an <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> element, because the content
+will be re-initialized whenever the user navigates to the tab. If you want to keep the content of
+off-screen tabs in the DOM, you can set the <code>preserveContent</code> input to <code>true</code>.</p>
+<div material-docs-example="tab-group-preserve-content"></div>
+
+
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility

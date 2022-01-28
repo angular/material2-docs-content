@@ -4844,6 +4844,22 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tabs"
         }
     },
+    "tab-group-preserve-content": {
+        "packagePath": "material/tabs/tab-group-preserve-content",
+        "title": "Tab group that keeps its content inside the DOM when it's off-screen.",
+        "componentName": "TabGroupPreserveContentExample",
+        "files": [
+            "tab-group-preserve-content-example.ts",
+            "tab-group-preserve-content-example.html"
+        ],
+        "selector": "tab-group-preserve-content-example",
+        "additionalComponents": [],
+        "primaryFile": "tab-group-preserve-content-example.ts",
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "material/tabs"
+        }
+    },
     "tab-group-stretched": {
         "packagePath": "material/tabs/tab-group-stretched",
         "title": "Tab group with stretched labels",
