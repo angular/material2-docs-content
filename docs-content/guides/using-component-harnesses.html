@@ -28,7 +28,7 @@ on a component&#39;s internals.</p>
           Which kinds of tests can use harnesses?
         </h2>
       <p>The Angular CDK&#39;s component harnesses are designed to work in multiple different test environments.
-Support currently includes Angular&#39;s Testbed environment in Karma unit tests and Protractor
+Support currently includes Angular&#39;s Testbed environment in Karma unit tests and Selenium WebDriver
 end-to-end (e2e) tests. You can also support additional environments by creating custom extensions
 of the CDK&#39;s <code>HarnessEnvironment</code> and <code>TestElement</code> classes.</p>
 
@@ -37,7 +37,7 @@ of the CDK&#39;s <code>HarnessEnvironment</code> and <code>TestElement</code> cl
           Getting started
         </h2>
       <p>The foundation for all test harnesses lives in <code>@angular/cdk/testing</code>. Start by importing either
-<code>TestbedHarnessEnvironment</code> or <code>ProtractorHarnessEnvironment</code> based on whether you&#39;re writing a
+<code>TestbedHarnessEnvironment</code> or <code>SeleniumWebDriverHarnessEnvironment</code> based on whether you&#39;re writing a
 unit test or an e2e test. From the <code>HarnessEnvironment</code>, you can get a <code>HarnessLoader</code> instance,
 which you will use to load Angular Material component harnesses. For example, if we&#39;re writing unit
 tests for a <code>UserProfile</code> component, the code might look like this:</p>
@@ -63,8 +63,8 @@ different paths. </p>
 <li><code>@angular/cdk/testing</code> contains symbols that are shared regardless of the environment your tests
 are in. </li>
 <li><code>@angular/cdk/testing/testbed</code> contains symbols that are used only in Karma tests.</li>
-<li><code>@angular/cdk/testing/protractor</code> (not shown above) contains symbols that are used only in
-Protractor tests.</li>
+<li><code>@angular/cdk/testing/selenium-webdriver</code> (not shown above) contains symbols that are used only in
+Selenium WebDriver tests.</li>
 </ul>
 
         <h2 id="loading-an-angular-material-harness" class="docs-header-link">
