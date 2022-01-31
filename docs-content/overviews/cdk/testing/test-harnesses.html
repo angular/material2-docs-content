@@ -47,14 +47,14 @@ matches the harness class to instances of the component in the DOM. Beyond that,
 given harness is specific to its corresponding component; refer to the component&#39;s documentation to
 learn how to use a specific harness.</p>
 
-        <h4 id="using-testbedharnessenvironment-and-protractorharnessenvironment" class="docs-header-link">
-          <span header-link="using-testbedharnessenvironment-and-protractorharnessenvironment"></span>
-          Using <code>TestbedHarnessEnvironment</code> and <code>ProtractorHarnessEnvironment</code>
+        <h4 id="using-testbedharnessenvironment-and-seleniumwebdriverharnessenvironment" class="docs-header-link">
+          <span header-link="using-testbedharnessenvironment-and-seleniumwebdriverharnessenvironment"></span>
+          Using <code>TestbedHarnessEnvironment</code> and <code>SeleniumWebDriverHarnessEnvironment</code>
         </h4>
       <p>These classes correspond to different implementations of the component harness system with bindings
 for specific test environments. Any given test must only import <em>one</em> of these classes. Karma-based
-unit tests should use the <code>TestbedHarnessEnvironment</code>, while Protractor-based end-to-end tests
-should use the <code>ProtractorHarnessEnvironment</code>. Additional environments require custom bindings; see
+unit tests should use the <code>TestbedHarnessEnvironment</code>, while Selenium WebDriver-based end-to-end tests
+should use the <code>SeleniumWebDriverHarnessEnvironment</code>. Additional environments require custom bindings; see
 <a href="#api-for-harness-environment-authors">API for harness environment authors</a> for more information on
 alternate test environments.</p>
 <p>These classes are primarily used to create a <code>HarnessLoader</code> instance, and in certain cases, to
@@ -120,7 +120,7 @@ it(<span class="hljs-string">&#x27;loads harnesses&#x27;</span>, <span class="hl
   <span class="hljs-comment">// ... make some assertions</span>
 });
 </code></pre>
-<p><code>ProtractorHarnessEnvironment</code> has an API that offers a single static method:</p>
+<p><code>SeleniumWebDriverHarnessEnvironment</code> has an API that offers a single static method:</p>
 <table>
 <thead>
 <tr>
@@ -133,7 +133,7 @@ it(<span class="hljs-string">&#x27;loads harnesses&#x27;</span>, <span class="hl
 <td>Gets a <code>HarnessLoader</code> instance for the current HTML document, rooted at the document&#39;s root element.</td>
 </tr>
 </tbody></table>
-<p>Since Protractor does not deal with fixtures, the API in this environment is simpler. The
+<p>Since Selenium WebDriver does not deal with fixtures, the API in this environment is simpler. The
 <code>HarnessLoader</code> returned by the <code>loader()</code> method should be sufficient for loading all necessary
 <code>ComponentHarness</code> instances.</p>
 <p>Please note that harnesses may not behave <em>exactly</em> the same in all environments. There will always
@@ -407,7 +407,7 @@ and content elements as follows:</p>
 </tr>
 </tbody></table>
 <p><code>TestElement</code> is an abstraction designed to work across different test environments (Karma,
-Protractor, etc). When using harnesses, you should perform all DOM interaction via this interface.
+Selenium WebDriver, etc). When using harnesses, you should perform all DOM interaction via this interface.
 Other means of accessing DOM elements (e.g. <code>document.querySelector</code>) will not work in all test
 environments.</p>
 <p>As a best practice, you should not expose <code>TestElement</code> instances to users of a harness
@@ -723,7 +723,7 @@ may need to explicitly wait for tasks outside <code>NgZone</code>, as this does 
         </h3>
       <p>Harness environment authors are developers who want to add support for using component harnesses in
 additional testing environments. Out-of-the-box, Angular CDK&#39;s component harnesses can be used in
-Protractor E2E tests and Karma unit tests. Developers can support additional environments by
+Selenium WebDriver E2E tests and Karma unit tests. Developers can support additional environments by
 creating custom implementations of <code>TestElement</code> and <code>HarnessEnvironment</code>.</p>
 
         <h4 id="creating-a-testelement-implementation-for-the-environment" class="docs-header-link">
@@ -734,7 +734,7 @@ creating custom implementations of <code>TestElement</code> and <code>HarnessEnv
 implementation. The <code>TestElement</code> interface serves as an environment-agnostic representation of a
 DOM element; it lets harnesses interact with DOM elements regardless of the underlying environment.
 Because some environments don&#39;t support interacting with DOM elements synchronously
-(e.g. webdriver), all of the <code>TestElement</code> methods are asynchronous, returning a <code>Promise</code> with the
+(e.g. WebDriver), all of the <code>TestElement</code> methods are asynchronous, returning a <code>Promise</code> with the
 result of the operation.</p>
 <table>
 <thead>
@@ -821,7 +821,7 @@ maintain a mapping from <code>TestKey</code> codes to the codes used in the part
 <p>The
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/testbed/unit-test-element.ts#L57"><code>UnitTestElement</code></a>
 and
-<a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-element.ts#L67"><code>ProtractorElement</code></a>
+<a href="https://github.com/angular/components/blob/master/src/cdk/testing/selenium-webdriver/selenium-web-driver-element.ts#L22"><code>SeleniumWebDriverElement</code></a>
 implementations in Angular CDK serve as good examples of implementations of this interface.</p>
 
         <h4 id="creating-a-harnessenvironemnt-implementation-for-the-environment" class="docs-header-link">
@@ -879,7 +879,7 @@ require arguments to be passed. (e.g. the <code>loader</code> method on <code>Te
 <p>The
 <a href="https://github.com/angular/components/blob/master/src/cdk/testing/testbed/testbed-harness-environment.ts#L20"><code>TestbedHarnessEnvironment</code></a>
 and
-<a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-harness-environment.ts#L16"><code>ProtractorHarnessEnvironment</code></a>
+<a href="https://github.com/angular/components/blob/master/src/cdk/testing/selenium-webdriver/selenium-web-driver-harness-environment.ts#L71"><code>SeleniumWebDriverHarnessEnvironment</code></a>
 implementations in Angular CDK serve as good examples of implementations of this interface.</p>
 
         <h4 id="handling-auto-change-detection-status" class="docs-header-link">
