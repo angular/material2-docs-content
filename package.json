@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "14.0.0-next.1+14.sha-4780518.with-local-changes",
+  "version": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -483,15 +483,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "14.0.0-next.1+14.sha-4780518.with-local-changes",
-    "@angular/cdk-experimental": "14.0.0-next.1+14.sha-4780518.with-local-changes",
+    "@angular/cdk": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
+    "@angular/cdk-experimental": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
     "@angular/core": "^13.0.0 || ^14.0.0-0",
     "@angular/common": "^13.0.0 || ^14.0.0-0",
-    "@angular/material": "14.0.0-next.1+14.sha-4780518.with-local-changes",
-    "@angular/material-experimental": "14.0.0-next.1+14.sha-4780518.with-local-changes",
-    "@angular/material-moment-adapter": "14.0.0-next.1+14.sha-4780518.with-local-changes",
-    "@angular/material-luxon-adapter": "14.0.0-next.1+14.sha-4780518.with-local-changes",
-    "@angular/material-date-fns-adapter": "14.0.0-next.1+14.sha-4780518.with-local-changes"
+    "@angular/material": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
+    "@angular/material-experimental": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
+    "@angular/material-moment-adapter": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
+    "@angular/material-luxon-adapter": "14.0.0-next.1+15.sha-ad03673.with-local-changes",
+    "@angular/material-date-fns-adapter": "14.0.0-next.1+15.sha-ad03673.with-local-changes"
   },
   "dependencies": {
     "tslib": "^2.3.0"
