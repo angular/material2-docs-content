@@ -316,6 +316,18 @@ CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-ru
 this property to <code>false</code>, your application becomes responsible for manually loading the desired
 file. The approach for this loading depends on your application.</p>
 
+        <h3 id="application-background-color" class="docs-header-link">
+          <span header-link="application-background-color"></span>
+          Application background color
+        </h3>
+      <p>By default, Angular Material does not apply any styles to your DOM outside
+of its own components. If you want to set your application&#39;s background color
+to match the components&#39; theme, you can either:</p>
+<ol>
+<li>Put your application&#39;s main content inside <code>mat-sidenav-container</code>, assuming you&#39;re using <code>MatSidenav</code>, or</li>
+<li>Apply the <code>mat-app-background</code> CSS class to your main content root element (typically <code>body</code>).</li>
+</ol>
+
         <h3 id="scoping-style-customizations" class="docs-header-link">
           <span header-link="scoping-style-customizations"></span>
           Scoping style customizations
