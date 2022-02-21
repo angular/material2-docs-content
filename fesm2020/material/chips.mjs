@@ -198,6 +198,19 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImpor
             args: [{ selector: 'chips-form-control-example', template: "<div class=\"example-button-container\">\n  <button mat-raised-button (click)=\"formControl.disable()\">Disable form control</button>\n  <button mat-raised-button (click)=\"formControl.enable()\">Enable form control</button>\n</div>\n\n<p>\n  <i>Select a focused chip by pressing <code>SPACE</code></i>\n</p>\n\n<mat-form-field class=\"example-chip-list\" appearance=\"fill\">\n  <mat-label>Video keywords</mat-label>\n  <mat-chip-list #chipList aria-label=\"Video keywords\" multiple [formControl]=\"formControl\">\n    <mat-chip\n        *ngFor=\"let keyword of keywords\"\n        [selected]=\"keyword\"\n        [value]=\"keyword\"\n        (removed)=\"removeKeyword(keyword)\">\n      {{keyword}}\n    </mat-chip>\n    <input\n      placeholder=\"New keyword...\"\n      [matChipInputFor]=\"chipList\"\n      (matChipInputTokenEnd)=\"addKeywordFromInput($event)\">\n  </mat-chip-list>\n</mat-form-field>\n\n<p>\n  <b>The following keywords are selected:</b> {{formControl.value}}\n</p>\n", styles: [".example-chip-list {\n  width: 100%;\n}\n\n.example-button-container > button {\n  margin: 0 12px;\n}\n"] }]
         }] });
 
+/**
+ * @title Chips avatar
+ * @description An avatar inside a chip
+ */
+class ChipsAvatarExample {
+}
+ChipsAvatarExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: ChipsAvatarExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ChipsAvatarExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.2.0", type: ChipsAvatarExample, selector: "chips-avatar-example", ngImport: i0, template: "<mat-chip-list aria-label=\"Dog selection\">\n  <mat-chip>\n    <mat-chip-avatar>\n        <img src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\" alt=\"Photo of a Shiba Inu\"/>\n    </mat-chip-avatar>\n    Dog one\n  </mat-chip>\n  <mat-chip color=\"primary\">\n    <mat-chip-avatar>\n        <img src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\" alt=\"Photo of a Shiba Inu\"/>\n    </mat-chip-avatar>\n    Dog two\n  </mat-chip>\n  <mat-chip color=\"accent\">\n    <mat-chip-avatar>\n        <img src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\" alt=\"Photo of a Shiba Inu\"/>\n    </mat-chip-avatar>\n    Dog three\n  </mat-chip>\n</mat-chip-list>\n", styles: [""], components: [{ type: i1$1.MatChipList, selector: "mat-chip-list", inputs: ["errorStateMatcher", "multiple", "compareWith", "value", "required", "placeholder", "disabled", "aria-orientation", "selectable", "tabIndex"], outputs: ["change", "valueChange"], exportAs: ["matChipList"] }], directives: [{ type: i1$1.MatChip, selector: "mat-basic-chip, [mat-basic-chip], mat-chip, [mat-chip]", inputs: ["color", "disableRipple", "tabIndex", "selected", "value", "selectable", "disabled", "removable"], outputs: ["selectionChange", "destroyed", "removed"], exportAs: ["matChip"] }, { type: i1$1.MatChipAvatar, selector: "mat-chip-avatar, [matChipAvatar]" }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: ChipsAvatarExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'chips-avatar-example', template: "<mat-chip-list aria-label=\"Dog selection\">\n  <mat-chip>\n    <mat-chip-avatar>\n        <img src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\" alt=\"Photo of a Shiba Inu\"/>\n    </mat-chip-avatar>\n    Dog one\n  </mat-chip>\n  <mat-chip color=\"primary\">\n    <mat-chip-avatar>\n        <img src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\" alt=\"Photo of a Shiba Inu\"/>\n    </mat-chip-avatar>\n    Dog two\n  </mat-chip>\n  <mat-chip color=\"accent\">\n    <mat-chip-avatar>\n        <img src=\"https://material.angular.io/assets/img/examples/shiba1.jpg\" alt=\"Photo of a Shiba Inu\"/>\n    </mat-chip-avatar>\n    Dog three\n  </mat-chip>\n</mat-chip-list>\n", styles: [""] }]
+        }] });
+
 const EXAMPLES = [
     ChipsAutocompleteExample,
     ChipsDragDropExample,
@@ -206,6 +219,7 @@ const EXAMPLES = [
     ChipsStackedExample,
     ChipsHarnessExample,
     ChipsFormControlExample,
+    ChipsAvatarExample,
 ];
 class ChipsExamplesModule {
 }
@@ -216,7 +230,8 @@ ChipsExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ver
         ChipsOverviewExample,
         ChipsStackedExample,
         ChipsHarnessExample,
-        ChipsFormControlExample], imports: [CommonModule,
+        ChipsFormControlExample,
+        ChipsAvatarExample], imports: [CommonModule,
         DragDropModule,
         MatAutocompleteModule,
         MatButtonModule,
@@ -229,7 +244,8 @@ ChipsExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ver
         ChipsOverviewExample,
         ChipsStackedExample,
         ChipsHarnessExample,
-        ChipsFormControlExample] });
+        ChipsFormControlExample,
+        ChipsAvatarExample] });
 ChipsExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: ChipsExamplesModule, imports: [[
             CommonModule,
             DragDropModule,
@@ -262,5 +278,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsFormControlExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
+export { ChipsAutocompleteExample, ChipsAvatarExample, ChipsDragDropExample, ChipsExamplesModule, ChipsFormControlExample, ChipsHarnessExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
 //# sourceMappingURL=chips.mjs.map
