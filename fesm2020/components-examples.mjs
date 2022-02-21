@@ -1743,6 +1743,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/chips"
         }
     },
+    "chips-avatar": {
+        "packagePath": "material/chips/chips-avatar",
+        "title": "Chips avatar",
+        "componentName": "ChipsAvatarExample",
+        "files": [
+            "chips-avatar-example.ts",
+            "chips-avatar-example.html",
+            "chips-avatar-example.css"
+        ],
+        "selector": "chips-avatar-example",
+        "additionalComponents": [],
+        "primaryFile": "chips-avatar-example.ts",
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
     "chips-drag-drop": {
         "packagePath": "material/chips/chips-drag-drop",
         "title": "Chips Drag and Drop",
