@@ -1278,6 +1278,7 @@ pointer down before starting to drag the element.</p>
     distance: Point;
     dropPoint: Point;
     isPointerOverContainer: boolean;
+    event: MouseEvent | TouchEvent;
 }&gt;</code>
     </p>
   </td>
@@ -1295,6 +1296,7 @@ pointer down before starting to drag the element.</p>
     source: DragRef;
     distance: Point;
     dropPoint: Point;
+    event: MouseEvent | TouchEvent;
 }&gt;</code>
     </p>
   </td>
@@ -1395,6 +1397,7 @@ because this event will fire for every pixel that the user has dragged.</p>
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>released: Subject&lt;{
     source: DragRef;
+    event: MouseEvent | TouchEvent;
 }&gt;</code>
     </p>
   </td>
@@ -1410,6 +1413,7 @@ because this event will fire for every pixel that the user has dragged.</p>
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>started: Subject&lt;{
     source: DragRef;
+    event: MouseEvent | TouchEvent;
 }&gt;</code>
     </p>
   </td>
@@ -2231,6 +2235,7 @@ moves their pointer close to the edges is disabled.</p>
     isPointerOverContainer: boolean;
     distance: Point;
     dropPoint: Point;
+    event: MouseEvent | TouchEvent;
 }&gt;</code>
     </p>
   </td>
@@ -2530,6 +2535,20 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
         <p>Distance the user has dragged since the start of the dragging sequence.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        event</p>
+      <code class="docs-api-method-parameter-type">MouseEvent | TouchEvent = {} as any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Event that triggered the dropping sequence.</p>
 
       </p>
     </td>
@@ -3157,6 +3176,19 @@ considers them to have changed the drag direction.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Native event that started the drag sequence.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>source: CdkDrag&lt;T&gt;</code>
     </p>
   </td>
@@ -3186,6 +3218,19 @@ considers them to have changed the drag direction.</p>
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Native event that caused the release event.</p>
+</td>
+</tr>
+
+
     
       
 
@@ -3248,6 +3293,19 @@ considers them to have changed the drag direction.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Position where the pointer was when the item was dropped</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Native event that caused the dragging to stop.</p>
 </td>
 </tr>
 
@@ -3448,6 +3506,19 @@ drop container by moving it into another one.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Position where the pointer was when the item was dropped</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Native event that caused the drop event.</p>
 </td>
 </tr>
 
