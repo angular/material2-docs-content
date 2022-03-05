@@ -27,8 +27,8 @@ const EXAMPLES = [
 ];
 export class AutocompleteExamplesModule {
 }
-AutocompleteExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: AutocompleteExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-AutocompleteExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: AutocompleteExamplesModule, declarations: [AutocompleteAutoActiveFirstOptionExample,
+AutocompleteExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: AutocompleteExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+AutocompleteExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: AutocompleteExamplesModule, declarations: [AutocompleteAutoActiveFirstOptionExample,
         AutocompleteDisplayExample,
         AutocompleteFilterExample,
         AutocompleteHarnessExample,
@@ -49,7 +49,7 @@ AutocompleteExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.
         AutocompleteOverviewExample,
         AutocompletePlainInputExample,
         AutocompleteSimpleExample] });
-AutocompleteExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: AutocompleteExamplesModule, imports: [[
+AutocompleteExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: AutocompleteExamplesModule, imports: [[
             CommonModule,
             MatAutocompleteModule,
             MatFormFieldModule,
@@ -58,7 +58,7 @@ AutocompleteExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.
             FormsModule,
             ReactiveFormsModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: AutocompleteExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: AutocompleteExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

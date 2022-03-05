@@ -19,8 +19,8 @@ const EXAMPLES = [
 ];
 export class ExpansionExamplesModule {
 }
-ExpansionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ExpansionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ExpansionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ExpansionExamplesModule, declarations: [ExpansionExpandCollapseAllExample,
+ExpansionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ExpansionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ExpansionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ExpansionExamplesModule, declarations: [ExpansionExpandCollapseAllExample,
         ExpansionHarnessExample,
         ExpansionOverviewExample,
         ExpansionStepsExample], imports: [MatButtonModule,
@@ -32,7 +32,7 @@ ExpansionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0",
         ExpansionHarnessExample,
         ExpansionOverviewExample,
         ExpansionStepsExample] });
-ExpansionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ExpansionExamplesModule, imports: [[
+ExpansionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ExpansionExamplesModule, imports: [[
             MatButtonModule,
             MatDatepickerModule,
             MatNativeDateModule,
@@ -40,7 +40,7 @@ ExpansionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0",
             MatIconModule,
             MatInputModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ExpansionExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ExpansionExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

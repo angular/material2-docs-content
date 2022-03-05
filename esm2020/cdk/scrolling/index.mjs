@@ -24,8 +24,8 @@ const EXAMPLES = [
 ];
 export class CdkScrollingExamplesModule {
 }
-CdkScrollingExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkScrollingExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkScrollingExamplesModule, declarations: [CdkVirtualScrollAppendOnlyExample,
+CdkScrollingExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, declarations: [CdkVirtualScrollAppendOnlyExample,
         CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
@@ -42,8 +42,8 @@ CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.
         CdkVirtualScrollHorizontalExample,
         CdkVirtualScrollOverviewExample,
         CdkVirtualScrollTemplateCacheExample] });
-CdkScrollingExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkScrollingExamplesModule, imports: [[ScrollingModule]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkScrollingExamplesModule, decorators: [{
+CdkScrollingExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, imports: [[ScrollingModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [ScrollingModule],

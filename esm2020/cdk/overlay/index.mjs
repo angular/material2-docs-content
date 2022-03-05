@@ -6,10 +6,10 @@ export { CdkOverlayBasicExample };
 const EXAMPLES = [CdkOverlayBasicExample];
 export class CdkOverlayExamplesModule {
 }
-CdkOverlayExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkOverlayExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkOverlayExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkOverlayExamplesModule, declarations: [CdkOverlayBasicExample], imports: [OverlayModule], exports: [CdkOverlayBasicExample] });
-CdkOverlayExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkOverlayExamplesModule, imports: [[OverlayModule]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: CdkOverlayExamplesModule, decorators: [{
+CdkOverlayExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkOverlayExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkOverlayExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkOverlayExamplesModule, declarations: [CdkOverlayBasicExample], imports: [OverlayModule], exports: [CdkOverlayBasicExample] });
+CdkOverlayExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkOverlayExamplesModule, imports: [[OverlayModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CdkOverlayExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [OverlayModule],

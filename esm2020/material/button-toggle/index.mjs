@@ -20,8 +20,8 @@ const EXAMPLES = [
 ];
 export class ButtonToggleExamplesModule {
 }
-ButtonToggleExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ButtonToggleExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ButtonToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ButtonToggleExamplesModule, declarations: [ButtonToggleAppearanceExample,
+ButtonToggleExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ButtonToggleExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ButtonToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ButtonToggleExamplesModule, declarations: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample,
         ButtonToggleHarnessExample,
@@ -32,8 +32,8 @@ ButtonToggleExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.
         ButtonToggleHarnessExample,
         ButtonToggleFormsExample,
         ButtonToggleModeExample] });
-ButtonToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ButtonToggleExamplesModule, imports: [[FormsModule, MatButtonToggleModule, MatIconModule, ReactiveFormsModule]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: ButtonToggleExamplesModule, decorators: [{
+ButtonToggleExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ButtonToggleExamplesModule, imports: [[FormsModule, MatButtonToggleModule, MatIconModule, ReactiveFormsModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ButtonToggleExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [FormsModule, MatButtonToggleModule, MatIconModule, ReactiveFormsModule],

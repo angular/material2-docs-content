@@ -62,8 +62,8 @@ const EXAMPLES = [
 ];
 export class DatepickerExamplesModule {
 }
-DatepickerExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: DatepickerExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-DatepickerExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: DatepickerExamplesModule, declarations: [DatepickerApiExample,
+DatepickerExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: DatepickerExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+DatepickerExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: DatepickerExamplesModule, declarations: [DatepickerApiExample,
         DatepickerColorExample,
         DatepickerCustomHeaderExample,
         DatepickerCustomIconExample,
@@ -120,7 +120,7 @@ DatepickerExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0"
         DateRangePickerSelectionStrategyExample,
         DatepickerActionsExample,
         ExampleHeader] });
-DatepickerExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: DatepickerExamplesModule, imports: [[
+DatepickerExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: DatepickerExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
             MatCardModule,
@@ -131,7 +131,7 @@ DatepickerExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0"
             ReactiveFormsModule,
             FormsModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.4", ngImport: i0, type: DatepickerExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: DatepickerExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
