@@ -6,9 +6,9 @@ import * as i1 from "@angular/material/card";
  */
 export class CardOverviewExample {
 }
-CardOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CardOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-CardOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "14.0.0-next.5", type: CardOverviewExample, selector: "card-overview-example", ngImport: i0, template: "<mat-card>Simple card</mat-card>\n", components: [{ type: i1.MatCard, selector: "mat-card", exportAs: ["matCard"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: CardOverviewExample, decorators: [{
+CardOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: CardOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+CardOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "14.0.0-next.6", type: CardOverviewExample, selector: "card-overview-example", ngImport: i0, template: "<mat-card>Simple card</mat-card>\n", components: [{ type: i1.MatCard, selector: "mat-card", exportAs: ["matCard"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: CardOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'card-overview-example', template: "<mat-card>Simple card</mat-card>\n" }]
         }] });

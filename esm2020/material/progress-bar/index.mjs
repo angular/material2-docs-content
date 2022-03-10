@@ -23,8 +23,8 @@ const EXAMPLES = [
 ];
 export class ProgressBarExamplesModule {
 }
-ProgressBarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ProgressBarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ProgressBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ProgressBarExamplesModule, declarations: [ProgressBarBufferExample,
+ProgressBarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ProgressBarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ProgressBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ProgressBarExamplesModule, declarations: [ProgressBarBufferExample,
         ProgressBarConfigurableExample,
         ProgressBarDeterminateExample,
         ProgressBarHarnessExample,
@@ -40,7 +40,7 @@ ProgressBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0
         ProgressBarHarnessExample,
         ProgressBarIndeterminateExample,
         ProgressBarQueryExample] });
-ProgressBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ProgressBarExamplesModule, imports: [[
+ProgressBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ProgressBarExamplesModule, imports: [[
             CommonModule,
             MatCardModule,
             MatProgressBarModule,
@@ -48,7 +48,7 @@ ProgressBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0
             MatSliderModule,
             FormsModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ProgressBarExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ProgressBarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

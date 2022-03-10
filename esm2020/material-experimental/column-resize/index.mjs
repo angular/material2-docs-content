@@ -11,14 +11,14 @@ export { OptInColumnResizeExample } from './opt-in-column-resize/opt-in-column-r
 export { OptInColumnResizeExampleModule } from './opt-in-column-resize/opt-in-column-resize-example-module';
 export class ColumnResizeExamplesModule {
 }
-ColumnResizeExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ColumnResizeExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ColumnResizeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ColumnResizeExamplesModule, exports: [DefaultEnabledColumnResizeExampleModule,
+ColumnResizeExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ColumnResizeExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ColumnResizeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ColumnResizeExamplesModule, exports: [DefaultEnabledColumnResizeExampleModule,
         DefaultEnabledColumnResizeFlexExampleModule,
         OptInColumnResizeExampleModule] });
-ColumnResizeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ColumnResizeExamplesModule, imports: [DefaultEnabledColumnResizeExampleModule,
+ColumnResizeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ColumnResizeExamplesModule, imports: [DefaultEnabledColumnResizeExampleModule,
         DefaultEnabledColumnResizeFlexExampleModule,
         OptInColumnResizeExampleModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.5", ngImport: i0, type: ColumnResizeExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: ColumnResizeExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     exports: [
