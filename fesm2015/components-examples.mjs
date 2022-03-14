@@ -4046,6 +4046,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/stepper"
         }
     },
+    "stepper-header-position": {
+        "packagePath": "material/stepper/stepper-header-position",
+        "title": "Stepper header position",
+        "componentName": "StepperHeaderPositionExample",
+        "files": [
+            "stepper-header-position-example.ts",
+            "stepper-header-position-example.html",
+            "stepper-header-position-example.css"
+        ],
+        "selector": "stepper-header-position-example",
+        "additionalComponents": [],
+        "primaryFile": "stepper-header-position-example.ts",
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "material/stepper"
+        }
+    },
     "stepper-intl": {
         "packagePath": "material/stepper/stepper-intl",
         "title": "Stepper that uses the MatStepperIntl service",
