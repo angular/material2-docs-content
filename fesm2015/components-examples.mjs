@@ -2292,6 +2292,26 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/datepicker"
         }
     },
+    "dialog-animations": {
+        "packagePath": "material/dialog/dialog-animations",
+        "title": "Dialog Animations",
+        "componentName": "DialogAnimationsExample",
+        "files": [
+            "dialog-animations-example.ts",
+            "dialog-animations-example.html",
+            "dialog-animations-example.css",
+            "dialog-animations-example-dialog.html"
+        ],
+        "selector": "dialog-animations-example",
+        "additionalComponents": [
+            "DialogAnimationsExampleDialog"
+        ],
+        "primaryFile": "dialog-animations-example.ts",
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "material/dialog"
+        }
+    },
     "dialog-content": {
         "packagePath": "material/dialog/dialog-content",
         "title": "Dialog with header, scrollable content and actions",

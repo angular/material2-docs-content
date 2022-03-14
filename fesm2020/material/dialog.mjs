@@ -203,6 +203,39 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", 
                 args: [TemplateRef]
             }] } });
 
+/**
+ * @title Dialog Animations
+ */
+class DialogAnimationsExample {
+    constructor(dialog) {
+        this.dialog = dialog;
+    }
+    openDialog(enterAnimationDuration, exitAnimationDuration) {
+        this.dialog.open(DialogAnimationsExampleDialog, {
+            width: '250px',
+            enterAnimationDuration,
+            exitAnimationDuration,
+        });
+    }
+}
+DialogAnimationsExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: DialogAnimationsExample, deps: [{ token: i1.MatDialog }], target: i0.ɵɵFactoryTarget.Component });
+DialogAnimationsExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "14.0.0-next.6", type: DialogAnimationsExample, selector: "dialog-animations-example", ngImport: i0, template: "<button mat-raised-button (click)=\"openDialog('0ms', '0ms')\">Open dialog without animation</button>\n<button mat-raised-button (click)=\"openDialog('3000ms', '1500ms')\">Open dialog slowly</button>\n", styles: ["button {\n  margin-right: 8px;\n}\n"], components: [{ type: i2.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: DialogAnimationsExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'dialog-animations-example', template: "<button mat-raised-button (click)=\"openDialog('0ms', '0ms')\">Open dialog without animation</button>\n<button mat-raised-button (click)=\"openDialog('3000ms', '1500ms')\">Open dialog slowly</button>\n", styles: ["button {\n  margin-right: 8px;\n}\n"] }]
+        }], ctorParameters: function () { return [{ type: i1.MatDialog }]; } });
+class DialogAnimationsExampleDialog {
+    constructor(dialogRef) {
+        this.dialogRef = dialogRef;
+    }
+}
+DialogAnimationsExampleDialog.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: DialogAnimationsExampleDialog, deps: [{ token: i1.MatDialogRef }], target: i0.ɵɵFactoryTarget.Component });
+DialogAnimationsExampleDialog.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "14.0.0-next.6", type: DialogAnimationsExampleDialog, selector: "dialog-animations-example-dialog", ngImport: i0, template: "<h1 mat-dialog-title>Delete file</h1>\n<div mat-dialog-content>\n  Would you like to delete cat.jpeg?\n</div>\n<div mat-dialog-actions>\n  <button mat-button mat-dialog-close>No</button>\n  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>\n</div>\n", components: [{ type: i2.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }], directives: [{ type: i1.MatDialogTitle, selector: "[mat-dialog-title], [matDialogTitle]", inputs: ["id"], exportAs: ["matDialogTitle"] }, { type: i1.MatDialogContent, selector: "[mat-dialog-content], mat-dialog-content, [matDialogContent]" }, { type: i1.MatDialogActions, selector: "[mat-dialog-actions], mat-dialog-actions, [matDialogActions]", inputs: ["align"] }, { type: i1.MatDialogClose, selector: "[mat-dialog-close], [matDialogClose]", inputs: ["aria-label", "type", "mat-dialog-close", "matDialogClose"], exportAs: ["matDialogClose"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: DialogAnimationsExampleDialog, decorators: [{
+            type: Component,
+            args: [{ selector: 'dialog-animations-example-dialog', template: "<h1 mat-dialog-title>Delete file</h1>\n<div mat-dialog-content>\n  Would you like to delete cat.jpeg?\n</div>\n<div mat-dialog-actions>\n  <button mat-button mat-dialog-close>No</button>\n  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>\n</div>\n" }]
+        }], ctorParameters: function () { return [{ type: i1.MatDialogRef }]; } });
+
 const EXAMPLES = [
     DialogContentExample,
     DialogContentExampleDialog,
@@ -215,6 +248,8 @@ const EXAMPLES = [
     DialogHarnessExample,
     DialogOverviewExample,
     DialogOverviewExampleDialog,
+    DialogAnimationsExample,
+    DialogAnimationsExampleDialog,
 ];
 class DialogExamplesModule {
 }
@@ -229,7 +264,9 @@ DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ve
         DialogFromMenuExampleDialog,
         DialogHarnessExample,
         DialogOverviewExample,
-        DialogOverviewExampleDialog], imports: [CommonModule,
+        DialogOverviewExampleDialog,
+        DialogAnimationsExample,
+        DialogAnimationsExampleDialog], imports: [CommonModule,
         MatButtonModule,
         MatDialogModule,
         MatInputModule,
@@ -244,7 +281,9 @@ DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ve
         DialogFromMenuExampleDialog,
         DialogHarnessExample,
         DialogOverviewExample,
-        DialogOverviewExampleDialog] });
+        DialogOverviewExampleDialog,
+        DialogAnimationsExample,
+        DialogAnimationsExampleDialog] });
 DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: DialogExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
@@ -273,5 +312,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", 
  * Generated bundle index. Do not edit.
  */
 
-export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogExamplesModule, DialogFromMenuExample, DialogFromMenuExampleDialog, DialogHarnessExample, DialogOverviewExample, DialogOverviewExampleDialog };
+export { DialogAnimationsExample, DialogAnimationsExampleDialog, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogExamplesModule, DialogFromMenuExample, DialogFromMenuExampleDialog, DialogHarnessExample, DialogOverviewExample, DialogOverviewExampleDialog };
 //# sourceMappingURL=dialog.mjs.map

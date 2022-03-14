@@ -119,6 +119,46 @@ will be available implicitly in the template:</p>
 <div material-docs-example="dialog-content"></div>
 
 
+        <h3 id="configuring-dialog-content-via-entrycomponents" class="docs-header-link">
+          <span header-link="configuring-dialog-content-via-entrycomponents"></span>
+          Configuring dialog content via <code>entryComponents</code>
+        </h3>
+      <p>Because <code>MatDialog</code> instantiates components at run-time, the Angular compiler needs extra
+information to create the necessary <code>ComponentFactory</code> for your dialog content component.</p>
+<p>For any component loaded into a dialog, you must include your component class in the list of
+<code>entryComponents</code> in your NgModule definition so that the Angular compiler knows to create
+the <code>ComponentFactory</code> for it.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [
+    <span class="hljs-comment">// ...</span>
+    MatDialogModule
+  ],
+
+  <span class="hljs-attr">declarations</span>: [
+    AppComponent,
+    ExampleDialogComponent
+  ],
+
+  <span class="hljs-attr">entryComponents</span>: [
+    ExampleDialogComponent
+  ],
+
+  <span class="hljs-attr">providers</span>: [],
+  <span class="hljs-attr">bootstrap</span>: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
+</code></pre>
+
+        <h3 id="controlling-the-dialog-animation" class="docs-header-link">
+          <span header-link="controlling-the-dialog-animation"></span>
+          Controlling the dialog animation
+        </h3>
+      <p>You can control the duration of the dialog&#39;s enter and exit animations using the
+<code>enterAnimationDuration</code> and <code>exitAnimationDuration</code> options. If you want to disable the dialog&#39;s
+animation completely, you can do so by setting the properties to <code>0ms</code>.</p>
+<div material-docs-example="dialog-animations"></div>
+
+
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
