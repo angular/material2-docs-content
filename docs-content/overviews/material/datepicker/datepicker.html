@@ -306,6 +306,10 @@ from <code>@angular/core</code>. If you want to override it, you can provide a n
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
 </code></pre>
 <p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
+<p><strong>Note:</strong> if you&#39;re using the <code>MatDateFnsModule</code>, you have to provide the data object for your
+locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
+compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
+from <code>date-fns/locale</code>.</p>
 <div material-docs-example="datepicker-locale"></div>
 
 
