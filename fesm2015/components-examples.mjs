@@ -4015,6 +4015,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/sort"
         }
     },
+    "stepper-animations": {
+        "packagePath": "material/stepper/stepper-animations",
+        "title": "Stepper animations",
+        "componentName": "StepperAnimationsExample",
+        "files": [
+            "stepper-animations-example.ts",
+            "stepper-animations-example.html",
+            "stepper-animations-example.css"
+        ],
+        "selector": "stepper-animations-example",
+        "additionalComponents": [],
+        "primaryFile": "stepper-animations-example.ts",
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "material/stepper"
+        }
+    },
     "stepper-editable": {
         "packagePath": "material/stepper/stepper-editable",
         "title": "Stepper with editable steps",
