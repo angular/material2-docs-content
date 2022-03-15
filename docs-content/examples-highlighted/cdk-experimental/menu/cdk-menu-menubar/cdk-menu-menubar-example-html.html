@@ -4,8 +4,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-bar-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span> [<span class="hljs-attr">cdkMenuTriggerFor</span>]=<span class="hljs-string">&quot;format&quot;</span>&gt;</span>Format<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">file</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;file&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">file</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>Share<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span> [<span class="hljs-attr">cdkMenuTriggerFor</span>]=<span class="hljs-string">&quot;new&quot;</span>&gt;</span>
@@ -20,8 +20,8 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">edit</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span> <span class="hljs-attr">cdkMenuPanel</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;edit&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">edit</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>Undo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>Redo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
@@ -31,8 +31,8 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">format</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span> <span class="hljs-attr">cdkMenuPanel</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;format&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">format</span> &gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-group&quot;</span> <span class="hljs-attr">cdkMenuGroup</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;bf&quot;</span> <span class="hljs-attr">cdkMenuItemCheckbox</span>&gt;</span>Bold<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;if&quot;</span> <span class="hljs-attr">cdkMenuItemCheckbox</span>&gt;</span>Italic<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -46,8 +46,8 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">new</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span> <span class="hljs-attr">cdkMenuPanel</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;new&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">new</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>From template<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
@@ -57,8 +57,8 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">download</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span> <span class="hljs-attr">cdkMenuPanel</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;download&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">download</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>Microsoft Word<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>PDF<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span> <span class="hljs-attr">cdkMenuItem</span>&gt;</span>Plain text<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
