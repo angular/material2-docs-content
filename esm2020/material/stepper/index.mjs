@@ -34,8 +34,8 @@ const EXAMPLES = [
 ];
 export class StepperExamplesModule {
 }
-StepperExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: StepperExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-StepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: StepperExamplesModule, declarations: [StepperEditableExample,
+StepperExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: StepperExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+StepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: StepperExamplesModule, declarations: [StepperEditableExample,
         StepperErrorsExample,
         StepperHarnessExample,
         StepperIntlExample,
@@ -63,7 +63,7 @@ StepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", v
         StepperVerticalExample,
         StepperLazyContentExample,
         StepperResponsiveExample] });
-StepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: StepperExamplesModule, imports: [[
+StepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: StepperExamplesModule, imports: [[
             FormsModule,
             MatButtonModule,
             MatIconModule,
@@ -73,7 +73,7 @@ StepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", v
             ReactiveFormsModule,
             CommonModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: StepperExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: StepperExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

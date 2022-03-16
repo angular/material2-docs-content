@@ -23,8 +23,8 @@ const EXAMPLES = [
 ];
 export class CardExamplesModule {
 }
-CardExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: CardExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CardExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: CardExamplesModule, declarations: [CardFancyExample,
+CardExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: CardExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CardExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: CardExamplesModule, declarations: [CardFancyExample,
         CardOverviewExample,
         CardHarnessExample,
         CardActionsExample,
@@ -37,8 +37,8 @@ CardExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", vers
         CardMediaSizeExample,
         CardSubtitleExample,
         CardFooterExample] });
-CardExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: CardExamplesModule, imports: [[MatButtonModule, MatCardModule, MatDividerModule, MatProgressBarModule]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: CardExamplesModule, decorators: [{
+CardExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: CardExamplesModule, imports: [[MatButtonModule, MatCardModule, MatDividerModule, MatProgressBarModule]] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: CardExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [MatButtonModule, MatCardModule, MatDividerModule, MatProgressBarModule],

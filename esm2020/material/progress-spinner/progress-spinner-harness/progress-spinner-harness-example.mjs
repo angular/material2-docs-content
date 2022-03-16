@@ -6,9 +6,9 @@ import * as i1 from "@angular/material/progress-spinner";
  */
 export class ProgressSpinnerHarnessExample {
 }
-ProgressSpinnerHarnessExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: ProgressSpinnerHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ProgressSpinnerHarnessExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.2.0", type: ProgressSpinnerHarnessExample, selector: "progress-spinner-harness-example", ngImport: i0, template: "<mat-progress-spinner mode=\"determinate\" [value]=\"value\"></mat-progress-spinner>\n<mat-spinner></mat-spinner>\n", components: [{ type: i1.MatProgressSpinner, selector: "mat-progress-spinner, mat-spinner", inputs: ["color", "diameter", "strokeWidth", "mode", "value"], exportAs: ["matProgressSpinner"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: ProgressSpinnerHarnessExample, decorators: [{
+ProgressSpinnerHarnessExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: ProgressSpinnerHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ProgressSpinnerHarnessExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.3.0", type: ProgressSpinnerHarnessExample, selector: "progress-spinner-harness-example", ngImport: i0, template: "<mat-progress-spinner mode=\"determinate\" [value]=\"value\"></mat-progress-spinner>\n<mat-spinner></mat-spinner>\n", components: [{ type: i1.MatProgressSpinner, selector: "mat-progress-spinner, mat-spinner", inputs: ["color", "diameter", "strokeWidth", "mode", "value"], exportAs: ["matProgressSpinner"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: ProgressSpinnerHarnessExample, decorators: [{
             type: Component,
             args: [{ selector: 'progress-spinner-harness-example', template: "<mat-progress-spinner mode=\"determinate\" [value]=\"value\"></mat-progress-spinner>\n<mat-spinner></mat-spinner>\n" }]
         }] });

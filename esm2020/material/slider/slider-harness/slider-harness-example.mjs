@@ -6,9 +6,9 @@ import * as i1 from "@angular/material/slider";
  */
 export class SliderHarnessExample {
 }
-SliderHarnessExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: SliderHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-SliderHarnessExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.2.0", type: SliderHarnessExample, selector: "slider-harness-example", ngImport: i0, template: "<mat-slider value=\"50\" aria-label=\"unit(s)\"></mat-slider>\n", components: [{ type: i1.MatSlider, selector: "mat-slider", inputs: ["disabled", "color", "tabIndex", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "value", "displayWith", "valueText", "vertical"], outputs: ["change", "input", "valueChange"], exportAs: ["matSlider"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.2.0", ngImport: i0, type: SliderHarnessExample, decorators: [{
+SliderHarnessExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: SliderHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+SliderHarnessExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "13.3.0", type: SliderHarnessExample, selector: "slider-harness-example", ngImport: i0, template: "<mat-slider value=\"50\" aria-label=\"unit(s)\"></mat-slider>\n", components: [{ type: i1.MatSlider, selector: "mat-slider", inputs: ["disabled", "color", "tabIndex", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "value", "displayWith", "valueText", "vertical"], outputs: ["change", "input", "valueChange"], exportAs: ["matSlider"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "13.3.0", ngImport: i0, type: SliderHarnessExample, decorators: [{
             type: Component,
             args: [{ selector: 'slider-harness-example', template: "<mat-slider value=\"50\" aria-label=\"unit(s)\"></mat-slider>\n" }]
         }] });
