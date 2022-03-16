@@ -1,7 +1,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItem</span> [<span class="hljs-attr">cdkMenuTriggerFor</span>]=<span class="hljs-string">&quot;menu&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-standalone-item&quot;</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">menu</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">menu</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu&quot;</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span>
       [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;bold&quot;</span>

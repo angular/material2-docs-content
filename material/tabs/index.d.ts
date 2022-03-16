@@ -8,10 +8,10 @@ import { TabGroupHarnessExample } from './tab-group-harness/tab-group-harness-ex
 import { TabGroupDynamicExample } from './tab-group-dynamic/tab-group-dynamic-example';
 import { TabGroupHeaderBelowExample } from './tab-group-header-below/tab-group-header-below-example';
 import { TabGroupLazyLoadedExample } from './tab-group-lazy-loaded/tab-group-lazy-loaded-example';
-import { TabGroupPreserveContentExample } from './tab-group-preserve-content/tab-group-preserve-content-example';
 import { TabGroupStretchedExample } from './tab-group-stretched/tab-group-stretched-example';
 import { TabGroupThemeExample } from './tab-group-theme/tab-group-theme-example';
 import { TabNavBarBasicExample } from './tab-nav-bar-basic/tab-nav-bar-basic-example';
+import { TabNavBarWithPanelExample } from './tab-nav-bar-with-panel/tab-nav-bar-with-panel-example';
 import * as i0 from "@angular/core";
 import * as i1 from "./tab-group-align/tab-group-align-example";
 import * as i2 from "./tab-group-animations/tab-group-animations-example";
@@ -26,7 +26,7 @@ import * as i10 from "./tab-group-lazy-loaded/tab-group-lazy-loaded-example";
 import * as i11 from "./tab-group-stretched/tab-group-stretched-example";
 import * as i12 from "./tab-group-theme/tab-group-theme-example";
 import * as i13 from "./tab-nav-bar-basic/tab-nav-bar-basic-example";
-import * as i14 from "./tab-group-preserve-content/tab-group-preserve-content-example";
+import * as i14 from "./tab-nav-bar-with-panel/tab-nav-bar-with-panel-example";
 import * as i15 from "@angular/common";
 import * as i16 from "@angular/material/button";
 import * as i17 from "@angular/material/button-toggle";
@@ -35,9 +35,9 @@ import * as i19 from "@angular/material/icon";
 import * as i20 from "@angular/material/input";
 import * as i21 from "@angular/material/tabs";
 import * as i22 from "@angular/forms";
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TabGroupPreserveContentExample, };
+export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHarnessExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TabNavBarWithPanelExample, };
 export declare class TabGroupExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TabGroupExamplesModule, [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample], [typeof i15.CommonModule, typeof i16.MatButtonModule, typeof i17.MatButtonToggleModule, typeof i18.MatCheckboxModule, typeof i19.MatIconModule, typeof i20.MatInputModule, typeof i21.MatTabsModule, typeof i22.ReactiveFormsModule], [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TabGroupExamplesModule, [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabNavBarWithPanelExample], [typeof i15.CommonModule, typeof i16.MatButtonModule, typeof i17.MatButtonToggleModule, typeof i18.MatCheckboxModule, typeof i19.MatIconModule, typeof i20.MatInputModule, typeof i21.MatTabsModule, typeof i22.ReactiveFormsModule], [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabNavBarWithPanelExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TabGroupExamplesModule>;
 }

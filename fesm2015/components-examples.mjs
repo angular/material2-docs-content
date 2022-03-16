@@ -2292,26 +2292,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/datepicker"
         }
     },
-    "dialog-animations": {
-        "packagePath": "material/dialog/dialog-animations",
-        "title": "Dialog Animations",
-        "componentName": "DialogAnimationsExample",
-        "files": [
-            "dialog-animations-example.ts",
-            "dialog-animations-example.html",
-            "dialog-animations-example.css",
-            "dialog-animations-example-dialog.html"
-        ],
-        "selector": "dialog-animations-example",
-        "additionalComponents": [
-            "DialogAnimationsExampleDialog"
-        ],
-        "primaryFile": "dialog-animations-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
-    },
     "dialog-content": {
         "packagePath": "material/dialog/dialog-content",
         "title": "Dialog with header, scrollable content and actions",
@@ -4015,23 +3995,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/sort"
         }
     },
-    "stepper-animations": {
-        "packagePath": "material/stepper/stepper-animations",
-        "title": "Stepper animations",
-        "componentName": "StepperAnimationsExample",
-        "files": [
-            "stepper-animations-example.ts",
-            "stepper-animations-example.html",
-            "stepper-animations-example.css"
-        ],
-        "selector": "stepper-animations-example",
-        "additionalComponents": [],
-        "primaryFile": "stepper-animations-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
-    },
     "stepper-editable": {
         "packagePath": "material/stepper/stepper-editable",
         "title": "Stepper with editable steps",
@@ -4078,23 +4041,6 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-harness-example",
         "additionalComponents": [],
         "primaryFile": "stepper-harness-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
-    },
-    "stepper-header-position": {
-        "packagePath": "material/stepper/stepper-header-position",
-        "title": "Stepper header position",
-        "componentName": "StepperHeaderPositionExample",
-        "files": [
-            "stepper-header-position-example.ts",
-            "stepper-header-position-example.html",
-            "stepper-header-position-example.css"
-        ],
-        "selector": "stepper-header-position-example",
-        "additionalComponents": [],
-        "primaryFile": "stepper-header-position-example.ts",
         "module": {
             "name": "StepperExamplesModule",
             "importSpecifier": "material/stepper"
@@ -4915,22 +4861,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tabs"
         }
     },
-    "tab-group-preserve-content": {
-        "packagePath": "material/tabs/tab-group-preserve-content",
-        "title": "Tab group that keeps its content inside the DOM when it's off-screen.",
-        "componentName": "TabGroupPreserveContentExample",
-        "files": [
-            "tab-group-preserve-content-example.ts",
-            "tab-group-preserve-content-example.html"
-        ],
-        "selector": "tab-group-preserve-content-example",
-        "additionalComponents": [],
-        "primaryFile": "tab-group-preserve-content-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
-    },
     "tab-group-stretched": {
         "packagePath": "material/tabs/tab-group-stretched",
         "title": "Tab group with stretched labels",
@@ -4977,6 +4907,23 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-nav-bar-basic-example",
         "additionalComponents": [],
         "primaryFile": "tab-nav-bar-basic-example.ts",
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "material/tabs"
+        }
+    },
+    "tab-nav-bar-with-panel": {
+        "packagePath": "material/tabs/tab-nav-bar-with-panel",
+        "title": "Use of the tab nav bar with the dedicated panel component.",
+        "componentName": "TabNavBarWithPanelExample",
+        "files": [
+            "tab-nav-bar-with-panel-example.ts",
+            "tab-nav-bar-with-panel-example.html",
+            "tab-nav-bar-with-panel-example.css"
+        ],
+        "selector": "tab-nav-bar-with-panel-example",
+        "additionalComponents": [],
+        "primaryFile": "tab-nav-bar-with-panel-example.ts",
         "module": {
             "name": "TabGroupExamplesModule",
             "importSpecifier": "material/tabs"

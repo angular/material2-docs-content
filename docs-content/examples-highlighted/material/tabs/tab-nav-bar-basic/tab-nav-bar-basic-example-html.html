@@ -1,10 +1,9 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span> [<span class="hljs-attr">backgroundColor</span>]=<span class="hljs-string">&quot;background&quot;</span> [<span class="hljs-attr">tabPanel</span>]=<span class="hljs-string">&quot;tabPanel&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span> [<span class="hljs-attr">backgroundColor</span>]=<span class="hljs-string">&quot;background&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let link of links&quot;</span>
      (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;activeLink = link&quot;</span>
      [<span class="hljs-attr">active</span>]=<span class="hljs-string">&quot;activeLink == link&quot;</span>&gt;</span> {{link}} <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-panel</span> #<span class="hljs-attr">tabPanel</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-panel</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-action-button&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;toggleBackground()&quot;</span>&gt;</span>
   Toggle background

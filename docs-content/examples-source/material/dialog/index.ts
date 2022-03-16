@@ -23,10 +23,6 @@ import {
   DialogFromMenuExampleDialog,
 } from './dialog-from-menu/dialog-from-menu-example';
 import {DialogHarnessExample} from './dialog-harness/dialog-harness-example';
-import {
-  DialogAnimationsExample,
-  DialogAnimationsExampleDialog,
-} from './dialog-animations/dialog-animations-example';
 
 export {
   DialogContentExample,
@@ -40,8 +36,6 @@ export {
   DialogHarnessExample,
   DialogOverviewExample,
   DialogOverviewExampleDialog,
-  DialogAnimationsExample,
-  DialogAnimationsExampleDialog,
 };
 
 const EXAMPLES = [
@@ -56,8 +50,6 @@ const EXAMPLES = [
   DialogHarnessExample,
   DialogOverviewExample,
   DialogOverviewExampleDialog,
-  DialogAnimationsExample,
-  DialogAnimationsExampleDialog,
 ];
 
 @NgModule({

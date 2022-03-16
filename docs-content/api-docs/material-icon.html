@@ -772,7 +772,7 @@ registerFontClassAlias. If no CSS class has been associated, returns the alias u
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns the CSS classes to be used for icon fonts when an <code>&lt;mat-icon&gt;</code> component does not
+      <p>Returns the CSS class name to be used for icon fonts when an <code>&lt;mat-icon&gt;</code> component does not
 have a fontSet input value, and is not loading an icon by name or URL.</p>
 
     </td>
@@ -783,7 +783,7 @@ have a fontSet input value, and is not loading an icon by name or URL.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string[]</code>
+      <code class="docs-api-method-returns-type">string</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -989,7 +989,7 @@ to the <code>&lt;mat-icon&gt;</code> element.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the CSS classes to be used for icon fonts when an <code>&lt;mat-icon&gt;</code> component does not
+      <p>Sets the CSS class name to be used for icon fonts when an <code>&lt;mat-icon&gt;</code> component does not
 have a fontSet input value, and is not loading an icon by name or URL.</p>
 
     </td>
@@ -1002,8 +1002,8 @@ have a fontSet input value, and is not loading an icon by name or URL.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        ...classNames</p>
-      <code class="docs-api-method-parameter-type">string[]</code>
+        className</p>
+      <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1181,53 +1181,6 @@ the element the icon is contained in.</p>
     
       
 
-<h4 id="MatIconDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatIconDefaultOptions"></span>
-  <code>MatIconDefaultOptions</code>
-</h4><p class="docs-api-interface-description"><p>Default options for <code>mat-icon</code>.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color of the icon.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>fontSet: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Font set that the icon is a part of.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
 <h4 id="IconOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="IconOptions"></span>
   <code>IconOptions</code>
@@ -1332,24 +1285,6 @@ URL from which to fetch an icon. The returned URL will be used to make a request
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> IconResolver = <span class="hljs-function">(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">namespace</span>: <span class="hljs-built_in">string</span></span>) =&gt;</span> SafeResourceUrl | SafeResourceUrlWithIconOptions | <span class="hljs-literal">null</span>;</code>
-</pre>
-</div>
-
-
-    <h3 id="material-icon-constants" class="docs-header-link docs-api-h3">
-      <span header-link="constants"></span>
-      Constants
-    </h3>
-    
-      
-
-<h4 id="MAT_ICON_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_ICON_DEFAULT_OPTIONS"></span>
-  <code>MAT_ICON_DEFAULT_OPTIONS</code>
-</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-icon</code>.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_ICON_DEFAULT_OPTIONS: InjectionToken&lt;MatIconDefaultOptions&gt;;</code>
 </pre>
 </div>
 

@@ -17,10 +17,10 @@ import {TabGroupHarnessExample} from './tab-group-harness/tab-group-harness-exam
 import {TabGroupDynamicExample} from './tab-group-dynamic/tab-group-dynamic-example';
 import {TabGroupHeaderBelowExample} from './tab-group-header-below/tab-group-header-below-example';
 import {TabGroupLazyLoadedExample} from './tab-group-lazy-loaded/tab-group-lazy-loaded-example';
-import {TabGroupPreserveContentExample} from './tab-group-preserve-content/tab-group-preserve-content-example';
 import {TabGroupStretchedExample} from './tab-group-stretched/tab-group-stretched-example';
 import {TabGroupThemeExample} from './tab-group-theme/tab-group-theme-example';
 import {TabNavBarBasicExample} from './tab-nav-bar-basic/tab-nav-bar-basic-example';
+import {TabNavBarWithPanelExample} from './tab-nav-bar-with-panel/tab-nav-bar-with-panel-example';
 
 export {
   TabGroupAlignExample,
@@ -36,7 +36,7 @@ export {
   TabGroupStretchedExample,
   TabGroupThemeExample,
   TabNavBarBasicExample,
-  TabGroupPreserveContentExample,
+  TabNavBarWithPanelExample,
 };
 
 const EXAMPLES = [
@@ -53,7 +53,7 @@ const EXAMPLES = [
   TabGroupStretchedExample,
   TabGroupThemeExample,
   TabNavBarBasicExample,
-  TabGroupPreserveContentExample,
+  TabNavBarWithPanelExample,
 ];
 
 @NgModule({
