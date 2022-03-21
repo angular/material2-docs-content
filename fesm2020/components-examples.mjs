@@ -1261,7 +1261,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "AutocompleteOptgroupExample",
         "files": [
             "autocomplete-optgroup-example.ts",
-            "./autocomplete-optgroup-example.html"
+            "autocomplete-optgroup-example.html"
         ],
         "selector": "autocomplete-optgroup-example",
         "additionalComponents": [],
