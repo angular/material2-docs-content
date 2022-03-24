@@ -4,8 +4,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">&quot;dp&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">dp</span>
                   <span class="hljs-attr">startView</span>=<span class="hljs-string">&quot;multi-year&quot;</span>
-                  (<span class="hljs-attr">yearSelected</span>)=<span class="hljs-string">&quot;chosenYearHandler($event)&quot;</span>
-                  (<span class="hljs-attr">monthSelected</span>)=<span class="hljs-string">&quot;chosenMonthHandler($event, dp)&quot;</span>
+                  (<span class="hljs-attr">monthSelected</span>)=<span class="hljs-string">&quot;setMonthAndYear($event, dp)&quot;</span>
                   <span class="hljs-attr">panelClass</span>=<span class="hljs-string">&quot;example-month-picker&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

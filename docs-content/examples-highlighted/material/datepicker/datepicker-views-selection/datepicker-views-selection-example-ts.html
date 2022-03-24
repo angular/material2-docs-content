@@ -49,15 +49,10 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerViewsSelectionExample</span> </span>{
   date = <span class="hljs-keyword">new</span> FormControl(moment());
 
-  <span class="hljs-function"><span class="hljs-title">chosenYearHandler</span>(<span class="hljs-params">normalizedYear: Moment</span>)</span> {
+  <span class="hljs-function"><span class="hljs-title">setMonthAndYear</span>(<span class="hljs-params">normalizedMonthAndYear: Moment, datepicker: MatDatepicker&lt;Moment&gt;</span>)</span> {
     <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-built_in">this</span>.date.value;
-    ctrlValue.year(normalizedYear.year());
-    <span class="hljs-built_in">this</span>.date.setValue(ctrlValue);
-  }
-
-  <span class="hljs-function"><span class="hljs-title">chosenMonthHandler</span>(<span class="hljs-params">normalizedMonth: Moment, datepicker: MatDatepicker&lt;Moment&gt;</span>)</span> {
-    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-built_in">this</span>.date.value;
-    ctrlValue.month(normalizedMonth.month());
+    ctrlValue.month(normalizedMonthAndYear.month());
+    ctrlValue.year(normalizedMonthAndYear.year());
     <span class="hljs-built_in">this</span>.date.setValue(ctrlValue);
     datepicker.close();
   }
