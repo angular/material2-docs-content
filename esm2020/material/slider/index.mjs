@@ -19,8 +19,8 @@ const EXAMPLES = [
 ];
 export class SliderExamplesModule {
 }
-SliderExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: SliderExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-SliderExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: SliderExamplesModule, declarations: [SliderConfigurableExample,
+SliderExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SliderExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+SliderExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SliderExamplesModule, declarations: [SliderConfigurableExample,
         SliderFormattingExample,
         SliderHarnessExample,
         SliderOverviewExample], imports: [CommonModule,
@@ -32,7 +32,7 @@ SliderExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ve
         SliderFormattingExample,
         SliderHarnessExample,
         SliderOverviewExample] });
-SliderExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: SliderExamplesModule, imports: [[
+SliderExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SliderExamplesModule, imports: [[
             CommonModule,
             FormsModule,
             MatCardModule,
@@ -40,7 +40,7 @@ SliderExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", ve
             MatInputModule,
             MatSliderModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: SliderExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SliderExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

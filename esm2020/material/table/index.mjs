@@ -79,8 +79,8 @@ const EXAMPLES = [
 ];
 export class TableExamplesModule {
 }
-TableExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TableExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TableExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TableExamplesModule, declarations: [TableBasicExample,
+TableExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TableExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+TableExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TableExamplesModule, declarations: [TableBasicExample,
         TableColumnStylingExample,
         TableDynamicArrayDataExample,
         TableDynamicColumnsExample,
@@ -153,7 +153,7 @@ TableExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", ver
         TableWithRipplesExample,
         TableWrappedExample,
         WrapperTable] });
-TableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TableExamplesModule, imports: [[
+TableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TableExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
             MatButtonToggleModule,
@@ -168,7 +168,7 @@ TableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", ver
             CdkTableModule,
             DragDropModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TableExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TableExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

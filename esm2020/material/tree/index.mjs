@@ -24,8 +24,8 @@ const EXAMPLES = [
 ];
 export class TreeExamplesModule {
 }
-TreeExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TreeExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TreeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TreeExamplesModule, declarations: [TreeChecklistExample,
+TreeExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TreeExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+TreeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TreeExamplesModule, declarations: [TreeChecklistExample,
         TreeDynamicExample,
         TreeFlatOverviewExample,
         TreeHarnessExample,
@@ -42,7 +42,7 @@ TreeExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", vers
         TreeHarnessExample,
         TreeLoadmoreExample,
         TreeNestedOverviewExample] });
-TreeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TreeExamplesModule, imports: [[
+TreeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TreeExamplesModule, imports: [[
             CommonModule,
             MatButtonModule,
             MatCheckboxModule,
@@ -51,7 +51,7 @@ TreeExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", vers
             MatProgressBarModule,
             MatTreeModule,
         ]] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: TreeExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TreeExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

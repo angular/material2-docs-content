@@ -6,9 +6,9 @@ import * as i1 from "@angular/material/slider";
  */
 export class SliderOverviewExample {
 }
-SliderOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: SliderOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-SliderOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "14.0.0-next.6", type: SliderOverviewExample, selector: "slider-overview-example", ngImport: i0, template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"], components: [{ type: i1.MatSlider, selector: "mat-slider", inputs: ["disabled", "color", "tabIndex", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "value", "displayWith", "valueText", "vertical"], outputs: ["change", "input", "valueChange"], exportAs: ["matSlider"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.6", ngImport: i0, type: SliderOverviewExample, decorators: [{
+SliderOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SliderOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+SliderOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "12.0.0", version: "14.0.0-next.9", type: SliderOverviewExample, selector: "slider-overview-example", ngImport: i0, template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"], components: [{ type: i1.MatSlider, selector: "mat-slider", inputs: ["disabled", "color", "tabIndex", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "value", "displayWith", "valueText", "vertical"], outputs: ["change", "input", "valueChange"], exportAs: ["matSlider"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SliderOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'slider-overview-example', template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"] }]
         }] });
