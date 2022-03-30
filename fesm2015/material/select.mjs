@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
 import { Component, ViewEncapsulation, NgModule } from '@angular/core';
 import * as i4 from '@angular/forms';
-import { FormControl, Validators, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormControl, Validators, UntypedFormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i1$1 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i6 from '@angular/material/input';
@@ -17,7 +17,7 @@ import * as i3 from '@angular/material/core';
 /** @title Select with custom trigger text */
 class SelectCustomTriggerExample {
     constructor() {
-        this.toppings = new FormControl();
+        this.toppings = new UntypedFormControl();
         this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
     }
 }
@@ -31,7 +31,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 /** @title Disabled select */
 class SelectDisabledExample {
     constructor() {
-        this.disableSelect = new FormControl(false);
+        this.disableSelect = new UntypedFormControl(false);
     }
 }
 SelectDisabledExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SelectDisabledExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -51,9 +51,12 @@ class MyErrorStateMatcher {
 /** @title Select with a custom ErrorStateMatcher */
 class SelectErrorStateMatcherExample {
     constructor() {
-        this.selected = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
-        this.selectFormControl = new FormControl('valid', [Validators.required, Validators.pattern('valid')]);
-        this.nativeSelectFormControl = new FormControl('valid', [
+        this.selected = new UntypedFormControl('valid', [Validators.required, Validators.pattern('valid')]);
+        this.selectFormControl = new UntypedFormControl('valid', [
+            Validators.required,
+            Validators.pattern('valid'),
+        ]);
+        this.nativeSelectFormControl = new UntypedFormControl('valid', [
             Validators.required,
             Validators.pattern('valid'),
         ]);
@@ -94,8 +97,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 /** @title Select with form field features */
 class SelectHintErrorExample {
     constructor() {
-        this.animalControl = new FormControl('', Validators.required);
-        this.selectFormControl = new FormControl('', Validators.required);
+        this.animalControl = new UntypedFormControl('', Validators.required);
+        this.selectFormControl = new UntypedFormControl('', Validators.required);
         this.animals = [
             { name: 'Dog', sound: 'Woof!' },
             { name: 'Cat', sound: 'Meow!' },
@@ -114,7 +117,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 /** @title Select with multiple selection */
 class SelectMultipleExample {
     constructor() {
-        this.toppings = new FormControl();
+        this.toppings = new UntypedFormControl();
         this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
     }
 }
@@ -138,7 +141,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 /** @title Select with option groups */
 class SelectOptgroupExample {
     constructor() {
-        this.pokemonControl = new FormControl();
+        this.pokemonControl = new UntypedFormControl();
         this.pokemonGroups = [
             {
                 name: 'Grass',
@@ -206,7 +209,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
  */
 class SelectPanelClassExample {
     constructor() {
-        this.panelColor = new FormControl('red');
+        this.panelColor = new UntypedFormControl('red');
     }
 }
 SelectPanelClassExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: SelectPanelClassExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -308,9 +311,9 @@ class SelectReactiveFormExample {
             { value: 'saab', viewValue: 'Saab' },
             { value: 'mercedes', viewValue: 'Mercedes' },
         ];
-        this.foodControl = new FormControl(this.foods[2].value);
-        this.carControl = new FormControl(this.cars[1].value);
-        this.form = new FormGroup({
+        this.foodControl = new UntypedFormControl(this.foods[2].value);
+        this.carControl = new UntypedFormControl(this.cars[1].value);
+        this.form = new UntypedFormGroup({
             food: this.foodControl,
             car: this.carControl,
         });

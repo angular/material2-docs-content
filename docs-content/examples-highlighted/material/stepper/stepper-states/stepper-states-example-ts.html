@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {STEPPER_GLOBAL_OPTIONS} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
 
 <span class="hljs-comment">/**
@@ -17,10 +17,10 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperStatesExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
-  <span class="hljs-attr">firstFormGroup</span>: FormGroup;
-  secondFormGroup: FormGroup;
+  <span class="hljs-attr">firstFormGroup</span>: UntypedFormGroup;
+  secondFormGroup: UntypedFormGroup;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: UntypedFormBuilder</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({

@@ -1,4 +1,3 @@
-import { FormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
 export declare const MY_FORMATS: {
     parse: {
@@ -13,7 +12,7 @@ export declare const MY_FORMATS: {
 };
 /** @title Datepicker with custom formats */
 export declare class DatepickerFormatsExample {
-    date: FormControl;
+    date: import("@angular/forms").FormControl;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerFormatsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerFormatsExample, "datepicker-formats-example", never, {}, {}, never, never>;
 }

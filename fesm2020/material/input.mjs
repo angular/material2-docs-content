@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import * as i2$1 from '@angular/forms';
-import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i2 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i3 from '@angular/material/icon';
@@ -37,7 +37,7 @@ class MyErrorStateMatcher {
 /** @title Input with a custom ErrorStateMatcher */
 class InputErrorStateMatcherExample {
     constructor() {
-        this.emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+        this.emailFormControl = new UntypedFormControl('', [Validators.required, Validators.email]);
         this.matcher = new MyErrorStateMatcher();
     }
 }
@@ -53,7 +53,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
  */
 class InputErrorsExample {
     constructor() {
-        this.emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+        this.emailFormControl = new UntypedFormControl('', [Validators.required, Validators.email]);
     }
 }
 InputErrorsExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: InputErrorsExample, deps: [], target: i0.ɵɵFactoryTarget.Component });

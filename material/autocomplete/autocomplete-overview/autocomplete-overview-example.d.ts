@@ -1,4 +1,3 @@
-import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 export interface State {
@@ -10,7 +9,7 @@ export interface State {
  * @title Autocomplete overview
  */
 export declare class AutocompleteOverviewExample {
-    stateCtrl: FormControl;
+    stateCtrl: import("@angular/forms").FormControl;
     filteredStates: Observable<State[]>;
     states: State[];
     constructor();

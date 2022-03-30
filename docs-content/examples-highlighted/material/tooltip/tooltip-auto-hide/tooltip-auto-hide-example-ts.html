@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {TooltipPosition} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
 
 <span class="hljs-comment">/**
@@ -12,5 +12,5 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipAutoHideExample</span> </span>{
   <span class="hljs-attr">positionOptions</span>: TooltipPosition[] = [<span class="hljs-string">&#x27;below&#x27;</span>, <span class="hljs-string">&#x27;above&#x27;</span>, <span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-string">&#x27;right&#x27;</span>];
-  position = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.positionOptions[<span class="hljs-number">0</span>]);
+  position = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-built_in">this</span>.positionOptions[<span class="hljs-number">0</span>]);
 }

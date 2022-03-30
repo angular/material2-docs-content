@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { MatStepperIntl } from '@angular/material/stepper';
 import * as i0 from "@angular/core";
 export declare class StepperIntl extends MatStepperIntl {
@@ -13,11 +13,11 @@ export declare class StepperIntl extends MatStepperIntl {
 export declare class StepperIntlExample implements OnInit {
     private _formBuilder;
     private _matStepperIntl;
-    firstFormGroup: FormGroup;
-    secondFormGroup: FormGroup;
+    firstFormGroup: UntypedFormGroup;
+    secondFormGroup: UntypedFormGroup;
     optionalLabelText: string;
     optionalLabelTextChoices: string[];
-    constructor(_formBuilder: FormBuilder, _matStepperIntl: MatStepperIntl);
+    constructor(_formBuilder: UntypedFormBuilder, _matStepperIntl: MatStepperIntl);
     updateOptionalLabel(): void;
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperIntlExample, never>;

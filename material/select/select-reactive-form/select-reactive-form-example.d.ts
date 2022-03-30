@@ -1,4 +1,4 @@
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import * as i0 from "@angular/core";
 interface Food {
     value: string;
@@ -12,11 +12,11 @@ interface Car {
  * @title Select in a reactive form
  */
 export declare class SelectReactiveFormExample {
-    form: FormGroup;
+    form: UntypedFormGroup;
     foods: Food[];
     cars: Car[];
-    foodControl: FormControl;
-    carControl: FormControl;
+    foodControl: import("@angular/forms").FormControl;
+    carControl: import("@angular/forms").FormControl;
     constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectReactiveFormExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never>;

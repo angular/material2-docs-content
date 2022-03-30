@@ -1,5 +1,4 @@
 import { OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 export interface User {
@@ -9,7 +8,7 @@ export interface User {
  * @title Display value autocomplete
  */
 export declare class AutocompleteDisplayExample implements OnInit {
-    myControl: FormControl;
+    myControl: import("@angular/forms").FormControl;
     options: User[];
     filteredOptions: Observable<User[]>;
     ngOnInit(): void;

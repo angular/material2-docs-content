@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
 import { Component, ViewChild, NgModule } from '@angular/core';
 import * as i7 from '@angular/forms';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormControl, ReactiveFormsModule } from '@angular/forms';
 import * as i4 from '@angular/material/autocomplete';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import * as i1$1 from '@angular/material/chips';
@@ -26,7 +26,7 @@ import { MatButtonModule } from '@angular/material/button';
 class ChipsAutocompleteExample {
     constructor() {
         this.separatorKeysCodes = [ENTER, COMMA];
-        this.fruitCtrl = new FormControl();
+        this.fruitCtrl = new UntypedFormControl();
         this.fruits = ['Lemon'];
         this.allFruits = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
         this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => (fruit ? this._filter(fruit) : this.allFruits.slice())));
@@ -179,7 +179,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 class ChipsFormControlExample {
     constructor() {
         this.keywords = new Set(['angular', 'how-to', 'tutorial']);
-        this.formControl = new FormControl(['angular']);
+        this.formControl = new UntypedFormControl(['angular']);
     }
     addKeywordFromInput(event) {
         if (event.value) {

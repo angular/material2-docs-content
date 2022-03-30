@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {startWith, map} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
@@ -22,7 +22,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;autocomplete-optgroup-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteOptgroupExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
-  <span class="hljs-attr">stateForm</span>: FormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
+  <span class="hljs-attr">stateForm</span>: UntypedFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
     <span class="hljs-attr">stateGroup</span>: <span class="hljs-string">&#x27;&#x27;</span>,
   });
 
@@ -125,7 +125,7 @@
 
   stateGroupOptions: Observable&lt;StateGroup[]&gt;;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: UntypedFormBuilder</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.stateGroupOptions = <span class="hljs-built_in">this</span>.stateForm.get(<span class="hljs-string">&#x27;stateGroup&#x27;</span>)!.valueChanges.pipe(

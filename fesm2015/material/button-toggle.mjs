@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import * as i2$1 from '@angular/forms';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i1 from '@angular/material/button-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import * as i2 from '@angular/material/icon';
@@ -64,7 +64,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
  */
 class ButtonToggleFormsExample {
     constructor() {
-        this.fontStyleControl = new FormControl();
+        this.fontStyleControl = new UntypedFormControl();
     }
 }
 ButtonToggleFormsExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: ButtonToggleFormsExample, deps: [], target: i0.ɵɵFactoryTarget.Component });

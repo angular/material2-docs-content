@@ -1,12 +1,11 @@
 import { OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 /**
  * @title Highlight the first autocomplete option
  */
 export declare class AutocompleteAutoActiveFirstOptionExample implements OnInit {
-    myControl: FormControl;
+    myControl: import("@angular/forms").FormControl;
     options: string[];
     filteredOptions: Observable<string[]>;
     ngOnInit(): void;

@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormControl, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormControl, UntypedFormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field with label */</span>
 <span class="hljs-meta">@Component</span>({
@@ -8,11 +8,11 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;form-field-label-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldLabelExample</span> </span>{
-  <span class="hljs-attr">options</span>: FormGroup;
-  hideRequiredControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>);
-  floatLabelControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;auto&#x27;</span>);
+  <span class="hljs-attr">options</span>: UntypedFormGroup;
+  hideRequiredControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-literal">false</span>);
+  floatLabelControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-string">&#x27;auto&#x27;</span>);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>)</span> {
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: UntypedFormBuilder</span>)</span> {
     <span class="hljs-built_in">this</span>.options = fb.group({
       <span class="hljs-attr">hideRequired</span>: <span class="hljs-built_in">this</span>.hideRequiredControl,
       <span class="hljs-attr">floatLabel</span>: <span class="hljs-built_in">this</span>.floatLabelControl,

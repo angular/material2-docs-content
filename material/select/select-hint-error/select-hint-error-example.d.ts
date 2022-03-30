@@ -1,4 +1,3 @@
-import { FormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
 interface Animal {
     name: string;
@@ -6,8 +5,8 @@ interface Animal {
 }
 /** @title Select with form field features */
 export declare class SelectHintErrorExample {
-    animalControl: FormControl;
-    selectFormControl: FormControl;
+    animalControl: import("@angular/forms").FormControl;
+    selectFormControl: import("@angular/forms").FormControl;
     animals: Animal[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectHintErrorExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never>;

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
 import { Component, Injectable, ChangeDetectionStrategy, Inject, ViewEncapsulation, NgModule } from '@angular/core';
 import * as i3 from '@angular/forms';
-import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import * as i3$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i1$2 from '@angular/material/card';
@@ -31,13 +31,13 @@ class DateRangePickerComparisonExample {
         const today = new Date();
         const month = today.getMonth();
         const year = today.getFullYear();
-        this.campaignOne = new FormGroup({
-            start: new FormControl(new Date(year, month, 13)),
-            end: new FormControl(new Date(year, month, 16)),
+        this.campaignOne = new UntypedFormGroup({
+            start: new UntypedFormControl(new Date(year, month, 13)),
+            end: new UntypedFormControl(new Date(year, month, 16)),
         });
-        this.campaignTwo = new FormGroup({
-            start: new FormControl(new Date(year, month, 15)),
-            end: new FormControl(new Date(year, month, 19)),
+        this.campaignTwo = new UntypedFormGroup({
+            start: new UntypedFormControl(new Date(year, month, 15)),
+            end: new UntypedFormControl(new Date(year, month, 19)),
         });
     }
 }
@@ -51,9 +51,9 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 /** @title Date range picker forms integration */
 class DateRangePickerFormsExample {
     constructor() {
-        this.range = new FormGroup({
-            start: new FormControl(),
-            end: new FormControl(),
+        this.range = new UntypedFormGroup({
+            start: new UntypedFormControl(),
+            end: new UntypedFormControl(),
         });
     }
 }
@@ -354,7 +354,7 @@ const MY_FORMATS$1 = {
 /** @title Datepicker with custom formats */
 class DatepickerFormatsExample {
     constructor() {
-        this.date = new FormControl(moment$2());
+        this.date = new UntypedFormControl(moment$2());
     }
 }
 DatepickerFormatsExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: DatepickerFormatsExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -473,7 +473,7 @@ const moment$1 = _rollupMoment__default || _rollupMoment;
 class DatepickerMomentExample {
     constructor() {
         // Datepicker takes `Moment` objects instead of `Date` objects.
-        this.date = new FormControl(moment$1([2017, 0, 1]));
+        this.date = new UntypedFormControl(moment$1([2017, 0, 1]));
     }
 }
 DatepickerMomentExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: DatepickerMomentExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -531,8 +531,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 /** @title Datepicker selected value */
 class DatepickerValueExample {
     constructor() {
-        this.date = new FormControl(new Date());
-        this.serializedDate = new FormControl(new Date().toISOString());
+        this.date = new UntypedFormControl(new Date());
+        this.serializedDate = new UntypedFormControl(new Date().toISOString());
     }
 }
 DatepickerValueExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: DatepickerValueExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -559,7 +559,7 @@ const MY_FORMATS = {
 /** @title Datepicker emulating a Year and month picker */
 class DatepickerViewsSelectionExample {
     constructor() {
-        this.date = new FormControl(moment());
+        this.date = new UntypedFormControl(moment());
     }
     setMonthAndYear(normalizedMonthAndYear, datepicker) {
         const ctrlValue = this.date.value;

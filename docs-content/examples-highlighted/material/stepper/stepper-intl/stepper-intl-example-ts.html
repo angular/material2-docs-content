@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, Injectable, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatStepperIntl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
 
 <span class="hljs-meta">@Injectable</span>()
@@ -18,12 +18,12 @@
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatStepperIntl, <span class="hljs-attr">useClass</span>: StepperIntl}],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperIntlExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
-  <span class="hljs-attr">firstFormGroup</span>: FormGroup;
-  secondFormGroup: FormGroup;
+  <span class="hljs-attr">firstFormGroup</span>: UntypedFormGroup;
+  secondFormGroup: UntypedFormGroup;
   optionalLabelText: <span class="hljs-built_in">string</span>;
   optionalLabelTextChoices: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Option 1&#x27;</span>, <span class="hljs-string">&#x27;Option 2&#x27;</span>, <span class="hljs-string">&#x27;Option 3&#x27;</span>];
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder, <span class="hljs-keyword">private</span> _matStepperIntl: MatStepperIntl</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: UntypedFormBuilder, <span class="hljs-keyword">private</span> _matStepperIntl: MatStepperIntl</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">updateOptionalLabel</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>._matStepperIntl.optionalLabel = <span class="hljs-built_in">this</span>.optionalLabelText;

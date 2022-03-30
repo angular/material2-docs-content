@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
 import { Component, ViewEncapsulation, NgModule } from '@angular/core';
 import * as i4 from '@angular/forms';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormControl, ReactiveFormsModule } from '@angular/forms';
 import * as i7 from '@angular/cdk/scrolling';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import * as i1$1 from '@angular/material/button';
@@ -25,7 +25,7 @@ import * as i3 from '@angular/material/core';
 class TooltipAutoHideExample {
     constructor() {
         this.positionOptions = ['below', 'above', 'left', 'right'];
-        this.position = new FormControl(this.positionOptions[0]);
+        this.position = new UntypedFormControl(this.positionOptions[0]);
     }
 }
 TooltipAutoHideExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TooltipAutoHideExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -52,8 +52,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
  */
 class TooltipDelayExample {
     constructor() {
-        this.showDelay = new FormControl(1000);
-        this.hideDelay = new FormControl(2000);
+        this.showDelay = new UntypedFormControl(1000);
+        this.hideDelay = new UntypedFormControl(2000);
     }
 }
 TooltipDelayExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TooltipDelayExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -68,7 +68,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
  */
 class TooltipDisabledExample {
     constructor() {
-        this.disabled = new FormControl(false);
+        this.disabled = new UntypedFormControl(false);
     }
 }
 TooltipDisabledExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TooltipDisabledExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -95,7 +95,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
  */
 class TooltipMessageExample {
     constructor() {
-        this.message = new FormControl('Info about the action');
+        this.message = new UntypedFormControl('Info about the action');
     }
 }
 TooltipMessageExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TooltipMessageExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -141,7 +141,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 class TooltipPositionExample {
     constructor() {
         this.positionOptions = ['after', 'before', 'above', 'below', 'left', 'right'];
-        this.position = new FormControl(this.positionOptions[0]);
+        this.position = new UntypedFormControl(this.positionOptions[0]);
     }
 }
 TooltipPositionExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.9", ngImport: i0, type: TooltipPositionExample, deps: [], target: i0.ɵɵFactoryTarget.Component });

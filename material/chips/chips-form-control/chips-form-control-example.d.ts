@@ -1,4 +1,3 @@
-import { FormControl } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
 import * as i0 from "@angular/core";
 /**
@@ -6,7 +5,7 @@ import * as i0 from "@angular/core";
  */
 export declare class ChipsFormControlExample {
     keywords: Set<string>;
-    formControl: FormControl;
+    formControl: import("@angular/forms").FormControl;
     addKeywordFromInput(event: MatChipInputEvent): void;
     removeKeyword(keyword: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsFormControlExample, never>;

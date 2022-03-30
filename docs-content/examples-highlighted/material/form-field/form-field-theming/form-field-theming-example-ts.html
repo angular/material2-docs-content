@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormControl, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field theming */</span>
 <span class="hljs-meta">@Component</span>({
@@ -8,11 +8,11 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;form-field-theming-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldThemingExample</span> </span>{
-  <span class="hljs-attr">options</span>: FormGroup;
-  colorControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;primary&#x27;</span>);
-  fontSizeControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-number">16</span>, Validators.min(<span class="hljs-number">10</span>));
+  <span class="hljs-attr">options</span>: UntypedFormGroup;
+  colorControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-string">&#x27;primary&#x27;</span>);
+  fontSizeControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-number">16</span>, Validators.min(<span class="hljs-number">10</span>));
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>)</span> {
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: UntypedFormBuilder</span>)</span> {
     <span class="hljs-built_in">this</span>.options = fb.group({
       <span class="hljs-attr">color</span>: <span class="hljs-built_in">this</span>.colorControl,
       <span class="hljs-attr">fontSize</span>: <span class="hljs-built_in">this</span>.fontSizeControl,

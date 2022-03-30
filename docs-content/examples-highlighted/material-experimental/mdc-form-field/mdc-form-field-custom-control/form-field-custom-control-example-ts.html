@@ -1,7 +1,13 @@
 <span class="hljs-keyword">import</span> {FocusMonitor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 <span class="hljs-keyword">import</span> {BooleanInput, coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component, ElementRef, Inject, Input, OnDestroy, Optional, Self} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ControlValueAccessor, FormBuilder, FormGroup, NgControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  ControlValueAccessor,
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  NgControl,
+  Validators,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormField, MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/mdc-form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {MAT_FORM_FIELD} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
@@ -32,7 +38,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
   <span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
 
-  parts: FormGroup;
+  parts: UntypedFormGroup;
   stateChanges = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
   focused = <span class="hljs-literal">false</span>;
   errorState = <span class="hljs-literal">false</span>;
@@ -103,7 +109,7 @@
   }
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    formBuilder: FormBuilder,
+    formBuilder: UntypedFormBuilder,
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,

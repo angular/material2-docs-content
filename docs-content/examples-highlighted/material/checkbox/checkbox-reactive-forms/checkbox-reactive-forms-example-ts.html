@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Checkboxes with reactive forms */</span>
 <span class="hljs-meta">@Component</span>({
@@ -8,9 +8,9 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;checkbox-reactive-forms-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CheckboxReactiveFormsExample</span> </span>{
-  <span class="hljs-attr">toppings</span>: FormGroup;
+  <span class="hljs-attr">toppings</span>: UntypedFormGroup;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>)</span> {
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">fb: UntypedFormBuilder</span>)</span> {
     <span class="hljs-built_in">this</span>.toppings = fb.group({
       <span class="hljs-attr">pepperoni</span>: <span class="hljs-literal">false</span>,
       <span class="hljs-attr">extracheese</span>: <span class="hljs-literal">false</span>,

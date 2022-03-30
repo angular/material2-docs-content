@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import * as i6 from '@angular/forms';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormControl, ReactiveFormsModule } from '@angular/forms';
 import * as i2$2 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i1$2 from '@angular/material/button-toggle';
@@ -120,7 +120,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.9", 
 class TabGroupDynamicExample {
     constructor() {
         this.tabs = ['First', 'Second', 'Third'];
-        this.selected = new FormControl(0);
+        this.selected = new UntypedFormControl(0);
     }
     addTab(selectAfterAdding) {
         this.tabs.push('New');
