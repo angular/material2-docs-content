@@ -5,6 +5,7 @@
 <span class="hljs-keyword">import</span> {CdkMenuMenubarExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-menu-menubar/cdk-menu-menubar-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkMenuInlineExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-menu-inline/cdk-menu-inline-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkMenuContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-menu-context/cdk-menu-context-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   CdkMenuStandaloneMenuExample,
@@ -23,7 +24,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [CdkMenuModule],
+  <span class="hljs-attr">imports</span>: [CdkMenuModule, CommonModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

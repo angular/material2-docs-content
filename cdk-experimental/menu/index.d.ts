@@ -10,9 +10,10 @@ import * as i3 from "./cdk-menu-inline/cdk-menu-inline-example";
 import * as i4 from "./cdk-menu-context/cdk-menu-context-example";
 import * as i5 from "./cdk-menu-standalone-stateful-menu/cdk-menu-standalone-stateful-menu-example";
 import * as i6 from "@angular/cdk-experimental/menu";
+import * as i7 from "@angular/common";
 export { CdkMenuStandaloneMenuExample, CdkMenuMenubarExample, CdkMenuInlineExample, CdkMenuContextExample, CdkMenuStandaloneStatefulMenuExample, };
 export declare class CdkMenuExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkMenuExamplesModule, [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample], [typeof i6.CdkMenuModule], [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkMenuExamplesModule, [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample], [typeof i6.CdkMenuModule, typeof i7.CommonModule], [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CdkMenuExamplesModule>;
 }

@@ -1,5 +1,4 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkMenuItem} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/menu&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Stateful Menu with Standalone Trigger. */</span>
 <span class="hljs-meta">@Component</span>({
@@ -11,9 +10,6 @@
   bold = <span class="hljs-literal">true</span>;
   italic = <span class="hljs-literal">false</span>;
 
-  size: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-string">&#x27;Normal&#x27;</span>;
-
-  <span class="hljs-function"><span class="hljs-title">onSizeChange</span>(<span class="hljs-params">item: CdkMenuItem</span>)</span> {
-    <span class="hljs-built_in">this</span>.size = item._elementRef.nativeElement.textContent?.trim();
-  }
+  sizes = [<span class="hljs-string">&#x27;Small&#x27;</span>, <span class="hljs-string">&#x27;Normal&#x27;</span>, <span class="hljs-string">&#x27;Large&#x27;</span>];
+  selectedSize: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-string">&#x27;Normal&#x27;</span>;
 }
