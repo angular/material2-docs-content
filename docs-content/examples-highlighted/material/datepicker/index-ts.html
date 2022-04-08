@@ -3,7 +3,7 @@
 <span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatNativeDateModule, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
@@ -106,5 +106,11 @@
   ],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">providers</span>: [
+    <span class="hljs-comment">// Except in specific examples, use &#x27;en-US&#x27; locale in datepicker examples. This ensures that</span>
+    <span class="hljs-comment">// the hardcoded date format strings displayed in `&lt;mat-hint&gt;` will match the format used by</span>
+    <span class="hljs-comment">// `NativeDateModule`.</span>
+    {<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-US&#x27;</span>},
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerExamplesModule</span> </span>{}

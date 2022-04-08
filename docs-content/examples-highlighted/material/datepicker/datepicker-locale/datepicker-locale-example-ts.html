@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MAT_MOMENT_DATE_FORMATS,
   MomentDateAdapter,
@@ -30,9 +30,22 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerLocaleExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _adapter: DateAdapter&lt;<span class="hljs-built_in">any</span>&gt;</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">private</span> _adapter: DateAdapter&lt;<span class="hljs-built_in">any</span>&gt;,
+    <span class="hljs-meta">@Inject</span>(MAT_DATE_LOCALE) <span class="hljs-keyword">private</span> _locale: <span class="hljs-built_in">string</span>,
+  </span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">french</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._adapter.setLocale(<span class="hljs-string">&#x27;fr&#x27;</span>);
+    <span class="hljs-built_in">this</span>._locale = <span class="hljs-string">&#x27;fr&#x27;</span>;
+    <span class="hljs-built_in">this</span>._adapter.setLocale(<span class="hljs-built_in">this</span>._locale);
+  }
+
+  getDateFormatString(): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._locale === <span class="hljs-string">&#x27;ja-JP&#x27;</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;YYYY/MM/DD&#x27;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._locale === <span class="hljs-string">&#x27;fr&#x27;</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;DD/MM/YYYY&#x27;</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#x27;</span>;
   }
 }
