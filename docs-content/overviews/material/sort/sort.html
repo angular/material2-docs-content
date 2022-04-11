@@ -56,7 +56,7 @@ that the header performs sorting, always use the <code>sortActionDescription</co
 description for the button element, such as &quot;Sort by last name&quot;.</p>
 <p><code>MatSortHeader</code> applies the <code>aria-sort</code> attribute to communicate the active sort state to
 assistive technology. However, most screen readers do not announce changes to the value of
-<code>aria-sort</code>, meaning that screen reader users do not receive feedback that sorting occured. To
+<code>aria-sort</code>, meaning that screen reader users do not receive feedback that sorting occurred. To
 remedy this, use the <code>matSortChange</code> event on the <code>MatSort</code> directive to announce state
 updates with the <code>LiveAnnouncer</code> service from <code>@angular/cdk/a11y</code>.</p>
 <p>If your application contains many tables and sort headers, consider creating a custom
