@@ -1,7 +1,7 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { BooleanInput } from '@angular/cdk/coercion';
 import { ElementRef, OnDestroy } from '@angular/core';
-import { ControlValueAccessor, UntypedFormBuilder, UntypedFormGroup, NgControl } from '@angular/forms';
+import { ControlValueAccessor, FormBuilder, NgControl } from '@angular/forms';
 import { MatFormField, MatFormFieldControl } from '@angular/material-experimental/mdc-form-field';
 import { Subject } from 'rxjs';
 import * as i0 from "@angular/core";
@@ -19,12 +19,17 @@ export declare class MyTel {
 }
 /** Custom `MatFormFieldControl` for telephone number input. */
 export declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
+    private _formBuilder;
     private _focusMonitor;
     private _elementRef;
     _formField: MatFormField;
     ngControl: NgControl;
     static nextId: number;
-    parts: UntypedFormGroup;
+    parts: import("@angular/forms").FormGroup<{
+        area: import("@angular/forms").FormControl<string | null>;
+        exchange: import("@angular/forms").FormControl<string | null>;
+        subscriber: import("@angular/forms").FormControl<string | null>;
+    }>;
     stateChanges: Subject<void>;
     focused: boolean;
     errorState: boolean;
@@ -46,7 +51,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     private _disabled;
     get value(): MyTel | null;
     set value(tel: MyTel | null);
-    constructor(formBuilder: UntypedFormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
+    constructor(_formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;

@@ -1,13 +1,7 @@
 <span class="hljs-keyword">import</span> {FocusMonitor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 <span class="hljs-keyword">import</span> {BooleanInput, coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component, ElementRef, Inject, Input, OnDestroy, Optional, Self} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  ControlValueAccessor,
-  UntypedFormBuilder,
-  UntypedFormGroup,
-  NgControl,
-  Validators,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {ControlValueAccessor, FormBuilder, NgControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormField, MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/mdc-form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {MAT_FORM_FIELD} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
@@ -38,7 +32,11 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
   <span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
 
-  parts: UntypedFormGroup;
+  parts = <span class="hljs-built_in">this</span>._formBuilder.group({
+    <span class="hljs-attr">area</span>: [<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+    <span class="hljs-attr">exchange</span>: [<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+    <span class="hljs-attr">subscriber</span>: [<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]],
+  });
   stateChanges = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
   focused = <span class="hljs-literal">false</span>;
   errorState = <span class="hljs-literal">false</span>;
@@ -98,7 +96,7 @@
       <span class="hljs-keyword">const</span> {
         <span class="hljs-attr">value</span>: {area, exchange, subscriber},
       } = <span class="hljs-built_in">this</span>.parts;
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area, exchange, subscriber);
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area!, exchange!, subscriber!);
     }
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
@@ -109,18 +107,12 @@
   }
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    formBuilder: UntypedFormBuilder,
+    <span class="hljs-keyword">private</span> _formBuilder: FormBuilder,
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
   </span>)</span> {
-    <span class="hljs-built_in">this</span>.parts = formBuilder.group({
-      <span class="hljs-attr">area</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
-      <span class="hljs-attr">exchange</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
-      <span class="hljs-attr">subscriber</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]],
-    });
-
     _focusMonitor.monitor(_elementRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
       <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.focused &amp;&amp; !origin) {
         <span class="hljs-built_in">this</span>.onTouched();

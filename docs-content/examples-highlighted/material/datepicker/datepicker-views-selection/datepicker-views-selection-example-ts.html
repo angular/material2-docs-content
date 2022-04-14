@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {UntypedFormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDatepicker} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
@@ -47,10 +47,10 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerViewsSelectionExample</span> </span>{
-  date = <span class="hljs-keyword">new</span> UntypedFormControl(moment());
+  date = <span class="hljs-keyword">new</span> FormControl(moment());
 
   <span class="hljs-function"><span class="hljs-title">setMonthAndYear</span>(<span class="hljs-params">normalizedMonthAndYear: Moment, datepicker: MatDatepicker&lt;Moment&gt;</span>)</span> {
-    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-built_in">this</span>.date.value;
+    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-built_in">this</span>.date.value!;
     ctrlValue.month(normalizedMonthAndYear.month());
     ctrlValue.year(normalizedMonthAndYear.year());
     <span class="hljs-built_in">this</span>.date.setValue(ctrlValue);

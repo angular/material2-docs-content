@@ -1,4 +1,5 @@
 import { ElementRef } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
@@ -8,7 +9,7 @@ import * as i0 from "@angular/core";
  */
 export declare class ChipsAutocompleteExample {
     separatorKeysCodes: number[];
-    fruitCtrl: import("@angular/forms").FormControl;
+    fruitCtrl: FormControl<string | null>;
     filteredFruits: Observable<string[]>;
     fruits: string[];
     allFruits: string[];

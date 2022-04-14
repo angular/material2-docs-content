@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 export interface StateGroup {
@@ -12,10 +12,12 @@ export declare const _filter: (opt: string[], value: string) => string[];
  */
 export declare class AutocompleteOptgroupExample implements OnInit {
     private _formBuilder;
-    stateForm: UntypedFormGroup;
+    stateForm: import("@angular/forms").FormGroup<{
+        stateGroup: import("@angular/forms").FormControl<string | null>;
+    }>;
     stateGroups: StateGroup[];
     stateGroupOptions: Observable<StateGroup[]>;
-    constructor(_formBuilder: UntypedFormBuilder);
+    constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
     private _filterGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteOptgroupExample, never>;

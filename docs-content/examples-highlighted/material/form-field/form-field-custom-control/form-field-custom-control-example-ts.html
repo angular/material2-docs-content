@@ -13,9 +13,9 @@
 <span class="hljs-keyword">import</span> {
   AbstractControl,
   ControlValueAccessor,
-  UntypedFormBuilder,
-  UntypedFormControl,
-  UntypedFormGroup,
+  FormBuilder,
+  FormControl,
+  FormGroup,
   NgControl,
   Validators,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
@@ -28,8 +28,8 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;form-field-custom-control-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldCustomControlExample</span> </span>{
-  <span class="hljs-attr">form</span>: UntypedFormGroup = <span class="hljs-keyword">new</span> UntypedFormGroup({
-    <span class="hljs-attr">tel</span>: <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)),
+  <span class="hljs-attr">form</span>: FormGroup = <span class="hljs-keyword">new</span> FormGroup({
+    <span class="hljs-attr">tel</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>)),
   });
 }
 
@@ -55,7 +55,11 @@
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;exchange&#x27;</span>) exchangeInput: HTMLInputElement;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;subscriber&#x27;</span>) subscriberInput: HTMLInputElement;
 
-  parts: UntypedFormGroup;
+  parts = <span class="hljs-built_in">this</span>._formBuilder.group({
+    <span class="hljs-attr">area</span>: [<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+    <span class="hljs-attr">exchange</span>: [<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+    <span class="hljs-attr">subscriber</span>: [<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]],
+  });
   stateChanges = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
   focused = <span class="hljs-literal">false</span>;
   touched = <span class="hljs-literal">false</span>;
@@ -115,7 +119,7 @@
       <span class="hljs-keyword">const</span> {
         <span class="hljs-attr">value</span>: {area, exchange, subscriber},
       } = <span class="hljs-built_in">this</span>.parts;
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area, exchange, subscriber);
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area!, exchange!, subscriber!);
     }
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
@@ -130,18 +134,12 @@
   }
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    formBuilder: UntypedFormBuilder,
+    <span class="hljs-keyword">private</span> _formBuilder: FormBuilder,
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
   </span>)</span> {
-    <span class="hljs-built_in">this</span>.parts = formBuilder.group({
-      <span class="hljs-attr">area</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
-      <span class="hljs-attr">exchange</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
-      <span class="hljs-attr">subscriber</span>: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]],
-    });
-
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.ngControl != <span class="hljs-literal">null</span>) {
       <span class="hljs-built_in">this</span>.ngControl.valueAccessor = <span class="hljs-built_in">this</span>;
     }

@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {UntypedFormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Tab group with dynamically changing tabs
@@ -11,7 +11,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabGroupDynamicExample</span> </span>{
   tabs = [<span class="hljs-string">&#x27;First&#x27;</span>, <span class="hljs-string">&#x27;Second&#x27;</span>, <span class="hljs-string">&#x27;Third&#x27;</span>];
-  selected = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-number">0</span>);
+  selected = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-number">0</span>);
 
   <span class="hljs-function"><span class="hljs-title">addTab</span>(<span class="hljs-params">selectAfterAdding: <span class="hljs-built_in">boolean</span></span>)</span> {
     <span class="hljs-built_in">this</span>.tabs.push(<span class="hljs-string">&#x27;New&#x27;</span>);

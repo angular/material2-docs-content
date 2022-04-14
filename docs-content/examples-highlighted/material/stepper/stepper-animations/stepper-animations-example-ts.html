@@ -7,7 +7,7 @@
  */</span>
 
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {UntypedFormBuilder, UntypedFormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Stepper animations
@@ -18,7 +18,7 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;stepper-animations-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperAnimationsExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: UntypedFormBuilder</span>)</span> {}
-  <span class="hljs-attr">firstFormGroup</span>: UntypedFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({<span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>]});
-  secondFormGroup: UntypedFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({<span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>]});
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
+  <span class="hljs-attr">firstFormGroup</span>: FormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({<span class="hljs-attr">firstCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>]});
+  secondFormGroup: FormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({<span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>]});
 }

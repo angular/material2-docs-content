@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {UntypedFormControl, UntypedFormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-keyword">interface</span> Food {
   <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
@@ -19,8 +19,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-reactive-form-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectReactiveFormExample</span> </span>{
-  <span class="hljs-attr">form</span>: UntypedFormGroup;
-  foods: Food[] = [
+  <span class="hljs-attr">foods</span>: Food[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;steak-0&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Steak&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;pizza-1&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Pizza&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;tacos-2&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Tacos&#x27;</span>},
@@ -30,13 +29,10 @@
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;saab&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Saab&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;mercedes&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Mercedes&#x27;</span>},
   ];
-  foodControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-built_in">this</span>.foods[<span class="hljs-number">2</span>].value);
-  carControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-built_in">this</span>.cars[<span class="hljs-number">1</span>].value);
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.form = <span class="hljs-keyword">new</span> UntypedFormGroup({
-      <span class="hljs-attr">food</span>: <span class="hljs-built_in">this</span>.foodControl,
-      <span class="hljs-attr">car</span>: <span class="hljs-built_in">this</span>.carControl,
-    });
-  }
+  foodControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.foods[<span class="hljs-number">2</span>].value);
+  carControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.cars[<span class="hljs-number">1</span>].value);
+  form = <span class="hljs-keyword">new</span> FormGroup({
+    <span class="hljs-attr">food</span>: <span class="hljs-built_in">this</span>.foodControl,
+    <span class="hljs-attr">car</span>: <span class="hljs-built_in">this</span>.carControl,
+  });
 }

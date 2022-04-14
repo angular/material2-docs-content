@@ -1,5 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {UntypedFormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDrawerMode} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Sidenav with configurable mode */</span>
 <span class="hljs-meta">@Component</span>({
@@ -8,6 +9,6 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-mode-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavModeExample</span> </span>{
-  mode = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-string">&#x27;over&#x27;</span>);
+  mode = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;over&#x27;</span> <span class="hljs-keyword">as</span> MatDrawerMode);
   shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.test(<span class="hljs-built_in">window</span>.location.host);
 }

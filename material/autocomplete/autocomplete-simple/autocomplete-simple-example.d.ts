@@ -1,9 +1,10 @@
+import { FormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
 /**
  * @title Simple autocomplete
  */
 export declare class AutocompleteSimpleExample {
-    myControl: import("@angular/forms").FormControl;
+    myControl: FormControl<string | null>;
     options: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteSimpleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteSimpleExample, "autocomplete-simple-example", never, {}, {}, never, never>;

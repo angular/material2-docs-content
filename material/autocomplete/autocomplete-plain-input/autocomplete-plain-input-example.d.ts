@@ -1,11 +1,12 @@
 import { OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 /**
  * @title Plain input autocomplete
  */
 export declare class AutocompletePlainInputExample implements OnInit {
-    control: import("@angular/forms").FormControl;
+    control: FormControl<string | null>;
     streets: string[];
     filteredStreets: Observable<string[]>;
     ngOnInit(): void;

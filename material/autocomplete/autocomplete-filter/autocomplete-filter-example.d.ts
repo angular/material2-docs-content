@@ -1,11 +1,12 @@
 import { OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as i0 from "@angular/core";
 /**
  * @title Filter autocomplete
  */
 export declare class AutocompleteFilterExample implements OnInit {
-    myControl: import("@angular/forms").FormControl;
+    myControl: FormControl<string | null>;
     options: string[];
     filteredOptions: Observable<string[]>;
     ngOnInit(): void;

@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {UntypedFormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 <span class="hljs-keyword">interface</span> Animal {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -12,8 +12,8 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-hint-error-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectHintErrorExample</span> </span>{
-  animalControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-string">&#x27;&#x27;</span>, Validators.required);
-  selectFormControl = <span class="hljs-keyword">new</span> UntypedFormControl(<span class="hljs-string">&#x27;&#x27;</span>, Validators.required);
+  animalControl = <span class="hljs-keyword">new</span> FormControl&lt;Animal | <span class="hljs-literal">null</span>&gt;(<span class="hljs-literal">null</span>, Validators.required);
+  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, Validators.required);
   animals: Animal[] = [
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Dog&#x27;</span>, <span class="hljs-attr">sound</span>: <span class="hljs-string">&#x27;Woof!&#x27;</span>},
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Cat&#x27;</span>, <span class="hljs-attr">sound</span>: <span class="hljs-string">&#x27;Meow!&#x27;</span>},

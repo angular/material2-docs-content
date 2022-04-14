@@ -1,10 +1,11 @@
+import { FormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
 /**
  * @title Tab group with dynamically changing tabs
  */
 export declare class TabGroupDynamicExample {
     tabs: string[];
-    selected: import("@angular/forms").FormControl;
+    selected: FormControl<number | null>;
     addTab(selectAfterAdding: boolean): void;
     removeTab(index: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupDynamicExample, never>;

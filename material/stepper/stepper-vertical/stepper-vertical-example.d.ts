@@ -1,16 +1,18 @@
-import { OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import * as i0 from "@angular/core";
 /**
  * @title Stepper vertical
  */
-export declare class StepperVerticalExample implements OnInit {
+export declare class StepperVerticalExample {
     private _formBuilder;
+    firstFormGroup: import("@angular/forms").FormGroup<{
+        firstCtrl: import("@angular/forms").FormControl<string | null>;
+    }>;
+    secondFormGroup: import("@angular/forms").FormGroup<{
+        secondCtrl: import("@angular/forms").FormControl<string | null>;
+    }>;
     isLinear: boolean;
-    firstFormGroup: UntypedFormGroup;
-    secondFormGroup: UntypedFormGroup;
-    constructor(_formBuilder: UntypedFormBuilder);
-    ngOnInit(): void;
+    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperVerticalExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never>;
 }

@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
 interface Pokemon {
     value: string;
@@ -10,7 +11,7 @@ interface PokemonGroup {
 }
 /** @title Select with option groups */
 export declare class SelectOptgroupExample {
-    pokemonControl: import("@angular/forms").FormControl;
+    pokemonControl: FormControl<string | null>;
     pokemonGroups: PokemonGroup[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never>;
