@@ -1,4 +1,4 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container mat-elevation-z8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container mat-elevation-z8&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
@@ -27,7 +27,7 @@
 
     <span class="hljs-comment">&lt;!-- Star Column --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;star&quot;</span> <span class="hljs-attr">stickyEnd</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;row actions&quot;</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
@@ -36,4 +36,4 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;displayedColumns&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let row; columns: displayedColumns;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>

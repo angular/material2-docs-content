@@ -5,10 +5,19 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> {{column}} <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> {{element[column]}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;expand&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;row actions&quot;</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;expand row&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;(expandedElement = expandedElement === element ? null : element); $event.stopPropagation()&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;expandedElement !== element&quot;</span>&gt;</span>keyboard_arrow_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span> 
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;expandedElement === element&quot;</span>&gt;</span>keyboard_arrow_up<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span> 
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;expandedDetail&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span> [<span class="hljs-attr">attr.colspan</span>]=<span class="hljs-string">&quot;columnsToDisplay.length&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span> [<span class="hljs-attr">attr.colspan</span>]=<span class="hljs-string">&quot;columnsToDisplayWithExpand.length&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-detail&quot;</span>
            [@<span class="hljs-attr">detailExpand</span>]=<span class="hljs-string">&quot;element == expandedElement ? &#x27;expanded&#x27; : &#x27;collapsed&#x27;&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-diagram&quot;</span>&gt;</span>
@@ -25,8 +34,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let element; columns: columnsToDisplay;&quot;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplayWithExpand&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let element; columns: columnsToDisplayWithExpand;&quot;</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-row&quot;</span>
       [<span class="hljs-attr">class.example-expanded-row</span>]=<span class="hljs-string">&quot;expandedElement === element&quot;</span>
       (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;expandedElement = expandedElement === element ? null : element&quot;</span>&gt;</span>

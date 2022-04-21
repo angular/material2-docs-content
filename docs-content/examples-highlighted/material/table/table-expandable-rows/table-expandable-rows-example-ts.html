@@ -19,6 +19,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableExpandableRowsExample</span> </span>{
   dataSource = ELEMENT_DATA;
   columnsToDisplay = [<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>];
+  columnsToDisplayWithExpand = [...this.columnsToDisplay, <span class="hljs-string">&#x27;expand&#x27;</span>];
   expandedElement: PeriodicElement | <span class="hljs-literal">null</span>;
 }
 
