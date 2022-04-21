@@ -11,5 +11,5 @@ export interface Tile {
 export declare class GridListDynamicExample {
     tiles: Tile[];
     static ɵfac: i0.ɵɵFactoryDeclaration<GridListDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<GridListDynamicExample, "grid-list-dynamic-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GridListDynamicExample, "grid-list-dynamic-example", never, {}, {}, never, never, false>;
 }

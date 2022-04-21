@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class GridListOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<GridListOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<GridListOverviewExample, "grid-list-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GridListOverviewExample, "grid-list-overview-example", never, {}, {}, never, never, false>;
 }

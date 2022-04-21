@@ -13,5 +13,5 @@ export declare class SlideToggleFormsExample {
     constructor(_formBuilder: FormBuilder);
     onFormSubmit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never, never, false>;
 }

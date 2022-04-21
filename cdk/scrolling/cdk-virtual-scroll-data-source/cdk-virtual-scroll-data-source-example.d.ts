@@ -5,7 +5,7 @@ import * as i0 from "@angular/core";
 export declare class CdkVirtualScrollDataSourceExample {
     ds: MyDataSource;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollDataSourceExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollDataSourceExample, "cdk-virtual-scroll-data-source-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollDataSourceExample, "cdk-virtual-scroll-data-source-example", never, {}, {}, never, never, false>;
 }
 export declare class MyDataSource extends DataSource<string | undefined> {
     private _length;

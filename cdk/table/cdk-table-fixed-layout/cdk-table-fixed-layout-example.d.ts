@@ -14,7 +14,7 @@ export declare class CdkTableFixedLayoutExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableFixedLayoutExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never, false>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

@@ -6,5 +6,5 @@ import * as i0 from "@angular/core";
 export declare class InputErrorsExample {
     emailFormControl: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never, false>;
 }

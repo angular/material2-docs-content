@@ -16,5 +16,5 @@ export declare class SortOverviewExample {
     constructor();
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never, false>;
 }

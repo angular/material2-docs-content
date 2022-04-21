@@ -16,5 +16,5 @@ export declare class CheckboxOverviewExample {
     someComplete(): boolean;
     setAll(completed: boolean): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxOverviewExample, "checkbox-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxOverviewExample, "checkbox-overview-example", never, {}, {}, never, never, false>;
 }

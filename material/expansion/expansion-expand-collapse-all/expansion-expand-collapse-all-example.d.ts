@@ -6,5 +6,5 @@ import * as i0 from "@angular/core";
 export declare class ExpansionExpandCollapseAllExample {
     accordion: MatAccordion;
     static ɵfac: i0.ɵɵFactoryDeclaration<ExpansionExpandCollapseAllExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ExpansionExpandCollapseAllExample, "expansion-expand-collapse-all-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ExpansionExpandCollapseAllExample, "expansion-expand-collapse-all-example", never, {}, {}, never, never, false>;
 }

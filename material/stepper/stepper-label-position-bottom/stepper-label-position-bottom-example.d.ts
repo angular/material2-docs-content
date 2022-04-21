@@ -13,5 +13,5 @@ export declare class StepperLabelPositionBottomExample {
     }>;
     constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperLabelPositionBottomExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<StepperLabelPositionBottomExample, "stepper-label-position-bottom-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperLabelPositionBottomExample, "stepper-label-position-bottom-example", never, {}, {}, never, never, false>;
 }

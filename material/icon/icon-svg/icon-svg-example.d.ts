@@ -7,5 +7,5 @@ import * as i0 from "@angular/core";
 export declare class IconSvgExample {
     constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer);
     static ɵfac: i0.ɵɵFactoryDeclaration<IconSvgExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<IconSvgExample, "icon-svg-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<IconSvgExample, "icon-svg-example", never, {}, {}, never, never, false>;
 }

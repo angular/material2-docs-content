@@ -14,5 +14,5 @@ export declare class CdkSelectionListExample {
     changeElementName(): void;
     reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, false>;
 }

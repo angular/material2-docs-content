@@ -3,5 +3,5 @@ import * as i0 from "@angular/core";
 export declare class SelectValueBindingExample {
     selected: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectValueBindingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectValueBindingExample, "select-value-binding-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectValueBindingExample, "select-value-binding-example", never, {}, {}, never, never, false>;
 }

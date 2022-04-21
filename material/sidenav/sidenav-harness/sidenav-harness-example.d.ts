@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class SidenavHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavHarnessExample, "sidenav-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavHarnessExample, "sidenav-harness-example", never, {}, {}, never, never, false>;
 }

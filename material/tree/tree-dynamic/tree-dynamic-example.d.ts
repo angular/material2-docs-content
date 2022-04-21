@@ -58,5 +58,5 @@ export declare class TreeDynamicExample {
     isExpandable: (node: DynamicFlatNode) => boolean;
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, false>;
 }

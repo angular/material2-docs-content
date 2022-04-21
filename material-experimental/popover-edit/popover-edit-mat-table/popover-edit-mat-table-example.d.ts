@@ -36,7 +36,7 @@ export declare class PopoverEditMatTableExample {
     goodJob(element: PeriodicElement): void;
     badJob(element: PeriodicElement): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never, false>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

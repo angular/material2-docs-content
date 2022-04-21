@@ -8,5 +8,5 @@ export declare class SelectHarnessExample {
         viewValue: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never, false>;
 }

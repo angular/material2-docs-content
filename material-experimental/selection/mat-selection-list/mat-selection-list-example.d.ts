@@ -14,5 +14,5 @@ export declare class MatSelectionListExample {
     changeElementName(): void;
     reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionListExample, "mat-selection-list-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionListExample, "mat-selection-list-example", never, {}, {}, never, never, false>;
 }

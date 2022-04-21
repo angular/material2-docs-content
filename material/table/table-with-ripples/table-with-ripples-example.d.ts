@@ -8,5 +8,5 @@ export declare class TableWithRipplesExample {
         name: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableWithRipplesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never, false>;
 }

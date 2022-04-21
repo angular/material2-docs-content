@@ -10,5 +10,5 @@ export declare class CheckboxReactiveFormsExample {
     }>;
     constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxReactiveFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never, false>;
 }

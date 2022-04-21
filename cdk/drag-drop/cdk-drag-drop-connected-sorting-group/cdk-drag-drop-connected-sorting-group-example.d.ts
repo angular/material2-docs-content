@@ -8,5 +8,5 @@ export declare class CdkDragDropConnectedSortingGroupExample {
     done: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropConnectedSortingGroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingGroupExample, "cdk-drag-drop-connected-sorting-group-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingGroupExample, "cdk-drag-drop-connected-sorting-group-example", never, {}, {}, never, never, false>;
 }

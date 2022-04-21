@@ -9,5 +9,5 @@ export declare class RippleOverviewExample {
     radius: number;
     color: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<RippleOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RippleOverviewExample, "ripple-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RippleOverviewExample, "ripple-overview-example", never, {}, {}, never, never, false>;
 }

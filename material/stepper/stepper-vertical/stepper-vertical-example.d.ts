@@ -14,5 +14,5 @@ export declare class StepperVerticalExample {
     isLinear: boolean;
     constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperVerticalExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never, false>;
 }

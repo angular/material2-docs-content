@@ -12,5 +12,5 @@ export declare class DefaultEnabledColumnResizeFlexExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
     static ɵfac: i0.ɵɵFactoryDeclaration<DefaultEnabledColumnResizeFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DefaultEnabledColumnResizeFlexExample, "default-enabled-column-resize-flex-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DefaultEnabledColumnResizeFlexExample, "default-enabled-column-resize-flex-example", never, {}, {}, never, never, false>;
 }

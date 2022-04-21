@@ -21,5 +21,5 @@ export declare class AutocompleteOptgroupExample implements OnInit {
     ngOnInit(): void;
     private _filterGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteOptgroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteOptgroupExample, "autocomplete-optgroup-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteOptgroupExample, "autocomplete-optgroup-example", never, {}, {}, never, never, false>;
 }

@@ -10,5 +10,5 @@ export declare class CdkPlatformOverviewExample {
     supportsScrollBehavior: boolean;
     constructor(platform: Platform);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPlatformOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPlatformOverviewExample, "cdk-platform-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPlatformOverviewExample, "cdk-platform-overview-example", never, {}, {}, never, never, false>;
 }

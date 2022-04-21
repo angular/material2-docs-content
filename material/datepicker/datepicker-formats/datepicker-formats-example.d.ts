@@ -16,5 +16,5 @@ export declare const MY_FORMATS: {
 export declare class DatepickerFormatsExample {
     date: FormControl<_moment.Moment | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerFormatsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerFormatsExample, "datepicker-formats-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerFormatsExample, "datepicker-formats-example", never, {}, {}, never, never, false>;
 }

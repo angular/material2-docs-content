@@ -10,5 +10,5 @@ export declare class TabNavBarBasicExample {
     toggleBackground(): void;
     addLink(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabNavBarBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never, false>;
 }

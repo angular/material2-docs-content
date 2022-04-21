@@ -6,7 +6,7 @@ export declare class TableStickyHeaderExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyHeaderExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, false>;
 }
 export interface PeriodicElement {
     name: string;

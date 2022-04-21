@@ -16,5 +16,5 @@ export declare class AutocompleteOverviewExample {
     constructor();
     private _filterStates;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteOverviewExample, "autocomplete-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteOverviewExample, "autocomplete-overview-example", never, {}, {}, never, never, false>;
 }

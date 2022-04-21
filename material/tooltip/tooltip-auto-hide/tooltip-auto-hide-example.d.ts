@@ -8,5 +8,5 @@ export declare class TooltipAutoHideExample {
     positionOptions: TooltipPosition[];
     position: FormControl<"left" | "right" | "above" | "below" | "before" | "after" | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipAutoHideExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never, false>;
 }

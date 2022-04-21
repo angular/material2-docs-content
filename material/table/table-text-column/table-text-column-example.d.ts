@@ -13,5 +13,5 @@ export declare class TableTextColumnExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, false>;
 }

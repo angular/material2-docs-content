@@ -8,5 +8,5 @@ export declare class AutocompleteHarnessExample {
         name: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteHarnessExample, "autocomplete-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteHarnessExample, "autocomplete-harness-example", never, {}, {}, never, never, false>;
 }

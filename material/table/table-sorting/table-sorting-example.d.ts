@@ -22,5 +22,5 @@ export declare class TableSortingExample implements AfterViewInit {
     /** Announce the change in sort state for assistive technology. */
     announceSortChange(sortState: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never, false>;
 }

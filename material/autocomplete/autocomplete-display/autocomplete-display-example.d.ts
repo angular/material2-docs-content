@@ -16,5 +16,5 @@ export declare class AutocompleteDisplayExample implements OnInit {
     displayFn(user: User): string;
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteDisplayExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteDisplayExample, "autocomplete-display-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteDisplayExample, "autocomplete-display-example", never, {}, {}, never, never, false>;
 }

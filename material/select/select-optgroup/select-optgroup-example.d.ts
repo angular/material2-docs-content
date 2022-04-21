@@ -14,6 +14,6 @@ export declare class SelectOptgroupExample {
     pokemonControl: FormControl<string | null>;
     pokemonGroups: PokemonGroup[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never, false>;
 }
 export {};

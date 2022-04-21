@@ -84,5 +84,5 @@ export declare class TreeChecklistExample {
     /** Save the node to database */
     saveNode(node: TodoItemFlatNode, itemValue: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeChecklistExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never, false>;
 }

@@ -13,5 +13,5 @@ export declare class FormFieldLabelExample {
     constructor(_formBuilder: FormBuilder);
     getFloatLabelValue(): FloatLabelType;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldLabelExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldLabelExample, "form-field-label-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldLabelExample, "form-field-label-example", never, {}, {}, never, never, false>;
 }

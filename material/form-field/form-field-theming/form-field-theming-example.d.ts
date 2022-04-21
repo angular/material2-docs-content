@@ -12,5 +12,5 @@ export declare class FormFieldThemingExample {
     constructor(_formBuilder: FormBuilder);
     getFontSize(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldThemingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never, false>;
 }

@@ -10,5 +10,5 @@ export declare class ChipsDragDropExample {
     vegetables: Vegetable[];
     drop(event: CdkDragDrop<Vegetable[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsDragDropExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never, never, false>;
 }

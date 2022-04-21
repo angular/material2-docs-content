@@ -6,5 +6,5 @@ import * as i0 from "@angular/core";
 export declare class TooltipDisabledExample {
     disabled: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDisabledExample, "tooltip-disabled-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDisabledExample, "tooltip-disabled-example", never, {}, {}, never, never, false>;
 }

@@ -7,5 +7,5 @@ export declare const myCustomTooltipDefaults: MatTooltipDefaultOptions;
  */
 export declare class TooltipModifiedDefaultsExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipModifiedDefaultsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipModifiedDefaultsExample, "tooltip-modified-defaults-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipModifiedDefaultsExample, "tooltip-modified-defaults-example", never, {}, {}, never, never, false>;
 }

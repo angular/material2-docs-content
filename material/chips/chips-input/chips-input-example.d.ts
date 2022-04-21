@@ -13,5 +13,5 @@ export declare class ChipsInputExample {
     add(event: MatChipInputEvent): void;
     remove(fruit: Fruit): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsInputExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsInputExample, "chips-input-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsInputExample, "chips-input-example", never, {}, {}, never, never, false>;
 }

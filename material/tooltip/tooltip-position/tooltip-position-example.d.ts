@@ -8,5 +8,5 @@ export declare class TooltipPositionExample {
     positionOptions: TooltipPosition[];
     position: FormControl<"left" | "right" | "above" | "below" | "before" | "after" | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never, never, false>;
 }

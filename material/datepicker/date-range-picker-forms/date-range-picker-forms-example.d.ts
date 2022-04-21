@@ -7,5 +7,5 @@ export declare class DateRangePickerFormsExample {
         end: FormControl<Date | null>;
     }>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DateRangePickerFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerFormsExample, "date-range-picker-forms-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerFormsExample, "date-range-picker-forms-example", never, {}, {}, never, never, false>;
 }

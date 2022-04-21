@@ -20,5 +20,5 @@ export declare class ChipsAutocompleteExample {
     selected(event: MatAutocompleteSelectedEvent): void;
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAutocompleteExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never, false>;
 }

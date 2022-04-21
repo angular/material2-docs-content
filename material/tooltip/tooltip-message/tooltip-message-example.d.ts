@@ -6,5 +6,5 @@ import * as i0 from "@angular/core";
 export declare class TooltipMessageExample {
     message: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipMessageExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipMessageExample, "tooltip-message-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipMessageExample, "tooltip-message-example", never, {}, {}, never, never, false>;
 }

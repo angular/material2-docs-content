@@ -13,5 +13,5 @@ export declare class AutocompletePlainInputExample implements OnInit {
     private _filter;
     private _normalizeValue;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompletePlainInputExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompletePlainInputExample, "autocomplete-plain-input-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompletePlainInputExample, "autocomplete-plain-input-example", never, {}, {}, never, never, false>;
 }

@@ -7,5 +7,5 @@ export declare class SlideToggleHarnessExample {
     disabled: boolean;
     ctrl: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never, false>;
 }

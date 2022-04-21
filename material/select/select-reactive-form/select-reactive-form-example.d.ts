@@ -21,6 +21,6 @@ export declare class SelectReactiveFormExample {
         car: FormControl<string | null>;
     }>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectReactiveFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never, false>;
 }
 export {};

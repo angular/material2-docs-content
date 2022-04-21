@@ -15,5 +15,5 @@ export declare class FocusMonitorOverviewExample implements OnDestroy, AfterView
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorOverviewExample, "focus-monitor-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorOverviewExample, "focus-monitor-overview-example", never, {}, {}, never, never, false>;
 }

@@ -3,5 +3,5 @@ import * as i0 from "@angular/core";
 export declare class CdkVirtualScrollFixedBufferExample {
     items: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollFixedBufferExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollFixedBufferExample, "cdk-virtual-scroll-fixed-buffer-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollFixedBufferExample, "cdk-virtual-scroll-fixed-buffer-example", never, {}, {}, never, never, false>;
 }

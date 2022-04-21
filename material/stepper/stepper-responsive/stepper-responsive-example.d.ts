@@ -20,5 +20,5 @@ export declare class StepperResponsiveExample {
     stepperOrientation: Observable<StepperOrientation>;
     constructor(_formBuilder: FormBuilder, breakpointObserver: BreakpointObserver);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperResponsiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<StepperResponsiveExample, "stepper-responsive-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperResponsiveExample, "stepper-responsive-example", never, {}, {}, never, never, false>;
 }

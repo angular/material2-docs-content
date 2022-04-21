@@ -10,6 +10,6 @@ export declare class SelectHintErrorExample {
     selectFormControl: FormControl<string | null>;
     animals: Animal[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectHintErrorExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never, false>;
 }
 export {};

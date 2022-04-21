@@ -9,7 +9,7 @@ export declare class MatSelectionColumnExample {
     selected: string[];
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionColumnExample, "mat-selection-column-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionColumnExample, "mat-selection-column-example", never, {}, {}, never, never, false>;
 }
 interface PeriodicElement {
     name: string;

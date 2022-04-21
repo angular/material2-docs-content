@@ -20,7 +20,7 @@ export declare class TableHttpExample implements AfterViewInit {
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, false>;
 }
 export interface GithubApi {
     items: GithubIssue[];

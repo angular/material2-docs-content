@@ -18,6 +18,6 @@ export declare class TreeNestedOverviewExample {
     constructor();
     hasChild: (_: number, node: FoodNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, false>;
 }
 export {};

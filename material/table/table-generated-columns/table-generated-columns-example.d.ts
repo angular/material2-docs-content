@@ -17,5 +17,5 @@ export declare class TableGeneratedColumnsExample {
     dataSource: PeriodicElement[];
     displayedColumns: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, false>;
 }

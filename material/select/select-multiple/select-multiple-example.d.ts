@@ -5,5 +5,5 @@ export declare class SelectMultipleExample {
     toppings: FormControl<string | null>;
     toppingList: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectMultipleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectMultipleExample, "select-multiple-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectMultipleExample, "select-multiple-example", never, {}, {}, never, never, false>;
 }

@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class ToolbarMultirowExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarMultirowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarMultirowExample, "toolbar-multirow-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarMultirowExample, "toolbar-multirow-example", never, {}, {}, never, never, false>;
 }

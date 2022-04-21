@@ -5,5 +5,5 @@ export declare class DatepickerMinMaxExample {
     maxDate: Date;
     constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerMinMaxExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerMinMaxExample, "datepicker-min-max-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerMinMaxExample, "datepicker-min-max-example", never, {}, {}, never, never, false>;
 }

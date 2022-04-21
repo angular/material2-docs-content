@@ -11,5 +11,5 @@ export declare class DateRangePickerComparisonExample {
         end: FormControl<Date | null>;
     }>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DateRangePickerComparisonExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerComparisonExample, "date-range-picker-comparison-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerComparisonExample, "date-range-picker-comparison-example", never, {}, {}, never, never, false>;
 }

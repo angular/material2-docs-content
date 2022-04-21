@@ -7,5 +7,5 @@ export declare class SidenavDisableCloseExample {
     close(reason: string): void;
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavDisableCloseExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavDisableCloseExample, "sidenav-disable-close-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavDisableCloseExample, "sidenav-disable-close-example", never, {}, {}, never, never, false>;
 }

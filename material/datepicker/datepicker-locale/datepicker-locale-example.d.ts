@@ -10,5 +10,5 @@ export declare class DatepickerLocaleExample {
     french(): void;
     getDateFormatString(): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerLocaleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerLocaleExample, "datepicker-locale-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerLocaleExample, "datepicker-locale-example", never, {}, {}, never, never, false>;
 }

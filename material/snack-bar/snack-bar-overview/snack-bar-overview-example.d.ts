@@ -8,5 +8,5 @@ export declare class SnackBarOverviewExample {
     constructor(_snackBar: MatSnackBar);
     openSnackBar(message: string, action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never, false>;
 }

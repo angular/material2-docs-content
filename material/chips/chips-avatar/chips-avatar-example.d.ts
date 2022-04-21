@@ -5,5 +5,5 @@ import * as i0 from "@angular/core";
  */
 export declare class ChipsAvatarExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAvatarExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAvatarExample, "chips-avatar-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAvatarExample, "chips-avatar-example", never, {}, {}, never, never, false>;
 }

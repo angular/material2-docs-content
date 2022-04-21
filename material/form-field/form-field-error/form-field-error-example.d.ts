@@ -5,5 +5,5 @@ export declare class FormFieldErrorExample {
     email: FormControl<string | null>;
     getErrorMessage(): "" | "You must enter a value" | "Not a valid email";
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldErrorExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorExample, "form-field-error-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorExample, "form-field-error-example", never, {}, {}, never, never, false>;
 }

@@ -9,9 +9,9 @@ export declare class SnackBarComponentExample {
     constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarComponentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never, false>;
 }
 export declare class PizzaPartyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<PizzaPartyComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyComponent, "snack-bar-component-example-snack", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyComponent, "snack-bar-component-example-snack", never, {}, {}, never, never, false>;
 }

@@ -17,7 +17,7 @@ export declare class TableDynamicObservableDataExample {
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicObservableDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, false>;
 }
 declare class ExampleDataSource extends DataSource<PeriodicElement> {
     private _dataStream;

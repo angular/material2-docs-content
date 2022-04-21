@@ -9,7 +9,7 @@ import * as i0 from "@angular/core";
 export declare class FormFieldCustomControlExample {
     form: FormGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldCustomControlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never, false>;
 }
 /** Data structure for holding telephone number. */
 export declare class MyTel {
@@ -70,5 +70,5 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     setDisabledState(isDisabled: boolean): void;
     _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never, false>;
 }

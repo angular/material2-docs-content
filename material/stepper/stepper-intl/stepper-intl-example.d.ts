@@ -23,5 +23,5 @@ export declare class StepperIntlExample {
     constructor(_formBuilder: FormBuilder, _matStepperIntl: MatStepperIntl);
     updateOptionalLabel(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperIntlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<StepperIntlExample, "stepper-intl-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperIntlExample, "stepper-intl-example", never, {}, {}, never, never, false>;
 }

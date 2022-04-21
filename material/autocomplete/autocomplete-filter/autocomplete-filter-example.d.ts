@@ -12,5 +12,5 @@ export declare class AutocompleteFilterExample implements OnInit {
     ngOnInit(): void;
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteFilterExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteFilterExample, "autocomplete-filter-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteFilterExample, "autocomplete-filter-example", never, {}, {}, never, never, false>;
 }

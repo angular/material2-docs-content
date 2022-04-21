@@ -16,5 +16,5 @@ export declare class SliderConfigurableExample {
     tickInterval: number;
     getSliderTickInterval(): number | 'auto';
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never, never, false>;
 }

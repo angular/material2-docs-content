@@ -8,7 +8,7 @@ export declare class TableReorderableExample {
     dataSource: PeriodicElement[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, false>;
 }
 export interface PeriodicElement {
     name: string;

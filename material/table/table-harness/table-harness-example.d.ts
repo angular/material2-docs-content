@@ -11,5 +11,5 @@ export declare class TableHarnessExample {
         symbol: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, false>;
 }

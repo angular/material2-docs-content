@@ -18,7 +18,7 @@ export declare class MyCustomPaginatorIntl implements MatPaginatorIntl {
  */
 export declare class PaginatorIntlExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorIntlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorIntlExample, "paginator-intl-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorIntlExample, "paginator-intl-example", never, {}, {}, never, never, false>;
 }
 export declare class PaginatorIntlExampleModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorIntlExampleModule, never>;

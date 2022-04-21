@@ -11,11 +11,11 @@ export declare class DialogDataExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExample, "dialog-data-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExample, "dialog-data-example", never, {}, {}, never, never, false>;
 }
 export declare class DialogDataExampleDialog {
     data: DialogData;
     constructor(data: DialogData);
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never, false>;
 }

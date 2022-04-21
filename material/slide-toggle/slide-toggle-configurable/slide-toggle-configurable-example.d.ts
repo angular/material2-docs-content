@@ -8,5 +8,5 @@ export declare class SlideToggleConfigurableExample {
     checked: boolean;
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never, never, false>;
 }

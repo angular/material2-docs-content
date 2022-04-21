@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class ButtonToggleOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleOverviewExample, "button-toggle-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleOverviewExample, "button-toggle-overview-example", never, {}, {}, never, never, false>;
 }

@@ -14,11 +14,11 @@ export declare class CdkLinearStepperWithFormExample {
     constructor(_formBuilder: FormBuilder);
     toggleLinearity(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkLinearStepperWithFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form-example", never, {}, {}, never, never, false>;
 }
 /** Custom CDK linear stepper component */
 export declare class CustomLinearStepper extends CdkStepper {
     selectStepByIndex(index: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CustomLinearStepper, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CustomLinearStepper, "example-custom-linear-stepper", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CustomLinearStepper, "example-custom-linear-stepper", never, {}, {}, never, never, false>;
 }

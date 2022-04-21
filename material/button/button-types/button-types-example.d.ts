@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class ButtonTypesExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonTypesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonTypesExample, "button-types-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonTypesExample, "button-types-example", never, {}, {}, never, never, false>;
 }

@@ -19,5 +19,5 @@ export declare class DatepickerViewsSelectionExample {
     date: FormControl<_moment.Moment | null>;
     setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerViewsSelectionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never, never, false>;
 }

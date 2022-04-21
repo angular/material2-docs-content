@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class TabGroupPreserveContentExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupPreserveContentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPreserveContentExample, "tab-group-preserve-content-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPreserveContentExample, "tab-group-preserve-content-example", never, {}, {}, never, never, false>;
 }

@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
 export declare class SelectDisabledExample {
     disableSelect: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectDisabledExample, "select-disabled-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectDisabledExample, "select-disabled-example", never, {}, {}, never, never, false>;
 }

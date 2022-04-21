@@ -16,6 +16,6 @@ export declare class SelectFormExample {
     foods: Food[];
     cars: Car[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormExample, "select-form-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormExample, "select-form-example", never, {}, {}, never, never, false>;
 }
 export {};

@@ -3,5 +3,5 @@ import * as i0 from "@angular/core";
 export declare class DatepickerInlineCalendarExample {
     selected: Date | null;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerInlineCalendarExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerInlineCalendarExample, "datepicker-inline-calendar-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerInlineCalendarExample, "datepicker-inline-calendar-example", never, {}, {}, never, never, false>;
 }

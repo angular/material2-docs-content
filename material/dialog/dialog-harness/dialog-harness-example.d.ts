@@ -10,5 +10,5 @@ export declare class DialogHarnessExample {
     constructor(dialog: MatDialog);
     open(config?: MatDialogConfig): import("@angular/material/dialog").MatDialogRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogHarnessExample, "dialog-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogHarnessExample, "dialog-harness-example", never, {}, {}, never, never, false>;
 }

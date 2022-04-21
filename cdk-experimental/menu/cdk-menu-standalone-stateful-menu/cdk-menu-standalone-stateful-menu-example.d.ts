@@ -6,5 +6,5 @@ export declare class CdkMenuStandaloneStatefulMenuExample {
     sizes: string[];
     selectedSize: string | undefined;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuStandaloneStatefulMenuExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuStandaloneStatefulMenuExample, "cdk-menu-standalone-stateful-menu-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuStandaloneStatefulMenuExample, "cdk-menu-standalone-stateful-menu-example", never, {}, {}, never, never, false>;
 }

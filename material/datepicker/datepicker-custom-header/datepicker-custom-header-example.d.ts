@@ -6,7 +6,7 @@ import * as i0 from "@angular/core";
 export declare class DatepickerCustomHeaderExample {
     exampleHeader: typeof ExampleHeader;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerCustomHeaderExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerCustomHeaderExample, "datepicker-custom-header-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerCustomHeaderExample, "datepicker-custom-header-example", never, {}, {}, never, never, false>;
 }
 /** Custom header component for datepicker. */
 export declare class ExampleHeader<D> implements OnDestroy {
@@ -20,5 +20,5 @@ export declare class ExampleHeader<D> implements OnDestroy {
     previousClicked(mode: 'month' | 'year'): void;
     nextClicked(mode: 'month' | 'year'): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ExampleHeader<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ExampleHeader<any>, "example-header", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ExampleHeader<any>, "example-header", never, {}, {}, never, never, false>;
 }

@@ -5,5 +5,5 @@ export declare class DatepickerValueExample {
     date: FormControl<Date | null>;
     serializedDate: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerValueExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerValueExample, "datepicker-value-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerValueExample, "datepicker-value-example", never, {}, {}, never, never, false>;
 }

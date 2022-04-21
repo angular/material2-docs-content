@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class CardFancyExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardFancyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardFancyExample, "card-fancy-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardFancyExample, "card-fancy-example", never, {}, {}, never, never, false>;
 }

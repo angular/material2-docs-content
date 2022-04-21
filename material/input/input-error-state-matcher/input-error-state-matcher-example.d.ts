@@ -10,5 +10,5 @@ export declare class InputErrorStateMatcherExample {
     emailFormControl: FormControl<string | null>;
     matcher: MyErrorStateMatcher;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorStateMatcherExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorStateMatcherExample, "input-error-state-matcher-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorStateMatcherExample, "input-error-state-matcher-example", never, {}, {}, never, never, false>;
 }

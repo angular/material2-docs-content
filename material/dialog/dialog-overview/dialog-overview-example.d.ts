@@ -14,7 +14,7 @@ export declare class DialogOverviewExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never, false>;
 }
 export declare class DialogOverviewExampleDialog {
     dialogRef: MatDialogRef<DialogOverviewExampleDialog>;
@@ -22,5 +22,5 @@ export declare class DialogOverviewExampleDialog {
     constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: DialogData);
     onNoClick(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never, false>;
 }

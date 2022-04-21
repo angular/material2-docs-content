@@ -42,6 +42,6 @@ export declare class TreeFlatOverviewExample {
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, false>;
 }
 export {};

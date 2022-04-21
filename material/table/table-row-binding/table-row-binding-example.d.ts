@@ -13,5 +13,5 @@ export declare class TableRowBindingExample {
     dataSource: PeriodicElement[];
     clickedRows: Set<PeriodicElement>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, false>;
 }

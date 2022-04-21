@@ -5,5 +5,5 @@ import * as i0 from "@angular/core";
 export declare class ProgressBarHarnessExample {
     value: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressBarHarnessExample, "progress-bar-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressBarHarnessExample, "progress-bar-harness-example", never, {}, {}, never, never, false>;
 }

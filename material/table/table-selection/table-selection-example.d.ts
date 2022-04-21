@@ -21,5 +21,5 @@ export declare class TableSelectionExample {
     /** The label for the checkbox on the passed row */
     checkboxLabel(row?: PeriodicElement): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, false>;
 }

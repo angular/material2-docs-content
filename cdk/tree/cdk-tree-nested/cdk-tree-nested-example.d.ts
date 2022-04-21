@@ -17,6 +17,6 @@ export declare class CdkTreeNestedExample {
     dataSource: ArrayDataSource<FoodNode>;
     hasChild: (_: number, node: FoodNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeNestedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never, never, false>;
 }
 export {};

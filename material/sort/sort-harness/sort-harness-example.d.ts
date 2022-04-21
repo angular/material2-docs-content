@@ -21,5 +21,5 @@ export declare class SortHarnessExample {
     }[];
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never, false>;
 }

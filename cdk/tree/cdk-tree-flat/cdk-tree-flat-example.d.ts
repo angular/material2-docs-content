@@ -18,6 +18,6 @@ export declare class CdkTreeFlatExample {
     getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
     shouldRender(node: ExampleFlatNode): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeFlatExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never, never, false>;
 }
 export {};

@@ -8,9 +8,9 @@ export declare class DialogElementsExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogElementsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExample, "dialog-elements-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExample, "dialog-elements-example", never, {}, {}, never, never, false>;
 }
 export declare class DialogElementsExampleDialog {
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogElementsExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExampleDialog, "dialog-elements-example-dialog", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExampleDialog, "dialog-elements-example-dialog", never, {}, {}, never, never, false>;
 }

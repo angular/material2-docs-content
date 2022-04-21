@@ -11,5 +11,5 @@ export declare class SidenavFixedExample {
     constructor(_formBuilder: FormBuilder);
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavFixedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavFixedExample, "sidenav-fixed-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavFixedExample, "sidenav-fixed-example", never, {}, {}, never, never, false>;
 }

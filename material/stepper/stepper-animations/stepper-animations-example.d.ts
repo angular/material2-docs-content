@@ -9,5 +9,5 @@ export declare class StepperAnimationsExample {
     firstFormGroup: FormGroup;
     secondFormGroup: FormGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperAnimationsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<StepperAnimationsExample, "stepper-animations-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<StepperAnimationsExample, "stepper-animations-example", never, {}, {}, never, never, false>;
 }

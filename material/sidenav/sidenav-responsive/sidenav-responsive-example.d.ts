@@ -11,5 +11,5 @@ export declare class SidenavResponsiveExample implements OnDestroy {
     ngOnDestroy(): void;
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavResponsiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavResponsiveExample, "sidenav-responsive-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavResponsiveExample, "sidenav-responsive-example", never, {}, {}, never, never, false>;
 }

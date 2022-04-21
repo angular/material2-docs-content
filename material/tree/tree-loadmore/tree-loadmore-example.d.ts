@@ -64,5 +64,5 @@ export declare class TreeLoadmoreExample {
     loadMore(item: string): void;
     loadChildren(node: LoadmoreFlatNode): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeLoadmoreExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never, false>;
 }

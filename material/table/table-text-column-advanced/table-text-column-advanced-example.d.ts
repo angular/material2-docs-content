@@ -18,5 +18,5 @@ export declare class TableTextColumnAdvancedExample {
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
     getWeight: (data: PeriodicElement) => string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnAdvancedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, false>;
 }

@@ -20,7 +20,7 @@ export declare class TableWrappedExample implements AfterViewInit {
     clearTable(): void;
     addData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableWrappedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, false>;
 }
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
@@ -36,5 +36,5 @@ export declare class WrapperTable<T> implements AfterContentInit {
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"]>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], false>;
 }

@@ -13,5 +13,5 @@ export declare class FiveDayRangeSelectionStrategy<D> implements MatDateRangeSel
 /** @title Date range picker with custom a selection strategy */
 export declare class DateRangePickerSelectionStrategyExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<DateRangePickerSelectionStrategyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerSelectionStrategyExample, "date-range-picker-selection-strategy-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerSelectionStrategyExample, "date-range-picker-selection-strategy-example", never, {}, {}, never, never, false>;
 }

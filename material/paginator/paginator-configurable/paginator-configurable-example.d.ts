@@ -10,5 +10,5 @@ export declare class PaginatorConfigurableExample {
     pageEvent: PageEvent;
     setPageSizeOptions(setPageSizeOptionsInput: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorConfigurableExample, "paginator-configurable-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorConfigurableExample, "paginator-configurable-example", never, {}, {}, never, never, false>;
 }

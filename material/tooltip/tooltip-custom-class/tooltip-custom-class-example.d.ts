@@ -4,5 +4,5 @@ import * as i0 from "@angular/core";
  */
 export declare class TooltipCustomClassExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipCustomClassExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipCustomClassExample, "tooltip-custom-class-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipCustomClassExample, "tooltip-custom-class-example", never, {}, {}, never, never, false>;
 }

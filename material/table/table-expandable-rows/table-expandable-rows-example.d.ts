@@ -7,7 +7,7 @@ export declare class TableExpandableRowsExample {
     columnsToDisplay: string[];
     expandedElement: PeriodicElement | null;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExpandableRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, false>;
 }
 export interface PeriodicElement {
     name: string;

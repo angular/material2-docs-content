@@ -10,5 +10,5 @@ export declare class BottomSheetHarnessExample {
     constructor(bottomSheet: MatBottomSheet);
     open(config?: MatBottomSheetConfig): import("@angular/material/bottom-sheet").MatBottomSheetRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetHarnessExample, "bottom-sheet-harness-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetHarnessExample, "bottom-sheet-harness-example", never, {}, {}, never, never, false>;
 }

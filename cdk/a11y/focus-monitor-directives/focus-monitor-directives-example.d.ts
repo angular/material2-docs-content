@@ -11,5 +11,5 @@ export declare class FocusMonitorDirectivesExample {
     formatOrigin(origin: FocusOrigin): string;
     markForCheck(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorDirectivesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never, never, false>;
 }
