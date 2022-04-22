@@ -18,7 +18,9 @@ existing element. The directive selector doubles as an <code>@Input()</code> for
       <p>The <code>Clipboard</code> service copies text to the user&#39;s clipboard. It has two methods: <code>copy</code> and
 <code>beginCopy</code>. For cases where you are copying a relatively small amount of text, you can call <code>copy</code>
 directly to place it on the clipboard.</p>
-<pre><code class="language-typescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeroProfile</span> </span>{
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Clipboard} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/clipboard&#x27;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeroProfile</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> clipboard: Clipboard</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">copyHeroName</span>(<span class="hljs-params"></span>)</span> {
@@ -31,7 +33,9 @@ the content. Directly calling <code>copy</code> may fail in this case, so you ca
 <code>beginCopy</code>. This method returns a <code>PendingCopy</code> object that has a <code>copy</code> method to finish copying
 the text that was buffered. Please note, if you call <code>beginCopy</code>, you must clean up the
 <code>PendingCopy</code> object by calling <code>destroy</code> on it after you are finished.</p>
-<pre><code class="language-typescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeroProfile</span> </span>{
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Clipboard} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/clipboard&#x27;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeroProfile</span> </span>{
   <span class="hljs-attr">lifetimeAchievements</span>: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> clipboard: Clipboard</span>)</span> {}
