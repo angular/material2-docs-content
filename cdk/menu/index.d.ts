@@ -9,7 +9,7 @@ import * as i2 from "./cdk-menu-menubar/cdk-menu-menubar-example";
 import * as i3 from "./cdk-menu-inline/cdk-menu-inline-example";
 import * as i4 from "./cdk-menu-context/cdk-menu-context-example";
 import * as i5 from "./cdk-menu-standalone-stateful-menu/cdk-menu-standalone-stateful-menu-example";
-import * as i6 from "@angular/cdk-experimental/menu";
+import * as i6 from "@angular/cdk/menu";
 import * as i7 from "@angular/common";
 export { CdkMenuStandaloneMenuExample, CdkMenuMenubarExample, CdkMenuInlineExample, CdkMenuContextExample, CdkMenuStandaloneStatefulMenuExample, };
 export declare class CdkMenuExamplesModule {

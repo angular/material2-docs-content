@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "14.0.0-next.11+sha-c03fd6e",
+  "version": "14.0.0-next.11+sha-653457e",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -27,14 +27,6 @@
       "es2015": "./fesm2015/components-examples.mjs",
       "node": "./fesm2015/components-examples.mjs",
       "default": "./fesm2020/components-examples.mjs"
-    },
-    "./cdk-experimental/menu": {
-      "types": "./cdk-experimental/menu/menu_public_index.d.ts",
-      "esm2020": "./esm2020/cdk-experimental/menu/menu_public_index.mjs",
-      "es2020": "./fesm2020/cdk-experimental/menu.mjs",
-      "es2015": "./fesm2015/cdk-experimental/menu.mjs",
-      "node": "./fesm2015/cdk-experimental/menu.mjs",
-      "default": "./fesm2020/cdk-experimental/menu.mjs"
     },
     "./cdk-experimental/popover-edit": {
       "types": "./cdk-experimental/popover-edit/popover-edit_public_index.d.ts",
@@ -91,6 +83,14 @@
       "es2015": "./fesm2015/cdk/layout.mjs",
       "node": "./fesm2015/cdk/layout.mjs",
       "default": "./fesm2020/cdk/layout.mjs"
+    },
+    "./cdk/menu": {
+      "types": "./cdk/menu/menu_public_index.d.ts",
+      "esm2020": "./esm2020/cdk/menu/menu_public_index.mjs",
+      "es2020": "./fesm2020/cdk/menu.mjs",
+      "es2015": "./fesm2015/cdk/menu.mjs",
+      "node": "./fesm2015/cdk/menu.mjs",
+      "default": "./fesm2020/cdk/menu.mjs"
     },
     "./cdk/overlay": {
       "types": "./cdk/overlay/overlay_public_index.d.ts",
@@ -483,15 +483,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "14.0.0-next.11+sha-c03fd6e",
-    "@angular/cdk-experimental": "14.0.0-next.11+sha-c03fd6e",
+    "@angular/cdk": "14.0.0-next.11+sha-653457e",
+    "@angular/cdk-experimental": "14.0.0-next.11+sha-653457e",
     "@angular/core": "^14.0.0-0 || ^15.0.0",
     "@angular/common": "^14.0.0-0 || ^15.0.0",
-    "@angular/material": "14.0.0-next.11+sha-c03fd6e",
-    "@angular/material-experimental": "14.0.0-next.11+sha-c03fd6e",
-    "@angular/material-moment-adapter": "14.0.0-next.11+sha-c03fd6e",
-    "@angular/material-luxon-adapter": "14.0.0-next.11+sha-c03fd6e",
-    "@angular/material-date-fns-adapter": "14.0.0-next.11+sha-c03fd6e"
+    "@angular/material": "14.0.0-next.11+sha-653457e",
+    "@angular/material-experimental": "14.0.0-next.11+sha-653457e",
+    "@angular/material-moment-adapter": "14.0.0-next.11+sha-653457e",
+    "@angular/material-luxon-adapter": "14.0.0-next.11+sha-653457e",
+    "@angular/material-date-fns-adapter": "14.0.0-next.11+sha-653457e"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
-import * as i1 from '@angular/cdk-experimental/menu';
-import { CdkMenuModule } from '@angular/cdk-experimental/menu';
+import * as i1 from '@angular/cdk/menu';
+import { CdkMenuModule } from '@angular/cdk/menu';
 import * as i2 from '@angular/common';
 import { CommonModule } from '@angular/common';
 

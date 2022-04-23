@@ -4,91 +4,6 @@
  ******************************************************************************
  */
 const EXAMPLE_COMPONENTS = {
-    "cdk-menu-context": {
-        "packagePath": "cdk-experimental/menu/cdk-menu-context",
-        "title": "Context menu.",
-        "componentName": "CdkMenuContextExample",
-        "files": [
-            "cdk-menu-context-example.ts",
-            "cdk-menu-context-example.html",
-            "cdk-menu-context-example.css"
-        ],
-        "selector": "cdk-menu-context-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-menu-context-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk-experimental/menu"
-        }
-    },
-    "cdk-menu-inline": {
-        "packagePath": "cdk-experimental/menu/cdk-menu-inline",
-        "title": "Gmail inline menu.",
-        "componentName": "CdkMenuInlineExample",
-        "files": [
-            "cdk-menu-inline-example.ts",
-            "cdk-menu-inline-example.html",
-            "cdk-menu-inline-example.css"
-        ],
-        "selector": "cdk-menu-inline-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-menu-inline-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk-experimental/menu"
-        }
-    },
-    "cdk-menu-menubar": {
-        "packagePath": "cdk-experimental/menu/cdk-menu-menubar",
-        "title": "Google Docs Menu Bar.",
-        "componentName": "CdkMenuMenubarExample",
-        "files": [
-            "cdk-menu-menubar-example.ts",
-            "cdk-menu-menubar-example.html",
-            "cdk-menu-menubar-example.css"
-        ],
-        "selector": "cdk-menu-menubar-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-menu-menubar-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk-experimental/menu"
-        }
-    },
-    "cdk-menu-standalone-menu": {
-        "packagePath": "cdk-experimental/menu/cdk-menu-standalone-menu",
-        "title": "Menu with Standalone Trigger.",
-        "componentName": "CdkMenuStandaloneMenuExample",
-        "files": [
-            "cdk-menu-standalone-menu-example.ts",
-            "cdk-menu-standalone-menu-example.html",
-            "cdk-menu-standalone-menu-example.css"
-        ],
-        "selector": "cdk-menu-standalone-menu-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-menu-standalone-menu-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk-experimental/menu"
-        }
-    },
-    "cdk-menu-standalone-stateful-menu": {
-        "packagePath": "cdk-experimental/menu/cdk-menu-standalone-stateful-menu",
-        "title": "Stateful Menu with Standalone Trigger.",
-        "componentName": "CdkMenuStandaloneStatefulMenuExample",
-        "files": [
-            "cdk-menu-standalone-stateful-menu-example.ts",
-            "cdk-menu-standalone-stateful-menu-example.html",
-            "cdk-menu-standalone-stateful-menu-example.css"
-        ],
-        "selector": "cdk-menu-standalone-stateful-menu-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-menu-standalone-stateful-menu-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk-experimental/menu"
-        }
-    },
     "cdk-popover-edit-cdk-table-flex": {
         "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-cdk-table-flex",
         "title": "CDK Popover Edit on a flex cdk-table.",
@@ -596,6 +511,91 @@ const EXAMPLE_COMPONENTS = {
         "module": {
             "name": "CdkLayoutExamplesModule",
             "importSpecifier": "cdk/layout"
+        }
+    },
+    "cdk-menu-context": {
+        "packagePath": "cdk/menu/cdk-menu-context",
+        "title": "Context menu.",
+        "componentName": "CdkMenuContextExample",
+        "files": [
+            "cdk-menu-context-example.ts",
+            "cdk-menu-context-example.html",
+            "cdk-menu-context-example.css"
+        ],
+        "selector": "cdk-menu-context-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-menu-context-example.ts",
+        "module": {
+            "name": "CdkMenuExamplesModule",
+            "importSpecifier": "cdk/menu"
+        }
+    },
+    "cdk-menu-inline": {
+        "packagePath": "cdk/menu/cdk-menu-inline",
+        "title": "Gmail inline menu.",
+        "componentName": "CdkMenuInlineExample",
+        "files": [
+            "cdk-menu-inline-example.ts",
+            "cdk-menu-inline-example.html",
+            "cdk-menu-inline-example.css"
+        ],
+        "selector": "cdk-menu-inline-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-menu-inline-example.ts",
+        "module": {
+            "name": "CdkMenuExamplesModule",
+            "importSpecifier": "cdk/menu"
+        }
+    },
+    "cdk-menu-menubar": {
+        "packagePath": "cdk/menu/cdk-menu-menubar",
+        "title": "Google Docs Menu Bar.",
+        "componentName": "CdkMenuMenubarExample",
+        "files": [
+            "cdk-menu-menubar-example.ts",
+            "cdk-menu-menubar-example.html",
+            "cdk-menu-menubar-example.css"
+        ],
+        "selector": "cdk-menu-menubar-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-menu-menubar-example.ts",
+        "module": {
+            "name": "CdkMenuExamplesModule",
+            "importSpecifier": "cdk/menu"
+        }
+    },
+    "cdk-menu-standalone-menu": {
+        "packagePath": "cdk/menu/cdk-menu-standalone-menu",
+        "title": "Menu with Standalone Trigger.",
+        "componentName": "CdkMenuStandaloneMenuExample",
+        "files": [
+            "cdk-menu-standalone-menu-example.ts",
+            "cdk-menu-standalone-menu-example.html",
+            "cdk-menu-standalone-menu-example.css"
+        ],
+        "selector": "cdk-menu-standalone-menu-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-menu-standalone-menu-example.ts",
+        "module": {
+            "name": "CdkMenuExamplesModule",
+            "importSpecifier": "cdk/menu"
+        }
+    },
+    "cdk-menu-standalone-stateful-menu": {
+        "packagePath": "cdk/menu/cdk-menu-standalone-stateful-menu",
+        "title": "Stateful Menu with Standalone Trigger.",
+        "componentName": "CdkMenuStandaloneStatefulMenuExample",
+        "files": [
+            "cdk-menu-standalone-stateful-menu-example.ts",
+            "cdk-menu-standalone-stateful-menu-example.html",
+            "cdk-menu-standalone-stateful-menu-example.css"
+        ],
+        "selector": "cdk-menu-standalone-stateful-menu-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-menu-standalone-stateful-menu-example.ts",
+        "module": {
+            "name": "CdkMenuExamplesModule",
+            "importSpecifier": "cdk/menu"
         }
     },
     "cdk-overlay-basic": {
