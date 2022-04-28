@@ -72,7 +72,7 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>openDialogs: DialogRef&lt;any, any&gt;[]</code>
+      <code>openDialogs: readonly DialogRef&lt;any, any&gt;[]</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Keeps track of the currently-open dialogs.</p>
@@ -674,11 +674,17 @@ be provided as a function in order to generate the providers lazily.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>restoreFocus: boolean</code>
+      <code>restoreFocus: boolean | string | HTMLElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the dialog should restore focus to the
-previously-focused element upon closing.</p>
+  <td class="docs-api-property-description"><p>Whether the dialog should restore focus to the previously-focused element upon closing.
+Has the following behavior based on the type that is passed in:</p>
+<ul>
+<li><code>boolean</code> - when true, will return focus to the element that was focused before the dialog
+ was opened, otherwise won&#39;t restore focus at all.</li>
+<li><code>string</code> - focus will be restored to the first element that matches the CSS selector.</li>
+<li><code>HTMLElement</code> - focus will be restored to the specific element.</li>
+</ul>
 </td>
 </tr>
 
@@ -1070,7 +1076,7 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the dialog&#39;s position.</p>
+      <p>Updates the position of the dialog based on the current position strategy.</p>
 
     </td>
   </tr><thead>
@@ -1114,7 +1120,7 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         width</p>
-      <code class="docs-api-method-parameter-type">string = &#39;&#39;</code>
+      <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1128,7 +1134,7 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         height</p>
-      <code class="docs-api-method-parameter-type">string = &#39;&#39;</code>
+      <code class="docs-api-method-parameter-type">string | number = &#39;&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
