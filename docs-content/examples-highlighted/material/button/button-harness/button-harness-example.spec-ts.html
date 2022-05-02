@@ -8,7 +8,6 @@
 describe(<span class="hljs-string">&#x27;ButtonHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;ButtonHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
-  <span class="hljs-keyword">let</span> buttonHarness = MatButtonHarness;
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
@@ -26,13 +25,14 @@ describe(<span class="hljs-string">&#x27;ButtonHarnessExample&#x27;</span>, <spa
   });
 
   it(<span class="hljs-string">&#x27;should load button with exact text&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(buttonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Basic button&#x27;</span>}));
+    <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Basic button&#x27;</span>}));
     expect(buttons.length).toBe(<span class="hljs-number">1</span>);
     expect(<span class="hljs-keyword">await</span> buttons[<span class="hljs-number">0</span>].getText()).toBe(<span class="hljs-string">&#x27;Basic button&#x27;</span>);
   });
 
   it(<span class="hljs-string">&#x27;should click a button&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> button = <span class="hljs-keyword">await</span> loader.getHarness(buttonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Basic button&#x27;</span>}));
+    <span class="hljs-keyword">const</span> button = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Basic button&#x27;</span>}));
+    expect(fixture.componentInstance.clicked).toBe(<span class="hljs-literal">false</span>);
     <span class="hljs-keyword">await</span> button.click();
     expect(fixture.componentInstance.clicked).toBe(<span class="hljs-literal">true</span>);
   });
