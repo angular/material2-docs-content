@@ -1,9 +1,0 @@
-{
-  "name": "@angular/components-examples/material/list",
-  "fesm2020": "../../fesm2020/material/list.mjs",
-  "fesm2015": "../../fesm2015/material/list.mjs",
-  "esm2020": "../../esm2020/material/list/list_public_index.mjs",
-  "typings": "./list_public_index.d.ts",
-  "module": "../../fesm2015/material/list.mjs",
-  "es2020": "../../fesm2020/material/list.mjs"
-}

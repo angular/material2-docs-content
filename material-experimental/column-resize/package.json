@@ -1,9 +1,0 @@
-{
-  "name": "@angular/components-examples/material-experimental/column-resize",
-  "fesm2020": "../../fesm2020/material-experimental/column-resize.mjs",
-  "fesm2015": "../../fesm2015/material-experimental/column-resize.mjs",
-  "esm2020": "../../esm2020/material-experimental/column-resize/column-resize_public_index.mjs",
-  "typings": "./column-resize_public_index.d.ts",
-  "module": "../../fesm2015/material-experimental/column-resize.mjs",
-  "es2020": "../../fesm2020/material-experimental/column-resize.mjs"
-}
