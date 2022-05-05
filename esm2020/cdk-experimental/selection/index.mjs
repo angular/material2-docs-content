@@ -11,20 +11,20 @@ export { CdkSelectionColumnExample, CdkSelectionListExample };
 const EXAMPLES = [CdkSelectionListExample, CdkSelectionColumnExample];
 export class CdkSelectionExamplesModule {
 }
-CdkSelectionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkSelectionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkSelectionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkSelectionExamplesModule, declarations: [CdkSelectionListExample, CdkSelectionColumnExample], imports: [CdkSelectionModule,
+CdkSelectionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkSelectionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkSelectionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkSelectionExamplesModule, declarations: [CdkSelectionListExample, CdkSelectionColumnExample], imports: [CdkSelectionModule,
         CdkTableModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         MatCheckboxModule], exports: [CdkSelectionListExample, CdkSelectionColumnExample] });
-CdkSelectionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkSelectionExamplesModule, imports: [CdkSelectionModule,
+CdkSelectionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkSelectionExamplesModule, imports: [CdkSelectionModule,
         CdkTableModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         MatCheckboxModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkSelectionExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkSelectionExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

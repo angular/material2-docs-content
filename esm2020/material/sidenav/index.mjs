@@ -37,8 +37,8 @@ const EXAMPLES = [
 ];
 export class SidenavExamplesModule {
 }
-SidenavExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: SidenavExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-SidenavExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: SidenavExamplesModule, declarations: [SidenavAutosizeExample,
+SidenavExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: SidenavExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+SidenavExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-next.16", ngImport: i0, type: SidenavExamplesModule, declarations: [SidenavAutosizeExample,
         SidenavBackdropExample,
         SidenavDisableCloseExample,
         SidenavDrawerOverviewExample,
@@ -69,7 +69,7 @@ SidenavExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", v
         SidenavOverviewExample,
         SidenavPositionExample,
         SidenavResponsiveExample] });
-SidenavExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: SidenavExamplesModule, imports: [CommonModule,
+SidenavExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: SidenavExamplesModule, imports: [CommonModule,
         FormsModule,
         MatButtonModule,
         MatCheckboxModule,
@@ -80,7 +80,7 @@ SidenavExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", v
         MatSelectModule,
         MatToolbarModule,
         ReactiveFormsModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: SidenavExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: SidenavExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

@@ -14,16 +14,16 @@ const EXAMPLES = [
 ];
 export class CdkTableExamplesModule {
 }
-CdkTableExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkTableExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, declarations: [CdkTableBasicExample,
+CdkTableExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkTableExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkTableExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkTableExamplesModule, declarations: [CdkTableBasicExample,
         CdkTableFlexBasicExample,
         CdkTableFixedLayoutExample,
         CdkTableRecycleRowsExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
         CdkTableFlexBasicExample,
         CdkTableFixedLayoutExample,
         CdkTableRecycleRowsExample] });
-CdkTableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, imports: [CdkTableModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: CdkTableExamplesModule, decorators: [{
+CdkTableExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkTableExamplesModule, imports: [CdkTableModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: CdkTableExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CdkTableModule],
