@@ -41,8 +41,8 @@ const EXAMPLES = [
 ];
 export class TabGroupExamplesModule {
 }
-TabGroupExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: TabGroupExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: TabGroupExamplesModule, declarations: [TabGroupAlignExample,
+TabGroupExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: TabGroupExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-next.16", ngImport: i0, type: TabGroupExamplesModule, declarations: [TabGroupAlignExample,
         TabGroupAnimationsExample,
         TabGroupAsyncExample,
         TabGroupBasicExample,
@@ -76,7 +76,7 @@ TabGroupExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "12.0.0", 
         TabGroupThemeExample,
         TabNavBarBasicExample,
         TabGroupPreserveContentExample] });
-TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: TabGroupExamplesModule, imports: [CommonModule,
+TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: TabGroupExamplesModule, imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -84,7 +84,7 @@ TabGroupExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", 
         MatInputModule,
         MatTabsModule,
         ReactiveFormsModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.15", ngImport: i0, type: TabGroupExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-next.16", ngImport: i0, type: TabGroupExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
