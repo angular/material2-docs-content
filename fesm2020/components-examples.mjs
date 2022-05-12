@@ -564,6 +564,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/menu"
         }
     },
+    "cdk-menu-nested-context": {
+        "packagePath": "cdk/menu/cdk-menu-nested-context",
+        "title": "Nested context menus.",
+        "componentName": "CdkMenuNestedContextExample",
+        "files": [
+            "cdk-menu-nested-context-example.ts",
+            "cdk-menu-nested-context-example.html",
+            "cdk-menu-nested-context-example.css"
+        ],
+        "selector": "cdk-menu-nested-context-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-menu-nested-context-example.ts",
+        "module": {
+            "name": "CdkMenuExamplesModule",
+            "importSpecifier": "cdk/menu"
+        }
+    },
     "cdk-menu-standalone-menu": {
         "packagePath": "cdk/menu/cdk-menu-standalone-menu",
         "title": "Menu with Standalone Trigger.",
