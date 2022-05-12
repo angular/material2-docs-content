@@ -1,14 +1,24 @@
+<span class="hljs-selector-class">.example-context-area</span> {
+  <span class="hljs-attribute">display</span>: inline-grid;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> dashed black;
+}
+
+<span class="hljs-selector-class">.example-context-area</span> <span class="hljs-selector-class">.example-context-area</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+}
+
 <span class="hljs-selector-class">.example-menu</span> {
   <span class="hljs-attribute">display</span>: inline-flex;
   <span class="hljs-attribute">flex-direction</span>: column;
   <span class="hljs-attribute">min-width</span>: <span class="hljs-number">180px</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">280px</span>;
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>);
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>);
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">6px</span> <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-selector-class">.example-menu-item</span>,
-<span class="hljs-selector-class">.example-standalone-trigger</span> {
+<span class="hljs-selector-class">.example-menu-item</span> {
   <span class="hljs-attribute">background-color</span>: transparent;
   <span class="hljs-attribute">cursor</span>: pointer;
   <span class="hljs-attribute">border</span>: none;
@@ -30,14 +40,4 @@
 
 <span class="hljs-selector-class">.example-menu-item</span><span class="hljs-selector-pseudo">:active</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">170</span>, <span class="hljs-number">170</span>, <span class="hljs-number">170</span>);
-}
-
-<span class="hljs-selector-class">.example-standalone-item</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">239</span>, <span class="hljs-number">239</span>, <span class="hljs-number">239</span>);
-}
-<span class="hljs-selector-class">.example-standalone-item</span><span class="hljs-selector-pseudo">:hover</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">208</span>, <span class="hljs-number">208</span>, <span class="hljs-number">208</span>);
-}
-<span class="hljs-selector-class">.example-standalone-item</span><span class="hljs-selector-attr">[aria-expanded=<span class="hljs-string">&#x27;true&#x27;</span>]</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">208</span>, <span class="hljs-number">208</span>, <span class="hljs-number">208</span>);
 }

@@ -7,9 +7,15 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-menu-standalone-stateful-menu-example.html&#x27;</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkMenuStandaloneStatefulMenuExample</span> </span>{
-  bold = <span class="hljs-literal">true</span>;
+  bold = <span class="hljs-literal">false</span>;
   italic = <span class="hljs-literal">false</span>;
 
   sizes = [<span class="hljs-string">&#x27;Small&#x27;</span>, <span class="hljs-string">&#x27;Normal&#x27;</span>, <span class="hljs-string">&#x27;Large&#x27;</span>];
   selectedSize: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-string">&#x27;Normal&#x27;</span>;
+
+  <span class="hljs-function"><span class="hljs-title">reset</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.bold = <span class="hljs-literal">false</span>;
+    <span class="hljs-built_in">this</span>.italic = <span class="hljs-literal">false</span>;
+    <span class="hljs-built_in">this</span>.selectedSize = <span class="hljs-string">&#x27;Normal&#x27;</span>;
+  }
 }

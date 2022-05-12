@@ -40,6 +40,78 @@ directives apply their associated ARIA roles to their host element.</p>
 <td>CdkMenuItemCheckbox</td>
 <td>menuitemcheckbox</td>
 </tr>
+<tr>
+<td>CdkMenuTrigger</td>
+<td>button</td>
+</tr>
+</tbody></table>
+
+        <h3 id="css-styles-and-classes" class="docs-header-link">
+          <span header-link="css-styles-and-classes"></span>
+          CSS Styles and Classes
+        </h3>
+      <p>The <code>@angular/cdk/menu</code> is designed to be highly customizable to your needs. It therefore does not
+make any assumptions about how elements should be styled. You are expected to apply any required
+CSS styles, but the directives do apply CSS classes to make it easier for you to add custom styles.
+The available CSS classes are listed below, by directive.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Directive</th>
+<th>CSS Class</th>
+<th>Applied...</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>cdkMenu</code></td>
+<td><code>cdk-menu</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenu</code></td>
+<td><code>cdk-menu-inline</code></td>
+<td>If the menu is an <a href="#menu-content">inline menu</a></td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuBar</code></td>
+<td><code>cdk-menu-bar</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuGroup</code></td>
+<td><code>cdk-menu-group</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuItem</code></td>
+<td><code>cdk-menu-item</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuItemCheckbox</code></td>
+<td><code>cdk-menu-item</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuItemCheckbox</code></td>
+<td><code>cdk-menu-item-checkbox</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuItemRadio</code></td>
+<td><code>cdk-menu-item</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuItemRadio</code></td>
+<td><code>cdk-menu-item-radio</code></td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left"><code>cdkMenuTriggerFor</code></td>
+<td><code>cdk-menu-trigger</code></td>
+<td>Always</td>
+</tr>
 </tbody></table>
 
         <h3 id="getting-started" class="docs-header-link">
@@ -49,14 +121,12 @@ directives apply their associated ARIA roles to their host element.</p>
       <p>Import the <code>CdkMenuModule</code> into the <code>NgModule</code> in which you want to create menus. You can then apply
 menu directives to build your custom menu. A typical menu consists of the following directives:</p>
 <ul>
-<li><code>cdkMenuTriggerFor</code> - links a trigger button to a menu you intend to open</li>
-<li><code>cdkMenuPanel</code> - wraps the menu and provides a link between the <code>cdkMenuTriggerFor</code> and the
-<code>cdkMenu</code></li>
-<li><code>cdkMenu</code> - the actual menu you want to open</li>
-<li><code>cdkMenuItem</code> - added to each button</li>
+<li><code>cdkMenuTriggerFor</code> - links a trigger element to an <code>ng-template</code> containing the menu to be opened</li>
+<li><code>cdkMenu</code> - creates the menu content opened by the trigger</li>
+<li><code>cdkMenuItem</code> - added to each item in the menu</li>
 </ul>
-<div material-docs-example="cdk-menu-standalone-menu"
-                             file="cdk-menu-standalone-menu-example.html"
+<div material-docs-example="cdk-menu-standalone-trigger"
+                             file="cdk-menu-standalone-trigger-example.html"
                              ></div>
 
 <p>Most menu interactions consist of two parts: a trigger and a menu panel.</p>
@@ -65,38 +135,70 @@ menu directives to build your custom menu. A typical menu consists of the follow
           <span header-link="triggers"></span>
           Triggers
         </h4>
-      <p>You must add the <code>cdkMenuItem</code> and <code>cdkMenuTriggerFor</code> directives to triggers like so,</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItem</span> [<span class="hljs-attr">cdkMenuTriggerFor</span>]=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-</code></pre>
-<p>Adding <code>cdkMenuItem</code> gives you keyboard navigation and focus management. Associating a trigger with
-a menu is done through the <code>cdkMenuTriggerFor</code> directive and you must provide a template reference
-variable to it. Once both of these directives are set, you can toggle the associated menu
-programmatically, using a mouse or using a keyboard.</p>
+      <p>You can add <code>cdkMenuTriggerFor</code> to any button to make it a trigger for the given menu, or any menu
+item to make it a trigger for a submenu. When adding this directive, be sure to pass a reference to
+the template containing the menu it should open. Users can toggle the associated menu using a mouse
+or keyboard.</p>
+<div material-docs-example="cdk-menu-standalone-trigger"
+                             file="cdk-menu-standalone-trigger-example.html"
+                             region="trigger"></div>
 
-        <h4 id="menu-panels" class="docs-header-link">
-          <span header-link="menu-panels"></span>
-          Menu panels
+<p>When creating a submenu trigger, add both <code>cdkMenuItem</code> and <code>cdkMenuTriggerFor</code> like so,</p>
+<div material-docs-example="cdk-menu-menubar"
+                             file="cdk-menu-menubar-example.html"
+                             region="file-trigger"></div>
+
+
+        <h4 id="menu-content" class="docs-header-link">
+          <span header-link="menu-content"></span>
+          Menu content
         </h4>
-      <p>You must wrap pop-up menus with an <code>ng-template</code> with the <code>cdkMenuPanel</code> directive and a reference
-variable which must be of type <code>cdkMenuPanel</code>. Further, the <code>cdkMenu</code> must also reference the
-<code>cdkMenuPanel</code>.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">panel</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;panel&quot;</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- some content --&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-</code></pre>
+      <p>There are two types of menus:</p>
+<ul>
+<li><em>inline menus</em> are always present on the page</li>
+<li><em>pop-up menus</em> can be toggled to hide or show by the user</li>
+</ul>
+<p>You can create menus by marking their content element with the <code>cdkMenu</code> or <code>cdkMenuBar</code>
+directives. You can create several types of menu interaction which are discussed below.</p>
+<p>All type of menus should exclusively contain elements with role <code>menuitem</code>, <code>menuitemcheckbox</code>,
+<code>menuitemradio</code>, or <code>group</code>. Supporting directives that automatically apply these roles are
+discussed below.</p>
 <p>Note that Angular CDK provides no styles; you must add styles as part of building your custom menu.</p>
+
+        <h3 id="inline-menus" class="docs-header-link">
+          <span header-link="inline-menus"></span>
+          Inline Menus
+        </h3>
+      <p>An <em>inline menu</em> is a menu that lives directly on the page rather than in a pop-up associated with a
+trigger. You can use an inline menu when you want a persistent menu interaction on a page. Menu
+items within an inline menus are logically grouped together, and you can navigate through them
+using your keyboard. You can create an inline menu by adding the <code>cdkMenu</code> directive to the element
+you want to serve as the menu content.</p>
+<div material-docs-example="cdk-menu-inline"
+                             file="cdk-menu-inline-example.html"
+                             ></div>
+
+
+        <h3 id="pop-up-menus" class="docs-header-link">
+          <span header-link="pop-up-menus"></span>
+          Pop-up Menus
+        </h3>
+      <p>You can create pop-up menus using the <code>cdkMenu</code> directive as well. Add this directive to the
+element you want to serve as the content for your pop-up menu. Then wrap the content element in an
+<code>ng-template</code> and reference the template from the <code>cdkMenuTriggerFor</code> property of the trigger. This
+will allow the trigger to show and hide the menu content as needed.</p>
+<div material-docs-example="cdk-menu-standalone-menu"
+                             file="cdk-menu-standalone-menu-example.html"
+                             ></div>
+
 
         <h3 id="menu-bars" class="docs-header-link">
           <span header-link="menu-bars"></span>
           Menu Bars
         </h3>
-      <p>The <code>CdkMenuBar</code> directive follows the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA menubar</a> spec and behaves similar to a desktop
-app menubar. It consists of at least one <code>CdkMenuItem</code> which triggers a submenu. A menubar can be
-layed out horizontally or vertically (defaulting to horizontal). If the layout changes, you must set
-the <code>orientation</code> attribute to match in order for the keyboard navigation to work properly and for
-menus to open up in the correct location.</p>
+      <p>Menu bars are a type of inline menu that you can create using the <code>cdkMenuBar</code> directive. They
+follow the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA menubar</a> spec and behave similarly to a desktop application menubar. Each
+bar consists of at least one <code>cdkMenuItem</code> that triggers a submenu.</p>
 <div material-docs-example="cdk-menu-menubar"
                              file="cdk-menu-menubar-example.html"
                              ></div>
@@ -106,7 +208,8 @@ menus to open up in the correct location.</p>
           <span header-link="context-menus"></span>
           Context Menus
         </h3>
-      <p>A context menu opens when a user right-clicks within some container element. You can mark a
+      <p>A context menus is a type of pop-up menu that doesn&#39;t have a traditional trigger element, instead
+it is triggered when a user right-clicks within some container element. You can mark a
 container element with the <code>cdkContextMenuTriggerFor</code>, which behaves like <code>cdkMenuTriggerFor</code> except
 that it responds to the browser&#39;s native <code>contextmenu</code> event. Custom context menus appear next to
 the cursor, similarly to native context menus.</p>
@@ -116,66 +219,58 @@ the cursor, similarly to native context menus.</p>
 
 <p>You can nest context menu container elements. Upon right-click, the menu associated with the closest
 container element will open.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">cdkContextMenuTriggerFor</span>]=<span class="hljs-string">&quot;outer&quot;</span>&gt;</span>
-  My outer context
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">cdkContextMenuTriggerFor</span>]=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>My inner context<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
-<p>In the example above, right clicking on &quot;My inner context&quot; will open up the &quot;inner&quot; menu and right
-clicking inside &quot;My outer context&quot; will open up the &quot;outer&quot; menu.</p>
+<div material-docs-example="cdk-menu-nested-context"
+                             file="cdk-menu-nested-context-example.html"
+                             region="triggers"></div>
 
-        <h3 id="inline-menus" class="docs-header-link">
-          <span header-link="inline-menus"></span>
-          Inline Menus
-        </h3>
-      <p>An <em>inline menu</em> is a menu that lives directly on the page rather than a pop-up associated with a
-trigger. You can use an inline menu when you want a persistent menu interaction on a page. Menu
-items within an inline menus are logically grouped together and you can navigate through them using
-your keyboard.</p>
-<div material-docs-example="cdk-menu-inline"
-                             file="cdk-menu-inline-example.html"
-                             ></div>
-
+<p>In the example above, right-clicking on &quot;Inner context menu&quot; will open up the &quot;inner&quot; menu and
+right-clicking inside &quot;Outer context menu&quot; will open up the &quot;outer&quot; menu.</p>
 
         <h3 id="menu-items" class="docs-header-link">
           <span header-link="menu-items"></span>
           Menu Items
         </h3>
-      <p>Both menu and menubar elements should exclusively contain menuitem elements. This directive allows
-the items to be navigated to via keyboard interaction.</p>
-<p>A menuitem by itself can provide some user defined action by hooking into the <code>cdkMenuItemTriggered</code>
-output. An example may be a close button which performs some closing logic.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">panel</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;panel&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItem</span> (<span class="hljs-attr">cdkMenuItemTriggered</span>)=<span class="hljs-string">&quot;closeApp()&quot;</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-</code></pre>
-<p>You can create nested menus by using a menuitem as the trigger for another menu.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">panel</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;panel&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItem</span> [<span class="hljs-attr">cdkMenuTriggerFor</span>]=<span class="hljs-string">&quot;submenu&quot;</span>&gt;</span>Open Submenu<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-</code></pre>
-<p>A menuitem also has two sub-types, neither of which should trigger a menu: CdkMenuItemCheckbox and
-CdkMenuItemRadio</p>
+      <p>The <code>cdkMenuItem</code> directive allows users to navigate menu items via keyboard.
+You can add a custom action to a menu item with the <code>cdkMenuItemTriggered</code> output.</p>
+<div material-docs-example="cdk-menu-standalone-stateful-menu"
+                             file="cdk-menu-standalone-stateful-menu-example.html"
+                             region="reset-item"></div>
+
+<p>You can create nested menus by using a menu item as the trigger for another menu.</p>
+<div material-docs-example="cdk-menu-menubar"
+                             file="cdk-menu-menubar-example.html"
+                             region="file-trigger"></div>
+
 
         <h4 id="menu-item-checkboxes" class="docs-header-link">
           <span header-link="menu-item-checkboxes"></span>
           Menu Item Checkboxes
         </h4>
-      <p>A <code>cdkMenuItemCheckbox</code> is a special type of menuitem that behaves as a checkbox. You can use this
-type of menuitem to toggle items on and off. An element with the <code>cdkMenuItemCheckbox</code> directive
+      <p>A <code>cdkMenuItemCheckbox</code> is a special type of menu item that behaves as a checkbox. You can use this
+type of menu item to toggle items on and off. An element with the <code>cdkMenuItemCheckbox</code> directive
 does not need the additional <code>cdkMenuItem</code> directive.</p>
+<p>Checkbox items do not track their own state. You must bind the checked state using the
+<code>cdkMenuItemChecked</code> input and listen to <code>cdkMenuItemTriggered</code> to know when it is toggled. If you
+don&#39;t bind the state it will reset when the menu is closed and re-opened.</p>
+<div material-docs-example="cdk-menu-standalone-stateful-menu"
+                             file="cdk-menu-standalone-stateful-menu-example.html"
+                             region="bold-item"></div>
+
 
         <h4 id="menu-item-radios" class="docs-header-link">
           <span header-link="menu-item-radios"></span>
           Menu Item Radios
         </h4>
-      <p>A <code>cdkMenuItemRadio</code> is a special type of menuitem that behaves as a radio button. You can use this
-type of menuitem for menus with exclusively selectable items. An element with the <code>cdkMenuItemRadio</code>
+      <p>A <code>cdkMenuItemRadio</code> is a special type of menu item that behaves as a radio button. You can use this
+type of menu item for menus with exclusively selectable items. An element with the <code>cdkMenuItemRadio</code>
 directive does not need the additional <code>cdkMenuItem</code> directive.</p>
+<p>As with checkbox items, radio items do not track their own state, but you can track it by binding
+<code>cdkMenuItemChecked</code> and listening for <code>cdkMenuItemTriggered</code>. If you do not bind the state the
+selection will reset when the menu is closed and reopened.</p>
+<div material-docs-example="cdk-menu-standalone-stateful-menu"
+                             file="cdk-menu-standalone-stateful-menu-example.html"
+                             region="size-items"></div>
+
 
         <h4 id="groups" class="docs-header-link">
           <span header-link="groups"></span>
@@ -186,27 +281,6 @@ directive does not need the additional <code>cdkMenuItem</code> directive.</p>
 can have the checked state.</p>
 <p>If you would like to have unrelated groups of radio buttons within a single menu you should use the
 <code>cdkMenuGroup</code> directive.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkMenuPanel</span> #<span class="hljs-attr">panel</span>=<span class="hljs-string">&quot;cdkMenuPanel&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenu</span> [<span class="hljs-attr">cdkMenuPanel</span>]=<span class="hljs-string">&quot;panel&quot;</span>&gt;</span>
-    <span class="hljs-comment">&lt;!-- Font size --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenuGroup</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Medium<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Large<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
-    <span class="hljs-comment">&lt;!-- Paragraph alignment --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkMenuGroup</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Center<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkMenuItemRadio</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-</code></pre>
-<p>Note however that when the menu is closed and reopened any state is lost. You must subscribe to the
-groups <code>change</code> output, or to <code>cdkMenuItemToggled</code> on each radio item and track changes your self.
-Finally, you can provide state for each item using the <code>checked</code> attribute.</p>
 <div material-docs-example="cdk-menu-standalone-stateful-menu"
                              file="cdk-menu-standalone-stateful-menu-example.html"
                              ></div>
@@ -216,18 +290,20 @@ Finally, you can provide state for each item using the <code>checked</code> attr
           <span header-link="smart-menu-aim"></span>
           Smart Menu Aim
         </h3>
-      <p><code>@angular/cdk/menu</code> intelligently predicts when a user intends to navigate to an open submenu and
-prevent premature closeouts. This functionality prevents users from having to hunt through the open
-menus in a maze-like fashion to reach their destination.</p>
-<p><img src="menuaim.png" alt="menu aim diagram" title="Menu Aim Diagram"></p>
+      <p><code>@angular/cdk/menu</code> is capable of intelligently predicting when a user intends to navigate to an
+open submenu and preventing premature closeouts. This functionality prevents users from having to
+hunt through the open menus in a maze-like fashion to reach their destination. To enable this
+feature for a menu and its sub-menus, add the <code>cdkMenuTargetAim</code> directive to the <code>cdkMenu</code> or
+<code>cdkMenuBar</code> element.</p>
+<p><img src="https://material.angular.io/assets/img/menuaim.png" alt="menu aim diagram" title="Menu Aim Diagram"></p>
 <p>As demonstrated in the diagram above we first track the user&#39;s mouse movements within a menu. Next,
 when a user mouses into a sibling menu item (e.g. Share button) the sibling item asks the Menu Aim
 service if it can perform its close actions. In order to determine if the current submenu can be
 closed out, the Menu Aim service calculates the slope between a selected target coordinate in the
 submenu and the previous mouse point, and the slope between the target and the current mouse point.
 If the slope of the current mouse point is greater than the slope of the previous that means the
-user is moving towards the submenu and we shouldn&#39;t close out. Users however may sometimes stop
-short in a sibling item after moving towards the submenu. The service is intelligent enough the
+user is moving towards the submenu, so we shouldn&#39;t close out. Users however may sometimes stop
+short in a sibling item after moving towards the submenu. The service is intelligent enough to
 detect this intention and will trigger the next menu.</p>
 
         <h3 id="accessibility" class="docs-header-link">

@@ -1,0 +1,8 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let size of sizes&quot;</span>
+    <span class="hljs-attr">cdkMenuItemRadio</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-menu-item&quot;</span>
+    [<span class="hljs-attr">cdkMenuItemChecked</span>]=<span class="hljs-string">&quot;size === selectedSize&quot;</span>
+    (<span class="hljs-attr">cdkMenuItemTriggered</span>)=<span class="hljs-string">&quot;selectedSize = size&quot;</span>&gt;</span>
+  {{size}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

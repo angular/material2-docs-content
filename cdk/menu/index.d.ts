@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
-import * as i6 from '@angular/cdk/menu';
-import * as i7 from '@angular/common';
+import * as i7 from '@angular/cdk/menu';
+import * as i8 from '@angular/common';
 
 /** @title Context menu. */
 export declare class CdkMenuContextExample {
@@ -10,7 +10,7 @@ export declare class CdkMenuContextExample {
 
 export declare class CdkMenuExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkMenuExamplesModule, [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample], [typeof i6.CdkMenuModule, typeof i7.CommonModule], [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuStandaloneStatefulMenuExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkMenuExamplesModule, [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuNestedContextExample, typeof i6.CdkMenuStandaloneStatefulMenuExample], [typeof i7.CdkMenuModule, typeof i8.CommonModule], [typeof i1.CdkMenuStandaloneMenuExample, typeof i2.CdkMenuMenubarExample, typeof i3.CdkMenuInlineExample, typeof i4.CdkMenuContextExample, typeof i5.CdkMenuNestedContextExample, typeof i6.CdkMenuStandaloneStatefulMenuExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CdkMenuExamplesModule>;
 }
 
@@ -26,6 +26,12 @@ export declare class CdkMenuMenubarExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuMenubarExample, "cdk-menu-menubar-example", ["cdkMenuMenubarExample"], {}, {}, never, never, false>;
 }
 
+/** @title Nested context menus. */
+export declare class CdkMenuNestedContextExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuNestedContextExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuNestedContextExample, "cdk-menu-nested-context-example", ["cdkMenuNestedContextExample"], {}, {}, never, never, false>;
+}
+
 /** @title Menu with Standalone Trigger. */
 export declare class CdkMenuStandaloneMenuExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuStandaloneMenuExample, never>;
@@ -38,6 +44,7 @@ export declare class CdkMenuStandaloneStatefulMenuExample {
     italic: boolean;
     sizes: string[];
     selectedSize: string | undefined;
+    reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkMenuStandaloneStatefulMenuExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkMenuStandaloneStatefulMenuExample, "cdk-menu-standalone-stateful-menu-example", never, {}, {}, never, never, false>;
 }
@@ -67,6 +74,12 @@ declare namespace i4 {
 }
 
 declare namespace i5 {
+    export {
+        CdkMenuNestedContextExample
+    }
+}
+
+declare namespace i6 {
     export {
         CdkMenuStandaloneStatefulMenuExample
     }
