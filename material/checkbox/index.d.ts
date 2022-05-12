@@ -53,9 +53,9 @@ export declare class CheckboxOverviewExample {
 export declare class CheckboxReactiveFormsExample {
     private _formBuilder;
     toppings: FormGroup<    {
-    pepperoni: FormControl<false | null> | FormControl<true | null>;
-    extracheese: FormControl<false | null> | FormControl<true | null>;
-    mushroom: FormControl<false | null> | FormControl<true | null>;
+    pepperoni: FormControl<boolean | null>;
+    extracheese: FormControl<boolean | null>;
+    mushroom: FormControl<boolean | null>;
     }>;
     constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxReactiveFormsExample, never>;
