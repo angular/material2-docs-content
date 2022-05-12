@@ -125,7 +125,7 @@ export declare class SidenavFixedExample {
     private _formBuilder;
     options: FormGroup<    {
     bottom: FormControl<number | null>;
-    fixed: FormControl<false | null> | FormControl<true | null>;
+    fixed: FormControl<boolean | null>;
     top: FormControl<number | null>;
     }>;
     constructor(_formBuilder: FormBuilder);
