@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "14.0.0-rc.0+sha-3d4b339",
+  "version": "14.0.0-rc.0+sha-190d952",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -67,6 +67,14 @@
       "es2015": "./fesm2015/cdk/clipboard.mjs",
       "node": "./fesm2015/cdk/clipboard.mjs",
       "default": "./fesm2020/cdk/clipboard.mjs"
+    },
+    "./cdk/dialog": {
+      "types": "./cdk/dialog/index.d.ts",
+      "esm2020": "./esm2020/cdk/dialog/dialog_public_index.mjs",
+      "es2020": "./fesm2020/cdk/dialog.mjs",
+      "es2015": "./fesm2015/cdk/dialog.mjs",
+      "node": "./fesm2015/cdk/dialog.mjs",
+      "default": "./fesm2020/cdk/dialog.mjs"
     },
     "./cdk/drag-drop": {
       "types": "./cdk/drag-drop/index.d.ts",
@@ -483,15 +491,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "14.0.0-rc.0+sha-3d4b339",
-    "@angular/cdk-experimental": "14.0.0-rc.0+sha-3d4b339",
+    "@angular/cdk": "14.0.0-rc.0+sha-190d952",
+    "@angular/cdk-experimental": "14.0.0-rc.0+sha-190d952",
     "@angular/core": "^14.0.0-0 || ^15.0.0",
     "@angular/common": "^14.0.0-0 || ^15.0.0",
-    "@angular/material": "14.0.0-rc.0+sha-3d4b339",
-    "@angular/material-experimental": "14.0.0-rc.0+sha-3d4b339",
-    "@angular/material-moment-adapter": "14.0.0-rc.0+sha-3d4b339",
-    "@angular/material-luxon-adapter": "14.0.0-rc.0+sha-3d4b339",
-    "@angular/material-date-fns-adapter": "14.0.0-rc.0+sha-3d4b339"
+    "@angular/material": "14.0.0-rc.0+sha-190d952",
+    "@angular/material-experimental": "14.0.0-rc.0+sha-190d952",
+    "@angular/material-moment-adapter": "14.0.0-rc.0+sha-190d952",
+    "@angular/material-luxon-adapter": "14.0.0-rc.0+sha-190d952",
+    "@angular/material-date-fns-adapter": "14.0.0-rc.0+sha-190d952"
   },
   "dependencies": {
     "tslib": "^2.3.0"
