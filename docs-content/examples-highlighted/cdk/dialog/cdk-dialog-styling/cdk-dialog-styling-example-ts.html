@@ -1,0 +1,26 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Dialog, DialogRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/dialog&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>CDK Dialog Styling
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-dialog-styling-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-styling-example.html&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDialogStylingExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: Dialog</span>)</span> {}
+
+  openDialog(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.dialog.open&lt;<span class="hljs-built_in">string</span>&gt;(CdkDialogStylingExampleDialog);
+  }
+}
+
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-dialog-styling-example-dialog&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-styling-example-dialog.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-dialog-styling-example-dialog.css&#x27;</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDialogStylingExampleDialog</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialogRef: DialogRef</span>)</span> {}
+}

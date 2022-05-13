@@ -1,0 +1,35 @@
+<span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Dialog, DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/dialog&#x27;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
+  <span class="hljs-attr">animal</span>: <span class="hljs-string">&#x27;panda&#x27;</span> | <span class="hljs-string">&#x27;unicorn&#x27;</span> | <span class="hljs-string">&#x27;lion&#x27;</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Injecting data when opening a dialog
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-dialog-data-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-data-example.html&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDialogDataExample</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: Dialog</span>)</span> {}
+
+  <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dialog.open(CdkDialogDataExampleDialog, {
+      <span class="hljs-attr">minWidth</span>: <span class="hljs-string">&#x27;300px&#x27;</span>,
+      <span class="hljs-attr">data</span>: {
+        <span class="hljs-attr">animal</span>: <span class="hljs-string">&#x27;panda&#x27;</span>,
+      },
+    });
+  }
+}
+
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-dialog-data-example-dialog&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-data-example-dialog.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./cdk-dialog-data-example-dialog.css&#x27;</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDialogDataExampleDialog</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData</span>)</span> {}
+}

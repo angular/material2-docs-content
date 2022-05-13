@@ -207,6 +207,66 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/clipboard"
         }
     },
+    "cdk-dialog-data": {
+        "packagePath": "cdk/dialog/cdk-dialog-data",
+        "title": "Injecting data when opening a dialog",
+        "componentName": "CdkDialogDataExample",
+        "files": [
+            "cdk-dialog-data-example.ts",
+            "cdk-dialog-data-example.html",
+            "cdk-dialog-data-example-dialog.html",
+            "./cdk-dialog-data-example-dialog.css"
+        ],
+        "selector": "cdk-dialog-data-example",
+        "additionalComponents": [
+            "CdkDialogDataExampleDialog"
+        ],
+        "primaryFile": "cdk-dialog-data-example.ts",
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "cdk/dialog"
+        }
+    },
+    "cdk-dialog-overview": {
+        "packagePath": "cdk/dialog/cdk-dialog-overview",
+        "title": "CDK Dialog Overview",
+        "componentName": "CdkDialogOverviewExample",
+        "files": [
+            "cdk-dialog-overview-example.ts",
+            "cdk-dialog-overview-example.html",
+            "cdk-dialog-overview-example-dialog.html",
+            "cdk-dialog-overview-example-dialog.css"
+        ],
+        "selector": "cdk-dialog-overview-example",
+        "additionalComponents": [
+            "CdkDialogOverviewExampleDialog"
+        ],
+        "primaryFile": "cdk-dialog-overview-example.ts",
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "cdk/dialog"
+        }
+    },
+    "cdk-dialog-styling": {
+        "packagePath": "cdk/dialog/cdk-dialog-styling",
+        "title": "CDK Dialog Styling",
+        "componentName": "CdkDialogStylingExample",
+        "files": [
+            "cdk-dialog-styling-example.ts",
+            "cdk-dialog-styling-example.html",
+            "cdk-dialog-styling-example-dialog.html",
+            "cdk-dialog-styling-example-dialog.css"
+        ],
+        "selector": "cdk-dialog-styling-example",
+        "additionalComponents": [
+            "CdkDialogStylingExampleDialog"
+        ],
+        "primaryFile": "cdk-dialog-styling-example.ts",
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "cdk/dialog"
+        }
+    },
     "cdk-drag-drop-axis-lock": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-axis-lock",
         "title": "Drag&Drop position locking",

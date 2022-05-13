@@ -1,0 +1,18 @@
+<span class="hljs-selector-pseudo">:host</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">500px</span>;
+  <span class="hljs-attribute">animation</span>: custom-dialog-enter <span class="hljs-number">1s</span> ease;
+}
+
+<span class="hljs-keyword">@keyframes</span> custom-dialog-enter {
+  <span class="hljs-selector-tag">from</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">0</span>) <span class="hljs-built_in">rotate</span>(<span class="hljs-number">360deg</span>);
+  }
+
+  <span class="hljs-selector-tag">to</span> {
+    <span class="hljs-attribute">transform</span>: none;
+  }
+}

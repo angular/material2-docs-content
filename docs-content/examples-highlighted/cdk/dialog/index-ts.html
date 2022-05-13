@@ -1,0 +1,41 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {DialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDialogDataExample,
+  CdkDialogDataExampleDialog,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-dialog-data/cdk-dialog-data-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDialogOverviewExample,
+  CdkDialogOverviewExampleDialog,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-dialog-overview/cdk-dialog-overview-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDialogStylingExample,
+  CdkDialogStylingExampleDialog,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-dialog-styling/cdk-dialog-styling-example&#x27;</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkDialogDataExample,
+  CdkDialogDataExampleDialog,
+  CdkDialogOverviewExample,
+  CdkDialogOverviewExampleDialog,
+  CdkDialogStylingExample,
+  CdkDialogStylingExampleDialog,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkDialogDataExample,
+  CdkDialogDataExampleDialog,
+  CdkDialogOverviewExample,
+  CdkDialogOverviewExampleDialog,
+  CdkDialogStylingExample,
+  CdkDialogStylingExampleDialog,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [CommonModule, DialogModule, FormsModule],
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogExamplesModule</span> </span>{}
