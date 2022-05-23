@@ -33,8 +33,8 @@ const EXAMPLES = [
 ];
 export class TooltipExamplesModule {
 }
-TooltipExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: TooltipExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.0", ngImport: i0, type: TooltipExamplesModule, declarations: [TooltipAutoHideExample,
+TooltipExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: TooltipExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.1", ngImport: i0, type: TooltipExamplesModule, declarations: [TooltipAutoHideExample,
         TooltipCustomClassExample,
         TooltipDelayExample,
         TooltipDisabledExample,
@@ -60,7 +60,7 @@ TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         TooltipModifiedDefaultsExample,
         TooltipOverviewExample,
         TooltipPositionExample] });
-TooltipExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: TooltipExamplesModule, imports: [CommonModule,
+TooltipExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: TooltipExamplesModule, imports: [CommonModule,
         MatButtonModule,
         MatCheckboxModule,
         MatInputModule,
@@ -68,7 +68,7 @@ TooltipExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", v
         MatTooltipModule,
         ReactiveFormsModule,
         ScrollingModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: TooltipExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: TooltipExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

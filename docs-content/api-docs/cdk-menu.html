@@ -1050,10 +1050,10 @@ This class can be extended to create custom menu types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dir: Directionality</code>
+      <code>dir: inject(Directionality, InjectFlags.Optional)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The directionality of the current page.</p>
+  <td class="docs-api-property-description"><p>The directionality (text direction) of the current page.</p>
 </td>
 </tr>
 
@@ -1066,7 +1066,8 @@ This class can be extended to create custom menu types.</p>
       <code>isInline: false</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the menu is displayed inline (i.e. always present vs a conditional popup that the user triggers with a trigger element).</p>
+  <td class="docs-api-property-description"><p>Whether the menu is displayed inline (i.e. always present vs a conditional popup that the
+user triggers with a trigger element).</p>
 </td>
 </tr>
 
@@ -1102,7 +1103,7 @@ This class can be extended to create custom menu types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>menuAim: MenuAim</code>
+      <code>menuAim: inject(MENU_AIM, InjectFlags.Optional | InjectFlags.Self)</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The menu aim service used by this menu.</p>
@@ -1141,7 +1142,7 @@ This class can be extended to create custom menu types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ngZone: NgZone</code>
+      <code>ngZone: inject(NgZone)</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The Angular zone.</p>
@@ -1533,7 +1534,7 @@ event.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkMenuTrigger | undefined</code>
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1809,7 +1810,7 @@ event.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkMenuTrigger | undefined</code>
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2085,7 +2086,7 @@ event.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkMenuTrigger | undefined</code>
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2195,7 +2196,8 @@ state.</p>
       <code>menuPosition: ConnectedPosition[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>A list of preferred menu positions to be used when constructing the <code>FlexibleConnectedPositionStrategy</code> for this trigger&#39;s menu.</p>
+  <td class="docs-api-property-description"><p>A list of preferred menu positions to be used when constructing the
+<code>FlexibleConnectedPositionStrategy</code> for this trigger&#39;s menu.</p>
 </td>
 </tr>
 
@@ -2238,6 +2240,19 @@ state.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the attached menu is requested to open</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: inject(Injector)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The DI injector for this component.</p>
 </td>
 </tr>
 
@@ -2617,7 +2632,7 @@ event.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkMenuTrigger | undefined</code>
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2739,7 +2754,8 @@ It is aware of nested context menus and will trigger only the lowest level non-d
       <code>menuPosition: ConnectedPosition[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>A list of preferred menu positions to be used when constructing the <code>FlexibleConnectedPositionStrategy</code> for this trigger&#39;s menu.</p>
+  <td class="docs-api-property-description"><p>A list of preferred menu positions to be used when constructing the
+<code>FlexibleConnectedPositionStrategy</code> for this trigger&#39;s menu.</p>
 </td>
 </tr>
 
@@ -2782,6 +2798,19 @@ It is aware of nested context menus and will trigger only the lowest level non-d
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the attached menu is requested to open</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: inject(Injector)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The DI injector for this component.</p>
 </td>
 </tr>
 
@@ -2959,10 +2988,10 @@ This class can be extended to create custom menu trigger types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector</code>
+      <code>injector: inject(Injector)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The DI injector for this component</p>
+  <td class="docs-api-property-description"><p>The DI injector for this component.</p>
 </td>
 </tr>
 
@@ -2975,7 +3004,8 @@ This class can be extended to create custom menu trigger types.</p>
       <code>menuPosition: ConnectedPosition[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>A list of preferred menu positions to be used when constructing the <code>FlexibleConnectedPositionStrategy</code> for this trigger&#39;s menu.</p>
+  <td class="docs-api-property-description"><p>A list of preferred menu positions to be used when constructing the
+<code>FlexibleConnectedPositionStrategy</code> for this trigger&#39;s menu.</p>
 </td>
 </tr>
 
@@ -2988,7 +3018,7 @@ This class can be extended to create custom menu trigger types.</p>
       <code>menuStack: MenuStack</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The menu stack this menu is part of.</p>
+  <td class="docs-api-property-description"><p>The menu stack in which this menu resides.</p>
 </td>
 </tr>
 
@@ -3050,7 +3080,7 @@ This class can be extended to create custom menu trigger types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
+      <code>viewContainerRef: inject(ViewContainerRef)</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The view container ref for this component</p>
