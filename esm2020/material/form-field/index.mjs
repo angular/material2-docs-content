@@ -32,8 +32,8 @@ const EXAMPLES = [
 ];
 export class FormFieldExamplesModule {
 }
-FormFieldExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: FormFieldExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-FormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.0", ngImport: i0, type: FormFieldExamplesModule, declarations: [FormFieldAppearanceExample,
+FormFieldExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: FormFieldExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+FormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.1", ngImport: i0, type: FormFieldExamplesModule, declarations: [FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
         FormFieldHarnessExample,
@@ -58,7 +58,7 @@ FormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0",
         FormFieldOverviewExample,
         FormFieldPrefixSuffixExample,
         FormFieldThemingExample] });
-FormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: FormFieldExamplesModule, imports: [CommonModule,
+FormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: FormFieldExamplesModule, imports: [CommonModule,
         MatButtonModule,
         MatCheckboxModule,
         MatFormFieldModule,
@@ -67,7 +67,7 @@ FormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0",
         MatRadioModule,
         MatSelectModule,
         ReactiveFormsModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: FormFieldExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: FormFieldExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

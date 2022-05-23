@@ -6,9 +6,9 @@ import * as i1 from "@angular/material/progress-bar";
  */
 export class ProgressBarDeterminateExample {
 }
-ProgressBarDeterminateExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: ProgressBarDeterminateExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ProgressBarDeterminateExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.0-rc.0", type: ProgressBarDeterminateExample, selector: "progress-bar-determinate-example", ngImport: i0, template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n", dependencies: [{ kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: ProgressBarDeterminateExample, decorators: [{
+ProgressBarDeterminateExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: ProgressBarDeterminateExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ProgressBarDeterminateExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.0-rc.1", type: ProgressBarDeterminateExample, selector: "progress-bar-determinate-example", ngImport: i0, template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n", dependencies: [{ kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: ProgressBarDeterminateExample, decorators: [{
             type: Component,
             args: [{ selector: 'progress-bar-determinate-example', template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n" }]
         }] });

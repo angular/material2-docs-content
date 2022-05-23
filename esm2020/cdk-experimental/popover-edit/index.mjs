@@ -21,8 +21,8 @@ const EXAMPLES = [
 ];
 export class CdkPopoverEditExamplesModule {
 }
-CdkPopoverEditExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: CdkPopoverEditExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkPopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.0", ngImport: i0, type: CdkPopoverEditExamplesModule, declarations: [CdkPopoverEditCdkTableExample,
+CdkPopoverEditExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: CdkPopoverEditExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkPopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.1", ngImport: i0, type: CdkPopoverEditExamplesModule, declarations: [CdkPopoverEditCdkTableExample,
         CdkPopoverEditCdkTableFlexExample,
         CdkPopoverEditCellSpanVanillaTableExample,
         CdkPopoverEditTabOutVanillaTableExample,
@@ -31,8 +31,8 @@ CdkPopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.
         CdkPopoverEditCellSpanVanillaTableExample,
         CdkPopoverEditTabOutVanillaTableExample,
         CdkPopoverEditVanillaTableExample] });
-CdkPopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: CdkPopoverEditExamplesModule, imports: [CdkPopoverEditModule, CdkTableModule, FormsModule, CommonModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: CdkPopoverEditExamplesModule, decorators: [{
+CdkPopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: CdkPopoverEditExamplesModule, imports: [CdkPopoverEditModule, CdkTableModule, FormsModule, CommonModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: CdkPopoverEditExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CdkPopoverEditModule, CdkTableModule, FormsModule, CommonModule],

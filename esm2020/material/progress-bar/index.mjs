@@ -23,8 +23,8 @@ const EXAMPLES = [
 ];
 export class ProgressBarExamplesModule {
 }
-ProgressBarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: ProgressBarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ProgressBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.0", ngImport: i0, type: ProgressBarExamplesModule, declarations: [ProgressBarBufferExample,
+ProgressBarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: ProgressBarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ProgressBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.0-rc.1", ngImport: i0, type: ProgressBarExamplesModule, declarations: [ProgressBarBufferExample,
         ProgressBarConfigurableExample,
         ProgressBarDeterminateExample,
         ProgressBarHarnessExample,
@@ -40,13 +40,13 @@ ProgressBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0
         ProgressBarHarnessExample,
         ProgressBarIndeterminateExample,
         ProgressBarQueryExample] });
-ProgressBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: ProgressBarExamplesModule, imports: [CommonModule,
+ProgressBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: ProgressBarExamplesModule, imports: [CommonModule,
         MatCardModule,
         MatProgressBarModule,
         MatRadioModule,
         MatSliderModule,
         FormsModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.0", ngImport: i0, type: ProgressBarExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.0-rc.1", ngImport: i0, type: ProgressBarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
