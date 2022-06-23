@@ -863,23 +863,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/scrolling"
         }
     },
-    "cdk-virtual-scroll-parent-scrolling": {
-        "packagePath": "cdk/scrolling/cdk-virtual-scroll-parent-scrolling",
-        "title": "Virtual scrolling viewport parent element",
-        "componentName": "CdkVirtualScrollParentScrollingExample",
-        "files": [
-            "cdk-virtual-scroll-parent-scrolling-example.ts",
-            "cdk-virtual-scroll-parent-scrolling-example.html",
-            "cdk-virtual-scroll-parent-scrolling-example.css"
-        ],
-        "selector": "cdk-virtual-scroll-parent-scrolling-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-virtual-scroll-parent-scrolling-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
-    },
     "cdk-virtual-scroll-template-cache": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-template-cache",
         "title": "Virtual scroll with no template caching",
@@ -892,23 +875,6 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-template-cache-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-template-cache-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
-    },
-    "cdk-virtual-scroll-window-scrolling": {
-        "packagePath": "cdk/scrolling/cdk-virtual-scroll-window-scrolling",
-        "title": "Virtual scrolling window",
-        "componentName": "CdkVirtualScrollWindowScrollingExample",
-        "files": [
-            "cdk-virtual-scroll-window-scrolling-example.ts",
-            "cdk-virtual-scroll-window-scrolling-example.html",
-            "cdk-virtual-scroll-window-scrolling-example.css"
-        ],
-        "selector": "cdk-virtual-scroll-window-scrolling-example",
-        "additionalComponents": [],
-        "primaryFile": "cdk-virtual-scroll-window-scrolling-example.ts",
         "module": {
             "name": "CdkScrollingExamplesModule",
             "importSpecifier": "cdk/scrolling"

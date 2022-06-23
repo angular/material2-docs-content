@@ -2,13 +2,12 @@ import { CollectionViewer } from '@angular/cdk/collections';
 import { DataSource } from '@angular/cdk/collections';
 import { FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import * as i0 from '@angular/core';
-import * as i12 from '@angular/common';
-import * as i13 from '@angular/cdk/scrolling';
+import * as i10 from '@angular/cdk/scrolling';
 import { Observable } from 'rxjs';
 
 export declare class CdkScrollingExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkScrollingExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkScrollingExamplesModule, [typeof i1.CdkVirtualScrollAppendOnlyExample, typeof i2.CdkVirtualScrollContextExample, typeof i3.CdkVirtualScrollCustomStrategyExample, typeof i4.CdkVirtualScrollDataSourceExample, typeof i5.CdkVirtualScrollDlExample, typeof i6.CdkVirtualScrollFixedBufferExample, typeof i7.CdkVirtualScrollHorizontalExample, typeof i8.CdkVirtualScrollOverviewExample, typeof i9.CdkVirtualScrollTemplateCacheExample, typeof i10.CdkVirtualScrollParentScrollingExample, typeof i11.CdkVirtualScrollWindowScrollingExample], [typeof i12.CommonModule, typeof i13.ScrollingModule], [typeof i1.CdkVirtualScrollAppendOnlyExample, typeof i2.CdkVirtualScrollContextExample, typeof i3.CdkVirtualScrollCustomStrategyExample, typeof i4.CdkVirtualScrollDataSourceExample, typeof i5.CdkVirtualScrollDlExample, typeof i6.CdkVirtualScrollFixedBufferExample, typeof i7.CdkVirtualScrollHorizontalExample, typeof i8.CdkVirtualScrollOverviewExample, typeof i9.CdkVirtualScrollTemplateCacheExample, typeof i10.CdkVirtualScrollParentScrollingExample, typeof i11.CdkVirtualScrollWindowScrollingExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkScrollingExamplesModule, [typeof i1.CdkVirtualScrollAppendOnlyExample, typeof i2.CdkVirtualScrollContextExample, typeof i3.CdkVirtualScrollCustomStrategyExample, typeof i4.CdkVirtualScrollDataSourceExample, typeof i5.CdkVirtualScrollDlExample, typeof i6.CdkVirtualScrollFixedBufferExample, typeof i7.CdkVirtualScrollHorizontalExample, typeof i8.CdkVirtualScrollOverviewExample, typeof i9.CdkVirtualScrollTemplateCacheExample], [typeof i10.ScrollingModule], [typeof i1.CdkVirtualScrollAppendOnlyExample, typeof i2.CdkVirtualScrollContextExample, typeof i3.CdkVirtualScrollCustomStrategyExample, typeof i4.CdkVirtualScrollDataSourceExample, typeof i5.CdkVirtualScrollDlExample, typeof i6.CdkVirtualScrollFixedBufferExample, typeof i7.CdkVirtualScrollHorizontalExample, typeof i8.CdkVirtualScrollOverviewExample, typeof i9.CdkVirtualScrollTemplateCacheExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CdkScrollingExamplesModule>;
 }
 
@@ -71,26 +70,11 @@ export declare class CdkVirtualScrollOverviewExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollOverviewExample, "cdk-virtual-scroll-overview-example", never, {}, {}, never, never, false>;
 }
 
-/** @title Virtual scrolling viewport parent element */
-export declare class CdkVirtualScrollParentScrollingExample {
-    items: string[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollParentScrollingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollParentScrollingExample, "cdk-virtual-scroll-parent-scrolling-example", never, {}, {}, never, never, false>;
-}
-
 /** @title Virtual scroll with no template caching */
 export declare class CdkVirtualScrollTemplateCacheExample {
     items: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollTemplateCacheExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollTemplateCacheExample, "cdk-virtual-scroll-template-cache-example", never, {}, {}, never, never, false>;
-}
-
-/** @title Virtual scrolling window */
-export declare class CdkVirtualScrollWindowScrollingExample {
-    shouldRun: boolean;
-    items: string[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollWindowScrollingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollWindowScrollingExample, "cdk-virtual-scroll-window-scrolling-example", never, { "shouldRun": "shouldRun"; }, {}, never, never, false>;
 }
 
 declare class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
@@ -100,18 +84,6 @@ declare class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy
 declare namespace i1 {
     export {
         CdkVirtualScrollAppendOnlyExample
-    }
-}
-
-declare namespace i10 {
-    export {
-        CdkVirtualScrollParentScrollingExample
-    }
-}
-
-declare namespace i11 {
-    export {
-        CdkVirtualScrollWindowScrollingExample
     }
 }
 

@@ -1,11 +1,9 @@
 import * as i1 from '@angular/cdk/scrolling';
 import { FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY, ScrollingModule } from '@angular/cdk/scrolling';
 import * as i0 from '@angular/core';
-import { Component, ChangeDetectionStrategy, ViewEncapsulation, Input, NgModule } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, NgModule } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription } from 'rxjs';
-import * as i1$1 from '@angular/common';
-import { CommonModule } from '@angular/common';
 
 /** @title Virtual scroll with view recycling disabled. */
 class CdkVirtualScrollAppendOnlyExample {
@@ -205,19 +203,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
             args: [{ selector: 'cdk-virtual-scroll-overview-example', changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
         }] });
 
-/** @title Virtual scrolling viewport parent element */
-class CdkVirtualScrollParentScrollingExample {
-    constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-    }
-}
-CdkVirtualScrollParentScrollingExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkVirtualScrollParentScrollingExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-CdkVirtualScrollParentScrollingExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: CdkVirtualScrollParentScrollingExample, selector: "cdk-virtual-scroll-parent-scrolling-example", ngImport: i0, template: "<div class=\"example-viewport\" cdkVirtualScrollingElement>\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n</div>\n", styles: [".example-viewport {\n  flex: 1;\n  width: 200px;\n  min-height: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"], dependencies: [{ kind: "directive", type: i1.CdkFixedSizeVirtualScroll, selector: "cdk-virtual-scroll-viewport[itemSize]", inputs: ["itemSize", "minBufferPx", "maxBufferPx"] }, { kind: "directive", type: i1.CdkVirtualForOf, selector: "[cdkVirtualFor][cdkVirtualForOf]", inputs: ["cdkVirtualForOf", "cdkVirtualForTrackBy", "cdkVirtualForTemplate", "cdkVirtualForTemplateCacheSize"] }, { kind: "component", type: i1.CdkVirtualScrollViewport, selector: "cdk-virtual-scroll-viewport", inputs: ["orientation", "appendOnly"], outputs: ["scrolledIndexChange"] }, { kind: "directive", type: i1.CdkVirtualScrollableElement, selector: "[cdkVirtualScrollingElement]" }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkVirtualScrollParentScrollingExample, decorators: [{
-            type: Component,
-            args: [{ selector: 'cdk-virtual-scroll-parent-scrolling-example', changeDetection: ChangeDetectionStrategy.OnPush, template: "<div class=\"example-viewport\" cdkVirtualScrollingElement>\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n</div>\n", styles: [".example-viewport {\n  flex: 1;\n  width: 200px;\n  min-height: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"] }]
-        }] });
-
 /** @title Virtual scroll with no template caching */
 class CdkVirtualScrollTemplateCacheExample {
     constructor() {
@@ -231,22 +216,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
             args: [{ selector: 'cdk-virtual-scroll-template-cache-example', changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\">\n  <div *cdkVirtualFor=\"let item of items; templateCacheSize: 0\" class=\"example-item\">{{item}}</div>\n</cdk-virtual-scroll-viewport>\n", styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"] }]
         }] });
 
-/** @title Virtual scrolling window */
-class CdkVirtualScrollWindowScrollingExample {
-    constructor() {
-        this.shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
-    }
-}
-CdkVirtualScrollWindowScrollingExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkVirtualScrollWindowScrollingExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-CdkVirtualScrollWindowScrollingExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: CdkVirtualScrollWindowScrollingExample, selector: "cdk-virtual-scroll-window-scrolling-example", inputs: { shouldRun: "shouldRun" }, ngImport: i0, template: "<ng-container *ngIf=\"shouldRun\">\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport scrollWindow itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n</ng-container>\n\n<div *ngIf=\"!shouldRun\">Please open on StackBlitz to see result</div>\n", styles: [".example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"], dependencies: [{ kind: "directive", type: i1$1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "directive", type: i1.CdkFixedSizeVirtualScroll, selector: "cdk-virtual-scroll-viewport[itemSize]", inputs: ["itemSize", "minBufferPx", "maxBufferPx"] }, { kind: "directive", type: i1.CdkVirtualForOf, selector: "[cdkVirtualFor][cdkVirtualForOf]", inputs: ["cdkVirtualForOf", "cdkVirtualForTrackBy", "cdkVirtualForTemplate", "cdkVirtualForTemplateCacheSize"] }, { kind: "component", type: i1.CdkVirtualScrollViewport, selector: "cdk-virtual-scroll-viewport", inputs: ["orientation", "appendOnly"], outputs: ["scrolledIndexChange"] }, { kind: "directive", type: i1.CdkVirtualScrollableWindow, selector: "cdk-virtual-scroll-viewport[scrollWindow]" }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkVirtualScrollWindowScrollingExample, decorators: [{
-            type: Component,
-            args: [{ selector: 'cdk-virtual-scroll-window-scrolling-example', changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-container *ngIf=\"shouldRun\">\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport scrollWindow itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n</ng-container>\n\n<div *ngIf=\"!shouldRun\">Please open on StackBlitz to see result</div>\n", styles: [".example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"] }]
-        }], propDecorators: { shouldRun: [{
-                type: Input
-            }] } });
-
 const EXAMPLES = [
     CdkVirtualScrollAppendOnlyExample,
     CdkVirtualScrollContextExample,
@@ -257,8 +226,6 @@ const EXAMPLES = [
     CdkVirtualScrollHorizontalExample,
     CdkVirtualScrollOverviewExample,
     CdkVirtualScrollTemplateCacheExample,
-    CdkVirtualScrollParentScrollingExample,
-    CdkVirtualScrollWindowScrollingExample,
 ];
 class CdkScrollingExamplesModule {
 }
@@ -271,9 +238,7 @@ CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.
         CdkVirtualScrollFixedBufferExample,
         CdkVirtualScrollHorizontalExample,
         CdkVirtualScrollOverviewExample,
-        CdkVirtualScrollTemplateCacheExample,
-        CdkVirtualScrollParentScrollingExample,
-        CdkVirtualScrollWindowScrollingExample], imports: [CommonModule, ScrollingModule], exports: [CdkVirtualScrollAppendOnlyExample,
+        CdkVirtualScrollTemplateCacheExample], imports: [ScrollingModule], exports: [CdkVirtualScrollAppendOnlyExample,
         CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
@@ -281,14 +246,12 @@ CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.
         CdkVirtualScrollFixedBufferExample,
         CdkVirtualScrollHorizontalExample,
         CdkVirtualScrollOverviewExample,
-        CdkVirtualScrollTemplateCacheExample,
-        CdkVirtualScrollParentScrollingExample,
-        CdkVirtualScrollWindowScrollingExample] });
-CdkScrollingExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkScrollingExamplesModule, imports: [CommonModule, ScrollingModule] });
+        CdkVirtualScrollTemplateCacheExample] });
+CdkScrollingExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkScrollingExamplesModule, imports: [ScrollingModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkScrollingExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [CommonModule, ScrollingModule],
+                    imports: [ScrollingModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
@@ -298,5 +261,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { CdkScrollingExamplesModule, CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollParentScrollingExample, CdkVirtualScrollTemplateCacheExample, CdkVirtualScrollWindowScrollingExample };
+export { CdkScrollingExamplesModule, CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample };
 //# sourceMappingURL=scrolling.mjs.map

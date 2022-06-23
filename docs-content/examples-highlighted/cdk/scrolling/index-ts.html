@@ -8,10 +8,7 @@
 <span class="hljs-keyword">import</span> {CdkVirtualScrollFixedBufferExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-virtual-scroll-fixed-buffer/cdk-virtual-scroll-fixed-buffer-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkVirtualScrollHorizontalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-virtual-scroll-horizontal/cdk-virtual-scroll-horizontal-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkVirtualScrollOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-virtual-scroll-overview/cdk-virtual-scroll-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkVirtualScrollParentScrollingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-virtual-scroll-parent-scrolling/cdk-virtual-scroll-parent-scrolling-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkVirtualScrollTemplateCacheExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-virtual-scroll-template-cache/cdk-virtual-scroll-template-cache-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkVirtualScrollWindowScrollingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-virtual-scroll-window-scrolling/cdk-virtual-scroll-window-scrolling-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   CdkVirtualScrollAppendOnlyExample,
@@ -23,8 +20,6 @@
   CdkVirtualScrollHorizontalExample,
   CdkVirtualScrollOverviewExample,
   CdkVirtualScrollTemplateCacheExample,
-  CdkVirtualScrollParentScrollingExample,
-  CdkVirtualScrollWindowScrollingExample,
 };
 
 <span class="hljs-keyword">const</span> EXAMPLES = [
@@ -37,12 +32,10 @@
   CdkVirtualScrollHorizontalExample,
   CdkVirtualScrollOverviewExample,
   CdkVirtualScrollTemplateCacheExample,
-  CdkVirtualScrollParentScrollingExample,
-  CdkVirtualScrollWindowScrollingExample,
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [CommonModule, ScrollingModule],
+  <span class="hljs-attr">imports</span>: [ScrollingModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

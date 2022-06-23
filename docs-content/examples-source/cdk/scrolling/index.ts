@@ -8,10 +8,7 @@ import {CdkVirtualScrollDlExample} from './cdk-virtual-scroll-dl/cdk-virtual-scr
 import {CdkVirtualScrollFixedBufferExample} from './cdk-virtual-scroll-fixed-buffer/cdk-virtual-scroll-fixed-buffer-example';
 import {CdkVirtualScrollHorizontalExample} from './cdk-virtual-scroll-horizontal/cdk-virtual-scroll-horizontal-example';
 import {CdkVirtualScrollOverviewExample} from './cdk-virtual-scroll-overview/cdk-virtual-scroll-overview-example';
-import {CdkVirtualScrollParentScrollingExample} from './cdk-virtual-scroll-parent-scrolling/cdk-virtual-scroll-parent-scrolling-example';
 import {CdkVirtualScrollTemplateCacheExample} from './cdk-virtual-scroll-template-cache/cdk-virtual-scroll-template-cache-example';
-import {CdkVirtualScrollWindowScrollingExample} from './cdk-virtual-scroll-window-scrolling/cdk-virtual-scroll-window-scrolling-example';
-import {CommonModule} from '@angular/common';
 
 export {
   CdkVirtualScrollAppendOnlyExample,
@@ -23,8 +20,6 @@ export {
   CdkVirtualScrollHorizontalExample,
   CdkVirtualScrollOverviewExample,
   CdkVirtualScrollTemplateCacheExample,
-  CdkVirtualScrollParentScrollingExample,
-  CdkVirtualScrollWindowScrollingExample,
 };
 
 const EXAMPLES = [
@@ -37,12 +32,10 @@ const EXAMPLES = [
   CdkVirtualScrollHorizontalExample,
   CdkVirtualScrollOverviewExample,
   CdkVirtualScrollTemplateCacheExample,
-  CdkVirtualScrollParentScrollingExample,
-  CdkVirtualScrollWindowScrollingExample,
 ];
 
 @NgModule({
-  imports: [CommonModule, ScrollingModule],
+  imports: [ScrollingModule],
   declarations: EXAMPLES,
   exports: EXAMPLES,
 })

@@ -148,7 +148,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>calendarLabel: &#39;Calendar&#39;</code>
+      <code>calendarLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the calendar popup (used by screen readers).</p>
@@ -175,7 +175,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closeCalendarLabel: &#39;Close calendar&#39;</code>
+      <code>closeCalendarLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Label for the button used to close the calendar popup.</p>
@@ -188,20 +188,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>endDateLabel: &#39;End date&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the last date of a range of dates (used by screen readers).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nextMonthLabel: &#39;Next month&#39;</code>
+      <code>nextMonthLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the next month button (used by screen readers).</p>
@@ -214,7 +201,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nextMultiYearLabel: &#39;Next 24 years&#39;</code>
+      <code>nextMultiYearLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the next multi-year button (used by screen readers).</p>
@@ -227,7 +214,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nextYearLabel: &#39;Next year&#39;</code>
+      <code>nextYearLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the next year button (used by screen readers).</p>
@@ -240,7 +227,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>openCalendarLabel: &#39;Open calendar&#39;</code>
+      <code>openCalendarLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the button used to open the calendar popup (used by screen readers).</p>
@@ -253,7 +240,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>prevMonthLabel: &#39;Previous month&#39;</code>
+      <code>prevMonthLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the previous month button (used by screen readers).</p>
@@ -266,7 +253,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>prevMultiYearLabel: &#39;Previous 24 years&#39;</code>
+      <code>prevMultiYearLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the previous multi-year button (used by screen readers).</p>
@@ -279,7 +266,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>prevYearLabel: &#39;Previous year&#39;</code>
+      <code>prevYearLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the previous year button (used by screen readers).</p>
@@ -292,20 +279,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>startDateLabel: &#39;Start date&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the first date of a range of dates (used by screen readers).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>switchToMonthViewLabel: &#39;Choose date&#39;</code>
+      <code>switchToMonthViewLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the &#39;switch to month view&#39; button (used by screen readers).</p>
@@ -318,7 +292,7 @@ components if the labels have changed after initialization.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>switchToMultiYearViewLabel: &#39;Choose month and year&#39;</code>
+      <code>switchToMultiYearViewLabel: string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>A label for the &#39;switch to year view&#39; button (used by screen readers).</p>
@@ -342,69 +316,7 @@ components if the labels have changed after initialization.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Formats a range of years (used for visuals).</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        start</p>
-      <code class="docs-api-method-parameter-type">string</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        end</p>
-      <code class="docs-api-method-parameter-type">string</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">formatYearRangeLabel
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Formats a label for a range of years (used by screen readers).</p>
+      <p>Formats a range of years.</p>
 
     </td>
   </tr><thead>

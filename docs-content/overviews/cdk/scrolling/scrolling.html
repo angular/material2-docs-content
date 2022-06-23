@@ -176,23 +176,4 @@ providing it as the <code>VIRTUAL_SCROLL_STRATEGY</code> on the component contai
 to the list as the user scrolls without removing rendered views. The <code>appendOnly</code> input ensures
 views that are already rendered persist in the DOM after they scroll out of view.</p>
 <div material-docs-example="cdk-virtual-scroll-append-only"></div>
-
-
-        <h3 id="separate-viewport-and-scrolling-element" class="docs-header-link">
-          <span header-link="separate-viewport-and-scrolling-element"></span>
-          Separate viewport and scrolling element
-        </h3>
-      <p>The virtual scroll viewport itself acts as the scrolling element by default. However, there may be
-some cases where you want to have the viewport scroll one of its parent elements. For example,
-if you want to have some non-virtualized content that the user can scroll through before or after
-the virtualized content.</p>
-<p>To configure a <code>cdk-vritual-scroll-viewport</code> to use one of its parent elements as the scrolling
-element, apply <code>cdkVirtualScrollingElement</code> to the scrolling parent element.</p>
-<div material-docs-example="cdk-virtual-scroll-parent-scrolling"></div>
-
-<p>Another common scenario is using the window itself as the scrolling element. This often a better
-user experience on mobile devices, as it allows the browser chrome to scroll away. To use the
-window as the scrolling element, add the <code>scrollWindow</code> attribute to the 
-<code>cdk-virtual-scroll-viewport</code>.</p>
-<div material-docs-example="cdk-virtual-scroll-window-scrolling"></div>
 </div>
