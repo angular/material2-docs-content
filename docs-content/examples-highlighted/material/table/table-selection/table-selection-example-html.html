@@ -3,7 +3,7 @@
   <span class="hljs-comment">&lt;!-- Checkbox Column --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;select&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;$event ? masterToggle() : null&quot;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;$event ? toggleAllRows() : null&quot;</span>
                     [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;selection.hasValue() &amp;&amp; isAllSelected()&quot;</span>
                     [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">&quot;selection.hasValue() &amp;&amp; !isAllSelected()&quot;</span>
                     [<span class="hljs-attr">aria-label</span>]=<span class="hljs-string">&quot;checkboxLabel()&quot;</span>&gt;</span>
