@@ -675,7 +675,7 @@ export declare class TableSelectionExample {
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
-    masterToggle(): void;
+    toggleAllRows(): void;
     /** The label for the checkbox on the passed row */
     checkboxLabel(row?: PeriodicElement_14): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;

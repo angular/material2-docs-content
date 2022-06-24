@@ -244,12 +244,12 @@ selection state.</p>
           <span header-link="2-define-a-selection-column"></span>
           2. Define a selection column
         </h5>
-      <p>Add a column definition for displaying the row checkboxes, including a master toggle checkbox for
+      <p>Add a column definition for displaying the row checkboxes, including a main toggle checkbox for
 the header. The column name should be added to the list of displayed columns provided to the
 header and data row.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;select&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;$event ? masterToggle() : null&quot;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;$event ? toggleAllRows() : null&quot;</span>
                   [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;selection.hasValue() &amp;&amp; isAllSelected()&quot;</span>
                   [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">&quot;selection.hasValue() &amp;&amp; !isAllSelected()&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
@@ -267,7 +267,7 @@ header and data row.</p>
           <span header-link="3-add-event-handling-logic"></span>
           3. Add event handling logic
         </h5>
-      <p>Implement the behavior in your component&#39;s logic to handle the header&#39;s master toggle and checking
+      <p>Implement the behavior in your component&#39;s logic to handle the header&#39;s main toggle and checking
 if all rows are selected.</p>
 <pre><code class="language-js"><span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
 <span class="hljs-function"><span class="hljs-title">isAllSelected</span>(<span class="hljs-params"></span>)</span> {
@@ -277,7 +277,7 @@ if all rows are selected.</p>
 }
 
 <span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
-<span class="hljs-function"><span class="hljs-title">masterToggle</span>(<span class="hljs-params"></span>)</span> {
+<span class="hljs-function"><span class="hljs-title">toggleAllRows</span>(<span class="hljs-params"></span>)</span> {
   <span class="hljs-built_in">this</span>.isAllSelected() ?
       <span class="hljs-built_in">this</span>.selection.clear() :
       <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
