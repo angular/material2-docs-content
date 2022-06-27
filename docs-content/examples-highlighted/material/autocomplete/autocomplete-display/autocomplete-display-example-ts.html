@@ -23,8 +23,10 @@
   <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.filteredOptions = <span class="hljs-built_in">this</span>.myControl.valueChanges.pipe(
       startWith(<span class="hljs-string">&#x27;&#x27;</span>),
-      map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> (<span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&#x27;string&#x27;</span> ? value : value?.name)),
-      map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> (name ? <span class="hljs-built_in">this</span>._filter(name) : <span class="hljs-built_in">this</span>.options.slice())),
+      map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> {
+        <span class="hljs-keyword">const</span> name = <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&#x27;string&#x27;</span> ? value : value?.name;
+        <span class="hljs-keyword">return</span> name ? <span class="hljs-built_in">this</span>._filter(name <span class="hljs-keyword">as</span> <span class="hljs-built_in">string</span>) : <span class="hljs-built_in">this</span>.options.slice();
+      }),
     );
   }
 
