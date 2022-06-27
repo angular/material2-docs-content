@@ -923,9 +923,14 @@ it will not contain any modifications made to elements previously returned).</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Defines an alias for a CSS class name to be used for icon fonts. Creating an matIcon
+      <p>Defines an alias for CSS class names to be used for icon fonts. Creating an matIcon
 component with the alias as the fontSet input will cause the class name to be applied
 to the <code>&lt;mat-icon&gt;</code> element.</p>
+<p>If the registered font is a ligature font, then don&#39;t forget to also include the special
+class <code>mat-ligature-font</code> to allow the usage via attribute. So register like this:</p>
+<pre><code class="language-ts">iconRegistry.registerFontClassAlias(&#39;f1&#39;, &#39;font1 mat-ligature-font&#39;);</code></pre>
+<p>And use like this:</p>
+<pre><code class="language-html">&lt;mat-icon fontSet=&quot;f1&quot; fontIcon=&quot;home&quot;&gt;&lt;/mat-icon&gt;</code></pre>
 
     </td>
   </tr><thead>
@@ -951,12 +956,12 @@ to the <code>&lt;mat-icon&gt;</code> element.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        className</p>
+        classNames</p>
       <code class="docs-api-method-parameter-type">string = alias</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Class name override to be used instead of the alias.</p>
+        <p>Class names override to be used instead of the alias.</p>
 
       </p>
     </td>
@@ -1053,13 +1058,18 @@ Examples:
   <code>&lt;mat-icon svgIcon=&quot;left-arrow&quot;&gt;&lt;/mat-icon&gt;
   &lt;mat-icon svgIcon=&quot;animals:cat&quot;&gt;&lt;/mat-icon&gt;</code></p>
 </li>
-<li><p>Use a font ligature as an icon by putting the ligature text in the content of the <code>&lt;mat-icon&gt;</code>
-component. By default the Material icons font is used as described at
+<li><p>Use a font ligature as an icon by putting the ligature text in the <code>fontIcon</code> attribute or the
+content of the <code>&lt;mat-icon&gt;</code> component. If you register a custom font class, don&#39;t forget to also
+include the special class <code>mat-ligature-font</code>. It is recommended to use the attribute alternative
+to prevent the ligature text to be selectable and to appear in search engine results.
+By default, the Material icons font is used as described at
 <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">http://google.github.io/material-design-icons/#icon-font-for-the-web</a>. You can specify an
 alternate font by setting the fontSet input to either the CSS class to apply to use the
 desired font, or to an alias previously registered with MatIconRegistry.registerFontClassAlias.
 Examples:
-  <code>&lt;mat-icon&gt;home&lt;/mat-icon&gt;
+  <code>&lt;mat-icon fontIcon=&quot;home&quot;&gt;&lt;/mat-icon&gt;
+  &lt;mat-icon&gt;home&lt;/mat-icon&gt;
+  &lt;mat-icon fontSet=&quot;myfont&quot; fontIcon=&quot;sun&quot;&gt;&lt;/mat-icon&gt;
   &lt;mat-icon fontSet=&quot;myfont&quot;&gt;sun&lt;/mat-icon&gt;</code></p>
 </li>
 <li><p>Specify a font glyph to be included via CSS rules by setting the fontSet input to specify the
