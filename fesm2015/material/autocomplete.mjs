@@ -47,7 +47,10 @@ class AutocompleteDisplayExample {
         this.options = [{ name: 'Mary' }, { name: 'Shelley' }, { name: 'Igor' }];
     }
     ngOnInit() {
-        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => (typeof value === 'string' ? value : value === null || value === void 0 ? void 0 : value.name)), map(name => (name ? this._filter(name) : this.options.slice())));
+        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => {
+            const name = typeof value === 'string' ? value : value === null || value === void 0 ? void 0 : value.name;
+            return name ? this._filter(name) : this.options.slice();
+        }));
     }
     displayFn(user) {
         return user && user.name ? user.name : '';
