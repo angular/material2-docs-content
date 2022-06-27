@@ -17,22 +17,22 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material card-testing
+    API reference for Angular Material legacy-card-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatCardHarness} from '@angular/material/card/testing';
+        import {MatLegacyCardHarness} from '@angular/material/legacy-card/testing';
       </code>
     </p>
-  <h3 id="material-card-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-card-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatCardHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCardHarness"></span>
-  <code>MatCardHarness</code>
+<h4 id="MatLegacyCardHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyCardHarness"></span>
+  <code>MatLegacyCardHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -41,7 +41,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-card in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-card in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,7 +53,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-card&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-card&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatCard</code> instance.</p>
@@ -487,7 +487,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a card with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatCardHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -500,7 +501,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">CardHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyCardHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -516,7 +517,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyCardHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -531,16 +532,16 @@
 
 
 
-    <h3 id="material-card-testing-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-card-testing-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
     
       
 
-<h4 id="CardHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="CardHarnessFilters"></span>
-  <code>CardHarnessFilters</code>
+<h4 id="LegacyCardHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyCardHarnessFilters"></span>
+  <code>LegacyCardHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatCardHarness</code> instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
