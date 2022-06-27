@@ -32,24 +32,24 @@ describe(<span class="hljs-string">&#x27;IconHarnessExample&#x27;</span>, <span 
 
   it(<span class="hljs-string">&#x27;should load all icon harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
-    expect(icons.length).toBe(<span class="hljs-number">3</span>);
+    expect(icons.length).toBe(<span class="hljs-number">4</span>);
   });
 
   it(<span class="hljs-string">&#x27;should get the name of an icon&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
     <span class="hljs-keyword">const</span> names = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> icons.map(<span class="hljs-function"><span class="hljs-params">icon</span> =&gt;</span> icon.getName()));
-    expect(names).toEqual([<span class="hljs-string">&#x27;fontIcon&#x27;</span>, <span class="hljs-string">&#x27;svgIcon&#x27;</span>, <span class="hljs-string">&#x27;ligature_icon&#x27;</span>]);
+    expect(names).toEqual([<span class="hljs-string">&#x27;fontIcon&#x27;</span>, <span class="hljs-string">&#x27;svgIcon&#x27;</span>, <span class="hljs-string">&#x27;ligature_icon&#x27;</span>, <span class="hljs-string">&#x27;ligature_icon_by_attribute&#x27;</span>]);
   });
 
   it(<span class="hljs-string">&#x27;should get the namespace of an icon&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
     <span class="hljs-keyword">const</span> namespaces = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> icons.map(<span class="hljs-function"><span class="hljs-params">icon</span> =&gt;</span> icon.getNamespace()));
-    expect(namespaces).toEqual([<span class="hljs-string">&#x27;fontIcons&#x27;</span>, <span class="hljs-string">&#x27;svgIcons&#x27;</span>, <span class="hljs-literal">null</span>]);
+    expect(namespaces).toEqual([<span class="hljs-string">&#x27;fontIcons&#x27;</span>, <span class="hljs-string">&#x27;svgIcons&#x27;</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>]);
   });
 
   it(<span class="hljs-string">&#x27;should get whether an icon is inline&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
     <span class="hljs-keyword">const</span> inlineStates = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> icons.map(<span class="hljs-function"><span class="hljs-params">icon</span> =&gt;</span> icon.isInline()));
-    expect(inlineStates).toEqual([<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>]);
+    expect(inlineStates).toEqual([<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>]);
   });
 });
