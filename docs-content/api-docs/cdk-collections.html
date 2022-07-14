@@ -348,6 +348,18 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>compareWith: (o1: T, o2: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>selected: T[]</code>
     </p>
   </td>
@@ -375,6 +387,41 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <p>Clears all of the selected values.</p>
 
     </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        flushEvent</p>
+      <code class="docs-api-method-parameter-type">boolean = true</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Whether to flush the changes in an event.
+  If false, the changes to the selection will be flushed along with the next event.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean | void</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the selection changed as a result of this call</p>
+
+      </p>
+    </td>
   </tr></table>
 
 
@@ -401,6 +448,20 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
+        values</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The values to deselect</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
         ...values</p>
       <code class="docs-api-method-parameter-type">T[]</code>
     </td>
@@ -410,7 +471,22 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </p>
     </td>
   </tr>
-  </table>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean | void</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the selection changed as a result of this call</p>
+
+      </p>
+    </td>
+  </tr></table>
 
 
   
@@ -564,32 +640,16 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        ...values</p>
-      <code class="docs-api-method-parameter-type">T[]</code>
+        values</p>
+      <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The values to select</p>
+
       </p>
     </td>
   </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setSelection
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
   
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
@@ -603,7 +663,86 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </p>
     </td>
   </tr>
-  </table>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean | void</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the selection changed as a result of this call</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setSelection
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the selected values</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        values</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The new selected values</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        ...values</p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean | void</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the selection changed as a result of this call</p>
+
+      </p>
+    </td>
+  </tr></table>
 
 
   
@@ -669,11 +808,27 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The value to toggle</p>
+
       </p>
     </td>
   </tr>
-  </table>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean | void</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the selection changed as a result of this call</p>
+
+      </p>
+    </td>
+  </tr></table>
 
 
   
