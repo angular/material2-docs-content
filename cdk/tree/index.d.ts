@@ -46,7 +46,7 @@ declare interface ExampleFlatNode {
 
 /**
  * Food data with nested structure.
- * Each node has a name and an optiona list of children.
+ * Each node has a name and an optional list of children.
  */
 declare interface FoodNode {
     name: string;
