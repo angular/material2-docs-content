@@ -272,10 +272,10 @@ emitted value indicates whether copying was successful.</p>
   
 </h4><p class="docs-api-class-description"><p>A pending copy-to-clipboard operation.</p>
 <p>The implementation of copying text to the clipboard modifies the DOM and
-forces a relayout. This relayout can take too long if the string is large,
+forces a re-layout. This re-layout can take too long if the string is large,
 causing the execCommand(&#39;copy&#39;) to happen too long after the user clicked.
 This results in the browser refusing to copy. This object lets the
-relayout happen in a separate tick from copying by providing a copy function
+re-layout happen in a separate tick from copying by providing a copy function
 that can be called later.</p>
 <p>Destroy must be called when no longer in use, regardless of whether <code>copy</code> is
 called.</p>
