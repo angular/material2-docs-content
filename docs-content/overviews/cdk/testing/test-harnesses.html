@@ -559,7 +559,7 @@ trigger text and to filter menu items based on their text:</p>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu&#x27;</span>;
 
-  <span class="hljs-comment">/** Creates a `HarnessPredicate` used to locatr a particular `MyMenuHarness`. */</span>
+  <span class="hljs-comment">/** Creates a `HarnessPredicate` used to locate a particular `MyMenuHarness`. */</span>
   <span class="hljs-keyword">static</span> <span class="hljs-keyword">with</span>(options: MyMenuHarnessFilters): HarnessPredicate&lt;MyMenuHarness&gt; {
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HarnessPredicate(MyMenuHarness, options)
         .addOption(<span class="hljs-string">&#x27;trigger text&#x27;</span>, options.triggerText,
@@ -580,7 +580,7 @@ trigger text and to filter menu items based on their text:</p>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItemHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu-item&#x27;</span>;
 
-  <span class="hljs-comment">/** Creates a `HarnessPredicate` used to locatr a particular `MyMenuItemHarness`. */</span>
+  <span class="hljs-comment">/** Creates a `HarnessPredicate` used to locate a particular `MyMenuItemHarness`. */</span>
   <span class="hljs-keyword">static</span> <span class="hljs-keyword">with</span>(options: MyMenuItemHarnessFilters): HarnessPredicate&lt;MyMenuItemHarness&gt; {
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HarnessPredicate(MyMenuItemHarness, options)
         .addOption(<span class="hljs-string">&#x27;text&#x27;</span>, options.text,
