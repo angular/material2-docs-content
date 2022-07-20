@@ -1,7 +1,7 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {MatLegacyCardModule} from '@angular/material/legacy-card';
+import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import {MatSliderModule} from '@angular/material/slider';
@@ -28,7 +28,7 @@ const EXAMPLES = [
   imports: [
     CommonModule,
     FormsModule,
-    MatLegacyCardModule,
+    MatCardModule,
     MatCheckboxModule,
     MatInputModule,
     MatSliderModule,

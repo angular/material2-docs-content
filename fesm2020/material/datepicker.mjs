@@ -6,8 +6,8 @@ import * as i4 from '@angular/forms';
 import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import * as i1$3 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
-import * as i1$4 from '@angular/material/legacy-card';
-import { MatLegacyCardModule } from '@angular/material/legacy-card';
+import * as i1$4 from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import * as i1$2 from '@angular/material/core';
 import { MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import * as i1 from '@angular/material/datepicker';
@@ -378,7 +378,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
 class DatepickerInlineCalendarExample {
 }
 DatepickerInlineCalendarExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DatepickerInlineCalendarExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-DatepickerInlineCalendarExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: DatepickerInlineCalendarExample, selector: "datepicker-inline-calendar-example", ngImport: i0, template: "<mat-card class=\"demo-inline-calendar-card\">\n  <mat-calendar [(selected)]=\"selected\"></mat-calendar>\n</mat-card>\n<p>Selected date: {{selected}}</p>\n", styles: [".demo-inline-calendar-card {\n  width: 300px;\n}\n"], dependencies: [{ kind: "component", type: i1$4.MatLegacyCard, selector: "mat-card", exportAs: ["matCard"] }, { kind: "component", type: i1.MatCalendar, selector: "mat-calendar", inputs: ["headerComponent", "startAt", "startView", "selected", "minDate", "maxDate", "dateFilter", "dateClass", "comparisonStart", "comparisonEnd"], outputs: ["selectedChange", "yearSelected", "monthSelected", "viewChanged", "_userSelection"], exportAs: ["matCalendar"] }] });
+DatepickerInlineCalendarExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: DatepickerInlineCalendarExample, selector: "datepicker-inline-calendar-example", ngImport: i0, template: "<mat-card class=\"demo-inline-calendar-card\">\n  <mat-calendar [(selected)]=\"selected\"></mat-calendar>\n</mat-card>\n<p>Selected date: {{selected}}</p>\n", styles: [".demo-inline-calendar-card {\n  width: 300px;\n}\n"], dependencies: [{ kind: "component", type: i1$4.MatCard, selector: "mat-card", exportAs: ["matCard"] }, { kind: "component", type: i1.MatCalendar, selector: "mat-calendar", inputs: ["headerComponent", "startAt", "startView", "selected", "minDate", "maxDate", "dateFilter", "dateClass", "comparisonStart", "comparisonEnd"], outputs: ["selectedChange", "yearSelected", "monthSelected", "viewChanged", "_userSelection"], exportAs: ["matCalendar"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DatepickerInlineCalendarExample, decorators: [{
             type: Component,
             args: [{ selector: 'datepicker-inline-calendar-example', template: "<mat-card class=\"demo-inline-calendar-card\">\n  <mat-calendar [(selected)]=\"selected\"></mat-calendar>\n</mat-card>\n<p>Selected date: {{selected}}</p>\n", styles: [".demo-inline-calendar-card {\n  width: 300px;\n}\n"] }]
@@ -640,7 +640,7 @@ DatepickerExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0"
         DatepickerActionsExample,
         ExampleHeader], imports: [CommonModule,
         MatButtonModule,
-        MatLegacyCardModule,
+        MatCardModule,
         MatDatepickerModule,
         MatInputModule,
         MatIconModule,
@@ -678,7 +678,7 @@ DatepickerExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0"
         { provide: MAT_DATE_LOCALE, useValue: 'en-US' },
     ], imports: [CommonModule,
         MatButtonModule,
-        MatLegacyCardModule,
+        MatCardModule,
         MatDatepickerModule,
         MatInputModule,
         MatIconModule,
@@ -691,7 +691,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                     imports: [
                         CommonModule,
                         MatButtonModule,
-                        MatLegacyCardModule,
+                        MatCardModule,
                         MatDatepickerModule,
                         MatInputModule,
                         MatIconModule,

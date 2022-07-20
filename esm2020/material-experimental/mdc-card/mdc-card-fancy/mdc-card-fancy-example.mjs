@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/material-experimental/mdc-button";
-import * as i2 from "@angular/material/card";
+import * as i2 from "@angular/material-experimental/mdc-card";
 /**
  * @title Card with multiple sections
  */

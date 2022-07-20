@@ -1504,7 +1504,7 @@ Defaults to using the resolver from the outlet that the portal is attached to.</
       <code>injector: Injector | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Injector used for the instantiation of the component.</p>
+  <td class="docs-api-property-description"><p>[Optional] Injector used for the instantiation of the component.</p>
 </td>
 </tr>
 
@@ -1527,23 +1527,10 @@ Defaults to using the resolver from the outlet that the portal is attached to.</
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>projectableNodes: Node[][] | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>List of DOM nodes that should be projected through <code>&lt;ng-content&gt;</code> of the attached component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>viewContainerRef: ViewContainerRef | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Where the attached component should live in Angular&#39;s <em>logical</em> component tree.
+  <td class="docs-api-property-description"><p>[Optional] Where the attached component should live in Angular&#39;s <em>logical</em> component tree.
 This is different from where the component <em>renders</em>, which is determined by the PortalOutlet.
 The origin is necessary when the host is outside of the Angular application context.</p>
 </td>

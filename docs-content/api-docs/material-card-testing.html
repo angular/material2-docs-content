@@ -41,7 +41,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-card in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-card in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,7 +53,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-card&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-card&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatCard</code> instance.</p>
@@ -487,7 +487,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a card with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatCardHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -516,7 +517,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatCardHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
