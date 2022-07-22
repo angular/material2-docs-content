@@ -4,8 +4,8 @@ import * as i11 from '@angular/material/slider';
 import * as i12 from '@angular/forms';
 import * as i7 from '@angular/common';
 import * as i8 from '@angular/material/legacy-card';
-import * as i9 from '@angular/material/progress-bar';
-import { ProgressBarMode } from '@angular/material/progress-bar';
+import * as i9 from '@angular/material/legacy-progress-bar';
+import { LegacyProgressBarMode } from '@angular/material/legacy-progress-bar';
 import { ThemePalette } from '@angular/material/core';
 
 declare namespace i1 {
@@ -57,7 +57,7 @@ export declare class ProgressBarBufferExample {
  */
 export declare class ProgressBarConfigurableExample {
     color: ThemePalette;
-    mode: ProgressBarMode;
+    mode: LegacyProgressBarMode;
     value: number;
     bufferValue: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarConfigurableExample, never>;
@@ -74,7 +74,7 @@ export declare class ProgressBarDeterminateExample {
 
 export declare class ProgressBarExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ProgressBarExamplesModule, [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample], [typeof i7.CommonModule, typeof i8.MatLegacyCardModule, typeof i9.MatProgressBarModule, typeof i10.MatRadioModule, typeof i11.MatSliderModule, typeof i12.FormsModule], [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ProgressBarExamplesModule, [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample], [typeof i7.CommonModule, typeof i8.MatLegacyCardModule, typeof i9.MatLegacyProgressBarModule, typeof i10.MatRadioModule, typeof i11.MatSliderModule, typeof i12.FormsModule], [typeof i1.ProgressBarBufferExample, typeof i2.ProgressBarConfigurableExample, typeof i3.ProgressBarDeterminateExample, typeof i4.ProgressBarHarnessExample, typeof i5.ProgressBarIndeterminateExample, typeof i6.ProgressBarQueryExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ProgressBarExamplesModule>;
 }
 

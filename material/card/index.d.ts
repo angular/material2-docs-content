@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
 import * as i10 from '@angular/material/divider';
-import * as i11 from '@angular/material/progress-bar';
+import * as i11 from '@angular/material/legacy-progress-bar';
 import * as i8 from '@angular/material/button';
 import * as i9 from '@angular/material/legacy-card';
 
@@ -14,7 +14,7 @@ export declare class CardActionsExample {
 
 export declare class CardExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CardExamplesModule, [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample, typeof i4.CardActionsExample, typeof i5.CardMediaSizeExample, typeof i6.CardSubtitleExample, typeof i7.CardFooterExample], [typeof i8.MatButtonModule, typeof i9.MatLegacyCardModule, typeof i10.MatDividerModule, typeof i11.MatProgressBarModule], [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample, typeof i4.CardActionsExample, typeof i5.CardMediaSizeExample, typeof i6.CardSubtitleExample, typeof i7.CardFooterExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CardExamplesModule, [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample, typeof i4.CardActionsExample, typeof i5.CardMediaSizeExample, typeof i6.CardSubtitleExample, typeof i7.CardFooterExample], [typeof i8.MatButtonModule, typeof i9.MatLegacyCardModule, typeof i10.MatDividerModule, typeof i11.MatLegacyProgressBarModule], [typeof i1.CardFancyExample, typeof i2.CardOverviewExample, typeof i3.CardHarnessExample, typeof i4.CardActionsExample, typeof i5.CardMediaSizeExample, typeof i6.CardSubtitleExample, typeof i7.CardFooterExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CardExamplesModule>;
 }
 

@@ -1,0 +1,65 @@
+<div class="docs-markdown"><p><code>&lt;mat-progress-bar&gt;</code> is a horizontal progress-bar for indicating progress and activity.</p>
+
+        <h3 id="progress-mode" class="docs-header-link">
+          <span header-link="progress-mode"></span>
+          Progress mode
+        </h3>
+      <p>The progress-bar supports four modes: determinate, indeterminate, buffer and query.</p>
+
+        <h4 id="determinate" class="docs-header-link">
+          <span header-link="determinate"></span>
+          Determinate
+        </h4>
+      <p>Operations where the percentage of the operation complete is known should use the 
+determinate indicator.</p>
+<div material-docs-example="progress-bar-determinate"></div>
+
+<p>This is the default mode and the progress is represented by the <code>value</code> property.</p>
+
+        <h4 id="indeterminate" class="docs-header-link">
+          <span header-link="indeterminate"></span>
+          Indeterminate
+        </h4>
+      <p>Operations where the user is asked to wait while something finishes and it’s 
+not necessary to indicate how long it will take should use the indeterminate indicator.</p>
+<div material-docs-example="progress-bar-indeterminate"></div>
+
+<p>In this mode the <code>value</code> property is ignored.</p>
+
+        <h4 id="buffer" class="docs-header-link">
+          <span header-link="buffer"></span>
+          Buffer
+        </h4>
+      <p>Use the <code>buffer</code> mode of the progress-bar to indicate some activity or loading from the server.</p>
+<div material-docs-example="progress-bar-buffer"></div>
+
+<p>In &quot;buffer&quot; mode, <code>value</code> determines the progress of the primary bar while the <code>bufferValue</code> is 
+used to show the additional buffering progress.</p>
+
+        <h4 id="query" class="docs-header-link">
+          <span header-link="query"></span>
+          Query
+        </h4>
+      <p>Use the <code>query</code> mode of the progress-bar to indicate pre-loading before the actual loading starts.</p>
+<div material-docs-example="progress-bar-query"></div>
+
+<p>In &quot;query&quot; mode, the progress-bar renders as an inverted &quot;indeterminate&quot; bar. Once the response 
+progress is available, the <code>mode</code> should be changed to determinate to convey the progress. In
+this mode the <code>value</code> property is ignored.</p>
+
+        <h3 id="theming" class="docs-header-link">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p>The color of a progress-bar can be changed by using the <code>color</code> property. By default, progress-bars
+use the theme&#39;s primary color. This can be changed to <code>&#39;accent&#39;</code> or <code>&#39;warn&#39;</code>.  </p>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p><code>MatProgressBar</code> implements the ARIA <code>role=&quot;progressbar&quot;</code> pattern. By default, the progress bar
+sets <code>aria-valuemin</code> to <code>0</code> and <code>aria-valuemax</code> to <code>100</code>. Avoid changing these values, as this may
+cause incompatibility with some assistive technology.</p>
+<p>Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for each progress bar.</p>
+</div>

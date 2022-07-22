@@ -1,0 +1,278 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Material legacy-progress-bar
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatLegacyProgressBarModule} from '@angular/material/legacy-progress-bar';
+      </code>
+    </p>
+  <h3 id="material-legacy-progress-bar-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="MatLegacyProgressBar" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyProgressBar"></span>
+  <code>MatLegacyProgressBar</code>
+  
+</h4><p class="docs-api-class-description"><p><code>&lt;mat-progress-bar&gt;</code> component.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-progress-bar</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matProgressBar</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>bufferValue: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Buffer value of the progress bar. Defaults to zero.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>mode: LegacyProgressBarMode</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Mode of the progress bar.</p>
+<p>Input must be one of these values: determinate, indeterminate, buffer, query, defaults to
+&#39;determinate&#39;.
+Mirrored to mode attribute.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Value of the progress bar. Defaults to zero. Mirrored to aria-valuenow.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>animationEnd: EventEmitter&lt;LegacyProgressAnimationEnd&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when animation of the primary progress bar completes. This event will not
+be emitted when animations are disabled, nor will it be emitted for modes with continuous
+animations (indeterminate and query).</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>progressbarId: `mat-progress-bar-${progressbarId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>ID of the progress bar.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-legacy-progress-bar-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="LegacyProgressAnimationEnd" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyProgressAnimationEnd"></span>
+  <code>LegacyProgressAnimationEnd</code>
+</h4><p class="docs-api-interface-description"><p>Last animation end data.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyProgressBarDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatLegacyProgressBarDefaultOptions"></span>
+  <code>MatLegacyProgressBarDefaultOptions</code>
+</h4><p class="docs-api-interface-description"><p>Default <code>mat-progress-bar</code> options that can be overridden.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color of the progress bar.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>mode: LegacyProgressBarMode</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default mode of the progress bar.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-legacy-progress-bar-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="LegacyProgressBarMode" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="LegacyProgressBarMode"></span>
+  <code>LegacyProgressBarMode</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> LegacyProgressBarMode = <span class="hljs-string">&#x27;determinate&#x27;</span> | <span class="hljs-string">&#x27;indeterminate&#x27;</span> | <span class="hljs-string">&#x27;buffer&#x27;</span> | <span class="hljs-string">&#x27;query&#x27;</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-legacy-progress-bar-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      Constants
+    </h3>
+    
+      
+
+<h4 id="MAT_LEGACY_PROGRESS_BAR_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_PROGRESS_BAR_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_PROGRESS_BAR_DEFAULT_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-progress-bar</code>.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_PROGRESS_BAR_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacyProgressBarDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    </div>
