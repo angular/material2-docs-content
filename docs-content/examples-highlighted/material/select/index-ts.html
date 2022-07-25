@@ -2,7 +2,7 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 <span class="hljs-keyword">import</span> {SelectCustomTriggerExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./select-custom-trigger/select-custom-trigger-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {SelectDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./select-disabled/select-disabled-example&#x27;</span>;
@@ -19,7 +19,7 @@
 <span class="hljs-keyword">import</span> {SelectReactiveFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./select-reactive-form/select-reactive-form-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {SelectInitialValueExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./select-initial-value/select-initial-value-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {SelectHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./select-harness/select-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-form-field&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   SelectCustomTriggerExample,
@@ -62,10 +62,10 @@
     CommonModule,
     FormsModule,
     MatCheckboxModule,
-    MatInputModule,
+    MatLegacyInputModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
+    MatLegacyFormFieldModule,
   ],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,

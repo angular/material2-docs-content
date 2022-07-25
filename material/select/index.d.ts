@@ -6,9 +6,9 @@ import * as i0 from '@angular/core';
 import * as i16 from '@angular/common';
 import * as i17 from '@angular/forms';
 import * as i18 from '@angular/material/checkbox';
-import * as i19 from '@angular/material/input';
+import * as i19 from '@angular/material/legacy-input';
 import * as i20 from '@angular/material/select';
-import * as i21 from '@angular/material/form-field';
+import * as i21 from '@angular/material/legacy-form-field';
 import { NgForm } from '@angular/forms';
 
 declare interface Animal {
@@ -185,7 +185,7 @@ export declare class SelectErrorStateMatcherExample {
 
 export declare class SelectExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<SelectExamplesModule, [typeof i1.SelectCustomTriggerExample, typeof i2.SelectDisabledExample, typeof i3.SelectErrorStateMatcherExample, typeof i4.SelectFormExample, typeof i5.SelectHarnessExample, typeof i6.SelectHintErrorExample, typeof i7.SelectInitialValueExample, typeof i8.SelectMultipleExample, typeof i9.SelectNoRippleExample, typeof i10.SelectOptgroupExample, typeof i11.SelectOverviewExample, typeof i12.SelectPanelClassExample, typeof i13.SelectReactiveFormExample, typeof i14.SelectResetExample, typeof i15.SelectValueBindingExample], [typeof i16.CommonModule, typeof i17.FormsModule, typeof i18.MatCheckboxModule, typeof i19.MatInputModule, typeof i20.MatSelectModule, typeof i17.ReactiveFormsModule, typeof i21.MatFormFieldModule], [typeof i1.SelectCustomTriggerExample, typeof i2.SelectDisabledExample, typeof i3.SelectErrorStateMatcherExample, typeof i4.SelectFormExample, typeof i5.SelectHarnessExample, typeof i6.SelectHintErrorExample, typeof i7.SelectInitialValueExample, typeof i8.SelectMultipleExample, typeof i9.SelectNoRippleExample, typeof i10.SelectOptgroupExample, typeof i11.SelectOverviewExample, typeof i12.SelectPanelClassExample, typeof i13.SelectReactiveFormExample, typeof i14.SelectResetExample, typeof i15.SelectValueBindingExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SelectExamplesModule, [typeof i1.SelectCustomTriggerExample, typeof i2.SelectDisabledExample, typeof i3.SelectErrorStateMatcherExample, typeof i4.SelectFormExample, typeof i5.SelectHarnessExample, typeof i6.SelectHintErrorExample, typeof i7.SelectInitialValueExample, typeof i8.SelectMultipleExample, typeof i9.SelectNoRippleExample, typeof i10.SelectOptgroupExample, typeof i11.SelectOverviewExample, typeof i12.SelectPanelClassExample, typeof i13.SelectReactiveFormExample, typeof i14.SelectResetExample, typeof i15.SelectValueBindingExample], [typeof i16.CommonModule, typeof i17.FormsModule, typeof i18.MatCheckboxModule, typeof i19.MatLegacyInputModule, typeof i20.MatSelectModule, typeof i17.ReactiveFormsModule, typeof i21.MatLegacyFormFieldModule], [typeof i1.SelectCustomTriggerExample, typeof i2.SelectDisabledExample, typeof i3.SelectErrorStateMatcherExample, typeof i4.SelectFormExample, typeof i5.SelectHarnessExample, typeof i6.SelectHintErrorExample, typeof i7.SelectInitialValueExample, typeof i8.SelectMultipleExample, typeof i9.SelectNoRippleExample, typeof i10.SelectOptgroupExample, typeof i11.SelectOverviewExample, typeof i12.SelectPanelClassExample, typeof i13.SelectReactiveFormExample, typeof i14.SelectResetExample, typeof i15.SelectValueBindingExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<SelectExamplesModule>;
 }
 

@@ -3,12 +3,11 @@ import * as i0 from '@angular/core';
 import { Component, Optional, Inject, Self, Input, NgModule } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { Validators, ReactiveFormsModule } from '@angular/forms';
-import * as i1 from '@angular/material-experimental/mdc-form-field';
-import { MatFormFieldControl, MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
+import * as i1 from '@angular/material/form-field';
+import { MAT_FORM_FIELD, MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
 import * as i2 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { MAT_FORM_FIELD } from '@angular/material/form-field';
 import { Subject } from 'rxjs';
 import * as i4 from '@angular/cdk/a11y';
 

@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
 import * as i4 from '@angular/common';
-import * as i5 from '@angular/material/input';
+import * as i5 from '@angular/material/legacy-input';
 import * as i6 from '@angular/material/paginator';
 import * as i8 from '@angular/forms';
 import { MatPaginatorIntl } from '@angular/material/paginator';
@@ -60,7 +60,7 @@ export declare class PaginatorConfigurableExample {
 
 export declare class PaginatorExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<PaginatorExamplesModule, [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample], [typeof i4.CommonModule, typeof i5.MatInputModule, typeof i6.MatPaginatorModule, typeof i7.PaginatorIntlExampleModule, typeof i8.FormsModule], [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<PaginatorExamplesModule, [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample], [typeof i4.CommonModule, typeof i5.MatLegacyInputModule, typeof i6.MatPaginatorModule, typeof i7.PaginatorIntlExampleModule, typeof i8.FormsModule], [typeof i1.PaginatorConfigurableExample, typeof i2.PaginatorHarnessExample, typeof i3.PaginatorOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<PaginatorExamplesModule>;
 }
 

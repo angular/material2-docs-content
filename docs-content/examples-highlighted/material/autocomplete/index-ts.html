@@ -2,8 +2,8 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
 <span class="hljs-keyword">import</span> {AutocompleteAutoActiveFirstOptionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {AutocompleteDisplayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./autocomplete-display/autocomplete-display-example&#x27;</span>;
@@ -40,8 +40,8 @@
   <span class="hljs-attr">imports</span>: [
     CommonModule,
     MatAutocompleteModule,
-    MatFormFieldModule,
-    MatInputModule,
+    MatLegacyFormFieldModule,
+    MatLegacyInputModule,
     MatSlideToggleModule,
     FormsModule,
     ReactiveFormsModule,

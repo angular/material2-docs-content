@@ -19,7 +19,11 @@
   NgControl,
   Validators,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  MAT_FORM_FIELD,
+  MatLegacyFormField,
+  MatLegacyFormFieldControl,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field with custom telephone number input control. */</span>
@@ -43,13 +47,15 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-tel-input&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;example-tel-input-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;example-tel-input-example.css&#x27;</span>],
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatFormFieldControl, <span class="hljs-attr">useExisting</span>: MyTelInput}],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatLegacyFormFieldControl, <span class="hljs-attr">useExisting</span>: MyTelInput}],
   <span class="hljs-attr">host</span>: {
     <span class="hljs-string">&#x27;[class.example-floating]&#x27;</span>: <span class="hljs-string">&#x27;shouldLabelFloat&#x27;</span>,
     <span class="hljs-string">&#x27;[id]&#x27;</span>: <span class="hljs-string">&#x27;id&#x27;</span>,
   },
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span>
+  <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatLegacyFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span>
+</span>{
   <span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;area&#x27;</span>) areaInput: HTMLInputElement;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;exchange&#x27;</span>) exchangeInput: HTMLInputElement;
@@ -137,7 +143,7 @@
     <span class="hljs-keyword">private</span> _formBuilder: FormBuilder,
     <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
     <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
-    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatFormField,
+    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Inject</span>(MAT_FORM_FIELD) <span class="hljs-keyword">public</span> _formField: MatLegacyFormField,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
   </span>)</span> {
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.ngControl != <span class="hljs-literal">null</span>) {

@@ -30,11 +30,31 @@
     
       
 
+<h4 id="MatLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLabel"></span>
+  <code>MatLabel</code>
+  
+</h4><p class="docs-api-class-description"><p>The floating label for a <code>mat-form-field</code>.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-label</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
 <h4 id="MatError" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatError"></span>
   <code>MatError</code>
   
-</h4><p class="docs-api-class-description"><p>Single error message to be shown underneath the form field.</p>
+</h4><p class="docs-api-class-description"><p>Single error message to be shown underneath the form-field.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
@@ -64,203 +84,6 @@
 
 
 
-
-
-
-    
-      
-
-<h4 id="MatFormField" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFormField"></span>
-  <code>MatFormField</code>
-  
-</h4><p class="docs-api-class-description"><p>Container for form controls that applies Material Design styling and behavior.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-form-field</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matFormField</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>appearance: MatFormFieldAppearance</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The form field appearance style.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>floatLabel: FloatLabelType</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the label should always float, never float or float as the user types.</p>
-<p>Note: only the legacy appearance supports the <code>never</code> option. <code>never</code> was originally added as a
-way to make the floating label emulate the behavior of a standard input placeholder. However
-the form field now supports both floating labels and placeholders. Therefore in the non-legacy
-appearances the <code>never</code> option has been disabled in favor of just using the placeholder.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>hideRequiredMarker: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the required marker should be hidden.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>hintLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Text for the form field hint.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets an ElementRef for the element that a overlay attached to the form field should be
-positioned relative to.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ElementRef</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getLabelId
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the id of the label element. If no label is present, returns <code>null</code>.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string | null</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updateOutlineGap
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the width and position of the gap in the outline. Only relevant for the outline
-appearance.</p>
-
-    </td>
-  </tr></table>
-
-
-  
 
 
 
@@ -322,28 +145,6 @@ appearance.</p>
     
       
 
-<h4 id="MatPlaceholder" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatPlaceholder"></span>
-  <code>MatPlaceholder</code>
-  
-</h4><p class="docs-api-class-description"><p>The placeholder text for an <code>MatFormField</code>.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-placeholder</span>
-  
-</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v8.0.0 or later">
-  Deprecated
-</div>
-
-
-
-
-
-
-    
-      
-
 <h4 id="MatPrefix" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatPrefix"></span>
   <code>MatPrefix</code>
@@ -353,6 +154,10 @@ appearance.</p>
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">[matPrefix]</span>
+  
+    <span class="docs-api-class-selector-name">[matIconPrefix]</span>
+  
+    <span class="docs-api-class-selector-name">[matTextPrefix]</span>
   
 </p>
 
@@ -374,6 +179,10 @@ appearance.</p>
   
     <span class="docs-api-class-selector-name">[matSuffix]</span>
   
+    <span class="docs-api-class-selector-name">[matIconSuffix]</span>
+  
+    <span class="docs-api-class-selector-name">[matTextSuffix]</span>
+  
 </p>
 
 
@@ -384,20 +193,178 @@ appearance.</p>
     
       
 
-<h4 id="MatLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatLabel"></span>
-  <code>MatLabel</code>
+<h4 id="MatFormField" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFormField"></span>
+  <code>MatFormField</code>
   
-</h4><p class="docs-api-class-description"><p>The floating label for a <code>mat-form-field</code>.</p>
+</h4><p class="docs-api-class-description"><p>Container for form controls that applies Material Design styling and behavior.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
-    <span class="docs-api-class-selector-name">mat-label</span>
+    <span class="docs-api-class-selector-name">mat-form-field</span>
   
-</p>
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matFormField</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>appearance: MatFormFieldAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The form field appearance style.</p>
+</td>
+</tr>
 
 
+    
+      
 
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The color palette for the form field.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>floatLabel: FloatLabelType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the label should always float or float as the user types.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hideRequiredMarker: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the required marker should be hidden.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hintLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Text for the form field hint.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>subscriptSizing: SubscriptSizing</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the form field should reserve space for one line of hint/error text (default)
+or to have the spacing grow from 0px as needed based on the size of the hint/error content.
+Note that when using dynamic sizing, layout shifts will occur when hint/error text changes.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets an ElementRef for the element that a overlay attached to the form field
+should be positioned relative to.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabelId
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the id of the label element. If no label is present, returns <code>null</code>.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -757,6 +724,19 @@ using the <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> injection token.</p>
 
 
     
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>subscriptSizing: SubscriptSizing</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the form field should reserve space for one line by default.</p>
+</td>
+</tr>
+
+
+    
   </table>
 
 
@@ -771,13 +751,13 @@ using the <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> injection token.</p>
     
       
 
-<h4 id="MatFormFieldAppearance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MatFormFieldAppearance"></span>
-  <code>MatFormFieldAppearance</code>
-</h4><p class="docs-api-type-alias-description"><p>Possible appearance styles for the form field.</p>
+<h4 id="FloatLabelType" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="FloatLabelType"></span>
+  <code>FloatLabelType</code>
+</h4><p class="docs-api-type-alias-description"><p>Type for the available floatLabel values.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatFormFieldAppearance = <span class="hljs-string">&#x27;legacy&#x27;</span> | <span class="hljs-string">&#x27;standard&#x27;</span> | <span class="hljs-string">&#x27;fill&#x27;</span> | <span class="hljs-string">&#x27;outline&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> FloatLabelType = <span class="hljs-string">&#x27;always&#x27;</span> | <span class="hljs-string">&#x27;auto&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -785,13 +765,27 @@ using the <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> injection token.</p>
     
       
 
-<h4 id="FloatLabelType" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="FloatLabelType"></span>
-  <code>FloatLabelType</code>
-</h4><p class="docs-api-type-alias-description"><p>Possible values for the &quot;floatLabel&quot; form field input.</p>
+<h4 id="MatFormFieldAppearance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatFormFieldAppearance"></span>
+  <code>MatFormFieldAppearance</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible appearance styles for the form field.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> FloatLabelType = <span class="hljs-string">&#x27;always&#x27;</span> | <span class="hljs-string">&#x27;never&#x27;</span> | <span class="hljs-string">&#x27;auto&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatFormFieldAppearance = <span class="hljs-string">&#x27;fill&#x27;</span> | <span class="hljs-string">&#x27;outline&#x27;</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="SubscriptSizing" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="SubscriptSizing"></span>
+  <code>SubscriptSizing</code>
+</h4><p class="docs-api-type-alias-description"><p>Behaviors for how the subscript height is set.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> SubscriptSizing = <span class="hljs-string">&#x27;fixed&#x27;</span> | <span class="hljs-string">&#x27;dynamic&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -812,37 +806,6 @@ retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_ERROR: InjectionToken&lt;MatError&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_FORM_FIELD_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_FORM_FIELD_DEFAULT_OPTIONS"></span>
-  <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to configure the
-default options for all form field within an app.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_FORM_FIELD_DEFAULT_OPTIONS: InjectionToken&lt;MatFormFieldDefaultOptions&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_FORM_FIELD" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_FORM_FIELD"></span>
-  <code>MAT_FORM_FIELD</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to inject an instances of <code>MatFormField</code>. It serves
-as alternative token to the actual <code>MatFormField</code> class which would cause unnecessary
-retention of the <code>MatFormField</code> class and its component metadata.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_FORM_FIELD: InjectionToken&lt;MatFormField&gt;;</code>
 </pre>
 </div>
 
@@ -875,6 +838,37 @@ retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SUFFIX: InjectionToken&lt;MatSuffix&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_FORM_FIELD" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_FORM_FIELD"></span>
+  <code>MAT_FORM_FIELD</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to inject an instances of <code>MatFormField</code>. It serves
+as alternative token to the actual <code>MatFormField</code> class which would cause unnecessary
+retention of the <code>MatFormField</code> class and its component metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_FORM_FIELD: InjectionToken&lt;MatFormField&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_FORM_FIELD_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_FORM_FIELD_DEFAULT_OPTIONS"></span>
+  <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to configure the
+default options for all form field within an app.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_FORM_FIELD_DEFAULT_OPTIONS: InjectionToken&lt;MatFormFieldDefaultOptions&gt;;</code>
 </pre>
 </div>
 

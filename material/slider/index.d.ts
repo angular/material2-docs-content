@@ -4,7 +4,7 @@ import * as i5 from '@angular/common';
 import * as i6 from '@angular/forms';
 import * as i7 from '@angular/material/legacy-card';
 import * as i8 from '@angular/material/checkbox';
-import * as i9 from '@angular/material/input';
+import * as i9 from '@angular/material/legacy-input';
 
 declare namespace i1 {
     export {
@@ -52,7 +52,7 @@ export declare class SliderConfigurableExample {
 
 export declare class SliderExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<SliderExamplesModule, [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderHarnessExample, typeof i4.SliderOverviewExample], [typeof i5.CommonModule, typeof i6.FormsModule, typeof i7.MatLegacyCardModule, typeof i8.MatCheckboxModule, typeof i9.MatInputModule, typeof i10.MatSliderModule], [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderHarnessExample, typeof i4.SliderOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SliderExamplesModule, [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderHarnessExample, typeof i4.SliderOverviewExample], [typeof i5.CommonModule, typeof i6.FormsModule, typeof i7.MatLegacyCardModule, typeof i8.MatCheckboxModule, typeof i9.MatLegacyInputModule, typeof i10.MatSliderModule], [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderHarnessExample, typeof i4.SliderOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<SliderExamplesModule>;
 }
 

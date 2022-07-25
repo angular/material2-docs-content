@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/input';
+import * as i10 from '@angular/material/legacy-input';
 import * as i5 from '@angular/material/button';
 import * as i6 from '@angular/material/datepicker';
 import * as i7 from '@angular/material/core';
@@ -9,7 +9,7 @@ import { MatAccordion } from '@angular/material/expansion';
 
 export declare class ExpansionExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ExpansionExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ExpansionExamplesModule, [typeof i1.ExpansionExpandCollapseAllExample, typeof i2.ExpansionHarnessExample, typeof i3.ExpansionOverviewExample, typeof i4.ExpansionStepsExample], [typeof i5.MatButtonModule, typeof i6.MatDatepickerModule, typeof i7.MatNativeDateModule, typeof i8.MatExpansionModule, typeof i9.MatIconModule, typeof i10.MatInputModule], [typeof i1.ExpansionExpandCollapseAllExample, typeof i2.ExpansionHarnessExample, typeof i3.ExpansionOverviewExample, typeof i4.ExpansionStepsExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ExpansionExamplesModule, [typeof i1.ExpansionExpandCollapseAllExample, typeof i2.ExpansionHarnessExample, typeof i3.ExpansionOverviewExample, typeof i4.ExpansionStepsExample], [typeof i5.MatButtonModule, typeof i6.MatDatepickerModule, typeof i7.MatNativeDateModule, typeof i8.MatExpansionModule, typeof i9.MatIconModule, typeof i10.MatLegacyInputModule], [typeof i1.ExpansionExpandCollapseAllExample, typeof i2.ExpansionHarnessExample, typeof i3.ExpansionOverviewExample, typeof i4.ExpansionStepsExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ExpansionExamplesModule>;
 }
 

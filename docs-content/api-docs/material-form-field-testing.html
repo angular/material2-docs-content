@@ -34,7 +34,7 @@
   <span header-link="MatFormFieldHarness"></span>
   <code>MatFormFieldHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Material form-field&#39;s in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based form-field&#39;s in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-form-field&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-mdc-form-field&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -81,7 +81,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;&#39;legacy&#39; | &#39;standard&#39; | &#39;fill&#39; | &#39;outline&#39;&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;&#39;fill&#39; | &#39;outline&#39;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -775,8 +775,8 @@ if no form control is set up.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatFormFieldHarness</code> that meets
-certain criteria.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a form field with specific
+attributes.</p>
 
     </td>
   </tr><thead>
@@ -805,7 +805,7 @@ certain criteria.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatFormFieldHarness&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">

@@ -6,7 +6,7 @@ import * as i0 from '@angular/core';
 import * as i14 from '@angular/forms';
 import * as i15 from '@angular/material/button';
 import * as i16 from '@angular/material/icon';
-import * as i17 from '@angular/material/input';
+import * as i17 from '@angular/material/legacy-input';
 import * as i18 from '@angular/material/radio';
 import * as i19 from '@angular/material/stepper';
 import * as i20 from '@angular/common';
@@ -140,7 +140,7 @@ export declare class StepperErrorsExample {
 
 export declare class StepperExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<StepperExamplesModule, [typeof i1.StepperEditableExample, typeof i2.StepperErrorsExample, typeof i3.StepperHarnessExample, typeof i4.StepperIntlExample, typeof i5.StepperLabelPositionBottomExample, typeof i6.StepperOptionalExample, typeof i7.StepperOverviewExample, typeof i8.StepperStatesExample, typeof i9.StepperVerticalExample, typeof i10.StepperLazyContentExample, typeof i11.StepperResponsiveExample, typeof i12.StepperHeaderPositionExample, typeof i13.StepperAnimationsExample], [typeof i14.FormsModule, typeof i15.MatButtonModule, typeof i16.MatIconModule, typeof i17.MatInputModule, typeof i18.MatRadioModule, typeof i19.MatStepperModule, typeof i14.ReactiveFormsModule, typeof i20.CommonModule], [typeof i1.StepperEditableExample, typeof i2.StepperErrorsExample, typeof i3.StepperHarnessExample, typeof i4.StepperIntlExample, typeof i5.StepperLabelPositionBottomExample, typeof i6.StepperOptionalExample, typeof i7.StepperOverviewExample, typeof i8.StepperStatesExample, typeof i9.StepperVerticalExample, typeof i10.StepperLazyContentExample, typeof i11.StepperResponsiveExample, typeof i12.StepperHeaderPositionExample, typeof i13.StepperAnimationsExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<StepperExamplesModule, [typeof i1.StepperEditableExample, typeof i2.StepperErrorsExample, typeof i3.StepperHarnessExample, typeof i4.StepperIntlExample, typeof i5.StepperLabelPositionBottomExample, typeof i6.StepperOptionalExample, typeof i7.StepperOverviewExample, typeof i8.StepperStatesExample, typeof i9.StepperVerticalExample, typeof i10.StepperLazyContentExample, typeof i11.StepperResponsiveExample, typeof i12.StepperHeaderPositionExample, typeof i13.StepperAnimationsExample], [typeof i14.FormsModule, typeof i15.MatButtonModule, typeof i16.MatIconModule, typeof i17.MatLegacyInputModule, typeof i18.MatRadioModule, typeof i19.MatStepperModule, typeof i14.ReactiveFormsModule, typeof i20.CommonModule], [typeof i1.StepperEditableExample, typeof i2.StepperErrorsExample, typeof i3.StepperHarnessExample, typeof i4.StepperIntlExample, typeof i5.StepperLabelPositionBottomExample, typeof i6.StepperOptionalExample, typeof i7.StepperOverviewExample, typeof i8.StepperStatesExample, typeof i9.StepperVerticalExample, typeof i10.StepperLazyContentExample, typeof i11.StepperResponsiveExample, typeof i12.StepperHeaderPositionExample, typeof i13.StepperAnimationsExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<StepperExamplesModule>;
 }
 
