@@ -17,22 +17,22 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material core-testing
+    API reference for Angular Material legacy-core-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatOptionHarness} from '@angular/material/core/testing';
+        import {MatLegacyOptionHarness} from '@angular/material/legacy-core/testing';
       </code>
     </p>
-  <h3 id="material-core-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-core-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatOptionHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatOptionHarness"></span>
-  <code>MatOptionHarness</code>
+<h4 id="MatLegacyOptionHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyOptionHarness"></span>
+  <code>MatLegacyOptionHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -41,7 +41,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based <code>mat-option</code> in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a <code>mat-option</code> in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,7 +53,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-option&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-option&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Selector used to locate option instances.</p>
@@ -311,7 +311,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for an option with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatOptionsHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -333,22 +334,7 @@
       </p>
     </td>
   </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
-
-      </p>
-    </td>
-  </tr></table>
+  </table>
 
 
   
@@ -358,9 +344,9 @@
     
       
 
-<h4 id="MatOptgroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatOptgroupHarness"></span>
-  <code>MatOptgroupHarness</code>
+<h4 id="MatLegacyOptgroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyOptgroupHarness"></span>
+  <code>MatLegacyOptgroupHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -369,7 +355,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based <code>mat-optgroup</code> in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a <code>mat-optgroup</code> in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -381,7 +367,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-optgroup&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-optgroup&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Selector used to locate option group instances.</p>
@@ -469,7 +455,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatOptionHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyOptionHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -558,8 +544,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a option group with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatOptgroupHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -581,29 +567,14 @@ attributes.</p>
       </p>
     </td>
   </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
-
-      </p>
-    </td>
-  </tr></table>
+  </table>
 
 
   
 
 
 
-    <h3 id="material-core-testing-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-core-testing-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
