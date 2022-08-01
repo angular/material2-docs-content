@@ -3,7 +3,7 @@ import * as i0 from "@angular/core";
 import * as i1 from "@angular/material/button";
 import * as i2 from "@angular/material/sidenav";
 import * as i3 from "@angular/material/legacy-form-field";
-import * as i4 from "@angular/material/select";
+import * as i4 from "@angular/material/legacy-select";
 import * as i5 from "@angular/material/legacy-core";
 /** @title Drawer with explicit backdrop setting */
 export class SidenavBackdropExample {

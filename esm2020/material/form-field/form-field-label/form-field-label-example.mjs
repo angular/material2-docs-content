@@ -7,7 +7,7 @@ import * as i3 from "@angular/material/legacy-form-field";
 import * as i4 from "@angular/material/icon";
 import * as i5 from "@angular/material/legacy-input";
 import * as i6 from "@angular/material/radio";
-import * as i7 from "@angular/material/select";
+import * as i7 from "@angular/material/legacy-select";
 import * as i8 from "@angular/material/legacy-core";
 /** @title Form field with label */
 export class FormFieldLabelExample {

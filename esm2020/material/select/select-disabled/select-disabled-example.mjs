@@ -5,7 +5,7 @@ import * as i1 from "@angular/forms";
 import * as i2 from "@angular/material/checkbox";
 import * as i3 from "@angular/material/legacy-form-field";
 import * as i4 from "@angular/material/legacy-input";
-import * as i5 from "@angular/material/select";
+import * as i5 from "@angular/material/legacy-select";
 import * as i6 from "@angular/material/legacy-core";
 /** @title Disabled select */
 export class SelectDisabledExample {

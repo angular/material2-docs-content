@@ -8,8 +8,8 @@ import * as i3 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i5 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
-import * as i4$1 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i4$1 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i4 from '@angular/material/legacy-form-field';
 import { take } from 'rxjs/operators';
 import * as i5$1 from '@angular/material/legacy-core';
@@ -85,14 +85,28 @@ class CdkTextFieldExamplesModule {
 CdkTextFieldExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkTextFieldExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 CdkTextFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.1", ngImport: i0, type: CdkTextFieldExamplesModule, declarations: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
-        TextFieldAutosizeTextareaExample], imports: [CommonModule, TextFieldModule, MatButtonModule, MatLegacyInputModule, MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
+        TextFieldAutosizeTextareaExample], imports: [CommonModule,
+        TextFieldModule,
+        MatButtonModule,
+        MatLegacyInputModule,
+        MatLegacySelectModule], exports: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
         TextFieldAutosizeTextareaExample] });
-CdkTextFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkTextFieldExamplesModule, imports: [CommonModule, TextFieldModule, MatButtonModule, MatLegacyInputModule, MatSelectModule] });
+CdkTextFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkTextFieldExamplesModule, imports: [CommonModule,
+        TextFieldModule,
+        MatButtonModule,
+        MatLegacyInputModule,
+        MatLegacySelectModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkTextFieldExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [CommonModule, TextFieldModule, MatButtonModule, MatLegacyInputModule, MatSelectModule],
+                    imports: [
+                        CommonModule,
+                        TextFieldModule,
+                        MatButtonModule,
+                        MatLegacyInputModule,
+                        MatLegacySelectModule,
+                    ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]

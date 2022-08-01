@@ -15,7 +15,7 @@ import * as i13 from '@angular/material/legacy-form-field';
 import * as i14 from '@angular/material/icon';
 import * as i15 from '@angular/material/legacy-input';
 import * as i16 from '@angular/material/radio';
-import * as i17 from '@angular/material/select';
+import * as i17 from '@angular/material/legacy-select';
 import * as i18 from '@angular/forms';
 import { MatLegacyFormField } from '@angular/material/legacy-form-field';
 import { MatLegacyFormFieldControl } from '@angular/material/legacy-form-field';
@@ -46,7 +46,7 @@ export declare class FormFieldErrorExample {
 
 export declare class FormFieldExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<FormFieldExamplesModule, [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample, typeof i2.MyTelInput], [typeof i10.CommonModule, typeof i11.MatButtonModule, typeof i12.MatCheckboxModule, typeof i13.MatLegacyFormFieldModule, typeof i14.MatIconModule, typeof i15.MatLegacyInputModule, typeof i16.MatRadioModule, typeof i17.MatSelectModule, typeof i18.ReactiveFormsModule], [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<FormFieldExamplesModule, [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample, typeof i2.MyTelInput], [typeof i10.CommonModule, typeof i11.MatButtonModule, typeof i12.MatCheckboxModule, typeof i13.MatLegacyFormFieldModule, typeof i14.MatIconModule, typeof i15.MatLegacyInputModule, typeof i16.MatRadioModule, typeof i17.MatLegacySelectModule, typeof i18.ReactiveFormsModule], [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<FormFieldExamplesModule>;
 }
 

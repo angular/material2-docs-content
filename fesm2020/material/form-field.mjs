@@ -16,8 +16,8 @@ import * as i2$1 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
 import * as i6 from '@angular/material/radio';
 import { MatRadioModule } from '@angular/material/radio';
-import * as i3 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i3 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i4 from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs';
@@ -368,7 +368,7 @@ FormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0",
         MatIconModule,
         MatLegacyInputModule,
         MatRadioModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         ReactiveFormsModule], exports: [FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
@@ -385,7 +385,7 @@ FormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0",
         MatIconModule,
         MatLegacyInputModule,
         MatRadioModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         ReactiveFormsModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: FormFieldExamplesModule, decorators: [{
             type: NgModule,
@@ -398,7 +398,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                         MatIconModule,
                         MatLegacyInputModule,
                         MatRadioModule,
-                        MatSelectModule,
+                        MatLegacySelectModule,
                         ReactiveFormsModule,
                     ],
                     declarations: [...EXAMPLES, MyTelInput],

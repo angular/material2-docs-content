@@ -6,8 +6,8 @@ import * as i2$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i5 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
-import * as i4 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i4 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i1 from '@angular/material/snack-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import * as i3 from '@angular/material/legacy-form-field';
@@ -113,15 +113,29 @@ SnackBarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", v
 SnackBarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.1", ngImport: i0, type: SnackBarExamplesModule, declarations: [SnackBarComponentExample,
         SnackBarHarnessExample,
         SnackBarOverviewExample,
-        SnackBarPositionExample, PizzaPartyComponent], imports: [FormsModule, MatButtonModule, MatLegacyInputModule, MatSelectModule, MatSnackBarModule], exports: [SnackBarComponentExample,
+        SnackBarPositionExample, PizzaPartyComponent], imports: [FormsModule,
+        MatButtonModule,
+        MatLegacyInputModule,
+        MatLegacySelectModule,
+        MatSnackBarModule], exports: [SnackBarComponentExample,
         SnackBarHarnessExample,
         SnackBarOverviewExample,
         SnackBarPositionExample] });
-SnackBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SnackBarExamplesModule, imports: [FormsModule, MatButtonModule, MatLegacyInputModule, MatSelectModule, MatSnackBarModule] });
+SnackBarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SnackBarExamplesModule, imports: [FormsModule,
+        MatButtonModule,
+        MatLegacyInputModule,
+        MatLegacySelectModule,
+        MatSnackBarModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SnackBarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [FormsModule, MatButtonModule, MatLegacyInputModule, MatSelectModule, MatSnackBarModule],
+                    imports: [
+                        FormsModule,
+                        MatButtonModule,
+                        MatLegacyInputModule,
+                        MatLegacySelectModule,
+                        MatSnackBarModule,
+                    ],
                     declarations: [...EXAMPLES, PizzaPartyComponent],
                     exports: EXAMPLES,
                 }]

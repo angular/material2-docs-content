@@ -17,36 +17,16 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material select
+    API reference for Angular Material legacy-select
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatSelectModule} from '@angular/material/select';
+        import {MatLegacySelectModule} from '@angular/material/legacy-select';
       </code>
     </p>
-  <h3 id="material-select-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-select-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
-    
-      
-
-<h4 id="MatSelectTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSelectTrigger"></span>
-  <code>MatSelectTrigger</code>
-  
-</h4><p class="docs-api-class-description"><p>Allows the user to customize the trigger that is displayed when the select has a value.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-select-trigger</span>
-  
-</p>
-
-
-
-
-
-
     
       
 
@@ -327,7 +307,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>customTrigger: MatSelectTrigger</code>
+      <code>customTrigger: MatLegacySelectTrigger</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -391,7 +371,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>optionGroups: QueryList&lt;MatOptgroup&gt;</code>
+      <code>optionGroups: QueryList&lt;MatLegacyOptgroup&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -416,7 +396,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>options: QueryList&lt;MatOption&gt;</code>
+      <code>options: QueryList&lt;MatLegacyOption&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -467,18 +447,6 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>shouldLabelFloat: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>trigger: ElementRef</code>
     </p>
   </td>
@@ -514,7 +482,12 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <th colspan="2" class="docs-api-method-name-cell">close
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Closes the overlay panel and focuses the host element.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -602,7 +575,27 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 
 
-    <h3 id="material-select-classes" class="docs-header-link docs-api-h3">
+    
+      
+
+<h4 id="MatSelectTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSelectTrigger"></span>
+  <code>MatSelectTrigger</code>
+  
+</h4><p class="docs-api-class-description"><p>Allows the user to customize the trigger that is displayed when the select has a value.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-select-trigger</span>
+  
+</p>
+
+
+
+
+
+
+    <h3 id="material-legacy-select-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
@@ -625,7 +618,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatSelect</code>
+      <code>source: MatLegacySelect</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the select that emitted the change event.</p>
@@ -652,118 +645,6 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 
 
-
-
-    <h3 id="material-select-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MatSelectConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatSelectConfig"></span>
-  <code>MatSelectConfig</code>
-</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the default options for the select module.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableOptionCentering: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether option centering should be disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>overlayPanelClass: string | string[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Class or list of classes to be applied to the menu&#39;s overlay panel.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>typeaheadDebounceInterval: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Time to wait in milliseconds after the last keystroke before moving focus to an item.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-select-constants" class="docs-header-link docs-api-h3">
-      <span header-link="constants"></span>
-      Constants
-    </h3>
-    
-      
-
-<h4 id="MAT_SELECT_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_SELECT_SCROLL_STRATEGY"></span>
-  <code>MAT_SELECT_SCROLL_STRATEGY</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while a select is open.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SELECT_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_SELECT_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_SELECT_CONFIG"></span>
-  <code>MAT_SELECT_CONFIG</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to provide the default options the select module.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SELECT_CONFIG: InjectionToken&lt;MatSelectConfig&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_SELECT_TRIGGER" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_SELECT_TRIGGER"></span>
-  <code>MAT_SELECT_TRIGGER</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatSelectTrigger</code>. It serves as
-alternative token to the actual <code>MatSelectTrigger</code> class which could cause unnecessary
-retention of the class and its directive metadata.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SELECT_TRIGGER: InjectionToken&lt;MatSelectTrigger&gt;;</code>
-</pre>
-</div>
 
 
     </div>

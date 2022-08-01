@@ -8,8 +8,8 @@ import * as i2$1 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i4 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
-import * as i5 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i5 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i3 from '@angular/material/legacy-form-field';
 import { MatLegacyFormFieldModule } from '@angular/material/legacy-form-field';
 import * as i6 from '@angular/material/legacy-core';
@@ -409,7 +409,7 @@ SelectExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ve
         FormsModule,
         MatCheckboxModule,
         MatLegacyInputModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         ReactiveFormsModule,
         MatLegacyFormFieldModule], exports: [SelectCustomTriggerExample,
         SelectDisabledExample,
@@ -430,7 +430,7 @@ SelectExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", ve
         FormsModule,
         MatCheckboxModule,
         MatLegacyInputModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         ReactiveFormsModule,
         MatLegacyFormFieldModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SelectExamplesModule, decorators: [{
@@ -441,7 +441,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                         FormsModule,
                         MatCheckboxModule,
                         MatLegacyInputModule,
-                        MatSelectModule,
+                        MatLegacySelectModule,
                         ReactiveFormsModule,
                         MatLegacyFormFieldModule,
                     ],

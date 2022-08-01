@@ -2,8 +2,8 @@ import * as i1 from '@angular/cdk/a11y';
 import { A11yModule } from '@angular/cdk/a11y';
 import * as i0 from '@angular/core';
 import { Component, ViewChild, NgModule } from '@angular/core';
-import * as i3 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i3 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i2 from '@angular/material/legacy-form-field';
 import * as i4 from '@angular/material/legacy-core';
 
@@ -111,14 +111,14 @@ class CdkA11yExamplesModule {
 CdkA11yExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkA11yExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
 CdkA11yExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.1", ngImport: i0, type: CdkA11yExamplesModule, declarations: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
-        FocusMonitorOverviewExample], imports: [A11yModule, MatSelectModule], exports: [FocusMonitorDirectivesExample,
+        FocusMonitorOverviewExample], imports: [A11yModule, MatLegacySelectModule], exports: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
         FocusMonitorOverviewExample] });
-CdkA11yExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkA11yExamplesModule, imports: [A11yModule, MatSelectModule] });
+CdkA11yExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkA11yExamplesModule, imports: [A11yModule, MatLegacySelectModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CdkA11yExamplesModule, decorators: [{
             type: NgModule,
             args: [{
-                    imports: [A11yModule, MatSelectModule],
+                    imports: [A11yModule, MatLegacySelectModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]

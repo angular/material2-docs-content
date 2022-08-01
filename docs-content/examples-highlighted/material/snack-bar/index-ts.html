@@ -2,7 +2,7 @@
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatLegacyInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacySelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-select&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   PizzaPartyComponent,
@@ -28,7 +28,13 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [FormsModule, MatButtonModule, MatLegacyInputModule, MatSelectModule, MatSnackBarModule],
+  <span class="hljs-attr">imports</span>: [
+    FormsModule,
+    MatButtonModule,
+    MatLegacyInputModule,
+    MatLegacySelectModule,
+    MatSnackBarModule,
+  ],
   <span class="hljs-attr">declarations</span>: [...EXAMPLES, PizzaPartyComponent],
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

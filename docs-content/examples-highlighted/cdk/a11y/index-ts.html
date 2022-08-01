@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {A11yModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacySelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-select&#x27;</span>;
 <span class="hljs-keyword">import</span> {FocusMonitorDirectivesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./focus-monitor-directives/focus-monitor-directives-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {FocusMonitorFocusViaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./focus-monitor-focus-via/focus-monitor-focus-via-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {FocusMonitorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./focus-monitor-overview/focus-monitor-overview-example&#x27;</span>;
@@ -14,7 +14,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [A11yModule, MatSelectModule],
+  <span class="hljs-attr">imports</span>: [A11yModule, MatLegacySelectModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

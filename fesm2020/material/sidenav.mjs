@@ -14,8 +14,8 @@ import * as i5$2 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';
 import * as i4$2 from '@angular/material/radio';
 import { MatRadioModule } from '@angular/material/radio';
-import * as i4 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i4 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i5 from '@angular/material/sidenav';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import * as i7 from '@angular/material/toolbar';
@@ -224,7 +224,7 @@ SidenavExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         MatListModule,
         MatRadioModule,
         MatSidenavModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         MatToolbarModule,
         ReactiveFormsModule], exports: [SidenavAutosizeExample,
         SidenavBackdropExample,
@@ -245,7 +245,7 @@ SidenavExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", v
         MatListModule,
         MatRadioModule,
         MatSidenavModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         MatToolbarModule,
         ReactiveFormsModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SidenavExamplesModule, decorators: [{
@@ -260,7 +260,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                         MatListModule,
                         MatRadioModule,
                         MatSidenavModule,
-                        MatSelectModule,
+                        MatLegacySelectModule,
                         MatToolbarModule,
                         ReactiveFormsModule,
                     ],

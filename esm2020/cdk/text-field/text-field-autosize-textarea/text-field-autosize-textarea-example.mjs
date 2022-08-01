@@ -5,7 +5,7 @@ import * as i0 from "@angular/core";
 import * as i1 from "@angular/cdk/text-field";
 import * as i2 from "@angular/material/legacy-form-field";
 import * as i3 from "@angular/material/legacy-input";
-import * as i4 from "@angular/material/select";
+import * as i4 from "@angular/material/legacy-select";
 import * as i5 from "@angular/material/legacy-core";
 /** @title Auto-resizing textarea */
 export class TextFieldAutosizeTextareaExample {

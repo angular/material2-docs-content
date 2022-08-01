@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/common";
 import * as i2 from "@angular/material/legacy-form-field";
-import * as i3 from "@angular/material/select";
+import * as i3 from "@angular/material/legacy-select";
 import * as i4 from "@angular/material/legacy-core";
 /**
  * @title Testing with MatSelectHarness

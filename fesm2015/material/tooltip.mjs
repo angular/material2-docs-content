@@ -12,8 +12,8 @@ import * as i2$2 from '@angular/material/checkbox';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import * as i3 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
-import * as i5 from '@angular/material/select';
-import { MatSelectModule } from '@angular/material/select';
+import * as i5 from '@angular/material/legacy-select';
+import { MatLegacySelectModule } from '@angular/material/legacy-select';
 import * as i2$1 from '@angular/material/legacy-tooltip';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatLegacyTooltipModule } from '@angular/material/legacy-tooltip';
 import * as i2 from '@angular/material/legacy-form-field';
@@ -194,7 +194,7 @@ TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         MatButtonModule,
         MatCheckboxModule,
         MatLegacyInputModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         MatLegacyTooltipModule,
         ReactiveFormsModule,
         ScrollingModule], exports: [TooltipAutoHideExample,
@@ -211,7 +211,7 @@ TooltipExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", v
         MatButtonModule,
         MatCheckboxModule,
         MatLegacyInputModule,
-        MatSelectModule,
+        MatLegacySelectModule,
         MatLegacyTooltipModule,
         ReactiveFormsModule,
         ScrollingModule] });
@@ -223,7 +223,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                         MatButtonModule,
                         MatCheckboxModule,
                         MatLegacyInputModule,
-                        MatSelectModule,
+                        MatLegacySelectModule,
                         MatLegacyTooltipModule,
                         ReactiveFormsModule,
                         ScrollingModule, // Required for the auto-scrolling example
