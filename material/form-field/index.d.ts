@@ -2,7 +2,7 @@ import { AbstractControl } from '@angular/forms';
 import { BooleanInput } from '@angular/cdk/coercion';
 import { ControlValueAccessor } from '@angular/forms';
 import { ElementRef } from '@angular/core';
-import { FloatLabelType } from '@angular/material/legacy-form-field';
+import { FloatLabelType } from '@angular/material/form-field';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
@@ -11,15 +11,16 @@ import * as i0 from '@angular/core';
 import * as i10 from '@angular/common';
 import * as i11 from '@angular/material/button';
 import * as i12 from '@angular/material/checkbox';
-import * as i13 from '@angular/material/legacy-form-field';
+import * as i13 from '@angular/material/form-field';
 import * as i14 from '@angular/material/icon';
-import * as i15 from '@angular/material/legacy-input';
+import * as i15 from '@angular/material/input';
 import * as i16 from '@angular/material/radio';
-import * as i17 from '@angular/material/legacy-select';
+import * as i17 from '@angular/material/select';
 import * as i18 from '@angular/forms';
-import { MatLegacyFormField } from '@angular/material/legacy-form-field';
-import { MatLegacyFormFieldControl } from '@angular/material/legacy-form-field';
+import { MatFormField } from '@angular/material/form-field';
+import { MatFormFieldControl } from '@angular/material/form-field';
 import { NgControl } from '@angular/forms';
+import { NonNullableFormBuilder } from '@angular/forms';
 import { OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 
@@ -46,7 +47,7 @@ export declare class FormFieldErrorExample {
 
 export declare class FormFieldExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<FormFieldExamplesModule, [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample, typeof i2.MyTelInput], [typeof i10.CommonModule, typeof i11.MatButtonModule, typeof i12.MatCheckboxModule, typeof i13.MatLegacyFormFieldModule, typeof i14.MatIconModule, typeof i15.MatLegacyInputModule, typeof i16.MatRadioModule, typeof i17.MatLegacySelectModule, typeof i18.ReactiveFormsModule], [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<FormFieldExamplesModule, [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample, typeof i2.MyTelInput], [typeof i10.CommonModule, typeof i11.MatButtonModule, typeof i12.MatCheckboxModule, typeof i13.MatFormFieldModule, typeof i14.MatIconModule, typeof i15.MatInputModule, typeof i16.MatRadioModule, typeof i17.MatSelectModule, typeof i18.ReactiveFormsModule], [typeof i1.FormFieldAppearanceExample, typeof i2.FormFieldCustomControlExample, typeof i3.FormFieldErrorExample, typeof i4.FormFieldHarnessExample, typeof i5.FormFieldHintExample, typeof i6.FormFieldLabelExample, typeof i7.FormFieldOverviewExample, typeof i8.FormFieldPrefixSuffixExample, typeof i9.FormFieldThemingExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<FormFieldExamplesModule>;
 }
 
@@ -69,10 +70,10 @@ export declare class FormFieldHintExample {
 export declare class FormFieldLabelExample {
     private _formBuilder;
     hideRequiredControl: FormControl<boolean | null>;
-    floatLabelControl: FormControl<"auto" | "always" | "never" | null>;
+    floatLabelControl: FormControl<"auto" | "always" | null>;
     options: FormGroup<    {
     hideRequired: FormControl<boolean | null>;
-    floatLabel: FormControl<"auto" | "always" | "never" | null>;
+    floatLabel: FormControl<"auto" | "always" | null>;
     }>;
     constructor(_formBuilder: FormBuilder);
     getFloatLabelValue(): FloatLabelType;
@@ -96,13 +97,11 @@ export declare class FormFieldPrefixSuffixExample {
 /** @title Form field theming */
 export declare class FormFieldThemingExample {
     private _formBuilder;
-    colorControl: FormControl<string | null>;
-    fontSizeControl: FormControl<number | null>;
     options: FormGroup<    {
-    color: FormControl<string | null>;
-    fontSize: FormControl<number | null>;
+    color: FormControl<"primary" | "accent" | "warn" | undefined>;
+    fontSize: FormControl<number>;
     }>;
-    constructor(_formBuilder: FormBuilder);
+    constructor(_formBuilder: NonNullableFormBuilder);
     getFontSize(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldThemingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never, false>;
@@ -173,11 +172,11 @@ declare class MyTel {
 }
 
 /** Custom `MatFormFieldControl` for telephone number input. */
-export declare class MyTelInput implements ControlValueAccessor, MatLegacyFormFieldControl<MyTel>, OnDestroy {
+export declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
     private _formBuilder;
     private _focusMonitor;
     private _elementRef;
-    _formField: MatLegacyFormField;
+    _formField: MatFormField;
     ngControl: NgControl;
     static nextId: number;
     areaInput: HTMLInputElement;
@@ -210,7 +209,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatLegacyFormFi
     get value(): MyTel | null;
     set value(tel: MyTel | null);
     get errorState(): boolean;
-    constructor(_formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatLegacyFormField, ngControl: NgControl);
+    constructor(_formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
     ngOnDestroy(): void;
     onFocusIn(event: FocusEvent): void;
     onFocusOut(event: FocusEvent): void;
