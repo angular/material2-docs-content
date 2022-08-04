@@ -17,22 +17,22 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material dialog
+    API reference for Angular Material legacy-dialog
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatDialogModule} from '@angular/material/dialog';
+        import {MatLegacyDialogModule} from '@angular/material/legacy-dialog';
       </code>
     </p>
-  <h3 id="material-dialog-services" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-dialog-services" class="docs-header-link docs-api-h3">
       <span header-link="services"></span>
       Services
     </h3>
     
       
 
-<h4 id="MatDialog" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialog"></span>
-  <code>MatDialog</code>
+<h4 id="MatLegacyDialog" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialog"></span>
+  <code>MatLegacyDialog</code>
   
 </h4><p class="docs-api-class-description"><p>Service to open Material Design modal dialogs.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -344,16 +344,16 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
 
 
 
-    <h3 id="material-dialog-directives" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-dialog-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
     
       
 
-<h4 id="MatDialogClose" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogClose"></span>
-  <code>MatDialogClose</code>
+<h4 id="MatLegacyDialogClose" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogClose"></span>
+  <code>MatLegacyDialogClose</code>
   
 </h4><p class="docs-api-class-description"><p>Button that will close the current dialog.</p>
 </p><p class="docs-api-directive-selectors">
@@ -379,7 +379,7 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
       <code>ariaLabel: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Screen-reader label for the button.</p>
+  <td class="docs-api-property-description"><p>Screen reader label for the button.</p>
 </td>
 </tr>
 
@@ -416,11 +416,14 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dialogRef: MatDialogRef&lt;any&gt;</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v13.0.0 or later">
+        Deprecated
+      </div><p class="docs-api-property-name">
+      <code>dialogRef: MatLegacyDialogRef&lt;any&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Reference to the containing dialog.</p>
+</td>
 </tr>
 
 
@@ -435,9 +438,9 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
     
       
 
-<h4 id="MatDialogTitle" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogTitle"></span>
-  <code>MatDialogTitle</code>
+<h4 id="MatLegacyDialogTitle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogTitle"></span>
+  <code>MatLegacyDialogTitle</code>
   
 </h4><p class="docs-api-class-description"><p>Title of a dialog element. Stays fixed to the top of the dialog when scrolling.</p>
 </p><p class="docs-api-directive-selectors">
@@ -463,7 +466,8 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
       <code>id: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Unique id for the dialog title. If none is supplied, it will be auto-generated.</p>
+</td>
 </tr>
 
 
@@ -478,9 +482,9 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
     
       
 
-<h4 id="MatDialogContent" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogContent"></span>
-  <code>MatDialogContent</code>
+<h4 id="MatLegacyDialogContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogContent"></span>
+  <code>MatLegacyDialogContent</code>
   
 </h4><p class="docs-api-class-description"><p>Scrollable content container of a dialog.</p>
 </p><p class="docs-api-directive-selectors">
@@ -502,9 +506,9 @@ Will emit on subscribe if there are no open dialogs to begin with.</p>
     
       
 
-<h4 id="MatDialogActions" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogActions"></span>
-  <code>MatDialogActions</code>
+<h4 id="MatLegacyDialogActions" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogActions"></span>
+  <code>MatLegacyDialogActions</code>
   
 </h4><p class="docs-api-class-description"><p>Container for the bottom action buttons in a dialog.
 Stays fixed to the bottom when scrolling.</p>
@@ -545,409 +549,23 @@ Stays fixed to the bottom when scrolling.</p>
 
 
 
-    <h3 id="material-dialog-classes" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-dialog-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatDialogConfig" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogConfig"></span>
-  <code>MatDialogConfig</code>
+<h4 id="MatLegacyDialogRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogRef"></span>
+  <code>MatLegacyDialogRef</code>
   
-</h4><p class="docs-api-class-description"><p>Configuration for opening a modal dialog with the MatDialog service.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaDescribedBy: string | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>ID of the element that describes the dialog.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaLabel: string | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Aria label to assign to the dialog element.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaLabelledBy: string | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>ID of the element that labels the dialog.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>autoFocus: AutoFocusTarget | string | boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Where the dialog should focus on open.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>backdropClass: string | string[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Custom class for the backdrop.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>closeOnNavigation: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the dialog should close when the user goes backwards/forwards in history.
-Note that this usually doesn&#39;t include clicking on links (unless the user is using
-the <code>HashLocationStrategy</code>).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>componentFactoryResolver: ComponentFactoryResolver</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Alternate <code>ComponentFactoryResolver</code> to use when resolving the associated component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>data: D | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Data being injected into the child component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>delayFocusTrap: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether to wait for the opening animation to finish before trapping focus.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>direction: Direction</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Layout direction for the dialog&#39;s content.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableClose: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the user can use escape or clicking on the backdrop to close the modal.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>enterAnimationDuration: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Duration of the enter animation. Has to be a valid CSS value (e.g. 100ms).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>exitAnimationDuration: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Duration of the exit animation. Has to be a valid CSS value (e.g. 50ms).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hasBackdrop: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the dialog has a backdrop.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>height: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Height of the dialog.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>id: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>ID for the dialog. If omitted, a unique one will be generated.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Injector used for the instantiation of the component to be attached. If provided,
-takes precedence over the injector indirectly provided by <code>ViewContainerRef</code>.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>maxHeight: number | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Max-height of the dialog. If a number is provided, assumes pixel units.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>maxWidth: number | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Max-width of the dialog. If a number is provided, assumes pixel units. Defaults to 80vw.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>minHeight: number | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Min-height of the dialog. If a number is provided, assumes pixel units.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>minWidth: number | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Min-width of the dialog. If a number is provided, assumes pixel units.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>panelClass: string | string[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Custom class for the overlay pane.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>position: DialogPosition</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Position overrides.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>restoreFocus: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the dialog should restore focus to the
-previously-focused element, after it&#39;s closed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>role: DialogRole</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The ARIA role of the dialog element.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollStrategy: ScrollStrategy</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Scroll strategy to be used for the dialog.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Where the attached component should live in Angular&#39;s <em>logical</em> component tree.
-This affects what is available for injection and the change detection order for the
-component instantiated inside of the dialog. This does not affect where the dialog
-content will be rendered.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>width: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Width of the dialog.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatDialogRef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogRef"></span>
-  <code>MatDialogRef</code>
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/dialog/api#MatDialogRef" class="docs-api-class-extends-type">
+      MatDialogRef
+    </a>
+  </span>
   
 </h4><p class="docs-api-class-description"><p>Reference to a dialog opened via the MatDialog service.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -1438,129 +1056,20 @@ content will be rendered.</p>
 
 
 
-    <h3 id="material-dialog-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="DialogPosition" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="DialogPosition"></span>
-  <code>DialogPosition</code>
-</h4><p class="docs-api-interface-description"><p>Possible overrides for a dialog&#39;s position.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>bottom: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Override for the dialog&#39;s bottom position.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>left: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Override for the dialog&#39;s left position.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>right: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Override for the dialog&#39;s right position.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>top: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Override for the dialog&#39;s top position.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-dialog-type_aliases" class="docs-header-link docs-api-h3">
-      <span header-link="type_aliases"></span>
-      Type aliases
-    </h3>
-    
-      
-
-<h4 id="AutoFocusTarget" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="AutoFocusTarget"></span>
-  <code>AutoFocusTarget</code>
-</h4><p class="docs-api-type-alias-description"><p>Options for where to set focus to automatically on dialog open</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> AutoFocusTarget = <span class="hljs-string">&#x27;dialog&#x27;</span> | <span class="hljs-string">&#x27;first-tabbable&#x27;</span> | <span class="hljs-string">&#x27;first-heading&#x27;</span>;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="DialogRole" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="DialogRole"></span>
-  <code>DialogRole</code>
-</h4><p class="docs-api-type-alias-description"><p>Valid ARIA roles for a dialog element.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DialogRole = <span class="hljs-string">&#x27;dialog&#x27;</span> | <span class="hljs-string">&#x27;alertdialog&#x27;</span>;</code>
-</pre>
-</div>
-
-
-    <h3 id="material-dialog-constants" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-dialog-constants" class="docs-header-link docs-api-h3">
       <span header-link="constants"></span>
       Constants
     </h3>
     
       
 
-<h4 id="MAT_DIALOG_DATA" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_DIALOG_DATA"></span>
-  <code>MAT_DIALOG_DATA</code>
+<h4 id="MAT_LEGACY_DIALOG_DATA" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_DIALOG_DATA"></span>
+  <code>MAT_LEGACY_DIALOG_DATA</code>
 </h4><p class="docs-api-constant-description"><p>Injection token that can be used to access the data that was passed in to a dialog.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DIALOG_DATA: InjectionToken&lt;<span class="hljs-built_in">any</span>&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_DIALOG_DATA: InjectionToken&lt;<span class="hljs-built_in">any</span>&gt;;</code>
 </pre>
 </div>
 
@@ -1568,13 +1077,13 @@ content will be rendered.</p>
     
       
 
-<h4 id="MAT_DIALOG_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_DIALOG_DEFAULT_OPTIONS"></span>
-  <code>MAT_DIALOG_DEFAULT_OPTIONS</code>
+<h4 id="MAT_LEGACY_DIALOG_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_DIALOG_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_DIALOG_DEFAULT_OPTIONS</code>
 </h4><p class="docs-api-constant-description"><p>Injection token that can be used to specify default dialog options.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DIALOG_DEFAULT_OPTIONS: InjectionToken&lt;MatDialogConfig&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_DIALOG_DEFAULT_OPTIONS: InjectionToken&lt;MatDialogConfig&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -1582,13 +1091,13 @@ content will be rendered.</p>
     
       
 
-<h4 id="MAT_DIALOG_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_DIALOG_SCROLL_STRATEGY"></span>
-  <code>MAT_DIALOG_SCROLL_STRATEGY</code>
+<h4 id="MAT_LEGACY_DIALOG_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_DIALOG_SCROLL_STRATEGY"></span>
+  <code>MAT_LEGACY_DIALOG_SCROLL_STRATEGY</code>
 </h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while the dialog is open.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DIALOG_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_DIALOG_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
 </pre>
 </div>
 

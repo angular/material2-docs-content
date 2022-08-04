@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material dialog-testing
+    API reference for Angular Material legacy-dialog-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatTestDialogOpenerModule} from '@angular/material/dialog/testing';
+        import {MatTestLegacyDialogOpenerModule} from '@angular/material/legacy-dialog/testing';
       </code>
     </p>
-  <h3 id="material-dialog-testing-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-dialog-testing-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
     
       
 
-<h4 id="MatTestDialogOpener" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTestDialogOpener"></span>
-  <code>MatTestDialogOpener</code>
+<h4 id="MatTestLegacyDialogOpener" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTestLegacyDialogOpener"></span>
+  <code>MatTestLegacyDialogOpener</code>
   
-</h4><p class="docs-api-class-description"><p>Test component that immediately opens a dialog when bootstrapped.</p>
+</h4><p class="docs-api-class-description"><p>Test component that immediately opens a dialog when created.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
@@ -143,16 +143,16 @@
 
 
 
-    <h3 id="material-dialog-testing-classes" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-dialog-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatDialogHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatDialogHarness"></span>
-  <code>MatDialogHarness</code>
+<h4 id="MatLegacyDialogHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogHarness"></span>
+  <code>MatLegacyDialogHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a standard <code>MatDialog</code> in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -166,7 +166,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-dialog-container&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-dialog-container&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatDialog</code> instance.</p>
@@ -777,7 +777,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a dialog with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatDialogHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -806,7 +807,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyDialogHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -818,24 +819,6 @@
 
 
   
-
-
-
-    <h3 id="material-dialog-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="DialogHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="DialogHarnessFilters"></span>
-  <code>DialogHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatDialogHarness</code> instances.</p>
-</p>
-
-
-
 
 
 
