@@ -17,24 +17,30 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material checkbox
+    API reference for Angular Material legacy-checkbox
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatCheckboxModule} from '@angular/material/checkbox';
+        import {MatLegacyCheckboxModule} from '@angular/material/legacy-checkbox';
       </code>
     </p>
-  <h3 id="material-checkbox-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-checkbox-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
     
       
 
-<h4 id="MatCheckbox" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCheckbox"></span>
-  <code>MatCheckbox</code>
+<h4 id="MatLegacyCheckbox" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyCheckbox"></span>
+  <code>MatLegacyCheckbox</code>
   
-</h4><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-class-description"><p>A material design checkbox component. Supports all of the functionality of an HTML5 checkbox,
+and exposes a similar API. A checkbox can be either checked, unchecked, indeterminate, or
+disabled. Note that all additional accessibility attributes are taken care of by the component,
+so there is no need to provide them yourself. However, if you want to omit a label and still
+have the checkbox be accessible, you may supply an [aria-label] input.
+See: <a href="https://material.io/design/components/selection-controls.html">https://material.io/design/components/selection-controls.html</a></p>
+</p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-checkbox</span>
@@ -332,7 +338,38 @@ set to false.</p>
       <p>Focuses the checkbox.</p>
 
     </td>
-  </tr></table>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   
@@ -356,183 +393,18 @@ set to false.</p>
 
 
 
-    
-      
-
-<h4 id="MatCheckboxRequiredValidator" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCheckboxRequiredValidator"></span>
-  <code>MatCheckboxRequiredValidator</code>
-  
-</h4><p class="docs-api-class-description"><p>Validator for Material checkbox&#39;s required attribute in template-driven checkbox.
-Current CheckboxRequiredValidator only work with <code>input type=checkbox</code> and does not
-work with <code>mat-checkbox</code>.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-checkbox[required][formControlName]</span>
-  
-    <span class="docs-api-class-selector-name">mat-checkbox[required][formControl]</span>
-  
-    <span class="docs-api-class-selector-name">mat-checkbox[required][ngModel]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>required: boolean | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tracks changes to the required attribute bound to this directive.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">enabled
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        input</p>
-      <code class="docs-api-method-parameter-type">boolean</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        fn</p>
-      <code class="docs-api-method-parameter-type">() =&gt; void</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">validate
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        control</p>
-      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    <h3 id="material-checkbox-classes" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-checkbox-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatCheckboxChange" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCheckboxChange"></span>
-  <code>MatCheckboxChange</code>
+<h4 id="MatLegacyCheckboxChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyCheckboxChange"></span>
+  <code>MatLegacyCheckboxChange</code>
   
-</h4><p class="docs-api-class-description"><p>Change event object emitted by checkbox.</p>
+</h4><p class="docs-api-class-description"><p>Change event object emitted by a checkbox.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -557,7 +429,7 @@ work with <code>mat-checkbox</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatCheckbox</code>
+      <code>source: MatLegacyCheckbox</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The source checkbox of the event.</p>
@@ -571,123 +443,6 @@ work with <code>mat-checkbox</code>.</p>
 
 
 
-
-
-    <h3 id="material-checkbox-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MatCheckboxDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatCheckboxDefaultOptions"></span>
-  <code>MatCheckboxDefaultOptions</code>
-</h4><p class="docs-api-interface-description"><p>Default <code>mat-checkbox</code> options that can be overridden.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>clickAction: MatCheckboxClickAction</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default checkbox click action for checkboxes.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default theme color palette to be used for checkboxes.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-checkbox-type_aliases" class="docs-header-link docs-api-h3">
-      <span header-link="type_aliases"></span>
-      Type aliases
-    </h3>
-    
-      
-
-<h4 id="MatCheckboxClickAction" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MatCheckboxClickAction"></span>
-  <code>MatCheckboxClickAction</code>
-</h4><p class="docs-api-type-alias-description"><p>Checkbox click action when user click on input element.
-noop: Do not toggle checked or indeterminate.
-check: Only toggle checked status, ignore indeterminate.
-check-indeterminate: Toggle checked status, set indeterminate to false. Default behavior.
-undefined: Same as <code>check-indeterminate</code>.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCheckboxClickAction = <span class="hljs-string">&#x27;noop&#x27;</span> | <span class="hljs-string">&#x27;check&#x27;</span> | <span class="hljs-string">&#x27;check-indeterminate&#x27;</span> | <span class="hljs-literal">undefined</span>;</code>
-</pre>
-</div>
-
-
-    <h3 id="material-checkbox-constants" class="docs-header-link docs-api-h3">
-      <span header-link="constants"></span>
-      Constants
-    </h3>
-    
-      
-
-<h4 id="MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR"></span>
-  <code>MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR</code>
-</h4><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR: <span class="hljs-built_in">any</span>;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_CHECKBOX_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_CHECKBOX_DEFAULT_OPTIONS"></span>
-  <code>MAT_CHECKBOX_DEFAULT_OPTIONS</code>
-</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-checkbox</code>.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHECKBOX_DEFAULT_OPTIONS: InjectionToken&lt;MatCheckboxDefaultOptions&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_CHECKBOX_REQUIRED_VALIDATOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_CHECKBOX_REQUIRED_VALIDATOR"></span>
-  <code>MAT_CHECKBOX_REQUIRED_VALIDATOR</code>
-</h4><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHECKBOX_REQUIRED_VALIDATOR: Provider;</code>
-</pre>
-</div>
 
 
     </div>

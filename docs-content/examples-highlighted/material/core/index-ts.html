@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-checkbox&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatRippleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatLegacyInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-input&#x27;</span>;
 <span class="hljs-keyword">import</span> {ElevationOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./elevation-overview/elevation-overview-example&#x27;</span>;
@@ -12,7 +12,13 @@
 <span class="hljs-keyword">const</span> EXAMPLES = [ElevationOverviewExample, RippleOverviewExample];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatCheckboxModule, MatLegacyInputModule, MatRippleModule, FormsModule],
+  <span class="hljs-attr">imports</span>: [
+    MatButtonModule,
+    MatLegacyCheckboxModule,
+    MatLegacyInputModule,
+    MatRippleModule,
+    FormsModule,
+  ],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

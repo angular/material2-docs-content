@@ -8,8 +8,8 @@ import * as i4 from '@angular/cdk/scrolling';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import * as i1$1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
-import * as i2$2 from '@angular/material/checkbox';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import * as i2$2 from '@angular/material/legacy-checkbox';
+import { MatLegacyCheckboxModule } from '@angular/material/legacy-checkbox';
 import * as i3 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
 import * as i5 from '@angular/material/legacy-select';
@@ -72,7 +72,7 @@ class TooltipDisabledExample {
     }
 }
 TooltipDisabledExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipDisabledExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-TooltipDisabledExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: TooltipDisabledExample, selector: "tooltip-disabled-example", ngImport: i0, template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipDisabled]=\"disabled.value\"\n        aria-label=\"Button that displays a tooltip that can be programmatically disabled\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"disabled\" class=\"example-disabled-checkbox\">\n  Tooltip disabled\n</mat-checkbox>\n", styles: [".example-disabled-checkbox {\n  margin-left: 8px;\n}\n"], dependencies: [{ kind: "component", type: i1$1.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i2$2.MatCheckbox, selector: "mat-checkbox", inputs: ["disableRipple", "color", "tabIndex"], exportAs: ["matCheckbox"] }, { kind: "directive", type: i2$1.MatLegacyTooltip, selector: "[matTooltip]", exportAs: ["matTooltip"] }, { kind: "directive", type: i5$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5$1.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
+TooltipDisabledExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: TooltipDisabledExample, selector: "tooltip-disabled-example", ngImport: i0, template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipDisabled]=\"disabled.value\"\n        aria-label=\"Button that displays a tooltip that can be programmatically disabled\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"disabled\" class=\"example-disabled-checkbox\">\n  Tooltip disabled\n</mat-checkbox>\n", styles: [".example-disabled-checkbox {\n  margin-left: 8px;\n}\n"], dependencies: [{ kind: "component", type: i1$1.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i2$2.MatLegacyCheckbox, selector: "mat-checkbox", inputs: ["disableRipple", "color", "tabIndex"], exportAs: ["matCheckbox"] }, { kind: "directive", type: i2$1.MatLegacyTooltip, selector: "[matTooltip]", exportAs: ["matTooltip"] }, { kind: "directive", type: i5$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5$1.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipDisabledExample, decorators: [{
             type: Component,
             args: [{ selector: 'tooltip-disabled-example', template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipDisabled]=\"disabled.value\"\n        aria-label=\"Button that displays a tooltip that can be programmatically disabled\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"disabled\" class=\"example-disabled-checkbox\">\n  Tooltip disabled\n</mat-checkbox>\n", styles: [".example-disabled-checkbox {\n  margin-left: 8px;\n}\n"] }]
@@ -192,7 +192,7 @@ TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         TooltipOverviewExample,
         TooltipPositionExample], imports: [CommonModule,
         MatButtonModule,
-        MatCheckboxModule,
+        MatLegacyCheckboxModule,
         MatLegacyInputModule,
         MatLegacySelectModule,
         MatLegacyTooltipModule,
@@ -209,7 +209,7 @@ TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         TooltipPositionExample] });
 TooltipExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipExamplesModule, imports: [CommonModule,
         MatButtonModule,
-        MatCheckboxModule,
+        MatLegacyCheckboxModule,
         MatLegacyInputModule,
         MatLegacySelectModule,
         MatLegacyTooltipModule,
@@ -221,7 +221,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                     imports: [
                         CommonModule,
                         MatButtonModule,
-                        MatCheckboxModule,
+                        MatLegacyCheckboxModule,
                         MatLegacyInputModule,
                         MatLegacySelectModule,
                         MatLegacyTooltipModule,

@@ -9,7 +9,7 @@ import * as i12 from '@angular/material/legacy-progress-bar';
 import * as i13 from '@angular/material/tree';
 import * as i7 from '@angular/common';
 import * as i8 from '@angular/material/button';
-import * as i9 from '@angular/material/checkbox';
+import * as i9 from '@angular/material/legacy-checkbox';
 import { MatTreeFlatDataSource } from '@angular/material/tree';
 import { MatTreeFlattener } from '@angular/material/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
@@ -288,7 +288,7 @@ export declare class TreeDynamicExample {
 
 export declare class TreeExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample], [typeof i7.CommonModule, typeof i8.MatButtonModule, typeof i9.MatCheckboxModule, typeof i10.MatIconModule, typeof i11.MatLegacyInputModule, typeof i12.MatLegacyProgressBarModule, typeof i13.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample], [typeof i7.CommonModule, typeof i8.MatButtonModule, typeof i9.MatLegacyCheckboxModule, typeof i10.MatIconModule, typeof i11.MatLegacyInputModule, typeof i12.MatLegacyProgressBarModule, typeof i13.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TreeExamplesModule>;
 }
 

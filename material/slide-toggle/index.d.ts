@@ -6,7 +6,7 @@ import * as i10 from '@angular/material/slide-toggle';
 import * as i5 from '@angular/forms';
 import * as i6 from '@angular/material/button';
 import * as i7 from '@angular/material/legacy-card';
-import * as i8 from '@angular/material/checkbox';
+import * as i8 from '@angular/material/legacy-checkbox';
 import * as i9 from '@angular/material/radio';
 import { ThemePalette } from '@angular/material/core';
 
@@ -47,7 +47,7 @@ export declare class SlideToggleConfigurableExample {
 
 export declare class SlideToggleExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample], [typeof i5.FormsModule, typeof i6.MatButtonModule, typeof i7.MatLegacyCardModule, typeof i8.MatCheckboxModule, typeof i9.MatRadioModule, typeof i10.MatSlideToggleModule, typeof i5.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample], [typeof i5.FormsModule, typeof i6.MatButtonModule, typeof i7.MatLegacyCardModule, typeof i8.MatLegacyCheckboxModule, typeof i9.MatRadioModule, typeof i10.MatSlideToggleModule, typeof i5.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<SlideToggleExamplesModule>;
 }
 
