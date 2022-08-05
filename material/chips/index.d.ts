@@ -5,13 +5,13 @@ import * as i0 from '@angular/core';
 import * as i10 from '@angular/cdk/drag-drop';
 import * as i11 from '@angular/material/legacy-autocomplete';
 import * as i12 from '@angular/material/button';
-import * as i13 from '@angular/material/chips';
+import * as i13 from '@angular/material/legacy-chips';
 import * as i14 from '@angular/material/icon';
 import * as i15 from '@angular/material/legacy-form-field';
 import * as i16 from '@angular/forms';
 import * as i9 from '@angular/common';
 import { MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
-import { MatChipInputEvent } from '@angular/material/chips';
+import { MatLegacyChipInputEvent } from '@angular/material/legacy-chips';
 import { Observable } from 'rxjs';
 import { ThemePalette } from '@angular/material/core';
 
@@ -31,7 +31,7 @@ export declare class ChipsAutocompleteExample {
     allFruits: string[];
     fruitInput: ElementRef<HTMLInputElement>;
     constructor();
-    add(event: MatChipInputEvent): void;
+    add(event: MatLegacyChipInputEvent): void;
     remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
     private _filter;
@@ -60,7 +60,7 @@ export declare class ChipsDragDropExample {
 
 export declare class ChipsExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample], [typeof i9.CommonModule, typeof i10.DragDropModule, typeof i11.MatLegacyAutocompleteModule, typeof i12.MatButtonModule, typeof i13.MatChipsModule, typeof i14.MatIconModule, typeof i15.MatLegacyFormFieldModule, typeof i16.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample], [typeof i9.CommonModule, typeof i10.DragDropModule, typeof i11.MatLegacyAutocompleteModule, typeof i12.MatButtonModule, typeof i13.MatLegacyChipsModule, typeof i14.MatIconModule, typeof i15.MatLegacyFormFieldModule, typeof i16.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ChipsExamplesModule>;
 }
 
@@ -70,7 +70,7 @@ export declare class ChipsExamplesModule {
 export declare class ChipsFormControlExample {
     keywords: Set<string>;
     formControl: FormControl<string[] | null>;
-    addKeywordFromInput(event: MatChipInputEvent): void;
+    addKeywordFromInput(event: MatLegacyChipInputEvent): void;
     removeKeyword(keyword: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsFormControlExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsFormControlExample, "chips-form-control-example", never, {}, {}, never, never, false>;
@@ -94,7 +94,7 @@ export declare class ChipsInputExample {
     addOnBlur: boolean;
     readonly separatorKeysCodes: readonly [13, 188];
     fruits: Fruit[];
-    add(event: MatChipInputEvent): void;
+    add(event: MatLegacyChipInputEvent): void;
     remove(fruit: Fruit): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsInputExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsInputExample, "chips-input-example", never, {}, {}, never, never, false>;

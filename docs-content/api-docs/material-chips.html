@@ -30,343 +30,18 @@
     
       
 
-<h4 id="MatChipList" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatChipList"></span>
-  <code>MatChipList</code>
-  
-</h4><p class="docs-api-class-description"><p>A material design chips component (named ChipList for its similarity to the List component).</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-chip-list</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matChipList</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-orientation&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>ariaOrientation: &#39;horizontal&#39; | &#39;vertical&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Orientation of the chip list.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>compareWith: (o1: any, o2: any) =&gt; boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A function to compare the option values with the selected values. The first argument
-is a value from an option. The second is a value from the selection. A boolean
-should be returned.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>errorStateMatcher: ErrorStateMatcher</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>An object used to control when error messages are shown.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>multiple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the user should be allowed to select multiple chips.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>role: string | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The ARIA role applied to the chip list.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>selectable: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether or not this chip list is selectable. When a chip list is not selectable,
-the selected states for all the chips inside the chip list are always ignored.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>change: EventEmitter&lt;MatChipListChange&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the selected chip list value has been changed by the user.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>chipBlurChanges: Observable&lt;MatChipEvent&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; blur change events.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>chipFocusChanges: Observable&lt;MatChipEvent&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; focus change events.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>chipRemoveChanges: Observable&lt;MatChipEvent&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove change events.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>chipSelectionChanges: Observable&lt;MatChipSelectionChange&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; selection change events.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>chips: QueryList&lt;MatChip&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The chips contained within this chip list.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>errorState: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is in an error state.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>focused: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether any chips or the matChipInput inside of this chip-list has focus.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>selected: MatChip[] | MatChip</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The array of selected chips inside chip list.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the first non-disabled chip in this chip list, or the associated input when there
-are no eligible chips.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">registerInput
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Associates an HTML input element with this chip list.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        inputElement</p>
-      <code class="docs-api-method-parameter-type">MatChipTextControl</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updateErrorState
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the error state based on the provided error state matcher.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
 <h4 id="MatChip" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatChip"></span>
   <code>MatChip</code>
   
-</h4><p class="docs-api-class-description"><p>Material Design styled chip directive. Used inside the MatChipList component.</p>
+</h4><p class="docs-api-class-description"><p>Material design styled Chip base component. Used inside the MatChipSet component.</p>
+<p>Extended by MatChipOption and MatChipRow for different interaction patterns.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-basic-chip</span>
   
-    <span class="docs-api-class-selector-name">[mat-basic-chip]</span>
-  
     <span class="docs-api-class-selector-name">mat-chip</span>
-  
-    <span class="docs-api-class-selector-name">[mat-chip]</span>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">matChip</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -375,6 +50,20 @@ are no eligible chips.</p>
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>ARIA label for the content of the chip.</p>
+</td>
+</tr>
+
+
     
       
 
@@ -412,7 +101,35 @@ are no eligible chips.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the chip is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>highlighted: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Colors the chip for emphasis as if it were selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A unique id for the chip. If none is supplied, it will be auto-generated.</p>
 </td>
 </tr>
 
@@ -437,10 +154,342 @@ are no eligible chips.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>role: string</code>
+      <code>role: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>ARIA role that should be applied to the chip.</p>
+  <td class="docs-api-property-description"><p>Role for the root of the chip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The value of the chip. Defaults to the content inside
+the <code>mat-mdc-chip-action-label</code> element.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>destroyed: EventEmitter&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emitted when the chip is destroyed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>removed: EventEmitter&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emitted when a chip is to be removed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>basicChipAttrName: &#39;mat-basic-chip&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The unstyled chip selector for this component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>leadingIcon: MatChipAvatar</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s leading icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>primaryAction: MatChipAction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Action receiving the primary set of user interactions.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>removeIcon: MatChipRemove</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s trailing remove icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the chip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trailingIcon: MatChipTrailingIcon</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s trailing icon.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Allows for programmatic focusing of the chip.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">remove
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Allows for programmatic removal of the chip.</p>
+<p>Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipOption" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipOption"></span>
+  <code>MatChipOption</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/chips/api#MatChip" class="docs-api-class-extends-type">
+      MatChip
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>An extension of the MatChip component that supports chip selection.
+Used with MatChipListbox.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-basic-chip-option</span>
+  
+    <span class="docs-api-class-selector-name">mat-chip-option</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>ARIA label for the content of the chip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>highlighted: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Colors the chip for emphasis as if it were selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A unique id for the chip. If none is supplied, it will be auto-generated.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>removable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Determines whether or not the chip displays the remove styling and emits (removed) events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Role for the root of the chip.</p>
 </td>
 </tr>
 
@@ -454,10 +503,10 @@ are no eligible chips.</p>
       <code>selectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not the chip is selectable. When a chip is not selectable,
-changes to its selected state are always ignored. By default a chip is
-selectable, and it becomes non-selectable if its parent chip list is
-not selectable.</p>
+  <td class="docs-api-property-description"><p>Whether or not the chip is selectable.</p>
+<p>When a chip is not selectable, changes to its selected state are always
+ignored. By default an option chip is selectable, and it becomes
+non-selectable if its parent chip list is not selectable.</p>
 </td>
 </tr>
 
@@ -485,7 +534,8 @@ not selectable.</p>
       <code>value: any</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The value of the chip. Defaults to the content inside <code>&lt;mat-chip&gt;</code> tags.</p>
+  <td class="docs-api-property-description"><p>The value of the chip. Defaults to the content inside
+the <code>mat-mdc-chip-action-label</code> element.</p>
 </td>
 </tr>
 
@@ -550,10 +600,10 @@ not selectable.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>avatar: MatChipAvatar</code>
+      <code>basicChipAttrName: &#39;mat-basic-chip-option&#39;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip avatar</p>
+  <td class="docs-api-property-description"><p>The unstyled chip selector for this component.</p>
 </td>
 </tr>
 
@@ -566,7 +616,7 @@ not selectable.</p>
       <code>chipListSelectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the chip list is selectable</p>
+  <td class="docs-api-property-description"><p>Whether the chip list is selectable.</p>
 </td>
 </tr>
 
@@ -602,10 +652,49 @@ not selectable.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>leadingIcon: MatChipAvatar</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s leading icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>primaryAction: MatChipAction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Action receiving the primary set of user interactions.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>removeIcon: MatChipRemove</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip&#39;s remove toggler.</p>
+  <td class="docs-api-property-description"><p>The chip&#39;s trailing remove icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the chip.</p>
 </td>
 </tr>
 
@@ -673,8 +762,7 @@ not selectable.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows for programmatic removal of the chip. Called by the MatChipList when the DELETE or
-BACKSPACE keys are pressed.</p>
+      <p>Allows for programmatic removal of the chip.</p>
 <p>Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
 
     </td>
@@ -709,7 +797,7 @@ BACKSPACE keys are pressed.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Select this chip and emit selected event</p>
+      <p>Selects this chip and emits userInputSelection event</p>
 
     </td>
   </tr></table>
@@ -771,27 +859,1030 @@ BACKSPACE keys are pressed.</p>
     
       
 
-<h4 id="MatChipRemove" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatChipRemove"></span>
-  <code>MatChipRemove</code>
+<h4 id="MatChipRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipRow"></span>
+  <code>MatChipRow</code>
   
-</h4><p class="docs-api-class-description"><p>Applies proper (click) support and adds styling for use with the Material Design &quot;cancel&quot; icon
-available at <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a>.</p>
-<p>Example:</p>
-<pre><code>`&lt;mat-chip&gt;
-  &lt;mat-icon matChipRemove&gt;cancel&lt;/mat-icon&gt;
-&lt;/mat-chip&gt;`</code></pre>
-<p>You <em>may</em> use a custom icon, but you may need to override the <code>mat-chip-remove</code> positioning
-styles to properly center the icon within the chip.</p>
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/chips/api#MatChip" class="docs-api-class-extends-type">
+      MatChip
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>An extension of the MatChip component used with MatChipGrid and
+the matChipInputFor directive.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
-    <span class="docs-api-class-selector-name">[matChipRemove]</span>
+    <span class="docs-api-class-selector-name">mat-chip-row</span>
   
-</p>
+    <span class="docs-api-class-selector-name">mat-basic-chip-row</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>ARIA label for the content of the chip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>editable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>highlighted: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Colors the chip for emphasis as if it were selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A unique id for the chip. If none is supplied, it will be auto-generated.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>removable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Determines whether or not the chip displays the remove styling and emits (removed) events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Role for the root of the chip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The value of the chip. Defaults to the content inside
+the <code>mat-mdc-chip-action-label</code> element.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>destroyed: EventEmitter&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emitted when the chip is destroyed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>edited: EventEmitter&lt;MatChipEditedEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emitted when the chip is edited.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>removed: EventEmitter&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emitted when a chip is to be removed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>basicChipAttrName: &#39;mat-basic-chip-row&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>contentEditInput: MatChipEditInput</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The projected chip edit input.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultEditInput: MatChipEditInput</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The default chip edit input that is used if none is projected into this chip row.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>leadingIcon: MatChipAvatar</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s leading icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>primaryAction: MatChipAction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Action receiving the primary set of user interactions.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>removeIcon: MatChipRemove</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s trailing remove icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the chip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trailingIcon: MatChipTrailingIcon</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s trailing icon.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Allows for programmatic focusing of the chip.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">remove
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Allows for programmatic removal of the chip.</p>
+<p>Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+
+    </td>
+  </tr></table>
+
+
+  
 
 
 
+    
+      
+
+<h4 id="MatChipSet" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipSet"></span>
+  <code>MatChipSet</code>
+  
+</h4><p class="docs-api-class-description"><p>Basic container component for the MatChip component.</p>
+<p>Extended by MatChipListbox and MatChipGrid for different interaction patterns.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-chip-set</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the chip set is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The ARIA role applied to the chip set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipDestroyedChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipFocusChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; focus events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>empty: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the chip list contains chips or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focused: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether any of the chips inside of this chip-set has focus.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Dummy method for subclasses to override. Base chip set cannot be focused.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipListbox" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipListbox"></span>
+  <code>MatChipListbox</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/chips/api#MatChipSet" class="docs-api-class-extends-type">
+      MatChipSet
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>An extension of the MatChipSet component that supports chip selection.
+Used with MatChipOption chips.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-chip-listbox</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-orientation&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaOrientation: &#39;horizontal&#39; | &#39;vertical&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Orientation of the chip list.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>compareWith: (o1: any, o2: any) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A function to compare the option values with the selected values. The first argument
+is a value from an option. The second is a value from the selection. A boolean
+should be returned.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the chip set is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>multiple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the user should be allowed to select multiple chips.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether this chip listbox is required.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The ARIA role applied to the chip set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selectable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether or not this chip listbox is selectable.</p>
+<p>When a chip listbox is not selectable, the selected states for all
+the chips inside the chip listbox are always ignored.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The value of the listbox, which is the combined value of the selected chips.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatChipListboxChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the selected chip listbox value has been changed by the user.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipBlurChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; blur events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipDestroyedChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipFocusChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; focus events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipSelectionChanges: Observable&lt;MatChipSelectionChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; selection change events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>empty: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the chip list contains chips or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focused: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether any of the chips inside of this chip-set has focus.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selected: MatChipOption[] | MatChipOption</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The array of selected chips inside the chip listbox.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the first selected chip in this chip listbox, or the first non-disabled chip when there
+are no selected chips.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipGrid" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipGrid"></span>
+  <code>MatChipGrid</code>
+  
+</h4><p class="docs-api-class-description"><p>An extension of the MatChipSet component used with MatChipRow chips and
+the matChipInputFor directive.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-chip-grid</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>errorStateMatcher: ErrorStateMatcher</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>An object used to control when error messages are shown.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The ARIA role applied to the chip set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatChipGridChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when the chip grid value has been changed by the user.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipBlurChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; blur events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipDestroyedChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>chipFocusChanges: Observable&lt;MatChipEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; focus events.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorState: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is in an error state.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focused: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether any chips or the matChipInput inside of this chip-grid has focus.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the first chip in this chip grid, or the associated input when there
+are no eligible chips.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerInput
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Associates an HTML input element with this chip grid.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        inputElement</p>
+      <code class="docs-api-method-parameter-type">MatChipTextControl</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateErrorState
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Updates the error state based on the provided error state matcher.</p>
+
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -803,7 +1894,7 @@ styles to properly center the icon within the chip.</p>
   <code>MatChipInput</code>
   
 </h4><p class="docs-api-class-description"><p>Directive that adds chip-specific behaviors to an input element inside <code>&lt;mat-form-field&gt;</code>.
-May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
+May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
@@ -836,7 +1927,7 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matChipInputFor&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>chipList: MatChipList</code>
+      <code>chipGrid: MatChipGrid</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Register input for chip list</p>
@@ -990,7 +2081,19 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <p>Focuses the input.</p>
 
     </td>
-  </tr><thead>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setDescribedByIds
+      </th>
+    </tr>
+  </thead><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -999,8 +2102,230 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOptions</code>
+        ids</p>
+      <code class="docs-api-method-parameter-type">string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipRemove" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipRemove"></span>
+  <code>MatChipRemove</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive to remove the parent chip when the trailing icon is clicked or
+when the ENTER key is pressed on it.</p>
+<p>Recommended for use with the Material Design &quot;cancel&quot; icon
+available at <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a>.</p>
+<p>Example:</p>
+<pre><code>&lt;mat-chip&gt;
+  &lt;mat-icon matChipRemove&gt;cancel&lt;/mat-icon&gt;
+&lt;/mat-chip&gt;</code></pre>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matChipRemove]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the action is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>isInteractive: true</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the action is interactive.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipEditInput" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipEditInput"></span>
+  <code>MatChipEditInput</code>
+  
+</h4><p class="docs-api-class-description"><p>A directive that makes a span editable and exposes functions to modify and retrieve the
+element&#39;s contents.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">span[matChipEditInput]</span>
+  
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getNativeElement
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getValue
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">initialize
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        initialValue</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setValue
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1022,59 +2347,11 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
     
       
 
-<h4 id="MatChipListChange" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatChipListChange"></span>
-  <code>MatChipListChange</code>
-  
-</h4><p class="docs-api-class-description"><p>Change event object that is emitted when the chip list value has changed.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatChipList</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Chip list that emitted the event.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>value: any</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Value of the chip list when the event was emitted.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
 <h4 id="MatChipSelectionChange" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatChipSelectionChange"></span>
   <code>MatChipSelectionChange</code>
   
-</h4><p class="docs-api-class-description"><p>Event object emitted by MatChip when selected or deselected.</p>
+</h4><p class="docs-api-class-description"><p>Event object emitted by MatChipOption when selected or deselected.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1112,10 +2389,106 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatChip</code>
+      <code>source: MatChipOption</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the chip that emitted the event.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatChipListboxChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipListboxChange"></span>
+  <code>MatChipListboxChange</code>
+  
+</h4><p class="docs-api-class-description"><p>Change event object that is emitted when the chip listbox value has changed.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatChipListbox</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Chip listbox that emitted the event.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Value of the chip listbox when the event was emitted.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatChipGridChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipGridChange"></span>
+  <code>MatChipGridChange</code>
+  
+</h4><p class="docs-api-class-description"><p>Change event object that is emitted when the chip grid value has changed.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatChipGrid</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Chip grid that emitted the event.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Value of the chip grid when the event was emitted.</p>
 </td>
 </tr>
 
@@ -1154,6 +2527,40 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The chip the event was fired on.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatChipEditedEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatChipEditedEvent"></span>
+  <code>MatChipEditedEvent</code>
+</h4><p class="docs-api-interface-description"><p>Represents an event fired on an individual <code>mat-chip</code> when it is edited.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The final edit value.</p>
 </td>
 </tr>
 
@@ -1262,6 +2669,132 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 
 
 
+    
+      
+
+<h4 id="MatChipTextControl" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatChipTextControl"></span>
+  <code>MatChipTextControl</code>
+</h4><p class="docs-api-interface-description"><p>Interface for a text control that is used to drive interaction with a mat-chip-list.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>empty: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the text control is empty.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focused: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the text control has browser focus.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Unique identifier for the text control.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>placeholder: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The text control&#39;s placeholder text.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the text control.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setDescribedByIds
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the list of ids the input is described by.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        ids</p>
+      <code class="docs-api-method-parameter-type">string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
     <h3 id="material-chips-constants" class="docs-header-link docs-api-h3">
       <span header-link="constants"></span>
       Constants
@@ -1269,15 +2802,13 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
     
       
 
-<h4 id="MAT_CHIP_REMOVE" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_CHIP_REMOVE"></span>
-  <code>MAT_CHIP_REMOVE</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatChipRemove</code>. It serves as
-alternative token to the actual <code>MatChipRemove</code> class which could cause unnecessary
-retention of the class and its directive metadata.</p>
+<h4 id="MAT_CHIPS_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHIPS_DEFAULT_OPTIONS"></span>
+  <code>MAT_CHIPS_DEFAULT_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for the chips module.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_REMOVE: InjectionToken&lt;MatChipRemove&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIPS_DEFAULT_OPTIONS: InjectionToken&lt;MatChipsDefaultOptions&gt;;</code>
 </pre>
 </div>
 
@@ -1293,7 +2824,7 @@ alternative token to the actual <code>MatChipAvatar</code> class which could cau
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_AVATAR: InjectionToken&lt;MatChipAvatar&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_AVATAR: InjectionToken&lt;unknown&gt;;</code>
 </pre>
 </div>
 
@@ -1309,7 +2840,7 @@ alternative token to the actual <code>MatChipTrailingIcon</code> class which cou
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_TRAILING_ICON: InjectionToken&lt;MatChipTrailingIcon&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_TRAILING_ICON: InjectionToken&lt;unknown&gt;;</code>
 </pre>
 </div>
 
@@ -1317,13 +2848,29 @@ retention of the class and its directive metadata.</p>
     
       
 
-<h4 id="MAT_CHIPS_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_CHIPS_DEFAULT_OPTIONS"></span>
-  <code>MAT_CHIPS_DEFAULT_OPTIONS</code>
-</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for the chips module.</p>
+<h4 id="MAT_CHIP_REMOVE" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHIP_REMOVE"></span>
+  <code>MAT_CHIP_REMOVE</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatChipRemove</code>. It serves as
+alternative token to the actual <code>MatChipRemove</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIPS_DEFAULT_OPTIONS: InjectionToken&lt;MatChipsDefaultOptions&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_REMOVE: InjectionToken&lt;unknown&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_CHIP" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHIP"></span>
+  <code>MAT_CHIP</code>
+</h4><p class="docs-api-constant-description"><p>Injection token used to avoid a circular dependency between the <code>MatChip</code> and <code>MatChipAction</code>.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP: InjectionToken&lt;unknown&gt;;</code>
 </pre>
 </div>
 
