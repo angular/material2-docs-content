@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-import * as i1 from "@angular/material/slide-toggle";
+import * as i1 from "@angular/material/legacy-slide-toggle";
 /**
  * @title Basic slide-toggles
  */
 export class SlideToggleOverviewExample {
 }
 SlideToggleOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SlideToggleOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-SlideToggleOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: SlideToggleOverviewExample, selector: "slide-toggle-overview-example", ngImport: i0, template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>\n", dependencies: [{ kind: "component", type: i1.MatSlideToggle, selector: "mat-slide-toggle", inputs: ["disabled", "disableRipple", "color", "tabIndex"], exportAs: ["matSlideToggle"] }] });
+SlideToggleOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: SlideToggleOverviewExample, selector: "slide-toggle-overview-example", ngImport: i0, template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>\n", dependencies: [{ kind: "component", type: i1.MatLegacySlideToggle, selector: "mat-slide-toggle", inputs: ["disabled", "disableRipple", "color", "tabIndex"], exportAs: ["matSlideToggle"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SlideToggleOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'slide-toggle-overview-example', template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>\n" }]

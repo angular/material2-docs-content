@@ -17,24 +17,25 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material slide-toggle
+    API reference for Angular Material legacy-slide-toggle
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+        import {MatLegacySlideToggleModule} from '@angular/material/legacy-slide-toggle';
       </code>
     </p>
-  <h3 id="material-slide-toggle-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-slide-toggle-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
     
       
 
-<h4 id="MatSlideToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSlideToggle"></span>
-  <code>MatSlideToggle</code>
+<h4 id="MatLegacySlideToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggle"></span>
+  <code>MatLegacySlideToggle</code>
   
-</h4><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-class-description"><p>Represents a slidable &quot;switch&quot; toggle that can be moved between on and off.</p>
+</p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-slide-toggle</span>
@@ -235,19 +236,6 @@ the slide toggle&#39;s value has changed.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>buttonId: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Returns the unique id for the visual hidden button.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>defaultColor: ThemePalette | undefined</code>
     </p>
   </td>
@@ -313,7 +301,38 @@ the slide toggle&#39;s value has changed.</p>
       <p>Focuses the slide-toggle.</p>
 
     </td>
-  </tr></table>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   
@@ -337,183 +356,16 @@ the slide toggle&#39;s value has changed.</p>
 
 
 
-    
-      
-
-<h4 id="MatSlideToggleRequiredValidator" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSlideToggleRequiredValidator"></span>
-  <code>MatSlideToggleRequiredValidator</code>
-  
-</h4><p class="docs-api-class-description"><p>Validator for Material slide-toggle components with the required attribute in a
-template-driven form. The default validator for required form controls asserts
-that the control value is not undefined but that is not appropriate for a slide-toggle
-where the value is always defined.</p>
-<p>Required slide-toggle form controls are valid when checked.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-slide-toggle[required][formControlName]</span>
-  
-    <span class="docs-api-class-selector-name">mat-slide-toggle[required][formControl]</span>
-  
-    <span class="docs-api-class-selector-name">mat-slide-toggle[required][ngModel]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>required: boolean | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tracks changes to the required attribute bound to this directive.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">enabled
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        input</p>
-      <code class="docs-api-method-parameter-type">boolean</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        fn</p>
-      <code class="docs-api-method-parameter-type">() =&gt; void</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">validate
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        control</p>
-      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    <h3 id="material-slide-toggle-classes" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-slide-toggle-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatSlideToggleChange" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSlideToggleChange"></span>
-  <code>MatSlideToggleChange</code>
+<h4 id="MatLegacySlideToggleChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggleChange"></span>
+  <code>MatLegacySlideToggleChange</code>
   
 </h4><p class="docs-api-class-description"><p>Change event object emitted by a slide toggle.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -540,7 +392,7 @@ where the value is always defined.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatSlideToggle</code>
+      <code>source: MatLegacySlideToggle</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The source slide toggle of the event.</p>
@@ -556,16 +408,16 @@ where the value is always defined.</p>
 
 
 
-    <h3 id="material-slide-toggle-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-slide-toggle-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
     
       
 
-<h4 id="MatSlideToggleDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatSlideToggleDefaultOptions"></span>
-  <code>MatSlideToggleDefaultOptions</code>
+<h4 id="MatLegacySlideToggleDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatLegacySlideToggleDefaultOptions"></span>
+  <code>MatLegacySlideToggleDefaultOptions</code>
 </h4><p class="docs-api-interface-description"><p>Default <code>mat-slide-toggle</code> options that can be overridden.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -607,33 +459,20 @@ where the value is always defined.</p>
 
 
 
-    <h3 id="material-slide-toggle-constants" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-slide-toggle-constants" class="docs-header-link docs-api-h3">
       <span header-link="constants"></span>
       Constants
     </h3>
     
       
 
-<h4 id="MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS"></span>
-  <code>MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS</code>
+<h4 id="MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS</code>
 </h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-slide-toggle</code>.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS: InjectionToken&lt;MatSlideToggleDefaultOptions&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR"></span>
-  <code>MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR</code>
-</h4><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR: Provider;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacySlideToggleDefaultOptions&gt;;</code>
 </pre>
 </div>
 

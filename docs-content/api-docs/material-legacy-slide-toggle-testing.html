@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material slide-toggle-testing
+    API reference for Angular Material legacy-slide-toggle-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatSlideToggleHarness} from '@angular/material/slide-toggle/testing';
+        import {MatLegacySlideToggleHarness} from '@angular/material/legacy-slide-toggle/testing';
       </code>
     </p>
-  <h3 id="material-slide-toggle-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-slide-toggle-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatSlideToggleHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSlideToggleHarness"></span>
-  <code>MatSlideToggleHarness</code>
+<h4 id="MatLegacySlideToggleHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggleHarness"></span>
+  <code>MatLegacySlideToggleHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based mat-slide-toggle in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-slide-toggle in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,10 +46,11 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-slide-toggle&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-slide-toggle&#39;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatSlideToggle</code> instance.</p>
+</td>
 </tr>
 
 
@@ -337,7 +338,12 @@ nothing if it is already checked.</p>
         </div>isChecked
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the slide-toggle is checked.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -431,7 +437,12 @@ nothing if it is already checked.</p>
         </div>isRequired
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the slide-toggle is required.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -492,7 +503,12 @@ nothing if it is already checked.</p>
         </div>toggle
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Toggle the checked state of the slide-toggle.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -558,7 +574,8 @@ nothing if it is already unchecked.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a slide-toggle w/ specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatSlideToggleHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -575,11 +592,7 @@ nothing if it is already unchecked.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Options for narrowing the search:</p>
-<ul>
-<li><code>selector</code> finds a slide-toggle whose host element matches the given selector.</li>
-<li><code>label</code> finds a slide-toggle with specific label text.</li>
-</ul>
+        <p>Options for filtering which slide toggle instances are considered a match.</p>
 
       </p>
     </td>
@@ -591,7 +604,7 @@ nothing if it is already unchecked.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacySlideToggleHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -603,83 +616,6 @@ nothing if it is already unchecked.</p>
 
 
   
-
-
-
-    <h3 id="material-slide-toggle-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="SlideToggleHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="SlideToggleHarnessFilters"></span>
-  <code>SlideToggleHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatSlideToggleHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>checked: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances with the given checked value.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances where the disabled state matches the given value.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>label: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose label matches the given value.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose name is the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
 
 
 
