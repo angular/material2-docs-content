@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import * as i4 from '@angular/forms';
 import * as i5 from '@angular/common';
-import * as i6 from '@angular/material/radio';
+import * as i6 from '@angular/material/legacy-radio';
 
 declare namespace i1 {
     export {
@@ -23,7 +23,7 @@ declare namespace i3 {
 
 export declare class RadioExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<RadioExamplesModule, [typeof i1.RadioHarnessExample, typeof i2.RadioNgModelExample, typeof i3.RadioOverviewExample], [typeof i4.ReactiveFormsModule, typeof i5.CommonModule, typeof i6.MatRadioModule, typeof i4.FormsModule], [typeof i1.RadioHarnessExample, typeof i2.RadioNgModelExample, typeof i3.RadioOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<RadioExamplesModule, [typeof i1.RadioHarnessExample, typeof i2.RadioNgModelExample, typeof i3.RadioOverviewExample], [typeof i4.ReactiveFormsModule, typeof i5.CommonModule, typeof i6.MatLegacyRadioModule, typeof i4.FormsModule], [typeof i1.RadioHarnessExample, typeof i2.RadioNgModelExample, typeof i3.RadioOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<RadioExamplesModule>;
 }
 

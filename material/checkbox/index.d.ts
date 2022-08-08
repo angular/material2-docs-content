@@ -5,7 +5,7 @@ import * as i0 from '@angular/core';
 import * as i5 from '@angular/common';
 import * as i6 from '@angular/material/legacy-card';
 import * as i7 from '@angular/material/legacy-checkbox';
-import * as i8 from '@angular/material/radio';
+import * as i8 from '@angular/material/legacy-radio';
 import * as i9 from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 
@@ -23,7 +23,7 @@ export declare class CheckboxConfigurableExample {
 
 export declare class CheckboxExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CheckboxExamplesModule, [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample, typeof i4.CheckboxReactiveFormsExample], [typeof i5.CommonModule, typeof i6.MatLegacyCardModule, typeof i7.MatLegacyCheckboxModule, typeof i8.MatRadioModule, typeof i9.FormsModule, typeof i9.ReactiveFormsModule], [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample, typeof i4.CheckboxReactiveFormsExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CheckboxExamplesModule, [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample, typeof i4.CheckboxReactiveFormsExample], [typeof i5.CommonModule, typeof i6.MatLegacyCardModule, typeof i7.MatLegacyCheckboxModule, typeof i8.MatLegacyRadioModule, typeof i9.FormsModule, typeof i9.ReactiveFormsModule], [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample, typeof i3.CheckboxHarnessExample, typeof i4.CheckboxReactiveFormsExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CheckboxExamplesModule>;
 }
 

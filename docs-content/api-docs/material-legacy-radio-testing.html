@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material radio-testing
+    API reference for Angular Material legacy-radio-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatRadioGroupHarness} from '@angular/material/radio/testing';
+        import {MatLegacyRadioGroupHarness} from '@angular/material/legacy-radio/testing';
       </code>
     </p>
-  <h3 id="material-radio-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-radio-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatRadioGroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatRadioGroupHarness"></span>
-  <code>MatRadioGroupHarness</code>
+<h4 id="MatLegacyRadioGroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRadioGroupHarness"></span>
+  <code>MatLegacyRadioGroupHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-radio-group in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-radio-group in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-radio-group&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-radio-group&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatRadioGroup</code> instance.</p>
@@ -343,8 +343,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a radio group with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatRadioGroupHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -373,7 +373,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyRadioGroupHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -391,11 +391,11 @@ attributes.</p>
     
       
 
-<h4 id="MatRadioButtonHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatRadioButtonHarness"></span>
-  <code>MatRadioButtonHarness</code>
+<h4 id="MatLegacyRadioButtonHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRadioButtonHarness"></span>
+  <code>MatLegacyRadioButtonHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-radio-button in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-radio-button in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -407,7 +407,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-radio-button&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-radio-button&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatRadioButton</code> instance.</p>
@@ -835,8 +835,8 @@ intentionally returned.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a radio button with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatRadioButtonHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -865,7 +865,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyRadioButtonHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -877,104 +877,6 @@ attributes.</p>
 
 
   
-
-
-
-    <h3 id="material-radio-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="RadioGroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="RadioGroupHarnessFilters"></span>
-  <code>RadioGroupHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioGroupHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose name attribute is the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="RadioButtonHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="RadioButtonHarnessFilters"></span>
-  <code>RadioButtonHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>checked: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances with the given checked value.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>label: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose label matches the given value.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose name attribute is the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
 
 
 
