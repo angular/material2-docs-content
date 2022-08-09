@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-import * as i1 from "@angular/material/slider";
+import * as i1 from "@angular/material/legacy-slider";
 /**
  * @title Basic slider
  */
 export class SliderOverviewExample {
 }
 SliderOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SliderOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-SliderOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: SliderOverviewExample, selector: "slider-overview-example", ngImport: i0, template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"], dependencies: [{ kind: "component", type: i1.MatSlider, selector: "mat-slider", inputs: ["disabled", "color", "tabIndex", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "value", "displayWith", "valueText", "vertical"], outputs: ["change", "input", "valueChange"], exportAs: ["matSlider"] }] });
+SliderOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: SliderOverviewExample, selector: "slider-overview-example", ngImport: i0, template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"], dependencies: [{ kind: "component", type: i1.MatLegacySlider, selector: "mat-slider", inputs: ["disabled", "color", "tabIndex", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "value", "displayWith", "valueText", "vertical"], outputs: ["change", "input", "valueChange"], exportAs: ["matSlider"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: SliderOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'slider-overview-example', template: "<mat-slider aria-label=\"unit(s)\"></mat-slider>\n", styles: ["mat-slider {\n  width: 300px;\n}\n"] }]

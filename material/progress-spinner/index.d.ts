@@ -3,7 +3,7 @@ import * as i4 from '@angular/common';
 import * as i5 from '@angular/material/legacy-card';
 import * as i6 from '@angular/material/progress-spinner';
 import * as i7 from '@angular/material/legacy-radio';
-import * as i8 from '@angular/material/slider';
+import * as i8 from '@angular/material/legacy-slider';
 import * as i9 from '@angular/forms';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { ThemePalette } from '@angular/material/core';
@@ -39,7 +39,7 @@ export declare class ProgressSpinnerConfigurableExample {
 
 export declare class ProgressSpinnerExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ProgressSpinnerExamplesModule, [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample], [typeof i4.CommonModule, typeof i5.MatLegacyCardModule, typeof i6.MatProgressSpinnerModule, typeof i7.MatLegacyRadioModule, typeof i8.MatSliderModule, typeof i9.FormsModule], [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ProgressSpinnerExamplesModule, [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample], [typeof i4.CommonModule, typeof i5.MatLegacyCardModule, typeof i6.MatProgressSpinnerModule, typeof i7.MatLegacyRadioModule, typeof i8.MatLegacySliderModule, typeof i9.FormsModule], [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerHarnessExample, typeof i3.ProgressSpinnerOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ProgressSpinnerExamplesModule>;
 }
 

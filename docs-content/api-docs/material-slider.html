@@ -68,10 +68,10 @@ behavior to the native <code>&lt;input type=&quot;range&quot;&gt;</code> element
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
+      <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -82,26 +82,40 @@ behavior to the native <code>&lt;input type=&quot;range&quot;&gt;</code> element
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>displayWith: (value: number) =&gt; string | number</code>
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the slider is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>discrete: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the slider displays a numeric value label upon pressing the thumb.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>displayWith: (value: number) =&gt; string</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Function that will be used to format the value before it is displayed
 in the thumb label. Can be used to format very large number in order
 for them to fit into the slider thumb.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>invert: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the slider is inverted.</p>
 </td>
 </tr>
 
@@ -140,109 +154,24 @@ for them to fit into the slider thumb.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>showTickMarks: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the slider displays tick marks along the slider track.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>step: number</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The values at which the thumb will snap.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>thumbLabel: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether or not to show the thumb label.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>tickInterval: &#39;auto&#39; | number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>How often to show ticks. Relative to the step so that a tick always appears on a step.
-Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12 values).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>value: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Value of the slider.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>valueText: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Text corresponding to the slider&#39;s value. Used primarily for improved accessibility.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>vertical: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the slider is vertical.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>change: EventEmitter&lt;MatSliderChange&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the slider value has changed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>input: EventEmitter&lt;MatSliderChange&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the slider thumb moves.</p>
 </td>
 </tr>
 
@@ -261,14 +190,51 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
 
 
     
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSliderThumb" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSliderThumb"></span>
+  <code>MatSliderThumb</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive that adds slider-specific behaviors to an input element inside <code>&lt;mat-slider&gt;</code>.
+Up to two may be placed inside of a <code>&lt;mat-slider&gt;</code>.</p>
+<p>If one is used, the selector <code>matSliderThumb</code> must be used, and the outcome will be a normal
+slider. If two are used, the selectors <code>matSliderStartThumb</code> and <code>matSliderEndThumb</code> must be
+used, and the outcome will be a range slider with two slider thumbs.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">input[matSliderThumb]</span>
+  
+    <span class="docs-api-class-selector-name">input[matSliderStartThumb]</span>
+  
+    <span class="docs-api-class-selector-name">input[matSliderEndThumb]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matSliderThumb</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>The current value of this slider input.</p>
 </td>
 </tr>
 
@@ -277,11 +243,12 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>displayValue: string | number</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dragEnd: EventEmitter&lt;MatSliderDragEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The value to be used for display purposes.</p>
+  <td class="docs-api-property-description"><p>Event emitted when the slider thumb stops being dragged.</p>
 </td>
 </tr>
 
@@ -290,24 +257,12 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>onTouched: () =&gt; any</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>dragStart: EventEmitter&lt;MatSliderDragEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>onTouch function registered via registerOnTouch (ControlValueAccessor).</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>percent: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The percentage of the slider that coincides with the value.</p>
+  <td class="docs-api-property-description"><p>Event emitted when the slider thumb starts being dragged.</p>
 </td>
 </tr>
 
@@ -326,12 +281,7 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <th colspan="2" class="docs-api-method-name-cell">blur
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>blur the host element</p>
-
-    </td>
-  </tr></table>
+  </thead></table>
 
 
   
@@ -343,48 +293,24 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <th colspan="2" class="docs-api-method-name-cell">focus
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>set focus to the host element</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
+  </thead></table>
 
 
   
 
 
 
-    <h3 id="material-slider-classes" class="docs-header-link docs-api-h3">
-      <span header-link="classes"></span>
-      Classes
+    <h3 id="material-slider-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
     </h3>
     
       
 
-<h4 id="MatSliderChange" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSliderChange"></span>
-  <code>MatSliderChange</code>
-  
-</h4><p class="docs-api-class-description"><p>A simple change event emitted by the MatSlider component.</p>
+<h4 id="MatSliderDragEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatSliderDragEvent"></span>
+  <code>MatSliderDragEvent</code>
+</h4><p class="docs-api-interface-description"><p>Represents a drag event emitted by the MatSlider component.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -396,10 +322,10 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatSlider</code>
+      <code>parent: MatSlider</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The MatSlider that changed.</p>
+  <td class="docs-api-property-description"><p>The MatSlider that was interacted with.</p>
 </td>
 </tr>
 
@@ -409,10 +335,23 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>value: number | null</code>
+      <code>source: MatSliderThumb</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The new value of the source slider.</p>
+  <td class="docs-api-property-description"><p>The MatSliderThumb that was interacted with.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The current value of the slider.</p>
 </td>
 </tr>
 
