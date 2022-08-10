@@ -5312,23 +5312,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tooltip"
         }
     },
-    "tooltip-position-at-origin": {
-        "packagePath": "material/tooltip/tooltip-position-at-origin",
-        "title": "Basic tooltip",
-        "componentName": "TooltipPositionAtOriginExample",
-        "files": [
-            "tooltip-position-at-origin-example.ts",
-            "tooltip-position-at-origin-example.html",
-            "tooltip-position-at-origin-example.css"
-        ],
-        "selector": "tooltip-position-at-origin-example",
-        "additionalComponents": [],
-        "primaryFile": "tooltip-position-at-origin-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
-    },
     "tooltip-position": {
         "packagePath": "material/tooltip/tooltip-position",
         "title": "Tooltip with a custom position",

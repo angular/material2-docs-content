@@ -152,21 +152,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
         }] });
 
 /**
- * @title Basic tooltip
- */
-class TooltipPositionAtOriginExample {
-    constructor() {
-        this.enabled = new FormControl(false);
-    }
-}
-TooltipPositionAtOriginExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipPositionAtOriginExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-TooltipPositionAtOriginExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: TooltipPositionAtOriginExample, selector: "tooltip-position-at-origin-example", ngImport: i0, template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipPositionAtOrigin]=\"enabled.value\"\n        aria-label=\"Button that displays a tooltip when focused or hovered over\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"enabled\" class=\"example-enabled-checkbox\">\n  Position at origin enabled\n</mat-checkbox>\n", styles: ["button {\n  width: 500px;\n  height: 500px;\n}\n\n.example-enabled-checkbox {\n  margin-left: 8px;\n}\n"], dependencies: [{ kind: "component", type: i1$1.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i2$2.MatLegacyCheckbox, selector: "mat-checkbox", inputs: ["disableRipple", "color", "tabIndex"], exportAs: ["matCheckbox"] }, { kind: "directive", type: i2$1.MatLegacyTooltip, selector: "[matTooltip]", exportAs: ["matTooltip"] }, { kind: "directive", type: i5$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i5$1.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipPositionAtOriginExample, decorators: [{
-            type: Component,
-            args: [{ selector: 'tooltip-position-at-origin-example', template: "<button mat-raised-button\n        matTooltip=\"Info about the action\"\n        [matTooltipPositionAtOrigin]=\"enabled.value\"\n        aria-label=\"Button that displays a tooltip when focused or hovered over\">\n  Action\n</button>\n\n<mat-checkbox [formControl]=\"enabled\" class=\"example-enabled-checkbox\">\n  Position at origin enabled\n</mat-checkbox>\n", styles: ["button {\n  width: 500px;\n  height: 500px;\n}\n\n.example-enabled-checkbox {\n  margin-left: 8px;\n}\n"] }]
-        }] });
-
-/**
  * @title Testing with MatTooltipHarness
  */
 class TooltipHarnessExample {
@@ -192,7 +177,6 @@ const EXAMPLES = [
     TooltipModifiedDefaultsExample,
     TooltipOverviewExample,
     TooltipPositionExample,
-    TooltipPositionAtOriginExample,
 ];
 class TooltipExamplesModule {
 }
@@ -206,8 +190,7 @@ TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         TooltipMessageExample,
         TooltipModifiedDefaultsExample,
         TooltipOverviewExample,
-        TooltipPositionExample,
-        TooltipPositionAtOriginExample], imports: [CommonModule,
+        TooltipPositionExample], imports: [CommonModule,
         MatButtonModule,
         MatLegacyCheckboxModule,
         MatLegacyInputModule,
@@ -223,8 +206,7 @@ TooltipExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         TooltipMessageExample,
         TooltipModifiedDefaultsExample,
         TooltipOverviewExample,
-        TooltipPositionExample,
-        TooltipPositionAtOriginExample] });
+        TooltipPositionExample] });
 TooltipExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipExamplesModule, imports: [CommonModule,
         MatButtonModule,
         MatLegacyCheckboxModule,
@@ -255,5 +237,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipHarnessExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionAtOriginExample, TooltipPositionExample };
+export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipHarnessExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample };
 //# sourceMappingURL=tooltip.mjs.map
