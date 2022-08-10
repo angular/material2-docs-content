@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import * as i10 from '@angular/material/legacy-dialog';
 import * as i11 from '@angular/material/legacy-input';
-import * as i12 from '@angular/material/menu';
+import * as i12 from '@angular/material/legacy-menu';
 import * as i13 from '@angular/forms';
 import * as i8 from '@angular/common';
 import * as i9 from '@angular/material/button';
@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatLegacyDialog } from '@angular/material/legacy-dialog';
 import { MatLegacyDialogConfig } from '@angular/material/legacy-dialog';
 import { MatLegacyDialogRef } from '@angular/material/legacy-dialog';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { MatLegacyMenuTrigger } from '@angular/material/legacy-menu';
 import { TemplateRef } from '@angular/core';
 
 /**
@@ -91,7 +91,7 @@ export declare class DialogElementsExampleDialog {
 
 export declare class DialogExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<DialogExamplesModule, [typeof i1.DialogContentExample, typeof i1.DialogContentExampleDialog, typeof i2.DialogDataExample, typeof i2.DialogDataExampleDialog, typeof i3.DialogElementsExample, typeof i3.DialogElementsExampleDialog, typeof i4.DialogFromMenuExample, typeof i4.DialogFromMenuExampleDialog, typeof i5.DialogHarnessExample, typeof i6.DialogOverviewExample, typeof i6.DialogOverviewExampleDialog, typeof i7.DialogAnimationsExample, typeof i7.DialogAnimationsExampleDialog], [typeof i8.CommonModule, typeof i9.MatButtonModule, typeof i10.MatLegacyDialogModule, typeof i11.MatLegacyInputModule, typeof i12.MatMenuModule, typeof i13.FormsModule], [typeof i1.DialogContentExample, typeof i1.DialogContentExampleDialog, typeof i2.DialogDataExample, typeof i2.DialogDataExampleDialog, typeof i3.DialogElementsExample, typeof i3.DialogElementsExampleDialog, typeof i4.DialogFromMenuExample, typeof i4.DialogFromMenuExampleDialog, typeof i5.DialogHarnessExample, typeof i6.DialogOverviewExample, typeof i6.DialogOverviewExampleDialog, typeof i7.DialogAnimationsExample, typeof i7.DialogAnimationsExampleDialog]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<DialogExamplesModule, [typeof i1.DialogContentExample, typeof i1.DialogContentExampleDialog, typeof i2.DialogDataExample, typeof i2.DialogDataExampleDialog, typeof i3.DialogElementsExample, typeof i3.DialogElementsExampleDialog, typeof i4.DialogFromMenuExample, typeof i4.DialogFromMenuExampleDialog, typeof i5.DialogHarnessExample, typeof i6.DialogOverviewExample, typeof i6.DialogOverviewExampleDialog, typeof i7.DialogAnimationsExample, typeof i7.DialogAnimationsExampleDialog], [typeof i8.CommonModule, typeof i9.MatButtonModule, typeof i10.MatLegacyDialogModule, typeof i11.MatLegacyInputModule, typeof i12.MatLegacyMenuModule, typeof i13.FormsModule], [typeof i1.DialogContentExample, typeof i1.DialogContentExampleDialog, typeof i2.DialogDataExample, typeof i2.DialogDataExampleDialog, typeof i3.DialogElementsExample, typeof i3.DialogElementsExampleDialog, typeof i4.DialogFromMenuExample, typeof i4.DialogFromMenuExampleDialog, typeof i5.DialogHarnessExample, typeof i6.DialogOverviewExample, typeof i6.DialogOverviewExampleDialog, typeof i7.DialogAnimationsExample, typeof i7.DialogAnimationsExampleDialog]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<DialogExamplesModule>;
 }
 
@@ -100,7 +100,7 @@ export declare class DialogExamplesModule {
  */
 export declare class DialogFromMenuExample {
     dialog: MatLegacyDialog;
-    menuTrigger: MatMenuTrigger;
+    menuTrigger: MatLegacyMenuTrigger;
     constructor(dialog: MatLegacyDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogFromMenuExample, never>;

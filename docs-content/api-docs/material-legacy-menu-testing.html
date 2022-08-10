@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material menu-testing
+    API reference for Angular Material legacy-menu-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatMenuHarness} from '@angular/material/menu/testing';
+        import {MatLegacyMenuHarness} from '@angular/material/legacy-menu/testing';
       </code>
     </p>
-  <h3 id="material-menu-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-menu-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatMenuHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatMenuHarness"></span>
-  <code>MatMenuHarness</code>
+<h4 id="MatLegacyMenuHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyMenuHarness"></span>
+  <code>MatLegacyMenuHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-menu in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-menu in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-menu-trigger&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-menu-trigger&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatMenu</code> instance.</p>
@@ -784,7 +784,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a menu with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatMenuHarness</code> that meets certain
+criteria.</p>
 
     </td>
   </tr><thead>
@@ -813,7 +814,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyMenuHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -831,11 +832,11 @@
     
       
 
-<h4 id="MatMenuItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatMenuItemHarness"></span>
-  <code>MatMenuItemHarness</code>
+<h4 id="MatLegacyMenuItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyMenuItemHarness"></span>
+  <code>MatLegacyMenuItemHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-menu-item in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-menu-item in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -847,7 +848,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-menu-item&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-menu-item&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatMenuItem</code> instance.</p>
@@ -1449,7 +1450,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a menu item with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatMenuItemHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -1478,7 +1480,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyMenuItemHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1490,91 +1492,6 @@
 
 
   
-
-
-
-    <h3 id="material-menu-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MenuHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MenuHarnessFilters"></span>
-  <code>MenuHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatMenuHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>triggerText: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose trigger text matches the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MenuItemHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MenuItemHarnessFilters"></span>
-  <code>MenuItemHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatMenuItemHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hasSubmenu: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances that have a sub-menu.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>text: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose text matches the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
 
 
 

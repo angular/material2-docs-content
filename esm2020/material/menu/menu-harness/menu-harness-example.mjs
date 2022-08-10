@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-import * as i1 from "@angular/material/menu";
+import * as i1 from "@angular/material/legacy-menu";
 /**
  * @title Testing with MatMenuHarness
  */
 export class MenuHarnessExample {
 }
 MenuHarnessExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: MenuHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MenuHarnessExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: MenuHarnessExample, selector: "menu-harness-example", ngImport: i0, template: "<button type=\"button\" [matMenuTriggerFor]=\"settingsMenu\">Settings</button>\n<button type=\"button\" disabled [matMenuTriggerFor]=\"settingsMenu\">Disabled menu</button>\n\n<mat-menu #settingsMenu>\n  <menu mat-menu-item>Profile</menu>\n  <menu mat-menu-item>Account</menu>\n</mat-menu>\n", dependencies: [{ kind: "component", type: i1.MatMenu, selector: "mat-menu", exportAs: ["matMenu"] }, { kind: "component", type: i1.MatMenuItem, selector: "[mat-menu-item]", inputs: ["disabled", "disableRipple", "role"], exportAs: ["matMenuItem"] }, { kind: "directive", type: i1.MatMenuTrigger, selector: "[mat-menu-trigger-for], [matMenuTriggerFor]", exportAs: ["matMenuTrigger"] }] });
+MenuHarnessExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: MenuHarnessExample, selector: "menu-harness-example", ngImport: i0, template: "<button type=\"button\" [matMenuTriggerFor]=\"settingsMenu\">Settings</button>\n<button type=\"button\" disabled [matMenuTriggerFor]=\"settingsMenu\">Disabled menu</button>\n\n<mat-menu #settingsMenu>\n  <menu mat-menu-item>Profile</menu>\n  <menu mat-menu-item>Account</menu>\n</mat-menu>\n", dependencies: [{ kind: "component", type: i1.MatLegacyMenu, selector: "mat-menu", exportAs: ["matMenu"] }, { kind: "component", type: i1.MatLegacyMenuItem, selector: "[mat-menu-item]", inputs: ["disabled", "disableRipple"], exportAs: ["matMenuItem"] }, { kind: "directive", type: i1.MatLegacyMenuTrigger, selector: "[mat-menu-trigger-for], [matMenuTriggerFor]", exportAs: ["matMenuTrigger"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: MenuHarnessExample, decorators: [{
             type: Component,
             args: [{ selector: 'menu-harness-example', template: "<button type=\"button\" [matMenuTriggerFor]=\"settingsMenu\">Settings</button>\n<button type=\"button\" disabled [matMenuTriggerFor]=\"settingsMenu\">Disabled menu</button>\n\n<mat-menu #settingsMenu>\n  <menu mat-menu-item>Profile</menu>\n  <menu mat-menu-item>Account</menu>\n</mat-menu>\n" }]

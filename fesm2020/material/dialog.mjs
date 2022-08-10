@@ -10,8 +10,8 @@ import * as i1 from '@angular/material/legacy-dialog';
 import { MAT_LEGACY_DIALOG_DATA, MatLegacyDialogModule } from '@angular/material/legacy-dialog';
 import * as i5 from '@angular/material/legacy-input';
 import { MatLegacyInputModule } from '@angular/material/legacy-input';
-import * as i3$1 from '@angular/material/menu';
-import { MatMenuModule } from '@angular/material/menu';
+import * as i3$1 from '@angular/material/legacy-menu';
+import { MatLegacyMenuModule } from '@angular/material/legacy-menu';
 import * as i4 from '@angular/material/legacy-form-field';
 
 /**
@@ -165,7 +165,7 @@ class DialogFromMenuExample {
     }
 }
 DialogFromMenuExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DialogFromMenuExample, deps: [{ token: i1.MatLegacyDialog }], target: i0.ɵɵFactoryTarget.Component });
-DialogFromMenuExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: DialogFromMenuExample, selector: "dialog-from-menu-example", viewQueries: [{ propertyName: "menuTrigger", first: true, predicate: ["menuTrigger"], descendants: true }], ngImport: i0, template: "<button mat-button [matMenuTriggerFor]=\"menu\" #menuTrigger>Menu</button>\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item (click)=\"openDialog()\">Open dialog</button>\n</mat-menu>\n", dependencies: [{ kind: "component", type: i2.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i3$1.MatMenu, selector: "mat-menu", exportAs: ["matMenu"] }, { kind: "component", type: i3$1.MatMenuItem, selector: "[mat-menu-item]", inputs: ["disabled", "disableRipple", "role"], exportAs: ["matMenuItem"] }, { kind: "directive", type: i3$1.MatMenuTrigger, selector: "[mat-menu-trigger-for], [matMenuTriggerFor]", exportAs: ["matMenuTrigger"] }] });
+DialogFromMenuExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: DialogFromMenuExample, selector: "dialog-from-menu-example", viewQueries: [{ propertyName: "menuTrigger", first: true, predicate: ["menuTrigger"], descendants: true }], ngImport: i0, template: "<button mat-button [matMenuTriggerFor]=\"menu\" #menuTrigger>Menu</button>\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item (click)=\"openDialog()\">Open dialog</button>\n</mat-menu>\n", dependencies: [{ kind: "component", type: i2.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i3$1.MatLegacyMenu, selector: "mat-menu", exportAs: ["matMenu"] }, { kind: "component", type: i3$1.MatLegacyMenuItem, selector: "[mat-menu-item]", inputs: ["disabled", "disableRipple"], exportAs: ["matMenuItem"] }, { kind: "directive", type: i3$1.MatLegacyMenuTrigger, selector: "[mat-menu-trigger-for], [matMenuTriggerFor]", exportAs: ["matMenuTrigger"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DialogFromMenuExample, decorators: [{
             type: Component,
             args: [{ selector: 'dialog-from-menu-example', template: "<button mat-button [matMenuTriggerFor]=\"menu\" #menuTrigger>Menu</button>\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item (click)=\"openDialog()\">Open dialog</button>\n</mat-menu>\n" }]
@@ -270,7 +270,7 @@ DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ve
         MatButtonModule,
         MatLegacyDialogModule,
         MatLegacyInputModule,
-        MatMenuModule,
+        MatLegacyMenuModule,
         FormsModule], exports: [DialogContentExample,
         DialogContentExampleDialog,
         DialogDataExample,
@@ -288,7 +288,7 @@ DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", ve
         MatButtonModule,
         MatLegacyDialogModule,
         MatLegacyInputModule,
-        MatMenuModule,
+        MatLegacyMenuModule,
         FormsModule] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DialogExamplesModule, decorators: [{
             type: NgModule,
@@ -298,7 +298,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
                         MatButtonModule,
                         MatLegacyDialogModule,
                         MatLegacyInputModule,
-                        MatMenuModule,
+                        MatLegacyMenuModule,
                         FormsModule,
                     ],
                     declarations: EXAMPLES,

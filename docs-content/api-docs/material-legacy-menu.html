@@ -17,13 +17,13 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material menu
+    API reference for Angular Material legacy-menu
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatMenuModule} from '@angular/material/menu';
+        import {MatLegacyMenuModule} from '@angular/material/legacy-menu';
       </code>
     </p>
-  <h3 id="material-menu-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-menu-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
@@ -420,9 +420,166 @@ the user to start from the first option when pressing the down arrow.</p>
     
       
 
-<h4 id="MatMenuTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatMenuTrigger"></span>
-  <code>MatMenuTrigger</code>
+<h4 id="MatLegacyMenuItem" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyMenuItem"></span>
+  <code>MatLegacyMenuItem</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/menu/api#MatMenuItem" class="docs-api-class-extends-type">
+      MatMenuItem
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Single item inside of a <code>mat-menu</code>. Provides the menu item styling and accessibility treatment.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[mat-menu-item]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matMenuItem</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: &#39;menuitem&#39; | &#39;menuitemradio&#39; | &#39;menuitemcheckbox&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>ARIA role for the menu item.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the menu item.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the label to be used when determining whether the option should be focused.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatLegacyMenuTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyMenuTrigger"></span>
+  <code>MatLegacyMenuTrigger</code>
   
 </h4><p class="docs-api-class-description"><p>Directive applied to an element that should trigger a <code>mat-menu</code>.</p>
 </p><p class="docs-api-directive-selectors">
@@ -729,159 +886,9 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
     
       
 
-<h4 id="MatMenuItem" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatMenuItem"></span>
-  <code>MatMenuItem</code>
-  
-</h4><p class="docs-api-class-description"><p>Single item inside of a <code>mat-menu</code>. Provides the menu item styling and accessibility treatment.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[mat-menu-item]</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matMenuItem</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>role: &#39;menuitem&#39; | &#39;menuitemradio&#39; | &#39;menuitemcheckbox&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>ARIA role for the menu item.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the menu item.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOrigin</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOptions</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getLabel
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the label to be used when determining whether the option should be focused.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatMenuContent" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatMenuContent"></span>
-  <code>MatMenuContent</code>
+<h4 id="MatLegacyMenuContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyMenuContent"></span>
+  <code>MatLegacyMenuContent</code>
   
 </h4><p class="docs-api-class-description"><p>Menu content that will be rendered lazily once the menu is opened.</p>
 </p><p class="docs-api-directive-selectors">
@@ -894,203 +901,6 @@ and it&#39;s up to you to manage focus, if you decide to turn it off.</p>
 
 
 
-
-
-    <h3 id="material-menu-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MatMenuDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatMenuDefaultOptions"></span>
-  <code>MatMenuDefaultOptions</code>
-</h4><p class="docs-api-interface-description"><p>Default <code>mat-menu</code> options that can be overridden.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>backdropClass: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Class to be applied to the menu&#39;s backdrop.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>hasBackdrop: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the menu has a backdrop.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>overlapTrigger: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the menu should overlap the menu trigger.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>overlayPanelClass: string | string[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Class or list of classes to be applied to the menu&#39;s overlay panel.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>xPosition: MenuPositionX</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The x-axis position of the menu.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>yPosition: MenuPositionY</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The y-axis position of the menu.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-menu-type_aliases" class="docs-header-link docs-api-h3">
-      <span header-link="type_aliases"></span>
-      Type aliases
-    </h3>
-    
-      
-
-<h4 id="MenuPositionX" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MenuPositionX"></span>
-  <code>MenuPositionX</code>
-</h4><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MenuPositionX = <span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span>;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MenuPositionY" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MenuPositionY"></span>
-  <code>MenuPositionY</code>
-</h4><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MenuPositionY = <span class="hljs-string">&#x27;above&#x27;</span> | <span class="hljs-string">&#x27;below&#x27;</span>;</code>
-</pre>
-</div>
-
-
-    <h3 id="material-menu-constants" class="docs-header-link docs-api-h3">
-      <span header-link="constants"></span>
-      Constants
-    </h3>
-    
-      
-
-<h4 id="MAT_MENU_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_MENU_DEFAULT_OPTIONS"></span>
-  <code>MAT_MENU_DEFAULT_OPTIONS</code>
-</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-menu</code>.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_MENU_DEFAULT_OPTIONS: InjectionToken&lt;MatMenuDefaultOptions&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_MENU_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_MENU_SCROLL_STRATEGY"></span>
-  <code>MAT_MENU_SCROLL_STRATEGY</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while the menu is open.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_MENU_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MENU_PANEL_TOP_PADDING" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MENU_PANEL_TOP_PADDING"></span>
-  <code>MENU_PANEL_TOP_PADDING</code>
-</h4><div class="docs-api-constant-deprecated-marker" title="Will be removed in v15.0.0 or later">
-  Deprecated
-</div><p class="docs-api-constant-description"><p>Default top padding of the menu panel.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MENU_PANEL_TOP_PADDING: <span class="hljs-number">8</span>;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="MAT_MENU_CONTENT" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_MENU_CONTENT"></span>
-  <code>MAT_MENU_CONTENT</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatMenuContent</code>. It serves
-as alternative token to the actual <code>MatMenuContent</code> class which could cause unnecessary
-retention of the class and its directive metadata.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_MENU_CONTENT: InjectionToken&lt;MatMenuContent&gt;;</code>
-</pre>
-</div>
 
 
     </div>
