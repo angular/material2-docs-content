@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import * as i6 from '@angular/common';
 import * as i7 from '@angular/material/icon';
-import * as i8 from '@angular/material/list';
+import * as i8 from '@angular/material/legacy-list';
 
 declare namespace i1 {
     export {
@@ -36,7 +36,7 @@ declare namespace i5 {
 
 export declare class ListExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ListExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ListExamplesModule, [typeof i1.ListHarnessExample, typeof i2.ListOverviewExample, typeof i3.ListSectionsExample, typeof i4.ListSelectionExample, typeof i5.ListSingleSelectionExample], [typeof i6.CommonModule, typeof i7.MatIconModule, typeof i8.MatListModule], [typeof i1.ListHarnessExample, typeof i2.ListOverviewExample, typeof i3.ListSectionsExample, typeof i4.ListSelectionExample, typeof i5.ListSingleSelectionExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ListExamplesModule, [typeof i1.ListHarnessExample, typeof i2.ListOverviewExample, typeof i3.ListSectionsExample, typeof i4.ListSelectionExample, typeof i5.ListSingleSelectionExample], [typeof i6.CommonModule, typeof i7.MatIconModule, typeof i8.MatLegacyListModule], [typeof i1.ListHarnessExample, typeof i2.ListOverviewExample, typeof i3.ListSectionsExample, typeof i4.ListSelectionExample, typeof i5.ListSingleSelectionExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ListExamplesModule>;
 }
 

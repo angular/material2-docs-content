@@ -17,31 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material list-testing
+    API reference for Angular Material legacy-list-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatSubheaderHarness} from '@angular/material/list/testing';
+        import {MatLegacyActionListHarness} from '@angular/material/legacy-list/testing';
       </code>
     </p>
-  <h3 id="material-list-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-list-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatSubheaderHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSubheaderHarness"></span>
-  <code>MatSubheaderHarness</code>
+<h4 id="MatLegacyActionListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyActionListHarness"></span>
+  <code>MatLegacyActionListHarness</code>
   
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
-      ComponentHarness
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based list subheader.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-action-list in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,154 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-subheader&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item (including text from any font icons).</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>host
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          static
-        </div>with
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">SubheaderHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatSubheaderHarness&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatActionListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatActionListHarness"></span>
-  <code>MatActionListHarness</code>
-  
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based action-list in tests.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-action-list&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;mat-action-list.mat-list&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatActionList</code> instance.</p>
@@ -491,7 +337,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacySubheaderHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -579,7 +425,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -667,7 +513,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -711,7 +557,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -767,8 +613,8 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for an action list with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatActionListHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -797,7 +643,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyActionListHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -815,9 +661,9 @@ attributes.</p>
     
       
 
-<h4 id="MatActionListItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatActionListItemHarness"></span>
-  <code>MatActionListItemHarness</code>
+<h4 id="MatLegacyActionListItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyActionListItemHarness"></span>
+  <code>MatLegacyActionListItemHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with an action list item.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -831,7 +677,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: `${MatActionListHarness.hostSelector} .mat-mdc-list-item`</code>
+      <code>static&nbsp;hostSelector: `${MatLegacyActionListHarness.hostSelector} .mat-list-item`</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListItem</code> instance.</p>
@@ -1090,38 +936,6 @@ attributes.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getFullText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
@@ -1214,13 +1028,12 @@ from icons and avatars.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getSecondaryText
+      <th colspan="2" class="docs-api-method-name-cell">getLinesText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the secondary line text of the list item. Null if the list item
-does not have a secondary line.</p>
+      <p>Gets the lines of text (<code>mat-line</code> elements) in this nav list item.</p>
 
     </td>
   </tr><thead>
@@ -1230,7 +1043,7 @@ does not have a secondary line.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1246,44 +1059,12 @@ does not have a secondary line.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTertiaryText
+      <th colspan="2" class="docs-api-method-name-cell">getText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the tertiary line text of the list item. Null if the list item
-does not have a tertiary line.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTitle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the title of the list item.</p>
+      <p>Gets the full text content of the list item.</p>
 
     </td>
   </tr><thead>
@@ -1294,37 +1075,6 @@ does not have a tertiary line.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getType
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the type of the list item, currently describing how many lines there are.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatListItemType&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1486,7 +1236,7 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the list item is disabled.</p>
+      <p>Whether this list option is disabled.</p>
 
     </td>
   </tr><thead>
@@ -1552,8 +1302,8 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a list item with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatActionListItemHarness</code> that
+meets certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -1582,7 +1332,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyActionListItemHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1594,51 +1344,17 @@ attributes.</p>
 
 
   
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v16.0.0 or later">
-            Deprecated
-          </div>getText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
 
 
 
     
       
 
-<h4 id="MatListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatListHarness"></span>
-  <code>MatListHarness</code>
+<h4 id="MatLegacyListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyListHarness"></span>
+  <code>MatLegacyListHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based list in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-list in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1650,7 +1366,7 @@ from icons and avatars.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-list&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-list:not(mat-action-list)&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatList</code> instance.</p>
@@ -1941,7 +1657,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacySubheaderHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2029,7 +1745,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2117,7 +1833,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2161,7 +1877,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2217,7 +1933,8 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a list with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatListHarness</code> that meets certain
+criteria.</p>
 
     </td>
   </tr><thead>
@@ -2246,7 +1963,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyListHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2264,9 +1981,9 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
     
       
 
-<h4 id="MatListItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatListItemHarness"></span>
-  <code>MatListItemHarness</code>
+<h4 id="MatLegacyListItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyListItemHarness"></span>
+  <code>MatLegacyListItemHarness</code>
   
 </h4><p class="docs-api-class-description"><p>Harness for interacting with a list item.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -2280,7 +1997,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: `${MatListHarness.hostSelector} .mat-mdc-list-item`</code>
+      <code>static&nbsp;hostSelector: `${MatLegacyListHarness.hostSelector} .mat-list-item`</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListItem</code> instance.</p>
@@ -2437,38 +2154,6 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getFullText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
@@ -2561,13 +2246,12 @@ from icons and avatars.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getSecondaryText
+      <th colspan="2" class="docs-api-method-name-cell">getLinesText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the secondary line text of the list item. Null if the list item
-does not have a secondary line.</p>
+      <p>Gets the lines of text (<code>mat-line</code> elements) in this nav list item.</p>
 
     </td>
   </tr><thead>
@@ -2577,7 +2261,7 @@ does not have a secondary line.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2593,44 +2277,12 @@ does not have a secondary line.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTertiaryText
+      <th colspan="2" class="docs-api-method-name-cell">getText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the tertiary line text of the list item. Null if the list item
-does not have a tertiary line.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTitle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the title of the list item.</p>
+      <p>Gets the full text content of the list item.</p>
 
     </td>
   </tr><thead>
@@ -2641,37 +2293,6 @@ does not have a tertiary line.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getType
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the type of the list item, currently describing how many lines there are.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatListItemType&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2833,7 +2454,7 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the list item is disabled.</p>
+      <p>Whether this list option is disabled.</p>
 
     </td>
   </tr><thead>
@@ -2866,7 +2487,8 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a list item with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatListItemHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -2895,7 +2517,7 @@ does not have a tertiary line.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyListItemHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2907,51 +2529,17 @@ does not have a tertiary line.</p>
 
 
   
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v16.0.0 or later">
-            Deprecated
-          </div>getText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
 
 
 
     
       
 
-<h4 id="MatNavListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatNavListHarness"></span>
-  <code>MatNavListHarness</code>
+<h4 id="MatLegacyNavListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyNavListHarness"></span>
+  <code>MatLegacyNavListHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based mat-nav-list in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-nav-list in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -2963,7 +2551,7 @@ from icons and avatars.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-nav-list&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-nav-list&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatNavList</code> instance.</p>
@@ -3254,7 +2842,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacySubheaderHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3342,7 +2930,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3430,7 +3018,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3474,7 +3062,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3530,8 +3118,8 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a nav list with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatNavListHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -3560,7 +3148,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyNavListHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -3578,11 +3166,11 @@ attributes.</p>
     
       
 
-<h4 id="MatNavListItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatNavListItemHarness"></span>
-  <code>MatNavListItemHarness</code>
+<h4 id="MatLegacyNavListItemHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyNavListItemHarness"></span>
+  <code>MatLegacyNavListItemHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based nav-list item.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a nav list item.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -3594,7 +3182,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: `${MatNavListHarness.hostSelector} .mat-mdc-list-item`</code>
+      <code>static&nbsp;hostSelector: `${MatLegacyNavListHarness.hostSelector} .mat-list-item`</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListItem</code> instance.</p>
@@ -3853,38 +3441,6 @@ attributes.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getFullText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
         </div>getHarness
@@ -4010,13 +3566,12 @@ from icons and avatars.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getSecondaryText
+      <th colspan="2" class="docs-api-method-name-cell">getLinesText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the secondary line text of the list item. Null if the list item
-does not have a secondary line.</p>
+      <p>Gets the lines of text (<code>mat-line</code> elements) in this nav list item.</p>
 
     </td>
   </tr><thead>
@@ -4026,7 +3581,7 @@ does not have a secondary line.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -4042,44 +3597,12 @@ does not have a secondary line.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTertiaryText
+      <th colspan="2" class="docs-api-method-name-cell">getText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the tertiary line text of the list item. Null if the list item
-does not have a tertiary line.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTitle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the title of the list item.</p>
+      <p>Gets the full text content of the list item.</p>
 
     </td>
   </tr><thead>
@@ -4090,37 +3613,6 @@ does not have a tertiary line.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getType
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the type of the list item, currently describing how many lines there are.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatListItemType&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -4277,45 +3769,12 @@ does not have a tertiary line.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>isActivated
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the list item is activated. Should only be used for nav list items.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">isDisabled
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the list item is disabled.</p>
+      <p>Whether this list option is disabled.</p>
 
     </td>
   </tr><thead>
@@ -4381,8 +3840,8 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a nav list item with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatNavListItemHarness</code> that
+meets certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -4411,7 +3870,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyNavListItemHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -4423,51 +3882,17 @@ attributes.</p>
 
 
   
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v16.0.0 or later">
-            Deprecated
-          </div>getText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
 
 
 
     
       
 
-<h4 id="MatSelectionListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSelectionListHarness"></span>
-  <code>MatSelectionListHarness</code>
+<h4 id="MatLegacySelectionListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySelectionListHarness"></span>
+  <code>MatLegacySelectionListHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC_based selection-list in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-selection-list in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -4479,7 +3904,7 @@ from icons and avatars.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-selection-list&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-selection-list&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatSelectionList</code> instance.</p>
@@ -4836,7 +4261,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatSubheaderHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacySubheaderHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -4924,7 +4349,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5012,7 +4437,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5056,7 +4481,7 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;(C | MatSubheaderHarness | MatDividerHarness)[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;(C | MatLegacySubheaderHarness | MatDividerHarness)[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5211,8 +4636,8 @@ no subheaders it is represented as a single <code>ListSection</code> with an und
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a selection list with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatSelectionListHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -5241,7 +4666,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacySelectionListHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5259,11 +4684,11 @@ attributes.</p>
     
       
 
-<h4 id="MatListOptionHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatListOptionHarness"></span>
-  <code>MatListOptionHarness</code>
+<h4 id="MatLegacyListOptionHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyListOptionHarness"></span>
+  <code>MatLegacyListOptionHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based list option.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a list option.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -5275,7 +4700,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-list-option&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-list-option&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatListOption</code> instance.</p>
@@ -5335,8 +4760,8 @@ attributes.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Puts the list option in an unchecked state by toggling it if it is currently
-checked, or doing nothing if it is already unchecked.</p>
+      <p>Puts the list option in an unchecked state by toggling it if it is currently checked, or doing
+nothing if it is already unchecked.</p>
 
     </td>
   </tr></table>
@@ -5491,7 +4916,7 @@ checked, or doing nothing if it is already unchecked.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatListOptionCheckboxPosition&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyListOptionCheckboxPosition&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5538,38 +4963,6 @@ checked, or doing nothing if it is already unchecked.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getFullText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5677,13 +5070,12 @@ from icons and avatars.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getSecondaryText
+      <th colspan="2" class="docs-api-method-name-cell">getLinesText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the secondary line text of the list item. Null if the list item
-does not have a secondary line.</p>
+      <p>Gets the lines of text (<code>mat-line</code> elements) in this nav list item.</p>
 
     </td>
   </tr><thead>
@@ -5693,7 +5085,7 @@ does not have a secondary line.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5709,44 +5101,12 @@ does not have a secondary line.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTertiaryText
+      <th colspan="2" class="docs-api-method-name-cell">getText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the tertiary line text of the list item. Null if the list item
-does not have a tertiary line.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getTitle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the title of the list item.</p>
+      <p>Gets the full text content of the list item.</p>
 
     </td>
   </tr><thead>
@@ -5757,37 +5117,6 @@ does not have a tertiary line.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getType
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the type of the list item, currently describing how many lines there are.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatListItemType&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -5949,7 +5278,7 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the list item is disabled.</p>
+      <p>Whether this list option is disabled.</p>
 
     </td>
   </tr><thead>
@@ -6048,8 +5377,8 @@ does not have a tertiary line.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Puts the list option in a checked state by toggling it if it is currently
-unchecked, or doing nothing if it is already checked.</p>
+      <p>Puts the list option in a checked state by toggling it if it is currently unchecked, or doing
+nothing if it is already checked.</p>
 
     </td>
   </tr></table>
@@ -6087,8 +5416,8 @@ unchecked, or doing nothing if it is already checked.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a list option with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatListOptionHarness</code> that
+meets certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -6117,7 +5446,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyListOptionHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -6129,44 +5458,10 @@ attributes.</p>
 
 
   
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v16.0.0 or later">
-            Deprecated
-          </div>getText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the full text content of the list item, excluding text
-from icons and avatars.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
 
 
 
-    <h3 id="material-list-testing-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-list-testing-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
@@ -6239,56 +5534,6 @@ from icons and avatars.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>fullText: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>secondaryText: string | RegExp | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>tertiaryText: string | RegExp | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>title: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v16.0.0 or later">
-        Deprecated
-      </div><p class="docs-api-property-name">
       <code>text: string | RegExp</code>
     </p>
   </td>
@@ -6342,18 +5587,6 @@ from icons and avatars.</p>
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>activated: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
     
       
 
