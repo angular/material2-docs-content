@@ -8,7 +8,7 @@ import * as i1 from "@angular/material/datepicker";
 import * as i2 from "@angular/material/legacy-form-field";
 import * as i3 from "@angular/material/legacy-input";
 import * as i4 from "@angular/material/core";
-import * as i5 from "@angular/material/button";
+import * as i5 from "@angular/material/legacy-button";
 import * as i6 from "@angular/material/icon";
 /** @title Datepicker with custom calendar header */
 export class DatepickerCustomHeaderExample {
@@ -72,7 +72,7 @@ ExampleHeader.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version:
         <mat-icon>keyboard_arrow_right</mat-icon>
       </button>
     </div>
-  `, isInline: true, styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "], dependencies: [{ kind: "component", type: i5.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i6.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
+  `, isInline: true, styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "], dependencies: [{ kind: "component", type: i5.MatLegacyButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i6.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: ExampleHeader, decorators: [{
             type: Component,
             args: [{ selector: 'example-header', template: `

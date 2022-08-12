@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
 import * as i12 from '@angular/common';
 import * as i13 from '@angular/forms';
-import * as i14 from '@angular/material/button';
+import * as i14 from '@angular/material/legacy-button';
 import * as i15 from '@angular/material/legacy-checkbox';
 import * as i16 from '@angular/material/icon';
 import * as i17 from '@angular/material/legacy-list';
@@ -116,7 +116,7 @@ export declare class SidenavDrawerOverviewExample {
 
 export declare class SidenavExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<SidenavExamplesModule, [typeof i1.SidenavAutosizeExample, typeof i2.SidenavBackdropExample, typeof i3.SidenavDisableCloseExample, typeof i4.SidenavDrawerOverviewExample, typeof i5.SidenavHarnessExample, typeof i6.SidenavFixedExample, typeof i7.SidenavModeExample, typeof i8.SidenavOpenCloseExample, typeof i9.SidenavOverviewExample, typeof i10.SidenavPositionExample, typeof i11.SidenavResponsiveExample], [typeof i12.CommonModule, typeof i13.FormsModule, typeof i14.MatButtonModule, typeof i15.MatLegacyCheckboxModule, typeof i16.MatIconModule, typeof i17.MatLegacyListModule, typeof i18.MatLegacyRadioModule, typeof i19.MatSidenavModule, typeof i20.MatLegacySelectModule, typeof i21.MatToolbarModule, typeof i13.ReactiveFormsModule], [typeof i1.SidenavAutosizeExample, typeof i2.SidenavBackdropExample, typeof i3.SidenavDisableCloseExample, typeof i4.SidenavDrawerOverviewExample, typeof i5.SidenavHarnessExample, typeof i6.SidenavFixedExample, typeof i7.SidenavModeExample, typeof i8.SidenavOpenCloseExample, typeof i9.SidenavOverviewExample, typeof i10.SidenavPositionExample, typeof i11.SidenavResponsiveExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SidenavExamplesModule, [typeof i1.SidenavAutosizeExample, typeof i2.SidenavBackdropExample, typeof i3.SidenavDisableCloseExample, typeof i4.SidenavDrawerOverviewExample, typeof i5.SidenavHarnessExample, typeof i6.SidenavFixedExample, typeof i7.SidenavModeExample, typeof i8.SidenavOpenCloseExample, typeof i9.SidenavOverviewExample, typeof i10.SidenavPositionExample, typeof i11.SidenavResponsiveExample], [typeof i12.CommonModule, typeof i13.FormsModule, typeof i14.MatLegacyButtonModule, typeof i15.MatLegacyCheckboxModule, typeof i16.MatIconModule, typeof i17.MatLegacyListModule, typeof i18.MatLegacyRadioModule, typeof i19.MatSidenavModule, typeof i20.MatLegacySelectModule, typeof i21.MatToolbarModule, typeof i13.ReactiveFormsModule], [typeof i1.SidenavAutosizeExample, typeof i2.SidenavBackdropExample, typeof i3.SidenavDisableCloseExample, typeof i4.SidenavDrawerOverviewExample, typeof i5.SidenavHarnessExample, typeof i6.SidenavFixedExample, typeof i7.SidenavModeExample, typeof i8.SidenavOpenCloseExample, typeof i9.SidenavOverviewExample, typeof i10.SidenavPositionExample, typeof i11.SidenavResponsiveExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<SidenavExamplesModule>;
 }
 

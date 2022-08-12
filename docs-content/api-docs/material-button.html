@@ -34,23 +34,22 @@
   <span header-link="MatButton"></span>
   <code>MatButton</code>
   
-</h4><p class="docs-api-class-description"><p>Material design button.</p>
+</h4><p class="docs-api-class-description"><p>Material Design button component. Users interact with a button to perform an action.
+See <a href="https://material.io/components/buttons">https://material.io/components/buttons</a></p>
+<p>The <code>MatButton</code> class applies to native button elements and captures the appearances for
+&quot;text button&quot;, &quot;outlined button&quot;, and &quot;contained button&quot; per the Material Design
+specification. <code>MatButton</code> additionally captures an additional &quot;flat&quot; appearance, which matches
+&quot;contained&quot; but without elevation.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
-    <span class="docs-api-class-selector-name">button[mat-button]</span>
+    <span class="docs-api-class-selector-name">    button[mat-button]</span>
   
     <span class="docs-api-class-selector-name">button[mat-raised-button]</span>
   
-    <span class="docs-api-class-selector-name">button[mat-icon-button]</span>
-  
-    <span class="docs-api-class-selector-name">button[mat-fab]</span>
-  
-    <span class="docs-api-class-selector-name">button[mat-mini-fab]</span>
-  
-    <span class="docs-api-class-selector-name">button[mat-stroked-button]</span>
-  
     <span class="docs-api-class-selector-name">button[mat-flat-button]</span>
+  
+    <span class="docs-api-class-selector-name">button[mat-stroked-button]  </span>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">matButton</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -63,40 +62,11 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>color: ThemePalette</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
 </td>
 </tr>
 
@@ -119,10 +89,10 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isIconButton: boolean</code>
+      <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the button is icon button.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -132,10 +102,10 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isRoundButton: boolean</code>
+      <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the button is round.</p>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
 </td>
 </tr>
 
@@ -181,8 +151,8 @@
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -217,14 +187,13 @@
   <span header-link="MatAnchor"></span>
   <code>MatAnchor</code>
   
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="components/button/api#MatButton" class="docs-api-class-extends-type">
-      MatButton
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Material design anchor button.</p>
+</h4><p class="docs-api-class-description"><p>Material Design button component for anchor elements. Anchor elements are used to provide
+links for the user to navigate across different routes or pages.
+See <a href="https://material.io/components/buttons">https://material.io/components/buttons</a></p>
+<p>The <code>MatAnchor</code> class applies to native anchor elements and captures the appearances for
+&quot;text button&quot;, &quot;outlined button&quot;, and &quot;contained button&quot; per the Material Design
+specification. <code>MatAnchor</code> additionally captures an additional &quot;flat&quot; appearance, which matches
+&quot;contained&quot; but without elevation.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
@@ -232,15 +201,9 @@
   
     <span class="docs-api-class-selector-name">a[mat-raised-button]</span>
   
-    <span class="docs-api-class-selector-name">a[mat-icon-button]</span>
-  
-    <span class="docs-api-class-selector-name">a[mat-fab]</span>
-  
-    <span class="docs-api-class-selector-name">a[mat-mini-fab]</span>
+    <span class="docs-api-class-selector-name">a[mat-flat-button]</span>
   
     <span class="docs-api-class-selector-name">a[mat-stroked-button]</span>
-  
-    <span class="docs-api-class-selector-name">a[mat-flat-button]</span>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
 <span class="docs-api-class-export-name">matButton, matAnchor</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
@@ -253,40 +216,11 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>color: ThemePalette</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
 </td>
 </tr>
 
@@ -309,10 +243,10 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isIconButton: boolean</code>
+      <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the button is icon button.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -322,10 +256,10 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isRoundButton: boolean</code>
+      <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the button is round.</p>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
 </td>
 </tr>
 
@@ -371,8 +305,8 @@
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -398,6 +332,965 @@
 
   
 
+
+
+    
+      
+
+<h4 id="MatFabButton" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFabButton"></span>
+  <code>MatFabButton</code>
+  
+</h4><p class="docs-api-class-description"><p>Material Design floating action button (FAB) component. These buttons represent the primary
+or most common action for users to interact with.
+See <a href="https://material.io/components/buttons-floating-action-button/">https://material.io/components/buttons-floating-action-button/</a></p>
+<p>The <code>MatFabButton</code> class has two appearances: normal and extended.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">button[mat-fab]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matButton</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>extended: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the button.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatMiniFabButton" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatMiniFabButton"></span>
+  <code>MatMiniFabButton</code>
+  
+</h4><p class="docs-api-class-description"><p>Material Design mini floating action button (FAB) component. These buttons represent the primary
+or most common action for users to interact with.
+See <a href="https://material.io/components/buttons-floating-action-button/">https://material.io/components/buttons-floating-action-button/</a></p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">button[mat-mini-fab]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matButton</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the button.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatFabAnchor" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFabAnchor"></span>
+  <code>MatFabAnchor</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/button/api#MatAnchor" class="docs-api-class-extends-type">
+      MatAnchor
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Material Design floating action button (FAB) component for anchor elements. Anchor elements
+are used to provide links for the user to navigate across different routes or pages.
+See <a href="https://material.io/components/buttons-floating-action-button/">https://material.io/components/buttons-floating-action-button/</a></p>
+<p>The <code>MatFabAnchor</code> class has two appearances: normal and extended.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">a[mat-fab]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matButton, matAnchor</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>extended: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the button.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatMiniFabAnchor" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatMiniFabAnchor"></span>
+  <code>MatMiniFabAnchor</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/button/api#MatAnchor" class="docs-api-class-extends-type">
+      MatAnchor
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Material Design mini floating action button (FAB) component for anchor elements. Anchor elements
+are used to provide links for the user to navigate across different routes or pages.
+See <a href="https://material.io/components/buttons-floating-action-button/">https://material.io/components/buttons-floating-action-button/</a></p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">a[mat-mini-fab]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matButton, matAnchor</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the button.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatIconButton" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatIconButton"></span>
+  <code>MatIconButton</code>
+  
+</h4><p class="docs-api-class-description"><p>Material Design icon button component. This type of button displays a single interactive icon for
+users to perform an action.
+See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">https://material.io/develop/web/components/buttons/icon-buttons/</a></p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">button[mat-icon-button]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matButton</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the button.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatIconAnchor" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatIconAnchor"></span>
+  <code>MatIconAnchor</code>
+  
+</h4><p class="docs-api-class-description"><p>Material Design icon button component for anchor elements. This button displays a single
+interaction icon that allows users to navigate across different routes or pages.
+See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">https://material.io/develop/web/components/buttons/icon-buttons/</a></p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">a[mat-icon-button]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matButton, matAnchor</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the MatRipple instance of the button.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        _origin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    <h3 id="material-button-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="MatFabDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatFabDefaultOptions"></span>
+  <code>MatFabDefaultOptions</code>
+</h4><p class="docs-api-interface-description"><p>Default FAB options that can be overridden.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-button-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      Constants
+    </h3>
+    
+      
+
+<h4 id="MAT_FAB_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_FAB_DEFAULT_OPTIONS"></span>
+  <code>MAT_FAB_DEFAULT_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for FAB.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_FAB_DEFAULT_OPTIONS: InjectionToken&lt;MatFabDefaultOptions&gt;;</code>
+</pre>
+</div>
 
 
     </div>

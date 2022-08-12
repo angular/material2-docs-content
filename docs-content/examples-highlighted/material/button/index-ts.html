@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDividerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {ButtonOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./button-overview/button-overview-example&#x27;</span>;
@@ -11,7 +11,7 @@
 <span class="hljs-keyword">const</span> EXAMPLES = [ButtonOverviewExample, ButtonTypesExample, ButtonHarnessExample];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatDividerModule, MatIconModule],
+  <span class="hljs-attr">imports</span>: [MatLegacyButtonModule, MatDividerModule, MatIconModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

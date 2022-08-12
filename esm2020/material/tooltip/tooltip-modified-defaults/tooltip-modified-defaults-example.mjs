@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS, } from '@angular/material/legacy-tooltip';
 import * as i0 from "@angular/core";
-import * as i1 from "@angular/material/button";
+import * as i1 from "@angular/material/legacy-button";
 import * as i2 from "@angular/material/legacy-tooltip";
 /** Custom options the configure the tooltip's default show/hide delays. */
 export const myCustomTooltipDefaults = {
@@ -15,7 +15,7 @@ export const myCustomTooltipDefaults = {
 export class TooltipModifiedDefaultsExample {
 }
 TooltipModifiedDefaultsExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipModifiedDefaultsExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-TooltipModifiedDefaultsExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: TooltipModifiedDefaultsExample, selector: "tooltip-modified-defaults-example", providers: [{ provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }], ngImport: i0, template: "<button mat-raised-button\n        matTooltip=\"By default, I delay\"\n        aria-label=\"Button that displays a tooltip that has custom delays through a default config\">\n  Button with delay-default tooltip\n</button>\n", dependencies: [{ kind: "component", type: i1.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "directive", type: i2.MatLegacyTooltip, selector: "[matTooltip]", exportAs: ["matTooltip"] }] });
+TooltipModifiedDefaultsExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: TooltipModifiedDefaultsExample, selector: "tooltip-modified-defaults-example", providers: [{ provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }], ngImport: i0, template: "<button mat-raised-button\n        matTooltip=\"By default, I delay\"\n        aria-label=\"Button that displays a tooltip that has custom delays through a default config\">\n  Button with delay-default tooltip\n</button>\n", dependencies: [{ kind: "component", type: i1.MatLegacyButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "directive", type: i2.MatLegacyTooltip, selector: "[matTooltip]", exportAs: ["matTooltip"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: TooltipModifiedDefaultsExample, decorators: [{
             type: Component,
             args: [{ selector: 'tooltip-modified-defaults-example', providers: [{ provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }], template: "<button mat-raised-button\n        matTooltip=\"By default, I delay\"\n        aria-label=\"Button that displays a tooltip that has custom delays through a default config\">\n  Button with delay-default tooltip\n</button>\n" }]

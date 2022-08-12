@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
 import * as i5 from '@angular/forms';
-import * as i6 from '@angular/material/button';
+import * as i6 from '@angular/material/legacy-button';
 import * as i7 from '@angular/material/legacy-input';
 import * as i8 from '@angular/material/legacy-select';
 import * as i9 from '@angular/material/snack-bar';
@@ -55,7 +55,7 @@ export declare class SnackBarComponentExample {
 
 export declare class SnackBarExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<SnackBarExamplesModule, [typeof i1.SnackBarComponentExample, typeof i2.SnackBarHarnessExample, typeof i3.SnackBarOverviewExample, typeof i4.SnackBarPositionExample, typeof i1.PizzaPartyComponent], [typeof i5.FormsModule, typeof i6.MatButtonModule, typeof i7.MatLegacyInputModule, typeof i8.MatLegacySelectModule, typeof i9.MatSnackBarModule], [typeof i1.SnackBarComponentExample, typeof i2.SnackBarHarnessExample, typeof i3.SnackBarOverviewExample, typeof i4.SnackBarPositionExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SnackBarExamplesModule, [typeof i1.SnackBarComponentExample, typeof i2.SnackBarHarnessExample, typeof i3.SnackBarOverviewExample, typeof i4.SnackBarPositionExample, typeof i1.PizzaPartyComponent], [typeof i5.FormsModule, typeof i6.MatLegacyButtonModule, typeof i7.MatLegacyInputModule, typeof i8.MatLegacySelectModule, typeof i9.MatSnackBarModule], [typeof i1.SnackBarComponentExample, typeof i2.SnackBarHarnessExample, typeof i3.SnackBarOverviewExample, typeof i4.SnackBarPositionExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<SnackBarExamplesModule>;
 }
 

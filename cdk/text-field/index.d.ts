@@ -5,7 +5,7 @@ import { ElementRef } from '@angular/core';
 import * as i0 from '@angular/core';
 import * as i4 from '@angular/common';
 import * as i5 from '@angular/cdk/text-field';
-import * as i6 from '@angular/material/button';
+import * as i6 from '@angular/material/legacy-button';
 import * as i7 from '@angular/material/legacy-input';
 import * as i8 from '@angular/material/legacy-select';
 import { NgZone } from '@angular/core';
@@ -13,7 +13,7 @@ import { OnDestroy } from '@angular/core';
 
 export declare class CdkTextFieldExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTextFieldExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkTextFieldExamplesModule, [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample], [typeof i4.CommonModule, typeof i5.TextFieldModule, typeof i6.MatButtonModule, typeof i7.MatLegacyInputModule, typeof i8.MatLegacySelectModule], [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkTextFieldExamplesModule, [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample], [typeof i4.CommonModule, typeof i5.TextFieldModule, typeof i6.MatLegacyButtonModule, typeof i7.MatLegacyInputModule, typeof i8.MatLegacySelectModule], [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CdkTextFieldExamplesModule>;
 }
 

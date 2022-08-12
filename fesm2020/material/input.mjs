@@ -4,8 +4,8 @@ import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import * as i4 from '@angular/forms';
 import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import * as i2 from '@angular/material/button';
-import { MatButtonModule } from '@angular/material/button';
+import * as i2 from '@angular/material/legacy-button';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
 import * as i3 from '@angular/material/icon';
 import { MatIconModule } from '@angular/material/icon';
 import * as i2$2 from '@angular/material/legacy-input';
@@ -21,7 +21,7 @@ class InputClearableExample {
     }
 }
 InputClearableExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: InputClearableExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-InputClearableExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: InputClearableExample, selector: "input-clearable-example", ngImport: i0, template: "<mat-form-field class=\"example-form-field\" appearance=\"fill\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  <button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n    <mat-icon>close</mat-icon>\n  </button>\n</mat-form-field>\n", styles: [".example-form-field {\n  width: 200px;\n}\n"], dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i2.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i3.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "component", type: i2$1.MatLegacyFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i2$1.MatLegacyLabel, selector: "mat-label" }, { kind: "directive", type: i2$1.MatLegacySuffix, selector: "[matSuffix]" }, { kind: "directive", type: i2$2.MatLegacyInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", exportAs: ["matInput"] }, { kind: "directive", type: i4.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i4.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i4.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }] });
+InputClearableExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: InputClearableExample, selector: "input-clearable-example", ngImport: i0, template: "<mat-form-field class=\"example-form-field\" appearance=\"fill\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  <button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n    <mat-icon>close</mat-icon>\n  </button>\n</mat-form-field>\n", styles: [".example-form-field {\n  width: 200px;\n}\n"], dependencies: [{ kind: "directive", type: i1.NgIf, selector: "[ngIf]", inputs: ["ngIf", "ngIfThen", "ngIfElse"] }, { kind: "component", type: i2.MatLegacyButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }, { kind: "component", type: i3.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }, { kind: "component", type: i2$1.MatLegacyFormField, selector: "mat-form-field", inputs: ["color", "appearance", "hideRequiredMarker", "hintLabel", "floatLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i2$1.MatLegacyLabel, selector: "mat-label" }, { kind: "directive", type: i2$1.MatLegacySuffix, selector: "[matSuffix]" }, { kind: "directive", type: i2$2.MatLegacyInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", exportAs: ["matInput"] }, { kind: "directive", type: i4.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i4.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i4.NgModel, selector: "[ngModel]:not([formControlName]):not([formControl])", inputs: ["name", "disabled", "ngModel", "ngModelOptions"], outputs: ["ngModelChange"], exportAs: ["ngModel"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: InputClearableExample, decorators: [{
             type: Component,
             args: [{ selector: 'input-clearable-example', template: "<mat-form-field class=\"example-form-field\" appearance=\"fill\">\n  <mat-label>Clearable input</mat-label>\n  <input matInput type=\"text\" [(ngModel)]=\"value\">\n  <button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\">\n    <mat-icon>close</mat-icon>\n  </button>\n</mat-form-field>\n", styles: [".example-form-field {\n  width: 200px;\n}\n"] }]
@@ -148,7 +148,7 @@ InputExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ver
         InputHintExample,
         InputOverviewExample,
         InputPrefixSuffixExample], imports: [CommonModule,
-        MatButtonModule,
+        MatLegacyButtonModule,
         MatIconModule,
         MatLegacyInputModule,
         FormsModule,
@@ -161,7 +161,7 @@ InputExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ver
         InputOverviewExample,
         InputPrefixSuffixExample] });
 InputExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: InputExamplesModule, imports: [CommonModule,
-        MatButtonModule,
+        MatLegacyButtonModule,
         MatIconModule,
         MatLegacyInputModule,
         FormsModule,
@@ -171,7 +171,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
             args: [{
                     imports: [
                         CommonModule,
-                        MatButtonModule,
+                        MatLegacyButtonModule,
                         MatIconModule,
                         MatLegacyInputModule,
                         FormsModule,

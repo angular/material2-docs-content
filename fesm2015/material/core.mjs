@@ -2,8 +2,8 @@ import * as i0 from '@angular/core';
 import { Component, NgModule } from '@angular/core';
 import * as i5 from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import * as i1 from '@angular/material/button';
-import { MatButtonModule } from '@angular/material/button';
+import * as i1 from '@angular/material/legacy-button';
+import { MatLegacyButtonModule } from '@angular/material/legacy-button';
 import * as i1$1 from '@angular/material/legacy-checkbox';
 import { MatLegacyCheckboxModule } from '@angular/material/legacy-checkbox';
 import * as i4 from '@angular/material/core';
@@ -21,7 +21,7 @@ class ElevationOverviewExample {
     }
 }
 ElevationOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: ElevationOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ElevationOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: ElevationOverviewExample, selector: "elevation-overview-example", ngImport: i0, template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n", styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"], dependencies: [{ kind: "component", type: i1.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
+ElevationOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: ElevationOverviewExample, selector: "elevation-overview-example", ngImport: i0, template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n", styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"], dependencies: [{ kind: "component", type: i1.MatLegacyButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: ElevationOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'elevation-overview-example', template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n", styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"] }]
@@ -48,12 +48,12 @@ const EXAMPLES = [ElevationOverviewExample, RippleOverviewExample];
 class CoreExamplesModule {
 }
 CoreExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CoreExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CoreExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.1", ngImport: i0, type: CoreExamplesModule, declarations: [ElevationOverviewExample, RippleOverviewExample], imports: [MatButtonModule,
+CoreExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "14.0.1", ngImport: i0, type: CoreExamplesModule, declarations: [ElevationOverviewExample, RippleOverviewExample], imports: [MatLegacyButtonModule,
         MatLegacyCheckboxModule,
         MatLegacyInputModule,
         MatRippleModule,
         FormsModule], exports: [ElevationOverviewExample, RippleOverviewExample] });
-CoreExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CoreExamplesModule, imports: [MatButtonModule,
+CoreExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: CoreExamplesModule, imports: [MatLegacyButtonModule,
         MatLegacyCheckboxModule,
         MatLegacyInputModule,
         MatRippleModule,
@@ -62,7 +62,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImpor
             type: NgModule,
             args: [{
                     imports: [
-                        MatButtonModule,
+                        MatLegacyButtonModule,
                         MatLegacyCheckboxModule,
                         MatLegacyInputModule,
                         MatRippleModule,

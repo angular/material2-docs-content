@@ -41,7 +41,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-button in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based mat-button in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,12 +53,11 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: `[mat-button], [mat-raised-button], [mat-flat-button], [mat-icon-button],
-                         [mat-stroked-button], [mat-fab], [mat-mini-fab]`</code>
+      <code>static&nbsp;hostSelector: `[mat-button], [mat-raised-button], [mat-flat-button],
+                         [mat-icon-button], [mat-stroked-button], [mat-fab], [mat-mini-fab]`</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatButton</code> instance.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -80,7 +79,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blurs the button.</p>
+      <p>Blurs the button and returns a void promise that indicates when the action is complete.</p>
 
     </td>
   </tr><thead>
@@ -267,7 +266,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the button.</p>
+      <p>Focuses the button and returns a void promise that indicates when the action is complete.</p>
 
     </td>
   </tr><thead>
@@ -531,7 +530,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the button&#39;s label text.</p>
+      <p>Gets a promise for the button&#39;s label text.</p>
 
     </td>
   </tr><thead>
@@ -643,7 +642,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the button is disabled.</p>
+      <p>Gets a boolean promise indicating if the button is disabled.</p>
 
     </td>
   </tr><thead>
@@ -709,8 +708,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatButtonHarness</code> that meets
-certain criteria.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a button with specific attributes.</p>
 
     </td>
   </tr><thead>
@@ -723,11 +721,15 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">ButtonHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyButtonHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        <p>Options for filtering which button instances are considered a match.</p>
+        <p>Options for narrowing the search:</p>
+<ul>
+<li><code>selector</code> finds a button whose host element matches the given selector.</li>
+<li><code>text</code> finds a button with specific text content.</li>
+</ul>
 
       </p>
     </td>
@@ -739,7 +741,7 @@ certain criteria.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatButtonHarness&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -751,44 +753,6 @@ certain criteria.</p>
 
 
   
-
-
-
-    <h3 id="material-button-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="ButtonHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ButtonHarnessFilters"></span>
-  <code>ButtonHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatButtonHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>text: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose text matches the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
 
 
 

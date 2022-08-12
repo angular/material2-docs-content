@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
 import * as i3 from '@angular/material/bottom-sheet';
-import * as i4 from '@angular/material/button';
+import * as i4 from '@angular/material/legacy-button';
 import * as i5 from '@angular/material/legacy-list';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatBottomSheetConfig } from '@angular/material/bottom-sheet';
@@ -9,7 +9,7 @@ import { TemplateRef } from '@angular/core';
 
 export declare class BottomSheetExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<BottomSheetExamplesModule, [typeof i1.BottomSheetHarnessExample, typeof i2.BottomSheetOverviewExample, typeof i2.BottomSheetOverviewExampleSheet], [typeof i3.MatBottomSheetModule, typeof i4.MatButtonModule, typeof i5.MatLegacyListModule], [typeof i1.BottomSheetHarnessExample, typeof i2.BottomSheetOverviewExample, typeof i2.BottomSheetOverviewExampleSheet]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<BottomSheetExamplesModule, [typeof i1.BottomSheetHarnessExample, typeof i2.BottomSheetOverviewExample, typeof i2.BottomSheetOverviewExampleSheet], [typeof i3.MatBottomSheetModule, typeof i4.MatLegacyButtonModule, typeof i5.MatLegacyListModule], [typeof i1.BottomSheetHarnessExample, typeof i2.BottomSheetOverviewExample, typeof i2.BottomSheetOverviewExampleSheet]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<BottomSheetExamplesModule>;
 }
 

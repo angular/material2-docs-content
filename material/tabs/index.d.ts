@@ -1,7 +1,7 @@
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import * as i15 from '@angular/common';
-import * as i16 from '@angular/material/button';
+import * as i16 from '@angular/material/legacy-button';
 import * as i17 from '@angular/material/button-toggle';
 import * as i18 from '@angular/material/legacy-checkbox';
 import * as i19 from '@angular/material/icon';
@@ -165,7 +165,7 @@ export declare class TabGroupDynamicHeightExample {
 
 export declare class TabGroupExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TabGroupExamplesModule, [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample], [typeof i15.CommonModule, typeof i16.MatButtonModule, typeof i17.MatButtonToggleModule, typeof i18.MatLegacyCheckboxModule, typeof i19.MatIconModule, typeof i20.MatLegacyInputModule, typeof i21.MatTabsModule, typeof i22.ReactiveFormsModule], [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TabGroupExamplesModule, [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample], [typeof i15.CommonModule, typeof i16.MatLegacyButtonModule, typeof i17.MatButtonToggleModule, typeof i18.MatLegacyCheckboxModule, typeof i19.MatIconModule, typeof i20.MatLegacyInputModule, typeof i21.MatTabsModule, typeof i22.ReactiveFormsModule], [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TabGroupExamplesModule>;
 }
 

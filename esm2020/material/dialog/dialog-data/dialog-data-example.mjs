@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { MatLegacyDialog, MAT_LEGACY_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import * as i0 from "@angular/core";
 import * as i1 from "@angular/material/legacy-dialog";
-import * as i2 from "@angular/material/button";
+import * as i2 from "@angular/material/legacy-button";
 import * as i3 from "@angular/common";
 /**
  * @title Injecting data when opening a dialog
@@ -20,7 +20,7 @@ export class DialogDataExample {
     }
 }
 DialogDataExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DialogDataExample, deps: [{ token: i1.MatLegacyDialog }], target: i0.ɵɵFactoryTarget.Component });
-DialogDataExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: DialogDataExample, selector: "dialog-data-example", ngImport: i0, template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>\n", dependencies: [{ kind: "component", type: i2.MatButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
+DialogDataExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.0.1", type: DialogDataExample, selector: "dialog-data-example", ngImport: i0, template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>\n", dependencies: [{ kind: "component", type: i2.MatLegacyButton, selector: "button[mat-button], button[mat-raised-button], button[mat-icon-button],             button[mat-fab], button[mat-mini-fab], button[mat-stroked-button],             button[mat-flat-button]", inputs: ["disabled", "disableRipple", "color"], exportAs: ["matButton"] }] });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.0.1", ngImport: i0, type: DialogDataExample, decorators: [{
             type: Component,
             args: [{ selector: 'dialog-data-example', template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>\n" }]

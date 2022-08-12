@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import * as i6 from '@angular/material/button';
+import * as i6 from '@angular/material/legacy-button';
 import * as i7 from '@angular/material/icon';
 import * as i8 from '@angular/material/legacy-menu';
 
@@ -35,7 +35,7 @@ declare namespace i5 {
 
 export declare class MenuExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<MenuExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<MenuExamplesModule, [typeof i1.MenuHarnessExample, typeof i2.MenuIconsExample, typeof i3.MenuOverviewExample, typeof i4.MenuPositionExample, typeof i5.MenuNestedExample], [typeof i6.MatButtonModule, typeof i7.MatIconModule, typeof i8.MatLegacyMenuModule], [typeof i1.MenuHarnessExample, typeof i2.MenuIconsExample, typeof i3.MenuOverviewExample, typeof i4.MenuPositionExample, typeof i5.MenuNestedExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<MenuExamplesModule, [typeof i1.MenuHarnessExample, typeof i2.MenuIconsExample, typeof i3.MenuOverviewExample, typeof i4.MenuPositionExample, typeof i5.MenuNestedExample], [typeof i6.MatLegacyButtonModule, typeof i7.MatIconModule, typeof i8.MatLegacyMenuModule], [typeof i1.MenuHarnessExample, typeof i2.MenuIconsExample, typeof i3.MenuOverviewExample, typeof i4.MenuPositionExample, typeof i5.MenuNestedExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<MenuExamplesModule>;
 }
 

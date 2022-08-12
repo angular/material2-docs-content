@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import * as i10 from '@angular/cdk/drag-drop';
 import * as i11 from '@angular/material/legacy-autocomplete';
-import * as i12 from '@angular/material/button';
+import * as i12 from '@angular/material/legacy-button';
 import * as i13 from '@angular/material/legacy-chips';
 import * as i14 from '@angular/material/icon';
 import * as i15 from '@angular/material/legacy-form-field';
@@ -60,7 +60,7 @@ export declare class ChipsDragDropExample {
 
 export declare class ChipsExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample], [typeof i9.CommonModule, typeof i10.DragDropModule, typeof i11.MatLegacyAutocompleteModule, typeof i12.MatButtonModule, typeof i13.MatLegacyChipsModule, typeof i14.MatIconModule, typeof i15.MatLegacyFormFieldModule, typeof i16.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample], [typeof i9.CommonModule, typeof i10.DragDropModule, typeof i11.MatLegacyAutocompleteModule, typeof i12.MatLegacyButtonModule, typeof i13.MatLegacyChipsModule, typeof i14.MatIconModule, typeof i15.MatLegacyFormFieldModule, typeof i16.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ChipsExamplesModule>;
 }
 

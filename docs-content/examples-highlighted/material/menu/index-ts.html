@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatLegacyMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-menu&#x27;</span>;
 <span class="hljs-keyword">import</span> {MenuIconsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-icons/menu-icons-example&#x27;</span>;
@@ -25,7 +25,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatIconModule, MatLegacyMenuModule],
+  <span class="hljs-attr">imports</span>: [MatLegacyButtonModule, MatIconModule, MatLegacyMenuModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

@@ -1603,7 +1603,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "button-harness": {
         "packagePath": "material/button/button-harness",
-        "title": "Testing with MatButtonHarness",
+        "title": "Testing with MatLegacyButtonHarness",
         "componentName": "ButtonHarnessExample",
         "files": [
             "button-harness-example.ts",
