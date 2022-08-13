@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material paginator-testing
+    API reference for Angular Material legacy-paginator-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatPaginatorHarness} from '@angular/material/paginator/testing';
+        import {MatLegacyPaginatorHarness} from '@angular/material/legacy-paginator/testing';
       </code>
     </p>
-  <h3 id="material-paginator-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-paginator-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatPaginatorHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatPaginatorHarness"></span>
-  <code>MatPaginatorHarness</code>
+<h4 id="MatLegacyPaginatorHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyPaginatorHarness"></span>
+  <code>MatLegacyPaginatorHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-paginator in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-paginator in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-paginator&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-paginator&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Selector used to find paginator instances.</p>
@@ -421,7 +421,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a paginator with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatPaginatorHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -450,7 +451,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyPaginatorHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -462,24 +463,6 @@
 
 
   
-
-
-
-    <h3 id="material-paginator-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="PaginatorHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="PaginatorHarnessFilters"></span>
-  <code>PaginatorHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatPaginatorHarness</code> instances.</p>
-</p>
-
-
-
 
 
 

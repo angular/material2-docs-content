@@ -17,141 +17,22 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material paginator
+    API reference for Angular Material legacy-paginator
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatPaginatorModule} from '@angular/material/paginator';
+        import {MatLegacyPaginatorModule} from '@angular/material/legacy-paginator';
       </code>
     </p>
-  <h3 id="material-paginator-services" class="docs-header-link docs-api-h3">
-      <span header-link="services"></span>
-      Services
-    </h3>
-    
-      
-
-<h4 id="MatPaginatorIntl" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatPaginatorIntl"></span>
-  <code>MatPaginatorIntl</code>
-  
-</h4><p class="docs-api-class-description"><p>To modify the labels and text displayed, create a new instance of MatPaginatorIntl and
-include it in a custom provider</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>changes: Subject&lt;void&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Stream to emit from when labels are changed. Use this to notify components when the labels have
-changed after initialization.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>firstPageLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the button that moves to the first page.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>getRangeLabel: (page: number, pageSize: number, length: number) =&gt; string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the range of items within the current page and the length of the whole list.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>itemsPerPageLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the page size selector.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>lastPageLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the button that moves to the last page.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nextPageLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the button that increments the current page.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>previousPageLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A label for the button that decrements the current page.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-paginator-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-paginator-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
     
       
 
-<h4 id="MatPaginator" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatPaginator"></span>
-  <code>MatPaginator</code>
+<h4 id="MatLegacyPaginator" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyPaginator"></span>
+  <code>MatLegacyPaginator</code>
   
 </h4><p class="docs-api-class-description"><p>Component to provide navigation between paged information. Displays the size of the current
 page, user-selectable options to change that size, what items are being shown, and
@@ -491,138 +372,10 @@ navigational button to go to the previous or next page.</p>
 
 
 
-    <h3 id="material-paginator-classes" class="docs-header-link docs-api-h3">
-      <span header-link="classes"></span>
-      Classes
-    </h3>
-    
-      
-
-<h4 id="PageEvent" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="PageEvent"></span>
-  <code>PageEvent</code>
-  
-</h4><p class="docs-api-class-description"><p>Change event object that is emitted when the user selects a
-different page size or navigates to another page.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>length: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The current total number of items being paged</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>pageIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The current page index.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>pageSize: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The current page size</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>previousPageIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Index of the page that was selected previously.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-paginator-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-paginator-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
-    
-      
-
-<h4 id="MatPaginatorSelectConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatPaginatorSelectConfig"></span>
-  <code>MatPaginatorSelectConfig</code>
-</h4><p class="docs-api-interface-description"><p>Object that can used to configure the underlying <code>MatSelect</code> inside a <code>MatPaginator</code>.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableOptionCentering: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether to center the active option over the trigger.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>panelClass: string | string[] | Set&lt;string&gt; | {
-    [key: string]: any;
-}</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Classes to be passed to the select panel.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
     
       
 
@@ -641,7 +394,7 @@ different page size or navigates to another page.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>formFieldAppearance: MatFormFieldAppearance</code>
+      <code>formFieldAppearance: MatLegacyFormFieldAppearance</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The default form-field appearance to apply to the page size options selector.</p>
@@ -709,7 +462,7 @@ different page size or navigates to another page.</p>
 
 
 
-    <h3 id="material-paginator-constants" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-paginator-constants" class="docs-header-link docs-api-h3">
       <span header-link="constants"></span>
       Constants
     </h3>

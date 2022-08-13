@@ -1,0 +1,50 @@
+<div class="docs-markdown"><p><code>&lt;mat-paginator&gt;</code> provides navigation for paged information, typically used with a table.</p>
+<div material-docs-example="paginator-overview"></div>
+
+
+        <h3 id="basic-use" class="docs-header-link">
+          <span header-link="basic-use"></span>
+          Basic use
+        </h3>
+      <p>Each paginator instance requires:</p>
+<ul>
+<li>The number of items per page (default set to 50)</li>
+<li>The total number of items being paged</li>
+</ul>
+<p>The current page index defaults to 0, but can be explicitly set via pageIndex.</p>
+<p>When the user interacts with the paginator, a <code>PageEvent</code> will be fired that can be used to update
+any associated data view.</p>
+
+        <h3 id="page-size-options" class="docs-header-link">
+          <span header-link="page-size-options"></span>
+          Page size options
+        </h3>
+      <p>The paginator displays a dropdown of page sizes for the user to choose from. The options for this
+dropdown can be set via <code>pageSizeOptions</code></p>
+<p>The current pageSize will always appear in the dropdown, even if it is not included in
+pageSizeOptions.</p>
+<p>If you want to customize some of the optional of the <code>mat-select</code> inside the <code>mat-paginator</code>, you
+can use the <code>selectConfig</code> input.</p>
+
+        <h3 id="internationalization" class="docs-header-link">
+          <span header-link="internationalization"></span>
+          Internationalization
+        </h3>
+      <p>The labels for the paginator can be customized by providing your own instance of <code>MatPaginatorIntl</code>.
+This will allow you to change the following:</p>
+<ol>
+<li>The label for the length of each page.</li>
+<li>The range text displayed to the user.</li>
+<li>The tooltip messages on the navigation buttons.</li>
+</ol>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>The paginator uses <code>role=&quot;group&quot;</code> to semantically group its child controls. You must add an
+<code>aria-label</code> or <code>aria-labelledby</code> attribute to <code>&lt;mat-paginator&gt;</code> with a label that describes
+the content controlled by the pagination control.</p>
+<p>You can set the <code>aria-label</code> attributes for the button and select controls within the paginator in
+<code>MatPaginatorIntl</code>.</p>
+</div>

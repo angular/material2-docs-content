@@ -1705,7 +1705,7 @@ set, the header text will default to the column name with its first letter capit
   <code>MatTableDataSource</code>
   
 </h4><p class="docs-api-class-description"><p>Data source that accepts a client-side data array and includes native support of filtering,
-sorting (using MatSort), and pagination (using MatPaginator).</p>
+sorting (using MatSort), and pagination (using paginator).</p>
 <p>Allows for sort customization by overriding sortingDataAccessor, which defines how data
 properties are accessed. Also allows for filter customization by overriding filterTermAccessor,
 which defines how row data is converted to a string for filter matching.</p>
@@ -1787,8 +1787,8 @@ shown to the user rather than all the data.</p>
       <code>paginator: P | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Instance of the MatPaginator component used by the table to control what page of the data is
-displayed. Page changes emitted by the MatPaginator will trigger an update to the
+  <td class="docs-api-property-description"><p>Instance of the paginator component used by the table to control what page of the data is
+displayed. Page changes emitted by the paginator will trigger an update to the
 table&#39;s rendered data.</p>
 <p>Note that the data source uses the paginator&#39;s properties to calculate which page of data
 should be displayed. If the paginator receives its properties as template inputs,
