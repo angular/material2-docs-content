@@ -17,22 +17,22 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material tabs-testing
+    API reference for Angular Material legacy-tabs-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatTabGroupHarness} from '@angular/material/tabs/testing';
+        import {MatLegacyTabGroupHarness} from '@angular/material/legacy-tabs/testing';
       </code>
     </p>
-  <h3 id="material-tabs-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-tabs-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatTabGroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabGroupHarness"></span>
-  <code>MatTabGroupHarness</code>
+<h4 id="MatLegacyTabGroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTabGroupHarness"></span>
+  <code>MatLegacyTabGroupHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -41,7 +41,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-tab-group in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-tab-group in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,7 +53,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-tab-group&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-tab-group&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatTabGroup</code> instance.</p>
@@ -89,7 +89,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatTabHarness&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyTabHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -125,7 +125,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">TabHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -141,7 +141,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatTabHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyTabHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -210,7 +210,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">TabHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -251,7 +251,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a tab group with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatTabGroupHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -264,7 +265,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">TabGroupHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabGroupHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -280,7 +281,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyTabGroupHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -298,9 +299,9 @@
     
       
 
-<h4 id="MatTabHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabHarness"></span>
-  <code>MatTabHarness</code>
+<h4 id="MatLegacyTabHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTabHarness"></span>
+  <code>MatLegacyTabHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -309,7 +310,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC_based Angular Material tab in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material tab-label in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -321,7 +322,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-tab&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-tab-label&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatTab</code> instance.</p>
@@ -916,7 +917,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a tab with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatTabHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -929,7 +931,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">TabHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -945,7 +947,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyTabHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -963,9 +965,9 @@
     
       
 
-<h4 id="MatTabNavBarHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabNavBarHarness"></span>
-  <code>MatTabNavBarHarness</code>
+<h4 id="MatLegacyTabNavBarHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTabNavBarHarness"></span>
+  <code>MatLegacyTabNavBarHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -974,7 +976,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-tab-nav-bar in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-tab-nav-bar in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -986,7 +988,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-tab-nav-bar&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-tab-nav-bar&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatTabNavBar</code> instance.</p>
@@ -1025,7 +1027,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">TabLinkHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabLinkHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1076,7 +1078,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatTabLinkHarness&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyTabLinkHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1112,7 +1114,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">TabLinkHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabLinkHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1128,7 +1130,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatTabLinkHarness[]&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyTabLinkHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1161,7 +1163,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatTabNavPanelHarness&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyTabNavPanelHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1217,8 +1219,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a tab nav bar with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatTabNavBar</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -1231,7 +1233,7 @@ attributes.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">TabNavBarHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabNavBarHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1247,7 +1249,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyTabNavBarHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1265,9 +1267,9 @@ attributes.</p>
     
       
 
-<h4 id="MatTabLinkHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabLinkHarness"></span>
-  <code>MatTabLinkHarness</code>
+<h4 id="MatLegacyTabLinkHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTabLinkHarness"></span>
+  <code>MatLegacyTabLinkHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1276,7 +1278,7 @@ attributes.</p>
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material tab link in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material tab link in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1288,7 +1290,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-tab-link&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-tab-link&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatTabLink</code> instance.</p>
@@ -1480,7 +1482,8 @@ attributes.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a tab link with specific attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatTabLinkHarness</code> that meets
+certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -1493,7 +1496,7 @@ attributes.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">TabLinkHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyTabLinkHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1509,7 +1512,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyTabLinkHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1524,17 +1527,17 @@ attributes.</p>
 
 
 
-    <h3 id="material-tabs-testing-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-tabs-testing-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
     
       
 
-<h4 id="TabHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="TabHarnessFilters"></span>
-  <code>TabHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
+<h4 id="LegacyTabHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyTabHarnessFilters"></span>
+  <code>LegacyTabHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTabHarness</code> instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1565,10 +1568,10 @@ attributes.</p>
     
       
 
-<h4 id="TabGroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="TabGroupHarnessFilters"></span>
-  <code>TabGroupHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
+<h4 id="LegacyTabGroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyTabGroupHarnessFilters"></span>
+  <code>LegacyTabGroupHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTabGroupHarness</code> instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1599,9 +1602,9 @@ attributes.</p>
     
       
 
-<h4 id="TabLinkHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="TabLinkHarnessFilters"></span>
-  <code>TabLinkHarnessFilters</code>
+<h4 id="LegacyTabLinkHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyTabLinkHarnessFilters"></span>
+  <code>LegacyTabLinkHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTabLinkHarness</code> instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -1633,9 +1636,9 @@ attributes.</p>
     
       
 
-<h4 id="TabNavBarHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="TabNavBarHarnessFilters"></span>
-  <code>TabNavBarHarnessFilters</code>
+<h4 id="LegacyTabNavBarHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyTabNavBarHarnessFilters"></span>
+  <code>LegacyTabNavBarHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTabNavBarHarness</code> instances.</p>
 </p>
 
@@ -1647,9 +1650,9 @@ attributes.</p>
     
       
 
-<h4 id="TabNavPanelHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="TabNavPanelHarnessFilters"></span>
-  <code>TabNavPanelHarnessFilters</code>
+<h4 id="LegacyTabNavPanelHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyTabNavPanelHarnessFilters"></span>
+  <code>LegacyTabNavPanelHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTabNavBarHarness</code> instances.</p>
 </p>
 

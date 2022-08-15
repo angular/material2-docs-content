@@ -1,0 +1,165 @@
+<div class="docs-markdown"><p>Angular Material tabs organize content into separate views where only one view can be
+visible at a time. Each tab&#39;s label is shown in the tab header and the active
+tab&#39;s label is designated with the animated ink bar. When the list of tab labels exceeds the width
+of the header, pagination controls appear to let the user scroll left and right across the labels.</p>
+<p>The active tab may be set using the <code>selectedIndex</code> input or when the user selects one of the
+tab labels in the header.</p>
+<div material-docs-example="tab-group-basic"></div>
+
+
+        <h3 id="events" class="docs-header-link">
+          <span header-link="events"></span>
+          Events
+        </h3>
+      <p>The <code>selectedTabChange</code> output event is emitted when the active tab changes.</p>
+<p>The <code>focusChange</code> output event is emitted when the user puts focus on any of the tab labels in
+the header, usually through keyboard navigation.</p>
+
+        <h3 id="labels" class="docs-header-link">
+          <span header-link="labels"></span>
+          Labels
+        </h3>
+      <p>If a tab&#39;s label is only text then the simple tab-group API can be used.</p>
+<div material-docs-example="tab-group-basic"
+                             file="tab-group-basic-example.html"
+                             ></div>
+
+<p>For more complex labels, add a template with the <code>mat-tab-label</code> directive inside the <code>mat-tab</code>.</p>
+<div material-docs-example="tab-group-custom-label"
+                             file="tab-group-custom-label-example.html"
+                             region="label-directive"></div>
+
+
+        <h3 id="dynamic-height" class="docs-header-link">
+          <span header-link="dynamic-height"></span>
+          Dynamic Height
+        </h3>
+      <p>By default, the tab group will not change its height to the height of the currently active tab. To
+change this, set the <code>dynamicHeight</code> input to true. The tab body will animate its height according
+ to the height of the active tab.</p>
+ <div material-docs-example="tab-group-dynamic-height"
+                             file="tab-group-dynamic-height-example.html"
+                             region="dynamic-height"></div>
+
+
+        <h3 id="tabs-and-navigation" class="docs-header-link">
+          <span header-link="tabs-and-navigation"></span>
+          Tabs and navigation
+        </h3>
+      <p>While <code>&lt;mat-tab-group&gt;</code> is used to switch between views within a single route, <code>&lt;nav mat-tab-nav-bar&gt;</code>
+provides a tab-like UI for navigating between routes.</p>
+ <div material-docs-example="tab-nav-bar-basic"
+                             file="tab-nav-bar-basic-example.html"
+                             region="mat-tab-nav"></div>
+
+<p>The <code>mat-tab-nav-bar</code> is not tied to any particular router; it works with normal <code>&lt;a&gt;</code> elements and
+uses the <code>active</code> property to determine which tab is currently active. The corresponding
+<code>&lt;router-outlet&gt;</code> must be wrapped in an <code>&lt;mat-tab-nav-panel&gt;</code> component and should typically be
+placed relatively close to the <code>mat-tab-nav-bar</code> (see <a href="#accessibility">Accessibility</a>).</p>
+
+        <h3 id="lazy-loading" class="docs-header-link">
+          <span header-link="lazy-loading"></span>
+          Lazy Loading
+        </h3>
+      <p>By default, the tab contents are eagerly loaded. Eagerly loaded tabs
+will initialize the child components but not inject them into the DOM
+until the tab is activated.</p>
+<p>If the tab contains several complex child components or the tab&#39;s contents
+rely on DOM calculations during initialization, it is advised
+to lazy load the tab&#39;s content.</p>
+<p>Tab contents can be lazy loaded by declaring the body in a <code>ng-template</code>
+with the <code>matTabContent</code> attribute.</p>
+ <div material-docs-example="tab-group-lazy-loaded"
+                             file="tab-group-lazy-loaded-example.html"
+                             region="mat-tab-content"></div>
+
+
+        <h3 id="label-alignment" class="docs-header-link">
+          <span header-link="label-alignment"></span>
+          Label alignment
+        </h3>
+      <p>If you want to align the tab labels in the center or towards the end of the container, you can
+do so using the <code>[mat-align-tabs]</code> attribute.</p>
+ <div material-docs-example="tab-group-align"
+                             file="tab-group-align-example.html"
+                             region="align-start"></div>
+
+
+        <h3 id="controlling-the-tab-animation" class="docs-header-link">
+          <span header-link="controlling-the-tab-animation"></span>
+          Controlling the tab animation
+        </h3>
+      <p>You can control the duration of the tabs&#39; animation using the <code>animationDuration</code> input. If you
+want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>. The
+duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injection token.</p>
+ <div material-docs-example="tab-group-animations"
+                             file="tab-group-animations-example.html"
+                             region="slow-animation-duration"></div>
+
+
+        <h3 id="keeping-the-tab-content-inside-the-dom-while-its-off-screen" class="docs-header-link">
+          <span header-link="keeping-the-tab-content-inside-the-dom-while-its-off-screen"></span>
+          Keeping the tab content inside the DOM while it&#39;s off-screen
+        </h3>
+      <p>By default the <code>&lt;mat-tab-group&gt;</code> will remove the content of off-screen tabs from the DOM until they
+come into the view. This is optimal for most cases since it keeps the DOM size smaller, but it
+isn&#39;t great for others like when a tab has an <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> element, because the content
+will be re-initialized whenever the user navigates to the tab. If you want to keep the content of
+off-screen tabs in the DOM, you can set the <code>preserveContent</code> input to <code>true</code>.</p>
+<div material-docs-example="tab-group-preserve-content"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p><code>MatTabGroup</code> and <code>MatTabNavBar</code> both implement the
+<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel">ARIA Tabs design pattern</a>. Both components
+compose <code>tablist</code>, <code>tab</code>, and <code>tabpanel</code> elements with handling for keyboard inputs and focus
+management.</p>
+<p>When using <code>MatTabNavBar</code>, you should place the <code>&lt;mat-tab-nav-panel&gt;</code> component relatively close to
+if not immediately adjacent to the <code>&lt;nav mat-tab-nav-bar&gt;</code> component so that it&#39;s easy for screen
+reader users to identify the association.</p>
+
+        <h4 id="labels-1" class="docs-header-link">
+          <span header-link="labels-1"></span>
+          Labels
+        </h4>
+      <p>Always provide an accessible label via <code>aria-label</code> or <code>aria-describedby</code> for tabs without
+descriptive text content.</p>
+<p>When using <code>MatTabNavGroup</code>, always specify a label for the <code>&lt;nav&gt;</code> element.</p>
+
+        <h4 id="keyboard-interaction" class="docs-header-link">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h4>
+      <p><code>MatTabGroup</code> and <code>MatTabNavBar</code> both implement the following keyboard interactions:</p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>LEFT_ARROW</code></td>
+<td>Move focus to previous tab</td>
+</tr>
+<tr>
+<td><code>RIGHT_ARROW</code></td>
+<td>Move focus to next tab</td>
+</tr>
+<tr>
+<td><code>HOME</code></td>
+<td>Move focus to first tab</td>
+</tr>
+<tr>
+<td><code>END</code></td>
+<td>Move focus to last tab</td>
+</tr>
+<tr>
+<td><code>SPACE</code> or <code>ENTER</code></td>
+<td>Switch to focused tab</td>
+</tr>
+</tbody></table>
+</div>

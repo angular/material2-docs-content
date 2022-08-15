@@ -30,17 +30,17 @@
     
       
 
-<h4 id="MatTab" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTab"></span>
-  <code>MatTab</code>
+<h4 id="MatTabContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTabContent"></span>
+  <code>MatTabContent</code>
   
-</h4><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-class-description"><p>Decorates the <code>ng-template</code> tags and reads out the template from it.</p>
+</p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
-    <span class="docs-api-class-selector-name">mat-tab</span>
+    <span class="docs-api-class-selector-name">[matTabContent]</span>
   
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matTab</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -50,139 +50,11 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>ariaLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Aria label for the tab.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-labelledby&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>ariaLabelledby: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Reference to the element that the tab is labelled by.
-Will be cleared if <code>aria-label</code> is set at the same time.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>bodyClass: string | string[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Classes to be passed to the tab mat-tab-body container.
-Supports string and string array values, same as <code>ngClass</code>.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>labelClass: string | string[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Classes to be passed to the tab label inside the mat-tab-header container.
-Supports string and string array values, same as <code>ngClass</code>.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;label&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>textLabel: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Plain text label for the tab, used when there is no template label.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isActive: false</code>
+      <code>template: TemplateRef&lt;any&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the tab is currently active.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>origin: number | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The initial relatively index origin of the tab if it was created and selected after there
-was already a selected tab. Provides context of what position the tab should originate from.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>position: number | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The relatively indexed position where 0 represents the center, negative is left, and positive
-represents the right.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateLabel: MatTabLabel</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Content for the tab label given by <code>&lt;ng-template mat-tab-label&gt;</code>.</p>
+  <td class="docs-api-property-description"><p>Content for the tab.</p>
 </td>
 </tr>
 
@@ -424,19 +296,17 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
     
       
 
-<h4 id="MatTabNav" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabNav"></span>
-  <code>MatTabNav</code>
+<h4 id="MatTab" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTab"></span>
+  <code>MatTab</code>
   
-</h4><p class="docs-api-class-description"><p>Navigation component matching the styles of the tab group header.
-Provides anchored navigation with animated ink bar.</p>
-</p><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
-    <span class="docs-api-class-selector-name">[mat-tab-nav-bar]</span>
+    <span class="docs-api-class-selector-name">mat-tab</span>
   
 </p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matTabNavBar, matTabNav</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+<span class="docs-api-class-export-name">matTab</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -446,12 +316,27 @@ Provides anchored navigation with animated ink bar.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>backgroundColor: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Background color of the tab nav.</p>
+  <td class="docs-api-property-description"><p>Aria label for the tab.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-labelledby&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the element that the tab is labelled by.
+Will be cleared if <code>aria-label</code> is set at the same time.</p>
 </td>
 </tr>
 
@@ -462,216 +347,11 @@ Provides anchored navigation with animated ink bar.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>bodyClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color of the nav bar.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disablePagination: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether pagination should be disabled. This can be used to avoid unnecessary
-layout recalculations if it&#39;s known that pagination won&#39;t be required.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the ripple effect is disabled or not.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>tabPanel: MatTabNavPanel</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Associated tab panel controlled by the nav bar. If not provided, then the nav bar
-follows the ARIA link / navigation landmark pattern. If provided, it follows the
-ARIA tabs design pattern.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>focusIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tracks which element has focus; used for keyboard navigation</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>indexFocused: EventEmitter&lt;number&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when a label is focused.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollDistance: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Sets the distance in pixels that the tab header should be transformed in the X-axis.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>selectFocusedIndex: EventEmitter&lt;number&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the option is selected.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>selectedIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The index of the active tab.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updateActiveLink
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Notifies the component that the active link has been changed.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updatePagination
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the view whether pagination should be enabled or not.</p>
-<p>WARNING: Calling this method can be very costly in terms of performance. It should be called
-as infrequently as possible from outside of the Tabs component as it causes a reflow of the
-page.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatTabLink" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabLink"></span>
-  <code>MatTabLink</code>
-  
-</h4><p class="docs-api-class-description"><p>Link inside of a <code>mat-tab-nav-bar</code>.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[mat-tab-link]</span>
-  
-    <span class="docs-api-class-selector-name">[matTabLink]</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matTabLink</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>active: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the link is active.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Classes to be passed to the tab mat-tab-body container.
+Supports string and string array values, same as <code>ngClass</code>.</p>
 </td>
 </tr>
 
@@ -696,10 +376,25 @@ page.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>id: `mat-tab-link-${nextUniqueId++}`</code>
+      <code>labelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Unique id for the tab.</p>
+  <td class="docs-api-property-description"><p>Classes to be passed to the tab label inside the mat-tab-header container.
+Supports string and string array values, same as <code>ngClass</code>.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>textLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Plain text label for the tab, used when there is no template label.</p>
 </td>
 </tr>
 
@@ -709,110 +404,51 @@ page.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
+      <code>isActive: false</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Whether the tab is currently active.</p>
 </td>
 </tr>
 
 
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the tab link.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatTabNavPanel" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabNavPanel"></span>
-  <code>MatTabNavPanel</code>
-  
-</h4><p class="docs-api-class-description"><p>Tab panel component associated with MatTabNav.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-tab-nav-panel</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matTabNavPanel</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>id: `mat-tab-nav-panel-${nextUniqueId++}`</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Unique id for the tab panel.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatTabContent" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabContent"></span>
-  <code>MatTabContent</code>
-  
-</h4><p class="docs-api-class-description"><p>Decorates the <code>ng-template</code> tags and reads out the template from it.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matTabContent]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
     
       
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>template: TemplateRef&lt;any&gt;</code>
+      <code>origin: number | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Content for the tab.</p>
+  <td class="docs-api-property-description"><p>The initial relatively index origin of the tab if it was created and selected after there
+was already a selected tab. Provides context of what position the tab should originate from.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>position: number | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The relatively indexed position where 0 represents the center, negative is left, and positive
+represents the right.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>templateLabel: MatTabLabel</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Content for the tab label given by <code>&lt;ng-template mat-tab-label&gt;</code>.</p>
 </td>
 </tr>
 
@@ -955,6 +591,20 @@ layout recalculations if it&#39;s known that pagination won&#39;t be required.</
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>fitInkBarToContent: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the ink bar should fit its width to the size of the tab label content.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>headerPosition: MatTabHeaderPosition</code>
     </p>
   </td>
@@ -989,6 +639,20 @@ like iframes and videos from reloading next time it comes back into the view.</p
     </p>
   </td>
   <td class="docs-api-property-description"><p>The index of the active tab.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;mat-stretch-tabs&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>stretchTabs: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether tabs should be stretched to fill the header.</p>
 </td>
 </tr>
 
@@ -1135,6 +799,452 @@ like iframes and videos from reloading next time it comes back into the view.</p
 <p>WARNING: Calling this method can be very costly in terms of performance. It should be called
 as infrequently as possible from outside of the Tabs component as it causes a reflow of the
 page.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatTabNav" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTabNav"></span>
+  <code>MatTabNav</code>
+  
+</h4><p class="docs-api-class-description"><p>Navigation component matching the styles of the tab group header.
+Provides anchored navigation with animated ink bar.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[mat-tab-nav-bar]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matTabNavBar, matTabNav</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>backgroundColor: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Background color of the tab nav.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color of the nav bar.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disablePagination: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether pagination should be disabled. This can be used to avoid unnecessary
+layout recalculations if it&#39;s known that pagination won&#39;t be required.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the ripple effect is disabled or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>fitInkBarToContent: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the ink bar should fit its width to the size of the tab label content.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;mat-stretch-tabs&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>stretchTabs: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether tabs should be stretched to fill the header.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>tabPanel: MatTabNavPanel</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Associated tab panel controlled by the nav bar. If not provided, then the nav bar
+follows the ARIA link / navigation landmark pattern. If provided, it follows the
+ARIA tabs design pattern.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focusIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tracks which element has focus; used for keyboard navigation</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>indexFocused: EventEmitter&lt;number&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when a label is focused.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollDistance: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Sets the distance in pixels that the tab header should be transformed in the X-axis.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selectFocusedIndex: EventEmitter&lt;number&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the option is selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selectedIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The index of the active tab.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateActiveLink
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Notifies the component that the active link has been changed.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updatePagination
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Updates the view whether pagination should be enabled or not.</p>
+<p>WARNING: Calling this method can be very costly in terms of performance. It should be called
+as infrequently as possible from outside of the Tabs component as it causes a reflow of the
+page.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatTabNavPanel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTabNavPanel"></span>
+  <code>MatTabNavPanel</code>
+  
+</h4><p class="docs-api-class-description"><p>Tab panel component associated with MatTabNav.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-tab-nav-panel</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matTabNavPanel</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: `mat-tab-nav-panel-${nextUniqueId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Unique id for the tab panel.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatTabLink" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTabLink"></span>
+  <code>MatTabLink</code>
+  
+</h4><p class="docs-api-class-description"><p>Link inside of a <code>mat-tab-nav-bar</code>.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[mat-tab-link]</span>
+  
+    <span class="docs-api-class-selector-name">[matTabLink]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matTabLink</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>active: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the link is active.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: `mat-tab-link-${nextUniqueId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Unique id for the tab.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>fitInkBarToContent: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">activateInkBar
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        previousIndicatorClientRect<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">ClientRect</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">deactivateInkBar
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the tab link.</p>
 
     </td>
   </tr></table>
@@ -1310,16 +1420,15 @@ like iframes and videos from reloading next time it comes back into the view.</p
     
       
 
-<h4 id="MatTabBodyOriginState" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MatTabBodyOriginState"></span>
-  <code>MatTabBodyOriginState</code>
-</h4><p class="docs-api-type-alias-description"><p>The origin state is an internally used state that is set on a new tab body indicating if it
-began to the left or right of the prior selected index. For example, if the selected index was
-set to 1, and a new tab is created and selected at index 2, then the tab body would have an
-origin of right because its index was greater than the prior selected index.</p>
+<h4 id="ScrollDirection" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ScrollDirection"></span>
+  <code>ScrollDirection</code>
+</h4><p class="docs-api-type-alias-description"><p>The directions that scrolling can go in when the header&#39;s tabs exceed the header width. &#39;After&#39;
+will scroll the header towards the end of the tabs list and &#39;before&#39; will scroll towards the
+beginning of the list.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatTabBodyOriginState = <span class="hljs-string">&#x27;left&#x27;</span> | <span class="hljs-string">&#x27;right&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> ScrollDirection = <span class="hljs-string">&#x27;after&#x27;</span> | <span class="hljs-string">&#x27;before&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -1347,15 +1456,16 @@ pseudo-prior state.</p>
     
       
 
-<h4 id="ScrollDirection" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="ScrollDirection"></span>
-  <code>ScrollDirection</code>
-</h4><p class="docs-api-type-alias-description"><p>The directions that scrolling can go in when the header&#39;s tabs exceed the header width. &#39;After&#39;
-will scroll the header towards the end of the tabs list and &#39;before&#39; will scroll towards the
-beginning of the list.</p>
+<h4 id="MatTabBodyOriginState" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatTabBodyOriginState"></span>
+  <code>MatTabBodyOriginState</code>
+</h4><p class="docs-api-type-alias-description"><p>The origin state is an internally used state that is set on a new tab body indicating if it
+began to the left or right of the prior selected index. For example, if the selected index was
+set to 1, and a new tab is created and selected at index 2, then the tab body would have an
+origin of right because its index was greater than the prior selected index.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> ScrollDirection = <span class="hljs-string">&#x27;after&#x27;</span> | <span class="hljs-string">&#x27;before&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatTabBodyOriginState = <span class="hljs-string">&#x27;left&#x27;</span> | <span class="hljs-string">&#x27;right&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -1388,6 +1498,38 @@ beginning of the list.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_TABS_CONFIG: InjectionToken&lt;MatTabsConfig&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_TAB_CONTENT" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_TAB_CONTENT"></span>
+  <code>MAT_TAB_CONTENT</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatTabContent</code>. It serves as
+alternative token to the actual <code>MatTabContent</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_TAB_CONTENT: InjectionToken&lt;MatTabContent&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_TAB_LABEL" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_TAB_LABEL"></span>
+  <code>MAT_TAB_LABEL</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatTabLabel</code>. It serves as
+alternative token to the actual <code>MatTabLabel</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_TAB_LABEL: InjectionToken&lt;MatTabLabel&gt;;</code>
 </pre>
 </div>
 
