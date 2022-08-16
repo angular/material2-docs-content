@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material snack-bar-testing
+    API reference for Angular Material legacy-snack-bar-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatSnackBarHarness} from '@angular/material/snack-bar/testing';
+        import {MatLegacySnackBarHarness} from '@angular/material/legacy-snack-bar/testing';
       </code>
     </p>
-  <h3 id="material-snack-bar-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-snack-bar-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatSnackBarHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSnackBarHarness"></span>
-  <code>MatSnackBarHarness</code>
+<h4 id="MatLegacySnackBarHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySnackBarHarness"></span>
+  <code>MatLegacySnackBarHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-snack-bar in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-snack-bar in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-snack-bar-container:not([mat-exit])&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-snack-bar-container&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatSnackBar</code> instance.</p>
@@ -583,8 +583,7 @@ determined based on the ARIA politeness specified in the snack-bar config.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatSnackBarHarness</code> that meets
-certain criteria.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a snack bar with specific attributes.</p>
 
     </td>
   </tr><thead>
@@ -613,7 +612,7 @@ certain criteria.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatSnackBarHarness&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacySnackBarHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -661,24 +660,6 @@ on the ARIA politeness specified in the snack-bar config.</p>
 
 
   
-
-
-
-    <h3 id="material-snack-bar-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="SnackBarHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="SnackBarHarnessFilters"></span>
-  <code>SnackBarHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatSnackBarHarness</code> instances.</p>
-</p>
-
-
-
 
 
 

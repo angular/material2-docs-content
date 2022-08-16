@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>handsetCssClass: &#39;mat-snack-bar-handset&#39;</code>
+      <code>handsetCssClass: &#39;mat-mdc-snack-bar-handset&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -322,14 +322,13 @@ currently opened snack bars.</p>
   <span header-link="SimpleSnackBar"></span>
   <code>SimpleSnackBar</code>
   
-</h4><p class="docs-api-class-description"><p>A component used to open as the default snack bar, matching material spec.
-This should only be used internally by the snack bar service.</p>
-</p><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">simple-snack-bar</span>
   
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matSnackBar</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -346,8 +345,7 @@ This should only be used internally by the snack bar service.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Data that was injected into the snack bar.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -399,6 +397,66 @@ This should only be used internally by the snack bar service.</p>
 
 
   
+
+
+
+    
+      
+
+<h4 id="MatSnackBarLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarLabel"></span>
+  <code>MatSnackBarLabel</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive that should be applied to the text element to be rendered in the snack bar.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matSnackBarLabel]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarActions" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarActions"></span>
+  <code>MatSnackBarActions</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive that should be applied to the element containing the snack bar&#39;s action buttons.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matSnackBarActions]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarAction" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarAction"></span>
+  <code>MatSnackBarAction</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive that should be applied to each of the snack bar&#39;s action buttons.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matSnackBarAction]</span>
+  
+</p>
+
+
+
 
 
 
@@ -736,40 +794,6 @@ injection. Note: this does not affect where the snackbar is inserted in the DOM.
     
       
 
-<h4 id="MatSnackBarDismiss" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatSnackBarDismiss"></span>
-  <code>MatSnackBarDismiss</code>
-</h4><p class="docs-api-interface-description"><p>Event that is emitted when a snack bar is dismissed.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dismissedByAction: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the snack bar was dismissed using the action button.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
 <h4 id="TextOnlySnackBar" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TextOnlySnackBar"></span>
   <code>TextOnlySnackBar</code>
@@ -828,6 +852,40 @@ injection. Note: this does not affect where the snackbar is inserted in the DOM.
     </p>
   </td>
   <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarDismiss" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatSnackBarDismiss"></span>
+  <code>MatSnackBarDismiss</code>
+</h4><p class="docs-api-interface-description"><p>Event that is emitted when a snack bar is dismissed.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dismissedByAction: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the snack bar was dismissed using the action button.</p>
+</td>
 </tr>
 
 

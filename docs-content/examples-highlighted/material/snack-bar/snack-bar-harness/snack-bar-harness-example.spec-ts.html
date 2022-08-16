@@ -1,10 +1,10 @@
 <span class="hljs-keyword">import</span> {ComponentFixture, TestBed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSnackBarHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacySnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-snack-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {SnackBarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./snack-bar-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacySnackBarHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-snack-bar/testing&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;SnackBarHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;SnackBarHarnessExample&gt;;
@@ -12,7 +12,7 @@ describe(<span class="hljs-string">&#x27;SnackBarHarnessExample&#x27;</span>, <s
 
   beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatSnackBarModule, NoopAnimationsModule],
+      <span class="hljs-attr">imports</span>: [MatLegacySnackBarModule, NoopAnimationsModule],
       <span class="hljs-attr">declarations</span>: [SnackBarHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(SnackBarHarnessExample);
@@ -22,34 +22,34 @@ describe(<span class="hljs-string">&#x27;SnackBarHarnessExample&#x27;</span>, <s
 
   it(<span class="hljs-string">&#x27;should load harness for simple snack-bar&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> snackBarRef = fixture.componentInstance.open(<span class="hljs-string">&#x27;Hi!&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>);
-    <span class="hljs-keyword">let</span> snackBars = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatSnackBarHarness);
+    <span class="hljs-keyword">let</span> snackBars = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatLegacySnackBarHarness);
 
     expect(snackBars.length).toBe(<span class="hljs-number">1</span>);
 
     snackBarRef.dismiss();
-    snackBars = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatSnackBarHarness);
+    snackBars = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatLegacySnackBarHarness);
     expect(snackBars.length).toBe(<span class="hljs-number">0</span>);
   });
 
   it(<span class="hljs-string">&#x27;should be able to get message of simple snack-bar&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     fixture.componentInstance.open(<span class="hljs-string">&#x27;Subscribed to newsletter.&#x27;</span>);
-    <span class="hljs-keyword">let</span> snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatSnackBarHarness);
+    <span class="hljs-keyword">let</span> snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatLegacySnackBarHarness);
     expect(<span class="hljs-keyword">await</span> snackBar.getMessage()).toBe(<span class="hljs-string">&#x27;Subscribed to newsletter.&#x27;</span>);
   });
 
   it(<span class="hljs-string">&#x27;should be able to get action description of simple snack-bar&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     fixture.componentInstance.open(<span class="hljs-string">&#x27;Hello&#x27;</span>, <span class="hljs-string">&#x27;Unsubscribe&#x27;</span>);
-    <span class="hljs-keyword">let</span> snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatSnackBarHarness);
+    <span class="hljs-keyword">let</span> snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatLegacySnackBarHarness);
     expect(<span class="hljs-keyword">await</span> snackBar.getActionDescription()).toBe(<span class="hljs-string">&#x27;Unsubscribe&#x27;</span>);
   });
 
   it(<span class="hljs-string">&#x27;should be able to check whether simple snack-bar has action&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     fixture.componentInstance.open(<span class="hljs-string">&#x27;With action&#x27;</span>, <span class="hljs-string">&#x27;Unsubscribe&#x27;</span>);
-    <span class="hljs-keyword">let</span> snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatSnackBarHarness);
+    <span class="hljs-keyword">let</span> snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatLegacySnackBarHarness);
     expect(<span class="hljs-keyword">await</span> snackBar.hasAction()).toBe(<span class="hljs-literal">true</span>);
 
     fixture.componentInstance.open(<span class="hljs-string">&#x27;No action&#x27;</span>);
-    snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatSnackBarHarness);
+    snackBar = <span class="hljs-keyword">await</span> loader.getHarness(MatLegacySnackBarHarness);
     expect(<span class="hljs-keyword">await</span> snackBar.hasAction()).toBe(<span class="hljs-literal">false</span>);
   });
 });
