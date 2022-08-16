@@ -1,0 +1,20 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-label&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-toppings-label&quot;</span>&gt;</span>
+    Choose Toppings
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">cdkListbox</span>
+      <span class="hljs-attr">cdkListboxMultiple</span>
+      [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;order&quot;</span>
+      <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;example-toppings-label&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let topping of toppings&quot;</span>
+        [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;topping&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>
+      {{topping}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  Your order: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{order | json}}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;order = []&quot;</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

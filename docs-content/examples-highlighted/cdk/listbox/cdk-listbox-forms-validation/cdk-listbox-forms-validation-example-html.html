@@ -1,0 +1,25 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-container&quot;</span> [<span class="hljs-attr">class.example-listbox-invalid</span>]=<span class="hljs-string">&quot;invalid | async&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-label&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-zodiac-sign-label&quot;</span>&gt;</span>
+    Zodiac Sign
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">cdkListbox</span>
+      [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;signCtrl&quot;</span>
+      <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;example-zodiac-sign-label&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let sign of signs&quot;</span>
+        [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;sign&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>
+      {{sign}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-errors&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;invalid | async&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let error of getErrors()&quot;</span>&gt;</span>{{error}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  Your zodiac sign is: <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{signCtrl.value | json}}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;signCtrl.setValue([&#x27;Cat&#x27;])&quot;</span>&gt;</span>Set: Cat<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;signCtrl.setValue([&#x27;Dragon&#x27;, &#x27;Snake&#x27;])&quot;</span>&gt;</span>Set: Dragon, Snake<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;signCtrl.setValue([&#x27;Cat&#x27;, &#x27;Rat&#x27;])&quot;</span>&gt;</span>Set: Cat, Rat<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;signCtrl.setValue([])&quot;</span>&gt;</span>Clear<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

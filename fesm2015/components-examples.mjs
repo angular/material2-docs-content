@@ -573,6 +573,210 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "cdk/layout"
         }
     },
+    "cdk-listbox-activedescendant": {
+        "packagePath": "cdk/listbox/cdk-listbox-activedescendant",
+        "title": "Listbox with aria-activedescendant.",
+        "componentName": "CdkListboxActivedescendantExample",
+        "files": [
+            "cdk-listbox-activedescendant-example.ts",
+            "cdk-listbox-activedescendant-example.html",
+            "cdk-listbox-activedescendant-example.css"
+        ],
+        "selector": "cdk-listbox-activedescendant-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-activedescendant-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-compare-with": {
+        "packagePath": "cdk/listbox/cdk-listbox-compare-with",
+        "title": "Listbox with complex object as values.",
+        "componentName": "CdkListboxCompareWithExample",
+        "files": [
+            "cdk-listbox-compare-with-example.ts",
+            "cdk-listbox-compare-with-example.html",
+            "cdk-listbox-compare-with-example.css"
+        ],
+        "selector": "cdk-listbox-compare-with-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-compare-with-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-custom-navigation": {
+        "packagePath": "cdk/listbox/cdk-listbox-custom-navigation",
+        "title": "Listbox with custom keyboard navigation options.",
+        "componentName": "CdkListboxCustomNavigationExample",
+        "files": [
+            "cdk-listbox-custom-navigation-example.ts",
+            "cdk-listbox-custom-navigation-example.html",
+            "cdk-listbox-custom-navigation-example.css"
+        ],
+        "selector": "cdk-listbox-custom-navigation-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-custom-navigation-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-custom-typeahead": {
+        "packagePath": "cdk/listbox/cdk-listbox-custom-typeahead",
+        "title": "Listbox with custom typeahead.",
+        "componentName": "CdkListboxCustomTypeaheadExample",
+        "files": [
+            "cdk-listbox-custom-typeahead-example.ts",
+            "cdk-listbox-custom-typeahead-example.html",
+            "cdk-listbox-custom-typeahead-example.css"
+        ],
+        "selector": "cdk-listbox-custom-typeahead-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-custom-typeahead-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-disabled": {
+        "packagePath": "cdk/listbox/cdk-listbox-disabled",
+        "title": "Listbox with disabled options.",
+        "componentName": "CdkListboxDisabledExample",
+        "files": [
+            "cdk-listbox-disabled-example.ts",
+            "cdk-listbox-disabled-example.html",
+            "cdk-listbox-disabled-example.css"
+        ],
+        "selector": "cdk-listbox-disabled-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-disabled-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-forms-validation": {
+        "packagePath": "cdk/listbox/cdk-listbox-forms-validation",
+        "title": "Listbox with forms validation.",
+        "componentName": "CdkListboxFormsValidationExample",
+        "files": [
+            "cdk-listbox-forms-validation-example.ts",
+            "cdk-listbox-forms-validation-example.html",
+            "cdk-listbox-forms-validation-example.css"
+        ],
+        "selector": "cdk-listbox-forms-validation-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-forms-validation-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-horizontal": {
+        "packagePath": "cdk/listbox/cdk-listbox-horizontal",
+        "title": "Horizontal listbox",
+        "componentName": "CdkListboxHorizontalExample",
+        "files": [
+            "cdk-listbox-horizontal-example.ts",
+            "cdk-listbox-horizontal-example.html",
+            "cdk-listbox-horizontal-example.css"
+        ],
+        "selector": "cdk-listbox-horizontal-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-horizontal-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-multiple": {
+        "packagePath": "cdk/listbox/cdk-listbox-multiple",
+        "title": "Listbox with multiple selection.",
+        "componentName": "CdkListboxMultipleExample",
+        "files": [
+            "cdk-listbox-multiple-example.ts",
+            "cdk-listbox-multiple-example.html",
+            "cdk-listbox-multiple-example.css"
+        ],
+        "selector": "cdk-listbox-multiple-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-multiple-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-overview": {
+        "packagePath": "cdk/listbox/cdk-listbox-overview",
+        "title": "Basic listbox.",
+        "componentName": "CdkListboxOverviewExample",
+        "files": [
+            "cdk-listbox-overview-example.ts",
+            "cdk-listbox-overview-example.html",
+            "cdk-listbox-overview-example.css"
+        ],
+        "selector": "cdk-listbox-overview-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-overview-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-reactive-forms": {
+        "packagePath": "cdk/listbox/cdk-listbox-reactive-forms",
+        "title": "Listbox with reactive forms.",
+        "componentName": "CdkListboxReactiveFormsExample",
+        "files": [
+            "cdk-listbox-reactive-forms-example.ts",
+            "cdk-listbox-reactive-forms-example.html",
+            "cdk-listbox-reactive-forms-example.css"
+        ],
+        "selector": "cdk-listbox-reactive-forms-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-reactive-forms-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-template-forms": {
+        "packagePath": "cdk/listbox/cdk-listbox-template-forms",
+        "title": "Listbox with template-driven forms.",
+        "componentName": "CdkListboxTemplateFormsExample",
+        "files": [
+            "cdk-listbox-template-forms-example.ts",
+            "cdk-listbox-template-forms-example.html",
+            "cdk-listbox-template-forms-example.css"
+        ],
+        "selector": "cdk-listbox-template-forms-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-template-forms-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
+    "cdk-listbox-value-binding": {
+        "packagePath": "cdk/listbox/cdk-listbox-value-binding",
+        "title": "Listbox with value binding.",
+        "componentName": "CdkListboxValueBindingExample",
+        "files": [
+            "cdk-listbox-value-binding-example.ts",
+            "cdk-listbox-value-binding-example.html",
+            "cdk-listbox-value-binding-example.css"
+        ],
+        "selector": "cdk-listbox-value-binding-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-listbox-value-binding-example.ts",
+        "module": {
+            "name": "CdkListboxExamplesModule",
+            "importSpecifier": "cdk/listbox"
+        }
+    },
     "cdk-menu-context": {
         "packagePath": "cdk/menu/cdk-menu-context",
         "title": "Context menu.",

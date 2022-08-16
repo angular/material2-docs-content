@@ -1,0 +1,20 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-label&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-appointment-label&quot;</span>&gt;</span>
+    Appointment Time
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">cdkListbox</span>
+      [<span class="hljs-attr">cdkListboxValue</span>]=<span class="hljs-string">&quot;appointment&quot;</span>
+      [<span class="hljs-attr">cdkListboxCompareWith</span>]=<span class="hljs-string">&quot;compareDate&quot;</span>
+      (<span class="hljs-attr">cdkListboxValueChange</span>)=<span class="hljs-string">&quot;appointment = $event.value&quot;</span>
+      <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;example-appointment-label&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let time of slots&quot;</span>
+        [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;time&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>
+      {{formatTime(time)}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;appointment[0]&quot;</span>&gt;</span>
+  Your appointment  is scheduled for <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>{{formatAppointment() | json}}<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

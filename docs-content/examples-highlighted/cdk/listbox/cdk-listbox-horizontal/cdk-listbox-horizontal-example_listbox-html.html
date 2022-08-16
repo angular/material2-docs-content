@@ -1,0 +1,13 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-label&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-shirt-size-label&quot;</span>&gt;</span>
+  Shirt Size
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">cdkListbox</span>
+    <span class="hljs-attr">cdkListboxOrientation</span>=<span class="hljs-string">&quot;horizontal&quot;</span>
+    <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;example-shirt-size-label&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let size of sizes&quot;</span>
+      [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;size&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>
+    {{size}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>

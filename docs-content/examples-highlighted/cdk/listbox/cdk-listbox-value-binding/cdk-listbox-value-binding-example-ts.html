@@ -1,0 +1,17 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Listbox with value binding. */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-listbox-value-binding-example&#x27;</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;cdkListboxValueBindingExample&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-value-binding-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-listbox-value-binding-example.css&#x27;</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxValueBindingExample</span> </span>{
+  starters = [<span class="hljs-string">&#x27;Sprigatito&#x27;</span>, <span class="hljs-string">&#x27;Fuecoco&#x27;</span>, <span class="hljs-string">&#x27;Quaxly&#x27;</span>];
+  starter: <span class="hljs-keyword">readonly</span> <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Fuecoco&#x27;</span>];
+
+  <span class="hljs-function"><span class="hljs-title">reset</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.starter = [<span class="hljs-string">&#x27;Fuecoco&#x27;</span>];
+  }
+}
