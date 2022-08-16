@@ -369,7 +369,7 @@ click. In our case we&#39;ll just focus the first <code>&lt;input&gt;</code> if 
 <code>&lt;input&gt;</code> anyways.</p>
 <pre><code class="language-ts"><span class="hljs-function"><span class="hljs-title">onContainerClick</span>(<span class="hljs-params">event: MouseEvent</span>)</span> {
   <span class="hljs-keyword">if</span> ((event.target <span class="hljs-keyword">as</span> Element).tagName.toLowerCase() != <span class="hljs-string">&#x27;input&#x27;</span>) {
-    <span class="hljs-built_in">this</span>.elRef.nativeElement.querySelector(<span class="hljs-string">&#x27;input&#x27;</span>).focus();
+    <span class="hljs-built_in">this</span>._elementRef.nativeElement.querySelector(<span class="hljs-string">&#x27;input&#x27;</span>).focus();
   }
 }
 </code></pre>
