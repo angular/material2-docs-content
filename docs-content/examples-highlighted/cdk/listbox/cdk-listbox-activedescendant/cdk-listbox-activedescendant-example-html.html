@@ -1,0 +1,16 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox-label&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-spatula-label&quot;</span>&gt;</span>
+    Spatula Features
+  <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">cdkListbox</span>
+      <span class="hljs-attr">cdkListboxMultiple</span>
+      <span class="hljs-attr">cdkListboxUseActiveDescendant</span>
+      <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;example-spatula-label&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let feature of features&quot;</span>
+        [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;feature&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>
+      {{feature}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

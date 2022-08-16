@@ -1,0 +1,53 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxActivedescendantExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-activedescendant/cdk-listbox-activedescendant-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxCompareWithExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-compare-with/cdk-listbox-compare-with-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxCustomNavigationExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-custom-navigation/cdk-listbox-custom-navigation-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxCustomTypeaheadExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-custom-typeahead/cdk-listbox-custom-typeahead-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-disabled/cdk-listbox-disabled-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxFormsValidationExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-forms-validation/cdk-listbox-forms-validation-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxHorizontalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-horizontal/cdk-listbox-horizontal-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxMultipleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-multiple/cdk-listbox-multiple-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-overview/cdk-listbox-overview-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxReactiveFormsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-reactive-forms/cdk-listbox-reactive-forms-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxTemplateFormsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-template-forms/cdk-listbox-template-forms-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxValueBindingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./cdk-listbox-value-binding/cdk-listbox-value-binding-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkListboxActivedescendantExample,
+  CdkListboxCompareWithExample,
+  CdkListboxCustomNavigationExample,
+  CdkListboxCustomTypeaheadExample,
+  CdkListboxDisabledExample,
+  CdkListboxFormsValidationExample,
+  CdkListboxHorizontalExample,
+  CdkListboxMultipleExample,
+  CdkListboxOverviewExample,
+  CdkListboxReactiveFormsExample,
+  CdkListboxTemplateFormsExample,
+  CdkListboxValueBindingExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkListboxActivedescendantExample,
+  CdkListboxCompareWithExample,
+  CdkListboxCustomNavigationExample,
+  CdkListboxCustomTypeaheadExample,
+  CdkListboxDisabledExample,
+  CdkListboxFormsValidationExample,
+  CdkListboxHorizontalExample,
+  CdkListboxMultipleExample,
+  CdkListboxOverviewExample,
+  CdkListboxReactiveFormsExample,
+  CdkListboxTemplateFormsExample,
+  CdkListboxValueBindingExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [CommonModule, FormsModule, ReactiveFormsModule, CdkListboxModule],
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxExamplesModule</span> </span>{}

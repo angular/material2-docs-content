@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "15.0.0-next.0+sha-950d437",
+  "version": "15.0.0-next.0+sha-1fbeb79",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -91,6 +91,14 @@
       "es2015": "./fesm2015/cdk/layout.mjs",
       "node": "./fesm2015/cdk/layout.mjs",
       "default": "./fesm2020/cdk/layout.mjs"
+    },
+    "./cdk/listbox": {
+      "types": "./cdk/listbox/index.d.ts",
+      "esm2020": "./esm2020/cdk/listbox/listbox_public_index.mjs",
+      "es2020": "./fesm2020/cdk/listbox.mjs",
+      "es2015": "./fesm2015/cdk/listbox.mjs",
+      "node": "./fesm2015/cdk/listbox.mjs",
+      "default": "./fesm2020/cdk/listbox.mjs"
     },
     "./cdk/menu": {
       "types": "./cdk/menu/index.d.ts",
@@ -491,15 +499,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "15.0.0-next.0+sha-950d437",
-    "@angular/cdk-experimental": "15.0.0-next.0+sha-950d437",
+    "@angular/cdk": "15.0.0-next.0+sha-1fbeb79",
+    "@angular/cdk-experimental": "15.0.0-next.0+sha-1fbeb79",
     "@angular/core": "^14.0.0 || ^15.0.0",
     "@angular/common": "^14.0.0 || ^15.0.0",
-    "@angular/material": "15.0.0-next.0+sha-950d437",
-    "@angular/material-experimental": "15.0.0-next.0+sha-950d437",
-    "@angular/material-moment-adapter": "15.0.0-next.0+sha-950d437",
-    "@angular/material-luxon-adapter": "15.0.0-next.0+sha-950d437",
-    "@angular/material-date-fns-adapter": "15.0.0-next.0+sha-950d437"
+    "@angular/material": "15.0.0-next.0+sha-1fbeb79",
+    "@angular/material-experimental": "15.0.0-next.0+sha-1fbeb79",
+    "@angular/material-moment-adapter": "15.0.0-next.0+sha-1fbeb79",
+    "@angular/material-luxon-adapter": "15.0.0-next.0+sha-1fbeb79",
+    "@angular/material-date-fns-adapter": "15.0.0-next.0+sha-1fbeb79"
   },
   "dependencies": {
     "tslib": "^2.3.0"
