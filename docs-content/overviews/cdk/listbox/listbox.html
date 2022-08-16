@@ -1,0 +1,294 @@
+<div class="docs-markdown"><p>The <code>@angular/cdk/listbox</code> module provides directives to help create custom listbox interactions
+based on the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">WAI ARIA listbox pattern</a>.</p>
+<p>By using <code>@angular/cdk/listbox</code> you get all the expected behaviors for an accessible experience,
+including bidi layout support, keyboard interaction, and focus management. All directives apply
+their associated ARIA roles to their host element.</p>
+
+        <h3 id="supported-aria-roles" class="docs-header-link">
+          <span header-link="supported-aria-roles"></span>
+          Supported ARIA Roles
+        </h3>
+      <p>The directives in <code>@angular/cdk/listbox</code> set the appropriate roles on their host element.</p>
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>ARIA Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cdkOption</td>
+<td>option</td>
+</tr>
+<tr>
+<td>cdkListbox</td>
+<td>listbox</td>
+</tr>
+</tbody></table>
+
+        <h3 id="css-styles-and-classes" class="docs-header-link">
+          <span header-link="css-styles-and-classes"></span>
+          CSS Styles and Classes
+        </h3>
+      <p>The <code>@angular/cdk/listbox</code> is designed to be highly customizable to your needs. It therefore does not
+make any assumptions about how elements should be styled. You are expected to apply any required
+CSS styles, but the directives do apply CSS classes to make it easier for you to add custom styles.
+The available CSS classes are listed below, by directive.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Directive</th>
+<th>CSS Class</th>
+<th>Applied...</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">cdkOption</td>
+<td>.cdk-option</td>
+<td>Always</td>
+</tr>
+<tr>
+<td align="left">cdkOption</td>
+<td>.cdk-option-active</td>
+<td>If the option is active</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>.cdk-listbox</td>
+<td>Always</td>
+</tr>
+</tbody></table>
+<p>In addition to CSS classes, these directives add aria attributes that can be targeted in CSS.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Directive</th>
+<th>Attribute Selector</th>
+<th>Applied...</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">cdkOption</td>
+<td>[aria-disabled=&quot;true&quot;]</td>
+<td>If the option is disabled</td>
+</tr>
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-disabled=&quot;false&quot;]</td>
+<td>If the option is not disabled</td>
+</tr>
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-selected=&quot;true&quot;]</td>
+<td>If the option is selected</td>
+</tr>
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-selected=&quot;false&quot;]</td>
+<td>If the option is not selected</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-disabled=&quot;true&quot;]</td>
+<td>If the listbox is disabled</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-disabled=&quot;false&quot;]</td>
+<td>If the listbox is not disabled</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-multiselectable=&quot;true&quot;]</td>
+<td>If the listbox is multiple selection</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-multiselectable=&quot;false&quot;]</td>
+<td>If the listbox is single selection</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-orientation=&quot;horizontal&quot;]</td>
+<td>If the listbox is oriented horizontally</td>
+</tr>
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-orientation=&quot;vertical&quot;]</td>
+<td>If the listbox is oriented vertically</td>
+</tr>
+</tbody></table>
+
+        <h3 id="getting-started" class="docs-header-link">
+          <span header-link="getting-started"></span>
+          Getting started
+        </h3>
+      <p>Import the <code>CdkListboxModule</code> into the <code>NgModule</code> in which you want to create a listbox. You can
+then apply listbox directives to build your custom listbox. A typical listbox consists of the
+following directives:</p>
+<ul>
+<li><code>cdkListbox</code> - Added to the container element containing the options to be selected</li>
+<li><code>cdkOption</code> - Added to each selectable option in the listbox</li>
+</ul>
+<div material-docs-example="cdk-listbox-overview"
+                             file="cdk-listbox-overview-example.html"
+                             region="listbox"></div>
+
+
+        <h3 id="option-values" class="docs-header-link">
+          <span header-link="option-values"></span>
+          Option values
+        </h3>
+      <p>Each option in a listbox is bound to the value it represents when selected, e.g.
+<code>&lt;li cdkOption=&quot;red&quot;&gt;Red&lt;/li&gt;</code>. Within a single listbox, each option must have a unique value. If 
+an option is not explicitly given a value, its value is considered to be <code>&#39;&#39;</code> (empty string), e.g.
+<code>&lt;li cdkOption&gt;No color preference&lt;/li&gt;</code>.</p>
+<div material-docs-example="cdk-listbox-overview"
+                             file="cdk-listbox-overview-example.html"
+                             region="option"></div>
+
+
+        <h3 id="single-vs-multiple-selection" class="docs-header-link">
+          <span header-link="single-vs-multiple-selection"></span>
+          Single vs multiple selection
+        </h3>
+      <p>Listboxes only support a single selected option at a time by default, but adding 
+<code>cdkListboxMultiple</code> will enable selecting more than one option.</p>
+<div material-docs-example="cdk-listbox-multiple"
+                             file="cdk-listbox-multiple-example.html"
+                             region="listbox"></div>
+
+
+        <h3 id="listbox-value" class="docs-header-link">
+          <span header-link="listbox-value"></span>
+          Listbox value
+        </h3>
+      <p>The listbox&#39;s value is an array containing the values of the selected option(s). This is true even
+for the single selection listbox, whose value is an array containing a single element. The listbox&#39;s
+value can be bound using <code>[cdkListboxValue]</code> and <code>(cdkListboxValueChange)</code>.</p>
+<div material-docs-example="cdk-listbox-value-binding"
+                             file="cdk-listbox-value-binding-example.html"
+                             region="listbox"></div>
+
+<p>Internally the listbox compares the listbox value against the individual option values using
+<code>Object.is</code> to determine which options should appear selected. If your option values are complex
+objects, you should provide a custom comparison function instead. This can be set via the
+<code>cdkListboxCompareWith</code> input on the listbox.</p>
+<div material-docs-example="cdk-listbox-compare-with"
+                             file="cdk-listbox-compare-with-example.html"
+                             region="listbox"></div>
+
+
+        <h3 id="angular-forms-support" class="docs-header-link">
+          <span header-link="angular-forms-support"></span>
+          Angular Forms support
+        </h3>
+      <p>The CDK Listbox supports both template driven forms and reactive forms.</p>
+<div material-docs-example="cdk-listbox-template-forms"
+                             file="cdk-listbox-template-forms-example.html"
+                             region="listbox"></div>
+
+<div material-docs-example="cdk-listbox-reactive-forms"
+                             file="cdk-listbox-reactive-forms-example.html"
+                             region="listbox"></div>
+
+
+        <h4 id="forms-validation" class="docs-header-link">
+          <span header-link="forms-validation"></span>
+          Forms validation
+        </h4>
+      <p>The CDK listbox integrates with Angular&#39;s form validation API and has the following built-in
+validation errors:</p>
+<ul>
+<li><code>cdkListboxUnexpectedOptionValues</code> - Raised when the bound value contains values that do not
+appear as option value in the listbox. The validation error contains a <code>values</code> property that
+lists the invalid values</li>
+<li><code>cdkListboxUnexpectedMultipleValues</code> - Raised when a single-selection listbox is bound to a value
+containing multiple selected options.</li>
+</ul>
+<div material-docs-example="cdk-listbox-forms-validation"
+                             file="cdk-listbox-forms-validation-example.ts"
+                             region="errors"></div>
+
+
+        <h3 id="disabling-options" class="docs-header-link">
+          <span header-link="disabling-options"></span>
+          Disabling options
+        </h3>
+      <p>You can disable options for selection by setting <code>cdkOptionDisabled</code>.
+In addition, the entire listbox control can be disabled by setting <code>cdkListboxDisabled</code> on the
+listbox element.</p>
+<div material-docs-example="cdk-listbox-disabled"
+                             file="cdk-listbox-disabled-example.html"
+                             region="listbox"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>The directives defined in <code>@angular/cdk/listbox</code> follow accessibility best practices as defined
+in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">ARIA spec</a>. Keyboard interaction is supported as defined in the
+<a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard-interaction-11" title="WAI ARIA Listbox Keyboard Interaction">ARIA listbox keyboard interaction spec</a> <em>without</em> the optional selection follows focus
+logic (TODO: should we make this an option?).</p>
+
+        <h4 id="listbox-label" class="docs-header-link">
+          <span header-link="listbox-label"></span>
+          Listbox label
+        </h4>
+      <p>Always give the listbox a meaningful label for screen readers. If your listbox has a visual label,
+you can associate it with the listbox using <code>aria-labelledby</code>, otherwise you should provide a
+screen-reader-only label with <code>aria-label</code>.</p>
+
+        <h4 id="roving-tabindex-vs-active-descendant" class="docs-header-link">
+          <span header-link="roving-tabindex-vs-active-descendant"></span>
+          Roving tabindex vs active descendant
+        </h4>
+      <p>By default, the CDK listbox uses the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex" title="MDN Roving Tabindex Technique">roving tabindex</a> strategy to manage focus.
+If you prefer to use the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_2_aria-activedescendant" title="MDN aria-activedescendant Technique">aria-activedescendant</a> strategy instead, set
+<code>useActiveDescendant=true</code> on the listbox.</p>
+<div material-docs-example="cdk-listbox-activedescendant"
+                             file="cdk-listbox-activedescendant-example.html"
+                             region="listbox"></div>
+
+
+        <h4 id="orientation" class="docs-header-link">
+          <span header-link="orientation"></span>
+          Orientation
+        </h4>
+      <p>Listboxes assume a vertical orientation by default, but can be customized by setting the
+<code>cdkListboxOrientation</code> input. Note that this only affects the keyboard navigation. You
+will still need to adjust your CSS styles to change the visual appearance.</p>
+<div material-docs-example="cdk-listbox-horizontal"
+                             file="cdk-listbox-horizontal-example.html"
+                             region="listbox"></div>
+
+
+        <h4 id="option-typeahead" class="docs-header-link">
+          <span header-link="option-typeahead"></span>
+          Option typeahead
+        </h4>
+      <p>The CDK listbox supports typeahead based on the option text. If the typeahead text for your options
+needs to be different than the display text (e.g. to exclude emoji), this can be accomplished by
+setting the <code>cdkOptionTypeaheadLabel</code> on the option.</p>
+<div material-docs-example="cdk-listbox-custom-typeahead"
+                             file="cdk-listbox-custom-typeahead-example.html"
+                             region="listbox"></div>
+
+
+        <h4 id="keyboard-navigation-options" class="docs-header-link">
+          <span header-link="keyboard-navigation-options"></span>
+          Keyboard navigation options
+        </h4>
+      <p>When using keyboard navigation to navigate through the options, the navigation wraps when attempting
+to navigate past the start or end of the options. To change this, set
+<code>cdkListboxNavigationWrapDisabled</code> on the listbox.</p>
+<p>Keyboard navigation skips disabled options by default. To change this set
+<code>cdkListboxNavigatesDisabledOptions</code> on the listbox.</p>
+<div material-docs-example="cdk-listbox-custom-navigation"
+                             file="cdk-listbox-custom-navigation-example.html"
+                             region="listbox"></div>
+
+<!-- links -->
+
+</div>
