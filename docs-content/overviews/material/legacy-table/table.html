@@ -1,0 +1,416 @@
+<div class="docs-markdown"><p>The <code>mat-table</code> provides a Material Design styled data-table that can be used to display rows of
+data.</p>
+<p>This table builds on the foundation of the CDK data-table and uses a similar interface for its
+data input and template, except that its element and attribute selectors will be prefixed
+with <code>mat-</code> instead of <code>cdk-</code>. For more information on the interface and a detailed look at how
+the table is implemented, see the
+<a href="https://material.angular.io/guide/cdk-table">guide covering the CDK data-table</a>.</p>
+
+        <h3 id="getting-started" class="docs-header-link">
+          <span header-link="getting-started"></span>
+          Getting Started
+        </h3>
+      <div material-docs-example="table-basic"></div>
+
+
+        <h4 id="1-write-your-mat-table-and-provide-data" class="docs-header-link">
+          <span header-link="1-write-your-mat-table-and-provide-data"></span>
+          1. Write your mat-table and provide data
+        </h4>
+      <p>Begin by adding the <code>&lt;table mat-table&gt;</code> component to your template and passing in data.</p>
+<p>The simplest way to provide data to the table is by passing a data array to the table&#39;s <code>dataSource</code>
+input. The table will take the array and render a row for each object in the data array.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;myDataArray&quot;</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<p>Since the table optimizes for performance, it will not automatically check for changes to the data
+array. Instead, when objects are added, removed, or moved on the data array, you can trigger an
+update to the table&#39;s rendered rows by calling its <code>renderRows()</code> method.</p>
+<p>While an array is the <em>simplest</em> way to bind data into the data source, it is also
+the most limited. For more complex applications, using a <code>DataSource</code> instance
+is recommended. See the section &quot;Advanced data sources&quot; below for more information.</p>
+
+        <h4 id="2-define-the-column-templates" class="docs-header-link">
+          <span header-link="2-define-the-column-templates"></span>
+          2. Define the column templates
+        </h4>
+      <p>Next, write your table&#39;s column templates.</p>
+<p>Each column definition should be given a unique name and contain the content for its header and row
+cells.</p>
+<p>Here&#39;s a simple column definition with the name <code>&#39;score&#39;</code>. The header cell contains the text
+&quot;Score&quot; and each row cell will render the <code>score</code> property of each row&#39;s data.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;score&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Score <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let user&quot;</span>&gt;</span> {{user.score}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+<p>Note that the cell templates are not restricted to only showing simple string values, but are
+flexible and allow you to provide any template.</p>
+<p>If your column is only responsible for rendering a single string value for the header and cells,
+you can instead define your column using the <code>mat-text-column</code>. The following column definition is
+equivalent to the one above.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;score&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
+</code></pre>
+<p>Check out the API docs and examples of the <code>mat-text-column</code> to see how you can customize the header
+text, text alignment, and cell data accessor.  Note that this is not compatible with the flex-layout
+table. Also, a data accessor should be provided if your data may have its properties minified
+since the string name will no longer match after minification.</p>
+
+        <h4 id="3-define-the-row-templates" class="docs-header-link">
+          <span header-link="3-define-the-row-templates"></span>
+          3. Define the row templates
+        </h4>
+      <p>Finally, once you have defined your columns, you need to tell the table which columns will be
+rendered in the header and data rows.</p>
+<p>To start, create a variable in your component that contains the list of the columns you want to
+render.</p>
+<pre><code class="language-ts">columnsToDisplay = [<span class="hljs-string">&#x27;userName&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>];
+</code></pre>
+<p>Then add <code>mat-header-row</code> and <code>mat-row</code> to the content of your <code>mat-table</code> and provide your
+column list as inputs.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+</code></pre>
+<p>Note that this list of columns provided to the rows can be in any order, not necessarily the order in
+which you wrote the column definitions. Also, you do not necessarily have to include every column
+that was defined in your template.</p>
+<p>This means that by changing your column list provided to the rows, you can easily re-order and
+include/exclude columns dynamically.</p>
+
+        <h3 id="advanced-data-sources" class="docs-header-link">
+          <span header-link="advanced-data-sources"></span>
+          Advanced data sources
+        </h3>
+      <p>The simplest way to provide data to your table is by passing a data array. More complex use-cases
+may benefit from a more flexible approach involving an Observable stream or by encapsulating your
+data source logic into a <code>DataSource</code> class.</p>
+
+        <h4 id="observable-stream-of-data-arrays" class="docs-header-link">
+          <span header-link="observable-stream-of-data-arrays"></span>
+          Observable stream of data arrays
+        </h4>
+      <p>An alternative approach to providing data to the table is by passing an Observable stream that emits
+the data array to be rendered each time it is changed. The table will listen to this stream and
+automatically trigger an update to the rows each time a new data array is emitted.</p>
+
+        <h4 id="datasource" class="docs-header-link">
+          <span header-link="datasource"></span>
+          DataSource
+        </h4>
+      <p>For most real-world applications, providing the table a <code>DataSource</code> instance will be the best way to
+manage data. The <code>DataSource</code> is meant to serve as a place to encapsulate any sorting, filtering,
+pagination, and data retrieval logic specific to the application.</p>
+<p>A <code>DataSource</code> is simply a class that has at a minimum the following methods: <code>connect</code> and
+<code>disconnect</code>. The <code>connect</code> method will be called by the table to provide an <code>Observable</code> that emits
+the data array that should be rendered. The table will call <code>disconnect</code> when the table is destroyed,
+which may be the right time to clean up any subscriptions that may have been registered in the
+<code>connect</code> method.</p>
+<p>Although Angular Material provides a ready-made table <code>DataSource</code> class, <code>MatTableDataSource</code>, you may
+want to create your own custom <code>DataSource</code> class for more complex use cases. This can be done by
+extending the abstract <code>DataSource</code> class with a custom <code>DataSource</code> class that then implements the
+<code>connect</code> and <code>disconnect</code> methods. For use cases where the custom <code>DataSource</code> must also inherit
+functionality by extending a different base class, the <code>DataSource</code> base class can be
+implemented instead (<code>MyCustomDataSource extends SomeOtherBaseClass implements DataSource</code>) to
+respect Typescript&#39;s restriction to only implement one base class.</p>
+
+        <h3 id="styling-columns" class="docs-header-link">
+          <span header-link="styling-columns"></span>
+          Styling Columns
+        </h3>
+      <p>Each table cell has an automatically generated class based on which column it appears in. The format for this
+generated class is <code>mat-column-NAME</code>. For example, cells in a column named &quot;symbol&quot; can be targeted with the
+selector <code>.mat-column-symbol</code>.</p>
+<div material-docs-example="table-column-styling"></div>
+
+
+        <h3 id="row-templates" class="docs-header-link">
+          <span header-link="row-templates"></span>
+          Row Templates
+        </h3>
+      <p>Event handlers and property binding on the row templates will be applied to each row rendered by the table. For example,
+adding a <code>(click)</code> handler to the row template will cause each individual row to call the handler when clicked.</p>
+<div material-docs-example="table-row-binding"></div>
+
+
+        <h3 id="features" class="docs-header-link">
+          <span header-link="features"></span>
+          Features
+        </h3>
+      <p>The <code>MatTable</code> is focused on a single responsibility: efficiently render rows of data in a
+performant and accessible way.</p>
+<p>You&#39;ll notice that the table itself doesn&#39;t come out of the box with a lot of features, but expects
+that the table will be included in a composition of components that fills out its features.</p>
+<p>For example, you can add sorting and pagination to the table by using MatSort and MatPaginator and
+mutating the data provided to the table according to their outputs.</p>
+<p>To simplify the use case of having a table that can sort, paginate, and filter an array of data,
+the Angular Material library comes with a <code>MatTableDataSource</code> that has already implemented
+the logic of determining what rows should be rendered according to the current table state. To add
+these feature to the table, check out their respective sections below.</p>
+
+        <h4 id="pagination" class="docs-header-link">
+          <span header-link="pagination"></span>
+          Pagination
+        </h4>
+      <p>To paginate the table&#39;s data, add a <code>&lt;mat-paginator&gt;</code> after the table.</p>
+<p>If you are using the <code>MatTableDataSource</code> for your table&#39;s data source, simply provide the
+<code>MatPaginator</code> to your data source. It will automatically listen for page changes made by the user
+and send the right paged data to the table.</p>
+<p>Otherwise if you are implementing the logic to paginate your data, you will want to listen to the
+paginator&#39;s <code>(page)</code> output and pass the right slice of data to your table.</p>
+<p>For more information on using and configuring the <code>&lt;mat-paginator&gt;</code>, check out the
+<a href="https://material.angular.io/components/legacy-paginator/overview">mat-paginator docs</a>.</p>
+<p>The <code>MatPaginator</code> is one provided solution to paginating your table&#39;s data, but it is not the only
+option. In fact, the table can work with any custom pagination UI or strategy since the <code>MatTable</code>
+and its interface is not tied to any one specific implementation.</p>
+<div material-docs-example="table-pagination"></div>
+
+
+        <h4 id="sorting" class="docs-header-link">
+          <span header-link="sorting"></span>
+          Sorting
+        </h4>
+      <p>To add sorting behavior to the table, add the <code>matSort</code> directive to the table and add
+<code>mat-sort-header</code> to each column header cell that should trigger sorting. Note that you have to import <code>MatSortModule</code> in order to initialize the <code>matSort</code> directive (see <a href="https://material.angular.io/components/sort/api">API docs</a>).</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;position&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+<p>If you are using the <code>MatTableDataSource</code> for your table&#39;s data source, provide the <code>MatSort</code>
+directive to the data source and it will automatically listen for sorting changes and change the
+order of data rendered by the table.</p>
+<p>By default, the <code>MatTableDataSource</code> sorts with the assumption that the sorted column&#39;s name
+matches the data property name that the column displays. For example, the following column
+definition is named <code>position</code>, which matches the name of the property displayed in the row cell.</p>
+<p>Note that if the data properties do not match the column names, or if a more complex data property
+accessor is required, then a custom <code>sortingDataAccessor</code> function can be set to override the
+default data accessor on the <code>MatTableDataSource</code>.</p>
+<p>If you are not using the <code>MatTableDataSource</code>, but instead implementing custom logic to sort your
+data, listen to the sort&#39;s <code>(matSortChange)</code> event and re-order your data according to the sort state.
+If you are providing a data array directly to the table, don&#39;t forget to call <code>renderRows()</code> on the
+table, since it will not automatically check the array for changes.</p>
+<div material-docs-example="table-sorting"></div>
+
+<p>For more information on using and configuring the sorting behavior, check out the
+<a href="https://material.angular.io/components/sort/overview">matSort docs</a>.</p>
+<p>The <code>MatSort</code> is one provided solution to sorting your table&#39;s data, but it is not the only option.
+In fact, the table can work with any custom sorting UI or strategy since the <code>MatTable</code> and
+its interface is not tied to any one specific implementation.</p>
+
+        <h4 id="filtering" class="docs-header-link">
+          <span header-link="filtering"></span>
+          Filtering
+        </h4>
+      <p>Angular Material does not provide a specific component to be used for filtering the <code>MatTable</code>
+since there is no single common approach to adding a filter UI to table data.</p>
+<p>A general strategy is to add an input where users can type in a filter string and listen to this
+input to change what data is offered from the data source to the table.</p>
+<p>If you are using the <code>MatTableDataSource</code>, simply provide the filter string to the
+<code>MatTableDataSource</code>. The data source will reduce each row data to a serialized form and will filter
+out the row if it does not contain the filter string. By default, the row data reducing function
+will concatenate all the object values and convert them to lowercase.</p>
+<p>For example, the data object <code>{id: 123, name: &#39;Mr. Smith&#39;, favoriteColor: &#39;blue&#39;}</code> will be reduced
+to <code>123mr. smithblue</code>. If your filter string was <code>blue</code> then it would be considered a match because
+it is contained in the reduced string, and the row would be displayed in the table.</p>
+<p>To override the default filtering behavior, a custom <code>filterPredicate</code> function can be set which
+takes a data object and filter string and returns true if the data object is considered a match.</p>
+<p>If you want to show a message when not data matches the filter, you can use the <code>*matNoDataRow</code>
+directive.</p>
+<!--- example(table-filtering) -->
+
+
+        <h4 id="selection" class="docs-header-link">
+          <span header-link="selection"></span>
+          Selection
+        </h4>
+      <p>Right now there is no formal support for adding a selection UI to the table, but Angular Material
+does offer the right components and pieces to set this up. The following steps are one solution but
+it is not the only way to incorporate row selection in your table.</p>
+
+        <h5 id="1-add-a-selection-model" class="docs-header-link">
+          <span header-link="1-add-a-selection-model"></span>
+          1. Add a selection model
+        </h5>
+      <p>Get started by setting up a <code>SelectionModel</code> from <code>@angular/cdk/collections</code> that will maintain the
+selection state.</p>
+<pre><code class="language-js"><span class="hljs-keyword">const</span> initialSelection = [];
+<span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
+<span class="hljs-built_in">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);
+</code></pre>
+
+        <h5 id="2-define-a-selection-column" class="docs-header-link">
+          <span header-link="2-define-a-selection-column"></span>
+          2. Define a selection column
+        </h5>
+      <p>Add a column definition for displaying the row checkboxes, including a main toggle checkbox for
+the header. The column name should be added to the list of displayed columns provided to the
+header and data row.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;select&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;$event ? toggleAllRows() : null&quot;</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;selection.hasValue() &amp;&amp; isAllSelected()&quot;</span>
+                  [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">&quot;selection.hasValue() &amp;&amp; !isAllSelected()&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;$event.stopPropagation()&quot;</span>
+                  (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;$event ? selection.toggle(row) : null&quot;</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;selection.isSelected(row)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+
+        <h5 id="3-add-event-handling-logic" class="docs-header-link">
+          <span header-link="3-add-event-handling-logic"></span>
+          3. Add event handling logic
+        </h5>
+      <p>Implement the behavior in your component&#39;s logic to handle the header&#39;s main toggle and checking
+if all rows are selected.</p>
+<pre><code class="language-js"><span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
+<span class="hljs-function"><span class="hljs-title">isAllSelected</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-keyword">const</span> numSelected = <span class="hljs-built_in">this</span>.selection.selected.length;
+  <span class="hljs-keyword">const</span> numRows = <span class="hljs-built_in">this</span>.dataSource.data.length;
+  <span class="hljs-keyword">return</span> numSelected == numRows;
+}
+
+<span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
+<span class="hljs-function"><span class="hljs-title">toggleAllRows</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-built_in">this</span>.isAllSelected() ?
+      <span class="hljs-built_in">this</span>.selection.clear() :
+      <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
+}
+</code></pre>
+
+        <h5 id="4-include-overflow-styling" class="docs-header-link">
+          <span header-link="4-include-overflow-styling"></span>
+          4. Include overflow styling
+        </h5>
+      <p>Finally, adjust the styling for the select column so that its overflow is not hidden. This allows
+the ripple effect to extend beyond the cell.</p>
+<pre><code class="language-css"><span class="hljs-selector-class">.mat-column-select</span> {
+  <span class="hljs-attribute">overflow</span>: initial;
+}
+</code></pre>
+<!--- example(table-selection) -->
+
+
+        <h4 id="footer-row" class="docs-header-link">
+          <span header-link="footer-row"></span>
+          Footer row
+        </h4>
+      <p>A footer row can be added to the table by adding a footer row definition to the table and adding
+footer cell templates to column definitions. The footer row will be rendered after the rendered
+data rows.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;cost&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Cost <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let data&quot;</span>&gt;</span> {{data.cost}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> {{totalCost}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+...
+
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let myRowData; columns: columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">&quot;columnsToDisplay&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+</code></pre>
+<!--- example(table-footer-row) -->
+
+
+        <h4 id="sticky-rows-and-columns" class="docs-header-link">
+          <span header-link="sticky-rows-and-columns"></span>
+          Sticky Rows and Columns
+        </h4>
+      <p>By using <code>position: sticky</code> styling, the table&#39;s rows and columns can be fixed so that they do not
+leave the viewport even when scrolled. The table provides inputs that will automatically apply the
+correct CSS styling so that the rows and columns become sticky.</p>
+<p>In order to fix the header row to the top of the scrolling viewport containing the table, you can
+add a <code>sticky</code> input to the <code>matHeaderRowDef</code>.</p>
+<!--- example(table-sticky-header) -->
+
+<p>Similarly, this can also be applied to the table&#39;s footer row. Note that if you are using the native
+<code>&lt;table&gt;</code> and using Safari, then the footer will only stick if <code>sticky</code> is applied to all the
+rendered footer rows.</p>
+<!--- example(table-sticky-footer) -->
+
+<p>It is also possible to fix cell columns to the start or end of the horizontally scrolling viewport.
+To do this, add the <code>sticky</code> or <code>stickyEnd</code> directive to the <code>ng-container</code> column definition.</p>
+<!--- example(table-sticky-columns) -->
+
+<p>Note that on Safari mobile when using the flex-based table, a cell stuck in more than one direction
+will struggle to stay in the correct position as you scroll. For example, if a header row is stuck
+to the top and the first column is stuck, then the top-left-most cell will appear jittery as you
+scroll.</p>
+<p>Also, sticky positioning in Edge will appear shaky for special cases. For example, if the scrolling
+container has a complex box shadow and has sibling elements, the stuck cells will appear jittery.
+There is currently an <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17514118/">open issue with Edge</a>
+to resolve this.</p>
+
+        <h4 id="multiple-row-templates" class="docs-header-link">
+          <span header-link="multiple-row-templates"></span>
+          Multiple row templates
+        </h4>
+      <p>When using the <code>multiTemplateDataRows</code> directive to support multiple rows for each data object, the context of <code>*matRowDef</code> is the same except that the <code>index</code> value is replaced by <code>dataIndex</code> and <code>renderIndex</code>.</p>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>By default, <code>MatTable</code> applies <code>role=&quot;table&quot;</code>, assuming the table&#39;s contains primarily static
+content. You can change the role by explicitly setting <code>role=&quot;grid&quot;</code> or <code>role=&quot;treegrid&quot;</code> on the
+table element. While changing the role will update child element roles, such as changing
+<code>role=&quot;cell&quot;</code> to <code>role=&quot;gridcell&quot;</code>, this does <em>not</em> apply additional keyboard input handling or
+focus management to the table.</p>
+<p>Always provide an accessible label for your tables via <code>aria-label</code> or <code>aria-labelledby</code> on the
+table element.</p>
+
+        <h3 id="tables-with-display-flex" class="docs-header-link">
+          <span header-link="tables-with-display-flex"></span>
+          Tables with <code>display: flex</code>
+        </h3>
+      <p>The <code>MatTable</code> does not require that you use a native HTML table. Instead, you can use an
+alternative approach that uses <code>display: flex</code> for the table&#39;s styles.</p>
+<p>This alternative approach replaces the native table element tags with the <code>MatTable</code> directive
+selectors. For example, <code>&lt;table mat-table&gt;</code> becomes <code>&lt;mat-table&gt;</code>; <code>&lt;tr mat-row&gt;</code> becomes
+<code>&lt;mat-row&gt;</code>. The following shows a previous example using this alternative template:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;dataSource&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.username}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Age Definition --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;age&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Age <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.age}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Title Definition --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Title <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let row&quot;</span>&gt;</span> {{row.title}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Header and Row Declarations --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;[&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;username&#x27;, &#x27;age&#x27;, &#x27;title&#x27;]&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
+</code></pre>
+<p>Note that this approach means you cannot include certain native-table features such colspan/rowspan
+or have columns that resize themselves based on their content.</p>
+
+        <h3 id="tables-with-matripple" class="docs-header-link">
+          <span header-link="tables-with-matripple"></span>
+          Tables with <code>MatRipple</code>
+        </h3>
+      <p>By default, <code>MatTable</code> does not set up Material Design ripples for rows. A ripple effect can be
+added to table rows by using the <code>MatRipple</code> directive from <code>@angular/material/core</code>. Due to
+limitations in browsers, ripples cannot be applied native <code>th</code> or <code>tr</code> elements. The recommended
+approach for setting up ripples is using the non-native <code>display: flex</code> variant of <code>MatTable</code>.</p>
+<!--- example(table-with-ripples) -->
+
+<p>More details about ripples on native table rows and their limitations can be found <a href="https://github.com/angular/components/issues/11883#issuecomment-634942981">in this issue</a>.</p>
+</div>

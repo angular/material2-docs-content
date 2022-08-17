@@ -17,24 +17,24 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material table-testing
+    API reference for Angular Material legacy-table-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatTableHarness} from '@angular/material/table/testing';
+        import {MatLegacyTableHarness} from '@angular/material/legacy-table/testing';
       </code>
     </p>
-  <h3 id="material-table-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-table-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatTableHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTableHarness"></span>
-  <code>MatTableHarness</code>
+<h4 id="MatLegacyTableHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTableHarness"></span>
+  <code>MatLegacyTableHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-table in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-table in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -46,7 +46,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-table&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-table&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatTableHarness</code> instance.</p>
@@ -629,7 +629,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyTableHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -647,11 +647,11 @@
     
       
 
-<h4 id="MatRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatRowHarness"></span>
-  <code>MatRowHarness</code>
+<h4 id="MatLegacyRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRowHarness"></span>
+  <code>MatLegacyRowHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material table row.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table row.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -663,7 +663,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-row&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-row&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatRowHarness</code> instance.</p>
@@ -886,7 +886,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyRowHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -904,11 +904,11 @@
     
       
 
-<h4 id="MatHeaderRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatHeaderRowHarness"></span>
-  <code>MatHeaderRowHarness</code>
+<h4 id="MatLegacyHeaderRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHeaderRowHarness"></span>
+  <code>MatLegacyHeaderRowHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material table header row.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table header row.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -920,7 +920,7 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-header-row&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-header-row&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatHeaderRowHarness</code> instance.</p>
@@ -1114,8 +1114,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a table header row with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for
+a table header row with specific attributes.</p>
 
     </td>
   </tr><thead>
@@ -1144,7 +1144,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyHeaderRowHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1162,11 +1162,11 @@ attributes.</p>
     
       
 
-<h4 id="MatFooterRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFooterRowHarness"></span>
-  <code>MatFooterRowHarness</code>
+<h4 id="MatLegacyFooterRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFooterRowHarness"></span>
+  <code>MatLegacyFooterRowHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material table footer row.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table footer row.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1178,7 +1178,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-footer-row&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-footer-row&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatFooterRowHarness</code> instance.</p>
@@ -1372,8 +1372,8 @@ attributes.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a table footer row cell with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for
+a table footer row cell with specific attributes.</p>
 
     </td>
   </tr><thead>
@@ -1402,7 +1402,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyFooterRowHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1420,11 +1420,11 @@ attributes.</p>
     
       
 
-<h4 id="MatCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCellHarness"></span>
-  <code>MatCellHarness</code>
+<h4 id="MatLegacyCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyCellHarness"></span>
+  <code>MatLegacyCellHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material table cell.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table cell.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1436,7 +1436,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-cell&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-cell&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatCellHarness</code> instance.</p>
@@ -1866,7 +1866,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatCellHarness&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyCellHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -1884,11 +1884,11 @@ attributes.</p>
     
       
 
-<h4 id="MatHeaderCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatHeaderCellHarness"></span>
-  <code>MatHeaderCellHarness</code>
+<h4 id="MatLegacyHeaderCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHeaderCellHarness"></span>
+  <code>MatLegacyHeaderCellHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material table header cell.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table header cell.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1900,7 +1900,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-header-cell&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-header-cell&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatHeaderCellHarness</code> instance.</p>
@@ -2301,8 +2301,8 @@ attributes.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a table header cell with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for
+a table header cell with specific attributes.</p>
 
     </td>
   </tr><thead>
@@ -2331,7 +2331,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatHeaderCellHarness&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyHeaderCellHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2349,11 +2349,11 @@ attributes.</p>
     
       
 
-<h4 id="MatFooterCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFooterCellHarness"></span>
-  <code>MatFooterCellHarness</code>
+<h4 id="MatLegacyFooterCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFooterCellHarness"></span>
+  <code>MatLegacyFooterCellHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based Angular Material table footer cell.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table footer cell.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -2365,7 +2365,7 @@ attributes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-footer-cell&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-footer-cell&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatFooterCellHarness</code> instance.</p>
@@ -2766,8 +2766,8 @@ attributes.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a table footer cell with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for
+a table footer cell with specific attributes.</p>
 
     </td>
   </tr><thead>
@@ -2796,7 +2796,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatFooterCellHarness&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyFooterCellHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -2808,113 +2808,6 @@ attributes.</p>
 
 
   
-
-
-
-    <h3 id="material-table-testing-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MatTableHarnessColumnsText" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatTableHarnessColumnsText"></span>
-  <code>MatTableHarnessColumnsText</code>
-</h4><p class="docs-api-interface-description"><p>Text extracted from a table organized by columns.</p>
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatRowHarnessColumnsText" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatRowHarnessColumnsText"></span>
-  <code>MatRowHarnessColumnsText</code>
-</h4><p class="docs-api-interface-description"><p>Text extracted from a table row organized by columns.</p>
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="CellHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="CellHarnessFilters"></span>
-  <code>CellHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of cell harness instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>columnName: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose column name matches the given value.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>text: string | RegExp</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Only find instances whose text matches the given value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="RowHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="RowHarnessFilters"></span>
-  <code>RowHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of row harness instances.</p>
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="TableHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="TableHarnessFilters"></span>
-  <code>TableHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of table harness instances.</p>
-</p>
-
-
-
 
 
 

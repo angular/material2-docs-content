@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
 import * as i3 from '@angular/material-experimental/selection';
-import * as i4 from '@angular/material/table';
+import * as i4 from '@angular/material/legacy-table';
 import * as i5 from '@angular/common';
 import * as i6 from '@angular/forms';
 import * as i7 from '@angular/material/legacy-checkbox';
@@ -33,7 +33,7 @@ export declare class MatSelectionColumnExample {
 
 export declare class MatSelectionExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<MatSelectionExamplesModule, [typeof i1.MatSelectionListExample, typeof i2.MatSelectionColumnExample], [typeof i3.MatSelectionModule, typeof i4.MatTableModule, typeof i5.CommonModule, typeof i6.FormsModule, typeof i6.ReactiveFormsModule, typeof i7.MatLegacyCheckboxModule], [typeof i1.MatSelectionListExample, typeof i2.MatSelectionColumnExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<MatSelectionExamplesModule, [typeof i1.MatSelectionListExample, typeof i2.MatSelectionColumnExample], [typeof i3.MatSelectionModule, typeof i4.MatLegacyTableModule, typeof i5.CommonModule, typeof i6.FormsModule, typeof i6.ReactiveFormsModule, typeof i7.MatLegacyCheckboxModule], [typeof i1.MatSelectionListExample, typeof i2.MatSelectionColumnExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<MatSelectionExamplesModule>;
 }
 

@@ -7,13 +7,13 @@
  */</span>
 
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-table&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDefaultEnabledColumnResizeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/column-resize&#x27;</span>;
 
 <span class="hljs-keyword">import</span> {DefaultEnabledColumnResizeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./default-enabled-column-resize-example&#x27;</span>;
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDefaultEnabledColumnResizeModule, MatTableModule],
+  <span class="hljs-attr">imports</span>: [MatDefaultEnabledColumnResizeModule, MatLegacyTableModule],
   <span class="hljs-attr">declarations</span>: [DefaultEnabledColumnResizeExample],
   <span class="hljs-attr">exports</span>: [DefaultEnabledColumnResizeExample],
 })

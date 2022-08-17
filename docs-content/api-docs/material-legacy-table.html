@@ -17,22 +17,336 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material table
+    API reference for Angular Material legacy-table
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatTableModule} from '@angular/material/table';
+        import {MatLegacyTableModule} from '@angular/material/legacy-table';
       </code>
     </p>
-  <h3 id="material-table-directives" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-table-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
     
       
 
-<h4 id="MatRecycleRows" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatRecycleRows"></span>
-  <code>MatRecycleRows</code>
+<h4 id="MatLegacyCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyCellDef"></span>
+  <code>MatLegacyCellDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkCellDef" class="docs-api-class-extends-type">
+      CdkCellDef
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Cell definition for the mat-table.
+Captures the template of a column&#39;s data row cell as well as cell-specific properties.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matCellDef]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyHeaderCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHeaderCellDef"></span>
+  <code>MatLegacyHeaderCellDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkHeaderCellDef" class="docs-api-class-extends-type">
+      CdkHeaderCellDef
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Header cell definition for the mat-table.
+Captures the template of a column&#39;s header cell and as well as cell-specific properties.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matHeaderCellDef]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyFooterCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFooterCellDef"></span>
+  <code>MatLegacyFooterCellDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkFooterCellDef" class="docs-api-class-extends-type">
+      CdkFooterCellDef
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Footer cell definition for the mat-table.
+Captures the template of a column&#39;s footer cell and as well as cell-specific properties.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matFooterCellDef]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyColumnDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyColumnDef"></span>
+  <code>MatLegacyColumnDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkColumnDef" class="docs-api-class-extends-type">
+      CdkColumnDef
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Column definition for the mat-table.
+Defines a set of cells available for a table column.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matColumnDef]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matColumnDef&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Unique name for this column.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>sticky: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;stickyEnd&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>stickyEnd: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether this column should be sticky positioned on the end of the row. Should make sure
+that it mimics the <code>CanStick</code> mixin such that <code>_hasStickyChanged</code> is set to true if the value
+has been changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>cssClassFriendlyName: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Transformed version of the column name that can be used as part of a CSS classname. Excludes
+all non-alphanumeric characters and the special characters &#39;-&#39; and &#39;_&#39;. Any characters that
+do not match are replaced by the &#39;-&#39; character.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasStickyChanged
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the sticky value has changed since this was last called.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">resetStickyChanged
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatLegacyHeaderCell" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHeaderCell"></span>
+  <code>MatLegacyHeaderCell</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkHeaderCell" class="docs-api-class-extends-type">
+      CdkHeaderCell
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Header cell template container that adds the right classes and role.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-header-cell</span>
+  
+    <span class="docs-api-class-selector-name">th[mat-header-cell]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyFooterCell" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFooterCell"></span>
+  <code>MatLegacyFooterCell</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkFooterCell" class="docs-api-class-extends-type">
+      CdkFooterCell
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Footer cell template container that adds the right classes and role.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-footer-cell</span>
+  
+    <span class="docs-api-class-selector-name">td[mat-footer-cell]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyCell" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyCell"></span>
+  <code>MatLegacyCell</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkCell" class="docs-api-class-extends-type">
+      CdkCell
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Cell template container that adds the right classes and role.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-cell</span>
+  
+    <span class="docs-api-class-selector-name">td[mat-cell]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyRecycleRows" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRecycleRows"></span>
+  <code>MatLegacyRecycleRows</code>
   
 </h4><p class="docs-api-class-description"><p>Enables the recycle view repeater strategy, which reduces rendering latency. Not compatible with
 tables that animate rows.</p>
@@ -53,9 +367,9 @@ tables that animate rows.</p>
     
       
 
-<h4 id="MatTable" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTable"></span>
-  <code>MatTable</code>
+<h4 id="MatLegacyTable" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTable"></span>
+  <code>MatLegacyTable</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -64,7 +378,8 @@ tables that animate rows.</p>
     </a>
   </span>
   
-</h4><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-class-description"><p>Wrapper for the CdkTable with Material design styles.</p>
+</p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-table</span>
@@ -190,7 +505,7 @@ data source, even if the set of rows is empty.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>stickyCssClass: &#39;mat-mdc-table-sticky&#39;</code>
+      <code>stickyCssClass: &#39;mat-table-sticky&#39;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Overrides the sticky CSS class set by the <code>CdkTable</code>.</p>
@@ -611,323 +926,9 @@ of these events.</p>
     
       
 
-<h4 id="MatCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCellDef"></span>
-  <code>MatCellDef</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkCellDef" class="docs-api-class-extends-type">
-      CdkCellDef
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Cell definition for the mat-table.
-Captures the template of a column&#39;s data row cell as well as cell-specific properties.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matCellDef]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatHeaderCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatHeaderCellDef"></span>
-  <code>MatHeaderCellDef</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkHeaderCellDef" class="docs-api-class-extends-type">
-      CdkHeaderCellDef
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Header cell definition for the mat-table.
-Captures the template of a column&#39;s header cell and as well as cell-specific properties.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matHeaderCellDef]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatFooterCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFooterCellDef"></span>
-  <code>MatFooterCellDef</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkFooterCellDef" class="docs-api-class-extends-type">
-      CdkFooterCellDef
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Footer cell definition for the mat-table.
-Captures the template of a column&#39;s footer cell and as well as cell-specific properties.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matFooterCellDef]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatColumnDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatColumnDef"></span>
-  <code>MatColumnDef</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkColumnDef" class="docs-api-class-extends-type">
-      CdkColumnDef
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Column definition for the mat-table.
-Defines a set of cells available for a table column.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matColumnDef]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matColumnDef&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Unique name for this column.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>sticky: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;stickyEnd&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>stickyEnd: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether this column should be sticky positioned on the end of the row. Should make sure
-that it mimics the <code>CanStick</code> mixin such that <code>_hasStickyChanged</code> is set to true if the value
-has been changed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>cssClassFriendlyName: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Transformed version of the column name that can be used as part of a CSS classname. Excludes
-all non-alphanumeric characters and the special characters &#39;-&#39; and &#39;_&#39;. Any characters that
-do not match are replaced by the &#39;-&#39; character.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">hasStickyChanged
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">boolean</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">resetStickyChanged
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatHeaderCell" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatHeaderCell"></span>
-  <code>MatHeaderCell</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkHeaderCell" class="docs-api-class-extends-type">
-      CdkHeaderCell
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Header cell template container that adds the right classes and role.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-header-cell</span>
-  
-    <span class="docs-api-class-selector-name">th[mat-header-cell]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatFooterCell" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFooterCell"></span>
-  <code>MatFooterCell</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkFooterCell" class="docs-api-class-extends-type">
-      CdkFooterCell
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Footer cell template container that adds the right classes and role.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-footer-cell</span>
-  
-    <span class="docs-api-class-selector-name">td[mat-footer-cell]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatCell" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatCell"></span>
-  <code>MatCell</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/table/api#CdkCell" class="docs-api-class-extends-type">
-      CdkCell
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Cell template container that adds the right classes and role.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-cell</span>
-  
-    <span class="docs-api-class-selector-name">td[mat-cell]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatHeaderRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatHeaderRowDef"></span>
-  <code>MatHeaderRowDef</code>
+<h4 id="MatLegacyHeaderRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHeaderRowDef"></span>
+  <code>MatLegacyHeaderRowDef</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1118,9 +1119,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatFooterRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFooterRowDef"></span>
-  <code>MatFooterRowDef</code>
+<h4 id="MatLegacyFooterRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFooterRowDef"></span>
+  <code>MatLegacyFooterRowDef</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1311,9 +1312,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatRowDef"></span>
-  <code>MatRowDef</code>
+<h4 id="MatLegacyRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRowDef"></span>
+  <code>MatLegacyRowDef</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1460,9 +1461,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatHeaderRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatHeaderRow"></span>
-  <code>MatHeaderRow</code>
+<h4 id="MatLegacyHeaderRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHeaderRow"></span>
+  <code>MatLegacyHeaderRow</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1471,7 +1472,7 @@ if there is no difference.</p>
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Footer template container that contains the cell outlet. Adds the right class and role.</p>
+</h4><p class="docs-api-class-description"><p>Header template container that contains the cell outlet. Adds the right class and role.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
@@ -1490,9 +1491,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatFooterRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatFooterRow"></span>
-  <code>MatFooterRow</code>
+<h4 id="MatLegacyFooterRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFooterRow"></span>
+  <code>MatLegacyFooterRow</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1520,9 +1521,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatRow"></span>
-  <code>MatRow</code>
+<h4 id="MatLegacyRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRow"></span>
+  <code>MatLegacyRow</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1550,9 +1551,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatNoDataRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatNoDataRow"></span>
-  <code>MatNoDataRow</code>
+<h4 id="MatLegacyNoDataRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyNoDataRow"></span>
+  <code>MatLegacyNoDataRow</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1596,9 +1597,9 @@ if there is no difference.</p>
     
       
 
-<h4 id="MatTextColumn" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTextColumn"></span>
-  <code>MatTextColumn</code>
+<h4 id="MatLegacyTextColumn" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTextColumn"></span>
+  <code>MatLegacyTextColumn</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -1692,19 +1693,19 @@ set, the header text will default to the column name with its first letter capit
 
 
 
-    <h3 id="material-table-classes" class="docs-header-link docs-api-h3">
+    <h3 id="material-legacy-table-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatTableDataSource" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTableDataSource"></span>
-  <code>MatTableDataSource</code>
+<h4 id="MatLegacyTableDataSource" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTableDataSource"></span>
+  <code>MatLegacyTableDataSource</code>
   
 </h4><p class="docs-api-class-description"><p>Data source that accepts a client-side data array and includes native support of filtering,
-sorting (using MatSort), and pagination (using MatPaginator).</p>
+sorting (using MatSort), and pagination (using paginator).</p>
 <p>Allows for sort customization by overriding sortingDataAccessor, which defines how data
 properties are accessed. Also allows for filter customization by overriding filterTermAccessor,
 which defines how row data is converted to a string for filter matching.</p>
@@ -1842,150 +1843,6 @@ This default function assumes that the sort header IDs (which defaults to the co
 matches the data&#39;s properties (e.g. column Xyz represents data[&#39;Xyz&#39;]).
 May be set to a custom function for different behavior.</p>
 </td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-table-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MatTableDataSourcePageEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatTableDataSourcePageEvent"></span>
-  <code>MatTableDataSourcePageEvent</code>
-</h4><p class="docs-api-interface-description"><p>Interface that matches the required API parts for the MatPaginator&#39;s PageEvent.
-Decoupled so that users can depend on either the legacy or MDC-based paginator.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>length: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>pageIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>pageSize: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatTableDataSourcePaginator" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatTableDataSourcePaginator"></span>
-  <code>MatTableDataSourcePaginator</code>
-</h4><p class="docs-api-interface-description"><p>Interface that matches the required API parts of the MatPaginator.
-Decoupled so that users can depend on either the legacy or MDC-based paginator.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>initialized: Observable&lt;void&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>length: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>page: Subject&lt;MatTableDataSourcePageEvent&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>pageIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>pageSize: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
 </tr>
 
 

@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyTable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -33,7 +33,7 @@
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
   dataSource = [...ELEMENT_DATA];
 
-  <span class="hljs-meta">@ViewChild</span>(MatTable) table: MatTable&lt;PeriodicElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(MatLegacyTable) table: MatLegacyTable&lt;PeriodicElement&gt;;
 
   <span class="hljs-function"><span class="hljs-title">addData</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">const</span> randomElementIndex = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * ELEMENT_DATA.length);

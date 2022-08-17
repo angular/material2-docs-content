@@ -15,19 +15,19 @@ import * as i37 from '@angular/material/legacy-paginator';
 import * as i38 from '@angular/material/progress-spinner';
 import * as i39 from '@angular/material/core';
 import * as i40 from '@angular/material/sort';
-import * as i41 from '@angular/material/table';
+import * as i41 from '@angular/material/legacy-table';
 import * as i42 from '@angular/cdk/table';
 import * as i43 from '@angular/cdk/drag-drop';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
-import { MatColumnDef } from '@angular/material/table';
-import { MatHeaderRowDef } from '@angular/material/table';
+import { MatLegacyColumnDef } from '@angular/material/legacy-table';
+import { MatLegacyHeaderRowDef } from '@angular/material/legacy-table';
+import { MatLegacyNoDataRow } from '@angular/material/legacy-table';
 import { MatLegacyPaginator } from '@angular/material/legacy-paginator';
-import { MatNoDataRow } from '@angular/material/table';
-import { MatRowDef } from '@angular/material/table';
+import { MatLegacyRowDef } from '@angular/material/legacy-table';
+import { MatLegacyTable } from '@angular/material/legacy-table';
+import { MatLegacyTableDataSource } from '@angular/material/legacy-table';
 import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { MatTableDataSource } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { QueryList } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -450,7 +450,7 @@ export declare class TableColumnStylingExample {
 export declare class TableDynamicArrayDataExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_3[];
-    table: MatTable<PeriodicElement_3>;
+    table: MatLegacyTable<PeriodicElement_3>;
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
@@ -486,7 +486,7 @@ export declare class TableDynamicObservableDataExample {
 
 export declare class TableExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFooterRowExample, typeof i10.TableGeneratedColumnsExample, typeof i11.TableHarnessExample, typeof i12.TableHttpExample, typeof i13.TableMultipleHeaderFooterExample, typeof i14.TableOverviewExample, typeof i15.TablePaginationExample, typeof i16.TableRecycleRowsExample, typeof i17.TableReorderableExample, typeof i18.TableRowBindingExample, typeof i19.TableRowContextExample, typeof i20.TableSelectionExample, typeof i21.TableSortingExample, typeof i22.TableStickyColumnsExample, typeof i23.TableStickyComplexExample, typeof i24.TableStickyComplexFlexExample, typeof i25.TableStickyFooterExample, typeof i26.TableStickyHeaderExample, typeof i27.TableTextColumnAdvancedExample, typeof i28.TableTextColumnExample, typeof i29.TableWithRipplesExample, typeof i30.TableWrappedExample, typeof i30.WrapperTable], [typeof i31.CommonModule, typeof i32.MatLegacyButtonModule, typeof i33.MatButtonToggleModule, typeof i34.MatLegacyCheckboxModule, typeof i35.MatIconModule, typeof i36.MatLegacyInputModule, typeof i37.MatLegacyPaginatorModule, typeof i38.MatProgressSpinnerModule, typeof i39.MatRippleModule, typeof i40.MatSortModule, typeof i41.MatTableModule, typeof i42.CdkTableModule, typeof i43.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFooterRowExample, typeof i10.TableGeneratedColumnsExample, typeof i11.TableHarnessExample, typeof i12.TableHttpExample, typeof i13.TableMultipleHeaderFooterExample, typeof i14.TableOverviewExample, typeof i15.TablePaginationExample, typeof i16.TableRecycleRowsExample, typeof i17.TableReorderableExample, typeof i18.TableRowBindingExample, typeof i19.TableRowContextExample, typeof i20.TableSelectionExample, typeof i21.TableSortingExample, typeof i22.TableStickyColumnsExample, typeof i23.TableStickyComplexExample, typeof i24.TableStickyComplexFlexExample, typeof i25.TableStickyFooterExample, typeof i26.TableStickyHeaderExample, typeof i27.TableTextColumnAdvancedExample, typeof i28.TableTextColumnExample, typeof i29.TableWithRipplesExample, typeof i30.TableWrappedExample, typeof i30.WrapperTable]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFooterRowExample, typeof i10.TableGeneratedColumnsExample, typeof i11.TableHarnessExample, typeof i12.TableHttpExample, typeof i13.TableMultipleHeaderFooterExample, typeof i14.TableOverviewExample, typeof i15.TablePaginationExample, typeof i16.TableRecycleRowsExample, typeof i17.TableReorderableExample, typeof i18.TableRowBindingExample, typeof i19.TableRowContextExample, typeof i20.TableSelectionExample, typeof i21.TableSortingExample, typeof i22.TableStickyColumnsExample, typeof i23.TableStickyComplexExample, typeof i24.TableStickyComplexFlexExample, typeof i25.TableStickyFooterExample, typeof i26.TableStickyHeaderExample, typeof i27.TableTextColumnAdvancedExample, typeof i28.TableTextColumnExample, typeof i29.TableWithRipplesExample, typeof i30.TableWrappedExample, typeof i30.WrapperTable], [typeof i31.CommonModule, typeof i32.MatLegacyButtonModule, typeof i33.MatButtonToggleModule, typeof i34.MatLegacyCheckboxModule, typeof i35.MatIconModule, typeof i36.MatLegacyInputModule, typeof i37.MatLegacyPaginatorModule, typeof i38.MatProgressSpinnerModule, typeof i39.MatRippleModule, typeof i40.MatSortModule, typeof i41.MatLegacyTableModule, typeof i42.CdkTableModule, typeof i43.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFooterRowExample, typeof i10.TableGeneratedColumnsExample, typeof i11.TableHarnessExample, typeof i12.TableHttpExample, typeof i13.TableMultipleHeaderFooterExample, typeof i14.TableOverviewExample, typeof i15.TablePaginationExample, typeof i16.TableRecycleRowsExample, typeof i17.TableReorderableExample, typeof i18.TableRowBindingExample, typeof i19.TableRowContextExample, typeof i20.TableSelectionExample, typeof i21.TableSortingExample, typeof i22.TableStickyColumnsExample, typeof i23.TableStickyComplexExample, typeof i24.TableStickyComplexFlexExample, typeof i25.TableStickyFooterExample, typeof i26.TableStickyHeaderExample, typeof i27.TableTextColumnAdvancedExample, typeof i28.TableTextColumnExample, typeof i29.TableWithRipplesExample, typeof i30.TableWrappedExample, typeof i30.WrapperTable]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TableExamplesModule>;
 }
 
@@ -507,7 +507,7 @@ export declare class TableExpandableRowsExample {
  */
 export declare class TableFilteringExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_7>;
+    dataSource: MatLegacyTableDataSource<PeriodicElement_7>;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFilteringExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, false>;
@@ -601,7 +601,7 @@ export declare class TableMultipleHeaderFooterExample {
  */
 export declare class TableOverviewExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<UserData>;
+    dataSource: MatLegacyTableDataSource<UserData>;
     paginator: MatLegacyPaginator;
     sort: MatSort;
     constructor();
@@ -616,7 +616,7 @@ export declare class TableOverviewExample implements AfterViewInit {
  */
 export declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_10>;
+    dataSource: MatLegacyTableDataSource<PeriodicElement_10>;
     paginator: MatLegacyPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
@@ -670,7 +670,7 @@ export declare class TableRowContextExample {
  */
 export declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_14>;
+    dataSource: MatLegacyTableDataSource<PeriodicElement_14>;
     selection: SelectionModel<PeriodicElement_14>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
@@ -688,7 +688,7 @@ export declare class TableSelectionExample {
 export declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_15>;
+    dataSource: MatLegacyTableDataSource<PeriodicElement_15>;
     constructor(_liveAnnouncer: LiveAnnouncer);
     sort: MatSort;
     ngAfterViewInit(): void;
@@ -763,7 +763,7 @@ export declare class TableStickyHeaderExample {
  */
 export declare class TableTextColumnAdvancedExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_20>;
+    dataSource: MatLegacyTableDataSource<PeriodicElement_20>;
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
@@ -800,7 +800,7 @@ export declare class TableWithRipplesExample {
  */
 export declare class TableWrappedExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_22>;
+    dataSource: MatLegacyTableDataSource<PeriodicElement_22>;
     sort: MatSort;
     ngAfterViewInit(): void;
     clearTable(): void;
@@ -836,11 +836,11 @@ declare interface UserData {
  * table.
  */
 export declare class WrapperTable<T> implements AfterContentInit {
-    headerRowDefs: QueryList<MatHeaderRowDef>;
-    rowDefs: QueryList<MatRowDef<T>>;
-    columnDefs: QueryList<MatColumnDef>;
-    noDataRow: MatNoDataRow;
-    table: MatTable<T>;
+    headerRowDefs: QueryList<MatLegacyHeaderRowDef>;
+    rowDefs: QueryList<MatLegacyRowDef<T>>;
+    columnDefs: QueryList<MatLegacyColumnDef>;
+    noDataRow: MatLegacyNoDataRow;
+    table: MatLegacyTable<T>;
     columns: string[];
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;

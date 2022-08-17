@@ -11,13 +11,13 @@
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  MatColumnDef,
-  MatHeaderRowDef,
-  MatNoDataRow,
-  MatRowDef,
-  MatTable,
-  MatTableDataSource,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+  MatLegacyColumnDef,
+  MatLegacyHeaderRowDef,
+  MatLegacyNoDataRow,
+  MatLegacyRowDef,
+  MatLegacyTable,
+  MatLegacyTableDataSource,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -49,7 +49,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableWrappedExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+  dataSource = <span class="hljs-keyword">new</span> MatLegacyTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
 
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;sort&#x27;</span>) sort: MatSort;
 
@@ -82,12 +82,12 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WrapperTable</span>&lt;<span class="hljs-title">T</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">AfterContentInit</span> </span>{
-  <span class="hljs-meta">@ContentChildren</span>(MatHeaderRowDef) headerRowDefs: QueryList&lt;MatHeaderRowDef&gt;;
-  <span class="hljs-meta">@ContentChildren</span>(MatRowDef) rowDefs: QueryList&lt;MatRowDef&lt;T&gt;&gt;;
-  <span class="hljs-meta">@ContentChildren</span>(MatColumnDef) columnDefs: QueryList&lt;MatColumnDef&gt;;
-  <span class="hljs-meta">@ContentChild</span>(MatNoDataRow) noDataRow: MatNoDataRow;
+  <span class="hljs-meta">@ContentChildren</span>(MatLegacyHeaderRowDef) headerRowDefs: QueryList&lt;MatLegacyHeaderRowDef&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(MatLegacyRowDef) rowDefs: QueryList&lt;MatLegacyRowDef&lt;T&gt;&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(MatLegacyColumnDef) columnDefs: QueryList&lt;MatLegacyColumnDef&gt;;
+  <span class="hljs-meta">@ContentChild</span>(MatLegacyNoDataRow) noDataRow: MatLegacyNoDataRow;
 
-  <span class="hljs-meta">@ViewChild</span>(MatTable, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) table: MatTable&lt;T&gt;;
+  <span class="hljs-meta">@ViewChild</span>(MatLegacyTable, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) table: MatLegacyTable&lt;T&gt;;
 
   <span class="hljs-meta">@Input</span>() columns: <span class="hljs-built_in">string</span>[];
 

@@ -1,6 +1,6 @@
 import * as i0 from '@angular/core';
 import * as i2 from '@angular/material-experimental/column-resize';
-import * as i3 from '@angular/material/table';
+import * as i3 from '@angular/material/legacy-table';
 
 export declare class ColumnResizeExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ColumnResizeExamplesModule, never>;
@@ -20,7 +20,7 @@ export declare class DefaultEnabledColumnResizeExample {
 
 export declare class DefaultEnabledColumnResizeExampleModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<DefaultEnabledColumnResizeExampleModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<DefaultEnabledColumnResizeExampleModule, [typeof i1.DefaultEnabledColumnResizeExample], [typeof i2.MatDefaultEnabledColumnResizeModule, typeof i3.MatTableModule], [typeof i1.DefaultEnabledColumnResizeExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<DefaultEnabledColumnResizeExampleModule, [typeof i1.DefaultEnabledColumnResizeExample], [typeof i2.MatDefaultEnabledColumnResizeModule, typeof i3.MatLegacyTableModule], [typeof i1.DefaultEnabledColumnResizeExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<DefaultEnabledColumnResizeExampleModule>;
 }
 
@@ -36,7 +36,7 @@ export declare class DefaultEnabledColumnResizeFlexExample {
 
 export declare class DefaultEnabledColumnResizeFlexExampleModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<DefaultEnabledColumnResizeFlexExampleModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<DefaultEnabledColumnResizeFlexExampleModule, [typeof i1_2.DefaultEnabledColumnResizeFlexExample], [typeof i2.MatDefaultEnabledColumnResizeModule, typeof i3.MatTableModule], [typeof i1_2.DefaultEnabledColumnResizeFlexExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<DefaultEnabledColumnResizeFlexExampleModule, [typeof i1_2.DefaultEnabledColumnResizeFlexExample], [typeof i2.MatDefaultEnabledColumnResizeModule, typeof i3.MatLegacyTableModule], [typeof i1_2.DefaultEnabledColumnResizeFlexExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<DefaultEnabledColumnResizeFlexExampleModule>;
 }
 
@@ -91,7 +91,7 @@ export declare class OptInColumnResizeExample {
 
 export declare class OptInColumnResizeExampleModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<OptInColumnResizeExampleModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<OptInColumnResizeExampleModule, [typeof i1_3.OptInColumnResizeExample], [typeof i2.MatColumnResizeModule, typeof i3.MatTableModule], [typeof i1_3.OptInColumnResizeExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<OptInColumnResizeExampleModule, [typeof i1_3.OptInColumnResizeExample], [typeof i2.MatColumnResizeModule, typeof i3.MatLegacyTableModule], [typeof i1_3.OptInColumnResizeExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<OptInColumnResizeExampleModule>;
 }
 
