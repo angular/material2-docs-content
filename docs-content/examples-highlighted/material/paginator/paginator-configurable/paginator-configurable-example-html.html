@@ -1,28 +1,47 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>List length<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;length&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-options&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Length<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Length&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;length&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Page size<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;pageSize&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Page size options<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">&quot;pageSizeOptions&quot;</span> (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">&quot;setPageSizeOptions($event)&quot;</span>
-         [<span class="hljs-attr">ngModelOptions</span>]=<span class="hljs-string">&quot;{updateOn: &#x27;blur&#x27;}&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Ex. 10,25,50&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Page Size<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Page Size&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;pageSize&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> [<span class="hljs-attr">length</span>]=<span class="hljs-string">&quot;length&quot;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Page Index<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Page Index&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;pageIndex&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Page Size Options<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">&quot;pageSizeOptions&quot;</span> (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">&quot;setPageSizeOptions($event)&quot;</span>
+           [<span class="hljs-attr">ngModelOptions</span>]=<span class="hljs-string">&quot;{updateOn: &#x27;blur&#x27;}&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Ex. 10,25,50&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-toggles&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;hidePageSize&quot;</span>&gt;</span>Hide page size<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;showPageSizeOptions&quot;</span>&gt;</span>Show multiple page size options<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;showFirstLastButtons&quot;</span>&gt;</span>Show first/last buttons<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;disabled&quot;</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> #<span class="hljs-attr">paginator</span>
+               <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-paginator&quot;</span>
+               (<span class="hljs-attr">page</span>)=<span class="hljs-string">&quot;handlePageEvent($event)&quot;</span>
+               [<span class="hljs-attr">length</span>]=<span class="hljs-string">&quot;length&quot;</span>
                [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">&quot;pageSize&quot;</span>
-               [<span class="hljs-attr">pageSizeOptions</span>]=<span class="hljs-string">&quot;pageSizeOptions&quot;</span>
-               (<span class="hljs-attr">page</span>)=<span class="hljs-string">&quot;pageEvent = $event&quot;</span>
+               [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;disabled&quot;</span>
+               [<span class="hljs-attr">showFirstLastButtons</span>]=<span class="hljs-string">&quot;showFirstLastButtons&quot;</span>
+               [<span class="hljs-attr">pageSizeOptions</span>]=<span class="hljs-string">&quot;showPageSizeOptions ? pageSizeOptions : []&quot;</span>
+               [<span class="hljs-attr">hidePageSize</span>]=<span class="hljs-string">&quot;hidePageSize&quot;</span>
+               [<span class="hljs-attr">pageIndex</span>]=<span class="hljs-string">&quot;pageIndex&quot;</span>
                <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select page&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-paginator</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;pageEvent&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>Page Change Event Properties<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>List length: {{pageEvent.length}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Page size: {{pageEvent.pageSize}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Page index: {{pageEvent.pageIndex}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-data&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> Output event: {{(pageEvent | json) || &#x27;No events dispatched yet&#x27;}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span> getNumberOfPages: {{paginator.getNumberOfPages()}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

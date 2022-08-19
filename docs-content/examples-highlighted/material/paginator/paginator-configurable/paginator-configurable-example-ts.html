@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {PageEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-paginator&#x27;</span>;
+<span class="hljs-keyword">import</span> {PageEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Configurable paginator
@@ -10,13 +10,24 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;paginator-configurable-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorConfigurableExample</span> </span>{
-  <span class="hljs-comment">// MatPaginator Inputs</span>
-  length = <span class="hljs-number">100</span>;
+  length = <span class="hljs-number">50</span>;
   pageSize = <span class="hljs-number">10</span>;
-  pageSizeOptions: <span class="hljs-built_in">number</span>[] = [<span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>, <span class="hljs-number">100</span>];
+  pageIndex = <span class="hljs-number">0</span>;
+  pageSizeOptions = [<span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">25</span>];
 
-  <span class="hljs-comment">// MatPaginator Output</span>
+  hidePageSize = <span class="hljs-literal">false</span>;
+  showPageSizeOptions = <span class="hljs-literal">true</span>;
+  showFirstLastButtons = <span class="hljs-literal">true</span>;
+  disabled = <span class="hljs-literal">false</span>;
+
   pageEvent: PageEvent;
+
+  <span class="hljs-function"><span class="hljs-title">handlePageEvent</span>(<span class="hljs-params">e: PageEvent</span>)</span> {
+    <span class="hljs-built_in">this</span>.pageEvent = e;
+    <span class="hljs-built_in">this</span>.length = e.length;
+    <span class="hljs-built_in">this</span>.pageSize = e.pageSize;
+    <span class="hljs-built_in">this</span>.pageIndex = e.pageIndex;
+  }
 
   <span class="hljs-function"><span class="hljs-title">setPageSizeOptions</span>(<span class="hljs-params">setPageSizeOptionsInput: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-keyword">if</span> (setPageSizeOptionsInput) {
