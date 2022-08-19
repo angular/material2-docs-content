@@ -1,15 +1,15 @@
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import * as i12 from '@angular/common';
-import * as i13 from '@angular/material/legacy-button';
-import * as i14 from '@angular/material/legacy-checkbox';
-import * as i15 from '@angular/material/legacy-input';
-import * as i16 from '@angular/material/legacy-select';
-import * as i17 from '@angular/material/legacy-tooltip';
+import * as i13 from '@angular/material/button';
+import * as i14 from '@angular/material/checkbox';
+import * as i15 from '@angular/material/input';
+import * as i16 from '@angular/material/select';
+import * as i17 from '@angular/material/tooltip';
 import * as i18 from '@angular/forms';
 import * as i19 from '@angular/cdk/scrolling';
-import { MatTooltipDefaultOptions } from '@angular/material/legacy-tooltip';
-import { TooltipPosition } from '@angular/material/legacy-tooltip';
+import { MatTooltipDefaultOptions } from '@angular/material/tooltip';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 declare namespace i1 {
     export {
@@ -120,7 +120,7 @@ export declare class TooltipDisabledExample {
 
 export declare class TooltipExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TooltipExamplesModule, [typeof i1.TooltipAutoHideExample, typeof i2.TooltipCustomClassExample, typeof i3.TooltipDelayExample, typeof i4.TooltipDisabledExample, typeof i5.TooltipHarnessExample, typeof i6.TooltipManualExample, typeof i7.TooltipMessageExample, typeof i8.TooltipModifiedDefaultsExample, typeof i9.TooltipOverviewExample, typeof i10.TooltipPositionExample, typeof i11.TooltipPositionAtOriginExample], [typeof i12.CommonModule, typeof i13.MatLegacyButtonModule, typeof i14.MatLegacyCheckboxModule, typeof i15.MatLegacyInputModule, typeof i16.MatLegacySelectModule, typeof i17.MatLegacyTooltipModule, typeof i18.ReactiveFormsModule, typeof i19.ScrollingModule], [typeof i1.TooltipAutoHideExample, typeof i2.TooltipCustomClassExample, typeof i3.TooltipDelayExample, typeof i4.TooltipDisabledExample, typeof i5.TooltipHarnessExample, typeof i6.TooltipManualExample, typeof i7.TooltipMessageExample, typeof i8.TooltipModifiedDefaultsExample, typeof i9.TooltipOverviewExample, typeof i10.TooltipPositionExample, typeof i11.TooltipPositionAtOriginExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TooltipExamplesModule, [typeof i1.TooltipAutoHideExample, typeof i2.TooltipCustomClassExample, typeof i3.TooltipDelayExample, typeof i4.TooltipDisabledExample, typeof i5.TooltipHarnessExample, typeof i6.TooltipManualExample, typeof i7.TooltipMessageExample, typeof i8.TooltipModifiedDefaultsExample, typeof i9.TooltipOverviewExample, typeof i10.TooltipPositionExample, typeof i11.TooltipPositionAtOriginExample], [typeof i12.CommonModule, typeof i13.MatButtonModule, typeof i14.MatCheckboxModule, typeof i15.MatInputModule, typeof i16.MatSelectModule, typeof i17.MatTooltipModule, typeof i18.ReactiveFormsModule, typeof i19.ScrollingModule], [typeof i1.TooltipAutoHideExample, typeof i2.TooltipCustomClassExample, typeof i3.TooltipDelayExample, typeof i4.TooltipDisabledExample, typeof i5.TooltipHarnessExample, typeof i6.TooltipManualExample, typeof i7.TooltipMessageExample, typeof i8.TooltipModifiedDefaultsExample, typeof i9.TooltipOverviewExample, typeof i10.TooltipPositionExample, typeof i11.TooltipPositionAtOriginExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TooltipExamplesModule>;
 }
 
