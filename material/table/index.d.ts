@@ -5,29 +5,30 @@ import { DataSource } from '@angular/cdk/collections';
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as i0 from '@angular/core';
-import * as i31 from '@angular/common';
-import * as i32 from '@angular/material/legacy-button';
-import * as i33 from '@angular/material/button-toggle';
-import * as i34 from '@angular/material/legacy-checkbox';
-import * as i35 from '@angular/material/icon';
-import * as i36 from '@angular/material/legacy-input';
-import * as i37 from '@angular/material/legacy-paginator';
-import * as i38 from '@angular/material/legacy-progress-spinner';
-import * as i39 from '@angular/material/core';
-import * as i40 from '@angular/material/sort';
-import * as i41 from '@angular/material/legacy-table';
-import * as i42 from '@angular/cdk/table';
-import * as i43 from '@angular/cdk/drag-drop';
+import * as i32 from '@angular/common';
+import * as i33 from '@angular/material/legacy-button';
+import * as i34 from '@angular/material/button-toggle';
+import * as i35 from '@angular/material/legacy-checkbox';
+import * as i36 from '@angular/material/icon';
+import * as i37 from '@angular/material/legacy-input';
+import * as i38 from '@angular/material/legacy-paginator';
+import * as i39 from '@angular/material/legacy-progress-spinner';
+import * as i40 from '@angular/material/core';
+import * as i41 from '@angular/material/sort';
+import * as i42 from '@angular/material/table';
+import * as i43 from '@angular/cdk/table';
+import * as i44 from '@angular/cdk/drag-drop';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
-import { MatLegacyColumnDef } from '@angular/material/legacy-table';
-import { MatLegacyHeaderRowDef } from '@angular/material/legacy-table';
-import { MatLegacyNoDataRow } from '@angular/material/legacy-table';
+import { MatColumnDef } from '@angular/material/table';
+import { MatHeaderRowDef } from '@angular/material/table';
 import { MatLegacyPaginator } from '@angular/material/legacy-paginator';
-import { MatLegacyRowDef } from '@angular/material/legacy-table';
-import { MatLegacyTable } from '@angular/material/legacy-table';
-import { MatLegacyTableDataSource } from '@angular/material/legacy-table';
+import { MatNoDataRow } from '@angular/material/table';
+import { MatRowDef } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSourcePaginator } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { QueryList } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -70,18 +71,24 @@ declare namespace i1 {
 
 declare namespace i10 {
     export {
-        PeriodicElement_9 as PeriodicElement,
-        TableGeneratedColumnsExample
+        TableFooterRowExample
     }
 }
 
 declare namespace i11 {
     export {
-        TableHarnessExample
+        PeriodicElement_10 as PeriodicElement,
+        TableGeneratedColumnsExample
     }
 }
 
 declare namespace i12 {
+    export {
+        TableHarnessExample
+    }
+}
+
+declare namespace i13 {
     export {
         TableHttpExample,
         GithubApi,
@@ -90,50 +97,44 @@ declare namespace i12 {
     }
 }
 
-declare namespace i13 {
+declare namespace i14 {
     export {
         TableMultipleHeaderFooterExample
     }
 }
 
-declare namespace i14 {
+declare namespace i15 {
     export {
         UserData,
         TableOverviewExample
     }
 }
 
-declare namespace i15 {
-    export {
-        TablePaginationExample,
-        PeriodicElement_10 as PeriodicElement
-    }
-}
-
 declare namespace i16 {
     export {
-        PeriodicElement_11 as PeriodicElement,
-        TableRecycleRowsExample
+        TablePaginationExample,
+        PeriodicElement_11 as PeriodicElement
     }
 }
 
 declare namespace i17 {
     export {
-        TableReorderableExample,
-        PeriodicElement_12 as PeriodicElement
+        PeriodicElement_12 as PeriodicElement,
+        TableRecycleRowsExample
     }
 }
 
 declare namespace i18 {
     export {
-        PeriodicElement_13 as PeriodicElement,
-        TableRowBindingExample
+        TableReorderableExample,
+        PeriodicElement_13 as PeriodicElement
     }
 }
 
 declare namespace i19 {
     export {
-        TableRowContextExample
+        PeriodicElement_14 as PeriodicElement,
+        TableRowBindingExample
     }
 }
 
@@ -146,70 +147,70 @@ declare namespace i2 {
 
 declare namespace i20 {
     export {
-        PeriodicElement_14 as PeriodicElement,
-        TableSelectionExample
+        TableRowContextExample
     }
 }
 
 declare namespace i21 {
     export {
         PeriodicElement_15 as PeriodicElement,
-        TableSortingExample
+        TableSelectionExample
     }
 }
 
 declare namespace i22 {
     export {
-        TableStickyColumnsExample,
-        PeriodicElement_16 as PeriodicElement
+        PeriodicElement_16 as PeriodicElement,
+        TableSortingExample
     }
 }
 
 declare namespace i23 {
     export {
-        TableStickyComplexExample,
+        TableStickyColumnsExample,
         PeriodicElement_17 as PeriodicElement
     }
 }
 
 declare namespace i24 {
     export {
-        TableStickyComplexFlexExample,
+        TableStickyComplexExample,
         PeriodicElement_18 as PeriodicElement
     }
 }
 
 declare namespace i25 {
     export {
-        Transaction_3 as Transaction,
-        TableStickyFooterExample
+        TableStickyComplexFlexExample,
+        PeriodicElement_19 as PeriodicElement
     }
 }
 
 declare namespace i26 {
     export {
-        TableStickyHeaderExample,
-        PeriodicElement_19 as PeriodicElement
+        Transaction_3 as Transaction,
+        TableStickyFooterExample
     }
 }
 
 declare namespace i27 {
     export {
-        PeriodicElement_20 as PeriodicElement,
-        TableTextColumnAdvancedExample
+        TableStickyHeaderExample,
+        PeriodicElement_20 as PeriodicElement
     }
 }
 
 declare namespace i28 {
     export {
         PeriodicElement_21 as PeriodicElement,
-        TableTextColumnExample
+        TableTextColumnAdvancedExample
     }
 }
 
 declare namespace i29 {
     export {
-        TableWithRipplesExample
+        PeriodicElement_22 as PeriodicElement,
+        TableTextColumnExample
     }
 }
 
@@ -222,7 +223,13 @@ declare namespace i3 {
 
 declare namespace i30 {
     export {
-        PeriodicElement_22 as PeriodicElement,
+        TableWithRipplesExample
+    }
+}
+
+declare namespace i31 {
+    export {
+        PeriodicElement_23 as PeriodicElement,
         TableWrappedExample,
         WrapperTable
     }
@@ -265,7 +272,8 @@ declare namespace i8 {
 
 declare namespace i9 {
     export {
-        TableFooterRowExample
+        PeriodicElement_9 as PeriodicElement,
+        TableFlexLargeRowExample
     }
 }
 
@@ -374,6 +382,13 @@ declare interface PeriodicElement_22 {
     symbol: string;
 }
 
+declare interface PeriodicElement_23 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+
 declare interface PeriodicElement_3 {
     name: string;
     position: number;
@@ -450,7 +465,7 @@ export declare class TableColumnStylingExample {
 export declare class TableDynamicArrayDataExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_3[];
-    table: MatLegacyTable<PeriodicElement_3>;
+    table: MatTable<PeriodicElement_3>;
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
@@ -486,7 +501,7 @@ export declare class TableDynamicObservableDataExample {
 
 export declare class TableExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFooterRowExample, typeof i10.TableGeneratedColumnsExample, typeof i11.TableHarnessExample, typeof i12.TableHttpExample, typeof i13.TableMultipleHeaderFooterExample, typeof i14.TableOverviewExample, typeof i15.TablePaginationExample, typeof i16.TableRecycleRowsExample, typeof i17.TableReorderableExample, typeof i18.TableRowBindingExample, typeof i19.TableRowContextExample, typeof i20.TableSelectionExample, typeof i21.TableSortingExample, typeof i22.TableStickyColumnsExample, typeof i23.TableStickyComplexExample, typeof i24.TableStickyComplexFlexExample, typeof i25.TableStickyFooterExample, typeof i26.TableStickyHeaderExample, typeof i27.TableTextColumnAdvancedExample, typeof i28.TableTextColumnExample, typeof i29.TableWithRipplesExample, typeof i30.TableWrappedExample, typeof i30.WrapperTable], [typeof i31.CommonModule, typeof i32.MatLegacyButtonModule, typeof i33.MatButtonToggleModule, typeof i34.MatLegacyCheckboxModule, typeof i35.MatIconModule, typeof i36.MatLegacyInputModule, typeof i37.MatLegacyPaginatorModule, typeof i38.MatLegacyProgressSpinnerModule, typeof i39.MatRippleModule, typeof i40.MatSortModule, typeof i41.MatLegacyTableModule, typeof i42.CdkTableModule, typeof i43.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFooterRowExample, typeof i10.TableGeneratedColumnsExample, typeof i11.TableHarnessExample, typeof i12.TableHttpExample, typeof i13.TableMultipleHeaderFooterExample, typeof i14.TableOverviewExample, typeof i15.TablePaginationExample, typeof i16.TableRecycleRowsExample, typeof i17.TableReorderableExample, typeof i18.TableRowBindingExample, typeof i19.TableRowContextExample, typeof i20.TableSelectionExample, typeof i21.TableSortingExample, typeof i22.TableStickyColumnsExample, typeof i23.TableStickyComplexExample, typeof i24.TableStickyComplexFlexExample, typeof i25.TableStickyFooterExample, typeof i26.TableStickyHeaderExample, typeof i27.TableTextColumnAdvancedExample, typeof i28.TableTextColumnExample, typeof i29.TableWithRipplesExample, typeof i30.TableWrappedExample, typeof i30.WrapperTable]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable], [typeof i32.CommonModule, typeof i33.MatLegacyButtonModule, typeof i34.MatButtonToggleModule, typeof i35.MatLegacyCheckboxModule, typeof i36.MatIconModule, typeof i37.MatLegacyInputModule, typeof i38.MatLegacyPaginatorModule, typeof i39.MatLegacyProgressSpinnerModule, typeof i40.MatRippleModule, typeof i41.MatSortModule, typeof i42.MatTableModule, typeof i43.CdkTableModule, typeof i44.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TableExamplesModule>;
 }
 
@@ -507,7 +522,7 @@ export declare class TableExpandableRowsExample {
  */
 export declare class TableFilteringExample {
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<PeriodicElement_7>;
+    dataSource: MatTableDataSource<PeriodicElement_7, MatTableDataSourcePaginator>;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFilteringExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, false>;
@@ -521,6 +536,16 @@ export declare class TableFlexBasicExample {
     dataSource: PeriodicElement_8[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexBasicExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, false>;
+}
+
+/**
+ * @title Flex table where one column's cells has a greater height than others.
+ */
+export declare class TableFlexLargeRowExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement_9[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexLargeRowExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, false>;
 }
 
 /**
@@ -542,9 +567,9 @@ export declare class TableGeneratedColumnsExample {
     columns: {
         columnDef: string;
         header: string;
-        cell: (element: PeriodicElement_9) => string;
+        cell: (element: PeriodicElement_10) => string;
     }[];
-    dataSource: PeriodicElement_9[];
+    dataSource: PeriodicElement_10[];
     displayedColumns: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, false>;
@@ -601,7 +626,7 @@ export declare class TableMultipleHeaderFooterExample {
  */
 export declare class TableOverviewExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<UserData>;
+    dataSource: MatTableDataSource<UserData>;
     paginator: MatLegacyPaginator;
     sort: MatSort;
     constructor();
@@ -616,7 +641,7 @@ export declare class TableOverviewExample implements AfterViewInit {
  */
 export declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<PeriodicElement_10>;
+    dataSource: MatTableDataSource<PeriodicElement_11, MatTableDataSourcePaginator>;
     paginator: MatLegacyPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
@@ -628,7 +653,7 @@ export declare class TablePaginationExample implements AfterViewInit {
  */
 export declare class TableRecycleRowsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_11[];
+    dataSource: PeriodicElement_12[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, false>;
 }
@@ -638,7 +663,7 @@ export declare class TableRecycleRowsExample {
  */
 export declare class TableReorderableExample {
     columns: string[];
-    dataSource: PeriodicElement_12[];
+    dataSource: PeriodicElement_13[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, false>;
@@ -649,8 +674,8 @@ export declare class TableReorderableExample {
  */
 export declare class TableRowBindingExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_13[];
-    clickedRows: Set<PeriodicElement_13>;
+    dataSource: PeriodicElement_14[];
+    clickedRows: Set<PeriodicElement_14>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, false>;
 }
@@ -670,14 +695,14 @@ export declare class TableRowContextExample {
  */
 export declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<PeriodicElement_14>;
-    selection: SelectionModel<PeriodicElement_14>;
+    dataSource: MatTableDataSource<PeriodicElement_15, MatTableDataSourcePaginator>;
+    selection: SelectionModel<PeriodicElement_15>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     toggleAllRows(): void;
     /** The label for the checkbox on the passed row */
-    checkboxLabel(row?: PeriodicElement_14): string;
+    checkboxLabel(row?: PeriodicElement_15): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, false>;
 }
@@ -688,7 +713,7 @@ export declare class TableSelectionExample {
 export declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<PeriodicElement_15>;
+    dataSource: MatTableDataSource<PeriodicElement_16, MatTableDataSourcePaginator>;
     constructor(_liveAnnouncer: LiveAnnouncer);
     sort: MatSort;
     ngAfterViewInit(): void;
@@ -703,7 +728,7 @@ export declare class TableSortingExample implements AfterViewInit {
  */
 export declare class TableStickyColumnsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_16[];
+    dataSource: PeriodicElement_17[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyColumnsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, false>;
 }
@@ -713,7 +738,7 @@ export declare class TableStickyColumnsExample {
  */
 export declare class TableStickyComplexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_17[];
+    dataSource: PeriodicElement_18[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
@@ -727,7 +752,7 @@ export declare class TableStickyComplexExample {
  */
 export declare class TableStickyComplexFlexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_18[];
+    dataSource: PeriodicElement_19[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
@@ -753,7 +778,7 @@ export declare class TableStickyFooterExample {
  */
 export declare class TableStickyHeaderExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_19[];
+    dataSource: PeriodicElement_20[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyHeaderExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, false>;
 }
@@ -763,11 +788,11 @@ export declare class TableStickyHeaderExample {
  */
 export declare class TableTextColumnAdvancedExample {
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<PeriodicElement_20>;
+    dataSource: MatTableDataSource<PeriodicElement_21, MatTableDataSourcePaginator>;
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-    getWeight: (data: PeriodicElement_20) => string;
+    getWeight: (data: PeriodicElement_21) => string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnAdvancedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, false>;
 }
@@ -778,7 +803,7 @@ export declare class TableTextColumnAdvancedExample {
  */
 export declare class TableTextColumnExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_21[];
+    dataSource: PeriodicElement_22[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, false>;
 }
@@ -800,7 +825,7 @@ export declare class TableWithRipplesExample {
  */
 export declare class TableWrappedExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatLegacyTableDataSource<PeriodicElement_22>;
+    dataSource: MatTableDataSource<PeriodicElement_23, MatTableDataSourcePaginator>;
     sort: MatSort;
     ngAfterViewInit(): void;
     clearTable(): void;
@@ -836,11 +861,11 @@ declare interface UserData {
  * table.
  */
 export declare class WrapperTable<T> implements AfterContentInit {
-    headerRowDefs: QueryList<MatLegacyHeaderRowDef>;
-    rowDefs: QueryList<MatLegacyRowDef<T>>;
-    columnDefs: QueryList<MatLegacyColumnDef>;
-    noDataRow: MatLegacyNoDataRow;
-    table: MatLegacyTable<T>;
+    headerRowDefs: QueryList<MatHeaderRowDef>;
+    rowDefs: QueryList<MatRowDef<T>>;
+    columnDefs: QueryList<MatColumnDef>;
+    noDataRow: MatNoDataRow;
+    table: MatTable<T>;
     columns: string[];
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;

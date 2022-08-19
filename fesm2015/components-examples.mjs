@@ -4687,6 +4687,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/table"
         }
     },
+    "table-flex-large-row": {
+        "packagePath": "material/table/table-flex-large-row",
+        "title": "Flex table where one column's cells has a greater height than others.",
+        "componentName": "TableFlexLargeRowExample",
+        "files": [
+            "table-flex-large-row-example.ts",
+            "table-flex-large-row-example.html",
+            "table-flex-large-row-example.css"
+        ],
+        "selector": "table-flex-large-row-example",
+        "additionalComponents": [],
+        "primaryFile": "table-flex-large-row-example.ts",
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "material/table"
+        }
+    },
     "table-footer-row": {
         "packagePath": "material/table/table-footer-row",
         "title": "Footer row table",

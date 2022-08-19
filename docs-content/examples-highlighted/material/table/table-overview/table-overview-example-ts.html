@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatLegacyPaginator} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-paginator&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-table&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserData {
   <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
@@ -53,7 +53,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;progress&#x27;</span>, <span class="hljs-string">&#x27;fruit&#x27;</span>];
-  dataSource: MatLegacyTableDataSource&lt;UserData&gt;;
+  dataSource: MatTableDataSource&lt;UserData&gt;;
 
   <span class="hljs-meta">@ViewChild</span>(MatLegacyPaginator) paginator: MatLegacyPaginator;
   <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
@@ -63,7 +63,7 @@
     <span class="hljs-keyword">const</span> users = <span class="hljs-built_in">Array</span>.from({<span class="hljs-attr">length</span>: <span class="hljs-number">100</span>}, <span class="hljs-function">(<span class="hljs-params">_, k</span>) =&gt;</span> createNewUser(k + <span class="hljs-number">1</span>));
 
     <span class="hljs-comment">// Assign the data to the data source for the table to render</span>
-    <span class="hljs-built_in">this</span>.dataSource = <span class="hljs-keyword">new</span> MatLegacyTableDataSource(users);
+    <span class="hljs-built_in">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(users);
   }
 
   <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {

@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-table&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -32,7 +32,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableSelectionExample</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;select&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatLegacyTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
   selection = <span class="hljs-keyword">new</span> SelectionModel&lt;PeriodicElement&gt;(<span class="hljs-literal">true</span>, []);
 
   <span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>

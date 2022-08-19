@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {LiveAnnouncer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 <span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSort, Sort} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-table&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -9,7 +9,6 @@
   weight: <span class="hljs-built_in">number</span>;
   symbol: <span class="hljs-built_in">string</span>;
 }
-
 <span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
@@ -22,7 +21,6 @@
   {<span class="hljs-attr">position</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fluorine&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">18.9984</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;F&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Neon&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">20.1797</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Ne&#x27;</span>},
 ];
-
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Table with sorting
  */</span>
@@ -33,7 +31,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableSortingExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatLegacyTableDataSource(ELEMENT_DATA);
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _liveAnnouncer: LiveAnnouncer</span>)</span> {}
 

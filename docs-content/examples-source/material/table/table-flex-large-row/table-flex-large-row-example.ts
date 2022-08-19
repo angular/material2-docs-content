@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {DecimalPipe} from '@angular/common';
-import {MatTableDataSource} from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
@@ -23,24 +21,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 /**
- * @title Use of 'mat-text-column' with various configurations of the interface.
+ * @title Flex table where one column's cells has a greater height than others.
  */
 @Component({
-  selector: 'table-text-column-advanced-example',
-  styleUrls: ['table-text-column-advanced-example.css'],
-  templateUrl: 'table-text-column-advanced-example.html',
+  selector: 'table-flex-large-row-example',
+  styleUrls: ['table-flex-large-row-example.css'],
+  templateUrl: 'table-flex-large-row-example.html',
 })
-export class TableTextColumnAdvancedExample {
+export class TableFlexLargeRowExample {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-  headerText: string;
-
-  decimalPipe = new DecimalPipe('en-US');
-
-  /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-  getWeight = (data: PeriodicElement): string => {
-    const result = this.decimalPipe.transform(data.weight, '1.0-2');
-    return result === null ? '' : result;
-  };
+  dataSource = ELEMENT_DATA;
 }
