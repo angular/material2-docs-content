@@ -34,8 +34,7 @@
   <span header-link="MatProgressSpinner"></span>
   <code>MatProgressSpinner</code>
   
-</h4><p class="docs-api-class-description"><p><code>&lt;mat-progress-spinner&gt;</code> component.</p>
-</p><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-progress-spinner</span>
@@ -86,7 +85,10 @@
       <code>mode: ProgressSpinnerMode</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Mode of the progress circle</p>
+  <td class="docs-api-property-description"><p>Mode of the progress bar.</p>
+<p>Input must be one of these values: determinate, indeterminate, buffer, query, defaults to
+&#39;determinate&#39;.
+Mirrored to mode attribute.</p>
 </td>
 </tr>
 
@@ -114,7 +116,7 @@
       <code>value: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Value of the progress circle.</p>
+  <td class="docs-api-property-description"><p>Value of the progress bar. Defaults to zero. Mirrored to aria-valuenow.</p>
 </td>
 </tr>
 
@@ -128,70 +130,6 @@
     </p>
   </td>
   <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    <h3 id="material-progress-spinner-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      Interfaces
-    </h3>
-    
-      
-
-<h4 id="MatProgressSpinnerDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="MatProgressSpinnerDefaultOptions"></span>
-  <code>MatProgressSpinnerDefaultOptions</code>
-</h4><p class="docs-api-interface-description"><p>Default <code>mat-progress-spinner</code> options that can be overridden.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color of the spinner.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>diameter: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Diameter of the spinner.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>strokeWidth: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Width of the spinner&#39;s stroke.</p>
 </td>
 </tr>
 
@@ -229,26 +167,13 @@
     
       
 
-<h4 id="MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS"></span>
-  <code>MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS</code>
-</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-progress-spinner</code>.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_PROGRESS_SPINNER_DEFAULT_OPTIONS: InjectionToken&lt;MatProgressSpinnerDefaultOptions&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
 <h4 id="MatSpinner" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MatSpinner"></span>
   <code>MatSpinner</code>
-</h4><div class="docs-api-constant-deprecated-marker" title="Will be removed in v8.0.0 or later">
-  Deprecated
-</div><div class="docs-markdown">
+</h4><p class="docs-api-constant-description"><p><code>&lt;mat-spinner&gt;</code> component.</p>
+<p>This is a component definition to be used as a convenience reference to create an
+indeterminate <code>&lt;mat-progress-spinner&gt;</code> instance.</p>
+</p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MatSpinner: <span class="hljs-keyword">typeof</span> MatProgressSpinner;</code>
 </pre>

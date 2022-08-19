@@ -17,22 +17,22 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material progress-spinner-testing
+    API reference for Angular Material legacy-progress-spinner-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatProgressSpinnerHarness} from '@angular/material/progress-spinner/testing';
+        import {MatLegacyProgressSpinnerHarness} from '@angular/material/legacy-progress-spinner/testing';
       </code>
     </p>
-  <h3 id="material-progress-spinner-testing-classes" class="docs-header-link docs-api-h3">
+  <h3 id="material-legacy-progress-spinner-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatProgressSpinnerHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatProgressSpinnerHarness"></span>
-  <code>MatProgressSpinnerHarness</code>
+<h4 id="MatLegacyProgressSpinnerHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyProgressSpinnerHarness"></span>
+  <code>MatLegacyProgressSpinnerHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -41,7 +41,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC based mat-progress-spinner in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-progress-spinner in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -53,10 +53,10 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-mdc-progress-spinner&#39;</code>
+      <code>static&nbsp;hostSelector: &#39;.mat-progress-spinner&#39;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatProgressSpinner</code> instance.</p>
+  <td class="docs-api-property-description"><p>The selector for the host element of a Progress Spinner instance.</p>
 </td>
 </tr>
 
@@ -178,8 +178,8 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a progress spinnner with specific
-attributes.</p>
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatProgressSpinnerHarness</code> that
+meets certain criteria.</p>
 
     </td>
   </tr><thead>
@@ -208,7 +208,7 @@ attributes.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyProgressSpinnerHarness&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -220,6 +220,24 @@ attributes.</p>
 
 
   
+
+
+
+    <h3 id="material-legacy-progress-spinner-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="LegacyProgressSpinnerHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyProgressSpinnerHarnessFilters"></span>
+  <code>LegacyProgressSpinnerHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatProgressSpinnerHarness</code> instances.</p>
+</p>
+
+
+
 
 
 

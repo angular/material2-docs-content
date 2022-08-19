@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ProgressSpinnerMode} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
+<span class="hljs-keyword">import</span> {LegacyProgressSpinnerMode} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-progress-spinner&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Configurable progress spinner
@@ -12,6 +12,6 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProgressSpinnerConfigurableExample</span> </span>{
   <span class="hljs-attr">color</span>: ThemePalette = <span class="hljs-string">&#x27;primary&#x27;</span>;
-  mode: ProgressSpinnerMode = <span class="hljs-string">&#x27;determinate&#x27;</span>;
+  mode: LegacyProgressSpinnerMode = <span class="hljs-string">&#x27;determinate&#x27;</span>;
   value = <span class="hljs-number">50</span>;
 }
