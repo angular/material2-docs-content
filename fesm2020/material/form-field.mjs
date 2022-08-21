@@ -375,7 +375,7 @@ FormFieldExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0",
         FormFieldLabelExample,
         FormFieldOverviewExample,
         FormFieldPrefixSuffixExample,
-        FormFieldThemingExample] });
+        FormFieldThemingExample, MyTelInput] });
 FormFieldExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "14.2.0-rc.0", ngImport: i0, type: FormFieldExamplesModule, imports: [CommonModule,
         MatLegacyButtonModule,
         MatLegacyCheckboxModule,
@@ -400,7 +400,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.2.0-rc.0", ng
                         ReactiveFormsModule,
                     ],
                     declarations: [...EXAMPLES, MyTelInput],
-                    exports: EXAMPLES,
+                    exports: [...EXAMPLES, MyTelInput],
                 }]
         }] });
 

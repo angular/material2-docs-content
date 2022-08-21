@@ -1381,26 +1381,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material-experimental/mdc-card"
         }
     },
-    "mdc-form-field-custom-control": {
-        "packagePath": "material-experimental/mdc-form-field/mdc-form-field-custom-control",
-        "title": "Form field with custom telephone number input control.",
-        "componentName": "MdcFormFieldCustomControlExample",
-        "files": [
-            "form-field-custom-control-example.ts",
-            "form-field-custom-control-example.html",
-            "example-tel-input-example.html",
-            "example-tel-input-example.css"
-        ],
-        "selector": "mdc-form-field-custom-control-example",
-        "additionalComponents": [
-            "MyTelInput"
-        ],
-        "primaryFile": "form-field-custom-control-example.ts",
-        "module": {
-            "name": "MdcFormFieldExamplesModule",
-            "importSpecifier": "material-experimental/mdc-form-field"
-        }
-    },
     "popover-edit-cell-span-mat-table": {
         "packagePath": "material-experimental/popover-edit/popover-edit-cell-span-mat-table",
         "title": "Material Popover Edit spanning multiple columns on a Material data-table",
