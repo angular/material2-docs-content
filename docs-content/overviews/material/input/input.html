@@ -7,18 +7,18 @@
           <span header-link="input-and-textarea-attributes"></span>
           <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> attributes
         </h3>
-      <p>All of the attributes that can be used with normal <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements can be used
+      <p>All of the attributes that can be used with <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> elements can be used
 on elements inside <code>&lt;mat-form-field&gt;</code> as well. This includes Angular directives such as <code>ngModel</code>
 and <code>formControl</code>.</p>
 <p>The only limitation is that the <code>type</code> attribute can only be one of the values supported by
-<code>matInput</code>.</p>
+<code>matNativeControl</code>.</p>
 
         <h3 id="supported-input-types" class="docs-header-link">
           <span header-link="supported-input-types"></span>
           Supported <code>&lt;input&gt;</code> types
         </h3>
       <p>The following <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">input types</a> can
-be used with <code>matInput</code>:</p>
+be used with <code>matNativeControl</code>:</p>
 <ul>
 <li>color</li>
 <li>date</li>
@@ -39,8 +39,8 @@ be used with <code>matInput</code>:</p>
           <span header-link="form-field-features"></span>
           Form field features
         </h3>
-      <p>There are a number of <code>&lt;mat-form-field&gt;</code> features that can be used with any <code>&lt;input matInput&gt;</code> or
-<code>&lt;textarea matInput&gt;</code>. These include error messages, hint text, prefix &amp; suffix, and theming. For
+      <p>There are a number of <code>&lt;mat-form-field&gt;</code> features that can be used with any <code>&lt;input matNativeControl&gt;</code> or
+<code>&lt;textarea matNativeControl&gt;</code>. These include error messages, hint text, prefix &amp; suffix, and theming. For
 additional information about these features, see the
 <a href="https://material.angular.io/components/form-field/overview">form field documentation</a>.</p>
 
@@ -60,12 +60,12 @@ element. In some cases that <code>&lt;mat-form-field&gt;</code> may use the plac
         </h3>
       <p>The <code>&lt;mat-form-field&gt;</code> allows you to
 <a href="https://material.angular.io/components/form-field/overview#error-messages">associate error messages</a>
-with your <code>matInput</code>. By default, these error messages are shown when the control is invalid and
+with your <code>matNativeControl</code>. By default, these error messages are shown when the control is invalid and
 either the user has interacted with (touched) the element or the parent form has been submitted. If
 you wish to override this behavior (e.g. to show the error as soon as the invalid control is dirty
 or when a parent form group is invalid), you can use the <code>errorStateMatcher</code> property of the
-<code>matInput</code>. The property takes an instance of an <code>ErrorStateMatcher</code> object. An <code>ErrorStateMatcher</code>
-must implement a single method <code>isErrorState</code> which takes the <code>FormControl</code> for this <code>matInput</code> as
+<code>matNativeControl</code>. The property takes an instance of an <code>ErrorStateMatcher</code> object. An <code>ErrorStateMatcher</code>
+must implement a single method <code>isErrorState</code> which takes the <code>FormControl</code> for this <code>matNativeControl</code> as
 well as the parent form and returns a boolean indicating whether errors should be shown. (<code>true</code>
 indicating that they should be shown, and <code>false</code> indicating that they should not.)</p>
 <div material-docs-example="input-error-state-matcher"></div>
@@ -100,7 +100,7 @@ for detecting when an input becomes autofilled and changing the appearance of th
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>The <code>matInput</code> directive works with native <code>&lt;input&gt;</code> to provide an accessible experience.</p>
+      <p>The <code>matNativeControl</code> directive works with native <code>&lt;input&gt;</code> to provide an accessible experience.</p>
 
         <h4 id="aria-attributes" class="docs-header-link">
           <span header-link="aria-attributes"></span>

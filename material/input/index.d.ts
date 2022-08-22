@@ -2,9 +2,9 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { FormControl } from '@angular/forms';
 import { FormGroupDirective } from '@angular/forms';
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/legacy-button';
+import * as i10 from '@angular/material/button';
 import * as i11 from '@angular/material/icon';
-import * as i12 from '@angular/material/legacy-input';
+import * as i12 from '@angular/material/input';
 import * as i13 from '@angular/forms';
 import * as i9 from '@angular/common';
 import { NgForm } from '@angular/forms';
@@ -86,7 +86,7 @@ export declare class InputErrorStateMatcherExample {
 
 export declare class InputExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<InputExamplesModule, [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample], [typeof i9.CommonModule, typeof i10.MatLegacyButtonModule, typeof i11.MatIconModule, typeof i12.MatLegacyInputModule, typeof i13.FormsModule, typeof i13.ReactiveFormsModule], [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<InputExamplesModule, [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample], [typeof i9.CommonModule, typeof i10.MatButtonModule, typeof i11.MatIconModule, typeof i12.MatInputModule, typeof i13.FormsModule, typeof i13.ReactiveFormsModule], [typeof i1.InputClearableExample, typeof i2.InputErrorStateMatcherExample, typeof i3.InputErrorsExample, typeof i4.InputFormExample, typeof i5.InputHarnessExample, typeof i6.InputHintExample, typeof i7.InputOverviewExample, typeof i8.InputPrefixSuffixExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<InputExamplesModule>;
 }
 
