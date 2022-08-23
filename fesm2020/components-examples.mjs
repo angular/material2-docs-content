@@ -4205,6 +4205,26 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/slider"
         }
     },
+    "snack-bar-annotated-component": {
+        "packagePath": "material/snack-bar/snack-bar-annotated-component",
+        "title": "Snack-bar with an annotated custom component",
+        "componentName": "SnackBarAnnotatedComponentExample",
+        "files": [
+            "snack-bar-annotated-component-example.ts",
+            "snack-bar-annotated-component-example.html",
+            "snack-bar-annotated-component-example.css",
+            "snack-bar-annotated-component-example-snack.html"
+        ],
+        "selector": "snack-bar-annotated-component-example",
+        "additionalComponents": [
+            "PizzaPartyAnnotatedComponent"
+        ],
+        "primaryFile": "snack-bar-annotated-component-example.ts",
+        "module": {
+            "name": "SnackBarExamplesModule",
+            "importSpecifier": "material/snack-bar"
+        }
+    },
     "snack-bar-component": {
         "packagePath": "material/snack-bar/snack-bar-component",
         "title": "Snack-bar with a custom component",

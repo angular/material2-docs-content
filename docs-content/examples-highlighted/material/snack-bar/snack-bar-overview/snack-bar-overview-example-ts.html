@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacySnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-snack-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Basic snack-bar
@@ -10,7 +10,7 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;snack-bar-overview-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarOverviewExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatLegacySnackBar</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">openSnackBar</span>(<span class="hljs-params">message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-built_in">this</span>._snackBar.open(message, action);
