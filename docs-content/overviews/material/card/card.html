@@ -2,13 +2,12 @@
 <div material-docs-example="card-overview"></div>
 
 
-
         <h3 id="basic-card-sections" class="docs-header-link">
           <span header-link="basic-card-sections"></span>
           Basic card sections
         </h3>
       <p>The most basic card needs only an <code>&lt;mat-card&gt;</code> element with some content. However, Angular Material
-provides a number of preset sections that you can use inside of an <code>&lt;mat-card&gt;</code>:</p>
+provides a number of preset sections that you can use inside a <code>&lt;mat-card&gt;</code>:</p>
 <table>
 <thead>
 <tr>
@@ -17,16 +16,12 @@ provides a number of preset sections that you can use inside of an <code>&lt;mat
 </tr>
 </thead>
 <tbody><tr>
-<td><code>&lt;mat-card-title&gt;</code></td>
-<td>Card title</td>
-</tr>
-<tr>
-<td><code>&lt;mat-card-subtitle&gt;</code></td>
-<td>Card subtitle</td>
+<td><code>&lt;mat-card-header&gt;</code></td>
+<td>Section anchored to the top of the card (adds padding)</td>
 </tr>
 <tr>
 <td><code>&lt;mat-card-content&gt;</code></td>
-<td>Primary card content. Intended for blocks of text</td>
+<td>Primary card content (adds padding)</td>
 </tr>
 <tr>
 <td><code>&lt;img mat-card-image&gt;</code></td>
@@ -34,7 +29,7 @@ provides a number of preset sections that you can use inside of an <code>&lt;mat
 </tr>
 <tr>
 <td><code>&lt;mat-card-actions&gt;</code></td>
-<td>Container for buttons at the bottom of the card</td>
+<td>Container for buttons at the bottom of the card (adds padding)</td>
 </tr>
 <tr>
 <td><code>&lt;mat-card-footer&gt;</code></td>
@@ -43,14 +38,31 @@ provides a number of preset sections that you can use inside of an <code>&lt;mat
 </tbody></table>
 <p>These elements primary serve as pre-styled content containers without any additional APIs. 
 However, the <code>align</code> property on <code>&lt;mat-card-actions&gt;</code> can be used to position the actions at the 
-<code>&#39;start&#39;</code> or <code>&#39;end&#39;</code> of the container.  </p>
+<code>&#39;start&#39;</code> or <code>&#39;end&#39;</code> of the container.</p>
+
+        <h3 id="card-padding" class="docs-header-link">
+          <span header-link="card-padding"></span>
+          Card padding
+        </h3>
+      <p>The <code>&lt;mat-card&gt;</code> element itself does not add any padding around its content. This allows developers
+to customize the padding to their liking by applying padding to the elements they put in the card.</p>
+<p>In many cases developers may just want the standard padding specified in the Material Design spec.
+In this case, the <code>&lt;mat-card-header&gt;</code>, <code>&lt;mat-card-content&gt;</code>, and <code>&lt;mat-card-footer&gt;</code> sections can be
+used.</p>
+<ul>
+<li><code>&lt;mat-card-content&gt;</code> adds standard padding along its sides, as well as along the top if it is the
+first element in the <code>&lt;mat-card&gt;</code>, and along the bottom if it is the last element in the
+<code>&lt;mat-card&gt;</code>.</li>
+<li><code>&lt;mat-card-header&gt;</code> adds standard padding along its sides and top.</li>
+<li><code>&lt;mat-card-actions&gt;</code> adds padding appropriate for the action buttons at the bottom of a card. </li>
+</ul>
 
         <h3 id="card-headers" class="docs-header-link">
           <span header-link="card-headers"></span>
           Card headers
         </h3>
-      <p>In addition to the aforementioned sections, <code>&lt;mat-card-header&gt;</code> gives the ability to add a rich
-header to a card. This header can contain:</p>
+      <p>A <code>&lt;mat-card-header&gt;</code> can contain any content, but there are several predefined elements
+that can be used to create a rich header to a card. These include:</p>
 <table>
 <thead>
 <tr>
@@ -71,6 +83,9 @@ header to a card. This header can contain:</p>
 <td>An image used as an avatar within the header</td>
 </tr>
 </tbody></table>
+<p>In addition to using <code>&lt;mat-card-title&gt;</code> and <code>&lt;mat-card-subtitle&gt;</code> directly within the
+<code>&lt;mat-card-header&gt;</code>, they can be further nested inside a <code>&lt;mat-card-title-group&gt;</code> in order arrange
+them with a (non-avatar) image.</p>
 
         <h3 id="title-groups" class="docs-header-link">
           <span header-link="title-groups"></span>

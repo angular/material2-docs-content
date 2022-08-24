@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "15.0.0-next.0+sha-9acb7b2",
+  "version": "15.0.0-next.0+sha-189a9b7",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -179,14 +179,6 @@
       "es2015": "./fesm2015/material-experimental/column-resize.mjs",
       "node": "./fesm2015/material-experimental/column-resize.mjs",
       "default": "./fesm2020/material-experimental/column-resize.mjs"
-    },
-    "./material-experimental/mdc-card": {
-      "types": "./material-experimental/mdc-card/index.d.ts",
-      "esm2020": "./esm2020/material-experimental/mdc-card/mdc-card_public_index.mjs",
-      "es2020": "./fesm2020/material-experimental/mdc-card.mjs",
-      "es2015": "./fesm2015/material-experimental/mdc-card.mjs",
-      "node": "./fesm2015/material-experimental/mdc-card.mjs",
-      "default": "./fesm2020/material-experimental/mdc-card.mjs"
     },
     "./material-experimental/popover-edit": {
       "types": "./material-experimental/popover-edit/index.d.ts",
@@ -491,15 +483,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "15.0.0-next.0+sha-9acb7b2",
-    "@angular/cdk-experimental": "15.0.0-next.0+sha-9acb7b2",
+    "@angular/cdk": "15.0.0-next.0+sha-189a9b7",
+    "@angular/cdk-experimental": "15.0.0-next.0+sha-189a9b7",
     "@angular/core": "^14.0.0 || ^15.0.0",
     "@angular/common": "^14.0.0 || ^15.0.0",
-    "@angular/material": "15.0.0-next.0+sha-9acb7b2",
-    "@angular/material-experimental": "15.0.0-next.0+sha-9acb7b2",
-    "@angular/material-moment-adapter": "15.0.0-next.0+sha-9acb7b2",
-    "@angular/material-luxon-adapter": "15.0.0-next.0+sha-9acb7b2",
-    "@angular/material-date-fns-adapter": "15.0.0-next.0+sha-9acb7b2"
+    "@angular/material": "15.0.0-next.0+sha-189a9b7",
+    "@angular/material-experimental": "15.0.0-next.0+sha-189a9b7",
+    "@angular/material-moment-adapter": "15.0.0-next.0+sha-189a9b7",
+    "@angular/material-luxon-adapter": "15.0.0-next.0+sha-189a9b7",
+    "@angular/material-date-fns-adapter": "15.0.0-next.0+sha-189a9b7"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -1364,23 +1364,6 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material-experimental/column-resize"
         }
     },
-    "mdc-card-fancy": {
-        "packagePath": "material-experimental/mdc-card/mdc-card-fancy",
-        "title": "Card with multiple sections",
-        "componentName": "MdcCardFancyExample",
-        "files": [
-            "mdc-card-fancy-example.ts",
-            "mdc-card-fancy-example.html",
-            "mdc-card-fancy-example.css"
-        ],
-        "selector": "mdc-card-fancy-example",
-        "additionalComponents": [],
-        "primaryFile": "mdc-card-fancy-example.ts",
-        "module": {
-            "name": "MdcCardExamplesModule",
-            "importSpecifier": "material-experimental/mdc-card"
-        }
-    },
     "popover-edit-cell-span-mat-table": {
         "packagePath": "material-experimental/popover-edit/popover-edit-cell-span-mat-table",
         "title": "Material Popover Edit spanning multiple columns on a Material data-table",
