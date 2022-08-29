@@ -1,15 +1,15 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-subheader</span>&gt;</span>Folders<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let folder of folders&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-line</span>&gt;</span> {{folder.updated | date}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matListItemIcon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">matListItemLine</span>&gt;</span>{{folder.updated | date}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-subheader</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let note of notes&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-line</span>&gt;</span> {{note.updated | date}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matListItemIcon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">matListItemLine</span>&gt;</span>{{note.updated | date}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>

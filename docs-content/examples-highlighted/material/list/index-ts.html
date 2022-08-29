@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-list&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
 <span class="hljs-keyword">import</span> {ListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-overview/list-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {ListSectionsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-sections/list-sections-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {ListSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-selection/list-selection-example&#x27;</span>;
@@ -25,7 +25,7 @@
 ];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [CommonModule, MatIconModule, MatLegacyListModule],
+  <span class="hljs-attr">imports</span>: [CommonModule, MatIconModule, MatListModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })

@@ -3249,8 +3249,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "ListSelectionExample",
         "files": [
             "list-selection-example.ts",
-            "list-selection-example.html",
-            "list-selection-example.css"
+            "list-selection-example.html"
         ],
         "selector": "list-selection-example",
         "additionalComponents": [],
@@ -3266,8 +3265,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "ListSingleSelectionExample",
         "files": [
             "list-single-selection-example.ts",
-            "list-single-selection-example.html",
-            "list-single-selection-example.css"
+            "list-single-selection-example.html"
         ],
         "selector": "list-single-selection-example",
         "additionalComponents": [],
