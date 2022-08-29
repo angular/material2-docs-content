@@ -5,5 +5,5 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-  Option selected: {{shoes.selectedOptions.selected[0]?.value}}
+  Option selected: {{shoes.selectedOptions.hasValue() ? shoes.selectedOptions.selected[0].value : &#x27;None&#x27;}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
