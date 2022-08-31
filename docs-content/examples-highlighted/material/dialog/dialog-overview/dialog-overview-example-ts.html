@@ -1,9 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  MatLegacyDialog,
-  MAT_LEGACY_DIALOG_DATA,
-  MatLegacyDialogRef,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDialog, MAT_DIALOG_DATA, MatDialogRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
   <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span>;
@@ -21,7 +17,7 @@
   <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span>;
   name: <span class="hljs-built_in">string</span>;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatLegacyDialog</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
 
   openDialog(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogOverviewExampleDialog, {
@@ -42,8 +38,8 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogOverviewExampleDialog</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> dialogRef: MatLegacyDialogRef&lt;DialogOverviewExampleDialog&gt;,
-    <span class="hljs-meta">@Inject</span>(MAT_LEGACY_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData,
+    <span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogOverviewExampleDialog&gt;,
+    <span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData,
   </span>)</span> {}
 
   onNoClick(): <span class="hljs-built_in">void</span> {
