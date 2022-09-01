@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-radio&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 <span class="hljs-keyword">import</span> {RadioNgModelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./radio-ng-model/radio-ng-model-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {RadioOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./radio-overview/radio-overview-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {RadioHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./radio-harness/radio-harness-example&#x27;</span>;
@@ -11,7 +11,7 @@
 <span class="hljs-keyword">const</span> EXAMPLES = [RadioHarnessExample, RadioNgModelExample, RadioOverviewExample];
 
 <span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [ReactiveFormsModule, CommonModule, MatLegacyRadioModule, FormsModule],
+  <span class="hljs-attr">imports</span>: [ReactiveFormsModule, CommonModule, MatRadioModule, FormsModule],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
   <span class="hljs-attr">exports</span>: EXAMPLES,
 })
