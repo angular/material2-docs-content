@@ -10,7 +10,7 @@ import * as i14 from '@angular/material/icon';
 import * as i15 from '@angular/material/legacy-form-field';
 import * as i16 from '@angular/forms';
 import * as i9 from '@angular/common';
-import { MatAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
+import { MatLegacyAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
 import { MatLegacyChipInputEvent } from '@angular/material/legacy-chips';
 import { Observable } from 'rxjs';
 import { ThemePalette } from '@angular/material/core';
@@ -33,7 +33,7 @@ export declare class ChipsAutocompleteExample {
     constructor();
     add(event: MatLegacyChipInputEvent): void;
     remove(fruit: string): void;
-    selected(event: MatAutocompleteSelectedEvent): void;
+    selected(event: MatLegacyAutocompleteSelectedEvent): void;
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAutocompleteExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never, false>;

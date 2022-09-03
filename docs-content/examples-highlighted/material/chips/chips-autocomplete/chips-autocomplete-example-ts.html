@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {COMMA, ENTER} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component, ElementRef, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatAutocompleteSelectedEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatLegacyAutocompleteSelectedEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-autocomplete&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatLegacyChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-chips&#x27;</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
@@ -52,7 +52,7 @@
     }
   }
 
-  selected(event: MatAutocompleteSelectedEvent): <span class="hljs-built_in">void</span> {
+  selected(event: MatLegacyAutocompleteSelectedEvent): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.fruits.push(event.option.viewValue);
     <span class="hljs-built_in">this</span>.fruitInput.nativeElement.value = <span class="hljs-string">&#x27;&#x27;</span>;
     <span class="hljs-built_in">this</span>.fruitCtrl.setValue(<span class="hljs-literal">null</span>);

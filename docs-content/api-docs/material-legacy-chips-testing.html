@@ -20,13 +20,766 @@
     API reference for Angular Material legacy-chips-testing
   </h2><p class="docs-api-module-import">
       <code>
-        import {MatLegacyChipListHarness} from '@angular/material/legacy-chips/testing';
+        import {MatLegacyChipHarness} from '@angular/material/legacy-chips/testing';
       </code>
     </p>
   <h3 id="material-legacy-chips-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
+    
+      
+
+<h4 id="MatLegacyChipHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyChipHarness"></span>
+  <code>MatLegacyChipHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ContentContainerComponentHarness" class="docs-api-class-extends-type">
+      ContentContainerComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard selectable Angular Material chip in tests.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>static&nbsp;hostSelector: &#39;.mat-chip&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatChip</code> instance.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getAllChildLoaders
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getAllHarnesses
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getAvatar
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the avatar inside a chip.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">LegacyChipAvatarHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Optionally filters which avatars are included.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyChipAvatarHarness | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getChildLoader
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getHarnessOrNull
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getRemoveButton
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the remove button inside of a chip.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">LegacyChipRemoveHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Optionally filters which remove buttons are included.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyChipRemoveHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the chip.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>hasHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the chip is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>remove
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Removes the given chip. Only applies if it&#39;s removable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatChipHarness</code> that meets
+certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">LegacyChipHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Options for filtering which chip instances are considered a match.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyChipHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
+            Deprecated
+          </div><div class="docs-api-modifier-method-marker">
+          async
+        </div>deselect
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Deselects the given chip. Only applies if it&#39;s selectable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
+            Deprecated
+          </div><div class="docs-api-modifier-method-marker">
+          async
+        </div>isSelected
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the chip is selected.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
+            Deprecated
+          </div><div class="docs-api-modifier-method-marker">
+          async
+        </div>select
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects the given chip. Only applies if it&#39;s selectable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
+            Deprecated
+          </div><div class="docs-api-modifier-method-marker">
+          async
+        </div>toggle
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Toggles the selected state of the given chip. Only applies if it&#39;s selectable.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
     
       
 
@@ -85,7 +838,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -137,7 +890,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipInputHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipInputHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -378,7 +1131,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">ChipListHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipListHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -433,7 +1186,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -444,759 +1197,6 @@ certain criteria.</p>
     </td>
   </tr>
   <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatLegacyChipHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatLegacyChipHarness"></span>
-  <code>MatLegacyChipHarness</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/testing/api#ContentContainerComponentHarness" class="docs-api-class-extends-type">
-      ContentContainerComponentHarness
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard selectable Angular Material chip in tests.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: &#39;.mat-chip&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The selector for the host element of a <code>MatChip</code> instance.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getAllChildLoaders
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        selector</p>
-      <code class="docs-api-method-parameter-type">S</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getAllHarnesses
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getAvatar
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the avatar inside a chip.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        filter</p>
-      <code class="docs-api-method-parameter-type">ChipAvatarHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which avatars are included.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyChipAvatarHarness | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getChildLoader
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        selector</p>
-      <code class="docs-api-method-parameter-type">S</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getHarness
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getHarnessOrNull
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;T | null&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getRemoveButton
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the remove button inside of a chip.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        filter</p>
-      <code class="docs-api-method-parameter-type">ChipRemoveHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Optionally filters which remove buttons are included.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatLegacyChipRemoveHarness&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getText
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the text of the chip.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>hasHarness
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        query</p>
-      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>host
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>isDisabled
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the chip is disabled.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>remove
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Removes the given chip. Only applies if it&#39;s removable.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          static
-        </div>with
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatChipHarness</code> that meets
-certain criteria.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options</p>
-      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        <p>Options for filtering which chip instances are considered a match.</p>
-
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatLegacyChipHarness&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
-            Deprecated
-          </div><div class="docs-api-modifier-method-marker">
-          async
-        </div>deselect
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deselects the given chip. Only applies if it&#39;s selectable.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
-            Deprecated
-          </div><div class="docs-api-modifier-method-marker">
-          async
-        </div>isSelected
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the chip is selected.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
-            Deprecated
-          </div><div class="docs-api-modifier-method-marker">
-          async
-        </div>select
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects the given chip. Only applies if it&#39;s selectable.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v12.0.0 or later">
-            Deprecated
-          </div><div class="docs-api-modifier-method-marker">
-          async
-        </div>toggle
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggles the selected state of the given chip. Only applies if it&#39;s selectable.</p>
-
-    </td>
-  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1656,7 +1656,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">ChipInputHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipInputHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1819,7 +1819,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">ChipRemoveHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipRemoveHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2040,7 +2040,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipAvatarHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipAvatarHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2230,7 +2230,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipRemoveHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipRemoveHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2563,7 +2563,7 @@ that meets certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">ChipOptionHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipOptionHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2652,7 +2652,7 @@ that meets certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipOptionHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipOptionHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2892,7 +2892,7 @@ that meets certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filter</p>
-      <code class="docs-api-method-parameter-type">ChipOptionHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipOptionHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2947,7 +2947,7 @@ certain criteria.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         options</p>
-      <code class="docs-api-method-parameter-type">ChipListboxHarnessFilters = {}</code>
+      <code class="docs-api-method-parameter-type">LegacyChipListboxHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2985,9 +2985,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipHarnessFilters"></span>
-  <code>ChipHarnessFilters</code>
+<h4 id="LegacyChipHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipHarnessFilters"></span>
+  <code>LegacyChipHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of chip instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -3034,9 +3034,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipOptionHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipOptionHarnessFilters"></span>
-  <code>ChipOptionHarnessFilters</code>
+<h4 id="LegacyChipOptionHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipOptionHarnessFilters"></span>
+  <code>LegacyChipOptionHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of selectable chip instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -3068,9 +3068,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipListHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipListHarnessFilters"></span>
-  <code>ChipListHarnessFilters</code>
+<h4 id="LegacyChipListHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipListHarnessFilters"></span>
+  <code>LegacyChipListHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter chip list instances.</p>
 </p>
 
@@ -3082,9 +3082,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipListboxHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipListboxHarnessFilters"></span>
-  <code>ChipListboxHarnessFilters</code>
+<h4 id="LegacyChipListboxHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipListboxHarnessFilters"></span>
+  <code>LegacyChipListboxHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter selectable chip list instances.</p>
 </p>
 
@@ -3096,9 +3096,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipInputHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipInputHarnessFilters"></span>
-  <code>ChipInputHarnessFilters</code>
+<h4 id="LegacyChipInputHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipInputHarnessFilters"></span>
+  <code>LegacyChipInputHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipListInputHarness</code> instances.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -3143,9 +3143,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipRemoveHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipRemoveHarnessFilters"></span>
-  <code>ChipRemoveHarnessFilters</code>
+<h4 id="LegacyChipRemoveHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipRemoveHarnessFilters"></span>
+  <code>LegacyChipRemoveHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipRemoveHarness</code> instances.</p>
 </p>
 
@@ -3157,9 +3157,9 @@ certain criteria.</p>
     
       
 
-<h4 id="ChipAvatarHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ChipAvatarHarnessFilters"></span>
-  <code>ChipAvatarHarnessFilters</code>
+<h4 id="LegacyChipAvatarHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="LegacyChipAvatarHarnessFilters"></span>
+  <code>LegacyChipAvatarHarnessFilters</code>
 </h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatChipAvatarHarness</code> instances.</p>
 </p>
 
