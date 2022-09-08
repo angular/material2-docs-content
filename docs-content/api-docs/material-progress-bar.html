@@ -111,7 +111,7 @@ Mirrored to mode attribute.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>animationEnd: EventEmitter&lt;LegacyProgressAnimationEnd&gt;</code>
+      <code>animationEnd: EventEmitter&lt;ProgressAnimationEnd&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when animation of the primary progress bar completes. This event will not
@@ -142,6 +142,90 @@ animations (indeterminate and query).</p>
 
 
 
+    <h3 id="material-progress-bar-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="ProgressAnimationEnd" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ProgressAnimationEnd"></span>
+  <code>ProgressAnimationEnd</code>
+</h4><p class="docs-api-interface-description"><p>Last animation end data.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatProgressBarDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatProgressBarDefaultOptions"></span>
+  <code>MatProgressBarDefaultOptions</code>
+</h4><p class="docs-api-interface-description"><p>Default <code>mat-progress-bar</code> options that can be overridden.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color of the progress bar.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>mode: ProgressBarMode</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default mode of the progress bar.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     <h3 id="material-progress-bar-type_aliases" class="docs-header-link docs-api-h3">
       <span header-link="type_aliases"></span>
       Type aliases
@@ -155,6 +239,24 @@ animations (indeterminate and query).</p>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> ProgressBarMode = <span class="hljs-string">&#x27;determinate&#x27;</span> | <span class="hljs-string">&#x27;indeterminate&#x27;</span> | <span class="hljs-string">&#x27;buffer&#x27;</span> | <span class="hljs-string">&#x27;query&#x27;</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-progress-bar-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      Constants
+    </h3>
+    
+      
+
+<h4 id="MAT_PROGRESS_BAR_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_PROGRESS_BAR_DEFAULT_OPTIONS"></span>
+  <code>MAT_PROGRESS_BAR_DEFAULT_OPTIONS</code>
+</h4><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-progress-bar</code>.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_PROGRESS_BAR_DEFAULT_OPTIONS: InjectionToken&lt;MatProgressBarDefaultOptions&gt;;</code>
 </pre>
 </div>
 
