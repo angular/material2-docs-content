@@ -11,7 +11,7 @@ export declare class CdkTableBasicExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableBasicExample, "cdk-table-basic-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableBasicExample, "cdk-table-basic-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkTableExamplesModule {
@@ -27,7 +27,7 @@ export declare class CdkTableFixedLayoutExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource_3;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableFixedLayoutExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -37,7 +37,7 @@ export declare class CdkTableFlexBasicExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource_2;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableFlexBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFlexBasicExample, "cdk-table-flex-basic-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFlexBasicExample, "cdk-table-flex-basic-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -47,7 +47,7 @@ export declare class CdkTableRecycleRowsExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource_4;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableRecycleRowsExample, "cdk-table-recycle-rows-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableRecycleRowsExample, "cdk-table-recycle-rows-example", never, {}, {}, never, never, false, never>;
 }
 
 /**

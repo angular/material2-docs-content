@@ -19,7 +19,7 @@ export declare class CdkPopoverEditCdkTableExample {
     onSubmitName(element: PeriodicElement_2, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_2, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditCdkTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableExample, "cdk-popover-edit-cdk-table-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableExample, "cdk-popover-edit-cdk-table-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -33,7 +33,7 @@ export declare class CdkPopoverEditCdkTableFlexExample {
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditCdkTableFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableFlexExample, "cdk-popover-edit-cdk-table-flex-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableFlexExample, "cdk-popover-edit-cdk-table-flex-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -44,7 +44,7 @@ export declare class CdkPopoverEditCellSpanVanillaTableExample {
     readonly persons: Person[];
     onSubmit(person: Person, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditCellSpanVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkPopoverEditExamplesModule {
@@ -63,7 +63,7 @@ export declare class CdkPopoverEditTabOutVanillaTableExample {
     onSubmitName(element: PeriodicElement_3, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_3, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditTabOutVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -76,7 +76,7 @@ export declare class CdkPopoverEditVanillaTableExample {
     onSubmitName(element: PeriodicElement_4, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_4, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditVanillaTableExample, "cdk-popover-edit-vanilla-table-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditVanillaTableExample, "cdk-popover-edit-vanilla-table-example", never, {}, {}, never, never, false, never>;
 }
 
 /**

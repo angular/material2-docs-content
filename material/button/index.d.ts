@@ -15,7 +15,7 @@ export declare class ButtonExamplesModule {
 export declare class ButtonHarnessExample {
     clicked: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -23,7 +23,7 @@ export declare class ButtonHarnessExample {
  */
 export declare class ButtonOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -31,7 +31,7 @@ export declare class ButtonOverviewExample {
  */
 export declare class ButtonTypesExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonTypesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonTypesExample, "button-types-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonTypesExample, "button-types-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

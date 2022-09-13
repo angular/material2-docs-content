@@ -27,14 +27,14 @@ import { Subject } from 'rxjs';
 /** @title Form field appearance variants */
 export declare class FormFieldAppearanceExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldAppearanceExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldAppearanceExample, "form-field-appearance-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldAppearanceExample, "form-field-appearance-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Form field with custom telephone number input control. */
 export declare class FormFieldCustomControlExample {
     form: FormGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldCustomControlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Form field with error messages */
@@ -42,7 +42,7 @@ export declare class FormFieldErrorExample {
     email: FormControl<string | null>;
     getErrorMessage(): "" | "You must enter a value" | "Not a valid email";
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldErrorExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorExample, "form-field-error-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorExample, "form-field-error-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class FormFieldExamplesModule {
@@ -57,13 +57,13 @@ export declare class FormFieldExamplesModule {
 export declare class FormFieldHarnessExample {
     requiredControl: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldHarnessExample, "form-field-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldHarnessExample, "form-field-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Form field with hints */
 export declare class FormFieldHintExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldHintExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldHintExample, "form-field-hint-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldHintExample, "form-field-hint-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Form field with label */
@@ -78,20 +78,20 @@ export declare class FormFieldLabelExample {
     constructor(_formBuilder: FormBuilder);
     getFloatLabelValue(): FloatLabelType;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldLabelExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldLabelExample, "form-field-label-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldLabelExample, "form-field-label-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Simple form field */
 export declare class FormFieldOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldOverviewExample, "form-field-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldOverviewExample, "form-field-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Form field with prefix & suffix */
 export declare class FormFieldPrefixSuffixExample {
     hide: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldPrefixSuffixExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldPrefixSuffixExample, "form-field-prefix-suffix-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldPrefixSuffixExample, "form-field-prefix-suffix-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Form field theming */
@@ -104,7 +104,7 @@ export declare class FormFieldThemingExample {
     constructor(_formBuilder: NonNullableFormBuilder);
     getFontSize(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldThemingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {
@@ -223,7 +223,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     setDisabledState(isDisabled: boolean): void;
     _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never, false, never>;
 }
 
 export { }

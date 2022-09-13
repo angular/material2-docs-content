@@ -15,7 +15,7 @@ export declare class CdkSelectionColumnExample {
     selected: string[];
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkSelectionExamplesModule {
@@ -38,7 +38,7 @@ export declare class CdkSelectionListExample {
     changeElementName(): void;
     reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

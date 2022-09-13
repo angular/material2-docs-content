@@ -14,7 +14,7 @@ export declare class CdkClipboardExamplesModule {
 export declare class CdkClipboardOverviewExample {
     value: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkClipboardOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkClipboardOverviewExample, "cdk-clipboard-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkClipboardOverviewExample, "cdk-clipboard-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

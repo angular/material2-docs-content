@@ -36,7 +36,7 @@ export declare class ChipsAutocompleteExample {
     selected(event: MatLegacyAutocompleteSelectedEvent): void;
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAutocompleteExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -45,7 +45,7 @@ export declare class ChipsAutocompleteExample {
  */
 export declare class ChipsAvatarExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAvatarExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAvatarExample, "chips-avatar-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAvatarExample, "chips-avatar-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -55,7 +55,7 @@ export declare class ChipsDragDropExample {
     vegetables: Vegetable[];
     drop(event: CdkDragDrop<Vegetable[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsDragDropExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class ChipsExamplesModule {
@@ -73,7 +73,7 @@ export declare class ChipsFormControlExample {
     addKeywordFromInput(event: MatLegacyChipInputEvent): void;
     removeKeyword(keyword: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsFormControlExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsFormControlExample, "chips-form-control-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsFormControlExample, "chips-form-control-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -84,7 +84,7 @@ export declare class ChipsHarnessExample {
     remove: () => void;
     add: () => void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsHarnessExample, "chips-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsHarnessExample, "chips-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -97,7 +97,7 @@ export declare class ChipsInputExample {
     add(event: MatLegacyChipInputEvent): void;
     remove(fruit: Fruit): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsInputExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsInputExample, "chips-input-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsInputExample, "chips-input-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -105,7 +105,7 @@ export declare class ChipsInputExample {
  */
 export declare class ChipsOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsOverviewExample, "chips-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsOverviewExample, "chips-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -114,7 +114,7 @@ export declare class ChipsOverviewExample {
 export declare class ChipsStackedExample {
     availableColors: ChipColor[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsStackedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never, never, false, never>;
 }
 
 declare interface Fruit {

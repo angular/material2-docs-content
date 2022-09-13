@@ -13,7 +13,7 @@ export declare class DividerExamplesModule {
  */
 export declare class DividerHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<DividerHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DividerHarnessExample, "divider-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DividerHarnessExample, "divider-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -21,7 +21,7 @@ export declare class DividerHarnessExample {
  */
 export declare class DividerOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<DividerOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DividerOverviewExample, "divider-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DividerOverviewExample, "divider-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

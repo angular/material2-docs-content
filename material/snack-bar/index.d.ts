@@ -46,12 +46,12 @@ declare namespace i5 {
 export declare class PizzaPartyAnnotatedComponent {
     snackBarRef: MatSnackBarRef<any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<PizzaPartyAnnotatedComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyAnnotatedComponent, "snack-bar-annotated-component-example-snack", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyAnnotatedComponent, "snack-bar-annotated-component-example-snack", never, {}, {}, never, never, false, never>;
 }
 
 export declare class PizzaPartyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<PizzaPartyComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyComponent, "snack-bar-component-example-snack", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PizzaPartyComponent, "snack-bar-component-example-snack", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -63,7 +63,7 @@ export declare class SnackBarAnnotatedComponentExample {
     constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarAnnotatedComponentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarAnnotatedComponentExample, "snack-bar-annotated-component-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarAnnotatedComponentExample, "snack-bar-annotated-component-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -75,7 +75,7 @@ export declare class SnackBarComponentExample {
     constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarComponentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class SnackBarExamplesModule {
@@ -92,7 +92,7 @@ export declare class SnackBarHarnessExample {
     constructor(snackBar: MatSnackBar);
     open(message: string, action?: string, config?: MatSnackBarConfig): MatSnackBarRef<TextOnlySnackBar>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarHarnessExample, "snack-bar-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarHarnessExample, "snack-bar-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -103,7 +103,7 @@ export declare class SnackBarOverviewExample {
     constructor(_snackBar: MatSnackBar);
     openSnackBar(message: string, action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -116,7 +116,7 @@ export declare class SnackBarPositionExample {
     constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarPositionExample, "snack-bar-position-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarPositionExample, "snack-bar-position-example", never, {}, {}, never, never, false, never>;
 }
 
 export { }

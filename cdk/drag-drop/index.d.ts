@@ -15,7 +15,7 @@ import { ViewContainerRef } from '@angular/core';
  */
 export declare class CdkDragDropAxisLockExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropAxisLockExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropAxisLockExample, "cdk-drag-drop-axis-lock-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropAxisLockExample, "cdk-drag-drop-axis-lock-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -23,7 +23,7 @@ export declare class CdkDragDropAxisLockExample {
  */
 export declare class CdkDragDropBoundaryExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropBoundaryExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropBoundaryExample, "cdk-drag-drop-boundary-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropBoundaryExample, "cdk-drag-drop-boundary-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -34,7 +34,7 @@ export declare class CdkDragDropConnectedSortingExample {
     done: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropConnectedSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingExample, "cdk-drag-drop-connected-sorting-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingExample, "cdk-drag-drop-connected-sorting-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -45,7 +45,7 @@ export declare class CdkDragDropConnectedSortingGroupExample {
     done: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropConnectedSortingGroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingGroupExample, "cdk-drag-drop-connected-sorting-group-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropConnectedSortingGroupExample, "cdk-drag-drop-connected-sorting-group-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -55,7 +55,7 @@ export declare class CdkDragDropCustomPlaceholderExample {
     movies: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropCustomPlaceholderExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropCustomPlaceholderExample, "cdk-drag-drop-custom-placeholder-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropCustomPlaceholderExample, "cdk-drag-drop-custom-placeholder-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -71,7 +71,7 @@ export declare class CdkDragDropCustomPreviewExample {
         poster: string;
     }[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropCustomPreviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropCustomPreviewExample, "cdk-drag-drop-custom-preview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropCustomPreviewExample, "cdk-drag-drop-custom-preview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -79,7 +79,7 @@ export declare class CdkDragDropCustomPreviewExample {
  */
 export declare class CdkDragDropDelayExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropDelayExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDelayExample, "cdk-drag-drop-delay-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDelayExample, "cdk-drag-drop-delay-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -92,7 +92,7 @@ export declare class CdkDragDropDisabledExample {
     }[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDisabledExample, "cdk-drag-drop-disabled-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDisabledExample, "cdk-drag-drop-disabled-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -103,7 +103,7 @@ export declare class CdkDragDropDisabledSortingExample {
     basket: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropDisabledSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDisabledSortingExample, "cdk-drag-drop-disabled-sorting-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropDisabledSortingExample, "cdk-drag-drop-disabled-sorting-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -118,7 +118,7 @@ export declare class CdkDragDropEnterPredicateExample {
     /** Predicate function that doesn't allow items to be dropped into a list. */
     noReturnPredicate(): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropEnterPredicateExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropEnterPredicateExample, "cdk-drag-drop-enter-predicate-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropEnterPredicateExample, "cdk-drag-drop-enter-predicate-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkDragDropExamplesModule {
@@ -137,7 +137,7 @@ export declare class CdkDragDropFreeDragPositionExample {
     };
     changePosition(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropFreeDragPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropFreeDragPositionExample, "cdk-drag-drop-free-drag-position-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropFreeDragPositionExample, "cdk-drag-drop-free-drag-position-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -145,7 +145,7 @@ export declare class CdkDragDropFreeDragPositionExample {
  */
 export declare class CdkDragDropHandleExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropHandleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropHandleExample, "cdk-drag-drop-handle-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropHandleExample, "cdk-drag-drop-handle-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -155,7 +155,7 @@ export declare class CdkDragDropHorizontalSortingExample {
     timePeriods: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropHorizontalSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropHorizontalSortingExample, "cdk-drag-drop-horizontal-sorting-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropHorizontalSortingExample, "cdk-drag-drop-horizontal-sorting-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -163,7 +163,7 @@ export declare class CdkDragDropHorizontalSortingExample {
  */
 export declare class CdkDragDropOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropOverviewExample, "cdk-drag-drop-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropOverviewExample, "cdk-drag-drop-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -180,7 +180,7 @@ export declare class CdkDragDropRootElementExample implements AfterViewInit, OnD
     ngOnDestroy(): void;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropRootElementExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropRootElementExample, "cdk-drag-drop-root-element-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropRootElementExample, "cdk-drag-drop-root-element-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -190,7 +190,7 @@ export declare class CdkDragDropSortingExample {
     movies: string[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortingExample, "cdk-drag-drop-sorting-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortingExample, "cdk-drag-drop-sorting-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -205,7 +205,7 @@ export declare class CdkDragDropSortPredicateExample {
      */
     sortPredicate(index: number, item: CdkDrag<number>): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropSortPredicateExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortPredicateExample, "cdk-drag-drop-sort-predicate-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortPredicateExample, "cdk-drag-drop-sort-predicate-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

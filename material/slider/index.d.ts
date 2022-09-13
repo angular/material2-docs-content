@@ -47,7 +47,7 @@ export declare class SliderConfigurableExample {
     tickInterval: number;
     getSliderTickInterval(): number | 'auto';
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class SliderExamplesModule {
@@ -62,7 +62,7 @@ export declare class SliderExamplesModule {
 export declare class SliderFormattingExample {
     formatLabel(value: number): string | number;
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderFormattingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SliderFormattingExample, "slider-formatting-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderFormattingExample, "slider-formatting-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -70,7 +70,7 @@ export declare class SliderFormattingExample {
  */
 export declare class SliderHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SliderHarnessExample, "slider-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderHarnessExample, "slider-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -78,7 +78,7 @@ export declare class SliderHarnessExample {
  */
 export declare class SliderOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SliderOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SliderOverviewExample, "slider-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SliderOverviewExample, "slider-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 export { }

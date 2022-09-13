@@ -51,7 +51,7 @@ export declare class SortHarnessExample {
     }[];
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortHarnessExample, "sort-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -63,7 +63,7 @@ export declare class SortOverviewExample {
     constructor();
     sortData(sort: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SortOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SortOverviewExample, "sort-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 export { }

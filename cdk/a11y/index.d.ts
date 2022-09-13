@@ -25,7 +25,7 @@ export declare class FocusMonitorDirectivesExample {
     formatOrigin(origin: FocusOrigin): string;
     markForCheck(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorDirectivesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Focusing with a specific FocusOrigin */
@@ -40,7 +40,7 @@ export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterView
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorFocusViaExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorFocusViaExample, "focus-monitor-focus-via-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorFocusViaExample, "focus-monitor-focus-via-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Monitoring focus with FocusMonitor */
@@ -57,7 +57,7 @@ export declare class FocusMonitorOverviewExample implements OnDestroy, AfterView
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorOverviewExample, "focus-monitor-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorOverviewExample, "focus-monitor-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

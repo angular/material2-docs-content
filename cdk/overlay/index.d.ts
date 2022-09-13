@@ -7,7 +7,7 @@ import * as i2 from '@angular/cdk/overlay';
 export declare class CdkOverlayBasicExample {
     isOpen: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkOverlayBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkOverlayBasicExample, "cdk-overlay-basic-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkOverlayBasicExample, "cdk-overlay-basic-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkOverlayExamplesModule {

@@ -446,7 +446,7 @@ export declare class TableBasicExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -456,7 +456,7 @@ export declare class TableColumnStylingExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_2[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableColumnStylingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -469,7 +469,7 @@ export declare class TableDynamicArrayDataExample {
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicArrayDataExample, "table-dynamic-array-data-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicArrayDataExample, "table-dynamic-array-data-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -483,7 +483,7 @@ export declare class TableDynamicColumnsExample {
     removeColumn(): void;
     shuffle(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -496,7 +496,7 @@ export declare class TableDynamicObservableDataExample {
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicObservableDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class TableExamplesModule {
@@ -514,7 +514,7 @@ export declare class TableExpandableRowsExample {
     columnsToDisplayWithExpand: string[];
     expandedElement: PeriodicElement_6 | null;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExpandableRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -525,7 +525,7 @@ export declare class TableFilteringExample {
     dataSource: MatTableDataSource<PeriodicElement_7, MatTableDataSourcePaginator>;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFilteringExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -535,7 +535,7 @@ export declare class TableFlexBasicExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_8[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -545,7 +545,7 @@ export declare class TableFlexLargeRowExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_9[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexLargeRowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -557,7 +557,7 @@ export declare class TableFooterRowExample {
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFooterRowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -572,7 +572,7 @@ export declare class TableGeneratedColumnsExample {
     dataSource: PeriodicElement_10[];
     displayedColumns: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -587,7 +587,7 @@ export declare class TableHarnessExample {
         symbol: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -606,7 +606,7 @@ export declare class TableHttpExample implements AfterViewInit {
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -618,7 +618,7 @@ export declare class TableMultipleHeaderFooterExample {
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableMultipleHeaderFooterExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -633,7 +633,7 @@ export declare class TableOverviewExample implements AfterViewInit {
     ngAfterViewInit(): void;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableOverviewExample, "table-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableOverviewExample, "table-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -645,7 +645,7 @@ export declare class TablePaginationExample implements AfterViewInit {
     paginator: MatLegacyPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -655,7 +655,7 @@ export declare class TableRecycleRowsExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_12[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -666,7 +666,7 @@ export declare class TableReorderableExample {
     dataSource: PeriodicElement_13[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -677,7 +677,7 @@ export declare class TableRowBindingExample {
     dataSource: PeriodicElement_14[];
     clickedRows: Set<PeriodicElement_14>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -687,7 +687,7 @@ export declare class TableRowContextExample {
     displayedColumns: string[];
     data: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowContextExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowContextExample, "table-row-context-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowContextExample, "table-row-context-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -704,7 +704,7 @@ export declare class TableSelectionExample {
     /** The label for the checkbox on the passed row */
     checkboxLabel(row?: PeriodicElement_15): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -720,7 +720,7 @@ export declare class TableSortingExample implements AfterViewInit {
     /** Announce the change in sort state for assistive technology. */
     announceSortChange(sortState: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -730,7 +730,7 @@ export declare class TableStickyColumnsExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_17[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -744,7 +744,7 @@ export declare class TableStickyComplexExample {
     /** Whether the button toggle group contains the id as an active value. */
     isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -758,7 +758,7 @@ export declare class TableStickyComplexFlexExample {
     /** Whether the button toggle group contains the id as an active value. */
     isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -770,7 +770,7 @@ export declare class TableStickyFooterExample {
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyFooterExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyFooterExample, "table-sticky-footer-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyFooterExample, "table-sticky-footer-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -780,7 +780,7 @@ export declare class TableStickyHeaderExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_20[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyHeaderExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -794,7 +794,7 @@ export declare class TableTextColumnAdvancedExample {
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
     getWeight: (data: PeriodicElement_21) => string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnAdvancedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -805,7 +805,7 @@ export declare class TableTextColumnExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_22[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -817,7 +817,7 @@ export declare class TableWithRipplesExample {
         name: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableWithRipplesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -831,7 +831,7 @@ export declare class TableWrappedExample implements AfterViewInit {
     clearTable(): void;
     addData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableWrappedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, false, never>;
 }
 
 declare interface Transaction {
@@ -870,7 +870,7 @@ export declare class WrapperTable<T> implements AfterContentInit {
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], false, never>;
 }
 
 export { }

@@ -44,7 +44,7 @@ export declare class MenuExamplesModule {
  */
 export declare class MenuHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<MenuHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MenuHarnessExample, "menu-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MenuHarnessExample, "menu-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -52,7 +52,7 @@ export declare class MenuHarnessExample {
  */
 export declare class MenuIconsExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<MenuIconsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MenuIconsExample, "menu-icons-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MenuIconsExample, "menu-icons-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -60,7 +60,7 @@ export declare class MenuIconsExample {
  */
 export declare class MenuNestedExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<MenuNestedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MenuNestedExample, "menu-nested-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MenuNestedExample, "menu-nested-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -68,7 +68,7 @@ export declare class MenuNestedExample {
  */
 export declare class MenuOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<MenuOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MenuOverviewExample, "menu-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MenuOverviewExample, "menu-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -76,7 +76,7 @@ export declare class MenuOverviewExample {
  */
 export declare class MenuPositionExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<MenuPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MenuPositionExample, "menu-position-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MenuPositionExample, "menu-position-example", never, {}, {}, never, never, false, never>;
 }
 
 export { }

@@ -88,7 +88,7 @@ export declare class TooltipAutoHideExample {
     positionOptions: TooltipPosition[];
     position: FormControl<"left" | "right" | "above" | "below" | "before" | "after" | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipAutoHideExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipAutoHideExample, "tooltip-auto-hide-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -96,7 +96,7 @@ export declare class TooltipAutoHideExample {
  */
 export declare class TooltipCustomClassExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipCustomClassExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipCustomClassExample, "tooltip-custom-class-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipCustomClassExample, "tooltip-custom-class-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -106,7 +106,7 @@ export declare class TooltipDelayExample {
     showDelay: FormControl<number | null>;
     hideDelay: FormControl<number | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDelayExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDelayExample, "tooltip-delay-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDelayExample, "tooltip-delay-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -115,7 +115,7 @@ export declare class TooltipDelayExample {
 export declare class TooltipDisabledExample {
     disabled: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDisabledExample, "tooltip-disabled-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDisabledExample, "tooltip-disabled-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class TooltipExamplesModule {
@@ -130,7 +130,7 @@ export declare class TooltipExamplesModule {
 export declare class TooltipHarnessExample {
     message: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipHarnessExample, "tooltip-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipHarnessExample, "tooltip-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -138,7 +138,7 @@ export declare class TooltipHarnessExample {
  */
 export declare class TooltipManualExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipManualExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipManualExample, "tooltip-manual-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipManualExample, "tooltip-manual-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -147,7 +147,7 @@ export declare class TooltipManualExample {
 export declare class TooltipMessageExample {
     message: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipMessageExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipMessageExample, "tooltip-message-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipMessageExample, "tooltip-message-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -155,7 +155,7 @@ export declare class TooltipMessageExample {
  */
 export declare class TooltipModifiedDefaultsExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipModifiedDefaultsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipModifiedDefaultsExample, "tooltip-modified-defaults-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipModifiedDefaultsExample, "tooltip-modified-defaults-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -163,7 +163,7 @@ export declare class TooltipModifiedDefaultsExample {
  */
 export declare class TooltipOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipOverviewExample, "tooltip-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipOverviewExample, "tooltip-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -172,7 +172,7 @@ export declare class TooltipOverviewExample {
 export declare class TooltipPositionAtOriginExample {
     enabled: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipPositionAtOriginExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionAtOriginExample, "tooltip-position-at-origin-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionAtOriginExample, "tooltip-position-at-origin-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -182,7 +182,7 @@ export declare class TooltipPositionExample {
     positionOptions: TooltipPosition[];
     position: FormControl<"left" | "right" | "above" | "below" | "before" | "after" | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TooltipPositionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never, never, false, never>;
 }
 
 export { }

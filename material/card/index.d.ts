@@ -9,7 +9,7 @@ import * as i9 from '@angular/material/card';
  */
 export declare class CardActionsExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardActionsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardActionsExample, "card-actions-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardActionsExample, "card-actions-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CardExamplesModule {
@@ -23,7 +23,7 @@ export declare class CardExamplesModule {
  */
 export declare class CardFancyExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardFancyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardFancyExample, "card-fancy-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardFancyExample, "card-fancy-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -32,7 +32,7 @@ export declare class CardFancyExample {
 export declare class CardFooterExample {
     longText: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<CardFooterExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardFooterExample, "card-footer-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardFooterExample, "card-footer-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -40,7 +40,7 @@ export declare class CardFooterExample {
  */
 export declare class CardHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardHarnessExample, "card-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardHarnessExample, "card-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -49,7 +49,7 @@ export declare class CardHarnessExample {
 export declare class CardMediaSizeExample {
     longText: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<CardMediaSizeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardMediaSizeExample, "card-media-size-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardMediaSizeExample, "card-media-size-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -57,7 +57,7 @@ export declare class CardMediaSizeExample {
  */
 export declare class CardOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardOverviewExample, "card-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardOverviewExample, "card-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -66,7 +66,7 @@ export declare class CardOverviewExample {
 export declare class CardSubtitleExample {
     longText: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<CardSubtitleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardSubtitleExample, "card-subtitle-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CardSubtitleExample, "card-subtitle-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

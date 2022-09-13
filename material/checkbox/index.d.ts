@@ -18,7 +18,7 @@ export declare class CheckboxConfigurableExample {
     labelPosition: 'before' | 'after';
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CheckboxExamplesModule {
@@ -33,7 +33,7 @@ export declare class CheckboxExamplesModule {
 export declare class CheckboxHarnessExample {
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxHarnessExample, "checkbox-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxHarnessExample, "checkbox-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -46,7 +46,7 @@ export declare class CheckboxOverviewExample {
     someComplete(): boolean;
     setAll(completed: boolean): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxOverviewExample, "checkbox-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxOverviewExample, "checkbox-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Checkboxes with reactive forms */
@@ -59,7 +59,7 @@ export declare class CheckboxReactiveFormsExample {
     }>;
     constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxReactiveFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

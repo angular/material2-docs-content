@@ -29,12 +29,12 @@ export declare class CdkPortalOverviewExample implements AfterViewInit {
     constructor(_viewContainerRef: ViewContainerRef);
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPortalOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPortalOverviewExample, "cdk-portal-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPortalOverviewExample, "cdk-portal-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class ComponentPortalExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ComponentPortalExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ComponentPortalExample, "component-portal-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ComponentPortalExample, "component-portal-example", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

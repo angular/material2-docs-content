@@ -64,7 +64,7 @@ declare namespace i8 {
 export declare class InputClearableExample {
     value: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputClearableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputClearableExample, "input-clearable-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputClearableExample, "input-clearable-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -73,7 +73,7 @@ export declare class InputClearableExample {
 export declare class InputErrorsExample {
     emailFormControl: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title Input with a custom ErrorStateMatcher */
@@ -81,7 +81,7 @@ export declare class InputErrorStateMatcherExample {
     emailFormControl: FormControl<string | null>;
     matcher: MyErrorStateMatcher;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorStateMatcherExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorStateMatcherExample, "input-error-state-matcher-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorStateMatcherExample, "input-error-state-matcher-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class InputExamplesModule {
@@ -95,7 +95,7 @@ export declare class InputExamplesModule {
  */
 export declare class InputFormExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputFormExample, "input-form-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputFormExample, "input-form-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -105,7 +105,7 @@ export declare class InputHarnessExample {
     inputType: string;
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputHarnessExample, "input-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputHarnessExample, "input-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -113,7 +113,7 @@ export declare class InputHarnessExample {
  */
 export declare class InputHintExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputHintExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputHintExample, "input-hint-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputHintExample, "input-hint-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -121,7 +121,7 @@ export declare class InputHintExample {
  */
 export declare class InputOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputOverviewExample, "input-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputOverviewExample, "input-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -129,7 +129,7 @@ export declare class InputOverviewExample {
  */
 export declare class InputPrefixSuffixExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputPrefixSuffixExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputPrefixSuffixExample, "input-prefix-suffix-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputPrefixSuffixExample, "input-prefix-suffix-example", never, {}, {}, never, never, false, never>;
 }
 
 /** Error when invalid control is dirty, touched, or submitted. */

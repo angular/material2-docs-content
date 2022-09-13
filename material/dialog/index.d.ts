@@ -19,14 +19,14 @@ export declare class DialogAnimationsExample {
     constructor(dialog: MatDialog);
     openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogAnimationsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogAnimationsExample, "dialog-animations-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogAnimationsExample, "dialog-animations-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogAnimationsExampleDialog {
     dialogRef: MatDialogRef<DialogAnimationsExampleDialog>;
     constructor(dialogRef: MatDialogRef<DialogAnimationsExampleDialog>);
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogAnimationsExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogAnimationsExampleDialog, "dialog-animations-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogAnimationsExampleDialog, "dialog-animations-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -37,12 +37,12 @@ export declare class DialogContentExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogContentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExample, "dialog-content-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExample, "dialog-content-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogContentExampleDialog {
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogContentExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExampleDialog, "dialog-content-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExampleDialog, "dialog-content-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 declare interface DialogData {
@@ -62,14 +62,14 @@ export declare class DialogDataExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExample, "dialog-data-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExample, "dialog-data-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogDataExampleDialog {
     data: DialogData;
     constructor(data: DialogData);
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -80,12 +80,12 @@ export declare class DialogElementsExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogElementsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExample, "dialog-elements-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExample, "dialog-elements-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogElementsExampleDialog {
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogElementsExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExampleDialog, "dialog-elements-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExampleDialog, "dialog-elements-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogExamplesModule {
@@ -103,12 +103,12 @@ export declare class DialogFromMenuExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogFromMenuExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogFromMenuExample, "dialog-from-menu-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogFromMenuExample, "dialog-from-menu-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogFromMenuExampleDialog {
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogFromMenuExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogFromMenuExampleDialog, "dialog-from-menu-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogFromMenuExampleDialog, "dialog-from-menu-dialog", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -120,7 +120,7 @@ export declare class DialogHarnessExample {
     constructor(dialog: MatDialog);
     open(config?: MatDialogConfig): MatDialogRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogHarnessExample, "dialog-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogHarnessExample, "dialog-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -133,7 +133,7 @@ export declare class DialogOverviewExample {
     constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DialogOverviewExampleDialog {
@@ -142,7 +142,7 @@ export declare class DialogOverviewExampleDialog {
     constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: DialogData_2);
     onNoClick(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

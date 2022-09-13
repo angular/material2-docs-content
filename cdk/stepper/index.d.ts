@@ -10,7 +10,7 @@ import * as i5 from '@angular/forms';
 /** @title A custom CDK stepper without a form */
 export declare class CdkCustomStepperWithoutFormExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkCustomStepperWithoutFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkCustomStepperWithoutFormExample, "cdk-custom-stepper-without-form-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkCustomStepperWithoutFormExample, "cdk-custom-stepper-without-form-example", never, {}, {}, never, never, false, never>;
 }
 
 /** @title A custom CDK linear stepper with forms */
@@ -26,7 +26,7 @@ export declare class CdkLinearStepperWithFormExample {
     constructor(_formBuilder: FormBuilder);
     toggleLinearity(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkLinearStepperWithFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkStepperExamplesModule {
@@ -39,14 +39,14 @@ export declare class CdkStepperExamplesModule {
 export declare class CustomLinearStepper extends CdkStepper {
     selectStepByIndex(index: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CustomLinearStepper, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CustomLinearStepper, "example-custom-linear-stepper", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CustomLinearStepper, "example-custom-linear-stepper", never, {}, {}, never, never, false, never>;
 }
 
 /** Custom CDK stepper component */
 export declare class CustomStepper extends CdkStepper {
     selectStepByIndex(index: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CustomStepper, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CustomStepper, "example-custom-stepper", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CustomStepper, "example-custom-stepper", never, {}, {}, never, never, false, never>;
 }
 
 declare namespace i1 {

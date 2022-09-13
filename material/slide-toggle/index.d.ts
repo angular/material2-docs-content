@@ -42,7 +42,7 @@ export declare class SlideToggleConfigurableExample {
     checked: boolean;
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class SlideToggleExamplesModule {
@@ -64,7 +64,7 @@ export declare class SlideToggleFormsExample {
     constructor(_formBuilder: FormBuilder);
     onFormSubmit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -74,7 +74,7 @@ export declare class SlideToggleHarnessExample {
     disabled: boolean;
     ctrl: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -82,7 +82,7 @@ export declare class SlideToggleHarnessExample {
  */
 export declare class SlideToggleOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleOverviewExample, "slide-toggle-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleOverviewExample, "slide-toggle-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 export { }

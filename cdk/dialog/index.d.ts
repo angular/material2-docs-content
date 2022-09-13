@@ -13,14 +13,14 @@ export declare class CdkDialogDataExample {
     constructor(dialog: Dialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExample, "cdk-dialog-data-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExample, "cdk-dialog-data-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkDialogDataExampleDialog {
     data: DialogData;
     constructor(data: DialogData);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogDataExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExampleDialog, "cdk-dialog-data-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExampleDialog, "cdk-dialog-data-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -33,7 +33,7 @@ export declare class CdkDialogOverviewExample {
     constructor(dialog: Dialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExample, "cdk-dialog-overview-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExample, "cdk-dialog-overview-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkDialogOverviewExampleDialog {
@@ -41,7 +41,7 @@ export declare class CdkDialogOverviewExampleDialog {
     data: DialogData_2;
     constructor(dialogRef: DialogRef<string>, data: DialogData_2);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogOverviewExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExampleDialog, "cdk-dialog-overview-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExampleDialog, "cdk-dialog-overview-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 /**
@@ -52,14 +52,14 @@ export declare class CdkDialogStylingExample {
     constructor(dialog: Dialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExample, "cdk-dialog-styling-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExample, "cdk-dialog-styling-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class CdkDialogStylingExampleDialog {
     dialogRef: DialogRef;
     constructor(dialogRef: DialogRef);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExampleDialog, "cdk-dialog-styling-example-dialog", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExampleDialog, "cdk-dialog-styling-example-dialog", never, {}, {}, never, never, false, never>;
 }
 
 declare interface DialogData {

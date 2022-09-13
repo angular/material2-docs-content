@@ -15,7 +15,7 @@ export declare class DefaultEnabledColumnResizeExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
     static ɵfac: i0.ɵɵFactoryDeclaration<DefaultEnabledColumnResizeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DefaultEnabledColumnResizeExample, "default-enabled-column-resize-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DefaultEnabledColumnResizeExample, "default-enabled-column-resize-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DefaultEnabledColumnResizeExampleModule {
@@ -31,7 +31,7 @@ export declare class DefaultEnabledColumnResizeFlexExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_2[];
     static ɵfac: i0.ɵɵFactoryDeclaration<DefaultEnabledColumnResizeFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DefaultEnabledColumnResizeFlexExample, "default-enabled-column-resize-flex-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DefaultEnabledColumnResizeFlexExample, "default-enabled-column-resize-flex-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class DefaultEnabledColumnResizeFlexExampleModule {
@@ -86,7 +86,7 @@ export declare class OptInColumnResizeExample {
     displayedColumns: string[];
     dataSource: PeriodicElement_3[];
     static ɵfac: i0.ɵɵFactoryDeclaration<OptInColumnResizeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<OptInColumnResizeExample, "opt-in-column-resize-example", never, {}, {}, never, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<OptInColumnResizeExample, "opt-in-column-resize-example", never, {}, {}, never, never, false, never>;
 }
 
 export declare class OptInColumnResizeExampleModule {
