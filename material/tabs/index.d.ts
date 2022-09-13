@@ -1,13 +1,13 @@
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
-import * as i15 from '@angular/common';
-import * as i16 from '@angular/material/legacy-button';
-import * as i17 from '@angular/material/button-toggle';
-import * as i18 from '@angular/material/legacy-checkbox';
-import * as i19 from '@angular/material/icon';
-import * as i20 from '@angular/material/legacy-input';
-import * as i21 from '@angular/material/legacy-tabs';
-import * as i22 from '@angular/forms';
+import * as i18 from '@angular/common';
+import * as i19 from '@angular/material/button';
+import * as i20 from '@angular/material/button-toggle';
+import * as i21 from '@angular/material/checkbox';
+import * as i22 from '@angular/material/icon';
+import * as i23 from '@angular/material/input';
+import * as i24 from '@angular/material/tabs';
+import * as i25 from '@angular/forms';
 import { Observable } from 'rxjs';
 import { ThemePalette } from '@angular/material/core';
 
@@ -49,6 +49,24 @@ declare namespace i13 {
 declare namespace i14 {
     export {
         TabGroupPreserveContentExample
+    }
+}
+
+declare namespace i15 {
+    export {
+        TabGroupPaginatedExample
+    }
+}
+
+declare namespace i16 {
+    export {
+        TabGroupInvertedExample
+    }
+}
+
+declare namespace i17 {
+    export {
+        TabGroupInkBarExample
     }
 }
 
@@ -165,7 +183,7 @@ export declare class TabGroupDynamicHeightExample {
 
 export declare class TabGroupExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TabGroupExamplesModule, [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample], [typeof i15.CommonModule, typeof i16.MatLegacyButtonModule, typeof i17.MatButtonToggleModule, typeof i18.MatLegacyCheckboxModule, typeof i19.MatIconModule, typeof i20.MatLegacyInputModule, typeof i21.MatLegacyTabsModule, typeof i22.ReactiveFormsModule], [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TabGroupExamplesModule, [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample, typeof i15.TabGroupPaginatedExample, typeof i16.TabGroupInvertedExample, typeof i17.TabGroupInkBarExample], [typeof i18.CommonModule, typeof i19.MatButtonModule, typeof i20.MatButtonToggleModule, typeof i21.MatCheckboxModule, typeof i22.MatIconModule, typeof i23.MatInputModule, typeof i24.MatTabsModule, typeof i25.ReactiveFormsModule], [typeof i1.TabGroupAlignExample, typeof i2.TabGroupAnimationsExample, typeof i3.TabGroupAsyncExample, typeof i4.TabGroupBasicExample, typeof i5.TabGroupCustomLabelExample, typeof i6.TabGroupDynamicExample, typeof i7.TabGroupDynamicHeightExample, typeof i8.TabGroupHarnessExample, typeof i9.TabGroupHeaderBelowExample, typeof i10.TabGroupLazyLoadedExample, typeof i11.TabGroupStretchedExample, typeof i12.TabGroupThemeExample, typeof i13.TabNavBarBasicExample, typeof i14.TabGroupPreserveContentExample, typeof i15.TabGroupPaginatedExample, typeof i16.TabGroupInvertedExample, typeof i17.TabGroupInkBarExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TabGroupExamplesModule>;
 }
 
@@ -186,6 +204,22 @@ export declare class TabGroupHeaderBelowExample {
 }
 
 /**
+ * @title Tab group with ink bar fit to content
+ */
+export declare class TabGroupInkBarExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupInkBarExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInkBarExample, "tab-group-ink-bar-example", never, {}, {}, never, never, false, never>;
+}
+
+/**
+ * @title Tab group with inverted tabs
+ */
+export declare class TabGroupInvertedExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupInvertedExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInvertedExample, "tab-group-inverted-example", never, {}, {}, never, never, false, never>;
+}
+
+/**
  * @title Tab group where the tab content is loaded lazily (when activated)
  */
 export declare class TabGroupLazyLoadedExample {
@@ -193,6 +227,15 @@ export declare class TabGroupLazyLoadedExample {
     getTimeLoaded(index: number): Date;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupLazyLoadedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupLazyLoadedExample, "tab-group-lazy-loaded-example", never, {}, {}, never, never, false, never>;
+}
+
+/**
+ * @title Tab group with paginated tabs
+ */
+export declare class TabGroupPaginatedExample {
+    lotsOfTabs: string[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupPaginatedExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPaginatedExample, "tab-group-paginated-example", never, {}, {}, never, never, false, never>;
 }
 
 /**

@@ -5229,6 +5229,38 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/tabs"
         }
     },
+    "tab-group-ink-bar": {
+        "packagePath": "material/tabs/tab-group-ink-bar",
+        "title": "Tab group with ink bar fit to content",
+        "componentName": "TabGroupInkBarExample",
+        "files": [
+            "tab-group-ink-bar-example.ts",
+            "tab-group-ink-bar-example.html"
+        ],
+        "selector": "tab-group-ink-bar-example",
+        "additionalComponents": [],
+        "primaryFile": "tab-group-ink-bar-example.ts",
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "material/tabs"
+        }
+    },
+    "tab-group-inverted": {
+        "packagePath": "material/tabs/tab-group-inverted",
+        "title": "Tab group with inverted tabs",
+        "componentName": "TabGroupInvertedExample",
+        "files": [
+            "tab-group-inverted-example.ts",
+            "tab-group-inverted-example.html"
+        ],
+        "selector": "tab-group-inverted-example",
+        "additionalComponents": [],
+        "primaryFile": "tab-group-inverted-example.ts",
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "material/tabs"
+        }
+    },
     "tab-group-lazy-loaded": {
         "packagePath": "material/tabs/tab-group-lazy-loaded",
         "title": "Tab group where the tab content is loaded lazily (when activated)",
@@ -5240,6 +5272,22 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-lazy-loaded-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-lazy-loaded-example.ts",
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "material/tabs"
+        }
+    },
+    "tab-group-paginated": {
+        "packagePath": "material/tabs/tab-group-paginated",
+        "title": "Tab group with paginated tabs",
+        "componentName": "TabGroupPaginatedExample",
+        "files": [
+            "tab-group-paginated-example.ts",
+            "tab-group-paginated-example.html"
+        ],
+        "selector": "tab-group-paginated-example",
+        "additionalComponents": [],
+        "primaryFile": "tab-group-paginated-example.ts",
         "module": {
             "name": "TabGroupExamplesModule",
             "importSpecifier": "material/tabs"

@@ -1,12 +1,12 @@
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button-toggle&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-tabs&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
 <span class="hljs-keyword">import</span> {TabGroupAlignExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-align/tab-group-align-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TabGroupAnimationsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-animations/tab-group-animations-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TabGroupAsyncExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-async/tab-group-async-example&#x27;</span>;
@@ -21,6 +21,9 @@
 <span class="hljs-keyword">import</span> {TabGroupStretchedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-stretched/tab-group-stretched-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TabGroupThemeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-theme/tab-group-theme-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {TabNavBarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-nav-bar-basic/tab-nav-bar-basic-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {TabGroupPaginatedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-paginated/tab-group-paginated-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {TabGroupInvertedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-inverted/tab-group-inverted-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {TabGroupInkBarExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tab-group-ink-bar/tab-group-ink-bar-example&#x27;</span>;
 
 <span class="hljs-keyword">export</span> {
   TabGroupAlignExample,
@@ -37,6 +40,9 @@
   TabGroupThemeExample,
   TabNavBarBasicExample,
   TabGroupPreserveContentExample,
+  TabGroupPaginatedExample,
+  TabGroupInvertedExample,
+  TabGroupInkBarExample,
 };
 
 <span class="hljs-keyword">const</span> EXAMPLES = [
@@ -54,17 +60,20 @@
   TabGroupThemeExample,
   TabNavBarBasicExample,
   TabGroupPreserveContentExample,
+  TabGroupPaginatedExample,
+  TabGroupInvertedExample,
+  TabGroupInkBarExample,
 ];
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">imports</span>: [
     CommonModule,
-    MatLegacyButtonModule,
+    MatButtonModule,
     MatButtonToggleModule,
-    MatLegacyCheckboxModule,
+    MatCheckboxModule,
     MatIconModule,
-    MatLegacyInputModule,
-    MatLegacyTabsModule,
+    MatInputModule,
+    MatTabsModule,
     ReactiveFormsModule,
   ],
   <span class="hljs-attr">declarations</span>: EXAMPLES,
