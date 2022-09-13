@@ -4186,6 +4186,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/slider"
         }
     },
+    "slider-range": {
+        "packagePath": "material/slider/slider-range",
+        "title": "Range slider",
+        "componentName": "SliderRangeExample",
+        "files": [
+            "slider-range-example.ts",
+            "slider-range-example.html",
+            "slider-range-example.css"
+        ],
+        "selector": "slider-range-example",
+        "additionalComponents": [],
+        "primaryFile": "slider-range-example.ts",
+        "module": {
+            "name": "SliderExamplesModule",
+            "importSpecifier": "material/slider"
+        }
+    },
     "snack-bar-annotated-component": {
         "packagePath": "material/snack-bar/snack-bar-annotated-component",
         "title": "Snack-bar with an annotated custom component",

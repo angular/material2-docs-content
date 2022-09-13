@@ -48,26 +48,26 @@ determine which features to include:</p>
           <span header-link="display-a-component"></span>
           Display a component
         </h3>
-      <p>Let&#39;s display a slider component in your app and verify that everything works.</p>
-<p>You need to import the <code>MatSliderModule</code> that you want to display by adding the following lines to
+      <p>Let&#39;s display a slide toggle component in your app and verify that everything works.</p>
+<p>You need to import the <code>MatSlideToggleModule</code> that you want to display by adding the following lines to
 your <code>app.module.ts</code> file.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> { MatSliderModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slider&#x27;</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { MatSlideToggleModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
 
 <span class="hljs-meta">@NgModule</span> ({
   <span class="hljs-attr">imports</span>: [
-    MatSliderModule,
+    MatSlideToggleModule,
   ]
 })
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
 </code></pre>
-<p>Add the <code>&lt;mat-slider&gt;</code> tag to the <code>app.component.html</code> like so:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">max</span>=<span class="hljs-string">&quot;100&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;1&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;50&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+<p>Add the <code>&lt;mat-slide-toggle&gt;</code> tag to the <code>app.component.html</code> like so:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span>&gt;</span>Toggle me!<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
 </code></pre>
 <p>Run your local dev server:</p>
 <pre><code class="language-bash">ng serve
 </code></pre>
 <p>Then point your browser to <a href="http://localhost:4200">http://localhost:4200</a></p>
-<p>You should see the Material slider component on the page.</p>
+<p>You should see the Material slide toggle component on the page.</p>
 <p>In addition to the installation schematic, Angular Material comes with
 <a href="https://material.angular.io/guide/schematics">several other schematics</a> (like nav, table,
 address-form, etc.) that can be used to easily generate pre-built components in your application.</p>

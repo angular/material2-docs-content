@@ -9,23 +9,11 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;slider-configurable-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SliderConfigurableExample</span> </span>{
-  autoTicks = <span class="hljs-literal">false</span>;
   disabled = <span class="hljs-literal">false</span>;
-  invert = <span class="hljs-literal">false</span>;
   max = <span class="hljs-number">100</span>;
   min = <span class="hljs-number">0</span>;
   showTicks = <span class="hljs-literal">false</span>;
   step = <span class="hljs-number">1</span>;
   thumbLabel = <span class="hljs-literal">false</span>;
   value = <span class="hljs-number">0</span>;
-  vertical = <span class="hljs-literal">false</span>;
-  tickInterval = <span class="hljs-number">1</span>;
-
-  getSliderTickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">&#x27;auto&#x27;</span> {
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.showTicks) {
-      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.autoTicks ? <span class="hljs-string">&#x27;auto&#x27;</span> : <span class="hljs-built_in">this</span>.tickInterval;
-    }
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-  }
 }
