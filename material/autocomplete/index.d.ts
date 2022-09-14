@@ -2,10 +2,10 @@ import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/legacy-autocomplete';
-import * as i11 from '@angular/material/legacy-form-field';
-import * as i12 from '@angular/material/legacy-input';
-import * as i13 from '@angular/material/legacy-slide-toggle';
+import * as i10 from '@angular/material/autocomplete';
+import * as i11 from '@angular/material/form-field';
+import * as i12 from '@angular/material/input';
+import * as i13 from '@angular/material/slide-toggle';
 import * as i14 from '@angular/forms';
 import * as i9 from '@angular/common';
 import { Observable } from 'rxjs';
@@ -40,7 +40,7 @@ export declare class AutocompleteDisplayExample implements OnInit {
 
 export declare class AutocompleteExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<AutocompleteExamplesModule, [typeof i1.AutocompleteAutoActiveFirstOptionExample, typeof i2.AutocompleteDisplayExample, typeof i3.AutocompleteFilterExample, typeof i4.AutocompleteHarnessExample, typeof i5.AutocompleteOptgroupExample, typeof i6.AutocompleteOverviewExample, typeof i7.AutocompletePlainInputExample, typeof i8.AutocompleteSimpleExample], [typeof i9.CommonModule, typeof i10.MatLegacyAutocompleteModule, typeof i11.MatLegacyFormFieldModule, typeof i12.MatLegacyInputModule, typeof i13.MatLegacySlideToggleModule, typeof i14.FormsModule, typeof i14.ReactiveFormsModule], [typeof i1.AutocompleteAutoActiveFirstOptionExample, typeof i2.AutocompleteDisplayExample, typeof i3.AutocompleteFilterExample, typeof i4.AutocompleteHarnessExample, typeof i5.AutocompleteOptgroupExample, typeof i6.AutocompleteOverviewExample, typeof i7.AutocompletePlainInputExample, typeof i8.AutocompleteSimpleExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<AutocompleteExamplesModule, [typeof i1.AutocompleteAutoActiveFirstOptionExample, typeof i2.AutocompleteDisplayExample, typeof i3.AutocompleteFilterExample, typeof i4.AutocompleteHarnessExample, typeof i5.AutocompleteOptgroupExample, typeof i6.AutocompleteOverviewExample, typeof i7.AutocompletePlainInputExample, typeof i8.AutocompleteSimpleExample], [typeof i9.CommonModule, typeof i10.MatAutocompleteModule, typeof i11.MatFormFieldModule, typeof i12.MatInputModule, typeof i13.MatSlideToggleModule, typeof i14.FormsModule, typeof i14.ReactiveFormsModule], [typeof i1.AutocompleteAutoActiveFirstOptionExample, typeof i2.AutocompleteDisplayExample, typeof i3.AutocompleteFilterExample, typeof i4.AutocompleteHarnessExample, typeof i5.AutocompleteOptgroupExample, typeof i6.AutocompleteOverviewExample, typeof i7.AutocompletePlainInputExample, typeof i8.AutocompleteSimpleExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<AutocompleteExamplesModule>;
 }
 

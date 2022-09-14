@@ -2,7 +2,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
          <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Search for a street&quot;</span>
          [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;control&quot;</span>
-         [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;auto&quot;</span>&gt;</span>
+         [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;auto&quot;</span>
+         <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-input&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let street of filteredStreets | async&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;street&quot;</span>&gt;</span>
       {{street}}
