@@ -4,7 +4,7 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Slide Toggle inside of a Template-driven form<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-form&quot;</span> #<span class="hljs-attr">form</span>=<span class="hljs-string">&quot;ngForm&quot;</span> (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">&quot;onFormSubmit()&quot;</span> <span class="hljs-attr">ngNativeValidate</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-form&quot;</span> #<span class="hljs-attr">form</span>=<span class="hljs-string">&quot;ngForm&quot;</span> (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">&quot;alertFormValues(form.form)&quot;</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> <span class="hljs-attr">ngModel</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;enableWifi&quot;</span>&gt;</span>Enable Wifi<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> <span class="hljs-attr">ngModel</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;acceptTerms&quot;</span> <span class="hljs-attr">required</span>&gt;</span>Accept Terms of Service<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
@@ -14,7 +14,7 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Slide Toggle inside of a Reactive form<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-form&quot;</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup&quot;</span> (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">&quot;onFormSubmit()&quot;</span> <span class="hljs-attr">ngNativeValidate</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-form&quot;</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;formGroup&quot;</span> (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">&quot;alertFormValues(formGroup)&quot;</span> <span class="hljs-attr">ngNativeValidate</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;enableWifi&quot;</span>&gt;</span>Enable Wifi<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-slide-toggle</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;acceptTerms&quot;</span>&gt;</span>Accept Terms of Service<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slide-toggle</span>&gt;</span>

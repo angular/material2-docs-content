@@ -2,12 +2,12 @@ import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/legacy-slide-toggle';
+import * as i10 from '@angular/material/slide-toggle';
 import * as i5 from '@angular/forms';
-import * as i6 from '@angular/material/legacy-button';
-import * as i7 from '@angular/material/legacy-card';
-import * as i8 from '@angular/material/legacy-checkbox';
-import * as i9 from '@angular/material/legacy-radio';
+import * as i6 from '@angular/material/button';
+import * as i7 from '@angular/material/card';
+import * as i8 from '@angular/material/checkbox';
+import * as i9 from '@angular/material/radio';
 import { ThemePalette } from '@angular/material/core';
 
 declare namespace i1 {
@@ -47,7 +47,7 @@ export declare class SlideToggleConfigurableExample {
 
 export declare class SlideToggleExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample], [typeof i5.FormsModule, typeof i6.MatLegacyButtonModule, typeof i7.MatLegacyCardModule, typeof i8.MatLegacyCheckboxModule, typeof i9.MatLegacyRadioModule, typeof i10.MatLegacySlideToggleModule, typeof i5.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample], [typeof i5.FormsModule, typeof i6.MatButtonModule, typeof i7.MatCardModule, typeof i8.MatCheckboxModule, typeof i9.MatRadioModule, typeof i10.MatSlideToggleModule, typeof i5.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleHarnessExample, typeof i4.SlideToggleOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<SlideToggleExamplesModule>;
 }
 
@@ -57,12 +57,12 @@ export declare class SlideToggleExamplesModule {
 export declare class SlideToggleFormsExample {
     private _formBuilder;
     isChecked: boolean;
-    formGroup: FormGroup<    {
-    enableWifi: FormControl<string | null>;
-    acceptTerms: FormControl<string | null>;
+    formGroup: FormGroup<{
+        enableWifi: FormControl<string | null>;
+        acceptTerms: FormControl<string | null>;
     }>;
     constructor(_formBuilder: FormBuilder);
-    onFormSubmit(): void;
+    alertFormValues(formGroup: FormGroup): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleFormsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never, never, false, never>;
 }
