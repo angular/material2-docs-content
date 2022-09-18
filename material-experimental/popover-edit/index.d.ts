@@ -2,17 +2,17 @@ import { BehaviorSubject } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 import { FormValueContainer } from '@angular/cdk-experimental/popover-edit';
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/legacy-list';
+import * as i10 from '@angular/material/list';
 import * as i11 from '@angular/material-experimental/popover-edit';
-import * as i12 from '@angular/material/legacy-snack-bar';
-import * as i13 from '@angular/material/legacy-table';
+import * as i12 from '@angular/material/snack-bar';
+import * as i13 from '@angular/material/table';
 import * as i14 from '@angular/forms';
 import * as i5 from '@angular/common';
-import * as i6 from '@angular/material/legacy-button';
-import * as i7 from '@angular/material/legacy-checkbox';
+import * as i6 from '@angular/material/button';
+import * as i7 from '@angular/material/checkbox';
 import * as i8 from '@angular/material/icon';
-import * as i9 from '@angular/material/legacy-input';
-import { MatLegacySnackBar } from '@angular/material/legacy-snack-bar';
+import * as i9 from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -158,7 +158,7 @@ export declare class PopoverEditCellSpanMatTableExample {
 
 export declare class PopoverEditExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<PopoverEditExamplesModule, [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample], [typeof i5.CommonModule, typeof i6.MatLegacyButtonModule, typeof i7.MatLegacyCheckboxModule, typeof i8.MatIconModule, typeof i9.MatLegacyInputModule, typeof i10.MatLegacyListModule, typeof i11.MatPopoverEditModule, typeof i12.MatLegacySnackBarModule, typeof i13.MatLegacyTableModule, typeof i14.FormsModule], [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<PopoverEditExamplesModule, [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample], [typeof i5.CommonModule, typeof i6.MatButtonModule, typeof i7.MatCheckboxModule, typeof i8.MatIconModule, typeof i9.MatInputModule, typeof i10.MatListModule, typeof i11.MatPopoverEditModule, typeof i12.MatSnackBarModule, typeof i13.MatTableModule, typeof i14.FormsModule], [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<PopoverEditExamplesModule>;
 }
 
@@ -176,7 +176,7 @@ export declare class PopoverEditMatTableExample {
     readonly weightValues: FormValueContainer<PeriodicElement, any>;
     readonly typeValues: FormValueContainer<PeriodicElement, any>;
     readonly fantasyValues: FormValueContainer<PeriodicElement, any>;
-    constructor(_snackBar: MatLegacySnackBar);
+    constructor(_snackBar: MatSnackBar);
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     onSubmitType(element: PeriodicElement, f: NgForm): void;

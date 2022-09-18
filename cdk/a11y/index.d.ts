@@ -5,13 +5,13 @@ import { FocusMonitor } from '@angular/cdk/a11y';
 import { FocusOrigin } from '@angular/cdk/a11y';
 import * as i0 from '@angular/core';
 import * as i4 from '@angular/cdk/a11y';
-import * as i5 from '@angular/material/legacy-select';
+import * as i5 from '@angular/material/select';
 import { NgZone } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 
 export declare class CdkA11yExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkA11yExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkA11yExamplesModule, [typeof i1.FocusMonitorDirectivesExample, typeof i2.FocusMonitorFocusViaExample, typeof i3.FocusMonitorOverviewExample], [typeof i4.A11yModule, typeof i5.MatLegacySelectModule], [typeof i1.FocusMonitorDirectivesExample, typeof i2.FocusMonitorFocusViaExample, typeof i3.FocusMonitorOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkA11yExamplesModule, [typeof i1.FocusMonitorDirectivesExample, typeof i2.FocusMonitorFocusViaExample, typeof i3.FocusMonitorOverviewExample], [typeof i4.A11yModule, typeof i5.MatSelectModule], [typeof i1.FocusMonitorDirectivesExample, typeof i2.FocusMonitorFocusViaExample, typeof i3.FocusMonitorOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<CdkA11yExamplesModule>;
 }
 

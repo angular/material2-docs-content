@@ -1770,7 +1770,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "button-harness": {
         "packagePath": "material/button/button-harness",
-        "title": "Testing with MatLegacyButtonHarness",
+        "title": "Testing with MatButtonHarness",
         "componentName": "ButtonHarnessExample",
         "files": [
             "button-harness-example.ts",
@@ -4402,8 +4402,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "StepperHeaderPositionExample",
         "files": [
             "stepper-header-position-example.ts",
-            "stepper-header-position-example.html",
-            "stepper-header-position-example.css"
+            "stepper-header-position-example.html"
         ],
         "selector": "stepper-header-position-example",
         "additionalComponents": [],
@@ -4453,8 +4452,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "StepperLazyContentExample",
         "files": [
             "stepper-lazy-content-example.ts",
-            "stepper-lazy-content-example.html",
-            "stepper-lazy-content-example.css"
+            "stepper-lazy-content-example.html"
         ],
         "selector": "stepper-lazy-content-example",
         "additionalComponents": [],
@@ -5048,8 +5046,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "TableWithRipplesExample",
         "files": [
             "table-with-ripples-example.ts",
-            "table-with-ripples-example.html",
-            "table-with-ripples-example.css"
+            "table-with-ripples-example.html"
         ],
         "selector": "table-with-ripples-example",
         "additionalComponents": [],
@@ -5653,8 +5650,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "TreeFlatOverviewExample",
         "files": [
             "tree-flat-overview-example.ts",
-            "tree-flat-overview-example.html",
-            "tree-flat-overview-example.css"
+            "tree-flat-overview-example.html"
         ],
         "selector": "tree-flat-overview-example",
         "additionalComponents": [],
@@ -5687,8 +5683,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "TreeLoadmoreExample",
         "files": [
             "tree-loadmore-example.ts",
-            "tree-loadmore-example.html",
-            "tree-loadmore-example.css"
+            "tree-loadmore-example.html"
         ],
         "selector": "tree-loadmore-example",
         "additionalComponents": [],

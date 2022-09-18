@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {HttpClient} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common/http&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component, ViewChild, AfterViewInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyPaginator} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-paginator&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatPaginator} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSort, SortDirection} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
 <span class="hljs-keyword">import</span> {merge, Observable, <span class="hljs-keyword">of</span> <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {catchError, map, startWith, switchMap} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
@@ -22,7 +22,7 @@
   isLoadingResults = <span class="hljs-literal">true</span>;
   isRateLimitReached = <span class="hljs-literal">false</span>;
 
-  <span class="hljs-meta">@ViewChild</span>(MatLegacyPaginator) paginator: MatLegacyPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
   <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _httpClient: HttpClient</span>)</span> {}

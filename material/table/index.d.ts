@@ -6,13 +6,13 @@ import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as i0 from '@angular/core';
 import * as i32 from '@angular/common';
-import * as i33 from '@angular/material/legacy-button';
+import * as i33 from '@angular/material/button';
 import * as i34 from '@angular/material/button-toggle';
-import * as i35 from '@angular/material/legacy-checkbox';
+import * as i35 from '@angular/material/checkbox';
 import * as i36 from '@angular/material/icon';
-import * as i37 from '@angular/material/legacy-input';
-import * as i38 from '@angular/material/legacy-paginator';
-import * as i39 from '@angular/material/legacy-progress-spinner';
+import * as i37 from '@angular/material/input';
+import * as i38 from '@angular/material/paginator';
+import * as i39 from '@angular/material/progress-spinner';
 import * as i40 from '@angular/material/core';
 import * as i41 from '@angular/material/sort';
 import * as i42 from '@angular/material/table';
@@ -22,8 +22,8 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { MatColumnDef } from '@angular/material/table';
 import { MatHeaderRowDef } from '@angular/material/table';
-import { MatLegacyPaginator } from '@angular/material/legacy-paginator';
 import { MatNoDataRow } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatRowDef } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
@@ -501,7 +501,7 @@ export declare class TableDynamicObservableDataExample {
 
 export declare class TableExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable], [typeof i32.CommonModule, typeof i33.MatLegacyButtonModule, typeof i34.MatButtonToggleModule, typeof i35.MatLegacyCheckboxModule, typeof i36.MatIconModule, typeof i37.MatLegacyInputModule, typeof i38.MatLegacyPaginatorModule, typeof i39.MatLegacyProgressSpinnerModule, typeof i40.MatRippleModule, typeof i41.MatSortModule, typeof i42.MatTableModule, typeof i43.CdkTableModule, typeof i44.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable], [typeof i32.CommonModule, typeof i33.MatButtonModule, typeof i34.MatButtonToggleModule, typeof i35.MatCheckboxModule, typeof i36.MatIconModule, typeof i37.MatInputModule, typeof i38.MatPaginatorModule, typeof i39.MatProgressSpinnerModule, typeof i40.MatRippleModule, typeof i41.MatSortModule, typeof i42.MatTableModule, typeof i43.CdkTableModule, typeof i44.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<TableExamplesModule>;
 }
 
@@ -601,7 +601,7 @@ export declare class TableHttpExample implements AfterViewInit {
     resultsLength: number;
     isLoadingResults: boolean;
     isRateLimitReached: boolean;
-    paginator: MatLegacyPaginator;
+    paginator: MatPaginator;
     sort: MatSort;
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
@@ -627,7 +627,7 @@ export declare class TableMultipleHeaderFooterExample {
 export declare class TableOverviewExample implements AfterViewInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<UserData>;
-    paginator: MatLegacyPaginator;
+    paginator: MatPaginator;
     sort: MatSort;
     constructor();
     ngAfterViewInit(): void;
@@ -642,7 +642,7 @@ export declare class TableOverviewExample implements AfterViewInit {
 export declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<PeriodicElement_11, MatTableDataSourcePaginator>;
-    paginator: MatLegacyPaginator;
+    paginator: MatPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never, false, never>;

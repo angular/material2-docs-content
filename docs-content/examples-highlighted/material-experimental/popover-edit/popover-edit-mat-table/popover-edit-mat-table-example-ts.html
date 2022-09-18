@@ -2,7 +2,7 @@
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormValueContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgForm} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacySnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-snack-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> ElementType = <span class="hljs-string">&#x27;Metal&#x27;</span> | <span class="hljs-string">&#x27;Semimetal&#x27;</span> | <span class="hljs-string">&#x27;Nonmetal&#x27;</span>;
@@ -220,7 +220,7 @@
   <span class="hljs-keyword">readonly</span> typeValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
   <span class="hljs-keyword">readonly</span> fantasyValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _snackBar: MatLegacySnackBar</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _snackBar: MatSnackBar</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">onSubmitName</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
     <span class="hljs-keyword">if</span> (!f.valid) {

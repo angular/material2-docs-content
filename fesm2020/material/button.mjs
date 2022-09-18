@@ -32,7 +32,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-next.1", 
         }] });
 
 /**
- * @title Testing with MatLegacyButtonHarness
+ * @title Testing with MatButtonHarness
  */
 class ButtonHarnessExample {
     constructor() {

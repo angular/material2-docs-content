@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import * as i5 from '@angular/material/legacy-button';
+import * as i5 from '@angular/material/button';
 import * as i6 from '@angular/material/icon';
 import * as i7 from '@angular/material/toolbar';
 
@@ -37,7 +37,7 @@ export declare class ToolbarBasicExample {
 
 export declare class ToolbarExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ToolbarExamplesModule, [typeof i1.ToolbarBasicExample, typeof i2.ToolbarHarnessExample, typeof i3.ToolbarMultirowExample, typeof i4.ToolbarOverviewExample], [typeof i5.MatLegacyButtonModule, typeof i6.MatIconModule, typeof i7.MatToolbarModule], [typeof i1.ToolbarBasicExample, typeof i2.ToolbarHarnessExample, typeof i3.ToolbarMultirowExample, typeof i4.ToolbarOverviewExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ToolbarExamplesModule, [typeof i1.ToolbarBasicExample, typeof i2.ToolbarHarnessExample, typeof i3.ToolbarMultirowExample, typeof i4.ToolbarOverviewExample], [typeof i5.MatButtonModule, typeof i6.MatIconModule, typeof i7.MatToolbarModule], [typeof i1.ToolbarBasicExample, typeof i2.ToolbarHarnessExample, typeof i3.ToolbarMultirowExample, typeof i4.ToolbarOverviewExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ToolbarExamplesModule>;
 }
 

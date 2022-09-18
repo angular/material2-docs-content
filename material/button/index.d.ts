@@ -10,7 +10,7 @@ export declare class ButtonExamplesModule {
 }
 
 /**
- * @title Testing with MatLegacyButtonHarness
+ * @title Testing with MatButtonHarness
  */
 export declare class ButtonHarnessExample {
     clicked: boolean;
