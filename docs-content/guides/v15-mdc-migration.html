@@ -1,0 +1,743 @@
+<div class="docs-markdown"><h1>Migrating to MDC-based Angular Material Components</h1><p>In Angular Material v15, many of the components have been refactored to be based on the official 
+<a href="https://github.com/material-components/material-components-web">Material Design Components for Web (MDC)</a>.
+The components from the following imports have been refactored:</p>
+<table>
+<thead>
+<tr>
+<th>Import path</th>
+<th>Summary of changes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@angular/material/autocomplete</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/button</td>
+<td>Style changes, API changes</td>
+</tr>
+<tr>
+<td>@angular/material/card</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/checkbox</td>
+<td>Style changes, changes to event behavior</td>
+</tr>
+<tr>
+<td>@angular/material/chips</td>
+<td>Complete rewrite</td>
+</tr>
+<tr>
+<td>@angular/material/core</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/dialog</td>
+<td>Style changes, changes to change detection behavior</td>
+</tr>
+<tr>
+<td>@angular/material/form-field</td>
+<td>Style changes, some appearances removed, API changes</td>
+</tr>
+<tr>
+<td>@angular/material/input</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/list</td>
+<td>Style changes, API changes</td>
+</tr>
+<tr>
+<td>@angular/material/menu</td>
+<td>Style changes, API changes</td>
+</tr>
+<tr>
+<td>@angular/material/paginator</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/progress-bar</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/progress-spinner</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/radio</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/select</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/slide-toggle</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/slider</td>
+<td>Complete rewrite</td>
+</tr>
+<tr>
+<td>@angular/material/snack-bar</td>
+<td>Style changes, API changes</td>
+</tr>
+<tr>
+<td>@angular/material/table</td>
+<td>Style changes only</td>
+</tr>
+<tr>
+<td>@angular/material/tabs</td>
+<td>Style changes, API changes</td>
+</tr>
+<tr>
+<td>@angular/material/tooltip</td>
+<td>Style changes only</td>
+</tr>
+</tbody></table>
+<p>The refactored components offer several benefits over the old implementations, including:</p>
+<ul>
+<li>Improved accessibility</li>
+<li>Better adherence to the Material Design spec</li>
+<li>Faster adoption of future versions of the Material Design spec, due to being based on common 
+infrastructure</li>
+</ul>
+
+        <h2 id="what-has-changed" class="docs-header-link">
+          <span header-link="what-has-changed"></span>
+          What has changed?
+        </h2>
+      <p>The new components have different internal DOM and CSS styles. However, most of the TypeScript APIs
+and component/directive selectors for the new components have been kept as close as possible to the
+old implementation. This makes it straightforward to migrate your application and get it running
+with the new components.</p>
+<p>Due to the new DOM and CSS, you will likely find that some styles in your application need to be
+adjusted, particularly if your CSS is overriding styles on internal elements on any of the migrated
+components.</p>
+<p>There are a few components with larger changes to their APIs that were necessary in order to
+integrate with MDC. These components include:</p>
+<ul>
+<li>form-field</li>
+<li>chips</li>
+<li>slider</li>
+<li>list</li>
+</ul>
+<p>See below for a <a href="#comprehensive-list-of-changes">comprehensive list of changes</a> for all components.</p>
+<p>The old implementation of each new component is now deprecated, but still available from a &quot;legacy&quot;
+import. For example, you can import the old <code>mat-button</code> implementation can be used by importing the
+legacy button module.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatLegacyButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-button&#x27;</span>;
+</code></pre>
+
+        <h2 id="how-to-migrate" class="docs-header-link">
+          <span header-link="how-to-migrate"></span>
+          How to Migrate
+        </h2>
+      <p>You can start your migration by running Angular Material&#39;s automated refactoring tool. This tool,
+implemented as an <a href="https://angular.io/guide/schematics">Angular Schematic</a>, updates the majority
+your code to the new component versions. While some follow-up is necessary, you can reduce the
+manual effort by following these best practices:</p>
+<p>You can reduce the amount of manual effort needed by ensuring that your application follows good
+practices before migrating.</p>
+<ul>
+<li>Avoid overriding styles on internal Angular Material elements in your CSS as much as possible. If
+you find yourself frequently overriding styles on internal elements, consider using a component
+that is designed for more style customization, such as the ones available in the
+<a href="guide/cdk">Angular CDK</a>.</li>
+<li>Use <a href="/guide/using-component-harnesses">component harnesses</a> to interact with Angular Material
+components in tests rather than inspecting internal elements, properties, or methods of the
+component. Using component harnesses makes your tests easier to understand and more robust to
+changes in Angular Material</li>
+</ul>
+
+        <h3 id="1-update-to-angular-material-v15" class="docs-header-link">
+          <span header-link="1-update-to-angular-material-v15"></span>
+          1. Update to Angular Material v15
+        </h3>
+      <p>Angular Material includes a schematic to help migrate applications to use the new MDC-based
+components. To get started, upgrade your application to Angular Material 15.</p>
+<pre><code class="language-shell">ng update @angular/material^15
+</code></pre>
+<p>As part of this update, a schematic will run to automatically move your application to use the
+&quot;legacy&quot; imports containing the old component implementations. This provides a quick path to getting
+your application running on v15 with minimal manual changes.</p>
+
+        <h3 id="2-run-the-migration-tool" class="docs-header-link">
+          <span header-link="2-run-the-migration-tool"></span>
+          2. Run the migration tool
+        </h3>
+      <p>After upgrading to v15, you can run the migration tool to switch from the legacy component
+implementations to the new MDC-based ones.</p>
+<pre><code class="language-shell">ng generate # TODO(wagnermaciel): Insert command here.
+</code></pre>
+<p>This command updates your TypeScript, styles, and templates to the new implementations, updating as
+much as it can automatically.</p>
+
+        <h4 id="running-a-partial-migration" class="docs-header-link">
+          <span header-link="running-a-partial-migration"></span>
+          Running a Partial Migration
+        </h4>
+      <p>Depending on the size and complexity of your application, you may want to migrate a single component
+(or small group of components) at a time, rather than all at once. 
+TODO(wagnermaciel): Add details on this: script params, which components need to move together</p>
+<p>You may also want to migrate your app one module at a time instead of all together. You can use both
+the old implementation and new implementation in the same application, as long as they aren&#39;t used
+in the same <code>NgModule</code>. TODO(wagnermaciel): Add detail on this: script params.</p>
+
+        <h3 id="3-check-for-todos-left-by-the-migration-tool" class="docs-header-link">
+          <span header-link="3-check-for-todos-left-by-the-migration-tool"></span>
+          3. Check for TODOs left by the migration tool.
+        </h3>
+      <p>In situations where the migration tool is not able to automatically update your code, it will
+attempt to add comments for a human to follow up. These TODO comments follow a common format, so
+they can be easily identified.</p>
+<pre><code class="language-ts"><span class="hljs-comment">// TODO(wagnermaciel): Do we have a common format for all TODOs the script adds?</span>
+</code></pre>
+<p>To search for all comments left by the migration tool, search for <code>TODO(...):</code> in your IDE.</p>
+<p>TODO(amysorto): Can we have the schematic generate a CSV of TODOs that can be imported into Jira</p>
+
+        <h3 id="4-verify-your-application" class="docs-header-link">
+          <span header-link="4-verify-your-application"></span>
+          4. Verify Your Application
+        </h3>
+      <p>After running the migration and addressing the TODOs, manually verify that everything is working
+correctly. </p>
+<p>Run your tests and confirm that they pass. It&#39;s possible that your tests depended on internal DOM or
+async timing details of the old component implementations and may need to be updated. If you find
+you need to update some tests, consider using <a href="guide/using-component-harnesses">component harnesses</a> to
+make the tests more robust.</p>
+<p>Run your application and verify that the new components look right. Due to the changes in internal
+DOM and CSS of the components, you may need to tweak some of your application&#39;s styles.</p>
+
+        <h2 id="comprehensive-list-of-changes" class="docs-header-link">
+          <span header-link="comprehensive-list-of-changes"></span>
+          Comprehensive List of Changes
+        </h2>
+      
+        <h3 id="library-wide-changes" class="docs-header-link">
+          <span header-link="library-wide-changes"></span>
+          Library-wide Changes
+        </h3>
+      <ul>
+<li><p>Component size, color, spacing, shadows, and animations all change slightly across the board.
+These changes generally improve spec-compliance and accessibility.</p>
+</li>
+<li><p>CSS classes applied to components use the <code>mat-mdc</code> prefix, whereas before it was simply a <code>mat</code>
+prefix. Elements that roughly correspond to element in the old implementation have been given the
+same class name (aside from the prefix). For example, the button’s host class is <code>mat-mdc-button</code>
+instead of <code>mat-button</code>. However, not all elements in the previous implementation have an
+equivalent element in the new implementation.</p>
+</li>
+</ul>
+
+        <h3 id="core-styles--theming" class="docs-header-link">
+          <span header-link="core-styles--theming"></span>
+          Core Styles &amp; Theming
+        </h3>
+      <ul>
+<li><p><code>mat.core()</code> no longer includes component typography styles. If your application was relying on
+this, you may need to add typography styles explicitly now. This can be done all at once:</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.all-component-typographies();
+</code></pre>
+<p>or individually for components your application uses:</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.button-typography();
+<span class="hljs-keyword">@include</span> mat.card-typography();
+<span class="hljs-comment">// ...</span>
+</code></pre>
+</li>
+<li><p>Default typography levels defined by <code>mat.define-typography-config</code> have been updated to reflect
+changes to the Material Design spec.</p>
+</li>
+<li><p>All components now have themeable density. Styles for the default density level (0) will be
+included by default when you include a theme mixin.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-variable">$theme</span>: mat.define-light-theme((
+  color: ...
+));
+
+<span class="hljs-comment">// Adds density level 0 styles</span>
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$theme</span>);
+</code></pre>
+<p>If you prefer a different default density level, you can set it in your theme config:</p>
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-light-theme((
+  color: ...,
+  density: -<span class="hljs-number">1</span>
+));
+</code></pre>
+</li>
+</ul>
+<p>TODO(mmalerba): link to density docs once they exist.</p>
+
+        <h3 id="autocomplete" class="docs-header-link">
+          <span header-link="autocomplete"></span>
+          Autocomplete
+        </h3>
+      <ul>
+<li>Long options now wrap by default instead of truncating.</li>
+</ul>
+
+        <h3 id="button" class="docs-header-link">
+          <span header-link="button"></span>
+          Button
+        </h3>
+      <ul>
+<li><p>Accessibility: Icon buttons are now 48px instead of 40px.</p>
+</li>
+<li><p>Accessibility: Buttons have a slightly different hover/focus/active colors, improving contrast 
+ratios.</p>
+</li>
+<li><p>Flat buttons have a different padding than raised buttons (this is apparent if you manually apply
+a background color to flat buttons).</p>
+</li>
+<li><p>Unthemed icon buttons may not show correctly on components such as snack-bars, since the container
+does not match the expected application theme background.</p>
+</li>
+<li><p>Overriding button colors may require additional selectors. Application authors should always
+prefer changing component colors via the supported theme API.</p>
+</li>
+<li><p>Outline buttons use a colored border instead of grey.</p>
+</li>
+<li><p>Icons in the button content will automatically be placed before the button text, unless the icon
+has the <code>iconPositionEnd</code> attribute.</p>
+</li>
+<li><p>FABs have extra attributes: <code>appearance</code> and <code>lowered</code>.</p>
+</li>
+<li><p>FABs default to an outline appearance instead of fill.</p>
+</li>
+<li><p>The button&#39;s theming mixins have been split into separate mixins for buttons
+(<code>mat.mdc-button-theme</code>), icon buttons (<code>mat.mdc-icon-button-theme</code>), and FABs
+(<code>mat.mdc-fab-theme</code>).</p>
+</li>
+<li><p>Icons next to button text now match font-size. Buttons with only icons and no text will not align
+properly (this does not apply to the icon-button).</p>
+</li>
+</ul>
+
+        <h3 id="card" class="docs-header-link">
+          <span header-link="card"></span>
+          Card
+        </h3>
+      <ul>
+<li><p>By default, mat-card does not apply any internal padding. Instead, this padding is defined on the
+card content areas: <code>&lt;mat-card-content&gt;</code>, <code>&lt;mat-card-header&gt;</code>, and <code>&lt;mat-card-actions&gt;</code>.</p>
+</li>
+<li><p><code>&lt;mat-card-content&gt;</code> no longer sets any typography styles, users are free to add whatever
+typography styles make sense for their application, either to <code>&lt;mat-card-content&gt;</code> itself or any
+child elements as appropriate.</p>
+</li>
+</ul>
+
+        <h3 id="checkbox" class="docs-header-link">
+          <span header-link="checkbox"></span>
+          Checkbox
+        </h3>
+      <ul>
+<li><p>Clicks on the checkbox now trigger directly on the native checkbox element rather than a shim div.
+Native checkboxes have bizarre behavior when calling <code>preventDefault</code> on their <code>click</code> event, so
+users should not call <code>preventDefault</code> on <code>click</code>.</p>
+</li>
+<li><p>Accessibility: Checkbox touch targets are larger, now 40px instead of 16px, which is more
+accessible.</p>
+</li>
+<li><p>Checkbox color may be changed to white or black due to a change in heuristics based on the
+application’s theme. Previously, the check’s color would be set to the theme’s background color.
+With MDC, it is determined by whether white or black has the most contrast against the primary
+color.</p>
+</li>
+<li><p>Accessibility: Focus state is slightly darker, improving contrast ratio</p>
+</li>
+<li><p>Many checkboxes on the page may cause the animation to seem slow</p>
+</li>
+<li><p>Text styles will not be inherited; you will need to specifically target the checkbox’s <code>label</code>.</p>
+</li>
+<li><p>After toggling a checkbox with the mouse, the ripple will remain visible instead of animating out.</p>
+</li>
+</ul>
+
+        <h3 id="chips" class="docs-header-link">
+          <span header-link="chips"></span>
+          Chips
+        </h3>
+      <ul>
+<li><p>The chips component has been split into multiple variants corresponding with more appropriate
+interaction patterns for accessibility. The original <code>mat-chip-list</code> used <code>role=&quot;listbox&quot;</code>, but
+this interaction pattern is not suited for all use-cases. The new chips have:</p>
+<ul>
+<li><p><code>&lt;mat-chip-listbox&gt;</code> with <code>&lt;mat-chip-option&gt;</code> - this is the closest to the previous interaction
+pattern. This is the only variant that supports selection state for chips. This pattern aligns
+with the filter chips pattern specified in the Material Design spec. This pattern should be used
+when you want the user to select one or more values from a list of options.</p>
+</li>
+<li><p><code>&lt;mat-chip-grid&gt;</code> with <code>&lt;mat-chip-row&gt;</code> - this pattern should be used for any text input + chips
+interaction.</p>
+</li>
+<li><p><code>&lt;mat-chip-set&gt;</code> with <code>&lt;mat-chip&gt;</code> - this variant has no accessibility pattern and assumes one
+will be applied at the application level. This allows the application to implement a custom
+accessibility pattern with the chips visuals.</p>
+</li>
+</ul>
+</li>
+<li><p>The migration tool always changes the legacy <code>&lt;mat-chip-list&gt;</code> to <code>&lt;mat-chip-listbox&gt;</code> to minimize
+differences before and after. You should separately consider changing to <code>&lt;mat-chip-grid&gt;</code> on a
+case-by-case basis.</p>
+</li>
+</ul>
+
+        <h3 id="dialog" class="docs-header-link">
+          <span header-link="dialog"></span>
+          Dialog
+        </h3>
+      <ul>
+<li><p>The <code>.mat-dialog-container</code> does not contain a 24px padding anymore. Instead, the inner dialog
+directives are responsible for adding the right padding. This will be apparent if your dialog does
+not use any of the directives like <code>mat-dialog-content</code>.</p>
+</li>
+<li><p><code>mat-dialog-content</code> uses the font-settings specified by the Material Design spec, which includes
+a rather roomy line-height. If you have an information-dense dialog that doesn&#39;t look good with 
+these settings, you can avoid using <code>&lt;mat-dialog-content&gt;</code> and just use a div with custom padding, 
+or use custom typography settings that can be applied with the <code>mat.mdc-dialog-typography</code> mixin.</p>
+</li>
+<li><p>The old dialog triggered an extra change detection, which may have masked change detection issues
+in your application that need to be fixed when migrating.</p>
+</li>
+</ul>
+
+        <h3 id="form-field" class="docs-header-link">
+          <span header-link="form-field"></span>
+          Form Field
+        </h3>
+      <ul>
+<li><p>The &quot;legacy&quot; and &quot;standard&quot; form-field appearance settings no longer exist, as these have been
+dropped from the Material Design spec.</p>
+</li>
+<li><p>The removed &quot;legacy&quot; appearance promoted input placeholders to the floating label if the label was
+not specified. All newer appearance settings require explicitly specifying a <code>&lt;mat-label&gt;</code> if one
+was not provided before. This change addresses an accessibility best practice of not using labels
+and placeholders interchangeably.</p>
+</li>
+<li><p>By default, MatFormField still reserves exactly one line of space below the field for hint or
+error text. However, there is a new option <code>@Input() subscriptSizing: &#39;fixed&#39;|&#39;dynamic&#39;</code>. When
+this setting is set to <code>fixed</code> (default), the form-field reserves enough space in the layout to
+show one line of hint or error text. When set to <code>dynamic</code>, the form-field expands and contracts
+the amount of space it takes in the layout to fit the error / hint that is currently shown.</p>
+</li>
+<li><p>The text inside <code>&lt;mat-hint&gt;</code> is larger and darker in order to meet W3C text guidelines.</p>
+</li>
+<li><p>While the previous form-field had a single directive for prefixes (<code>matPrefix</code>) and a single 
+directive for suffixes (<code>matSuffix</code>), the MDC-based form-field distinguishes between text
+prefix/suffixes which are baseline aligned with the input text, and icon prefix/suffixes which are
+center aligned in the form-field. Use <code>matTextPrefix</code> or <code>matTextSuffix</code> to indicate a text
+prefix/suffix, and <code>matIconPrefix</code> or <code>matIconSuffix</code> to indicate an icon prefix/suffix. The old
+<code>matSuffix</code> and <code>matPrefix</code> APIs will behave like icons, though they are now deprecated.</p>
+</li>
+<li><p>The <code>floatLabel</code> input no longer accepts <code>&#39;never&#39;</code>. <code>floatLabel=&quot;never&quot;</code> was only supported by the
+legacy form-field appearance which has been dropped. It was used to achieve a floating label that
+behaved like a placeholder. If you need this behavior, use the <code>placeholder</code> property on <code>&lt;input&gt;</code>
+instead.</p>
+</li>
+</ul>
+
+        <h3 id="input" class="docs-header-link">
+          <span header-link="input"></span>
+          Input
+        </h3>
+      <ul>
+<li><p>MatInput must be inside <code>&lt;mat-form-field&gt;</code>. Previously it was (unintentionally) possible to use an
+<code>&lt;input matInput&gt;</code> without the form field if the page loaded form field styles elsewhere.</p>
+</li>
+<li><p>The MDC-based MatInput hides the native calendar picker indicator associated with
+<code>&lt;input matInput type=&quot;date&quot;&gt;</code>, if you want this indicator to appear for your inputs, use the
+following styles:</p>
+<pre><code class="language-scss"><span class="hljs-selector-class">.mat-mdc-input-element</span>::-webkit-calendar-picker-indicator {
+  display: block;
+}
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="list" class="docs-header-link">
+          <span header-link="list"></span>
+          List
+        </h3>
+      <ul>
+<li><p>The API has been reworked to support text wrapping and better integration with the Material Design
+specification.</p>
+</li>
+<li><p>Previously, list items were commonly created using multiple <code>span</code> elements with the <code>matLine</code>
+directive applied. Each <code>span</code> resulting in a line, and the first one becoming the primary line.
+With the new API, the <code>matLine</code> directive has been split into two more granular and meaningful
+directives:</p>
+<ul>
+<li><code>matListItemTitle</code></li>
+<li><code>matListItemLine</code></li>
+</ul>
+</li>
+<li><p>Text outside of a <code>matListItemLine</code> (so-called &quot;unscoped content&quot;) will result in an additional
+line being acquired (as if the content was put into a line).</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  Second line
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>The amount of lines is automatically inferred. e.g. in the snippet above the list item will
+acquire space for two lines. With the new API you can now set an explicit number of lines on the
+<code>&lt;mat-list-item&gt;</code> to activate wrapping.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> <span class="hljs-attr">lines</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  This will text will wrap into the third line. Space for three lines is acquired by the list
+  item.
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+</code></pre>
+<p>Note that text inside a <code>matListItemTitle</code> or <code>matListItemLine</code> will never wrap. Only unscoped
+content will wrap/take up the remaining space based on explicit number of lines provided.</p>
+</li>
+<li><p>Aside from the differences in how lines are composed, some other directives have been renamed to
+use more explicit naming:</p>
+<ul>
+<li><code>matListIcon</code> is now <code>matListItemIcon</code></li>
+<li><code>matListAvatar</code> is now <code>matListItemAvatar</code></li>
+</ul>
+</li>
+<li><p>Lastly, also a new directive (<code>matListItemMeta</code>) is available to put content into the meta section
+of a list item (usually the end of the list item). Previously unscoped content in a list item was 
+put into the meta section.</p>
+</li>
+<li><p>Recommended migration steps for common use of a list item:</p>
+<ol>
+<li>Change the first <code>matLine</code> to <code>matListItemTitle</code></li>
+<li>Change all other <code>matLine</code>&#39;s to <code>matListItemLine</code></li>
+<li>Change all <code>matListIcon</code> to <code>matListItemIcon</code></li>
+<li>Change all <code>matListAvatar</code> to <code>matListItemAvatar</code></li>
+<li>Wrap all unscoped content (content outside a <code>matLine</code>) in a <code>matListItemMeta</code> container.</li>
+</ol>
+</li>
+</ul>
+
+        <h3 id="menu" class="docs-header-link">
+          <span header-link="menu"></span>
+          Menu
+        </h3>
+      <ul>
+<li><p>The icon for a menu item appears before the text, regardless of the order in the DOM.</p>
+<ul>
+<li><p>If you have a piece of content such as an <code>&lt;img&gt;</code> that you want to use in place of a
+<code>&lt;mat-icon&gt;</code> use <code>ngProjectAs=&quot;mat-icon&quot;</code> to project it into the icon slot.</p>
+</li>
+<li><p>If you need your icon to appear at the end of the item (not officially supported by the spec)
+you can wrap both the text and your icon in a span, e.g.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>end_icon<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>The text in menu items wrap instead of being hidden with an ellipses.</p>
+</li>
+</ul>
+
+        <h3 id="option--optgroup" class="docs-header-link">
+          <span header-link="option--optgroup"></span>
+          Option / Optgroup
+        </h3>
+      <ul>
+<li>Long options now wrap instead of truncating with an ellipsis.</li>
+</ul>
+
+        <h3 id="paginator" class="docs-header-link">
+          <span header-link="paginator"></span>
+          Paginator
+        </h3>
+      <ul>
+<li>The form-field inside of <code>mat-paginator</code> only supports the <code>appearance</code> options offered by the new
+form-field (<code>fill</code> and <code>outline</code>).</li>
+</ul>
+
+        <h3 id="progress-bar" class="docs-header-link">
+          <span header-link="progress-bar"></span>
+          Progress Bar
+        </h3>
+      <ul>
+<li><p>Hiding the bar with <code>visibility: hidden</code> will not hide all internal elements because they apply
+a <code>visibility: visible</code> style. Instead, style it with <code>opacity: 0</code> or <code>display: none</code>, or remove
+it completely with <code>ngIf</code>.</p>
+</li>
+<li><p>Height is always set to 4px and does not get shorter or taller using <code>height</code> styles.</p>
+</li>
+</ul>
+
+        <h3 id="progress-spinner" class="docs-header-link">
+          <span header-link="progress-spinner"></span>
+          Progress Spinner
+        </h3>
+      <ul>
+<li>Host element is no longer <code>display: block</code> which may affect layout. To fix layout issues add
+<code>display: block</code> back to the element.</li>
+</ul>
+
+        <h3 id="radio" class="docs-header-link">
+          <span header-link="radio"></span>
+          Radio
+        </h3>
+      <ul>
+<li>Radio-button labels are no longer <code>width: 100%</code>. This helps prevent users from accidentally
+selecting a radio when clicking on whitespace that appears inert on the page.</li>
+</ul>
+
+        <h3 id="select" class="docs-header-link">
+          <span header-link="select"></span>
+          Select
+        </h3>
+      <ul>
+<li><p>MatSelect no longer aligns the selected option in the dropdown menu with the trigger text.</p>
+</li>
+<li><p>Long options now wrap by default instead of truncating.</p>
+</li>
+<li><p>Previously the dropdown menu width could be wider than the parent form-field, but now the dropdown
+is the same width as the form-field</p>
+</li>
+</ul>
+
+        <h3 id="slide-toggle" class="docs-header-link">
+          <span header-link="slide-toggle"></span>
+          Slide Toggle
+        </h3>
+      <ul>
+<li><p>Accessibility: MDC-based version uses <code>&lt;button role=&quot;switch&quot;&gt;</code> to represent the toggle rather than
+<code>&lt;input type=&quot;checkbox&quot;&gt;</code></p>
+</li>
+<li><p>Accessibility: The touch target is much larger than the slide toggle; to match the legacy size,
+you can provide a <code>-5</code> density to the slide toggle’s theme mixin:</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.slide-toggle-theme(
+  map-merge(<span class="hljs-variable">$theme</span>, (<span class="hljs-attribute">density</span>: -<span class="hljs-number">5</span>))
+);
+</code></pre>
+</li>
+<li><p>The label is closer to the enabled toggle</p>
+</li>
+</ul>
+
+        <h3 id="slider" class="docs-header-link">
+          <span header-link="slider"></span>
+          Slider
+        </h3>
+      <ul>
+<li><p>Accessibility: sliders now work with mobile device screen readers.</p>
+</li>
+<li><p>To accommodate range sliders, the implementation has changed from the <code>&lt;mat-slider&gt;</code> element being
+the form control to the <code>&lt;mat-slider&gt;</code> element containing 1-2 <code>&lt;input&gt;</code> elements (the slider
+&quot;thumbs&quot;) that act as the form control(s). The value, associated events (<code>input</code>, <code>change</code>), and
+labels (<code>aria-label</code>) now live on the <code>&lt;input&gt;</code> elements instead.</p>
+</li>
+<li><p>Vertical sliders and inverted sliders are no longer supported, as they are no longer part of the
+Material Design spec. TODO(jelbourn): should we add a note that vertical sliders are likely to
+return in a future version?</p>
+</li>
+<li><p>Range sliders are now supported. TODO(wagnermaciel): add more about this.</p>
+</li>
+</ul>
+
+        <h3 id="snack-bar" class="docs-header-link">
+          <span header-link="snack-bar"></span>
+          Snack Bar
+        </h3>
+      <ul>
+<li><p>For simple, text-based snack-bars, there are no significant changes.</p>
+</li>
+<li><p>For simple snack-bars with an action button, they use the MDC-based mat-button, so your
+application will need to include the Sass theming mixin for the MDC-based button</p>
+</li>
+<li><p>For snack-bars that use custom structured content (i.e. calls to <code>MatSnackBar.openFromComponent</code>
+and <code>MatSnackBar.openFromTemplate</code>), you should use the following new directives to annotate your
+content:</p>
+<ul>
+<li><code>matSnackBarLabel</code> to mark the text displayed to users</li>
+<li><code>matSnackBarActions</code> to mark the element containing the action buttons</li>
+<li><code>matSnackBarAction</code> to mark individual action buttons</li>
+<li>If you do not specify any of these directives, it will treat the entire custom component /
+template as text.</li>
+</ul>
+</li>
+<li><p>Tests that open a snack-bar now require calling <code>flush()</code> before attempting to access the content
+of the snackbar. Updating your tests to use <a href="guide/using-component-harnesses">component harnesses</a>
+before running the migration tool should make this transition seamless.</p>
+</li>
+</ul>
+
+        <h3 id="table" class="docs-header-link">
+          <span header-link="table"></span>
+          Table
+        </h3>
+      <ul>
+<li><p>Every cell has <code>16px</code> left and right padding. Previously only a <code>24px</code> padding applied to the
+leftmost and rightmost cells.</p>
+</li>
+<li><p>Header text size and color matches the data rows.</p>
+</li>
+<li><p>Text will not wrap by default; to enable text wrapping, apply the <code>white-space: normal</code> style to
+the table cell.</p>
+</li>
+<li><p>Row height is <code>52px</code> instead of <code>48px</code>.</p>
+</li>
+<li><p>Cells have box-sizing <code>border-box</code> instead of <code>content-box</code>. This may affect custom width styles.</p>
+</li>
+<li><p>The paginator property of the <code>MatTableDataSource</code> has a generic interface that matches most of
+the paginator API. You may need to explicitly type the paginator to access the full API, e.g.
+<code>new MatTableDataSource&lt;MyData, MatPaginator&gt;();</code></p>
+</li>
+<li><p>MDC-based flex tables (<code>&lt;mat-table&gt;</code>) display borders on their cells instead of the rows.</p>
+</li>
+<li><p>The last row of the table no longer has a bottom border since the table is assumed to be
+surrounded by a border.</p>
+</li>
+<li><p>Flex table row height is set using <code>height</code> instead of <code>min-height</code>.</p>
+</li>
+</ul>
+
+        <h3 id="tabs" class="docs-header-link">
+          <span header-link="tabs"></span>
+          Tabs
+        </h3>
+      <ul>
+<li><p>Accessibility: <code>MatTabNav</code> now throws an error if the <code>[tabPanel]</code> input is not provided. The
+<code>[tabPanel]</code> input and associated <code>mat-tab-nav-panel</code> component improve accessibility.
+TODO(crisbeto): This point needs further elaboration.</p>
+</li>
+<li><p>The selected tab label now uses a text color from the theme, matching the selection indicator.</p>
+</li>
+<li><p>Tab header labels default to stretching the width of the container. This can be turned off by
+providing <code>mat-stretch-tabs=&quot;false&quot;</code>.</p>
+</li>
+</ul>
+
+        <h3 id="tooltip" class="docs-header-link">
+          <span header-link="tooltip"></span>
+          Tooltip
+        </h3>
+      <ul>
+<li><p>Accessibility: the background color is now completely opaque, preventing text bleed-through.</p>
+</li>
+<li><p>The default font-size has changed from <code>10px</code> to <code>12px</code>.</p>
+</li>
+<li><p>The line height has changed from <code>normal</code> to <code>16px</code>.</p>
+</li>
+<li><p>Text overflow has changed from <code>ellipsis</code> to <code>clip</code>.</p>
+</li>
+<li><p>The tooltip now has a min-width of 40px.</p>
+</li>
+<li><p>The text alignment for single line tooltips is now <code>center</code> and changes to <code>left</code> for multiline
+tooltips.</p>
+</li>
+</ul>
+</div>
