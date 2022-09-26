@@ -1,4 +1,4 @@
-<div class="docs-markdown"><h1>Migrating to MDC-based Angular Material Components</h1><p>In Angular Material v15, many of the components have been refactored to be based on the official 
+<div class="docs-markdown"><h1>Migrating to MDC-based Angular Material Components</h1><p>In Angular Material v15, many of the components have been refactored to be based on the official
 <a href="https://github.com/material-components/material-components-web">Material Design Components for Web (MDC)</a>.
 The components from the following imports have been refactored:</p>
 <table>
@@ -101,7 +101,7 @@ The components from the following imports have been refactored:</p>
 <ul>
 <li>Improved accessibility</li>
 <li>Better adherence to the Material Design spec</li>
-<li>Faster adoption of future versions of the Material Design spec, due to being based on common 
+<li>Faster adoption of future versions of the Material Design spec, due to being based on common
 infrastructure</li>
 </ul>
 
@@ -180,7 +180,7 @@ much as it can automatically.</p>
           Running a Partial Migration
         </h4>
       <p>Depending on the size and complexity of your application, you may want to migrate a single component
-(or small group of components) at a time, rather than all at once. 
+(or small group of components) at a time, rather than all at once.
 TODO(wagnermaciel): Add details on this: script params, which components need to move together</p>
 <p>You may also want to migrate your app one module at a time instead of all together. You can use both
 the old implementation and new implementation in the same application, as long as they aren&#39;t used
@@ -203,7 +203,7 @@ they can be easily identified.</p>
           4. Verify Your Application
         </h3>
       <p>After running the migration and addressing the TODOs, manually verify that everything is working
-correctly. </p>
+correctly.</p>
 <p>Run your tests and confirm that they pass. It&#39;s possible that your tests depended on internal DOM or
 async timing details of the old component implementations and may need to be updated. If you find
 you need to update some tests, consider using <a href="guide/using-component-harnesses">component harnesses</a> to
@@ -290,7 +290,7 @@ included by default when you include a theme mixin.</p>
       <ul>
 <li><p>Accessibility: Icon buttons are now 48px instead of 40px.</p>
 </li>
-<li><p>Accessibility: Buttons have a slightly different hover/focus/active colors, improving contrast 
+<li><p>Accessibility: Buttons have a slightly different hover/focus/active colors, improving contrast
 ratios.</p>
 </li>
 <li><p>Flat buttons have a different padding than raised buttons (this is apparent if you manually apply
@@ -400,8 +400,8 @@ directives are responsible for adding the right padding. This will be apparent i
 not use any of the directives like <code>mat-dialog-content</code>.</p>
 </li>
 <li><p><code>mat-dialog-content</code> uses the font-settings specified by the Material Design spec, which includes
-a rather roomy line-height. If you have an information-dense dialog that doesn&#39;t look good with 
-these settings, you can avoid using <code>&lt;mat-dialog-content&gt;</code> and just use a div with custom padding, 
+a rather roomy line-height. If you have an information-dense dialog that doesn&#39;t look good with
+these settings, you can avoid using <code>&lt;mat-dialog-content&gt;</code> and just use a div with custom padding,
 or use custom typography settings that can be applied with the <code>mat.mdc-dialog-typography</code> mixin.</p>
 </li>
 <li><p>The old dialog triggered an extra change detection, which may have masked change detection issues
@@ -430,7 +430,7 @@ the amount of space it takes in the layout to fit the error / hint that is curre
 </li>
 <li><p>The text inside <code>&lt;mat-hint&gt;</code> is larger and darker in order to meet W3C text guidelines.</p>
 </li>
-<li><p>While the previous form-field had a single directive for prefixes (<code>matPrefix</code>) and a single 
+<li><p>While the previous form-field had a single directive for prefixes (<code>matPrefix</code>) and a single
 directive for suffixes (<code>matSuffix</code>), the MDC-based form-field distinguishes between text
 prefix/suffixes which are baseline aligned with the input text, and icon prefix/suffixes which are
 center aligned in the form-field. Use <code>matTextPrefix</code> or <code>matTextSuffix</code> to indicate a text
@@ -492,8 +492,8 @@ acquire space for two lines. With the new API you can now set an explicit number
 <code>&lt;mat-list-item&gt;</code> to activate wrapping.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> <span class="hljs-attr">lines</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  This will text will wrap into the third line. Space for three lines is acquired by the list
-  item.
+  This text will wrap into the third line. Space for three lines is acquired by the
+  list item.
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
 </code></pre>
 <p>Note that text inside a <code>matListItemTitle</code> or <code>matListItemLine</code> will never wrap. Only unscoped
@@ -507,7 +507,7 @@ use more explicit naming:</p>
 </ul>
 </li>
 <li><p>Lastly, also a new directive (<code>matListItemMeta</code>) is available to put content into the meta section
-of a list item (usually the end of the list item). Previously unscoped content in a list item was 
+of a list item (usually the end of the list item). Previously unscoped content in a list item was
 put into the meta section.</p>
 </li>
 <li><p>Recommended migration steps for common use of a list item:</p>
