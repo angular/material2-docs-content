@@ -709,28 +709,26 @@ before running the migration tool should make this transition seamless.</p>
           Table
         </h3>
       <ul>
-<li><p>Every cell has <code>16px</code> left and right padding. Previously only a <code>24px</code> padding applied to the
-leftmost and rightmost cells.</p>
+<li><p>All cells have a <code>16px</code> left and right padding instead of just the leftmost and rightmost cells having a padding of <code>24px</code>.</p>
 </li>
-<li><p>Header text size and color matches the data rows.</p>
+<li><p>Header cells have the same color and text size as the data rows instead of having more grayish and smaller text.</p>
 </li>
-<li><p>Text will not wrap by default; to enable text wrapping, apply the <code>white-space: normal</code> style to
-the table cell.</p>
+<li><p>Cell text no longer wraps by default. Cell wrapping can be enabled by applying <code>white-space: normal</code> to
+the table cells.</p>
 </li>
 <li><p>Row height is <code>52px</code> instead of <code>48px</code>.</p>
 </li>
-<li><p>Cells have box-sizing <code>border-box</code> instead of <code>content-box</code>. This may affect custom width styles.</p>
+<li><p>Cell box-sizing is <code>border-box</code> instead of <code>content-box</code>. This may affect custom width styles.</p>
+</li>
+<li><p>The table&#39;s last row does not include a bottom border row because the table is expected to have a border.</p>
 </li>
 <li><p>The paginator property of the <code>MatTableDataSource</code> has a generic interface that matches most of
 the paginator API. You may need to explicitly type the paginator to access the full API, e.g.
 <code>new MatTableDataSource&lt;MyData, MatPaginator&gt;();</code></p>
 </li>
-<li><p>MDC-based flex tables (<code>&lt;mat-table&gt;</code>) display borders on their cells instead of the rows.</p>
+<li><p>Flex tables (<code>&lt;mat-table&gt;</code>) display a border on the cells instead of rows.</p>
 </li>
-<li><p>The last row of the table no longer has a bottom border since the table is assumed to be
-surrounded by a border.</p>
-</li>
-<li><p>Flex table row height is set using <code>height</code> instead of <code>min-height</code>.</p>
+<li><p>Flex table (<code>&lt;mat-table&gt;</code>) row height is set with <code>height</code> instead of <code>min-height</code>.</p>
 </li>
 </ul>
 
