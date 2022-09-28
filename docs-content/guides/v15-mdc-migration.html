@@ -280,7 +280,14 @@ included by default when you include a theme mixin.</p>
           Autocomplete
         </h3>
       <ul>
-<li>Long options now wrap by default instead of truncating.</li>
+<li><p>Long options now wrap instead of truncating.</p>
+</li>
+<li><p>Option heights are no longer capped at <code>48px</code>.</p>
+</li>
+<li><p>Option list now has an <code>8px</code> top and bottom padding.</p>
+</li>
+<li><p>Options list now has an animation when opening and closing.</p>
+</li>
 </ul>
 
         <h3 id="button" class="docs-header-link">
@@ -541,7 +548,11 @@ you can wrap both the text and your icon in a span, e.g.</p>
 </li>
 </ul>
 </li>
-<li><p>The text in menu items wrap instead of being hidden with an ellipses.</p>
+<li><p>The text in menu items wraps instead of being hidden with an ellipses.</p>
+</li>
+<li><p>Menu item heights are no longer capped at <code>48px</code>.</p>
+</li>
+<li><p>Menu elevation starts from level 8, instead of level 4.</p>
 </li>
 </ul>
 
@@ -589,18 +600,36 @@ it completely with <code>ngIf</code>.</p>
           Radio
         </h3>
       <ul>
-<li>Radio-button labels are no longer <code>width: 100%</code>. This helps prevent users from accidentally
-selecting a radio when clicking on whitespace that appears inert on the page.</li>
+<li><p>Radio button labels are no longer <code>width: 100%</code>. This helps prevent users from accidentally
+selecting a radio when clicking on whitespace that appears inert on the page.</p>
+</li>
+<li><p>Labels are smaller and further away from the radio button to align with the Material Design spec.</p>
+</li>
+<li><p>Accessibility: The touch target is much larger than the radio button; to match the legacy size,
+you can provide a <code>-5</code> density to the radio button&#39;s theme mixin:</p>
+</li>
 </ul>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.radio-theme(
+  map-merge(<span class="hljs-variable">$theme</span>, (<span class="hljs-attribute">density</span>: -<span class="hljs-number">5</span>))
+);
+</code></pre>
 
         <h3 id="select" class="docs-header-link">
           <span header-link="select"></span>
           Select
         </h3>
       <ul>
-<li><p>MatSelect no longer aligns the selected option in the dropdown menu with the trigger text.</p>
+<li><p><code>MatSelect</code> no longer aligns the selected option in the dropdown menu with the trigger text.</p>
 </li>
-<li><p>Long options now wrap by default instead of truncating.</p>
+<li><p>Long options now wrap instead of truncating.</p>
+</li>
+<li><p>Option heights are no longer capped at <code>48px</code>.</p>
+</li>
+<li><p>Option list now has an <code>8px</code> top and bottom padding.</p>
+</li>
+<li><p>Option list animation has changed.</p>
 </li>
 <li><p>Previously the dropdown menu width could be wider than the parent form-field, but now the dropdown
 is the same width as the form-field</p>
@@ -710,10 +739,19 @@ surrounded by a border.</p>
           Tabs
         </h3>
       <ul>
-<li><p>Accessibility: <code>MatTabNav</code> now throws an error if the <code>[tabPanel]</code> input is not provided. The
-<code>[tabPanel]</code> input and associated <code>mat-tab-nav-panel</code> component improve accessibility.
-TODO(crisbeto): This point needs further elaboration.</p>
-</li>
+<li>Accessibility: <code>&lt;mat-tab-nav-bar&gt;</code> now requires an additional <code>&lt;mat-tab-nav-panel&gt;</code> element to
+be wrapped around the content that it is connected to. A refernece to the tab panel has to be
+passed in to the <code>tabPanel</code> or an error will be thrown. The addition of the tab panel allows
+for better labelling for assistive technology.</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span> [<span class="hljs-attr">tabPanel</span>]=<span class="hljs-string">&quot;tabPanel&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-panel</span> #<span class="hljs-attr">tabPanel</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-panel</span>&gt;</span>
+</code></pre>
+<ul>
 <li><p>The selected tab label now uses a text color from the theme, matching the selection indicator.</p>
 </li>
 <li><p>Tab header labels default to stretching the width of the container. This can be turned off by
