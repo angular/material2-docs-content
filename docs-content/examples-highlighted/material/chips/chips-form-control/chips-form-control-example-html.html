@@ -2,28 +2,24 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;formControl.disable()&quot;</span>&gt;</span>Disable form control<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;formControl.enable()&quot;</span>&gt;</span>Enable form control<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Select a focused chip by pressing <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>SPACE<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Enter video keywords<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-chip-list&quot;</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-form-field&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Video keywords<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> #<span class="hljs-attr">chipList</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Video keywords&quot;</span> <span class="hljs-attr">multiple</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;formControl&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>
-        *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let keyword of keywords&quot;</span>
-        [<span class="hljs-attr">selected</span>]=<span class="hljs-string">&quot;keyword&quot;</span>
-        [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;keyword&quot;</span>
-        (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;removeKeyword(keyword)&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">chipGrid</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Enter keywords&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;formControl&quot;</span> &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let keyword of keywords&quot;</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;removeKeyword(keyword)&quot;</span>&gt;</span>
       {{keyword}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
-      <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;New keyword...&quot;</span>
-      [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;chipList&quot;</span>
-      (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;addKeywordFromInput($event)&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&#x27;remove &#x27; + keyword&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-grid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;New keyword...&quot;</span>
+          [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;chipGrid&quot;</span>
+          (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>The following keywords are selected:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{formControl.value}}
+  <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>The following keywords are entered:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> {{formControl.value}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

@@ -1,2 +1,202 @@
-<div class="docs-markdown"><!-- TODO: this guide and the related live examples need to be rewritten to reflect the new chips API. -->
+<div class="docs-markdown"><p>Chips allow users to view information, make selections, filter content, and enter data.</p>
+
+        <h3 id="static-chips" class="docs-header-link">
+          <span header-link="static-chips"></span>
+          Static Chips
+        </h3>
+      <p>Chips are always used inside a container. To create chips, start with a <code>&lt;mat-chip-set&gt;</code> element. Then, nest <code>&lt;mat-chip&gt;</code> elements inside the <code>&lt;mat-chip-set&gt;</code>.</p>
+<div material-docs-example="chips-overview"></div>
+
+<p>By default, <code>&lt;mat-chip&gt;</code> renders a chip with Material Design styles applied. For a chip with no styles applied, use <code>&lt;mat-basic-chip&gt;</code>.</p>
+<p><em>Hint: <code>&lt;mat-basic-chip&gt;</code> receives the <code>mat-mdc-basic-chip</code> CSS class in addition to the <code>mat-mdc-chip</code> class.</em></p>
+
+        <h4 id="disabled-appearance" class="docs-header-link">
+          <span header-link="disabled-appearance"></span>
+          Disabled appearance
+        </h4>
+      <p>Although <code>&lt;mat-chip&gt;</code> is not interactive, you can set the <code>disabled</code> Input to give it disabled appearance.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+</code></pre>
+
+        <h3 id="selection-chips" class="docs-header-link">
+          <span header-link="selection-chips"></span>
+          Selection Chips
+        </h3>
+      <p>Use <code>&lt;mat-chip-listbox&gt;</code> and <code>&lt;mat-chip-option&gt;</code> for selecting one or many items from a list. Start with creating a <code>&lt;mat-chip-listbox&gt;</code> element. If the user may select more than one option, add the <code>multiple</code> attribute. Nest a <code>&lt;mat-chip-option&gt;</code> element inside the <code>&lt;mat-chip-listbox&gt;</code> for each available option.</p>
+
+        <h4 id="disabled-mat-chip-option" class="docs-header-link">
+          <span header-link="disabled-mat-chip-option"></span>
+          Disabled <code>&lt;mat-chip-option&gt;</code>
+        </h4>
+      <p>Use the <code>disabled</code> Input to disable a <code>&lt;mat-chip-option&gt;</code>. This gives the <code>&lt;mat-chip-option&gt;</code> a disabled appearance and prevents the user from interacting with it.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
+</code></pre>
+
+        <h4 id="keyboard-interactions" class="docs-header-link">
+          <span header-link="keyboard-interactions"></span>
+          Keyboard Interactions
+        </h4>
+      <p>Users can move through the chips using the arrow keys and select/deselect them with space. Chips also gain focus when clicked, ensuring keyboard navigation starts at the currently focused chip.</p>
+
+        <h3 id="chips-connected-to-an-input-field" class="docs-header-link">
+          <span header-link="chips-connected-to-an-input-field"></span>
+          Chips connected to an input field
+        </h3>
+      <p>Use <code>&lt;mat-chip-grid&gt;</code> and <code>&lt;mat-chip-row&gt;</code> for assisting users with text entry.</p>
+<p>Chips are always used inside a container. To create chips connected to an input field, start by creating a <code>&lt;mat-chip-grid&gt;</code> as the container. Add an <code>&lt;input/&gt;</code> element, and register it to the <code>&lt;mat-chip-grid&gt;</code> by passing the <code>matChipInputFor</code> Input. Always use an <code>&lt;input/&gt;</code> elemnt with <code>&lt;mat-chip-grid&gt;</code>. Nest a <code>&lt;mat-chip-row&gt;</code> element inside the <code>&lt;mat-chip-grid&gt;</code> for each piece of data entered by the user. An example of of using chips for text input.</p>
+<div material-docs-example="chips-input"></div>
+
+
+        <h4 id="disabled-mat-chip-row" class="docs-header-link">
+          <span header-link="disabled-mat-chip-row"></span>
+          Disabled <code>&lt;mat-chip-row&gt;</code>
+        </h4>
+      <p>Use the <code>disabled</code> Input to disable a <code>&lt;mat-chip-row&gt;</code>. This  gives the <code>&lt;mat-chip-row&gt;</code> a disabled appearance and prevents the user from interacting with it.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
+</code></pre>
+
+        <h4 id="keyboard-interactions-1" class="docs-header-link">
+          <span header-link="keyboard-interactions-1"></span>
+          Keyboard Interactions
+        </h4>
+      <p>Users can move through the chips using the arrow keys and select/deselect them with the space. Chips also gain focus when clicked, ensuring keyboard navigation starts at the appropriate chip.</p>
+<p>Users can press delete to remove a chip. Pressing delete triggers the <code>removed</code> Output on the chip, so be sure to implement <code>removed</code> if you require that functionality.</p>
+
+        <h4 id="autocomplete" class="docs-header-link">
+          <span header-link="autocomplete"></span>
+          Autocomplete
+        </h4>
+      <p>An example of chip input with autocomplete.</p>
+<div material-docs-example="chips-autocomplete"></div>
+
+
+        <h3 id="icons" class="docs-header-link">
+          <span header-link="icons"></span>
+          Icons
+        </h3>
+      <p>You can add icons to chips to identify entities (like individuals) and provide additional functionality.</p>
+
+        <h4 id="adding-up-to-two-icons-with-content-projection" class="docs-header-link">
+          <span header-link="adding-up-to-two-icons-with-content-projection"></span>
+          Adding up to two icons with content projection
+        </h4>
+      <p>You can add two additional icons to an individual chip. A chip has two slots to display icons using content projection. All variants of chips support adding icons including <code>&lt;mat-chip&gt;</code>, <code>&lt;mat-chip-option&gt;</code>, and <code>&lt;mat-chip-row&gt;</code>.</p>
+<p>A chip has a front slot for adding an avatar image. To add an avatar, nest an element with <code>matChipAvatar</code> attribute inside of <code>&lt;mat-chip&gt;</code>.</p>
+<div material-docs-example="chips-avatar"></div>
+
+<p>You can add an additional icon to the back slot by nesting an element with either the <code>matChipTrailingIcon</code> or <code>matChipRemove</code> attribute.</p>
+
+        <h4 id="remove-button" class="docs-header-link">
+          <span header-link="remove-button"></span>
+          Remove Button
+        </h4>
+      <p>Sometimes the end user would like the ability to remove a chip. You can provide that functionality using <code>matChipRemove</code>. <code>matChipRemove</code> renders to the back slot of a chip and triggers the <code>removed</code> Output when clicked.</p>
+<p>To create a remove button, nest a <code>&lt;button&gt;</code> element with <code>matChipRemove</code> attribute inside the <code>&lt;mat-chip-option&gt;</code>. Be sure to implement the <code>removed</code> Output.</p>
+<pre><code class="language-html"> <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span>
+  Orange
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Remove orange&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
+</code></pre>
+<p>See the <a href="#accessibility">accessibility</a> section for how to create accessible icons.</p>
+
+        <h3 id="orientation" class="docs-header-link">
+          <span header-link="orientation"></span>
+          Orientation
+        </h3>
+      <p>By default, chips are displayed horizontally. To stack chips vertically, apply the <code>mat-mdc-chip-set-stacked</code> class to <code>&lt;mat-chip-set&gt;</code>, <code>&lt;mat-chip-listbox&gt;</code> or <code>&lt;mat-chip-grid&gt;</code>. </p>
+<div material-docs-example="chips-stacked"></div>
+
+
+        <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
+          <span header-link="specifying-global-configuration-defaults"></span>
+          Specifying global configuration defaults
+        </h3>
+      <p>Use the <code>MAT_CHIPS_DEFAULT_OPTIONS</code> token to specify default options for the chips module.</p>
+<pre><code class="language-html">@NgModule({
+  providers: [
+    {
+      provide: MAT_CHIPS_DEFAULT_OPTIONS,
+      useValue: {
+        separatorKeyCodes: [COMMA, SPACE]
+      }
+    }
+  ]
+})
+</code></pre>
+
+        <h3 id="theming" class="docs-header-link">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p>By default, chips use the primary color. Specify the <code>color</code> property to change the color to <code>accent</code> or <code>warn</code>.</p>
+
+        <h3 id="interaction-patterns" class="docs-header-link">
+          <span header-link="interaction-patterns"></span>
+          Interaction Patterns
+        </h3>
+      <p>The chips components support 3 user interaction patterns, each with its own container and chip elements:</p>
+
+        <h4 id="listbox" class="docs-header-link">
+          <span header-link="listbox"></span>
+          Listbox
+        </h4>
+      <p><code>&lt;mat-chip-listbox&gt;</code> and <code>&lt;mat-chip-option&gt;</code> : These elements implement a listbox accessibility pattern. Use them to present set of user selectable options.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-listbox</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;select a shirt size&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span> Small <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span> Medium <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span>&gt;</span> Large <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-listbox</span>&gt;</span>
+</code></pre>
+
+        <h4 id="text-entry" class="docs-header-link">
+          <span header-link="text-entry"></span>
+          Text Entry
+        </h4>
+      <p><code>&lt;mat-chip-grid&gt;</code> and <code>&lt;mat-chip-row&gt;</code> : These elements implement a grid accessibility pattern. Use them as part of a free form input that allows users to enter text to add chips.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">myChipGrid</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;mySelection&quot;</span>
+  <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;enter sandwich fillings&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let filling of fillings&quot;</span>
+                 (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(filling)&quot;</span>&gt;</span>
+      {{filling.name}}
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;myChipGrid&quot;</span>
+           [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
+           (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-grid</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+</code></pre>
+
+        <h4 id="static-content" class="docs-header-link">
+          <span header-link="static-content"></span>
+          Static Content
+        </h4>
+      <p><code>&lt;mat-chip-set&gt;</code> and <code>&lt;mat-chip&gt;</code> as an unordered list : Present a list of items that are not interactive. This interaction pattern mimics using <code>ul</code> and <code>li</code> elements. Apply role=&quot;list&quot; to the <code>&lt;mat-list&gt;</code>. Apply role=&quot;listitem&quot; to each <code>&lt;mat-list-item&gt;</code>.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-set</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;listitem&quot;</span>&gt;</span> Sugar <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;listitem&quot;</span>&gt;</span> Spice <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;listitem&quot;</span>&gt;</span> Everything Nice <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-set</span>&gt;</span>
+</code></pre>
+<p><code>&lt;mat-chip-set&gt;</code> and <code>&lt;mat-chip&gt;</code> : These elements do not implement any specific accessibility pattern. Add the appropriate accessibility depending on the context. Note that Angular Material does not intend <code>&lt;mat-chip&gt;</code>, <code>&lt;mat-basic-chip&gt;</code>, and <code>&lt;mat-chip-set&gt;</code> to be interactive.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-set</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span> John <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span> Paul <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span> James <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-set</span>&gt;</span>
+</code></pre>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>The <a href="#interaction-patterns">Interaction Patterns</a> section describes the three variants of chips available. Choose the chip variant that best matches your use case.</p>
+<p>For both MatChipGrid and MatChipListbox, always apply an accessible label to the control via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+<p>Always apply MatChipRemove to a <code>&lt;button&gt;</code> element, never a <code>&lt;mat-icon&gt;</code> element.</p>
+<p>When using MatChipListbox, never nest other interactive controls inside of the <code>&lt;mat-chip-option&gt;</code> element. Nesting controls degrades the experience for assistive technology users.</p>
 </div>

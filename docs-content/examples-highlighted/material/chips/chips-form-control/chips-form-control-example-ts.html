@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatLegacyChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/legacy-chips&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatChipInputEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Chips with form control
@@ -11,17 +11,25 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;chips-form-control-example.css&#x27;</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsFormControlExample</span> </span>{
-  keywords = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>]);
+  keywords = [<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>];
   formControl = <span class="hljs-keyword">new</span> FormControl([<span class="hljs-string">&#x27;angular&#x27;</span>]);
 
-  <span class="hljs-function"><span class="hljs-title">addKeywordFromInput</span>(<span class="hljs-params">event: MatLegacyChipInputEvent</span>)</span> {
-    <span class="hljs-keyword">if</span> (event.value) {
-      <span class="hljs-built_in">this</span>.keywords.add(event.value);
-      event.chipInput!.clear();
+  <span class="hljs-function"><span class="hljs-title">removeKeyword</span>(<span class="hljs-params">keyword: <span class="hljs-built_in">string</span></span>)</span> {
+    <span class="hljs-keyword">const</span> index = <span class="hljs-built_in">this</span>.keywords.indexOf(keyword);
+    <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
+      <span class="hljs-built_in">this</span>.keywords.splice(index, <span class="hljs-number">1</span>);
     }
   }
 
-  <span class="hljs-function"><span class="hljs-title">removeKeyword</span>(<span class="hljs-params">keyword: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>.keywords.delete(keyword);
+  add(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> value = (event.value || <span class="hljs-string">&#x27;&#x27;</span>).trim();
+
+    <span class="hljs-comment">// Add our keyword</span>
+    <span class="hljs-keyword">if</span> (value) {
+      <span class="hljs-built_in">this</span>.keywords.push(value);
+    }
+
+    <span class="hljs-comment">// Clear the input value</span>
+    event.chipInput!.clear();
   }
 }

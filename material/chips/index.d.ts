@@ -3,15 +3,16 @@ import { ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import * as i10 from '@angular/cdk/drag-drop';
-import * as i11 from '@angular/material/legacy-autocomplete';
-import * as i12 from '@angular/material/legacy-button';
-import * as i13 from '@angular/material/legacy-chips';
+import * as i11 from '@angular/material/autocomplete';
+import * as i12 from '@angular/material/button';
+import * as i13 from '@angular/material/chips';
 import * as i14 from '@angular/material/icon';
-import * as i15 from '@angular/material/legacy-form-field';
+import * as i15 from '@angular/material/form-field';
 import * as i16 from '@angular/forms';
 import * as i9 from '@angular/common';
-import { MatLegacyAutocompleteSelectedEvent } from '@angular/material/legacy-autocomplete';
-import { MatLegacyChipInputEvent } from '@angular/material/legacy-chips';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { MatChipEditedEvent } from '@angular/material/chips';
+import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
 import { ThemePalette } from '@angular/material/core';
 
@@ -31,9 +32,9 @@ export declare class ChipsAutocompleteExample {
     allFruits: string[];
     fruitInput: ElementRef<HTMLInputElement>;
     constructor();
-    add(event: MatLegacyChipInputEvent): void;
+    add(event: MatChipInputEvent): void;
     remove(fruit: string): void;
-    selected(event: MatLegacyAutocompleteSelectedEvent): void;
+    selected(event: MatAutocompleteSelectedEvent): void;
     private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAutocompleteExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never, false, never>;
@@ -60,7 +61,7 @@ export declare class ChipsDragDropExample {
 
 export declare class ChipsExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample], [typeof i9.CommonModule, typeof i10.DragDropModule, typeof i11.MatLegacyAutocompleteModule, typeof i12.MatLegacyButtonModule, typeof i13.MatLegacyChipsModule, typeof i14.MatIconModule, typeof i15.MatLegacyFormFieldModule, typeof i16.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample], [typeof i9.CommonModule, typeof i10.DragDropModule, typeof i11.MatAutocompleteModule, typeof i12.MatButtonModule, typeof i13.MatChipsModule, typeof i14.MatIconModule, typeof i15.MatFormFieldModule, typeof i16.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample, typeof i6.ChipsHarnessExample, typeof i7.ChipsFormControlExample, typeof i8.ChipsAvatarExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ChipsExamplesModule>;
 }
 
@@ -68,10 +69,10 @@ export declare class ChipsExamplesModule {
  * @title Chips with form control
  */
 export declare class ChipsFormControlExample {
-    keywords: Set<string>;
+    keywords: string[];
     formControl: FormControl<string[] | null>;
-    addKeywordFromInput(event: MatLegacyChipInputEvent): void;
     removeKeyword(keyword: string): void;
+    add(event: MatChipInputEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsFormControlExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsFormControlExample, "chips-form-control-example", never, {}, {}, never, never, false, never>;
 }
@@ -94,8 +95,9 @@ export declare class ChipsInputExample {
     addOnBlur: boolean;
     readonly separatorKeysCodes: readonly [13, 188];
     fruits: Fruit[];
-    add(event: MatLegacyChipInputEvent): void;
+    add(event: MatChipInputEvent): void;
     remove(fruit: Fruit): void;
+    edit(fruit: Fruit, event: MatChipEditedEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsInputExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsInputExample, "chips-input-example", never, {}, {}, never, never, false, never>;
 }
