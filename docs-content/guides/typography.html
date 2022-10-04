@@ -134,29 +134,12 @@ baseline if unspecified.</p>
   // ...
 );
 </code></pre>
-<p>To customize component typography for your entire application, you can pass your custom typography
-config to the <code>core</code> mixin described in the <a href="https://material.angular.io/guide/theming">theming guide</a>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$my-custom-typography</span>: mat.define-typography-config(
-  <span class="hljs-variable">$headline</span>:  mat.define-typography-level(<span class="hljs-number">3rem</span>, <span class="hljs-number">1</span>, <span class="hljs-number">700</span>),
-);
-
-<span class="hljs-keyword">@include</span> mat.core(<span class="hljs-variable">$my-custom-typography</span>);
-</code></pre>
-<p>Passing your typography config to <code>core</code> mixin will apply your specified values to all Angular
-Material components. If a config is not specified, <code>core</code> will emit the default Material Design
-typography styles.</p>
 
         <h3 id="typography-configs-and-theming" class="docs-header-link">
           <span header-link="typography-configs-and-theming"></span>
           Typography configs and theming
         </h3>
-      <p>In addition to the <code>core</code> mixin, you can specify your typography config when including any <code>theme</code>
-mixin, as described in the <a href="https://material.angular.io/guide/theming">theming guide</a>. Because the <code>core</code> mixin always emits
-typography styles, specifying a typography config to a theme mixin results in duplicate typography
-CSS. You should only provide a typography config when applying your theme if you need to specify
-multiple typography styles that are conditionally applied based on your application&#39;s behavior.</p>
+      <p>You can provide a typography config when defining a theme to customize typographic styles. See the <a href="https://material.angular.io/guide/theming">theming guide</a> for details on custom themes.</p>
 <p>The following example shows a typical theme definition and a &quot;kids theme&quot; that only applies when
 the <code>&quot;.kids-theme&quot;</code> CSS class is present. You can <a href="https://material.angular.io/guide/theming#defining-multiple-themes">see the theming guide for more guidance on
 defining multiple themes</a>.</p>
@@ -166,12 +149,14 @@ defining multiple themes</a>.</p>
 
 <span class="hljs-variable">$my-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
 <span class="hljs-variable">$my-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-typography</span>: mat.define-typography-config();
 
 <span class="hljs-variable">$my-theme</span>: mat.define-light-theme((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
- )
+ ),
+  typography: <span class="hljs-variable">$my-typography</span>,
 ));
 
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
@@ -179,8 +164,10 @@ defining multiple themes</a>.</p>
 <span class="hljs-selector-class">.kids-theme</span> {
   <span class="hljs-variable">$kids-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$cyan-palette</span>);
   <span class="hljs-variable">$kids-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$yellow-palette</span>);
+
+  <span class="hljs-comment">// Typography config based on the default, but using &quot;Comic Sans&quot; as the </span>
+  <span class="hljs-comment">// default font family for all levels.</span>
   <span class="hljs-variable">$kids-typography</span>: mat.define-typography-config(
-    // Specify <span class="hljs-string">&quot;Comic Sans&quot;</span> as the default font family for all levels.
     <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
   );
 
