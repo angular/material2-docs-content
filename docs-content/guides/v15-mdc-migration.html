@@ -737,10 +737,15 @@ the paginator API. You may need to explicitly type the paginator to access the f
           Tabs
         </h3>
       <ul>
-<li>Accessibility: <code>&lt;mat-tab-nav-bar&gt;</code> now requires an additional <code>&lt;mat-tab-nav-panel&gt;</code> element to
-be wrapped around the content that it is connected to. A refernece to the tab panel has to be
-passed in to the <code>tabPanel</code> or an error will be thrown. The addition of the tab panel allows
-for better labelling for assistive technology.</li>
+<li><p>Header label text color matches the theme color when the tab header is selected.</p>
+</li>
+<li><p>Header labels stretch to fill the container&#39;s width. This can be turned off by
+setting the <code>&lt;mat-tab-group&gt;</code> input <code>mat-stretch-tabs</code> to <code>false</code>.</p>
+</li>
+<li><p>The <code>&lt;mat-tab-nav-bar&gt;</code> requires a reference to a <code>&lt;mat-tab-nav-panel&gt;</code> using the <code>tabPanel</code> input. 
+The <code>&lt;mat-tab-nav-panel&gt;</code> must wrap the content connected to the nav-bar. This allows
+the component to provide correct labeling for assistive technology.</p>
+</li>
 </ul>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
@@ -749,13 +754,6 @@ for better labelling for assistive technology.</li>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span> [<span class="hljs-attr">tabPanel</span>]=<span class="hljs-string">&quot;tabPanel&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-panel</span> #<span class="hljs-attr">tabPanel</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-panel</span>&gt;</span>
 </code></pre>
-<ul>
-<li><p>The selected tab label now uses a text color from the theme, matching the selection indicator.</p>
-</li>
-<li><p>Tab header labels default to stretching the width of the container. This can be turned off by
-providing <code>mat-stretch-tabs=&quot;false&quot;</code>.</p>
-</li>
-</ul>
 
         <h3 id="tooltip" class="docs-header-link">
           <span header-link="tooltip"></span>
