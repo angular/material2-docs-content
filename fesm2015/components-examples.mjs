@@ -1623,7 +1623,8 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "BadgeOverviewExample",
         "files": [
             "badge-overview-example.ts",
-            "badge-overview-example.html"
+            "badge-overview-example.html",
+            "badge-overview-example.css"
         ],
         "selector": "badge-overview-example",
         "additionalComponents": [],
