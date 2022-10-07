@@ -590,7 +590,14 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
       <code>ariaSelected: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The ARIA selected applied to the chip.</p>
+  <td class="docs-api-property-description"><p>The ARIA selected applied to the chip. Conforms to WAI ARIA best practices for listbox
+interaction patterns.</p>
+<p>From <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/">WAI ARIA Listbox authoring practices guide</a>:
+ &quot;If any options are selected, each selected option has either aria-selected or aria-checked
+ set to true. All options that are selectable but not selected have either aria-selected or
+ aria-checked set to false.&quot;</p>
+<p>Set <code>aria-selected=&quot;false&quot;</code> on not-selected listbox options that are selectable to fix
+VoiceOver reading every option as &quot;selected&quot; (#25736).</p>
 </td>
 </tr>
 
