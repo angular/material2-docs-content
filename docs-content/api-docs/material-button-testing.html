@@ -558,6 +558,39 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
           async
+        </div>getVariant
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the variant of the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;ButtonVariant&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
         </div>hasHarness
       </th>
     </tr>
@@ -729,6 +762,7 @@
 <ul>
 <li><code>selector</code> finds a button whose host element matches the given selector.</li>
 <li><code>text</code> finds a button with specific text content.</li>
+<li><code>variant</code> finds buttons matching a specific variant.</li>
 </ul>
 
       </p>
@@ -787,11 +821,42 @@
 
 
     
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>variant: ButtonVariant</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find instances with a variant.</p>
+</td>
+</tr>
+
+
+    
   </table>
 
 
 
 
+
+
+    <h3 id="material-button-testing-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="ButtonVariant" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ButtonVariant"></span>
+  <code>ButtonVariant</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible button appearances.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> ButtonVariant = <span class="hljs-string">&#x27;basic&#x27;</span> | <span class="hljs-string">&#x27;raised&#x27;</span> | <span class="hljs-string">&#x27;flat&#x27;</span> | <span class="hljs-string">&#x27;icon&#x27;</span> | <span class="hljs-string">&#x27;stroked&#x27;</span> | <span class="hljs-string">&#x27;fab&#x27;</span> | <span class="hljs-string">&#x27;mini-fab&#x27;</span>;</code>
+</pre>
+</div>
 
 
     </div>
