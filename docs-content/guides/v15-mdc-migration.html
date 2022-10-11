@@ -578,9 +578,9 @@ form-field (<code>fill</code> and <code>outline</code>).</li>
           Progress Bar
         </h3>
       <ul>
-<li><p>Hiding the bar with <code>visibility: hidden</code> will not hide all internal elements because they apply
-a <code>visibility: visible</code> style. Instead, style it with <code>opacity: 0</code> or <code>display: none</code>, or remove
-it completely with <code>ngIf</code>.</p>
+<li><p>Visibility on internal elements is now set to <code>visible</code>. Setting <code>visibility: hidden</code> will no
+longer hide all internal elements. Instead, style it with <code>opacity: 0</code>, <code>display: none</code>, or
+remove it completely with <code>ngIf</code>.</p>
 </li>
 <li><p>Height is always set to 4px and does not get shorter or taller using <code>height</code> styles.</p>
 </li>
