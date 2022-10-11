@@ -170,7 +170,7 @@ your application running on v15 with minimal manual changes.</p>
         </h3>
       <p>After upgrading to v15, you can run the migration tool to switch from the legacy component
 implementations to the new MDC-based ones.</p>
-<pre><code class="language-shell">ng generate # TODO(wagnermaciel): Insert command here.
+<pre><code class="language-shell">ng generate @angular/material:mdc-migration
 </code></pre>
 <p>This command updates your TypeScript, styles, and templates to the new implementations, updating as
 much as it can automatically.</p>
@@ -180,11 +180,11 @@ much as it can automatically.</p>
           Running a Partial Migration
         </h4>
       <p>Depending on the size and complexity of your application, you may want to migrate a single component
-(or small group of components) at a time, rather than all at once.
-TODO(wagnermaciel): Add details on this: script params, which components need to move together</p>
+or small group of components at a time, rather than all components at once.</p>
 <p>You may also want to migrate your app one module at a time instead of all together. You can use both
 the old implementation and new implementation in the same application, as long as they aren&#39;t used
-in the same <code>NgModule</code>. TODO(wagnermaciel): Add detail on this: script params.</p>
+in the same <code>NgModule</code>.</p>
+<p>The script will prompt you for the directory and components you want to migrate.</p>
 
         <h3 id="3-check-for-todos-left-by-the-migration-tool" class="docs-header-link">
           <span header-link="3-check-for-todos-left-by-the-migration-tool"></span>
@@ -193,10 +193,10 @@ in the same <code>NgModule</code>. TODO(wagnermaciel): Add detail on this: scrip
       <p>In situations where the migration tool is not able to automatically update your code, it will
 attempt to add comments for a human to follow up. These TODO comments follow a common format, so
 they can be easily identified.</p>
-<pre><code class="language-ts"><span class="hljs-comment">// TODO(wagnermaciel): Do we have a common format for all TODOs the script adds?</span>
+<pre><code class="language-ts"><span class="hljs-comment">// TODO(mdc-migration): ...</span>
 </code></pre>
-<p>To search for all comments left by the migration tool, search for <code>TODO(...):</code> in your IDE.</p>
-<p>TODO(amysorto): Can we have the schematic generate a CSV of TODOs that can be imported into Jira</p>
+<p>To search for all comments left by the migration tool, search for <code>TODO(mdc-migration):</code> in your
+IDE.</p>
 
         <h3 id="4-verify-your-application" class="docs-header-link">
           <span header-link="4-verify-your-application"></span>
@@ -224,7 +224,10 @@ DOM and CSS of the components, you may need to tweak some of your application&#3
 <li><p>Component size, color, spacing, shadows, and animations all change slightly across the board.
 These changes generally improve spec-compliance and accessibility.</p>
 </li>
-<li><p>CSS classes applied to components use the <code>mat-mdc</code> prefix, whereas before it was simply a <code>mat</code>
+<li><p>The DOM structure of components has changed to allow for improved accessibility and compliance 
+with the Material Design spec.</p>
+</li>
+<li><p>CSS classes applied to components use the <code>mat-mdc-</code> prefix, whereas before it was simply a <code>mat-</code>
 prefix. Elements that roughly correspond to element in the old implementation have been given the
 same class name (aside from the prefix). For example, the button’s host class is <code>mat-mdc-button</code>
 instead of <code>mat-button</code>. However, not all elements in the previous implementation have an
@@ -232,25 +235,11 @@ equivalent element in the new implementation.</p>
 </li>
 </ul>
 
-        <h3 id="core-styles--theming" class="docs-header-link">
-          <span header-link="core-styles--theming"></span>
-          Core Styles &amp; Theming
+        <h3 id="theming" class="docs-header-link">
+          <span header-link="theming"></span>
+          Theming
         </h3>
       <ul>
-<li><p><code>mat.core()</code> no longer includes component typography styles. If your application was relying on
-this, you may need to add typography styles explicitly now. This can be done all at once:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.all-component-typographies();
-</code></pre>
-<p>or individually for components your application uses:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.button-typography();
-<span class="hljs-keyword">@include</span> mat.card-typography();
-<span class="hljs-comment">// ...</span>
-</code></pre>
-</li>
 <li><p>Default typography levels defined by <code>mat.define-typography-config</code> have been updated to reflect
 changes to the Material Design spec.</p>
 </li>
@@ -266,6 +255,8 @@ included by default when you include a theme mixin.</p>
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$theme</span>);
 </code></pre>
 <p>If you prefer a different default density level, you can set it in your theme config:</p>
+<!-- TODO(wagnermaciel): link to density docs for more info once they exist. -->
+
 <pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-light-theme((
   color: ...,
   density: -<span class="hljs-number">1</span>
@@ -273,7 +264,6 @@ included by default when you include a theme mixin.</p>
 </code></pre>
 </li>
 </ul>
-<p>TODO(mmalerba): link to density docs once they exist.</p>
 
         <h3 id="autocomplete" class="docs-header-link">
           <span header-link="autocomplete"></span>
@@ -337,7 +327,14 @@ card content areas: <code>&lt;mat-card-content&gt;</code>, <code>&lt;mat-card-he
 </li>
 <li><p><code>&lt;mat-card-content&gt;</code> no longer sets any typography styles, users are free to add whatever
 typography styles make sense for their application, either to <code>&lt;mat-card-content&gt;</code> itself or any
-child elements as appropriate.</p>
+child elements as appropriate. For example:</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@include</span> mat.typography-hierarchy();
+</code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-card</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-card-content</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-body-1&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
+</code></pre>
 </li>
 </ul>
 
@@ -350,19 +347,23 @@ child elements as appropriate.</p>
 Native checkboxes have bizarre behavior when calling <code>preventDefault</code> on their <code>click</code> event, so
 users should not call <code>preventDefault</code> on <code>click</code>.</p>
 </li>
-<li><p>Accessibility: Checkbox touch targets are larger, now 40px instead of 16px, which is more
-accessible.</p>
+<li><p>Checkbox touch targets are larger, now 40px instead of 16px, which is more accessible. Be sure to
+allow enough space in your layout so that the touch target does not overlap other components. If
+you are not concerned with accessibility you can match the previous size by using density -5 for
+the checkbox.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@include</span> mat.checkbox-density(-<span class="hljs-number">5px</span>);
+</code></pre>
 </li>
 <li><p>Checkbox color may be changed to white or black due to a change in heuristics based on the
 application’s theme. Previously, the check’s color would be set to the theme’s background color.
 With MDC, it is determined by whether white or black has the most contrast against the primary
 color.</p>
 </li>
-<li><p>Accessibility: Focus state is slightly darker, improving contrast ratio</p>
+<li><p>Focus state is slightly darker, improving contrast ratio.</p>
 </li>
-<li><p>Many checkboxes on the page may cause the animation to seem slow</p>
-</li>
-<li><p>Text styles will not be inherited; you will need to specifically target the checkbox’s <code>label</code>.</p>
+<li><p>Text styles will not be inherited; you will need to specifically target the checkbox’s <code>label</code> to
+override typography properties.</p>
 </li>
 <li><p>After toggling a checkbox with the mouse, the ripple will remain visible instead of animating out.</p>
 </li>
@@ -372,7 +373,9 @@ color.</p>
           <span header-link="chips"></span>
           Chips
         </h3>
-      <ul>
+      <!-- TODO(zarend): review -->
+
+<ul>
 <li><p>The chips component has been split into multiple variants corresponding with more appropriate
 interaction patterns for accessibility. The original <code>mat-chip-list</code> used <code>role=&quot;listbox&quot;</code>, but
 this interaction pattern is not suited for all use-cases. The new chips have:</p>
@@ -404,7 +407,7 @@ case-by-case basis.</p>
       <ul>
 <li><p>The <code>.mat-dialog-container</code> does not contain a 24px padding anymore. Instead, the inner dialog
 directives are responsible for adding the right padding. This will be apparent if your dialog does
-not use any of the directives like <code>mat-dialog-content</code>.</p>
+not use any of the directives like <code>&lt;mat-dialog-content&gt;</code>.</p>
 </li>
 <li><p><code>mat-dialog-content</code> uses the font-settings specified by the Material Design spec, which includes
 a rather roomy line-height. If you have an information-dense dialog that doesn&#39;t look good with
@@ -448,6 +451,9 @@ prefix/suffix, and <code>matIconPrefix</code> or <code>matIconSuffix</code> to i
 legacy form-field appearance which has been dropped. It was used to achieve a floating label that
 behaved like a placeholder. If you need this behavior, use the <code>placeholder</code> property on <code>&lt;input&gt;</code>
 instead.</p>
+</li>
+<li><p>Custom form field controls may need their styles adjusted to account for the fact that the
+surrounding form field DOM and styles have changed.</p>
 </li>
 </ul>
 
@@ -494,9 +500,9 @@ line being acquired (as if the content was put into a line).</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
 </code></pre>
 </li>
-<li><p>The amount of lines is automatically inferred. e.g. in the snippet above the list item will
-acquire space for two lines. With the new API you can now set an explicit number of lines on the
-<code>&lt;mat-list-item&gt;</code> to activate wrapping.</p>
+<li><p>The amount of lines is automatically inferred. For example, in the snippet above the list item
+will acquire space for two lines. With the new API you can now set an explicit number of lines on
+the <code>&lt;mat-list-item&gt;</code> to activate wrapping.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> <span class="hljs-attr">lines</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   This text will wrap into the third line. Space for three lines is acquired by the
@@ -539,7 +545,7 @@ put into the meta section.</p>
 <code>&lt;mat-icon&gt;</code> use <code>ngProjectAs=&quot;mat-icon&quot;</code> to project it into the icon slot.</p>
 </li>
 <li><p>If you need your icon to appear at the end of the item (not officially supported by the spec)
-you can wrap both the text and your icon in a span, e.g.</p>
+you can wrap both the text and your icon in a span, for example:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>end_icon<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
@@ -561,7 +567,10 @@ you can wrap both the text and your icon in a span, e.g.</p>
           Option / Optgroup
         </h3>
       <ul>
-<li>Long options now wrap instead of truncating with an ellipsis.</li>
+<li><p>Long options now wrap instead of truncating with an ellipsis.</p>
+</li>
+<li><p>Option heights are no longer capped at <code>48px</code>.</p>
+</li>
 </ul>
 
         <h3 id="paginator" class="docs-header-link">
@@ -605,16 +614,14 @@ selecting a radio when clicking on whitespace that appears inert on the page.</p
 </li>
 <li><p>Labels are smaller and further away from the radio button to align with the Material Design spec.</p>
 </li>
-<li><p>Accessibility: The touch target is much larger than the radio button; to match the legacy size,
-you can provide a <code>-5</code> density to the radio button&#39;s theme mixin:</p>
+<li><p>The touch target is now much larger and more accessible. Be sure to allow enough space in your
+layout so that the touch target does not overlap other components. If you are not concerned with
+accessibility you can match the previous size by using density -5 for the radio.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@include</span> mat.radio-density(-<span class="hljs-number">5px</span>);
+</code></pre>
 </li>
 </ul>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.radio-theme(
-  map-merge(<span class="hljs-variable">$theme</span>, (<span class="hljs-attribute">density</span>: -<span class="hljs-number">5</span>))
-);
-</code></pre>
 
         <h3 id="select" class="docs-header-link">
           <span header-link="select"></span>
@@ -640,17 +647,17 @@ is the same width as the form-field</p>
           <span header-link="slide-toggle"></span>
           Slide Toggle
         </h3>
-      <ul>
-<li><p>Accessibility: MDC-based version uses <code>&lt;button role=&quot;switch&quot;&gt;</code> to represent the toggle rather than
-<code>&lt;input type=&quot;checkbox&quot;&gt;</code></p>
-</li>
-<li><p>Accessibility: The touch target is much larger than the slide toggle; to match the legacy size,
-you can provide a <code>-5</code> density to the slide toggle’s theme mixin:</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+      <!-- TODO(zarend): review -->
 
-<span class="hljs-keyword">@include</span> mat.slide-toggle-theme(
-  map-merge(<span class="hljs-variable">$theme</span>, (<span class="hljs-attribute">density</span>: -<span class="hljs-number">5</span>))
-);
+<ul>
+<li><p>To improve accessibility, the MDC-based version uses <code>&lt;button role=&quot;switch&quot;&gt;</code> to represent the
+toggle rather than <code>&lt;input type=&quot;checkbox&quot;&gt;</code>.</p>
+</li>
+<li><p>The touch target is much larger and more accessible. Be sure to allow enough space in your
+layout so that the touch target does not overlap other components. If you are not concerned with
+accessibility you can match the previous size by using density -5 for the slide-toggle.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@include</span> mat.slide-toggle-density(-<span class="hljs-number">5px</span>);
 </code></pre>
 </li>
 <li><p>The label is closer to the enabled toggle</p>
@@ -661,8 +668,10 @@ you can provide a <code>-5</code> density to the slide toggle’s theme mixin:</
           <span header-link="slider"></span>
           Slider
         </h3>
-      <ul>
-<li><p>Accessibility: sliders now work with mobile device screen readers.</p>
+      <!-- TODO(wagnermaciel): review -->
+
+<ul>
+<li><p>Sliders now work with mobile device screen readers.</p>
 </li>
 <li><p>To accommodate range sliders, the implementation has changed from the <code>&lt;mat-slider&gt;</code> element being
 the form control to the <code>&lt;mat-slider&gt;</code> element containing 1-2 <code>&lt;input&gt;</code> elements (the slider
@@ -670,10 +679,9 @@ the form control to the <code>&lt;mat-slider&gt;</code> element containing 1-2 <
 labels (<code>aria-label</code>) now live on the <code>&lt;input&gt;</code> elements instead.</p>
 </li>
 <li><p>Vertical sliders and inverted sliders are no longer supported, as they are no longer part of the
-Material Design spec. TODO(jelbourn): should we add a note that vertical sliders are likely to
-return in a future version?</p>
+Material Design spec.</p>
 </li>
-<li><p>Range sliders are now supported. TODO(wagnermaciel): add more about this.</p>
+<li><p>Range sliders are now supported. <!-- TODO(wagnermaciel): add more about this. --></p>
 </li>
 </ul>
 
@@ -685,10 +693,10 @@ return in a future version?</p>
 <li><p>For simple, text-based snack-bars, there are no significant changes.</p>
 </li>
 <li><p>For simple snack-bars with an action button, they use the MDC-based mat-button, so your
-application will need to include the Sass theming mixin for the MDC-based button</p>
+application will need to include the Sass theming mixin for the MDC-based button.</p>
 </li>
-<li><p>For snack-bars that use custom structured content (i.e. calls to <code>MatSnackBar.openFromComponent</code>
-and <code>MatSnackBar.openFromTemplate</code>), you should use the following new directives to annotate your
+<li><p>For snack-bars that use custom structured content (if you call <code>MatSnackBar.openFromComponent</code> or
+<code>MatSnackBar.openFromTemplate</code>), you should use the following new directives to annotate your
 content:</p>
 <ul>
 <li><code>matSnackBarLabel</code> to mark the text displayed to users</li>
@@ -709,22 +717,25 @@ before running the migration tool should make this transition seamless.</p>
           Table
         </h3>
       <ul>
-<li><p>All cells have a <code>16px</code> left and right padding instead of just the leftmost and rightmost cells having a padding of <code>24px</code>.</p>
+<li><p>All cells have a <code>16px</code> left and right padding instead of just the leftmost and rightmost cells
+having a padding of <code>24px</code>.</p>
 </li>
-<li><p>Header cells have the same color and text size as the data rows instead of having more grayish and smaller text.</p>
+<li><p>Header cells have the same color and text size as the data rows instead of having more grayish and
+smaller text.</p>
 </li>
-<li><p>Cell text no longer wraps by default. Cell wrapping can be enabled by applying <code>white-space: normal</code> to
-the table cells.</p>
+<li><p>Cell text no longer wraps by default. Cell wrapping can be enabled by applying
+<code>white-space: normal</code> to the table cells.</p>
 </li>
 <li><p>Row height is <code>52px</code> instead of <code>48px</code>.</p>
 </li>
 <li><p>Cell box-sizing is <code>border-box</code> instead of <code>content-box</code>. This may affect custom width styles.</p>
 </li>
-<li><p>The table&#39;s last row does not include a bottom border row because the table is expected to have a border.</p>
+<li><p>The table&#39;s last row does not include a bottom border row because the table is expected to have a
+border.</p>
 </li>
-<li><p>The paginator property of the <code>MatTableDataSource</code> has a generic interface that matches most of
-the paginator API. You may need to explicitly type the paginator to access the full API, e.g.
-<code>new MatTableDataSource&lt;MyData, MatPaginator&gt;();</code></p>
+<li><p>The paginator property of the <code>MatTableDataSource</code> has a generic interface that matches most, but
+not all of the paginator API. You may need to explicitly type the paginator to access the full
+API, for example: <code>new MatTableDataSource&lt;MyData, MatPaginator&gt;();</code></p>
 </li>
 <li><p>Flex tables (<code>&lt;mat-table&gt;</code>) display a border on the cells instead of rows.</p>
 </li>
@@ -742,11 +753,9 @@ the paginator API. You may need to explicitly type the paginator to access the f
 <li><p>Header labels stretch to fill the container&#39;s width. This can be turned off by
 setting the <code>&lt;mat-tab-group&gt;</code> input <code>mat-stretch-tabs</code> to <code>false</code>.</p>
 </li>
-<li><p>The <code>&lt;mat-tab-nav-bar&gt;</code> requires a reference to a <code>&lt;mat-tab-nav-panel&gt;</code> using the <code>tabPanel</code> input. 
-The <code>&lt;mat-tab-nav-panel&gt;</code> must wrap the content connected to the nav-bar. This allows
-the component to provide correct labeling for assistive technology.</p>
-</li>
-</ul>
+<li><p>The <code>&lt;mat-tab-nav-bar&gt;</code> requires a reference to a <code>&lt;mat-tab-nav-panel&gt;</code> using the <code>tabPanel</code>
+input. The <code>&lt;mat-tab-nav-panel&gt;</code> must wrap the content connected to the nav-bar. This allows the
+component to provide correct labeling for assistive technology.</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
 
@@ -754,6 +763,8 @@ the component to provide correct labeling for assistive technology.</p>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span> [<span class="hljs-attr">tabPanel</span>]=<span class="hljs-string">&quot;tabPanel&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-panel</span> #<span class="hljs-attr">tabPanel</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-panel</span>&gt;</span>
 </code></pre>
+</li>
+</ul>
 
         <h3 id="tooltip" class="docs-header-link">
           <span header-link="tooltip"></span>
