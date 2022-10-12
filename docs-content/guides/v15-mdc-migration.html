@@ -224,8 +224,8 @@ DOM and CSS of the components, you may need to tweak some of your application&#3
 <li><p>Component size, color, spacing, shadows, and animations all change slightly across the board.
 These changes generally improve spec-compliance and accessibility.</p>
 </li>
-<li><p>The DOM structure of components has changed to allow for improved accessibility and compliance 
-with the Material Design spec.</p>
+<li><p>The DOM structure for all components has changed to improve accessibility and better follow the
+Material Design spec.</p>
 </li>
 <li><p>CSS classes applied to components use the <code>mat-mdc-</code> prefix, whereas before it was simply a <code>mat-</code>
 prefix. Elements that roughly correspond to element in the old implementation have been given the
@@ -362,7 +362,7 @@ color.</p>
 </li>
 <li><p>Focus state is slightly darker, improving contrast ratio.</p>
 </li>
-<li><p>Text styles will not be inherited; you will need to specifically target the checkbox’s <code>label</code> to
+<li><p>Text styles are not inherited; you will need to specifically target the checkbox’s <code>label</code> to
 override typography properties.</p>
 </li>
 <li><p>After toggling a checkbox with the mouse, the ripple will remain visible instead of animating out.</p>
@@ -500,9 +500,9 @@ line being acquired (as if the content was put into a line).</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
 </code></pre>
 </li>
-<li><p>The amount of lines is automatically inferred. For example, in the snippet above the list item
-will acquire space for two lines. With the new API you can now set an explicit number of lines on
-the <code>&lt;mat-list-item&gt;</code> to activate wrapping.</p>
+<li><p>The list automatically infers the number of lines of text content. For example, in the snippet
+above, the list item renders space for two lines. With the new API, you can set an explicit number
+of lines on the <code>&lt;mat-list-item&gt;</code> to manually control wrapping.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> <span class="hljs-attr">lines</span>=<span class="hljs-string">&quot;3&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   This text will wrap into the third line. Space for three lines is acquired by the
