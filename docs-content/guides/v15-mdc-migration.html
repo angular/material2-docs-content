@@ -285,35 +285,25 @@ included by default when you include a theme mixin.</p>
           Button
         </h3>
       <ul>
-<li><p>Accessibility: Icon buttons are now 48px instead of 40px.</p>
+<li><p>Icon button height and width are <code>48px</code> instead of <code>40px</code>.</p>
 </li>
-<li><p>Accessibility: Buttons have a slightly different hover/focus/active colors, improving contrast
-ratios.</p>
+<li><p>State colors (hover, focus, active) are slightly different to improve text contrast ratios.</p>
 </li>
-<li><p>Flat buttons have a different padding than raised buttons (this is apparent if you manually apply
-a background color to flat buttons).</p>
+<li><p>Letter-spacing is <code>1.25px</code> instead of <code>normal</code>.</p>
 </li>
-<li><p>Unthemed icon buttons may not show correctly on components such as snack-bars, since the container
-does not match the expected application theme background.</p>
+<li><p>FAB supports text with the <code>extended</code> input attribute.</p>
 </li>
-<li><p>Overriding button colors may require additional selectors. Application authors should always
-prefer changing component colors via the supported theme API.</p>
+<li><p>Theming mixins are split into three separate mixins:</p>
+<ul>
+<li>Normal button (default, raised, stroked, flat): <code>mat.mdc-button-theme</code></li>
+<li>Icon button: <code>mat.mdc-icon-button-theme</code></li>
+<li>FAB: <code>mat.mdc-fab-theme</code></li>
+</ul>
 </li>
-<li><p>Outline buttons use a colored border instead of grey.</p>
+<li><p>Icons in the button content are placed before the button text. Add the <code>iconPositionEnd</code> attribute to place them after the button text.</p>
 </li>
-<li><p>Icons in the button content will automatically be placed before the button text, unless the icon
-has the <code>iconPositionEnd</code> attribute.</p>
-</li>
-<li><p>FABs have extra attributes: <code>appearance</code> and <code>lowered</code>.</p>
-</li>
-<li><p>FABs default to an outline appearance instead of fill.</p>
-</li>
-<li><p>The button&#39;s theming mixins have been split into separate mixins for buttons
-(<code>mat.mdc-button-theme</code>), icon buttons (<code>mat.mdc-icon-button-theme</code>), and FABs
-(<code>mat.mdc-fab-theme</code>).</p>
-</li>
-<li><p>Icons next to button text now match font-size. Buttons with only icons and no text will not align
-properly (this does not apply to the icon-button).</p>
+<li><p>Icons in the button content inherit the text <code>font-size</code>. Buttons with only icons and no text do
+not align properly (this does not apply to the icon-button).</p>
 </li>
 </ul>
 
