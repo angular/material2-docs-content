@@ -1050,7 +1050,7 @@ This class can be extended to create custom menu types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dir: inject(Directionality, InjectFlags.Optional)</code>
+      <code>dir: inject(Directionality, { optional: true })</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The directionality (text direction) of the current page.</p>
@@ -1103,7 +1103,7 @@ user triggers with a trigger element).</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>menuAim: inject(MENU_AIM, InjectFlags.Optional | InjectFlags.Self)</code>
+      <code>menuAim: inject(MENU_AIM, { optional: true, self: true })</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The menu aim service used by this menu.</p>
