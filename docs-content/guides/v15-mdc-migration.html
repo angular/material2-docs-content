@@ -363,9 +363,7 @@ override typography properties.</p>
           <span header-link="chips"></span>
           Chips
         </h3>
-      <!-- TODO(zarend): review -->
-
-<ul>
+      <ul>
 <li><p>The chips component has been split into multiple variants corresponding with more appropriate
 interaction patterns for accessibility. The original <code>mat-chip-list</code> used <code>role=&quot;listbox&quot;</code>, but
 this interaction pattern is not suited for all use-cases. The new chips have:</p>
@@ -385,8 +383,9 @@ accessibility pattern with the chips visuals.</p>
 </ul>
 </li>
 <li><p>The migration tool always changes the legacy <code>&lt;mat-chip-list&gt;</code> to <code>&lt;mat-chip-listbox&gt;</code> to minimize
-differences before and after. You should separately consider changing to <code>&lt;mat-chip-grid&gt;</code> on a
-case-by-case basis.</p>
+differences before and after. You should separately consider changing to <code>&lt;mat-chip-grid&gt;</code> or
+<code>&lt;mat-chip-set&gt;</code> on a case-by-case basis. See <a href="guide/overview#interaction-patterns">Chips Interaction Patterns</a> for more guidence on
+choosing the appropriate component for your use case.</p>
 </li>
 </ul>
 
