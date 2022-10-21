@@ -32,10 +32,10 @@ slide-toggles use the theme&#39;s accent color. This can be changed to <code>&#3
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p><code>MatSlideToggle</code> uses an internal <code>&lt;input type=&quot;checkbox&quot;&gt;</code> with <code>role=&quot;switch&quot;</code> to provide an
-accessible experience. This internal checkbox receives focus and is automatically labelled by the
-text content of the <code>&lt;mat-slide-toggle&gt;</code> element. Avoid adding other interactive controls into the
-content of <code>&lt;mat-slide-toggle&gt;</code>, as this degrades the experience for users of assistive technology.</p>
+      <p><code>MatSlideToggle</code> uses an internal <code>&lt;button role=&quot;switch&quot;&gt;</code> to provide an accessible experience. This
+internal button receives focus and is automatically labelled by the text content of the
+<code>&lt;mat-slide-toggle&gt;</code> element. Avoid adding other interactive controls into the content of
+<code>&lt;mat-slide-toggle&gt;</code>, as this degrades the experience for users of assistive technology.</p>
 <p>Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for toggles without
 descriptive text content. For dynamic labels, <code>MatSlideToggle</code> provides input properties for binding
 <code>aria-label</code> and <code>aria-labelledby</code>. This means that you should not use the <code>attr.</code> prefix when
