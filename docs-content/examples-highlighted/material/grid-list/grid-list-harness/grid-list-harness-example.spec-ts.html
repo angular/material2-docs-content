@@ -9,8 +9,8 @@ describe(<span class="hljs-string">&#x27;GridListHarnessExample&#x27;</span>, <s
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;GridListHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
-  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+  beforeEach(<span class="hljs-function">() =&gt;</span> {
+    TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatGridListModule],
       <span class="hljs-attr">declarations</span>: [GridListHarnessExample],
     }).compileComponents();
