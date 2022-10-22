@@ -11,8 +11,8 @@ describe(<span class="hljs-string">&#x27;InputHarnessExample&#x27;</span>, <span
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;InputHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
-  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+  beforeEach(<span class="hljs-function">() =&gt;</span> {
+    TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatInputModule, NoopAnimationsModule, ReactiveFormsModule],
       <span class="hljs-attr">declarations</span>: [InputHarnessExample],
     }).compileComponents();
