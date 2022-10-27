@@ -16,16 +16,16 @@ const EXAMPLES = [
 ];
 export class ToolbarExamplesModule {
 }
-ToolbarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: ToolbarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ToolbarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.0", ngImport: i0, type: ToolbarExamplesModule, declarations: [ToolbarBasicExample,
+ToolbarExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: ToolbarExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ToolbarExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.1", ngImport: i0, type: ToolbarExamplesModule, declarations: [ToolbarBasicExample,
         ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample], imports: [MatButtonModule, MatIconModule, MatToolbarModule], exports: [ToolbarBasicExample,
         ToolbarHarnessExample,
         ToolbarMultirowExample,
         ToolbarOverviewExample] });
-ToolbarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: ToolbarExamplesModule, imports: [MatButtonModule, MatIconModule, MatToolbarModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: ToolbarExamplesModule, decorators: [{
+ToolbarExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: ToolbarExamplesModule, imports: [MatButtonModule, MatIconModule, MatToolbarModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: ToolbarExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [MatButtonModule, MatIconModule, MatToolbarModule],
