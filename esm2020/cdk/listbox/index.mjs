@@ -32,8 +32,8 @@ const EXAMPLES = [
 ];
 export class CdkListboxExamplesModule {
 }
-CdkListboxExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: CdkListboxExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkListboxExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.0", ngImport: i0, type: CdkListboxExamplesModule, declarations: [CdkListboxActivedescendantExample,
+CdkListboxExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: CdkListboxExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkListboxExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.1", ngImport: i0, type: CdkListboxExamplesModule, declarations: [CdkListboxActivedescendantExample,
         CdkListboxCompareWithExample,
         CdkListboxCustomNavigationExample,
         CdkListboxCustomTypeaheadExample,
@@ -56,8 +56,8 @@ CdkListboxExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0"
         CdkListboxReactiveFormsExample,
         CdkListboxTemplateFormsExample,
         CdkListboxValueBindingExample] });
-CdkListboxExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: CdkListboxExamplesModule, imports: [CommonModule, FormsModule, ReactiveFormsModule, CdkListboxModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: CdkListboxExamplesModule, decorators: [{
+CdkListboxExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: CdkListboxExamplesModule, imports: [CommonModule, FormsModule, ReactiveFormsModule, CdkListboxModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: CdkListboxExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CommonModule, FormsModule, ReactiveFormsModule, CdkListboxModule],

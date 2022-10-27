@@ -41,8 +41,8 @@ const EXAMPLES = [
 ];
 export class SelectExamplesModule {
 }
-SelectExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: SelectExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-SelectExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.0", ngImport: i0, type: SelectExamplesModule, declarations: [SelectCustomTriggerExample,
+SelectExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: SelectExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+SelectExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.1", ngImport: i0, type: SelectExamplesModule, declarations: [SelectCustomTriggerExample,
         SelectDisabledExample,
         SelectErrorStateMatcherExample,
         SelectFormExample,
@@ -77,14 +77,14 @@ SelectExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ve
         SelectReactiveFormExample,
         SelectResetExample,
         SelectValueBindingExample] });
-SelectExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: SelectExamplesModule, imports: [CommonModule,
+SelectExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: SelectExamplesModule, imports: [CommonModule,
         FormsModule,
         MatCheckboxModule,
         MatInputModule,
         MatSelectModule,
         ReactiveFormsModule,
         MatFormFieldModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: SelectExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: SelectExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

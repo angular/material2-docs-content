@@ -17,8 +17,8 @@ const EXAMPLES = [
 ];
 export class DialogExamplesModule {
 }
-DialogExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: DialogExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.0", ngImport: i0, type: DialogExamplesModule, declarations: [CdkDialogDataExample,
+DialogExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: DialogExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0-rc.1", ngImport: i0, type: DialogExamplesModule, declarations: [CdkDialogDataExample,
         CdkDialogDataExampleDialog,
         CdkDialogOverviewExample,
         CdkDialogOverviewExampleDialog,
@@ -29,8 +29,8 @@ DialogExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ve
         CdkDialogOverviewExampleDialog,
         CdkDialogStylingExample,
         CdkDialogStylingExampleDialog] });
-DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: DialogExamplesModule, imports: [CommonModule, DialogModule, FormsModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.0", ngImport: i0, type: DialogExamplesModule, decorators: [{
+DialogExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: DialogExamplesModule, imports: [CommonModule, DialogModule, FormsModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0-rc.1", ngImport: i0, type: DialogExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CommonModule, DialogModule, FormsModule],
