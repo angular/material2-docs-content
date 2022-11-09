@@ -32,8 +32,8 @@ requests</a>.</p>
         </h2>
       <p>A <strong>typography level</strong> is a collection of typographic styles that corresponds to a specific
 part of an application&#39;s structure, such as a header. Each level includes styles for font family,
-font weight, font size, and letter spacing. Angular Material uses the <a href="https://material.io/archive/guidelines/style/typography.html#typography-styles">typography levels
-from the 2014 version of the Material Design specification</a>, outlined in the
+font weight, font size, and letter spacing. Angular Material uses the <a href="https://m2.material.io/design/typography/the-type-system.html#type-scale">typography levels
+from the 2018 version of the Material Design specification</a>, outlined in the
 table below.</p>
 <table>
 <thead>
@@ -43,35 +43,35 @@ table below.</p>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>display-4</code></td>
-<td>112px, one-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>headline-1</code></td>
+<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
 </tr>
 <tr>
-<td><code>display-3</code></td>
-<td>56px, one-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>headline-2</code></td>
+<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
 </tr>
 <tr>
-<td><code>display-2</code></td>
-<td>45px, one-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>headline-3</code></td>
+<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
 </tr>
 <tr>
-<td><code>display-1</code></td>
-<td>34px, one-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>headline-4</code></td>
+<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
 </tr>
 <tr>
-<td><code>headline</code></td>
+<td><code>headline-5</code></td>
 <td>Section heading corresponding to the <code>&lt;h1&gt;</code> tag.</td>
 </tr>
 <tr>
-<td><code>title</code></td>
+<td><code>headline-6</code></td>
 <td>Section heading corresponding to the <code>&lt;h2&gt;</code> tag.</td>
 </tr>
 <tr>
-<td><code>subheading-2</code></td>
+<td><code>subtitle-1</code></td>
 <td>Section heading corresponding to the <code>&lt;h3&gt;</code> tag.</td>
 </tr>
 <tr>
-<td><code>subheading-1</code></td>
+<td><code>subtitle-2</code></td>
 <td>Section heading corresponding to the <code>&lt;h4&gt;</code> tag.</td>
 </tr>
 <tr>
@@ -89,10 +89,6 @@ table below.</p>
 <tr>
 <td><code>button</code></td>
 <td>Buttons and anchors.</td>
-</tr>
-<tr>
-<td><code>input</code></td>
-<td>Form input fields.</td>
 </tr>
 </tbody></table>
 
@@ -126,11 +122,11 @@ baseline if unspecified.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-variable">$my-custom-typography-config</span>: mat.define-typography-config(
-  <span class="hljs-variable">$display-4</span>: mat.define-typography-level(<span class="hljs-number">112px</span>, <span class="hljs-number">112px</span>, <span class="hljs-number">300</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.05em</span>),
-  <span class="hljs-variable">$display-3</span>: mat.define-typography-level(<span class="hljs-number">56px</span>, <span class="hljs-number">56px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.02em</span>),
-  <span class="hljs-variable">$display-2</span>: mat.define-typography-level(<span class="hljs-number">45px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.005em</span>),
-  <span class="hljs-variable">$display-1</span>: mat.define-typography-level(<span class="hljs-number">34px</span>, <span class="hljs-number">40px</span>, <span class="hljs-number">400</span>),
-  <span class="hljs-variable">$headline</span>:  mat.define-typography-level(<span class="hljs-number">24px</span>, <span class="hljs-number">32px</span>, <span class="hljs-number">400</span>),
+  <span class="hljs-variable">$headline-1</span>: mat.define-typography-level(<span class="hljs-number">112px</span>, <span class="hljs-number">112px</span>, <span class="hljs-number">300</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.05em</span>),
+  <span class="hljs-variable">$headline-2</span>: mat.define-typography-level(<span class="hljs-number">56px</span>, <span class="hljs-number">56px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.02em</span>),
+  <span class="hljs-variable">$headline-3</span>: mat.define-typography-level(<span class="hljs-number">45px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.005em</span>),
+  <span class="hljs-variable">$headline-4</span>: mat.define-typography-level(<span class="hljs-number">34px</span>, <span class="hljs-number">40px</span>, <span class="hljs-number">400</span>),
+  <span class="hljs-variable">$headline-5</span>: mat.define-typography-level(<span class="hljs-number">24px</span>, <span class="hljs-number">32px</span>, <span class="hljs-number">400</span>),
   // ...
 );
 </code></pre>
@@ -165,7 +161,7 @@ defining multiple themes</a>.</p>
   <span class="hljs-variable">$kids-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$cyan-palette</span>);
   <span class="hljs-variable">$kids-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$yellow-palette</span>);
 
-  <span class="hljs-comment">// Typography config based on the default, but using &quot;Comic Sans&quot; as the </span>
+  <span class="hljs-comment">// Typography config based on the default, but using &quot;Comic Sans&quot; as the</span>
   <span class="hljs-comment">// default font family for all levels.</span>
   <span class="hljs-variable">$kids-typography</span>: mat.define-typography-config(
     <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
@@ -213,43 +209,43 @@ class. The table below lists the CSS classes emitted and the native elements sty
 </tr>
 </thead>
 <tbody><tr>
-<td><code>.mat-display-4</code></td>
-<td><code>display-4</code></td>
+<td><code>.mat-headline-1</code></td>
+<td><code>headline-1</code></td>
 <td>None</td>
 </tr>
 <tr>
-<td><code>.mat-display-3</code></td>
-<td><code>display-3</code></td>
+<td><code>.mat-headline-2</code></td>
+<td><code>headline-2</code></td>
 <td>None</td>
 </tr>
 <tr>
-<td><code>.mat-display-2</code></td>
-<td><code>display-2</code></td>
+<td><code>.mat-headline-3</code></td>
+<td><code>headline-3</code></td>
 <td>None</td>
 </tr>
 <tr>
-<td><code>.mat-display-1</code></td>
-<td><code>display-1</code></td>
+<td><code>.mat-headline-4</code></td>
+<td><code>headline-4</code></td>
 <td>None</td>
 </tr>
 <tr>
-<td><code>.mat-h1</code> or <code>.mat-headline</code></td>
-<td><code>headline</code></td>
+<td><code>.mat-h1</code> or <code>.mat-headline-5</code></td>
+<td><code>headline-5</code></td>
 <td><code>&lt;h1&gt;</code></td>
 </tr>
 <tr>
-<td><code>.mat-h2</code> or <code>.mat-title</code></td>
-<td><code>title</code></td>
+<td><code>.mat-h2</code> or <code>.mat-headline-6</code></td>
+<td><code>headline-6</code></td>
 <td><code>&lt;h2&gt;</code></td>
 </tr>
 <tr>
-<td><code>.mat-h3</code> or <code>.mat-subheading-2</code></td>
-<td><code>subheading-2</code></td>
+<td><code>.mat-h3</code> or <code>.mat-subtitle-1</code></td>
+<td><code>subtitle-1</code></td>
 <td><code>&lt;h3&gt;</code></td>
 </tr>
 <tr>
-<td><code>.mat-h4</code> or <code>.mat-subheading-1</code></td>
-<td><code>subheading-1</code></td>
+<td><code>.mat-h4</code> or <code>.mat-body-1</code></td>
+<td><code>body-1</code></td>
 <td><code>&lt;h4&gt;</code></td>
 </tr>
 <tr>
@@ -263,13 +259,13 @@ class. The table below lists the CSS classes emitted and the native elements sty
 <td><code>&lt;h6&gt;</code></td>
 </tr>
 <tr>
-<td><code>.mat-body</code> or <code>.mat-body-1</code></td>
-<td><code>body-1</code></td>
+<td><code>.mat-body</code> or <code>.mat-body-2</code></td>
+<td><code>body-2</code></td>
 <td>Body text</td>
 </tr>
 <tr>
-<td><code>.mat-body-strong</code> or <code>.mat-body-2</code></td>
-<td><code>body-2</code></td>
+<td><code>.mat-body-strong</code> or <code>.mat-subtitle-2</code></td>
+<td><code>subtitle-2</code></td>
 <td>None</td>
 </tr>
 <tr>
@@ -279,10 +275,10 @@ class. The table below lists the CSS classes emitted and the native elements sty
 </tr>
 </tbody></table>
 <p>In addition to the typographic styles, these style rules also include a <code>margin-bottom</code> for
-headers and paragraphs. For <code>body-1</code> styles, text is styled within the provided CSS selector.</p>
+headers and paragraphs. For <code>body</code> styles, text is styled within the provided CSS selector.</p>
 <p>The <code>.mat-h5</code> and <code>.mat-h6</code> styles don&#39;t directly correspond to a specific Material Design
-typography level. The <code>.mat-h5</code> style uses the <code>body-1</code> level with the font-size scaled down by
-<code>0.83</code>. The <code>.mat-h6</code> style uses the <code>body-1</code> level with the font-size scaled down by <code>0.67</code>.</p>
+typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> level with the font-size scaled down by
+<code>0.83</code>. The <code>.mat-h6</code> style uses the <code>body-2</code> level with the font-size scaled down by <code>0.67</code>.</p>
 <p>The <code>button</code> and <code>input</code> typography levels do not map to CSS classes.</p>
 <p>You can also manually emit the CSS rules for these CSS classes and native elements by calling the <code>typography-hierarchy</code>
 mixin. This mixin accepts a typography config and a CSS selector under which the styles are scopes (defaulting to
