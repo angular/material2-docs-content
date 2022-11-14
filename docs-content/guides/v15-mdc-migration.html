@@ -656,10 +656,86 @@ accessibility you can match the previous size by using density -5 for the slide-
           <span header-link="slider"></span>
           Slider
         </h3>
-      <!-- TODO(wagnermaciel): review -->
-
-<ul>
+      <ul>
 <li><p>Sliders now work with mobile device screen readers.</p>
+</li>
+<li><p>The slider template API has changed from a single <code>&lt;mat-slider&gt;</code> element to a <code>&lt;mat-slider&gt;</code>
+element which contains one or two <code>&lt;input&gt;</code> elements (depending on whether the slider should)
+be a standard or range slider. E.g.</p>
+<pre><code class="language-html">  <span class="hljs-comment">&lt;!-- Single slider --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Range slider --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderStartThumb</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderEndThumb</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>The new <code>discrete</code> property on the <code>&lt;mat-slider&gt;</code> now controls whether the slider has tick marks
+and a value indicator tooltip. It replaces <code>thumbLabel</code>.</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">thumbLabel</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">discrete</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>The <code>tickInterval</code> property has been removed. To switch to the new API, use <code>showTickMarks</code> to
+create a slider with tick marks, and the interval for your tick marks will match your slider&#39;s
+<code>step</code>. The <code>tickInterval</code> property is under consideration to be added back in future releases.</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">tickInterval</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">step</span>=<span class="hljs-string">&quot;5&quot;</span> <span class="hljs-attr">showTickMarks</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>The <code>displayValue</code> property has been removed. The suggested alternative for controlling the
+value indicator text is to provide a function via <code>displayWith</code>.</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">displayValue</span>]=<span class="hljs-string">&quot;myDisplayValue&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">displayWith</span>]=<span class="hljs-string">&quot;myDisplayWithFn&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>The <code>valueText</code> property is now removed in favor of directly using the native input&#39;s
+aria-valuetext or providing a <code>displayWith</code> function.</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">valueText</span>]=<span class="hljs-string">&quot;myValueText&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After (Option 1) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">attr.aria-valuetext</span>]=<span class="hljs-string">&quot;myValueText&quot;</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After (Option 2) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">displayWith</span>]=<span class="hljs-string">&quot;myDisplayWithFn&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>The slider API has also changed such that there are two new components: <code>MatSliderThumb</code> and
+<code>MatSliderRangeThumb</code>. They provide the following properties:</p>
+<ul>
+<li><code>@Input() value: number</code></li>
+<li><code>@Output() valueChange: EventEmitter&lt;number&gt;</code></li>
+<li><code>@Output() dragEnd: EventEmitter&lt;MatSliderDragEvent&gt;</code></li>
+<li><code>@Output() dragStart: EventEmitter&lt;MatSliderDragEvent&gt;</code></li>
+<li><code>percentage: number</code>
+And the following methods:</li>
+<li><code>blur</code></li>
+<li><code>focus</code></li>
+</ul>
 </li>
 <li><p>To accommodate range sliders, the implementation has changed from the <code>&lt;mat-slider&gt;</code> element being
 the form control to the <code>&lt;mat-slider&gt;</code> element containing 1-2 <code>&lt;input&gt;</code> elements (the slider
@@ -667,9 +743,7 @@ the form control to the <code>&lt;mat-slider&gt;</code> element containing 1-2 <
 labels (<code>aria-label</code>) now live on the <code>&lt;input&gt;</code> elements instead.</p>
 </li>
 <li><p>Vertical sliders and inverted sliders are no longer supported, as they are no longer part of the
-Material Design spec.</p>
-</li>
-<li><p>Range sliders are now supported. <!-- TODO(wagnermaciel): add more about this. --></p>
+Material Design spec. As a result, the <code>invert</code> and <code>vertical</code> properties have been removed.</p>
 </li>
 </ul>
 
