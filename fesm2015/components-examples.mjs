@@ -3276,6 +3276,23 @@ const EXAMPLE_COMPONENTS = {
             "importSpecifier": "material/list"
         }
     },
+    "list-variants": {
+        "packagePath": "material/list/list-variants",
+        "title": "List variants",
+        "componentName": "ListVariantsExample",
+        "files": [
+            "list-variants-example.ts",
+            "list-variants-example.html",
+            "./list-variants-example.css"
+        ],
+        "selector": "list-variants-example",
+        "additionalComponents": [],
+        "primaryFile": "list-variants-example.ts",
+        "module": {
+            "name": "ListExamplesModule",
+            "importSpecifier": "material/list"
+        }
+    },
     "menu-harness": {
         "packagePath": "material/menu/menu-harness",
         "title": "Testing with MatMenuHarness",
