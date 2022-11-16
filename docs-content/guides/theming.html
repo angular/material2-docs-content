@@ -3,7 +3,7 @@
           <span header-link="what-is-theming"></span>
           What is theming?
         </h2>
-      <p>Angular Material&#39;s theming system lets you customize color and typography styles for components
+      <p>Angular Material&#39;s theming system lets you customize color, typography, and density styles for components
 in your application. The theming system is based on Google&#39;s
 <a href="https://material.io/design/material-theming/overview.html">Material Design</a> specification.</p>
 <p>This document describes the concepts and APIs for customizing colors. For typography customization,
@@ -77,7 +77,7 @@ require these hues, but you can use these hues when defining a theme as describe
           <span header-link="themes"></span>
           Themes
         </h2>
-      <p>A <strong>theme</strong> is a collection of color and typography options. Each theme includes three palettes that
+      <p>A <strong>theme</strong> is a collection of color, typography, and density options. Each theme includes three palettes that
 determine component colors:</p>
 <ul>
 <li>A <strong>primary</strong> palette for the color that appears most frequently throughout your application</li>
@@ -91,8 +91,8 @@ custom theme with Sass, or by importing a pre-built theme CSS file.</p>
           <span header-link="custom-themes-with-sass"></span>
           Custom themes with Sass
         </h3>
-      <p>A <strong>theme file</strong> is a Sass file that calls Angular Material Sass mixins to output color and
-typography CSS styles.</p>
+      <p>A <strong>theme file</strong> is a Sass file that calls Angular Material Sass mixins to output color,
+typography, and density CSS styles.</p>
 
         <h4 id="the-core-mixin" class="docs-header-link">
           <span header-link="the-core-mixin"></span>
@@ -111,8 +111,9 @@ times will result in duplicate CSS in your application.</p>
           <span header-link="defining-a-theme"></span>
           Defining a theme
         </h4>
-      <p>Angular Material represents a theme as a Sass map that contains your color and typography
-choices. For more about typography customization, see <a href="https://material.angular.io/guide/typography">Angular Material Typography</a>.</p>
+      <p>Angular Material represents a theme as a Sass map that contains your color, typography, and density
+choices. See <a href="https://material.angular.io/guide/typography">Angular Material Typography</a> for an in-depth guide to customizing typography. See
+[Customizing density][#customizing-density] below for details on adjusting component density.</p>
 <p>Constructing the theme first requires defining your primary and accent palettes, with an optional
 warn palette. The <code>define-palette</code> Sass function accepts a color palette, described in the
 <a href="#palettes">Palettes</a> section above, as well as four optional hue numbers. These four hues
@@ -143,7 +144,9 @@ background and foreground colors used throughout the components.</p>
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
    warn: <span class="hljs-variable">$my-warn</span>,
- )
+ ),
+ typography: mat.define-typography-config(),
+ density: <span class="hljs-number">0</span>,
 ));
 </code></pre>
 
@@ -153,10 +156,11 @@ background and foreground colors used throughout the components.</p>
         </h4>
       <p>The <code>core-theme</code> Sass mixin emits prerequisite styles for common features used by multiple
 components, such as ripples. This mixin must be included once per theme.</p>
-<p>Each Angular Material component has a &quot;color&quot; mixin that emits the component&#39;s color styles and
-a &quot;typography&quot; mixin that emits the component&#39;s typography styles.</p>
-<p>Additionally, each component has a &quot;theme&quot; mixin that emits styles for both color and typography.
-This theme mixin will only emit color or typography styles if you provided a corresponding
+<p>Each Angular Material component has a mixin for each color , typography, and density. For example, <code>MatButton</code> declares
+<code>button-color</code>, <code>button-typography</code>, and <code>button-density</code>. Each mixin emits only the styles corresponding to that
+area of customization.</p>
+<p>Additionally, each component has a &quot;theme&quot; mixin that emits all styles that depend on the theme config.
+This theme mixin only emits color, typography, or density styles if you provided a corresponding
 configuration to <code>define-light-theme</code> or <code>define-dark-theme</code>.</p>
 <p>Apply the styles for each of the components used in your application by including each of their
 theme Sass mixins.</p>
@@ -171,7 +175,8 @@ theme Sass mixins.</p>
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
- )
+ ),
+ density: <span class="hljs-number">0</span>,
 ));
 
 <span class="hljs-comment">// Emit theme-dependent styles for common features used across multiple components.</span>
@@ -186,8 +191,8 @@ theme Sass mixins.</p>
 </code></pre>
 <p>As an alternative to listing every component that your application uses, Angular Material offers
 Sass mixins that includes styles for all components in the library: <code>all-component-colors</code>,
-<code>all-component-typographies</code>, and <code>all-component-themes</code>. These mixins behave the same as individual
-component mixins, except they emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular
+<code>all-component-typographies</code>, <code>all-component-densitites</code>, and <code>all-component-themes</code>. These mixins behave the same as
+individual component mixins, except they emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular
 Material. Unless your application uses every single component, this will produce unnecessary CSS.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
@@ -200,7 +205,9 @@ Material. Unless your application uses every single component, this will produce
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
- )
+ ),
+ typography: mat.define-typography-config(),
+ density: <span class="hljs-number">0</span>,
 ));
 
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
@@ -273,33 +280,33 @@ CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-ru
 
 <span class="hljs-keyword">@include</span> mat.core();
 
-<span class="hljs-comment">// Define a light theme</span>
-<span class="hljs-variable">$light-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
-<span class="hljs-variable">$light-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>);
-<span class="hljs-variable">$light-theme</span>: mat.define-light-theme((
- color: (
-   primary: <span class="hljs-variable">$light-primary</span>,
-   accent: <span class="hljs-variable">$light-accent</span>,
- )
-));
-
 <span class="hljs-comment">// Define a dark theme</span>
-<span class="hljs-variable">$dark-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>);
-<span class="hljs-variable">$dark-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$blue-grey-palette</span>);
 <span class="hljs-variable">$dark-theme</span>: mat.define-dark-theme((
  color: (
-   primary: <span class="hljs-variable">$dark-primary</span>,
-   accent: <span class="hljs-variable">$dark-accent</span>,
- )
+   primary: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>),
+   accent: mat.define-palette(mat.<span class="hljs-variable">$blue-grey-palette</span>),
+ ),
+  // Only include `typography` and `density` in the default dark theme.
+  typography: mat.define-typography-config(),
+  density: <span class="hljs-number">0</span>,
+));
+
+<span class="hljs-comment">// Define a light theme</span>
+<span class="hljs-variable">$light-theme</span>: mat.define-light-theme((
+ color: (
+   primary: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>),
+   accent: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>),
+ ),
 ));
 
 <span class="hljs-comment">// Apply the dark theme by default</span>
 <span class="hljs-keyword">@include</span> mat.core-theme(<span class="hljs-variable">$dark-theme</span>);
 <span class="hljs-keyword">@include</span> mat.button-theme(<span class="hljs-variable">$dark-theme</span>);
 
-<span class="hljs-comment">// Apply the light theme only when the `.my-light-theme` CSS class is applied</span>
-<span class="hljs-comment">// to an ancestor element of the components (such as `body`).</span>
-<span class="hljs-selector-class">.my-light-theme</span> {
+<span class="hljs-comment">// Apply the light theme only when the user prefers light themes.</span>
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">prefers-color-scheme</span>: light) {
+ <span class="hljs-comment">// Use the `-color` mixins to only apply color styles without reapplying the same</span>
+ <span class="hljs-comment">// typography and density styles.</span>
  <span class="hljs-keyword">@include</span> mat.core-color(<span class="hljs-variable">$light-theme</span>);
  <span class="hljs-keyword">@include</span> mat.button-color(<span class="hljs-variable">$light-theme</span>);
 }
@@ -321,7 +328,7 @@ file. The approach for this loading depends on your application.</p>
           Application background color
         </h3>
       <p>By default, Angular Material does not apply any styles to your DOM outside
-of its own components. If you want to set your application&#39;s background color
+its own components. If you want to set your application&#39;s background color
 to match the components&#39; theme, you can either:</p>
 <ol>
 <li>Put your application&#39;s main content inside <code>mat-sidenav-container</code>, assuming you&#39;re using <code>MatSidenav</code>, or</li>
@@ -374,6 +381,35 @@ passed to <code>define-palette</code>.</p>
 <span class="hljs-selector-class">.my-custom-darker-style</span> {
  <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;darker&#x27;</span>);
  <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;darker-contrast&#x27;</span>);
+}
+</code></pre>
+
+        <h2 id="customizing-density" class="docs-header-link">
+          <span header-link="customizing-density"></span>
+          Customizing density
+        </h2>
+      <p>Angular Material&#39;s density customization is based on the
+<a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidelines</a>. This system
+defines a scale where zero represents the default density. You can decrement the number for <em>more density</em> and increment
+the number for <em>less density</em>.</p>
+<p>The density system is based on a <em>density scale</em>. The scale starts with the
+default density of <code>0</code>. Each whole number step down (<code>-1</code>, <code>-2</code>, etc.) reduces
+the affected sizes by <code>4px</code>, down to the minimum size necessary for a component to render coherently.</p>
+<p>Components that appear in task-based or pop-up contexts, such as <code>MatDatepicker</code>, don&#39;t change their size via the
+density system. The <a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidance</a>
+explicitly discourages increasing density for such interactions because they don&#39;t compete for space in the
+application&#39;s layout.</p>
+<p>You can apply custom density setting to the entire library or to individual components using their density Sass mixins.</p>
+<pre><code class="language-scss"><span class="hljs-comment">// You can set a density setting in your theme to apply to all components.</span>
+<span class="hljs-variable">$dark-theme</span>: mat.define-dark-theme((
+  color: ...,
+  typography: ...,
+  density: -<span class="hljs-number">2</span>,
+));
+
+<span class="hljs-comment">// Or you can selectively apply the Sass mixin to affect only specific parts of your application.</span>
+<span class="hljs-selector-class">.the-dense-zone</span> {
+  <span class="hljs-keyword">@include</span> mat.button-density(-<span class="hljs-number">1</span>);
 }
 </code></pre>
 
@@ -457,11 +493,20 @@ to use <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Usin
 shadow root that contains an Angular Material component. You can accomplish this by manually loading
 the CSS in each shadow root, or by using <a href="https://developers.google.com/web/updates/2019/02/constructable-stylesheets">Constructable Stylesheets</a>.</p>
 
+        <h2 id="user-preference-media-queries" class="docs-header-link">
+          <span header-link="user-preference-media-queries"></span>
+          User preference media queries
+        </h2>
+      <p>Angular Material does not apply styles based on user preference media queries, such as <code>prefers-color-scheme</code>
+or <code>prefers-contrast</code>. Instead, Angular Material&#39;s Sass mixins give you the flexibility to
+apply theme styles to based on the conditions that make the most sense for your users. This may mean using media
+queries directly or reading a saved user preference.</p>
+
         <h2 id="style-customization-outside-the-theming-system" class="docs-header-link">
           <span header-link="style-customization-outside-the-theming-system"></span>
           Style customization outside the theming system
         </h2>
-      <p>Angular Material supports customizing color and typography as outlined in this document. Angular
+      <p>Angular Material supports customizing color, typography, and density as outlined in this document. Angular
 strongly discourages, and does not directly support, overriding component CSS outside the theming
 APIs described above. Component DOM structure and CSS classes are considered private implementation
 details that may change at any time.</p>
