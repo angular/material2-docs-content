@@ -52,24 +52,10 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>checkboxPosition: MatListOptionCheckboxPosition</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the label should appear before or after the checkbox. Defaults to &#39;after&#39;</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
       <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color of the list option. This sets the color of the checkbox.</p>
+  <td class="docs-api-property-description"><p>Theme color of the list option. This sets the color of the checkbox/radio.</p>
 </td>
 </tr>
 
@@ -140,10 +126,40 @@ always be able to take up the remaining space of the item, unless it represents 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>togglePosition: MatListOptionTogglePosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the label should appear before or after the checkbox/radio. Defaults to &#39;after&#39;</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>value: any</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Value of the option</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><div class="docs-api-deprecated-marker" title="Will be removed in v17.0.0 or later">
+        Deprecated
+      </div><p class="docs-api-property-name">
+      <code>checkboxPosition: MatListOptionTogglePosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the label should appear before or after the checkbox/radio. Defaults to &#39;after&#39;</p>
 </td>
 </tr>
 
@@ -887,14 +903,14 @@ button or additional text content.</p>
     
       
 
-<h4 id="MatListOptionCheckboxPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="MatListOptionCheckboxPosition"></span>
-  <code>MatListOptionCheckboxPosition</code>
-</h4><p class="docs-api-type-alias-description"><p>Type describing possible positions of a checkbox in a list option
+<h4 id="MatListOptionTogglePosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatListOptionTogglePosition"></span>
+  <code>MatListOptionTogglePosition</code>
+</h4><p class="docs-api-type-alias-description"><p>Type describing possible positions of a checkbox or radio in a list option
 with respect to the list item&#39;s text.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatListOptionCheckboxPosition = <span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatListOptionTogglePosition = <span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span>;</code>
 </pre>
 </div>
 
