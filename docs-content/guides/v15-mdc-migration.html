@@ -339,10 +339,10 @@ users should not call <code>preventDefault</code> on <code>click</code>.</p>
 </li>
 <li><p>Checkbox touch targets are larger, now 40px instead of 16px, which is more accessible. Be sure to
 allow enough space in your layout so that the touch target does not overlap other components. If
-you are not concerned with accessibility you can match the previous size by using density -5 for
+you are not concerned with accessibility you can match the previous size by using density -1 for
 the checkbox.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@include</span> mat.checkbox-density(-<span class="hljs-number">5px</span>);
+<span class="hljs-keyword">@include</span> mat.checkbox-density(-<span class="hljs-number">1</span>);
 </code></pre>
 </li>
 <li><p>Checkbox color may be changed to white or black due to a change in heuristics based on the
@@ -605,9 +605,9 @@ selecting a radio when clicking on whitespace that appears inert on the page.</p
 </li>
 <li><p>The touch target is now much larger and more accessible. Be sure to allow enough space in your
 layout so that the touch target does not overlap other components. If you are not concerned with
-accessibility you can match the previous size by using density -5 for the radio.</p>
+accessibility you can match the previous size by using density -1 for the radio.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@include</span> mat.radio-density(-<span class="hljs-number">5px</span>);
+<span class="hljs-keyword">@include</span> mat.radio-density(-<span class="hljs-number">1</span>);
 </code></pre>
 </li>
 </ul>
@@ -643,9 +643,9 @@ validation. Consider alternative approaches to form validation.</p>
 </li>
 <li><p>The touch target is much larger and more accessible. Be sure to allow enough space in your
 layout so that the touch target does not overlap other components. If you are not concerned with
-accessibility you can match the previous size by using density -5 for the slide-toggle.</p>
+accessibility you can match the previous size by using density -1 for the slide-toggle.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@include</span> mat.slide-toggle-density(-<span class="hljs-number">5px</span>);
+<span class="hljs-keyword">@include</span> mat.slide-toggle-density(-<span class="hljs-number">1</span>);
 </code></pre>
 </li>
 <li><p>The label is closer to the enabled toggle</p>
