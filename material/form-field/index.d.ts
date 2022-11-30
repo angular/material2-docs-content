@@ -20,7 +20,6 @@ import * as i18 from '@angular/forms';
 import { MatFormField } from '@angular/material/form-field';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { NgControl } from '@angular/forms';
-import { NonNullableFormBuilder } from '@angular/forms';
 import { OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 
@@ -96,13 +95,7 @@ export declare class FormFieldPrefixSuffixExample {
 
 /** @title Form field theming */
 export declare class FormFieldThemingExample {
-    private _formBuilder;
-    options: FormGroup<    {
-    color: FormControl<"primary" | "accent" | "warn" | undefined>;
-    fontSize: FormControl<number>;
-    }>;
-    constructor(_formBuilder: NonNullableFormBuilder);
-    getFontSize(): number;
+    colorControl: FormControl<"primary" | "accent" | "warn" | null | undefined>;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldThemingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never, never, false, never>;
 }
