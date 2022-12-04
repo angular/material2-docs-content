@@ -60,6 +60,20 @@ certain locales. It is also worth noting that using ALL CAPS in the text itself 
 screen-readers, which will read the text character-by-character. We leave the decision of how to
 approach this to the consuming app.</p>
 
+        <h3 id="extended-fab-buttons" class="docs-header-link">
+          <span header-link="extended-fab-buttons"></span>
+          Extended fab buttons
+        </h3>
+      <p>Traditional fab buttons are circular and only have space for a single icon. However, you can add the
+<code>extended</code> attribute to allow the fab to expand into a rounded rectangle shape with space for a text
+label in addition to the icon. Only full sized fabs support the <code>extended</code> attribute, mini fabs do
+not.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-fab</span> <span class="hljs-attr">extended</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>home<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  Home
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility

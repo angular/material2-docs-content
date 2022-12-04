@@ -2,10 +2,11 @@ import * as i0 from '@angular/core';
 import * as i4 from '@angular/material/button';
 import * as i5 from '@angular/material/divider';
 import * as i6 from '@angular/material/icon';
+import * as i7 from '@angular/material/tooltip';
 
 export declare class ButtonExamplesModule {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<ButtonExamplesModule, [typeof i1.ButtonOverviewExample, typeof i2.ButtonTypesExample, typeof i3.ButtonHarnessExample], [typeof i4.MatButtonModule, typeof i5.MatDividerModule, typeof i6.MatIconModule], [typeof i1.ButtonOverviewExample, typeof i2.ButtonTypesExample, typeof i3.ButtonHarnessExample]>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<ButtonExamplesModule, [typeof i1.ButtonOverviewExample, typeof i2.ButtonTypesExample, typeof i3.ButtonHarnessExample], [typeof i4.MatButtonModule, typeof i5.MatDividerModule, typeof i6.MatIconModule, typeof i7.MatTooltipModule], [typeof i1.ButtonOverviewExample, typeof i2.ButtonTypesExample, typeof i3.ButtonHarnessExample]>;
     static ɵinj: i0.ɵɵInjectorDeclaration<ButtonExamplesModule>;
 }
 
