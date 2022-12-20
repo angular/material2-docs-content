@@ -567,6 +567,20 @@ and each list item is removed from the tab order (has tabindex=&quot;-1&quot;).<
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether radio indicator for all list items is hidden.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>multiple: boolean</code>
     </p>
   </td>
@@ -881,6 +895,44 @@ button or additional text content.</p>
 
 
 
+    <h3 id="material-list-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="MatListConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatListConfig"></span>
+  <code>MatListConfig</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the default options for the list module.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Wheter icon indicators should be hidden for single-selection.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     <h3 id="material-list-type_aliases" class="docs-header-link docs-api-h3">
       <span header-link="type_aliases"></span>
       Type aliases
@@ -945,6 +997,20 @@ retention of the class and its component metadata.</p>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SELECTION_LIST_VALUE_ACCESSOR: <span class="hljs-built_in">any</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_LIST_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LIST_CONFIG"></span>
+  <code>MAT_LIST_CONFIG</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to provide the default options the list module.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LIST_CONFIG: InjectionToken&lt;MatListConfig&gt;;</code>
 </pre>
 </div>
 
