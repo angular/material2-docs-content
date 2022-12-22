@@ -40,9 +40,9 @@ class BreakpointObserverOverviewExample {
         this.destroyed.complete();
     }
 }
-BreakpointObserverOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0", ngImport: i0, type: BreakpointObserverOverviewExample, deps: [{ token: i1.BreakpointObserver }], target: i0.ɵɵFactoryTarget.Component });
-BreakpointObserverOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.0.0", type: BreakpointObserverOverviewExample, selector: "breakpoint-observer-overview-example", ngImport: i0, template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0", ngImport: i0, type: BreakpointObserverOverviewExample, decorators: [{
+BreakpointObserverOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.1.0-next.3", ngImport: i0, type: BreakpointObserverOverviewExample, deps: [{ token: i1.BreakpointObserver }], target: i0.ɵɵFactoryTarget.Component });
+BreakpointObserverOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "15.1.0-next.3", type: BreakpointObserverOverviewExample, selector: "breakpoint-observer-overview-example", ngImport: i0, template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.1.0-next.3", ngImport: i0, type: BreakpointObserverOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'breakpoint-observer-overview-example', template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] }]
         }], ctorParameters: function () { return [{ type: i1.BreakpointObserver }]; } });
@@ -50,10 +50,10 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0", ngImpor
 const EXAMPLES = [BreakpointObserverOverviewExample];
 class CdkLayoutExamplesModule {
 }
-CdkLayoutExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.0.0", ngImport: i0, type: CdkLayoutExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkLayoutExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.0.0", ngImport: i0, type: CdkLayoutExamplesModule, declarations: [BreakpointObserverOverviewExample], imports: [LayoutModule], exports: [BreakpointObserverOverviewExample] });
-CdkLayoutExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.0.0", ngImport: i0, type: CdkLayoutExamplesModule, imports: [LayoutModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.0.0", ngImport: i0, type: CdkLayoutExamplesModule, decorators: [{
+CdkLayoutExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.1.0-next.3", ngImport: i0, type: CdkLayoutExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkLayoutExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "15.1.0-next.3", ngImport: i0, type: CdkLayoutExamplesModule, declarations: [BreakpointObserverOverviewExample], imports: [LayoutModule], exports: [BreakpointObserverOverviewExample] });
+CdkLayoutExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "15.1.0-next.3", ngImport: i0, type: CdkLayoutExamplesModule, imports: [LayoutModule] });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.1.0-next.3", ngImport: i0, type: CdkLayoutExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [LayoutModule],
