@@ -2353,6 +2353,39 @@ by dragging it into another container.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>receivingStarted: Subject&lt;{
+    receiver: DropListRef;
+    initiator: DropListRef;
+    items: DragRef[];
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when a dragging sequence is started in a list connected to the current one.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>receivingStopped: Subject&lt;{
+    receiver: DropListRef;
+    initiator: DropListRef;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when a dragging sequence is stopped from a list connected to the current one.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>sortPredicate: (index: number, drag: DragRef, drop: DropListRef) =&gt; boolean</code>
     </p>
   </td>
