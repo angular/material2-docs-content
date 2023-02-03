@@ -196,10 +196,17 @@ typography styles only for the button component.</p>
           <span header-link="using-typography-styles-in-your-application"></span>
           Using typography styles in your application
         </h2>
-      <p>In addition to styles shared between components, the <code>core</code> mixin includes CSS classes for styling
-your application. These CSS classes correspond to the typography levels in your typography config.
-This mixin also emits styles for native header elements scoped within the <code>.mat-typography</code> CSS
-class. The table below lists the CSS classes emitted and the native elements styled.</p>
+      <p>In addition to styles shared between components, the <code>typography-hierarchy</code> mixin includes CSS
+classes for styling your application. These CSS classes correspond to the typography levels in your
+typography config. This mixin also emits styles for native header elements scoped within the
+<code>.mat-typography</code> CSS class.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-comment">// Use the default configuration.</span>
+<span class="hljs-variable">$my-typography</span>: mat.define-typography-config();
+<span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$my-typography</span>);
+</code></pre>
+<p>The table below lists the CSS classes emitted and the native elements styled.</p>
 <table>
 <thead>
 <tr>
@@ -280,10 +287,8 @@ headers and paragraphs. For <code>body</code> styles, text is styled within the 
 typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> level with the font-size scaled down by
 <code>0.83</code>. The <code>.mat-h6</code> style uses the <code>body-2</code> level with the font-size scaled down by <code>0.67</code>.</p>
 <p>The <code>button</code> and <code>input</code> typography levels do not map to CSS classes.</p>
-<p>You can also manually emit the CSS rules for these CSS classes and native elements by calling the <code>typography-hierarchy</code>
-mixin. This mixin accepts a typography config and a CSS selector under which the styles are scopes (defaulting to
-<code>.mat-typography</code>).</p>
-<p>The following example demonstrates usage of the typography styles emitted by the <code>core</code> mixin.</p>
+<p>The following example demonstrates usage of the typography styles emitted by the
+<code>typography-hierarchy</code> mixin.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This header will *not* be styled because it is outside `.mat-typography` --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Top header<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
