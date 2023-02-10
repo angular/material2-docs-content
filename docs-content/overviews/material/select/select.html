@@ -205,6 +205,10 @@ controls, such as buttons or checkboxes, inside a select option. Nesting interac
 this interferes with most assistive technology.</p>
 <p>Always provide an accessible label for the select. This can be done by adding a <code>&lt;mat-label&gt;</code>
 inside of <code>&lt;mat-form-field&gt;</code>, the <code>aria-label</code> attribute, or the <code>aria-labelledby</code> attribute.</p>
+<p>By default, <code>MatSelect</code> displays a checkmark to identify selected items. While you can hide the
+checkmark indicator for single-selection via <code>hideSingleSelectionIndicator</code>, this makes the
+component less accessible by making it harder or impossible for users to visually identify selected
+items.</p>
 
         <h3 id="troubleshooting" class="docs-header-link">
           <span header-link="troubleshooting"></span>
