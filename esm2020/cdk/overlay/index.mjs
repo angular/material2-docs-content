@@ -4,12 +4,13 @@ import { CdkOverlayBasicExample } from './cdk-overlay-basic/cdk-overlay-basic-ex
 import * as i0 from "@angular/core";
 export { CdkOverlayBasicExample };
 const EXAMPLES = [CdkOverlayBasicExample];
-export class CdkOverlayExamplesModule {
+class CdkOverlayExamplesModule {
 }
-CdkOverlayExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.0", ngImport: i0, type: CdkOverlayExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkOverlayExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.0", ngImport: i0, type: CdkOverlayExamplesModule, declarations: [CdkOverlayBasicExample], imports: [OverlayModule], exports: [CdkOverlayBasicExample] });
-CdkOverlayExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.0", ngImport: i0, type: CdkOverlayExamplesModule, imports: [OverlayModule] });
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.0", ngImport: i0, type: CdkOverlayExamplesModule, decorators: [{
+CdkOverlayExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkOverlayExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkOverlayExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkOverlayExamplesModule, declarations: [CdkOverlayBasicExample], imports: [OverlayModule], exports: [CdkOverlayBasicExample] });
+CdkOverlayExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkOverlayExamplesModule, imports: [OverlayModule] });
+export { CdkOverlayExamplesModule };
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkOverlayExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [OverlayModule],
@@ -17,4 +18,4 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.0", 
                     exports: EXAMPLES,
                 }]
         }] });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9jZGsvb3ZlcmxheS9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsUUFBUSxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBQ3ZDLE9BQU8sRUFBQyxhQUFhLEVBQUMsTUFBTSxzQkFBc0IsQ0FBQztBQUVuRCxPQUFPLEVBQUMsc0JBQXNCLEVBQUMsTUFBTSwrQ0FBK0MsQ0FBQzs7QUFFckYsT0FBTyxFQUFDLHNCQUFzQixFQUFDLENBQUM7QUFFaEMsTUFBTSxRQUFRLEdBQUcsQ0FBQyxzQkFBc0IsQ0FBQyxDQUFDO0FBTzFDLE1BQU0sT0FBTyx3QkFBd0I7OzRIQUF4Qix3QkFBd0I7NkhBQXhCLHdCQUF3QixpQkFQbkIsc0JBQXNCLGFBRzVCLGFBQWEsYUFIUCxzQkFBc0I7NkhBTzNCLHdCQUF3QixZQUp6QixhQUFhO2tHQUlaLHdCQUF3QjtrQkFMcEMsUUFBUTttQkFBQztvQkFDUixPQUFPLEVBQUUsQ0FBQyxhQUFhLENBQUM7b0JBQ3hCLFlBQVksRUFBRSxRQUFRO29CQUN0QixPQUFPLEVBQUUsUUFBUTtpQkFDbEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge05nTW9kdWxlfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7T3ZlcmxheU1vZHVsZX0gZnJvbSAnQGFuZ3VsYXIvY2RrL292ZXJsYXknO1xuXG5pbXBvcnQge0Nka092ZXJsYXlCYXNpY0V4YW1wbGV9IGZyb20gJy4vY2RrLW92ZXJsYXktYmFzaWMvY2RrLW92ZXJsYXktYmFzaWMtZXhhbXBsZSc7XG5cbmV4cG9ydCB7Q2RrT3ZlcmxheUJhc2ljRXhhbXBsZX07XG5cbmNvbnN0IEVYQU1QTEVTID0gW0Nka092ZXJsYXlCYXNpY0V4YW1wbGVdO1xuXG5ATmdNb2R1bGUoe1xuICBpbXBvcnRzOiBbT3ZlcmxheU1vZHVsZV0sXG4gIGRlY2xhcmF0aW9uczogRVhBTVBMRVMsXG4gIGV4cG9ydHM6IEVYQU1QTEVTLFxufSlcbmV4cG9ydCBjbGFzcyBDZGtPdmVybGF5RXhhbXBsZXNNb2R1bGUge31cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9jZGsvb3ZlcmxheS9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsUUFBUSxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBQ3ZDLE9BQU8sRUFBQyxhQUFhLEVBQUMsTUFBTSxzQkFBc0IsQ0FBQztBQUVuRCxPQUFPLEVBQUMsc0JBQXNCLEVBQUMsTUFBTSwrQ0FBK0MsQ0FBQzs7QUFFckYsT0FBTyxFQUFDLHNCQUFzQixFQUFDLENBQUM7QUFFaEMsTUFBTSxRQUFRLEdBQUcsQ0FBQyxzQkFBc0IsQ0FBQyxDQUFDO0FBRTFDLE1BS2Esd0JBQXdCOzs0SEFBeEIsd0JBQXdCOzZIQUF4Qix3QkFBd0IsaUJBUG5CLHNCQUFzQixhQUc1QixhQUFhLGFBSFAsc0JBQXNCOzZIQU8zQix3QkFBd0IsWUFKekIsYUFBYTtTQUlaLHdCQUF3QjtrR0FBeEIsd0JBQXdCO2tCQUxwQyxRQUFRO21CQUFDO29CQUNSLE9BQU8sRUFBRSxDQUFDLGFBQWEsQ0FBQztvQkFDeEIsWUFBWSxFQUFFLFFBQVE7b0JBQ3RCLE9BQU8sRUFBRSxRQUFRO2lCQUNsQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7TmdNb2R1bGV9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHtPdmVybGF5TW9kdWxlfSBmcm9tICdAYW5ndWxhci9jZGsvb3ZlcmxheSc7XG5cbmltcG9ydCB7Q2RrT3ZlcmxheUJhc2ljRXhhbXBsZX0gZnJvbSAnLi9jZGstb3ZlcmxheS1iYXNpYy9jZGstb3ZlcmxheS1iYXNpYy1leGFtcGxlJztcblxuZXhwb3J0IHtDZGtPdmVybGF5QmFzaWNFeGFtcGxlfTtcblxuY29uc3QgRVhBTVBMRVMgPSBbQ2RrT3ZlcmxheUJhc2ljRXhhbXBsZV07XG5cbkBOZ01vZHVsZSh7XG4gIGltcG9ydHM6IFtPdmVybGF5TW9kdWxlXSxcbiAgZGVjbGFyYXRpb25zOiBFWEFNUExFUyxcbiAgZXhwb3J0czogRVhBTVBMRVMsXG59KVxuZXhwb3J0IGNsYXNzIENka092ZXJsYXlFeGFtcGxlc01vZHVsZSB7fVxuIl19
