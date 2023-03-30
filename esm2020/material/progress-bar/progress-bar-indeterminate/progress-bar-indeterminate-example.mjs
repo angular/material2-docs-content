@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/progress-bar";
  */
 class ProgressBarIndeterminateExample {
 }
-ProgressBarIndeterminateExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ProgressBarIndeterminateExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.0.0-next.2", type: ProgressBarIndeterminateExample, selector: "progress-bar-indeterminate-example", ngImport: i0, template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>\n", dependencies: [{ kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] });
+ProgressBarIndeterminateExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ProgressBarIndeterminateExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ProgressBarIndeterminateExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.0.0-next.5", type: ProgressBarIndeterminateExample, selector: "progress-bar-indeterminate-example", ngImport: i0, template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>\n", dependencies: [{ kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] });
 export { ProgressBarIndeterminateExample };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ProgressBarIndeterminateExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ProgressBarIndeterminateExample, decorators: [{
             type: Component,
             args: [{ selector: 'progress-bar-indeterminate-example', template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>\n" }]
         }] });

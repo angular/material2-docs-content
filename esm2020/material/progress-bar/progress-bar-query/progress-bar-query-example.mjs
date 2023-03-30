@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/progress-bar";
  */
 class ProgressBarQueryExample {
 }
-ProgressBarQueryExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ProgressBarQueryExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-ProgressBarQueryExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.0.0-next.2", type: ProgressBarQueryExample, selector: "progress-bar-query-example", ngImport: i0, template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>\n", dependencies: [{ kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] });
+ProgressBarQueryExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ProgressBarQueryExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+ProgressBarQueryExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.0.0-next.5", type: ProgressBarQueryExample, selector: "progress-bar-query-example", ngImport: i0, template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>\n", dependencies: [{ kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] });
 export { ProgressBarQueryExample };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ProgressBarQueryExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ProgressBarQueryExample, decorators: [{
             type: Component,
             args: [{ selector: 'progress-bar-query-example', template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>\n" }]
         }] });

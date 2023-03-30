@@ -21,8 +21,8 @@ const EXAMPLES = [
 ];
 class SliderExamplesModule {
 }
-SliderExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: SliderExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-SliderExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.2", ngImport: i0, type: SliderExamplesModule, declarations: [SliderConfigurableExample,
+SliderExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: SliderExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+SliderExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: SliderExamplesModule, declarations: [SliderConfigurableExample,
         SliderFormattingExample,
         SliderHarnessExample,
         SliderOverviewExample,
@@ -36,14 +36,14 @@ SliderExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ve
         SliderHarnessExample,
         SliderOverviewExample,
         SliderRangeExample] });
-SliderExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: SliderExamplesModule, imports: [CommonModule,
+SliderExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: SliderExamplesModule, imports: [CommonModule,
         FormsModule,
         MatCardModule,
         MatCheckboxModule,
         MatInputModule,
         MatSliderModule] });
 export { SliderExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: SliderExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: SliderExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

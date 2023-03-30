@@ -870,7 +870,7 @@ export declare class WrapperTable<T> implements AfterContentInit {
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": false; }; "dataSource": { "alias": "dataSource"; "required": false; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], false, never>;
 }
 
 export { }

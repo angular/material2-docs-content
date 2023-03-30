@@ -7,11 +7,11 @@ export { CdkAccordionOverviewExample };
 const EXAMPLES = [CdkAccordionOverviewExample];
 class CdkAccordionExamplesModule {
 }
-CdkAccordionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkAccordionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkAccordionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkAccordionExamplesModule, declarations: [CdkAccordionOverviewExample], imports: [CommonModule, CdkAccordionModule], exports: [CdkAccordionOverviewExample] });
-CdkAccordionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkAccordionExamplesModule, imports: [CommonModule, CdkAccordionModule] });
+CdkAccordionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkAccordionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkAccordionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkAccordionExamplesModule, declarations: [CdkAccordionOverviewExample], imports: [CommonModule, CdkAccordionModule], exports: [CdkAccordionOverviewExample] });
+CdkAccordionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkAccordionExamplesModule, imports: [CommonModule, CdkAccordionModule] });
 export { CdkAccordionExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: CdkAccordionExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkAccordionExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CommonModule, CdkAccordionModule],

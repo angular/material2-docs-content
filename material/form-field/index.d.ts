@@ -166,7 +166,6 @@ declare class MyTel {
 
 /** Custom `MatFormFieldControl` for telephone number input. */
 export declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
-    private _formBuilder;
     private _focusMonitor;
     private _elementRef;
     _formField: MatFormField;
@@ -202,7 +201,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     get value(): MyTel | null;
     set value(tel: MyTel | null);
     get errorState(): boolean;
-    constructor(_formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
+    constructor(formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, _formField: MatFormField, ngControl: NgControl);
     ngOnDestroy(): void;
     onFocusIn(event: FocusEvent): void;
     onFocusOut(event: FocusEvent): void;
@@ -216,7 +215,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     setDisabledState(isDisabled: boolean): void;
     _handleInput(control: AbstractControl, nextElement?: HTMLInputElement): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MyTelInput, [null, null, null, { optional: true; }, { optional: true; self: true; }]>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": "aria-describedby"; "placeholder": "placeholder"; "required": "required"; "disabled": "disabled"; "value": "value"; }, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MyTelInput, "example-tel-input", never, { "userAriaDescribedBy": { "alias": "aria-describedby"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "required": { "alias": "required"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "value": { "alias": "value"; "required": false; }; }, {}, never, never, false, never>;
 }
 
 export { }

@@ -90,7 +90,7 @@ export declare class CdkVirtualScrollWindowScrollingExample {
     shouldRun: boolean;
     items: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollWindowScrollingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollWindowScrollingExample, "cdk-virtual-scroll-window-scrolling-example", never, { "shouldRun": "shouldRun"; }, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollWindowScrollingExample, "cdk-virtual-scroll-window-scrolling-example", never, { "shouldRun": { "alias": "shouldRun"; "required": false; }; }, {}, never, never, false, never>;
 }
 
 declare class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {

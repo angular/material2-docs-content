@@ -20,8 +20,8 @@ const EXAMPLES = [
 ];
 class ListExamplesModule {
 }
-ListExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ListExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ListExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.2", ngImport: i0, type: ListExamplesModule, declarations: [ListHarnessExample,
+ListExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ListExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ListExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: ListExamplesModule, declarations: [ListHarnessExample,
         ListOverviewExample,
         ListSectionsExample,
         ListSelectionExample,
@@ -32,9 +32,9 @@ ListExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         ListSelectionExample,
         ListSingleSelectionExample,
         ListVariantsExample] });
-ListExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ListExamplesModule, imports: [CommonModule, MatIconModule, MatListModule] });
+ListExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ListExamplesModule, imports: [CommonModule, MatIconModule, MatListModule] });
 export { ListExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: ListExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ListExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CommonModule, MatIconModule, MatListModule],

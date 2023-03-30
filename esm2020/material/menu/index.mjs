@@ -18,8 +18,8 @@ const EXAMPLES = [
 ];
 class MenuExamplesModule {
 }
-MenuExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: MenuExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-MenuExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.2", ngImport: i0, type: MenuExamplesModule, declarations: [MenuHarnessExample,
+MenuExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: MenuExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+MenuExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: MenuExamplesModule, declarations: [MenuHarnessExample,
         MenuIconsExample,
         MenuOverviewExample,
         MenuPositionExample,
@@ -28,9 +28,9 @@ MenuExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", vers
         MenuOverviewExample,
         MenuPositionExample,
         MenuNestedExample] });
-MenuExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: MenuExamplesModule, imports: [MatButtonModule, MatIconModule, MatMenuModule] });
+MenuExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: MenuExamplesModule, imports: [MatButtonModule, MatIconModule, MatMenuModule] });
 export { MenuExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.2", ngImport: i0, type: MenuExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: MenuExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [MatButtonModule, MatIconModule, MatMenuModule],
