@@ -23,8 +23,8 @@ const EXAMPLES = [
 ];
 class PopoverEditExamplesModule {
 }
-PopoverEditExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: PopoverEditExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-PopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: PopoverEditExamplesModule, declarations: [PopoverEditCellSpanMatTableExample,
+PopoverEditExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: PopoverEditExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+PopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: PopoverEditExamplesModule, declarations: [PopoverEditCellSpanMatTableExample,
         PopoverEditMatTableExample,
         PopoverEditMatTableFlexExample,
         PopoverEditTabOutMatTableExample], imports: [CommonModule,
@@ -40,7 +40,7 @@ PopoverEditExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0
         PopoverEditMatTableExample,
         PopoverEditMatTableFlexExample,
         PopoverEditTabOutMatTableExample] });
-PopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: PopoverEditExamplesModule, imports: [CommonModule,
+PopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: PopoverEditExamplesModule, imports: [CommonModule,
         MatButtonModule,
         MatCheckboxModule,
         MatIconModule,
@@ -51,7 +51,7 @@ PopoverEditExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0
         MatTableModule,
         FormsModule] });
 export { PopoverEditExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: PopoverEditExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: PopoverEditExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

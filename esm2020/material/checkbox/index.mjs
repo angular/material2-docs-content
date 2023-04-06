@@ -18,8 +18,8 @@ const EXAMPLES = [
 ];
 class CheckboxExamplesModule {
 }
-CheckboxExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CheckboxExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CheckboxExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CheckboxExamplesModule, declarations: [CheckboxConfigurableExample,
+CheckboxExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CheckboxExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CheckboxExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: CheckboxExamplesModule, declarations: [CheckboxConfigurableExample,
         CheckboxOverviewExample,
         CheckboxHarnessExample,
         CheckboxReactiveFormsExample], imports: [CommonModule,
@@ -31,14 +31,14 @@ CheckboxExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", 
         CheckboxOverviewExample,
         CheckboxHarnessExample,
         CheckboxReactiveFormsExample] });
-CheckboxExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CheckboxExamplesModule, imports: [CommonModule,
+CheckboxExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CheckboxExamplesModule, imports: [CommonModule,
         MatCardModule,
         MatCheckboxModule,
         MatRadioModule,
         FormsModule,
         ReactiveFormsModule] });
 export { CheckboxExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CheckboxExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CheckboxExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

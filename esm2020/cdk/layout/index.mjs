@@ -6,11 +6,11 @@ export { BreakpointObserverOverviewExample };
 const EXAMPLES = [BreakpointObserverOverviewExample];
 class CdkLayoutExamplesModule {
 }
-CdkLayoutExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkLayoutExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkLayoutExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkLayoutExamplesModule, declarations: [BreakpointObserverOverviewExample], imports: [LayoutModule], exports: [BreakpointObserverOverviewExample] });
-CdkLayoutExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkLayoutExamplesModule, imports: [LayoutModule] });
+CdkLayoutExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkLayoutExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkLayoutExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkLayoutExamplesModule, declarations: [BreakpointObserverOverviewExample], imports: [LayoutModule], exports: [BreakpointObserverOverviewExample] });
+CdkLayoutExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkLayoutExamplesModule, imports: [LayoutModule] });
 export { CdkLayoutExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkLayoutExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkLayoutExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [LayoutModule],

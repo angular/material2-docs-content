@@ -29,8 +29,8 @@ const EXAMPLES = [
 ];
 class CdkScrollingExamplesModule {
 }
-CdkScrollingExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, declarations: [CdkVirtualScrollAppendOnlyExample,
+CdkScrollingExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkScrollingExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkScrollingExamplesModule, declarations: [CdkVirtualScrollAppendOnlyExample,
         CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
@@ -51,9 +51,9 @@ CdkScrollingExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.
         CdkVirtualScrollTemplateCacheExample,
         CdkVirtualScrollParentScrollingExample,
         CdkVirtualScrollWindowScrollingExample] });
-CdkScrollingExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, imports: [CommonModule, ScrollingModule] });
+CdkScrollingExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkScrollingExamplesModule, imports: [CommonModule, ScrollingModule] });
 export { CdkScrollingExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkScrollingExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkScrollingExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [CommonModule, ScrollingModule],

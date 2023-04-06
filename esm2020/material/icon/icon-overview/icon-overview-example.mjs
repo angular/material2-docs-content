@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/icon";
  */
 class IconOverviewExample {
 }
-IconOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: IconOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-IconOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.0.0-next.5", type: IconOverviewExample, selector: "icon-overview-example", ngImport: i0, template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\" fontIcon=\"home\"></mat-icon>\n", dependencies: [{ kind: "component", type: i1.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }] });
+IconOverviewExample.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: IconOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+IconOverviewExample.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.0.0-next.7", type: IconOverviewExample, selector: "icon-overview-example", ngImport: i0, template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\" fontIcon=\"home\"></mat-icon>\n", dependencies: [{ kind: "component", type: i1.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }] });
 export { IconOverviewExample };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: IconOverviewExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: IconOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'icon-overview-example', template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\" fontIcon=\"home\"></mat-icon>\n" }]
         }] });

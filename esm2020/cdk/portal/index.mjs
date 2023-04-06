@@ -6,11 +6,11 @@ export { CdkPortalOverviewExample, ComponentPortalExample };
 const EXAMPLES = [CdkPortalOverviewExample, ComponentPortalExample];
 class CdkPortalExamplesModule {
 }
-CdkPortalExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkPortalExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkPortalExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkPortalExamplesModule, declarations: [CdkPortalOverviewExample, ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample, ComponentPortalExample] });
-CdkPortalExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkPortalExamplesModule, imports: [PortalModule] });
+CdkPortalExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkPortalExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkPortalExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkPortalExamplesModule, declarations: [CdkPortalOverviewExample, ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample, ComponentPortalExample] });
+CdkPortalExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkPortalExamplesModule, imports: [PortalModule] });
 export { CdkPortalExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkPortalExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkPortalExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [PortalModule],

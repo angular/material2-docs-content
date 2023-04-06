@@ -42,8 +42,8 @@ const EXAMPLES = [
 ];
 class CdkDragDropExamplesModule {
 }
-CdkDragDropExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkDragDropExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkDragDropExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkDragDropExamplesModule, declarations: [CdkDragDropAxisLockExample,
+CdkDragDropExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkDragDropExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkDragDropExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkDragDropExamplesModule, declarations: [CdkDragDropAxisLockExample,
         CdkDragDropBoundaryExample,
         CdkDragDropConnectedSortingExample,
         CdkDragDropConnectedSortingGroupExample,
@@ -76,9 +76,9 @@ CdkDragDropExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0
         CdkDragDropRootElementExample,
         CdkDragDropSortingExample,
         CdkDragDropSortPredicateExample] });
-CdkDragDropExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkDragDropExamplesModule, imports: [DragDropModule, OverlayModule, CommonModule] });
+CdkDragDropExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkDragDropExamplesModule, imports: [DragDropModule, OverlayModule, CommonModule] });
 export { CdkDragDropExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkDragDropExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkDragDropExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [DragDropModule, OverlayModule, CommonModule],

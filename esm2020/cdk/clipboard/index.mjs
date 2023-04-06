@@ -7,11 +7,11 @@ export { CdkClipboardOverviewExample };
 const EXAMPLES = [CdkClipboardOverviewExample];
 class CdkClipboardExamplesModule {
 }
-CdkClipboardExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkClipboardExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-CdkClipboardExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkClipboardExamplesModule, declarations: [CdkClipboardOverviewExample], imports: [ClipboardModule, FormsModule], exports: [CdkClipboardOverviewExample] });
-CdkClipboardExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkClipboardExamplesModule, imports: [ClipboardModule, FormsModule] });
+CdkClipboardExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkClipboardExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+CdkClipboardExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkClipboardExamplesModule, declarations: [CdkClipboardOverviewExample], imports: [ClipboardModule, FormsModule], exports: [CdkClipboardOverviewExample] });
+CdkClipboardExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkClipboardExamplesModule, imports: [ClipboardModule, FormsModule] });
 export { CdkClipboardExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: CdkClipboardExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: CdkClipboardExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [ClipboardModule, FormsModule],

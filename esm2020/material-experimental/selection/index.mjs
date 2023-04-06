@@ -11,21 +11,21 @@ export { MatSelectionListExample, MatSelectionColumnExample };
 const EXAMPLES = [MatSelectionListExample, MatSelectionColumnExample];
 class MatSelectionExamplesModule {
 }
-MatSelectionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: MatSelectionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-MatSelectionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: MatSelectionExamplesModule, declarations: [MatSelectionListExample, MatSelectionColumnExample], imports: [MatSelectionModule,
+MatSelectionExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: MatSelectionExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+MatSelectionExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: MatSelectionExamplesModule, declarations: [MatSelectionListExample, MatSelectionColumnExample], imports: [MatSelectionModule,
         MatTableModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         MatCheckboxModule], exports: [MatSelectionListExample, MatSelectionColumnExample] });
-MatSelectionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: MatSelectionExamplesModule, imports: [MatSelectionModule,
+MatSelectionExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: MatSelectionExamplesModule, imports: [MatSelectionModule,
         MatTableModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         MatCheckboxModule] });
 export { MatSelectionExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: MatSelectionExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: MatSelectionExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

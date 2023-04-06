@@ -38,8 +38,8 @@ const EXAMPLES = [
 ];
 class StepperExamplesModule {
 }
-StepperExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: StepperExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-StepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: StepperExamplesModule, declarations: [StepperEditableExample,
+StepperExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: StepperExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+StepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: StepperExamplesModule, declarations: [StepperEditableExample,
         StepperErrorsExample,
         StepperHarnessExample,
         StepperIntlExample,
@@ -71,7 +71,7 @@ StepperExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", v
         StepperResponsiveExample,
         StepperHeaderPositionExample,
         StepperAnimationsExample] });
-StepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: StepperExamplesModule, imports: [FormsModule,
+StepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: StepperExamplesModule, imports: [FormsModule,
         MatButtonModule,
         MatIconModule,
         MatInputModule,
@@ -80,7 +80,7 @@ StepperExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", v
         ReactiveFormsModule,
         CommonModule] });
 export { StepperExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: StepperExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: StepperExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [

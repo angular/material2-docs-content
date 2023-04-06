@@ -29,8 +29,8 @@ const EXAMPLES = [
 ];
 class ChipsExamplesModule {
 }
-ChipsExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ChipsExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
-ChipsExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.5", ngImport: i0, type: ChipsExamplesModule, declarations: [ChipsAutocompleteExample,
+ChipsExamplesModule.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: ChipsExamplesModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule });
+ChipsExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.0-next.7", ngImport: i0, type: ChipsExamplesModule, declarations: [ChipsAutocompleteExample,
         ChipsDragDropExample,
         ChipsInputExample,
         ChipsOverviewExample,
@@ -52,7 +52,7 @@ ChipsExamplesModule.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", ver
         ChipsHarnessExample,
         ChipsFormControlExample,
         ChipsAvatarExample] });
-ChipsExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ChipsExamplesModule, imports: [CommonModule,
+ChipsExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: ChipsExamplesModule, imports: [CommonModule,
         DragDropModule,
         MatAutocompleteModule,
         MatButtonModule,
@@ -61,7 +61,7 @@ ChipsExamplesModule.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", ver
         MatFormFieldModule,
         ReactiveFormsModule] });
 export { ChipsExamplesModule };
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.5", ngImport: i0, type: ChipsExamplesModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.0-next.7", ngImport: i0, type: ChipsExamplesModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
