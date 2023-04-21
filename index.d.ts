@@ -44,6 +44,8 @@ export declare interface LiveExample {
     module: NgModuleInfo;
 }
 
+export declare function loadExample(id: string): Promise<any>;
+
 export declare interface NgModuleInfo {
     /** Name of the NgModule. */
     name: string;
