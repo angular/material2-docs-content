@@ -59,10 +59,12 @@ background color to <code>primary</code>, <code>accent</code>, or <code>warn</co
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
-      <p>Badges should be given a meaningful description via <code>matBadgeDescription</code>. This description will be
-applied, via <code>aria-describedby</code> to the element decorated by <code>matBadge</code>.</p>
-<p>When applying a badge to a <code>&lt;mat-icon&gt;</code>, it is important to know that the icon is marked as
-<code>aria-hidden</code> by default. If the combination of icon and badge communicates some meaningful
-information, that information should be surfaced in another way. <a href="https://material.angular.io/components/icon/overview#indicator-icons">See the guidance on indicator
+      <p>You must provide a meaningful description via <code>matBadgeDescription</code>. When attached to an interactive
+element, <code>MatBadge</code> applies this description to its host via <code>aria-describedby</code>. When attached to
+a non-interactive element, <code>MatBadge</code> appends a visually-hidden, inline description element. The
+badge determines interactivity based on whether the host element is focusable.</p>
+<p>When applying a badge to a <code>&lt;mat-icon&gt;</code>, it is important to know that <code>&lt;mat-icon&gt;</code> is
+<code>aria-hidden=&quot;true&quot;</code> by default. If the combination of icon and badge communicates meaningful
+information, always surface this information in another way. <a href="https://material.angular.io/components/icon/overview#indicator-icons">See the guidance on indicator
 icons for more information</a>.</p>
 </div>
