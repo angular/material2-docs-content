@@ -1,0 +1,113 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular CDK observers-private
+  </h2>
+    <p>Import symbols from <code>@angular/cdk/observers/private</code></p><h3 id="cdk-observers-private-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      Services
+    </h3>
+    
+      
+
+<h4 id="SharedResizeObserver" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="SharedResizeObserver"></span>
+  <code>SharedResizeObserver</code>
+  
+</h4><p class="docs-api-class-description"><p>Allows observing resize events on multiple elements using a shared set of ResizeObserver.
+Sharing a ResizeObserver instance is recommended for better performance (see
+<a href="https://github.com/WICG/resize-observer/issues/59">https://github.com/WICG/resize-observer/issues/59</a>).</p>
+<p>Rather than share a single <code>ResizeObserver</code>, this class creates one <code>ResizeObserver</code> per type
+of observed box (&#39;content-box&#39;, &#39;border-box&#39;, and &#39;device-pixel-content-box&#39;). This avoids
+later calls to <code>observe</code> with a different box type from influencing the events dispatched to
+earlier calls.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">observe
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a stream of resize events for the given target element and box type.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        target</p>
+      <code class="docs-api-method-parameter-type">Element</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The element to observe for resizes.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">ResizeObserverOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Options to pass to the <code>ResizeObserver</code></p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;ResizeObserverEntry[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>The stream of resize events for the element.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    </div>
