@@ -1,6 +1,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>mat-select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite food<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;selectedValue&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;food&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let food of foods&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;food.value&quot;</span>&gt;</span>
@@ -10,7 +10,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Selected food: {{selectedValue}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>native html select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite car<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">matNativeControl</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;selectedCar&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;car&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">selected</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
