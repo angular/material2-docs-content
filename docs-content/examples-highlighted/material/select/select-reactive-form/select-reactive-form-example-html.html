@@ -1,6 +1,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;form&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>mat-select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Food<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;foodControl&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;food&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>None<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
@@ -11,7 +11,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Selected: {{foodControl.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Native select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Car<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">matNativeControl</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;carControl&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;car&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>None<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
