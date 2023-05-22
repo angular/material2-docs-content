@@ -1,10 +1,12 @@
 <span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {DateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MatDateRangeSelectionStrategy,
   DateRange,
   MAT_DATE_RANGE_SELECTION_STRATEGY,
+  MatDatepickerModule,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-meta">@Injectable</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FiveDayRangeSelectionStrategy</span>&lt;<span class="hljs-title">D</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">MatDateRangeSelectionStrategy</span>&lt;<span class="hljs-title">D</span>&gt; </span>{
@@ -39,5 +41,7 @@
       <span class="hljs-attr">useClass</span>: FiveDayRangeSelectionStrategy,
     },
   ],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatDatepickerModule, MatNativeDateModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRangePickerSelectionStrategyExample</span> </span>{}

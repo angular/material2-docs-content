@@ -3,13 +3,6 @@ import { CollectionViewer } from '@angular/cdk/collections';
 import { DataSource } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/icon';
-import * as i11 from '@angular/material/input';
-import * as i12 from '@angular/material/progress-bar';
-import * as i13 from '@angular/material/tree';
-import * as i7 from '@angular/common';
-import * as i8 from '@angular/material/button';
-import * as i9 from '@angular/material/checkbox';
 import { MatTreeFlatDataSource } from '@angular/material/tree';
 import { MatTreeFlattener } from '@angular/material/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
@@ -121,51 +114,6 @@ declare interface FoodNode_2 {
     children?: FoodNode_2[];
 }
 
-declare namespace i1 {
-    export {
-        TodoItemNode,
-        TodoItemFlatNode,
-        ChecklistDatabase,
-        TreeChecklistExample
-    }
-}
-
-declare namespace i2 {
-    export {
-        DynamicFlatNode,
-        DynamicDatabase,
-        DynamicDataSource,
-        TreeDynamicExample
-    }
-}
-
-declare namespace i3 {
-    export {
-        TreeFlatOverviewExample
-    }
-}
-
-declare namespace i4 {
-    export {
-        TreeHarnessExample
-    }
-}
-
-declare namespace i5 {
-    export {
-        LoadmoreNode,
-        LoadmoreFlatNode,
-        LoadmoreDatabase,
-        TreeLoadmoreExample
-    }
-}
-
-declare namespace i6 {
-    export {
-        TreeNestedOverviewExample
-    }
-}
-
 /**
  * A database that only load part of the data initially. After user clicks on the `Load more`
  * button, more data will be loaded.
@@ -269,7 +217,7 @@ export declare class TreeChecklistExample {
     /** Save the node to database */
     saveNode(node: TodoItemFlatNode, itemValue: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeChecklistExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -283,13 +231,7 @@ export declare class TreeDynamicExample {
     isExpandable: (node: DynamicFlatNode) => boolean;
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, false, never>;
-}
-
-export declare class TreeExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample], [typeof i7.CommonModule, typeof i8.MatButtonModule, typeof i9.MatCheckboxModule, typeof i10.MatIconModule, typeof i11.MatInputModule, typeof i12.MatProgressBarModule, typeof i13.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeHarnessExample, typeof i5.TreeLoadmoreExample, typeof i6.TreeNestedOverviewExample]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<TreeExamplesModule>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -319,7 +261,7 @@ export declare class TreeFlatOverviewExample {
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -349,7 +291,7 @@ export declare class TreeHarnessExample {
     constructor();
     hasChild: (_: number, node: ExampleFlatNode_2) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -372,7 +314,7 @@ export declare class TreeLoadmoreExample {
     loadMore(item: string): void;
     loadChildren(node: LoadmoreFlatNode): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeLoadmoreExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -384,7 +326,7 @@ export declare class TreeNestedOverviewExample {
     constructor();
     hasChild: (_: number, node: FoodNode_2) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 export { }

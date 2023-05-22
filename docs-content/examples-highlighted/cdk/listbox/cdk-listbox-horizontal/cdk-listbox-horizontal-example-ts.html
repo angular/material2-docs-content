@@ -1,4 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Horizontal listbox */</span>
 <span class="hljs-meta">@Component</span>({
@@ -6,6 +8,8 @@
   <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;cdkListboxhorizontalExample&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-horizontal-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-listbox-horizontal-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [CdkListbox, NgFor, CdkOption],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxHorizontalExample</span> </span>{
   sizes = [<span class="hljs-string">&#x27;XS&#x27;</span>, <span class="hljs-string">&#x27;S&#x27;</span>, <span class="hljs-string">&#x27;M&#x27;</span>, <span class="hljs-string">&#x27;L&#x27;</span>, <span class="hljs-string">&#x27;XL&#x27;</span>];

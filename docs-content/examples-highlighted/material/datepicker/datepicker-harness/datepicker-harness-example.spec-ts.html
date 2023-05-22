@@ -2,11 +2,10 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDatepickerInputHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {DatepickerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./datepicker-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;DatepickerHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;DatepickerHarnessExample&gt;;
@@ -14,8 +13,7 @@ describe(<span class="hljs-string">&#x27;DatepickerHarnessExample&#x27;</span>, 
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatDatepickerModule, NoopAnimationsModule, MatNativeDateModule, FormsModule],
-      <span class="hljs-attr">declarations</span>: [DatepickerHarnessExample],
+      <span class="hljs-attr">imports</span>: [MatDatepickerModule, NoopAnimationsModule, MatNativeDateModule],
     }).compileComponents();
     fixture = TestBed.createComponent(DatepickerHarnessExample);
     fixture.detectChanges();

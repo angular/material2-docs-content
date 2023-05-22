@@ -1,5 +1,6 @@
-<span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
+<span class="hljs-keyword">import</span> {SelectionChange, CdkSelectionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/table&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>CDK Selection Column on a CDK table.
@@ -8,6 +9,8 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-selection-column-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-selection-column-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-selection-column-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [CdkTableModule, CdkSelectionModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkSelectionColumnExample</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;select&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];

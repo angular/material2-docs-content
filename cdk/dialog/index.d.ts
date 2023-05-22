@@ -1,9 +1,6 @@
 import { Dialog } from '@angular/cdk/dialog';
 import { DialogRef } from '@angular/cdk/dialog';
 import * as i0 from '@angular/core';
-import * as i4 from '@angular/common';
-import * as i5 from '@angular/cdk/dialog';
-import * as i6 from '@angular/forms';
 
 /**
  * @title Injecting data when opening a dialog
@@ -13,14 +10,14 @@ export declare class CdkDialogDataExample {
     constructor(dialog: Dialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExample, "cdk-dialog-data-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExample, "cdk-dialog-data-example", never, {}, {}, never, never, true, never>;
 }
 
 export declare class CdkDialogDataExampleDialog {
     data: DialogData;
     constructor(data: DialogData);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogDataExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExampleDialog, "cdk-dialog-data-example-dialog", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExampleDialog, "cdk-dialog-data-example-dialog", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -33,7 +30,7 @@ export declare class CdkDialogOverviewExample {
     constructor(dialog: Dialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExample, "cdk-dialog-overview-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExample, "cdk-dialog-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 export declare class CdkDialogOverviewExampleDialog {
@@ -41,7 +38,7 @@ export declare class CdkDialogOverviewExampleDialog {
     data: DialogData_2;
     constructor(dialogRef: DialogRef<string>, data: DialogData_2);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogOverviewExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExampleDialog, "cdk-dialog-overview-example-dialog", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExampleDialog, "cdk-dialog-overview-example-dialog", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -52,14 +49,14 @@ export declare class CdkDialogStylingExample {
     constructor(dialog: Dialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExample, "cdk-dialog-styling-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExample, "cdk-dialog-styling-example", never, {}, {}, never, never, true, never>;
 }
 
 export declare class CdkDialogStylingExampleDialog {
     dialogRef: DialogRef;
     constructor(dialogRef: DialogRef);
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExampleDialog, "cdk-dialog-styling-example-dialog", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExampleDialog, "cdk-dialog-styling-example-dialog", never, {}, {}, never, never, true, never>;
 }
 
 declare interface DialogData {
@@ -69,35 +66,6 @@ declare interface DialogData {
 declare interface DialogData_2 {
     animal: string;
     name: string;
-}
-
-export declare class DialogExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<DialogExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<DialogExamplesModule, [typeof i1.CdkDialogDataExample, typeof i1.CdkDialogDataExampleDialog, typeof i2.CdkDialogOverviewExample, typeof i2.CdkDialogOverviewExampleDialog, typeof i3.CdkDialogStylingExample, typeof i3.CdkDialogStylingExampleDialog], [typeof i4.CommonModule, typeof i5.DialogModule, typeof i6.FormsModule], [typeof i1.CdkDialogDataExample, typeof i1.CdkDialogDataExampleDialog, typeof i2.CdkDialogOverviewExample, typeof i2.CdkDialogOverviewExampleDialog, typeof i3.CdkDialogStylingExample, typeof i3.CdkDialogStylingExampleDialog]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<DialogExamplesModule>;
-}
-
-declare namespace i1 {
-    export {
-        DialogData,
-        CdkDialogDataExample,
-        CdkDialogDataExampleDialog
-    }
-}
-
-declare namespace i2 {
-    export {
-        DialogData_2 as DialogData,
-        CdkDialogOverviewExample,
-        CdkDialogOverviewExampleDialog
-    }
-}
-
-declare namespace i3 {
-    export {
-        CdkDialogStylingExample,
-        CdkDialogStylingExampleDialog
-    }
 }
 
 export { }

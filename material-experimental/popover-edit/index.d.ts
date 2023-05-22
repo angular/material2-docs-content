@@ -2,16 +2,6 @@ import { BehaviorSubject } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 import { FormValueContainer } from '@angular/cdk-experimental/popover-edit';
 import * as i0 from '@angular/core';
-import * as i10 from '@angular/material/list';
-import * as i11 from '@angular/material-experimental/popover-edit';
-import * as i12 from '@angular/material/snack-bar';
-import * as i13 from '@angular/material/table';
-import * as i14 from '@angular/forms';
-import * as i5 from '@angular/common';
-import * as i6 from '@angular/material/button';
-import * as i7 from '@angular/material/checkbox';
-import * as i8 from '@angular/material/icon';
-import * as i9 from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -80,54 +70,20 @@ declare class ExampleDataSource_4 extends DataSource<PeriodicElement_3> {
 
 declare type FantasyElement = 'Earth' | 'Water' | 'Wind' | 'Fire' | 'Light' | 'Dark';
 
-declare namespace i1 {
-    export {
-        Person,
-        PopoverEditCellSpanMatTableExample,
-        ExampleDataSource
-    }
-}
-
-declare namespace i2 {
-    export {
-        ElementType,
-        FantasyElement,
-        PeriodicElement,
-        PopoverEditMatTableExample,
-        ExampleDataSource_2 as ExampleDataSource
-    }
-}
-
-declare namespace i3 {
-    export {
-        PeriodicElement_2 as PeriodicElement,
-        PopoverEditMatTableFlexExample,
-        ExampleDataSource_3 as ExampleDataSource
-    }
-}
-
-declare namespace i4 {
-    export {
-        PeriodicElement_3 as PeriodicElement,
-        PopoverEditTabOutMatTableExample,
-        ExampleDataSource_4 as ExampleDataSource
-    }
-}
-
 declare interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+
+declare interface PeriodicElement_2 {
     name: string;
     type: ElementType;
     position: number;
     weight: number;
     symbol: string;
     fantasyCounterparts: FantasyElement[];
-}
-
-declare interface PeriodicElement_2 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
 }
 
 declare interface PeriodicElement_3 {
@@ -153,13 +109,7 @@ export declare class PopoverEditCellSpanMatTableExample {
     readonly preservedValues: WeakMap<Person, any>;
     onSubmit(person: Person, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditCellSpanMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never, never, false, never>;
-}
-
-export declare class PopoverEditExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<PopoverEditExamplesModule, [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample], [typeof i5.CommonModule, typeof i6.MatButtonModule, typeof i7.MatCheckboxModule, typeof i8.MatIconModule, typeof i9.MatInputModule, typeof i10.MatListModule, typeof i11.MatPopoverEditModule, typeof i12.MatSnackBarModule, typeof i13.MatTableModule, typeof i14.FormsModule], [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<PopoverEditExamplesModule>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -168,23 +118,23 @@ export declare class PopoverEditExamplesModule {
 export declare class PopoverEditMatTableExample {
     private readonly _snackBar;
     displayedColumns: string[];
-    dataSource: ExampleDataSource_2;
+    dataSource: ExampleDataSource_3;
     nameEditEnabled: boolean;
     readonly TYPES: readonly ElementType[];
     readonly FANTASY_ELEMENTS: readonly FantasyElement[];
-    readonly nameValues: FormValueContainer<PeriodicElement, any>;
-    readonly weightValues: FormValueContainer<PeriodicElement, any>;
-    readonly typeValues: FormValueContainer<PeriodicElement, any>;
-    readonly fantasyValues: FormValueContainer<PeriodicElement, any>;
+    readonly nameValues: FormValueContainer<PeriodicElement_2, any>;
+    readonly weightValues: FormValueContainer<PeriodicElement_2, any>;
+    readonly typeValues: FormValueContainer<PeriodicElement_2, any>;
+    readonly fantasyValues: FormValueContainer<PeriodicElement_2, any>;
     constructor(_snackBar: MatSnackBar);
-    onSubmitName(element: PeriodicElement, f: NgForm): void;
-    onSubmitWeight(element: PeriodicElement, f: NgForm): void;
-    onSubmitType(element: PeriodicElement, f: NgForm): void;
-    onSubmitFantasyCounterparts(element: PeriodicElement, f: NgForm): void;
-    goodJob(element: PeriodicElement): void;
-    badJob(element: PeriodicElement): void;
+    onSubmitName(element: PeriodicElement_2, f: NgForm): void;
+    onSubmitWeight(element: PeriodicElement_2, f: NgForm): void;
+    onSubmitType(element: PeriodicElement_2, f: NgForm): void;
+    onSubmitFantasyCounterparts(element: PeriodicElement_2, f: NgForm): void;
+    goodJob(element: PeriodicElement_2): void;
+    badJob(element: PeriodicElement_2): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -192,13 +142,13 @@ export declare class PopoverEditMatTableExample {
  */
 export declare class PopoverEditMatTableFlexExample {
     displayedColumns: string[];
-    dataSource: ExampleDataSource_3;
-    readonly preservedNameValues: WeakMap<PeriodicElement_2, any>;
-    readonly preservedWeightValues: WeakMap<PeriodicElement_2, any>;
-    onSubmitName(element: PeriodicElement_2, f: NgForm): void;
-    onSubmitWeight(element: PeriodicElement_2, f: NgForm): void;
+    dataSource: ExampleDataSource_2;
+    readonly preservedNameValues: WeakMap<PeriodicElement, any>;
+    readonly preservedWeightValues: WeakMap<PeriodicElement, any>;
+    onSubmitName(element: PeriodicElement, f: NgForm): void;
+    onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditMatTableFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableFlexExample, "popover-edit-mat-table-flex-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableFlexExample, "popover-edit-mat-table-flex-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -212,7 +162,7 @@ export declare class PopoverEditTabOutMatTableExample {
     onSubmitName(element: PeriodicElement_3, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_3, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditTabOutMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditTabOutMatTableExample, "popover-edit-tab-out-mat-table-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditTabOutMatTableExample, "popover-edit-tab-out-mat-table-example", never, {}, {}, never, never, true, never>;
 }
 
 export { }

@@ -2,7 +2,6 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDividerHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDividerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider&#x27;</span>;
 <span class="hljs-keyword">import</span> {DividerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./divider-harness-example&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;DividerHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
@@ -10,10 +9,6 @@ describe(<span class="hljs-string">&#x27;DividerHarnessExample&#x27;</span>, <sp
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatDividerModule],
-      <span class="hljs-attr">declarations</span>: [DividerHarnessExample],
-    }).compileComponents();
     fixture = TestBed.createComponent(DividerHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

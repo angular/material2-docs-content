@@ -2,19 +2,13 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatTreeHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree&#x27;</span>;
 <span class="hljs-keyword">import</span> {TreeHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tree-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;TreeHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;TreeHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatTreeModule, MatIconModule],
-      <span class="hljs-attr">declarations</span>: [TreeHarnessExample],
-    }).compileComponents();
     fixture = TestBed.createComponent(TreeHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

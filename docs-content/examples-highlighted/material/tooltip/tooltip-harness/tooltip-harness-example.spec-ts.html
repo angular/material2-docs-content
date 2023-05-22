@@ -2,9 +2,9 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatTooltipHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
 <span class="hljs-keyword">import</span> {TooltipHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;TooltipHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;TooltipHarnessExample&gt;;
@@ -13,7 +13,6 @@ describe(<span class="hljs-string">&#x27;TooltipHarnessExample&#x27;</span>, <sp
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatTooltipModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [TooltipHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(TooltipHarnessExample);
     fixture.detectChanges();

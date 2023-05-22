@@ -2,19 +2,13 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatRadioButtonHarness, MatRadioGroupHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 <span class="hljs-keyword">import</span> {RadioHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./radio-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;RadioHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;RadioHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatRadioModule, ReactiveFormsModule],
-      <span class="hljs-attr">declarations</span>: [RadioHarnessExample],
-    }).compileComponents();
     fixture = TestBed.createComponent(RadioHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

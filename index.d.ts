@@ -40,21 +40,10 @@ export declare interface LiveExample {
     packagePath: string;
     /** List of additional components which are part of the example. */
     additionalComponents: string[];
-    /** NgModule that declares this example. */
-    module: NgModuleInfo;
+    /** Path from which to import the xample. */
+    importPath: string;
 }
 
 export declare function loadExample(id: string): Promise<any>;
-
-export declare interface NgModuleInfo {
-    /** Name of the NgModule. */
-    name: string;
-    /**
-     * Import specifier that resolves to this module. The specifier is not scoped to
-     * `@angular/components-examples` because it's up to the consumer how the module is
-     * imported. For example, in the docs app, modules are lazily imported from `fesm2022/`.
-     */
-    importSpecifier: string;
-}
 
 export { }

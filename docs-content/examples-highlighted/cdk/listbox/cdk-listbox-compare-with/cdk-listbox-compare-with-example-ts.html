@@ -1,4 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor, NgIf, JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
 
 <span class="hljs-keyword">const</span> today = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
 
@@ -16,6 +18,8 @@
   <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;cdkListboxCompareWithExample&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-compare-with-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-listbox-compare-with-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [CdkListbox, NgFor, CdkOption, NgIf, JsonPipe],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxCompareWithExample</span> </span>{
   slots = [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>].map(

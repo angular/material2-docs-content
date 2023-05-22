@@ -1,12 +1,17 @@
-<span class="hljs-keyword">import</span> {CdkTextareaAutosize} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/text-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkTextareaAutosize, TextFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/text-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {Component, NgZone, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {take} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title <span class="hljs-variable">Auto</span></span>-resizing textarea */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;text-field-autosize-textarea-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./text-field-autosize-textarea-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./text-field-autosize-textarea-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule, MatInputModule, TextFieldModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TextFieldAutosizeTextareaExample</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _ngZone: NgZone</span>)</span> {}

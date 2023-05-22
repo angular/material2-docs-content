@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
@@ -10,6 +10,9 @@
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _moment <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;moment&#x27;</span>;
 <span class="hljs-comment">// tslint:disable-next-line:no-duplicate-imports</span>
 <span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> _rollupMoment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;moment&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-keyword">const</span> moment = _rollupMoment || _moment;
 
@@ -23,6 +26,14 @@
     <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
     {<span class="hljs-attr">provide</span>: DateAdapter, <span class="hljs-attr">useClass</span>: MomentDateAdapter, <span class="hljs-attr">deps</span>: [MAT_DATE_LOCALE]},
     {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MAT_MOMENT_DATE_FORMATS},
+  ],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerMomentExample</span> </span>{

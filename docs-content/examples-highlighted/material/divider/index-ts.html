@@ -1,16 +1,2 @@
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDividerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
-<span class="hljs-keyword">import</span> {DividerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./divider-overview/divider-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {DividerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./divider-harness/divider-harness-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {DividerHarnessExample, DividerOverviewExample};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [DividerHarnessExample, DividerOverviewExample];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDividerModule, MatListModule],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DividerExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {DividerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./divider-overview/divider-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {DividerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./divider-harness/divider-harness-example&#x27;</span>;

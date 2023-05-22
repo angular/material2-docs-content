@@ -2,8 +2,12 @@
 <span class="hljs-keyword">import</span> {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
+  MatSnackBarModule,
   MatSnackBarVerticalPosition,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title <span class="hljs-variable">Snack</span></span>-bar with configurable position
@@ -12,6 +16,8 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;snack-bar-position-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;snack-bar-position-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;snack-bar-position-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule, MatButtonModule, MatSnackBarModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarPositionExample</span> </span>{
   <span class="hljs-attr">horizontalPosition</span>: MatSnackBarHorizontalPosition = <span class="hljs-string">&#x27;start&#x27;</span>;

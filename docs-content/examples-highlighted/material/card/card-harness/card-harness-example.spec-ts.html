@@ -3,7 +3,6 @@
 <span class="hljs-keyword">import</span> {MatButtonHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCardHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
 <span class="hljs-keyword">import</span> {CardHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./card-harness-example&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;CardHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
@@ -11,10 +10,6 @@ describe(<span class="hljs-string">&#x27;CardHarnessExample&#x27;</span>, <span 
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatCardModule],
-      <span class="hljs-attr">declarations</span>: [CardHarnessExample],
-    }).compileComponents();
     fixture = TestBed.createComponent(CardHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

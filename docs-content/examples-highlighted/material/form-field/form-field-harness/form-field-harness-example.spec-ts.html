@@ -2,10 +2,7 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormFieldHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input/testing&#x27;</span>;
 
@@ -15,8 +12,7 @@ describe(<span class="hljs-string">&#x27;FormFieldHarnessExample&#x27;</span>, <
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, ReactiveFormsModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [FormFieldHarnessExample],
+      <span class="hljs-attr">imports</span>: [NoopAnimationsModule],
     }).compileComponents();
     fixture = TestBed.createComponent(FormFieldHarnessExample);
     fixture.detectChanges();

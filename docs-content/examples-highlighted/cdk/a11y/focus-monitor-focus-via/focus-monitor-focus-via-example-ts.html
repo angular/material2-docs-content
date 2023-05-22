@@ -8,12 +8,16 @@
   OnDestroy,
   ViewChild,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Focusing with a specific FocusOrigin */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-focus-via-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-focus-via-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-focus-via-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorFocusViaExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span>, <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;monitored&#x27;</span>) monitoredEl: ElementRef&lt;HTMLElement&gt;;

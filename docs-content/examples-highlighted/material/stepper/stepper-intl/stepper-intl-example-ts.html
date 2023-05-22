@@ -1,6 +1,11 @@
 <span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatStepperIntl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatStepperIntl, MatStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/stepper&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 
 <span class="hljs-meta">@Injectable</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperIntl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MatStepperIntl</span> </span>{
@@ -16,6 +21,17 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;stepper-intl-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;stepper-intl-example.css&#x27;</span>],
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatStepperIntl, <span class="hljs-attr">useClass</span>: StepperIntl}],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    MatRadioModule,
+    FormsModule,
+    NgFor,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StepperIntlExample</span> </span>{
   <span class="hljs-attr">optionalLabelText</span>: <span class="hljs-built_in">string</span>;

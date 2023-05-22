@@ -1,7 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 import * as i0 from '@angular/core';
-import * as i5 from '@angular/cdk/table';
 import { Observable } from 'rxjs';
 
 /**
@@ -9,15 +8,9 @@ import { Observable } from 'rxjs';
  */
 export declare class CdkTableBasicExample {
     displayedColumns: string[];
-    dataSource: ExampleDataSource;
+    dataSource: ExampleDataSource_2;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableBasicExample, "cdk-table-basic-example", never, {}, {}, never, never, false, never>;
-}
-
-export declare class CdkTableExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkTableExamplesModule, [typeof i1.CdkTableBasicExample, typeof i2.CdkTableFlexBasicExample, typeof i3.CdkTableFixedLayoutExample, typeof i4.CdkTableRecycleRowsExample], [typeof i5.CdkTableModule], [typeof i1.CdkTableBasicExample, typeof i2.CdkTableFlexBasicExample, typeof i3.CdkTableFixedLayoutExample, typeof i4.CdkTableRecycleRowsExample]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<CdkTableExamplesModule>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableBasicExample, "cdk-table-basic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -27,7 +20,7 @@ export declare class CdkTableFixedLayoutExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource_3;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableFixedLayoutExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFixedLayoutExample, "cdk-table-fixed-layout-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -35,9 +28,9 @@ export declare class CdkTableFixedLayoutExample {
  */
 export declare class CdkTableFlexBasicExample {
     displayedColumns: string[];
-    dataSource: ExampleDataSource_2;
+    dataSource: ExampleDataSource;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableFlexBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFlexBasicExample, "cdk-table-flex-basic-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableFlexBasicExample, "cdk-table-flex-basic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -47,7 +40,7 @@ export declare class CdkTableRecycleRowsExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource_4;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableRecycleRowsExample, "cdk-table-recycle-rows-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTableRecycleRowsExample, "cdk-table-recycle-rows-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -110,50 +103,18 @@ declare class ExampleDataSource_4 extends DataSource<PeriodicElement_4> {
     disconnect(): void;
 }
 
-declare namespace i1 {
-    export {
-        PeriodicElement,
-        CdkTableBasicExample,
-        ExampleDataSource
-    }
-}
-
-declare namespace i2 {
-    export {
-        PeriodicElement_2 as PeriodicElement,
-        CdkTableFlexBasicExample,
-        ExampleDataSource_2 as ExampleDataSource
-    }
-}
-
-declare namespace i3 {
-    export {
-        PeriodicElement_3 as PeriodicElement,
-        CdkTableFixedLayoutExample,
-        ExampleDataSource_3 as ExampleDataSource
-    }
-}
-
-declare namespace i4 {
-    export {
-        PeriodicElement_4 as PeriodicElement,
-        CdkTableRecycleRowsExample,
-        ExampleDataSource_4 as ExampleDataSource
-    }
-}
-
 declare interface PeriodicElement {
     name: string;
     position: number;
-    weight: number;
     symbol: string;
+    weight: number;
 }
 
 declare interface PeriodicElement_2 {
     name: string;
     position: number;
-    symbol: string;
     weight: number;
+    symbol: string;
 }
 
 declare interface PeriodicElement_3 {

@@ -16,10 +16,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-popover-edit-cdk-table-flex-example",
         "additionalComponents": [],
         "primaryFile": "cdk-popover-edit-cdk-table-flex-example.ts",
-        "module": {
-            "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "cdk-experimental/popover-edit"
-        }
+        "importPath": "cdk-experimental/popover-edit"
     },
     "cdk-popover-edit-cdk-table": {
         "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-cdk-table",
@@ -33,10 +30,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-popover-edit-cdk-table-example",
         "additionalComponents": [],
         "primaryFile": "cdk-popover-edit-cdk-table-example.ts",
-        "module": {
-            "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "cdk-experimental/popover-edit"
-        }
+        "importPath": "cdk-experimental/popover-edit"
     },
     "cdk-popover-edit-cell-span-vanilla-table": {
         "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-cell-span-vanilla-table",
@@ -50,10 +44,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-popover-edit-cell-span-vanilla-table-example",
         "additionalComponents": [],
         "primaryFile": "cdk-popover-edit-cell-span-vanilla-table-example.ts",
-        "module": {
-            "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "cdk-experimental/popover-edit"
-        }
+        "importPath": "cdk-experimental/popover-edit"
     },
     "cdk-popover-edit-tab-out-vanilla-table": {
         "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-tab-out-vanilla-table",
@@ -67,10 +58,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-popover-edit-tab-out-vanilla-table-example",
         "additionalComponents": [],
         "primaryFile": "cdk-popover-edit-tab-out-vanilla-table-example.ts",
-        "module": {
-            "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "cdk-experimental/popover-edit"
-        }
+        "importPath": "cdk-experimental/popover-edit"
     },
     "cdk-popover-edit-vanilla-table": {
         "packagePath": "cdk-experimental/popover-edit/cdk-popover-edit-vanilla-table",
@@ -84,10 +72,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-popover-edit-vanilla-table-example",
         "additionalComponents": [],
         "primaryFile": "cdk-popover-edit-vanilla-table-example.ts",
-        "module": {
-            "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "cdk-experimental/popover-edit"
-        }
+        "importPath": "cdk-experimental/popover-edit"
     },
     "cdk-selection-column": {
         "packagePath": "cdk-experimental/selection/cdk-selection-column",
@@ -101,10 +86,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-selection-column-example",
         "additionalComponents": [],
         "primaryFile": "cdk-selection-column-example.ts",
-        "module": {
-            "name": "CdkSelectionExamplesModule",
-            "importSpecifier": "cdk-experimental/selection"
-        }
+        "importPath": "cdk-experimental/selection"
     },
     "cdk-selection-list": {
         "packagePath": "cdk-experimental/selection/cdk-selection-list",
@@ -117,10 +99,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-selection-list-example",
         "additionalComponents": [],
         "primaryFile": "cdk-selection-list-example.ts",
-        "module": {
-            "name": "CdkSelectionExamplesModule",
-            "importSpecifier": "cdk-experimental/selection"
-        }
+        "importPath": "cdk-experimental/selection"
     },
     "focus-monitor-directives": {
         "packagePath": "cdk/a11y/focus-monitor-directives",
@@ -134,10 +113,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "focus-monitor-directives-example",
         "additionalComponents": [],
         "primaryFile": "focus-monitor-directives-example.ts",
-        "module": {
-            "name": "CdkA11yExamplesModule",
-            "importSpecifier": "cdk/a11y"
-        }
+        "importPath": "cdk/a11y"
     },
     "focus-monitor-focus-via": {
         "packagePath": "cdk/a11y/focus-monitor-focus-via",
@@ -151,10 +127,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "focus-monitor-focus-via-example",
         "additionalComponents": [],
         "primaryFile": "focus-monitor-focus-via-example.ts",
-        "module": {
-            "name": "CdkA11yExamplesModule",
-            "importSpecifier": "cdk/a11y"
-        }
+        "importPath": "cdk/a11y"
     },
     "focus-monitor-overview": {
         "packagePath": "cdk/a11y/focus-monitor-overview",
@@ -168,10 +141,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "focus-monitor-overview-example",
         "additionalComponents": [],
         "primaryFile": "focus-monitor-overview-example.ts",
-        "module": {
-            "name": "CdkA11yExamplesModule",
-            "importSpecifier": "cdk/a11y"
-        }
+        "importPath": "cdk/a11y"
     },
     "cdk-accordion-overview": {
         "packagePath": "cdk/accordion/cdk-accordion-overview",
@@ -185,10 +155,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-accordion-overview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-accordion-overview-example.ts",
-        "module": {
-            "name": "CdkAccordionExamplesModule",
-            "importSpecifier": "cdk/accordion"
-        }
+        "importPath": "cdk/accordion"
     },
     "cdk-clipboard-overview": {
         "packagePath": "cdk/clipboard/cdk-clipboard-overview",
@@ -202,10 +169,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-clipboard-overview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-clipboard-overview-example.ts",
-        "module": {
-            "name": "CdkClipboardExamplesModule",
-            "importSpecifier": "cdk/clipboard"
-        }
+        "importPath": "cdk/clipboard"
     },
     "cdk-dialog-data": {
         "packagePath": "cdk/dialog/cdk-dialog-data",
@@ -222,10 +186,7 @@ const EXAMPLE_COMPONENTS = {
             "CdkDialogDataExampleDialog"
         ],
         "primaryFile": "cdk-dialog-data-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "cdk/dialog"
-        }
+        "importPath": "cdk/dialog"
     },
     "cdk-dialog-overview": {
         "packagePath": "cdk/dialog/cdk-dialog-overview",
@@ -242,10 +203,7 @@ const EXAMPLE_COMPONENTS = {
             "CdkDialogOverviewExampleDialog"
         ],
         "primaryFile": "cdk-dialog-overview-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "cdk/dialog"
-        }
+        "importPath": "cdk/dialog"
     },
     "cdk-dialog-styling": {
         "packagePath": "cdk/dialog/cdk-dialog-styling",
@@ -262,10 +220,7 @@ const EXAMPLE_COMPONENTS = {
             "CdkDialogStylingExampleDialog"
         ],
         "primaryFile": "cdk-dialog-styling-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "cdk/dialog"
-        }
+        "importPath": "cdk/dialog"
     },
     "cdk-drag-drop-axis-lock": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-axis-lock",
@@ -279,10 +234,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-axis-lock-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-axis-lock-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-boundary": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-boundary",
@@ -296,10 +248,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-boundary-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-boundary-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-connected-sorting-group": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-connected-sorting-group",
@@ -313,10 +262,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-connected-sorting-group-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-connected-sorting-group-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-connected-sorting": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-connected-sorting",
@@ -330,10 +276,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-connected-sorting-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-connected-sorting-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-custom-placeholder": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-custom-placeholder",
@@ -347,10 +290,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-custom-placeholder-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-custom-placeholder-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-custom-preview": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-custom-preview",
@@ -364,10 +304,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-custom-preview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-custom-preview-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-delay": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-delay",
@@ -381,10 +318,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-delay-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-delay-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-disabled-sorting": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-disabled-sorting",
@@ -398,10 +332,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-disabled-sorting-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-disabled-sorting-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-disabled": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-disabled",
@@ -415,10 +346,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-disabled-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-disabled-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-enter-predicate": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-enter-predicate",
@@ -432,10 +360,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-enter-predicate-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-enter-predicate-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-free-drag-position": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-free-drag-position",
@@ -449,10 +374,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-free-drag-position-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-free-drag-position-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-handle": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-handle",
@@ -466,10 +388,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-handle-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-handle-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-horizontal-sorting": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-horizontal-sorting",
@@ -483,10 +402,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-horizontal-sorting-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-horizontal-sorting-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-overview": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-overview",
@@ -500,10 +416,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-overview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-overview-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-root-element": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-root-element",
@@ -517,10 +430,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-root-element-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-root-element-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-sort-predicate": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-sort-predicate",
@@ -534,10 +444,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-sort-predicate-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-sort-predicate-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "cdk-drag-drop-sorting": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-sorting",
@@ -551,10 +458,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-drag-drop-sorting-example",
         "additionalComponents": [],
         "primaryFile": "cdk-drag-drop-sorting-example.ts",
-        "module": {
-            "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "cdk/drag-drop"
-        }
+        "importPath": "cdk/drag-drop"
     },
     "breakpoint-observer-overview": {
         "packagePath": "cdk/layout/breakpoint-observer-overview",
@@ -568,10 +472,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "breakpoint-observer-overview-example",
         "additionalComponents": [],
         "primaryFile": "breakpoint-observer-overview-example.ts",
-        "module": {
-            "name": "CdkLayoutExamplesModule",
-            "importSpecifier": "cdk/layout"
-        }
+        "importPath": "cdk/layout"
     },
     "cdk-listbox-activedescendant": {
         "packagePath": "cdk/listbox/cdk-listbox-activedescendant",
@@ -585,10 +486,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-activedescendant-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-activedescendant-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-compare-with": {
         "packagePath": "cdk/listbox/cdk-listbox-compare-with",
@@ -602,10 +500,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-compare-with-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-compare-with-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-custom-navigation": {
         "packagePath": "cdk/listbox/cdk-listbox-custom-navigation",
@@ -619,10 +514,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-custom-navigation-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-custom-navigation-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-custom-typeahead": {
         "packagePath": "cdk/listbox/cdk-listbox-custom-typeahead",
@@ -636,10 +528,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-custom-typeahead-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-custom-typeahead-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-disabled": {
         "packagePath": "cdk/listbox/cdk-listbox-disabled",
@@ -653,10 +542,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-disabled-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-disabled-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-forms-validation": {
         "packagePath": "cdk/listbox/cdk-listbox-forms-validation",
@@ -670,10 +556,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-forms-validation-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-forms-validation-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-horizontal": {
         "packagePath": "cdk/listbox/cdk-listbox-horizontal",
@@ -687,10 +570,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-horizontal-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-horizontal-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-multiple": {
         "packagePath": "cdk/listbox/cdk-listbox-multiple",
@@ -704,10 +584,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-multiple-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-multiple-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-overview": {
         "packagePath": "cdk/listbox/cdk-listbox-overview",
@@ -721,10 +598,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-overview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-overview-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-reactive-forms": {
         "packagePath": "cdk/listbox/cdk-listbox-reactive-forms",
@@ -738,10 +612,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-reactive-forms-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-reactive-forms-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-template-forms": {
         "packagePath": "cdk/listbox/cdk-listbox-template-forms",
@@ -755,10 +626,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-template-forms-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-template-forms-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-listbox-value-binding": {
         "packagePath": "cdk/listbox/cdk-listbox-value-binding",
@@ -772,10 +640,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-listbox-value-binding-example",
         "additionalComponents": [],
         "primaryFile": "cdk-listbox-value-binding-example.ts",
-        "module": {
-            "name": "CdkListboxExamplesModule",
-            "importSpecifier": "cdk/listbox"
-        }
+        "importPath": "cdk/listbox"
     },
     "cdk-menu-context": {
         "packagePath": "cdk/menu/cdk-menu-context",
@@ -789,10 +654,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-menu-context-example",
         "additionalComponents": [],
         "primaryFile": "cdk-menu-context-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk/menu"
-        }
+        "importPath": "cdk/menu"
     },
     "cdk-menu-inline": {
         "packagePath": "cdk/menu/cdk-menu-inline",
@@ -806,10 +668,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-menu-inline-example",
         "additionalComponents": [],
         "primaryFile": "cdk-menu-inline-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk/menu"
-        }
+        "importPath": "cdk/menu"
     },
     "cdk-menu-menubar": {
         "packagePath": "cdk/menu/cdk-menu-menubar",
@@ -823,10 +682,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-menu-menubar-example",
         "additionalComponents": [],
         "primaryFile": "cdk-menu-menubar-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk/menu"
-        }
+        "importPath": "cdk/menu"
     },
     "cdk-menu-nested-context": {
         "packagePath": "cdk/menu/cdk-menu-nested-context",
@@ -840,10 +696,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-menu-nested-context-example",
         "additionalComponents": [],
         "primaryFile": "cdk-menu-nested-context-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk/menu"
-        }
+        "importPath": "cdk/menu"
     },
     "cdk-menu-standalone-menu": {
         "packagePath": "cdk/menu/cdk-menu-standalone-menu",
@@ -857,10 +710,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-menu-standalone-menu-example",
         "additionalComponents": [],
         "primaryFile": "cdk-menu-standalone-menu-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk/menu"
-        }
+        "importPath": "cdk/menu"
     },
     "cdk-menu-standalone-stateful-menu": {
         "packagePath": "cdk/menu/cdk-menu-standalone-stateful-menu",
@@ -874,10 +724,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-menu-standalone-stateful-menu-example",
         "additionalComponents": [],
         "primaryFile": "cdk-menu-standalone-stateful-menu-example.ts",
-        "module": {
-            "name": "CdkMenuExamplesModule",
-            "importSpecifier": "cdk/menu"
-        }
+        "importPath": "cdk/menu"
     },
     "cdk-overlay-basic": {
         "packagePath": "cdk/overlay/cdk-overlay-basic",
@@ -891,10 +738,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-overlay-basic-example",
         "additionalComponents": [],
         "primaryFile": "cdk-overlay-basic-example.ts",
-        "module": {
-            "name": "CdkOverlayExamplesModule",
-            "importSpecifier": "cdk/overlay"
-        }
+        "importPath": "cdk/overlay"
     },
     "cdk-platform-overview": {
         "packagePath": "cdk/platform/cdk-platform-overview",
@@ -907,10 +751,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-platform-overview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-platform-overview-example.ts",
-        "module": {
-            "name": "CdkPlatformExamplesModule",
-            "importSpecifier": "cdk/platform"
-        }
+        "importPath": "cdk/platform"
     },
     "cdk-portal-overview": {
         "packagePath": "cdk/portal/cdk-portal-overview",
@@ -926,10 +767,7 @@ const EXAMPLE_COMPONENTS = {
             "ComponentPortalExample"
         ],
         "primaryFile": "cdk-portal-overview-example.ts",
-        "module": {
-            "name": "CdkPortalExamplesModule",
-            "importSpecifier": "cdk/portal"
-        }
+        "importPath": "cdk/portal"
     },
     "cdk-virtual-scroll-append-only": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-append-only",
@@ -943,10 +781,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-append-only-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-append-only-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-context": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-context",
@@ -960,10 +795,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-context-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-context-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-custom-strategy": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-custom-strategy",
@@ -977,10 +809,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-custom-strategy-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-custom-strategy-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-data-source": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-data-source",
@@ -994,10 +823,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-data-source-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-data-source-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-dl": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-dl",
@@ -1011,10 +837,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-dl-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-dl-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-fixed-buffer": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-fixed-buffer",
@@ -1028,10 +851,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-fixed-buffer-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-fixed-buffer-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-horizontal": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-horizontal",
@@ -1045,10 +865,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-horizontal-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-horizontal-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-overview": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-overview",
@@ -1062,10 +879,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-overview-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-overview-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-parent-scrolling": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-parent-scrolling",
@@ -1079,10 +893,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-parent-scrolling-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-parent-scrolling-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-template-cache": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-template-cache",
@@ -1096,10 +907,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-template-cache-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-template-cache-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-virtual-scroll-window-scrolling": {
         "packagePath": "cdk/scrolling/cdk-virtual-scroll-window-scrolling",
@@ -1113,10 +921,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-virtual-scroll-window-scrolling-example",
         "additionalComponents": [],
         "primaryFile": "cdk-virtual-scroll-window-scrolling-example.ts",
-        "module": {
-            "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "cdk/scrolling"
-        }
+        "importPath": "cdk/scrolling"
     },
     "cdk-custom-stepper-without-form": {
         "packagePath": "cdk/stepper/cdk-custom-stepper-without-form",
@@ -1134,10 +939,7 @@ const EXAMPLE_COMPONENTS = {
             "CustomStepper"
         ],
         "primaryFile": "cdk-custom-stepper-without-form-example.ts",
-        "module": {
-            "name": "CdkStepperExamplesModule",
-            "importSpecifier": "cdk/stepper"
-        }
+        "importPath": "cdk/stepper"
     },
     "cdk-linear-stepper-with-form": {
         "packagePath": "cdk/stepper/cdk-linear-stepper-with-form",
@@ -1155,10 +957,7 @@ const EXAMPLE_COMPONENTS = {
             "CustomLinearStepper"
         ],
         "primaryFile": "cdk-linear-stepper-with-form-example.ts",
-        "module": {
-            "name": "CdkStepperExamplesModule",
-            "importSpecifier": "cdk/stepper"
-        }
+        "importPath": "cdk/stepper"
     },
     "cdk-table-basic": {
         "packagePath": "cdk/table/cdk-table-basic",
@@ -1172,10 +971,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-table-basic-example",
         "additionalComponents": [],
         "primaryFile": "cdk-table-basic-example.ts",
-        "module": {
-            "name": "CdkTableExamplesModule",
-            "importSpecifier": "cdk/table"
-        }
+        "importPath": "cdk/table"
     },
     "cdk-table-fixed-layout": {
         "packagePath": "cdk/table/cdk-table-fixed-layout",
@@ -1189,10 +985,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-table-fixed-layout-example",
         "additionalComponents": [],
         "primaryFile": "cdk-table-fixed-layout-example.ts",
-        "module": {
-            "name": "CdkTableExamplesModule",
-            "importSpecifier": "cdk/table"
-        }
+        "importPath": "cdk/table"
     },
     "cdk-table-flex-basic": {
         "packagePath": "cdk/table/cdk-table-flex-basic",
@@ -1206,10 +999,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-table-flex-basic-example",
         "additionalComponents": [],
         "primaryFile": "cdk-table-flex-basic-example.ts",
-        "module": {
-            "name": "CdkTableExamplesModule",
-            "importSpecifier": "cdk/table"
-        }
+        "importPath": "cdk/table"
     },
     "cdk-table-recycle-rows": {
         "packagePath": "cdk/table/cdk-table-recycle-rows",
@@ -1223,10 +1013,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-table-recycle-rows-example",
         "additionalComponents": [],
         "primaryFile": "cdk-table-recycle-rows-example.ts",
-        "module": {
-            "name": "CdkTableExamplesModule",
-            "importSpecifier": "cdk/table"
-        }
+        "importPath": "cdk/table"
     },
     "text-field-autofill-directive": {
         "packagePath": "cdk/text-field/text-field-autofill-directive",
@@ -1240,10 +1027,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "text-field-autofill-directive-example",
         "additionalComponents": [],
         "primaryFile": "text-field-autofill-directive-example.ts",
-        "module": {
-            "name": "CdkTextFieldExamplesModule",
-            "importSpecifier": "cdk/text-field"
-        }
+        "importPath": "cdk/text-field"
     },
     "text-field-autofill-monitor": {
         "packagePath": "cdk/text-field/text-field-autofill-monitor",
@@ -1257,10 +1041,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "text-field-autofill-monitor-example",
         "additionalComponents": [],
         "primaryFile": "text-field-autofill-monitor-example.ts",
-        "module": {
-            "name": "CdkTextFieldExamplesModule",
-            "importSpecifier": "cdk/text-field"
-        }
+        "importPath": "cdk/text-field"
     },
     "text-field-autosize-textarea": {
         "packagePath": "cdk/text-field/text-field-autosize-textarea",
@@ -1274,10 +1055,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "text-field-autosize-textarea-example",
         "additionalComponents": [],
         "primaryFile": "text-field-autosize-textarea-example.ts",
-        "module": {
-            "name": "CdkTextFieldExamplesModule",
-            "importSpecifier": "cdk/text-field"
-        }
+        "importPath": "cdk/text-field"
     },
     "cdk-tree-flat": {
         "packagePath": "cdk/tree/cdk-tree-flat",
@@ -1291,10 +1069,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-tree-flat-example",
         "additionalComponents": [],
         "primaryFile": "cdk-tree-flat-example.ts",
-        "module": {
-            "name": "CdkTreeExamplesModule",
-            "importSpecifier": "cdk/tree"
-        }
+        "importPath": "cdk/tree"
     },
     "cdk-tree-nested": {
         "packagePath": "cdk/tree/cdk-tree-nested",
@@ -1308,10 +1083,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-tree-nested-example",
         "additionalComponents": [],
         "primaryFile": "cdk-tree-nested-example.ts",
-        "module": {
-            "name": "CdkTreeExamplesModule",
-            "importSpecifier": "cdk/tree"
-        }
+        "importPath": "cdk/tree"
     },
     "default-enabled-column-resize-flex": {
         "packagePath": "material-experimental/column-resize/default-enabled-column-resize-flex",
@@ -1325,10 +1097,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "default-enabled-column-resize-flex-example",
         "additionalComponents": [],
         "primaryFile": "default-enabled-column-resize-flex-example.ts",
-        "module": {
-            "name": "ColumnResizeExamplesModule",
-            "importSpecifier": "material-experimental/column-resize"
-        }
+        "importPath": "material-experimental/column-resize"
     },
     "default-enabled-column-resize": {
         "packagePath": "material-experimental/column-resize/default-enabled-column-resize",
@@ -1342,10 +1111,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "default-enabled-column-resize-example",
         "additionalComponents": [],
         "primaryFile": "default-enabled-column-resize-example.ts",
-        "module": {
-            "name": "ColumnResizeExamplesModule",
-            "importSpecifier": "material-experimental/column-resize"
-        }
+        "importPath": "material-experimental/column-resize"
     },
     "opt-in-column-resize": {
         "packagePath": "material-experimental/column-resize/opt-in-column-resize",
@@ -1359,10 +1125,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "opt-in-column-resize-example",
         "additionalComponents": [],
         "primaryFile": "opt-in-column-resize-example.ts",
-        "module": {
-            "name": "ColumnResizeExamplesModule",
-            "importSpecifier": "material-experimental/column-resize"
-        }
+        "importPath": "material-experimental/column-resize"
     },
     "popover-edit-cell-span-mat-table": {
         "packagePath": "material-experimental/popover-edit/popover-edit-cell-span-mat-table",
@@ -1376,10 +1139,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "popover-edit-cell-span-mat-table-example",
         "additionalComponents": [],
         "primaryFile": "popover-edit-cell-span-mat-table-example.ts",
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "material-experimental/popover-edit"
-        }
+        "importPath": "material-experimental/popover-edit"
     },
     "popover-edit-mat-table-flex": {
         "packagePath": "material-experimental/popover-edit/popover-edit-mat-table-flex",
@@ -1393,10 +1153,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "popover-edit-mat-table-flex-example",
         "additionalComponents": [],
         "primaryFile": "popover-edit-mat-table-flex-example.ts",
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "material-experimental/popover-edit"
-        }
+        "importPath": "material-experimental/popover-edit"
     },
     "popover-edit-mat-table": {
         "packagePath": "material-experimental/popover-edit/popover-edit-mat-table",
@@ -1410,10 +1167,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "popover-edit-mat-table-example",
         "additionalComponents": [],
         "primaryFile": "popover-edit-mat-table-example.ts",
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "material-experimental/popover-edit"
-        }
+        "importPath": "material-experimental/popover-edit"
     },
     "popover-edit-tab-out-mat-table": {
         "packagePath": "material-experimental/popover-edit/popover-edit-tab-out-mat-table",
@@ -1427,10 +1181,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "popover-edit-tab-out-mat-table-example",
         "additionalComponents": [],
         "primaryFile": "popover-edit-tab-out-mat-table-example.ts",
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "material-experimental/popover-edit"
-        }
+        "importPath": "material-experimental/popover-edit"
     },
     "mat-selection-column": {
         "packagePath": "material-experimental/selection/mat-selection-column",
@@ -1444,10 +1195,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "mat-selection-column-example",
         "additionalComponents": [],
         "primaryFile": "mat-selection-column-example.ts",
-        "module": {
-            "name": "MatSelectionExamplesModule",
-            "importSpecifier": "material-experimental/selection"
-        }
+        "importPath": "material-experimental/selection"
     },
     "mat-selection-list": {
         "packagePath": "material-experimental/selection/mat-selection-list",
@@ -1460,10 +1208,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "mat-selection-list-example",
         "additionalComponents": [],
         "primaryFile": "mat-selection-list-example.ts",
-        "module": {
-            "name": "MatSelectionExamplesModule",
-            "importSpecifier": "material-experimental/selection"
-        }
+        "importPath": "material-experimental/selection"
     },
     "autocomplete-auto-active-first-option": {
         "packagePath": "material/autocomplete/autocomplete-auto-active-first-option",
@@ -1477,10 +1222,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-auto-active-first-option-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-auto-active-first-option-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-display": {
         "packagePath": "material/autocomplete/autocomplete-display",
@@ -1494,10 +1236,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-display-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-display-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-filter": {
         "packagePath": "material/autocomplete/autocomplete-filter",
@@ -1511,10 +1250,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-filter-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-filter-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-harness": {
         "packagePath": "material/autocomplete/autocomplete-harness",
@@ -1528,10 +1264,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-harness-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-harness-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-optgroup": {
         "packagePath": "material/autocomplete/autocomplete-optgroup",
@@ -1544,10 +1277,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-optgroup-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-optgroup-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-overview": {
         "packagePath": "material/autocomplete/autocomplete-overview",
@@ -1561,10 +1291,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-overview-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-overview-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-plain-input": {
         "packagePath": "material/autocomplete/autocomplete-plain-input",
@@ -1578,10 +1305,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-plain-input-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-plain-input-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "autocomplete-simple": {
         "packagePath": "material/autocomplete/autocomplete-simple",
@@ -1595,10 +1319,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "autocomplete-simple-example",
         "additionalComponents": [],
         "primaryFile": "autocomplete-simple-example.ts",
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "material/autocomplete"
-        }
+        "importPath": "material/autocomplete"
     },
     "badge-harness": {
         "packagePath": "material/badge/badge-harness",
@@ -1612,10 +1333,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "badge-harness-example",
         "additionalComponents": [],
         "primaryFile": "badge-harness-example.ts",
-        "module": {
-            "name": "BadgeExamplesModule",
-            "importSpecifier": "material/badge"
-        }
+        "importPath": "material/badge"
     },
     "badge-overview": {
         "packagePath": "material/badge/badge-overview",
@@ -1629,10 +1347,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "badge-overview-example",
         "additionalComponents": [],
         "primaryFile": "badge-overview-example.ts",
-        "module": {
-            "name": "BadgeExamplesModule",
-            "importSpecifier": "material/badge"
-        }
+        "importPath": "material/badge"
     },
     "bottom-sheet-harness": {
         "packagePath": "material/bottom-sheet/bottom-sheet-harness",
@@ -1646,10 +1361,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "bottom-sheet-harness-example",
         "additionalComponents": [],
         "primaryFile": "bottom-sheet-harness-example.ts",
-        "module": {
-            "name": "BottomSheetExamplesModule",
-            "importSpecifier": "material/bottom-sheet"
-        }
+        "importPath": "material/bottom-sheet"
     },
     "bottom-sheet-overview": {
         "packagePath": "material/bottom-sheet/bottom-sheet-overview",
@@ -1665,10 +1377,7 @@ const EXAMPLE_COMPONENTS = {
             "BottomSheetOverviewExampleSheet"
         ],
         "primaryFile": "bottom-sheet-overview-example.ts",
-        "module": {
-            "name": "BottomSheetExamplesModule",
-            "importSpecifier": "material/bottom-sheet"
-        }
+        "importPath": "material/bottom-sheet"
     },
     "button-toggle-appearance": {
         "packagePath": "material/button-toggle/button-toggle-appearance",
@@ -1682,10 +1391,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-toggle-appearance-example",
         "additionalComponents": [],
         "primaryFile": "button-toggle-appearance-example.ts",
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "material/button-toggle"
-        }
+        "importPath": "material/button-toggle"
     },
     "button-toggle-exclusive": {
         "packagePath": "material/button-toggle/button-toggle-exclusive",
@@ -1699,10 +1405,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-toggle-exclusive-example",
         "additionalComponents": [],
         "primaryFile": "button-toggle-exclusive-example.ts",
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "material/button-toggle"
-        }
+        "importPath": "material/button-toggle"
     },
     "button-toggle-forms": {
         "packagePath": "material/button-toggle/button-toggle-forms",
@@ -1715,10 +1418,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-toggle-forms-example",
         "additionalComponents": [],
         "primaryFile": "button-toggle-forms-example.ts",
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "material/button-toggle"
-        }
+        "importPath": "material/button-toggle"
     },
     "button-toggle-harness": {
         "packagePath": "material/button-toggle/button-toggle-harness",
@@ -1732,10 +1432,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-toggle-harness-example",
         "additionalComponents": [],
         "primaryFile": "button-toggle-harness-example.ts",
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "material/button-toggle"
-        }
+        "importPath": "material/button-toggle"
     },
     "button-toggle-mode": {
         "packagePath": "material/button-toggle/button-toggle-mode",
@@ -1748,10 +1445,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-toggle-mode-example",
         "additionalComponents": [],
         "primaryFile": "button-toggle-mode-example.ts",
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "material/button-toggle"
-        }
+        "importPath": "material/button-toggle"
     },
     "button-toggle-overview": {
         "packagePath": "material/button-toggle/button-toggle-overview",
@@ -1764,10 +1458,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-toggle-overview-example",
         "additionalComponents": [],
         "primaryFile": "button-toggle-overview-example.ts",
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "material/button-toggle"
-        }
+        "importPath": "material/button-toggle"
     },
     "button-harness": {
         "packagePath": "material/button/button-harness",
@@ -1781,10 +1472,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-harness-example",
         "additionalComponents": [],
         "primaryFile": "button-harness-example.ts",
-        "module": {
-            "name": "ButtonExamplesModule",
-            "importSpecifier": "material/button"
-        }
+        "importPath": "material/button"
     },
     "button-overview": {
         "packagePath": "material/button/button-overview",
@@ -1798,10 +1486,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-overview-example",
         "additionalComponents": [],
         "primaryFile": "button-overview-example.ts",
-        "module": {
-            "name": "ButtonExamplesModule",
-            "importSpecifier": "material/button"
-        }
+        "importPath": "material/button"
     },
     "button-types": {
         "packagePath": "material/button/button-types",
@@ -1815,10 +1500,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "button-types-example",
         "additionalComponents": [],
         "primaryFile": "button-types-example.ts",
-        "module": {
-            "name": "ButtonExamplesModule",
-            "importSpecifier": "material/button"
-        }
+        "importPath": "material/button"
     },
     "card-actions": {
         "packagePath": "material/card/card-actions",
@@ -1831,10 +1513,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-actions-example",
         "additionalComponents": [],
         "primaryFile": "card-actions-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "card-fancy": {
         "packagePath": "material/card/card-fancy",
@@ -1848,10 +1527,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-fancy-example",
         "additionalComponents": [],
         "primaryFile": "card-fancy-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "card-footer": {
         "packagePath": "material/card/card-footer",
@@ -1865,10 +1541,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-footer-example",
         "additionalComponents": [],
         "primaryFile": "card-footer-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "card-harness": {
         "packagePath": "material/card/card-harness",
@@ -1882,10 +1555,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-harness-example",
         "additionalComponents": [],
         "primaryFile": "card-harness-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "card-media-size": {
         "packagePath": "material/card/card-media-size",
@@ -1899,10 +1569,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-media-size-example",
         "additionalComponents": [],
         "primaryFile": "card-media-size-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "card-overview": {
         "packagePath": "material/card/card-overview",
@@ -1915,10 +1582,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-overview-example",
         "additionalComponents": [],
         "primaryFile": "card-overview-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "card-subtitle": {
         "packagePath": "material/card/card-subtitle",
@@ -1932,10 +1596,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-subtitle-example",
         "additionalComponents": [],
         "primaryFile": "card-subtitle-example.ts",
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "material/card"
-        }
+        "importPath": "material/card"
     },
     "checkbox-configurable": {
         "packagePath": "material/checkbox/checkbox-configurable",
@@ -1949,10 +1610,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "checkbox-configurable-example",
         "additionalComponents": [],
         "primaryFile": "checkbox-configurable-example.ts",
-        "module": {
-            "name": "CheckboxExamplesModule",
-            "importSpecifier": "material/checkbox"
-        }
+        "importPath": "material/checkbox"
     },
     "checkbox-harness": {
         "packagePath": "material/checkbox/checkbox-harness",
@@ -1966,10 +1624,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "checkbox-harness-example",
         "additionalComponents": [],
         "primaryFile": "checkbox-harness-example.ts",
-        "module": {
-            "name": "CheckboxExamplesModule",
-            "importSpecifier": "material/checkbox"
-        }
+        "importPath": "material/checkbox"
     },
     "checkbox-overview": {
         "packagePath": "material/checkbox/checkbox-overview",
@@ -1983,10 +1638,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "checkbox-overview-example",
         "additionalComponents": [],
         "primaryFile": "checkbox-overview-example.ts",
-        "module": {
-            "name": "CheckboxExamplesModule",
-            "importSpecifier": "material/checkbox"
-        }
+        "importPath": "material/checkbox"
     },
     "checkbox-reactive-forms": {
         "packagePath": "material/checkbox/checkbox-reactive-forms",
@@ -2000,10 +1652,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "checkbox-reactive-forms-example",
         "additionalComponents": [],
         "primaryFile": "checkbox-reactive-forms-example.ts",
-        "module": {
-            "name": "CheckboxExamplesModule",
-            "importSpecifier": "material/checkbox"
-        }
+        "importPath": "material/checkbox"
     },
     "chips-autocomplete": {
         "packagePath": "material/chips/chips-autocomplete",
@@ -2017,10 +1666,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-autocomplete-example",
         "additionalComponents": [],
         "primaryFile": "chips-autocomplete-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-avatar": {
         "packagePath": "material/chips/chips-avatar",
@@ -2034,10 +1680,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-avatar-example",
         "additionalComponents": [],
         "primaryFile": "chips-avatar-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-drag-drop": {
         "packagePath": "material/chips/chips-drag-drop",
@@ -2051,10 +1694,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-drag-drop-example",
         "additionalComponents": [],
         "primaryFile": "chips-drag-drop-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-form-control": {
         "packagePath": "material/chips/chips-form-control",
@@ -2068,10 +1708,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-form-control-example",
         "additionalComponents": [],
         "primaryFile": "chips-form-control-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-harness": {
         "packagePath": "material/chips/chips-harness",
@@ -2085,10 +1722,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-harness-example",
         "additionalComponents": [],
         "primaryFile": "chips-harness-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-input": {
         "packagePath": "material/chips/chips-input",
@@ -2102,10 +1736,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-input-example",
         "additionalComponents": [],
         "primaryFile": "chips-input-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-overview": {
         "packagePath": "material/chips/chips-overview",
@@ -2118,10 +1749,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-overview-example",
         "additionalComponents": [],
         "primaryFile": "chips-overview-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "chips-stacked": {
         "packagePath": "material/chips/chips-stacked",
@@ -2135,10 +1763,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-stacked-example",
         "additionalComponents": [],
         "primaryFile": "chips-stacked-example.ts",
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "material/chips"
-        }
+        "importPath": "material/chips"
     },
     "elevation-overview": {
         "packagePath": "material/core/elevation-overview",
@@ -2152,10 +1777,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "elevation-overview-example",
         "additionalComponents": [],
         "primaryFile": "elevation-overview-example.ts",
-        "module": {
-            "name": "CoreExamplesModule",
-            "importSpecifier": "material/core"
-        }
+        "importPath": "material/core"
     },
     "ripple-overview": {
         "packagePath": "material/core/ripple-overview",
@@ -2169,10 +1791,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "ripple-overview-example",
         "additionalComponents": [],
         "primaryFile": "ripple-overview-example.ts",
-        "module": {
-            "name": "CoreExamplesModule",
-            "importSpecifier": "material/core"
-        }
+        "importPath": "material/core"
     },
     "date-range-picker-comparison": {
         "packagePath": "material/datepicker/date-range-picker-comparison",
@@ -2186,10 +1805,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "date-range-picker-comparison-example",
         "additionalComponents": [],
         "primaryFile": "date-range-picker-comparison-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "date-range-picker-forms": {
         "packagePath": "material/datepicker/date-range-picker-forms",
@@ -2202,10 +1818,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "date-range-picker-forms-example",
         "additionalComponents": [],
         "primaryFile": "date-range-picker-forms-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "date-range-picker-overview": {
         "packagePath": "material/datepicker/date-range-picker-overview",
@@ -2218,10 +1831,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "date-range-picker-overview-example",
         "additionalComponents": [],
         "primaryFile": "date-range-picker-overview-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "date-range-picker-selection-strategy": {
         "packagePath": "material/datepicker/date-range-picker-selection-strategy",
@@ -2234,10 +1844,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "date-range-picker-selection-strategy-example",
         "additionalComponents": [],
         "primaryFile": "date-range-picker-selection-strategy-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-actions": {
         "packagePath": "material/datepicker/datepicker-actions",
@@ -2251,10 +1858,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-actions-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-actions-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-api": {
         "packagePath": "material/datepicker/datepicker-api",
@@ -2268,10 +1872,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-api-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-api-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-color": {
         "packagePath": "material/datepicker/datepicker-color",
@@ -2285,10 +1886,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-color-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-color-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-custom-header": {
         "packagePath": "material/datepicker/datepicker-custom-header",
@@ -2303,10 +1901,7 @@ const EXAMPLE_COMPONENTS = {
             "ExampleHeader"
         ],
         "primaryFile": "datepicker-custom-header-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-custom-icon": {
         "packagePath": "material/datepicker/datepicker-custom-icon",
@@ -2319,10 +1914,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-custom-icon-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-custom-icon-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-date-class": {
         "packagePath": "material/datepicker/datepicker-date-class",
@@ -2336,10 +1928,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-date-class-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-date-class-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-disabled": {
         "packagePath": "material/datepicker/datepicker-disabled",
@@ -2352,10 +1941,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-disabled-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-disabled-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-events": {
         "packagePath": "material/datepicker/datepicker-events",
@@ -2369,10 +1955,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-events-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-events-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-filter": {
         "packagePath": "material/datepicker/datepicker-filter",
@@ -2385,10 +1968,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-filter-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-filter-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-formats": {
         "packagePath": "material/datepicker/datepicker-formats",
@@ -2401,10 +1981,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-formats-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-formats-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-harness": {
         "packagePath": "material/datepicker/datepicker-harness",
@@ -2418,10 +1995,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-harness-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-harness-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-inline-calendar": {
         "packagePath": "material/datepicker/datepicker-inline-calendar",
@@ -2435,10 +2009,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-inline-calendar-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-inline-calendar-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-locale": {
         "packagePath": "material/datepicker/datepicker-locale",
@@ -2452,10 +2023,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-locale-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-locale-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-min-max": {
         "packagePath": "material/datepicker/datepicker-min-max",
@@ -2468,10 +2036,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-min-max-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-min-max-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-moment": {
         "packagePath": "material/datepicker/datepicker-moment",
@@ -2484,10 +2049,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-moment-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-moment-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-overview": {
         "packagePath": "material/datepicker/datepicker-overview",
@@ -2500,10 +2062,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-overview-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-overview-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-start-view": {
         "packagePath": "material/datepicker/datepicker-start-view",
@@ -2516,10 +2075,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-start-view-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-start-view-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-touch": {
         "packagePath": "material/datepicker/datepicker-touch",
@@ -2532,10 +2088,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-touch-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-touch-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-value": {
         "packagePath": "material/datepicker/datepicker-value",
@@ -2549,10 +2102,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-value-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-value-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "datepicker-views-selection": {
         "packagePath": "material/datepicker/datepicker-views-selection",
@@ -2566,10 +2116,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "datepicker-views-selection-example",
         "additionalComponents": [],
         "primaryFile": "datepicker-views-selection-example.ts",
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "material/datepicker"
-        }
+        "importPath": "material/datepicker"
     },
     "dialog-animations": {
         "packagePath": "material/dialog/dialog-animations",
@@ -2586,10 +2133,7 @@ const EXAMPLE_COMPONENTS = {
             "DialogAnimationsExampleDialog"
         ],
         "primaryFile": "dialog-animations-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "dialog-content": {
         "packagePath": "material/dialog/dialog-content",
@@ -2605,10 +2149,7 @@ const EXAMPLE_COMPONENTS = {
             "DialogContentExampleDialog"
         ],
         "primaryFile": "dialog-content-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "dialog-data": {
         "packagePath": "material/dialog/dialog-data",
@@ -2624,10 +2165,7 @@ const EXAMPLE_COMPONENTS = {
             "DialogDataExampleDialog"
         ],
         "primaryFile": "dialog-data-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "dialog-elements": {
         "packagePath": "material/dialog/dialog-elements",
@@ -2643,10 +2181,7 @@ const EXAMPLE_COMPONENTS = {
             "DialogElementsExampleDialog"
         ],
         "primaryFile": "dialog-elements-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "dialog-from-menu": {
         "packagePath": "material/dialog/dialog-from-menu",
@@ -2662,10 +2197,7 @@ const EXAMPLE_COMPONENTS = {
             "DialogFromMenuExampleDialog"
         ],
         "primaryFile": "dialog-from-menu-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "dialog-harness": {
         "packagePath": "material/dialog/dialog-harness",
@@ -2679,10 +2211,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "dialog-harness-example",
         "additionalComponents": [],
         "primaryFile": "dialog-harness-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "dialog-overview": {
         "packagePath": "material/dialog/dialog-overview",
@@ -2698,10 +2227,7 @@ const EXAMPLE_COMPONENTS = {
             "DialogOverviewExampleDialog"
         ],
         "primaryFile": "dialog-overview-example.ts",
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "material/dialog"
-        }
+        "importPath": "material/dialog"
     },
     "divider-harness": {
         "packagePath": "material/divider/divider-harness",
@@ -2715,10 +2241,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "divider-harness-example",
         "additionalComponents": [],
         "primaryFile": "divider-harness-example.ts",
-        "module": {
-            "name": "DividerExamplesModule",
-            "importSpecifier": "material/divider"
-        }
+        "importPath": "material/divider"
     },
     "divider-overview": {
         "packagePath": "material/divider/divider-overview",
@@ -2731,10 +2254,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "divider-overview-example",
         "additionalComponents": [],
         "primaryFile": "divider-overview-example.ts",
-        "module": {
-            "name": "DividerExamplesModule",
-            "importSpecifier": "material/divider"
-        }
+        "importPath": "material/divider"
     },
     "expansion-expand-collapse-all": {
         "packagePath": "material/expansion/expansion-expand-collapse-all",
@@ -2748,10 +2268,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "expansion-expand-collapse-all-example",
         "additionalComponents": [],
         "primaryFile": "expansion-expand-collapse-all-example.ts",
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "material/expansion"
-        }
+        "importPath": "material/expansion"
     },
     "expansion-harness": {
         "packagePath": "material/expansion/expansion-harness",
@@ -2765,10 +2282,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "expansion-harness-example",
         "additionalComponents": [],
         "primaryFile": "expansion-harness-example.ts",
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "material/expansion"
-        }
+        "importPath": "material/expansion"
     },
     "expansion-overview": {
         "packagePath": "material/expansion/expansion-overview",
@@ -2782,10 +2296,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "expansion-overview-example",
         "additionalComponents": [],
         "primaryFile": "expansion-overview-example.ts",
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "material/expansion"
-        }
+        "importPath": "material/expansion"
     },
     "expansion-steps": {
         "packagePath": "material/expansion/expansion-steps",
@@ -2799,10 +2310,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "expansion-steps-example",
         "additionalComponents": [],
         "primaryFile": "expansion-steps-example.ts",
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "material/expansion"
-        }
+        "importPath": "material/expansion"
     },
     "form-field-appearance": {
         "packagePath": "material/form-field/form-field-appearance",
@@ -2815,10 +2323,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-appearance-example",
         "additionalComponents": [],
         "primaryFile": "form-field-appearance-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-custom-control": {
         "packagePath": "material/form-field/form-field-custom-control",
@@ -2835,10 +2340,7 @@ const EXAMPLE_COMPONENTS = {
             "MyTelInput"
         ],
         "primaryFile": "form-field-custom-control-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-error": {
         "packagePath": "material/form-field/form-field-error",
@@ -2852,10 +2354,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-error-example",
         "additionalComponents": [],
         "primaryFile": "form-field-error-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-harness": {
         "packagePath": "material/form-field/form-field-harness",
@@ -2869,10 +2368,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-harness-example",
         "additionalComponents": [],
         "primaryFile": "form-field-harness-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-hint": {
         "packagePath": "material/form-field/form-field-hint",
@@ -2886,10 +2382,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-hint-example",
         "additionalComponents": [],
         "primaryFile": "form-field-hint-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-label": {
         "packagePath": "material/form-field/form-field-label",
@@ -2903,10 +2396,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-label-example",
         "additionalComponents": [],
         "primaryFile": "form-field-label-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-overview": {
         "packagePath": "material/form-field/form-field-overview",
@@ -2920,10 +2410,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-overview-example",
         "additionalComponents": [],
         "primaryFile": "form-field-overview-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-prefix-suffix": {
         "packagePath": "material/form-field/form-field-prefix-suffix",
@@ -2937,10 +2424,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-prefix-suffix-example",
         "additionalComponents": [],
         "primaryFile": "form-field-prefix-suffix-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "form-field-theming": {
         "packagePath": "material/form-field/form-field-theming",
@@ -2954,10 +2438,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "form-field-theming-example",
         "additionalComponents": [],
         "primaryFile": "form-field-theming-example.ts",
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "material/form-field"
-        }
+        "importPath": "material/form-field"
     },
     "grid-list-dynamic": {
         "packagePath": "material/grid-list/grid-list-dynamic",
@@ -2970,10 +2451,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "grid-list-dynamic-example",
         "additionalComponents": [],
         "primaryFile": "grid-list-dynamic-example.ts",
-        "module": {
-            "name": "GridListExamplesModule",
-            "importSpecifier": "material/grid-list"
-        }
+        "importPath": "material/grid-list"
     },
     "grid-list-harness": {
         "packagePath": "material/grid-list/grid-list-harness",
@@ -2987,10 +2465,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "grid-list-harness-example",
         "additionalComponents": [],
         "primaryFile": "grid-list-harness-example.ts",
-        "module": {
-            "name": "GridListExamplesModule",
-            "importSpecifier": "material/grid-list"
-        }
+        "importPath": "material/grid-list"
     },
     "grid-list-overview": {
         "packagePath": "material/grid-list/grid-list-overview",
@@ -3004,10 +2479,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "grid-list-overview-example",
         "additionalComponents": [],
         "primaryFile": "grid-list-overview-example.ts",
-        "module": {
-            "name": "GridListExamplesModule",
-            "importSpecifier": "material/grid-list"
-        }
+        "importPath": "material/grid-list"
     },
     "icon-harness": {
         "packagePath": "material/icon/icon-harness",
@@ -3021,10 +2493,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "icon-harness-example",
         "additionalComponents": [],
         "primaryFile": "icon-harness-example.ts",
-        "module": {
-            "name": "IconExamplesModule",
-            "importSpecifier": "material/icon"
-        }
+        "importPath": "material/icon"
     },
     "icon-overview": {
         "packagePath": "material/icon/icon-overview",
@@ -3037,10 +2506,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "icon-overview-example",
         "additionalComponents": [],
         "primaryFile": "icon-overview-example.ts",
-        "module": {
-            "name": "IconExamplesModule",
-            "importSpecifier": "material/icon"
-        }
+        "importPath": "material/icon"
     },
     "icon-svg": {
         "packagePath": "material/icon/icon-svg",
@@ -3053,10 +2519,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "icon-svg-example",
         "additionalComponents": [],
         "primaryFile": "icon-svg-example.ts",
-        "module": {
-            "name": "IconExamplesModule",
-            "importSpecifier": "material/icon"
-        }
+        "importPath": "material/icon"
     },
     "input-clearable": {
         "packagePath": "material/input/input-clearable",
@@ -3070,10 +2533,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-clearable-example",
         "additionalComponents": [],
         "primaryFile": "input-clearable-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-error-state-matcher": {
         "packagePath": "material/input/input-error-state-matcher",
@@ -3087,10 +2547,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-error-state-matcher-example",
         "additionalComponents": [],
         "primaryFile": "input-error-state-matcher-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-errors": {
         "packagePath": "material/input/input-errors",
@@ -3104,10 +2561,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-errors-example",
         "additionalComponents": [],
         "primaryFile": "input-errors-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-form": {
         "packagePath": "material/input/input-form",
@@ -3121,10 +2575,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-form-example",
         "additionalComponents": [],
         "primaryFile": "input-form-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-harness": {
         "packagePath": "material/input/input-harness",
@@ -3138,10 +2589,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-harness-example",
         "additionalComponents": [],
         "primaryFile": "input-harness-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-hint": {
         "packagePath": "material/input/input-hint",
@@ -3155,10 +2603,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-hint-example",
         "additionalComponents": [],
         "primaryFile": "input-hint-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-overview": {
         "packagePath": "material/input/input-overview",
@@ -3172,10 +2617,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-overview-example",
         "additionalComponents": [],
         "primaryFile": "input-overview-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "input-prefix-suffix": {
         "packagePath": "material/input/input-prefix-suffix",
@@ -3189,10 +2631,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "input-prefix-suffix-example",
         "additionalComponents": [],
         "primaryFile": "input-prefix-suffix-example.ts",
-        "module": {
-            "name": "InputExamplesModule",
-            "importSpecifier": "material/input"
-        }
+        "importPath": "material/input"
     },
     "list-harness": {
         "packagePath": "material/list/list-harness",
@@ -3206,10 +2645,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "list-harness-example",
         "additionalComponents": [],
         "primaryFile": "list-harness-example.ts",
-        "module": {
-            "name": "ListExamplesModule",
-            "importSpecifier": "material/list"
-        }
+        "importPath": "material/list"
     },
     "list-overview": {
         "packagePath": "material/list/list-overview",
@@ -3222,10 +2658,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "list-overview-example",
         "additionalComponents": [],
         "primaryFile": "list-overview-example.ts",
-        "module": {
-            "name": "ListExamplesModule",
-            "importSpecifier": "material/list"
-        }
+        "importPath": "material/list"
     },
     "list-sections": {
         "packagePath": "material/list/list-sections",
@@ -3239,10 +2672,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "list-sections-example",
         "additionalComponents": [],
         "primaryFile": "list-sections-example.ts",
-        "module": {
-            "name": "ListExamplesModule",
-            "importSpecifier": "material/list"
-        }
+        "importPath": "material/list"
     },
     "list-selection": {
         "packagePath": "material/list/list-selection",
@@ -3255,10 +2685,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "list-selection-example",
         "additionalComponents": [],
         "primaryFile": "list-selection-example.ts",
-        "module": {
-            "name": "ListExamplesModule",
-            "importSpecifier": "material/list"
-        }
+        "importPath": "material/list"
     },
     "list-single-selection": {
         "packagePath": "material/list/list-single-selection",
@@ -3271,10 +2698,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "list-single-selection-example",
         "additionalComponents": [],
         "primaryFile": "list-single-selection-example.ts",
-        "module": {
-            "name": "ListExamplesModule",
-            "importSpecifier": "material/list"
-        }
+        "importPath": "material/list"
     },
     "list-variants": {
         "packagePath": "material/list/list-variants",
@@ -3288,10 +2712,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "list-variants-example",
         "additionalComponents": [],
         "primaryFile": "list-variants-example.ts",
-        "module": {
-            "name": "ListExamplesModule",
-            "importSpecifier": "material/list"
-        }
+        "importPath": "material/list"
     },
     "menu-harness": {
         "packagePath": "material/menu/menu-harness",
@@ -3305,10 +2726,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "menu-harness-example",
         "additionalComponents": [],
         "primaryFile": "menu-harness-example.ts",
-        "module": {
-            "name": "MenuExamplesModule",
-            "importSpecifier": "material/menu"
-        }
+        "importPath": "material/menu"
     },
     "menu-icons": {
         "packagePath": "material/menu/menu-icons",
@@ -3321,10 +2739,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "menu-icons-example",
         "additionalComponents": [],
         "primaryFile": "menu-icons-example.ts",
-        "module": {
-            "name": "MenuExamplesModule",
-            "importSpecifier": "material/menu"
-        }
+        "importPath": "material/menu"
     },
     "menu-nested": {
         "packagePath": "material/menu/menu-nested",
@@ -3337,10 +2752,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "menu-nested-example",
         "additionalComponents": [],
         "primaryFile": "menu-nested-example.ts",
-        "module": {
-            "name": "MenuExamplesModule",
-            "importSpecifier": "material/menu"
-        }
+        "importPath": "material/menu"
     },
     "menu-overview": {
         "packagePath": "material/menu/menu-overview",
@@ -3353,10 +2765,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "menu-overview-example",
         "additionalComponents": [],
         "primaryFile": "menu-overview-example.ts",
-        "module": {
-            "name": "MenuExamplesModule",
-            "importSpecifier": "material/menu"
-        }
+        "importPath": "material/menu"
     },
     "menu-position": {
         "packagePath": "material/menu/menu-position",
@@ -3369,10 +2778,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "menu-position-example",
         "additionalComponents": [],
         "primaryFile": "menu-position-example.ts",
-        "module": {
-            "name": "MenuExamplesModule",
-            "importSpecifier": "material/menu"
-        }
+        "importPath": "material/menu"
     },
     "paginator-configurable": {
         "packagePath": "material/paginator/paginator-configurable",
@@ -3386,10 +2792,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "paginator-configurable-example",
         "additionalComponents": [],
         "primaryFile": "paginator-configurable-example.ts",
-        "module": {
-            "name": "PaginatorExamplesModule",
-            "importSpecifier": "material/paginator"
-        }
+        "importPath": "material/paginator"
     },
     "paginator-harness": {
         "packagePath": "material/paginator/paginator-harness",
@@ -3403,10 +2806,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "paginator-harness-example",
         "additionalComponents": [],
         "primaryFile": "paginator-harness-example.ts",
-        "module": {
-            "name": "PaginatorExamplesModule",
-            "importSpecifier": "material/paginator"
-        }
+        "importPath": "material/paginator"
     },
     "paginator-intl": {
         "packagePath": "material/paginator/paginator-intl",
@@ -3419,10 +2819,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "paginator-intl-example",
         "additionalComponents": [],
         "primaryFile": "paginator-intl-example.ts",
-        "module": {
-            "name": "PaginatorExamplesModule",
-            "importSpecifier": "material/paginator"
-        }
+        "importPath": "material/paginator"
     },
     "paginator-overview": {
         "packagePath": "material/paginator/paginator-overview",
@@ -3435,10 +2832,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "paginator-overview-example",
         "additionalComponents": [],
         "primaryFile": "paginator-overview-example.ts",
-        "module": {
-            "name": "PaginatorExamplesModule",
-            "importSpecifier": "material/paginator"
-        }
+        "importPath": "material/paginator"
     },
     "progress-bar-buffer": {
         "packagePath": "material/progress-bar/progress-bar-buffer",
@@ -3451,10 +2845,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-bar-buffer-example",
         "additionalComponents": [],
         "primaryFile": "progress-bar-buffer-example.ts",
-        "module": {
-            "name": "ProgressBarExamplesModule",
-            "importSpecifier": "material/progress-bar"
-        }
+        "importPath": "material/progress-bar"
     },
     "progress-bar-configurable": {
         "packagePath": "material/progress-bar/progress-bar-configurable",
@@ -3468,10 +2859,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-bar-configurable-example",
         "additionalComponents": [],
         "primaryFile": "progress-bar-configurable-example.ts",
-        "module": {
-            "name": "ProgressBarExamplesModule",
-            "importSpecifier": "material/progress-bar"
-        }
+        "importPath": "material/progress-bar"
     },
     "progress-bar-determinate": {
         "packagePath": "material/progress-bar/progress-bar-determinate",
@@ -3484,10 +2872,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-bar-determinate-example",
         "additionalComponents": [],
         "primaryFile": "progress-bar-determinate-example.ts",
-        "module": {
-            "name": "ProgressBarExamplesModule",
-            "importSpecifier": "material/progress-bar"
-        }
+        "importPath": "material/progress-bar"
     },
     "progress-bar-harness": {
         "packagePath": "material/progress-bar/progress-bar-harness",
@@ -3501,10 +2886,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-bar-harness-example",
         "additionalComponents": [],
         "primaryFile": "progress-bar-harness-example.ts",
-        "module": {
-            "name": "ProgressBarExamplesModule",
-            "importSpecifier": "material/progress-bar"
-        }
+        "importPath": "material/progress-bar"
     },
     "progress-bar-indeterminate": {
         "packagePath": "material/progress-bar/progress-bar-indeterminate",
@@ -3517,10 +2899,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-bar-indeterminate-example",
         "additionalComponents": [],
         "primaryFile": "progress-bar-indeterminate-example.ts",
-        "module": {
-            "name": "ProgressBarExamplesModule",
-            "importSpecifier": "material/progress-bar"
-        }
+        "importPath": "material/progress-bar"
     },
     "progress-bar-query": {
         "packagePath": "material/progress-bar/progress-bar-query",
@@ -3533,10 +2912,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-bar-query-example",
         "additionalComponents": [],
         "primaryFile": "progress-bar-query-example.ts",
-        "module": {
-            "name": "ProgressBarExamplesModule",
-            "importSpecifier": "material/progress-bar"
-        }
+        "importPath": "material/progress-bar"
     },
     "progress-spinner-configurable": {
         "packagePath": "material/progress-spinner/progress-spinner-configurable",
@@ -3550,10 +2926,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-spinner-configurable-example",
         "additionalComponents": [],
         "primaryFile": "progress-spinner-configurable-example.ts",
-        "module": {
-            "name": "ProgressSpinnerExamplesModule",
-            "importSpecifier": "material/progress-spinner"
-        }
+        "importPath": "material/progress-spinner"
     },
     "progress-spinner-harness": {
         "packagePath": "material/progress-spinner/progress-spinner-harness",
@@ -3567,10 +2940,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-spinner-harness-example",
         "additionalComponents": [],
         "primaryFile": "progress-spinner-harness-example.ts",
-        "module": {
-            "name": "ProgressSpinnerExamplesModule",
-            "importSpecifier": "material/progress-spinner"
-        }
+        "importPath": "material/progress-spinner"
     },
     "progress-spinner-overview": {
         "packagePath": "material/progress-spinner/progress-spinner-overview",
@@ -3583,10 +2953,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "progress-spinner-overview-example",
         "additionalComponents": [],
         "primaryFile": "progress-spinner-overview-example.ts",
-        "module": {
-            "name": "ProgressSpinnerExamplesModule",
-            "importSpecifier": "material/progress-spinner"
-        }
+        "importPath": "material/progress-spinner"
     },
     "radio-harness": {
         "packagePath": "material/radio/radio-harness",
@@ -3600,10 +2967,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "radio-harness-example",
         "additionalComponents": [],
         "primaryFile": "radio-harness-example.ts",
-        "module": {
-            "name": "RadioExamplesModule",
-            "importSpecifier": "material/radio"
-        }
+        "importPath": "material/radio"
     },
     "radio-ng-model": {
         "packagePath": "material/radio/radio-ng-model",
@@ -3617,10 +2981,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "radio-ng-model-example",
         "additionalComponents": [],
         "primaryFile": "radio-ng-model-example.ts",
-        "module": {
-            "name": "RadioExamplesModule",
-            "importSpecifier": "material/radio"
-        }
+        "importPath": "material/radio"
     },
     "radio-overview": {
         "packagePath": "material/radio/radio-overview",
@@ -3634,10 +2995,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "radio-overview-example",
         "additionalComponents": [],
         "primaryFile": "radio-overview-example.ts",
-        "module": {
-            "name": "RadioExamplesModule",
-            "importSpecifier": "material/radio"
-        }
+        "importPath": "material/radio"
     },
     "select-custom-trigger": {
         "packagePath": "material/select/select-custom-trigger",
@@ -3651,10 +3009,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-custom-trigger-example",
         "additionalComponents": [],
         "primaryFile": "select-custom-trigger-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-disabled": {
         "packagePath": "material/select/select-disabled",
@@ -3667,10 +3022,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-disabled-example",
         "additionalComponents": [],
         "primaryFile": "select-disabled-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-error-state-matcher": {
         "packagePath": "material/select/select-error-state-matcher",
@@ -3683,10 +3035,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-error-state-matcher-example",
         "additionalComponents": [],
         "primaryFile": "select-error-state-matcher-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-form": {
         "packagePath": "material/select/select-form",
@@ -3699,10 +3048,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-form-example",
         "additionalComponents": [],
         "primaryFile": "select-form-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-harness": {
         "packagePath": "material/select/select-harness",
@@ -3716,10 +3062,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-harness-example",
         "additionalComponents": [],
         "primaryFile": "select-harness-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-hint-error": {
         "packagePath": "material/select/select-hint-error",
@@ -3732,10 +3075,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-hint-error-example",
         "additionalComponents": [],
         "primaryFile": "select-hint-error-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-initial-value": {
         "packagePath": "material/select/select-initial-value",
@@ -3748,10 +3088,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-initial-value-example",
         "additionalComponents": [],
         "primaryFile": "select-initial-value-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-multiple": {
         "packagePath": "material/select/select-multiple",
@@ -3764,10 +3101,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-multiple-example",
         "additionalComponents": [],
         "primaryFile": "select-multiple-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-no-ripple": {
         "packagePath": "material/select/select-no-ripple",
@@ -3780,10 +3114,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-no-ripple-example",
         "additionalComponents": [],
         "primaryFile": "select-no-ripple-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-optgroup": {
         "packagePath": "material/select/select-optgroup",
@@ -3796,10 +3127,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-optgroup-example",
         "additionalComponents": [],
         "primaryFile": "select-optgroup-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-overview": {
         "packagePath": "material/select/select-overview",
@@ -3812,10 +3140,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-overview-example",
         "additionalComponents": [],
         "primaryFile": "select-overview-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-panel-class": {
         "packagePath": "material/select/select-panel-class",
@@ -3829,10 +3154,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-panel-class-example",
         "additionalComponents": [],
         "primaryFile": "select-panel-class-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-reactive-form": {
         "packagePath": "material/select/select-reactive-form",
@@ -3845,10 +3167,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-reactive-form-example",
         "additionalComponents": [],
         "primaryFile": "select-reactive-form-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-reset": {
         "packagePath": "material/select/select-reset",
@@ -3861,10 +3180,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-reset-example",
         "additionalComponents": [],
         "primaryFile": "select-reset-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "select-value-binding": {
         "packagePath": "material/select/select-value-binding",
@@ -3877,10 +3193,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "select-value-binding-example",
         "additionalComponents": [],
         "primaryFile": "select-value-binding-example.ts",
-        "module": {
-            "name": "SelectExamplesModule",
-            "importSpecifier": "material/select"
-        }
+        "importPath": "material/select"
     },
     "sidenav-autosize": {
         "packagePath": "material/sidenav/sidenav-autosize",
@@ -3894,10 +3207,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-autosize-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-autosize-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-backdrop": {
         "packagePath": "material/sidenav/sidenav-backdrop",
@@ -3911,10 +3221,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-backdrop-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-backdrop-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-disable-close": {
         "packagePath": "material/sidenav/sidenav-disable-close",
@@ -3928,10 +3235,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-disable-close-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-disable-close-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-drawer-overview": {
         "packagePath": "material/sidenav/sidenav-drawer-overview",
@@ -3945,10 +3249,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-drawer-overview-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-drawer-overview-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-fixed": {
         "packagePath": "material/sidenav/sidenav-fixed",
@@ -3962,10 +3263,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-fixed-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-fixed-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-harness": {
         "packagePath": "material/sidenav/sidenav-harness",
@@ -3979,10 +3277,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-harness-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-harness-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-mode": {
         "packagePath": "material/sidenav/sidenav-mode",
@@ -3996,10 +3291,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-mode-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-mode-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-open-close": {
         "packagePath": "material/sidenav/sidenav-open-close",
@@ -4013,10 +3305,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-open-close-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-open-close-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-overview": {
         "packagePath": "material/sidenav/sidenav-overview",
@@ -4030,10 +3319,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-overview-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-overview-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-position": {
         "packagePath": "material/sidenav/sidenav-position",
@@ -4047,10 +3333,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-position-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-position-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "sidenav-responsive": {
         "packagePath": "material/sidenav/sidenav-responsive",
@@ -4064,10 +3347,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sidenav-responsive-example",
         "additionalComponents": [],
         "primaryFile": "sidenav-responsive-example.ts",
-        "module": {
-            "name": "SidenavExamplesModule",
-            "importSpecifier": "material/sidenav"
-        }
+        "importPath": "material/sidenav"
     },
     "slide-toggle-configurable": {
         "packagePath": "material/slide-toggle/slide-toggle-configurable",
@@ -4081,10 +3361,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slide-toggle-configurable-example",
         "additionalComponents": [],
         "primaryFile": "slide-toggle-configurable-example.ts",
-        "module": {
-            "name": "SlideToggleExamplesModule",
-            "importSpecifier": "material/slide-toggle"
-        }
+        "importPath": "material/slide-toggle"
     },
     "slide-toggle-forms": {
         "packagePath": "material/slide-toggle/slide-toggle-forms",
@@ -4098,10 +3375,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slide-toggle-forms-example",
         "additionalComponents": [],
         "primaryFile": "slide-toggle-forms-example.ts",
-        "module": {
-            "name": "SlideToggleExamplesModule",
-            "importSpecifier": "material/slide-toggle"
-        }
+        "importPath": "material/slide-toggle"
     },
     "slide-toggle-harness": {
         "packagePath": "material/slide-toggle/slide-toggle-harness",
@@ -4115,10 +3389,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slide-toggle-harness-example",
         "additionalComponents": [],
         "primaryFile": "slide-toggle-harness-example.ts",
-        "module": {
-            "name": "SlideToggleExamplesModule",
-            "importSpecifier": "material/slide-toggle"
-        }
+        "importPath": "material/slide-toggle"
     },
     "slide-toggle-overview": {
         "packagePath": "material/slide-toggle/slide-toggle-overview",
@@ -4131,10 +3402,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slide-toggle-overview-example",
         "additionalComponents": [],
         "primaryFile": "slide-toggle-overview-example.ts",
-        "module": {
-            "name": "SlideToggleExamplesModule",
-            "importSpecifier": "material/slide-toggle"
-        }
+        "importPath": "material/slide-toggle"
     },
     "slider-configurable": {
         "packagePath": "material/slider/slider-configurable",
@@ -4148,10 +3416,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slider-configurable-example",
         "additionalComponents": [],
         "primaryFile": "slider-configurable-example.ts",
-        "module": {
-            "name": "SliderExamplesModule",
-            "importSpecifier": "material/slider"
-        }
+        "importPath": "material/slider"
     },
     "slider-formatting": {
         "packagePath": "material/slider/slider-formatting",
@@ -4165,10 +3430,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slider-formatting-example",
         "additionalComponents": [],
         "primaryFile": "slider-formatting-example.ts",
-        "module": {
-            "name": "SliderExamplesModule",
-            "importSpecifier": "material/slider"
-        }
+        "importPath": "material/slider"
     },
     "slider-harness": {
         "packagePath": "material/slider/slider-harness",
@@ -4182,10 +3444,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slider-harness-example",
         "additionalComponents": [],
         "primaryFile": "slider-harness-example.ts",
-        "module": {
-            "name": "SliderExamplesModule",
-            "importSpecifier": "material/slider"
-        }
+        "importPath": "material/slider"
     },
     "slider-overview": {
         "packagePath": "material/slider/slider-overview",
@@ -4199,10 +3458,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slider-overview-example",
         "additionalComponents": [],
         "primaryFile": "slider-overview-example.ts",
-        "module": {
-            "name": "SliderExamplesModule",
-            "importSpecifier": "material/slider"
-        }
+        "importPath": "material/slider"
     },
     "slider-range": {
         "packagePath": "material/slider/slider-range",
@@ -4216,10 +3472,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "slider-range-example",
         "additionalComponents": [],
         "primaryFile": "slider-range-example.ts",
-        "module": {
-            "name": "SliderExamplesModule",
-            "importSpecifier": "material/slider"
-        }
+        "importPath": "material/slider"
     },
     "snack-bar-annotated-component": {
         "packagePath": "material/snack-bar/snack-bar-annotated-component",
@@ -4236,10 +3489,7 @@ const EXAMPLE_COMPONENTS = {
             "PizzaPartyAnnotatedComponent"
         ],
         "primaryFile": "snack-bar-annotated-component-example.ts",
-        "module": {
-            "name": "SnackBarExamplesModule",
-            "importSpecifier": "material/snack-bar"
-        }
+        "importPath": "material/snack-bar"
     },
     "snack-bar-component": {
         "packagePath": "material/snack-bar/snack-bar-component",
@@ -4256,10 +3506,7 @@ const EXAMPLE_COMPONENTS = {
             "PizzaPartyComponent"
         ],
         "primaryFile": "snack-bar-component-example.ts",
-        "module": {
-            "name": "SnackBarExamplesModule",
-            "importSpecifier": "material/snack-bar"
-        }
+        "importPath": "material/snack-bar"
     },
     "snack-bar-harness": {
         "packagePath": "material/snack-bar/snack-bar-harness",
@@ -4273,10 +3520,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "snack-bar-harness-example",
         "additionalComponents": [],
         "primaryFile": "snack-bar-harness-example.ts",
-        "module": {
-            "name": "SnackBarExamplesModule",
-            "importSpecifier": "material/snack-bar"
-        }
+        "importPath": "material/snack-bar"
     },
     "snack-bar-overview": {
         "packagePath": "material/snack-bar/snack-bar-overview",
@@ -4290,10 +3534,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "snack-bar-overview-example",
         "additionalComponents": [],
         "primaryFile": "snack-bar-overview-example.ts",
-        "module": {
-            "name": "SnackBarExamplesModule",
-            "importSpecifier": "material/snack-bar"
-        }
+        "importPath": "material/snack-bar"
     },
     "snack-bar-position": {
         "packagePath": "material/snack-bar/snack-bar-position",
@@ -4307,10 +3548,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "snack-bar-position-example",
         "additionalComponents": [],
         "primaryFile": "snack-bar-position-example.ts",
-        "module": {
-            "name": "SnackBarExamplesModule",
-            "importSpecifier": "material/snack-bar"
-        }
+        "importPath": "material/snack-bar"
     },
     "sort-harness": {
         "packagePath": "material/sort/sort-harness",
@@ -4324,10 +3562,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sort-harness-example",
         "additionalComponents": [],
         "primaryFile": "sort-harness-example.ts",
-        "module": {
-            "name": "SortExamplesModule",
-            "importSpecifier": "material/sort"
-        }
+        "importPath": "material/sort"
     },
     "sort-overview": {
         "packagePath": "material/sort/sort-overview",
@@ -4341,10 +3576,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "sort-overview-example",
         "additionalComponents": [],
         "primaryFile": "sort-overview-example.ts",
-        "module": {
-            "name": "SortExamplesModule",
-            "importSpecifier": "material/sort"
-        }
+        "importPath": "material/sort"
     },
     "stepper-animations": {
         "packagePath": "material/stepper/stepper-animations",
@@ -4358,10 +3590,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-animations-example",
         "additionalComponents": [],
         "primaryFile": "stepper-animations-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-editable": {
         "packagePath": "material/stepper/stepper-editable",
@@ -4375,10 +3604,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-editable-example",
         "additionalComponents": [],
         "primaryFile": "stepper-editable-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-errors": {
         "packagePath": "material/stepper/stepper-errors",
@@ -4392,10 +3618,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-errors-example",
         "additionalComponents": [],
         "primaryFile": "stepper-errors-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-harness": {
         "packagePath": "material/stepper/stepper-harness",
@@ -4409,10 +3632,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-harness-example",
         "additionalComponents": [],
         "primaryFile": "stepper-harness-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-header-position": {
         "packagePath": "material/stepper/stepper-header-position",
@@ -4425,10 +3645,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-header-position-example",
         "additionalComponents": [],
         "primaryFile": "stepper-header-position-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-intl": {
         "packagePath": "material/stepper/stepper-intl",
@@ -4442,10 +3659,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-intl-example",
         "additionalComponents": [],
         "primaryFile": "stepper-intl-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-label-position-bottom": {
         "packagePath": "material/stepper/stepper-label-position-bottom",
@@ -4459,10 +3673,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-label-position-bottom-example",
         "additionalComponents": [],
         "primaryFile": "stepper-label-position-bottom-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-lazy-content": {
         "packagePath": "material/stepper/stepper-lazy-content",
@@ -4475,10 +3686,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-lazy-content-example",
         "additionalComponents": [],
         "primaryFile": "stepper-lazy-content-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-optional": {
         "packagePath": "material/stepper/stepper-optional",
@@ -4492,10 +3700,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-optional-example",
         "additionalComponents": [],
         "primaryFile": "stepper-optional-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-overview": {
         "packagePath": "material/stepper/stepper-overview",
@@ -4509,10 +3714,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-overview-example",
         "additionalComponents": [],
         "primaryFile": "stepper-overview-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-responsive": {
         "packagePath": "material/stepper/stepper-responsive",
@@ -4526,10 +3728,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-responsive-example",
         "additionalComponents": [],
         "primaryFile": "stepper-responsive-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-states": {
         "packagePath": "material/stepper/stepper-states",
@@ -4543,10 +3742,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-states-example",
         "additionalComponents": [],
         "primaryFile": "stepper-states-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "stepper-vertical": {
         "packagePath": "material/stepper/stepper-vertical",
@@ -4560,10 +3756,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "stepper-vertical-example",
         "additionalComponents": [],
         "primaryFile": "stepper-vertical-example.ts",
-        "module": {
-            "name": "StepperExamplesModule",
-            "importSpecifier": "material/stepper"
-        }
+        "importPath": "material/stepper"
     },
     "table-basic": {
         "packagePath": "material/table/table-basic",
@@ -4577,10 +3770,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-basic-example",
         "additionalComponents": [],
         "primaryFile": "table-basic-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-column-styling": {
         "packagePath": "material/table/table-column-styling",
@@ -4594,10 +3784,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-column-styling-example",
         "additionalComponents": [],
         "primaryFile": "table-column-styling-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-dynamic-array-data": {
         "packagePath": "material/table/table-dynamic-array-data",
@@ -4611,10 +3798,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-dynamic-array-data-example",
         "additionalComponents": [],
         "primaryFile": "table-dynamic-array-data-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-dynamic-columns": {
         "packagePath": "material/table/table-dynamic-columns",
@@ -4628,10 +3812,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-dynamic-columns-example",
         "additionalComponents": [],
         "primaryFile": "table-dynamic-columns-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-dynamic-observable-data": {
         "packagePath": "material/table/table-dynamic-observable-data",
@@ -4645,10 +3826,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-dynamic-observable-data-example",
         "additionalComponents": [],
         "primaryFile": "table-dynamic-observable-data-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-expandable-rows": {
         "packagePath": "material/table/table-expandable-rows",
@@ -4662,10 +3840,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-expandable-rows-example",
         "additionalComponents": [],
         "primaryFile": "table-expandable-rows-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-filtering": {
         "packagePath": "material/table/table-filtering",
@@ -4679,10 +3854,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-filtering-example",
         "additionalComponents": [],
         "primaryFile": "table-filtering-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-flex-basic": {
         "packagePath": "material/table/table-flex-basic",
@@ -4696,10 +3868,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-flex-basic-example",
         "additionalComponents": [],
         "primaryFile": "table-flex-basic-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-flex-large-row": {
         "packagePath": "material/table/table-flex-large-row",
@@ -4713,10 +3882,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-flex-large-row-example",
         "additionalComponents": [],
         "primaryFile": "table-flex-large-row-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-footer-row": {
         "packagePath": "material/table/table-footer-row",
@@ -4730,10 +3896,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-footer-row-example",
         "additionalComponents": [],
         "primaryFile": "table-footer-row-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-generated-columns": {
         "packagePath": "material/table/table-generated-columns",
@@ -4747,10 +3910,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-generated-columns-example",
         "additionalComponents": [],
         "primaryFile": "table-generated-columns-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-harness": {
         "packagePath": "material/table/table-harness",
@@ -4764,10 +3924,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-harness-example",
         "additionalComponents": [],
         "primaryFile": "table-harness-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-http": {
         "packagePath": "material/table/table-http",
@@ -4781,10 +3938,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-http-example",
         "additionalComponents": [],
         "primaryFile": "table-http-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-multiple-header-footer": {
         "packagePath": "material/table/table-multiple-header-footer",
@@ -4798,10 +3952,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-multiple-header-footer-example",
         "additionalComponents": [],
         "primaryFile": "table-multiple-header-footer-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-overview": {
         "packagePath": "material/table/table-overview",
@@ -4815,10 +3966,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-overview-example",
         "additionalComponents": [],
         "primaryFile": "table-overview-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-pagination": {
         "packagePath": "material/table/table-pagination",
@@ -4832,10 +3980,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-pagination-example",
         "additionalComponents": [],
         "primaryFile": "table-pagination-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-recycle-rows": {
         "packagePath": "material/table/table-recycle-rows",
@@ -4849,10 +3994,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-recycle-rows-example",
         "additionalComponents": [],
         "primaryFile": "table-recycle-rows-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-reorderable": {
         "packagePath": "material/table/table-reorderable",
@@ -4866,10 +4008,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-reorderable-example",
         "additionalComponents": [],
         "primaryFile": "table-reorderable-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-row-binding": {
         "packagePath": "material/table/table-row-binding",
@@ -4883,10 +4022,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-row-binding-example",
         "additionalComponents": [],
         "primaryFile": "table-row-binding-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-row-context": {
         "packagePath": "material/table/table-row-context",
@@ -4900,10 +4036,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-row-context-example",
         "additionalComponents": [],
         "primaryFile": "table-row-context-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-selection": {
         "packagePath": "material/table/table-selection",
@@ -4917,10 +4050,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-selection-example",
         "additionalComponents": [],
         "primaryFile": "table-selection-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-sorting": {
         "packagePath": "material/table/table-sorting",
@@ -4934,10 +4064,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-sorting-example",
         "additionalComponents": [],
         "primaryFile": "table-sorting-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-sticky-columns": {
         "packagePath": "material/table/table-sticky-columns",
@@ -4951,10 +4078,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-sticky-columns-example",
         "additionalComponents": [],
         "primaryFile": "table-sticky-columns-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-sticky-complex-flex": {
         "packagePath": "material/table/table-sticky-complex-flex",
@@ -4968,10 +4092,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-sticky-complex-flex-example",
         "additionalComponents": [],
         "primaryFile": "table-sticky-complex-flex-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-sticky-complex": {
         "packagePath": "material/table/table-sticky-complex",
@@ -4985,10 +4106,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-sticky-complex-example",
         "additionalComponents": [],
         "primaryFile": "table-sticky-complex-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-sticky-footer": {
         "packagePath": "material/table/table-sticky-footer",
@@ -5002,10 +4120,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-sticky-footer-example",
         "additionalComponents": [],
         "primaryFile": "table-sticky-footer-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-sticky-header": {
         "packagePath": "material/table/table-sticky-header",
@@ -5019,10 +4134,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-sticky-header-example",
         "additionalComponents": [],
         "primaryFile": "table-sticky-header-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-text-column-advanced": {
         "packagePath": "material/table/table-text-column-advanced",
@@ -5036,10 +4148,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-text-column-advanced-example",
         "additionalComponents": [],
         "primaryFile": "table-text-column-advanced-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-text-column": {
         "packagePath": "material/table/table-text-column",
@@ -5053,10 +4162,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-text-column-example",
         "additionalComponents": [],
         "primaryFile": "table-text-column-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-with-ripples": {
         "packagePath": "material/table/table-with-ripples",
@@ -5069,10 +4175,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "table-with-ripples-example",
         "additionalComponents": [],
         "primaryFile": "table-with-ripples-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "table-wrapped": {
         "packagePath": "material/table/table-wrapped",
@@ -5089,10 +4192,7 @@ const EXAMPLE_COMPONENTS = {
             "WrapperTable"
         ],
         "primaryFile": "table-wrapped-example.ts",
-        "module": {
-            "name": "TableExamplesModule",
-            "importSpecifier": "material/table"
-        }
+        "importPath": "material/table"
     },
     "tab-group-align": {
         "packagePath": "material/tabs/tab-group-align",
@@ -5106,10 +4206,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-align-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-align-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-animations": {
         "packagePath": "material/tabs/tab-group-animations",
@@ -5123,10 +4220,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-animations-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-animations-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-async": {
         "packagePath": "material/tabs/tab-group-async",
@@ -5139,10 +4233,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-async-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-async-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-basic": {
         "packagePath": "material/tabs/tab-group-basic",
@@ -5155,10 +4246,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-basic-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-basic-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-custom-label": {
         "packagePath": "material/tabs/tab-group-custom-label",
@@ -5172,10 +4260,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-custom-label-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-custom-label-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-dynamic-height": {
         "packagePath": "material/tabs/tab-group-dynamic-height",
@@ -5189,10 +4274,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-dynamic-height-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-dynamic-height-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-dynamic": {
         "packagePath": "material/tabs/tab-group-dynamic",
@@ -5206,10 +4288,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-dynamic-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-dynamic-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-harness": {
         "packagePath": "material/tabs/tab-group-harness",
@@ -5223,10 +4302,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-harness-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-harness-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-header-below": {
         "packagePath": "material/tabs/tab-group-header-below",
@@ -5239,10 +4315,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-header-below-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-header-below-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-ink-bar": {
         "packagePath": "material/tabs/tab-group-ink-bar",
@@ -5255,10 +4328,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-ink-bar-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-ink-bar-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-inverted": {
         "packagePath": "material/tabs/tab-group-inverted",
@@ -5271,10 +4341,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-inverted-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-inverted-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-lazy-loaded": {
         "packagePath": "material/tabs/tab-group-lazy-loaded",
@@ -5287,10 +4354,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-lazy-loaded-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-lazy-loaded-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-paginated": {
         "packagePath": "material/tabs/tab-group-paginated",
@@ -5303,10 +4367,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-paginated-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-paginated-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-preserve-content": {
         "packagePath": "material/tabs/tab-group-preserve-content",
@@ -5319,10 +4380,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-preserve-content-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-preserve-content-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-stretched": {
         "packagePath": "material/tabs/tab-group-stretched",
@@ -5336,10 +4394,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-stretched-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-stretched-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-group-theme": {
         "packagePath": "material/tabs/tab-group-theme",
@@ -5353,10 +4408,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-theme-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-theme-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "tab-nav-bar-basic": {
         "packagePath": "material/tabs/tab-nav-bar-basic",
@@ -5370,10 +4422,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-nav-bar-basic-example",
         "additionalComponents": [],
         "primaryFile": "tab-nav-bar-basic-example.ts",
-        "module": {
-            "name": "TabGroupExamplesModule",
-            "importSpecifier": "material/tabs"
-        }
+        "importPath": "material/tabs"
     },
     "toolbar-basic": {
         "packagePath": "material/toolbar/toolbar-basic",
@@ -5387,10 +4436,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "toolbar-basic-example",
         "additionalComponents": [],
         "primaryFile": "toolbar-basic-example.ts",
-        "module": {
-            "name": "ToolbarExamplesModule",
-            "importSpecifier": "material/toolbar"
-        }
+        "importPath": "material/toolbar"
     },
     "toolbar-harness": {
         "packagePath": "material/toolbar/toolbar-harness",
@@ -5404,10 +4450,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "toolbar-harness-example",
         "additionalComponents": [],
         "primaryFile": "toolbar-harness-example.ts",
-        "module": {
-            "name": "ToolbarExamplesModule",
-            "importSpecifier": "material/toolbar"
-        }
+        "importPath": "material/toolbar"
     },
     "toolbar-multirow": {
         "packagePath": "material/toolbar/toolbar-multirow",
@@ -5421,10 +4464,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "toolbar-multirow-example",
         "additionalComponents": [],
         "primaryFile": "toolbar-multirow-example.ts",
-        "module": {
-            "name": "ToolbarExamplesModule",
-            "importSpecifier": "material/toolbar"
-        }
+        "importPath": "material/toolbar"
     },
     "toolbar-overview": {
         "packagePath": "material/toolbar/toolbar-overview",
@@ -5438,10 +4478,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "toolbar-overview-example",
         "additionalComponents": [],
         "primaryFile": "toolbar-overview-example.ts",
-        "module": {
-            "name": "ToolbarExamplesModule",
-            "importSpecifier": "material/toolbar"
-        }
+        "importPath": "material/toolbar"
     },
     "tooltip-auto-hide": {
         "packagePath": "material/tooltip/tooltip-auto-hide",
@@ -5455,10 +4492,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-auto-hide-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-auto-hide-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-custom-class": {
         "packagePath": "material/tooltip/tooltip-custom-class",
@@ -5472,10 +4506,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-custom-class-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-custom-class-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-delay": {
         "packagePath": "material/tooltip/tooltip-delay",
@@ -5489,10 +4520,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-delay-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-delay-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-disabled": {
         "packagePath": "material/tooltip/tooltip-disabled",
@@ -5506,10 +4534,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-disabled-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-disabled-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-harness": {
         "packagePath": "material/tooltip/tooltip-harness",
@@ -5523,10 +4548,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-harness-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-harness-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-manual": {
         "packagePath": "material/tooltip/tooltip-manual",
@@ -5540,10 +4562,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-manual-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-manual-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-message": {
         "packagePath": "material/tooltip/tooltip-message",
@@ -5557,10 +4576,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-message-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-message-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-modified-defaults": {
         "packagePath": "material/tooltip/tooltip-modified-defaults",
@@ -5573,10 +4589,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-modified-defaults-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-modified-defaults-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-overview": {
         "packagePath": "material/tooltip/tooltip-overview",
@@ -5589,10 +4602,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-overview-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-overview-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-position-at-origin": {
         "packagePath": "material/tooltip/tooltip-position-at-origin",
@@ -5606,10 +4616,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-position-at-origin-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-position-at-origin-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tooltip-position": {
         "packagePath": "material/tooltip/tooltip-position",
@@ -5623,10 +4630,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tooltip-position-example",
         "additionalComponents": [],
         "primaryFile": "tooltip-position-example.ts",
-        "module": {
-            "name": "TooltipExamplesModule",
-            "importSpecifier": "material/tooltip"
-        }
+        "importPath": "material/tooltip"
     },
     "tree-checklist": {
         "packagePath": "material/tree/tree-checklist",
@@ -5640,10 +4644,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-checklist-example",
         "additionalComponents": [],
         "primaryFile": "tree-checklist-example.ts",
-        "module": {
-            "name": "TreeExamplesModule",
-            "importSpecifier": "material/tree"
-        }
+        "importPath": "material/tree"
     },
     "tree-dynamic": {
         "packagePath": "material/tree/tree-dynamic",
@@ -5657,10 +4658,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-dynamic-example",
         "additionalComponents": [],
         "primaryFile": "tree-dynamic-example.ts",
-        "module": {
-            "name": "TreeExamplesModule",
-            "importSpecifier": "material/tree"
-        }
+        "importPath": "material/tree"
     },
     "tree-flat-overview": {
         "packagePath": "material/tree/tree-flat-overview",
@@ -5673,10 +4671,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-flat-overview-example",
         "additionalComponents": [],
         "primaryFile": "tree-flat-overview-example.ts",
-        "module": {
-            "name": "TreeExamplesModule",
-            "importSpecifier": "material/tree"
-        }
+        "importPath": "material/tree"
     },
     "tree-harness": {
         "packagePath": "material/tree/tree-harness",
@@ -5690,10 +4685,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-harness-example",
         "additionalComponents": [],
         "primaryFile": "tree-harness-example.ts",
-        "module": {
-            "name": "TreeExamplesModule",
-            "importSpecifier": "material/tree"
-        }
+        "importPath": "material/tree"
     },
     "tree-loadmore": {
         "packagePath": "material/tree/tree-loadmore",
@@ -5706,10 +4698,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-loadmore-example",
         "additionalComponents": [],
         "primaryFile": "tree-loadmore-example.ts",
-        "module": {
-            "name": "TreeExamplesModule",
-            "importSpecifier": "material/tree"
-        }
+        "importPath": "material/tree"
     },
     "tree-nested-overview": {
         "packagePath": "material/tree/tree-nested-overview",
@@ -5723,10 +4712,7 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-nested-overview-example",
         "additionalComponents": [],
         "primaryFile": "tree-nested-overview-example.ts",
-        "module": {
-            "name": "TreeExamplesModule",
-            "importSpecifier": "material/tree"
-        }
+        "importPath": "material/tree"
     }
 };
 async function loadExample(id) {

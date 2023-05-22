@@ -1,10 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 import * as i0 from '@angular/core';
-import * as i6 from '@angular/cdk-experimental/popover-edit';
-import * as i7 from '@angular/cdk/table';
-import * as i8 from '@angular/forms';
-import * as i9 from '@angular/common';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -19,7 +15,7 @@ export declare class CdkPopoverEditCdkTableExample {
     onSubmitName(element: PeriodicElement_2, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_2, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditCdkTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableExample, "cdk-popover-edit-cdk-table-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableExample, "cdk-popover-edit-cdk-table-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -33,7 +29,7 @@ export declare class CdkPopoverEditCdkTableFlexExample {
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditCdkTableFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableFlexExample, "cdk-popover-edit-cdk-table-flex-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCdkTableFlexExample, "cdk-popover-edit-cdk-table-flex-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -44,13 +40,7 @@ export declare class CdkPopoverEditCellSpanVanillaTableExample {
     readonly persons: Person[];
     onSubmit(person: Person, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditCellSpanVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never, never, false, never>;
-}
-
-export declare class CdkPopoverEditExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkPopoverEditExamplesModule, [typeof i1.CdkPopoverEditCdkTableExample, typeof i2.CdkPopoverEditCdkTableFlexExample, typeof i3.CdkPopoverEditCellSpanVanillaTableExample, typeof i4.CdkPopoverEditTabOutVanillaTableExample, typeof i5.CdkPopoverEditVanillaTableExample], [typeof i6.CdkPopoverEditModule, typeof i7.CdkTableModule, typeof i8.FormsModule, typeof i9.CommonModule], [typeof i1.CdkPopoverEditCdkTableExample, typeof i2.CdkPopoverEditCdkTableFlexExample, typeof i3.CdkPopoverEditCellSpanVanillaTableExample, typeof i4.CdkPopoverEditTabOutVanillaTableExample, typeof i5.CdkPopoverEditVanillaTableExample]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<CdkPopoverEditExamplesModule>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -63,7 +53,7 @@ export declare class CdkPopoverEditTabOutVanillaTableExample {
     onSubmitName(element: PeriodicElement_3, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_3, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditTabOutVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -76,7 +66,7 @@ export declare class CdkPopoverEditVanillaTableExample {
     onSubmitName(element: PeriodicElement_4, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_4, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkPopoverEditVanillaTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditVanillaTableExample, "cdk-popover-edit-vanilla-table-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkPopoverEditVanillaTableExample, "cdk-popover-edit-vanilla-table-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -107,43 +97,6 @@ declare class ExampleDataSource_2 extends DataSource<PeriodicElement_2> {
     /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect(): Observable<PeriodicElement_2[]>;
     disconnect(): void;
-}
-
-declare namespace i1 {
-    export {
-        PeriodicElement_2 as PeriodicElement,
-        CdkPopoverEditCdkTableExample,
-        ExampleDataSource_2 as ExampleDataSource
-    }
-}
-
-declare namespace i2 {
-    export {
-        PeriodicElement,
-        CdkPopoverEditCdkTableFlexExample,
-        ExampleDataSource
-    }
-}
-
-declare namespace i3 {
-    export {
-        Person,
-        CdkPopoverEditCellSpanVanillaTableExample
-    }
-}
-
-declare namespace i4 {
-    export {
-        PeriodicElement_3 as PeriodicElement,
-        CdkPopoverEditTabOutVanillaTableExample
-    }
-}
-
-declare namespace i5 {
-    export {
-        PeriodicElement_4 as PeriodicElement,
-        CdkPopoverEditVanillaTableExample
-    }
 }
 
 declare interface PeriodicElement {

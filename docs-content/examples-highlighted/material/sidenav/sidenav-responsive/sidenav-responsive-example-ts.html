@@ -1,11 +1,27 @@
 <span class="hljs-keyword">import</span> {MediaMatcher} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/layout&#x27;</span>;
 <span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSidenavModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatToolbarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/toolbar&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgIf, NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Responsive sidenav */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;sidenav-responsive-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-responsive-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-responsive-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    NgIf,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    NgFor,
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavResponsiveExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
   <span class="hljs-attr">mobileQuery</span>: MediaQueryList;

@@ -2,7 +2,6 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressSpinnerHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
 <span class="hljs-keyword">import</span> {ProgressSpinnerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./progress-spinner-harness-example&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;ProgressSpinnerHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
@@ -10,10 +9,6 @@ describe(<span class="hljs-string">&#x27;ProgressSpinnerHarnessExample&#x27;</sp
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatProgressSpinnerModule],
-      <span class="hljs-attr">declarations</span>: [ProgressSpinnerHarnessExample],
-    }).compileComponents();
     fixture = TestBed.createComponent(ProgressSpinnerHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

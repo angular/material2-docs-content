@@ -2,7 +2,6 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSortHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
 <span class="hljs-keyword">import</span> {SortHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./sort-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
 
@@ -12,8 +11,7 @@ describe(<span class="hljs-string">&#x27;SortHarnessExample&#x27;</span>, <span 
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatSortModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [SortHarnessExample],
+      <span class="hljs-attr">imports</span>: [NoopAnimationsModule],
     }).compileComponents();
     fixture = TestBed.createComponent(SortHarnessExample);
     fixture.detectChanges();

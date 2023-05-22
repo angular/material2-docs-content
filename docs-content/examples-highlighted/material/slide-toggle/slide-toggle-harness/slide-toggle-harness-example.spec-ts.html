@@ -2,19 +2,13 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSlideToggleHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
 <span class="hljs-keyword">import</span> {SlideToggleHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./slide-toggle-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;SlideToggleHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;SlideToggleHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatSlideToggleModule, ReactiveFormsModule],
-      <span class="hljs-attr">declarations</span>: [SlideToggleHarnessExample],
-    }).compileComponents();
     fixture = TestBed.createComponent(SlideToggleHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

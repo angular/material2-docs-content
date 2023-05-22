@@ -9,6 +9,7 @@
   Optional,
   Self,
   ViewChild,
+  forwardRef,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   AbstractControl,
@@ -18,14 +19,30 @@
   FormGroup,
   NgControl,
   Validators,
+  FormsModule,
+  ReactiveFormsModule,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  MAT_FORM_FIELD,
+  MatFormField,
+  MatFormFieldControl,
+  MatFormFieldModule,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field with custom telephone number input control. */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;form-field-custom-control-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;form-field-custom-control-example.html&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    forwardRef(<span class="hljs-function">() =&gt;</span> MyTelInput),
+    MatIconModule,
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldCustomControlExample</span> </span>{
   <span class="hljs-attr">form</span>: FormGroup = <span class="hljs-keyword">new</span> FormGroup({
@@ -48,6 +65,8 @@
     <span class="hljs-string">&#x27;[class.example-floating]&#x27;</span>: <span class="hljs-string">&#x27;shouldLabelFloat&#x27;</span>,
     <span class="hljs-string">&#x27;[id]&#x27;</span>: <span class="hljs-string">&#x27;id&#x27;</span>,
   },
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [FormsModule, ReactiveFormsModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">ControlValueAccessor</span>, <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt;, <span class="hljs-title">OnDestroy</span> </span>{
   <span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;

@@ -1,5 +1,7 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {Observable, Observer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgIf, NgFor, AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ExampleTab {
   <span class="hljs-attr">label</span>: <span class="hljs-built_in">string</span>;
@@ -12,6 +14,8 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tab-group-async-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tab-group-async-example.html&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [NgIf, MatTabsModule, NgFor, AsyncPipe],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabGroupAsyncExample</span> </span>{
   <span class="hljs-attr">asyncTabs</span>: Observable&lt;ExampleTab[]&gt;;

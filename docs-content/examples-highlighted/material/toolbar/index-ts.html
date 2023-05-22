@@ -1,24 +1,4 @@
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatToolbarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/toolbar&#x27;</span>;
-<span class="hljs-keyword">import</span> {ToolbarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-basic/toolbar-basic-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-multirow/toolbar-multirow-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-overview/toolbar-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ToolbarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-harness/toolbar-harness-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {ToolbarBasicExample, ToolbarHarnessExample, ToolbarMultirowExample, ToolbarOverviewExample};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  ToolbarBasicExample,
-  ToolbarHarnessExample,
-  ToolbarMultirowExample,
-  ToolbarOverviewExample,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatIconModule, MatToolbarModule],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ToolbarExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {ToolbarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-basic/toolbar-basic-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-multirow/toolbar-multirow-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-overview/toolbar-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ToolbarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./toolbar-harness/toolbar-harness-example&#x27;</span>;

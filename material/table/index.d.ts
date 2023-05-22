@@ -5,19 +5,6 @@ import { DataSource } from '@angular/cdk/collections';
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as i0 from '@angular/core';
-import * as i32 from '@angular/common';
-import * as i33 from '@angular/material/button';
-import * as i34 from '@angular/material/button-toggle';
-import * as i35 from '@angular/material/checkbox';
-import * as i36 from '@angular/material/icon';
-import * as i37 from '@angular/material/input';
-import * as i38 from '@angular/material/paginator';
-import * as i39 from '@angular/material/progress-spinner';
-import * as i40 from '@angular/material/core';
-import * as i41 from '@angular/material/sort';
-import * as i42 from '@angular/material/table';
-import * as i43 from '@angular/cdk/table';
-import * as i44 from '@angular/cdk/drag-drop';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { MatColumnDef } from '@angular/material/table';
@@ -35,12 +22,12 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { Sort } from '@angular/material/sort';
 import { SortDirection } from '@angular/material/sort';
 
-declare class ExampleDataSource extends DataSource<PeriodicElement_5> {
+declare class ExampleDataSource extends DataSource<PeriodicElement_21> {
     private _dataStream;
-    constructor(initialData: PeriodicElement_5[]);
-    connect(): Observable<PeriodicElement_5[]>;
+    constructor(initialData: PeriodicElement_21[]);
+    connect(): Observable<PeriodicElement_21[]>;
     disconnect(): void;
-    setData(data: PeriodicElement_5[]): void;
+    setData(data: PeriodicElement_21[]): void;
 }
 
 /** An example database that the data source uses to retrieve data for the table. */
@@ -60,221 +47,6 @@ declare interface GithubIssue {
     number: string;
     state: string;
     title: string;
-}
-
-declare namespace i1 {
-    export {
-        PeriodicElement,
-        TableBasicExample
-    }
-}
-
-declare namespace i10 {
-    export {
-        TableFooterRowExample
-    }
-}
-
-declare namespace i11 {
-    export {
-        PeriodicElement_10 as PeriodicElement,
-        TableGeneratedColumnsExample
-    }
-}
-
-declare namespace i12 {
-    export {
-        TableHarnessExample
-    }
-}
-
-declare namespace i13 {
-    export {
-        TableHttpExample,
-        GithubApi,
-        GithubIssue,
-        ExampleHttpDatabase
-    }
-}
-
-declare namespace i14 {
-    export {
-        TableMultipleHeaderFooterExample
-    }
-}
-
-declare namespace i15 {
-    export {
-        UserData,
-        TableOverviewExample
-    }
-}
-
-declare namespace i16 {
-    export {
-        TablePaginationExample,
-        PeriodicElement_11 as PeriodicElement
-    }
-}
-
-declare namespace i17 {
-    export {
-        PeriodicElement_12 as PeriodicElement,
-        TableRecycleRowsExample
-    }
-}
-
-declare namespace i18 {
-    export {
-        TableReorderableExample,
-        PeriodicElement_13 as PeriodicElement
-    }
-}
-
-declare namespace i19 {
-    export {
-        PeriodicElement_14 as PeriodicElement,
-        TableRowBindingExample
-    }
-}
-
-declare namespace i2 {
-    export {
-        PeriodicElement_2 as PeriodicElement,
-        TableColumnStylingExample
-    }
-}
-
-declare namespace i20 {
-    export {
-        TableRowContextExample
-    }
-}
-
-declare namespace i21 {
-    export {
-        PeriodicElement_15 as PeriodicElement,
-        TableSelectionExample
-    }
-}
-
-declare namespace i22 {
-    export {
-        PeriodicElement_16 as PeriodicElement,
-        TableSortingExample
-    }
-}
-
-declare namespace i23 {
-    export {
-        TableStickyColumnsExample,
-        PeriodicElement_17 as PeriodicElement
-    }
-}
-
-declare namespace i24 {
-    export {
-        TableStickyComplexExample,
-        PeriodicElement_18 as PeriodicElement
-    }
-}
-
-declare namespace i25 {
-    export {
-        TableStickyComplexFlexExample,
-        PeriodicElement_19 as PeriodicElement
-    }
-}
-
-declare namespace i26 {
-    export {
-        Transaction_3 as Transaction,
-        TableStickyFooterExample
-    }
-}
-
-declare namespace i27 {
-    export {
-        TableStickyHeaderExample,
-        PeriodicElement_20 as PeriodicElement
-    }
-}
-
-declare namespace i28 {
-    export {
-        PeriodicElement_21 as PeriodicElement,
-        TableTextColumnAdvancedExample
-    }
-}
-
-declare namespace i29 {
-    export {
-        PeriodicElement_22 as PeriodicElement,
-        TableTextColumnExample
-    }
-}
-
-declare namespace i3 {
-    export {
-        PeriodicElement_3 as PeriodicElement,
-        TableDynamicArrayDataExample
-    }
-}
-
-declare namespace i30 {
-    export {
-        TableWithRipplesExample
-    }
-}
-
-declare namespace i31 {
-    export {
-        PeriodicElement_23 as PeriodicElement,
-        TableWrappedExample,
-        WrapperTable
-    }
-}
-
-declare namespace i4 {
-    export {
-        PeriodicElement_4 as PeriodicElement,
-        TableDynamicColumnsExample
-    }
-}
-
-declare namespace i5 {
-    export {
-        PeriodicElement_5 as PeriodicElement,
-        TableDynamicObservableDataExample
-    }
-}
-
-declare namespace i6 {
-    export {
-        TableExpandableRowsExample,
-        PeriodicElement_6 as PeriodicElement
-    }
-}
-
-declare namespace i7 {
-    export {
-        PeriodicElement_7 as PeriodicElement,
-        TableFilteringExample
-    }
-}
-
-declare namespace i8 {
-    export {
-        PeriodicElement_8 as PeriodicElement,
-        TableFlexBasicExample
-    }
-}
-
-declare namespace i9 {
-    export {
-        PeriodicElement_9 as PeriodicElement,
-        TableFlexLargeRowExample
-    }
 }
 
 declare interface PeriodicElement {
@@ -401,6 +173,7 @@ declare interface PeriodicElement_4 {
     position: number;
     weight: number;
     symbol: string;
+    description: string;
 }
 
 declare interface PeriodicElement_5 {
@@ -415,7 +188,6 @@ declare interface PeriodicElement_6 {
     position: number;
     weight: number;
     symbol: string;
-    description: string;
 }
 
 declare interface PeriodicElement_7 {
@@ -444,9 +216,9 @@ declare interface PeriodicElement_9 {
  */
 export declare class TableBasicExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement[];
+    dataSource: PeriodicElement_2[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -454,9 +226,9 @@ export declare class TableBasicExample {
  */
 export declare class TableColumnStylingExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_2[];
+    dataSource: PeriodicElement_18[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableColumnStylingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -464,12 +236,12 @@ export declare class TableColumnStylingExample {
  */
 export declare class TableDynamicArrayDataExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_3[];
-    table: MatTable<PeriodicElement_3>;
+    dataSource: PeriodicElement_20[];
+    table: MatTable<PeriodicElement_20>;
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicArrayDataExample, "table-dynamic-array-data-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicArrayDataExample, "table-dynamic-array-data-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -478,12 +250,12 @@ export declare class TableDynamicArrayDataExample {
 export declare class TableDynamicColumnsExample {
     displayedColumns: string[];
     columnsToDisplay: string[];
-    data: PeriodicElement_4[];
+    data: PeriodicElement_3[];
     addColumn(): void;
     removeColumn(): void;
     shuffle(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -491,30 +263,24 @@ export declare class TableDynamicColumnsExample {
  */
 export declare class TableDynamicObservableDataExample {
     displayedColumns: string[];
-    dataToDisplay: PeriodicElement_5[];
+    dataToDisplay: PeriodicElement_21[];
     dataSource: ExampleDataSource;
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicObservableDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, false, never>;
-}
-
-export declare class TableExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<TableExamplesModule, [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable], [typeof i32.CommonModule, typeof i33.MatButtonModule, typeof i34.MatButtonToggleModule, typeof i35.MatCheckboxModule, typeof i36.MatIconModule, typeof i37.MatInputModule, typeof i38.MatPaginatorModule, typeof i39.MatProgressSpinnerModule, typeof i40.MatRippleModule, typeof i41.MatSortModule, typeof i42.MatTableModule, typeof i43.CdkTableModule, typeof i44.DragDropModule], [typeof i1.TableBasicExample, typeof i2.TableColumnStylingExample, typeof i3.TableDynamicArrayDataExample, typeof i4.TableDynamicColumnsExample, typeof i5.TableDynamicObservableDataExample, typeof i6.TableExpandableRowsExample, typeof i7.TableFilteringExample, typeof i8.TableFlexBasicExample, typeof i9.TableFlexLargeRowExample, typeof i10.TableFooterRowExample, typeof i11.TableGeneratedColumnsExample, typeof i12.TableHarnessExample, typeof i13.TableHttpExample, typeof i14.TableMultipleHeaderFooterExample, typeof i15.TableOverviewExample, typeof i16.TablePaginationExample, typeof i17.TableRecycleRowsExample, typeof i18.TableReorderableExample, typeof i19.TableRowBindingExample, typeof i20.TableRowContextExample, typeof i21.TableSelectionExample, typeof i22.TableSortingExample, typeof i23.TableStickyColumnsExample, typeof i24.TableStickyComplexExample, typeof i25.TableStickyComplexFlexExample, typeof i26.TableStickyFooterExample, typeof i27.TableStickyHeaderExample, typeof i28.TableTextColumnAdvancedExample, typeof i29.TableTextColumnExample, typeof i30.TableWithRipplesExample, typeof i31.TableWrappedExample, typeof i31.WrapperTable]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<TableExamplesModule>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
  * @title Table with expandable rows
  */
 export declare class TableExpandableRowsExample {
-    dataSource: PeriodicElement_6[];
+    dataSource: PeriodicElement_4[];
     columnsToDisplay: string[];
     columnsToDisplayWithExpand: string[];
-    expandedElement: PeriodicElement_6 | null;
+    expandedElement: PeriodicElement_4 | null;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExpandableRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -522,10 +288,10 @@ export declare class TableExpandableRowsExample {
  */
 export declare class TableFilteringExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_7, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_5, MatTableDataSourcePaginator>;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFilteringExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -533,9 +299,9 @@ export declare class TableFilteringExample {
  */
 export declare class TableFlexBasicExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_8[];
+    dataSource: PeriodicElement[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -543,9 +309,9 @@ export declare class TableFlexBasicExample {
  */
 export declare class TableFlexLargeRowExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_9[];
+    dataSource: PeriodicElement_23[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexLargeRowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -557,7 +323,7 @@ export declare class TableFooterRowExample {
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFooterRowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -567,12 +333,12 @@ export declare class TableGeneratedColumnsExample {
     columns: {
         columnDef: string;
         header: string;
-        cell: (element: PeriodicElement_10) => string;
+        cell: (element: PeriodicElement_22) => string;
     }[];
-    dataSource: PeriodicElement_10[];
+    dataSource: PeriodicElement_22[];
     displayedColumns: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -587,7 +353,7 @@ export declare class TableHarnessExample {
         symbol: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -606,7 +372,7 @@ export declare class TableHttpExample implements AfterViewInit {
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -618,7 +384,7 @@ export declare class TableMultipleHeaderFooterExample {
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableMultipleHeaderFooterExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -633,7 +399,7 @@ export declare class TableOverviewExample implements AfterViewInit {
     ngAfterViewInit(): void;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableOverviewExample, "table-overview-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableOverviewExample, "table-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -641,11 +407,11 @@ export declare class TableOverviewExample implements AfterViewInit {
  */
 export declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_11, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_6, MatTableDataSourcePaginator>;
     paginator: MatPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -653,9 +419,9 @@ export declare class TablePaginationExample implements AfterViewInit {
  */
 export declare class TableRecycleRowsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_12[];
+    dataSource: PeriodicElement_17[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -663,10 +429,10 @@ export declare class TableRecycleRowsExample {
  */
 export declare class TableReorderableExample {
     columns: string[];
-    dataSource: PeriodicElement_13[];
+    dataSource: PeriodicElement_16[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -674,10 +440,10 @@ export declare class TableReorderableExample {
  */
 export declare class TableRowBindingExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_14[];
-    clickedRows: Set<PeriodicElement_14>;
+    dataSource: PeriodicElement_19[];
+    clickedRows: Set<PeriodicElement_19>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -687,7 +453,7 @@ export declare class TableRowContextExample {
     displayedColumns: string[];
     data: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowContextExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowContextExample, "table-row-context-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowContextExample, "table-row-context-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -695,16 +461,16 @@ export declare class TableRowContextExample {
  */
 export declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_15, MatTableDataSourcePaginator>;
-    selection: SelectionModel<PeriodicElement_15>;
+    dataSource: MatTableDataSource<PeriodicElement_7, MatTableDataSourcePaginator>;
+    selection: SelectionModel<PeriodicElement_7>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     toggleAllRows(): void;
     /** The label for the checkbox on the passed row */
-    checkboxLabel(row?: PeriodicElement_15): string;
+    checkboxLabel(row?: PeriodicElement_7): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -713,14 +479,14 @@ export declare class TableSelectionExample {
 export declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_16, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_8, MatTableDataSourcePaginator>;
     constructor(_liveAnnouncer: LiveAnnouncer);
     sort: MatSort;
     ngAfterViewInit(): void;
     /** Announce the change in sort state for assistive technology. */
     announceSortChange(sortState: Sort): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSortingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableSortingExample, "table-sorting-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -728,9 +494,9 @@ export declare class TableSortingExample implements AfterViewInit {
  */
 export declare class TableStickyColumnsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_17[];
+    dataSource: PeriodicElement_9[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -738,13 +504,13 @@ export declare class TableStickyColumnsExample {
  */
 export declare class TableStickyComplexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_18[];
+    dataSource: PeriodicElement_11[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
     isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -752,13 +518,13 @@ export declare class TableStickyComplexExample {
  */
 export declare class TableStickyComplexFlexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_19[];
+    dataSource: PeriodicElement_10[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
     isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -770,7 +536,7 @@ export declare class TableStickyFooterExample {
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyFooterExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyFooterExample, "table-sticky-footer-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyFooterExample, "table-sticky-footer-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -778,9 +544,9 @@ export declare class TableStickyFooterExample {
  */
 export declare class TableStickyHeaderExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_20[];
+    dataSource: PeriodicElement_12[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyHeaderExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -788,13 +554,13 @@ export declare class TableStickyHeaderExample {
  */
 export declare class TableTextColumnAdvancedExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_21, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_13, MatTableDataSourcePaginator>;
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-    getWeight: (data: PeriodicElement_21) => string;
+    getWeight: (data: PeriodicElement_13) => string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnAdvancedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -803,9 +569,9 @@ export declare class TableTextColumnAdvancedExample {
  */
 export declare class TableTextColumnExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_22[];
+    dataSource: PeriodicElement_14[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -817,7 +583,7 @@ export declare class TableWithRipplesExample {
         name: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableWithRipplesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -825,13 +591,13 @@ export declare class TableWithRipplesExample {
  */
 export declare class TableWrappedExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_23, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_15, MatTableDataSourcePaginator>;
     sort: MatSort;
     ngAfterViewInit(): void;
     clearTable(): void;
     addData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableWrappedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, true, never>;
 }
 
 declare interface Transaction {
@@ -870,7 +636,7 @@ export declare class WrapperTable<T> implements AfterContentInit {
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": false; }; "dataSource": { "alias": "dataSource"; "required": false; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], false, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": false; }; "dataSource": { "alias": "dataSource"; "required": false; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], true, never>;
 }
 
 export { }

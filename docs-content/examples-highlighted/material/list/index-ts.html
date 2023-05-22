@@ -1,35 +1,6 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
-<span class="hljs-keyword">import</span> {ListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-overview/list-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ListSectionsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-sections/list-sections-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ListSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-selection/list-selection-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ListSingleSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-single-selection/list-single-selection-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ListHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-harness/list-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {ListVariantsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-variants/list-variants-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {
-  ListHarnessExample,
-  ListOverviewExample,
-  ListSectionsExample,
-  ListSelectionExample,
-  ListSingleSelectionExample,
-  ListVariantsExample,
-};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  ListHarnessExample,
-  ListOverviewExample,
-  ListSectionsExample,
-  ListSelectionExample,
-  ListSingleSelectionExample,
-  ListVariantsExample,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [CommonModule, MatIconModule, MatListModule],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {ListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-overview/list-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ListSectionsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-sections/list-sections-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ListSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-selection/list-selection-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ListSingleSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-single-selection/list-single-selection-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ListHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-harness/list-harness-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {ListVariantsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./list-variants/list-variants-example&#x27;</span>;
