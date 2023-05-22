@@ -1,64 +1,11 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {ScrollingModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/scrolling&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipAutoHideExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-auto-hide/tooltip-auto-hide-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipCustomClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-custom-class/tooltip-custom-class-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipDelayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-delay/tooltip-delay-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-disabled/tooltip-disabled-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipManualExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-manual/tooltip-manual-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipMessageExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-message/tooltip-message-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipModifiedDefaultsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-modified-defaults/tooltip-modified-defaults-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-overview/tooltip-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-position/tooltip-position-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipPositionAtOriginExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-position-at-origin/tooltip-position-at-origin-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-harness/tooltip-harness-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {
-  TooltipAutoHideExample,
-  TooltipCustomClassExample,
-  TooltipDelayExample,
-  TooltipDisabledExample,
-  TooltipHarnessExample,
-  TooltipManualExample,
-  TooltipMessageExample,
-  TooltipModifiedDefaultsExample,
-  TooltipOverviewExample,
-  TooltipPositionExample,
-  TooltipPositionAtOriginExample,
-};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  TooltipAutoHideExample,
-  TooltipCustomClassExample,
-  TooltipDelayExample,
-  TooltipDisabledExample,
-  TooltipHarnessExample,
-  TooltipManualExample,
-  TooltipMessageExample,
-  TooltipModifiedDefaultsExample,
-  TooltipOverviewExample,
-  TooltipPositionExample,
-  TooltipPositionAtOriginExample,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    CommonModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatSelectModule,
-    MatTooltipModule,
-    ReactiveFormsModule,
-    ScrollingModule, <span class="hljs-comment">// Required for the auto-scrolling example</span>
-  ],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {TooltipAutoHideExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-auto-hide/tooltip-auto-hide-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipCustomClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-custom-class/tooltip-custom-class-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipDelayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-delay/tooltip-delay-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-disabled/tooltip-disabled-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipManualExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-manual/tooltip-manual-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipMessageExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-message/tooltip-message-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipModifiedDefaultsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-modified-defaults/tooltip-modified-defaults-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-overview/tooltip-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-position/tooltip-position-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipPositionAtOriginExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-position-at-origin/tooltip-position-at-origin-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TooltipHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./tooltip-harness/tooltip-harness-example&#x27;</span>;

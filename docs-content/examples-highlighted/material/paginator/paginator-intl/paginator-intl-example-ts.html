@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, Injectable, NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatPaginatorIntl, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
@@ -32,12 +32,8 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;paginator-intl-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;paginator-intl-example.html&#x27;</span>,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorIntlExample</span> </span>{}
-
-<span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatPaginatorModule],
-  <span class="hljs-attr">declarations</span>: [PaginatorIntlExample],
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatPaginatorIntl, <span class="hljs-attr">useClass</span>: MyCustomPaginatorIntl}],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorIntlExampleModule</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorIntlExample</span> </span>{}

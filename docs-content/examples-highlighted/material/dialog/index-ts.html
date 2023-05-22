@@ -1,75 +1,22 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  DialogContentExample,
-  DialogContentExampleDialog,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-content/dialog-content-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {DialogDataExample, DialogDataExampleDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-data/dialog-data-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  DialogElementsExample,
-  DialogElementsExampleDialog,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-elements/dialog-elements-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  DialogOverviewExample,
-  DialogOverviewExampleDialog,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-overview/dialog-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  DialogFromMenuExample,
-  DialogFromMenuExampleDialog,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-from-menu/dialog-from-menu-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {DialogHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-harness/dialog-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {
-  DialogAnimationsExample,
-  DialogAnimationsExampleDialog,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-animations/dialog-animations-example&#x27;</span>;
-
 <span class="hljs-keyword">export</span> {
   DialogContentExample,
   DialogContentExampleDialog,
-  DialogDataExample,
-  DialogDataExampleDialog,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-content/dialog-content-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {DialogDataExample, DialogDataExampleDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-data/dialog-data-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {
   DialogElementsExample,
   DialogElementsExampleDialog,
-  DialogFromMenuExample,
-  DialogFromMenuExampleDialog,
-  DialogHarnessExample,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-elements/dialog-elements-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {
   DialogOverviewExample,
   DialogOverviewExampleDialog,
-  DialogAnimationsExample,
-  DialogAnimationsExampleDialog,
-};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  DialogContentExample,
-  DialogContentExampleDialog,
-  DialogDataExample,
-  DialogDataExampleDialog,
-  DialogElementsExample,
-  DialogElementsExampleDialog,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-overview/dialog-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {
   DialogFromMenuExample,
   DialogFromMenuExampleDialog,
-  DialogHarnessExample,
-  DialogOverviewExample,
-  DialogOverviewExampleDialog,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-from-menu/dialog-from-menu-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {DialogHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-harness/dialog-harness-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {
   DialogAnimationsExample,
   DialogAnimationsExampleDialog,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    CommonModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatInputModule,
-    MatMenuModule,
-    FormsModule,
-  ],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogExamplesModule</span> </span>{}
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./dialog-animations/dialog-animations-example&#x27;</span>;

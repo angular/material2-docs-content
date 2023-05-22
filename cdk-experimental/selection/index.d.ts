@@ -1,9 +1,4 @@
 import * as i0 from '@angular/core';
-import * as i3 from '@angular/cdk-experimental/selection';
-import * as i4 from '@angular/cdk/table';
-import * as i5 from '@angular/common';
-import * as i6 from '@angular/forms';
-import * as i7 from '@angular/material/checkbox';
 import { SelectionChange } from '@angular/cdk-experimental/selection';
 
 /**
@@ -15,13 +10,7 @@ export declare class CdkSelectionColumnExample {
     selected: string[];
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, false, never>;
-}
-
-export declare class CdkSelectionExamplesModule {
-    static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionExamplesModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDeclaration<CdkSelectionExamplesModule, [typeof i1.CdkSelectionListExample, typeof i2.CdkSelectionColumnExample], [typeof i3.CdkSelectionModule, typeof i4.CdkTableModule, typeof i5.CommonModule, typeof i6.FormsModule, typeof i6.ReactiveFormsModule, typeof i7.MatCheckboxModule], [typeof i1.CdkSelectionListExample, typeof i2.CdkSelectionColumnExample]>;
-    static ɵinj: i0.ɵɵInjectorDeclaration<CdkSelectionExamplesModule>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -38,19 +27,7 @@ export declare class CdkSelectionListExample {
     changeElementName(): void;
     reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, false, never>;
-}
-
-declare namespace i1 {
-    export {
-        CdkSelectionListExample
-    }
-}
-
-declare namespace i2 {
-    export {
-        CdkSelectionColumnExample
-    }
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, true, never>;
 }
 
 declare interface PeriodicElement {

@@ -1,32 +1,5 @@
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
-<span class="hljs-keyword">import</span> {MenuIconsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-icons/menu-icons-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MenuOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-overview/menu-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MenuPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-position/menu-position-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MenuNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-nested/menu-nested-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {MenuHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-harness/menu-harness-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {
-  MenuHarnessExample,
-  MenuIconsExample,
-  MenuOverviewExample,
-  MenuPositionExample,
-  MenuNestedExample,
-};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  MenuHarnessExample,
-  MenuIconsExample,
-  MenuOverviewExample,
-  MenuPositionExample,
-  MenuNestedExample,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatIconModule, MatMenuModule],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MenuExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {MenuIconsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-icons/menu-icons-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {MenuOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-overview/menu-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {MenuPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-position/menu-position-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {MenuNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-nested/menu-nested-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {MenuHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./menu-harness/menu-harness-example&#x27;</span>;

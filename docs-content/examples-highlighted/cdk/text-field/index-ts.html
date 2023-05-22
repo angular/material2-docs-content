@@ -1,28 +1,3 @@
-<span class="hljs-keyword">import</span> {TextFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/text-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {TextFieldAutofillDirectiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./text-field-autofill-directive/text-field-autofill-directive-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TextFieldAutofillMonitorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./text-field-autofill-monitor/text-field-autofill-monitor-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {TextFieldAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./text-field-autosize-textarea/text-field-autosize-textarea-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {
-  TextFieldAutofillDirectiveExample,
-  TextFieldAutofillMonitorExample,
-  TextFieldAutosizeTextareaExample,
-};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  TextFieldAutofillDirectiveExample,
-  TextFieldAutofillMonitorExample,
-  TextFieldAutosizeTextareaExample,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [CommonModule, TextFieldModule, MatButtonModule, MatInputModule, MatSelectModule],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTextFieldExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {TextFieldAutofillDirectiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./text-field-autofill-directive/text-field-autofill-directive-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TextFieldAutofillMonitorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./text-field-autofill-monitor/text-field-autofill-monitor-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {TextFieldAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./text-field-autosize-textarea/text-field-autosize-textarea-example&#x27;</span>;

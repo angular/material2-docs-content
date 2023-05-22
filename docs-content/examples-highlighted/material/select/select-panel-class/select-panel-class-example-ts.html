@@ -1,5 +1,7 @@
 <span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Select with custom panel styling
@@ -11,6 +13,8 @@
   <span class="hljs-comment">// Encapsulation has to be disabled in order for the</span>
   <span class="hljs-comment">// component style to apply to the select panel.</span>
   <span class="hljs-attr">encapsulation</span>: ViewEncapsulation.None,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectPanelClassExample</span> </span>{
   panelColor = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;red&#x27;</span>);

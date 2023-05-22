@@ -2,9 +2,9 @@
 <span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSelectHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 <span class="hljs-keyword">import</span> {SelectHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./select-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;SelectHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;SelectHarnessExample&gt;;
@@ -13,7 +13,6 @@ describe(<span class="hljs-string">&#x27;SelectHarnessExample&#x27;</span>, <spa
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatSelectModule, NoopAnimationsModule],
-      <span class="hljs-attr">declarations</span>: [SelectHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(SelectHarnessExample);
     fixture.detectChanges();

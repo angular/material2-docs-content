@@ -11,8 +11,7 @@ describe(<span class="hljs-string">&#x27;GridListHarnessExample&#x27;</span>, <s
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatGridListModule],
-      <span class="hljs-attr">declarations</span>: [GridListHarnessExample],
+      <span class="hljs-attr">imports</span>: [MatGridListModule, GridListHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(GridListHarnessExample);
     fixture.detectChanges();

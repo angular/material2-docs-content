@@ -11,8 +11,7 @@ describe(<span class="hljs-string">&#x27;SliderHarnessExample&#x27;</span>, <spa
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [MatSliderModule],
-      <span class="hljs-attr">declarations</span>: [SliderHarnessExample],
+      <span class="hljs-attr">imports</span>: [MatSliderModule, SliderHarnessExample],
     }).compileComponents();
     fixture = TestBed.createComponent(SliderHarnessExample);
     fixture.detectChanges();

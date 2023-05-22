@@ -1,17 +1,3 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatGridListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list&#x27;</span>;
-<span class="hljs-keyword">import</span> {GridListDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-dynamic/grid-list-dynamic-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-overview/grid-list-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {GridListHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-harness/grid-list-harness-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {GridListDynamicExample, GridListHarnessExample, GridListOverviewExample};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [GridListDynamicExample, GridListHarnessExample, GridListOverviewExample];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [CommonModule, MatGridListModule],
-  <span class="hljs-attr">declarations</span>: EXAMPLES,
-  <span class="hljs-attr">exports</span>: EXAMPLES,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GridListExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {GridListDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-dynamic/grid-list-dynamic-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-overview/grid-list-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {GridListHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./grid-list-harness/grid-list-harness-example&#x27;</span>;

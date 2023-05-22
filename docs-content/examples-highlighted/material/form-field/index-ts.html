@@ -1,64 +1,12 @@
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldAppearanceExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-appearance/form-field-appearance-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {
+<span class="hljs-keyword">export</span> {FormFieldAppearanceExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-appearance/form-field-appearance-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {
   FormFieldCustomControlExample,
   MyTelInput,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-custom-control/form-field-custom-control-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldErrorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-error/form-field-error-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldHintExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-hint/form-field-hint-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-label/form-field-label-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-overview/form-field-overview-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldPrefixSuffixExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-prefix-suffix/form-field-prefix-suffix-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldThemingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-theming/form-field-theming-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormFieldHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-harness/form-field-harness-example&#x27;</span>;
-
-<span class="hljs-keyword">export</span> {
-  FormFieldAppearanceExample,
-  FormFieldCustomControlExample,
-  FormFieldErrorExample,
-  FormFieldHarnessExample,
-  FormFieldHintExample,
-  FormFieldLabelExample,
-  FormFieldOverviewExample,
-  FormFieldPrefixSuffixExample,
-  FormFieldThemingExample,
-  MyTelInput,
-};
-
-<span class="hljs-keyword">const</span> EXAMPLES = [
-  FormFieldAppearanceExample,
-  FormFieldCustomControlExample,
-  FormFieldErrorExample,
-  FormFieldHarnessExample,
-  FormFieldHintExample,
-  FormFieldLabelExample,
-  FormFieldOverviewExample,
-  FormFieldPrefixSuffixExample,
-  FormFieldThemingExample,
-];
-
-<span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [
-    CommonModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatRadioModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-  ],
-  <span class="hljs-attr">declarations</span>: [...EXAMPLES, MyTelInput],
-  <span class="hljs-attr">exports</span>: [...EXAMPLES, MyTelInput],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldExamplesModule</span> </span>{}
+<span class="hljs-keyword">export</span> {FormFieldErrorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-error/form-field-error-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {FormFieldHintExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-hint/form-field-hint-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {FormFieldLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-label/form-field-label-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {FormFieldOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-overview/form-field-overview-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {FormFieldPrefixSuffixExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-prefix-suffix/form-field-prefix-suffix-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {FormFieldThemingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-theming/form-field-theming-example&#x27;</span>;
+<span class="hljs-keyword">export</span> {FormFieldHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./form-field-harness/form-field-harness-example&#x27;</span>;
