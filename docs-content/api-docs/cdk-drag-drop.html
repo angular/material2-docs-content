@@ -2522,7 +2522,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2656,7 +2656,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2735,7 +2735,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2771,7 +2771,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2967,7 +2967,7 @@ is currently being dragged inside a connected drop list.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         items</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal[]</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -4306,22 +4306,6 @@ Same advantages and disadvantages as <code>parent</code>.</li>
     
       
 
-<h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="CDK_DROP_LIST"></span>
-  <code>CDK_DROP_LIST</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
-alternative token to the actual <code>CdkDropList</code> class which could cause unnecessary
-retention of the class and its directive metadata.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
 <h4 id="CDK_DRAG_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DRAG_CONFIG"></span>
   <code>CDK_DRAG_CONFIG</code>
@@ -4346,6 +4330,22 @@ retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: InjectionToken&lt;CdkDropListGroup&lt;unknown&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DROP_LIST"></span>
+  <code>CDK_DROP_LIST</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
+alternative token to the actual <code>CdkDropList</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 
