@@ -6,7 +6,7 @@ import * as i0 from '@angular/core';
 export declare class GridListDynamicExample {
     tiles: Tile[];
     static ɵfac: i0.ɵɵFactoryDeclaration<GridListDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<GridListDynamicExample, "grid-list-dynamic-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GridListDynamicExample, "grid-list-dynamic-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -14,7 +14,7 @@ export declare class GridListDynamicExample {
  */
 export declare class GridListHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<GridListHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<GridListHarnessExample, "grid-list-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GridListHarnessExample, "grid-list-harness-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -22,7 +22,7 @@ export declare class GridListHarnessExample {
  */
 export declare class GridListOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<GridListOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<GridListOverviewExample, "grid-list-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<GridListOverviewExample, "grid-list-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 declare interface Tile {

@@ -66,14 +66,14 @@ export declare class SelectCustomTriggerExample {
     toppings: FormControl<string | null>;
     toppingList: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectCustomTriggerExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectCustomTriggerExample, "select-custom-trigger-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectCustomTriggerExample, "select-custom-trigger-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Disabled select */
 export declare class SelectDisabledExample {
     disableSelect: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectDisabledExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectDisabledExample, "select-disabled-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectDisabledExample, "select-disabled-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with a custom ErrorStateMatcher */
@@ -83,7 +83,7 @@ export declare class SelectErrorStateMatcherExample {
     nativeSelectFormControl: FormControl<string | null>;
     matcher: MyErrorStateMatcher;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectErrorStateMatcherExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectErrorStateMatcherExample, "select-error-state-matcher-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectErrorStateMatcherExample, "select-error-state-matcher-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -95,7 +95,7 @@ export declare class SelectFormExample {
     foods: Food[];
     cars: Car[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormExample, "select-form-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectFormExample, "select-form-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -107,7 +107,7 @@ export declare class SelectHarnessExample {
         viewValue: string;
     }[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHarnessExample, "select-harness-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with form field features */
@@ -116,7 +116,7 @@ export declare class SelectHintErrorExample {
     selectFormControl: FormControl<string | null>;
     animals: Animal[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectHintErrorExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -129,7 +129,7 @@ export declare class SelectInitialValueExample {
     selectedCar: string;
     selectCar(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectInitialValueExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectInitialValueExample, "select-initial-value-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectInitialValueExample, "select-initial-value-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with multiple selection */
@@ -137,13 +137,13 @@ export declare class SelectMultipleExample {
     toppings: FormControl<string | null>;
     toppingList: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectMultipleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectMultipleExample, "select-multiple-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectMultipleExample, "select-multiple-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with no option ripple */
 export declare class SelectNoRippleExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectNoRippleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectNoRippleExample, "select-no-ripple-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectNoRippleExample, "select-no-ripple-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with option groups */
@@ -151,7 +151,7 @@ export declare class SelectOptgroupExample {
     pokemonControl: FormControl<string | null>;
     pokemonGroups: PokemonGroup[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectOptgroupExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -160,7 +160,7 @@ export declare class SelectOptgroupExample {
 export declare class SelectOverviewExample {
     foods: Food_2[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOverviewExample, "select-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectOverviewExample, "select-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -169,7 +169,7 @@ export declare class SelectOverviewExample {
 export declare class SelectPanelClassExample {
     panelColor: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectPanelClassExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectPanelClassExample, "select-panel-class-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectPanelClassExample, "select-panel-class-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -185,21 +185,21 @@ export declare class SelectReactiveFormExample {
         car: FormControl<string | null>;
     }>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectReactiveFormExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectReactiveFormExample, "select-reactive-form-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with reset option */
 export declare class SelectResetExample {
     states: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectResetExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectResetExample, "select-reset-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectResetExample, "select-reset-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Select with 2-way value binding */
 export declare class SelectValueBindingExample {
     selected: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<SelectValueBindingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SelectValueBindingExample, "select-value-binding-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectValueBindingExample, "select-value-binding-example", never, {}, {}, never, never, true, never, false>;
 }
 
 export { }

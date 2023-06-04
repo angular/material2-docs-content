@@ -109,7 +109,7 @@ export declare class PopoverEditCellSpanMatTableExample {
     readonly preservedValues: WeakMap<Person, any>;
     onSubmit(person: Person, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditCellSpanMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -134,7 +134,7 @@ export declare class PopoverEditMatTableExample {
     goodJob(element: PeriodicElement_2): void;
     badJob(element: PeriodicElement_2): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -148,7 +148,7 @@ export declare class PopoverEditMatTableFlexExample {
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditMatTableFlexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableFlexExample, "popover-edit-mat-table-flex-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditMatTableFlexExample, "popover-edit-mat-table-flex-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -162,7 +162,7 @@ export declare class PopoverEditTabOutMatTableExample {
     onSubmitName(element: PeriodicElement_3, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_3, f: NgForm): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<PopoverEditTabOutMatTableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditTabOutMatTableExample, "popover-edit-tab-out-mat-table-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PopoverEditTabOutMatTableExample, "popover-edit-tab-out-mat-table-example", never, {}, {}, never, never, true, never, false>;
 }
 
 export { }

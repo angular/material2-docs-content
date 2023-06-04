@@ -13,7 +13,7 @@ export declare class CheckboxConfigurableExample {
     labelPosition: 'before' | 'after';
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -22,7 +22,7 @@ export declare class CheckboxConfigurableExample {
 export declare class CheckboxHarnessExample {
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxHarnessExample, "checkbox-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxHarnessExample, "checkbox-harness-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -35,7 +35,7 @@ export declare class CheckboxOverviewExample {
     someComplete(): boolean;
     setAll(completed: boolean): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxOverviewExample, "checkbox-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxOverviewExample, "checkbox-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Checkboxes with reactive forms */
@@ -48,7 +48,7 @@ export declare class CheckboxReactiveFormsExample {
     }>;
     constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<CheckboxReactiveFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CheckboxReactiveFormsExample, "checkbox-reactive-forms-example", never, {}, {}, never, never, true, never, false>;
 }
 
 declare interface Task {

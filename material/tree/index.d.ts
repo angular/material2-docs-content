@@ -217,7 +217,7 @@ export declare class TreeChecklistExample {
     /** Save the node to database */
     saveNode(node: TodoItemFlatNode, itemValue: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeChecklistExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -231,7 +231,7 @@ export declare class TreeDynamicExample {
     isExpandable: (node: DynamicFlatNode) => boolean;
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -261,7 +261,7 @@ export declare class TreeFlatOverviewExample {
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -291,7 +291,7 @@ export declare class TreeHarnessExample {
     constructor();
     hasChild: (_: number, node: ExampleFlatNode_2) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -314,7 +314,7 @@ export declare class TreeLoadmoreExample {
     loadMore(item: string): void;
     loadChildren(node: LoadmoreFlatNode): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeLoadmoreExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -326,7 +326,7 @@ export declare class TreeNestedOverviewExample {
     constructor();
     hasChild: (_: number, node: FoodNode_2) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 export { }

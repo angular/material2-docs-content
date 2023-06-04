@@ -13,7 +13,7 @@ export declare class CdkTreeFlatExample {
     getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
     shouldRender(node: ExampleFlatNode): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeFlatExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -24,7 +24,7 @@ export declare class CdkTreeNestedExample {
     dataSource: ArrayDataSource<FoodNode>;
     hasChild: (_: number, node: FoodNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeNestedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** Flat node with expandable and level information */

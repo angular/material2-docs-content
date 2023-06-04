@@ -11,7 +11,7 @@ export declare class TextFieldAutofillDirectiveExample {
     firstNameAutofilled: boolean;
     lastNameAutofilled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TextFieldAutofillDirectiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutofillDirectiveExample, "text-field-autofill-directive-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutofillDirectiveExample, "text-field-autofill-directive-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Monitoring autofill state with AutofillMonitor */
@@ -25,7 +25,7 @@ export declare class TextFieldAutofillMonitorExample implements AfterViewInit, O
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TextFieldAutofillMonitorExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutofillMonitorExample, "text-field-autofill-monitor-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutofillMonitorExample, "text-field-autofill-monitor-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /** @title Auto-resizing textarea */
@@ -35,7 +35,7 @@ export declare class TextFieldAutosizeTextareaExample {
     autosize: CdkTextareaAutosize;
     triggerResize(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TextFieldAutosizeTextareaExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutosizeTextareaExample, "text-field-autosize-textarea-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutosizeTextareaExample, "text-field-autosize-textarea-example", never, {}, {}, never, never, true, never, false>;
 }
 
 export { }

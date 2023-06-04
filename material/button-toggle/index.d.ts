@@ -7,7 +7,7 @@ import { MatButtonToggleAppearance } from '@angular/material/button-toggle';
  */
 export declare class ButtonToggleAppearanceExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleAppearanceExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleAppearanceExample, "button-toggle-appearance-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleAppearanceExample, "button-toggle-appearance-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -15,7 +15,7 @@ export declare class ButtonToggleAppearanceExample {
  */
 export declare class ButtonToggleExclusiveExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleExclusiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleExclusiveExample, "button-toggle-exclusive-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleExclusiveExample, "button-toggle-exclusive-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -25,7 +25,7 @@ export declare class ButtonToggleFormsExample {
     fontStyleControl: FormControl<string | null>;
     fontStyle?: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleFormsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleFormsExample, "button-toggle-forms-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleFormsExample, "button-toggle-forms-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -35,7 +35,7 @@ export declare class ButtonToggleHarnessExample {
     disabled: boolean;
     appearance: MatButtonToggleAppearance;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleHarnessExample, "button-toggle-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleHarnessExample, "button-toggle-harness-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -43,7 +43,7 @@ export declare class ButtonToggleHarnessExample {
  */
 export declare class ButtonToggleModeExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleModeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleModeExample, "button-toggle-mode-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleModeExample, "button-toggle-mode-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -51,7 +51,7 @@ export declare class ButtonToggleModeExample {
  */
 export declare class ButtonToggleOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleOverviewExample, "button-toggle-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleOverviewExample, "button-toggle-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 export { }

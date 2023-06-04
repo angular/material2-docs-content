@@ -5,7 +5,7 @@ import * as i0 from '@angular/core';
  */
 export declare class RadioHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RadioHarnessExample, "radio-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RadioHarnessExample, "radio-harness-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -15,7 +15,7 @@ export declare class RadioNgModelExample {
     favoriteSeason: string;
     seasons: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioNgModelExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RadioNgModelExample, "radio-ng-model-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RadioNgModelExample, "radio-ng-model-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -23,7 +23,7 @@ export declare class RadioNgModelExample {
  */
 export declare class RadioOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<RadioOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RadioOverviewExample, "radio-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<RadioOverviewExample, "radio-overview-example", never, {}, {}, never, never, true, never, false>;
 }
 
 export { }

@@ -10,7 +10,7 @@ export declare class CdkSelectionColumnExample {
     selected: string[];
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, true, never, false>;
 }
 
 /**
@@ -27,7 +27,7 @@ export declare class CdkSelectionListExample {
     changeElementName(): void;
     reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, true, never, false>;
 }
 
 declare interface PeriodicElement {
