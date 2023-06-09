@@ -1,6 +1,6 @@
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import * as i0 from '@angular/core';
-import { Component, ViewChild } from '@angular/core';
+import { inject, Component, ViewChild } from '@angular/core';
 import * as i1 from '@angular/forms';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i5 from '@angular/material/autocomplete';
@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgFor, AsyncPipe } from '@angular/common';
 import * as i2 from '@angular/material/form-field';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import * as i6 from '@angular/material/core';
 import { moveItemInArray, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import * as i1$2 from '@angular/material/button';
@@ -27,6 +28,7 @@ class ChipsAutocompleteExample {
         this.fruitCtrl = new FormControl('');
         this.fruits = ['Lemon'];
         this.allFruits = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+        this.announcer = inject(LiveAnnouncer);
         this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => (fruit ? this._filter(fruit) : this.allFruits.slice())));
     }
     add(event) {
@@ -43,6 +45,7 @@ class ChipsAutocompleteExample {
         const index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
+            this.announcer.announce(`Removed ${fruit}`);
         }
     }
     selected(event) {
@@ -107,6 +110,7 @@ class ChipsInputExample {
         this.addOnBlur = true;
         this.separatorKeysCodes = [ENTER, COMMA];
         this.fruits = [{ name: 'Lemon' }, { name: 'Lime' }, { name: 'Apple' }];
+        this.announcer = inject(LiveAnnouncer);
     }
     add(event) {
         const value = (event.value || '').trim();
@@ -121,6 +125,7 @@ class ChipsInputExample {
         const index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
+            this.announcer.announce(`Removed ${fruit}`);
         }
     }
     edit(fruit, event) {
@@ -200,11 +205,13 @@ class ChipsFormControlExample {
     constructor() {
         this.keywords = ['angular', 'how-to', 'tutorial', 'accessibility'];
         this.formControl = new FormControl(['angular']);
+        this.announcer = inject(LiveAnnouncer);
     }
     removeKeyword(keyword) {
         const index = this.keywords.indexOf(keyword);
         if (index >= 0) {
             this.keywords.splice(index, 1);
+            this.announcer.announce(`removed ${keyword}`);
         }
     }
     add(event) {
