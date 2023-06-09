@@ -1,9 +1,10 @@
 <span class="hljs-keyword">import</span> {COMMA, ENTER} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatChipEditedEvent, MatChipInputEvent, MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {LiveAnnouncer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Fruit {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
@@ -24,6 +25,8 @@
   <span class="hljs-keyword">readonly</span> separatorKeysCodes = [ENTER, COMMA] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>;
   fruits: Fruit[] = [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lemon&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lime&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>}];
 
+  announcer = inject(LiveAnnouncer);
+
   add(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> value = (event.value || <span class="hljs-string">&#x27;&#x27;</span>).trim();
 
@@ -41,6 +44,8 @@
 
     <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
       <span class="hljs-built_in">this</span>.fruits.splice(index, <span class="hljs-number">1</span>);
+
+      <span class="hljs-built_in">this</span>.announcer.announce(<span class="hljs-string">`Removed <span class="hljs-subst">${fruit}</span>`</span>);
     }
   }
 

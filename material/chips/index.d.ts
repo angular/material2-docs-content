@@ -2,6 +2,7 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipEditedEvent } from '@angular/material/chips';
 import { MatChipInputEvent } from '@angular/material/chips';
@@ -23,6 +24,7 @@ export declare class ChipsAutocompleteExample {
     fruits: string[];
     allFruits: string[];
     fruitInput: ElementRef<HTMLInputElement>;
+    announcer: LiveAnnouncer;
     constructor();
     add(event: MatChipInputEvent): void;
     remove(fruit: string): void;
@@ -57,6 +59,7 @@ export declare class ChipsDragDropExample {
 export declare class ChipsFormControlExample {
     keywords: string[];
     formControl: FormControl<string[] | null>;
+    announcer: LiveAnnouncer;
     removeKeyword(keyword: string): void;
     add(event: MatChipInputEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsFormControlExample, never>;
@@ -81,6 +84,7 @@ export declare class ChipsInputExample {
     addOnBlur: boolean;
     readonly separatorKeysCodes: readonly [13, 188];
     fruits: Fruit[];
+    announcer: LiveAnnouncer;
     add(event: MatChipInputEvent): void;
     remove(fruit: Fruit): void;
     edit(fruit: Fruit, event: MatChipEditedEvent): void;
