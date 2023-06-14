@@ -13,7 +13,7 @@ declare interface ExampleTab {
  */
 export declare class TabGroupAlignExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupAlignExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAlignExample, "tab-group-align-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAlignExample, "tab-group-align-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -21,7 +21,7 @@ export declare class TabGroupAlignExample {
  */
 export declare class TabGroupAnimationsExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupAnimationsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAnimationsExample, "tab-group-animations-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAnimationsExample, "tab-group-animations-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -31,7 +31,7 @@ export declare class TabGroupAsyncExample {
     asyncTabs: Observable<ExampleTab[]>;
     constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupAsyncExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAsyncExample, "tab-group-async-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupAsyncExample, "tab-group-async-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -39,7 +39,7 @@ export declare class TabGroupAsyncExample {
  */
 export declare class TabGroupBasicExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupBasicExample, "tab-group-basic-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupBasicExample, "tab-group-basic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -47,7 +47,7 @@ export declare class TabGroupBasicExample {
  */
 export declare class TabGroupCustomLabelExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupCustomLabelExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupCustomLabelExample, "tab-group-custom-label-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupCustomLabelExample, "tab-group-custom-label-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -59,7 +59,7 @@ export declare class TabGroupDynamicExample {
     addTab(selectAfterAdding: boolean): void;
     removeTab(index: number): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupDynamicExample, "tab-group-dynamic-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupDynamicExample, "tab-group-dynamic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -67,7 +67,7 @@ export declare class TabGroupDynamicExample {
  */
 export declare class TabGroupDynamicHeightExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupDynamicHeightExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupDynamicHeightExample, "tab-group-dynamic-height-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupDynamicHeightExample, "tab-group-dynamic-height-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -75,7 +75,7 @@ export declare class TabGroupDynamicHeightExample {
  */
 export declare class TabGroupHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupHarnessExample, "tab-group-harness-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupHarnessExample, "tab-group-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -83,7 +83,7 @@ export declare class TabGroupHarnessExample {
  */
 export declare class TabGroupHeaderBelowExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupHeaderBelowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupHeaderBelowExample, "tab-group-header-below-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupHeaderBelowExample, "tab-group-header-below-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -91,7 +91,7 @@ export declare class TabGroupHeaderBelowExample {
  */
 export declare class TabGroupInkBarExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupInkBarExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInkBarExample, "tab-group-ink-bar-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInkBarExample, "tab-group-ink-bar-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -99,7 +99,7 @@ export declare class TabGroupInkBarExample {
  */
 export declare class TabGroupInvertedExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupInvertedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInvertedExample, "tab-group-inverted-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInvertedExample, "tab-group-inverted-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -109,7 +109,7 @@ export declare class TabGroupLazyLoadedExample {
     tabLoadTimes: Date[];
     getTimeLoaded(index: number): Date;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupLazyLoadedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupLazyLoadedExample, "tab-group-lazy-loaded-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupLazyLoadedExample, "tab-group-lazy-loaded-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -118,7 +118,7 @@ export declare class TabGroupLazyLoadedExample {
 export declare class TabGroupPaginatedExample {
     lotsOfTabs: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupPaginatedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPaginatedExample, "tab-group-paginated-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPaginatedExample, "tab-group-paginated-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -126,7 +126,7 @@ export declare class TabGroupPaginatedExample {
  */
 export declare class TabGroupPreserveContentExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupPreserveContentExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPreserveContentExample, "tab-group-preserve-content-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupPreserveContentExample, "tab-group-preserve-content-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -134,7 +134,7 @@ export declare class TabGroupPreserveContentExample {
  */
 export declare class TabGroupStretchedExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupStretchedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupStretchedExample, "tab-group-stretched-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupStretchedExample, "tab-group-stretched-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -142,7 +142,7 @@ export declare class TabGroupStretchedExample {
  */
 export declare class TabGroupThemeExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupThemeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupThemeExample, "tab-group-theme-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupThemeExample, "tab-group-theme-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -155,7 +155,7 @@ export declare class TabNavBarBasicExample {
     toggleBackground(): void;
     addLink(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabNavBarBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never, true, never>;
 }
 
 export { }

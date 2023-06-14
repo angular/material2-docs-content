@@ -11,7 +11,7 @@ export declare class MatSelectionColumnExample {
     selected: string[];
     selectionChanged(event: SelectionChange<PeriodicElement>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionColumnExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionColumnExample, "mat-selection-column-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionColumnExample, "mat-selection-column-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -28,7 +28,7 @@ export declare class MatSelectionListExample {
     changeElementName(): void;
     reset(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<MatSelectionListExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionListExample, "mat-selection-list-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MatSelectionListExample, "mat-selection-list-example", never, {}, {}, never, never, true, never>;
 }
 
 declare interface PeriodicElement {

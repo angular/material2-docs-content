@@ -11,7 +11,7 @@ export declare class BreakpointObserverOverviewExample implements OnDestroy {
     constructor(breakpointObserver: BreakpointObserver);
     ngOnDestroy(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<BreakpointObserverOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BreakpointObserverOverviewExample, "breakpoint-observer-overview-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BreakpointObserverOverviewExample, "breakpoint-observer-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 export { }
