@@ -10,7 +10,7 @@ export declare class ProgressSpinnerConfigurableExample {
     mode: ProgressSpinnerMode;
     value: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerConfigurableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerConfigurableExample, "progress-spinner-configurable-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerConfigurableExample, "progress-spinner-configurable-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -19,7 +19,7 @@ export declare class ProgressSpinnerConfigurableExample {
 export declare class ProgressSpinnerHarnessExample {
     value: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerHarnessExample, "progress-spinner-harness-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerHarnessExample, "progress-spinner-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -27,7 +27,7 @@ export declare class ProgressSpinnerHarnessExample {
  */
 export declare class ProgressSpinnerOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerOverviewExample, "progress-spinner-overview-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerOverviewExample, "progress-spinner-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 export { }

@@ -13,7 +13,7 @@ export declare class BottomSheetHarnessExample {
     constructor(bottomSheet: MatBottomSheet);
     open(config?: MatBottomSheetConfig): MatBottomSheetRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetHarnessExample, "bottom-sheet-harness-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetHarnessExample, "bottom-sheet-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -24,7 +24,7 @@ export declare class BottomSheetOverviewExample {
     constructor(_bottomSheet: MatBottomSheet);
     openBottomSheet(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetOverviewExample, "bottom-sheet-overview-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetOverviewExample, "bottom-sheet-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 export declare class BottomSheetOverviewExampleSheet {
@@ -32,7 +32,7 @@ export declare class BottomSheetOverviewExampleSheet {
     constructor(_bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>);
     openLink(event: MouseEvent): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<BottomSheetOverviewExampleSheet, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetOverviewExampleSheet, "bottom-sheet-overview-example-sheet", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BottomSheetOverviewExampleSheet, "bottom-sheet-overview-example-sheet", never, {}, {}, never, never, true, never>;
 }
 
 export { }

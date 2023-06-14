@@ -8,7 +8,7 @@ export declare class BadgeHarnessExample {
     overlap: boolean;
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<BadgeHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BadgeHarnessExample, "badge-harness-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BadgeHarnessExample, "badge-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -18,7 +18,7 @@ export declare class BadgeOverviewExample {
     hidden: boolean;
     toggleBadgeVisibility(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<BadgeOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<BadgeOverviewExample, "badge-overview-example", never, {}, {}, never, never, true, never, false>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BadgeOverviewExample, "badge-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 export { }
