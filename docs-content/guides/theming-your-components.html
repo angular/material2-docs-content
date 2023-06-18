@@ -17,6 +17,14 @@ indicating whether dark mode is set.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;sass:map&#x27;</span>;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
+<span class="hljs-variable">$primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
+<span class="hljs-variable">$accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>);
+<span class="hljs-variable">$warn</span>: mat.define-palette(mat.<span class="hljs-variable">$red-palette</span>);
+
+<span class="hljs-variable">$theme</span>: mat.define-light-theme((
+  color: (primary: <span class="hljs-variable">$primary</span>, accent: <span class="hljs-variable">$accent</span>, warn: <span class="hljs-variable">$warn</span>),
+));
+
 <span class="hljs-variable">$color-config</span>:    mat.get-color-config(<span class="hljs-variable">$theme</span>);
 <span class="hljs-variable">$primary-palette</span>: map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">&#x27;primary&#x27;</span>);
 <span class="hljs-variable">$accent-palette</span>:  map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">&#x27;accent&#x27;</span>);
