@@ -3223,6 +3223,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "sidenav-backdrop-example.ts",
         "importPath": "material/sidenav"
     },
+    "sidenav-configurable-focus-trap": {
+        "packagePath": "material/sidenav/sidenav-configurable-focus-trap",
+        "title": "Sidenav using injected ConfigurableFocusTrap",
+        "componentName": "SidenavConfigurableFocusTrapExample",
+        "files": [
+            "sidenav-configurable-focus-trap-example.ts",
+            "sidenav-configurable-focus-trap-example.html",
+            "sidenav-configurable-focus-trap-example.css"
+        ],
+        "selector": "sidenav-configurable-focus-trap-example",
+        "additionalComponents": [],
+        "primaryFile": "sidenav-configurable-focus-trap-example.ts",
+        "importPath": "material/sidenav"
+    },
     "sidenav-disable-close": {
         "packagePath": "material/sidenav/sidenav-disable-close",
         "title": "Sidenav with custom escape and backdrop click behavior",
@@ -5178,6 +5192,8 @@ async function loadExample(id) {
         case 'sidenav-autosize':
             return import('@angular/components-examples/material/sidenav');
         case 'sidenav-backdrop':
+            return import('@angular/components-examples/material/sidenav');
+        case 'sidenav-configurable-focus-trap':
             return import('@angular/components-examples/material/sidenav');
         case 'sidenav-disable-close':
             return import('@angular/components-examples/material/sidenav');

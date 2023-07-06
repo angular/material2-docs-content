@@ -22,6 +22,16 @@ export declare class SidenavBackdropExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavBackdropExample, "sidenav-backdrop-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Sidenav using injected ConfigurableFocusTrap */
+export declare class SidenavConfigurableFocusTrapExample {
+    mode: FormControl<"push" | "over" | "side" | null>;
+    hasBackdrop: FormControl<boolean | null>;
+    position: FormControl<"start" | "end" | null>;
+    shouldRun: boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<SidenavConfigurableFocusTrapExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavConfigurableFocusTrapExample, "sidenav-configurable-focus-trap-example", never, {}, {}, never, never, true, never>;
+}
+
 /** @title Sidenav with custom escape and backdrop click behavior */
 export declare class SidenavDisableCloseExample {
     sidenav: MatSidenav;
@@ -58,14 +68,6 @@ export declare class SidenavFixedExample {
 export declare class SidenavHarnessExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavHarnessExample, "sidenav-harness-example", never, {}, {}, never, never, true, never>;
-}
-
-/** @title Sidenav with configurable mode */
-export declare class SidenavModeExample {
-    mode: FormControl<"over" | "push" | "side" | null>;
-    shouldRun: boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<SidenavModeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SidenavModeExample, "sidenav-mode-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Sidenav open & close behavior */
