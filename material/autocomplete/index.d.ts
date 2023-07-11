@@ -102,6 +102,19 @@ export declare class AutocompletePlainInputExample implements OnInit {
 }
 
 /**
+ * @title Require an autocomplete option to be selected.
+ */
+export declare class AutocompleteRequireSelectionExample implements OnInit {
+    myControl: FormControl<string | null>;
+    options: string[];
+    filteredOptions: Observable<string[]>;
+    ngOnInit(): void;
+    private _filter;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteRequireSelectionExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteRequireSelectionExample, "autocomplete-require-selection-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Simple autocomplete
  */
 export declare class AutocompleteSimpleExample {

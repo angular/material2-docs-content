@@ -1,0 +1,45 @@
+<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor, AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Require an autocomplete option to be selected.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;autocomplete-require-selection-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;autocomplete-require-selection-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;autocomplete-require-selection-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    NgFor,
+    AsyncPipe,
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteRequireSelectionExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
+  myControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>);
+  options: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;One&#x27;</span>, <span class="hljs-string">&#x27;Two&#x27;</span>, <span class="hljs-string">&#x27;Three&#x27;</span>, <span class="hljs-string">&#x27;Three&#x27;</span>, <span class="hljs-string">&#x27;Four&#x27;</span>];
+  filteredOptions: Observable&lt;<span class="hljs-built_in">string</span>[]&gt;;
+
+  <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.filteredOptions = <span class="hljs-built_in">this</span>.myControl.valueChanges.pipe(
+      startWith(<span class="hljs-string">&#x27;&#x27;</span>),
+      map(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-built_in">this</span>._filter(value || <span class="hljs-string">&#x27;&#x27;</span>)),
+    );
+  }
+
+  <span class="hljs-keyword">private</span> _filter(value: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">const</span> filterValue = value.toLowerCase();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span> option.toLowerCase().includes(filterValue));
+  }
+}

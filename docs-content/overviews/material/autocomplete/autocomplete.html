@@ -11,8 +11,8 @@ of the text input to be when that option is selected.</p>
                              file="autocomplete-simple-example.html"
                              region="mat-autocomplete"></div>
 
-<p>Next, create the input and set the <code>matAutocomplete</code> input to refer to the template reference we assigned 
-to the autocomplete. Let&#39;s assume you&#39;re using the <code>formControl</code> directive from <code>ReactiveFormsModule</code> to 
+<p>Next, create the input and set the <code>matAutocomplete</code> input to refer to the template reference we assigned
+to the autocomplete. Let&#39;s assume you&#39;re using the <code>formControl</code> directive from <code>ReactiveFormsModule</code> to
 track the value of the input.</p>
 <blockquote>
 <p>Note: It is possible to use template-driven forms instead, if you prefer. We use reactive forms
@@ -60,6 +60,25 @@ data as an object, but display just one of the option&#39;s string properties.</
 <p>To make this work, create a function on your component class that maps the control value to the
 desired display value. Then bind it to the autocomplete&#39;s <code>displayWith</code> property.</p>
 <div material-docs-example="autocomplete-display"></div>
+
+
+        <h3 id="require-an-option-to-be-selected" class="docs-header-link">
+          <span header-link="require-an-option-to-be-selected"></span>
+          Require an option to be selected
+        </h3>
+      <p>By default, the autocomplete will accept the value that the user typed into the input field.
+Instead, if you want to instead ensure that an option from the autocomplete was selected, you can
+enable the <code>requireSelection</code> input on <code>mat-autocomplete</code>. This will change the behavior of
+the autocomplete in the following ways:</p>
+<ol>
+<li>If the user opens the autocomplete, changes its value, but doesn&#39;t select anything, the
+autocomplete value will be reset back to <code>null</code>.</li>
+<li>If the user opens and closes the autocomplete without changing the value, the old value will
+be preserved.</li>
+</ol>
+<p>This behavior can be configured globally using the <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</code>
+injection token.</p>
+<div material-docs-example="autocomplete-require-selection"></div>
 
 
         <h3 id="automatically-highlighting-the-first-option" class="docs-header-link">

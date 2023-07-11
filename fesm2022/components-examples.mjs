@@ -1307,6 +1307,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "autocomplete-plain-input-example.ts",
         "importPath": "material/autocomplete"
     },
+    "autocomplete-require-selection": {
+        "packagePath": "material/autocomplete/autocomplete-require-selection",
+        "title": "Require an autocomplete option to be selected.",
+        "componentName": "AutocompleteRequireSelectionExample",
+        "files": [
+            "autocomplete-require-selection-example.ts",
+            "autocomplete-require-selection-example.html",
+            "autocomplete-require-selection-example.css"
+        ],
+        "selector": "autocomplete-require-selection-example",
+        "additionalComponents": [],
+        "primaryFile": "autocomplete-require-selection-example.ts",
+        "importPath": "material/autocomplete"
+    },
     "autocomplete-simple": {
         "packagePath": "material/autocomplete/autocomplete-simple",
         "title": "Simple autocomplete",
@@ -4914,6 +4928,8 @@ async function loadExample(id) {
         case 'autocomplete-overview':
             return import('@angular/components-examples/material/autocomplete');
         case 'autocomplete-plain-input':
+            return import('@angular/components-examples/material/autocomplete');
+        case 'autocomplete-require-selection':
             return import('@angular/components-examples/material/autocomplete');
         case 'autocomplete-simple':
             return import('@angular/components-examples/material/autocomplete');
