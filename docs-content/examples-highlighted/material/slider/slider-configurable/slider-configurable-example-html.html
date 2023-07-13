@@ -41,7 +41,7 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-label-container&quot;</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;example-name-label&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-name-label&quot;</span>&gt;</span>Value<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-value-label&quot;</span>&gt;</span>{{value}}<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-value-label&quot;</span>&gt;</span>{{slider.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>
         <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>
@@ -51,7 +51,7 @@
         [<span class="hljs-attr">step</span>]=<span class="hljs-string">&quot;step&quot;</span>
         [<span class="hljs-attr">discrete</span>]=<span class="hljs-string">&quot;thumbLabel&quot;</span>
         [<span class="hljs-attr">showTickMarks</span>]=<span class="hljs-string">&quot;showTicks&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span> #<span class="hljs-attr">slider</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
