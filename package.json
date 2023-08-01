@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "16.2.0-next.5+sha-b00ee77",
+  "version": "16.2.0-next.5+sha-9f44454",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -369,15 +369,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "16.2.0-next.5+sha-b00ee77",
-    "@angular/cdk-experimental": "16.2.0-next.5+sha-b00ee77",
+    "@angular/cdk": "16.2.0-next.5+sha-9f44454",
+    "@angular/cdk-experimental": "16.2.0-next.5+sha-9f44454",
     "@angular/core": "^16.0.0-0 || ^16.1.0-0 || ^16.2.0-0 || ^16.3.0-0 || ^17.0.0-0",
     "@angular/common": "^16.0.0-0 || ^16.1.0-0 || ^16.2.0-0 || ^16.3.0-0 || ^17.0.0-0",
-    "@angular/material": "16.2.0-next.5+sha-b00ee77",
-    "@angular/material-experimental": "16.2.0-next.5+sha-b00ee77",
-    "@angular/material-moment-adapter": "16.2.0-next.5+sha-b00ee77",
-    "@angular/material-luxon-adapter": "16.2.0-next.5+sha-b00ee77",
-    "@angular/material-date-fns-adapter": "16.2.0-next.5+sha-b00ee77"
+    "@angular/material": "16.2.0-next.5+sha-9f44454",
+    "@angular/material-experimental": "16.2.0-next.5+sha-9f44454",
+    "@angular/material-moment-adapter": "16.2.0-next.5+sha-9f44454",
+    "@angular/material-luxon-adapter": "16.2.0-next.5+sha-9f44454",
+    "@angular/material-date-fns-adapter": "16.2.0-next.5+sha-9f44454"
   },
   "dependencies": {
     "tslib": "^2.3.0"
