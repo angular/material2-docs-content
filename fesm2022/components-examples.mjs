@@ -1309,7 +1309,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "autocomplete-require-selection": {
         "packagePath": "material/autocomplete/autocomplete-require-selection",
-        "title": "Require an autocomplete option to be selected.",
+        "title": "Require an autocomplete option to be selected",
         "componentName": "AutocompleteRequireSelectionExample",
         "files": [
             "autocomplete-require-selection-example.ts",
