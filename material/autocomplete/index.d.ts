@@ -1,3 +1,4 @@
+import { ElementRef } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
@@ -102,14 +103,15 @@ export declare class AutocompletePlainInputExample implements OnInit {
 }
 
 /**
- * @title Require an autocomplete option to be selected.
+ * @title Require an autocomplete option to be selected
  */
-export declare class AutocompleteRequireSelectionExample implements OnInit {
+export declare class AutocompleteRequireSelectionExample {
+    input: ElementRef<HTMLInputElement>;
     myControl: FormControl<string | null>;
     options: string[];
-    filteredOptions: Observable<string[]>;
-    ngOnInit(): void;
-    private _filter;
+    filteredOptions: string[];
+    constructor();
+    filter(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteRequireSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteRequireSelectionExample, "autocomplete-require-selection-example", never, {}, {}, never, never, true, never>;
 }
