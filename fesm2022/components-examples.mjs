@@ -4660,20 +4660,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tooltip-position-example.ts",
         "importPath": "material/tooltip"
     },
-    "tree-checklist": {
-        "packagePath": "material/tree/tree-checklist",
-        "title": "Tree with checkboxes",
-        "componentName": "TreeChecklistExample",
-        "files": [
-            "tree-checklist-example.ts",
-            "tree-checklist-example.html",
-            "tree-checklist-example.css"
-        ],
-        "selector": "tree-checklist-example",
-        "additionalComponents": [],
-        "primaryFile": "tree-checklist-example.ts",
-        "importPath": "material/tree"
-    },
     "tree-dynamic": {
         "packagePath": "material/tree/tree-dynamic",
         "title": "Tree with dynamic data",
@@ -5413,8 +5399,6 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/tooltip');
         case 'tooltip-position':
             return import('@angular/components-examples/material/tooltip');
-        case 'tree-checklist':
-            return import('@angular/components-examples/material/tree');
         case 'tree-dynamic':
             return import('@angular/components-examples/material/tree');
         case 'tree-flat-overview':
