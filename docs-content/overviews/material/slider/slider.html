@@ -19,9 +19,11 @@ respectively. The initial value is set to the minimum value unless otherwise spe
           <span header-link="selecting-a-range"></span>
           Selecting a range
         </h3>
-      <p>A <code>&lt;mat-slider&gt;</code> can be converted into a range slider by projecting both a <code>matStartThumb</code> and a
-<code>matEndThumb</code> into it. Each of the thumbs has an independent value, but they won&#39;t be allowed to
-overlap and they&#39;re still bound by the same <code>min</code> and <code>max</code> from the slider.</p>
+      <p>A <code>&lt;mat-slider&gt;</code> can be converted into a range slider by projecting both a <code>matSliderStartThumb</code> and a
+<code>matSliderEndThumb</code> into it. Each thumb has its own value, but both are still
+constrained by the slider&#39;s <code>min</code> and <code>max</code> values. The <code>matSliderStartThumb</code> cannot have a value
+greater than that of the <code>matSliderEndThumb</code> and the <code>matSliderEndThumb</code> cannot have a value less than
+that of the <code>matSliderStartThumb</code>, though they both may have the same value.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderStartThumb</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderEndThumb</span>&gt;</span>
