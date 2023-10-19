@@ -123,7 +123,7 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>selected: MatRadioButton</code>
+      <code>selected: T</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The currently selected radio button. If set to a new radio button, the radio group value
@@ -407,7 +407,7 @@ the radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>radioGroup: MatRadioGroup</code>
+      <code>radioGroup: _MatRadioGroupBase&lt;_MatRadioButtonBase&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The parent radio group. May or may not be present.</p>
@@ -495,7 +495,7 @@ the radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatRadioButton</code>
+      <code>source: _MatRadioButtonBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The radio button that emits the change event.</p>
@@ -606,7 +606,7 @@ alternative token to the actual <code>MatRadioGroup</code> class which could cau
 retention of the class and its component metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_RADIO_GROUP: InjectionToken&lt;MatRadioGroup&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_RADIO_GROUP: InjectionToken&lt;_MatRadioGroupBase&lt;_MatRadioButtonBase&gt;&gt;;</code>
 </pre>
 </div>
 
