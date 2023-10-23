@@ -92,8 +92,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>checked: boolean</code>
     </p>
   </td>
@@ -108,10 +108,10 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: string | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p>Palette color of slide toggle.</p>
 </td>
 </tr>
 
@@ -125,7 +125,7 @@
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the slide toggle has a ripple.</p>
 </td>
 </tr>
 
@@ -139,7 +139,7 @@
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the slide toggle is disabled.</p>
 </td>
 </tr>
 
@@ -148,8 +148,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>hideIcon: boolean</code>
     </p>
   </td>
@@ -204,8 +204,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -220,7 +220,7 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>change: EventEmitter&lt;T&gt;</code>
+      <code>change: EventEmitter&lt;MatSlideToggleChange&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle changes its value.</p>
@@ -253,32 +253,6 @@ the slide toggle&#39;s value has changed.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Returns the unique id for the visual hidden button.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
