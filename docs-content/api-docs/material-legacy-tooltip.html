@@ -1,0 +1,303 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Material legacy-tooltip
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-tooltip</code></p><h3 id="material-legacy-tooltip-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="MatLegacyTooltip" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTooltip"></span>
+  <code>MatLegacyTooltip</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive that attaches a material design tooltip to the host element. Animates the showing and
+hiding of a tooltip provided position (defaults to below the element).</p>
+<p><a href="https://material.io/design/components/tooltips.html">https://material.io/design/components/tooltips.html</a></p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matTooltip]</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matTooltip</span><div class="docs-api-class-deprecated-marker" title="Will be removed in v17.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipDisabled&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Disables the display of the tooltip.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipHideDelay&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>hideDelay: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The default delay in ms before hiding the tooltip after hide is called</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltip&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>message: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The message to be displayed in the tooltip</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipPosition&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>position: TooltipPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Allows the user to define the position of the tooltip relative to the parent element</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipPositionAtOrigin&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>positionAtOrigin: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether tooltip should be relative to the click or touch origin
+instead of outside the element bounding box.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipShowDelay&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>showDelay: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The default delay in ms before showing the tooltip after show is called</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipClass&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>tooltipClass: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Classes to be passed to the tooltip. Supports the same syntax as <code>ngClass</code>.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipTouchGestures&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>touchGestures: TooltipTouchGestures</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>How touch gestures should be handled by the tooltip. On touch devices the tooltip directive
+uses a long press gesture to show and hide, however it can conflict with the native browser
+gestures. To work around the conflict, Angular Material disables native gestures on the
+trigger, but that might not be desirable on particular elements (e.g. inputs and draggable
+elements). The different values for this option configure the touch event handling as follows:</p>
+<ul>
+<li><code>auto</code> - Enables touch gestures for all elements, but tries to avoid conflicts with native
+browser gestures on particular elements. In particular, it allows text selection on inputs
+and textareas, and preserves the native browser dragging on elements marked as <code>draggable</code>.</li>
+<li><code>on</code> - Enables touch gestures for all elements and disables native
+browser gestures with no exceptions.</li>
+<li><code>off</code> - Disables touch gestures. Note that this will prevent the tooltip from
+showing on touch devices.</li>
+</ul>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hide
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Hides the tooltip after the delay in ms, defaults to tooltip-delay-hide or 0ms if no input</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        delay</p>
+      <code class="docs-api-method-parameter-type">number = this.hideDelay</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">show
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Shows the tooltip after the delay in ms, defaults to tooltip-delay-show or 0ms if no input</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        delay</p>
+      <code class="docs-api-method-parameter-type">number = this.showDelay</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ x</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Shows/hides the tooltip</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ x</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    </div>
