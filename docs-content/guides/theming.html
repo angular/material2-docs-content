@@ -401,29 +401,8 @@ The example below shows how to customize the color of all buttons inside element
           <span header-link="reading-hues-from-palettes"></span>
           Reading hues from palettes
         </h3>
-      <p>You can use the <code>get-color-from-palette</code> function to get specific hues from a palette by their
-number identifier. You can also access the contrast color for a particular hue by suffixing the
-hue&#39;s number identifier with <code>-contrast</code>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
-
-<span class="hljs-selector-class">.my-custom-style</span> {
- <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-number">500</span>);
- <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;500-contrast&#x27;</span>);
-}
-</code></pre>
-<p>You can also reference colors using the <code>&quot;default&quot;</code>, <code>&quot;lighter&quot;</code>, <code>&quot;darker&quot;</code>, and <code>&quot;text&quot;</code> colors
-passed to <code>define-palette</code>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
-
-<span class="hljs-selector-class">.my-custom-darker-style</span> {
- <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;darker&#x27;</span>);
- <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;darker-contrast&#x27;</span>);
-}
-</code></pre>
+      <p>It is possible to read colors from a theme for use in your own components. For more information
+about this see our guide on <a href="https://material.angular.io/guide/theming-your-components#reading-color-values">Theming your own components</a>.</p>
 
         <h2 id="customizing-density" class="docs-header-link">
           <span header-link="customizing-density"></span>
