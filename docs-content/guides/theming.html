@@ -223,33 +223,54 @@ your project&#39;s <code>angular.json</code> file</a>.</p>
           <span header-link="theming-dimensions"></span>
           Theming dimensions
         </h4>
-      <p>Angular Material themes are divided along several dimensions:</p>
-<p>Base
-: Common base styles for the design system. These styles don&#39;t change based on your configured
+      <p>Angular Material themes are divided along four dimensions: base, color, typography, and density.</p>
+
+        <h5 id="base" class="docs-header-link">
+          <span header-link="base"></span>
+          Base
+        </h5>
+      <p>Common base styles for the design system. These styles don&#39;t change based on your configured
 colors, typography, or density, so they only need to be included once per application. These
 mixins include structural styles such as border-radius, border-width, etc. All components have a base
 mixin that can be used to include its base styles. (For example,
 <code>@include mat.checkbox-base($theme)</code>)</p>
-<p>Color
-: Styles related to the colors in your application. These style should be included at least once in
+
+        <h5 id="color" class="docs-header-link">
+          <span header-link="color"></span>
+          Color
+        </h5>
+      <p>Styles related to the colors in your application. These style should be included at least once in
 your application. Depending on your needs, you may need to include these styles multiple times
 with different configurations. (For example, if your app supports light and dark theme colors.)
 All components have a color mixin that can be used to include its color styles. (For example,
 <code>@include mat.checkbox-color($theme)</code>)</p>
-<p>Typography
-: Styles related to the fonts used in your application, including the font family, size, weight,
+
+        <h5 id="typography" class="docs-header-link">
+          <span header-link="typography"></span>
+          Typography
+        </h5>
+      <p>Styles related to the fonts used in your application, including the font family, size, weight,
 line-height, and letter-spacing. These style should be included at least once in your application.
 Depending on your needs, you may need to include these styles multiple times with different
 configurations. (For example, if your app supports reading content in either a serif or sans-serif
 font.) All components  have a typography mixin that can be used to include its typography
 styles. (For example, <code>@include mat.checkbox-typography($theme)</code>)</p>
-<p>Density
-: Styles related to the size and spacing of elements in your application. These style should be
+
+        <h5 id="density" class="docs-header-link">
+          <span header-link="density"></span>
+          Density
+        </h5>
+      <p>Styles related to the size and spacing of elements in your application. These style should be
 included at least once in your application. Depending on your needs, you may need to include these
 styles multiple times with different configurations. (For example, if your app supports both a
 normal and compact mode). All components have a density mixin that can be used to include its
 density styles. (For example, <code>@include mat.checkbox-density($theme)</code>)</p>
-<p>All components also support a theme mixin that can be used to include the component&#39;s styles for all
+
+        <h5 id="theme-mixin" class="docs-header-link">
+          <span header-link="theme-mixin"></span>
+          Theme mixin
+        </h5>
+      <p>All components also support a theme mixin that can be used to include the component&#39;s styles for all
 theme dimensions at once. (For example, <code>@include mat.checkbox-theme($theme)</code>).</p>
 <p>The recommended approach is to rely on the <code>theme</code> mixins to lay down your base styles, and if
 needed us the single dimension mixins to override particular aspects for parts of your app (see the
