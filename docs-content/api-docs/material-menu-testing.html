@@ -34,13 +34,6 @@
   <span header-link="MatMenuHarness"></span>
   <code>MatMenuHarness</code>
   
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/testing/api#ContentContainerComponentHarness" class="docs-api-class-extends-type">
-      ContentContainerComponentHarness
-    </a>
-  </span>
-  
 </h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-menu in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -126,7 +119,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         itemFilter</p>
-      <code class="docs-api-method-parameter-type">Omit&lt;MenuItemHarnessFilters, &quot;ancestor&quot;&gt;</code>
+      <code class="docs-api-method-parameter-type">Omit&lt;ItemFilters, &quot;ancestor&quot;&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -157,7 +150,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         ...subItemFilters</p>
-      <code class="docs-api-method-parameter-type">Omit&lt;MenuItemHarnessFilters, &quot;ancestor&quot;&gt;[]</code>
+      <code class="docs-api-method-parameter-type">Omit&lt;ItemFilters, &quot;ancestor&quot;&gt;[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -507,7 +500,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         filters<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">Omit&lt;MenuItemHarnessFilters, &quot;ancestor&quot;&gt;</code>
+      <code class="docs-api-method-parameter-type">Omit&lt;ItemFilters, &quot;ancestor&quot;&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -523,35 +516,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatMenuItemHarness[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
-          async
-        </div>getRootHarnessLoader
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;Item[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -870,14 +835,8 @@
   <span header-link="MatMenuItemHarness"></span>
   <code>MatMenuItemHarness</code>
   
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/testing/api#ContentContainerComponentHarness" class="docs-api-class-extends-type">
-      ContentContainerComponentHarness
-    </a>
-  </span>
-  
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with an MDC-based mat-menu-item in tests.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -1256,7 +1215,7 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatMenuHarness | null&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;Menu | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
