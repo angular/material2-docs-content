@@ -2304,7 +2304,8 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "ExpansionOverviewExample",
         "files": [
             "expansion-overview-example.ts",
-            "expansion-overview-example.html"
+            "expansion-overview-example.html",
+            "expansion-overview-example.css"
         ],
         "selector": "expansion-overview-example",
         "additionalComponents": [],
