@@ -57,7 +57,7 @@ behavior to the native <code>&lt;input type=&quot;range&quot;&gt;</code> element
       <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Palette color of the slider.</p>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
 </td>
 </tr>
 
@@ -66,12 +66,12 @@ behavior to the native <code>&lt;input type=&quot;range&quot;&gt;</code> element
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled in the slider.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -80,8 +80,8 @@ behavior to the native <code>&lt;input type=&quot;range&quot;&gt;</code> element
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -94,8 +94,8 @@ behavior to the native <code>&lt;input type=&quot;range&quot;&gt;</code> element
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>discrete: boolean</code>
     </p>
   </td>
@@ -124,8 +124,8 @@ for them to fit into the slider thumb.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>max: number</code>
     </p>
   </td>
@@ -138,8 +138,8 @@ for them to fit into the slider thumb.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>min: number</code>
     </p>
   </td>
@@ -152,8 +152,8 @@ for them to fit into the slider thumb.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>showTickMarks: boolean</code>
     </p>
   </td>
@@ -166,12 +166,25 @@ for them to fit into the slider thumb.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>step: number</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The values at which the thumb will snap.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -212,8 +225,8 @@ used, and the outcome will be a range slider with two slider thumbs.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>value: number</code>
     </p>
   </td>
@@ -353,8 +366,8 @@ used, and the outcome will be a range slider with two slider thumbs.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>value: number</code>
     </p>
   </td>
