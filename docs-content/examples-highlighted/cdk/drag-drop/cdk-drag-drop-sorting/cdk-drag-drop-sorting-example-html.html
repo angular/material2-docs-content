@@ -1,3 +1,5 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let movie of movies&quot;</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{movie}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  @for (movie of movies; track movie) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{movie}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

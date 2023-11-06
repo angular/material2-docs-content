@@ -6,7 +6,7 @@
 <span class="hljs-keyword">import</span> {catchError, map, startWith, switchMap} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgIf, DatePipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {DatePipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Table retrieving data through HTTP
@@ -16,14 +16,7 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;table-http-example.css&#x27;</span>],
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-http-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [
-    NgIf,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    MatSortModule,
-    MatPaginatorModule,
-    DatePipe,
-  ],
+  <span class="hljs-attr">imports</span>: [MatProgressSpinnerModule, MatTableModule, MatSortModule, MatPaginatorModule, DatePipe],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableHttpExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;created&#x27;</span>, <span class="hljs-string">&#x27;state&#x27;</span>, <span class="hljs-string">&#x27;number&#x27;</span>, <span class="hljs-string">&#x27;title&#x27;</span>];

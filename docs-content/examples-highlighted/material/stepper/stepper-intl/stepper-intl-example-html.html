@@ -4,12 +4,11 @@
   <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-radio-group&quot;</span>
   [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;optionalLabelText&quot;</span>
   (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">&quot;updateOptionalLabel()&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-radio-button&quot;</span>
-    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let optionalLabelTextChoice of optionalLabelTextChoices&quot;</span>
-    [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;optionalLabelTextChoice&quot;</span>&gt;</span>
-    {{optionalLabelTextChoice}}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+  @for (optionalLabelTextChoice of optionalLabelTextChoices; track optionalLabelTextChoice) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-radio-button&quot;</span>
+      [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;optionalLabelTextChoice&quot;</span>&gt;</span>{{optionalLabelTextChoice}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-stepper&quot;</span> #<span class="hljs-attr">stepper</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">&quot;firstFormGroup&quot;</span>&gt;</span>

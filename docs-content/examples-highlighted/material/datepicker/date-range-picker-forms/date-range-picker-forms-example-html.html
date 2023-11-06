@@ -8,8 +8,12 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matIconSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">&quot;picker&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-date-range-picker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-date-range-picker</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;range.controls.start.hasError(&#x27;matStartDateInvalid&#x27;)&quot;</span>&gt;</span>Invalid start date<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;range.controls.end.hasError(&#x27;matEndDateInvalid&#x27;)&quot;</span>&gt;</span>Invalid end date<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  @if (range.controls.start.hasError(&#x27;matStartDateInvalid&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Invalid start date<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+  @if (range.controls.end.hasError(&#x27;matEndDateInvalid&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Invalid end date<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Selected range: {{range.value | json}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

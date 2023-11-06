@@ -11,8 +11,10 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     {{node.item}}
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-progress-bar</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;node.isLoading&quot;</span>
-                      <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;indeterminate&quot;</span>
-                      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-progress-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-progress-bar</span>&gt;</span>
+    @if (node.isLoading) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-progress-bar</span>
+          <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;indeterminate&quot;</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-progress-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-progress-bar</span>&gt;</span>
+    }
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree</span>&gt;</span>
