@@ -70,11 +70,11 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;nameEditEnabled&quot;</span>&gt;</span>
+      @if (nameEditEnabled) {
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matEditOpen</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+      }
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
@@ -99,10 +99,9 @@
                   [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">&quot;[element.type]&quot;</span>
                   (<span class="hljs-attr">selectionChange</span>)=<span class="hljs-string">&quot;f.ngSubmit.emit()&quot;</span>
                   <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Element type&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let type of TYPES&quot;</span>
-                    [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;type&quot;</span>&gt;</span>
-                  {{type}}
-                <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+                @for (type of TYPES; track type) {
+                  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;type&quot;</span>&gt;</span>{{type}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+                }
               <span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
@@ -155,11 +154,11 @@
               <span class="hljs-tag">&lt;<span class="hljs-name">mat-selection-list</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">&quot;element.fantasyCounterparts&quot;</span>
                   <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;fantasyCounterparts&quot;</span>
                   <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Fantasy Element Counterparts&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let fantasyElement of FANTASY_ELEMENTS&quot;</span>
+                @for (fantasyElement of FANTASY_ELEMENTS; track fantasyElement) {
+                  <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span>
                     [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fantasyElement&quot;</span>
-                    <span class="hljs-attr">checkboxPosition</span>=<span class="hljs-string">&quot;before&quot;</span>&gt;</span>
-                  {{fantasyElement}}
-                <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+                    <span class="hljs-attr">checkboxPosition</span>=<span class="hljs-string">&quot;before&quot;</span>&gt;</span>{{fantasyElement}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+                }
               <span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-edit-actions</span>&gt;</span>

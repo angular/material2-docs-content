@@ -1,4 +1,4 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;shouldRun&quot;</span>&gt;</span>
+@if (shouldRun) {
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-header&quot;</span>&gt;</span>Header<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
@@ -23,6 +23,6 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-footer&quot;</span>&gt;</span>Footer<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!shouldRun&quot;</span>&gt;</span>Please open on StackBlitz to see result<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+} @else {
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Please open on StackBlitz to see result<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+}

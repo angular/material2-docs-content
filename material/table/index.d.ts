@@ -326,7 +326,7 @@ export declare class TableFooterRowExample {
 }
 
 /**
- * @title Table with columns defined using ngFor instead of statically written in the template.
+ * @title Table with columns defined using a for loop instead of statically written in the template.
  */
 export declare class TableGeneratedColumnsExample {
     columns: {

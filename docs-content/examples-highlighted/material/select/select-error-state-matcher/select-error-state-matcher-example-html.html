@@ -7,10 +7,12 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;invalid&quot;</span>&gt;</span>Invalid option<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>Errors appear instantly!<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;selected.hasError(&#x27;required&#x27;)&quot;</span>&gt;</span>You must make a selection<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;selected.hasError(&#x27;pattern&#x27;) &amp;&amp; !selected.hasError(&#x27;required&#x27;)&quot;</span>&gt;</span>
-    Your selection is invalid
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  @if (selected.hasError(&#x27;required&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>You must make a selection<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+  @if (selected.hasError(&#x27;pattern&#x27;) &amp;&amp; !selected.hasError(&#x27;required&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Your selection is invalid<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>native html select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
@@ -21,8 +23,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;valid&quot;</span> <span class="hljs-attr">selected</span>&gt;</span>Valid option<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;invalid&quot;</span>&gt;</span>Invalid option<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;nativeSelectFormControl.hasError(&#x27;required&#x27;)&quot;</span>&gt;</span>You must make a selection<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;nativeSelectFormControl.hasError(&#x27;pattern&#x27;) &amp;&amp; !nativeSelectFormControl.hasError(&#x27;required&#x27;)&quot;</span>&gt;</span>
-    Your selection is invalid
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  @if (nativeSelectFormControl.hasError(&#x27;required&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>You must make a selection<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+  @if (nativeSelectFormControl.hasError(&#x27;pattern&#x27;) &amp;&amp; !nativeSelectFormControl.hasError(&#x27;required&#x27;)) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Your selection is invalid<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

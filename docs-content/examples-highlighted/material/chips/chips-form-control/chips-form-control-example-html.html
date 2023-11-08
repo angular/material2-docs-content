@@ -8,12 +8,14 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-form-field&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Video keywords<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">chipGrid</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Enter keywords&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;formControl&quot;</span> &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let keyword of keywords&quot;</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;removeKeyword(keyword)&quot;</span>&gt;</span>
-      {{keyword}}
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&#x27;remove &#x27; + keyword&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
+    @for (keyword of keywords; track keyword) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;removeKeyword(keyword)&quot;</span>&gt;</span>
+        {{keyword}}
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&#x27;remove &#x27; + keyword&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
+    }
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-grid</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;New keyword...&quot;</span>
           [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;chipGrid&quot;</span>

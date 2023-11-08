@@ -14,14 +14,16 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> [<span class="hljs-attr">selectedIndex</span>]=<span class="hljs-string">&quot;selected.value&quot;</span>
                (<span class="hljs-attr">selectedIndexChange</span>)=<span class="hljs-string">&quot;selected.setValue($event)&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let tab of tabs; let index = index&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;tab&quot;</span>&gt;</span>
-    Contents for {{tab}} tab
+  @for (tab of tabs; track tab; let index = $index) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;tab&quot;</span>&gt;</span>
+      Contents for {{tab}} tab
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span>
-            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-delete-tab-button&quot;</span>
-            [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;tabs.length === 1&quot;</span>
-            (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;removeTab(index)&quot;</span>&gt;</span>
-      Delete Tab
-    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span>
+              <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-delete-tab-button&quot;</span>
+              [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;tabs.length === 1&quot;</span>
+              (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;removeTab(index)&quot;</span>&gt;</span>
+        Delete Tab
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>

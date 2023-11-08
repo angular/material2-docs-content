@@ -5,8 +5,8 @@
          [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;auto&quot;</span>
          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-input&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let street of filteredStreets | async&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;street&quot;</span>&gt;</span>
-      {{street}}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    @for (street of filteredStreets | async; track street) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;street&quot;</span>&gt;</span>{{street}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    }
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

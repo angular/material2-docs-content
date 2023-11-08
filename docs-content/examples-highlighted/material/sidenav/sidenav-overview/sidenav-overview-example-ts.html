@@ -1,6 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSidenavModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgIf} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Basic sidenav */</span>
 <span class="hljs-meta">@Component</span>({
@@ -8,7 +7,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-overview-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-overview-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [NgIf, MatSidenavModule],
+  <span class="hljs-attr">imports</span>: [MatSidenavModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavOverviewExample</span> </span>{
   shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.test(<span class="hljs-built_in">window</span>.location.host);

@@ -1,6 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgForm, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Person {
@@ -30,7 +29,7 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-popover-edit-cell-span-vanilla-table-example.css&#x27;</span>],
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cell-span-vanilla-table-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [CdkPopoverEditModule, FormsModule, NgFor],
+  <span class="hljs-attr">imports</span>: [CdkPopoverEditModule, FormsModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPopoverEditCellSpanVanillaTableExample</span> </span>{
   <span class="hljs-keyword">readonly</span> preservedValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;Person, <span class="hljs-built_in">any</span>&gt;();

@@ -38,12 +38,12 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!clickedRows.size&quot;</span>&gt;</span>
-  Clicked rows will be logged here
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+@if (!clickedRows.size) {
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Clicked rows will be logged here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+}
 
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let clickedRow of clickedRows&quot;</span>&gt;</span>
-    Clicked on {{clickedRow.name}}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  @for (clickedRow of clickedRows; track clickedRow) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Clicked on {{clickedRow.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>

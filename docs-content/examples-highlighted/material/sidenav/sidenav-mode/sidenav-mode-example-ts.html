@@ -1,5 +1,4 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgIf} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDrawerMode, MatSidenavModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
@@ -11,14 +10,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-mode-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-mode-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [
-    NgIf,
-    MatSidenavModule,
-    MatButtonModule,
-    MatRadioModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+  <span class="hljs-attr">imports</span>: [MatSidenavModule, MatButtonModule, MatRadioModule, FormsModule, ReactiveFormsModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavModeExample</span> </span>{
   mode = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;over&#x27;</span> <span class="hljs-keyword">as</span> MatDrawerMode);
