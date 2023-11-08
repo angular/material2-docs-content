@@ -8,9 +8,9 @@
            [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;myControl&quot;</span>
            [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;auto&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let option of options&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option&quot;</span>&gt;</span>
-        {{option}}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      @for (option of options; track option) {
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option&quot;</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      }
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

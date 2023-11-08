@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/divider";
  * @title Testing with MatDividerHarness
  */
 export class DividerHarnessExample {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.1.1", ngImport: i0, type: DividerHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.1.1", type: DividerHarnessExample, isStandalone: true, selector: "divider-harness-example", ngImport: i0, template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n", dependencies: [{ kind: "ngmodule", type: MatDividerModule }, { kind: "component", type: i1.MatDivider, selector: "mat-divider", inputs: ["vertical", "inset"] }] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.0.0", ngImport: i0, type: DividerHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.0.0", type: DividerHarnessExample, isStandalone: true, selector: "divider-harness-example", ngImport: i0, template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n", dependencies: [{ kind: "ngmodule", type: MatDividerModule }, { kind: "component", type: i1.MatDivider, selector: "mat-divider", inputs: ["vertical", "inset"] }] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.1.1", ngImport: i0, type: DividerHarnessExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.0.0", ngImport: i0, type: DividerHarnessExample, decorators: [{
             type: Component,
             args: [{ selector: 'divider-harness-example', standalone: true, imports: [MatDividerModule], template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n" }]
         }] });

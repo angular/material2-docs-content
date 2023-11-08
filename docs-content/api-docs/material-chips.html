@@ -88,10 +88,10 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the chip.</p>
 </td>
 </tr>
 
@@ -100,12 +100,12 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the ripple effect is disabled or not.</p>
 </td>
 </tr>
 
@@ -114,12 +114,12 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the chip is disabled.</p>
 </td>
 </tr>
 
@@ -128,8 +128,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>highlighted: boolean</code>
     </p>
   </td>
@@ -156,8 +156,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>removable: boolean</code>
     </p>
   </td>
@@ -232,32 +232,6 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The unstyled chip selector for this component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -441,10 +415,10 @@ user cannot click disabled chips.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the chip.</p>
 </td>
 </tr>
 
@@ -453,12 +427,12 @@ user cannot click disabled chips.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the ripple effect is disabled or not.</p>
 </td>
 </tr>
 
@@ -467,12 +441,12 @@ user cannot click disabled chips.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the chip is disabled.</p>
 </td>
 </tr>
 
@@ -481,8 +455,8 @@ user cannot click disabled chips.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>highlighted: boolean</code>
     </p>
   </td>
@@ -509,8 +483,8 @@ user cannot click disabled chips.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>removable: boolean</code>
     </p>
   </td>
@@ -537,8 +511,8 @@ user cannot click disabled chips.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>selectable: boolean</code>
     </p>
   </td>
@@ -554,8 +528,8 @@ non-selectable if its parent chip list is not selectable.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>selected: boolean</code>
     </p>
   </td>
@@ -663,32 +637,6 @@ VoiceOver reading every option as &quot;selected&quot; (#25736).</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the chip list is selectable.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -971,10 +919,10 @@ the matChipInputFor directive.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the chip.</p>
 </td>
 </tr>
 
@@ -983,12 +931,12 @@ the matChipInputFor directive.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the ripple effect is disabled or not.</p>
 </td>
 </tr>
 
@@ -997,12 +945,12 @@ the matChipInputFor directive.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the chip is disabled.</p>
 </td>
 </tr>
 
@@ -1024,8 +972,8 @@ the matChipInputFor directive.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>highlighted: boolean</code>
     </p>
   </td>
@@ -1052,8 +1000,8 @@ the matChipInputFor directive.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>removable: boolean</code>
     </p>
   </td>
@@ -1163,36 +1111,10 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>defaultEditInput: MatChipEditInput</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The default chip edit input that is used if none is projected into this chip row.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -1332,8 +1254,8 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -1364,7 +1286,7 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
       <code>chipDestroyedChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; destroy events.</p>
 </td>
 </tr>
 
@@ -1387,10 +1309,10 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
+      <code>chipRemovedChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
 </td>
 </tr>
 
@@ -1508,8 +1430,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -1522,8 +1444,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>hideSingleSelectionIndicator: boolean</code>
     </p>
   </td>
@@ -1536,8 +1458,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>multiple: boolean</code>
     </p>
   </td>
@@ -1550,8 +1472,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -1578,8 +1500,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>selectable: boolean</code>
     </p>
   </td>
@@ -1639,7 +1561,7 @@ the chips inside the chip listbox are always ignored.</p>
       <code>chipDestroyedChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; destroy events.</p>
 </td>
 </tr>
 
@@ -1662,10 +1584,10 @@ the chips inside the chip listbox are always ignored.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>chipSelectionChanges: Observable&lt;MatChipSelectionChange&gt;</code>
+      <code>chipRemovedChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; selection change events.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
 </td>
 </tr>
 
@@ -1675,10 +1597,10 @@ the chips inside the chip listbox are always ignored.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
+      <code>chipSelectionChanges: Observable&lt;MatChipSelectionChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; selection change events.</p>
 </td>
 </tr>
 
@@ -1832,7 +1754,7 @@ the matChipInputFor directive.</p>
       <code>chipDestroyedChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; destroy events.</p>
 </td>
 </tr>
 
@@ -1855,10 +1777,10 @@ the matChipInputFor directive.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
+      <code>chipRemovedChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Combined stream of all of the child chips&#39; remove events.</p>
 </td>
 </tr>
 
@@ -1993,7 +1915,7 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matChipInputAddOnBlur&#39;</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;matChipInputAddOnBlur&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>addOnBlur: boolean</code>
     </p>
@@ -2021,8 +1943,8 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -2247,25 +2169,12 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the action is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -2335,8 +2244,8 @@ available at <a href="https://material.io/icons/#ic_cancel">https://material.io/
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -2355,19 +2264,6 @@ available at <a href="https://material.io/icons/#ic_cancel">https://material.io/
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the action is interactive.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 

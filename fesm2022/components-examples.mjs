@@ -2304,8 +2304,7 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "ExpansionOverviewExample",
         "files": [
             "expansion-overview-example.ts",
-            "expansion-overview-example.html",
-            "expansion-overview-example.css"
+            "expansion-overview-example.html"
         ],
         "selector": "expansion-overview-example",
         "additionalComponents": [],
@@ -3928,7 +3927,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "table-generated-columns": {
         "packagePath": "material/table/table-generated-columns",
-        "title": "Table with columns defined using ngFor instead of statically written in the template.",
+        "title": "Table with columns defined using a for loop instead of statically written in the template.",
         "componentName": "TableGeneratedColumnsExample",
         "files": [
             "table-generated-columns-example.ts",
