@@ -26,47 +26,45 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-
+  
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> First name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Middle name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Last name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let person of persons&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{person.id}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 
-  @for (person of persons; track person) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{person.id}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>
-          [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;{person: person, focus: &#x27;firstName&#x27;}&quot;</span>
-          [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">&quot;{after: 2}&quot;</span>&gt;</span>
-        {{person.firstName}}
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>
-          [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;{person: person, focus: &#x27;middleName&#x27;}&quot;</span>
-          [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">&quot;{before: 1, after: 1}&quot;</span>&gt;</span>
-        {{person.middleName}}
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>
-          [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;{person: person, focus: &#x27;lastName&#x27;}&quot;</span>
-          [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">&quot;{before: 2}&quot;</span>&gt;</span>
-        {{person.lastName}}
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  }
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>
+        [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;{person: person, focus: &#x27;firstName&#x27;}&quot;</span>
+        [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">&quot;{after: 2}&quot;</span>&gt;</span>
+      {{person.firstName}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>
+        [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;{person: person, focus: &#x27;middleName&#x27;}&quot;</span>
+        [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">&quot;{before: 1, after: 1}&quot;</span>&gt;</span>
+      {{person.middleName}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>
+        [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;{person: person, focus: &#x27;lastName&#x27;}&quot;</span>
+        [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">&quot;{before: 2}&quot;</span>&gt;</span>
+      {{person.lastName}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

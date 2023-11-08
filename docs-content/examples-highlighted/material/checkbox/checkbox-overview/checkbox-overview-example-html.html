@@ -15,15 +15,13 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list-section&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-      @for (subtask of task.subtasks; track subtask) {
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;subtask.completed&quot;</span>
-                        [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;subtask.color&quot;</span>
-                        (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">&quot;updateAllComplete()&quot;</span>&gt;</span>
-            {{subtask.name}}
-          <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      }
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let subtask of task.subtasks&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;subtask.completed&quot;</span>
+                      [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;subtask.color&quot;</span>
+                      (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">&quot;updateAllComplete()&quot;</span>&gt;</span>
+          {{subtask.name}}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>

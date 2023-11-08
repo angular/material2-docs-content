@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgFor} from '@angular/common';
 import {
   CdkDragDrop,
   CdkDropList,
@@ -15,7 +16,7 @@ import {
   templateUrl: 'cdk-drag-drop-custom-preview-example.html',
   styleUrls: ['cdk-drag-drop-custom-preview-example.css'],
   standalone: true,
-  imports: [CdkDropList, CdkDrag, CdkDragPreview],
+  imports: [CdkDropList, NgFor, CdkDrag, CdkDragPreview],
 })
 export class CdkDragDropCustomPreviewExample {
   // tslint:disable:max-line-length

@@ -4,6 +4,7 @@
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 
 <span class="hljs-meta">@Injectable</span>()
@@ -24,6 +25,7 @@
   <span class="hljs-attr">imports</span>: [
     MatRadioModule,
     FormsModule,
+    NgFor,
     MatStepperModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -41,10 +43,7 @@
     <span class="hljs-attr">secondCtrl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
   });
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">private</span> _formBuilder: FormBuilder,
-    <span class="hljs-keyword">private</span> _matStepperIntl: MatStepperIntl,
-  </span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder, <span class="hljs-keyword">private</span> _matStepperIntl: MatStepperIntl</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">updateOptionalLabel</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>._matStepperIntl.optionalLabel = <span class="hljs-built_in">this</span>.optionalLabelText;

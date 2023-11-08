@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgFor} from '@angular/common';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -15,7 +16,7 @@ import {
   templateUrl: 'cdk-drag-drop-enter-predicate-example.html',
   styleUrls: ['cdk-drag-drop-enter-predicate-example.css'],
   standalone: true,
-  imports: [CdkDropList, CdkDrag],
+  imports: [CdkDropList, NgFor, CdkDrag],
 })
 export class CdkDragDropEnterPredicateExample {
   all = [1, 2, 3, 4, 5, 6, 7, 8, 9];

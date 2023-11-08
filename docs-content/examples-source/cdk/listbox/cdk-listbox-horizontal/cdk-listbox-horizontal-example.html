@@ -6,8 +6,10 @@
     cdkListboxOrientation="horizontal"
     aria-labelledby="example-shirt-size-label"
     class="example-listbox">
-  @for (size of sizes; track size) {
-    <li [cdkOption]="size" class="example-option">{{size}}</li>
-  }
+  <li *ngFor="let size of sizes"
+      [cdkOption]="size"
+      class="example-option">
+    {{size}}
+  </li>
 </ul>
 <!-- #enddocregion listbox -->

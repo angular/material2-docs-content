@@ -105,7 +105,7 @@
           <span header-link="orientation"></span>
           Orientation
         </h3>
-      <p>By default, chips are displayed horizontally. To stack chips vertically, apply the <code>mat-mdc-chip-set-stacked</code> class to <code>&lt;mat-chip-set&gt;</code>, <code>&lt;mat-chip-listbox&gt;</code> or <code>&lt;mat-chip-grid&gt;</code>.</p>
+      <p>By default, chips are displayed horizontally. To stack chips vertically, apply the <code>mat-mdc-chip-set-stacked</code> class to <code>&lt;mat-chip-set&gt;</code>, <code>&lt;mat-chip-listbox&gt;</code> or <code>&lt;mat-chip-grid&gt;</code>. </p>
 <div material-docs-example="chips-stacked"></div>
 
 
@@ -157,15 +157,14 @@
       <p><code>&lt;mat-chip-grid&gt;</code> and <code>&lt;mat-chip-row&gt;</code> : These elements implement a grid accessibility pattern. Use them as part of a free form input that allows users to enter text to add chips.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">myChipGrid</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;mySelection&quot;</span>
-    <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;enter sandwich fillings&quot;</span>&gt;</span>
-    @for (filling of fillings; track filling) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(filling)&quot;</span>&gt;</span>
-        {{filling.name}}
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
-    }
+  <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;enter sandwich fillings&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let filling of fillings&quot;</span>
+                 (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(filling)&quot;</span>&gt;</span>
+      {{filling.name}}
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;myChipGrid&quot;</span>
            [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
            (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span> /&gt;</span>

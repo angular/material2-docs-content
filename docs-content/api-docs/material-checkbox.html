@@ -93,8 +93,8 @@ take precedence so this may be omitted.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>checked: boolean</code>
     </p>
   </td>
@@ -109,10 +109,10 @@ take precedence so this may be omitted.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: string | undefined</code>
+      <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Palette color of the checkbox.</p>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
 </td>
 </tr>
 
@@ -121,12 +121,12 @@ take precedence so this may be omitted.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the checkbox has a ripple.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -135,12 +135,13 @@ take precedence so this may be omitted.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the checkbox is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the checkbox is disabled. This fully overrides the implementation provided by
+mixinDisabled, but the mixin is still required because mixinTabIndex requires it.</p>
 </td>
 </tr>
 
@@ -163,8 +164,8 @@ take precedence so this may be omitted.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>indeterminate: boolean</code>
     </p>
   </td>
@@ -208,8 +209,8 @@ set to false.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -238,7 +239,7 @@ set to false.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>change: EventEmitter&lt;MatCheckboxChange&gt;</code>
+      <code>change: EventEmitter&lt;E&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the checkbox&#39;s <code>checked</code> value changes.</p>
@@ -256,6 +257,32 @@ set to false.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the checkbox&#39;s <code>indeterminate</code> value changes.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 

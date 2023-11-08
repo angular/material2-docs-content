@@ -3,8 +3,8 @@
           <span header-link="what-is-theming"></span>
           What is theming?
         </h2>
-      <p>Angular Material&#39;s theming system lets you customize base, color, typography, and density styles for
-components in your application. The theming system is based on Google&#39;s
+      <p>Angular Material&#39;s theming system lets you customize color, typography, and density styles for components
+in your application. The theming system is based on Google&#39;s
 <a href="https://material.io/design/material-theming/overview.html">Material Design</a> specification.</p>
 <p>This document describes the concepts and APIs for customizing colors. For typography customization,
 see <a href="https://material.angular.io/guide/typography">Angular Material Typography</a>. For guidance on building components to be
@@ -77,8 +77,8 @@ require these hues, but you can use these hues when defining a theme as describe
           <span header-link="themes"></span>
           Themes
         </h2>
-      <p>A <strong>theme</strong> is a collection of color, typography, and density options. Each theme includes three
-palettes that determine component colors:</p>
+      <p>A <strong>theme</strong> is a collection of color, typography, and density options. Each theme includes three palettes that
+determine component colors:</p>
 <ul>
 <li>A <strong>primary</strong> palette for the color that appears most frequently throughout your application</li>
 <li>An <strong>accent</strong>, or <em>secondary</em>, palette used to selectively highlight key parts of your UI</li>
@@ -112,8 +112,7 @@ times will result in duplicate CSS in your application.</p>
           Defining a theme
         </h4>
       <p>Angular Material represents a theme as a Sass map that contains your color, typography, and density
-choices, as well as some base design system settings. See
-<a href="https://material.angular.io/guide/typography">Angular Material Typography</a> for an in-depth guide to customizing typography. See
+choices. See <a href="https://material.angular.io/guide/typography">Angular Material Typography</a> for an in-depth guide to customizing typography. See
 <a href="#customizing-density">Customizing density</a> below for details on adjusting component density.</p>
 <p>Constructing the theme first requires defining your primary and accent palettes, with an optional
 warn palette. The <code>define-palette</code> Sass function accepts a color palette, described in the
@@ -157,14 +156,12 @@ background and foreground colors used throughout the components.</p>
         </h4>
       <p>The <code>core-theme</code> Sass mixin emits prerequisite styles for common features used by multiple
 components, such as ripples. This mixin must be included once per theme.</p>
-<p>Each Angular Material component has a mixin for each <a href="#theming-dimensions">theming dimension</a>: base,
-color, typography, and density. For example, <code>MatButton</code> declares <code>button-base</code>, <code>button-color</code>,
-<code>button-typography</code>, and <code>button-density</code>. Each mixin emits only the styles corresponding to that
-dimension of customization.</p>
-<p>Additionally, each component has a &quot;theme&quot; mixin that emits all styles that depend on the theme
-config. This theme mixin only emits color, typography, or density styles if you provided a
-corresponding configuration to <code>define-light-theme</code> or <code>define-dark-theme</code>, and it always emits the
-base styles.</p>
+<p>Each Angular Material component has a mixin for each color , typography, and density. For example, <code>MatButton</code> declares
+<code>button-color</code>, <code>button-typography</code>, and <code>button-density</code>. Each mixin emits only the styles corresponding to that
+area of customization.</p>
+<p>Additionally, each component has a &quot;theme&quot; mixin that emits all styles that depend on the theme config.
+This theme mixin only emits color, typography, or density styles if you provided a corresponding
+configuration to <code>define-light-theme</code> or <code>define-dark-theme</code>.</p>
 <p>Apply the styles for each of the components used in your application by including each of their
 theme Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
@@ -193,11 +190,10 @@ theme Sass mixins.</p>
 <span class="hljs-comment">// Include the theme mixins for other components you use here.</span>
 </code></pre>
 <p>As an alternative to listing every component that your application uses, Angular Material offers
-Sass mixins that includes styles for all components in the library: <code>all-component-bases</code>,
-<code>all-component-colors</code>, <code>all-component-typographies</code>, <code>all-component-densities</code>, and
-<code>all-component-themes</code>. These mixins behave the same as individual component mixins, except they
-emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular Material. Unless your application
-uses every single component, this will produce unnecessary CSS.</p>
+Sass mixins that includes styles for all components in the library: <code>all-component-colors</code>,
+<code>all-component-typographies</code>, <code>all-component-densities</code>, and <code>all-component-themes</code>. These mixins behave the same as
+individual component mixins, except they emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular
+Material. Unless your application uses every single component, this will produce unnecessary CSS.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-keyword">@include</span> mat.core();
@@ -218,63 +214,6 @@ uses every single component, this will produce unnecessary CSS.</p>
 </code></pre>
 <p>To include the emitted styles in your application, <a href="https://angular.io/guide/workspace-config#styles-and-scripts-configuration">add your theme file to the <code>styles</code> array of
 your project&#39;s <code>angular.json</code> file</a>.</p>
-
-        <h4 id="theming-dimensions" class="docs-header-link">
-          <span header-link="theming-dimensions"></span>
-          Theming dimensions
-        </h4>
-      <p>Angular Material themes are divided along four dimensions: base, color, typography, and density.</p>
-
-        <h5 id="base" class="docs-header-link">
-          <span header-link="base"></span>
-          Base
-        </h5>
-      <p>Common base styles for the design system. These styles don&#39;t change based on your configured
-colors, typography, or density, so they only need to be included once per application. These
-mixins include structural styles such as border-radius, border-width, etc. All components have a base
-mixin that can be used to include its base styles. (For example,
-<code>@include mat.checkbox-base($theme)</code>)</p>
-
-        <h5 id="color" class="docs-header-link">
-          <span header-link="color"></span>
-          Color
-        </h5>
-      <p>Styles related to the colors in your application. These style should be included at least once in
-your application. Depending on your needs, you may need to include these styles multiple times
-with different configurations. (For example, if your app supports light and dark theme colors.)
-All components have a color mixin that can be used to include its color styles. (For example,
-<code>@include mat.checkbox-color($theme)</code>)</p>
-
-        <h5 id="typography" class="docs-header-link">
-          <span header-link="typography"></span>
-          Typography
-        </h5>
-      <p>Styles related to the fonts used in your application, including the font family, size, weight,
-line-height, and letter-spacing. These style should be included at least once in your application.
-Depending on your needs, you may need to include these styles multiple times with different
-configurations. (For example, if your app supports reading content in either a serif or sans-serif
-font.) All components  have a typography mixin that can be used to include its typography
-styles. (For example, <code>@include mat.checkbox-typography($theme)</code>)</p>
-
-        <h5 id="density" class="docs-header-link">
-          <span header-link="density"></span>
-          Density
-        </h5>
-      <p>Styles related to the size and spacing of elements in your application. These style should be
-included at least once in your application. Depending on your needs, you may need to include these
-styles multiple times with different configurations. (For example, if your app supports both a
-normal and compact mode). All components have a density mixin that can be used to include its
-density styles. (For example, <code>@include mat.checkbox-density($theme)</code>)</p>
-
-        <h5 id="theme-mixin" class="docs-header-link">
-          <span header-link="theme-mixin"></span>
-          Theme mixin
-        </h5>
-      <p>All components also support a theme mixin that can be used to include the component&#39;s styles for all
-theme dimensions at once. (For example, <code>@include mat.checkbox-theme($theme)</code>).</p>
-<p>The recommended approach is to rely on the <code>theme</code> mixins to lay down your base styles, and if
-needed us the single dimension mixins to override particular aspects for parts of your app (see the
-section on <a href="#multiple-themes-in-one-file">Multiple themes in one file</a>.)</p>
 
         <h3 id="using-a-pre-built-theme" class="docs-header-link">
           <span header-link="using-a-pre-built-theme"></span>
@@ -392,8 +331,7 @@ file. The approach for this loading depends on your application.</p>
 its own components. If you want to set your application&#39;s background color
 to match the components&#39; theme, you can either:</p>
 <ol>
-<li>Put your application&#39;s main content inside <code>mat-sidenav-container</code>, assuming you&#39;re using
-<code>MatSidenav</code>, or</li>
+<li>Put your application&#39;s main content inside <code>mat-sidenav-container</code>, assuming you&#39;re using <code>MatSidenav</code>, or</li>
 <li>Apply the <code>mat-app-background</code> CSS class to your main content root element (typically <code>body</code>).</li>
 </ol>
 
@@ -422,27 +360,46 @@ The example below shows how to customize the color of all buttons inside element
           <span header-link="reading-hues-from-palettes"></span>
           Reading hues from palettes
         </h3>
-      <p>It is possible to read colors from a theme for use in your own components. For more information
-about this see our guide on <a href="https://material.angular.io/guide/theming-your-components#reading-color-values">Theming your own components</a>.</p>
+      <p>You can use the <code>get-color-from-palette</code> function to get specific hues from a palette by their
+number identifier. You can also access the contrast color for a particular hue by suffixing the
+hue&#39;s number identifier with <code>-contrast</code>.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
+
+<span class="hljs-selector-class">.my-custom-style</span> {
+ <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-number">500</span>);
+ <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;500-contrast&#x27;</span>);
+}
+</code></pre>
+<p>You can also reference colors using the <code>&quot;default&quot;</code>, <code>&quot;lighter&quot;</code>, <code>&quot;darker&quot;</code>, and <code>&quot;text&quot;</code> colors
+passed to <code>define-palette</code>.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
+
+<span class="hljs-selector-class">.my-custom-darker-style</span> {
+ <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;darker&#x27;</span>);
+ <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">&#x27;darker-contrast&#x27;</span>);
+}
+</code></pre>
 
         <h2 id="customizing-density" class="docs-header-link">
           <span header-link="customizing-density"></span>
           Customizing density
         </h2>
       <p>Angular Material&#39;s density customization is based on the
-<a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidelines</a>. This system defines a scale where zero
-represents the default density. You can decrement the number for <em>more density</em> and increment the
-number for <em>less density</em>.</p>
+<a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidelines</a>. This system
+defines a scale where zero represents the default density. You can decrement the number for <em>more density</em> and increment
+the number for <em>less density</em>.</p>
 <p>The density system is based on a <em>density scale</em>. The scale starts with the
 default density of <code>0</code>. Each whole number step down (<code>-1</code>, <code>-2</code>, etc.) reduces
-the affected sizes by <code>4px</code>, down to the minimum size necessary for a component to render
-coherently.</p>
-<p>Components that appear in task-based or pop-up contexts, such as <code>MatDatepicker</code>, don&#39;t change their
-size via the density system. The <a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidance</a> explicitly
-discourages increasing density for such interactions because they don&#39;t compete for space in the
+the affected sizes by <code>4px</code>, down to the minimum size necessary for a component to render coherently.</p>
+<p>Components that appear in task-based or pop-up contexts, such as <code>MatDatepicker</code>, don&#39;t change their size via the
+density system. The <a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidance</a>
+explicitly discourages increasing density for such interactions because they don&#39;t compete for space in the
 application&#39;s layout.</p>
-<p>You can apply custom density setting to the entire library or to individual components using their
-density Sass mixins.</p>
+<p>You can apply custom density setting to the entire library or to individual components using their density Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// You can set a density setting in your theme to apply to all components.</span>
 <span class="hljs-variable">$dark-theme</span>: mat.define-dark-theme((
   color: ...,
@@ -540,17 +497,17 @@ the CSS in each shadow root, or by using <a href="https://developers.google.com/
           <span header-link="user-preference-media-queries"></span>
           User preference media queries
         </h2>
-      <p>Angular Material does not apply styles based on user preference media queries, such as 
-<code>prefers-color-scheme</code> or <code>prefers-contrast</code>. Instead, Angular Material&#39;s Sass mixins give you the
-flexibility to apply theme styles to based on the conditions that make the most sense for your
-users. This may mean using media queries directly or reading a saved user preference.</p>
+      <p>Angular Material does not apply styles based on user preference media queries, such as <code>prefers-color-scheme</code>
+or <code>prefers-contrast</code>. Instead, Angular Material&#39;s Sass mixins give you the flexibility to
+apply theme styles to based on the conditions that make the most sense for your users. This may mean using media
+queries directly or reading a saved user preference.</p>
 
         <h2 id="style-customization-outside-the-theming-system" class="docs-header-link">
           <span header-link="style-customization-outside-the-theming-system"></span>
           Style customization outside the theming system
         </h2>
-      <p>Angular Material supports customizing color, typography, and density as outlined in this document. 
-Angular strongly discourages, and does not directly support, overriding component CSS outside the 
-theming APIs described above. Component DOM structure and CSS classes are considered private 
-implementation details that may change at any time.</p>
+      <p>Angular Material supports customizing color, typography, and density as outlined in this document. Angular
+strongly discourages, and does not directly support, overriding component CSS outside the theming
+APIs described above. Component DOM structure and CSS classes are considered private implementation
+details that may change at any time.</p>
 </div>

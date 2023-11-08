@@ -1,6 +1,7 @@
 import {AutofillMonitor} from '@angular/cdk/text-field';
 import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
+import {NgIf} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -10,7 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   templateUrl: './text-field-autofill-monitor-example.html',
   styleUrls: ['./text-field-autofill-monitor-example.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [MatFormFieldModule, MatInputModule, NgIf, MatButtonModule],
 })
 export class TextFieldAutofillMonitorExample implements AfterViewInit, OnDestroy {
   @ViewChild('first', {read: ElementRef}) firstName: ElementRef<HTMLElement>;

@@ -3,19 +3,13 @@
   My favorite animal is:
   <ul>
     <li>
-      @if (data.animal === 'panda') {
-        <span>&#10003;</span>
-      } Panda
+      <span *ngIf="data.animal === 'panda'">&#10003;</span> Panda
     </li>
     <li>
-      @if (data.animal === 'unicorn') {
-        <span>&#10003;</span>
-      } Unicorn
+      <span *ngIf="data.animal === 'unicorn'">&#10003;</span> Unicorn
     </li>
     <li>
-      @if (data.animal === 'lion') {
-        <span>&#10003;</span>
-      } Lion
+      <span *ngIf="data.animal === 'lion'">&#10003;</span> Lion
     </li>
   </ul>
 </div>

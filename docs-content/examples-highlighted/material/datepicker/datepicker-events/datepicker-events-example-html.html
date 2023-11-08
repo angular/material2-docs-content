@@ -8,7 +8,5 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-events&quot;</span>&gt;</span>
-  @for (e of events; track e) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{{e}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  }
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let e of events&quot;</span>&gt;</span>{{e}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

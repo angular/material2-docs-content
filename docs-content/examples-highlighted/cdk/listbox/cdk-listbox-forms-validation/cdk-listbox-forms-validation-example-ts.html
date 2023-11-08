@@ -2,7 +2,7 @@
 <span class="hljs-keyword">import</span> {FormControl, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {AsyncPipe, JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor, NgIf, AsyncPipe, JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Listbox with forms validation. */</span>
@@ -12,7 +12,16 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-forms-validation-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-listbox-forms-validation-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [CdkListbox, FormsModule, ReactiveFormsModule, CdkOption, AsyncPipe, JsonPipe],
+  <span class="hljs-attr">imports</span>: [
+    CdkListbox,
+    FormsModule,
+    ReactiveFormsModule,
+    NgFor,
+    CdkOption,
+    NgIf,
+    AsyncPipe,
+    JsonPipe,
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxFormsValidationExample</span> </span>{
   signs = [

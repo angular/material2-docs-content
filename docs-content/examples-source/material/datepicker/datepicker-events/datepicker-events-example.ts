@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MatDatepickerInputEvent, MatDatepickerModule} from '@angular/material/datepicker';
+import {NgFor} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
@@ -10,7 +11,7 @@ import {MatNativeDateModule} from '@angular/material/core';
   templateUrl: 'datepicker-events-example.html',
   styleUrls: ['datepicker-events-example.css'],
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule],
+  imports: [MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule, NgFor],
 })
 export class DatepickerEventsExample {
   events: string[] = [];

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {startWith, map} from 'rxjs/operators';
-import {AsyncPipe} from '@angular/common';
+import {NgFor, AsyncPipe} from '@angular/common';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -31,6 +31,7 @@ export const _filter = (opt: string[], value: string): string[] => {
     MatFormFieldModule,
     MatInputModule,
     MatAutocompleteModule,
+    NgFor,
     AsyncPipe,
   ],
 })

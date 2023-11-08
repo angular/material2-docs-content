@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgFor} from '@angular/common';
 import {
   CdkMenu,
   CdkMenuItem,
@@ -19,6 +20,7 @@ import {
     CdkMenu,
     CdkMenuItemCheckbox,
     CdkMenuGroup,
+    NgFor,
     CdkMenuItemRadio,
     CdkMenuItem,
   ],

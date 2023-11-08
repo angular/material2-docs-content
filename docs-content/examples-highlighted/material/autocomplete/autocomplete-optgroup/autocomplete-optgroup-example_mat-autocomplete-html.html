@@ -1,9 +1,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">autoGroup</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
-    @for (group of stateGroupOptions | async; track group) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;group.letter&quot;</span>&gt;</span>
-        @for (name of group.names; track name) {
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>{{name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-        }
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let group of stateGroupOptions | async&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;group.letter&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let name of group.names&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
+        {{name}}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
