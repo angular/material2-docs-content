@@ -419,13 +419,22 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.0.0", ngImpor
 
 /** @title Datepicker with different locale */
 class DatepickerLocaleExample {
-    constructor(_adapter, _locale) {
+    constructor(_adapter, _intl, _locale) {
         this._adapter = _adapter;
+        this._intl = _intl;
         this._locale = _locale;
+    }
+    ngOnInit() {
+        this.updateCloseButtonLabel('カレンダーを閉じる');
     }
     french() {
         this._locale = 'fr';
         this._adapter.setLocale(this._locale);
+        this.updateCloseButtonLabel('Fermer le calendrier');
+    }
+    updateCloseButtonLabel(label) {
+        this._intl.closeCalendarLabel = label;
+        this._intl.changes.next();
     }
     getDateFormatString() {
         if (this._locale === 'ja-JP') {
@@ -436,7 +445,7 @@ class DatepickerLocaleExample {
         }
         return '';
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.0.0", ngImport: i0, type: DatepickerLocaleExample, deps: [{ token: i1$1.DateAdapter }, { token: MAT_DATE_LOCALE }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.0.0", ngImport: i0, type: DatepickerLocaleExample, deps: [{ token: i1$1.DateAdapter }, { token: i3.MatDatepickerIntl }, { token: MAT_DATE_LOCALE }], target: i0.ɵɵFactoryTarget.Component }); }
     static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.0.0", type: DatepickerLocaleExample, isStandalone: true, selector: "datepicker-locale-example", providers: [
             // The locale would typically be provided on the root module of your application. We do it at
             // the component level here, due to limitations of our example generation script.
@@ -468,7 +477,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.0.0", ngImpor
                         },
                         { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
                     ], standalone: true, imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule], template: "<mat-form-field>\n  <mat-label>Different locale</mat-label>\n  <input matInput [matDatepicker]=\"dp\">\n  <mat-hint>{{getDateFormatString()}}</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp></mat-datepicker>\n</mat-form-field>\n<button mat-button (click)=\"french()\">Dynamically switch to French</button>\n", styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"] }]
-        }], ctorParameters: () => [{ type: i1$1.DateAdapter }, { type: undefined, decorators: [{
+        }], ctorParameters: () => [{ type: i1$1.DateAdapter }, { type: i3.MatDatepickerIntl }, { type: undefined, decorators: [{
                     type: Inject,
                     args: [MAT_DATE_LOCALE]
                 }] }] });
