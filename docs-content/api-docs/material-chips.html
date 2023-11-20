@@ -1678,6 +1678,13 @@ are no selected chips.</p>
   <span header-link="MatChipGrid"></span>
   <code>MatChipGrid</code>
   
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/chips/api#MatChipSet" class="docs-api-class-extends-type">
+      MatChipSet
+    </a>
+  </span>
+  
 </h4><p class="docs-api-class-description"><p>An extension of the MatChipSet component used with MatChipRow chips and
 the matChipInputFor directive.</p>
 </p><p class="docs-api-directive-selectors">
@@ -1793,7 +1800,7 @@ the matChipInputFor directive.</p>
       <code>errorState: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is in an error state.</p>
+  <td class="docs-api-property-description"><p>Whether the chip grid is in an error state.</p>
 </td>
 </tr>
 
@@ -1808,6 +1815,18 @@ the matChipInputFor directive.</p>
   </td>
   <td class="docs-api-property-description"><p>Whether any chips or the matChipInput inside of this chip-grid has focus.</p>
 </td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ngControl: NgControl</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -1880,7 +1899,7 @@ are no eligible chips.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the error state based on the provided error state matcher.</p>
+      <p>Refreshes the error state of the chip grid.</p>
 
     </td>
   </tr></table>
