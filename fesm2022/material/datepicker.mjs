@@ -605,7 +605,7 @@ class DatepickerViewsSelectionExample {
         this.date = new FormControl(moment());
     }
     setMonthAndYear(normalizedMonthAndYear, datepicker) {
-        const ctrlValue = this.date.value;
+        const ctrlValue = this.date.value ?? moment();
         ctrlValue.month(normalizedMonthAndYear.month());
         ctrlValue.year(normalizedMonthAndYear.year());
         this.date.setValue(ctrlValue);
