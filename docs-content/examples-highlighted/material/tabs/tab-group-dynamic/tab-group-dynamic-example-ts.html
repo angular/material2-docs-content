@@ -38,5 +38,6 @@
 
   <span class="hljs-function"><span class="hljs-title">removeTab</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span></span>)</span> {
     <span class="hljs-built_in">this</span>.tabs.splice(index, <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">this</span>.selected.setValue(index);
   }
 }
