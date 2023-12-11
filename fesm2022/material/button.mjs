@@ -5,9 +5,9 @@ import { MatIconModule } from '@angular/material/icon';
 import * as i2 from '@angular/material/divider';
 import { MatDividerModule } from '@angular/material/divider';
 import * as i1 from '@angular/material/button';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, MatButton } from '@angular/material/button';
 import * as i2$1 from '@angular/material/tooltip';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTooltipModule, MatTooltip } from '@angular/material/tooltip';
 
 /**
  * @title Basic buttons
@@ -34,6 +34,18 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.0-next.2", 
         }] });
 
 /**
+ * @title Interactive disabled buttons
+ */
+class ButtonDisabledInteractiveExample {
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.1.0-next.2", ngImport: i0, type: ButtonDisabledInteractiveExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.1.0-next.2", type: ButtonDisabledInteractiveExample, isStandalone: true, selector: "button-disabled-interactive-example", ngImport: i0, template: "<button\n  mat-raised-button\n  disabled\n  disabledInteractive\n  matTooltip=\"This is a tooltip!\">Disabled button allowing interactivity</button>\n\n<button\n  mat-raised-button\n  disabled\n  matTooltip=\"This is a tooltip!\">Default disabled button</button>\n", styles: ["button {\n  margin-right: 8px;\n}\n"], dependencies: [{ kind: "component", type: MatButton, selector: "    button[mat-button], button[mat-raised-button], button[mat-flat-button],    button[mat-stroked-button]  ", exportAs: ["matButton"] }, { kind: "directive", type: MatTooltip, selector: "[matTooltip]", inputs: ["matTooltipPosition", "matTooltipPositionAtOrigin", "matTooltipDisabled", "matTooltipShowDelay", "matTooltipHideDelay", "matTooltipTouchGestures", "matTooltip", "matTooltipClass"], exportAs: ["matTooltip"] }] }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.0-next.2", ngImport: i0, type: ButtonDisabledInteractiveExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'button-disabled-interactive-example', standalone: true, imports: [MatButton, MatTooltip], template: "<button\n  mat-raised-button\n  disabled\n  disabledInteractive\n  matTooltip=\"This is a tooltip!\">Disabled button allowing interactivity</button>\n\n<button\n  mat-raised-button\n  disabled\n  matTooltip=\"This is a tooltip!\">Default disabled button</button>\n", styles: ["button {\n  margin-right: 8px;\n}\n"] }]
+        }] });
+
+/**
  * @title Testing with MatButtonHarness
  */
 class ButtonHarnessExample {
@@ -52,5 +64,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.0-next.2", 
  * Generated bundle index. Do not edit.
  */
 
-export { ButtonHarnessExample, ButtonOverviewExample, ButtonTypesExample };
+export { ButtonDisabledInteractiveExample, ButtonHarnessExample, ButtonOverviewExample, ButtonTypesExample };
 //# sourceMappingURL=button.mjs.map

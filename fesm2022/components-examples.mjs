@@ -1474,6 +1474,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "button-toggle-overview-example.ts",
         "importPath": "material/button-toggle"
     },
+    "button-disabled-interactive": {
+        "packagePath": "material/button/button-disabled-interactive",
+        "title": "Interactive disabled buttons",
+        "componentName": "ButtonDisabledInteractiveExample",
+        "files": [
+            "button-disabled-interactive-example.ts",
+            "button-disabled-interactive-example.html",
+            "button-disabled-interactive-example.css"
+        ],
+        "selector": "button-disabled-interactive-example",
+        "additionalComponents": [],
+        "primaryFile": "button-disabled-interactive-example.ts",
+        "importPath": "material/button"
+    },
     "button-harness": {
         "packagePath": "material/button/button-harness",
         "title": "Testing with MatButtonHarness",
@@ -4938,6 +4952,8 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/button-toggle');
         case 'button-toggle-overview':
             return import('@angular/components-examples/material/button-toggle');
+        case 'button-disabled-interactive':
+            return import('@angular/components-examples/material/button');
         case 'button-harness':
             return import('@angular/components-examples/material/button');
         case 'button-overview':
