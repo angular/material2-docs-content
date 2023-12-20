@@ -906,6 +906,20 @@ layout recalculations if it&#39;s known that pagination won&#39;t be required.</
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>selectedIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The index of the active tab.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;mat-stretch-tabs&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>stretchTabs: boolean</code>
@@ -936,6 +950,34 @@ ARIA tabs design pattern.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>indexFocused: EventEmitter&lt;number&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when a label is focused.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectFocusedIndex: EventEmitter&lt;number&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the option is selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>focusIndex: number</code>
     </p>
@@ -950,49 +992,10 @@ ARIA tabs design pattern.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>indexFocused: EventEmitter&lt;number&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when a label is focused.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>scrollDistance: number</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Sets the distance in pixels that the tab header should be transformed in the X-axis.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>selectFocusedIndex: EventEmitter&lt;number&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the option is selected.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>selectedIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The index of the active tab.</p>
 </td>
 </tr>
 
@@ -1111,8 +1114,8 @@ page.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>active: boolean</code>
     </p>
   </td>
