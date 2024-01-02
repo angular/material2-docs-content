@@ -2,14 +2,15 @@
 <span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Datepicker start date */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;datepicker-start-view-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-start-view-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule],
+  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()],
+  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerStartViewExample</span> </span>{
   startDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1990</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
