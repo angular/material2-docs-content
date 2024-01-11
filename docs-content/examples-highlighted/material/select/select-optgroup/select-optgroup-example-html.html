@@ -3,12 +3,14 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Pokemon<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;pokemonControl&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>-- None --<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let group of pokemonGroups&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;group.name&quot;</span>
-                  [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;group.disabled&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let pokemon of group.pokemon&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;pokemon.value&quot;</span>&gt;</span>
-        {{pokemon.viewValue}}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
+    @for (group of pokemonGroups; track group) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;group.name&quot;</span>
+                    [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">&quot;group.disabled&quot;</span>&gt;</span>
+        @for (pokemon of group.pokemon; track pokemon) {
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;pokemon.value&quot;</span>&gt;</span>{{pokemon.viewValue}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        }
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
+    }
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 

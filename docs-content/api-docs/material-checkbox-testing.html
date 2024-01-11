@@ -34,7 +34,14 @@
   <span header-link="MatCheckboxHarness"></span>
   <code>MatCheckboxHarness</code>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a MDC-based mat-checkbox in tests.</p>
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a mat-checkbox in tests.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -571,7 +578,15 @@ might not have the expected result.</p>
         </div>toggle
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Toggles the checked state of the checkbox.</p>
+<p>Note: This attempts to toggle the checkbox as a user would, by clicking it. Therefore if you
+are using <code>MAT_CHECKBOX_DEFAULT_OPTIONS</code> to change the behavior on click, calling this method
+might not have the expected result.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>

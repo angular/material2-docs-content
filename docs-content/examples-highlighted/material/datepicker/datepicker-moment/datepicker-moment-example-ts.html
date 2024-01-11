@@ -1,7 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
-<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {provideMomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
 
 <span class="hljs-comment">// Depending on whether rollup is used, moment needs to be imported differently.</span>
 <span class="hljs-comment">// Since Moment.js doesn&#x27;t have a default export, we normally need to import using the `* as`</span>
@@ -21,11 +20,10 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;datepicker-moment-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-moment-example.html&#x27;</span>,
   <span class="hljs-attr">providers</span>: [
-    <span class="hljs-comment">// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing</span>
-    <span class="hljs-comment">// `MatMomentDateModule` in your applications root module. We provide it at the component level</span>
-    <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
-    {<span class="hljs-attr">provide</span>: DateAdapter, <span class="hljs-attr">useClass</span>: MomentDateAdapter, <span class="hljs-attr">deps</span>: [MAT_DATE_LOCALE]},
-    {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MAT_MOMENT_DATE_FORMATS},
+    <span class="hljs-comment">// Moment can be provided globally to your app by adding `provideMomentDateAdapter`</span>
+    <span class="hljs-comment">// to your app config. We provide it at the component level here, due to limitations</span>
+    <span class="hljs-comment">// of our example generation script.</span>
+    provideMomentDateAdapter(),
   ],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [

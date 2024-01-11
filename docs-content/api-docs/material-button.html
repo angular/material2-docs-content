@@ -62,11 +62,12 @@ specification. <code>MatButton</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -75,11 +76,12 @@ specification. <code>MatButton</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -88,7 +90,8 @@ specification. <code>MatButton</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -101,11 +104,33 @@ specification. <code>MatButton</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
 </tr>
 
 
@@ -152,7 +177,7 @@ specification. <code>MatButton</code> additionally captures an additional &quot;
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -217,11 +242,12 @@ specification. <code>MatAnchor</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -230,11 +256,12 @@ specification. <code>MatAnchor</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -243,7 +270,8 @@ specification. <code>MatAnchor</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -256,11 +284,33 @@ specification. <code>MatAnchor</code> additionally captures an additional &quot;
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
 </tr>
 
 
@@ -307,7 +357,7 @@ specification. <code>MatAnchor</code> additionally captures an additional &quot;
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -363,11 +413,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -376,11 +427,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -389,7 +441,8 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -402,11 +455,13 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
 </tr>
 
 
@@ -414,7 +469,28 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>extended: boolean</code>
     </p>
   </td>
@@ -465,7 +541,7 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -520,11 +596,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -533,11 +610,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -546,7 +624,8 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -559,11 +638,33 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
 </tr>
 
 
@@ -610,7 +711,7 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -673,11 +774,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -686,11 +788,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -699,7 +802,8 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -712,11 +816,13 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
 </tr>
 
 
@@ -724,7 +830,28 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>extended: boolean</code>
     </p>
   </td>
@@ -775,7 +902,7 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -837,11 +964,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -850,11 +978,12 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -863,7 +992,8 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -876,11 +1006,33 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
 </tr>
 
 
@@ -927,7 +1079,7 @@ See <a href="https://material.io/components/buttons-floating-action-button/">htt
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -982,11 +1134,12 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -995,11 +1148,12 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -1008,7 +1162,8 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -1021,11 +1176,33 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
 </tr>
 
 
@@ -1072,7 +1249,7 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -1127,11 +1304,12 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute, alias: &#39;aria-disabled&#39; }</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDisabled: boolean | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p><code>aria-disabled</code> value of the button.</p>
 </td>
 </tr>
 
@@ -1140,11 +1318,12 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+  <td class="docs-api-property-description"><p>Theme color palette of the button</p>
 </td>
 </tr>
 
@@ -1153,7 +1332,8 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
@@ -1166,11 +1346,33 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Whether the button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Natively disabled buttons prevent focus and any pointer events from reaching the button.
+In some scenarios this might not be desirable, because it can prevent users from finding out
+why the button is disabled (e.g. via tooltip).</p>
+<p>Enabling this input will change the button so that it is styled to be disabled and will be
+marked as <code>aria-disabled</code>, but it will allow the button to receive events and focus.</p>
+<p>Note that by enabling this, you need to set the <code>tabindex</code> yourself if the button isn&#39;t
+meant to be tabbable and you have to prevent the button action (e.g. form submissions).</p>
+</td>
 </tr>
 
 
@@ -1217,7 +1419,7 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        _origin</p>
+        origin</p>
       <code class="docs-api-method-parameter-type">FocusOrigin = &#39;program&#39;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -1250,6 +1452,40 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
+    
+      
+
+<h4 id="MatButtonConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatButtonConfig"></span>
+  <code>MatButtonConfig</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the default options for the button component.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether disabled buttons should be interactive.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     
       
 
@@ -1287,6 +1523,20 @@ See <a href="https://material.io/develop/web/components/buttons/icon-buttons/">h
       <span header-link="constants"></span>
       Constants
     </h3>
+    
+      
+
+<h4 id="MAT_BUTTON_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_BUTTON_CONFIG"></span>
+  <code>MAT_BUTTON_CONFIG</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to provide the default options the button component.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_BUTTON_CONFIG: InjectionToken&lt;MatButtonConfig&gt;;</code>
+</pre>
+</div>
+
+
     
       
 

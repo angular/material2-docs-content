@@ -92,8 +92,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>checked: boolean</code>
     </p>
   </td>
@@ -108,10 +108,10 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: ThemePalette</code>
+      <code>color: string | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+  <td class="docs-api-property-description"><p>Palette color of slide toggle.</p>
 </td>
 </tr>
 
@@ -120,12 +120,12 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the slide toggle has a ripple.</p>
 </td>
 </tr>
 
@@ -134,12 +134,12 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the slide toggle is disabled.</p>
 </td>
 </tr>
 
@@ -148,8 +148,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>hideIcon: boolean</code>
     </p>
   </td>
@@ -204,8 +204,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -220,7 +220,7 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>change: EventEmitter&lt;T&gt;</code>
+      <code>change: EventEmitter&lt;MatSlideToggleChange&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle changes its value.</p>
@@ -253,32 +253,6 @@ the slide toggle&#39;s value has changed.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Returns the unique id for the visual hidden button.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultColor: ThemePalette | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -336,6 +310,41 @@ the slide toggle&#39;s value has changed.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Implemented as a part of Validator.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fn</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">toggle
       </th>
     </tr>
@@ -343,6 +352,55 @@ the slide toggle&#39;s value has changed.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Toggles the checked state of the slide-toggle.</p>
 
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">validate
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Implemented as a part of Validator.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        control</p>
+      <code class="docs-api-method-parameter-type">AbstractControl&lt;boolean, boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
     </td>
   </tr></table>
 
@@ -372,7 +430,9 @@ where the value is always defined.</p>
   
     <span class="docs-api-class-selector-name">mat-slide-toggle[required][ngModel]</span>
   
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v19.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -641,6 +701,21 @@ where the value is always defined.</p>
     
       
 
+<h4 id="MAT_SLIDE_TOGGLE_VALUE_ACCESSOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_SLIDE_TOGGLE_VALUE_ACCESSOR"></span>
+  <code>MAT_SLIDE_TOGGLE_VALUE_ACCESSOR</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be removed in v19.0.0 or later">
+  Deprecated
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SLIDE_TOGGLE_VALUE_ACCESSOR: { <span class="hljs-attr">provide</span>: InjectionToken&lt;<span class="hljs-keyword">readonly</span> ControlValueAccessor[]&gt;; useExisting: Type&lt;<span class="hljs-built_in">any</span>&gt;; multi: <span class="hljs-built_in">boolean</span>; };</code>
+</pre>
+</div>
+
+
+    
+      
+
 <h4 id="MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS"></span>
   <code>MAT_SLIDE_TOGGLE_DEFAULT_OPTIONS</code>
@@ -658,7 +733,9 @@ where the value is always defined.</p>
 <h4 id="MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR"></span>
   <code>MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR</code>
-</h4><div class="docs-markdown">
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be removed in v19.0.0 or later">
+  Deprecated
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SLIDE_TOGGLE_REQUIRED_VALIDATOR: Provider;</code>
 </pre>

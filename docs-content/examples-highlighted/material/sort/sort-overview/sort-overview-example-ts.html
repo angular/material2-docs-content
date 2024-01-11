@@ -1,6 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {Sort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Dessert {
   <span class="hljs-attr">calories</span>: <span class="hljs-built_in">number</span>;
@@ -18,7 +17,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sort-overview-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sort-overview-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatSortModule, NgFor],
+  <span class="hljs-attr">imports</span>: [MatSortModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SortOverviewExample</span> </span>{
   <span class="hljs-attr">desserts</span>: Dessert[] = [

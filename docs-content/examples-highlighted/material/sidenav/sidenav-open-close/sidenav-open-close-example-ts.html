@@ -3,7 +3,6 @@
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSidenavModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgIf, NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Sidenav open &amp; close behavior */</span>
 <span class="hljs-meta">@Component</span>({
@@ -11,7 +10,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-open-close-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;sidenav-open-close-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [NgIf, MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule, NgFor],
+  <span class="hljs-attr">imports</span>: [MatSidenavModule, MatCheckboxModule, FormsModule, MatButtonModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavOpenCloseExample</span> </span>{
   <span class="hljs-attr">events</span>: <span class="hljs-built_in">string</span>[] = [];

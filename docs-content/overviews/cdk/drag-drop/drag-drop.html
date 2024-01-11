@@ -49,7 +49,9 @@ to set up the connection automatically. Note that any new <code>cdkDropList</cod
 will be connected to all other lists automatically.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropListGroup</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- All lists in here will be connected. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let list of lists&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  @for (list of lists; track list) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  }
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <div material-docs-example="cdk-drag-drop-connected-sorting-group"></div>
@@ -62,9 +64,13 @@ will be connected to all other lists automatically.</p>
       <p>You can associate some arbitrary data with both <code>cdkDrag</code> and <code>cdkDropList</code> by setting <code>cdkDragData</code>
 or <code>cdkDropListData</code>, respectively. Events fired from both directives include this data, allowing
 you to easily identify the origin of the drag or drop interaction.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">&quot;list&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let list of lists&quot;</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDrag</span> [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;item&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let item of list&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<pre><code class="language-html">@for (list of lists; track list) {
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">&quot;list&quot;</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
+    @for (item of list; track item) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDrag</span> [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;item&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+}
 </code></pre>
 
         <h3 id="styling" class="docs-header-link">

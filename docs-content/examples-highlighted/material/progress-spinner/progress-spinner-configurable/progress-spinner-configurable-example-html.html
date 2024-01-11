@@ -29,12 +29,14 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;mode === &#x27;determinate&#x27;&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>Progress:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    @if (mode === &#x27;determinate&#x27;) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>Progress:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    }
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
 
