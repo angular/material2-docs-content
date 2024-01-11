@@ -21,15 +21,14 @@
     <hr />
     <div cdkMenuGroup>
       <!-- #docregion size-items -->
-      @for (size of sizes; track size) {
-        <button
-            cdkMenuItemRadio
-            class="example-menu-item"
-            [cdkMenuItemChecked]="size === selectedSize"
-            (cdkMenuItemTriggered)="selectedSize = size">
-          {{size}}
-        </button>
-      }
+      <button
+          *ngFor="let size of sizes"
+          cdkMenuItemRadio
+          class="example-menu-item"
+          [cdkMenuItemChecked]="size === selectedSize"
+          (cdkMenuItemTriggered)="selectedSize = size">
+        {{size}}
+      </button>
       <!-- #enddocregion size-items -->
     </div>
     <hr />

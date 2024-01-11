@@ -1,0 +1,498 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Material legacy-slide-toggle
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-slide-toggle</code></p><h3 id="material-legacy-slide-toggle-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlideToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggle"></span>
+  <code>MatLegacySlideToggle</code>
+  
+</h4><p class="docs-api-class-description"><p>Represents a slidable &quot;switch&quot; toggle that can be moved between on and off.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-slide-toggle</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matSlideToggle</span><div class="docs-api-class-deprecated-marker" title="Will be removed in v17.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-describedby&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDescribedby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Used to set the aria-describedby attribute on the underlying input element.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Used to set the aria-label attribute on the underlying input element.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-labelledby&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Used to set the aria-labelledby attribute on the underlying input element.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the slide-toggle element is checked or not.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hideIcon: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether to hide the icon inside of the slide toggle.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>A unique id for the slide-toggle input. If none is supplied, it will be auto-generated.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: &#39;before&#39; | &#39;after&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the label should appear after or before the slide-toggle. Defaults to &#39;after&#39;.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Name value will be applied to the input element if present.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the slide-toggle is required.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle changes its value.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>toggleChange: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle input is toggled.
+This event is always emitted when the user toggles the slide toggle, but this does not mean
+the slide toggle&#39;s value has changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaults: MatSlideToggleDefaultOptions</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>inputId: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Returns the unique id for the visual hidden input.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the slide-toggle.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Toggles the checked state of the slide-toggle.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="material-legacy-slide-toggle-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlideToggleChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggleChange"></span>
+  <code>MatLegacySlideToggleChange</code>
+  
+</h4><p class="docs-api-class-description"><p>Change event object emitted by a slide toggle.</p>
+</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v17.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The new <code>checked</code> value of the slide toggle.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatLegacySlideToggle</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The source slide toggle of the event.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-legacy-slide-toggle-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlideToggleDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatLegacySlideToggleDefaultOptions"></span>
+  <code>MatLegacySlideToggleDefaultOptions</code>
+</h4><p class="docs-api-interface-description"><p>Default <code>mat-slide-toggle</code> options that can be overridden.</p>
+</p><div class="docs-api-interface-deprecated-marker" title="Will be removed in v17.0.0 or later">
+  Deprecated
+</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color for slide toggles.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableToggleValue: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether toggle action triggers value changes in slide toggle.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="material-legacy-slide-toggle-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      Constants
+    </h3>
+    
+      
+
+<h4 id="MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="Will be removed in v17.0.0 or later">
+  Deprecated
+</div><p class="docs-api-constant-description"><p>Injection token to be used to override the default options for <code>mat-slide-toggle</code></p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacySlideToggleDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

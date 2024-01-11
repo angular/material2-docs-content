@@ -6,7 +6,7 @@ import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {DatePipe} from '@angular/common';
+import {NgIf, DatePipe} from '@angular/common';
 
 /**
  * @title Table retrieving data through HTTP
@@ -16,7 +16,14 @@ import {DatePipe} from '@angular/common';
   styleUrls: ['table-http-example.css'],
   templateUrl: 'table-http-example.html',
   standalone: true,
-  imports: [MatProgressSpinnerModule, MatTableModule, MatSortModule, MatPaginatorModule, DatePipe],
+  imports: [
+    NgIf,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    DatePipe,
+  ],
 })
 export class TableHttpExample implements AfterViewInit {
   displayedColumns: string[] = ['created', 'state', 'number', 'title'];

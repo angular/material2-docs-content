@@ -2,7 +2,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 import {MatCalendarCellClassFunction, MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatNativeDateModule} from '@angular/material/core';
 
 /** @title Datepicker with custom date classes */
 @Component({
@@ -11,8 +11,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   styleUrls: ['datepicker-date-class-example.css'],
   encapsulation: ViewEncapsulation.None,
   standalone: true,
-  providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
+  imports: [MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule],
 })
 export class DatepickerDateClassExample {
   dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {

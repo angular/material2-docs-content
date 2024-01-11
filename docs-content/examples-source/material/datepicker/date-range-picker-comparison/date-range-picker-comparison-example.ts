@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {FormGroup, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatNativeDateModule} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -14,8 +14,13 @@ const year = today.getFullYear();
   templateUrl: 'date-range-picker-comparison-example.html',
   styleUrls: ['date-range-picker-comparison-example.css'],
   standalone: true,
-  providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatDatepickerModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class DateRangePickerComparisonExample {
   campaignOne = new FormGroup({

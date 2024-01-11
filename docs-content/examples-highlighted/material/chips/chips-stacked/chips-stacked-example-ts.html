@@ -1,5 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ChipColor {
@@ -15,7 +16,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-stacked-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;chips-stacked-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatChipsModule],
+  <span class="hljs-attr">imports</span>: [MatChipsModule, NgFor],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsStackedExample</span> </span>{
   <span class="hljs-attr">availableColors</span>: ChipColor[] = [

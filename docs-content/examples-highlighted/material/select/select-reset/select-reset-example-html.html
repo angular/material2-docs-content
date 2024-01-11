@@ -3,9 +3,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>None<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    @for (state of states; track state) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;state&quot;</span>&gt;</span>{{state}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let state of states&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;state&quot;</span>&gt;</span>{{state}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 

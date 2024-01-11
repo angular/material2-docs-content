@@ -2,8 +2,6 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Enter your email<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;pat@example.com&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
-    @if (email.invalid) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>{{getErrorMessage()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;email.invalid&quot;</span>&gt;</span>{{getErrorMessage()}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

@@ -1,14 +1,6 @@
 import * as i0 from '@angular/core';
 
 /**
- * @title Interactive disabled buttons
- */
-export declare class ButtonDisabledInteractiveExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonDisabledInteractiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonDisabledInteractiveExample, "button-disabled-interactive-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Testing with MatButtonHarness
  */
 export declare class ButtonHarnessExample {

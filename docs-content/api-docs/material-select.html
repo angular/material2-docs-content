@@ -30,6 +30,26 @@
     
       
 
+<h4 id="MatSelectTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSelectTrigger"></span>
+  <code>MatSelectTrigger</code>
+  
+</h4><p class="docs-api-class-description"><p>Allows the user to customize the trigger that is displayed when the select has a value.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-select-trigger</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
 <h4 id="MatSelect" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatSelect"></span>
   <code>MatSelect</code>
@@ -94,9 +114,9 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
-      <code>disableOptionCentering: this._defaultOptions?.disableOptionCentering ?? false</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableOptionCentering: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether to center the active option over the trigger.</p>
@@ -108,12 +128,12 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples in the select are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -122,12 +142,12 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the select is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
 </td>
 </tr>
 
@@ -150,8 +170,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>hideSingleSelectionIndicator: boolean</code>
     </p>
   </td>
@@ -178,8 +198,8 @@ should be returned.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>multiple: boolean</code>
     </p>
   </td>
@@ -237,8 +257,8 @@ If set to null or an empty string, the panel will grow to match the longest opti
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -266,8 +286,8 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>typeaheadDebounceInterval: number</code>
     </p>
   </td>
@@ -310,7 +330,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
-      <code>selectionChange: EventEmitter&lt;MatSelectChange&gt;</code>
+      <code>selectionChange: EventEmitter&lt;C&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Event emitted when the selected value has been changed by the user.</p>
@@ -339,7 +359,19 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <code>customTrigger: MatSelectTrigger</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>User-supplied override of the trigger element.</p>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
 </td>
 </tr>
 
@@ -365,7 +397,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <code>errorState: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the select is in an error state.</p>
+  <td class="docs-api-property-description"><p>Whether the component is in an error state.</p>
 </td>
 </tr>
 
@@ -388,23 +420,10 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ngControl: NgControl</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>optionGroups: QueryList&lt;MatOptgroup&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>All of the defined groups of options.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -429,8 +448,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <code>options: QueryList&lt;MatOption&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>All of the defined select options.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -478,6 +496,18 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>shouldLabelFloat: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>trigger: ElementRef</code>
     </p>
   </td>
@@ -513,12 +543,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <th colspan="2" class="docs-api-method-name-cell">close
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Closes the overlay panel and focuses the host element.</p>
-
-    </td>
-  </tr></table>
+  </thead></table>
 
 
   
@@ -565,12 +590,7 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
       <th colspan="2" class="docs-api-method-name-cell">open
       </th>
     </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Opens the overlay panel.</p>
-
-    </td>
-  </tr></table>
+  </thead></table>
 
 
   
@@ -601,33 +621,13 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Refreshes the error state of the select.</p>
+      <p>Updates the error state based on the provided error state matcher.</p>
 
     </td>
   </tr></table>
 
 
   
-
-
-
-    
-      
-
-<h4 id="MatSelectTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatSelectTrigger"></span>
-  <code>MatSelectTrigger</code>
-  
-</h4><p class="docs-api-class-description"><p>Allows the user to customize the trigger that is displayed when the select has a value.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-select-trigger</span>
-  
-</p>
-
-
-
 
 
 

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgFor} from '@angular/common';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 export interface Tile {
@@ -15,7 +16,7 @@ export interface Tile {
   selector: 'grid-list-dynamic-example',
   templateUrl: 'grid-list-dynamic-example.html',
   standalone: true,
-  imports: [MatGridListModule],
+  imports: [MatGridListModule, NgFor],
 })
 export class GridListDynamicExample {
   tiles: Tile[] = [

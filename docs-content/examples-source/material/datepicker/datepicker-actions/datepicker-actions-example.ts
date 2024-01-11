@@ -3,7 +3,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatNativeDateModule} from '@angular/material/core';
 
 /** @title Datepicker action buttons */
 @Component({
@@ -11,7 +11,12 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   templateUrl: 'datepicker-actions-example.html',
   styleUrls: ['datepicker-actions-example.css'],
   standalone: true,
-  providers: [provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+  ],
 })
 export class DatepickerActionsExample {}

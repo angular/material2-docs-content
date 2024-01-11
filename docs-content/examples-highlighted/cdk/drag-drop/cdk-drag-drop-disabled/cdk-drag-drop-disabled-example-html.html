@@ -1,8 +1,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
-  @for (item of items; track item) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span>
-      <span class="hljs-attr">cdkDrag</span>
-      [<span class="hljs-attr">cdkDragDisabled</span>]=<span class="hljs-string">&quot;item.disabled&quot;</span>&gt;</span>{{item.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  }
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span>
+    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let item of items&quot;</span>
+    <span class="hljs-attr">cdkDrag</span>
+    [<span class="hljs-attr">cdkDragDisabled</span>]=<span class="hljs-string">&quot;item.disabled&quot;</span>&gt;</span>{{item.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

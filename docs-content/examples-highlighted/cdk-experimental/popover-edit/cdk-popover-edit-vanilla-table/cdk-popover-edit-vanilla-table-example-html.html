@@ -19,53 +19,51 @@
       <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-
+  
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let element of elements&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>&gt;</span>
+      {{element.name}}
+      
+      <span class="hljs-comment">&lt;!-- This edit is defined in the cell and can implicitly access element --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">nameEdit</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color: white; width: 100%&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">&quot;ngForm&quot;</span>
+              <span class="hljs-attr">cdkEditControl</span>
+              (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">&quot;onSubmitName(element, f)&quot;</span>
+              [<span class="hljs-attr">cdkEditControlPreservedFormValue</span>]=<span class="hljs-string">&quot;preservedNameValues.get(element)&quot;</span>
+              (<span class="hljs-attr">cdkEditControlPreservedFormValueChange</span>)=<span class="hljs-string">&quot;preservedNameValues.set(element, $event)&quot;</span>&gt;</span>
+            Edit a:
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">&quot;element.name&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Confirm<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditRevert</span>&gt;</span>Revert<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditClose</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-  @for (element of elements; track element) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;nameEdit&quot;</span>&gt;</span>
-        {{element.name}}
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;weightEdit&quot;</span> [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;element&quot;</span>&gt;</span>
+      {{element.weight}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 
-        <span class="hljs-comment">&lt;!-- This edit is defined in the cell and can implicitly access element --&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">nameEdit</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color: white; width: 100%&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">&quot;ngForm&quot;</span>
-                <span class="hljs-attr">cdkEditControl</span>
-                (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">&quot;onSubmitName(element, f)&quot;</span>
-                [<span class="hljs-attr">cdkEditControlPreservedFormValue</span>]=<span class="hljs-string">&quot;preservedNameValues.get(element)&quot;</span>
-                (<span class="hljs-attr">cdkEditControlPreservedFormValueChange</span>)=<span class="hljs-string">&quot;preservedNameValues.set(element, $event)&quot;</span>&gt;</span>
-              Edit a:
-              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">&quot;element.name&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">required</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>Confirm<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditRevert</span>&gt;</span>Revert<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditClose</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">&quot;weightEdit&quot;</span> [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">&quot;element&quot;</span>&gt;</span>
-        {{element.weight}}
-
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  }
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

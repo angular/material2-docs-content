@@ -5,6 +5,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {NgIf, NgFor} from '@angular/common';
 
 /** @title Responsive sidenav */
 @Component({
@@ -12,7 +13,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   templateUrl: 'sidenav-responsive-example.html',
   styleUrls: ['sidenav-responsive-example.css'],
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule],
+  imports: [
+    NgIf,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    NgFor,
+  ],
 })
 export class SidenavResponsiveExample implements OnDestroy {
   mobileQuery: MediaQueryList;

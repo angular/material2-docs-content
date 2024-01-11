@@ -1,4 +1,4 @@
-@if (shouldRun) {
+<ng-container *ngIf="shouldRun">
   <mat-toolbar class="example-header">Header</mat-toolbar>
 
   <mat-sidenav-container class="example-container">
@@ -23,6 +23,6 @@
   </mat-sidenav-container>
 
   <mat-toolbar class="example-footer">Footer</mat-toolbar>
-} @else {
-  <div>Please open on StackBlitz to see result</div>
-}
+</ng-container>
+
+<div *ngIf="!shouldRun">Please open on StackBlitz to see result</div>

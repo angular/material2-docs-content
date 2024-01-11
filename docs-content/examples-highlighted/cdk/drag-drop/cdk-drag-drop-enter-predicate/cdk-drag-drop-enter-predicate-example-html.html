@@ -9,12 +9,11 @@
     <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span>
     (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>
     [<span class="hljs-attr">cdkDropListEnterPredicate</span>]=<span class="hljs-string">&quot;noReturnPredicate&quot;</span>&gt;</span>
-    @for (number of all; track number) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span>
-          [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;number&quot;</span>
-          <span class="hljs-attr">cdkDrag</span>&gt;</span>{{number}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span>
+      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let number of all&quot;</span>
+      [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;number&quot;</span>
+      <span class="hljs-attr">cdkDrag</span>&gt;</span>{{number}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
@@ -29,12 +28,11 @@
     <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span>
     (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>
     [<span class="hljs-attr">cdkDropListEnterPredicate</span>]=<span class="hljs-string">&quot;evenPredicate&quot;</span>&gt;</span>
-    @for (number of even; track number) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span>
-          <span class="hljs-attr">cdkDrag</span>
-          [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;number&quot;</span>&gt;</span>{{number}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span>
+      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let number of even&quot;</span>
+      <span class="hljs-attr">cdkDrag</span>
+      [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;number&quot;</span>&gt;</span>{{number}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 

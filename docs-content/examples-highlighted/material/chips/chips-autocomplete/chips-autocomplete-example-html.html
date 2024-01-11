@@ -2,23 +2,21 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-chip-list&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Fruits<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">chipGrid</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Fruit selection&quot;</span>&gt;</span>
-      @for (fruit of fruits; track fruit) {
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(fruit)&quot;</span>&gt;</span>
-          {{fruit}}
-          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;remove &#x27; + fruit&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
-      }
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let fruit of fruits&quot;</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(fruit)&quot;</span>&gt;</span>
+        {{fruit}}
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;remove &#x27; + fruit&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-grid</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;New Fruit...&quot;</span> #<span class="hljs-attr">fruitInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;fruitCtrl&quot;</span>
       [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;chipGrid&quot;</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;auto&quot;</span>
       [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
       (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span>/&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span> (<span class="hljs-attr">optionSelected</span>)=<span class="hljs-string">&quot;selected($event)&quot;</span>&gt;</span>
-      @for (fruit of filteredFruits | async; track fruit) {
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span>&gt;</span>{{fruit}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-      }
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let fruit of filteredFruits | async&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span>&gt;</span>
+        {{fruit}}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

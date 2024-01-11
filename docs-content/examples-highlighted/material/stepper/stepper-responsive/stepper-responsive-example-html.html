@@ -1,11 +1,7 @@
-@switch (stepperOrientation | async) {
-  @case (&#x27;horizontal&#x27;) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Make your screen smaller to see a vertical stepper<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  }
-  @case (&#x27;vertical&#x27;) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Make your screen larger to see a horizontal stepper<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  }
-}
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> [<span class="hljs-attr">ngSwitch</span>]=<span class="hljs-string">&quot;stepperOrientation | async&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngSwitchCase</span>=<span class="hljs-string">&quot;&#x27;horizontal&#x27;&quot;</span>&gt;</span>Make your screen smaller to see a vertical stepper<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngSwitchCase</span>=<span class="hljs-string">&quot;&#x27;vertical&#x27;&quot;</span>&gt;</span>Make your screen larger to see a horizontal stepper<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span>
   <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-stepper&quot;</span>

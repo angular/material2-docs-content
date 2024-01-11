@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgFor} from '@angular/common';
 import {
   CdkDrag,
   CdkDragDrop,
@@ -16,7 +17,7 @@ import {
   templateUrl: 'cdk-drag-drop-disabled-sorting-example.html',
   styleUrls: ['cdk-drag-drop-disabled-sorting-example.css'],
   standalone: true,
-  imports: [CdkDropListGroup, CdkDropList, CdkDrag],
+  imports: [CdkDropListGroup, CdkDropList, NgFor, CdkDrag],
 })
 export class CdkDragDropDisabledSortingExample {
   items = ['Carrots', 'Tomatoes', 'Onions', 'Apples', 'Avocados'];

@@ -1,6 +1,7 @@
 <span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {provideMomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
+<span class="hljs-keyword">import</span> {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDatepicker, MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 
 <span class="hljs-comment">// Depending on whether rollup is used, moment needs to be imported differently.</span>
@@ -35,10 +36,15 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-views-selection-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;datepicker-views-selection-example.css&#x27;</span>],
   <span class="hljs-attr">providers</span>: [
-    <span class="hljs-comment">// Moment can be provided globally to your app by adding `provideMomentDateAdapter`</span>
-    <span class="hljs-comment">// to your app config. We provide it at the component level here, due to limitations</span>
-    <span class="hljs-comment">// of our example generation script.</span>
-    provideMomentDateAdapter(MY_FORMATS),
+    <span class="hljs-comment">// `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your</span>
+    <span class="hljs-comment">// application&#x27;s root module. We provide it at the component level here, due to limitations of</span>
+    <span class="hljs-comment">// our example generation script.</span>
+    {
+      <span class="hljs-attr">provide</span>: DateAdapter,
+      <span class="hljs-attr">useClass</span>: MomentDateAdapter,
+      <span class="hljs-attr">deps</span>: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+    },
+    {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MY_FORMATS},
   ],
   <span class="hljs-attr">encapsulation</span>: ViewEncapsulation.None,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
@@ -54,7 +60,7 @@
   date = <span class="hljs-keyword">new</span> FormControl(moment());
 
   <span class="hljs-function"><span class="hljs-title">setMonthAndYear</span>(<span class="hljs-params">normalizedMonthAndYear: Moment, datepicker: MatDatepicker&lt;Moment&gt;</span>)</span> {
-    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-built_in">this</span>.date.value ?? moment();
+    <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-built_in">this</span>.date.value!;
     ctrlValue.month(normalizedMonthAndYear.month());
     ctrlValue.year(normalizedMonthAndYear.year());
     <span class="hljs-built_in">this</span>.date.setValue(ctrlValue);

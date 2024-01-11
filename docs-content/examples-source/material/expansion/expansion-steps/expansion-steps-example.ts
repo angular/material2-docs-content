@@ -5,7 +5,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatNativeDateModule} from '@angular/material/core';
 
 /**
  * @title Expansion panel as accordion
@@ -15,7 +15,6 @@ import {provideNativeDateAdapter} from '@angular/material/core';
   templateUrl: 'expansion-steps-example.html',
   styleUrls: ['expansion-steps-example.css'],
   standalone: true,
-  providers: [provideNativeDateAdapter()],
   imports: [
     MatExpansionModule,
     MatIconModule,
@@ -23,6 +22,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
     MatInputModule,
     MatButtonModule,
     MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class ExpansionStepsExample {

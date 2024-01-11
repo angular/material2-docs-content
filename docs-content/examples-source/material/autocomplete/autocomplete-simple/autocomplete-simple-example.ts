@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgFor} from '@angular/common';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -18,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    NgFor,
   ],
 })
 export class AutocompleteSimpleExample {

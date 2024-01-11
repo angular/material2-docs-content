@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {NgFor} from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -20,7 +21,14 @@ interface PokemonGroup {
   selector: 'select-optgroup-example',
   templateUrl: 'select-optgroup-example.html',
   standalone: true,
-  imports: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatInputModule],
+  imports: [
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgFor,
+    MatInputModule,
+  ],
 })
 export class SelectOptgroupExample {
   pokemonControl = new FormControl('');

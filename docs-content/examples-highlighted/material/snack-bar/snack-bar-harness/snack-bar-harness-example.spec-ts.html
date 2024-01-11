@@ -4,6 +4,7 @@
 <span class="hljs-keyword">import</span> {SnackBarHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./snack-bar-harness-example&#x27;</span>;
 <span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSnackBarHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;SnackBarHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;SnackBarHarnessExample&gt;;
@@ -11,7 +12,7 @@ describe(<span class="hljs-string">&#x27;SnackBarHarnessExample&#x27;</span>, <s
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [NoopAnimationsModule],
+      <span class="hljs-attr">imports</span>: [MatSnackBarModule, NoopAnimationsModule],
     }).compileComponents();
     fixture = TestBed.createComponent(SnackBarHarnessExample);
     fixture.detectChanges();

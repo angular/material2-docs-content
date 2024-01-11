@@ -4,6 +4,7 @@ import {Component, Injectable} from '@angular/core';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {NgIf} from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTreeModule} from '@angular/material/tree';
@@ -141,7 +142,7 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
   templateUrl: 'tree-dynamic-example.html',
   styleUrls: ['tree-dynamic-example.css'],
   standalone: true,
-  imports: [MatTreeModule, MatButtonModule, MatIconModule, MatProgressBarModule],
+  imports: [MatTreeModule, MatButtonModule, MatIconModule, NgIf, MatProgressBarModule],
 })
 export class TreeDynamicExample {
   constructor(database: DynamicDatabase) {

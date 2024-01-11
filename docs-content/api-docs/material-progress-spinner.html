@@ -54,10 +54,10 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>color: string</code>
+      <code>color: ThemePalette</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Theme palette color of the progress spinner.</p>
+  <td class="docs-api-property-description"><p>Theme color palette for the component.</p>
 </td>
 </tr>
 
@@ -66,8 +66,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>diameter: number</code>
     </p>
   </td>
@@ -97,8 +97,8 @@ Mirrored to mode attribute.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>strokeWidth: number</code>
     </p>
   </td>
@@ -111,12 +111,25 @@ Mirrored to mode attribute.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>value: number</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Value of the progress bar. Defaults to zero. Mirrored to aria-valuenow.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default color to fall back to if no value is set.</p>
 </td>
 </tr>
 
