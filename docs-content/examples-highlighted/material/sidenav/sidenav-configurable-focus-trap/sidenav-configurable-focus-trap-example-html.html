@@ -1,39 +1,36 @@
-@if (shouldRun) {
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span> [<span class="hljs-attr">hasBackdrop</span>]=<span class="hljs-string">&quot;hasBackdrop.value&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> #<span class="hljs-attr">sidenav</span> [<span class="hljs-attr">mode</span>]=<span class="hljs-string">&quot;mode.value!&quot;</span> [<span class="hljs-attr">position</span>]=<span class="hljs-string">&quot;position.value!&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;sidenav.toggle()&quot;</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Test input for drawer<span class="hljs-tag">&lt;<span class="hljs-name">input</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;shouldRun&quot;</span> [<span class="hljs-attr">hasBackdrop</span>]=<span class="hljs-string">&quot;hasBackdrop.value&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> #<span class="hljs-attr">sidenav</span> [<span class="hljs-attr">mode</span>]=<span class="hljs-string">&quot;mode.value!&quot;</span> [<span class="hljs-attr">position</span>]=<span class="hljs-string">&quot;position.value!&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;sidenav.toggle()&quot;</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Test input for drawer<span class="hljs-tag">&lt;<span class="hljs-name">input</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;sidenav.toggle()&quot;</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;mode&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Mode:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;over&quot;</span>&gt;</span>Over<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;side&quot;</span>&gt;</span>Side<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;push&quot;</span>&gt;</span>Push<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;hasBackdrop&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Has Backdrop:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;null&quot;</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;position&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Position:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;start&quot;</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;end&quot;</span>&gt;</span>End<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Test input for drawer content<span class="hljs-tag">&lt;<span class="hljs-name">input</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
-} @else {
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Please open on Stackblitz to see result<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-}
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;sidenav.toggle()&quot;</span>&gt;</span>Toggle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;mode&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Mode:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;over&quot;</span>&gt;</span>Over<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;side&quot;</span>&gt;</span>Side<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;push&quot;</span>&gt;</span>Push<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;hasBackdrop&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Has Backdrop:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;null&quot;</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-radio-group&quot;</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;position&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Position:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;start&quot;</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;end&quot;</span>&gt;</span>End<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Test input for drawer content<span class="hljs-tag">&lt;<span class="hljs-name">input</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
 
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!shouldRun&quot;</span>&gt;</span>Please open on Stackblitz to see result<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

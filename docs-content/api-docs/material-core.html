@@ -36,8 +36,8 @@
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
-    <a href="components/core/api#DateAdapter" class="docs-api-class-extends-type">
-      DateAdapter
+    <a href="" class="docs-api-class-extends-type">
+      LegacyDateAdapter
     </a>
   </span>
   
@@ -1547,6 +1547,30 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     
       
 
+<h4 id="MatLine" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLine"></span>
+  <code>MatLine</code>
+  
+</h4><p class="docs-api-class-description"><p>Shared directive to count lines inside a text area, such as a list item.
+Line elements can be extracted with a @ContentChildren(MatLine) query, then
+counted by checking the query list&#39;s length.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[mat-line]</span>
+  
+    <span class="docs-api-class-selector-name">[matLine]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
 <h4 id="MatOption" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatOption"></span>
   <code>MatOption</code>
@@ -1568,8 +1592,8 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -1654,7 +1678,7 @@ for components like autocomplete where focus must remain on the input.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>group: MatOptgroup</code>
+      <code>group: _MatOptgroupBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -1934,12 +1958,12 @@ events will display the proper options as active on arrow key events.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>whether the option group is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
 </td>
 </tr>
 
@@ -1960,30 +1984,6 @@ events will display the proper options as active on arrow key events.</p>
 
     
   </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatLine" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatLine"></span>
-  <code>MatLine</code>
-  
-</h4><p class="docs-api-class-description"><p>Shared directive to count lines inside a text area, such as a list item.
-Line elements can be extracted with a @ContentChildren(MatLine) query, then
-counted by checking the query list&#39;s length.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[mat-line]</span>
-  
-    <span class="docs-api-class-selector-name">[matLine]</span>
-  
-</p>
 
 
 
@@ -3586,7 +3586,7 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatOption&lt;T&gt;</code>
+      <code>source: _MatOptionBase&lt;T&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the option that emitted the event.</p>
@@ -3959,51 +3959,6 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">HasInitializedCtor &amp; T</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-    
-      
-      
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">provideNativeDateAdapter
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        formats</p>
-      <code class="docs-api-method-parameter-type">MatDateFormats = MAT_NATIVE_DATE_FORMATS</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Provider[]</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">

@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {Component, forwardRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkStepper, CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgTemplateOutlet} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgTemplateOutlet, NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>A custom CDK linear stepper with forms */</span>
 <span class="hljs-meta">@Component</span>({
@@ -39,7 +39,7 @@
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./example-custom-linear-stepper.css&#x27;</span>],
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomLinearStepper}],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [NgTemplateOutlet, CdkStepperModule],
+  <span class="hljs-attr">imports</span>: [NgTemplateOutlet, CdkStepperModule, NgFor],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomLinearStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CdkStepper</span> </span>{
   selectStepByIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {

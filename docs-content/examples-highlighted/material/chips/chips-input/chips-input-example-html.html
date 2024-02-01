@@ -1,18 +1,16 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-chip-list&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Fruits<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">chipGrid</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Enter fruits&quot;</span>&gt;</span>
-    @for (fruit of fruits; track fruit) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span>
-        (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(fruit)&quot;</span>
-        [<span class="hljs-attr">editable</span>]=<span class="hljs-string">&quot;true&quot;</span>
-        (<span class="hljs-attr">edited</span>)=<span class="hljs-string">&quot;edit(fruit, $event)&quot;</span>
-        [<span class="hljs-attr">aria-description</span>]=<span class="hljs-string">&quot;&#x27;press enter to edit &#x27; + fruit.name&quot;</span>&gt;</span>
-        {{fruit.name}}
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;remove &#x27; + fruit.name&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let fruit of fruits&quot;</span>
+                  (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;remove(fruit)&quot;</span>
+                  [<span class="hljs-attr">editable</span>]=<span class="hljs-string">&quot;true&quot;</span>
+                  (<span class="hljs-attr">edited</span>)=<span class="hljs-string">&quot;edit(fruit, $event)&quot;</span>
+                  [<span class="hljs-attr">aria-description</span>]=<span class="hljs-string">&quot;&#x27;press enter to edit &#x27; + fruit.name&quot;</span>&gt;</span>
+      {{fruit.name}}
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;remove &#x27; + fruit.name&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;New fruit...&quot;</span>
            [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;chipGrid&quot;</span>
            [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>

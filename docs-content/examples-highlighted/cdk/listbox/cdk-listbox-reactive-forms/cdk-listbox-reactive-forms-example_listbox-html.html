@@ -5,7 +5,9 @@
     [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;languageCtrl&quot;</span>
     <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;example-language-label&quot;</span>
     <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-listbox&quot;</span>&gt;</span>
-  @for (language of languages; track language) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;language&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>{{language}}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  }
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let language of languages&quot;</span>
+      [<span class="hljs-attr">cdkOption</span>]=<span class="hljs-string">&quot;language&quot;</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-option&quot;</span>&gt;</span>
+    {{language}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>

@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {NgIf} from '@angular/common';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
 /** @title Virtual scrolling window */
@@ -8,7 +9,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
   templateUrl: 'cdk-virtual-scroll-window-scrolling-example.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [ScrollingModule],
+  imports: [NgIf, ScrollingModule],
 })
 export class CdkVirtualScrollWindowScrollingExample {
   @Input() shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);

@@ -36,11 +36,14 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;step-navigation-bar&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-button&quot;</span> <span class="hljs-attr">cdkStepperPrevious</span>&gt;</span><span class="hljs-symbol">&amp;larr;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    @for (step of steps; track step) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;step&quot;</span> [<span class="hljs-attr">class.active</span>]=<span class="hljs-string">&quot;selectedIndex === $index&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onClick(i)&quot;</span>&gt;</span>
-        Step {{i + 1}}
-      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;step&quot;</span>
+      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let step of steps; let i = index;&quot;</span>
+      [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">&quot;{&#x27;active&#x27;: selectedIndex === i}&quot;</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;onClick(i)&quot;</span>
+    &gt;</span>
+      Step {{i + 1}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;nav-button&quot;</span> <span class="hljs-attr">cdkStepperNext</span>&gt;</span><span class="hljs-symbol">&amp;rarr;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
@@ -96,11 +99,9 @@
 <p>As you can see in this example, each step needs to be wrapped inside a <code>&lt;cdk-step&gt;</code> tag.</p>
 <p>If you want to iterate over your steps and use your own custom component you can do it, for example, this way:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">app-custom-stepper</span>&gt;</span>
-  @for (step of mySteps; track step) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">my-step-component</span> [<span class="hljs-attr">step</span>]=<span class="hljs-string">&quot;$index&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-step-component</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
-  }
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-step</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let step of mySteps; let stepIndex = index&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">my-step-component</span> [<span class="hljs-attr">step</span>]=<span class="hljs-string">&quot;step&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">my-step-component</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-step</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span>
 </code></pre>
 

@@ -1,16 +1,11 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container mat-elevation-z8&quot;</span>&gt;</span>
-  @if (isLoadingResults || isRateLimitReached) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-loading-shade&quot;</span>&gt;</span>
-      @if (isLoadingResults) {
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
-      }
-      @if (isRateLimitReached) {
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-rate-limit-reached&quot;</span>&gt;</span>
-          GitHub&#x27;s API rate limit has been reached. It will be reset in one minute.
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      }
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-loading-shade&quot;</span>
+       *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;isLoadingResults || isRateLimitReached&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;isLoadingResults&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-rate-limit-reached&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;isRateLimitReached&quot;</span>&gt;</span>
+      GitHub&#x27;s API rate limit has been reached. It will be reset in one minute.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-table-container&quot;</span>&gt;</span>
 

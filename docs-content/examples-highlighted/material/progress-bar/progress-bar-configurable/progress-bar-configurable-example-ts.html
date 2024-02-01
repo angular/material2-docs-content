@@ -2,6 +2,7 @@
 <span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {ProgressBarMode, MatProgressBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-bar&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSliderModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slider&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgIf} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
@@ -14,7 +15,14 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;progress-bar-configurable-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;progress-bar-configurable-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatCardModule, MatRadioModule, FormsModule, MatSliderModule, MatProgressBarModule],
+  <span class="hljs-attr">imports</span>: [
+    MatCardModule,
+    MatRadioModule,
+    FormsModule,
+    NgIf,
+    MatSliderModule,
+    MatProgressBarModule,
+  ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProgressBarConfigurableExample</span> </span>{
   <span class="hljs-attr">color</span>: ThemePalette = <span class="hljs-string">&#x27;primary&#x27;</span>;

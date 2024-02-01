@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgFor} from '@angular/common';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 /**
@@ -9,7 +10,7 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
   templateUrl: 'cdk-accordion-overview-example.html',
   styleUrls: ['cdk-accordion-overview-example.css'],
   standalone: true,
-  imports: [CdkAccordionModule],
+  imports: [CdkAccordionModule, NgFor],
 })
 export class CdkAccordionOverviewExample {
   items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];

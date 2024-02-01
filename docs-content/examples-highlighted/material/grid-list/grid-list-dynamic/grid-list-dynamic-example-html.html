@@ -1,8 +1,9 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-grid-list</span> <span class="hljs-attr">cols</span>=<span class="hljs-string">&quot;4&quot;</span> <span class="hljs-attr">rowHeight</span>=<span class="hljs-string">&quot;100px&quot;</span>&gt;</span>
-  @for (tile of tiles; track tile) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-grid-tile</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-grid-tile</span>
+      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let tile of tiles&quot;</span>
       [<span class="hljs-attr">colspan</span>]=<span class="hljs-string">&quot;tile.cols&quot;</span>
       [<span class="hljs-attr">rowspan</span>]=<span class="hljs-string">&quot;tile.rows&quot;</span>
-      [<span class="hljs-attr">style.background</span>]=<span class="hljs-string">&quot;tile.color&quot;</span>&gt;</span>{{tile.text}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-grid-tile</span>&gt;</span>
-  }
+      [<span class="hljs-attr">style.background</span>]=<span class="hljs-string">&quot;tile.color&quot;</span>&gt;</span>
+    {{tile.text}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-grid-tile</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-grid-list</span>&gt;</span>

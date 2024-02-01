@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
+import {NgFor} from '@angular/common';
 
 /**
  * @title Drag&Drop sorting
@@ -9,7 +10,7 @@ import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/d
   templateUrl: 'cdk-drag-drop-sorting-example.html',
   styleUrls: ['cdk-drag-drop-sorting-example.css'],
   standalone: true,
-  imports: [CdkDropList, CdkDrag],
+  imports: [CdkDropList, NgFor, CdkDrag],
 })
 export class CdkDragDropSortingExample {
   movies = [

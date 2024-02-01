@@ -3,9 +3,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Food<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">value</span>)]=<span class="hljs-string">&quot;selectedFood&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    @for (option of foods; track option) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span>&gt;</span>{{ option.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
-    }
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let option of foods&quot;</span>&gt;</span>{{ option.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You selected: {{selectedFood}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -15,10 +13,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Favorite Car<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">matNativeControl</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;selectCar($event)&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-    @for (option of cars; track option) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let option of cars&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span>
             [<span class="hljs-attr">selected</span>]=<span class="hljs-string">&quot;selectedCar === option.value&quot;</span>&gt;</span>{{ option.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-    }
   <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You selected: {{selectedCar}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

@@ -3,9 +3,7 @@
   <mat-label>State</mat-label>
   <mat-select>
     <mat-option>None</mat-option>
-    @for (state of states; track state) {
-      <mat-option [value]="state">{{state}}</mat-option>
-    }
+    <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
   </mat-select>
 </mat-form-field>
 

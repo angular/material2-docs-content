@@ -1,4 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   CdkDragDrop,
   CdkDrag,
@@ -16,7 +17,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-connected-sorting-group-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-drag-drop-connected-sorting-group-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [CdkDropListGroup, CdkDropList, CdkDrag],
+  <span class="hljs-attr">imports</span>: [CdkDropListGroup, CdkDropList, NgFor, CdkDrag],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDragDropConnectedSortingGroupExample</span> </span>{
   todo = [<span class="hljs-string">&#x27;Get to work&#x27;</span>, <span class="hljs-string">&#x27;Pick up groceries&#x27;</span>, <span class="hljs-string">&#x27;Go home&#x27;</span>, <span class="hljs-string">&#x27;Fall asleep&#x27;</span>];

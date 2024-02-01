@@ -8,11 +8,9 @@ import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MatDateFormats } from '@angular/material/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDatepickerIntl } from '@angular/material/datepicker';
 import { Moment } from 'moment';
 import * as _moment from 'moment';
 import { OnDestroy } from '@angular/core';
-import { OnInit } from '@angular/core';
 
 /** @title Datepicker action buttons */
 export declare class DatepickerActionsExample {
@@ -98,14 +96,11 @@ export declare class DatepickerInlineCalendarExample {
 }
 
 /** @title Datepicker with different locale */
-export declare class DatepickerLocaleExample implements OnInit {
+export declare class DatepickerLocaleExample {
     private _adapter;
-    private _intl;
     private _locale;
-    constructor(_adapter: DateAdapter<any>, _intl: MatDatepickerIntl, _locale: string);
-    ngOnInit(): void;
+    constructor(_adapter: DateAdapter<any>, _locale: string);
     french(): void;
-    updateCloseButtonLabel(label: string): void;
     getDateFormatString(): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerLocaleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerLocaleExample, "datepicker-locale-example", never, {}, {}, never, never, true, never>;

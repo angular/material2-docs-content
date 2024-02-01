@@ -1,6 +1,6 @@
 import {Component, forwardRef} from '@angular/core';
 import {CdkStepper, CdkStepperModule} from '@angular/cdk/stepper';
-import {NgTemplateOutlet} from '@angular/common';
+import {NgTemplateOutlet, NgFor} from '@angular/common';
 
 /** @title A custom CDK stepper without a form */
 @Component({
@@ -19,7 +19,7 @@ export class CdkCustomStepperWithoutFormExample {}
   styleUrls: ['./example-custom-stepper.css'],
   providers: [{provide: CdkStepper, useExisting: CustomStepper}],
   standalone: true,
-  imports: [NgTemplateOutlet, CdkStepperModule],
+  imports: [NgTemplateOutlet, CdkStepperModule, NgFor],
 })
 export class CustomStepper extends CdkStepper {
   selectStepByIndex(index: number): void {

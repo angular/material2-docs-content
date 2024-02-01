@@ -34,8 +34,7 @@
   <span header-link="MatAutocomplete"></span>
   <code>MatAutocomplete</code>
   
-</h4><p class="docs-api-class-description"><p>Autocomplete component.</p>
-</p><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-autocomplete</span>
@@ -79,8 +78,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>autoActiveFirstOption: boolean</code>
     </p>
   </td>
@@ -94,8 +93,8 @@ Can be configured globally through the <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>autoSelectActiveOption: boolean</code>
     </p>
   </td>
@@ -123,12 +122,12 @@ inside the overlay container to allow for easy styling.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled within the autocomplete panel.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
 </td>
 </tr>
 
@@ -151,8 +150,8 @@ inside the overlay container to allow for easy styling.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>hideSingleSelectionIndicator: boolean</code>
     </p>
   </td>
@@ -180,8 +179,8 @@ match the width of its host.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>requireSelection: boolean</code>
     </p>
   </td>
@@ -384,8 +383,7 @@ as a connection point for an autocomplete panel.</p>
   <span header-link="MatAutocompleteTrigger"></span>
   <code>MatAutocompleteTrigger</code>
   
-</h4><p class="docs-api-class-description"><p>Base class with all of the <code>MatAutocompleteTrigger</code> functionality.</p>
-</p><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">input[matAutocomplete]</span>
@@ -405,7 +403,7 @@ as a connection point for an autocomplete panel.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matAutocomplete&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>autocomplete: MatAutocomplete</code>
+      <code>autocomplete: _MatAutocompleteBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The autocomplete panel to be attached to this trigger.</p>
@@ -417,7 +415,7 @@ as a connection point for an autocomplete panel.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;matAutocompleteDisabled&#39;, transform: booleanAttribute }</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matAutocompleteDisabled&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>autocompleteDisabled: boolean</code>
     </p>
@@ -434,7 +432,7 @@ act as a regular input and the user won&#39;t be able to open the panel.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matAutocompleteConnectedTo&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>connectedTo: MatAutocompleteOrigin</code>
+      <code>connectedTo: _MatAutocompleteOriginBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference relative to which to position the autocomplete panel.
@@ -466,7 +464,7 @@ whether it fits completely in the viewport.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>activeOption: MatOption | null</code>
+      <code>activeOption: _MatOptionBase | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The currently active option, coerced to MatOption type.</p>
@@ -598,7 +596,7 @@ within the viewport.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>option: MatOption</code>
+      <code>option: _MatOptionBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Option that was selected.</p>
@@ -611,7 +609,7 @@ within the viewport.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatAutocomplete</code>
+      <code>source: _MatAutocompleteBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the autocomplete panel that emitted the event.</p>
@@ -649,7 +647,7 @@ within the viewport.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>option: MatOption | null</code>
+      <code>option: _MatOptionBase | null</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Option that was selected.</p>
@@ -662,7 +660,7 @@ within the viewport.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: MatAutocomplete</code>
+      <code>source: _MatAutocompleteBase</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Reference to the autocomplete panel that emitted the event.</p>

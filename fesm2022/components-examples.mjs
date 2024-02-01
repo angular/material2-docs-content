@@ -1474,20 +1474,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "button-toggle-overview-example.ts",
         "importPath": "material/button-toggle"
     },
-    "button-disabled-interactive": {
-        "packagePath": "material/button/button-disabled-interactive",
-        "title": "Interactive disabled buttons",
-        "componentName": "ButtonDisabledInteractiveExample",
-        "files": [
-            "button-disabled-interactive-example.ts",
-            "button-disabled-interactive-example.html",
-            "button-disabled-interactive-example.css"
-        ],
-        "selector": "button-disabled-interactive-example",
-        "additionalComponents": [],
-        "primaryFile": "button-disabled-interactive-example.ts",
-        "importPath": "material/button"
-    },
     "button-harness": {
         "packagePath": "material/button/button-harness",
         "title": "Testing with MatButtonHarness",
@@ -2318,7 +2304,8 @@ const EXAMPLE_COMPONENTS = {
         "componentName": "ExpansionOverviewExample",
         "files": [
             "expansion-overview-example.ts",
-            "expansion-overview-example.html"
+            "expansion-overview-example.html",
+            "expansion-overview-example.css"
         ],
         "selector": "expansion-overview-example",
         "additionalComponents": [],
@@ -3941,7 +3928,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "table-generated-columns": {
         "packagePath": "material/table/table-generated-columns",
-        "title": "Table with columns defined using a for loop instead of statically written in the template.",
+        "title": "Table with columns defined using ngFor instead of statically written in the template.",
         "componentName": "TableGeneratedColumnsExample",
         "files": [
             "table-generated-columns-example.ts",
@@ -4952,8 +4939,6 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/button-toggle');
         case 'button-toggle-overview':
             return import('@angular/components-examples/material/button-toggle');
-        case 'button-disabled-interactive':
-            return import('@angular/components-examples/material/button');
         case 'button-harness':
             return import('@angular/components-examples/material/button');
         case 'button-overview':

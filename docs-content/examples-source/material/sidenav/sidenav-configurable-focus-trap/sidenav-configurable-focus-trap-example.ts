@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgIf} from '@angular/common';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDrawerMode, MatSidenavModule} from '@angular/material/sidenav';
 import {MatRadioModule} from '@angular/material/radio';
@@ -11,7 +12,14 @@ import {ConfigurableFocusTrapFactory, FocusTrapFactory} from '@angular/cdk/a11y'
   templateUrl: 'sidenav-configurable-focus-trap-example.html',
   styleUrls: ['sidenav-configurable-focus-trap-example.css'],
   standalone: true,
-  imports: [MatSidenavModule, MatButtonModule, MatRadioModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    NgIf,
+    MatSidenavModule,
+    MatButtonModule,
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [{provide: FocusTrapFactory, useClass: ConfigurableFocusTrapFactory}],
 })
 export class SidenavConfigurableFocusTrapExample {

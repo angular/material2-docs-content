@@ -310,6 +310,45 @@ typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> le
           <span header-link="reading-typography-values-from-a-config"></span>
           Reading typography values from a config
         </h3>
-      <p>It is possible to read typography properties from a theme for use in your own components. For more
-information about this see our guide on <a href="https://material.angular.io/guide/theming-your-components#reading-typography-values">Theming your own components</a>.</p>
+      <p>You can read typography style values from a typography config via the following Sass functions. Each
+accepts a typography config and a level.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Example usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>font-size</code></td>
+<td><code>mat.font-size($config, &#39;body-1&#39;);</code></td>
+</tr>
+<tr>
+<td><code>font-family</code></td>
+<td><code>mat.font-family($config, &#39;body-1&#39;);</code></td>
+</tr>
+<tr>
+<td><code>font-weight</code></td>
+<td><code>mat.font-weight($config, &#39;body-1&#39;);</code></td>
+</tr>
+<tr>
+<td><code>line-height</code></td>
+<td><code>mat.line-height($config, &#39;body-1&#39;);</code></td>
+</tr>
+<tr>
+<td><code>letter-spacing</code></td>
+<td><code>mat.letter-spacing($config, &#39;body-1&#39;);</code></td>
+</tr>
+</tbody></table>
+<p>Additionally, you can use the <code>typography-level</code> Sass mixin to directly emit the CSS styles for a
+given typography level.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+
+<span class="hljs-comment">// Use the default configuration.</span>
+<span class="hljs-variable">$my-typography</span>: mat.define-typography-config();
+
+<span class="hljs-selector-class">.some-class-name</span> {
+  <span class="hljs-keyword">@include</span> mat.typography-level(<span class="hljs-variable">$my-typography</span>, <span class="hljs-string">&#x27;body-1&#x27;</span>);
+}
+</code></pre>
 </div>

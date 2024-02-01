@@ -2,16 +2,12 @@
   <mat-form-field>
     <mat-label>First name</mat-label>
     <input matInput #first>
-    @if (firstNameAutofilled) {
-      <mat-hint>Autofilled!</mat-hint>
-    }
+    <mat-hint *ngIf="firstNameAutofilled">Autofilled!</mat-hint>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Last name</mat-label>
     <input matInput #last>
-    @if (lastNameAutofilled) {
-      <mat-hint>Autofilled!</mat-hint>
-    }
+    <mat-hint *ngIf="lastNameAutofilled">Autofilled!</mat-hint>
   </mat-form-field>
   <button mat-raised-button>Submit</button>
 </form>

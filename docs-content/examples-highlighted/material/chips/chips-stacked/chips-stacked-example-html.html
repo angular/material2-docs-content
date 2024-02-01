@@ -1,5 +1,5 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-listbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-mdc-chip-set-stacked&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Color selection&quot;</span>&gt;</span>
-  @for (chip of availableColors; track chip) {
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span> <span class="hljs-attr">selected</span> [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;chip.color&quot;</span>&gt;</span>{{chip.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
-  }
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let chip of availableColors&quot;</span> <span class="hljs-attr">selected</span> [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;chip.color&quot;</span>&gt;</span>
+    {{chip.name}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-option</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-listbox</span>&gt;</span>

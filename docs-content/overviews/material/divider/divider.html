@@ -37,25 +37,19 @@ like avatar images or icons. Make sure to avoid adding an inset divider to the l
 in a list, because it will overlap with the section divider.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mat-subheader</span>&gt;</span>Folders<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-   @for (folder of folders; track folder) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mat-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span>{{folder.updated}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-         @if (!$last) {
-            <span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span> [<span class="hljs-attr">inset</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span>
-         }
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-   }
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let folder of folders; last as last&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mat-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> {{folder.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span> [<span class="hljs-attr">inset</span>]=<span class="hljs-string">&quot;true&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!last&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mat-subheader</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-   @for (note of notes; track node) {
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mat-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> {{note.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
-   }
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let note of notes&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mat-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> {{note.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
 </code></pre>
 

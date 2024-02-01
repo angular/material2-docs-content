@@ -1,8 +1,12 @@
-<span class="hljs-keyword">import</span> {Component, Inject, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {provideMomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
-<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  MAT_MOMENT_DATE_FORMATS,
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDatepickerModule, MatDatepickerIntl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;moment/locale/ja&#x27;</span>;
@@ -17,35 +21,28 @@
     <span class="hljs-comment">// The locale would typically be provided on the root module of your application. We do it at</span>
     <span class="hljs-comment">// the component level here, due to limitations of our example generation script.</span>
     {<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;ja-JP&#x27;</span>},
-
-    <span class="hljs-comment">// Moment can be provided globally to your app by adding `provideMomentDateAdapter`</span>
-    <span class="hljs-comment">// to your app config. We provide it at the component level here, due to limitations</span>
-    <span class="hljs-comment">// of our example generation script.</span>
-    provideMomentDateAdapter(),
+    <span class="hljs-comment">// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing</span>
+    <span class="hljs-comment">// `MatMomentDateModule` in your applications root module. We provide it at the component level</span>
+    <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
+    {
+      <span class="hljs-attr">provide</span>: DateAdapter,
+      <span class="hljs-attr">useClass</span>: MomentDateAdapter,
+      <span class="hljs-attr">deps</span>: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+    },
+    {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MAT_MOMENT_DATE_FORMATS},
   ],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerLocaleExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerLocaleExample</span> </span>{
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
     <span class="hljs-keyword">private</span> _adapter: DateAdapter&lt;<span class="hljs-built_in">any</span>&gt;,
-    <span class="hljs-keyword">private</span> _intl: MatDatepickerIntl,
     <span class="hljs-meta">@Inject</span>(MAT_DATE_LOCALE) <span class="hljs-keyword">private</span> _locale: <span class="hljs-built_in">string</span>,
   </span>)</span> {}
-
-  <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.updateCloseButtonLabel(<span class="hljs-string">&#x27;カレンダーを閉じる&#x27;</span>);
-  }
 
   <span class="hljs-function"><span class="hljs-title">french</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>._locale = <span class="hljs-string">&#x27;fr&#x27;</span>;
     <span class="hljs-built_in">this</span>._adapter.setLocale(<span class="hljs-built_in">this</span>._locale);
-    <span class="hljs-built_in">this</span>.updateCloseButtonLabel(<span class="hljs-string">&#x27;Fermer le calendrier&#x27;</span>);
-  }
-
-  <span class="hljs-function"><span class="hljs-title">updateCloseButtonLabel</span>(<span class="hljs-params">label: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._intl.closeCalendarLabel = label;
-    <span class="hljs-built_in">this</span>._intl.changes.next();
   }
 
   getDateFormatString(): <span class="hljs-built_in">string</span> {

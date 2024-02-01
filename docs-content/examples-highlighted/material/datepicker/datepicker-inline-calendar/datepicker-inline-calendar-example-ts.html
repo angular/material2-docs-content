@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
-<span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Datepicker inline calendar example */</span>
 <span class="hljs-meta">@Component</span>({
@@ -9,8 +9,7 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-inline-calendar-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;datepicker-inline-calendar-example.css&#x27;</span>],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()],
-  <span class="hljs-attr">imports</span>: [MatCardModule, MatDatepickerModule],
+  <span class="hljs-attr">imports</span>: [MatCardModule, MatDatepickerModule, MatNativeDateModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerInlineCalendarExample</span> </span>{
   <span class="hljs-attr">selected</span>: <span class="hljs-built_in">Date</span> | <span class="hljs-literal">null</span>;
