@@ -1,5 +1,4 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgFor} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
 
 <span class="hljs-comment">/**
@@ -9,7 +8,7 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tab-group-paginated-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tab-group-paginated-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatTabsModule, NgFor],
+  <span class="hljs-attr">imports</span>: [MatTabsModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabGroupPaginatedExample</span> </span>{
   lotsOfTabs = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">30</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function">(<span class="hljs-params">_, index</span>) =&gt;</span> <span class="hljs-string">`Tab <span class="hljs-subst">${index}</span>`</span>);

@@ -65,8 +65,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -107,8 +107,8 @@
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -123,7 +123,7 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>selected: T</code>
+      <code>selected: MatRadioButton</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The currently selected radio button. If set to a new radio button, the radio group value
@@ -238,8 +238,8 @@ a radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt;<
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>checked: boolean</code>
     </p>
   </td>
@@ -266,12 +266,12 @@ a radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt;<
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disableRipple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled inside the radio button</p>
 </td>
 </tr>
 
@@ -280,8 +280,8 @@ a radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt;<
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
@@ -336,8 +336,8 @@ a radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt;<
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>required: boolean</code>
     </p>
   </td>
@@ -381,19 +381,6 @@ the radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>defaultTabIndex: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tabindex to which to fall back to if no value is set.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>inputId: string</code>
     </p>
   </td>
@@ -407,7 +394,7 @@ the radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>radioGroup: _MatRadioGroupBase&lt;_MatRadioButtonBase&gt;</code>
+      <code>radioGroup: MatRadioGroup</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The parent radio group. May or may not be present.</p>
@@ -495,7 +482,7 @@ the radio button (the same behavior as <code>&lt;input type-&quot;radio&quot;&gt
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>source: _MatRadioButtonBase</code>
+      <code>source: MatRadioButton</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The radio button that emits the change event.</p>
@@ -606,7 +593,7 @@ alternative token to the actual <code>MatRadioGroup</code> class which could cau
 retention of the class and its component metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_RADIO_GROUP: InjectionToken&lt;_MatRadioGroupBase&lt;_MatRadioButtonBase&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_RADIO_GROUP: InjectionToken&lt;MatRadioGroup&gt;;</code>
 </pre>
 </div>
 

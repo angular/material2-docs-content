@@ -1,5 +1,5 @@
 <div class="docs-markdown"><p>The datepicker allows users to enter a date either through text input, or by choosing a date from
-the calendar. It is made up of several components, directives and <a href="#choosing-a-date-implementation-and-date-format-settings">the date implementation module</a> that work together.</p>
+the calendar. It is made up of several components, directives and <a href="#choosing-a-date-implementation-and-date-format-settings">the date implementation</a> that work together.</p>
 <div material-docs-example="datepicker-overview"></div>
 
 
@@ -159,7 +159,7 @@ dates before or after a certain point, will not prevent the user from advancing 
 that point.</p>
 <div material-docs-example="datepicker-filter"></div>
 
-<p>In this example the user cannot select any date that falls on a Saturday or Sunday, but all of the 
+<p>In this example the user cannot select any date that falls on a Saturday or Sunday, but all of the
 dates which fall on other days of the week are selectable.</p>
 <p>Each validation property has a different error that can be checked:</p>
 <ul>
@@ -302,15 +302,12 @@ month. If you want to make the calendar larger or smaller, adjust the width rath
       <p>By default, the <code>MAT_DATE_LOCALE</code> injection token will use the existing <code>LOCALE_ID</code> locale code
 from <code>@angular/core</code>. If you want to override it, you can provide a new value for the
 <code>MAT_DATE_LOCALE</code> token:</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>},
-  ],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+<pre><code class="language-ts">bootstapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
+});
 </code></pre>
 <p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
-<p><strong>Note:</strong> if you&#39;re using the <code>MatDateFnsModule</code>, you have to provide the data object for your
+<p><strong>Note:</strong> if you&#39;re using the <code>provideDateFnsAdapter</code>, you have to provide the data object for your
 locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
 compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
 from <code>date-fns/locale</code>.</p>
@@ -324,8 +321,8 @@ from <code>date-fns/locale</code>.</p>
       <p>The datepicker was built to be date implementation agnostic. This means that it can be made to work
 with a variety of different date implementations. However it also means that developers need to make
 sure to provide the appropriate pieces for the datepicker to work with their chosen implementation.</p>
-<p>The easiest way to ensure this is to import one of the provided date modules:</p>
-<p><code>MatNativeDateModule</code></p>
+<p>The easiest way to ensure this is to import one of the provided date adapters:</p>
+<p><code>provideNativeDateAdapter</code> or <code>MatNativeDateModule</code></p>
 <table>
   <tbody>
     <tr>
@@ -347,7 +344,7 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
   </tbody>
 </table>
 
-<p><code>MatDateFnsModule</code> (installed via <code>@angular/material-date-fns-adapter</code>)</p>
+<p><code>provideDateFnsAdapter</code> or <code>MatDateFnsModule</code> (installed via <code>ng add @angular/material-date-fns-adapter</code>)</p>
 <table>
   <tbody>
     <tr>
@@ -369,7 +366,7 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
   </tbody>
 </table>
 
-<p><code>MatLuxonDateModule</code> (installed via <code>@angular/material-luxon-adapter</code>)</p>
+<p><code>provideLuxonDateAdapter</code> or <code>MatLuxonDateModule</code> (installed via <code>ng add @angular/material-luxon-adapter</code>)</p>
 <table>
   <tbody>
     <tr>
@@ -391,7 +388,7 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
   </tbody>
 </table>
 
-<p><code>MatMomentDateModule</code> (installed via <code>@angular/material-moment-adapter</code>)</p>
+<p><code>provideMomentDateAdapter</code> or <code>MatMomentDateModule</code> (installed via <code>ng add @angular/material-moment-adapter</code>)</p>
 <table>
   <tbody>
     <tr>
@@ -413,17 +410,16 @@ sure to provide the appropriate pieces for the datepicker to work with their cho
   </tbody>
 </table>
 
-<p><em>Please note: <code>MatNativeDateModule</code> is based off the functionality available in JavaScript&#39;s
+<p><em>Please note: <code>provideNativeDateAdapter</code> is based off the functionality available in JavaScript&#39;s
 native <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code> object</a>.
 Thus it is not suitable for many locales. One of the biggest shortcomings of the native <code>Date</code>
 object is the inability to set the parse format. We strongly recommend using an adapter based on
-a more robust formatting and parsing library. You can use the <code>MomentDateAdapter</code>
+a more robust formatting and parsing library. You can use <code>provideMomentDateAdapter</code>
 or a custom <code>DateAdapter</code> that works with the library of your choice.</em></p>
-<p>These modules include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule, MatNativeDateModule],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+<p>These APIs include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()]
+});
 </code></pre>
 <p>Because <code>DateAdapter</code> is a generic class, <code>MatDatepicker</code> and <code>MatDatepickerInput</code> also need to be
 made generic. When working with these classes (for example as a <code>ViewChild</code>) you should include the
@@ -436,25 +432,21 @@ example:</p>
 </code></pre>
 <div material-docs-example="datepicker-moment"></div>
 
-<p>By default the <code>MomentDateAdapter</code> creates dates in your time zone specific locale. You can change the default behaviour to parse dates as UTC by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> and setting it to <code>useUtc: true</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule, MatMomentDateModule],
-  <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_MOMENT_DATE_ADAPTER_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>}}
-  ]
-})
+<p>By default the <code>MomentDateAdapter</code> creates dates in your time zone specific locale. You can change
+the default behaviour to parse dates as UTC by passing <code>useUtc: true</code> into <code>provideMomentDateAdapter</code>
+or by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> injection token.</p>
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideMomentDateAdapter(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">useUtc</span>: <span class="hljs-literal">true</span>})]
+});
 </code></pre>
 <p>By default the <code>MomentDateAdapter</code> will parse dates in a
 <a href="https://momentjs.com/guides/#/parsing/forgiving-mode/">forgiving way</a>. This may result in dates
 being parsed incorrectly. You can change the default behaviour to
-<a href="https://momentjs.com/guides/#/parsing/strict-mode/">parse dates strictly</a> by providing
-the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> and setting it to <code>strict: true</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule, MatMomentDateModule],
-  <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_MOMENT_DATE_ADAPTER_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">strict</span>: <span class="hljs-literal">true</span>}}
-  ]
-})
+<a href="https://momentjs.com/guides/#/parsing/strict-mode/">parse dates strictly</a> by <code>strict: true</code> to
+<code>provideMomentDateAdapter</code> or by providing the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> injection token.</p>
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideMomentDateAdapter(<span class="hljs-literal">undefined</span>, {<span class="hljs-attr">strict</span>: <span class="hljs-literal">true</span>})]
+});
 </code></pre>
 <p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app
 requires. This is accomplished by subclassing <code>DateAdapter</code> and providing your subclass as the
@@ -462,14 +454,12 @@ requires. This is accomplished by subclassing <code>DateAdapter</code> and provi
 in your app are formats that can be understood by your date implementation. See
 <a href="#customizing-the-parse-and-display-formats"><em>Customizing the parse and display formats</em></a> for more
 information about <code>MAT_DATE_FORMATS</code>.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule],
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: DateAdapter, <span class="hljs-attr">useClass</span>: MyDateAdapter},
     {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MY_DATE_FORMATS},
-  ],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+  ]
+});
 </code></pre>
 <p>If you need to work with native <code>Date</code> objects, but need custom behavior (for example custom date
 parsing), you can consider subclassing <code>NativeDateAdapter</code>.</p>
@@ -482,48 +472,36 @@ parsing), you can consider subclassing <code>NativeDateAdapter</code>.</p>
 and displaying dates. These formats are passed through to the <code>DateAdapter</code> so you will want to make
 sure that the format objects you&#39;re using are compatible with the <code>DateAdapter</code> used in your app.</p>
 <p>If you want use one of the <code>DateAdapters</code> that ships with Angular Material, but use your own
-<code>MAT_DATE_FORMATS</code>, you can import the <code>NativeDateModule</code> or <code>MomentDateModule</code>. These modules are
-identical to the &quot;Mat&quot;-prefixed versions (<code>MatNativeDateModule</code> and <code>MatMomentDateModule</code>) except
-they do not include the default formats. For example:</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule, NativeDateModule],
-  <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_DATE_FORMATS, <span class="hljs-attr">useValue</span>: MY_NATIVE_DATE_FORMATS},
-  ],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+<code>MAT_DATE_FORMATS</code>, you can either pass the formats into the providers function, or provide the
+<code>MAT_DATE_FORMATS</code> token yourself. For example:</p>
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter(MY_NATIVE_DATE_FORMATS)],
+});
 </code></pre>
 <div material-docs-example="datepicker-formats"></div>
 
 
-        <h5 id="momentdatemodule-formats" class="docs-header-link">
-          <span header-link="momentdatemodule-formats"></span>
-          MomentDateModule formats
+        <h5 id="momentjs-formats" class="docs-header-link">
+          <span header-link="momentjs-formats"></span>
+          Moment.js formats
         </h5>
-      <p>To use custom formats with the <code>MomentDateModule</code> you can pick from the parse formats documented
-<a href="https://momentjs.com/docs/#/parsing/string-format/">here</a> and the display formats documented
-<a href="https://momentjs.com/docs/#/displaying/format/">here</a>.</p>
+      <p>To use custom formats with the <code>provideMomentDateAdapter</code> you can pick from the parse formats
+documented <a href="https://momentjs.com/docs/#/parsing/string-format/">here</a> and the display formats
+documented <a href="https://momentjs.com/docs/#/displaying/format/">here</a>.</p>
 <p>It is also possible to support multiple parse formats. For example:</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule, MomentDateModule],
-  <span class="hljs-attr">providers</span>: [
-    {
-      <span class="hljs-attr">provide</span>: MAT_DATE_FORMATS,
-      <span class="hljs-attr">useValue</span>: {
-        <span class="hljs-attr">parse</span>: {
-          <span class="hljs-attr">dateInput</span>: [<span class="hljs-string">&#x27;l&#x27;</span>, <span class="hljs-string">&#x27;LL&#x27;</span>],
-        },
-        <span class="hljs-attr">display</span>: {
-          <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;L&#x27;</span>,
-          <span class="hljs-attr">monthYearLabel</span>: <span class="hljs-string">&#x27;MMM YYYY&#x27;</span>,
-          <span class="hljs-attr">dateA11yLabel</span>: <span class="hljs-string">&#x27;LL&#x27;</span>,
-          <span class="hljs-attr">monthYearA11yLabel</span>: <span class="hljs-string">&#x27;MMMM YYYY&#x27;</span>,
-        },
-      },
+<pre><code class="language-ts">bootstraApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideMomentDateAdapter({
+    <span class="hljs-attr">parse</span>: {
+      <span class="hljs-attr">dateInput</span>: [<span class="hljs-string">&#x27;l&#x27;</span>, <span class="hljs-string">&#x27;LL&#x27;</span>],
     },
-  ],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+    <span class="hljs-attr">display</span>: {
+      <span class="hljs-attr">dateInput</span>: <span class="hljs-string">&#x27;L&#x27;</span>,
+      <span class="hljs-attr">monthYearLabel</span>: <span class="hljs-string">&#x27;MMM YYYY&#x27;</span>,
+      <span class="hljs-attr">dateA11yLabel</span>: <span class="hljs-string">&#x27;LL&#x27;</span>,
+      <span class="hljs-attr">monthYearA11yLabel</span>: <span class="hljs-string">&#x27;MMMM YYYY&#x27;</span>,
+    },
+  })]
+});
 </code></pre>
 
         <h4 id="customizing-the-calendar-header" class="docs-header-link">
@@ -547,14 +525,13 @@ detection.</p>
         </h4>
       <p>The various text strings used by the datepicker are provided through <code>MatDatepickerIntl</code>.
 Localization of these messages can be done by providing a subclass with translated values in your
-application root module.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatDatepickerModule, MatNativeDateModule],
+app config.</p>
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: MatDatepickerIntl, <span class="hljs-attr">useClass</span>: MyIntl},
+    provideNativeDateAdapter(),
   ],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+});
 </code></pre>
 
         <h4 id="highlighting-specific-dates" class="docs-header-link">
@@ -780,8 +757,8 @@ additional means of opening the pop-up, such as <code>MatDatepickerToggle</code>
           Error: MatDatepicker: No provider found for DateAdapter/MAT_DATE_FORMATS
         </h4>
       <p>This error is thrown if you have not provided all of the injectables the datepicker needs to work.
-The easiest way to resolve this is to import the <code>MatNativeDateModule</code> or <code>MatMomentDateModule</code> in
-your application&#39;s root module. See
+The easiest way to resolve this is to add <code>provideNativeDateAdapter</code> or <code>provideMomentDateAdapter</code>
+to your app config. See
 <a href="#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>) for
 more information.</p>
 

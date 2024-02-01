@@ -21,10 +21,12 @@ in the API summary.</p>
 component.</p>
 <p>By default, <code>&lt;mat-icon&gt;</code> expects the
 <a href="https://google.github.io/material-design-icons/#icon-font-for-the-web">Material icons font</a>.
-(You will still need to include the HTML to load the font and its CSS, as described in the link).
-You can specify a different font by setting the <code>fontSet</code> input to either the CSS class to apply to
-use the desired font, or to an alias previously registered with
-<code>MatIconRegistry.registerFontClassAlias</code>.</p>
+(You will still need to include the HTML to load the font and its CSS, as described in the link).</p>
+<p>You can specify a different font, such as Material&#39;s latest icons, 
+<a href="https://fonts.google.com/icons">Material Symbols</a>, by setting the <code>fontSet</code> input to either the 
+CSS class to apply to use the desired font, or to an alias previously registered with
+<code>MatIconRegistry.registerFontClassAlias</code>. Alternatively you can set the default for all
+your application&#39;s icons using <code>MatIconRegistry.setDefaultFontSetClass</code>.</p>
 
         <h3 id="font-icons-with-css" class="docs-header-link">
           <span header-link="font-icons-with-css"></span>

@@ -15,7 +15,6 @@ import { MatRowDef } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatTableDataSourcePaginator } from '@angular/material/table';
 import { Observable } from 'rxjs';
 import { QueryList } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -288,7 +287,7 @@ export declare class TableExpandableRowsExample {
  */
 export declare class TableFilteringExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_5, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_5, MatPaginator>;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFilteringExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, true, never>;
@@ -327,7 +326,7 @@ export declare class TableFooterRowExample {
 }
 
 /**
- * @title Table with columns defined using ngFor instead of statically written in the template.
+ * @title Table with columns defined using a for loop instead of statically written in the template.
  */
 export declare class TableGeneratedColumnsExample {
     columns: {
@@ -407,7 +406,7 @@ export declare class TableOverviewExample implements AfterViewInit {
  */
 export declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_6, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_6, MatPaginator>;
     paginator: MatPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
@@ -461,7 +460,7 @@ export declare class TableRowContextExample {
  */
 export declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_7, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_7, MatPaginator>;
     selection: SelectionModel<PeriodicElement_7>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
@@ -479,7 +478,7 @@ export declare class TableSelectionExample {
 export declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_8, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_8, MatPaginator>;
     constructor(_liveAnnouncer: LiveAnnouncer);
     sort: MatSort;
     ngAfterViewInit(): void;
@@ -554,7 +553,7 @@ export declare class TableStickyHeaderExample {
  */
 export declare class TableTextColumnAdvancedExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_13, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_13, MatPaginator>;
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
@@ -591,7 +590,7 @@ export declare class TableWithRipplesExample {
  */
 export declare class TableWrappedExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_15, MatTableDataSourcePaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_15, MatPaginator>;
     sort: MatSort;
     ngAfterViewInit(): void;
     clearTable(): void;

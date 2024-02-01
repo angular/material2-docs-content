@@ -221,13 +221,16 @@ items.</p>
         </h4>
       <p>This error is thrown if you attempt to bind the <code>multiple</code> property on <code>&lt;mat-select&gt;</code> to a dynamic
 value. (e.g. <code>[multiple]=&quot;isMultiple&quot;</code> where the value of <code>isMultiple</code> changes over the course of
-the component&#39;s lifetime). If you need to change this dynamically, use <code>ngIf</code> or <code>ngSwitch</code> instead:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;isMultiple&quot;</span> <span class="hljs-attr">multiple</span>&gt;</span>
-  ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;!isMultiple&quot;</span>&gt;</span>
-  ...
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+the component&#39;s lifetime). If you need to change this dynamically, use <code>@if</code> or <code>@switch</code> instead:</p>
+<pre><code class="language-html">@if (isMultiple) {
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> <span class="hljs-attr">multiple</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+} @else {
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+}
 </code></pre>
 
         <h4 id="error-value-must-be-an-array-in-multiple-selection-mode" class="docs-header-link">

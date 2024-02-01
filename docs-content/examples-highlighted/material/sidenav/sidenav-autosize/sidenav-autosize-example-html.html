@@ -1,7 +1,9 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span> <span class="hljs-attr">autosize</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer</span> #<span class="hljs-attr">drawer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-sidenav&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;side&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Auto-resizing sidenav<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;showFiller&quot;</span>&gt;</span>Lorem, ipsum dolor sit amet consectetur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    @if (showFiller) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem, ipsum dolor sit amet consectetur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    }
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;showFiller = !showFiller&quot;</span> <span class="hljs-attr">mat-raised-button</span>&gt;</span>
       Toggle extra text
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
