@@ -571,6 +571,9 @@ well.</p>
       <p>Because Material 3 is implemented as an alternate theme for the same components used for Material 2,
 the APIs for both are largely the same. However, there are a few differences to be aware of:</p>
 <ul>
+<li>M3 expects that any <code>@include</code> of the <code>-theme</code>, <code>-color</code>, <code>-typography</code>, <code>-density</code>, or <code>-base</code>
+mixins should be wrapped in a selector. If your app includes such an <code>@include</code> at the root level,
+we recommend wrapping it in <code>html { ... }</code></li>
 <li>M3 has a different API for setting the color variant of a component (see
 <a href="#using-component-color-variants">using component color variants</a> for more).</li>
 <li>The <code>backgroundColor</code> property of <code>&lt;mat-tab-group&gt;</code> is not supported, and should not be used with
