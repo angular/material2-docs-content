@@ -1156,12 +1156,12 @@ page.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>id: `mat-tab-link-${nextUniqueId++}`</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: numberAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>fitInkBarToContent: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Unique id for the tab.</p>
+  <td class="docs-api-property-description"><p>Whether the ink bar should fit to the entire tab or just its content.</p>
 </td>
 </tr>
 
@@ -1170,11 +1170,13 @@ page.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>fitInkBarToContent: boolean</code>
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: `mat-tab-link-${nextUniqueId++}`</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Unique id for the tab.</p>
+</td>
 </tr>
 
 
@@ -1192,7 +1194,12 @@ page.</p>
       <th colspan="2" class="docs-api-method-name-cell">activateInkBar
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Aligns the ink bar to the current item.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1222,7 +1229,12 @@ page.</p>
       <th colspan="2" class="docs-api-method-name-cell">deactivateInkBar
       </th>
     </tr>
-  </thead></table>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Removes the ink bar from the current item.</p>
+
+    </td>
+  </tr></table>
 
 
   
