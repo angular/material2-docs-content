@@ -737,12 +737,12 @@ Defines a set of cells available for a table column.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+  <td class="docs-api-property-description"><p>Whether the cell is sticky.</p>
 </td>
 </tr>
 
@@ -794,7 +794,7 @@ do not match are replaced by the &#39;-&#39; character.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
+      <p>Whether the sticky state has changed.</p>
 
     </td>
   </tr><thead>
@@ -825,7 +825,7 @@ do not match are replaced by the &#39;-&#39; character.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+      <p>Resets the sticky changed state.</p>
 
     </td>
   </tr></table>
@@ -953,7 +953,7 @@ Captures the header row&#39;s template and other header properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matHeaderRowDef</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">matHeaderRowDef</span>)
         </div><p class="docs-api-property-name">
       <code>columns: Iterable&lt;string&gt;</code>
     </p>
@@ -967,12 +967,12 @@ Captures the header row&#39;s template and other header properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matHeaderRowDefSticky</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">matHeaderRowDefSticky</span>)
         </div><p class="docs-api-property-name">
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+  <td class="docs-api-property-description"><p>Whether the row is sticky.</p>
 </td>
 </tr>
 
@@ -1074,7 +1074,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
+      <p>Whether the sticky state has changed.</p>
 
     </td>
   </tr><thead>
@@ -1105,7 +1105,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+      <p>Resets the sticky changed state.</p>
 
     </td>
   </tr></table>
@@ -1146,7 +1146,7 @@ Captures the footer row&#39;s template and other footer properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matFooterRowDef</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">matFooterRowDef</span>)
         </div><p class="docs-api-property-name">
       <code>columns: Iterable&lt;string&gt;</code>
     </p>
@@ -1160,12 +1160,12 @@ Captures the footer row&#39;s template and other footer properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matFooterRowDefSticky</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">matFooterRowDefSticky</span>)
         </div><p class="docs-api-property-name">
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+  <td class="docs-api-property-description"><p>Whether the row is sticky.</p>
 </td>
 </tr>
 
@@ -1267,7 +1267,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
+      <p>Whether the sticky state has changed.</p>
 
     </td>
   </tr><thead>
@@ -1298,7 +1298,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+      <p>Resets the sticky changed state.</p>
 
     </td>
   </tr></table>
@@ -1340,7 +1340,7 @@ a when predicate that describes when this row should be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matRowDefColumns</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">matRowDefColumns</span>)
         </div><p class="docs-api-property-name">
       <code>columns: Iterable&lt;string&gt;</code>
     </p>
@@ -1354,7 +1354,7 @@ a when predicate that describes when this row should be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matRowDefWhen</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">matRowDefWhen</span>)
         </div><p class="docs-api-property-name">
       <code>when: (index: number, rowData: T) =&gt; boolean</code>
     </p>
