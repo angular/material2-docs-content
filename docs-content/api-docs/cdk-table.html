@@ -709,12 +709,12 @@ Defines a set of cells available for a table column.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+  <td class="docs-api-property-description"><p>Whether the cell is sticky.</p>
 </td>
 </tr>
 
@@ -766,7 +766,7 @@ do not match are replaced by the &#39;-&#39; character.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
+      <p>Whether the sticky state has changed.</p>
 
     </td>
   </tr><thead>
@@ -797,7 +797,7 @@ do not match are replaced by the &#39;-&#39; character.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+      <p>Resets the sticky changed state.</p>
 
     </td>
   </tr></table>
@@ -901,6 +901,13 @@ do not match are replaced by the &#39;-&#39; character.</p>
   <span header-link="CdkHeaderRowDef"></span>
   <code>CdkHeaderRowDef</code>
   
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#BaseRowDef" class="docs-api-class-extends-type">
+      BaseRowDef
+    </a>
+  </span>
+  
 </h4><p class="docs-api-class-description"><p>Header row definition for the CDK table.
 Captures the header row&#39;s template and other header properties such as the columns to display.</p>
 </p><p class="docs-api-directive-selectors">
@@ -918,7 +925,7 @@ Captures the header row&#39;s template and other header properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkHeaderRowDef</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">cdkHeaderRowDef</span>)
         </div><p class="docs-api-property-name">
       <code>columns: Iterable&lt;string&gt;</code>
     </p>
@@ -932,12 +939,12 @@ Captures the header row&#39;s template and other header properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkHeaderRowDefSticky</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkHeaderRowDefSticky&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+  <td class="docs-api-property-description"><p>Whether the row is sticky.</p>
 </td>
 </tr>
 
@@ -1039,7 +1046,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
+      <p>Whether the sticky state has changed.</p>
 
     </td>
   </tr><thead>
@@ -1070,7 +1077,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+      <p>Resets the sticky changed state.</p>
 
     </td>
   </tr></table>
@@ -1086,6 +1093,13 @@ if there is no difference.</p>
 <h4 id="CdkFooterRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="CdkFooterRowDef"></span>
   <code>CdkFooterRowDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#BaseRowDef" class="docs-api-class-extends-type">
+      BaseRowDef
+    </a>
+  </span>
   
 </h4><p class="docs-api-class-description"><p>Footer row definition for the CDK table.
 Captures the footer row&#39;s template and other footer properties such as the columns to display.</p>
@@ -1104,7 +1118,7 @@ Captures the footer row&#39;s template and other footer properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkFooterRowDef</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">cdkFooterRowDef</span>)
         </div><p class="docs-api-property-name">
       <code>columns: Iterable&lt;string&gt;</code>
     </p>
@@ -1118,12 +1132,12 @@ Captures the footer row&#39;s template and other footer properties such as the c
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkFooterRowDefSticky</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkFooterRowDefSticky&#39;, transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
+  <td class="docs-api-property-description"><p>Whether the row is sticky.</p>
 </td>
 </tr>
 
@@ -1225,7 +1239,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the sticky value has changed since this was last called.</p>
+      <p>Whether the sticky state has changed.</p>
 
     </td>
   </tr><thead>
@@ -1256,7 +1270,7 @@ if there is no difference.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets the dirty check for cases where the sticky state has been used without checking.</p>
+      <p>Resets the sticky changed state.</p>
 
     </td>
   </tr></table>
@@ -1298,7 +1312,7 @@ a when predicate that describes when this row should be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkRowDefColumns</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">cdkRowDefColumns</span>)
         </div><p class="docs-api-property-name">
       <code>columns: Iterable&lt;string&gt;</code>
     </p>
@@ -1312,7 +1326,7 @@ a when predicate that describes when this row should be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkRowDefWhen</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">cdkRowDefWhen</span>)
         </div><p class="docs-api-property-name">
       <code>when: (index: number, rowData: T) =&gt; boolean</code>
     </p>
