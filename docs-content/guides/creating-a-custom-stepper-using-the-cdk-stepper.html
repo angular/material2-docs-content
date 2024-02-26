@@ -10,9 +10,9 @@
       <p>Now we are ready to create our custom stepper component. Therefore, we need to create a new Angular component which extends <code>CdkStepper</code>:</p>
 <p><strong>custom-stepper.component.ts</strong></p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&quot;app-custom-stepper&quot;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&quot;./custom-stepper.component.html&quot;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&quot;./custom-stepper.component.css&quot;</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;app-custom-stepper&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./custom-stepper.component.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./custom-stepper.component.css&#x27;</span>,
   <span class="hljs-comment">// This custom stepper provides itself as CdkStepper so that it can be recognized</span>
   <span class="hljs-comment">// by other components.</span>
   <span class="hljs-attr">providers</span>: [{ <span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomStepperComponent }]

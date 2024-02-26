@@ -47,7 +47,7 @@
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-wrapped-example&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;table-wrapped-example.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-wrapped-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-wrapped-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatButtonModule, forwardRef(<span class="hljs-function">() =&gt;</span> WrapperTable), MatSortModule, MatTableModule],
@@ -78,13 +78,11 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;wrapper-table&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;wrapper-table.html&#x27;</span>,
-  <span class="hljs-attr">styles</span>: [
-    <span class="hljs-string">`
+  <span class="hljs-attr">styles</span>: <span class="hljs-string">`
     table {
       width: 100%;
     }
   `</span>,
-  ],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatTableModule, MatSortModule],
 })

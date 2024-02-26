@@ -17,7 +17,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;snack-bar-annotated-component-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;snack-bar-annotated-component-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;snack-bar-annotated-component-example.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;snack-bar-annotated-component-example.css&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, FormsModule, MatInputModule, MatButtonModule],
 })
@@ -36,8 +36,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;snack-bar-annotated-component-example-snack&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;snack-bar-annotated-component-example-snack.html&#x27;</span>,
-  <span class="hljs-attr">styles</span>: [
-    <span class="hljs-string">`
+  <span class="hljs-attr">styles</span>: <span class="hljs-string">`
     :host {
       display: flex;
     }
@@ -46,7 +45,6 @@
       color: hotpink;
     }
   `</span>,
-  ],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatButtonModule, MatSnackBarLabel, MatSnackBarActions, MatSnackBarAction],
 })

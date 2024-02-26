@@ -52,14 +52,18 @@
 
 <span class="hljs-comment">/** Data structure for holding telephone number. */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTel</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> area: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> exchange: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> subscriber: <span class="hljs-built_in">string</span></span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">public</span> area: <span class="hljs-built_in">string</span>,
+    <span class="hljs-keyword">public</span> exchange: <span class="hljs-built_in">string</span>,
+    <span class="hljs-keyword">public</span> subscriber: <span class="hljs-built_in">string</span>,
+  </span>)</span> {}
 }
 
 <span class="hljs-comment">/** Custom `MatFormFieldControl` for telephone number input. */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-tel-input&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;example-tel-input-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;example-tel-input-example.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;example-tel-input-example.css&#x27;</span>,
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MatFormFieldControl, <span class="hljs-attr">useExisting</span>: MyTelInput}],
   <span class="hljs-attr">host</span>: {
     <span class="hljs-string">&#x27;[class.example-floating]&#x27;</span>: <span class="hljs-string">&#x27;shouldLabelFloat&#x27;</span>,

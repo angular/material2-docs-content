@@ -6,7 +6,7 @@
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Virtual scroll with a custom data source */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-virtual-scroll-data-source-example&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-virtual-scroll-data-source-example.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-virtual-scroll-data-source-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-virtual-scroll-data-source-example.html&#x27;</span>,
   <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
@@ -52,13 +52,18 @@
     <span class="hljs-built_in">this</span>._fetchedPages.add(page);
 
     <span class="hljs-comment">// Use `setTimeout` to simulate fetching data from server.</span>
-    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-      <span class="hljs-built_in">this</span>._cachedData.splice(
-        page * <span class="hljs-built_in">this</span>._pageSize,
-        <span class="hljs-built_in">this</span>._pageSize,
-        ...Array.from({<span class="hljs-attr">length</span>: <span class="hljs-built_in">this</span>._pageSize}).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${page * <span class="hljs-built_in">this</span>._pageSize + i}</span>`</span>),
-      );
-      <span class="hljs-built_in">this</span>._dataStream.next(<span class="hljs-built_in">this</span>._cachedData);
-    }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span> + <span class="hljs-number">200</span>);
+    <span class="hljs-built_in">setTimeout</span>(
+      <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>._cachedData.splice(
+          page * <span class="hljs-built_in">this</span>._pageSize,
+          <span class="hljs-built_in">this</span>._pageSize,
+          ...Array.from({<span class="hljs-attr">length</span>: <span class="hljs-built_in">this</span>._pageSize}).map(
+            <span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${page * <span class="hljs-built_in">this</span>._pageSize + i}</span>`</span>,
+          ),
+        );
+        <span class="hljs-built_in">this</span>._dataStream.next(<span class="hljs-built_in">this</span>._cachedData);
+      },
+      <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span> + <span class="hljs-number">200</span>,
+    );
   }
 }
