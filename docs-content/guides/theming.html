@@ -179,6 +179,7 @@ theme Sass mixins.</p>
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
  ),
+ typography: mat.define-typography-config(),
  density: <span class="hljs-number">0</span>,
 ));
 
@@ -540,7 +541,7 @@ the CSS in each shadow root, or by using <a href="https://developers.google.com/
           <span header-link="user-preference-media-queries"></span>
           User preference media queries
         </h2>
-      <p>Angular Material does not apply styles based on user preference media queries, such as 
+      <p>Angular Material does not apply styles based on user preference media queries, such as
 <code>prefers-color-scheme</code> or <code>prefers-contrast</code>. Instead, Angular Material&#39;s Sass mixins give you the
 flexibility to apply theme styles to based on the conditions that make the most sense for your
 users. This may mean using media queries directly or reading a saved user preference.</p>
@@ -549,8 +550,8 @@ users. This may mean using media queries directly or reading a saved user prefer
           <span header-link="style-customization-outside-the-theming-system"></span>
           Style customization outside the theming system
         </h2>
-      <p>Angular Material supports customizing color, typography, and density as outlined in this document. 
-Angular strongly discourages, and does not directly support, overriding component CSS outside the 
-theming APIs described above. Component DOM structure and CSS classes are considered private 
+      <p>Angular Material supports customizing color, typography, and density as outlined in this document.
+Angular strongly discourages, and does not directly support, overriding component CSS outside the
+theming APIs described above. Component DOM structure and CSS classes are considered private
 implementation details that may change at any time.</p>
 </div>
