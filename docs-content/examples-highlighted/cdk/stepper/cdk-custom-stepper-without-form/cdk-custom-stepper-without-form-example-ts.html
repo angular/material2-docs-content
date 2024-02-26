@@ -6,7 +6,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-custom-stepper-without-form-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./cdk-custom-stepper-without-form-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./cdk-custom-stepper-without-form-example.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./cdk-custom-stepper-without-form-example.css&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [forwardRef(<span class="hljs-function">() =&gt;</span> CustomStepper), CdkStepperModule],
 })
@@ -16,7 +16,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-custom-stepper&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./example-custom-stepper.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;./example-custom-stepper.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./example-custom-stepper.css&#x27;</span>,
   <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomStepper}],
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [NgTemplateOutlet, CdkStepperModule],

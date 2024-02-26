@@ -5,7 +5,7 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-directives-example.css&#x27;</span>],
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example.css&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [A11yModule],
 })
@@ -13,7 +13,10 @@
   elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
   subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _ngZone: NgZone, <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef</span>)</span> {}
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">private</span> _ngZone: NgZone,
+    <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef,
+  </span>)</span> {}
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
     <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">&#x27; focused&#x27;</span> : <span class="hljs-string">&#x27;blurred&#x27;</span>;
