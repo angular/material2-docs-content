@@ -35,7 +35,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.0", ngImpor
 class FormFieldCustomControlExample {
     constructor() {
         this.form = new FormGroup({
-            tel: new FormControl(new MyTel('', '', '')),
+            tel: new FormControl(null),
         });
     }
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.2.0", ngImport: i0, type: FormFieldCustomControlExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
