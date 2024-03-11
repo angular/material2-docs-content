@@ -1,6 +1,5 @@
 <span class="hljs-keyword">import</span> {CdkTextareaAutosize, TextFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/text-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component, NgZone, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {take} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
+<span class="hljs-keyword">import</span> {afterNextRender, Component, inject, Injector, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
@@ -14,12 +13,19 @@
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule, MatInputModule, TextFieldModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TextFieldAutosizeTextareaExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _ngZone: NgZone</span>)</span> {}
+  <span class="hljs-keyword">private</span> _injector = inject(Injector);
 
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;autosize&#x27;</span>) autosize: CdkTextareaAutosize;
 
   <span class="hljs-function"><span class="hljs-title">triggerResize</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-comment">// Wait for changes to be applied, then trigger textarea resize.</span>
-    <span class="hljs-built_in">this</span>._ngZone.onStable.pipe(take(<span class="hljs-number">1</span>)).subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.autosize.resizeToFitContent(<span class="hljs-literal">true</span>));
+    <span class="hljs-comment">// Wait for content to render, then trigger textarea resize.</span>
+    afterNextRender(
+      <span class="hljs-function">() =&gt;</span> {
+        <span class="hljs-built_in">this</span>.autosize.resizeToFitContent(<span class="hljs-literal">true</span>);
+      },
+      {
+        <span class="hljs-attr">injector</span>: <span class="hljs-built_in">this</span>._injector,
+      },
+    );
   }
 }

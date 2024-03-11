@@ -3,7 +3,6 @@ import { AutofillMonitor } from '@angular/cdk/text-field';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { ElementRef } from '@angular/core';
 import * as i0 from '@angular/core';
-import { NgZone } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 
 /** @title Monitoring autofill state with cdkAutofill */
@@ -30,8 +29,7 @@ export declare class TextFieldAutofillMonitorExample implements AfterViewInit, O
 
 /** @title Auto-resizing textarea */
 export declare class TextFieldAutosizeTextareaExample {
-    private _ngZone;
-    constructor(_ngZone: NgZone);
+    private _injector;
     autosize: CdkTextareaAutosize;
     triggerResize(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TextFieldAutosizeTextareaExample, never>;
