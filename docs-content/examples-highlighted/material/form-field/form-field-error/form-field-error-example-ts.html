@@ -1,7 +1,9 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {takeUntilDestroyed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/rxjs-interop&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {merge} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field with error messages */</span>
 <span class="hljs-meta">@Component</span>({
@@ -14,11 +16,21 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldErrorExample</span> </span>{
   email = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>, [Validators.required, Validators.email]);
 
-  <span class="hljs-function"><span class="hljs-title">getErrorMessage</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.email.hasError(<span class="hljs-string">&#x27;required&#x27;</span>)) {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;You must enter a value&#x27;</span>;
-    }
+  errorMessage = <span class="hljs-string">&#x27;&#x27;</span>;
 
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.email.hasError(<span class="hljs-string">&#x27;email&#x27;</span>) ? <span class="hljs-string">&#x27;Not a valid email&#x27;</span> : <span class="hljs-string">&#x27;&#x27;</span>;
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    merge(<span class="hljs-built_in">this</span>.email.statusChanges, <span class="hljs-built_in">this</span>.email.valueChanges)
+      .pipe(takeUntilDestroyed())
+      .subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.updateErrorMessage());
+  }
+
+  <span class="hljs-function"><span class="hljs-title">updateErrorMessage</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.email.hasError(<span class="hljs-string">&#x27;required&#x27;</span>)) {
+      <span class="hljs-built_in">this</span>.errorMessage = <span class="hljs-string">&#x27;You must enter a value&#x27;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.email.hasError(<span class="hljs-string">&#x27;email&#x27;</span>)) {
+      <span class="hljs-built_in">this</span>.errorMessage = <span class="hljs-string">&#x27;Not a valid email&#x27;</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">this</span>.errorMessage = <span class="hljs-string">&#x27;&#x27;</span>;
+    }
   }
 }

@@ -30,7 +30,9 @@ export declare class FormFieldCustomControlExample {
 /** @title Form field with error messages */
 export declare class FormFieldErrorExample {
     email: FormControl<string | null>;
-    getErrorMessage(): "" | "You must enter a value" | "Not a valid email";
+    errorMessage: string;
+    constructor();
+    updateErrorMessage(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FormFieldErrorExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<FormFieldErrorExample, "form-field-error-example", never, {}, {}, never, never, true, never>;
 }
