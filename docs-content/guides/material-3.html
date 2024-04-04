@@ -49,6 +49,7 @@ theme configuration object. The configuration object may have the following prop
 </tr>
 </tbody></table>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
+
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
 <span class="hljs-variable">$theme</span>: matx.define-theme((
@@ -195,6 +196,7 @@ component (e.g. <code>.mat-accent</code>). However, there are no built-in styles
 can instead apply color variants by passing the <code>$color-variant</code> option to a component&#39;s <code>-theme</code> or
 <code>-color</code> mixins.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
+
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tertiary-checkbox&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;tertiary-checkbox&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> /&gt;</span>
@@ -337,6 +339,7 @@ components or use excessive specificity to override any of these tokenized prope
 your base theme to your application&#39;s root element (typically <code>html</code> or <code>body</code>) and apply any
 overrides on the highest-level selector where they apply.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
+
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
   Some content...
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>
@@ -385,8 +388,9 @@ different for M3 themes, in accordance with the spec.</p>
 directly reading properties off of it, e.g. using <code>map.get</code>. Always use the utility functions
 provided by Angular Material to access properties of the theme.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@anuglar/material&#x27;</span> as mat;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@anuglar/material-experimental&#x27;</span> as matx;
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
 <span class="hljs-keyword">@mixin</span> my-comp-theme(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-comp</span> {
@@ -407,7 +411,7 @@ provided by Angular Material to access properties of the theme.</p>
           <span header-link="reading-tonal-palette-colors"></span>
           Reading tonal palette colors
         </h3>
-      <p>To read a 
+      <p>To read a
 <a href="https://m3.material.io/styles/color/system/how-the-system-works#3ce9da92-a118-4692-8b2c-c5c52a413fa6">tonal palette color</a>
 from the theme, use the <code>get-theme-color</code> function with three arguments:</p>
 <table>
@@ -542,7 +546,7 @@ support both M2 and M3 themes. Once the entire app is migrated, the support for 
 removed.</p>
 <p>The simplest way to accomplish this is by checking the theme version and emitting different styles
 for M2 vs M3. You can check the theme version using the <code>get-theme-version</code> function from
-<code>@angular/material</code>. The function will return <code>0</code> for an M2 theme or <code>1</code> for an M3 theme (see 
+<code>@angular/material</code>. The function will return <code>0</code> for an M2 theme or <code>1</code> for an M3 theme (see
 <a href="#theme-your-own-components-using-a-material-3-theme">theme your own components using a Material 3 theme</a>
 for how to read values from an M3 theme).</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
@@ -595,10 +599,11 @@ your app, you may need to update the class names.</li>
       <p>We recommend <em>not</em> relying on the <code>color=&quot;primary&quot;</code>, <code>color=&quot;accent&quot;</code>, or <code>color=&quot;warn&quot;</code> options
 that are offered by a number of Angular Material components for M2 themes. However, if you want to
 quickly update to M3 and are willing to accept the extra CSS generated for these variants, you can
-enable backwards compatibility styles that restore the behavior of this API. Call the 
+enable backwards compatibility styles that restore the behavior of this API. Call the
 <code>color-variants-back-compat</code> mixin from <code>@angular/material-experimental</code> with the M3 theme you want
 to generate color variant styles for.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
+
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
@@ -622,6 +627,7 @@ updating all usages to one of the new class names. However, to make migration ea
 We have made a best effort to map the M2 classes to reasonable equivalents in M3. To enable these
 styles, pass an additional argument <code>$back-compat: true</code> to the mixin.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
+
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
@@ -654,9 +660,9 @@ across your app.</p>
           <span header-link="are-the-material-2-styles-and-apis-going-away"></span>
           Are the Material 2 styles and APIs going away?
         </h3>
-      <p>Material 2 styles and their APIs will continue to be supported, and we do not have any immediate 
-plans to deprecate them. We understand that it will take time for applications to switch to the 
-latest Material 3 styles, and we want to provide enough time for migrations. When we do decide to 
-remove these APIs, they will be marked as deprecated and continue to be supported in the following 
+      <p>Material 2 styles and their APIs will continue to be supported, and we do not have any immediate
+plans to deprecate them. We understand that it will take time for applications to switch to the
+latest Material 3 styles, and we want to provide enough time for migrations. When we do decide to
+remove these APIs, they will be marked as deprecated and continue to be supported in the following
 two major releases. As of now, they are not considered deprecated.</p>
 </div>
