@@ -109,6 +109,21 @@ used with the <code>primary</code> and <code>tertiary</code> options:</p>
 <li><code>$m3-violet-palette</code></li>
 <li><code>$m3-rose-palette</code></li>
 </ul>
+<p>Alternatively, a theme can be generated with a custom color with the following schematic:</p>
+<pre><code class="language-shell">ng generate @angular/material:m3-theme
+</code></pre>
+<p>This schematic integrates with <a href="https://github.com/material-foundation/material-color-utilities">Material Color Utilities</a> to build a theme based on a generated set of palettes based on a single color. Optionally you can provide additional custom colors for the secondary, tertiary, and neutral palettes.</p>
+<p>The output of the schematic is a new Sass file that exports a theme or themes (if generating both a light and dark theme) that can be provided to component theme mixins.</p>
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
+<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;./path/to/m3-theme&#x27;</span>;
+
+<span class="hljs-keyword">@include</span> mat.core();
+
+<span class="hljs-comment">// Apply the light theme by default</span>
+<span class="hljs-keyword">@include</span> mat.core-theme(m3-theme.<span class="hljs-variable">$light-theme</span>);
+<span class="hljs-keyword">@include</span> mat.button-theme(m3-theme.<span class="hljs-variable">$light-theme</span>);
+</code></pre>
+<p>Learn more about this schematic in its <a href="https://github.com/angular/components/blob/main/src/material/schematics/ng-generate/m3-theme/README.md">documentation</a>.</p>
 <!-- TODO(mmalerba): Illustrate palettes with example. -->
 
 
@@ -641,13 +656,6 @@ styles, pass an additional argument <code>$back-compat: true</code> to the mixin
           FAQ
         </h2>
       
-        <h3 id="can-i-use-colors-other-than-the-pre-defined-material-3-palettes" class="docs-header-link">
-          <span header-link="can-i-use-colors-other-than-the-pre-defined-material-3-palettes"></span>
-          Can I use colors other than the pre-defined Material 3 palettes?
-        </h3>
-      <p>Currently, we only offer predefined palettes, but we plan to add support for using custom generated
-palettes as part of making the M3 APIs stable and available in <code>@angular/material</code>.</p>
-
         <h3 id="can-i-depend-on-the-css-custom-property-names-being-stable" class="docs-header-link">
           <span header-link="can-i-depend-on-the-css-custom-property-names-being-stable"></span>
           Can I depend on the CSS custom property names being stable?
