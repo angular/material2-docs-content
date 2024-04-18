@@ -64,11 +64,11 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.0", ngImpor
  */
 class SlideToggleOverviewExample {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.2.0", ngImport: i0, type: SlideToggleOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.2.0", type: SlideToggleOverviewExample, isStandalone: true, selector: "slide-toggle-overview-example", ngImport: i0, template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>\n", dependencies: [{ kind: "ngmodule", type: MatSlideToggleModule }, { kind: "component", type: i2$1.MatSlideToggle, selector: "mat-slide-toggle", inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon"], outputs: ["change", "toggleChange"], exportAs: ["matSlideToggle"] }] }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "17.2.0", type: SlideToggleOverviewExample, isStandalone: true, selector: "slide-toggle-overview-example", ngImport: i0, template: "<p><mat-slide-toggle>Slide me!</mat-slide-toggle></p>\n<p><mat-slide-toggle labelPosition=\"before\">...and slide me too!</mat-slide-toggle></p>\n", dependencies: [{ kind: "ngmodule", type: MatSlideToggleModule }, { kind: "component", type: i2$1.MatSlideToggle, selector: "mat-slide-toggle", inputs: ["name", "id", "labelPosition", "aria-label", "aria-labelledby", "aria-describedby", "required", "color", "disabled", "disableRipple", "tabIndex", "checked", "hideIcon"], outputs: ["change", "toggleChange"], exportAs: ["matSlideToggle"] }] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.2.0", ngImport: i0, type: SlideToggleOverviewExample, decorators: [{
             type: Component,
-            args: [{ selector: 'slide-toggle-overview-example', standalone: true, imports: [MatSlideToggleModule], template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>\n" }]
+            args: [{ selector: 'slide-toggle-overview-example', standalone: true, imports: [MatSlideToggleModule], template: "<p><mat-slide-toggle>Slide me!</mat-slide-toggle></p>\n<p><mat-slide-toggle labelPosition=\"before\">...and slide me too!</mat-slide-toggle></p>\n" }]
         }] });
 
 /**
