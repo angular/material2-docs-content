@@ -6,9 +6,6 @@
       <p><a href="https://m3.material.io/">Material 3 (M3)</a> is the latest iteration of Google&#39;s open-source design
 system, Material Design. It is the successor to <a href="https://m2.material.io/">Material 2 (M2)</a>, the
 design system which Angular Material has followed.</p>
-<p>As of v17.2.0, Angular Material includes experimental support for M3 styling in addition to M2. The
-team plans to stabilize support for M3 after a brief period in experimental in order to get feedback
-on the design and API.</p>
 
         <h2 id="how-to-use-material-3-in-your-app" class="docs-header-link">
           <span header-link="how-to-use-material-3-in-your-app"></span>
@@ -16,7 +13,7 @@ on the design and API.</p>
         </h2>
       <p>M3 is implemented in Angular Material as an alternate Sass theme for the same set of Angular
 Material components already used by many apps. To use M3 with Angular Material, create your theme
-using the <code>define-theme</code> function from <code>@angular/material-experimental</code>, as opposed to the
+using the <code>define-theme</code> function from <code>@angular/material</code>, as opposed to the
 <code>define-light-theme</code> or <code>define-dark-theme</code> from <code>@angular/material</code> that are used to create M2
 themes.</p>
 
@@ -24,7 +21,7 @@ themes.</p>
           <span header-link="defining-your-theme"></span>
           Defining your theme
         </h3>
-      <p>The simplest usage of the API, <code>$theme: matx.define-theme()</code> defines a theme with default values.
+      <p>The simplest usage of the API, <code>$theme: mat.define-theme()</code> defines a theme with default values.
 However, like its M2 counterparts, <code>define-theme</code> allows you to configure the appearance of your
 Angular Material app along three theming dimensions: color, typography, and density, by passing a
 theme configuration object. The configuration object may have the following properties.</p>
@@ -50,12 +47,12 @@ theme configuration object. The configuration object may have the following prop
 </tbody></table>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
 
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$theme</span>: matx.define-theme((
+<span class="hljs-variable">$theme</span>: mat.define-theme((
   color: (
     theme-type: dark,
-    primary: matx.<span class="hljs-variable">$m3-violet-palette</span>,
+    primary: mat.<span class="hljs-variable">$violet-palette</span>,
   ),
   typography: (
     brand-family: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
@@ -94,20 +91,20 @@ more about these terms):</p>
 <td>[Optional] Specifies the palette to use for the app&#39;s tertiary color palette.</td>
 </tr>
 </tbody></table>
-<p>There are a number of color palettes available in <code>@angular/material-experimental</code> that can be
+<p>There are a number of color palettes available in <code>@angular/material</code> that can be
 used with the <code>primary</code> and <code>tertiary</code> options:</p>
 <ul>
-<li><code>$m3-red-palette</code></li>
-<li><code>$m3-green-palette</code></li>
-<li><code>$m3-blue-palette</code></li>
-<li><code>$m3-yellow-palette</code></li>
-<li><code>$m3-cyan-palette</code></li>
-<li><code>$m3-magenta-palette</code></li>
-<li><code>$m3-orange-palette</code></li>
-<li><code>$m3-chartreuse-palette</code></li>
-<li><code>$m3-azure-palette</code></li>
-<li><code>$m3-violet-palette</code></li>
-<li><code>$m3-rose-palette</code></li>
+<li><code>$red-palette</code></li>
+<li><code>$green-palette</code></li>
+<li><code>$blue-palette</code></li>
+<li><code>$yellow-palette</code></li>
+<li><code>$cyan-palette</code></li>
+<li><code>$magenta-palette</code></li>
+<li><code>$orange-palette</code></li>
+<li><code>$chartreuse-palette</code></li>
+<li><code>$azure-palette</code></li>
+<li><code>$violet-palette</code></li>
+<li><code>$rose-palette</code></li>
 </ul>
 <p>Alternatively, a theme can be generated with a custom color with the following schematic:</p>
 <pre><code class="language-shell">ng generate @angular/material:m3-theme
@@ -218,9 +215,8 @@ can instead apply color variants by passing the <code>$color-variant</code> opti
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 </code></pre>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
-<span class="hljs-variable">$theme</span>: matx.define-theme();
+<span class="hljs-variable">$theme</span>: mat.define-theme();
 
 <span class="hljs-selector-class">.tertiary-checkbox</span> {
   <span class="hljs-keyword">@include</span> mat.checkbox-color(<span class="hljs-variable">$theme</span>, <span class="hljs-variable">$color-variant</span>: tertiary);
@@ -364,10 +360,9 @@ overrides on the highest-level selector where they apply.</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
 </code></pre>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
-<span class="hljs-variable">$light-theme</span>: matx.define-theme();
-<span class="hljs-variable">$dark-theme</span>: matx.define-theme((
+<span class="hljs-variable">$light-theme</span>: mat.define-theme();
+<span class="hljs-variable">$dark-theme</span>: mat.define-theme((
   color: (
     theme-type: dark
   )
@@ -405,7 +400,6 @@ provided by Angular Material to access properties of the theme.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
 <span class="hljs-keyword">@mixin</span> my-comp-theme(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-comp</span> {
@@ -615,18 +609,17 @@ your app, you may need to update the class names.</li>
 that are offered by a number of Angular Material components for M2 themes. However, if you want to
 quickly update to M3 and are willing to accept the extra CSS generated for these variants, you can
 enable backwards compatibility styles that restore the behavior of this API. Call the
-<code>color-variants-back-compat</code> mixin from <code>@angular/material-experimental</code> with the M3 theme you want
+<code>color-variants-backwards-compatibility</code> mixin from <code>@angular/material</code> with the M3 theme you want
 to generate color variant styles for.</p>
 <!-- TODO(mmalerba): Upgrade to embedded example -->
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
-<span class="hljs-variable">$theme</span>: matx.define-theme();
+<span class="hljs-variable">$theme</span>: mat.define-theme();
 
 <span class="hljs-selector-tag">html</span> {
   <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$theme</span>);
-  <span class="hljs-keyword">@include</span> matx.color-variants-back-compat(<span class="hljs-variable">$theme</span>);
+  <span class="hljs-keyword">@include</span> mat.color-variants-backwards-compatibility(<span class="hljs-variable">$theme</span>);
 }
 </code></pre>
 
@@ -644,9 +637,8 @@ styles, pass an additional argument <code>$back-compat: true</code> to the mixin
 <!-- TODO(mmalerba): Upgrade to embedded example -->
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material-experimental&#x27;</span> as matx;
 
-<span class="hljs-variable">$theme</span>: matx.define-theme();
+<span class="hljs-variable">$theme</span>: mat.define-theme();
 
 <span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$theme</span>, <span class="hljs-variable">$back-compat</span>: true);
 </code></pre>
