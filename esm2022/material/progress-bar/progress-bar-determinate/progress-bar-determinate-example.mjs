@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/progress-bar";
  * @title Determinate progress-bar
  */
 export class ProgressBarDeterminateExample {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.0-next.1", ngImport: i0, type: ProgressBarDeterminateExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.0.0-next.1", type: ProgressBarDeterminateExample, isStandalone: true, selector: "progress-bar-determinate-example", ngImport: i0, template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n", dependencies: [{ kind: "ngmodule", type: MatProgressBarModule }, { kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.0-next.5", ngImport: i0, type: ProgressBarDeterminateExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.0.0-next.5", type: ProgressBarDeterminateExample, isStandalone: true, selector: "progress-bar-determinate-example", ngImport: i0, template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n", dependencies: [{ kind: "ngmodule", type: MatProgressBarModule }, { kind: "component", type: i1.MatProgressBar, selector: "mat-progress-bar", inputs: ["color", "value", "bufferValue", "mode"], outputs: ["animationEnd"], exportAs: ["matProgressBar"] }] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.0-next.1", ngImport: i0, type: ProgressBarDeterminateExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.0-next.5", ngImport: i0, type: ProgressBarDeterminateExample, decorators: [{
             type: Component,
             args: [{ selector: 'progress-bar-determinate-example', standalone: true, imports: [MatProgressBarModule], template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n" }]
         }] });
