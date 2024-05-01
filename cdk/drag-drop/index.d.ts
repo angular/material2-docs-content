@@ -2,6 +2,7 @@ import { AfterViewInit } from '@angular/core';
 import { CdkDrag } from '@angular/cdk/drag-drop';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import * as i0 from '@angular/core';
+import { MatTable } from '@angular/material/table';
 import { OnDestroy } from '@angular/core';
 import { Overlay } from '@angular/cdk/overlay';
 import { TemplateRef } from '@angular/core';
@@ -197,6 +198,26 @@ export declare class CdkDragDropSortPredicateExample {
     sortPredicate(index: number, item: CdkDrag<number>): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropSortPredicateExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropSortPredicateExample, "cdk-drag-drop-sort-predicate-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Drag&Drop table
+ */
+export declare class CdkDragDropTableExample {
+    table: MatTable<PeriodicElement>;
+    displayedColumns: string[];
+    dataSource: PeriodicElement[];
+    drop(event: CdkDragDrop<string>): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropTableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropTableExample, "cdk-drag-drop-table-example", never, {}, {}, never, never, true, never>;
+}
+
+declare interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+    quantity: number;
 }
 
 export { }
