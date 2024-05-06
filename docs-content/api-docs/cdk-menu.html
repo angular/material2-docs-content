@@ -3056,6 +3056,19 @@ This class can be extended to create custom menu trigger types.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuScrollStrategy: inject(MENU_SCROLL_STRATEGY)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function used to configure the scroll strategy for the menu.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>menuStack: MenuStack</code>
     </p>
   </td>
@@ -3825,6 +3838,20 @@ the submenu.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> MENU_TRIGGER: InjectionToken&lt;CdkMenuTriggerBase&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MENU_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MENU_SCROLL_STRATEGY"></span>
+  <code>MENU_SCROLL_STRATEGY</code>
+</h4><p class="docs-api-constant-description"><p>Injection token used to configure the behavior of the menu when the page is scrolled.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MENU_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
 </pre>
 </div>
 
