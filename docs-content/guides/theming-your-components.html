@@ -1,11 +1,15 @@
 <div class="docs-markdown"><h1>Theme your own components with Angular Material&#39;s theming system</h1><p>You can use Angular Material&#39;s Sass-based theming system for your own custom components.</p>
+<p><strong>Note: The information on this page is specific to Material 2, for Material 3
+information on how to theme your components go to the [theming guide][theming-guide].</strong></p>
 
         <h2 id="reading-style-values-from-a-theme" class="docs-header-link">
           <span header-link="reading-style-values-from-a-theme"></span>
           Reading style values from a theme
         </h2>
-      <p>As described in the <a href="https://material.angular.io/guide/theming#themes">theming guide</a>, a theme is a Sass map that contains style values to
-customize components. Angular Material provides APIs for reading values from this data structure.</p>
+      <p>As described in the [theming guide][theme-map], a theme is a Sass map that contains style values to
+customize components. Angular Material provides APIs for reading values from this data structure.
+[theming-guide]: <a href="https://material.angular.io/guide/theming#theme-your-own-components-using-a-material-3-theme">https://material.angular.io/guide/theming#theme-your-own-components-using-a-material-3-theme</a>
+[theme-map]: <a href="https://material.angular.io/guide/theming#themes">https://material.angular.io/guide/theming#themes</a></p>
 
         <h3 id="reading-color-values" class="docs-header-link">
           <span header-link="reading-color-values"></span>
@@ -207,7 +211,7 @@ theme, and returns either <code>light</code> or <code>dark</code>.</p>
         </h3>
       <p>To read typography values from a theme, you can use the <code>get-theme-typography</code> Sass function. This
 function supports reading typography properties from the typography levels defined in the theme.
-There are two ways to call the function. </p>
+There are two ways to call the function.</p>
 <p>The first way to call it is by passing just the theme and the typography level to get a shorthand
 <code>font</code> property based on the settings for that level. (Note: <code>letter-spacing</code> cannot be expressed in
 the <code>font</code> shorthand, so it must be applied separately).</p>
