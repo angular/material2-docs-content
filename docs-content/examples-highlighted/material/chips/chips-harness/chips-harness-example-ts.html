@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
 
@@ -12,7 +12,7 @@
   <span class="hljs-attr">imports</span>: [MatChipsModule, MatIconModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsHarnessExample</span> </span>{
-  isDisabled = <span class="hljs-literal">false</span>;
+  isDisabled = signal(<span class="hljs-literal">false</span>);
   remove: <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">void</span> = jasmine.createSpy(<span class="hljs-string">&#x27;remove spy&#x27;</span>);
   add: <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">void</span> = jasmine.createSpy(<span class="hljs-string">&#x27;add spy&#x27;</span>);
 }

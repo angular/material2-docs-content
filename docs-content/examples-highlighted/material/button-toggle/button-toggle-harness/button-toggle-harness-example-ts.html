@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonToggleAppearance, MatButtonToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button-toggle&#x27;</span>;
 
 <span class="hljs-comment">/**
@@ -11,6 +11,6 @@
   <span class="hljs-attr">imports</span>: [MatButtonToggleModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ButtonToggleHarnessExample</span> </span>{
-  disabled = <span class="hljs-literal">false</span>;
-  appearance: MatButtonToggleAppearance = <span class="hljs-string">&#x27;standard&#x27;</span>;
+  disabled = signal(<span class="hljs-literal">false</span>);
+  appearance = signal&lt;MatButtonToggleAppearance&gt;(<span class="hljs-string">&#x27;standard&#x27;</span>);
 }

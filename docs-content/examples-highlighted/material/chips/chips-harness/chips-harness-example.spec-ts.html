@@ -19,7 +19,7 @@ describe(<span class="hljs-string">&#x27;ChipsHarnessExample&#x27;</span>, <span
 
     expect(<span class="hljs-keyword">await</span> chipList.isDisabled()).toBeFalse();
 
-    fixture.componentInstance.isDisabled = <span class="hljs-literal">true</span>;
+    fixture.componentInstance.isDisabled.set(<span class="hljs-literal">true</span>);
     fixture.detectChanges();
 
     expect(<span class="hljs-keyword">await</span> chipList.isDisabled()).toBeTrue();

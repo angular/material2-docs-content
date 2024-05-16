@@ -8,6 +8,7 @@ import { MatChipEditedEvent } from '@angular/material/chips';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
 import { ThemePalette } from '@angular/material/core';
+import { WritableSignal } from '@angular/core';
 
 declare interface ChipColor {
     name: string;
@@ -70,7 +71,7 @@ export declare class ChipsFormControlExample {
  * @title Testing with MatChipsHarness
  */
 export declare class ChipsHarnessExample {
-    isDisabled: boolean;
+    isDisabled: WritableSignal<boolean>;
     remove: () => void;
     add: () => void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsHarnessExample, never>;

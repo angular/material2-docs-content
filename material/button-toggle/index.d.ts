@@ -1,6 +1,7 @@
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { MatButtonToggleAppearance } from '@angular/material/button-toggle';
+import { WritableSignal } from '@angular/core';
 
 /**
  * @title Button toggle appearance
@@ -32,8 +33,8 @@ export declare class ButtonToggleFormsExample {
  * @title Testing with MatButtonToggleHarness
  */
 export declare class ButtonToggleHarnessExample {
-    disabled: boolean;
-    appearance: MatButtonToggleAppearance;
+    disabled: WritableSignal<boolean>;
+    appearance: WritableSignal<MatButtonToggleAppearance>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleHarnessExample, "button-toggle-harness-example", never, {}, {}, never, never, true, never>;
 }

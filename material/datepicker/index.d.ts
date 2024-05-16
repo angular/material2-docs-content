@@ -13,6 +13,7 @@ import { Moment } from 'moment';
 import * as _moment from 'moment';
 import { OnDestroy } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { WritableSignal } from '@angular/core';
 
 /** @title Datepicker action buttons */
 export declare class DatepickerActionsExample {
@@ -85,7 +86,7 @@ export declare class DatepickerFormatsExample {
  */
 export declare class DatepickerHarnessExample {
     date: Date | null;
-    minDate: Date | null;
+    minDate: WritableSignal<Date | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerHarnessExample, "datepicker-harness-example", never, {}, {}, never, never, true, never>;
 }
