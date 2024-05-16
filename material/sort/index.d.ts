@@ -1,5 +1,6 @@
 import * as i0 from '@angular/core';
 import { Sort } from '@angular/material/sort';
+import { WritableSignal } from '@angular/core';
 
 declare interface Dessert {
     calories: number;
@@ -13,7 +14,7 @@ declare interface Dessert {
  * @title Testing with MatSortHarness
  */
 export declare class SortHarnessExample {
-    disableThirdHeader: boolean;
+    disableThirdHeader: WritableSignal<boolean>;
     desserts: {
         name: string;
         calories: number;

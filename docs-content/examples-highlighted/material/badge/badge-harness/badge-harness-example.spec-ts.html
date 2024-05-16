@@ -23,7 +23,7 @@ describe(<span class="hljs-string">&#x27;BadgeHarnessExample&#x27;</span>, <span
     <span class="hljs-keyword">const</span> badge = <span class="hljs-keyword">await</span> loader.getHarness(MatBadgeHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#simple&#x27;</span>}));
 
     expect(<span class="hljs-keyword">await</span> badge.getText()).toBe(<span class="hljs-string">&#x27;S&#x27;</span>);
-    fixture.componentInstance.simpleContent = <span class="hljs-string">&#x27;Changed&#x27;</span>;
+    fixture.componentInstance.simpleContent.set(<span class="hljs-string">&#x27;Changed&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> badge.getText()).toBe(<span class="hljs-string">&#x27;Changed&#x27;</span>);
   });
 
@@ -31,7 +31,7 @@ describe(<span class="hljs-string">&#x27;BadgeHarnessExample&#x27;</span>, <span
     <span class="hljs-keyword">const</span> badge = <span class="hljs-keyword">await</span> loader.getHarness(MatBadgeHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#overlapping&#x27;</span>}));
 
     expect(<span class="hljs-keyword">await</span> badge.isOverlapping()).toBe(<span class="hljs-literal">true</span>);
-    fixture.componentInstance.overlap = <span class="hljs-literal">false</span>;
+    fixture.componentInstance.overlap.set(<span class="hljs-literal">false</span>);
     expect(<span class="hljs-keyword">await</span> badge.isOverlapping()).toBe(<span class="hljs-literal">false</span>);
   });
 
@@ -39,7 +39,7 @@ describe(<span class="hljs-string">&#x27;BadgeHarnessExample&#x27;</span>, <span
     <span class="hljs-keyword">const</span> badge = <span class="hljs-keyword">await</span> loader.getHarness(MatBadgeHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#disabled&#x27;</span>}));
 
     expect(<span class="hljs-keyword">await</span> badge.isDisabled()).toBe(<span class="hljs-literal">true</span>);
-    fixture.componentInstance.disabled = <span class="hljs-literal">false</span>;
+    fixture.componentInstance.disabled.set(<span class="hljs-literal">false</span>);
     expect(<span class="hljs-keyword">await</span> badge.isDisabled()).toBe(<span class="hljs-literal">false</span>);
   });
 });

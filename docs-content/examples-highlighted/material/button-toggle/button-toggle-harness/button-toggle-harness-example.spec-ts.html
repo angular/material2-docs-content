@@ -28,14 +28,14 @@ describe(<span class="hljs-string">&#x27;ButtonToggleHarnessExample&#x27;</span>
   it(<span class="hljs-string">&#x27;should get whether the group is disabled&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> group = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonToggleGroupHarness);
     expect(<span class="hljs-keyword">await</span> group.isDisabled()).toBe(<span class="hljs-literal">false</span>);
-    fixture.componentInstance.disabled = <span class="hljs-literal">true</span>;
+    fixture.componentInstance.disabled.set(<span class="hljs-literal">true</span>);
     expect(<span class="hljs-keyword">await</span> group.isDisabled()).toBe(<span class="hljs-literal">true</span>);
   });
 
   it(<span class="hljs-string">&#x27;should get the group appearance&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> group = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonToggleGroupHarness);
     expect(<span class="hljs-keyword">await</span> group.getAppearance()).toBe(<span class="hljs-string">&#x27;standard&#x27;</span>);
-    fixture.componentInstance.appearance = <span class="hljs-string">&#x27;legacy&#x27;</span>;
+    fixture.componentInstance.appearance.set(<span class="hljs-string">&#x27;legacy&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> group.getAppearance()).toBe(<span class="hljs-string">&#x27;legacy&#x27;</span>);
   });
 });

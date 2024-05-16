@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatBadgeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/badge&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
@@ -12,7 +12,7 @@
   <span class="hljs-attr">imports</span>: [MatButtonModule, MatBadgeModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BadgeHarnessExample</span> </span>{
-  simpleContent = <span class="hljs-string">&#x27;S&#x27;</span>;
-  overlap = <span class="hljs-literal">true</span>;
-  disabled = <span class="hljs-literal">true</span>;
+  simpleContent = signal(<span class="hljs-string">&#x27;S&#x27;</span>);
+  overlap = signal(<span class="hljs-literal">true</span>);
+  disabled = signal(<span class="hljs-literal">true</span>);
 }

@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
@@ -16,5 +16,5 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerHarnessExample</span> </span>{
   <span class="hljs-attr">date</span>: <span class="hljs-built_in">Date</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
-  minDate: <span class="hljs-built_in">Date</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+  minDate = signal&lt;<span class="hljs-literal">null</span> | <span class="hljs-built_in">Date</span>&gt;(<span class="hljs-literal">null</span>);
 }

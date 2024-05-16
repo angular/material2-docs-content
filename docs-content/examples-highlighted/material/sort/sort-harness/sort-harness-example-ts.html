@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {Sort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
 
 <span class="hljs-comment">/**
@@ -11,7 +11,7 @@
   <span class="hljs-attr">imports</span>: [MatSortModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SortHarnessExample</span> </span>{
-  disableThirdHeader = <span class="hljs-literal">false</span>;
+  disableThirdHeader = signal(<span class="hljs-literal">false</span>);
   desserts = [
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Frozen yogurt&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">159</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Ice cream sandwich&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">237</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">37</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},

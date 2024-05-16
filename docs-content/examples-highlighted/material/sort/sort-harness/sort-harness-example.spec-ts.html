@@ -48,7 +48,7 @@ describe(<span class="hljs-string">&#x27;SortHarnessExample&#x27;</span>, <span 
 
     expect(<span class="hljs-keyword">await</span> thirdHeader.isDisabled()).toBe(<span class="hljs-literal">false</span>);
 
-    fixture.componentInstance.disableThirdHeader = <span class="hljs-literal">true</span>;
+    fixture.componentInstance.disableThirdHeader.set(<span class="hljs-literal">true</span>);
     fixture.detectChanges();
 
     expect(<span class="hljs-keyword">await</span> thirdHeader.isDisabled()).toBe(<span class="hljs-literal">true</span>);

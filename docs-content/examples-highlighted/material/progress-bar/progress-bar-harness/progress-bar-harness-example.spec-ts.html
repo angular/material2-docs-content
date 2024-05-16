@@ -20,7 +20,7 @@ describe(<span class="hljs-string">&#x27;ProgressBarHarnessExample&#x27;</span>,
   });
 
   it(<span class="hljs-string">&#x27;should get the value&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    fixture.componentInstance.value = <span class="hljs-number">50</span>;
+    fixture.componentInstance.value.set(<span class="hljs-number">50</span>);
     <span class="hljs-keyword">const</span> [determinate, indeterminate] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatProgressBarHarness);
     expect(<span class="hljs-keyword">await</span> determinate.getValue()).toBe(<span class="hljs-number">50</span>);
     expect(<span class="hljs-keyword">await</span> indeterminate.getValue()).toBe(<span class="hljs-literal">null</span>);

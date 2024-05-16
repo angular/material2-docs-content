@@ -40,7 +40,7 @@ describe(<span class="hljs-string">&#x27;DatepickerHarnessExample&#x27;</span>, 
 
   it(<span class="hljs-string">&#x27;should get the minimum date of the input&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> input = <span class="hljs-keyword">await</span> loader.getHarness(MatDatepickerInputHarness);
-    fixture.componentInstance.minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2020</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    fixture.componentInstance.minDate.set(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2020</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">12</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
     expect(<span class="hljs-keyword">await</span> input.getMin()).toEqual(<span class="hljs-string">&#x27;2020-01-01&#x27;</span>);
   });
 

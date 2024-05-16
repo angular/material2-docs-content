@@ -1,6 +1,7 @@
 import * as i0 from '@angular/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { ThemePalette } from '@angular/material/core';
+import { WritableSignal } from '@angular/core';
 
 /**
  * @title Configurable progress spinner
@@ -17,7 +18,7 @@ export declare class ProgressSpinnerConfigurableExample {
  * @title Testing with MatProgressSpinnerHarness
  */
 export declare class ProgressSpinnerHarnessExample {
-    value: number;
+    value: WritableSignal<number>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerHarnessExample, "progress-spinner-harness-example", never, {}, {}, never, never, true, never>;
 }

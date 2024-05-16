@@ -46,7 +46,7 @@ describe(<span class="hljs-string">&#x27;InputHarnessExample&#x27;</span>, <span
     expect(<span class="hljs-keyword">await</span> inputs[<span class="hljs-number">1</span>].isDisabled()).toBe(<span class="hljs-literal">false</span>);
     expect(<span class="hljs-keyword">await</span> inputs[<span class="hljs-number">2</span>].isDisabled()).toBe(<span class="hljs-literal">false</span>);
 
-    fixture.componentInstance.disabled = <span class="hljs-literal">true</span>;
+    fixture.componentInstance.disabled.set(<span class="hljs-literal">true</span>);
 
     expect(<span class="hljs-keyword">await</span> inputs[<span class="hljs-number">1</span>].isDisabled()).toBe(<span class="hljs-literal">true</span>);
   });
@@ -59,7 +59,7 @@ describe(<span class="hljs-string">&#x27;InputHarnessExample&#x27;</span>, <span
     expect(<span class="hljs-keyword">await</span> inputs[<span class="hljs-number">1</span>].getType()).toBe(<span class="hljs-string">&#x27;number&#x27;</span>);
     expect(<span class="hljs-keyword">await</span> inputs[<span class="hljs-number">2</span>].getType()).toBe(<span class="hljs-string">&#x27;textarea&#x27;</span>);
 
-    fixture.componentInstance.inputType = <span class="hljs-string">&#x27;text&#x27;</span>;
+    fixture.componentInstance.inputType.set(<span class="hljs-string">&#x27;text&#x27;</span>);
 
     expect(<span class="hljs-keyword">await</span> inputs[<span class="hljs-number">1</span>].getType()).toBe(<span class="hljs-string">&#x27;text&#x27;</span>);
   });

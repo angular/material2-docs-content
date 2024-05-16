@@ -1,6 +1,7 @@
 import * as i0 from '@angular/core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
 import { ThemePalette } from '@angular/material/core';
+import { WritableSignal } from '@angular/core';
 
 /**
  * @title Buffer progress-bar
@@ -34,7 +35,7 @@ export declare class ProgressBarDeterminateExample {
  * @title Testing with MatProgressBarHarness
  */
 export declare class ProgressBarHarnessExample {
-    value: number;
+    value: WritableSignal<number | undefined>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressBarHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ProgressBarHarnessExample, "progress-bar-harness-example", never, {}, {}, never, never, true, never>;
 }

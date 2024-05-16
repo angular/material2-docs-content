@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { FormGroupDirective } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { WritableSignal } from '@angular/core';
 
 /**
  * @title Input with a clear button
@@ -42,8 +43,8 @@ export declare class InputFormExample {
  * @title Testing with MatInputHarness
  */
 export declare class InputHarnessExample {
-    inputType: string;
-    disabled: boolean;
+    inputType: WritableSignal<string>;
+    disabled: WritableSignal<boolean>;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputHarnessExample, "input-harness-example", never, {}, {}, never, never, true, never>;
 }
