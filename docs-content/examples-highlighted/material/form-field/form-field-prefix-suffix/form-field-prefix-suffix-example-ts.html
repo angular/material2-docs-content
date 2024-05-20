@@ -14,4 +14,8 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldPrefixSuffixExample</span> </span>{
   hide = <span class="hljs-literal">true</span>;
+  <span class="hljs-function"><span class="hljs-title">clickEvent</span>(<span class="hljs-params">event: MouseEvent</span>)</span> {
+    <span class="hljs-built_in">this</span>.hide = !<span class="hljs-built_in">this</span>.hide;
+    event.stopPropagation();
+  }
 }
