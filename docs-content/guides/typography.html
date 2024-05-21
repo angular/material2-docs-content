@@ -1,4 +1,6 @@
-<div class="docs-markdown"><h1>Customizing Typography</h1>
+<div class="docs-markdown"><h1>Customizing Typography</h1><p><strong>Note: The information on this page is specific to Material 3, for Material 2
+information on typography go to the <a href="https://material.angular.io/guide/material-2-theming#customizing-typography">Material 2 guide</a>.</strong></p>
+
         <h2 id="what-is-typography" class="docs-header-link">
           <span header-link="what-is-typography"></span>
           What is typography?
@@ -26,177 +28,149 @@ snippet can be placed in your application&#39;s <code>&lt;head&gt;</code> to loa
 note that, by default, <a href="https://angular.io/guide/workspace-config#fonts-optimization-options">the Angular CLI inlines assets from Google Fonts to reduce render-blocking
 requests</a>.</p>
 
-        <h2 id="typography-levels" class="docs-header-link">
-          <span header-link="typography-levels"></span>
-          Typography levels
+        <h2 id="configuring-typography" class="docs-header-link">
+          <span header-link="configuring-typography"></span>
+          Configuring Typography
         </h2>
-      <p>A <strong>typography level</strong> is a collection of typographic styles that corresponds to a specific
-part of an application&#39;s structure, such as a header. Each level includes styles for font family,
-font weight, font size, and letter spacing. Angular Material uses the <a href="https://m2.material.io/design/typography/the-type-system.html#type-scale">typography levels
-from the 2018 version of the Material Design specification</a>, outlined in the
-table below.</p>
+      <p>The following aspects of your app&#39;s typography can be customized via the <code>typography</code> property of
+the theme configuration object.</p>
 <table>
 <thead>
 <tr>
-<th>Name</th>
+<th>Typography Property</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>headline-1</code></td>
-<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>plain-family</code></td>
+<td>[Optional] The font family to use for plain text, such as body text.</td>
 </tr>
 <tr>
-<td><code>headline-2</code></td>
-<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>brand-family</code></td>
+<td>[Optional] The font family to use for brand text, such as headlines.</td>
 </tr>
 <tr>
-<td><code>headline-3</code></td>
-<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>bold-weight</code></td>
+<td>[Optional] The font weight to use for bold text.</td>
 </tr>
 <tr>
-<td><code>headline-4</code></td>
-<td>One-off header, usually at the top of the page (e.g. a hero header).</td>
+<td><code>medium-weight</code></td>
+<td>[Optional] The font weight to use for medium text.</td>
 </tr>
 <tr>
-<td><code>headline-5</code></td>
-<td>Section heading corresponding to the <code>&lt;h1&gt;</code> tag.</td>
-</tr>
-<tr>
-<td><code>headline-6</code></td>
-<td>Section heading corresponding to the <code>&lt;h2&gt;</code> tag.</td>
-</tr>
-<tr>
-<td><code>subtitle-1</code></td>
-<td>Section heading corresponding to the <code>&lt;h3&gt;</code> tag.</td>
-</tr>
-<tr>
-<td><code>subtitle-2</code></td>
-<td>Section heading corresponding to the <code>&lt;h4&gt;</code> tag.</td>
-</tr>
-<tr>
-<td><code>body-1</code></td>
-<td>Base body text.</td>
-</tr>
-<tr>
-<td><code>body-2</code></td>
-<td>Secondary body text.</td>
-</tr>
-<tr>
-<td><code>caption</code></td>
-<td>Smaller body and hint text.</td>
-</tr>
-<tr>
-<td><code>button</code></td>
-<td>Buttons and anchors.</td>
+<td><code>regular-weight</code></td>
+<td>[Optional] The font weight to use for regular text.</td>
 </tr>
 </tbody></table>
+<p>These are used to generate the styles for the different typescale levels.</p>
 
-        <h3 id="define-a-level" class="docs-header-link">
-          <span header-link="define-a-level"></span>
-          Define a level
-        </h3>
-      <p>You can define a typography level with the <code>define-typography-level</code> Sass function. This function
-accepts, in order, CSS values for <code>font-size</code>, <code>line-height</code>, <code>font-weight</code>, <code>font-family</code>, and
-<code>letter-spacing</code>. You can also specify the parameters by name, as demonstrated in the example below.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$my-custom-level</span>: mat.define-typography-level(
-  <span class="hljs-variable">$font-family</span>: Roboto,
-  <span class="hljs-variable">$font-weight</span>: <span class="hljs-number">400</span>,
-  <span class="hljs-variable">$font-size</span>: <span class="hljs-number">1rem</span>,
-  <span class="hljs-variable">$line-height</span>: <span class="hljs-number">1</span>,
-  <span class="hljs-variable">$letter-spacing</span>: normal,
-);
-</code></pre>
-
-        <h2 id="typography-config" class="docs-header-link">
-          <span header-link="typography-config"></span>
-          Typography config
+        <h2 id="type-scale-levels" class="docs-header-link">
+          <span header-link="type-scale-levels"></span>
+          Type scale levels
         </h2>
-      <p>A <strong>typography config</strong> is a collection of all typography levels. Angular Material represents this
-config as a Sass map. This map contains the styles for each level, keyed by name. You can create
-a typography config with the <code>define-typography-config</code> Sass function. Every parameter for
-<code>define-typography-config</code> is optional; the styles for a level will default to Material Design&#39;s
-baseline if unspecified.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$my-custom-typography-config</span>: mat.define-typography-config(
-  <span class="hljs-variable">$headline-1</span>: mat.define-typography-level(<span class="hljs-number">112px</span>, <span class="hljs-number">112px</span>, <span class="hljs-number">300</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.05em</span>),
-  <span class="hljs-variable">$headline-2</span>: mat.define-typography-level(<span class="hljs-number">56px</span>, <span class="hljs-number">56px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.02em</span>),
-  <span class="hljs-variable">$headline-3</span>: mat.define-typography-level(<span class="hljs-number">45px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.005em</span>),
-  <span class="hljs-variable">$headline-4</span>: mat.define-typography-level(<span class="hljs-number">34px</span>, <span class="hljs-number">40px</span>, <span class="hljs-number">400</span>),
-  <span class="hljs-variable">$headline-5</span>: mat.define-typography-level(<span class="hljs-number">24px</span>, <span class="hljs-number">32px</span>, <span class="hljs-number">400</span>),
-  // ...
-);
-</code></pre>
-
-        <h3 id="typography-configs-and-theming" class="docs-header-link">
-          <span header-link="typography-configs-and-theming"></span>
-          Typography configs and theming
-        </h3>
-      <p>You can provide a typography config when defining a theme to customize typographic styles. See the <a href="https://material.angular.io/guide/theming">theming guide</a> for details on custom themes.</p>
-<p>The following example shows a typical theme definition and a &quot;kids theme&quot; that only applies when
-the <code>&quot;.kids-theme&quot;</code> CSS class is present. You can <a href="https://material.angular.io/guide/theming#defining-multiple-themes">see the theming guide for more guidance on
-defining multiple themes</a>.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.core();
-
-<span class="hljs-variable">$my-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
-<span class="hljs-variable">$my-typography</span>: mat.define-typography-config();
-
-<span class="hljs-variable">$my-theme</span>: mat.define-light-theme((
- color: (
-   primary: <span class="hljs-variable">$my-primary</span>,
-   accent: <span class="hljs-variable">$my-accent</span>,
- ),
-  typography: <span class="hljs-variable">$my-typography</span>,
-));
-
-<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
-
-<span class="hljs-selector-class">.kids-theme</span> {
-  <span class="hljs-variable">$kids-primary</span>: mat.define-palette(mat.<span class="hljs-variable">$cyan-palette</span>);
-  <span class="hljs-variable">$kids-accent</span>: mat.define-palette(mat.<span class="hljs-variable">$yellow-palette</span>);
-
-  <span class="hljs-comment">// Typography config based on the default, but using &quot;Comic Sans&quot; as the</span>
-  <span class="hljs-comment">// default font family for all levels.</span>
-  <span class="hljs-variable">$kids-typography</span>: mat.define-typography-config(
-    <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
-  );
-
-  <span class="hljs-variable">$kids-theme</span>: mat.define-light-theme((
-   color: (
-     primary: <span class="hljs-variable">$kids-primary</span>,
-     accent: <span class="hljs-variable">$kids-accent</span>,
-   ),
-   typography: <span class="hljs-variable">$kids-typography</span>,
-  ));
-
-  <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$kids-theme</span>);
-}
-</code></pre>
-<p>Each component also has a <code>typography</code> mixin that emits only the typography styles for that
-component, based on a provided typography config. The following example demonstrates applying
-typography styles only for the button component.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-variable">$kids-typography</span>: mat.define-typography-config(
-  // Specify <span class="hljs-string">&quot;Comic Sans&quot;</span> as the default font family for all levels.
-  <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
-);
-
-<span class="hljs-comment">// Now we have sweet buttons with Comic Sans.</span>
-<span class="hljs-keyword">@include</span> mat.button-typography(<span class="hljs-variable">$kids-typography</span>);
-</code></pre>
+      <p>A <strong>type scale</strong> is a selection of font styles that can be used across an app.
+They’re assigned based on use (such as display or headline), and grouped more
+broadly into categories based on scale (such as large or small). For more
+information, see the <a href="https://m3.material.io/styles/typography/type-scale-tokens">M3 typography spec</a>.</p>
+<p>There are <code>large</code>, <code>medium</code>, and <code>small</code> variations for the following type roles:</p>
+<ul>
+<li><strong>Display</strong>: Display styles are reserved for short, important text or numerals. They work best on large screens.</li>
+<li><strong>Headline</strong>: Headline styles are best-suited for short, high-emphasis text on smaller screens. These styles can be good for marking primary passages of text or important regions of content.</li>
+<li><strong>Title</strong>: Title styles are smaller than headline styles, and should be used for medium-emphasis text that remains relatively short. For example, consider using title styles to divide secondary passages of text or secondary regions of content.</li>
+<li><strong>Body</strong>: Body styles are used for longer passages of text in your app.</li>
+<li><strong>Label</strong>: Label styles are smaller, utilitarian styles, used for things like the text inside components or for very small text in the content body, such as captions.</li>
+</ul>
+<p>The table below lists the CSS classes emitted and the native elements styled.</p>
+<table>
+<thead>
+<tr>
+<th>CSS class</th>
+<th>Typesale level</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.mat-display-large</code></td>
+<td><code>display-large</code></td>
+</tr>
+<tr>
+<td><code>.mat-display-medium</code></td>
+<td><code>display-medium</code></td>
+</tr>
+<tr>
+<td><code>.mat-display-small</code></td>
+<td><code>display-small</code></td>
+</tr>
+<tr>
+<td><code>.mat-headline-large</code></td>
+<td><code>headline-large</code></td>
+</tr>
+<tr>
+<td><code>.mat-headline-medium</code></td>
+<td><code>headline-medium</code></td>
+</tr>
+<tr>
+<td><code>.mat-headline-small</code></td>
+<td><code>headline-small</code></td>
+</tr>
+<tr>
+<td><code>.mat-title-large</code></td>
+<td><code>title-large</code></td>
+</tr>
+<tr>
+<td><code>.mat-title-medium</code></td>
+<td><code>title-medium</code></td>
+</tr>
+<tr>
+<td><code>.mat-title-small</code></td>
+<td><code>title-small</code></td>
+</tr>
+<tr>
+<td><code>.mat-body-large</code></td>
+<td><code>body-large</code></td>
+</tr>
+<tr>
+<td><code>.mat-body-medium</code></td>
+<td><code>body-medium</code></td>
+</tr>
+<tr>
+<td><code>.mat-body-small</code></td>
+<td><code>body-small</code></td>
+</tr>
+<tr>
+<td><code>.mat-label-large</code></td>
+<td><code>label-large</code></td>
+</tr>
+<tr>
+<td><code>.mat-label-medium</code></td>
+<td><code>label-medium</code></td>
+</tr>
+<tr>
+<td><code>.mat-label-small</code></td>
+<td><code>label-small</code></td>
+</tr>
+</tbody></table>
 
         <h2 id="using-typography-styles-in-your-application" class="docs-header-link">
           <span header-link="using-typography-styles-in-your-application"></span>
           Using typography styles in your application
         </h2>
-      <p>In addition to styles shared between components, the <code>typography-hierarchy</code> mixin includes CSS
+      <p>See the <a href="https://material.angular.io/guide/theming#defining-a-theme">theming guide</a>
+for details on setting up a theme that has typography configured.</p>
+
+        <h3 id="reading-typography-values-from-a-config" class="docs-header-link">
+          <span header-link="reading-typography-values-from-a-config"></span>
+          Reading typography values from a config
+        </h3>
+      <p>It is possible to read typography properties from a theme for use in your own components. For more
+information about this see our guide on <a href="https://material.angular.io/guide/theming-your-components#reading-typography-values">Theming your own components</a>.</p>
+
+        <h2 id="using-typography-styles-in-your-application-1" class="docs-header-link">
+          <span header-link="using-typography-styles-in-your-application-1"></span>
+          Using typography styles in your application
+        </h2>
+      <p><strong>Note: this section is applicable only if you are using the <a href="https://material.angular.io/guide/material-2-theming#optional-add-backwards-compatibility-styles-for-typography-hierarchy">M2 backwards compatability
+mixin</a>.</strong></p>
+<p>In addition to styles shared between components, the <code>typography-hierarchy</code> mixin includes CSS
 classes for styling your application. These CSS classes correspond to the typography levels in your
 typography config. This mixin also emits styles for native header elements scoped within the
 <code>.mat-typography</code> CSS class.</p>
@@ -206,81 +180,6 @@ typography config. This mixin also emits styles for native header elements scope
 <span class="hljs-variable">$my-typography</span>: mat.define-typography-config();
 <span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$my-typography</span>);
 </code></pre>
-<p>The table below lists the CSS classes emitted and the native elements styled.</p>
-<table>
-<thead>
-<tr>
-<th>CSS class</th>
-<th>Level name</th>
-<th>Native elements</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>.mat-headline-1</code></td>
-<td><code>headline-1</code></td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>.mat-headline-2</code></td>
-<td><code>headline-2</code></td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>.mat-headline-3</code></td>
-<td><code>headline-3</code></td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>.mat-headline-4</code></td>
-<td><code>headline-4</code></td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>.mat-h1</code> or <code>.mat-headline-5</code></td>
-<td><code>headline-5</code></td>
-<td><code>&lt;h1&gt;</code></td>
-</tr>
-<tr>
-<td><code>.mat-h2</code> or <code>.mat-headline-6</code></td>
-<td><code>headline-6</code></td>
-<td><code>&lt;h2&gt;</code></td>
-</tr>
-<tr>
-<td><code>.mat-h3</code> or <code>.mat-subtitle-1</code></td>
-<td><code>subtitle-1</code></td>
-<td><code>&lt;h3&gt;</code></td>
-</tr>
-<tr>
-<td><code>.mat-h4</code> or <code>.mat-body-1</code></td>
-<td><code>body-1</code></td>
-<td><code>&lt;h4&gt;</code></td>
-</tr>
-<tr>
-<td><code>.mat-h5</code></td>
-<td>None</td>
-<td><code>&lt;h5&gt;</code></td>
-</tr>
-<tr>
-<td><code>.mat-h6</code></td>
-<td>None</td>
-<td><code>&lt;h6&gt;</code></td>
-</tr>
-<tr>
-<td><code>.mat-body</code> or <code>.mat-body-2</code></td>
-<td><code>body-2</code></td>
-<td>Body text</td>
-</tr>
-<tr>
-<td><code>.mat-body-strong</code> or <code>.mat-subtitle-2</code></td>
-<td><code>subtitle-2</code></td>
-<td>None</td>
-</tr>
-<tr>
-<td><code>.mat-small</code> or <code>.mat-caption</code></td>
-<td><code>caption</code></td>
-<td>None</td>
-</tr>
-</tbody></table>
 <p>In addition to the typographic styles, these style rules also include a <code>margin-bottom</code> for
 headers and paragraphs. For <code>body</code> styles, text is styled within the provided CSS selector.</p>
 <p>The <code>.mat-h5</code> and <code>.mat-h6</code> styles don&#39;t directly correspond to a specific Material Design
@@ -305,11 +204,4 @@ typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> le
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
-
-        <h3 id="reading-typography-values-from-a-config" class="docs-header-link">
-          <span header-link="reading-typography-values-from-a-config"></span>
-          Reading typography values from a config
-        </h3>
-      <p>It is possible to read typography properties from a theme for use in your own components. For more
-information about this see our guide on <a href="https://material.angular.io/guide/theming-your-components#reading-typography-values">Theming your own components</a>.</p>
 </div>
