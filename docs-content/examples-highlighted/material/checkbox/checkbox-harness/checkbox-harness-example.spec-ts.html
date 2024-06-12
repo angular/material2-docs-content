@@ -38,7 +38,7 @@ describe(<span class="hljs-string">&#x27;CheckboxHarnessExample&#x27;</span>, <s
   });
 
   it(<span class="hljs-string">&#x27;should toggle checkbox&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    fixture.componentInstance.disabled = <span class="hljs-literal">false</span>;
+    fixture.componentRef.setInput(<span class="hljs-string">&#x27;disabled&#x27;</span>, <span class="hljs-literal">false</span>);
     fixture.changeDetectorRef.markForCheck();
     <span class="hljs-keyword">const</span> [checkedCheckbox, uncheckedCheckbox] = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatCheckboxHarness);
     <span class="hljs-keyword">await</span> checkedCheckbox.toggle();

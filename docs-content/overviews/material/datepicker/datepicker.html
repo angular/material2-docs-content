@@ -131,11 +131,11 @@ the locale of the browser running the code.</p>
           <span header-link="changing-the-datepicker-colors"></span>
           Changing the datepicker colors
         </h3>
-      <p>The datepicker popup will automatically inherit the color palette (<code>primary</code>, <code>accent</code>, or <code>warn</code>)
-from the <code>mat-form-field</code> it is attached to. If you would like to specify a different palette for
-the popup you can do so by setting the <code>color</code> property on <code>mat-datepicker</code>.</p>
-<div material-docs-example="datepicker-color"></div>
-
+      <p>The color of the datepicker can be changed by specifying a <code>$color-variant</code> when applying the
+<code>mat.datepicker-theme</code> or <code>mat.datepicker-color</code> mixins (see the
+<a href="/guide/theming#using-component-color-variants">theming guide</a> to learn more.) By default, the
+datepicker uses the theme&#39;s primary palette. This can be changed to <code>&#39;secondary&#39;</code>, <code>&#39;tertiary&#39;</code>, or
+<code>&#39;error&#39;</code>.</p>
 
         <h3 id="date-validation" class="docs-header-link">
           <span header-link="date-validation"></span>
@@ -228,16 +228,13 @@ datepicker to only assign the value to the data model if the user presses &quot;
 you can provide the comparison range start and end dates to the <code>mat-date-range-input</code> using the
 <code>comparisonStart</code> and <code>comparisonEnd</code> bindings. The comparison range will be rendered statically
 within the calendar, but it will change colors to indicate which dates overlap with the user&#39;s
-selected range.</p>
+selected range. The comparison and overlap colors can be customized using the
+<code>datepicker-date-range-colors</code> mixin.</p>
 <div material-docs-example="date-range-picker-comparison"></div>
 
-<p>Note that comparison and overlap colors aren&#39;t derived from the current theme, due
-to limitations in the Material Design theming system. They can be customized using the
-<code>datepicker-date-range-colors</code> mixin.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-keyword">@include</span> mat.datepicker-date-range-colors(
-  hotpink, teal, yellow, purple);
+<span class="hljs-keyword">@include</span> mat.datepicker-date-range-colors(hotpink, teal, yellow, purple);
 </code></pre>
 
         <h3 id="customizing-the-date-selection-logic" class="docs-header-link">
@@ -289,10 +286,10 @@ month. If you want to make the calendar larger or smaller, adjust the width rath
         </h3>
       <p>Internationalization of the datepicker is configured via four aspects:</p>
 <ol>
-<li>The date locale.</li>
-<li>The date implementation that the datepicker accepts.</li>
-<li>The display and parse formats used by the datepicker.</li>
-<li>The message strings used in the datepicker&#39;s UI.</li>
+<li> The date locale.</li>
+<li> The date implementation that the datepicker accepts.</li>
+<li> The display and parse formats used by the datepicker.</li>
+<li> The message strings used in the datepicker&#39;s UI.</li>
 </ol>
 
         <h4 id="setting-the-locale-code" class="docs-header-link">

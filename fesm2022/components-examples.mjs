@@ -1930,20 +1930,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "datepicker-api-example.ts",
         "importPath": "material/datepicker"
     },
-    "datepicker-color": {
-        "packagePath": "material/datepicker/datepicker-color",
-        "title": "Datepicker palette colors",
-        "componentName": "DatepickerColorExample",
-        "files": [
-            "datepicker-color-example.ts",
-            "datepicker-color-example.html",
-            "datepicker-color-example.css"
-        ],
-        "selector": "datepicker-color-example",
-        "additionalComponents": [],
-        "primaryFile": "datepicker-color-example.ts",
-        "importPath": "material/datepicker"
-    },
     "datepicker-custom-header": {
         "packagePath": "material/datepicker/datepicker-custom-header",
         "title": "Datepicker with custom calendar header",
@@ -5045,8 +5031,6 @@ async function loadExample(id) {
         case 'datepicker-actions':
             return import('@angular/components-examples/material/datepicker');
         case 'datepicker-api':
-            return import('@angular/components-examples/material/datepicker');
-        case 'datepicker-color':
             return import('@angular/components-examples/material/datepicker');
         case 'datepicker-custom-header':
             return import('@angular/components-examples/material/datepicker');

@@ -1,7 +1,9 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {provideMomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-moment-adapter&#x27;</span>;
-
+<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-comment">// Depending on whether rollup is used, moment needs to be imported differently.</span>
 <span class="hljs-comment">// Since Moment.js doesn&#x27;t have a default export, we normally need to import using the `* as`</span>
 <span class="hljs-comment">// syntax. However, rollup creates a synthetic default module and we thus need to import it using</span>
@@ -9,9 +11,6 @@
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _moment <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;moment&#x27;</span>;
 <span class="hljs-comment">// tslint:disable-next-line:no-duplicate-imports</span>
 <span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> _rollupMoment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;moment&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-keyword">const</span> moment = _rollupMoment || _moment;
 
@@ -33,8 +32,9 @@
     FormsModule,
     ReactiveFormsModule,
   ],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerMomentExample</span> </span>{
   <span class="hljs-comment">// Datepicker takes `Moment` objects instead of `Date` objects.</span>
-  date = <span class="hljs-keyword">new</span> FormControl(moment([<span class="hljs-number">2017</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]));
+  <span class="hljs-keyword">readonly</span> date = <span class="hljs-keyword">new</span> FormControl(moment([<span class="hljs-number">2017</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]));
 }

@@ -5,21 +5,20 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list-section&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>
-                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;allComplete&quot;</span>
-                  [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;task.color&quot;</span>
-                  [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">&quot;someComplete()&quot;</span>
-                  (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;setAll($event.checked)&quot;</span>&gt;</span>
-      {{task.name}}
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>
+      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;task().completed&quot;</span>
+      [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">&quot;partiallyComplete()&quot;</span>
+      (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;update($event.checked)&quot;</span>
+    &gt;</span>
+      {{task().name}}
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list-section&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
-      @for (subtask of task.subtasks; track subtask) {
+      @for (subtask of task().subtasks; track subtask; let i = $index) {
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;subtask.completed&quot;</span>
-                        [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;subtask.color&quot;</span>
-                        (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">&quot;updateAllComplete()&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">&quot;subtask.completed&quot;</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">&quot;update($event.checked, i)&quot;</span>&gt;</span>
             {{subtask.name}}
           <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>

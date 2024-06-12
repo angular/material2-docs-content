@@ -1,8 +1,8 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, model} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Configurable checkbox
@@ -13,10 +13,11 @@
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;checkbox-configurable-example.css&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatCardModule, MatCheckboxModule, FormsModule, MatRadioModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CheckboxConfigurableExample</span> </span>{
-  checked = <span class="hljs-literal">false</span>;
-  indeterminate = <span class="hljs-literal">false</span>;
-  labelPosition: <span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span> = <span class="hljs-string">&#x27;after&#x27;</span>;
-  disabled = <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">readonly</span> checked = model(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">readonly</span> indeterminate = model(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">readonly</span> labelPosition = model&lt;<span class="hljs-string">&#x27;before&#x27;</span> | <span class="hljs-string">&#x27;after&#x27;</span>&gt;(<span class="hljs-string">&#x27;after&#x27;</span>);
+  <span class="hljs-keyword">readonly</span> disabled = model(<span class="hljs-literal">false</span>);
 }

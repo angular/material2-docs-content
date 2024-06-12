@@ -1,4 +1,3 @@
-import { ChangeDetectorRef } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
@@ -8,11 +7,12 @@ import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MatDateFormats } from '@angular/material/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDatepickerIntl } from '@angular/material/datepicker';
+import { ModelSignal } from '@angular/core';
 import { Moment } from 'moment';
 import * as _moment from 'moment';
 import { OnDestroy } from '@angular/core';
 import { OnInit } from '@angular/core';
+import { Signal } from '@angular/core';
 import { WritableSignal } from '@angular/core';
 
 /** @title Datepicker action buttons */
@@ -27,15 +27,9 @@ export declare class DatepickerApiExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerApiExample, "datepicker-api-example", never, {}, {}, never, never, true, never>;
 }
 
-/** @title Datepicker palette colors */
-export declare class DatepickerColorExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerColorExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerColorExample, "datepicker-color-example", never, {}, {}, never, never, true, never>;
-}
-
 /** @title Datepicker with custom calendar header */
 export declare class DatepickerCustomHeaderExample {
-    exampleHeader: typeof ExampleHeader;
+    readonly exampleHeader: typeof ExampleHeader;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerCustomHeaderExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerCustomHeaderExample, "datepicker-custom-header-example", never, {}, {}, never, never, true, never>;
 }
@@ -61,7 +55,7 @@ export declare class DatepickerDisabledExample {
 
 /** @title Datepicker input and change events */
 export declare class DatepickerEventsExample {
-    events: string[];
+    events: WritableSignal<string[]>;
     addEvent(type: string, event: MatDatepickerInputEvent<Date>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerEventsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerEventsExample, "datepicker-events-example", never, {}, {}, never, never, true, never>;
@@ -76,7 +70,7 @@ export declare class DatepickerFilterExample {
 
 /** @title Datepicker with custom formats */
 export declare class DatepickerFormatsExample {
-    date: FormControl<_moment.Moment | null>;
+    readonly date: FormControl<_moment.Moment | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerFormatsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerFormatsExample, "datepicker-formats-example", never, {}, {}, never, never, true, never>;
 }
@@ -85,45 +79,44 @@ export declare class DatepickerFormatsExample {
  * @title Testing with MatDatepickerInputHarness
  */
 export declare class DatepickerHarnessExample {
-    date: Date | null;
+    date: ModelSignal<Date | null>;
     minDate: WritableSignal<Date | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerHarnessExample, "datepicker-harness-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerHarnessExample, "datepicker-harness-example", never, { "date": { "alias": "date"; "required": false; "isSignal": true; }; }, { "date": "dateChange"; }, never, never, true, never>;
 }
 
 /** @title Datepicker inline calendar example */
 export declare class DatepickerInlineCalendarExample {
-    selected: Date | null;
+    selected: ModelSignal<Date | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerInlineCalendarExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerInlineCalendarExample, "datepicker-inline-calendar-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerInlineCalendarExample, "datepicker-inline-calendar-example", never, { "selected": { "alias": "selected"; "required": false; "isSignal": true; }; }, { "selected": "selectedChange"; }, never, never, true, never>;
 }
 
 /** @title Datepicker with different locale */
 export declare class DatepickerLocaleExample implements OnInit {
-    private _adapter;
-    private _intl;
-    private _locale;
-    constructor(_adapter: DateAdapter<any>, _intl: MatDatepickerIntl, _locale: string);
+    private readonly _adapter;
+    private readonly _intl;
+    private readonly _locale;
+    readonly dateFormatString: Signal<"" | "YYYY/MM/DD" | "DD/MM/YYYY">;
     ngOnInit(): void;
     french(): void;
     updateCloseButtonLabel(label: string): void;
-    getDateFormatString(): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerLocaleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerLocaleExample, "datepicker-locale-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Datepicker with min & max validation */
 export declare class DatepickerMinMaxExample {
-    minDate: Date;
-    maxDate: Date;
-    constructor();
+    private readonly _currentYear;
+    readonly minDate: Date;
+    readonly maxDate: Date;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerMinMaxExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerMinMaxExample, "datepicker-min-max-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Datepicker that uses Moment.js dates */
 export declare class DatepickerMomentExample {
-    date: FormControl<_moment.Moment | null>;
+    readonly date: FormControl<_moment.Moment | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerMomentExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerMomentExample, "datepicker-moment-example", never, {}, {}, never, never, true, never>;
 }
@@ -136,7 +129,7 @@ export declare class DatepickerOverviewExample {
 
 /** @title Datepicker start date */
 export declare class DatepickerStartViewExample {
-    startDate: Date;
+    readonly startDate: Date;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerStartViewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerStartViewExample, "datepicker-start-view-example", never, {}, {}, never, never, true, never>;
 }
@@ -149,15 +142,15 @@ export declare class DatepickerTouchExample {
 
 /** @title Datepicker selected value */
 export declare class DatepickerValueExample {
-    date: FormControl<Date | null>;
-    serializedDate: FormControl<string | null>;
+    readonly date: FormControl<Date | null>;
+    readonly serializedDate: FormControl<string | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerValueExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerValueExample, "datepicker-value-example", never, {}, {}, never, never, true, never>;
 }
 
 /** @title Datepicker emulating a Year and month picker */
 export declare class DatepickerViewsSelectionExample {
-    date: FormControl<_moment.Moment | null>;
+    readonly date: FormControl<_moment.Moment | null>;
     setMonthAndYear(normalizedMonthAndYear: Moment, datepicker: MatDatepicker<Moment>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerViewsSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never, never, true, never>;
@@ -165,11 +158,11 @@ export declare class DatepickerViewsSelectionExample {
 
 /** @title Date range picker comparison ranges */
 export declare class DateRangePickerComparisonExample {
-    campaignOne: FormGroup<{
+    readonly campaignOne: FormGroup<{
         start: FormControl<Date | null>;
         end: FormControl<Date | null>;
     }>;
-    campaignTwo: FormGroup<{
+    readonly campaignTwo: FormGroup<{
         start: FormControl<Date | null>;
         end: FormControl<Date | null>;
     }>;
@@ -179,7 +172,7 @@ export declare class DateRangePickerComparisonExample {
 
 /** @title Date range picker forms integration */
 export declare class DateRangePickerFormsExample {
-    range: FormGroup<{
+    readonly range: FormGroup<{
         start: FormControl<Date | null>;
         end: FormControl<Date | null>;
     }>;
@@ -205,9 +198,9 @@ export declare class ExampleHeader<D> implements OnDestroy {
     private _dateAdapter;
     private _dateFormats;
     private _destroyed;
-    constructor(_calendar: MatCalendar<D>, _dateAdapter: DateAdapter<D>, _dateFormats: MatDateFormats, cdr: ChangeDetectorRef);
+    readonly periodLabel: WritableSignal<string>;
+    constructor(_calendar: MatCalendar<D>, _dateAdapter: DateAdapter<D>, _dateFormats: MatDateFormats);
     ngOnDestroy(): void;
-    get periodLabel(): string;
     previousClicked(mode: 'month' | 'year'): void;
     nextClicked(mode: 'month' | 'year'): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ExampleHeader<any>, never>;

@@ -1,11 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ChipColor {
-  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  color: ThemePalette;
-}
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Stacked chips
@@ -18,10 +12,5 @@
   <span class="hljs-attr">imports</span>: [MatChipsModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsStackedExample</span> </span>{
-  <span class="hljs-attr">availableColors</span>: ChipColor[] = [
-    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;none&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-literal">undefined</span>},
-    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Primary&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;primary&#x27;</span>},
-    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Accent&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;accent&#x27;</span>},
-    {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Warn&#x27;</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;warn&#x27;</span>},
-  ];
+  <span class="hljs-keyword">readonly</span> bestBoys: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Samoyed&#x27;</span>, <span class="hljs-string">&#x27;Akita Inu&#x27;</span>, <span class="hljs-string">&#x27;Alaskan Malamute&#x27;</span>, <span class="hljs-string">&#x27;Siberian Husky&#x27;</span>];
 }

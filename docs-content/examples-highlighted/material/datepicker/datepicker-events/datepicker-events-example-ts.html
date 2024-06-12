@@ -1,8 +1,8 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDatepickerInputEvent, MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDatepickerInputEvent, MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Datepicker input and change events */</span>
 <span class="hljs-meta">@Component</span>({
@@ -12,11 +12,12 @@
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()],
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerEventsExample</span> </span>{
-  <span class="hljs-attr">events</span>: <span class="hljs-built_in">string</span>[] = [];
+  events = signal&lt;<span class="hljs-built_in">string</span>[]&gt;([]);
 
   <span class="hljs-function"><span class="hljs-title">addEvent</span>(<span class="hljs-params"><span class="hljs-keyword">type</span>: <span class="hljs-built_in">string</span>, event: MatDatepickerInputEvent&lt;<span class="hljs-built_in">Date</span>&gt;</span>)</span> {
-    <span class="hljs-built_in">this</span>.events.push(<span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">type</span>}</span>: <span class="hljs-subst">${event.value}</span>`</span>);
+    <span class="hljs-built_in">this</span>.events.update(<span class="hljs-function"><span class="hljs-params">events</span> =&gt;</span> [...events, <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-keyword">type</span>}</span>: <span class="hljs-subst">${event.value}</span>`</span>]);
   }
 }
