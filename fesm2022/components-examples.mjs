@@ -404,6 +404,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "cdk-drag-drop-horizontal-sorting-example.ts",
         "importPath": "cdk/drag-drop"
     },
+    "cdk-drag-drop-mixed-sorting": {
+        "packagePath": "cdk/drag-drop/cdk-drag-drop-mixed-sorting",
+        "title": "Drag&Drop horizontal wrapping list",
+        "componentName": "CdkDragDropMixedSortingExample",
+        "files": [
+            "cdk-drag-drop-mixed-sorting-example.ts",
+            "cdk-drag-drop-mixed-sorting-example.html",
+            "cdk-drag-drop-mixed-sorting-example.css"
+        ],
+        "selector": "cdk-drag-drop-mixed-sorting-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-drag-drop-mixed-sorting-example.ts",
+        "importPath": "cdk/drag-drop"
+    },
     "cdk-drag-drop-overview": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-overview",
         "title": "Basic Drag&Drop",
@@ -4813,6 +4827,8 @@ async function loadExample(id) {
         case 'cdk-drag-drop-handle':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-horizontal-sorting':
+            return import('@angular/components-examples/cdk/drag-drop');
+        case 'cdk-drag-drop-mixed-sorting':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-overview':
             return import('@angular/components-examples/cdk/drag-drop');

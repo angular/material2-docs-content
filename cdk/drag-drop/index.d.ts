@@ -151,6 +151,16 @@ export declare class CdkDragDropHorizontalSortingExample {
 }
 
 /**
+ * @title Drag&Drop horizontal wrapping list
+ */
+export declare class CdkDragDropMixedSortingExample {
+    items: string[];
+    drop(event: CdkDragDrop<string[]>): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropMixedSortingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropMixedSortingExample, "cdk-drag-drop-mixed-sorting-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Basic Drag&Drop
  */
 export declare class CdkDragDropOverviewExample {
