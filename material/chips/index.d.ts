@@ -1,38 +1,29 @@
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipEditedEvent } from '@angular/material/chips';
 import { MatChipInputEvent } from '@angular/material/chips';
-import { Observable } from 'rxjs';
-import { ThemePalette } from '@angular/material/core';
+import { ModelSignal } from '@angular/core';
+import { Signal } from '@angular/core';
 import { WritableSignal } from '@angular/core';
-
-declare interface ChipColor {
-    name: string;
-    color: ThemePalette;
-}
 
 /**
  * @title Chips Autocomplete
  */
 export declare class ChipsAutocompleteExample {
-    separatorKeysCodes: number[];
-    fruitCtrl: FormControl<string | null>;
-    filteredFruits: Observable<string[]>;
-    fruits: string[];
-    allFruits: string[];
-    fruitInput: ElementRef<HTMLInputElement>;
-    announcer: LiveAnnouncer;
-    constructor();
+    readonly separatorKeysCodes: number[];
+    readonly currentFruit: ModelSignal<string>;
+    readonly fruits: WritableSignal<string[]>;
+    readonly allFruits: string[];
+    readonly filteredFruits: Signal<string[]>;
+    readonly announcer: LiveAnnouncer;
     add(event: MatChipInputEvent): void;
     remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
-    private _filter;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsAutocompleteExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsAutocompleteExample, "chips-autocomplete-example", never, { "currentFruit": { "alias": "currentFruit"; "required": false; "isSignal": true; }; }, { "currentFruit": "currentFruitChange"; }, never, never, true, never>;
 }
 
 /**
@@ -48,7 +39,7 @@ export declare class ChipsAvatarExample {
  * @title Chips Drag and Drop
  */
 export declare class ChipsDragDropExample {
-    vegetables: Vegetable[];
+    readonly vegetables: WritableSignal<Vegetable[]>;
     drop(event: CdkDragDrop<Vegetable[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsDragDropExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never, never, true, never>;
@@ -58,8 +49,8 @@ export declare class ChipsDragDropExample {
  * @title Chips with form control
  */
 export declare class ChipsFormControlExample {
-    keywords: string[];
-    formControl: FormControl<string[] | null>;
+    readonly keywords: WritableSignal<string[]>;
+    readonly formControl: FormControl<string[] | null>;
     announcer: LiveAnnouncer;
     removeKeyword(keyword: string): void;
     add(event: MatChipInputEvent): void;
@@ -82,10 +73,10 @@ export declare class ChipsHarnessExample {
  * @title Chips with input
  */
 export declare class ChipsInputExample {
-    addOnBlur: boolean;
+    readonly addOnBlur = true;
     readonly separatorKeysCodes: readonly [13, 188];
-    fruits: Fruit[];
-    announcer: LiveAnnouncer;
+    readonly fruits: WritableSignal<Fruit[]>;
+    readonly announcer: LiveAnnouncer;
     add(event: MatChipInputEvent): void;
     remove(fruit: Fruit): void;
     edit(fruit: Fruit, event: MatChipEditedEvent): void;
@@ -105,7 +96,7 @@ export declare class ChipsOverviewExample {
  * @title Stacked chips
  */
 export declare class ChipsStackedExample {
-    availableColors: ChipColor[];
+    readonly bestBoys: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsStackedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never, never, true, never>;
 }

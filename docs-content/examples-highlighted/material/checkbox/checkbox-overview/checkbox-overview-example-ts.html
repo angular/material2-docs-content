@@ -1,12 +1,10 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, computed, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Task {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
   completed: <span class="hljs-built_in">boolean</span>;
-  color: ThemePalette;
   subtasks?: Task[];
 }
 
@@ -19,37 +17,37 @@
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;checkbox-overview-example.css&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatCheckboxModule, FormsModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CheckboxOverviewExample</span> </span>{
-  <span class="hljs-attr">task</span>: Task = {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Indeterminate&#x27;</span>,
+  <span class="hljs-keyword">readonly</span> task = signal&lt;Task&gt;({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Parent task&#x27;</span>,
     <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;primary&#x27;</span>,
     <span class="hljs-attr">subtasks</span>: [
-      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Primary&#x27;</span>, <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;primary&#x27;</span>},
-      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Accent&#x27;</span>, <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;accent&#x27;</span>},
-      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Warn&#x27;</span>, <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;warn&#x27;</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Child task 1&#x27;</span>, <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Child task 2&#x27;</span>, <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Child task 3&#x27;</span>, <span class="hljs-attr">completed</span>: <span class="hljs-literal">false</span>},
     ],
-  };
+  });
 
-  allComplete: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
-
-  <span class="hljs-function"><span class="hljs-title">updateAllComplete</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.allComplete = <span class="hljs-built_in">this</span>.task.subtasks != <span class="hljs-literal">null</span> &amp;&amp; <span class="hljs-built_in">this</span>.task.subtasks.every(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completed);
-  }
-
-  someComplete(): <span class="hljs-built_in">boolean</span> {
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.task.subtasks == <span class="hljs-literal">null</span>) {
+  <span class="hljs-keyword">readonly</span> partiallyComplete = computed(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">const</span> task = <span class="hljs-built_in">this</span>.task();
+    <span class="hljs-keyword">if</span> (!task.subtasks) {
       <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
     }
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.task.subtasks.filter(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completed).length &gt; <span class="hljs-number">0</span> &amp;&amp; !<span class="hljs-built_in">this</span>.allComplete;
-  }
+    <span class="hljs-keyword">return</span> task.subtasks.some(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completed) &amp;&amp; !task.subtasks.every(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completed);
+  });
 
-  <span class="hljs-function"><span class="hljs-title">setAll</span>(<span class="hljs-params">completed: <span class="hljs-built_in">boolean</span></span>)</span> {
-    <span class="hljs-built_in">this</span>.allComplete = completed;
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.task.subtasks == <span class="hljs-literal">null</span>) {
-      <span class="hljs-keyword">return</span>;
-    }
-    <span class="hljs-built_in">this</span>.task.subtasks.forEach(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> (t.completed = completed));
+  <span class="hljs-function"><span class="hljs-title">update</span>(<span class="hljs-params">completed: <span class="hljs-built_in">boolean</span>, index?: <span class="hljs-built_in">number</span></span>)</span> {
+    <span class="hljs-built_in">this</span>.task.update(<span class="hljs-function"><span class="hljs-params">task</span> =&gt;</span> {
+      <span class="hljs-keyword">if</span> (index === <span class="hljs-literal">undefined</span>) {
+        task.completed = completed;
+        task.subtasks?.forEach(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> (t.completed = completed));
+      } <span class="hljs-keyword">else</span> {
+        task.subtasks![index].completed = completed;
+        task.completed = task.subtasks?.every(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.completed) ?? <span class="hljs-literal">true</span>;
+      }
+      <span class="hljs-keyword">return</span> {...task};
+    });
   }
 }

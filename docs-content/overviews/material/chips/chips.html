@@ -8,7 +8,6 @@
 <div material-docs-example="chips-overview"></div>
 
 <p>By default, <code>&lt;mat-chip&gt;</code> renders a chip with Material Design styles applied. For a chip with no styles applied, use <code>&lt;mat-basic-chip&gt;</code>.</p>
-<p><em>Hint: <code>&lt;mat-basic-chip&gt;</code> receives the <code>mat-mdc-basic-chip</code> CSS class in addition to the <code>mat-mdc-chip</code> class.</em></p>
 
         <h4 id="disabled-appearance" class="docs-header-link">
           <span header-link="disabled-appearance"></span>
@@ -51,7 +50,7 @@
           <span header-link="disabled-mat-chip-row"></span>
           Disabled <code>&lt;mat-chip-row&gt;</code>
         </h4>
-      <p>Use the <code>disabled</code> Input to disable a <code>&lt;mat-chip-row&gt;</code>. This  gives the <code>&lt;mat-chip-row&gt;</code> a disabled appearance and prevents the user from interacting with it.</p>
+      <p>Use the <code>disabled</code> Input to disable a <code>&lt;mat-chip-row&gt;</code>. This gives the <code>&lt;mat-chip-row&gt;</code> a disabled appearance and prevents the user from interacting with it.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> <span class="hljs-attr">disabled</span>&gt;</span>Orange<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
 </code></pre>
 
@@ -66,7 +65,7 @@
           <span header-link="autocomplete"></span>
           Autocomplete
         </h4>
-      <p>An example of chip input with autocomplete.</p>
+      <p>A <code>&lt;mat-chip-grid&gt;</code> can be combined with <code>&lt;mat-autocomplete&gt;</code> to enable free-form chip input with suggestions.</p>
 <div material-docs-example="chips-autocomplete"></div>
 
 
@@ -130,7 +129,11 @@
           <span header-link="theming"></span>
           Theming
         </h3>
-      <p>By default, chips use the primary color. Specify the <code>color</code> property to change the color to <code>accent</code> or <code>warn</code>.</p>
+      <p>The color of a <code>&lt;mat-datepicker&gt;</code> can be changed by specifying a <code>$color-variant</code> when applying the
+<code>mat.datepicker-theme</code> or <code>mat.datepicker-color</code> mixins (see the
+<a href="/guide/theming#using-component-color-variants">theming guide</a> to learn more.) By default, the
+datepicker uses the theme&#39;s primary palette. This can be changed to <code>&#39;secondary&#39;</code>, <code>&#39;tertiary&#39;</code>,
+or <code>&#39;error&#39;</code>.</p>
 
         <h3 id="interaction-patterns" class="docs-header-link">
           <span header-link="interaction-patterns"></span>
