@@ -1,17 +1,17 @@
-<span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject, model, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  MatDialog,
   MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
+  MatDialog,
   MatDialogActions,
   MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
   <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span>;
@@ -26,21 +26,23 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-overview-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogOverviewExample</span> </span>{
-  <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span>;
-  name: <span class="hljs-built_in">string</span>;
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
+  <span class="hljs-keyword">readonly</span> animal = signal(<span class="hljs-string">&#x27;&#x27;</span>);
+  <span class="hljs-keyword">readonly</span> name = model(<span class="hljs-string">&#x27;&#x27;</span>);
+  <span class="hljs-keyword">readonly</span> dialog = inject(MatDialog);
 
   openDialog(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogOverviewExampleDialog, {
-      <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-built_in">this</span>.name, <span class="hljs-attr">animal</span>: <span class="hljs-built_in">this</span>.animal},
+      <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-built_in">this</span>.name(), <span class="hljs-attr">animal</span>: <span class="hljs-built_in">this</span>.animal()},
     });
 
     dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;The dialog was closed&#x27;</span>);
-      <span class="hljs-built_in">this</span>.animal = result;
+      <span class="hljs-keyword">if</span> (result !== <span class="hljs-literal">undefined</span>) {
+        <span class="hljs-built_in">this</span>.animal.set(result);
+      }
     });
   }
 }
@@ -61,10 +63,9 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogOverviewExampleDialog</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogOverviewExampleDialog&gt;,
-    <span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData,
-  </span>)</span> {}
+  <span class="hljs-keyword">readonly</span> dialogRef = inject(MatDialogRef&lt;DialogOverviewExampleDialog&gt;);
+  <span class="hljs-keyword">readonly</span> data = inject&lt;DialogData&gt;(MAT_DIALOG_DATA);
+  <span class="hljs-keyword">readonly</span> animal = model(<span class="hljs-built_in">this</span>.data.animal);
 
   onNoClick(): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.dialogRef.close();

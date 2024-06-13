@@ -1,9 +1,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-accordion</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-headers-align&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">expanded</span>]=<span class="hljs-string">&quot;step === 0&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;setStep(0)&quot;</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">expanded</span>]=<span class="hljs-string">&quot;step() === 0&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;setStep(0)&quot;</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span>
-        Personal data
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span> Personal data <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
         Type your name and age
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>account_circle<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
@@ -12,23 +10,21 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>First name<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Age<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">min</span>=<span class="hljs-string">&quot;1&quot;</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-action-row</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;primary&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;nextStep()&quot;</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">expanded</span>]=<span class="hljs-string">&quot;step === 1&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;setStep(1)&quot;</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">expanded</span>]=<span class="hljs-string">&quot;step() === 1&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;setStep(1)&quot;</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span>
-        Destination
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span> Destination <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
         Type the country name
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>map<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
@@ -37,7 +33,7 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Country<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-action-row</span>&gt;</span>
@@ -46,11 +42,9 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">expanded</span>]=<span class="hljs-string">&quot;step === 2&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;setStep(2)&quot;</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">expanded</span>]=<span class="hljs-string">&quot;step() === 2&quot;</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;setStep(2)&quot;</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span>
-        Day of the trip
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span> Day of the trip <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
         Inform the date you wish to travel
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>date_range<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
@@ -59,7 +53,7 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Date<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">&quot;picker&quot;</span> (<span class="hljs-attr">focus</span>)=<span class="hljs-string">&quot;picker.open()&quot;</span> <span class="hljs-attr">readonly</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">&quot;picker&quot;</span> (<span class="hljs-attr">focus</span>)=<span class="hljs-string">&quot;picker.open()&quot;</span> <span class="hljs-attr">readonly</span> /&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">picker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
 
@@ -68,5 +62,4 @@
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">color</span>=<span class="hljs-string">&quot;primary&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;nextStep()&quot;</span>&gt;</span>End<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
-
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-accordion</span>&gt;</span>

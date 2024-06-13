@@ -1,12 +1,12 @@
-<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject, viewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MatDialog,
   MatDialogActions,
   MatDialogClose,
   MatDialogContent,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatMenuTrigger, MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatMenuModule, MatMenuTrigger} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/menu&#x27;</span>;
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Dialog launched from a menu
  */</span>
@@ -15,18 +15,19 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-from-menu-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatButtonModule, MatMenuModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogFromMenuExample</span> </span>{
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;menuTrigger&#x27;</span>) menuTrigger: MatMenuTrigger;
+  <span class="hljs-keyword">readonly</span> menuTrigger = viewChild.required(MatMenuTrigger);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
+  <span class="hljs-keyword">readonly</span> dialog = inject(MatDialog);
 
   <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogFromMenuExampleDialog, {<span class="hljs-attr">restoreFocus</span>: <span class="hljs-literal">false</span>});
 
     <span class="hljs-comment">// Manually restore focus to the menu trigger since the element that</span>
     <span class="hljs-comment">// opens the dialog won&#x27;t be in the DOM any more when the dialog closes.</span>
-    dialogRef.afterClosed().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.menuTrigger.focus());
+    dialogRef.afterClosed().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.menuTrigger().focus());
   }
 }
 
@@ -35,5 +36,6 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-from-menu-example-dialog.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogFromMenuExampleDialog</span> </span>{}
