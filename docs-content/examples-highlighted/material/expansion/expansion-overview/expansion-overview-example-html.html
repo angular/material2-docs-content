@@ -1,23 +1,16 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-accordion</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> <span class="hljs-attr">hideToggle</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span>
-        This is the expansion title
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
-        This is a summary of the content
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-description</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span> This is the expansion title <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span> This is a summary of the content <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-description</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the primary content of the panel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;panelOpenState = true&quot;</span>
-                       (<span class="hljs-attr">closed</span>)=<span class="hljs-string">&quot;panelOpenState = false&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> (<span class="hljs-attr">opened</span>)=<span class="hljs-string">&quot;panelOpenState.set(true)&quot;</span> (<span class="hljs-attr">closed</span>)=<span class="hljs-string">&quot;panelOpenState.set(false)&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span>
-        Self aware panel
-      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span> Self aware panel <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
-        Currently I am {{panelOpenState ? &#x27;open&#x27; : &#x27;closed&#x27;}}
+        Currently I am {{panelOpenState() ? &#x27;open&#x27; : &#x27;closed&#x27;}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-description</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I&#x27;m visible because I am open<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

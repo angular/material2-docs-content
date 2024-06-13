@@ -3,22 +3,23 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatDialogConfig } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { ModelSignal } from '@angular/core';
+import { Signal } from '@angular/core';
 import { TemplateRef } from '@angular/core';
+import { WritableSignal } from '@angular/core';
 
 /**
  * @title Dialog Animations
  */
 export declare class DialogAnimationsExample {
-    dialog: MatDialog;
-    constructor(dialog: MatDialog);
+    readonly dialog: MatDialog;
     openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogAnimationsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogAnimationsExample, "dialog-animations-example", never, {}, {}, never, never, true, never>;
 }
 
 export declare class DialogAnimationsExampleDialog {
-    dialogRef: MatDialogRef<DialogAnimationsExampleDialog>;
-    constructor(dialogRef: MatDialogRef<DialogAnimationsExampleDialog>);
+    readonly dialogRef: MatDialogRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogAnimationsExampleDialog, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogAnimationsExampleDialog, "dialog-animations-example-dialog", never, {}, {}, never, never, true, never>;
 }
@@ -27,8 +28,7 @@ export declare class DialogAnimationsExampleDialog {
  * @title Dialog with header, scrollable content and actions
  */
 export declare class DialogContentExample {
-    dialog: MatDialog;
-    constructor(dialog: MatDialog);
+    readonly dialog: MatDialog;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogContentExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogContentExample, "dialog-content-example", never, {}, {}, never, never, true, never>;
@@ -70,8 +70,7 @@ export declare class DialogDataExampleDialog {
  * @title Dialog elements
  */
 export declare class DialogElementsExample {
-    dialog: MatDialog;
-    constructor(dialog: MatDialog);
+    readonly dialog: MatDialog;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogElementsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogElementsExample, "dialog-elements-example", never, {}, {}, never, never, true, never>;
@@ -86,9 +85,8 @@ export declare class DialogElementsExampleDialog {
  * @title Dialog launched from a menu
  */
 export declare class DialogFromMenuExample {
-    dialog: MatDialog;
-    menuTrigger: MatMenuTrigger;
-    constructor(dialog: MatDialog);
+    readonly menuTrigger: Signal<MatMenuTrigger>;
+    readonly dialog: MatDialog;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogFromMenuExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogFromMenuExample, "dialog-from-menu-example", never, {}, {}, never, never, true, never>;
@@ -103,9 +101,8 @@ export declare class DialogFromMenuExampleDialog {
  * @title Testing with MatDialogHarness
  */
 export declare class DialogHarnessExample {
+    readonly dialogTemplate: Signal<TemplateRef<any>>;
     readonly dialog: MatDialog;
-    dialogTemplate: TemplateRef<any>;
-    constructor(dialog: MatDialog);
     open(config?: MatDialogConfig): MatDialogRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogHarnessExample, "dialog-harness-example", never, {}, {}, never, never, true, never>;
@@ -115,22 +112,21 @@ export declare class DialogHarnessExample {
  * @title Dialog Overview
  */
 export declare class DialogOverviewExample {
-    dialog: MatDialog;
-    animal: string;
-    name: string;
-    constructor(dialog: MatDialog);
+    readonly animal: WritableSignal<string>;
+    readonly name: ModelSignal<string>;
+    readonly dialog: MatDialog;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExample, "dialog-overview-example", never, { "name": { "alias": "name"; "required": false; "isSignal": true; }; }, { "name": "nameChange"; }, never, never, true, never>;
 }
 
 export declare class DialogOverviewExampleDialog {
-    dialogRef: MatDialogRef<DialogOverviewExampleDialog>;
-    data: DialogData_2;
-    constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: DialogData_2);
+    readonly dialogRef: MatDialogRef<any, any>;
+    readonly data: DialogData_2;
+    readonly animal: ModelSignal<string>;
     onNoClick(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExampleDialog, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, {}, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DialogOverviewExampleDialog, "dialog-overview-example-dialog", never, { "animal": { "alias": "animal"; "required": false; "isSignal": true; }; }, { "animal": "animalChange"; }, never, never, true, never>;
 }
 
 export { }

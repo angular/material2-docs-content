@@ -1,11 +1,13 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {toSignal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/rxjs-interop&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 <span class="hljs-keyword">import</span> {FloatLabelType, MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Form field with label */</span>
 <span class="hljs-meta">@Component</span>({
@@ -23,18 +25,18 @@
     MatSelectModule,
     MatIconModule,
   ],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FormFieldLabelExample</span> </span>{
-  hideRequiredControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>);
-  floatLabelControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;auto&#x27;</span> <span class="hljs-keyword">as</span> FloatLabelType);
-  options = <span class="hljs-built_in">this</span>._formBuilder.group({
+  <span class="hljs-keyword">readonly</span> hideRequiredControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">readonly</span> floatLabelControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;auto&#x27;</span> <span class="hljs-keyword">as</span> FloatLabelType);
+  <span class="hljs-keyword">readonly</span> options = inject(FormBuilder).group({
     <span class="hljs-attr">hideRequired</span>: <span class="hljs-built_in">this</span>.hideRequiredControl,
     <span class="hljs-attr">floatLabel</span>: <span class="hljs-built_in">this</span>.floatLabelControl,
   });
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
-
-  getFloatLabelValue(): FloatLabelType {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.floatLabelControl.value || <span class="hljs-string">&#x27;auto&#x27;</span>;
-  }
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">readonly</span> hideRequired = toSignal(<span class="hljs-built_in">this</span>.hideRequiredControl.valueChanges);
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">readonly</span> floatLabel = toSignal(
+    <span class="hljs-built_in">this</span>.floatLabelControl.valueChanges.pipe(map(<span class="hljs-function"><span class="hljs-params">v</span> =&gt;</span> v || <span class="hljs-string">&#x27;auto&#x27;</span>)),
+    {<span class="hljs-attr">initialValue</span>: <span class="hljs-string">&#x27;auto&#x27;</span>},
+  );
 }

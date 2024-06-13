@@ -2453,20 +2453,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "form-field-prefix-suffix-example.ts",
         "importPath": "material/form-field"
     },
-    "form-field-theming": {
-        "packagePath": "material/form-field/form-field-theming",
-        "title": "Form field theming",
-        "componentName": "FormFieldThemingExample",
-        "files": [
-            "form-field-theming-example.ts",
-            "form-field-theming-example.html",
-            "form-field-theming-example.css"
-        ],
-        "selector": "form-field-theming-example",
-        "additionalComponents": [],
-        "primaryFile": "form-field-theming-example.ts",
-        "importPath": "material/form-field"
-    },
     "grid-list-dynamic": {
         "packagePath": "material/grid-list/grid-list-dynamic",
         "title": "Dynamic grid-list",
@@ -5091,8 +5077,6 @@ async function loadExample(id) {
         case 'form-field-overview':
             return import('@angular/components-examples/material/form-field');
         case 'form-field-prefix-suffix':
-            return import('@angular/components-examples/material/form-field');
-        case 'form-field-theming':
             return import('@angular/components-examples/material/form-field');
         case 'grid-list-dynamic':
             return import('@angular/components-examples/material/grid-list');

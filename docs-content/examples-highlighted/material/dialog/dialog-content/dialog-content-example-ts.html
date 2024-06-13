@@ -1,6 +1,6 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDialog, MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatDialog, MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Dialog with header, scrollable content and actions
@@ -10,9 +10,10 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-content-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatButtonModule, MatDialogModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogContentExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
+  <span class="hljs-keyword">readonly</span> dialog = inject(MatDialog);
 
   <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogContentExampleDialog);
@@ -28,5 +29,6 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-content-example-dialog.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatDialogModule, MatButtonModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogContentExampleDialog</span> </span>{}

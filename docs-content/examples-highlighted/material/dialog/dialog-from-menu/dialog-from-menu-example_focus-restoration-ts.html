@@ -2,4 +2,4 @@
 
 <span class="hljs-comment">// Manually restore focus to the menu trigger since the element that</span>
 <span class="hljs-comment">// opens the dialog won&#x27;t be in the DOM any more when the dialog closes.</span>
-dialogRef.afterClosed().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.menuTrigger.focus());
+dialogRef.afterClosed().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.menuTrigger().focus());

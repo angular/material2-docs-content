@@ -1,13 +1,13 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   MatDialog,
-  MatDialogRef,
   MatDialogActions,
   MatDialogClose,
-  MatDialogTitle,
   MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Dialog Animations
@@ -18,9 +18,10 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-animations-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatButtonModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogAnimationsExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>)</span> {}
+  <span class="hljs-keyword">readonly</span> dialog = inject(MatDialog);
 
   openDialog(enterAnimationDuration: <span class="hljs-built_in">string</span>, <span class="hljs-attr">exitAnimationDuration</span>: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.dialog.open(DialogAnimationsExampleDialog, {
@@ -36,7 +37,8 @@
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-animations-example-dialog.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatButtonModule, MatDialogActions, MatDialogClose, MatDialogTitle, MatDialogContent],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogAnimationsExampleDialog</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogAnimationsExampleDialog&gt;</span>)</span> {}
+  <span class="hljs-keyword">readonly</span> dialogRef = inject(MatDialogRef&lt;DialogAnimationsExampleDialog&gt;);
 }
