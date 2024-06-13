@@ -15,19 +15,19 @@ is performed. An <code>&lt;a&gt;</code> element should be used whenever the user
 </thead>
 <tbody><tr>
 <td><code>mat-button</code></td>
-<td>Rectangular text button w/ no elevation</td>
+<td>Rectangular text button w/ no elevation and rounded corners</td>
 </tr>
 <tr>
 <td><code>mat-raised-button</code></td>
-<td>Rectangular contained button w/ elevation</td>
+<td>Rectangular contained button w/ elevation and rounded corners</td>
 </tr>
 <tr>
 <td><code>mat-flat-button</code></td>
-<td>Rectangular contained button w/ no elevation</td>
+<td>Rectangular contained button w/ no elevation and rounded corners</td>
 </tr>
 <tr>
 <td><code>mat-stroked-button</code></td>
-<td>Rectangular outlined button w/ no elevation</td>
+<td>Rectangular outlined button w/ no elevation and rounded corners</td>
 </tr>
 <tr>
 <td><code>mat-icon-button</code></td>
@@ -35,30 +35,13 @@ is performed. An <code>&lt;a&gt;</code> element should be used whenever the user
 </tr>
 <tr>
 <td><code>mat-fab</code></td>
-<td>Circular button w/ elevation, defaults to theme&#39;s accent color</td>
+<td>Square button w/ elevation and rounded corners, meant to contain an icon. Can be <a href="https://material.angular.io/components/button/overview#extended-fab-buttons">extended</a> to a rectangle to also fit a label</td>
 </tr>
 <tr>
 <td><code>mat-mini-fab</code></td>
 <td>Same as <code>mat-fab</code> but smaller</td>
 </tr>
 </tbody></table>
-
-        <h3 id="theming" class="docs-header-link">
-          <span header-link="theming"></span>
-          Theming
-        </h3>
-      <p>Buttons can be colored in terms of the current theme using the <code>color</code> property to set the
-background color to <code>primary</code>, <code>accent</code>, or <code>warn</code>.</p>
-
-        <h3 id="capitalization" class="docs-header-link">
-          <span header-link="capitalization"></span>
-          Capitalization
-        </h3>
-      <p>According to the Material design spec button text has to be capitalized, however we have opted not
-to capitalize buttons automatically via <code>text-transform: uppercase</code>, because it can cause issues in
-certain locales. It is also worth noting that using ALL CAPS in the text itself causes issues for
-screen-readers, which will read the text character-by-character. We leave the decision of how to
-approach this to the consuming app.</p>
 
         <h3 id="extended-fab-buttons" class="docs-header-link">
           <span header-link="extended-fab-buttons"></span>
@@ -97,6 +80,14 @@ guard against such cases in your component.</p>
 default. A <code>&lt;button&gt;</code> element should be used for any interaction that <em>performs an action on the
 current page</em>. An <code>&lt;a&gt;</code> element should be used for any interaction that <em>navigates to another
 URL</em>. All standard accessibility best practices for buttons and anchors apply to <code>MatButton</code>.</p>
+
+        <h4 id="capitalization" class="docs-header-link">
+          <span header-link="capitalization"></span>
+          Capitalization
+        </h4>
+      <p>Using ALL CAPS in the button text itself causes issues for screen-readers, which
+will read the text character-by-character. It can also cause issues for localization.
+We recommend not changing the default capitalization for the button text.</p>
 
         <h4 id="disabling-anchors" class="docs-header-link">
           <span header-link="disabling-anchors"></span>

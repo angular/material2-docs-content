@@ -25,12 +25,4 @@ export declare class ButtonOverviewExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Button varieties
- */
-export declare class ButtonTypesExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonTypesExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonTypesExample, "button-types-example", never, {}, {}, never, never, true, never>;
-}
-
 export { }
