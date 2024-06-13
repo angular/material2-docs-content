@@ -120,8 +120,67 @@ more about these terms):</p>
           <span header-link="pre-built-themes"></span>
           Pre-built themes
         </h5>
-      <p>There are a number of color palettes available in <code>@angular/material</code> that can be
-used with the <code>primary</code> and <code>tertiary</code> options:</p>
+      <p>Angular Material includes several pre-built theme CSS files, each with different palettes selected.
+You can use one of these pre-built themes if you don&#39;t want to define a custom theme with Sass.</p>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Light or dark?</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>azure-blue.css</code></td>
+<td>Light</td>
+<td>Material Design 3</td>
+</tr>
+<tr>
+<td><code>rose-red.css</code></td>
+<td>Light</td>
+<td>Material Design 3</td>
+</tr>
+<tr>
+<td><code>cyan-orange.css</code></td>
+<td>Dark</td>
+<td>Material Design 3</td>
+</tr>
+<tr>
+<td><code>magenta-violet.css</code></td>
+<td>Dark</td>
+<td>Material Design 3</td>
+</tr>
+<tr>
+<td><code>deeppurple-amber.css</code></td>
+<td>Light</td>
+<td>Material Design 2</td>
+</tr>
+<tr>
+<td><code>indigo-pink.css</code></td>
+<td>Light</td>
+<td>Material Design 2</td>
+</tr>
+<tr>
+<td><code>pink-bluegrey.css</code></td>
+<td>Dark</td>
+<td>Material Design 2</td>
+</tr>
+<tr>
+<td><code>purple-green.css</code></td>
+<td>Dark</td>
+<td>Material Design 2</td>
+</tr>
+</tbody></table>
+<p>These files include the CSS for every component in the library. To include only the CSS for a subset
+of components, you must use the Sass API detailed in <a href="#defining-a-theme">Defining a theme</a> above.
+You can <a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">reference the source code for these pre-built themes</a> to see examples of complete theme definitions.</p>
+
+        <h5 id="pre-defined-palettes" class="docs-header-link">
+          <span header-link="pre-defined-palettes"></span>
+          Pre-defined palettes
+        </h5>
+      <p>The pre-built themes are based on a set of pre-defined palettes that can be used with the <code>primary</code>
+and <code>tertiary</code> options:</p>
 <ul>
 <li><code>$red-palette</code></li>
 <li><code>$green-palette</code></li>
