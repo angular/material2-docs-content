@@ -1544,20 +1544,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "button-overview-example.ts",
         "importPath": "material/button"
     },
-    "button-types": {
-        "packagePath": "material/button/button-types",
-        "title": "Button varieties",
-        "componentName": "ButtonTypesExample",
-        "files": [
-            "button-types-example.ts",
-            "button-types-example.html",
-            "button-types-example.css"
-        ],
-        "selector": "button-types-example",
-        "additionalComponents": [],
-        "primaryFile": "button-types-example.ts",
-        "importPath": "material/button"
-    },
     "card-actions": {
         "packagePath": "material/card/card-actions",
         "title": "Card with actions alignment option",
@@ -4961,8 +4947,6 @@ async function loadExample(id) {
         case 'button-harness':
             return import('@angular/components-examples/material/button');
         case 'button-overview':
-            return import('@angular/components-examples/material/button');
-        case 'button-types':
             return import('@angular/components-examples/material/button');
         case 'card-actions':
             return import('@angular/components-examples/material/card');
