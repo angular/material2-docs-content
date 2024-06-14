@@ -1,5 +1,6 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button-toggle&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Button toggle selection mode
@@ -8,6 +9,18 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;button-toggle-mode-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;button-toggle-mode-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonToggleModule],
+  <span class="hljs-attr">imports</span>: [MatButtonToggleModule, MatCheckboxModule],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ButtonToggleModeExample</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ButtonToggleModeExample</span> </span>{
+  hideSingleSelectionIndicator = signal(<span class="hljs-literal">false</span>);
+  hideMultipleSelectionIndicator = signal(<span class="hljs-literal">false</span>);
+
+  <span class="hljs-function"><span class="hljs-title">toggleSingleSelectionIndicator</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.hideSingleSelectionIndicator.update(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> !value);
+  }
+
+  <span class="hljs-function"><span class="hljs-title">toggleMultipleSelectionIndicator</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.hideMultipleSelectionIndicator.update(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> !value);
+  }
+}

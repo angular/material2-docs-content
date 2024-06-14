@@ -12,14 +12,6 @@ export declare class ButtonToggleAppearanceExample {
 }
 
 /**
- * @title Exclusive selection
- */
-export declare class ButtonToggleExclusiveExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleExclusiveExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleExclusiveExample, "button-toggle-exclusive-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Button-toggles with forms
  */
 export declare class ButtonToggleFormsExample {
@@ -43,6 +35,10 @@ export declare class ButtonToggleHarnessExample {
  * @title Button toggle selection mode
  */
 export declare class ButtonToggleModeExample {
+    hideSingleSelectionIndicator: WritableSignal<boolean>;
+    hideMultipleSelectionIndicator: WritableSignal<boolean>;
+    toggleSingleSelectionIndicator(): void;
+    toggleMultipleSelectionIndicator(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonToggleModeExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonToggleModeExample, "button-toggle-mode-example", never, {}, {}, never, never, true, never>;
 }

@@ -1421,20 +1421,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "button-toggle-appearance-example.ts",
         "importPath": "material/button-toggle"
     },
-    "button-toggle-exclusive": {
-        "packagePath": "material/button-toggle/button-toggle-exclusive",
-        "title": "Exclusive selection",
-        "componentName": "ButtonToggleExclusiveExample",
-        "files": [
-            "button-toggle-exclusive-example.ts",
-            "button-toggle-exclusive-example.html",
-            "button-toggle-exclusive-example.css"
-        ],
-        "selector": "button-toggle-exclusive-example",
-        "additionalComponents": [],
-        "primaryFile": "button-toggle-exclusive-example.ts",
-        "importPath": "material/button-toggle"
-    },
     "button-toggle-forms": {
         "packagePath": "material/button-toggle/button-toggle-forms",
         "title": "Button-toggles with forms",
@@ -4915,8 +4901,6 @@ async function loadExample(id) {
         case 'bottom-sheet-overview':
             return import('@angular/components-examples/material/bottom-sheet');
         case 'button-toggle-appearance':
-            return import('@angular/components-examples/material/button-toggle');
-        case 'button-toggle-exclusive':
             return import('@angular/components-examples/material/button-toggle');
         case 'button-toggle-forms':
             return import('@angular/components-examples/material/button-toggle');
