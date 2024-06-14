@@ -1598,20 +1598,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "card-overview-example.ts",
         "importPath": "material/card"
     },
-    "card-subtitle": {
-        "packagePath": "material/card/card-subtitle",
-        "title": "Card with sub-title",
-        "componentName": "CardSubtitleExample",
-        "files": [
-            "card-subtitle-example.ts",
-            "card-subtitle-example.html",
-            "card-subtitle-example.css"
-        ],
-        "selector": "card-subtitle-example",
-        "additionalComponents": [],
-        "primaryFile": "card-subtitle-example.ts",
-        "importPath": "material/card"
-    },
     "checkbox-configurable": {
         "packagePath": "material/checkbox/checkbox-configurable",
         "title": "Configurable checkbox",
@@ -4927,8 +4913,6 @@ async function loadExample(id) {
         case 'card-media-size':
             return import('@angular/components-examples/material/card');
         case 'card-overview':
-            return import('@angular/components-examples/material/card');
-        case 'card-subtitle':
             return import('@angular/components-examples/material/card');
         case 'checkbox-configurable':
             return import('@angular/components-examples/material/checkbox');
