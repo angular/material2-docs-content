@@ -50,13 +50,4 @@ export declare class CardOverviewExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CardOverviewExample, "card-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Card with sub-title
- */
-export declare class CardSubtitleExample {
-    longText: string;
-    static ɵfac: i0.ɵɵFactoryDeclaration<CardSubtitleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardSubtitleExample, "card-subtitle-example", never, {}, {}, never, never, true, never>;
-}
-
 export { }
