@@ -32,4 +32,12 @@ export declare class ToolbarOverviewExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarOverviewExample, "toolbar-overview-example", never, {}, {}, never, never, true, never>;
 }
 
+/**
+ * @title Toolbar with just text
+ */
+export declare class ToolbarSimpleExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ToolbarSimpleExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ToolbarSimpleExample, "toolbar-simple-example", never, {}, {}, never, never, true, never>;
+}
+
 export { }
