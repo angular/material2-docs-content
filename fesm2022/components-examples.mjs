@@ -4479,6 +4479,19 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "toolbar-overview-example.ts",
         "importPath": "material/toolbar"
     },
+    "toolbar-simple": {
+        "packagePath": "material/toolbar/toolbar-simple",
+        "title": "Toolbar with just text",
+        "componentName": "ToolbarSimpleExample",
+        "files": [
+            "toolbar-simple-example.ts",
+            "toolbar-simple-example.html"
+        ],
+        "selector": "toolbar-simple-example",
+        "additionalComponents": [],
+        "primaryFile": "toolbar-simple-example.ts",
+        "importPath": "material/toolbar"
+    },
     "tooltip-auto-hide": {
         "packagePath": "material/tooltip/tooltip-auto-hide",
         "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.",
@@ -5343,6 +5356,8 @@ async function loadExample(id) {
         case 'toolbar-multirow':
             return import('@angular/components-examples/material/toolbar');
         case 'toolbar-overview':
+            return import('@angular/components-examples/material/toolbar');
+        case 'toolbar-simple':
             return import('@angular/components-examples/material/toolbar');
         case 'tooltip-auto-hide':
             return import('@angular/components-examples/material/tooltip');
