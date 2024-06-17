@@ -31,7 +31,7 @@ describe(<span class="hljs-string">&#x27;CardHarnessExample&#x27;</span>, <span 
 
   it(<span class="hljs-string">&#x27;should act as a harness loader for user content&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> card = <span class="hljs-keyword">await</span> loader.getHarness(MatCardHarness.with({<span class="hljs-attr">title</span>: <span class="hljs-string">&#x27;Shiba Inu&#x27;</span>}));
-    <span class="hljs-keyword">const</span> footerSubcomponents = (<span class="hljs-keyword">await</span> card.getAllHarnesses(MatButtonHarness)) ?? [];
+    <span class="hljs-keyword">const</span> footerSubcomponents = <span class="hljs-keyword">await</span> card.getAllHarnesses(MatButtonHarness);
     expect(footerSubcomponents.length).toBe(<span class="hljs-number">2</span>);
   });
 });
