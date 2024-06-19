@@ -259,6 +259,28 @@ or their unique IDs.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDropListElementContainer&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>elementContainerSelector: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Selector that will be used to resolve an alternate element container for the drop list.
+Passing an alternate container is useful for the cases where one might not have control
+over the parent node of the draggable items within the list (e.g. due to content projection).
+This allows for usages like:</p>
+<pre><code>&lt;div cdkDropList cdkDropListElementContainer=&quot;.inner&quot;&gt;
+  &lt;div class=&quot;inner&quot;&gt;
+    &lt;div cdkDrag&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDropListEnterPredicate&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>enterPredicate: (drag: CdkDrag, drop: CdkDropList) =&gt; boolean</code>
@@ -2923,6 +2945,59 @@ is currently being dragged inside a connected drop list.</p>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
         
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withElementContainer
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Configures the drop list so that a different element is used as the container for the
+dragged items. This is useful for the cases when one might not have control over the
+full DOM that sets up the dragging.
+Note that the alternate container needs to be a descendant of the drop list.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        container</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>New element container to be assigned.</p>
+
       </p>
     </td>
   </tr>
