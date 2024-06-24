@@ -12,10 +12,10 @@ export class DialogHarnessExample {
     open(config) {
         return this.dialog.open(this.dialogTemplate(), config);
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.1", ngImport: i0, type: DialogHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.2.0", version: "18.1.0-next.1", type: DialogHarnessExample, isStandalone: true, selector: "dialog-harness-example", viewQueries: [{ propertyName: "dialogTemplate", first: true, predicate: TemplateRef, descendants: true, isSignal: true }], ngImport: i0, template: "<ng-template>\n  Hello from the dialog!\n</ng-template>\n", changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DialogHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.2.0", version: "18.1.0-next.3", type: DialogHarnessExample, isStandalone: true, selector: "dialog-harness-example", viewQueries: [{ propertyName: "dialogTemplate", first: true, predicate: TemplateRef, descendants: true, isSignal: true }], ngImport: i0, template: "<ng-template>\n  Hello from the dialog!\n</ng-template>\n", changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.1", ngImport: i0, type: DialogHarnessExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DialogHarnessExample, decorators: [{
             type: Component,
             args: [{ selector: 'dialog-harness-example', standalone: true, changeDetection: ChangeDetectionStrategy.OnPush, template: "<ng-template>\n  Hello from the dialog!\n</ng-template>\n" }]
         }] });

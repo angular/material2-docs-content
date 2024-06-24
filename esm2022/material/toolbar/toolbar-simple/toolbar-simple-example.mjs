@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/toolbar";
  * @title Toolbar with just text
  */
 export class ToolbarSimpleExample {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.1", ngImport: i0, type: ToolbarSimpleExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.0-next.1", type: ToolbarSimpleExample, isStandalone: true, selector: "toolbar-simple-example", ngImport: i0, template: "<mat-toolbar>\n  <span>My Application</span>\n</mat-toolbar>\n", dependencies: [{ kind: "ngmodule", type: MatToolbarModule }, { kind: "component", type: i1.MatToolbar, selector: "mat-toolbar", inputs: ["color"], exportAs: ["matToolbar"] }] }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: ToolbarSimpleExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.0-next.3", type: ToolbarSimpleExample, isStandalone: true, selector: "toolbar-simple-example", ngImport: i0, template: "<mat-toolbar>\n  <span>My Application</span>\n</mat-toolbar>\n", dependencies: [{ kind: "ngmodule", type: MatToolbarModule }, { kind: "component", type: i1.MatToolbar, selector: "mat-toolbar", inputs: ["color"], exportAs: ["matToolbar"] }] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.1", ngImport: i0, type: ToolbarSimpleExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: ToolbarSimpleExample, decorators: [{
             type: Component,
             args: [{ selector: 'toolbar-simple-example', standalone: true, imports: [MatToolbarModule], template: "<mat-toolbar>\n  <span>My Application</span>\n</mat-toolbar>\n" }]
         }] });

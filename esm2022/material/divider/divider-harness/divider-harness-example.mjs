@@ -6,10 +6,10 @@ import * as i1 from "@angular/material/divider";
  * @title Testing with MatDividerHarness
  */
 export class DividerHarnessExample {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.1", ngImport: i0, type: DividerHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.0-next.1", type: DividerHarnessExample, isStandalone: true, selector: "divider-harness-example", ngImport: i0, template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n", dependencies: [{ kind: "ngmodule", type: MatDividerModule }, { kind: "component", type: i1.MatDivider, selector: "mat-divider", inputs: ["vertical", "inset"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DividerHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.0-next.3", type: DividerHarnessExample, isStandalone: true, selector: "divider-harness-example", ngImport: i0, template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n", dependencies: [{ kind: "ngmodule", type: MatDividerModule }, { kind: "component", type: i1.MatDivider, selector: "mat-divider", inputs: ["vertical", "inset"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.1", ngImport: i0, type: DividerHarnessExample, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DividerHarnessExample, decorators: [{
             type: Component,
             args: [{ selector: 'divider-harness-example', standalone: true, imports: [MatDividerModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n" }]
         }] });
