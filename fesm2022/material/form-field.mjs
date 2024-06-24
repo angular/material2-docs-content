@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Component, ChangeDetectionStrategy, forwardRef, viewChild, inject, signal, input, booleanAttribute, model, computed, ElementRef, effect } from '@angular/core';
+import { Component, ChangeDetectionStrategy, forwardRef, viewChild, inject, signal, input, booleanAttribute, model, computed, ElementRef, effect, untracked } from '@angular/core';
 import * as i1 from '@angular/material/form-field';
 import { MatFormFieldModule, MAT_FORM_FIELD, MatFormFieldControl } from '@angular/material/form-field';
 import * as i3 from '@angular/material/icon';
@@ -138,18 +138,19 @@ class MyTelInput {
             this._required();
             this._disabled();
             // Propagate state changes.
-            this.stateChanges.next();
+            untracked(() => this.stateChanges.next());
         });
         effect(() => {
             if (this._disabled()) {
-                this.parts.disable();
+                untracked(() => this.parts.disable());
             }
             else {
-                this.parts.enable();
+                untracked(() => this.parts.enable());
             }
         });
         effect(() => {
-            this.parts.setValue(this._value() || new MyTel('', '', ''));
+            const value = this._value() || new MyTel('', '', '');
+            untracked(() => this.parts.setValue(value));
         });
         this.parts.statusChanges.pipe(takeUntilDestroyed()).subscribe(() => {
             this.stateChanges.next();
