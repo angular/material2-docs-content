@@ -13,6 +13,7 @@
   input,
   model,
   signal,
+  untracked,
   viewChild,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {takeUntilDestroyed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/rxjs-interop&#x27;</span>;
@@ -175,19 +176,20 @@
       <span class="hljs-built_in">this</span>._required();
       <span class="hljs-built_in">this</span>._disabled();
       <span class="hljs-comment">// Propagate state changes.</span>
-      <span class="hljs-built_in">this</span>.stateChanges.next();
+      untracked(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.stateChanges.next());
     });
 
     effect(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._disabled()) {
-        <span class="hljs-built_in">this</span>.parts.disable();
+        untracked(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.parts.disable());
       } <span class="hljs-keyword">else</span> {
-        <span class="hljs-built_in">this</span>.parts.enable();
+        untracked(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.parts.enable());
       }
     });
 
     effect(<span class="hljs-function">() =&gt;</span> {
-      <span class="hljs-built_in">this</span>.parts.setValue(<span class="hljs-built_in">this</span>._value() || <span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>));
+      <span class="hljs-keyword">const</span> value = <span class="hljs-built_in">this</span>._value() || <span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>);
+      untracked(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.parts.setValue(value));
     });
 
     <span class="hljs-built_in">this</span>.parts.statusChanges.pipe(takeUntilDestroyed()).subscribe(<span class="hljs-function">() =&gt;</span> {
