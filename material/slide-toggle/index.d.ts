@@ -2,13 +2,11 @@ import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
-import { ThemePalette } from '@angular/material/core';
 
 /**
  * @title Configurable slide-toggle
  */
 export declare class SlideToggleConfigurableExample {
-    color: ThemePalette;
     checked: boolean;
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleConfigurableExample, never>;

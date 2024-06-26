@@ -32,17 +32,6 @@ would make that impossible (e.g., radio-buttons inside of table cells). The radi
       <p><code>&lt;mat-radio-group&gt;</code> is compatible with <code>@angular/forms</code> and supports both <code>FormsModule</code>
 and <code>ReactiveFormsModule</code>.</p>
 
-        <h3 id="default-color-configuration" class="docs-header-link">
-          <span header-link="default-color-configuration"></span>
-          Default Color Configuration
-        </h3>
-      <p>The default color for radio buttons can be configured globally using the <code>MAT_RADIO_DEFAULT_OPTIONS</code> provider</p>
-<pre><code>providers: [{
-    provide: MAT_RADIO_DEFAULT_OPTIONS,
-    useValue: { color: &#39;accent&#39; },
-}]
-</code></pre>
-
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
           Accessibility
@@ -59,7 +48,7 @@ should not use the <code>attr.</code> prefix when binding these properties, as d
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
 </code></pre>
 <p>Prefer placing all radio buttons inside of a <code>&lt;mat-radio-group&gt;</code> rather than creating standalone
-radio buttons because groups are easier to use exclusively with a keyboard. </p>
+radio buttons because groups are easier to use exclusively with a keyboard.</p>
 <p>You should provide an accessible label for all <code>&lt;mat-radio-group&gt;</code> elements via <code>aria-label</code> or
-<code>aria-labelledby</code>. </p>
+<code>aria-labelledby</code>.</p>
 </div>

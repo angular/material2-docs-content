@@ -1,5 +1,4 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
 
@@ -16,11 +15,6 @@
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabNavBarBasicExample</span> </span>{
   links = [<span class="hljs-string">&#x27;First&#x27;</span>, <span class="hljs-string">&#x27;Second&#x27;</span>, <span class="hljs-string">&#x27;Third&#x27;</span>];
   activeLink = <span class="hljs-built_in">this</span>.links[<span class="hljs-number">0</span>];
-  background: ThemePalette = <span class="hljs-literal">undefined</span>;
-
-  <span class="hljs-function"><span class="hljs-title">toggleBackground</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.background = <span class="hljs-built_in">this</span>.background ? <span class="hljs-literal">undefined</span> : <span class="hljs-string">&#x27;primary&#x27;</span>;
-  }
 
   <span class="hljs-function"><span class="hljs-title">addLink</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.links.push(<span class="hljs-string">`Link <span class="hljs-subst">${<span class="hljs-built_in">this</span>.links.length + <span class="hljs-number">1</span>}</span>`</span>);

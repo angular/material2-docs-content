@@ -1,7 +1,6 @@
 import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { Observable } from 'rxjs';
-import { ThemePalette } from '@angular/material/core';
 
 declare interface ExampleTab {
     label: string;
@@ -138,21 +137,11 @@ export declare class TabGroupStretchedExample {
 }
 
 /**
- * @title Customizing the theme options on the tab group
- */
-export declare class TabGroupThemeExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupThemeExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupThemeExample, "tab-group-theme-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Basic use of the tab nav bar
  */
 export declare class TabNavBarBasicExample {
     links: string[];
     activeLink: string;
-    background: ThemePalette;
-    toggleBackground(): void;
     addLink(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TabNavBarBasicExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never, never, true, never>;
