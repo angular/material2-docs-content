@@ -1,13 +1,11 @@
 import * as i0 from '@angular/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
-import { ThemePalette } from '@angular/material/core';
 import { WritableSignal } from '@angular/core';
 
 /**
  * @title Configurable progress spinner
  */
 export declare class ProgressSpinnerConfigurableExample {
-    color: ThemePalette;
     mode: ProgressSpinnerMode;
     value: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerConfigurableExample, never>;

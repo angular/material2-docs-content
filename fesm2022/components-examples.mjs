@@ -4395,20 +4395,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tab-group-stretched-example.ts",
         "importPath": "material/tabs"
     },
-    "tab-group-theme": {
-        "packagePath": "material/tabs/tab-group-theme",
-        "title": "Customizing the theme options on the tab group",
-        "componentName": "TabGroupThemeExample",
-        "files": [
-            "tab-group-theme-example.ts",
-            "tab-group-theme-example.html",
-            "tab-group-theme-example.css"
-        ],
-        "selector": "tab-group-theme-example",
-        "additionalComponents": [],
-        "primaryFile": "tab-group-theme-example.ts",
-        "importPath": "material/tabs"
-    },
     "tab-nav-bar-basic": {
         "packagePath": "material/tabs/tab-nav-bar-basic",
         "title": "Basic use of the tab nav bar",
@@ -5344,8 +5330,6 @@ async function loadExample(id) {
         case 'tab-group-preserve-content':
             return import('@angular/components-examples/material/tabs');
         case 'tab-group-stretched':
-            return import('@angular/components-examples/material/tabs');
-        case 'tab-group-theme':
             return import('@angular/components-examples/material/tabs');
         case 'tab-nav-bar-basic':
             return import('@angular/components-examples/material/tabs');

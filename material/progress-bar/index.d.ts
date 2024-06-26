@@ -1,6 +1,5 @@
 import * as i0 from '@angular/core';
 import { ProgressBarMode } from '@angular/material/progress-bar';
-import { ThemePalette } from '@angular/material/core';
 import { WritableSignal } from '@angular/core';
 
 /**
@@ -15,7 +14,6 @@ export declare class ProgressBarBufferExample {
  * @title Configurable progress-bar
  */
 export declare class ProgressBarConfigurableExample {
-    color: ThemePalette;
     mode: ProgressBarMode;
     value: number;
     bufferValue: number;
