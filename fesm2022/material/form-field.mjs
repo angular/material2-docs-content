@@ -347,7 +347,7 @@ class FormFieldPrefixSuffixExample {
         this.hide = signal(true);
     }
     clickEvent(event) {
-        this.hide.set(!this.hide);
+        this.hide.set(!this.hide());
         event.stopPropagation();
     }
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: FormFieldPrefixSuffixExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
