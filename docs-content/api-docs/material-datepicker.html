@@ -4258,7 +4258,9 @@ has no effect in M3 themes.</p>
 <h4 id="DateFilterFn" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="DateFilterFn"></span>
   <code>DateFilterFn</code>
-</h4><p class="docs-api-type-alias-description"><p>Function that can be used to filter out dates from a calendar.</p>
+</h4><p class="docs-api-type-alias-description"><p>Function that can be used to filter out dates from a calendar.
+Datepicker can sometimes receive a null value as input for the date argument.
+This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no date has been selected yet in the calendar.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> DateFilterFn = <span class="hljs-function">(<span class="hljs-params">date: D | <span class="hljs-literal">null</span></span>) =&gt;</span> <span class="hljs-built_in">boolean</span>;</code>
