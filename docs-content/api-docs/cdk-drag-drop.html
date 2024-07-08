@@ -774,6 +774,21 @@ when trying to enable dragging on an element that you might not have access to.<
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkDragScale&#39;, transform: numberAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>scale: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>If the parent of the dragged element has a <code>scale</code> transform, it can throw off the
+positioning when the user starts dragging. Use this input to notify the CDK of the scale.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">&#39;cdkDragDropped&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>dropped: EventEmitter&lt;CdkDragDrop&lt;any&gt;&gt;</code>
@@ -1454,6 +1469,20 @@ because this event will fire for every pixel that the user has dragged.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Emits when the user has released a drag item, before any animations have started.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scale: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>If the parent of the dragged element has a <code>scale</code> transform, it can throw off the
+positioning when the user starts dragging. Use this input to notify the CDK of the scale.</p>
 </td>
 </tr>
 
