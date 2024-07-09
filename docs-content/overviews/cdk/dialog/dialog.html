@@ -150,6 +150,11 @@ to inherit standard behaviors, such as accessible focus management.</p>
   Hello, {{data.name}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 </code></pre>
+<p>If you&#39;re using a <code>TemplateRef</code> and need to access the <code>DialogRef</code>, you can use the following:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">let-data</span> <span class="hljs-attr">let-dialogRef</span>=<span class="hljs-string">&quot;dialogRef&quot;</span>&gt;</span>
+    Hello, {{data.name}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
 <div material-docs-example="cdk-dialog-data"></div>
 
 
