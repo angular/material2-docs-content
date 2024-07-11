@@ -7,6 +7,7 @@ import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MatDateFormats } from '@angular/material/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { MatDialog } from '@angular/material/dialog';
 import { ModelSignal } from '@angular/core';
 import { Moment } from 'moment';
 import * as _moment from 'moment';
@@ -45,6 +46,16 @@ export declare class DatepickerDateClassExample {
     dateClass: MatCalendarCellClassFunction<Date>;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerDateClassExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerDateClassExample, "datepicker-date-class-example", never, {}, {}, never, never, true, never>;
+}
+
+/** @title Datepicker inside a MatDialog */
+export declare class DatepickerDialogExample {
+    dialog: MatDialog;
+    selectedDate: ModelSignal<Date | null>;
+    constructor(dialog: MatDialog);
+    openDialog(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerDialogExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerDialogExample, "datepicker-dialog-example", never, { "selectedDate": { "alias": "selectedDate"; "required": false; "isSignal": true; }; }, { "selectedDate": "selectedDateChange"; }, never, never, true, never>;
 }
 
 /** @title Disabled datepicker */
