@@ -187,6 +187,7 @@ definition is named <code>position</code>, which matches the name of the propert
 <p>Note that if the data properties do not match the column names, or if a more complex data property
 accessor is required, then a custom <code>sortingDataAccessor</code> function can be set to override the
 default data accessor on the <code>MatTableDataSource</code>.</p>
+<p>When updating the data soure asynchronously avoid doing so by recreating the entire <code>MatTableDataSource</code> as this could break sorting. Rather update it through the <code>MatTableDataSource.data</code> property.</p>
 <p>If you are not using the <code>MatTableDataSource</code>, but instead implementing custom logic to sort your
 data, listen to the sort&#39;s <code>(matSortChange)</code> event and re-order your data according to the sort state.
 If you are providing a data array directly to the table, don&#39;t forget to call <code>renderRows()</code> on the
