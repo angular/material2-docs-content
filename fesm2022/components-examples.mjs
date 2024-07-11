@@ -1930,6 +1930,22 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "datepicker-date-class-example.ts",
         "importPath": "material/datepicker"
     },
+    "datepicker-dialog": {
+        "packagePath": "material/datepicker/datepicker-dialog",
+        "title": "Datepicker inside a MatDialog",
+        "componentName": "DatepickerDialogExample",
+        "files": [
+            "datepicker-dialog-example.ts",
+            "datepicker-dialog-example.html",
+            "datepicker-dialog-example-dialog.html"
+        ],
+        "selector": "datepicker-dialog-example",
+        "additionalComponents": [
+            "DatepickerDialogExampleDialog"
+        ],
+        "primaryFile": "datepicker-dialog-example.ts",
+        "importPath": "material/datepicker"
+    },
     "datepicker-disabled": {
         "packagePath": "material/datepicker/datepicker-disabled",
         "title": "Disabled datepicker",
@@ -4974,6 +4990,8 @@ async function loadExample(id) {
         case 'datepicker-custom-icon':
             return import('@angular/components-examples/material/datepicker');
         case 'datepicker-date-class':
+            return import('@angular/components-examples/material/datepicker');
+        case 'datepicker-dialog':
             return import('@angular/components-examples/material/datepicker');
         case 'datepicker-disabled':
             return import('@angular/components-examples/material/datepicker');

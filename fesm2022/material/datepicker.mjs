@@ -3,7 +3,7 @@ import { Component, ChangeDetectionStrategy, Injectable, signal, Inject, ViewEnc
 import * as i3$1 from '@angular/forms';
 import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as i1$1 from '@angular/material/core';
-import { provideNativeDateAdapter, MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
+import { provideNativeDateAdapter, MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE, MAT_NATIVE_DATE_FORMATS } from '@angular/material/core';
 import * as i3 from '@angular/material/datepicker';
 import { MatDatepickerModule, DateRange, MAT_DATE_RANGE_SELECTION_STRATEGY, MatDatepickerIntl } from '@angular/material/datepicker';
 import * as i1 from '@angular/material/form-field';
@@ -24,6 +24,8 @@ import * as i1$2 from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card';
 import 'moment/locale/fr';
 import 'moment/locale/ja';
+import * as i1$3 from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
 const today = new Date();
 const month = today.getMonth();
@@ -573,9 +575,62 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.3", 
                     ], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-form-field>\n  <mat-label>Month and Year</mat-label>\n  <input matInput [matDatepicker]=\"dp\" [formControl]=\"date\">\n  <mat-hint>MM/YYYY</mat-hint>\n  <mat-datepicker-toggle matIconSuffix [for]=\"dp\"></mat-datepicker-toggle>\n  <mat-datepicker #dp\n                  startView=\"multi-year\"\n                  (monthSelected)=\"setMonthAndYear($event, dp)\"\n                  panelClass=\"example-month-picker\">\n  </mat-datepicker>\n</mat-form-field>\n", styles: [".example-month-picker .mat-calendar-period-button {\n  pointer-events: none;\n}\n\n.example-month-picker .mat-calendar-arrow {\n  display: none;\n}\n"] }]
         }] });
 
+/** @title Datepicker inside a MatDialog */
+class DatepickerDialogExample {
+    constructor(dialog) {
+        this.dialog = dialog;
+        this.selectedDate = model(null);
+    }
+    openDialog() {
+        const dialogRef = this.dialog.open(DatepickerDialogExampleDialog, {
+            minWidth: '500px',
+            data: { selectedDate: this.selectedDate() },
+        });
+        dialogRef.afterClosed().subscribe(result => {
+            this.selectedDate.set(result);
+        });
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DatepickerDialogExample, deps: [{ token: i1$3.MatDialog }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.1.0", version: "18.1.0-next.3", type: DatepickerDialogExample, isStandalone: true, selector: "datepicker-dialog-example", inputs: { selectedDate: { classPropertyName: "selectedDate", publicName: "selectedDate", isSignal: true, isRequired: false, transformFunction: null } }, outputs: { selectedDate: "selectedDateChange" }, ngImport: i0, template: "<p>Selected date: {{selectedDate()}}</p>\n<button mat-flat-button color=\"primary\" (click)=\"openDialog()\">Open Dialog</button>\n", dependencies: [{ kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i4.MatButton, selector: "    button[mat-button], button[mat-raised-button], button[mat-flat-button],    button[mat-stroked-button]  ", exportAs: ["matButton"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DatepickerDialogExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'datepicker-dialog-example', standalone: true, imports: [MatButtonModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<p>Selected date: {{selectedDate()}}</p>\n<button mat-flat-button color=\"primary\" (click)=\"openDialog()\">Open Dialog</button>\n" }]
+        }], ctorParameters: () => [{ type: i1$3.MatDialog }] });
+class DatepickerDialogExampleDialog {
+    constructor(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        this.date = new FormControl(new Date());
+        this.date.setValue(data.selectedDate);
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DatepickerDialogExampleDialog, deps: [{ token: i1$3.MatDialogRef }, { token: MAT_DIALOG_DATA }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.0-next.3", type: DatepickerDialogExampleDialog, isStandalone: true, selector: "datepicker-dialog-example", providers: [
+            provideNativeDateAdapter(),
+            { provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS },
+        ], ngImport: i0, template: "<h2 mat-dialog-title>Datepicker in a Dialog</h2>\n<mat-dialog-content align=\"center\">\n  <mat-form-field>\n    <mat-label>Select a date</mat-label>\n    <input matInput [matDatepicker]=\"picker\" [formControl]=\"date\">\n    <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n    <mat-datepicker #picker></mat-datepicker>\n  </mat-form-field>\n</mat-dialog-content>\n<mat-dialog-actions>\n  <button mat-button mat-dialog-close>Clear</button>\n  <button mat-button [mat-dialog-close]=\"date.value\" cdkFocusInitial>Ok</button>\n</mat-dialog-actions>\n", dependencies: [{ kind: "ngmodule", type: MatDatepickerModule }, { kind: "component", type: i3.MatDatepicker, selector: "mat-datepicker", exportAs: ["matDatepicker"] }, { kind: "directive", type: i3.MatDatepickerInput, selector: "input[matDatepicker]", inputs: ["matDatepicker", "min", "max", "matDatepickerFilter"], exportAs: ["matDatepickerInput"] }, { kind: "component", type: i3.MatDatepickerToggle, selector: "mat-datepicker-toggle", inputs: ["for", "tabIndex", "aria-label", "disabled", "disableRipple"], exportAs: ["matDatepickerToggle"] }, { kind: "ngmodule", type: MatDialogModule }, { kind: "directive", type: i1$3.MatDialogClose, selector: "[mat-dialog-close], [matDialogClose]", inputs: ["aria-label", "type", "mat-dialog-close", "matDialogClose"], exportAs: ["matDialogClose"] }, { kind: "directive", type: i1$3.MatDialogTitle, selector: "[mat-dialog-title], [matDialogTitle]", inputs: ["id"], exportAs: ["matDialogTitle"] }, { kind: "directive", type: i1$3.MatDialogActions, selector: "[mat-dialog-actions], mat-dialog-actions, [matDialogActions]", inputs: ["align"] }, { kind: "directive", type: i1$3.MatDialogContent, selector: "[mat-dialog-content], mat-dialog-content, [matDialogContent]" }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i4.MatButton, selector: "    button[mat-button], button[mat-raised-button], button[mat-flat-button],    button[mat-stroked-button]  ", exportAs: ["matButton"] }, { kind: "ngmodule", type: MatFormFieldModule }, { kind: "component", type: i1.MatFormField, selector: "mat-form-field", inputs: ["hideRequiredMarker", "color", "floatLabel", "appearance", "subscriptSizing", "hintLabel"], exportAs: ["matFormField"] }, { kind: "directive", type: i1.MatLabel, selector: "mat-label" }, { kind: "directive", type: i1.MatSuffix, selector: "[matSuffix], [matIconSuffix], [matTextSuffix]", inputs: ["matTextSuffix"] }, { kind: "ngmodule", type: MatInputModule }, { kind: "directive", type: i2.MatInput, selector: "input[matInput], textarea[matInput], select[matNativeControl],      input[matNativeControl], textarea[matNativeControl]", inputs: ["disabled", "id", "placeholder", "name", "required", "type", "errorStateMatcher", "aria-describedby", "value", "readonly"], exportAs: ["matInput"] }, { kind: "ngmodule", type: ReactiveFormsModule }, { kind: "directive", type: i3$1.DefaultValueAccessor, selector: "input:not([type=checkbox])[formControlName],textarea[formControlName],input:not([type=checkbox])[formControl],textarea[formControl],input:not([type=checkbox])[ngModel],textarea[ngModel],[ngDefaultControl]" }, { kind: "directive", type: i3$1.NgControlStatus, selector: "[formControlName],[ngModel],[formControl]" }, { kind: "directive", type: i3$1.FormControlDirective, selector: "[formControl]", inputs: ["formControl", "disabled", "ngModel"], outputs: ["ngModelChange"], exportAs: ["ngForm"] }] }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0-next.3", ngImport: i0, type: DatepickerDialogExampleDialog, decorators: [{
+            type: Component,
+            args: [{ selector: 'datepicker-dialog-example', standalone: true, imports: [
+                        MatDatepickerModule,
+                        MatDialogModule,
+                        MatButtonModule,
+                        MatFormFieldModule,
+                        MatInputModule,
+                        ReactiveFormsModule,
+                    ], providers: [
+                        provideNativeDateAdapter(),
+                        { provide: MAT_DATE_FORMATS, useValue: MAT_NATIVE_DATE_FORMATS },
+                    ], template: "<h2 mat-dialog-title>Datepicker in a Dialog</h2>\n<mat-dialog-content align=\"center\">\n  <mat-form-field>\n    <mat-label>Select a date</mat-label>\n    <input matInput [matDatepicker]=\"picker\" [formControl]=\"date\">\n    <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\n    <mat-datepicker #picker></mat-datepicker>\n  </mat-form-field>\n</mat-dialog-content>\n<mat-dialog-actions>\n  <button mat-button mat-dialog-close>Clear</button>\n  <button mat-button [mat-dialog-close]=\"date.value\" cdkFocusInitial>Ok</button>\n</mat-dialog-actions>\n" }]
+        }], ctorParameters: () => [{ type: i1$3.MatDialogRef }, { type: undefined, decorators: [{
+                    type: Inject,
+                    args: [MAT_DIALOG_DATA]
+                }] }] });
+
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerInlineCalendarExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
+export { DateRangePickerComparisonExample, DateRangePickerFormsExample, DateRangePickerOverviewExample, DateRangePickerSelectionStrategyExample, DatepickerActionsExample, DatepickerApiExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDialogExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerHarnessExample, DatepickerInlineCalendarExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
 //# sourceMappingURL=datepicker.mjs.map
