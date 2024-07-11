@@ -32,9 +32,9 @@ Intended to be used with components that correspond to a <code>role=&quot;menu&q
 <pre><code class="language-ts"><span class="hljs-built_in">this</span>.keyManager = <span class="hljs-keyword">new</span> FocusKeyManager(...).withWrap();
 </code></pre>
 
-        <h4 id="types-of-key-managers" class="docs-header-link">
-          <span header-link="types-of-key-managers"></span>
-          Types of key managers
+        <h4 id="types-of-list-key-managers" class="docs-header-link">
+          <span header-link="types-of-list-key-managers"></span>
+          Types of list key managers
         </h4>
       <p>There are two varieties of <code>ListKeyManager</code>, <code>FocusKeyManager</code> and <code>ActiveDescendantKeyManager</code>.</p>
 
@@ -62,6 +62,36 @@ Each item managed must implement the
 }
 </code></pre>
 <p>Each item must also have an ID bound to the listbox&#39;s or menu&#39;s <code>aria-activedescendant</code>.</p>
+
+        <h3 id="treekeymanager" class="docs-header-link">
+          <span header-link="treekeymanager"></span>
+          TreeKeyManager
+        </h3>
+      <p><code>TreeKeyManager</code> manages the active option in a tree view. Use this key manager for
+components that implement a <code>role=&quot;tree&quot;</code> pattern.</p>
+
+        <h4 id="basic-usage-1" class="docs-header-link">
+          <span header-link="basic-usage-1"></span>
+          Basic usage
+        </h4>
+      <p>Any component that uses a <code>TreeKeyManager</code> should do three things:</p>
+<ul>
+<li>Create a <code>@ViewChildren</code> query for the tree items being managed.</li>
+<li>Initialize the <code>TreeKeyManager</code>, passing in the options.</li>
+<li>Forward keyboard events from the managed component to the <code>TreeKeyManager</code> via <code>onKeydown</code>.</li>
+</ul>
+<p>Each tree item should implement the <a href="guide/api#TreeKeyManagerItem"><code>TreeKeyManagerItem</code></a> interface.</p>
+
+        <h4 id="focus-management" class="docs-header-link">
+          <span header-link="focus-management"></span>
+          Focus management
+        </h4>
+      <p>The <code>TreeKeyManager</code> will handle focusing the appropriate item on keyboard interactions.</p>
+<p><code>tabindex</code> should also be set by the component when the active item changes. This can be listened to
+via the <code>change</code> property on the <code>TreeKeyManager</code>. In particular, the tree should only have a
+<code>tabindex</code> set if there is no active item, and should not have a <code>tabindex</code> set if there is an
+active item. Only the HTML node corresponding to the active item should have a <code>tabindex</code> set to
+<code>0</code>, with all other items set to <code>-1</code>.</p>
 
         <h3 id="focustrap" class="docs-header-link">
           <span header-link="focustrap"></span>

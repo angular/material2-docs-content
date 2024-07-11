@@ -1,0 +1,409 @@
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, QueryList} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ArrayDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {coerceObservable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion/private&#x27;</span>;
+<span class="hljs-keyword">import</span> {FlatTreeControl, CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  TREE_KEY_MANAGER,
+  TreeKeyManagerFactory,
+  TreeKeyManagerItem,
+  TreeKeyManagerStrategy,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {
+  DOWN_ARROW,
+  END,
+  ENTER,
+  H,
+  HOME,
+  J,
+  K,
+  L,
+  LEFT_ARROW,
+  RIGHT_ARROW,
+  SPACE,
+  TAB,
+  UP_ARROW,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
+<span class="hljs-keyword">import</span> {Subject, isObservable, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {take} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
+
+<span class="hljs-keyword">const</span> TREE_DATA: ExampleFlatNode[] = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+];
+
+<span class="hljs-comment">/** Flat node with expandable and level information */</span>
+<span class="hljs-keyword">interface</span> ExampleFlatNode {
+  <span class="hljs-attr">expandable</span>: <span class="hljs-built_in">boolean</span>;
+  name: <span class="hljs-built_in">string</span>;
+  level: <span class="hljs-built_in">number</span>;
+  isExpanded?: <span class="hljs-built_in">boolean</span>;
+}
+
+<span class="hljs-comment">/**
+ * This class manages keyboard events for trees. If you pass it a QueryList or other list of tree
+ * items, it will set the active item, focus, handle expansion and typeahead correctly when
+ * keyboard events occur.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">VimTreeKeyManager</span>&lt;<span class="hljs-title">T</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">TreeKeyManagerItem</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">TreeKeyManagerStrategy</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+  <span class="hljs-keyword">private</span> _activeItemIndex = -<span class="hljs-number">1</span>;
+  <span class="hljs-keyword">private</span> _activeItem: T | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+
+  <span class="hljs-keyword">private</span> _items: T[] = [];
+
+  <span class="hljs-keyword">private</span> _hasInitialFocused = <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_initialFocus</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._hasInitialFocused) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>._items.length) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-built_in">this</span>._focusFirstItem();
+
+    <span class="hljs-built_in">this</span>._hasInitialFocused = <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-comment">// TreeKeyManagerOptions not implemented.</span>
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">items: Observable&lt;T[]&gt; | QueryList&lt;T&gt; | T[]</span>)</span> {
+    <span class="hljs-comment">// We allow for the items to be an array or Observable because, in some cases, the consumer may</span>
+    <span class="hljs-comment">// not have access to a QueryList of the items they want to manage (e.g. when the</span>
+    <span class="hljs-comment">// items aren&#x27;t being collected via `ViewChildren` or `ContentChildren`).</span>
+    <span class="hljs-keyword">if</span> (items <span class="hljs-keyword">instanceof</span> QueryList) {
+      <span class="hljs-built_in">this</span>._items = items.toArray();
+      items.changes.subscribe(<span class="hljs-function">(<span class="hljs-params">newItems: QueryList&lt;T&gt;</span>) =&gt;</span> {
+        <span class="hljs-built_in">this</span>._items = newItems.toArray();
+        <span class="hljs-built_in">this</span>._updateActiveItemIndex(<span class="hljs-built_in">this</span>._items);
+        <span class="hljs-built_in">this</span>._initialFocus();
+      });
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isObservable(items)) {
+      items.subscribe(<span class="hljs-function"><span class="hljs-params">newItems</span> =&gt;</span> {
+        <span class="hljs-built_in">this</span>._items = newItems;
+        <span class="hljs-built_in">this</span>._updateActiveItemIndex(newItems);
+        <span class="hljs-built_in">this</span>._initialFocus();
+      });
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">this</span>._items = items;
+      <span class="hljs-built_in">this</span>._initialFocus();
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-title">destroy</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.change.complete();
+  }
+
+  <span class="hljs-comment">/** Stream that emits any time the focused item changes. */</span>
+  <span class="hljs-keyword">readonly</span> change = <span class="hljs-keyword">new</span> Subject&lt;T | <span class="hljs-literal">null</span>&gt;();
+
+  <span class="hljs-comment">/**
+   * Handles a keyboard event on the tree.
+   * <span class="hljs-doctag">@param </span>event Keyboard event that represents the user interaction with the tree.
+   */</span>
+  <span class="hljs-function"><span class="hljs-title">onKeydown</span>(<span class="hljs-params">event: KeyboardEvent</span>)</span> {
+    <span class="hljs-keyword">const</span> keyCode = event.keyCode;
+
+    <span class="hljs-keyword">switch</span> (keyCode) {
+      <span class="hljs-keyword">case</span> TAB:
+        <span class="hljs-comment">// Return early here, in order to allow Tab to actually tab out of the tree</span>
+        <span class="hljs-keyword">return</span>;
+
+      <span class="hljs-keyword">case</span> DOWN_ARROW:
+      <span class="hljs-keyword">case</span> J:
+        <span class="hljs-built_in">this</span>._focusNextItem();
+        <span class="hljs-keyword">break</span>;
+
+      <span class="hljs-keyword">case</span> UP_ARROW:
+      <span class="hljs-keyword">case</span> K:
+        <span class="hljs-built_in">this</span>._focusPreviousItem();
+        <span class="hljs-keyword">break</span>;
+
+      <span class="hljs-keyword">case</span> RIGHT_ARROW:
+      <span class="hljs-keyword">case</span> L:
+        <span class="hljs-built_in">this</span>._expandCurrentItem();
+        <span class="hljs-keyword">break</span>;
+
+      <span class="hljs-keyword">case</span> LEFT_ARROW:
+      <span class="hljs-keyword">case</span> H:
+        <span class="hljs-built_in">this</span>._collapseCurrentItem();
+        <span class="hljs-keyword">break</span>;
+
+      <span class="hljs-keyword">case</span> HOME:
+        <span class="hljs-built_in">this</span>._focusFirstItem();
+        <span class="hljs-keyword">break</span>;
+
+      <span class="hljs-keyword">case</span> END:
+        <span class="hljs-built_in">this</span>._focusLastItem();
+        <span class="hljs-keyword">break</span>;
+
+      <span class="hljs-keyword">case</span> ENTER:
+      <span class="hljs-keyword">case</span> SPACE:
+        <span class="hljs-built_in">this</span>._activateCurrentItem();
+        <span class="hljs-keyword">break</span>;
+    }
+  }
+
+  <span class="hljs-comment">/** Index of the currently active item. */</span>
+  getActiveItemIndex(): <span class="hljs-built_in">number</span> | <span class="hljs-literal">null</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._activeItemIndex;
+  }
+
+  <span class="hljs-comment">/** The currently active item. */</span>
+  getActiveItem(): T | <span class="hljs-literal">null</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._activeItem;
+  }
+
+  <span class="hljs-comment">/**
+   * Focus the provided item by index.
+   * <span class="hljs-doctag">@param </span>index The index of the item to focus.
+   * <span class="hljs-doctag">@param </span>options Additional focusing options.
+   */</span>
+  focusItem(index: <span class="hljs-built_in">number</span>, options?: {emitChangeEvent?: <span class="hljs-built_in">boolean</span>}): <span class="hljs-built_in">void</span>;
+  <span class="hljs-comment">/**
+   * Focus the provided item.
+   * <span class="hljs-doctag">@param </span>item The item to focus. Equality is determined via the trackBy function.
+   * <span class="hljs-doctag">@param </span>options Additional focusing options.
+   */</span>
+  focusItem(item: T, options?: {emitChangeEvent?: <span class="hljs-built_in">boolean</span>}): <span class="hljs-built_in">void</span>;
+  focusItem(itemOrIndex: <span class="hljs-built_in">number</span> | T, options?: {emitChangeEvent?: <span class="hljs-built_in">boolean</span>}): <span class="hljs-built_in">void</span>;
+  <span class="hljs-function"><span class="hljs-title">focusItem</span>(<span class="hljs-params">itemOrIndex: <span class="hljs-built_in">number</span> | T, options: {emitChangeEvent?: <span class="hljs-built_in">boolean</span>} = {}</span>)</span> {
+    <span class="hljs-comment">// Set default options</span>
+    options.emitChangeEvent ??= <span class="hljs-literal">true</span>;
+
+    <span class="hljs-keyword">let</span> index =
+      <span class="hljs-keyword">typeof</span> itemOrIndex === <span class="hljs-string">&#x27;number&#x27;</span>
+        ? itemOrIndex
+        : <span class="hljs-built_in">this</span>._items.findIndex(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item === itemOrIndex);
+    <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span> || index &gt;= <span class="hljs-built_in">this</span>._items.length) {
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">const</span> activeItem = <span class="hljs-built_in">this</span>._items[index];
+
+    <span class="hljs-comment">// If we&#x27;re just setting the same item, don&#x27;t re-call activate or focus</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._activeItem !== <span class="hljs-literal">null</span> &amp;&amp; activeItem === <span class="hljs-built_in">this</span>._activeItem) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-built_in">this</span>._activeItem = activeItem ?? <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>._activeItemIndex = index;
+
+    <span class="hljs-keyword">if</span> (options.emitChangeEvent) {
+      <span class="hljs-comment">// Emit to `change` stream as required by TreeKeyManagerStrategy interface.</span>
+      <span class="hljs-built_in">this</span>.change.next(<span class="hljs-built_in">this</span>._activeItem);
+    }
+    <span class="hljs-built_in">this</span>._activeItem?.focus();
+    <span class="hljs-built_in">this</span>._activateCurrentItem();
+  }
+
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_updateActiveItemIndex</span>(<span class="hljs-params">newItems: T[]</span>)</span> {
+    <span class="hljs-keyword">const</span> activeItem = <span class="hljs-built_in">this</span>._activeItem;
+    <span class="hljs-keyword">if</span> (activeItem) {
+      <span class="hljs-keyword">const</span> newIndex = newItems.findIndex(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item === activeItem);
+
+      <span class="hljs-keyword">if</span> (newIndex &gt; -<span class="hljs-number">1</span> &amp;&amp; newIndex !== <span class="hljs-built_in">this</span>._activeItemIndex) {
+        <span class="hljs-built_in">this</span>._activeItemIndex = newIndex;
+      }
+    }
+  }
+
+  <span class="hljs-comment">/** Focus the first available item. */</span>
+  <span class="hljs-keyword">private</span> _focusFirstItem(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.focusItem(<span class="hljs-built_in">this</span>._findNextAvailableItemIndex(-<span class="hljs-number">1</span>));
+  }
+
+  <span class="hljs-comment">/** Focus the last available item. */</span>
+  <span class="hljs-keyword">private</span> _focusLastItem(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.focusItem(<span class="hljs-built_in">this</span>._findPreviousAvailableItemIndex(<span class="hljs-built_in">this</span>._items.length));
+  }
+
+  <span class="hljs-comment">/** Focus the next available item. */</span>
+  <span class="hljs-keyword">private</span> _focusNextItem(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.focusItem(<span class="hljs-built_in">this</span>._findNextAvailableItemIndex(<span class="hljs-built_in">this</span>._activeItemIndex));
+  }
+
+  <span class="hljs-comment">/** Focus the previous available item. */</span>
+  <span class="hljs-keyword">private</span> _focusPreviousItem(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.focusItem(<span class="hljs-built_in">this</span>._findPreviousAvailableItemIndex(<span class="hljs-built_in">this</span>._activeItemIndex));
+  }
+
+  <span class="hljs-comment">//// Navigational methods</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_findNextAvailableItemIndex</span>(<span class="hljs-params">startingIndex: <span class="hljs-built_in">number</span></span>)</span> {
+    <span class="hljs-keyword">if</span> (startingIndex + <span class="hljs-number">1</span> &lt; <span class="hljs-built_in">this</span>._items.length) {
+      <span class="hljs-keyword">return</span> startingIndex + <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> startingIndex;
+  }
+
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_findPreviousAvailableItemIndex</span>(<span class="hljs-params">startingIndex: <span class="hljs-built_in">number</span></span>)</span> {
+    <span class="hljs-keyword">if</span> (startingIndex - <span class="hljs-number">1</span> &gt;= <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> startingIndex - <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">return</span> startingIndex;
+  }
+
+  <span class="hljs-comment">/**
+   * If the item is already expanded, we collapse the item. Otherwise, we will focus the parent.
+   */</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_collapseCurrentItem</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>._activeItem) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>._isCurrentItemExpanded()) {
+      <span class="hljs-built_in">this</span>._activeItem.collapse();
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> parent = <span class="hljs-built_in">this</span>._activeItem.getParent();
+      <span class="hljs-keyword">if</span> (!parent) {
+        <span class="hljs-keyword">return</span>;
+      }
+      <span class="hljs-built_in">this</span>.focusItem(parent <span class="hljs-keyword">as</span> T);
+    }
+  }
+
+  <span class="hljs-comment">/**
+   * If the item is already collapsed, we expand the item. Otherwise, we will focus the first child.
+   */</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_expandCurrentItem</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>._activeItem) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>._isCurrentItemExpanded()) {
+      <span class="hljs-built_in">this</span>._activeItem.expand();
+    } <span class="hljs-keyword">else</span> {
+      coerceObservable(<span class="hljs-built_in">this</span>._activeItem.getChildren())
+        .pipe(take(<span class="hljs-number">1</span>))
+        .subscribe(<span class="hljs-function"><span class="hljs-params">children</span> =&gt;</span> {
+          <span class="hljs-keyword">const</span> firstChild = children[<span class="hljs-number">0</span>];
+          <span class="hljs-keyword">if</span> (!firstChild) {
+            <span class="hljs-keyword">return</span>;
+          }
+          <span class="hljs-built_in">this</span>.focusItem(firstChild <span class="hljs-keyword">as</span> T);
+        });
+    }
+  }
+
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_isCurrentItemExpanded</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>._activeItem) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">this</span>._activeItem.isExpanded === <span class="hljs-string">&#x27;boolean&#x27;</span>
+      ? <span class="hljs-built_in">this</span>._activeItem.isExpanded
+      : <span class="hljs-built_in">this</span>._activeItem.isExpanded();
+  }
+
+  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_activateCurrentItem</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>._activeItem?.activate();
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">VimTreeKeyManagerFactory</span>&lt;<span class="hljs-title">T</span> <span class="hljs-title">extends</span> <span class="hljs-title">TreeKeyManagerItem</span>&gt;(<span class="hljs-params"></span>): <span class="hljs-title">TreeKeyManagerFactory</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">items</span> =&gt;</span> <span class="hljs-keyword">new</span> VimTreeKeyManager(items);
+}
+
+<span class="hljs-keyword">const</span> VIM_TREE_KEY_MANAGER_PROVIDER = {
+  <span class="hljs-attr">provide</span>: TREE_KEY_MANAGER,
+  <span class="hljs-attr">useFactory</span>: VimTreeKeyManagerFactory,
+};
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Tree with vim keyboard commands.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-tree-custom-key-manager-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-tree-custom-key-manager-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-tree-custom-key-manager-example.css&#x27;</span>],
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [CdkTreeModule, MatButtonModule, MatIconModule],
+  <span class="hljs-attr">providers</span>: [VIM_TREE_KEY_MANAGER_PROVIDER],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTreeCustomKeyManagerExample</span> </span>{
+  treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;ExampleFlatNode&gt;(
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level,
+    <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable,
+  );
+
+  dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(TREE_DATA);
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: ExampleFlatNode</span>) =&gt;</span> node.expandable;
+
+  <span class="hljs-function"><span class="hljs-title">getParentNode</span>(<span class="hljs-params">node: ExampleFlatNode</span>)</span> {
+    <span class="hljs-keyword">const</span> nodeIndex = TREE_DATA.indexOf(node);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = nodeIndex - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+      <span class="hljs-keyword">if</span> (TREE_DATA[i].level === node.level - <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> TREE_DATA[i];
+      }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">shouldRender</span>(<span class="hljs-params">node: ExampleFlatNode</span>)</span> {
+    <span class="hljs-keyword">let</span> parent = <span class="hljs-built_in">this</span>.getParentNode(node);
+    <span class="hljs-keyword">while</span> (parent) {
+      <span class="hljs-keyword">if</span> (!parent.isExpanded) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+      }
+      parent = <span class="hljs-built_in">this</span>.getParentNode(parent);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+}

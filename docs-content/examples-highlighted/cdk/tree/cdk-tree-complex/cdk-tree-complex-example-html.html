@@ -1,0 +1,40 @@
+@if (areRootsLoading | async) {
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
+} @else {
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree</span>
+      #<span class="hljs-attr">tree</span>
+      [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">&quot;roots&quot;</span>
+      [<span class="hljs-attr">childrenAccessor</span>]=<span class="hljs-string">&quot;getChildren&quot;</span>
+      [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">&quot;trackBy&quot;</span>
+      [<span class="hljs-attr">expansionKey</span>]=<span class="hljs-string">&quot;expansionKey&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-tree-node</span>
+        *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>
+        <span class="hljs-attr">cdkTreeNodePadding</span>
+        [<span class="hljs-attr">cdkTreeNodeTypeaheadLabel</span>]=<span class="hljs-string">&quot;node.raw.name&quot;</span>
+        [<span class="hljs-attr">isExpandable</span>]=<span class="hljs-string">&quot;node.isExpandable()&quot;</span>
+        (<span class="hljs-attr">expandedChange</span>)=<span class="hljs-string">&quot;onExpand(node, $event)&quot;</span>&gt;</span>
+      <span class="hljs-comment">&lt;!-- Spinner when node is loading children; this replaces the expand button. --&gt;</span>
+      @if (node.areChildrenLoading()) {
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span> <span class="hljs-attr">diameter</span>=<span class="hljs-string">&quot;48&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;indeterminate&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
+      }
+
+      @if (!node.areChildrenLoading() &amp;&amp; node.isExpandable()) {
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+            <span class="hljs-attr">mat-icon-button</span>
+            <span class="hljs-attr">cdkTreeNodeToggle</span>
+            [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;Toggle &#x27; + node.raw.name&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-icon-rtl-mirror&quot;</span>&gt;</span>
+            {{tree.isExpanded(node) ? &#x27;expand_more&#x27; : &#x27;chevron_right&#x27;}}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      }
+
+      <span class="hljs-comment">&lt;!-- Spacer for leaf nodes --&gt;</span>
+      @if (node.isLeaf()) {
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;toggle-spacer&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      }
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{node.raw.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree-node</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-tree</span>&gt;</span>
+}

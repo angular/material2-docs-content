@@ -1,3 +1,4 @@
+import { ArrayDataSource } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs';
 import { CollectionViewer } from '@angular/cdk/collections';
 import { DataSource } from '@angular/cdk/collections';
@@ -71,6 +72,23 @@ declare interface ExampleFlatNode_2 {
     level: number;
 }
 
+/** Flat node with expandable and level information */
+declare interface ExampleFlatNode_3 {
+    expandable: boolean;
+    name: string;
+    level: number;
+}
+
+/** Flat node with expandable and level information */
+declare class FlatNode {
+    name: string;
+    level: number;
+    expandable: boolean;
+    parent: string | null;
+    isLoadMore: boolean;
+    constructor(name: string, level?: number, expandable?: boolean, parent?: string | null, isLoadMore?: boolean);
+}
+
 /**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
@@ -94,37 +112,29 @@ declare interface FoodNode_2 {
  * button, more data will be loaded.
  */
 declare class LoadmoreDatabase {
-    batchNumber: number;
-    dataChange: BehaviorSubject<LoadmoreNode[]>;
-    nodeMap: Map<string, LoadmoreNode>;
-    /** The data */
-    rootLevelNodes: string[];
-    dataMap: Map<string, string[]>;
+    /** Map of node name to node */
+    nodes: Map<string, NestedNode>;
+    dataChange: BehaviorSubject<NestedNode[]>;
+    /** Example data */
+    rootNodes: string[];
+    childMap: Map<string, string[]>;
     initialize(): void;
     /** Expand a node whose children are not loaded */
-    loadMore(item: string, onlyFirstTime?: boolean): void;
+    loadChildren(name: string, onlyFirstTime?: boolean): void;
     private _generateNode;
     static ɵfac: i0.ɵɵFactoryDeclaration<LoadmoreDatabase, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<LoadmoreDatabase>;
 }
 
-/** Flat node with expandable and level information */
-declare class LoadmoreFlatNode {
-    item: string;
-    level: number;
-    expandable: boolean;
-    loadMoreParentItem: string | null;
-    constructor(item: string, level?: number, expandable?: boolean, loadMoreParentItem?: string | null);
-}
-
 /** Nested node */
-declare class LoadmoreNode {
-    item: string;
+declare class NestedNode {
+    name: string;
     hasChildren: boolean;
-    loadMoreParentItem: string | null;
-    childrenChange: BehaviorSubject<LoadmoreNode[]>;
-    get children(): LoadmoreNode[];
-    constructor(item: string, hasChildren?: boolean, loadMoreParentItem?: string | null);
+    parent: string | null;
+    isLoadMore: boolean;
+    childrenChange: BehaviorSubject<NestedNode[]>;
+    get children(): NestedNode[];
+    constructor(name: string, hasChildren?: boolean, parent?: string | null, isLoadMore?: boolean);
 }
 
 declare interface Node_2 {
@@ -207,24 +217,39 @@ export declare class TreeHarnessExample {
 }
 
 /**
+ * @title Tree with flat nodes
+ */
+export declare class TreeLegacyKeyboardInterfaceExample {
+    treeControl: FlatTreeControl<ExampleFlatNode_3, ExampleFlatNode_3>;
+    dataSource: ArrayDataSource<ExampleFlatNode_3>;
+    hasChild: (_: number, node: ExampleFlatNode_3) => boolean;
+    getParentNode(node: ExampleFlatNode_3): ExampleFlatNode_3 | null;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeLegacyKeyboardInterfaceExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLegacyKeyboardInterfaceExample, "tree-legacy-keyboard-interface-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Tree with partially loaded data
  */
 export declare class TreeLoadmoreExample {
     private _database;
-    nodeMap: Map<string, LoadmoreFlatNode>;
-    treeControl: FlatTreeControl<LoadmoreFlatNode>;
-    treeFlattener: MatTreeFlattener<LoadmoreNode, LoadmoreFlatNode>;
-    dataSource: MatTreeFlatDataSource<LoadmoreNode, LoadmoreFlatNode>;
+    nodeMap: Map<string, FlatNode>;
+    treeControl: FlatTreeControl<FlatNode>;
+    treeFlattener: MatTreeFlattener<NestedNode, FlatNode>;
+    dataSource: MatTreeFlatDataSource<NestedNode, FlatNode>;
     constructor(_database: LoadmoreDatabase);
-    getChildren: (node: LoadmoreNode) => Observable<LoadmoreNode[]>;
-    transformer: (node: LoadmoreNode, level: number) => LoadmoreFlatNode;
-    getLevel: (node: LoadmoreFlatNode) => number;
-    isExpandable: (node: LoadmoreFlatNode) => boolean;
-    hasChild: (_: number, _nodeData: LoadmoreFlatNode) => boolean;
-    isLoadMore: (_: number, _nodeData: LoadmoreFlatNode) => boolean;
-    /** Load more nodes from data source */
-    loadMore(item: string): void;
-    loadChildren(node: LoadmoreFlatNode): void;
+    getChildren: (node: NestedNode) => Observable<NestedNode[]>;
+    transformer: (node: NestedNode, level: number) => FlatNode;
+    getLevel: (node: FlatNode) => number;
+    isExpandable: (node: FlatNode) => boolean;
+    hasChild: (_: number, node: FlatNode) => boolean;
+    isLoadMore: (_: number, node: FlatNode) => boolean;
+    loadChildren(node: FlatNode): void;
+    /** Load more nodes when clicking on "Load more" node. */
+    loadOnClick(event: MouseEvent, node: FlatNode): void;
+    /** Load more nodes on keyboardpress when focused on "Load more" node */
+    loadOnKeypress(event: KeyboardEvent, node: FlatNode): void;
+    private _loadSiblings;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeLoadmoreExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never, never, true, never>;
 }

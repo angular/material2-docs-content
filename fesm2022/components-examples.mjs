@@ -1085,6 +1085,62 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "text-field-autosize-textarea-example.ts",
         "importPath": "cdk/text-field"
     },
+    "cdk-tree-complex": {
+        "packagePath": "cdk/tree/cdk-tree-complex",
+        "title": "Complex example making use of the redux pattern.",
+        "componentName": "CdkTreeComplexExample",
+        "files": [
+            "cdk-tree-complex-example.ts",
+            "cdk-tree-complex-example.html",
+            "cdk-tree-complex-example.css"
+        ],
+        "selector": "cdk-tree-complex-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-tree-complex-example.ts",
+        "importPath": "cdk/tree"
+    },
+    "cdk-tree-custom-key-manager": {
+        "packagePath": "cdk/tree/cdk-tree-custom-key-manager",
+        "title": "Tree with vim keyboard commands.",
+        "componentName": "CdkTreeCustomKeyManagerExample",
+        "files": [
+            "cdk-tree-custom-key-manager-example.ts",
+            "cdk-tree-custom-key-manager-example.html",
+            "cdk-tree-custom-key-manager-example.css"
+        ],
+        "selector": "cdk-tree-custom-key-manager-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-tree-custom-key-manager-example.ts",
+        "importPath": "cdk/tree"
+    },
+    "cdk-tree-flat-children-accessor": {
+        "packagePath": "cdk/tree/cdk-tree-flat-children-accessor",
+        "title": "Tree with flat nodes",
+        "componentName": "CdkTreeFlatChildrenAccessorExample",
+        "files": [
+            "cdk-tree-flat-children-accessor-example.ts",
+            "cdk-tree-flat-children-accessor-example.html",
+            "cdk-tree-flat-children-accessor-example.css"
+        ],
+        "selector": "cdk-tree-flat-children-accessor-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-tree-flat-children-accessor-example.ts",
+        "importPath": "cdk/tree"
+    },
+    "cdk-tree-flat-level-accessor": {
+        "packagePath": "cdk/tree/cdk-tree-flat-level-accessor",
+        "title": "Tree with flat nodes",
+        "componentName": "CdkTreeFlatLevelAccessorExample",
+        "files": [
+            "cdk-tree-flat-level-accessor-example.ts",
+            "cdk-tree-flat-level-accessor-example.html",
+            "cdk-tree-flat-level-accessor-example.css"
+        ],
+        "selector": "cdk-tree-flat-level-accessor-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-tree-flat-level-accessor-example.ts",
+        "importPath": "cdk/tree"
+    },
     "cdk-tree-flat": {
         "packagePath": "cdk/tree/cdk-tree-flat",
         "title": "Tree with flat nodes",
@@ -1097,6 +1153,34 @@ const EXAMPLE_COMPONENTS = {
         "selector": "cdk-tree-flat-example",
         "additionalComponents": [],
         "primaryFile": "cdk-tree-flat-example.ts",
+        "importPath": "cdk/tree"
+    },
+    "cdk-tree-nested-children-accessor": {
+        "packagePath": "cdk/tree/cdk-tree-nested-children-accessor",
+        "title": "Tree with nested nodes, using childAccessor",
+        "componentName": "CdkTreeNestedChildrenAccessorExample",
+        "files": [
+            "cdk-tree-nested-children-accessor-example.ts",
+            "cdk-tree-nested-children-accessor-example.html",
+            "cdk-tree-nested-children-accessor-example.css"
+        ],
+        "selector": "cdk-tree-nested-children-accessor-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-tree-nested-children-accessor-example.ts",
+        "importPath": "cdk/tree"
+    },
+    "cdk-tree-nested-level-accessor": {
+        "packagePath": "cdk/tree/cdk-tree-nested-level-accessor",
+        "title": "Tree with nested nodes",
+        "componentName": "CdkTreeNestedLevelAccessorExample",
+        "files": [
+            "cdk-tree-nested-level-accessor-example.ts",
+            "cdk-tree-nested-level-accessor-example.html",
+            "cdk-tree-nested-level-accessor-example.css"
+        ],
+        "selector": "cdk-tree-nested-level-accessor-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-tree-nested-level-accessor-example.ts",
         "importPath": "cdk/tree"
     },
     "cdk-tree-nested": {
@@ -4687,13 +4771,28 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tree-harness-example.ts",
         "importPath": "material/tree"
     },
+    "tree-legacy-keyboard-interface": {
+        "packagePath": "material/tree/tree-legacy-keyboard-interface",
+        "title": "Tree with flat nodes",
+        "componentName": "TreeLegacyKeyboardInterfaceExample",
+        "files": [
+            "tree-legacy-keyboard-interface-example.ts",
+            "tree-legacy-keyboard-interface-example.html",
+            "tree-legacy-keyboard-interface-example.css"
+        ],
+        "selector": "tree-legacy-keyboard-interface-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-legacy-keyboard-interface-example.ts",
+        "importPath": "material/tree"
+    },
     "tree-loadmore": {
         "packagePath": "material/tree/tree-loadmore",
         "title": "Tree with partially loaded data",
         "componentName": "TreeLoadmoreExample",
         "files": [
             "tree-loadmore-example.ts",
-            "tree-loadmore-example.html"
+            "tree-loadmore-example.html",
+            "tree-loadmore-example.css"
         ],
         "selector": "tree-loadmore-example",
         "additionalComponents": [],
@@ -4869,7 +4968,19 @@ async function loadExample(id) {
             return import('@angular/components-examples/cdk/text-field');
         case 'text-field-autosize-textarea':
             return import('@angular/components-examples/cdk/text-field');
+        case 'cdk-tree-complex':
+            return import('@angular/components-examples/cdk/tree');
+        case 'cdk-tree-custom-key-manager':
+            return import('@angular/components-examples/cdk/tree');
+        case 'cdk-tree-flat-children-accessor':
+            return import('@angular/components-examples/cdk/tree');
+        case 'cdk-tree-flat-level-accessor':
+            return import('@angular/components-examples/cdk/tree');
         case 'cdk-tree-flat':
+            return import('@angular/components-examples/cdk/tree');
+        case 'cdk-tree-nested-children-accessor':
+            return import('@angular/components-examples/cdk/tree');
+        case 'cdk-tree-nested-level-accessor':
             return import('@angular/components-examples/cdk/tree');
         case 'cdk-tree-nested':
             return import('@angular/components-examples/cdk/tree');
@@ -5388,6 +5499,8 @@ async function loadExample(id) {
         case 'tree-flat-overview':
             return import('@angular/components-examples/material/tree');
         case 'tree-harness':
+            return import('@angular/components-examples/material/tree');
+        case 'tree-legacy-keyboard-interface':
             return import('@angular/components-examples/material/tree');
         case 'tree-loadmore':
             return import('@angular/components-examples/material/tree');
