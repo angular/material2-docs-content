@@ -3969,6 +3969,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "table-multiple-header-footer-example.ts",
         "importPath": "material/table"
     },
+    "table-multiple-row-template": {
+        "packagePath": "material/table/table-multiple-row-template",
+        "title": "Table with multiple row template",
+        "componentName": "TableMultipleRowTemplateExample",
+        "files": [
+            "table-multiple-row-template-example.ts",
+            "table-multiple-row-template-example.html",
+            "table-multiple-row-template-example.css"
+        ],
+        "selector": "table-multiple-row-template-example",
+        "additionalComponents": [],
+        "primaryFile": "table-multiple-row-template-example.ts",
+        "importPath": "material/table"
+    },
     "table-overview": {
         "packagePath": "material/table/table-overview",
         "title": "Data table with sorting, pagination, and filtering.",
@@ -5284,6 +5298,8 @@ async function loadExample(id) {
         case 'table-http':
             return import('@angular/components-examples/material/table');
         case 'table-multiple-header-footer':
+            return import('@angular/components-examples/material/table');
+        case 'table-multiple-row-template':
             return import('@angular/components-examples/material/table');
         case 'table-overview':
             return import('@angular/components-examples/material/table');
