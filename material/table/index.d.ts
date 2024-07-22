@@ -21,12 +21,12 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { Sort } from '@angular/material/sort';
 import { SortDirection } from '@angular/material/sort';
 
-declare class ExampleDataSource extends DataSource<PeriodicElement_21> {
+declare class ExampleDataSource extends DataSource<PeriodicElement_22> {
     private _dataStream;
-    constructor(initialData: PeriodicElement_21[]);
-    connect(): Observable<PeriodicElement_21[]>;
+    constructor(initialData: PeriodicElement_22[]);
+    connect(): Observable<PeriodicElement_22[]>;
     disconnect(): void;
-    setData(data: PeriodicElement_21[]): void;
+    setData(data: PeriodicElement_22[]): void;
 }
 
 /** An example database that the data source uses to retrieve data for the table. */
@@ -160,6 +160,13 @@ declare interface PeriodicElement_23 {
     symbol: string;
 }
 
+declare interface PeriodicElement_24 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+
 declare interface PeriodicElement_3 {
     name: string;
     position: number;
@@ -225,7 +232,7 @@ export declare class TableBasicExample {
  */
 export declare class TableColumnStylingExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_18[];
+    dataSource: PeriodicElement_19[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableColumnStylingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, true, never>;
 }
@@ -235,8 +242,8 @@ export declare class TableColumnStylingExample {
  */
 export declare class TableDynamicArrayDataExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_20[];
-    table: MatTable<PeriodicElement_20>;
+    dataSource: PeriodicElement_21[];
+    table: MatTable<PeriodicElement_21>;
     addData(): void;
     removeData(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
@@ -262,7 +269,7 @@ export declare class TableDynamicColumnsExample {
  */
 export declare class TableDynamicObservableDataExample {
     displayedColumns: string[];
-    dataToDisplay: PeriodicElement_21[];
+    dataToDisplay: PeriodicElement_22[];
     dataSource: ExampleDataSource;
     addData(): void;
     removeData(): void;
@@ -308,7 +315,7 @@ export declare class TableFlexBasicExample {
  */
 export declare class TableFlexLargeRowExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_23[];
+    dataSource: PeriodicElement_24[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexLargeRowExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, true, never>;
 }
@@ -332,9 +339,9 @@ export declare class TableGeneratedColumnsExample {
     columns: {
         columnDef: string;
         header: string;
-        cell: (element: PeriodicElement_22) => string;
+        cell: (element: PeriodicElement_23) => string;
     }[];
-    dataSource: PeriodicElement_22[];
+    dataSource: PeriodicElement_23[];
     displayedColumns: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, true, never>;
@@ -387,6 +394,16 @@ export declare class TableMultipleHeaderFooterExample {
 }
 
 /**
+ * @title Table with multiple row template
+ */
+export declare class TableMultipleRowTemplateExample {
+    displayedColumns: string[];
+    dataSource: MatTableDataSource<PeriodicElement_6, MatPaginator>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableMultipleRowTemplateExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleRowTemplateExample, "table-multiple-row-template-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Data table with sorting, pagination, and filtering.
  */
 export declare class TableOverviewExample implements AfterViewInit {
@@ -406,7 +423,7 @@ export declare class TableOverviewExample implements AfterViewInit {
  */
 export declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_6, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_7, MatPaginator>;
     paginator: MatPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
@@ -418,7 +435,7 @@ export declare class TablePaginationExample implements AfterViewInit {
  */
 export declare class TableRecycleRowsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_17[];
+    dataSource: PeriodicElement_18[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, true, never>;
 }
@@ -428,7 +445,7 @@ export declare class TableRecycleRowsExample {
  */
 export declare class TableReorderableExample {
     columns: string[];
-    dataSource: PeriodicElement_16[];
+    dataSource: PeriodicElement_17[];
     drop(event: CdkDragDrop<string[]>): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, true, never>;
@@ -439,8 +456,8 @@ export declare class TableReorderableExample {
  */
 export declare class TableRowBindingExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_19[];
-    clickedRows: Set<PeriodicElement_19>;
+    dataSource: PeriodicElement_20[];
+    clickedRows: Set<PeriodicElement_20>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, true, never>;
 }
@@ -460,14 +477,14 @@ export declare class TableRowContextExample {
  */
 export declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_7, MatPaginator>;
-    selection: SelectionModel<PeriodicElement_7>;
+    dataSource: MatTableDataSource<PeriodicElement_8, MatPaginator>;
+    selection: SelectionModel<PeriodicElement_8>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     toggleAllRows(): void;
     /** The label for the checkbox on the passed row */
-    checkboxLabel(row?: PeriodicElement_7): string;
+    checkboxLabel(row?: PeriodicElement_8): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, true, never>;
 }
@@ -478,7 +495,7 @@ export declare class TableSelectionExample {
 export declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_8, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_9, MatPaginator>;
     constructor(_liveAnnouncer: LiveAnnouncer);
     sort: MatSort;
     ngAfterViewInit(): void;
@@ -493,7 +510,7 @@ export declare class TableSortingExample implements AfterViewInit {
  */
 export declare class TableStickyColumnsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_9[];
+    dataSource: PeriodicElement_10[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyColumnsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, true, never>;
 }
@@ -503,7 +520,7 @@ export declare class TableStickyColumnsExample {
  */
 export declare class TableStickyComplexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_11[];
+    dataSource: PeriodicElement_12[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
@@ -517,7 +534,7 @@ export declare class TableStickyComplexExample {
  */
 export declare class TableStickyComplexFlexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_10[];
+    dataSource: PeriodicElement_11[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
@@ -543,7 +560,7 @@ export declare class TableStickyFooterExample {
  */
 export declare class TableStickyHeaderExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_12[];
+    dataSource: PeriodicElement_13[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyHeaderExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, true, never>;
 }
@@ -553,11 +570,11 @@ export declare class TableStickyHeaderExample {
  */
 export declare class TableTextColumnAdvancedExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_13, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_14, MatPaginator>;
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-    getWeight: (data: PeriodicElement_13) => string;
+    getWeight: (data: PeriodicElement_14) => string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnAdvancedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, true, never>;
 }
@@ -568,7 +585,7 @@ export declare class TableTextColumnAdvancedExample {
  */
 export declare class TableTextColumnExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_14[];
+    dataSource: PeriodicElement_15[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, true, never>;
 }
@@ -590,7 +607,7 @@ export declare class TableWithRipplesExample {
  */
 export declare class TableWrappedExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_15, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement_16, MatPaginator>;
     sort: MatSort;
     ngAfterViewInit(): void;
     clearTable(): void;
