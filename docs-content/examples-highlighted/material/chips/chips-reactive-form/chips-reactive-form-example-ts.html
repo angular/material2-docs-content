@@ -1,0 +1,57 @@
+<span class="hljs-keyword">import</span> {LiveAnnouncer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatChipInputEvent, MatChipsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Chips in reactive forms
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;chips-reactive-form-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;chips-reactive-form-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;chips-reactive-form-example.css&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [
+    MatButtonModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    ReactiveFormsModule,
+    MatIconModule,
+  ],
+  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChipsReactiveFormExample</span> </span>{
+  <span class="hljs-keyword">readonly</span> reactiveKeywords = signal([<span class="hljs-string">&#x27;angular&#x27;</span>, <span class="hljs-string">&#x27;how-to&#x27;</span>, <span class="hljs-string">&#x27;tutorial&#x27;</span>, <span class="hljs-string">&#x27;accessibility&#x27;</span>]);
+  <span class="hljs-keyword">readonly</span> formControl = <span class="hljs-keyword">new</span> FormControl([<span class="hljs-string">&#x27;angular&#x27;</span>]);
+
+  announcer = inject(LiveAnnouncer);
+
+  <span class="hljs-function"><span class="hljs-title">removeReactiveKeyword</span>(<span class="hljs-params">keyword: <span class="hljs-built_in">string</span></span>)</span> {
+    <span class="hljs-built_in">this</span>.reactiveKeywords.update(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> index = keywords.indexOf(keyword);
+      <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> keywords;
+      }
+
+      keywords.splice(index, <span class="hljs-number">1</span>);
+      <span class="hljs-built_in">this</span>.announcer.announce(<span class="hljs-string">`removed <span class="hljs-subst">${keyword}</span> from reactive form`</span>);
+      <span class="hljs-keyword">return</span> [...keywords];
+    });
+  }
+
+  addReactiveKeyword(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> value = (event.value || <span class="hljs-string">&#x27;&#x27;</span>).trim();
+
+    <span class="hljs-comment">// Add our keyword</span>
+    <span class="hljs-keyword">if</span> (value) {
+      <span class="hljs-built_in">this</span>.reactiveKeywords.update(<span class="hljs-function"><span class="hljs-params">keywords</span> =&gt;</span> [...keywords, value]);
+      <span class="hljs-built_in">this</span>.announcer.announce(<span class="hljs-string">`added <span class="hljs-subst">${value}</span> to reactive form`</span>);
+    }
+
+    <span class="hljs-comment">// Clear the input value</span>
+    event.chipInput!.clear();
+  }
+}

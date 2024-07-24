@@ -1849,6 +1849,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "chips-overview-example.ts",
         "importPath": "material/chips"
     },
+    "chips-reactive-form": {
+        "packagePath": "material/chips/chips-reactive-form",
+        "title": "Chips in reactive forms",
+        "componentName": "ChipsReactiveFormExample",
+        "files": [
+            "chips-reactive-form-example.ts",
+            "chips-reactive-form-example.html",
+            "chips-reactive-form-example.css"
+        ],
+        "selector": "chips-reactive-form-example",
+        "additionalComponents": [],
+        "primaryFile": "chips-reactive-form-example.ts",
+        "importPath": "material/chips"
+    },
     "chips-stacked": {
         "packagePath": "material/chips/chips-stacked",
         "title": "Stacked chips",
@@ -1861,6 +1875,20 @@ const EXAMPLE_COMPONENTS = {
         "selector": "chips-stacked-example",
         "additionalComponents": [],
         "primaryFile": "chips-stacked-example.ts",
+        "importPath": "material/chips"
+    },
+    "chips-template-form": {
+        "packagePath": "material/chips/chips-template-form",
+        "title": "Chips in template-driven forms",
+        "componentName": "ChipsTemplateFormExample",
+        "files": [
+            "chips-template-form-example.ts",
+            "chips-template-form-example.html",
+            "chips-template-form-example.css"
+        ],
+        "selector": "chips-template-form-example",
+        "additionalComponents": [],
+        "primaryFile": "chips-template-form-example.ts",
         "importPath": "material/chips"
     },
     "elevation-overview": {
@@ -5092,7 +5120,11 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/chips');
         case 'chips-overview':
             return import('@angular/components-examples/material/chips');
+        case 'chips-reactive-form':
+            return import('@angular/components-examples/material/chips');
         case 'chips-stacked':
+            return import('@angular/components-examples/material/chips');
+        case 'chips-template-form':
             return import('@angular/components-examples/material/chips');
         case 'elevation-overview':
             return import('@angular/components-examples/material/core');
