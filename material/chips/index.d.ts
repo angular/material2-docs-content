@@ -93,12 +93,37 @@ export declare class ChipsOverviewExample {
 }
 
 /**
+ * @title Chips in reactive forms
+ */
+export declare class ChipsReactiveFormExample {
+    readonly reactiveKeywords: WritableSignal<string[]>;
+    readonly formControl: FormControl<string[] | null>;
+    announcer: LiveAnnouncer;
+    removeReactiveKeyword(keyword: string): void;
+    addReactiveKeyword(event: MatChipInputEvent): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsReactiveFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsReactiveFormExample, "chips-reactive-form-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Stacked chips
  */
 export declare class ChipsStackedExample {
     readonly bestBoys: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ChipsStackedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Chips in template-driven forms
+ */
+export declare class ChipsTemplateFormExample {
+    readonly templateKeywords: WritableSignal<string[]>;
+    announcer: LiveAnnouncer;
+    removeTemplateKeyword(keyword: string): void;
+    addTemplateKeyword(event: MatChipInputEvent): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ChipsTemplateFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ChipsTemplateFormExample, "chips-template-form-example", never, {}, {}, never, never, true, never>;
 }
 
 declare interface Fruit {
