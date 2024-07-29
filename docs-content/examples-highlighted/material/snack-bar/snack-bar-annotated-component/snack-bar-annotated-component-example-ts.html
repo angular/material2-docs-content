@@ -22,9 +22,9 @@
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, FormsModule, MatInputModule, MatButtonModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarAnnotatedComponentExample</span> </span>{
-  durationInSeconds = <span class="hljs-number">5</span>;
+  <span class="hljs-keyword">private</span> _snackBar = inject(MatSnackBar);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>)</span> {}
+  durationInSeconds = <span class="hljs-number">5</span>;
 
   <span class="hljs-function"><span class="hljs-title">openSnackBar</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>._snackBar.openFromComponent(PizzaPartyAnnotatedComponent, {

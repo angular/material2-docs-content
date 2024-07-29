@@ -23,7 +23,6 @@ export declare class PizzaPartyComponent {
 export declare class SnackBarAnnotatedComponentExample {
     private _snackBar;
     durationInSeconds: number;
-    constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarAnnotatedComponentExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarAnnotatedComponentExample, "snack-bar-annotated-component-example", never, {}, {}, never, never, true, never>;
@@ -35,7 +34,6 @@ export declare class SnackBarAnnotatedComponentExample {
 export declare class SnackBarComponentExample {
     private _snackBar;
     durationInSeconds: number;
-    constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarComponentExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarComponentExample, "snack-bar-component-example", never, {}, {}, never, never, true, never>;
@@ -46,7 +44,6 @@ export declare class SnackBarComponentExample {
  */
 export declare class SnackBarHarnessExample {
     readonly snackBar: MatSnackBar;
-    constructor(snackBar: MatSnackBar);
     open(message: string, action?: string, config?: MatSnackBarConfig): MatSnackBarRef<TextOnlySnackBar>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarHarnessExample, "snack-bar-harness-example", never, {}, {}, never, never, true, never>;
@@ -57,7 +54,6 @@ export declare class SnackBarHarnessExample {
  */
 export declare class SnackBarOverviewExample {
     private _snackBar;
-    constructor(_snackBar: MatSnackBar);
     openSnackBar(message: string, action: string): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarOverviewExample, "snack-bar-overview-example", never, {}, {}, never, never, true, never>;
@@ -70,7 +66,6 @@ export declare class SnackBarPositionExample {
     private _snackBar;
     horizontalPosition: MatSnackBarHorizontalPosition;
     verticalPosition: MatSnackBarVerticalPosition;
-    constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SnackBarPositionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SnackBarPositionExample, "snack-bar-position-example", never, {}, {}, never, never, true, never>;

@@ -40,10 +40,6 @@ export declare class DialogContentExampleDialog {
 }
 
 declare interface DialogData {
-    animal: 'panda' | 'unicorn' | 'lion';
-}
-
-declare interface DialogData_2 {
     animal: string;
     name: string;
 }
@@ -53,15 +49,13 @@ declare interface DialogData_2 {
  */
 export declare class DialogDataExample {
     dialog: MatDialog;
-    constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExample, "dialog-data-example", never, {}, {}, never, never, true, never>;
 }
 
 export declare class DialogDataExampleDialog {
-    data: DialogData;
-    constructor(data: DialogData);
+    data: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogDataExampleDialog, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DialogDataExampleDialog, "dialog-data-example-dialog", never, {}, {}, never, never, true, never>;
 }
@@ -122,7 +116,7 @@ export declare class DialogOverviewExample {
 
 export declare class DialogOverviewExampleDialog {
     readonly dialogRef: MatDialogRef<any, any>;
-    readonly data: DialogData_2;
+    readonly data: DialogData;
     readonly animal: ModelSignal<string>;
     onNoClick(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DialogOverviewExampleDialog, never>;

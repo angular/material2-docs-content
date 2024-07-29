@@ -1,5 +1,4 @@
 import { CdkStepper } from '@angular/cdk/stepper';
-import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
@@ -20,7 +19,6 @@ export declare class CdkLinearStepperWithFormExample {
     secondFormGroup: FormGroup<    {
     secondControl: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     toggleLinearity(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkLinearStepperWithFormExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkLinearStepperWithFormExample, "cdk-linear-stepper-with-form-example", never, {}, {}, never, never, true, never>;

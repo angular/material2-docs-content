@@ -107,25 +107,6 @@ declare interface FoodNode_2 {
     children?: FoodNode_2[];
 }
 
-/**
- * A database that only load part of the data initially. After user clicks on the `Load more`
- * button, more data will be loaded.
- */
-declare class LoadmoreDatabase {
-    /** Map of node name to node */
-    nodes: Map<string, NestedNode>;
-    dataChange: BehaviorSubject<NestedNode[]>;
-    /** Example data */
-    rootNodes: string[];
-    childMap: Map<string, string[]>;
-    initialize(): void;
-    /** Expand a node whose children are not loaded */
-    loadChildren(name: string, onlyFirstTime?: boolean): void;
-    private _generateNode;
-    static ɵfac: i0.ɵɵFactoryDeclaration<LoadmoreDatabase, never>;
-    static ɵprov: i0.ɵɵInjectableDeclaration<LoadmoreDatabase>;
-}
-
 /** Nested node */
 declare class NestedNode {
     name: string;
@@ -146,7 +127,7 @@ declare interface Node_2 {
  * @title Tree with dynamic data
  */
 export declare class TreeDynamicExample {
-    constructor(database: DynamicDatabase);
+    constructor();
     treeControl: FlatTreeControl<DynamicFlatNode>;
     dataSource: DynamicDataSource;
     getLevel: (node: DynamicFlatNode) => number;
@@ -237,7 +218,7 @@ export declare class TreeLoadmoreExample {
     treeControl: FlatTreeControl<FlatNode>;
     treeFlattener: MatTreeFlattener<NestedNode, FlatNode>;
     dataSource: MatTreeFlatDataSource<NestedNode, FlatNode>;
-    constructor(_database: LoadmoreDatabase);
+    constructor();
     getChildren: (node: NestedNode) => Observable<NestedNode[]>;
     transformer: (node: NestedNode, level: number) => FlatNode;
     getLevel: (node: FlatNode) => number;

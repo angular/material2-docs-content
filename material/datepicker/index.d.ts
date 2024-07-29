@@ -1,10 +1,7 @@
-import { DateAdapter } from '@angular/material/core';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
-import { MatCalendar } from '@angular/material/datepicker';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
-import { MatDateFormats } from '@angular/material/core';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDialog } from '@angular/material/dialog';
@@ -52,7 +49,6 @@ export declare class DatepickerDateClassExample {
 export declare class DatepickerDialogExample {
     dialog: MatDialog;
     selectedDate: ModelSignal<Date | null>;
-    constructor(dialog: MatDialog);
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerDialogExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerDialogExample, "datepicker-dialog-example", never, { "selectedDate": { "alias": "selectedDate"; "required": false; "isSignal": true; }; }, { "selectedDate": "selectedDateChange"; }, never, never, true, never>;
@@ -210,7 +206,7 @@ export declare class ExampleHeader<D> implements OnDestroy {
     private _dateFormats;
     private _destroyed;
     readonly periodLabel: WritableSignal<string>;
-    constructor(_calendar: MatCalendar<D>, _dateAdapter: DateAdapter<D>, _dateFormats: MatDateFormats);
+    constructor();
     ngOnDestroy(): void;
     previousClicked(mode: 'month' | 'year'): void;
     nextClicked(mode: 'month' | 'year'): void;

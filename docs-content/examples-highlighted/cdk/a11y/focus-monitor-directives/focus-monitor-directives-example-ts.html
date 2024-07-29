@@ -1,5 +1,5 @@
+<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, NgZone, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {A11yModule, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, NgZone} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Monitoring focus with FocusMonitor */</span>
 <span class="hljs-meta">@Component</span>({
@@ -10,13 +10,11 @@
   <span class="hljs-attr">imports</span>: [A11yModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorDirectivesExample</span> </span>{
+  <span class="hljs-keyword">private</span> _ngZone = inject(NgZone);
+  <span class="hljs-keyword">private</span> _cdr = inject(ChangeDetectorRef);
+
   elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
   subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">private</span> _ngZone: NgZone,
-    <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef,
-  </span>)</span> {}
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
     <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">&#x27; focused&#x27;</span> : <span class="hljs-string">&#x27;blurred&#x27;</span>;

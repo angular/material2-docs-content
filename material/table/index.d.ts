@@ -5,7 +5,6 @@ import { DataSource } from '@angular/cdk/collections';
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as i0 from '@angular/core';
-import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { MatColumnDef } from '@angular/material/table';
 import { MatHeaderRowDef } from '@angular/material/table';
@@ -375,7 +374,6 @@ export declare class TableHttpExample implements AfterViewInit {
     isRateLimitReached: boolean;
     paginator: MatPaginator;
     sort: MatSort;
-    constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, true, never>;
@@ -496,7 +494,6 @@ export declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
     dataSource: MatTableDataSource<PeriodicElement_9, MatPaginator>;
-    constructor(_liveAnnouncer: LiveAnnouncer);
     sort: MatSort;
     ngAfterViewInit(): void;
     /** Announce the change in sort state for assistive technology. */

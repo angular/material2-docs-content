@@ -4,9 +4,7 @@ import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import * as i0 from '@angular/core';
 import { MatTable } from '@angular/material/table';
 import { OnDestroy } from '@angular/core';
-import { Overlay } from '@angular/cdk/overlay';
 import { TemplateRef } from '@angular/core';
-import { ViewContainerRef } from '@angular/core';
 
 /**
  * @title Drag&Drop position locking
@@ -177,7 +175,6 @@ export declare class CdkDragDropRootElementExample implements AfterViewInit, OnD
     _dialogTemplate: TemplateRef<any>;
     private _overlayRef;
     private _portal;
-    constructor(_overlay: Overlay, _viewContainerRef: ViewContainerRef);
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     openDialog(): void;

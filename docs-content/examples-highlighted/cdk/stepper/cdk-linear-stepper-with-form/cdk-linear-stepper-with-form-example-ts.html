@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, forwardRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, forwardRef, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {CdkStepper, CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgTemplateOutlet} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
@@ -17,6 +17,8 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkLinearStepperWithFormExample</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _formBuilder = inject(FormBuilder);
+
   isLinear = <span class="hljs-literal">true</span>;
   firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
     <span class="hljs-attr">firstControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
@@ -24,8 +26,6 @@
   secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
     <span class="hljs-attr">secondControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
   });
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _formBuilder: FormBuilder</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">toggleLinearity</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.isLinear = !<span class="hljs-built_in">this</span>.isLinear;

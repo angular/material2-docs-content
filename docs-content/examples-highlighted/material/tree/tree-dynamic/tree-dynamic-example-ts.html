@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {CollectionViewer, SelectionChange, DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
 <span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, Injectable, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject, merge, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatProgressBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-bar&#x27;</span>;
@@ -145,7 +145,9 @@
   <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeDynamicExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">database: DynamicDatabase</span>)</span> {
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">const</span> database = inject(DynamicDatabase);
+
     <span class="hljs-built_in">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;DynamicFlatNode&gt;(<span class="hljs-built_in">this</span>.getLevel, <span class="hljs-built_in">this</span>.isExpandable);
     <span class="hljs-built_in">this</span>.dataSource = <span class="hljs-keyword">new</span> DynamicDataSource(<span class="hljs-built_in">this</span>.treeControl, database);
 

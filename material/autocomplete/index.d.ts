@@ -1,5 +1,4 @@
 import { ElementRef } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
@@ -68,7 +67,6 @@ export declare class AutocompleteOptgroupExample implements OnInit {
     }>;
     stateGroups: StateGroup[];
     stateGroupOptions: Observable<StateGroup[]>;
-    constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
     private _filterGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteOptgroupExample, never>;

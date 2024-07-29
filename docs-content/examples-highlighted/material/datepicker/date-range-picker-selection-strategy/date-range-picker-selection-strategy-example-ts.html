@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, Injectable, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   DateRange,
@@ -10,7 +10,7 @@
 
 <span class="hljs-meta">@Injectable</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FiveDayRangeSelectionStrategy</span>&lt;<span class="hljs-title">D</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">MatDateRangeSelectionStrategy</span>&lt;<span class="hljs-title">D</span>&gt; </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _dateAdapter: DateAdapter&lt;D&gt;</span>)</span> {}
+  <span class="hljs-keyword">private</span> _dateAdapter = inject&lt;DateAdapter&lt;D&gt;&gt;(DateAdapter&lt;D&gt;);
 
   selectionFinished(date: D | <span class="hljs-literal">null</span>): DateRange&lt;D&gt; {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._createFiveDayRange(date);

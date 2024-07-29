@@ -1,4 +1,3 @@
-import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
@@ -23,7 +22,6 @@ export declare class SlideToggleFormsExample {
         enableWifi: FormControl<string | null>;
         acceptTerms: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     alertFormValues(formGroup: FormGroup): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleFormsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never, never, true, never>;

@@ -1,9 +1,6 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
-import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
-import { MatStepperIntl } from '@angular/material/stepper';
 import { Observable } from 'rxjs';
 import { StepperOrientation } from '@angular/material/stepper';
 
@@ -12,7 +9,6 @@ import { StepperOrientation } from '@angular/material/stepper';
  */
 export declare class StepperAnimationsExample {
     private _formBuilder;
-    constructor(_formBuilder: FormBuilder);
     firstFormGroup: FormGroup;
     secondFormGroup: FormGroup;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperAnimationsExample, never>;
@@ -31,7 +27,6 @@ export declare class StepperEditableExample {
     secondCtrl: FormControl<string | null>;
     }>;
     isEditable: boolean;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperEditableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperEditableExample, "stepper-editable-example", never, {}, {}, never, never, true, never>;
 }
@@ -47,7 +42,6 @@ export declare class StepperErrorsExample {
     secondFormGroup: FormGroup<    {
     secondCtrl: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperErrorsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperErrorsExample, "stepper-errors-example", never, {}, {}, never, never, true, never>;
 }
@@ -71,7 +65,6 @@ export declare class StepperHeaderPositionExample {
     secondFormGroup: FormGroup<    {
     secondCtrl: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperHeaderPositionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperHeaderPositionExample, "stepper-header-position-example", never, {}, {}, never, never, true, never>;
 }
@@ -90,7 +83,6 @@ export declare class StepperIntlExample {
     secondFormGroup: FormGroup<    {
     secondCtrl: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder, _matStepperIntl: MatStepperIntl);
     updateOptionalLabel(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperIntlExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperIntlExample, "stepper-intl-example", never, {}, {}, never, never, true, never>;
@@ -107,7 +99,6 @@ export declare class StepperLabelPositionBottomExample {
     secondFormGroup: FormGroup<    {
     secondCtrl: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperLabelPositionBottomExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperLabelPositionBottomExample, "stepper-label-position-bottom-example", never, {}, {}, never, never, true, never>;
 }
@@ -132,7 +123,6 @@ export declare class StepperOptionalExample {
     secondCtrl: FormControl<string | null>;
     }>;
     isOptional: boolean;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperOptionalExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperOptionalExample, "stepper-optional-example", never, {}, {}, never, never, true, never>;
 }
@@ -149,7 +139,6 @@ export declare class StepperOverviewExample {
     secondCtrl: FormControl<string | null>;
     }>;
     isLinear: boolean;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperOverviewExample, "stepper-overview-example", never, {}, {}, never, never, true, never>;
 }
@@ -169,7 +158,7 @@ export declare class StepperResponsiveExample {
     thirdCtrl: FormControl<string | null>;
     }>;
     stepperOrientation: Observable<StepperOrientation>;
-    constructor(_formBuilder: FormBuilder, breakpointObserver: BreakpointObserver);
+    constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperResponsiveExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperResponsiveExample, "stepper-responsive-example", never, {}, {}, never, never, true, never>;
 }
@@ -185,7 +174,6 @@ export declare class StepperStatesExample {
     secondFormGroup: FormGroup<    {
     secondCtrl: FormControl<string | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperStatesExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperStatesExample, "stepper-states-example", never, {}, {}, never, never, true, never>;
 }
@@ -202,7 +190,6 @@ export declare class StepperVerticalExample {
     secondCtrl: FormControl<string | null>;
     }>;
     isLinear: boolean;
-    constructor(_formBuilder: FormBuilder);
     static ɵfac: i0.ɵɵFactoryDeclaration<StepperVerticalExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<StepperVerticalExample, "stepper-vertical-example", never, {}, {}, never, never, true, never>;
 }

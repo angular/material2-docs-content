@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   getSupportedInputTypes,
   Platform,
@@ -15,9 +15,9 @@
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPlatformOverviewExample</span> </span>{
+  platform = inject(Platform);
+
   supportedInputTypes = <span class="hljs-built_in">Array</span>.from(getSupportedInputTypes()).join(<span class="hljs-string">&#x27;, &#x27;</span>);
   supportsPassiveEventListeners = supportsPassiveEventListeners();
   supportsScrollBehavior = supportsScrollBehavior();
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> platform: Platform</span>)</span> {}
 }

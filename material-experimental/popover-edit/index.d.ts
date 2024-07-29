@@ -2,7 +2,6 @@ import { BehaviorSubject } from 'rxjs';
 import { DataSource } from '@angular/cdk/collections';
 import { FormValueContainer } from '@angular/cdk-experimental/popover-edit';
 import * as i0 from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
 
@@ -126,7 +125,6 @@ export declare class PopoverEditMatTableExample {
     readonly weightValues: FormValueContainer<PeriodicElement_2, any>;
     readonly typeValues: FormValueContainer<PeriodicElement_2, any>;
     readonly fantasyValues: FormValueContainer<PeriodicElement_2, any>;
-    constructor(_snackBar: MatSnackBar);
     onSubmitName(element: PeriodicElement_2, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement_2, f: NgForm): void;
     onSubmitType(element: PeriodicElement_2, f: NgForm): void;

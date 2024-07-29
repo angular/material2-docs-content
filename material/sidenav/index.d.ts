@@ -1,10 +1,7 @@
-import { ChangeDetectorRef } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { MediaMatcher } from '@angular/cdk/layout';
 import { OnDestroy } from '@angular/core';
 
 /**
@@ -56,7 +53,6 @@ export declare class SidenavFixedExample {
     fixed: FormControl<boolean | null>;
     top: FormControl<number | null>;
     }>;
-    constructor(_formBuilder: FormBuilder);
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavFixedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavFixedExample, "sidenav-fixed-example", never, {}, {}, never, never, true, never>;
@@ -99,7 +95,7 @@ export declare class SidenavResponsiveExample implements OnDestroy {
     fillerNav: string[];
     fillerContent: string[];
     private _mobileQueryListener;
-    constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher);
+    constructor();
     ngOnDestroy(): void;
     shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavResponsiveExample, never>;

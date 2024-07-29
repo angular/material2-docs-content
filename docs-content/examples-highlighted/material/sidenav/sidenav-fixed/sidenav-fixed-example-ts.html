@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
@@ -25,13 +25,13 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavFixedExample</span> </span>{
+  <span class="hljs-keyword">private</span> _formBuilder = inject(FormBuilder);
+
   options = <span class="hljs-built_in">this</span>._formBuilder.group({
     <span class="hljs-attr">bottom</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">fixed</span>: <span class="hljs-literal">false</span>,
     <span class="hljs-attr">top</span>: <span class="hljs-number">0</span>,
   });
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>)</span> {}
 
   shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.test(<span class="hljs-built_in">window</span>.location.host);
 }

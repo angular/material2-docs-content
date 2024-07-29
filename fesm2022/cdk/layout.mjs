@@ -1,13 +1,12 @@
-import * as i1 from '@angular/cdk/layout';
-import { Breakpoints } from '@angular/cdk/layout';
 import * as i0 from '@angular/core';
-import { Component } from '@angular/core';
+import { inject, Component } from '@angular/core';
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 /** @title Respond to viewport changes with BreakpointObserver */
 class BreakpointObserverOverviewExample {
-    constructor(breakpointObserver) {
+    constructor() {
         this.destroyed = new Subject();
         // Create a map to display breakpoint names for demonstration purposes.
         this.displayNameMap = new Map([
@@ -17,7 +16,7 @@ class BreakpointObserverOverviewExample {
             [Breakpoints.Large, 'Large'],
             [Breakpoints.XLarge, 'XLarge'],
         ]);
-        breakpointObserver
+        inject(BreakpointObserver)
             .observe([
             Breakpoints.XSmall,
             Breakpoints.Small,
@@ -38,13 +37,13 @@ class BreakpointObserverOverviewExample {
         this.destroyed.next();
         this.destroyed.complete();
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0", ngImport: i0, type: BreakpointObserverOverviewExample, deps: [{ token: i1.BreakpointObserver }], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.1.0", ngImport: i0, type: BreakpointObserverOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
     static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "18.1.0", type: BreakpointObserverOverviewExample, isStandalone: true, selector: "breakpoint-observer-overview-example", ngImport: i0, template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] }); }
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.1.0", ngImport: i0, type: BreakpointObserverOverviewExample, decorators: [{
             type: Component,
             args: [{ selector: 'breakpoint-observer-overview-example', standalone: true, template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] }]
-        }], ctorParameters: () => [{ type: i1.BreakpointObserver }] });
+        }], ctorParameters: () => [] });
 
 /**
  * Generated bundle index. Do not edit.

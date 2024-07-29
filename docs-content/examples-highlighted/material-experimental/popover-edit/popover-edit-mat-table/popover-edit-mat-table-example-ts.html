@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormValueContainer, CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
 <span class="hljs-keyword">import</span> {NgForm, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
@@ -221,7 +221,9 @@
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PopoverEditMatTableExample</span> </span>{
-  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _snackBar = inject(MatSnackBar);
+
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [
     <span class="hljs-string">&#x27;position&#x27;</span>,
     <span class="hljs-string">&#x27;name&#x27;</span>,
     <span class="hljs-string">&#x27;type&#x27;</span>,
@@ -240,8 +242,6 @@
   <span class="hljs-keyword">readonly</span> weightValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
   <span class="hljs-keyword">readonly</span> typeValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
   <span class="hljs-keyword">readonly</span> fantasyValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _snackBar: MatSnackBar</span>)</span> {}
 
   <span class="hljs-function"><span class="hljs-title">onSubmitName</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
     <span class="hljs-keyword">if</span> (!f.valid) {

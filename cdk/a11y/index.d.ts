@@ -1,10 +1,8 @@
 import { AfterViewInit } from '@angular/core';
-import { ChangeDetectorRef } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { FocusOrigin } from '@angular/cdk/a11y';
 import * as i0 from '@angular/core';
-import { NgZone } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 
 /** @title Monitoring focus with FocusMonitor */
@@ -13,7 +11,6 @@ export declare class FocusMonitorDirectivesExample {
     private _cdr;
     elementOrigin: string;
     subtreeOrigin: string;
-    constructor(_ngZone: NgZone, _cdr: ChangeDetectorRef);
     formatOrigin(origin: FocusOrigin): string;
     markForCheck(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FocusMonitorDirectivesExample, never>;
@@ -27,7 +24,6 @@ export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterView
     private _ngZone;
     monitoredEl: ElementRef<HTMLElement>;
     origin: string;
-    constructor(focusMonitor: FocusMonitor, _cdr: ChangeDetectorRef, _ngZone: NgZone);
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;
@@ -44,7 +40,6 @@ export declare class FocusMonitorOverviewExample implements OnDestroy, AfterView
     subtree: ElementRef<HTMLElement>;
     elementOrigin: string;
     subtreeOrigin: string;
-    constructor(_focusMonitor: FocusMonitor, _cdr: ChangeDetectorRef, _ngZone: NgZone);
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;

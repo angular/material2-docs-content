@@ -1,5 +1,5 @@
+<span class="hljs-keyword">import</span> {Component, OnDestroy, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {BreakpointObserver, Breakpoints} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/layout&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {takeUntil} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
@@ -23,8 +23,8 @@
     [Breakpoints.XLarge, <span class="hljs-string">&#x27;XLarge&#x27;</span>],
   ]);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">breakpointObserver: BreakpointObserver</span>)</span> {
-    breakpointObserver
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    inject(BreakpointObserver)
       .observe([
         Breakpoints.XSmall,
         Breakpoints.Small,
