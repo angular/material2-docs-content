@@ -488,6 +488,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "cdk-drag-drop-table-example.ts",
         "importPath": "cdk/drag-drop"
     },
+    "cdk-drag-drop-tabs": {
+        "packagePath": "cdk/drag-drop/cdk-drag-drop-tabs",
+        "title": "Drag&Drop tabs",
+        "componentName": "CdkDragDropTabsExample",
+        "files": [
+            "cdk-drag-drop-tabs-example.ts",
+            "cdk-drag-drop-tabs-example.html",
+            "cdk-drag-drop-tabs-example.css"
+        ],
+        "selector": "cdk-drag-drop-tabs-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-drag-drop-tabs-example.ts",
+        "importPath": "cdk/drag-drop"
+    },
     "breakpoint-observer-overview": {
         "packagePath": "cdk/layout/breakpoint-observer-overview",
         "title": "Respond to viewport changes with BreakpointObserver",
@@ -4826,6 +4840,8 @@ async function loadExample(id) {
         case 'cdk-drag-drop-sorting':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-table':
+            return import('@angular/components-examples/cdk/drag-drop');
+        case 'cdk-drag-drop-tabs':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'breakpoint-observer-overview':
             return import('@angular/components-examples/cdk/layout');
