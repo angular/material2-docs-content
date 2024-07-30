@@ -1,0 +1,27 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>
+  <span class="hljs-attr">cdkDropList</span>
+  <span class="hljs-attr">cdkDropListOrientation</span>=<span class="hljs-string">&quot;horizontal&quot;</span>
+  (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>
+  <span class="hljs-attr">cdkDropListElementContainer</span>=<span class="hljs-string">&quot;.mat-mdc-tab-labels&quot;</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-drag-tabs&quot;</span>
+  [(<span class="hljs-attr">selectedIndex</span>)]=<span class="hljs-string">&quot;selectedTabIndex&quot;</span>
+  <span class="hljs-attr">animationDuration</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>
+  @for (tab of tabs; track $index) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>
+          <span class="hljs-attr">cdkDrag</span>
+          <span class="hljs-attr">cdkDragPreviewClass</span>=<span class="hljs-string">&quot;example-drag-tabs-preview&quot;</span>
+          <span class="hljs-attr">cdkDragRootElement</span>=<span class="hljs-string">&quot;.mat-mdc-tab&quot;</span>&gt;</span>{{tab}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Content for {{tab}}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem perspiciatis in delectus
+      reprehenderit, molestias ullam nostrum odit, modi consequatur harum beatae? Sapiente
+      voluptatibus illo natus assumenda hic quasi dolor et laborum veniam! Molestiae architecto
+      nesciunt est quo nisi? Nostrum repellendus quibusdam laudantium? Optio architecto explicabo
+      labore sapiente cum alias nobis!
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>

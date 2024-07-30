@@ -219,6 +219,17 @@ export declare class CdkDragDropTableExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropTableExample, "cdk-drag-drop-table-example", never, {}, {}, never, never, true, never>;
 }
 
+/**
+ * @title Drag&Drop tabs
+ */
+export declare class CdkDragDropTabsExample {
+    protected tabs: string[];
+    protected selectedTabIndex: number;
+    drop(event: CdkDragDrop<string[]>): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<CdkDragDropTabsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkDragDropTabsExample, "cdk-drag-drop-tabs-example", never, {}, {}, never, never, true, never>;
+}
+
 declare interface PeriodicElement {
     name: string;
     position: number;
