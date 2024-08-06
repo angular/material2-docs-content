@@ -13,7 +13,7 @@ describe(<span class="hljs-string">&#x27;BottomSheetHarnessExample&#x27;</span>,
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatBottomSheetModule, NoopAnimationsModule],
-    }).compileComponents();
+    });
     fixture = TestBed.createComponent(BottomSheetHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.documentRootLoader(fixture);

@@ -13,7 +13,7 @@ describe(<span class="hljs-string">&#x27;SelectHarnessExample&#x27;</span>, <spa
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatSelectModule, NoopAnimationsModule],
-    }).compileComponents();
+    });
     fixture = TestBed.createComponent(SelectHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

@@ -14,7 +14,7 @@ describe(<span class="hljs-string">&#x27;DatepickerHarnessExample&#x27;</span>, 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatDatepickerModule, NoopAnimationsModule, MatNativeDateModule],
-    }).compileComponents();
+    });
     fixture = TestBed.createComponent(DatepickerHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

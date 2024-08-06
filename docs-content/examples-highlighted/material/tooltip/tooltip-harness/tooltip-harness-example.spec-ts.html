@@ -13,7 +13,7 @@ describe(<span class="hljs-string">&#x27;TooltipHarnessExample&#x27;</span>, <sp
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatTooltipModule, NoopAnimationsModule],
-    }).compileComponents();
+    });
     fixture = TestBed.createComponent(TooltipHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

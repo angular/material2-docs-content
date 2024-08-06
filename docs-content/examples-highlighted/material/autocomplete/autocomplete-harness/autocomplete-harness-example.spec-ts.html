@@ -13,7 +13,7 @@ describe(<span class="hljs-string">&#x27;AutocompleteHarnessExample&#x27;</span>
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [MatAutocompleteModule, NoopAnimationsModule],
-    }).compileComponents();
+    });
     fixture = TestBed.createComponent(AutocompleteHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);

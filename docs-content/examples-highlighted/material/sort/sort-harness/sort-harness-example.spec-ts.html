@@ -12,7 +12,7 @@ describe(<span class="hljs-string">&#x27;SortHarnessExample&#x27;</span>, <span 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
     TestBed.configureTestingModule({
       <span class="hljs-attr">imports</span>: [NoopAnimationsModule],
-    }).compileComponents();
+    });
     fixture = TestBed.createComponent(SortHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);
