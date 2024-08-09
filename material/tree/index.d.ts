@@ -10,6 +10,7 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Observable } from 'rxjs';
 import { SelectionChange } from '@angular/cdk/collections';
+import { WritableSignal } from '@angular/core';
 
 /**
  * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
@@ -55,8 +56,8 @@ declare class DynamicFlatNode {
     item: string;
     level: number;
     expandable: boolean;
-    isLoading: boolean;
-    constructor(item: string, level?: number, expandable?: boolean, isLoading?: boolean);
+    isLoading: WritableSignal<boolean>;
+    constructor(item: string, level?: number, expandable?: boolean, isLoading?: WritableSignal<boolean>);
 }
 
 /** Flat node with expandable and level information */

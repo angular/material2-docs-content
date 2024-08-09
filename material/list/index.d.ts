@@ -1,3 +1,5 @@
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
 
 /**
@@ -36,12 +38,27 @@ export declare class ListSelectionExample {
 }
 
 /**
- * @title List with single selection
+ * @title List with single selection using Reactive Forms
  */
 export declare class ListSingleSelectionExample {
-    typesOfShoes: string[];
+    form: FormGroup;
+    shoes: Shoes[];
+    shoesControl: FormControl<any>;
+    constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<ListSingleSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListSingleSelectionExample, "list-single-selection-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title List with single selection using Reactive forms
+ */
+export declare class ListSingleSelectionReactiveFormExample {
+    form: FormGroup;
+    shoes: Shoes_2[];
+    shoesControl: FormControl<any>;
+    constructor();
+    static ɵfac: i0.ɵɵFactoryDeclaration<ListSingleSelectionReactiveFormExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListSingleSelectionReactiveFormExample, "list-single-selection-reactive-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -55,6 +72,16 @@ export declare class ListVariantsExample {
 declare interface Section {
     name: string;
     updated: Date;
+}
+
+declare interface Shoes {
+    value: string;
+    name: string;
+}
+
+declare interface Shoes_2 {
+    value: string;
+    name: string;
 }
 
 export { }
