@@ -2730,9 +2730,22 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "list-selection-example.ts",
         "importPath": "material/list"
     },
+    "list-single-selection-reactive-form": {
+        "packagePath": "material/list/list-single-selection-reactive-form",
+        "title": "List with single selection using Reactive forms",
+        "componentName": "ListSingleSelectionReactiveFormExample",
+        "files": [
+            "list-single-selection-reactive-form-example.ts",
+            "list-single-selection-form-example.html"
+        ],
+        "selector": "list-single-selection-reactive-form-example",
+        "additionalComponents": [],
+        "primaryFile": "list-single-selection-reactive-form-example.ts",
+        "importPath": "material/list"
+    },
     "list-single-selection": {
         "packagePath": "material/list/list-single-selection",
-        "title": "List with single selection",
+        "title": "List with single selection using Reactive Forms",
         "componentName": "ListSingleSelectionExample",
         "files": [
             "list-single-selection-example.ts",
@@ -5160,6 +5173,8 @@ async function loadExample(id) {
         case 'list-sections':
             return import('@angular/components-examples/material/list');
         case 'list-selection':
+            return import('@angular/components-examples/material/list');
+        case 'list-single-selection-reactive-form':
             return import('@angular/components-examples/material/list');
         case 'list-single-selection':
             return import('@angular/components-examples/material/list');

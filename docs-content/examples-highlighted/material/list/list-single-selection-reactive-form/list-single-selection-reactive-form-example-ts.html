@@ -1,20 +1,21 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {FormControl, FormGroup, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
+
 <span class="hljs-keyword">interface</span> Shoes {
   <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
   name: <span class="hljs-built_in">string</span>;
 }
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>List with single selection using Reactive Forms
+ * <span class="hljs-doctag">@title </span>List with single selection using Reactive forms
  */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;list-single-selection-example&#x27;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;list-single-selection-example.html&#x27;</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;list-single-selection-reactive-form-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;list-single-selection-form-example.html&#x27;</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatListModule, FormsModule, ReactiveFormsModule],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListSingleSelectionExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListSingleSelectionReactiveFormExample</span> </span>{
   <span class="hljs-attr">form</span>: FormGroup;
   shoes: Shoes[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;boots&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Boots&#x27;</span>},
