@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "19.0.0-next.1+sha-64cf19c",
+  "version": "19.0.0-next.1+sha-891bd57",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -22,344 +22,230 @@
     },
     ".": {
       "types": "./index.d.ts",
-      "esm2022": "./esm2022/components-examples_public_index.mjs",
-      "esm": "./esm2022/components-examples_public_index.mjs",
       "default": "./fesm2022/components-examples.mjs"
     },
     "./cdk-experimental/popover-edit": {
       "types": "./cdk-experimental/popover-edit/index.d.ts",
-      "esm2022": "./esm2022/cdk-experimental/popover-edit/popover-edit_public_index.mjs",
-      "esm": "./esm2022/cdk-experimental/popover-edit/popover-edit_public_index.mjs",
       "default": "./fesm2022/cdk-experimental/popover-edit.mjs"
     },
     "./cdk-experimental/selection": {
       "types": "./cdk-experimental/selection/index.d.ts",
-      "esm2022": "./esm2022/cdk-experimental/selection/selection_public_index.mjs",
-      "esm": "./esm2022/cdk-experimental/selection/selection_public_index.mjs",
       "default": "./fesm2022/cdk-experimental/selection.mjs"
     },
     "./cdk/a11y": {
       "types": "./cdk/a11y/index.d.ts",
-      "esm2022": "./esm2022/cdk/a11y/a11y_public_index.mjs",
-      "esm": "./esm2022/cdk/a11y/a11y_public_index.mjs",
       "default": "./fesm2022/cdk/a11y.mjs"
     },
     "./cdk/accordion": {
       "types": "./cdk/accordion/index.d.ts",
-      "esm2022": "./esm2022/cdk/accordion/accordion_public_index.mjs",
-      "esm": "./esm2022/cdk/accordion/accordion_public_index.mjs",
       "default": "./fesm2022/cdk/accordion.mjs"
     },
     "./cdk/clipboard": {
       "types": "./cdk/clipboard/index.d.ts",
-      "esm2022": "./esm2022/cdk/clipboard/clipboard_public_index.mjs",
-      "esm": "./esm2022/cdk/clipboard/clipboard_public_index.mjs",
       "default": "./fesm2022/cdk/clipboard.mjs"
     },
     "./cdk/dialog": {
       "types": "./cdk/dialog/index.d.ts",
-      "esm2022": "./esm2022/cdk/dialog/dialog_public_index.mjs",
-      "esm": "./esm2022/cdk/dialog/dialog_public_index.mjs",
       "default": "./fesm2022/cdk/dialog.mjs"
     },
     "./cdk/drag-drop": {
       "types": "./cdk/drag-drop/index.d.ts",
-      "esm2022": "./esm2022/cdk/drag-drop/drag-drop_public_index.mjs",
-      "esm": "./esm2022/cdk/drag-drop/drag-drop_public_index.mjs",
       "default": "./fesm2022/cdk/drag-drop.mjs"
     },
     "./cdk/layout": {
       "types": "./cdk/layout/index.d.ts",
-      "esm2022": "./esm2022/cdk/layout/layout_public_index.mjs",
-      "esm": "./esm2022/cdk/layout/layout_public_index.mjs",
       "default": "./fesm2022/cdk/layout.mjs"
     },
     "./cdk/listbox": {
       "types": "./cdk/listbox/index.d.ts",
-      "esm2022": "./esm2022/cdk/listbox/listbox_public_index.mjs",
-      "esm": "./esm2022/cdk/listbox/listbox_public_index.mjs",
       "default": "./fesm2022/cdk/listbox.mjs"
     },
     "./cdk/menu": {
       "types": "./cdk/menu/index.d.ts",
-      "esm2022": "./esm2022/cdk/menu/menu_public_index.mjs",
-      "esm": "./esm2022/cdk/menu/menu_public_index.mjs",
       "default": "./fesm2022/cdk/menu.mjs"
     },
     "./cdk/overlay": {
       "types": "./cdk/overlay/index.d.ts",
-      "esm2022": "./esm2022/cdk/overlay/overlay_public_index.mjs",
-      "esm": "./esm2022/cdk/overlay/overlay_public_index.mjs",
       "default": "./fesm2022/cdk/overlay.mjs"
     },
     "./cdk/platform": {
       "types": "./cdk/platform/index.d.ts",
-      "esm2022": "./esm2022/cdk/platform/platform_public_index.mjs",
-      "esm": "./esm2022/cdk/platform/platform_public_index.mjs",
       "default": "./fesm2022/cdk/platform.mjs"
     },
     "./cdk/portal": {
       "types": "./cdk/portal/index.d.ts",
-      "esm2022": "./esm2022/cdk/portal/portal_public_index.mjs",
-      "esm": "./esm2022/cdk/portal/portal_public_index.mjs",
       "default": "./fesm2022/cdk/portal.mjs"
     },
     "./cdk/scrolling": {
       "types": "./cdk/scrolling/index.d.ts",
-      "esm2022": "./esm2022/cdk/scrolling/scrolling_public_index.mjs",
-      "esm": "./esm2022/cdk/scrolling/scrolling_public_index.mjs",
       "default": "./fesm2022/cdk/scrolling.mjs"
     },
     "./cdk/stepper": {
       "types": "./cdk/stepper/index.d.ts",
-      "esm2022": "./esm2022/cdk/stepper/stepper_public_index.mjs",
-      "esm": "./esm2022/cdk/stepper/stepper_public_index.mjs",
       "default": "./fesm2022/cdk/stepper.mjs"
     },
     "./cdk/table": {
       "types": "./cdk/table/index.d.ts",
-      "esm2022": "./esm2022/cdk/table/table_public_index.mjs",
-      "esm": "./esm2022/cdk/table/table_public_index.mjs",
       "default": "./fesm2022/cdk/table.mjs"
     },
     "./cdk/text-field": {
       "types": "./cdk/text-field/index.d.ts",
-      "esm2022": "./esm2022/cdk/text-field/text-field_public_index.mjs",
-      "esm": "./esm2022/cdk/text-field/text-field_public_index.mjs",
       "default": "./fesm2022/cdk/text-field.mjs"
     },
     "./cdk/tree": {
       "types": "./cdk/tree/index.d.ts",
-      "esm2022": "./esm2022/cdk/tree/tree_public_index.mjs",
-      "esm": "./esm2022/cdk/tree/tree_public_index.mjs",
       "default": "./fesm2022/cdk/tree.mjs"
     },
     "./material-experimental/column-resize": {
       "types": "./material-experimental/column-resize/index.d.ts",
-      "esm2022": "./esm2022/material-experimental/column-resize/column-resize_public_index.mjs",
-      "esm": "./esm2022/material-experimental/column-resize/column-resize_public_index.mjs",
       "default": "./fesm2022/material-experimental/column-resize.mjs"
     },
     "./material-experimental/popover-edit": {
       "types": "./material-experimental/popover-edit/index.d.ts",
-      "esm2022": "./esm2022/material-experimental/popover-edit/popover-edit_public_index.mjs",
-      "esm": "./esm2022/material-experimental/popover-edit/popover-edit_public_index.mjs",
       "default": "./fesm2022/material-experimental/popover-edit.mjs"
     },
     "./material-experimental/selection": {
       "types": "./material-experimental/selection/index.d.ts",
-      "esm2022": "./esm2022/material-experimental/selection/selection_public_index.mjs",
-      "esm": "./esm2022/material-experimental/selection/selection_public_index.mjs",
       "default": "./fesm2022/material-experimental/selection.mjs"
     },
     "./material/autocomplete": {
       "types": "./material/autocomplete/index.d.ts",
-      "esm2022": "./esm2022/material/autocomplete/autocomplete_public_index.mjs",
-      "esm": "./esm2022/material/autocomplete/autocomplete_public_index.mjs",
       "default": "./fesm2022/material/autocomplete.mjs"
     },
     "./material/badge": {
       "types": "./material/badge/index.d.ts",
-      "esm2022": "./esm2022/material/badge/badge_public_index.mjs",
-      "esm": "./esm2022/material/badge/badge_public_index.mjs",
       "default": "./fesm2022/material/badge.mjs"
     },
     "./material/bottom-sheet": {
       "types": "./material/bottom-sheet/index.d.ts",
-      "esm2022": "./esm2022/material/bottom-sheet/bottom-sheet_public_index.mjs",
-      "esm": "./esm2022/material/bottom-sheet/bottom-sheet_public_index.mjs",
       "default": "./fesm2022/material/bottom-sheet.mjs"
     },
     "./material/button": {
       "types": "./material/button/index.d.ts",
-      "esm2022": "./esm2022/material/button/button_public_index.mjs",
-      "esm": "./esm2022/material/button/button_public_index.mjs",
       "default": "./fesm2022/material/button.mjs"
     },
     "./material/button-toggle": {
       "types": "./material/button-toggle/index.d.ts",
-      "esm2022": "./esm2022/material/button-toggle/button-toggle_public_index.mjs",
-      "esm": "./esm2022/material/button-toggle/button-toggle_public_index.mjs",
       "default": "./fesm2022/material/button-toggle.mjs"
     },
     "./material/card": {
       "types": "./material/card/index.d.ts",
-      "esm2022": "./esm2022/material/card/card_public_index.mjs",
-      "esm": "./esm2022/material/card/card_public_index.mjs",
       "default": "./fesm2022/material/card.mjs"
     },
     "./material/checkbox": {
       "types": "./material/checkbox/index.d.ts",
-      "esm2022": "./esm2022/material/checkbox/checkbox_public_index.mjs",
-      "esm": "./esm2022/material/checkbox/checkbox_public_index.mjs",
       "default": "./fesm2022/material/checkbox.mjs"
     },
     "./material/chips": {
       "types": "./material/chips/index.d.ts",
-      "esm2022": "./esm2022/material/chips/chips_public_index.mjs",
-      "esm": "./esm2022/material/chips/chips_public_index.mjs",
       "default": "./fesm2022/material/chips.mjs"
     },
     "./material/core": {
       "types": "./material/core/index.d.ts",
-      "esm2022": "./esm2022/material/core/core_public_index.mjs",
-      "esm": "./esm2022/material/core/core_public_index.mjs",
       "default": "./fesm2022/material/core.mjs"
     },
     "./material/datepicker": {
       "types": "./material/datepicker/index.d.ts",
-      "esm2022": "./esm2022/material/datepicker/datepicker_public_index.mjs",
-      "esm": "./esm2022/material/datepicker/datepicker_public_index.mjs",
       "default": "./fesm2022/material/datepicker.mjs"
     },
     "./material/dialog": {
       "types": "./material/dialog/index.d.ts",
-      "esm2022": "./esm2022/material/dialog/dialog_public_index.mjs",
-      "esm": "./esm2022/material/dialog/dialog_public_index.mjs",
       "default": "./fesm2022/material/dialog.mjs"
     },
     "./material/divider": {
       "types": "./material/divider/index.d.ts",
-      "esm2022": "./esm2022/material/divider/divider_public_index.mjs",
-      "esm": "./esm2022/material/divider/divider_public_index.mjs",
       "default": "./fesm2022/material/divider.mjs"
     },
     "./material/expansion": {
       "types": "./material/expansion/index.d.ts",
-      "esm2022": "./esm2022/material/expansion/expansion_public_index.mjs",
-      "esm": "./esm2022/material/expansion/expansion_public_index.mjs",
       "default": "./fesm2022/material/expansion.mjs"
     },
     "./material/form-field": {
       "types": "./material/form-field/index.d.ts",
-      "esm2022": "./esm2022/material/form-field/form-field_public_index.mjs",
-      "esm": "./esm2022/material/form-field/form-field_public_index.mjs",
       "default": "./fesm2022/material/form-field.mjs"
     },
     "./material/grid-list": {
       "types": "./material/grid-list/index.d.ts",
-      "esm2022": "./esm2022/material/grid-list/grid-list_public_index.mjs",
-      "esm": "./esm2022/material/grid-list/grid-list_public_index.mjs",
       "default": "./fesm2022/material/grid-list.mjs"
     },
     "./material/icon": {
       "types": "./material/icon/index.d.ts",
-      "esm2022": "./esm2022/material/icon/icon_public_index.mjs",
-      "esm": "./esm2022/material/icon/icon_public_index.mjs",
       "default": "./fesm2022/material/icon.mjs"
     },
     "./material/input": {
       "types": "./material/input/index.d.ts",
-      "esm2022": "./esm2022/material/input/input_public_index.mjs",
-      "esm": "./esm2022/material/input/input_public_index.mjs",
       "default": "./fesm2022/material/input.mjs"
     },
     "./material/list": {
       "types": "./material/list/index.d.ts",
-      "esm2022": "./esm2022/material/list/list_public_index.mjs",
-      "esm": "./esm2022/material/list/list_public_index.mjs",
       "default": "./fesm2022/material/list.mjs"
     },
     "./material/menu": {
       "types": "./material/menu/index.d.ts",
-      "esm2022": "./esm2022/material/menu/menu_public_index.mjs",
-      "esm": "./esm2022/material/menu/menu_public_index.mjs",
       "default": "./fesm2022/material/menu.mjs"
     },
     "./material/paginator": {
       "types": "./material/paginator/index.d.ts",
-      "esm2022": "./esm2022/material/paginator/paginator_public_index.mjs",
-      "esm": "./esm2022/material/paginator/paginator_public_index.mjs",
       "default": "./fesm2022/material/paginator.mjs"
     },
     "./material/progress-bar": {
       "types": "./material/progress-bar/index.d.ts",
-      "esm2022": "./esm2022/material/progress-bar/progress-bar_public_index.mjs",
-      "esm": "./esm2022/material/progress-bar/progress-bar_public_index.mjs",
       "default": "./fesm2022/material/progress-bar.mjs"
     },
     "./material/progress-spinner": {
       "types": "./material/progress-spinner/index.d.ts",
-      "esm2022": "./esm2022/material/progress-spinner/progress-spinner_public_index.mjs",
-      "esm": "./esm2022/material/progress-spinner/progress-spinner_public_index.mjs",
       "default": "./fesm2022/material/progress-spinner.mjs"
     },
     "./material/radio": {
       "types": "./material/radio/index.d.ts",
-      "esm2022": "./esm2022/material/radio/radio_public_index.mjs",
-      "esm": "./esm2022/material/radio/radio_public_index.mjs",
       "default": "./fesm2022/material/radio.mjs"
     },
     "./material/select": {
       "types": "./material/select/index.d.ts",
-      "esm2022": "./esm2022/material/select/select_public_index.mjs",
-      "esm": "./esm2022/material/select/select_public_index.mjs",
       "default": "./fesm2022/material/select.mjs"
     },
     "./material/sidenav": {
       "types": "./material/sidenav/index.d.ts",
-      "esm2022": "./esm2022/material/sidenav/sidenav_public_index.mjs",
-      "esm": "./esm2022/material/sidenav/sidenav_public_index.mjs",
       "default": "./fesm2022/material/sidenav.mjs"
     },
     "./material/slide-toggle": {
       "types": "./material/slide-toggle/index.d.ts",
-      "esm2022": "./esm2022/material/slide-toggle/slide-toggle_public_index.mjs",
-      "esm": "./esm2022/material/slide-toggle/slide-toggle_public_index.mjs",
       "default": "./fesm2022/material/slide-toggle.mjs"
     },
     "./material/slider": {
       "types": "./material/slider/index.d.ts",
-      "esm2022": "./esm2022/material/slider/slider_public_index.mjs",
-      "esm": "./esm2022/material/slider/slider_public_index.mjs",
       "default": "./fesm2022/material/slider.mjs"
     },
     "./material/snack-bar": {
       "types": "./material/snack-bar/index.d.ts",
-      "esm2022": "./esm2022/material/snack-bar/snack-bar_public_index.mjs",
-      "esm": "./esm2022/material/snack-bar/snack-bar_public_index.mjs",
       "default": "./fesm2022/material/snack-bar.mjs"
     },
     "./material/sort": {
       "types": "./material/sort/index.d.ts",
-      "esm2022": "./esm2022/material/sort/sort_public_index.mjs",
-      "esm": "./esm2022/material/sort/sort_public_index.mjs",
       "default": "./fesm2022/material/sort.mjs"
     },
     "./material/stepper": {
       "types": "./material/stepper/index.d.ts",
-      "esm2022": "./esm2022/material/stepper/stepper_public_index.mjs",
-      "esm": "./esm2022/material/stepper/stepper_public_index.mjs",
       "default": "./fesm2022/material/stepper.mjs"
     },
     "./material/table": {
       "types": "./material/table/index.d.ts",
-      "esm2022": "./esm2022/material/table/table_public_index.mjs",
-      "esm": "./esm2022/material/table/table_public_index.mjs",
       "default": "./fesm2022/material/table.mjs"
     },
     "./material/tabs": {
       "types": "./material/tabs/index.d.ts",
-      "esm2022": "./esm2022/material/tabs/tabs_public_index.mjs",
-      "esm": "./esm2022/material/tabs/tabs_public_index.mjs",
       "default": "./fesm2022/material/tabs.mjs"
     },
     "./material/toolbar": {
       "types": "./material/toolbar/index.d.ts",
-      "esm2022": "./esm2022/material/toolbar/toolbar_public_index.mjs",
-      "esm": "./esm2022/material/toolbar/toolbar_public_index.mjs",
       "default": "./fesm2022/material/toolbar.mjs"
     },
     "./material/tooltip": {
       "types": "./material/tooltip/index.d.ts",
-      "esm2022": "./esm2022/material/tooltip/tooltip_public_index.mjs",
-      "esm": "./esm2022/material/tooltip/tooltip_public_index.mjs",
       "default": "./fesm2022/material/tooltip.mjs"
     },
     "./material/tree": {
       "types": "./material/tree/index.d.ts",
-      "esm2022": "./esm2022/material/tree/tree_public_index.mjs",
-      "esm": "./esm2022/material/tree/tree_public_index.mjs",
       "default": "./fesm2022/material/tree.mjs"
     }
   },
@@ -369,15 +255,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "19.0.0-next.1+sha-64cf19c",
-    "@angular/cdk-experimental": "19.0.0-next.1+sha-64cf19c",
+    "@angular/cdk": "19.0.0-next.1+sha-891bd57",
+    "@angular/cdk-experimental": "19.0.0-next.1+sha-891bd57",
     "@angular/core": "^19.0.0-0 || ^19.1.0-0 || ^19.2.0-0 || ^19.3.0-0 || ^20.0.0-0",
     "@angular/common": "^19.0.0-0 || ^19.1.0-0 || ^19.2.0-0 || ^19.3.0-0 || ^20.0.0-0",
-    "@angular/material": "19.0.0-next.1+sha-64cf19c",
-    "@angular/material-experimental": "19.0.0-next.1+sha-64cf19c",
-    "@angular/material-moment-adapter": "19.0.0-next.1+sha-64cf19c",
-    "@angular/material-luxon-adapter": "19.0.0-next.1+sha-64cf19c",
-    "@angular/material-date-fns-adapter": "19.0.0-next.1+sha-64cf19c"
+    "@angular/material": "19.0.0-next.1+sha-891bd57",
+    "@angular/material-experimental": "19.0.0-next.1+sha-891bd57",
+    "@angular/material-moment-adapter": "19.0.0-next.1+sha-891bd57",
+    "@angular/material-luxon-adapter": "19.0.0-next.1+sha-891bd57",
+    "@angular/material-date-fns-adapter": "19.0.0-next.1+sha-891bd57"
   },
   "dependencies": {
     "tslib": "^2.3.0"
