@@ -244,28 +244,18 @@ system. Otherwise, you can include this mixin in a global stylesheet.</p>
           <span header-link="targeting-high-contrast-users"></span>
           Targeting high contrast users
         </h4>
-      <p>Microsoft Windows includes an accessibility feature called <a href="https://support.microsoft.com/en-us/windows/use-high-contrast-mode-in-windows-10-fedc744c-90ac-69df-aed5-c8a90125e696">Windows High Contrast Mode</a>. The
+      <p>Some operating systems include an accessibility feature called High Contrast Mode. The
 <code>cdk/a11y</code> package provides a Sass mixin that lets you define styles that only apply in high
 contrast mode. To create a high contrast style, define your style inside the <code>high-contrast</code> mixin.</p>
-<p>The mixin works by targeting a CSS class which is added to the <code>body</code> by the CDK when high contrast
-mode is detected at runtime, via the <code>HighContrastModeDetector</code> service.</p>
+<p>The mixin works by targeting the <code>forced-colors</code> media query.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/cdk&#x27;</span>;
 
 <span class="hljs-selector-tag">button</span> {
-  <span class="hljs-keyword">@include</span> cdk.high-contrast() {
+  <span class="hljs-keyword">@include</span> cdk.high-contrast {
     <span class="hljs-attribute">outline</span>: solid <span class="hljs-number">1px</span>;
   }
 }
 </code></pre>
-<p>The <code>high-contrast</code> mixin accepts two optional parameters, <code>$target</code> and <code>$encapsulation</code>.</p>
-<p>The <code>$target</code> parameter allows you to specify which variation of high contrast mode your style
-targets. The accepted values are <code>active</code> (default), <code>black-on-white</code>, and <code>white-on-black</code>. These
-values correspond to the supported values for the
-<a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/"><code>-ms-high-contrast</code> media query</a>.</p>
-<p>The <code>$encapsulation</code> parameter affects how the emitted styles interact with style encapsulation.
-The supported values are <code>on</code>, <code>off</code>, and <code>any</code>. The default value is <code>any</code>, which works for any
-encapsulation scenario by emitting two selectors. Specifying either <code>on</code> or <code>off</code> slightly reduces
-the amount of CSS emitted by limiting the styles to components with encapsulation enabled or
-disabled, respectively. The styles emitted for encapsulated components work for both Angular&#39;s
-emulated style encapsulation and for native Shadow DOM encapsulation.</p>
+<p>The <code>high-contrast</code> mixin accepts the optional <code>$target</code> parameter which allows you to specify
+the value of the <code>forced-color</code> media query. Its value can be either <code>active</code> or <code>none</code>.</p>
 </div>
