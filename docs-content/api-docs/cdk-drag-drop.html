@@ -425,11 +425,10 @@ by dragging it into another container.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>element: ElementRef&lt;HTMLElement&gt;</code>
+      <code>element: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Element that the drop list is attached to.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -889,11 +888,10 @@ because this event will fire for every pixel that the user has dragged.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dropContainer: CdkDropList</code>
+      <code>dropContainer: inject&lt;CdkDropList&gt;(CDK_DROP_LIST, { optional: true, skipSelf: true })!</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Droppable container that the draggable is a part of.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -902,11 +900,10 @@ because this event will fire for every pixel that the user has dragged.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>element: ElementRef&lt;HTMLElement&gt;</code>
+      <code>element: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Element that the draggable is attached to.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -1104,7 +1101,7 @@ while the current element is being dragged.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>element: ElementRef&lt;HTMLElement&gt;</code>
+      <code>element: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -1172,7 +1169,7 @@ of a CdkDrag when it is being dragged.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;T&gt;</code>
+      <code>templateRef: inject&lt;TemplateRef&lt;T&gt;&gt;(TemplateRef)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -1226,7 +1223,7 @@ it is being dragged. The placeholder is displayed in place of the element being 
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;T&gt;</code>
+      <code>templateRef: inject&lt;TemplateRef&lt;T&gt;&gt;(TemplateRef)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>

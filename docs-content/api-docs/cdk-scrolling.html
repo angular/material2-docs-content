@@ -339,7 +339,7 @@ can be listened to through the service.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dir: Directionality</code>
+      <code>dir: inject(Directionality, { optional: true })</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -351,7 +351,7 @@ can be listened to through the service.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>elementRef: ElementRef&lt;HTMLElement&gt;</code>
+      <code>elementRef: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -363,7 +363,7 @@ can be listened to through the service.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ngZone: NgZone</code>
+      <code>ngZone: inject(NgZone)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -375,7 +375,7 @@ can be listened to through the service.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollDispatcher: ScrollDispatcher</code>
+      <code>scrollDispatcher: inject(ScrollDispatcher)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -928,7 +928,7 @@ will be removed.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>elementRef: ElementRef&lt;HTMLElement&gt;</code>
+      <code>elementRef: inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -953,7 +953,7 @@ will be removed.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>scrollable: CdkVirtualScrollable</code>
+      <code>scrollable: inject&lt;CdkVirtualScrollable&gt;(VIRTUAL_SCROLLABLE, { optional: true })!</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
