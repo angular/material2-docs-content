@@ -733,7 +733,7 @@ directly attached to it, enabling declarative use.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to this PortalOutlet using the ComponentFactoryResolver.</p>
+      <p>Attach the given ComponentPortal to this PortalOutlet.</p>
 
     </td>
   </tr><thead>
@@ -1145,7 +1145,7 @@ directly attached to it, enabling declarative use.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to this PortalOutlet using the ComponentFactoryResolver.</p>
+      <p>Attach the given ComponentPortal to this PortalOutlet.</p>
 
     </td>
   </tr><thead>
@@ -1487,20 +1487,6 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>componentFactoryResolver: ComponentFactoryResolver | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Alternate <code>ComponentFactoryResolver</code> to use when resolving the associated component.
-Defaults to using the resolver from the outlet that the portal is attached to.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>injector: Injector | null</code>
     </p>
   </td>
@@ -1547,6 +1533,20 @@ Defaults to using the resolver from the outlet that the portal is attached to.</
 This is different from where the component <em>renders</em>, which is determined by the PortalOutlet.
 The origin is necessary when the host is outside of the Angular application context.</p>
 </td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v18.0.0 or later">
+        Deprecated
+      </div><p class="docs-api-property-name">
+      <code>componentFactoryResolver: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -2904,7 +2904,7 @@ application context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.</p>
+      <p>Attach the given ComponentPortal to DOM element.</p>
 
     </td>
   </tr><thead>
@@ -3279,7 +3279,7 @@ application context.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the given ComponentPortal to DOM element using the ComponentFactoryResolver.</p>
+      <p>Attach the given ComponentPortal to DOM element.</p>
 
     </td>
   </tr><thead>
