@@ -560,9 +560,6 @@ directly attached to it, enabling declarative use.</p>
         Deprecated
       </div><p class="docs-api-property-name">
       <code>attachDomPortal: (portal: DomPortal) =&gt; {
-    if (!this._document &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
-        throw Error(&#39;Cannot attach DOM portal without _document constructor parameter&#39;);
-    }
     const element = portal.element;
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
@@ -972,9 +969,6 @@ directly attached to it, enabling declarative use.</p>
         Deprecated
       </div><p class="docs-api-property-name">
       <code>attachDomPortal: (portal: DomPortal) =&gt; {
-    if (!this._document &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
-        throw Error(&#39;Cannot attach DOM portal without _document constructor parameter&#39;);
-    }
     const element = portal.element;
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
@@ -2732,9 +2726,6 @@ application context.</p>
         Deprecated
       </div><p class="docs-api-property-name">
       <code>attachDomPortal: (portal: DomPortal) =&gt; {
-    if (!this._document &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
-        throw Error(&#39;Cannot attach DOM portal without _document constructor parameter&#39;);
-    }
     const element = portal.element;
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
@@ -3107,9 +3098,6 @@ application context.</p>
         Deprecated
       </div><p class="docs-api-property-name">
       <code>attachDomPortal: (portal: DomPortal) =&gt; {
-    if (!this._document &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
-        throw Error(&#39;Cannot attach DOM portal without _document constructor parameter&#39;);
-    }
     const element = portal.element;
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);

@@ -330,7 +330,7 @@ multiple children of an element with the MatAccordion directive attached.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>accordion: MatAccordionBase</code>
+      <code>accordion: inject&lt;MatAccordionBase&gt;(MAT_ACCORDION, { optional: true, skipSelf: true })!</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Optionally defined accordion the expansion panel belongs to.</p>
@@ -483,7 +483,7 @@ multiple children of an element with the MatAccordion directive attached.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>panel: MatExpansionPanel</code>
+      <code>panel: inject(MatExpansionPanel, { host: true })</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>

@@ -1438,7 +1438,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         form</p>
-      <code class="docs-api-method-parameter-type">NgForm | FormGroupDirective</code>
+      <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1511,7 +1511,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         form</p>
-      <code class="docs-api-method-parameter-type">NgForm | FormGroupDirective</code>
+      <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1654,7 +1654,7 @@ for components like autocomplete where focus must remain on the input.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>group: MatOptgroup</code>
+      <code>group: inject&lt;MatOptgroup&gt;(MAT_OPTGROUP, { optional: true })</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
