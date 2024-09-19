@@ -4813,6 +4813,19 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tree-dynamic-example.ts",
         "importPath": "material/tree"
     },
+    "tree-flat-child-accessor-overview": {
+        "packagePath": "material/tree/tree-flat-child-accessor-overview",
+        "title": "Tree with flat nodes (childrenAccessor)",
+        "componentName": "TreeFlatChildAccessorOverviewExample",
+        "files": [
+            "tree-flat-child-accessor-overview-example.ts",
+            "tree-flat-child-accessor-overview-example.html"
+        ],
+        "selector": "tree-flat-child-accessor-overview-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-flat-child-accessor-overview-example.ts",
+        "importPath": "material/tree"
+    },
     "tree-flat-overview": {
         "packagePath": "material/tree/tree-flat-overview",
         "title": "Tree with flat nodes",
@@ -4866,6 +4879,20 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tree-loadmore-example",
         "additionalComponents": [],
         "primaryFile": "tree-loadmore-example.ts",
+        "importPath": "material/tree"
+    },
+    "tree-nested-child-accessor-overview": {
+        "packagePath": "material/tree/tree-nested-child-accessor-overview",
+        "title": "Tree with nested nodes (childrenAccessor)",
+        "componentName": "TreeNestedChildAccessorOverviewExample",
+        "files": [
+            "tree-nested-child-accessor-overview-example.ts",
+            "tree-nested-child-accessor-overview-example.html",
+            "tree-nested-child-accessor-overview-example.css"
+        ],
+        "selector": "tree-nested-child-accessor-overview-example",
+        "additionalComponents": [],
+        "primaryFile": "tree-nested-child-accessor-overview-example.ts",
         "importPath": "material/tree"
     },
     "tree-nested-overview": {
@@ -5575,6 +5602,8 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/tooltip');
         case 'tree-dynamic':
             return import('@angular/components-examples/material/tree');
+        case 'tree-flat-child-accessor-overview':
+            return import('@angular/components-examples/material/tree');
         case 'tree-flat-overview':
             return import('@angular/components-examples/material/tree');
         case 'tree-harness':
@@ -5582,6 +5611,8 @@ async function loadExample(id) {
         case 'tree-legacy-keyboard-interface':
             return import('@angular/components-examples/material/tree');
         case 'tree-loadmore':
+            return import('@angular/components-examples/material/tree');
+        case 'tree-nested-child-accessor-overview':
             return import('@angular/components-examples/material/tree');
         case 'tree-nested-overview':
             return import('@angular/components-examples/material/tree');

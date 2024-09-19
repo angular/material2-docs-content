@@ -1,0 +1,26 @@
+<span class="hljs-selector-class">.example-tree-invisible</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+
+<span class="hljs-selector-class">.example-tree</span> <span class="hljs-selector-tag">ul</span>,
+<span class="hljs-selector-class">.example-tree</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">list-style-type</span>: none;
+}
+
+<span class="hljs-comment">/*
+ * This padding sets alignment of the nested nodes.
+ */</span>
+<span class="hljs-selector-class">.example-tree</span> <span class="hljs-selector-class">.mat-nested-tree-node</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[role=group]</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">40px</span>;
+}
+
+<span class="hljs-comment">/*
+ * Padding for leaf nodes.
+ * Leaf nodes need to have padding so as to align with other non-leaf nodes
+ * under the same parent.
+ */</span>
+<span class="hljs-selector-class">.example-tree</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-attr">[role=group]</span> &gt; <span class="hljs-selector-class">.mat-tree-node</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">40px</span>;
+}

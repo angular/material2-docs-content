@@ -108,6 +108,24 @@ declare interface FoodNode_2 {
     children?: FoodNode_2[];
 }
 
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
+declare interface FoodNode_3 {
+    name: string;
+    children?: FoodNode_3[];
+}
+
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
+declare interface FoodNode_4 {
+    name: string;
+    children?: FoodNode_4[];
+}
+
 /** Nested node */
 declare class NestedNode {
     name: string;
@@ -136,6 +154,17 @@ export declare class TreeDynamicExample {
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Tree with flat nodes (childrenAccessor)
+ */
+export declare class TreeFlatChildAccessorOverviewExample {
+    dataSource: FoodNode_2[];
+    childrenAccessor: (node: FoodNode_2) => FoodNode_2[];
+    hasChild: (_: number, node: FoodNode_2) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatChildAccessorOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatChildAccessorOverviewExample, "tree-flat-child-accessor-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
@@ -237,13 +266,24 @@ export declare class TreeLoadmoreExample {
 }
 
 /**
+ * @title Tree with nested nodes (childrenAccessor)
+ */
+export declare class TreeNestedChildAccessorOverviewExample {
+    childrenAccessor: (node: FoodNode_4) => FoodNode_4[];
+    dataSource: FoodNode_4[];
+    hasChild: (_: number, node: FoodNode_4) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedChildAccessorOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedChildAccessorOverviewExample, "tree-nested-child-accessor-overview-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Tree with nested nodes
  */
 export declare class TreeNestedOverviewExample {
-    treeControl: NestedTreeControl<FoodNode_2, FoodNode_2>;
-    dataSource: MatTreeNestedDataSource<FoodNode_2>;
+    treeControl: NestedTreeControl<FoodNode_3, FoodNode_3>;
+    dataSource: MatTreeNestedDataSource<FoodNode_3>;
     constructor();
-    hasChild: (_: number, node: FoodNode_2) => boolean;
+    hasChild: (_: number, node: FoodNode_3) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, true, never>;
 }
