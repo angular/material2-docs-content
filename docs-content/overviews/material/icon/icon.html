@@ -55,7 +55,7 @@ change the color by setting the <code>color</code> style on the <code>mat-icon</
 <p>In order to guard against XSS vulnerabilities, any SVG URLs and HTML strings passed to the
 <code>MatIconRegistry</code> must be marked as trusted by using Angular&#39;s <code>DomSanitizer</code> service.</p>
 <p><code>MatIconRegistry</code> fetches all remote SVG icons via Angular&#39;s <code>HttpClient</code> service. If you haven&#39;t
-included <a href="https://angular.io/guide/http"><code>HttpClientModule</code> from the <code>@angular/common/http</code> package</a>
+included <a href="https://angular.dev/guide/http"><code>HttpClientModule</code> from the <code>@angular/common/http</code> package</a>
 in your <code>NgModule</code> imports, you will get an error at runtime.</p>
 <p>Note that <code>HttpClient</code> fetches SVG icons registered with a URL via <code>XmlHttpRequest</code>, subject to the
 <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a>. This
