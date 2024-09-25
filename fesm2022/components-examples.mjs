@@ -1975,7 +1975,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "date-range-picker-selection-strategy": {
         "packagePath": "material/datepicker/date-range-picker-selection-strategy",
-        "title": "Date range picker with custom a selection strategy",
+        "title": "Date range picker with a custom selection strategy",
         "componentName": "DateRangePickerSelectionStrategyExample",
         "files": [
             "date-range-picker-selection-strategy-example.ts",
