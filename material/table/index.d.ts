@@ -5,6 +5,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { DecimalPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import * as i0 from '@angular/core';
+import { InputSignal } from '@angular/core';
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { MatColumnDef } from '@angular/material/table';
 import { MatHeaderRowDef } from '@angular/material/table';
@@ -645,11 +646,11 @@ export declare class WrapperTable<T> implements AfterContentInit {
     columnDefs: QueryList<MatColumnDef>;
     noDataRow: MatNoDataRow;
     table: MatTable<T>;
-    columns: string[];
-    dataSource: DataSource<T>;
+    readonly columns: InputSignal<string[]>;
+    readonly dataSource: InputSignal<DataSource<T>>;
     ngAfterContentInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": false; }; "dataSource": { "alias": "dataSource"; "required": false; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": true; "isSignal": true; }; "dataSource": { "alias": "dataSource"; "required": true; "isSignal": true; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], true, never>;
 }
 
 export { }

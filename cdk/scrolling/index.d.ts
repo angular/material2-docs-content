@@ -1,6 +1,7 @@
 import { CollectionViewer } from '@angular/cdk/collections';
 import { DataSource } from '@angular/cdk/collections';
 import * as i0 from '@angular/core';
+import { InputSignal } from '@angular/core';
 import { Observable } from 'rxjs';
 
 /** @title Virtual scroll with view recycling disabled. */
@@ -78,10 +79,10 @@ export declare class CdkVirtualScrollTemplateCacheExample {
 
 /** @title Virtual scrolling window */
 export declare class CdkVirtualScrollWindowScrollingExample {
-    shouldRun: boolean;
+    readonly shouldRun: InputSignal<boolean>;
     items: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkVirtualScrollWindowScrollingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollWindowScrollingExample, "cdk-virtual-scroll-window-scrolling-example", never, { "shouldRun": { "alias": "shouldRun"; "required": false; }; }, {}, never, never, true, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<CdkVirtualScrollWindowScrollingExample, "cdk-virtual-scroll-window-scrolling-example", never, { "shouldRun": { "alias": "shouldRun"; "required": false; "isSignal": true; }; }, {}, never, never, true, never>;
 }
 
 declare class MyDataSource extends DataSource<string | undefined> {
