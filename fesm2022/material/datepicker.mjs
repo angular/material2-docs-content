@@ -99,7 +99,7 @@ class FiveDayRangeSelectionStrategy {
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.0.0-next.3", ngImport: i0, type: FiveDayRangeSelectionStrategy, decorators: [{
             type: Injectable
         }] });
-/** @title Date range picker with custom a selection strategy */
+/** @title Date range picker with a custom selection strategy */
 class DateRangePickerSelectionStrategyExample {
     static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "19.0.0-next.3", ngImport: i0, type: DateRangePickerSelectionStrategyExample, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
     static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "19.0.0-next.3", type: DateRangePickerSelectionStrategyExample, isStandalone: true, selector: "date-range-picker-selection-strategy-example", providers: [

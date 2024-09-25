@@ -193,7 +193,7 @@ export declare class DateRangePickerOverviewExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerOverviewExample, "date-range-picker-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-/** @title Date range picker with custom a selection strategy */
+/** @title Date range picker with a custom selection strategy */
 export declare class DateRangePickerSelectionStrategyExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<DateRangePickerSelectionStrategyExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<DateRangePickerSelectionStrategyExample, "date-range-picker-selection-strategy-example", never, {}, {}, never, never, true, never>;
