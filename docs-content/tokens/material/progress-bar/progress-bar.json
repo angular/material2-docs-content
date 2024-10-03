@@ -1,0 +1,1 @@
+{"totalTokens":5,"base":[{"name":"--mdc-linear-progress-active-indicator-height"},{"name":"--mdc-linear-progress-track-height"},{"name":"--mdc-linear-progress-track-shape"}],"color":[{"name":"--mdc-linear-progress-active-indicator-color","derivedFrom":"--sys-primary"},{"name":"--mdc-linear-progress-track-color","derivedFrom":"--sys-surface-variant"}],"typography":[],"density":[]}
