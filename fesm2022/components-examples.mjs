@@ -4578,6 +4578,33 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tab-nav-bar-basic-example.ts",
         "importPath": "material/tabs"
     },
+    "timepicker-harness": {
+        "packagePath": "material/timepicker/timepicker-harness",
+        "title": "Testing with MatTimepickerInputHarness",
+        "componentName": "TimepickerHarnessExample",
+        "files": [
+            "timepicker-harness-example.ts",
+            "timepicker-harness-example.html",
+            "timepicker-harness-example.spec.ts"
+        ],
+        "selector": "timepicker-harness-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-harness-example.ts",
+        "importPath": "material/timepicker"
+    },
+    "timepicker-overview": {
+        "packagePath": "material/timepicker/timepicker-overview",
+        "title": "Basic timepicker",
+        "componentName": "TimepickerOverviewExample",
+        "files": [
+            "timepicker-overview-example.ts",
+            "timepicker-overview-example.html"
+        ],
+        "selector": "timepicker-overview-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-overview-example.ts",
+        "importPath": "material/timepicker"
+    },
     "toolbar-basic": {
         "packagePath": "material/toolbar/toolbar-basic",
         "title": "Basic toolbar",
@@ -5568,6 +5595,10 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/tabs');
         case 'tab-nav-bar-basic':
             return import('@angular/components-examples/material/tabs');
+        case 'timepicker-harness':
+            return import('@angular/components-examples/material/timepicker');
+        case 'timepicker-overview':
+            return import('@angular/components-examples/material/timepicker');
         case 'toolbar-basic':
             return import('@angular/components-examples/material/toolbar');
         case 'toolbar-harness':

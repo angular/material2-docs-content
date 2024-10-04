@@ -1,0 +1,1171 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Material timepicker-testing
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatTimepickerHarness} from '@angular/material/timepicker/testing';
+      </code>
+    </p>
+  <h3 id="material-timepicker-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="MatTimepickerHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTimepickerHarness"></span>
+  <code>MatTimepickerHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>static&nbsp;hostSelector: &#39;mat-timepicker&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getOptions
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the options inside the timepicker panel.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filters<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">Omit&lt;OptionHarnessFilters, &quot;ancestor&quot;&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatOptionHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isOpen
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the timepicker is open.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>selectOption
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Selects the first option matching the given filters.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filters</p>
+      <code class="docs-api-method-parameter-type">OptionHarnessFilters</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a timepicker with specific
+attributes.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">TimepickerHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Options for filtering which timepicker instances are considered a match.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatTimepickerInputHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTimepickerInputHarness"></span>
+  <code>MatTimepickerInputHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Material timepicker inputs in tests.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>static&nbsp;hostSelector: &#39;.mat-timepicker-input&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>blur
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Blurs the input and returns a promise that indicates when the
+action is complete.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>closeTimepicker
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Closes the timepicker associated with the input.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the input and returns a promise that indicates when the
+action is complete.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getPlaceholder
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the placeholder of the input.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getTimepicker
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the <code>MatTimepickerHarness</code> that is associated with the input.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">TimepickerHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Optionally filters which timepicker is included.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatTimepickerHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value of the input.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the input is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isFocused
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the input is focused.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isRequired
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the input is required.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isTimepickerOpen
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the timepicker associated with the input is open.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>openTimepicker
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Opens the timepicker associated with the input and returns the timepicker instance.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatTimepickerHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>setValue
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the value of the input. The value will be set by simulating
+keypresses that correspond to the given value.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        newValue</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatTimepickerInputHarness</code>
+that meets certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">TimepickerInputHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Options for filtering which input instances are considered a match.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatTimepickerToggleHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTimepickerToggleHarness"></span>
+  <code>MatTimepickerToggleHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Material timepicker toggle in tests.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>static&nbsp;hostSelector: &#39;.mat-timepicker-toggle&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the toggle is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>isTimepickerOpen
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the timepicker associated with the toggle is open.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>openTimepicker
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Opens the timepicker associated with the toggle.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>with
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessPredicate</code> that can be used to search for a <code>MatTimepickerToggleHarness</code> that
+meets certain criteria.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">TimepickerToggleHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Options for filtering which timepicker toggle instances are considered a match.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HarnessPredicate&lt;MatTimepickerToggleHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>a <code>HarnessPredicate</code> configured with the given options.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="material-timepicker-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="TimepickerHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TimepickerHarnessFilters"></span>
+  <code>TimepickerHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatTimepickerHarness</code> instances.</p>
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="TimepickerInputHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TimepickerInputHarnessFilters"></span>
+  <code>TimepickerInputHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of timepicker input instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>placeholder: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Filters based on the placeholder text of the input.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Filters based on the value of the input.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="TimepickerToggleHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TimepickerToggleHarnessFilters"></span>
+  <code>TimepickerToggleHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of timepicker toggle instances.</p>
+</p>
+
+
+
+
+
+
+    </div>
