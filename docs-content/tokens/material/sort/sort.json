@@ -1,1 +1,1 @@
-{"totalTokens":1,"base":[],"color":[{"name":"--mat-sort-arrow-color","derivedFrom":"--sys-on-surface"}],"typography":[],"density":[]}
+[{"name":"sort","tokens":[{"name":"arrow-color","prefix":"mat-sort","type":"color","derivedFrom":"on-surface"}]}]

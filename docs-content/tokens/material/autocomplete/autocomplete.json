@@ -1,1 +1,1 @@
-{"totalTokens":3,"base":[{"name":"--mat-autocomplete-container-elevation-shadow"},{"name":"--mat-autocomplete-container-shape"}],"color":[{"name":"--mat-autocomplete-background-color","derivedFrom":"--sys-surface-container"}],"typography":[],"density":[]}
+[{"name":"autocomplete","tokens":[{"name":"background-color","prefix":"mat-autocomplete","type":"color","derivedFrom":"surface-container"},{"name":"container-elevation-shadow","prefix":"mat-autocomplete","type":"base"},{"name":"container-shape","prefix":"mat-autocomplete","type":"base"}]}]

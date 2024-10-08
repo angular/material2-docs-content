@@ -1,1 +1,1 @@
-{"totalTokens":3,"base":[{"name":"--mat-timepicker-container-elevation-shadow"},{"name":"--mat-timepicker-container-shape"}],"color":[{"name":"--mat-timepicker-container-background-color","derivedFrom":"--sys-surface-container"}],"typography":[],"density":[]}
+[{"name":"timepicker","tokens":[{"name":"container-background-color","prefix":"mat-timepicker","type":"color","derivedFrom":"surface-container"},{"name":"container-elevation-shadow","prefix":"mat-timepicker","type":"base"},{"name":"container-shape","prefix":"mat-timepicker","type":"base"}]}]

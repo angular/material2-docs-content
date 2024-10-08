@@ -1,1 +1,1 @@
-{"totalTokens":3,"base":[{"name":"--mdc-circular-progress-active-indicator-width"},{"name":"--mdc-circular-progress-size"}],"color":[{"name":"--mdc-circular-progress-active-indicator-color","derivedFrom":"--sys-primary"}],"typography":[],"density":[]}
+[{"name":"progress-spinner","tokens":[{"name":"active-indicator-color","prefix":"mdc-circular-progress","type":"color","derivedFrom":"primary"},{"name":"active-indicator-width","prefix":"mdc-circular-progress","type":"base"},{"name":"size","prefix":"mdc-circular-progress","type":"base"}]}]
