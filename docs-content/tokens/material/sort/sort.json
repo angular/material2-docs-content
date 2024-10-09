@@ -1,1 +1,1 @@
-[{"name":"sort","tokens":[{"name":"arrow-color","prefix":"mat-sort","type":"color","derivedFrom":"on-surface"}]}]
+[{"name":"sort","overridesMixin":"sort-overrides","tokens":[{"name":"arrow-color","type":"color","sources":[{"prefix":"mat-sort","derivedFrom":"on-surface"}]}]}]

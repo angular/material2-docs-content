@@ -1,1 +1,1 @@
-[{"name":"icon","tokens":[{"name":"color","prefix":"mat-icon","type":"base"}]}]
+[{"name":"icon","overridesMixin":"icon-overrides","tokens":[{"name":"color","type":"base","sources":[{"prefix":"mat-icon"}]}]}]
