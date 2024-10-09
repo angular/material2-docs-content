@@ -1,0 +1,1 @@
+[{"name":"divider","overridesMixin":"divider-overrides","tokens":[{"name":"color","type":"color","sources":[{"prefix":"mat-divider","derivedFrom":"outline"}]},{"name":"width","type":"base","sources":[{"prefix":"mat-divider"}]}]}]

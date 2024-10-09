@@ -1,0 +1,1 @@
+[{"name":"progress-spinner","overridesMixin":"progress-spinner-overrides","tokens":[{"name":"active-indicator-color","type":"color","sources":[{"prefix":"mdc-circular-progress","derivedFrom":"primary"}]},{"name":"active-indicator-width","type":"base","sources":[{"prefix":"mdc-circular-progress"}]},{"name":"size","type":"base","sources":[{"prefix":"mdc-circular-progress"}]}]}]

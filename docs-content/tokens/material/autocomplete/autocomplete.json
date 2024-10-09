@@ -1,0 +1,1 @@
+[{"name":"autocomplete","overridesMixin":"autocomplete-overrides","tokens":[{"name":"background-color","type":"color","sources":[{"prefix":"mat-autocomplete","derivedFrom":"surface-container"}]},{"name":"container-elevation-shadow","type":"base","sources":[{"prefix":"mat-autocomplete"}]},{"name":"container-shape","type":"base","sources":[{"prefix":"mat-autocomplete"}]}]}]
