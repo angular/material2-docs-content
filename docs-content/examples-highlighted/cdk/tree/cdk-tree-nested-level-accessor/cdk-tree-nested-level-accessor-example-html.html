@@ -7,13 +7,17 @@
     {{node.name}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> #<span class="hljs-attr">treeNode</span>=<span class="hljs-string">&quot;cdkNestedTreeNode&quot;</span>
-      <span class="hljs-attr">cdkTreeNodeToggle</span>
-      [<span class="hljs-attr">cdkTreeNodeTypeaheadLabel</span>]=<span class="hljs-string">&quot;node.name&quot;</span>
-      *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node; when: hasChild&quot;</span>
-      <span class="hljs-attr">isExpandable</span>
-      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-node&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;Toggle &#x27; + node.name&quot;</span> <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span>
+    #<span class="hljs-attr">treeNode</span>=<span class="hljs-string">&quot;cdkNestedTreeNode&quot;</span>
+    [<span class="hljs-attr">cdkTreeNodeTypeaheadLabel</span>]=<span class="hljs-string">&quot;node.name&quot;</span>
+    *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node; when: hasChild&quot;</span>
+    <span class="hljs-attr">isExpandable</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-node&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">mat-icon-button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toggle&quot;</span>
+      [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;Toggle &#x27; + node.name&quot;</span>
+      <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-icon-rtl-mirror&quot;</span>&gt;</span>
         {{tree.isExpanded(node) ? &#x27;expand_more&#x27; : &#x27;chevron_right&#x27;}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>

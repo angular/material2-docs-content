@@ -77,7 +77,7 @@ export declare class CdkTreeFlatLevelAccessorExample {
 }
 
 /**
- * @title Tree with nested nodes, using childAccessor
+ * @title Tree with nested nodes using childAccessor
  */
 export declare class CdkTreeNestedChildrenAccessorExample {
     tree: CdkTree<NestedFoodNode>;
@@ -102,7 +102,7 @@ export declare class CdkTreeNestedExample {
 }
 
 /**
- * @title Tree with nested nodes
+ * @title Tree with nested nodes and level accessor
  */
 export declare class CdkTreeNestedLevelAccessorExample {
     tree: CdkTree<FlatFoodNode>;
