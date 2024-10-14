@@ -1171,7 +1171,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "cdk-tree-nested-children-accessor": {
         "packagePath": "cdk/tree/cdk-tree-nested-children-accessor",
-        "title": "Tree with nested nodes, using childAccessor",
+        "title": "Tree with nested nodes using childAccessor",
         "componentName": "CdkTreeNestedChildrenAccessorExample",
         "files": [
             "cdk-tree-nested-children-accessor-example.ts",
@@ -1185,7 +1185,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "cdk-tree-nested-level-accessor": {
         "packagePath": "cdk/tree/cdk-tree-nested-level-accessor",
-        "title": "Tree with nested nodes",
+        "title": "Tree with nested nodes and level accessor",
         "componentName": "CdkTreeNestedLevelAccessorExample",
         "files": [
             "cdk-tree-nested-level-accessor-example.ts",
