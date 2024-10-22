@@ -26,19 +26,6 @@ familiarity with CSS and Sass basics, including variables, functions, and mixins
       <p>A <strong>theme file</strong> is a Sass file that calls Angular Material Sass mixins to output color,
 typography, and density CSS styles.</p>
 
-        <h4 id="the-core-mixin" class="docs-header-link">
-          <span header-link="the-core-mixin"></span>
-          The <code>core</code> mixin
-        </h4>
-      <p>Angular Material defines a mixin named <code>core</code> that includes prerequisite styles for common
-features used by multiple components, such as ripples. The <code>core</code> mixin must be included exactly
-once for your application, even if you define multiple themes. Including the <code>core</code> mixin multiple
-times will result in duplicate CSS in your application.</p>
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.core();
-</code></pre>
-
         <h4 id="defining-a-theme" class="docs-header-link">
           <span header-link="defining-a-theme"></span>
           Defining a theme
@@ -309,8 +296,6 @@ selector or increase the specificity of the rule.</li>
 theme Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-keyword">@include</span> mat.core();
-
 <span class="hljs-variable">$my-theme</span>: mat.define-theme((
  color: (
     theme-type: light,
@@ -337,8 +322,6 @@ Sass mixins that includes styles for all components in the library: <code>all-co
 emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular Material. Unless your application
 uses every single component, this will produce unnecessary CSS.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.core();
 
 <span class="hljs-variable">$my-theme</span>: mat.define-theme((
  color: (
@@ -429,8 +412,6 @@ styles than necessary.</p>
 <p>To control which theme applies when, <code>@include</code> the mixins only within a context specified via
 CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-rules/mixin">documentation for Sass mixins</a> for further background.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
-
-<span class="hljs-keyword">@include</span> mat.core();
 
 <span class="hljs-comment">// Define a dark theme</span>
 <span class="hljs-variable">$dark-theme</span>: mat.define-theme((
@@ -589,7 +570,6 @@ would not contrast sufficiently with the background color.</p>
 the custom theme API.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-keyword">@include</span> mat.core();
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
 
 <span class="hljs-variable">$my-theme</span>: mat.define-theme((
@@ -618,7 +598,6 @@ theme, the indicators will use the default hue of the primary palette.</p>
 of the custom theme API.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-keyword">@include</span> mat.core();
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators((
   <span class="hljs-attribute">border-style</span>: dotted,
   <span class="hljs-attribute">border-width</span>: <span class="hljs-number">4px</span>,
