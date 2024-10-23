@@ -183,7 +183,8 @@ will be used.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 Remove this input or later">
+        </div><div class="docs-api-deprecated-marker" deprecated-message="This is an alias for `isDisabled`. Will be removed in v21.0.0 Remove this input or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
@@ -199,7 +200,9 @@ will be used.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 or later">
+          @Input()</div><div class="docs-api-deprecated-marker" deprecated-message="This will be ignored; the tree will automatically determine the appropriate role
+for tree node. This input will be removed in a future version. Will be removed in v21.0.0 or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
@@ -218,7 +221,10 @@ will be used.</p>
     transform: (value: unknown) =&gt; (value == null ? 0 : numberAttribute(value)),
     alias: &#39;tabIndex&#39;,
 }</span>)
-        </div><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 Remove this attribute. or later">
+        </div><div class="docs-api-deprecated-marker" deprecated-message="By default MatTreeNode manages focus using TreeKeyManager instead of tabIndex.
+  Recommend to avoid setting tabIndex directly to prevent TreeKeyManager form getting into
+  an unexpected state. Tabindex to be removed in a future version. Will be removed in v21.0.0 Remove this attribute. or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>tabIndexInputBinding: number</code>
@@ -233,7 +239,10 @@ will be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 Remove this attribute. or later">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="By default MatTreeNode manages focus using TreeKeyManager instead of tabIndex.
+  Recommend to avoid setting tabIndex directly to prevent TreeKeyManager form getting into
+  an unexpected state. Tabindex to be removed in a future version. Will be removed in v21.0.0 Remove this attribute. or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>defaultTabIndex: 0</code>
@@ -681,7 +690,8 @@ will be used.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 Remove this input or later">
+        </div><div class="docs-api-deprecated-marker" deprecated-message="This is an alias for `isDisabled`. Will be removed in v21.0.0 Remove this input or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
@@ -697,7 +707,9 @@ will be used.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 or later">
+          @Input()</div><div class="docs-api-deprecated-marker" deprecated-message="This will be ignored; the tree will automatically determine the appropriate role
+for tree node. This input will be removed in a future version. Will be removed in v21.0.0 or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
@@ -1100,7 +1112,9 @@ Can be used by the data source to as a heuristic of what data should be provided
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><div class="docs-api-deprecated-marker" title="Will be removed in v21.0.0 or later">
+          @Input()</div><div class="docs-api-deprecated-marker" deprecated-message="Use one of `levelAccessor` or `childrenAccessor` instead. To be removed in a
+future version. Will be removed in v21.0.0 or later."
+  >
         Deprecated
       </div><p class="docs-api-property-name">
       <code>treeControl: TreeControl&lt;T, K&gt;</code>
@@ -1693,7 +1707,9 @@ Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F
   level: 2
 }
 and the output flattened type is <code>F</code> with additional information.</p>
-</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v21.0.0 or later">
+</p><div class="docs-api-class-deprecated-marker" deprecated-message="Use MatTree#childrenAccessor and MatTreeNode#isExpandable
+instead. To be removed in a future version. Will be removed in v21.0.0 or later."
+  >
   Deprecated
 </div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
@@ -1891,7 +1907,9 @@ The data source need to handle expansion/collapsion of the tree node and change 
 to <code>MatTree</code>.
 The nested tree nodes of type <code>T</code> are flattened through <code>MatTreeFlattener</code>, and converted
 to type <code>F</code> for <code>MatTree</code> to consume.</p>
-</p><div class="docs-api-class-deprecated-marker" title="Will be removed in v21.0.0 or later">
+</p><div class="docs-api-class-deprecated-marker" deprecated-message="Use one of levelAccessor or childrenAccessor instead. To be removed in a future
+version. Will be removed in v21.0.0 or later."
+  >
   Deprecated
 </div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
