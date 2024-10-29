@@ -5658,6 +5658,16 @@ async function loadExample(id) {
  * example, and path to examples.
  */
 class ExampleData {
+    /** Description of the example. */
+    description;
+    /** List of files that are part of this example. */
+    exampleFiles;
+    /** Selector name of the example component. */
+    selectorName;
+    /** Name of the file that contains the example component. */
+    indexFilename;
+    /** Names of the components being used in this example. */
+    componentNames;
     constructor(example) {
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
