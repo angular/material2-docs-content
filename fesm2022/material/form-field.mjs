@@ -137,6 +137,7 @@ class MyTelInput {
             this._placeholder();
             this._required();
             this._disabled();
+            this._focused();
             // Propagate state changes.
             untracked(() => this.stateChanges.next());
         });
