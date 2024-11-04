@@ -4578,6 +4578,46 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "tab-nav-bar-basic-example.ts",
         "importPath": "material/tabs"
     },
+    "timepicker-custom-icon": {
+        "packagePath": "material/timepicker/timepicker-custom-icon",
+        "title": "Timepicker with custom toggle icon",
+        "componentName": "TimepickerCustomIconExample",
+        "files": [
+            "timepicker-custom-icon-example.ts",
+            "timepicker-custom-icon-example.html"
+        ],
+        "selector": "timepicker-custom-icon-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-custom-icon-example.ts",
+        "importPath": "material/timepicker"
+    },
+    "timepicker-datepicker-integration": {
+        "packagePath": "material/timepicker/timepicker-datepicker-integration",
+        "title": "Timepicker integration with datepicker",
+        "componentName": "TimepickerDatepickerIntegrationExample",
+        "files": [
+            "timepicker-datepicker-integration-example.ts",
+            "timepicker-datepicker-integration-example.html",
+            "./timepicker-datepicker-integration-example.css"
+        ],
+        "selector": "timepicker-datepicker-integration-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-datepicker-integration-example.ts",
+        "importPath": "material/timepicker"
+    },
+    "timepicker-forms": {
+        "packagePath": "material/timepicker/timepicker-forms",
+        "title": "Timepicker forms integration",
+        "componentName": "TimepickerFormsExample",
+        "files": [
+            "timepicker-forms-example.ts",
+            "timepicker-forms-example.html"
+        ],
+        "selector": "timepicker-forms-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-forms-example.ts",
+        "importPath": "material/timepicker"
+    },
     "timepicker-harness": {
         "packagePath": "material/timepicker/timepicker-harness",
         "title": "Testing with MatTimepickerInputHarness",
@@ -4592,6 +4632,32 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "timepicker-harness-example.ts",
         "importPath": "material/timepicker"
     },
+    "timepicker-locale": {
+        "packagePath": "material/timepicker/timepicker-locale",
+        "title": "Timepicker with different locale",
+        "componentName": "TimepickerLocaleExample",
+        "files": [
+            "timepicker-locale-example.ts",
+            "timepicker-locale-example.html"
+        ],
+        "selector": "timepicker-locale-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-locale-example.ts",
+        "importPath": "material/timepicker"
+    },
+    "timepicker-options": {
+        "packagePath": "material/timepicker/timepicker-options",
+        "title": "Timepicker options customization",
+        "componentName": "TimepickerOptionsExample",
+        "files": [
+            "timepicker-options-example.ts",
+            "timepicker-options-example.html"
+        ],
+        "selector": "timepicker-options-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-options-example.ts",
+        "importPath": "material/timepicker"
+    },
     "timepicker-overview": {
         "packagePath": "material/timepicker/timepicker-overview",
         "title": "Basic timepicker",
@@ -4603,6 +4669,20 @@ const EXAMPLE_COMPONENTS = {
         "selector": "timepicker-overview-example",
         "additionalComponents": [],
         "primaryFile": "timepicker-overview-example.ts",
+        "importPath": "material/timepicker"
+    },
+    "timepicker-validation": {
+        "packagePath": "material/timepicker/timepicker-validation",
+        "title": "Timepicker validation",
+        "componentName": "TimepickerValidationExample",
+        "files": [
+            "timepicker-validation-example.ts",
+            "timepicker-validation-example.html",
+            "./timepicker-validation-example.css"
+        ],
+        "selector": "timepicker-validation-example",
+        "additionalComponents": [],
+        "primaryFile": "timepicker-validation-example.ts",
         "importPath": "material/timepicker"
     },
     "toolbar-basic": {
@@ -5595,9 +5675,21 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/tabs');
         case 'tab-nav-bar-basic':
             return import('@angular/components-examples/material/tabs');
+        case 'timepicker-custom-icon':
+            return import('@angular/components-examples/material/timepicker');
+        case 'timepicker-datepicker-integration':
+            return import('@angular/components-examples/material/timepicker');
+        case 'timepicker-forms':
+            return import('@angular/components-examples/material/timepicker');
         case 'timepicker-harness':
             return import('@angular/components-examples/material/timepicker');
+        case 'timepicker-locale':
+            return import('@angular/components-examples/material/timepicker');
+        case 'timepicker-options':
+            return import('@angular/components-examples/material/timepicker');
         case 'timepicker-overview':
+            return import('@angular/components-examples/material/timepicker');
+        case 'timepicker-validation':
             return import('@angular/components-examples/material/timepicker');
         case 'toolbar-basic':
             return import('@angular/components-examples/material/toolbar');
