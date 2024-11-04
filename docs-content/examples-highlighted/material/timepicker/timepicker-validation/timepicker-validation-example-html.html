@@ -1,0 +1,26 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Pick a time<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+    <span class="hljs-attr">matInput</span>
+    [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">&quot;formControl&quot;</span>
+    [<span class="hljs-attr">matTimepicker</span>]=<span class="hljs-string">&quot;picker&quot;</span>
+    <span class="hljs-attr">matTimepickerMin</span>=<span class="hljs-string">&quot;12:30&quot;</span>
+    <span class="hljs-attr">matTimepickerMax</span>=<span class="hljs-string">&quot;17:30&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-timepicker-toggle</span> <span class="hljs-attr">matIconSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">&quot;picker&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-timepicker</span> #<span class="hljs-attr">picker</span>/&gt;</span>
+
+  @if (formControl.errors?.[&#x27;matTimepickerParse&#x27;]) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Value isn&#x27;t a valid time<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+
+  @if (formControl.errors?.[&#x27;matTimepickerMin&#x27;]) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Value is too early<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+
+  @if (formControl.errors?.[&#x27;matTimepickerMax&#x27;]) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>Value is too late<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Enter a value before 12:30 PM or after 5:30 PM to see the errors<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Errors: {{formControl.errors | json}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>

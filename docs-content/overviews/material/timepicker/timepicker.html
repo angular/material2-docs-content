@@ -1,2 +1,328 @@
-<div class="docs-markdown"><p>TODO</p>
+<div class="docs-markdown"><p>The Angular Material Timepicker allows users to set the time portion of a date object either by
+typing it in or by selecting it from a list of pre-defined options.</p>
+<div material-docs-example="timepicker-overview"></div>
+
+
+        <h3 id="connecting-a-timepicker-to-an-input" class="docs-header-link">
+          <span header-link="connecting-a-timepicker-to-an-input"></span>
+          Connecting a timepicker to an input
+        </h3>
+      <p>A timepicker is composed of a text input and a dropdown menu, connected through the <code>matTimepicker</code>
+binding on the input.</p>
+<p>There is also an optional timepicker toggle button that gives the user an easy way to open the dropdown.</p>
+<div material-docs-example="timepicker-overview"
+                             file="timepicker-overview-example.html"
+                             region="minimum-setup"></div>
+
+<p>The timepicker input and toggle can be used either on their own or as a part of a <code>mat-form-field</code>:</p>
+<div material-docs-example="timepicker-overview"
+                             file="timepicker-overview-example.html"
+                             ></div>
+
+
+        <h3 id="timepicker-forms-integration" class="docs-header-link">
+          <span header-link="timepicker-forms-integration"></span>
+          Timepicker forms integration
+        </h3>
+      <p>The timepicker input integrates with the <code>@angular/forms</code> module by providing itself as a
+<code>ControlValueAccessor</code> and a <code>Validator</code> (see <a href="#input-validation">Input validation</a> below for more
+information). When the user types in a new time or selects one from the dropdown, the
+time will be set on the date object which is the current value of the form control. If the form
+control doesn&#39;t have a value, the timepicker will create one with today&#39;s date and the selected
+time.</p>
+<div material-docs-example="timepicker-forms"></div>
+
+
+
+        <h3 id="integration-with-matdatepicker" class="docs-header-link">
+          <span header-link="integration-with-matdatepicker"></span>
+          Integration with <code>MatDatepicker</code>
+        </h3>
+      <p>Material&#39;s datepicker and timepicker components can operate over the same value, allowing for a
+combined datetime picker to be implemented. When binding the two components to the same value, the
+datepicker will set the entire date object while the timepicker will only modify the time portion
+of it.</p>
+<div material-docs-example="timepicker-datepicker-integration"></div>
+
+
+        <h3 id="input-validation" class="docs-header-link">
+          <span header-link="input-validation"></span>
+          Input validation
+        </h3>
+      <p>The timepicker input checks that the value typed in by the user is a valid time string and
+whether it fits into the specified bounds.</p>
+<p>If the user types in an invalid time string (for example <code>abc</code> or <code>24:67</code>), the timepicker input
+will report the <code>matTimepickerParse</code> error. The string is parsed using the <code>parseTime</code> method of
+the <a href="#choosing-a-date-implementation-and-format-settings">the current date implementation</a>.</p>
+<p>The timepicker input also checks that the value typed in by the user fits within the minimum and
+maximum bounds set through the <code>matTimepickerMin</code> and <code>matTimepickerMax</code> inputs. They accept either
+a date object with a specific time or a time string. The inputs also control which times will be
+shown inside of the dropdown menu. For example, setting <code>matTimepickerMin=&quot;12:30&quot;</code> and
+<code>matTimepickerMax=&quot;21:25&quot;</code> will allow the user to only select a time between 12:30 in the afternoon
+and 9:25 in the evening. If the value is outside of those bounds, either a <code>maxTimepickerMin</code> or
+<code>matTimepickerMax</code> error will be reported to the value accessor.</p>
+<div material-docs-example="timepicker-validation"></div>
+
+
+
+        <h3 id="customizing-the-dropdown-options" class="docs-header-link">
+          <span header-link="customizing-the-dropdown-options"></span>
+          Customizing the dropdown options
+        </h3>
+      <p>By default the <code>mat-timepicker</code> dropdown shows options at 30 minute intervals. You can customize the
+list of options either by setting an interval or providing a custom set of options.</p>
+<p>The easiest way is to change the options is to pass the <code>interval</code> input to <code>mat-timepicker</code> with
+an interval string which will be used when generating the options. For example,
+<code>&lt;mat-timepicker interval=&quot;90m&quot;/&gt;</code> will show the options at 90 minute intervals, starting from the
+minimum time and ending at the maximum. Valid interval strings include:</p>
+<ul>
+<li>A number which will be interpreted as minutes, e.g. <code>interval=&quot;50&quot;</code> represents 50 minutes.</li>
+<li>A number with short units, for example <code>30m</code> represents 30 minutes while <code>5h</code> is 5 hours.
+Supported short units include <code>h</code> or <code>H</code> for hours, <code>m</code> or <code>M</code> for minutes and <code>s</code> or <code>S</code> for seconds.</li>
+<li>A number with long units, for example <code>75 min</code> represents 75 minutes while <code>1.5 hours</code> is an hour
+and a half. Supported long units include <code>min</code> or <code>minute</code> or <code>minutes</code> for minutes, <code>hour</code> or <code>hours</code> for
+hours and <code>second</code> or <code>seconds</code> for seconds.</li>
+</ul>
+<p>Furthermore, the default interval can be controlled for the entire application using the
+<code>MAT_TIMEPICKER_CONFIG</code> injection token. For example, adding the following to your <code>providers</code> will
+default all timepickers to a 90 minute interval:</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MAT_TIMEPICKER_CONFIG} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/timepicker&#x27;</span>;
+
+{
+  <span class="hljs-attr">provide</span>: MAT_TIMEPICKER_CONFIG,
+  <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">interval</span>: <span class="hljs-string">&#x27;90 minutes&#x27;</span>},
+}
+</code></pre>
+<p>If your app requires more fine-grained control over the options, you can pass in an array of
+options into <code>mat-timepicker</code> instead. Note that the options need to match the <code>MatTimepickerOption</code>
+interface.</p>
+<div material-docs-example="timepicker-options"></div>
+
+
+
+        <h3 id="customizing-the-toggle-icon" class="docs-header-link">
+          <span header-link="customizing-the-toggle-icon"></span>
+          Customizing the toggle icon
+        </h3>
+      <p><code>mat-timepicker-toggle</code> renders a clock icon by default. You can customize it by projecting in an
+element with the <code>matTimepickerToggleIcon</code> attribute into the toggle:</p>
+<div material-docs-example="timepicker-custom-icon"></div>
+
+
+        <h3 id="internationalization" class="docs-header-link">
+          <span header-link="internationalization"></span>
+          Internationalization
+        </h3>
+      <p>Internationalization of the timepicker uses the same date adapter as <code>mat-datepicker</code>. It is
+configured via three aspects:</p>
+<ol>
+<li> The date locale.</li>
+<li> The date implementation that the timepicker accepts.</li>
+<li> The display and parse formats used by the timepicker.</li>
+</ol>
+
+        <h4 id="setting-the-locale-code" class="docs-header-link">
+          <span header-link="setting-the-locale-code"></span>
+          Setting the locale code
+        </h4>
+      <p>By default, the <code>MAT_DATE_LOCALE</code> injection token will use the existing <code>LOCALE_ID</code> locale code
+from <code>@angular/core</code>. If you want to override it, you can provide a new value for the
+<code>MAT_DATE_LOCALE</code> token:</p>
+<pre><code class="language-ts">bootstapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
+});
+</code></pre>
+<p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
+<p><strong>Note:</strong> if you&#39;re using the <code>provideDateFnsAdapter</code>, you have to provide the data object for your
+locale to <code>MAT_DATE_LOCALE</code> instead of the locale code, in addition to providing a configuration
+compatible with <code>date-fns</code> to <code>MAT_DATE_FORMATS</code>. Locale data for <code>date-fns</code> can be imported
+from <code>date-fns/locale</code>.</p>
+<div material-docs-example="timepicker-locale"></div>
+
+
+        <h4 id="choosing-a-date-implementation-and-format-settings" class="docs-header-link">
+          <span header-link="choosing-a-date-implementation-and-format-settings"></span>
+          Choosing a date implementation and format settings
+        </h4>
+      <p>The timepicker is built to be implementation-agnostic and to be interoperable with
+<code>mat-datepicker</code>. This means that it can be made to work with a variety of different date
+implementations. However it also means that developers need to make sure to provide the
+appropriate pieces for the timepicker to work with their chosen implementation.</p>
+<p>The easiest way to ensure this is to import one of the provided date adapters:</p>
+<p><code>provideNativeDateAdapter</code> or <code>MatNativeDateModule</code></p>
+<table>
+  <tbody>
+    <tr>
+      <th align="left" scope="row">Date type</th>
+      <td><code>Date</code></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Supported locales</th>
+      <td>Locales using either AM/PM or 24-hour formatting</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Dependencies</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Import from</th>
+      <td><code>@angular/material/core</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>provideDateFnsAdapter</code> or <code>MatDateFnsModule</code> (installed via <code>ng add @angular/material-date-fns-adapter</code>)</p>
+<table>
+  <tbody>
+    <tr>
+      <th align="left" scope="row">Date type</th>
+      <td><code>Date</code></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Supported locales</th>
+      <td><a href="https://github.com/date-fns/date-fns/tree/master/src/locale/">See project for details</a></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Dependencies</th>
+      <td><a href="https://date-fns.org/">date-fns</a></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Import from</th>
+      <td><code>@angular/material-date-fns-adapter</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>provideLuxonDateAdapter</code> or <code>MatLuxonDateModule</code> (installed via <code>ng add @angular/material-luxon-adapter</code>)</p>
+<table>
+  <tbody>
+    <tr>
+      <th align="left" scope="row">Date type</th>
+      <td><code>DateTime</code></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Supported locales</th>
+      <td><a href="https://moment.github.io/luxon/">See project for details</a></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Dependencies</th>
+      <td><a href="https://moment.github.io/luxon/">Luxon</a></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Import from</th>
+      <td><code>@angular/material-luxon-adapter</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>provideMomentDateAdapter</code> or <code>MatMomentDateModule</code> (installed via <code>ng add @angular/material-moment-adapter</code>)</p>
+<table>
+  <tbody>
+    <tr>
+      <th align="left" scope="row">Date type</th>
+      <td><code>Moment</code></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Supported locales</th>
+      <td><a href="https://github.com/moment/moment/tree/develop/src/locale">See project for details</a></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Dependencies</th>
+      <td><a href="https://momentjs.com/">Moment.js</a></td>
+    </tr>
+    <tr>
+      <th align="left" scope="row">Import from</th>
+      <td><code>@angular/material-moment-adapter</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note</strong>: <code>provideNativeDateAdapter</code> implements time parsing using a regex which means that it
+only supports AM/PM time (e.g. <code>1:45 PM</code>) or 24-hour time (e.g. <code>22:45</code> or <code>22.45</code>). As such
+it won&#39;t work on locales with different formatting. We recommend using one of the provided date
+adapters mentioned above or creating your own adapter by extending the <code>DateAdapter</code> class from
+<code>@angular/material/core</code>. For example, if you want to use the <code>date-fns</code> adapter, you can update
+your <code>bootstrapApplication</code> format to the following:</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {provideDateFnsAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-date-fns-adapter&#x27;</span>;
+
+bootstrapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideDateFnsAdapter()]
+});
+</code></pre>
+
+        <h4 id="customizing-the-parse-and-display-formats" class="docs-header-link">
+          <span header-link="customizing-the-parse-and-display-formats"></span>
+          Customizing the parse and display formats
+        </h4>
+      <p>The <code>MAT_DATE_FORMATS</code> object is a collection of formats that the timepicker uses when parsing
+and displaying date objects. These formats are passed through to the <code>DateAdapter</code> so you will want
+to make sure that the format objects you&#39;re providing are compatible with the <code>DateAdapter</code> used in
+your app.</p>
+<p><code>MAT_DATE_FORMATS</code> is the same object used by <code>mat-datepicker</code> so it&#39;s likely already
+configured if your app is using the datepicker, but for the timepicker you need to ensure that the
+<code>display.timeInput</code>, <code>display.timeOptionLabel</code> and <code>parse.timeInput</code> properties are set as well.</p>
+<p>If you want use one of the <code>DateAdapters</code> that ships with Angular Material, but use your own
+<code>MAT_DATE_FORMATS</code>, you can either pass the formats into the providers function, or provide the
+<code>MAT_DATE_FORMATS</code> token yourself. For example:</p>
+<pre><code class="language-ts">bootstrapApplication(MyApp, {
+  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter(MY_NATIVE_DATE_FORMATS)],
+});
+</code></pre>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>The timepicker implements the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">ARIA combobox interaction pattern</a>.
+The timepicker input specifies <code>role=&quot;combobox&quot;</code> while the content of the dropdown applies
+<code>role=&quot;listbox&quot;</code> and the options within the dropdown apply <code>role=&quot;option&quot;</code>. By default the listbox
+is labelled from the <code>mat-form-field</code> it is placed in, but if you aren&#39;t using a form field or if
+you want to customize the label, you can do so through the <code>ariaLabel</code> or <code>ariaLabelledby</code> inputs
+on <code>mat-timepicker</code>.</p>
+
+        <h3 id="troubleshooting" class="docs-header-link">
+          <span header-link="troubleshooting"></span>
+          Troubleshooting
+        </h3>
+      
+        <h4 id="error-mattimepicker-no-provider-found-for-dateadaptermat_date_formats" class="docs-header-link">
+          <span header-link="error-mattimepicker-no-provider-found-for-dateadaptermat_date_formats"></span>
+          Error: MatTimepicker: No provider found for DateAdapter/MAT_DATE_FORMATS
+        </h4>
+      <p>This error is thrown if you haven&#39;t provided all of the injectables the timepicker needs in order to
+work correctly. The easiest way to resolve this is to add <code>provideNativeDateAdapter</code> or
+<code>provideMomentDateAdapter</code> to your app config. See
+<a href="#choosing-a-date-implementation-and-format-settings"><em>Choosing a date implementation</em></a> for
+more information.</p>
+
+        <h4 id="error-mattimepicker-incomplete-mat_date_formats-has-been-provided" class="docs-header-link">
+          <span header-link="error-mattimepicker-incomplete-mat_date_formats-has-been-provided"></span>
+          Error: MatTimepicker: Incomplete <code>MAT_DATE_FORMATS</code> has been provided
+        </h4>
+      <p>The timepicker needs the <code>display.timeInput</code>, <code>display.timeOptionLabel</code> and <code>parse.timeInput</code> fields
+in <code>MAT_DATE_FORMATS</code> in order to work correctly. You should update your date formats object to
+include include these fields. See <a href="#customizing-the-parse-and-display-formats"><em>Customizing the parse and display formats</em></a>
+for more information.</p>
+
+        <h4 id="error-cannot-specify-both-the-options-and-interval-inputs-at-the-same-time" class="docs-header-link">
+          <span header-link="error-cannot-specify-both-the-options-and-interval-inputs-at-the-same-time"></span>
+          Error: Cannot specify both the <code>options</code> and <code>interval</code> inputs at the same time
+        </h4>
+      <p>A <code>mat-timepicker</code> cannot specifify both the <code>options</code> and <code>interval</code> inputs at the same time.
+The template should be updated to remove one of them.</p>
+
+        <h4 id="error-value-of-options-input-cannot-be-an-empty-array" class="docs-header-link">
+          <span header-link="error-value-of-options-input-cannot-be-an-empty-array"></span>
+          Error: Value of <code>options</code> input cannot be an empty array
+        </h4>
+      <p>The array passed into the <code>options</code> input of <code>mat-timepicker</code> cannot be empty, because the user
+won&#39;t have any options to choose from.</p>
+
+        <h4 id="error-a-mattimepicker-can-only-be-associated-with-a-single-input" class="docs-header-link">
+          <span header-link="error-a-mattimepicker-can-only-be-associated-with-a-single-input"></span>
+          Error: A MatTimepicker can only be associated with a single input
+        </h4>
+      <p>This error is thrown if more than one <code>&lt;input&gt;</code> tries to claim ownership over the same
+<code>&lt;mat-timepicker&gt;</code> (via the <code>matTimepicker</code> attribute on the input). A timepicker can only be
+associated with a single input.</p>
 </div>
