@@ -2,9 +2,9 @@
   <span class="hljs-comment">&lt;!-- This is the tree node template for leaf nodes --&gt;</span>
   <span class="hljs-comment">&lt;!-- There is inline padding applied to this node using styles.
     This padding value depends on the mat-icon-button width. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-nested-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>&gt;</span>
     {{node.name}}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-nested-tree-node</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-nested-tree-node</span>
       *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">&quot;let node; when: hasChild&quot;</span>
