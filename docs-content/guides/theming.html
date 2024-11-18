@@ -58,7 +58,7 @@ typography CSS variables will not be included in the output.</p>
       <p>The <code>theme</code>‘s color determines the component color styles, such as the fill
 color of checkboxes or ripple color of buttons. It depends on color palettes of
 varying tones to build a color scheme. Check out the
-<a href="https://docs.google.com/document/d/1tJiP7Z3kQdx94gwK3HKtfP-qioWHAsF3TQW7mbjM7YQ/edit?resourcekey=0-CngmrlEF51YAuYAJQwPBOw&amp;tab=t.0#heading=h.rbsv65h8pako">Palettes</a>
+<a href="#prebuilt-color-palettes">Palettes</a>
 section to learn about available prebuilt palettes, or how to create custom
 palettes.</p>
 <p>You can set the color in one of two ways: as a single color palette, or as a
@@ -223,11 +223,11 @@ your application’s theme:</p>
           <strong>Custom Color Palettes</strong>
         </h3>
       <p>The Angular Material
-<a href="https://github.com/angular/components/blob/main/src/material/schematics/ng-generate/m3-theme/README.md">palette generation schematic</a>
+<a href="https://github.com/angular/components/blob/main/src/material/schematics/ng-generate/theme-color/README.md">palette generation schematic</a>
 builds custom color palettes based on a single color input for the primary
 color, and optionally color inputs to further customize secondary, tertiary, and
 neutral palettes:</p>
-<pre><code>ng generate @angular/material:theme
+<pre><code>ng generate @angular/material:theme-color
 </code></pre>
 
         <h2 id="loading-fonts" class="docs-header-link">
@@ -349,7 +349,7 @@ information to the user:</p>
   font: var(--mat-sys-body-large);
 }
 </code></pre>
-<p>See the <a href="https://ng-comp-devapp.web.app/theme">Theme Variables</a> guide for a
+<p>See the <a href="https://material.angular.io/guide/system-variables">Theme Variables</a> guide for a
 comprehensive list of these variables, examples of where they are used, and how
 components can depend on them.</p>
 
