@@ -340,14 +340,14 @@ to handle such cases we should re-evaluate <code>errorState</code> on every chan
 }
 
 <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">updateErrorState</span>(<span class="hljs-params"></span>)</span> {
-  <span class="hljs-keyword">const</span> parent = <span class="hljs-built_in">this</span>._parentFormGroup || <span class="hljs-built_in">this</span>.parentForm;
+  <span class="hljs-keyword">const</span> parentSubmitted = <span class="hljs-built_in">this</span>._parentFormGroup?.submitted || <span class="hljs-built_in">this</span>._parentForm?.submitted;
+  <span class="hljs-keyword">const</span> touchedOrParentSubmitted = <span class="hljs-built_in">this</span>.touched || parentSubmitted;
 
-  <span class="hljs-keyword">const</span> oldState = <span class="hljs-built_in">this</span>.errorState;
-  <span class="hljs-keyword">const</span> newState = (<span class="hljs-built_in">this</span>.ngControl?.invalid || <span class="hljs-built_in">this</span>.parts.invalid) &amp;&amp; (<span class="hljs-built_in">this</span>.touched || parent.submitted);
+  <span class="hljs-keyword">const</span> newState = (<span class="hljs-built_in">this</span>.ngControl?.invalid || <span class="hljs-built_in">this</span>.parts.invalid) &amp;&amp; touchedOrParentSubmitted;
 
-  <span class="hljs-keyword">if</span> (oldState !== newState) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.errorState !== newState) {
     <span class="hljs-built_in">this</span>.errorState = newState;
-    <span class="hljs-built_in">this</span>.stateChanges.next();
+    <span class="hljs-built_in">this</span>.stateChanges.next(); <span class="hljs-comment">// Notify listeners of state changes.</span>
   }
 }
 </code></pre>
