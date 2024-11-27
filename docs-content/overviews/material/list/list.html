@@ -171,6 +171,27 @@ attribute. Whichever heading tag is appropriate for your DOM hierarchy should be
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
 </code></pre>
 
+        <h3 id="lists-with-meta-section-icons" class="docs-header-link">
+          <span header-link="lists-with-meta-section-icons"></span>
+          Lists with meta section icons
+        </h3>
+      <p>To add a meta icon to your list item, use the <code>matListItemMeta</code> directive. This allows you to display an icon or any other content in the meta section of the list item.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list</span>&gt;</span>
+  @for (message of messages; track message) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">matListItemMeta</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>{{message.from}}<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">matListItemLine</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{message.subject}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;demo-2&quot;</span>&gt;</span> -- {{message.content}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+  }
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
+</code></pre>
+
         <h3 id="lists-with-avatars" class="docs-header-link">
           <span header-link="lists-with-avatars"></span>
           Lists with avatars
