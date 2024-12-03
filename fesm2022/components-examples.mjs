@@ -4474,7 +4474,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "tab-group-header-below": {
         "packagePath": "material/tabs/tab-group-header-below",
-        "title": "Tab group with the headers on the bottom",
+        "title": "Tab group with headers below the content",
         "componentName": "TabGroupHeaderBelowExample",
         "files": [
             "tab-group-header-below-example.ts",
@@ -4496,19 +4496,6 @@ const EXAMPLE_COMPONENTS = {
         "selector": "tab-group-ink-bar-example",
         "additionalComponents": [],
         "primaryFile": "tab-group-ink-bar-example.ts",
-        "importPath": "material/tabs"
-    },
-    "tab-group-inverted": {
-        "packagePath": "material/tabs/tab-group-inverted",
-        "title": "Tab group with inverted tabs",
-        "componentName": "TabGroupInvertedExample",
-        "files": [
-            "tab-group-inverted-example.ts",
-            "tab-group-inverted-example.html"
-        ],
-        "selector": "tab-group-inverted-example",
-        "additionalComponents": [],
-        "primaryFile": "tab-group-inverted-example.ts",
         "importPath": "material/tabs"
     },
     "tab-group-lazy-loaded": {
@@ -5662,8 +5649,6 @@ async function loadExample(id) {
         case 'tab-group-header-below':
             return import('@angular/components-examples/material/tabs');
         case 'tab-group-ink-bar':
-            return import('@angular/components-examples/material/tabs');
-        case 'tab-group-inverted':
             return import('@angular/components-examples/material/tabs');
         case 'tab-group-lazy-loaded':
             return import('@angular/components-examples/material/tabs');
