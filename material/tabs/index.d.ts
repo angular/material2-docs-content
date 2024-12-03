@@ -78,7 +78,7 @@ export declare class TabGroupHarnessExample {
 }
 
 /**
- * @title Tab group with the headers on the bottom
+ * @title Tab group with headers below the content
  */
 export declare class TabGroupHeaderBelowExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupHeaderBelowExample, never>;
@@ -91,14 +91,6 @@ export declare class TabGroupHeaderBelowExample {
 export declare class TabGroupInkBarExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupInkBarExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInkBarExample, "tab-group-ink-bar-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Tab group with inverted tabs
- */
-export declare class TabGroupInvertedExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<TabGroupInvertedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TabGroupInvertedExample, "tab-group-inverted-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
