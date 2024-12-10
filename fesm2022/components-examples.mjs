@@ -3322,6 +3322,19 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "select-reset-example.ts",
         "importPath": "material/select"
     },
+    "select-selectable-null": {
+        "packagePath": "material/select/select-selectable-null",
+        "title": "Select with selectable null options",
+        "componentName": "SelectSelectableNullExample",
+        "files": [
+            "select-selectable-null-example.ts",
+            "select-selectable-null-example.html"
+        ],
+        "selector": "select-selectable-null-example",
+        "additionalComponents": [],
+        "primaryFile": "select-selectable-null-example.ts",
+        "importPath": "material/select"
+    },
     "select-value-binding": {
         "packagePath": "material/select/select-value-binding",
         "title": "Select with 2-way value binding",
@@ -5481,6 +5494,8 @@ async function loadExample(id) {
         case 'select-reactive-form':
             return import('@angular/components-examples/material/select');
         case 'select-reset':
+            return import('@angular/components-examples/material/select');
+        case 'select-selectable-null':
             return import('@angular/components-examples/material/select');
         case 'select-value-binding':
             return import('@angular/components-examples/material/select');
