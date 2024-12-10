@@ -72,6 +72,17 @@ This can be accomplished by creating a <code>FormControl</code> with the disable
 <div material-docs-example="select-reset"></div>
 
 
+        <h3 id="allowing-nullable-options-to-be-selected" class="docs-header-link">
+          <span header-link="allowing-nullable-options-to-be-selected"></span>
+          Allowing nullable options to be selected
+        </h3>
+      <p>By default any options with a <code>null</code> or <code>undefined</code> value will reset the select&#39;s value. If instead
+you want the nullable options to be selectable, you can enable the <code>canSelectNullableOptions</code> input.
+The default value for the input can be controlled application-wide through the <code>MAT_SELECT_CONFIG</code>
+injection token.</p>
+<div material-docs-example="select-selectable-null"></div>
+
+
         <h3 id="creating-groups-of-options" class="docs-header-link">
           <span header-link="creating-groups-of-options"></span>
           Creating groups of options

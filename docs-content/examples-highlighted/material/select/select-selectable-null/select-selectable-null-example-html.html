@@ -1,0 +1,19 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>mat-select allowing selection of nullable options<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span> <span class="hljs-attr">canSelectNullableOptions</span>&gt;</span>
+    @for (option of options; track option) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span>&gt;</span>{{option.label}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>mat-select with default configuration<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span>&gt;</span>
+    @for (option of options; track option) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;option.value&quot;</span>&gt;</span>{{option.label}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

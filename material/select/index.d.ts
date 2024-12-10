@@ -195,6 +195,20 @@ export declare class SelectResetExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<SelectResetExample, "select-reset-example", never, {}, {}, never, never, true, never>;
 }
 
+/** @title Select with selectable null options */
+export declare class SelectSelectableNullExample {
+    value: number | null;
+    options: ({
+        label: string;
+        value: null;
+    } | {
+        label: string;
+        value: number;
+    })[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<SelectSelectableNullExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SelectSelectableNullExample, "select-selectable-null-example", never, {}, {}, never, never, true, never>;
+}
+
 /** @title Select with 2-way value binding */
 export declare class SelectValueBindingExample {
     selected: string;
