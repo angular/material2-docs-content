@@ -3,6 +3,7 @@ import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { OnDestroy } from '@angular/core';
+import { WritableSignal } from '@angular/core';
 
 /**
  * @title Autosize sidenav
@@ -91,13 +92,14 @@ export declare class SidenavPositionExample {
 
 /** @title Responsive sidenav */
 export declare class SidenavResponsiveExample implements OnDestroy {
-    mobileQuery: MediaQueryList;
-    fillerNav: string[];
-    fillerContent: string[];
-    private _mobileQueryListener;
+    protected readonly fillerNav: string[];
+    protected readonly fillerContent: string[];
+    protected readonly isMobile: WritableSignal<boolean>;
+    private readonly _mobileQuery;
+    private readonly _mobileQueryListener;
     constructor();
     ngOnDestroy(): void;
-    shouldRun: boolean;
+    protected readonly shouldRun: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SidenavResponsiveExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SidenavResponsiveExample, "sidenav-responsive-example", never, {}, {}, never, never, true, never>;
 }
