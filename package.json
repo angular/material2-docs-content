@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "19.0.5+sha-d0a5458",
+  "version": "19.0.5+sha-ce072eb",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -259,15 +259,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "19.0.5+sha-d0a5458",
-    "@angular/cdk-experimental": "19.0.5+sha-d0a5458",
+    "@angular/cdk": "19.0.5+sha-ce072eb",
+    "@angular/cdk-experimental": "19.0.5+sha-ce072eb",
     "@angular/core": "^19.0.0 || ^20.0.0",
     "@angular/common": "^19.0.0 || ^20.0.0",
-    "@angular/material": "19.0.5+sha-d0a5458",
-    "@angular/material-experimental": "19.0.5+sha-d0a5458",
-    "@angular/material-moment-adapter": "19.0.5+sha-d0a5458",
-    "@angular/material-luxon-adapter": "19.0.5+sha-d0a5458",
-    "@angular/material-date-fns-adapter": "19.0.5+sha-d0a5458"
+    "@angular/material": "19.0.5+sha-ce072eb",
+    "@angular/material-experimental": "19.0.5+sha-ce072eb",
+    "@angular/material-moment-adapter": "19.0.5+sha-ce072eb",
+    "@angular/material-luxon-adapter": "19.0.5+sha-ce072eb",
+    "@angular/material-date-fns-adapter": "19.0.5+sha-ce072eb"
   },
   "dependencies": {
     "tslib": "^2.3.0"
