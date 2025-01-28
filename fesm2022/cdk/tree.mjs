@@ -17,7 +17,74 @@ import { coerceObservable } from '@angular/cdk/coercion/private';
 import { TREE_KEY_MANAGER } from '@angular/cdk/a11y';
 import { SPACE, ENTER, END, HOME, H, LEFT_ARROW, L, RIGHT_ARROW, K, UP_ARROW, J, DOWN_ARROW, TAB } from '@angular/cdk/keycodes';
 
-const FLAT_DATA = [
+const NESTED_DATA$1 = [
+    {
+        name: 'Fruit',
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+    },
+    {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+            },
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
+    },
+];
+
+function flattenNodes$1(nodes) {
+    const flattenedNodes = [];
+    for (const node of nodes) {
+        flattenedNodes.push(node);
+        if (node.children) {
+            flattenedNodes.push(...flattenNodes$1(node.children));
+        }
+    }
+    return flattenedNodes;
+}
+/**
+ * @title Tree with flat nodes
+ */
+class CdkTreeFlatChildrenAccessorExample {
+    tree;
+    childrenAccessor = (dataNode) => timer(100).pipe(mapTo(dataNode.children ?? []));
+    dataSource = new ArrayDataSource(NESTED_DATA$1);
+    hasChild = (_, node) => !!node.children?.length;
+    getParentNode(node) {
+        for (const parent of flattenNodes$1(NESTED_DATA$1)) {
+            if (parent.children?.includes(node)) {
+                return parent;
+            }
+        }
+        return null;
+    }
+    shouldRender(node) {
+        let parent = this.getParentNode(node);
+        while (parent) {
+            if (!this.tree.isExpanded(parent)) {
+                return false;
+            }
+            parent = this.getParentNode(parent);
+        }
+        return true;
+    }
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "19.1.3", ngImport: i0, type: CdkTreeFlatChildrenAccessorExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "19.1.3", type: CdkTreeFlatChildrenAccessorExample, isStandalone: true, selector: "cdk-tree-flat-children-accessor-example", viewQueries: [{ propertyName: "tree", first: true, predicate: CdkTree, descendants: true }], ngImport: i0, template: "<cdk-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 [isExpandable]=\"true\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"], dependencies: [{ kind: "ngmodule", type: CdkTreeModule }, { kind: "directive", type: i1.CdkTreeNodeDef, selector: "[cdkTreeNodeDef]", inputs: ["cdkTreeNodeDefWhen"] }, { kind: "directive", type: i1.CdkTreeNodePadding, selector: "[cdkTreeNodePadding]", inputs: ["cdkTreeNodePadding", "cdkTreeNodePaddingIndent"] }, { kind: "directive", type: i1.CdkTreeNodeToggle, selector: "[cdkTreeNodeToggle]", inputs: ["cdkTreeNodeToggleRecursive"] }, { kind: "component", type: i1.CdkTree, selector: "cdk-tree", inputs: ["dataSource", "treeControl", "levelAccessor", "childrenAccessor", "trackBy", "expansionKey"], exportAs: ["cdkTree"] }, { kind: "directive", type: i1.CdkTreeNode, selector: "cdk-tree-node", inputs: ["role", "isExpandable", "isExpanded", "isDisabled", "cdkTreeNodeTypeaheadLabel"], outputs: ["activation", "expandedChange"], exportAs: ["cdkTreeNode"] }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i2.MatIconButton, selector: "button[mat-icon-button]", exportAs: ["matButton"] }, { kind: "ngmodule", type: MatIconModule }, { kind: "component", type: i3.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.1.3", ngImport: i0, type: CdkTreeFlatChildrenAccessorExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'cdk-tree-flat-children-accessor-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 [isExpandable]=\"true\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
+        }], propDecorators: { tree: [{
+                type: ViewChild,
+                args: [CdkTree]
+            }] } });
+
+const FLAT_DATA$1 = [
     {
         name: 'Fruit',
         expandable: true,
@@ -74,72 +141,6 @@ const FLAT_DATA = [
         level: 2,
     },
 ];
-const NESTED_DATA = [
-    {
-        name: 'Fruit',
-        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
-    },
-    {
-        name: 'Vegetables',
-        children: [
-            {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
-            },
-            {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
-            },
-        ],
-    },
-];
-
-function flattenNodes$1(nodes) {
-    const flattenedNodes = [];
-    for (const node of nodes) {
-        flattenedNodes.push(node);
-        if (node.children) {
-            flattenedNodes.push(...flattenNodes$1(node.children));
-        }
-    }
-    return flattenedNodes;
-}
-/**
- * @title Tree with flat nodes
- */
-class CdkTreeFlatChildrenAccessorExample {
-    tree;
-    childrenAccessor = (dataNode) => timer(100).pipe(mapTo(dataNode.children ?? []));
-    dataSource = new ArrayDataSource(NESTED_DATA);
-    hasChild = (_, node) => !!node.children?.length;
-    getParentNode(node) {
-        for (const parent of flattenNodes$1(NESTED_DATA)) {
-            if (parent.children?.includes(node)) {
-                return parent;
-            }
-        }
-        return null;
-    }
-    shouldRender(node) {
-        let parent = this.getParentNode(node);
-        while (parent) {
-            if (!this.tree.isExpanded(parent)) {
-                return false;
-            }
-            parent = this.getParentNode(parent);
-        }
-        return true;
-    }
-    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "19.1.3", ngImport: i0, type: CdkTreeFlatChildrenAccessorExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "19.1.3", type: CdkTreeFlatChildrenAccessorExample, isStandalone: true, selector: "cdk-tree-flat-children-accessor-example", viewQueries: [{ propertyName: "tree", first: true, predicate: CdkTree, descendants: true }], ngImport: i0, template: "<cdk-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 [isExpandable]=\"true\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"], dependencies: [{ kind: "ngmodule", type: CdkTreeModule }, { kind: "directive", type: i1.CdkTreeNodeDef, selector: "[cdkTreeNodeDef]", inputs: ["cdkTreeNodeDefWhen"] }, { kind: "directive", type: i1.CdkTreeNodePadding, selector: "[cdkTreeNodePadding]", inputs: ["cdkTreeNodePadding", "cdkTreeNodePaddingIndent"] }, { kind: "directive", type: i1.CdkTreeNodeToggle, selector: "[cdkTreeNodeToggle]", inputs: ["cdkTreeNodeToggleRecursive"] }, { kind: "component", type: i1.CdkTree, selector: "cdk-tree", inputs: ["dataSource", "treeControl", "levelAccessor", "childrenAccessor", "trackBy", "expansionKey"], exportAs: ["cdkTree"] }, { kind: "directive", type: i1.CdkTreeNode, selector: "cdk-tree-node", inputs: ["role", "isExpandable", "isExpanded", "isDisabled", "cdkTreeNodeTypeaheadLabel"], outputs: ["activation", "expandedChange"], exportAs: ["cdkTreeNode"] }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i2.MatIconButton, selector: "button[mat-icon-button]", exportAs: ["matButton"] }, { kind: "ngmodule", type: MatIconModule }, { kind: "component", type: i3.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
-}
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.1.3", ngImport: i0, type: CdkTreeFlatChildrenAccessorExample, decorators: [{
-            type: Component,
-            args: [{ selector: 'cdk-tree-flat-children-accessor-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 [isExpandable]=\"true\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
-        }], propDecorators: { tree: [{
-                type: ViewChild,
-                args: [CdkTree]
-            }] } });
 
 /**
  * @title Tree with flat nodes
@@ -147,15 +148,15 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.1.3", ngImpor
 class CdkTreeFlatLevelAccessorExample {
     tree;
     levelAccessor = (dataNode) => dataNode.level;
-    dataSource = new ArrayDataSource(FLAT_DATA);
+    dataSource = new ArrayDataSource(FLAT_DATA$1);
     hasChild = (_, node) => node.expandable;
     getParentNode(node) {
-        const nodeIndex = FLAT_DATA.indexOf(node);
+        const nodeIndex = FLAT_DATA$1.indexOf(node);
         // Determine the node's parent by finding the first preceding node that's
         // one level shallower.
         for (let i = nodeIndex - 1; i >= 0; i--) {
-            if (FLAT_DATA[i].level === node.level - 1) {
-                return FLAT_DATA[i];
+            if (FLAT_DATA$1[i].level === node.level - 1) {
+                return FLAT_DATA$1[i];
             }
         }
         return null;
@@ -267,6 +268,64 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.1.3", ngImpor
             args: [{ selector: 'cdk-tree-flat-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 (expandedChange)=\"node.isExpanded = $event\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
         }] });
 
+const FLAT_DATA = [
+    {
+        name: 'Fruit',
+        expandable: true,
+        level: 0,
+    },
+    {
+        name: 'Apple',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Banana',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Fruit loops',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Vegetables',
+        expandable: true,
+        level: 0,
+    },
+    {
+        name: 'Green',
+        expandable: true,
+        level: 1,
+    },
+    {
+        name: 'Broccoli',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Brussels sprouts',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Orange',
+        expandable: true,
+        level: 1,
+    },
+    {
+        name: 'Pumpkins',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Carrots',
+        expandable: false,
+        level: 2,
+    },
+];
+
 /**
  * @title Tree with nested nodes and level accessor
  */
@@ -301,6 +360,26 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.1.3", ngImpor
                 type: ViewChild,
                 args: [CdkTree]
             }] } });
+
+const NESTED_DATA = [
+    {
+        name: 'Fruit',
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+    },
+    {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+            },
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
+    },
+];
 
 function flattenNodes(nodes) {
     const flattenedNodes = [];
