@@ -80,12 +80,12 @@ export declare class CdkTreeFlatLevelAccessorExample {
  * @title Tree with nested nodes using childAccessor
  */
 export declare class CdkTreeNestedChildrenAccessorExample {
-    tree: CdkTree<NestedFoodNode>;
-    childrenAccessor: (dataNode: NestedFoodNode) => NestedFoodNode[];
-    dataSource: ArrayDataSource<NestedFoodNode>;
-    hasChild: (_: number, node: NestedFoodNode) => boolean;
-    getParentNode(node: NestedFoodNode): NestedFoodNode | null;
-    shouldRender(node: NestedFoodNode): boolean;
+    tree: CdkTree<NestedFoodNode_2>;
+    childrenAccessor: (dataNode: NestedFoodNode_2) => NestedFoodNode_2[];
+    dataSource: ArrayDataSource<NestedFoodNode_2>;
+    hasChild: (_: number, node: NestedFoodNode_2) => boolean;
+    getParentNode(node: NestedFoodNode_2): NestedFoodNode_2 | null;
+    shouldRender(node: NestedFoodNode_2): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeNestedChildrenAccessorExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeNestedChildrenAccessorExample, "cdk-tree-nested-children-accessor-example", never, {}, {}, never, never, true, never>;
 }
@@ -105,12 +105,12 @@ export declare class CdkTreeNestedExample {
  * @title Tree with nested nodes and level accessor
  */
 export declare class CdkTreeNestedLevelAccessorExample {
-    tree: CdkTree<FlatFoodNode>;
-    levelAccessor: (dataNode: FlatFoodNode) => number;
-    dataSource: ArrayDataSource<FlatFoodNode>;
-    hasChild: (_: number, node: FlatFoodNode) => boolean;
-    getParentNode(node: FlatFoodNode): FlatFoodNode | null;
-    shouldRender(node: FlatFoodNode): boolean;
+    tree: CdkTree<FlatFoodNode_2>;
+    levelAccessor: (dataNode: FlatFoodNode_2) => number;
+    dataSource: ArrayDataSource<FlatFoodNode_2>;
+    hasChild: (_: number, node: FlatFoodNode_2) => boolean;
+    getParentNode(node: FlatFoodNode_2): FlatFoodNode_2 | null;
+    shouldRender(node: FlatFoodNode_2): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkTreeNestedLevelAccessorExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkTreeNestedLevelAccessorExample, "cdk-tree-nested-level-accessor-example", never, {}, {}, never, never, true, never>;
 }
@@ -139,6 +139,14 @@ declare interface FlatFoodNode {
     isExpanded?: boolean;
 }
 
+/** Flat node with expandable and level information */
+declare interface FlatFoodNode_2 {
+    expandable: boolean;
+    name: string;
+    level: number;
+    isExpanded?: boolean;
+}
+
 /**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
@@ -157,6 +165,15 @@ declare type LoadingState = 'INIT' | 'LOADING' | 'LOADED';
 declare interface NestedFoodNode {
     name: string;
     children?: NestedFoodNode[];
+}
+
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
+declare interface NestedFoodNode_2 {
+    name: string;
+    children?: NestedFoodNode_2[];
 }
 
 declare interface RawData {
