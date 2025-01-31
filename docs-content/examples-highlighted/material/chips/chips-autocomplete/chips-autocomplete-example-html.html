@@ -21,7 +21,7 @@
       [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
       (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span>
     /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span> (<span class="hljs-attr">optionSelected</span>)=<span class="hljs-string">&quot;selected($event)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span> (<span class="hljs-attr">optionSelected</span>)=<span class="hljs-string">&quot;selected($event); fruitInput.value = &#x27;&#x27;&quot;</span>&gt;</span>
       @for (fruit of filteredFruits(); track fruit) {
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;fruit&quot;</span>&gt;</span>{{fruit}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
       }
