@@ -3,19 +3,20 @@
        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mat-elevation-z8&quot;</span>&gt;</span>
   @for (column of columnsToDisplay; track column) {
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;{{column}}&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> {{column}} <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span> {{element[column]}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>{{column}}<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span>{{element[column]}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
   }
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;expand&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;row actions&quot;</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;expand row&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;(expandedElement = expandedElement === element ? null : element); $event.stopPropagation()&quot;</span>&gt;</span>
-        @if (expandedElement === element) {
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>keyboard_arrow_up<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-        } @else {
-          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>keyboard_arrow_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
-        }
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+        <span class="hljs-attr">mat-icon-button</span>
+        <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;expand row&quot;</span>
+        (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;toggle(element); $event.stopPropagation()&quot;</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toggle-button&quot;</span>
+        [<span class="hljs-attr">class.example-toggle-button-expanded</span>]=<span class="hljs-string">&quot;isExpanded(element)&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>keyboard_arrow_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
@@ -23,17 +24,19 @@
   <span class="hljs-comment">&lt;!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;expandedDetail&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">&quot;let element&quot;</span> [<span class="hljs-attr">attr.colspan</span>]=<span class="hljs-string">&quot;columnsToDisplayWithExpand.length&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-detail&quot;</span>
-           [@<span class="hljs-attr">detailExpand</span>]=<span class="hljs-string">&quot;element == expandedElement ? &#x27;expanded&#x27; : &#x27;collapsed&#x27;&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-diagram&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-position&quot;</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-symbol&quot;</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-name&quot;</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-weight&quot;</span>&gt;</span> {{element.weight}} <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-description&quot;</span>&gt;</span>
-          {{element.description}}
-          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-description-attribution&quot;</span>&gt;</span> -- Wikipedia <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-detail-wrapper&quot;</span>
+        [<span class="hljs-attr">class.example-element-detail-wrapper-expanded</span>]=<span class="hljs-string">&quot;isExpanded(element)&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-detail&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-diagram&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-position&quot;</span>&gt;</span>{{element.position}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-symbol&quot;</span>&gt;</span>{{element.symbol}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-name&quot;</span>&gt;</span>{{element.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-weight&quot;</span>&gt;</span>{{element.weight}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-description&quot;</span>&gt;</span>
+            {{element.description}}
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-description-attribution&quot;</span>&gt;</span> -- Wikipedia <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
@@ -42,8 +45,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">&quot;columnsToDisplayWithExpand&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let element; columns: columnsToDisplayWithExpand;&quot;</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-element-row&quot;</span>
-      [<span class="hljs-attr">class.example-expanded-row</span>]=<span class="hljs-string">&quot;expandedElement === element&quot;</span>
-      (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;expandedElement = expandedElement === element ? null : element&quot;</span>&gt;</span>
+      [<span class="hljs-attr">class.example-expanded-row</span>]=<span class="hljs-string">&quot;isExpanded(element)&quot;</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;toggle(element)&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">&quot;let row; columns: [&#x27;expandedDetail&#x27;]&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-detail-row&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

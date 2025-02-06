@@ -285,6 +285,10 @@ export declare class TableExpandableRowsExample {
     columnsToDisplay: string[];
     columnsToDisplayWithExpand: string[];
     expandedElement: PeriodicElement_4 | null;
+    /** Checks whether an element is expanded. */
+    isExpanded(element: PeriodicElement_4): boolean;
+    /** Toggles the expanded state of an element. */
+    toggle(element: PeriodicElement_4): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExpandableRowsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, true, never>;
 }

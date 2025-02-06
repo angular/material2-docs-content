@@ -6,6 +6,10 @@
   <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
 }
 
+<span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.example-element-row</span> {
+  <span class="hljs-attribute">cursor</span>: pointer;
+}
+
 <span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.example-element-row</span><span class="hljs-selector-pseudo">:not</span>(<span class="hljs-selector-class">.example-expanded-row</span>)<span class="hljs-selector-pseudo">:hover</span> {
   <span class="hljs-attribute">background</span>: whitesmoke;
 }
@@ -18,9 +22,21 @@
   <span class="hljs-attribute">border-bottom-width</span>: <span class="hljs-number">0</span>;
 }
 
-<span class="hljs-selector-class">.example-element-detail</span> {
+<span class="hljs-selector-class">.example-element-detail-wrapper</span> {
   <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">display</span>: grid;
+  grid-template-rows: <span class="hljs-number">0</span>fr;
+  grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">transition</span>: grid-template-rows <span class="hljs-number">225ms</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">1</span>);
+}
+
+<span class="hljs-selector-class">.example-element-detail-wrapper-expanded</span> {
+  grid-template-rows: <span class="hljs-number">1</span>fr;
+}
+
+<span class="hljs-selector-class">.example-element-detail</span> {
   <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">0</span>;
 }
 
 <span class="hljs-selector-class">.example-element-diagram</span> {
@@ -44,4 +60,12 @@
 
 <span class="hljs-selector-class">.example-element-description-attribution</span> {
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.5</span>;
+}
+
+<span class="hljs-selector-class">.example-toggle-button</span> {
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">225ms</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.4</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">1</span>);
+}
+
+<span class="hljs-selector-class">.example-toggle-button-expanded</span> {
+  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">180deg</span>);
 }
