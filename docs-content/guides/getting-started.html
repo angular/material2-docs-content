@@ -21,9 +21,6 @@ determine which features to include:</p>
 <li><p>Set up global Angular Material typography styles:</p>
 <p>Whether to apply the global <a href="https://material.angular.io/guide/typography">typography</a> styles to your application.</p>
 </li>
-<li><p>Set up browser animations for Angular Material:</p>
-<p>Importing the <a href="https://angular.dev/api/platform-browser/animations/BrowserAnimationsModule"><code>BrowserAnimationsModule</code></a> into your application enables Angular&#39;s <a href="https://angular.dev/guide/animations">animation system</a>. Declining this will disable most of Angular Material&#39;s animations.</p>
-</li>
 </ol>
 <p>The <code>ng add</code> command will additionally perform the following actions:</p>
 <ul>
@@ -45,7 +42,7 @@ determine which features to include:</p>
         </h3>
       <p>Let&#39;s display a slide toggle component in your app and verify that everything works.</p>
 <p>You need to import the <code>MatSlideToggleModule</code> that you want to display by adding the following lines to
-your standalone component&#39;s imports, or otherwise your component&#39;s <code>NgModule</code>. </p>
+your standalone component&#39;s imports, or otherwise your component&#39;s <code>NgModule</code>.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> { MatSlideToggleModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
 
 <span class="hljs-meta">@Component</span> ({
