@@ -364,7 +364,25 @@ we&#39;ll use <code>example-tel-input</code> as our control type which will resu
 class <code>mat-form-field-type-example-tel-input</code>.</p>
 <pre><code class="language-ts">controlType = <span class="hljs-string">&#x27;example-tel-input&#x27;</span>;
 </code></pre>
+          <h4 id="autofilled" class="docs-header-link">
+    <span header-link="autofilled"></span>
+    <code>autofilled</code>
+  </h4>
+  <p>This property allows us to specify Whether the input is currently in an autofilled state.
+    If set true it will add <code>mat-form-field-autofilled</code> class to the <code>&lt;mat-form-field&gt;</code>,
+     If property is not present on the control it is assumed to be false.
+  <pre><code class="language-ts">autofilled = <span class="hljs-string">true | false</span>;
+  </code></pre>
 
+          <h4 id="userAriaDescribedBy" class="docs-header-link">
+    <span header-link="userAriaDescribedBy"></span>
+    <code>userAriaDescribedBy</code>
+  </h4>
+  <p>This property allows us to specify the Value 
+    of <code>aria-describedby</code> that should be merged with the described-by ids which are set by the form-field.
+  <pre><code class="language-ts">userAriaDescribedBy = <span class="hljs-string">&#x27;id&#x27 | &#x27space-separated list of element ids&#x27;</span>;
+  </code></pre>
+  
         <h4 id="setdescribedbyidsids-string" class="docs-header-link">
           <span header-link="setdescribedbyidsids-string"></span>
           <code>setDescribedByIds(ids: string[])</code>
