@@ -634,7 +634,7 @@ has been found.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragConstrainPosition&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>constrainPosition: (userPointerPosition: Point, dragRef: DragRef, dimensions: DOMRect, pickupPositionInElement: Point) =&gt; Point</code>
+      <code>constrainPosition: DragConstrainPosition</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Function that can be used to customize the logic of how the position of the drag item
@@ -1278,7 +1278,7 @@ it is being dragged. The placeholder is displayed in place of the element being 
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>constrainPosition: (userPointerPosition: Point, dragRef: DragRef, dimensions: DOMRect, pickupPositionInElement: Point) =&gt; Point</code>
+      <code>constrainPosition: DragConstrainPosition</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Function that can be used to customize the logic of how the position of the drag item
@@ -4348,6 +4348,20 @@ Same advantages and disadvantages as <code>parent</code>.</li>
     
       
 
+<h4 id="DragConstrainPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragConstrainPosition"></span>
+  <code>DragConstrainPosition</code>
+</h4><p class="docs-api-type-alias-description"><p>Function that can be used to constrain the position of a dragged element.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragConstrainPosition = <span class="hljs-function">(<span class="hljs-params">userPointerPosition: Point, dragRef: DragRef, dimensions: DOMRect, pickupPositionInElement: Point</span>) =&gt;</span> Point;</code>
+</pre>
+</div>
+
+
+    
+      
+
 <h4 id="DragStartDelay" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="DragStartDelay"></span>
   <code>DragStartDelay</code>
@@ -4372,20 +4386,6 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragAxis = <span class="hljs-string">&#x27;x&#x27;</span> | <span class="hljs-string">&#x27;y&#x27;</span>;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="DragConstrainPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
-  <span header-link="DragConstrainPosition"></span>
-  <code>DragConstrainPosition</code>
-</h4><p class="docs-api-type-alias-description"><p>Function that can be used to constrain the position of a dragged element.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragConstrainPosition = <span class="hljs-function">(<span class="hljs-params">point: Point, dragRef: DragRef</span>) =&gt;</span> Point;</code>
 </pre>
 </div>
 
