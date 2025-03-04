@@ -1539,21 +1539,6 @@ The origin is necessary when the host is outside of the Angular application cont
 
 
     
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" deprecated-message="No longer in use. To be removed. Will be removed in v18.0.0 or later."
-  >
-        Deprecated
-      </div><p class="docs-api-property-name">
-      <code>componentFactoryResolver: any</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
   </table>
 
 
@@ -2741,7 +2726,7 @@ application context.</p>
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
     }
-    const anchorNode = this._document.createComment(&#39;dom-portal&#39;);
+    const anchorNode = this.outletElement.ownerDocument.createComment(&#39;dom-portal&#39;);
     element.parentNode!.insertBefore(anchorNode, element);
     this.outletElement.appendChild(element);
     this._attachedPortal = portal;
@@ -3115,7 +3100,7 @@ application context.</p>
     if (!element.parentNode &amp;&amp; (typeof ngDevMode === &#39;undefined&#39; || ngDevMode)) {
         throw Error(&#39;DOM portal content must be attached to a parent node.&#39;);
     }
-    const anchorNode = this._document.createComment(&#39;dom-portal&#39;);
+    const anchorNode = this.outletElement.ownerDocument.createComment(&#39;dom-portal&#39;);
     element.parentNode!.insertBefore(anchorNode, element);
     this.outletElement.appendChild(element);
     this._attachedPortal = portal;
