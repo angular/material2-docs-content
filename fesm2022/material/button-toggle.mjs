@@ -79,9 +79,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             args: [{ selector: 'button-toggle-mode-example', imports: [MatButtonToggleModule, MatCheckboxModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<section>\n  <mat-checkbox\n    [checked]=\"hideSingleSelectionIndicator()\"\n    (change)=\"toggleSingleSelectionIndicator()\"\n  >\n    Hide Single Selection Indicator\n  </mat-checkbox>\n  <mat-checkbox\n    [checked]=\"hideMultipleSelectionIndicator()\"\n    (change)=\"toggleMultipleSelectionIndicator()\"\n  >\n    Hide Multiple Selection Indicator\n  </mat-checkbox>\n</section>\n<section>\n  <h3>Single selection</h3>\n  <mat-button-toggle-group\n    name=\"favoriteColor\"\n    aria-label=\"Favorite Color\"\n    [hideSingleSelectionIndicator]=\"hideSingleSelectionIndicator()\"\n  >\n    <mat-button-toggle value=\"red\">Red</mat-button-toggle>\n    <mat-button-toggle value=\"green\">Green</mat-button-toggle>\n    <mat-button-toggle value=\"blue\">Blue</mat-button-toggle>\n  </mat-button-toggle-group>\n</section>\n<section>\n  <h3>Multiple selection</h3>\n  <mat-button-toggle-group\n    name=\"ingredients\"\n    aria-label=\"Ingredients\"\n    [hideMultipleSelectionIndicator]=\"hideMultipleSelectionIndicator()\"\n    multiple\n  >\n    <mat-button-toggle value=\"flour\">Flour</mat-button-toggle>\n    <mat-button-toggle value=\"eggs\">Eggs</mat-button-toggle>\n    <mat-button-toggle value=\"sugar\">Sugar</mat-button-toggle>\n  </mat-button-toggle-group>\n</section>\n" }]
         }] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ButtonToggleAppearanceExample, ButtonToggleFormsExample, ButtonToggleHarnessExample, ButtonToggleModeExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.mjs.map

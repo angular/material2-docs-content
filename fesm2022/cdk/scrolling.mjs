@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 import { Component, ChangeDetectionStrategy, ViewEncapsulation, input } from '@angular/core';
 import * as i1 from '@angular/cdk/scrolling';
-import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
+import { ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
@@ -217,10 +217,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'cdk-virtual-scroll-window-scrolling-example', changeDetection: ChangeDetectionStrategy.OnPush, imports: [ScrollingModule], template: "@if (shouldRun()) {\n  <div class=\"example-header\">Content before</div>\n  <cdk-virtual-scroll-viewport scrollWindow itemSize=\"50\">\n    <div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div>\n  </cdk-virtual-scroll-viewport>\n  <div class=\"example-footer\">Content after</div>\n}\n\n@if (!shouldRun()) {\n  <div>Please open on StackBlitz to see result</div>\n}\n", styles: [".example-item {\n  height: 50px;\n}\n\n.example-header,\n.example-footer {\n  height: 100px;\n  background: lightgray;\n}\n"] }]
         }] });
-
-/**
- * Generated bundle index. Do not edit.
- */
 
 export { CdkVirtualScrollAppendOnlyExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollParentScrollingExample, CdkVirtualScrollTemplateCacheExample, CdkVirtualScrollWindowScrollingExample };
 //# sourceMappingURL=scrolling.mjs.map

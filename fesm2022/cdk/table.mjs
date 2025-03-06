@@ -173,9 +173,5 @@ class ExampleDataSource extends DataSource {
     disconnect() { }
 }
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkTableBasicExample, CdkTableFixedLayoutExample, CdkTableFlexBasicExample, CdkTableRecycleRowsExample };
 //# sourceMappingURL=table.mjs.map

@@ -121,9 +121,5 @@ const ELEMENT_SYMBOLS = [
     'Ca',
 ];
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkSelectionColumnExample, CdkSelectionListExample };
 //# sourceMappingURL=selection.mjs.map

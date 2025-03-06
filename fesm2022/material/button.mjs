@@ -45,9 +45,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             args: [{ selector: 'button-harness-example', imports: [MatButtonModule], template: "<button id=\"basic\" type=\"button\" mat-button (click)=\"clicked = true\">\n  Basic button\n</button>\n" }]
         }] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ButtonDisabledInteractiveExample, ButtonHarnessExample, ButtonOverviewExample };
 //# sourceMappingURL=button.mjs.map

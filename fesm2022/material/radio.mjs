@@ -43,9 +43,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             args: [{ selector: 'radio-harness-example', imports: [MatRadioModule], template: "<mat-radio-group name=\"flavors\">\n  <mat-radio-button value=\"chocolate\" checked=\"true\">Chocolate</mat-radio-button>\n  <mat-radio-button value=\"vanilla\">Vanilla</mat-radio-button>\n  <mat-radio-button value=\"strawberry\">Strawberry</mat-radio-button>\n</mat-radio-group>\n" }]
         }] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { RadioHarnessExample, RadioNgModelExample, RadioOverviewExample };
 //# sourceMappingURL=radio.mjs.map
