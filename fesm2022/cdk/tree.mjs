@@ -17,26 +17,6 @@ import { coerceObservable } from '@angular/cdk/coercion/private';
 import { TREE_KEY_MANAGER } from '@angular/cdk/a11y';
 import { SPACE, ENTER, END, HOME, H, LEFT_ARROW, L, RIGHT_ARROW, K, UP_ARROW, J, DOWN_ARROW, TAB } from '@angular/cdk/keycodes';
 
-const NESTED_DATA$1 = [
-    {
-        name: 'Fruit',
-        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
-    },
-    {
-        name: 'Vegetables',
-        children: [
-            {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
-            },
-            {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
-            },
-        ],
-    },
-];
-
 function flattenNodes$1(nodes) {
     const flattenedNodes = [];
     for (const node of nodes) {
@@ -53,10 +33,10 @@ function flattenNodes$1(nodes) {
 class CdkTreeFlatChildrenAccessorExample {
     tree;
     childrenAccessor = (dataNode) => timer(100).pipe(mapTo(dataNode.children ?? []));
-    dataSource = new ArrayDataSource(NESTED_DATA$1);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA$7);
     hasChild = (_, node) => !!node.children?.length;
     getParentNode(node) {
-        for (const parent of flattenNodes$1(NESTED_DATA$1)) {
+        for (const parent of flattenNodes$1(EXAMPLE_DATA$7)) {
             if (parent.children?.includes(node)) {
                 return parent;
             }
@@ -83,62 +63,23 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
                 type: ViewChild,
                 args: [CdkTree]
             }] } });
-
-const FLAT_DATA$1 = [
+const EXAMPLE_DATA$7 = [
     {
         name: 'Fruit',
-        expandable: true,
-        level: 0,
-    },
-    {
-        name: 'Apple',
-        expandable: false,
-        level: 1,
-    },
-    {
-        name: 'Banana',
-        expandable: false,
-        level: 1,
-    },
-    {
-        name: 'Fruit loops',
-        expandable: false,
-        level: 1,
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
     },
     {
         name: 'Vegetables',
-        expandable: true,
-        level: 0,
-    },
-    {
-        name: 'Green',
-        expandable: true,
-        level: 1,
-    },
-    {
-        name: 'Broccoli',
-        expandable: false,
-        level: 2,
-    },
-    {
-        name: 'Brussels sprouts',
-        expandable: false,
-        level: 2,
-    },
-    {
-        name: 'Orange',
-        expandable: true,
-        level: 1,
-    },
-    {
-        name: 'Pumpkins',
-        expandable: false,
-        level: 2,
-    },
-    {
-        name: 'Carrots',
-        expandable: false,
-        level: 2,
+        children: [
+            {
+                name: 'Green',
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+            },
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
     },
 ];
 
@@ -148,15 +89,15 @@ const FLAT_DATA$1 = [
 class CdkTreeFlatLevelAccessorExample {
     tree;
     levelAccessor = (dataNode) => dataNode.level;
-    dataSource = new ArrayDataSource(FLAT_DATA$1);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA$6);
     hasChild = (_, node) => node.expandable;
     getParentNode(node) {
-        const nodeIndex = FLAT_DATA$1.indexOf(node);
+        const nodeIndex = EXAMPLE_DATA$6.indexOf(node);
         // Determine the node's parent by finding the first preceding node that's
         // one level shallower.
         for (let i = nodeIndex - 1; i >= 0; i--) {
-            if (FLAT_DATA$1[i].level === node.level - 1) {
-                return FLAT_DATA$1[i];
+            if (EXAMPLE_DATA$6[i].level === node.level - 1) {
+                return EXAMPLE_DATA$6[i];
             }
         }
         return null;
@@ -176,8 +117,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
                 type: ViewChild,
                 args: [CdkTree]
             }] } });
-
-const TREE_DATA$3 = [
+const EXAMPLE_DATA$6 = [
     {
         name: 'Fruit',
         expandable: true,
@@ -234,18 +174,19 @@ const TREE_DATA$3 = [
         level: 2,
     },
 ];
+
 /**
  * @title Tree with flat nodes
  */
 class CdkTreeFlatExample {
     treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
-    dataSource = new ArrayDataSource(TREE_DATA$3);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA$5);
     hasChild = (_, node) => node.expandable;
     getParentNode(node) {
-        const nodeIndex = TREE_DATA$3.indexOf(node);
+        const nodeIndex = EXAMPLE_DATA$5.indexOf(node);
         for (let i = nodeIndex - 1; i >= 0; i--) {
-            if (TREE_DATA$3[i].level === node.level - 1) {
-                return TREE_DATA$3[i];
+            if (EXAMPLE_DATA$5[i].level === node.level - 1) {
+                return EXAMPLE_DATA$5[i];
             }
         }
         return null;
@@ -267,8 +208,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'cdk-tree-flat-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 (expandedChange)=\"node.isExpanded = $event\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
         }] });
-
-const FLAT_DATA = [
+const EXAMPLE_DATA$5 = [
     {
         name: 'Fruit',
         expandable: true,
@@ -332,15 +272,15 @@ const FLAT_DATA = [
 class CdkTreeNestedLevelAccessorExample {
     tree;
     levelAccessor = (dataNode) => dataNode.level;
-    dataSource = new ArrayDataSource(FLAT_DATA);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA$4);
     hasChild = (_, node) => node.expandable;
     getParentNode(node) {
-        const nodeIndex = FLAT_DATA.indexOf(node);
+        const nodeIndex = EXAMPLE_DATA$4.indexOf(node);
         // Determine the node's parent by finding the first preceding node that's
         // one level shallower.
         for (let i = nodeIndex - 1; i >= 0; i--) {
-            if (FLAT_DATA[i].level === node.level - 1) {
-                return FLAT_DATA[i];
+            if (EXAMPLE_DATA$4[i].level === node.level - 1) {
+                return EXAMPLE_DATA$4[i];
             }
         }
         return null;
@@ -360,24 +300,61 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
                 type: ViewChild,
                 args: [CdkTree]
             }] } });
-
-const NESTED_DATA = [
+const EXAMPLE_DATA$4 = [
     {
         name: 'Fruit',
-        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+        expandable: true,
+        level: 0,
+    },
+    {
+        name: 'Apple',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Banana',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Fruit loops',
+        expandable: false,
+        level: 1,
     },
     {
         name: 'Vegetables',
-        children: [
-            {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
-            },
-            {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
-            },
-        ],
+        expandable: true,
+        level: 0,
+    },
+    {
+        name: 'Green',
+        expandable: true,
+        level: 1,
+    },
+    {
+        name: 'Broccoli',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Brussels sprouts',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Orange',
+        expandable: true,
+        level: 1,
+    },
+    {
+        name: 'Pumpkins',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Carrots',
+        expandable: false,
+        level: 2,
     },
 ];
 
@@ -397,10 +374,10 @@ function flattenNodes(nodes) {
 class CdkTreeNestedChildrenAccessorExample {
     tree;
     childrenAccessor = (dataNode) => dataNode.children ?? [];
-    dataSource = new ArrayDataSource(NESTED_DATA);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA$3);
     hasChild = (_, node) => !!node.children && node.children.length > 0;
     getParentNode(node) {
-        for (const parent of flattenNodes(NESTED_DATA)) {
+        for (const parent of flattenNodes(EXAMPLE_DATA$3)) {
             if (parent.children?.includes(node)) {
                 return parent;
             }
@@ -422,8 +399,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
                 type: ViewChild,
                 args: [CdkTree]
             }] } });
-
-const TREE_DATA$2 = [
+const EXAMPLE_DATA$3 = [
     {
         name: 'Fruit',
         children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
@@ -442,12 +418,13 @@ const TREE_DATA$2 = [
         ],
     },
 ];
+
 /**
  * @title Tree with nested nodes
  */
 class CdkTreeNestedExample {
     treeControl = new NestedTreeControl(node => node.children);
-    dataSource = new ArrayDataSource(TREE_DATA$2);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA$2);
     hasChild = (_, node) => !!node.children && node.children.length > 0;
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: CdkTreeNestedExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
     static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "20.0.0-next.1", type: CdkTreeNestedExample, isStandalone: true, selector: "cdk-tree-nested-example", ngImport: i0, template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\" *cdkTreeNodeDef=\"let node\"\n      class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\"\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n    *cdkTreeNodeDef=\"let node; when: hasChild\"\n    isExpandable\n    class=\"example-tree-node\">\n    <button\n      mat-icon-button\n      class=\"example-toggle\"\n      [attr.aria-label]=\"'Toggle ' + node.name\"\n      cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n", styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n\n.example-toggle {\n  vertical-align: middle;\n}\n"], dependencies: [{ kind: "ngmodule", type: CdkTreeModule }, { kind: "directive", type: i1.CdkNestedTreeNode, selector: "cdk-nested-tree-node", exportAs: ["cdkNestedTreeNode"] }, { kind: "directive", type: i1.CdkTreeNodeDef, selector: "[cdkTreeNodeDef]", inputs: ["cdkTreeNodeDefWhen"] }, { kind: "directive", type: i1.CdkTreeNodeToggle, selector: "[cdkTreeNodeToggle]", inputs: ["cdkTreeNodeToggleRecursive"] }, { kind: "component", type: i1.CdkTree, selector: "cdk-tree", inputs: ["dataSource", "treeControl", "levelAccessor", "childrenAccessor", "trackBy", "expansionKey"], exportAs: ["cdkTree"] }, { kind: "directive", type: i1.CdkTreeNodeOutlet, selector: "[cdkTreeNodeOutlet]" }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i1$1.MatIconButton, selector: "button[mat-icon-button], a[mat-icon-button]", exportAs: ["matButton", "matAnchor"] }, { kind: "ngmodule", type: MatIconModule }, { kind: "component", type: i3.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
@@ -456,38 +433,26 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'cdk-tree-nested-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\" *cdkTreeNodeDef=\"let node\"\n      class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node #treeNode=\"cdkNestedTreeNode\"\n    [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n    *cdkTreeNodeDef=\"let node; when: hasChild\"\n    isExpandable\n    class=\"example-tree-node\">\n    <button\n      mat-icon-button\n      class=\"example-toggle\"\n      [attr.aria-label]=\"'Toggle ' + node.name\"\n      cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n", styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n\n.example-toggle {\n  vertical-align: middle;\n}\n"] }]
         }] });
-
-const TREE_DATA$1 = new Map([
+const EXAMPLE_DATA$2 = [
     {
-        id: '1',
         name: 'Fruit',
-        children: ['1-1', '1-2', '1-3'],
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
     },
-    { id: '1-1', name: 'Apple', parent: '1' },
-    { id: '1-2', name: 'Banana', parent: '1' },
-    { id: '1-3', name: 'Fruit Loops', parent: '1' },
     {
-        id: '2',
         name: 'Vegetables',
-        children: ['2-1', '2-2'],
+        children: [
+            {
+                name: 'Green',
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+            },
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
     },
-    {
-        id: '2-1',
-        name: 'Green',
-        parent: '2',
-        children: ['2-1-1', '2-1-2'],
-    },
-    {
-        id: '2-2',
-        name: 'Orange',
-        parent: '2',
-        children: ['2-2-1', '2-2-2'],
-    },
-    { id: '2-1-1', name: 'Broccoli', parent: '2-1' },
-    { id: '2-1-2', name: 'Brussel sprouts', parent: '2-1' },
-    { id: '2-2-1', name: 'Pumpkins', parent: '2-2' },
-    { id: '2-2-2', name: 'Carrots', parent: '2-2' },
-].map(datum => [datum.id, datum]));
+];
+
 class FakeDataBackend {
     _getRandomDelayTime() {
         // anywhere from 100 to 500ms.
@@ -495,12 +460,12 @@ class FakeDataBackend {
     }
     getChildren(id) {
         // first, find the specified ID in our tree
-        const item = TREE_DATA$1.get(id);
+        const item = EXAMPLE_DATA$1.get(id);
         const children = item?.children ?? [];
-        return of(children.map(childId => TREE_DATA$1.get(childId))).pipe(delay(this._getRandomDelayTime()));
+        return of(children.map(childId => EXAMPLE_DATA$1.get(childId))).pipe(delay(this._getRandomDelayTime()));
     }
     getRoots() {
-        return of([...TREE_DATA$1.values()].filter(datum => !datum.parent)).pipe(delay(this._getRandomDelayTime()));
+        return of([...EXAMPLE_DATA$1.values()].filter(datum => !datum.parent)).pipe(delay(this._getRandomDelayTime()));
     }
 }
 class TransformedData {
@@ -665,64 +630,38 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'cdk-tree-complex-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule, CommonModule, MatProgressSpinnerModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "@if (areRootsLoading | async) {\n  <mat-spinner></mat-spinner>\n} @else {\n  <cdk-tree\n      #tree\n      [dataSource]=\"roots\"\n      [childrenAccessor]=\"getChildren\"\n      [trackBy]=\"trackBy\"\n      [expansionKey]=\"expansionKey\">\n    <cdk-tree-node\n        *cdkTreeNodeDef=\"let node\"\n        cdkTreeNodePadding\n        [cdkTreeNodeTypeaheadLabel]=\"node.raw.name\"\n        [isExpandable]=\"node.isExpandable()\"\n        (expandedChange)=\"onExpand(node, $event)\">\n      <!-- Spinner when node is loading children; this replaces the expand button. -->\n      @if (node.areChildrenLoading()) {\n        <mat-spinner diameter=\"48\" mode=\"indeterminate\"></mat-spinner>\n      }\n\n      @if (!node.areChildrenLoading() && node.isExpandable()) {\n        <button\n            mat-icon-button\n            cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.raw.name\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n      }\n\n      <!-- Spacer for leaf nodes -->\n      @if (node.isLeaf()) {\n        <div class=\"toggle-spacer\"></div>\n      }\n\n      <span>{{node.raw.name}}</span>\n    </cdk-tree-node>\n  </cdk-tree>\n}\n", styles: ["cdk-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
         }] });
-
-const TREE_DATA = [
+const EXAMPLE_DATA$1 = new Map([
     {
+        id: '1',
         name: 'Fruit',
-        expandable: true,
-        level: 0,
+        children: ['1-1', '1-2', '1-3'],
     },
+    { id: '1-1', name: 'Apple', parent: '1' },
+    { id: '1-2', name: 'Banana', parent: '1' },
+    { id: '1-3', name: 'Fruit Loops', parent: '1' },
     {
-        name: 'Apple',
-        expandable: false,
-        level: 1,
-    },
-    {
-        name: 'Banana',
-        expandable: false,
-        level: 1,
-    },
-    {
-        name: 'Fruit loops',
-        expandable: false,
-        level: 1,
-    },
-    {
+        id: '2',
         name: 'Vegetables',
-        expandable: true,
-        level: 0,
+        children: ['2-1', '2-2'],
     },
     {
+        id: '2-1',
         name: 'Green',
-        expandable: true,
-        level: 1,
+        parent: '2',
+        children: ['2-1-1', '2-1-2'],
     },
     {
-        name: 'Broccoli',
-        expandable: false,
-        level: 2,
-    },
-    {
-        name: 'Brussels sprouts',
-        expandable: false,
-        level: 2,
-    },
-    {
+        id: '2-2',
         name: 'Orange',
-        expandable: true,
-        level: 1,
+        parent: '2',
+        children: ['2-2-1', '2-2-2'],
     },
-    {
-        name: 'Pumpkins',
-        expandable: false,
-        level: 2,
-    },
-    {
-        name: 'Carrots',
-        expandable: false,
-        level: 2,
-    },
-];
+    { id: '2-1-1', name: 'Broccoli', parent: '2-1' },
+    { id: '2-1-2', name: 'Brussel sprouts', parent: '2-1' },
+    { id: '2-2-1', name: 'Pumpkins', parent: '2-2' },
+    { id: '2-2-2', name: 'Carrots', parent: '2-2' },
+].map(datum => [datum.id, datum]));
+
 /**
  * This class manages keyboard events for trees. If you pass it a QueryList or other list of tree
  * items, it will set the active item, focus, handle expansion and typeahead correctly when
@@ -944,13 +883,13 @@ const VIM_TREE_KEY_MANAGER_PROVIDER = {
  */
 class CdkTreeCustomKeyManagerExample {
     treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
-    dataSource = new ArrayDataSource(TREE_DATA);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA);
     hasChild = (_, node) => node.expandable;
     getParentNode(node) {
-        const nodeIndex = TREE_DATA.indexOf(node);
+        const nodeIndex = EXAMPLE_DATA.indexOf(node);
         for (let i = nodeIndex - 1; i >= 0; i--) {
-            if (TREE_DATA[i].level === node.level - 1) {
-                return TREE_DATA[i];
+            if (EXAMPLE_DATA[i].level === node.level - 1) {
+                return EXAMPLE_DATA[i];
             }
         }
         return null;
@@ -972,6 +911,63 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'cdk-tree-custom-key-manager-example', imports: [CdkTreeModule, MatButtonModule, MatIconModule], providers: [VIM_TREE_KEY_MANAGER_PROVIDER], changeDetection: ChangeDetectionStrategy.OnPush, template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 cdkTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\"\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 [isDisabled]=\"!shouldRender(node)\"\n                 (expandedChange)=\"node.isExpanded = $event\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
         }] });
+const EXAMPLE_DATA = [
+    {
+        name: 'Fruit',
+        expandable: true,
+        level: 0,
+    },
+    {
+        name: 'Apple',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Banana',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Fruit loops',
+        expandable: false,
+        level: 1,
+    },
+    {
+        name: 'Vegetables',
+        expandable: true,
+        level: 0,
+    },
+    {
+        name: 'Green',
+        expandable: true,
+        level: 1,
+    },
+    {
+        name: 'Broccoli',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Brussels sprouts',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Orange',
+        expandable: true,
+        level: 1,
+    },
+    {
+        name: 'Pumpkins',
+        expandable: false,
+        level: 2,
+    },
+    {
+        name: 'Carrots',
+        expandable: false,
+        level: 2,
+    },
+];
 
 export { CdkTreeComplexExample, CdkTreeCustomKeyManagerExample, CdkTreeFlatChildrenAccessorExample, CdkTreeFlatExample, CdkTreeFlatLevelAccessorExample, CdkTreeNestedChildrenAccessorExample, CdkTreeNestedExample, CdkTreeNestedLevelAccessorExample };
 //# sourceMappingURL=tree.mjs.map

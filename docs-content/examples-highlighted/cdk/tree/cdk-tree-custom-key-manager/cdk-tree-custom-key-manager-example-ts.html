@@ -28,64 +28,6 @@
 <span class="hljs-keyword">import</span> {Subject, isObservable, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {take} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
-<span class="hljs-keyword">const</span> TREE_DATA: ExampleFlatNode[] = [
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>,
-    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
-  },
-];
-
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
 <span class="hljs-keyword">interface</span> ExampleFlatNode {
   <span class="hljs-attr">expandable</span>: <span class="hljs-built_in">boolean</span>;
@@ -379,16 +321,16 @@
     <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable,
   );
 
-  dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(TREE_DATA);
+  dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(EXAMPLE_DATA);
 
   hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: ExampleFlatNode</span>) =&gt;</span> node.expandable;
 
   <span class="hljs-function"><span class="hljs-title">getParentNode</span>(<span class="hljs-params">node: ExampleFlatNode</span>)</span> {
-    <span class="hljs-keyword">const</span> nodeIndex = TREE_DATA.indexOf(node);
+    <span class="hljs-keyword">const</span> nodeIndex = EXAMPLE_DATA.indexOf(node);
 
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = nodeIndex - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
-      <span class="hljs-keyword">if</span> (TREE_DATA[i].level === node.level - <span class="hljs-number">1</span>) {
-        <span class="hljs-keyword">return</span> TREE_DATA[i];
+      <span class="hljs-keyword">if</span> (EXAMPLE_DATA[i].level === node.level - <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> EXAMPLE_DATA[i];
       }
     }
 
@@ -406,3 +348,61 @@
     <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
   }
 }
+
+<span class="hljs-keyword">const</span> EXAMPLE_DATA: ExampleFlatNode[] = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">0</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">1</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>,
+    <span class="hljs-attr">expandable</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">level</span>: <span class="hljs-number">2</span>,
+  },
+];

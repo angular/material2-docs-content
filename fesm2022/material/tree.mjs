@@ -151,25 +151,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             args: [{ selector: 'tree-dynamic-example', imports: [MatTreeModule, MatButtonModule, MatIconModule, MatProgressBarModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    {{node.item}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                [cdkTreeNodeTypeaheadLabel]=\"node.item\">\n    <button mat-icon-button\n            [attr.aria-label]=\"'Toggle ' + node.item\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.item}}\n    @if (node.isLoading()) {\n      <mat-progress-bar\n          mode=\"indeterminate\"\n          class=\"example-tree-progress-bar\"></mat-progress-bar>\n    }\n  </mat-tree-node>\n</mat-tree>\n", styles: [".example-tree-progress-bar {\n  margin-left: 30px;\n}\n"] }]
         }], ctorParameters: () => [] });
 
-const TREE_DATA$4 = [
-    {
-        name: 'Fruit',
-        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
-    },
-    {
-        name: 'Vegetables',
-        children: [
-            {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
-            },
-            {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
-            },
-        ],
-    },
-];
 /**
  * @title Tree with flat nodes
  */
@@ -185,7 +166,7 @@ class TreeFlatOverviewExample {
     treeFlattener = new MatTreeFlattener(this._transformer, node => node.level, node => node.expandable, node => node.children);
     dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
     constructor() {
-        this.dataSource.data = TREE_DATA$4;
+        this.dataSource.data = EXAMPLE_DATA$5;
     }
     hasChild = (_, node) => node.expandable;
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeFlatOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -195,8 +176,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'tree-flat-overview-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n" }]
         }], ctorParameters: () => [] });
-
-const TREE_DATA$3 = [
+const EXAMPLE_DATA$5 = [
     {
         name: 'Fruit',
         children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
@@ -215,11 +195,12 @@ const TREE_DATA$3 = [
         ],
     },
 ];
+
 /**
  * @title Tree with flat nodes (childrenAccessor)
  */
 class TreeFlatChildAccessorOverviewExample {
-    dataSource = TREE_DATA$3;
+    dataSource = EXAMPLE_DATA$4;
     childrenAccessor = (node) => node.children ?? [];
     hasChild = (_, node) => !!node.children && node.children.length > 0;
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeFlatChildAccessorOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -229,22 +210,26 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'tree-flat-child-accessor-overview-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n" }]
         }] });
-
-const FLAT_TREE_DATA = [
+const EXAMPLE_DATA$4 = [
     {
-        name: 'Flat Group 1',
-        children: [{ name: 'Flat Leaf 1.1' }, { name: 'Flat Leaf 1.2' }, { name: 'Flat Leaf 1.3' }],
+        name: 'Fruit',
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
     },
     {
-        name: 'Flat Group 2',
+        name: 'Vegetables',
         children: [
             {
-                name: 'Flat Group 2.1',
-                children: [{ name: 'Flat Leaf 2.1.1' }, { name: 'Flat Leaf 2.1.2' }, { name: 'Flat Leaf 2.1.3' }],
+                name: 'Green',
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+            },
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
             },
         ],
     },
 ];
+
 /**
  * @title Testing with MatTreeHarness
  */
@@ -260,7 +245,7 @@ class TreeHarnessExample {
     treeFlattener = new MatTreeFlattener(this._transformer, node => node.level, node => node.expandable, node => node.children);
     dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
     constructor() {
-        this.dataSource.data = FLAT_TREE_DATA;
+        this.dataSource.data = EXAMPLE_DATA$3;
     }
     hasChild = (_, node) => node.expandable;
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeHarnessExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -270,8 +255,22 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'tree-harness-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                 [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'Toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n" }]
         }], ctorParameters: () => [] });
+const EXAMPLE_DATA$3 = [
+    {
+        name: 'Flat Group 1',
+        children: [{ name: 'Flat Leaf 1.1' }, { name: 'Flat Leaf 1.2' }, { name: 'Flat Leaf 1.3' }],
+    },
+    {
+        name: 'Flat Group 2',
+        children: [
+            {
+                name: 'Flat Group 2.1',
+                children: [{ name: 'Flat Leaf 2.1.1' }, { name: 'Flat Leaf 2.1.2' }, { name: 'Flat Leaf 2.1.3' }],
+            },
+        ],
+    },
+];
 
-const LOAD_MORE = 'LOAD_MORE';
 let loadMoreId = 1;
 /** Nested node */
 class NestedNode {
@@ -358,7 +357,7 @@ class LoadmoreDatabase {
             .map(name => this._generateNode(name, parent.name));
         if (newChildrenNumber < children.length) {
             // Need a new "Load More" node
-            nodes.push(new NestedNode(`${LOAD_MORE}-${loadMoreId++}`, false, name, true));
+            nodes.push(new NestedNode(`LOAD_MORE-${loadMoreId++}`, false, name, true));
         }
         parent.childrenChange.next(nodes);
         this.dataChange.next(this.dataChange.value);
@@ -444,25 +443,6 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             args: [{ selector: 'tree-loadmore-example', providers: [LoadmoreDatabase], imports: [MatTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- Leaf node -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n\n  <!-- expandable node -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding matTreeNodeToggle\n                 (expandedChange)=\"loadChildren(node)\" [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <button mat-icon-button\n            [attr.aria-label]=\"'Toggle ' + node.name\"\n            matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n\n  <mat-tree-node class=\"example-load-more\" *matTreeNodeDef=\"let node; when: isLoadMore\"\n    role=\"treeitem\" (click)=\"loadOnClick($event, node)\"\n    (keydown)=\"loadOnKeypress($event, node)\">\n    Load more of {{node.parent}}...\n  </mat-tree-node>\n</mat-tree>\n", styles: [".example-load-more {\n    border-radius: 10px;\n    padding-left: 15px;\n    padding-right: 15px;\n    cursor: pointer;\n}\n.example-load-more:focus {\n    /*\n      Display a focus state for the \"Load More\" button.\n      0.12 is a common value in Material Design\n    */\n    background: rgba(0, 0, 0, 0.12);\n}\n.example-load-more:hover {\n    /*\n      Display a focus state for the \"Load More\" button.\n      0.04 is a common value in Material Design\n    */\n    background: rgba(0, 0, 0, 0.04);\n}\n"] }]
         }], ctorParameters: () => [] });
 
-const TREE_DATA$2 = [
-    {
-        name: 'Fruit',
-        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
-    },
-    {
-        name: 'Vegetables',
-        children: [
-            {
-                name: 'Green',
-                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
-            },
-            {
-                name: 'Orange',
-                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
-            },
-        ],
-    },
-];
 /**
  * @title Tree with nested nodes
  */
@@ -470,7 +450,7 @@ class TreeNestedOverviewExample {
     treeControl = new NestedTreeControl(node => node.children);
     dataSource = new MatTreeNestedDataSource();
     constructor() {
-        this.dataSource.data = TREE_DATA$2;
+        this.dataSource.data = EXAMPLE_DATA$2;
     }
     hasChild = (_, node) => !!node.children && node.children.length > 0;
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeNestedOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
@@ -480,8 +460,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'tree-nested-overview-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <!-- There is inline padding applied to this node using styles.\n    This padding value depends on the mat-icon-button width. -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node\">\n    {{node.name}}\n  </mat-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node\n      *matTreeNodeDef=\"let node; when: hasChild\"\n      matTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <div class=\"mat-tree-node\">\n      <button mat-icon-button matTreeNodeToggle\n              [attr.aria-label]=\"'Toggle ' + node.name\">\n        <mat-icon class=\"mat-icon-rtl-mirror\">\n          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n        </mat-icon>\n      </button>\n      {{node.name}}\n    </div>\n    <!-- There is inline padding applied to this div using styles.\n        This padding value depends on the mat-icon-button width.  -->\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\"\n        role=\"group\">\n      <ng-container matTreeNodeOutlet></ng-container>\n    </div>\n  </mat-nested-tree-node>\n</mat-tree>\n", styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n/*\n * This padding sets alignment of the nested nodes.\n */\n.example-tree .mat-nested-tree-node div[role=group] {\n  padding-left: 40px;\n}\n\n/*\n * Padding for leaf nodes.\n * Leaf nodes need to have padding so as to align with other non-leaf nodes\n * under the same parent.\n */\n.example-tree div[role=group] > .mat-nested-tree-node {\n  padding-left: 40px;\n}\n"] }]
         }], ctorParameters: () => [] });
-
-const TREE_DATA$1 = [
+const EXAMPLE_DATA$2 = [
     {
         name: 'Fruit',
         children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
@@ -500,12 +479,13 @@ const TREE_DATA$1 = [
         ],
     },
 ];
+
 /**
  * @title Tree with nested nodes (childrenAccessor)
  */
 class TreeNestedChildAccessorOverviewExample {
     childrenAccessor = (node) => node.children ?? [];
-    dataSource = TREE_DATA$1;
+    dataSource = EXAMPLE_DATA$1;
     hasChild = (_, node) => !!node.children && node.children.length > 0;
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeNestedChildAccessorOverviewExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
     static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "20.0.0-next.1", type: TreeNestedChildAccessorOverviewExample, isStandalone: true, selector: "tree-nested-child-accessor-overview-example", ngImport: i0, template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <!-- There is inline padding applied to this node using styles.\n    This padding value depends on the mat-icon-button width. -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node\">\n    {{node.name}}\n  </mat-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node\n      *matTreeNodeDef=\"let node; when: hasChild\"\n      matTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <div class=\"mat-tree-node\">\n      <button mat-icon-button matTreeNodeToggle\n              [attr.aria-label]=\"'Toggle ' + node.name\">\n        <mat-icon class=\"mat-icon-rtl-mirror\">\n          {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n        </mat-icon>\n      </button>\n      {{node.name}}\n    </div>\n    <!-- There is inline padding applied to this div using styles.\n        This padding value depends on the mat-icon-button width.  -->\n    <div [class.example-tree-invisible]=\"!tree.isExpanded(node)\"\n        role=\"group\">\n      <ng-container matTreeNodeOutlet></ng-container>\n    </div>\n  </mat-nested-tree-node>\n</mat-tree>\n", styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n/*\n * This padding sets alignment of the nested nodes.\n */\n.example-tree .mat-nested-tree-node div[role=group] {\n  padding-left: 40px;\n}\n\n/*\n * Padding for leaf nodes.\n * Leaf nodes need to have padding so as to align with other non-leaf nodes\n * under the same parent.\n */\n.example-tree div[role=group] > .mat-nested-tree-node {\n  padding-left: 40px;\n}\n"], dependencies: [{ kind: "ngmodule", type: MatTreeModule }, { kind: "directive", type: i1.MatNestedTreeNode, selector: "mat-nested-tree-node", inputs: ["matNestedTreeNode", "disabled", "tabIndex"], outputs: ["activation", "expandedChange"], exportAs: ["matNestedTreeNode"] }, { kind: "directive", type: i1.MatTreeNodeDef, selector: "[matTreeNodeDef]", inputs: ["matTreeNodeDefWhen", "matTreeNode"] }, { kind: "directive", type: i1.MatTreeNodeToggle, selector: "[matTreeNodeToggle]", inputs: ["matTreeNodeToggleRecursive"] }, { kind: "component", type: i1.MatTree, selector: "mat-tree", exportAs: ["matTree"] }, { kind: "directive", type: i1.MatTreeNodeOutlet, selector: "[matTreeNodeOutlet]" }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i1$1.MatIconButton, selector: "button[mat-icon-button], a[mat-icon-button]", exportAs: ["matButton", "matAnchor"] }, { kind: "ngmodule", type: MatIconModule }, { kind: "component", type: i3.MatIcon, selector: "mat-icon", inputs: ["color", "inline", "svgIcon", "fontSet", "fontIcon"], exportAs: ["matIcon"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
@@ -514,8 +494,50 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", 
             type: Component,
             args: [{ selector: 'tree-nested-child-accessor-overview-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree #tree [dataSource]=\"dataSource\" [childrenAccessor]=\"childrenAccessor\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <!-- There is inline padding applied to this node using styles.\n    This padding value depends on the mat-icon-button width. -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node\">\n    {{node.name}}\n  </mat-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node\n      *matTreeNodeDef=\"let node; when: hasChild\"\n      matTreeNodeToggle [cdkTreeNodeTypeaheadLabel]=\"node.name\">\n    <div class=\"mat-tree-node\">\n      <button mat-icon-button matTreeNodeToggle\n              [attr.aria-label]=\"'Toggle ' + node.name\">\n        <mat-icon class=\"mat-icon-rtl-mirror\">\n          {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n        </mat-icon>\n      </button>\n      {{node.name}}\n    </div>\n    <!-- There is inline padding applied to this div using styles.\n        This padding value depends on the mat-icon-button width.  -->\n    <div [class.example-tree-invisible]=\"!tree.isExpanded(node)\"\n        role=\"group\">\n      <ng-container matTreeNodeOutlet></ng-container>\n    </div>\n  </mat-nested-tree-node>\n</mat-tree>\n", styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n/*\n * This padding sets alignment of the nested nodes.\n */\n.example-tree .mat-nested-tree-node div[role=group] {\n  padding-left: 40px;\n}\n\n/*\n * Padding for leaf nodes.\n * Leaf nodes need to have padding so as to align with other non-leaf nodes\n * under the same parent.\n */\n.example-tree div[role=group] > .mat-nested-tree-node {\n  padding-left: 40px;\n}\n"] }]
         }] });
+const EXAMPLE_DATA$1 = [
+    {
+        name: 'Fruit',
+        children: [{ name: 'Apple' }, { name: 'Banana' }, { name: 'Fruit loops' }],
+    },
+    {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [{ name: 'Broccoli' }, { name: 'Brussels sprouts' }],
+            },
+            {
+                name: 'Orange',
+                children: [{ name: 'Pumpkins' }, { name: 'Carrots' }],
+            },
+        ],
+    },
+];
 
-const TREE_DATA = [
+/**
+ * @title Tree with flat nodes
+ */
+class TreeLegacyKeyboardInterfaceExample {
+    treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
+    dataSource = new ArrayDataSource(EXAMPLE_DATA);
+    hasChild = (_, node) => node.expandable;
+    getParentNode(node) {
+        const nodeIndex = EXAMPLE_DATA.indexOf(node);
+        for (let i = nodeIndex - 1; i >= 0; i--) {
+            if (EXAMPLE_DATA[i].level === node.level - 1) {
+                return EXAMPLE_DATA[i];
+            }
+        }
+        return null;
+    }
+    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeLegacyKeyboardInterfaceExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "20.0.0-next.1", type: TreeLegacyKeyboardInterfaceExample, isStandalone: true, selector: "tree-legacy-keyboard-interface-example", providers: [NOOP_TREE_KEY_MANAGER_FACTORY_PROVIDER], ngImport: i0, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding\n                 isExpandable\n                 [isExpanded]=\"true\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"], dependencies: [{ kind: "ngmodule", type: MatTreeModule }, { kind: "directive", type: i1.MatTreeNodeDef, selector: "[matTreeNodeDef]", inputs: ["matTreeNodeDefWhen", "matTreeNode"] }, { kind: "directive", type: i1.MatTreeNodePadding, selector: "[matTreeNodePadding]", inputs: ["matTreeNodePadding", "matTreeNodePaddingIndent"] }, { kind: "component", type: i1.MatTree, selector: "mat-tree", exportAs: ["matTree"] }, { kind: "directive", type: i1.MatTreeNode, selector: "mat-tree-node", inputs: ["tabIndex", "disabled"], outputs: ["activation", "expandedChange"], exportAs: ["matTreeNode"] }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i1$1.MatIconButton, selector: "button[mat-icon-button], a[mat-icon-button]", exportAs: ["matButton", "matAnchor"] }, { kind: "ngmodule", type: MatIconModule }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeLegacyKeyboardInterfaceExample, decorators: [{
+            type: Component,
+            args: [{ selector: 'tree-legacy-keyboard-interface-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], providers: [NOOP_TREE_KEY_MANAGER_FACTORY_PROVIDER], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding\n                 isExpandable\n                 [isExpanded]=\"true\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
+        }] });
+const EXAMPLE_DATA = [
     {
         name: 'Fruit',
         expandable: true,
@@ -572,29 +594,6 @@ const TREE_DATA = [
         level: 2,
     },
 ];
-/**
- * @title Tree with flat nodes
- */
-class TreeLegacyKeyboardInterfaceExample {
-    treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
-    dataSource = new ArrayDataSource(TREE_DATA);
-    hasChild = (_, node) => node.expandable;
-    getParentNode(node) {
-        const nodeIndex = TREE_DATA.indexOf(node);
-        for (let i = nodeIndex - 1; i >= 0; i--) {
-            if (TREE_DATA[i].level === node.level - 1) {
-                return TREE_DATA[i];
-            }
-        }
-        return null;
-    }
-    static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeLegacyKeyboardInterfaceExample, deps: [], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "20.0.0-next.1", type: TreeLegacyKeyboardInterfaceExample, isStandalone: true, selector: "tree-legacy-keyboard-interface-example", providers: [NOOP_TREE_KEY_MANAGER_FACTORY_PROVIDER], ngImport: i0, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding\n                 isExpandable\n                 [isExpanded]=\"true\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"], dependencies: [{ kind: "ngmodule", type: MatTreeModule }, { kind: "directive", type: i1.MatTreeNodeDef, selector: "[matTreeNodeDef]", inputs: ["matTreeNodeDefWhen", "matTreeNode"] }, { kind: "directive", type: i1.MatTreeNodePadding, selector: "[matTreeNodePadding]", inputs: ["matTreeNodePadding", "matTreeNodePaddingIndent"] }, { kind: "component", type: i1.MatTree, selector: "mat-tree", exportAs: ["matTree"] }, { kind: "directive", type: i1.MatTreeNode, selector: "mat-tree-node", inputs: ["tabIndex", "disabled"], outputs: ["activation", "expandedChange"], exportAs: ["matTreeNode"] }, { kind: "ngmodule", type: MatButtonModule }, { kind: "component", type: i1$1.MatIconButton, selector: "button[mat-icon-button], a[mat-icon-button]", exportAs: ["matButton", "matAnchor"] }, { kind: "ngmodule", type: MatIconModule }], changeDetection: i0.ChangeDetectionStrategy.OnPush });
-}
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.1", ngImport: i0, type: TreeLegacyKeyboardInterfaceExample, decorators: [{
-            type: Component,
-            args: [{ selector: 'tree-legacy-keyboard-interface-example', imports: [MatTreeModule, MatButtonModule, MatIconModule], providers: [NOOP_TREE_KEY_MANAGER_FACTORY_PROVIDER], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding\n                 isExpandable\n                 [isExpanded]=\"true\"\n                 class=\"example-tree-node\"\n                 tabindex=\"0\">\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n", styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"] }]
-        }] });
 
 export { TreeDynamicExample, TreeFlatChildAccessorOverviewExample, TreeFlatOverviewExample, TreeHarnessExample, TreeLegacyKeyboardInterfaceExample, TreeLoadmoreExample, TreeNestedChildAccessorOverviewExample, TreeNestedOverviewExample };
 //# sourceMappingURL=tree.mjs.map
