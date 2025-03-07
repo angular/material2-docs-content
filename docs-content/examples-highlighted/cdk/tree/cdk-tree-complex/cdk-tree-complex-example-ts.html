@@ -14,40 +14,6 @@
   children?: <span class="hljs-built_in">string</span>[];
 }
 
-<span class="hljs-keyword">const</span> TREE_DATA: <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, BackendData&gt; = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>(
-  [
-    {
-      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1&#x27;</span>,
-      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
-      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;1-1&#x27;</span>, <span class="hljs-string">&#x27;1-2&#x27;</span>, <span class="hljs-string">&#x27;1-3&#x27;</span>],
-    },
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;1&#x27;</span>},
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;1&#x27;</span>},
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-3&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit Loops&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;1&#x27;</span>},
-    {
-      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2&#x27;</span>,
-      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
-      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;2-1&#x27;</span>, <span class="hljs-string">&#x27;2-2&#x27;</span>],
-    },
-    {
-      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>,
-      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
-      <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2&#x27;</span>,
-      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;2-1-1&#x27;</span>, <span class="hljs-string">&#x27;2-1-2&#x27;</span>],
-    },
-    {
-      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>,
-      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
-      <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2&#x27;</span>,
-      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;2-2-1&#x27;</span>, <span class="hljs-string">&#x27;2-2-2&#x27;</span>],
-    },
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>},
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussel sprouts&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>},
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>},
-    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>},
-  ].map(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> [datum.id, datum]),
-);
-
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FakeDataBackend</span> </span>{
   <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_getRandomDelayTime</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-comment">// anywhere from 100 to 500ms.</span>
@@ -56,16 +22,16 @@
 
   getChildren(id: <span class="hljs-built_in">string</span>): Observable&lt;BackendData[]&gt; {
     <span class="hljs-comment">// first, find the specified ID in our tree</span>
-    <span class="hljs-keyword">const</span> item = TREE_DATA.get(id);
+    <span class="hljs-keyword">const</span> item = EXAMPLE_DATA.get(id);
     <span class="hljs-keyword">const</span> children = item?.children ?? [];
 
-    <span class="hljs-keyword">return</span> observableOf(children.map(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> TREE_DATA.get(childId)!)).pipe(
+    <span class="hljs-keyword">return</span> observableOf(children.map(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> EXAMPLE_DATA.get(childId)!)).pipe(
       delay(<span class="hljs-built_in">this</span>._getRandomDelayTime()),
     );
   }
 
   getRoots(): Observable&lt;BackendData[]&gt; {
-    <span class="hljs-keyword">return</span> observableOf([...TREE_DATA.values()].filter(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> !datum.parent)).pipe(
+    <span class="hljs-keyword">return</span> observableOf([...EXAMPLE_DATA.values()].filter(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> !datum.parent)).pipe(
       delay(<span class="hljs-built_in">this</span>._getRandomDelayTime()),
     );
   }
@@ -268,7 +234,7 @@
     <span class="hljs-keyword">const</span> transformFn = sourcesAndTransform[sourcesAndTransform.length - <span class="hljs-number">1</span>] <span class="hljs-keyword">as</span> TransformFn&lt;T, U&gt;;
 
     <span class="hljs-keyword">return</span> combineLatest([...sources, <span class="hljs-built_in">this</span>._state]).pipe(
-      map(<span class="hljs-function"><span class="hljs-params">args</span> =&gt;</span> transformFn(...(args <span class="hljs-keyword">as</span> [...ObservedValuesOf&lt;T&gt;, State]))),
+      map(<span class="hljs-function"><span class="hljs-params">args</span> =&gt;</span> transformFn(...(args <span class="hljs-keyword">as</span> unknown <span class="hljs-keyword">as</span> [...ObservedValuesOf&lt;T&gt;, State]))),
       shareReplay({<span class="hljs-attr">refCount</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">bufferSize</span>: <span class="hljs-number">1</span>}),
     );
   }
@@ -305,3 +271,37 @@
     }
   }
 }
+
+<span class="hljs-keyword">const</span> EXAMPLE_DATA = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, BackendData&gt;(
+  [
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1&#x27;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
+      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;1-1&#x27;</span>, <span class="hljs-string">&#x27;1-2&#x27;</span>, <span class="hljs-string">&#x27;1-3&#x27;</span>],
+    },
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;1&#x27;</span>},
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;1&#x27;</span>},
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1-3&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit Loops&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;1&#x27;</span>},
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2&#x27;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
+      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;2-1&#x27;</span>, <span class="hljs-string">&#x27;2-2&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
+      <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2&#x27;</span>,
+      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;2-1-1&#x27;</span>, <span class="hljs-string">&#x27;2-1-2&#x27;</span>],
+    },
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
+      <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2&#x27;</span>,
+      <span class="hljs-attr">children</span>: [<span class="hljs-string">&#x27;2-2-1&#x27;</span>, <span class="hljs-string">&#x27;2-2-2&#x27;</span>],
+    },
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>},
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussel sprouts&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>},
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>},
+    {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>},
+  ].map(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> [datum.id, datum]),
+);

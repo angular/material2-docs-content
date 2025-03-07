@@ -13,11 +13,10 @@
 <span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {ENTER, SPACE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
 
-<span class="hljs-keyword">const</span> LOAD_MORE = <span class="hljs-string">&#x27;LOAD_MORE&#x27;</span>;
 <span class="hljs-keyword">let</span> loadMoreId = <span class="hljs-number">1</span>;
 
 <span class="hljs-comment">/** Nested node */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NestedNode</span> </span>{
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NestedNode</span> </span>{
   childrenChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;NestedNode[]&gt;([]);
 
   <span class="hljs-keyword">get</span> <span class="hljs-title">children</span>(): <span class="hljs-title">NestedNode</span>[] {
@@ -104,7 +103,7 @@
       .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">this</span>._generateNode(name, parent.name));
     <span class="hljs-keyword">if</span> (newChildrenNumber &lt; children.length) {
       <span class="hljs-comment">// Need a new &quot;Load More&quot; node</span>
-      nodes.push(<span class="hljs-keyword">new</span> NestedNode(<span class="hljs-string">`<span class="hljs-subst">${LOAD_MORE}</span>-<span class="hljs-subst">${loadMoreId++}</span>`</span>, <span class="hljs-literal">false</span>, name, <span class="hljs-literal">true</span>));
+      nodes.push(<span class="hljs-keyword">new</span> NestedNode(<span class="hljs-string">`LOAD_MORE-<span class="hljs-subst">${loadMoreId++}</span>`</span>, <span class="hljs-literal">false</span>, name, <span class="hljs-literal">true</span>));
     }
 
     parent.childrenChange.next(nodes);
