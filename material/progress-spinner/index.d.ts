@@ -1,11 +1,10 @@
-import * as i0 from '@angular/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
-import { WritableSignal } from '@angular/core';
+import * as i0 from '@angular/core';
 
 /**
  * @title Configurable progress spinner
  */
-export declare class ProgressSpinnerConfigurableExample {
+declare class ProgressSpinnerConfigurableExample {
     mode: ProgressSpinnerMode;
     value: number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerConfigurableExample, never>;
@@ -13,20 +12,20 @@ export declare class ProgressSpinnerConfigurableExample {
 }
 
 /**
- * @title Testing with MatProgressSpinnerHarness
- */
-export declare class ProgressSpinnerHarnessExample {
-    value: WritableSignal<number>;
-    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerHarnessExample, "progress-spinner-harness-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Basic progress-spinner
  */
-export declare class ProgressSpinnerOverviewExample {
+declare class ProgressSpinnerOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerOverviewExample, "progress-spinner-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+/**
+ * @title Testing with MatProgressSpinnerHarness
+ */
+declare class ProgressSpinnerHarnessExample {
+    value: i0.WritableSignal<number>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressSpinnerHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressSpinnerHarnessExample, "progress-spinner-harness-example", never, {}, {}, never, never, true, never>;
+}
+
+export { ProgressSpinnerConfigurableExample, ProgressSpinnerHarnessExample, ProgressSpinnerOverviewExample };

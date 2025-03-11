@@ -1,18 +1,16 @@
-import { Dialog } from '@angular/cdk/dialog';
-import { DialogRef } from '@angular/cdk/dialog';
+import { Dialog, DialogRef } from '@angular/cdk/dialog';
 import * as i0 from '@angular/core';
 
 /**
  * @title Injecting data when opening a dialog
  */
-export declare class CdkDialogDataExample {
+declare class CdkDialogDataExample {
     dialog: Dialog;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogDataExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExample, "cdk-dialog-data-example", never, {}, {}, never, never, true, never>;
 }
-
-export declare class CdkDialogDataExampleDialog {
+declare class CdkDialogDataExampleDialog {
     data: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogDataExampleDialog, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogDataExampleDialog, "cdk-dialog-data-example-dialog", never, {}, {}, never, never, true, never>;
@@ -21,7 +19,7 @@ export declare class CdkDialogDataExampleDialog {
 /**
  * @title CDK Dialog Overview
  */
-export declare class CdkDialogOverviewExample {
+declare class CdkDialogOverviewExample {
     dialog: Dialog;
     animal: string | undefined;
     name: string;
@@ -29,8 +27,7 @@ export declare class CdkDialogOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogOverviewExample, "cdk-dialog-overview-example", never, {}, {}, never, never, true, never>;
 }
-
-export declare class CdkDialogOverviewExampleDialog {
+declare class CdkDialogOverviewExampleDialog {
     dialogRef: DialogRef<string, unknown>;
     data: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogOverviewExampleDialog, never>;
@@ -40,17 +37,16 @@ export declare class CdkDialogOverviewExampleDialog {
 /**
  * @title CDK Dialog Styling
  */
-export declare class CdkDialogStylingExample {
+declare class CdkDialogStylingExample {
     dialog: Dialog;
     openDialog(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExample, "cdk-dialog-styling-example", never, {}, {}, never, never, true, never>;
 }
-
-export declare class CdkDialogStylingExampleDialog {
+declare class CdkDialogStylingExampleDialog {
     dialogRef: DialogRef<any, any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkDialogStylingExampleDialog, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkDialogStylingExampleDialog, "cdk-dialog-styling-example-dialog", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+export { CdkDialogDataExample, CdkDialogDataExampleDialog, CdkDialogOverviewExample, CdkDialogOverviewExampleDialog, CdkDialogStylingExample, CdkDialogStylingExampleDialog };

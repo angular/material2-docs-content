@@ -1,27 +1,22 @@
-import { FormControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
-
-/**
- * @title Testing with MatListHarness
- */
-export declare class ListHarnessExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<ListHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ListHarnessExample, "list-harness-example", never, {}, {}, never, never, true, never>;
-}
+import { FormGroup, FormControl } from '@angular/forms';
 
 /**
  * @title Basic list
  */
-export declare class ListOverviewExample {
+declare class ListOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ListOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListOverviewExample, "list-overview-example", never, {}, {}, never, never, true, never>;
 }
 
+interface Section {
+    name: string;
+    updated: Date;
+}
 /**
  * @title List with sections
  */
-export declare class ListSectionsExample {
+declare class ListSectionsExample {
     folders: Section[];
     notes: Section[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListSectionsExample, never>;
@@ -31,30 +26,38 @@ export declare class ListSectionsExample {
 /**
  * @title List with selection
  */
-export declare class ListSelectionExample {
+declare class ListSelectionExample {
     typesOfShoes: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<ListSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListSelectionExample, "list-selection-example", never, {}, {}, never, never, true, never>;
 }
 
+interface Shoes$1 {
+    value: string;
+    name: string;
+}
 /**
  * @title List with single selection using Reactive Forms
  */
-export declare class ListSingleSelectionExample {
+declare class ListSingleSelectionExample {
     form: FormGroup;
-    shoes: Shoes[];
+    shoes: Shoes$1[];
     shoesControl: FormControl<any>;
     constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<ListSingleSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListSingleSelectionExample, "list-single-selection-example", never, {}, {}, never, never, true, never>;
 }
 
+interface Shoes {
+    value: string;
+    name: string;
+}
 /**
  * @title List with single selection using Reactive forms
  */
-export declare class ListSingleSelectionReactiveFormExample {
+declare class ListSingleSelectionReactiveFormExample {
     form: FormGroup;
-    shoes: Shoes_2[];
+    shoes: Shoes[];
     shoesControl: FormControl<any>;
     constructor();
     static ɵfac: i0.ɵɵFactoryDeclaration<ListSingleSelectionReactiveFormExample, never>;
@@ -62,26 +65,19 @@ export declare class ListSingleSelectionReactiveFormExample {
 }
 
 /**
+ * @title Testing with MatListHarness
+ */
+declare class ListHarnessExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ListHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ListHarnessExample, "list-harness-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title List variants
  */
-export declare class ListVariantsExample {
+declare class ListVariantsExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ListVariantsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ListVariantsExample, "list-variants-example", never, {}, {}, never, never, true, never>;
 }
 
-declare interface Section {
-    name: string;
-    updated: Date;
-}
-
-declare interface Shoes {
-    value: string;
-    name: string;
-}
-
-declare interface Shoes_2 {
-    value: string;
-    name: string;
-}
-
-export { }
+export { ListHarnessExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, ListSingleSelectionReactiveFormExample, ListVariantsExample };

@@ -1,262 +1,61 @@
-import { AfterContentInit } from '@angular/core';
-import { AfterViewInit } from '@angular/core';
-import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { DataSource } from '@angular/cdk/collections';
-import { DecimalPipe } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import * as i0 from '@angular/core';
-import { InputSignal } from '@angular/core';
-import { MatButtonToggleGroup } from '@angular/material/button-toggle';
-import { MatColumnDef } from '@angular/material/table';
-import { MatHeaderRowDef } from '@angular/material/table';
-import { MatNoDataRow } from '@angular/material/table';
+import { AfterViewInit, AfterContentInit, QueryList } from '@angular/core';
+import * as _angular_material_paginator from '@angular/material/paginator';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatRowDef } from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource, MatHeaderRowDef, MatRowDef, MatColumnDef, MatNoDataRow, MatTable } from '@angular/material/table';
+import { HttpClient } from '@angular/common/http';
+import { MatSort, SortDirection, Sort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
-import { QueryList } from '@angular/core';
-import { SelectionModel } from '@angular/cdk/collections';
-import { Sort } from '@angular/material/sort';
-import { SortDirection } from '@angular/material/sort';
+import { SelectionModel, DataSource } from '@angular/cdk/collections';
+import { MatButtonToggleGroup } from '@angular/material/button-toggle';
+import { DecimalPipe } from '@angular/common';
+import { CdkDragDrop } from '@angular/cdk/drag-drop';
 
-declare class ExampleDataSource extends DataSource<PeriodicElement_22> {
-    private _dataStream;
-    constructor(initialData: PeriodicElement_22[]);
-    connect(): Observable<PeriodicElement_22[]>;
-    disconnect(): void;
-    setData(data: PeriodicElement_22[]): void;
-}
-
-/** An example database that the data source uses to retrieve data for the table. */
-declare class ExampleHttpDatabase {
-    private _httpClient;
-    constructor(_httpClient: HttpClient);
-    getRepoIssues(sort: string, order: SortDirection, page: number): Observable<GithubApi>;
-}
-
-declare interface GithubApi {
-    items: GithubIssue[];
-    total_count: number;
-}
-
-declare interface GithubIssue {
-    created_at: string;
-    number: string;
-    state: string;
-    title: string;
-}
-
-declare interface PeriodicElement {
+interface PeriodicElement$n {
     name: string;
     position: number;
     weight: number;
     symbol: string;
 }
+/**
+ * @title Basic use of `<mat-table>` (uses display flex)
+ */
+declare class TableFlexBasicExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement$n[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexBasicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, true, never>;
+}
 
-declare interface PeriodicElement_10 {
+interface PeriodicElement$m {
     name: string;
     position: number;
     weight: number;
     symbol: string;
 }
-
-declare interface PeriodicElement_11 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_12 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_13 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_14 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_15 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_16 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_17 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_18 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_19 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_2 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_20 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_21 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_22 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_23 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_24 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_3 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_4 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-    description: string;
-}
-
-declare interface PeriodicElement_5 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_6 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_7 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_8 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-declare interface PeriodicElement_9 {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
 /**
  * @title Basic use of `<table mat-table>`
  */
-export declare class TableBasicExample {
+declare class TableBasicExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_2[];
+    dataSource: PeriodicElement$m[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableBasicExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableBasicExample, "table-basic-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Styling columns using their auto-generated column names
- */
-export declare class TableColumnStylingExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement_19[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableColumnStylingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, true, never>;
+interface PeriodicElement$l {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
 }
-
-/**
- * @title Adding and removing data when using an array-based datasource.
- */
-export declare class TableDynamicArrayDataExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement_21[];
-    table: MatTable<PeriodicElement_21>;
-    addData(): void;
-    removeData(): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicArrayDataExample, "table-dynamic-array-data-example", never, {}, {}, never, never, true, never>;
-}
-
 /**
  * @title Table dynamically changing the columns displayed
  */
-export declare class TableDynamicColumnsExample {
+declare class TableDynamicColumnsExample {
     displayedColumns: string[];
     columnsToDisplay: string[];
-    data: PeriodicElement_3[];
+    data: PeriodicElement$l[];
     addColumn(): void;
     removeColumn(): void;
     shuffle(): void;
@@ -265,71 +64,55 @@ export declare class TableDynamicColumnsExample {
 }
 
 /**
- * @title Adding and removing data when using an observable-based datasource.
- */
-export declare class TableDynamicObservableDataExample {
-    displayedColumns: string[];
-    dataToDisplay: PeriodicElement_22[];
-    dataSource: ExampleDataSource;
-    addData(): void;
-    removeData(): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicObservableDataExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Table with expandable rows
  */
-export declare class TableExpandableRowsExample {
-    dataSource: PeriodicElement_4[];
+declare class TableExpandableRowsExample {
+    dataSource: PeriodicElement$k[];
     columnsToDisplay: string[];
     columnsToDisplayWithExpand: string[];
-    expandedElement: PeriodicElement_4 | null;
+    expandedElement: PeriodicElement$k | null;
     /** Checks whether an element is expanded. */
-    isExpanded(element: PeriodicElement_4): boolean;
+    isExpanded(element: PeriodicElement$k): boolean;
     /** Toggles the expanded state of an element. */
-    toggle(element: PeriodicElement_4): void;
+    toggle(element: PeriodicElement$k): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableExpandableRowsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never, never, true, never>;
 }
+interface PeriodicElement$k {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+    description: string;
+}
 
+interface PeriodicElement$j {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Table with filtering
  */
-export declare class TableFilteringExample {
+declare class TableFilteringExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_5, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement$j, _angular_material_paginator.MatPaginator>;
     applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFilteringExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableFilteringExample, "table-filtering-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Basic use of `<mat-table>` (uses display flex)
- */
-export declare class TableFlexBasicExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexBasicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexBasicExample, "table-flex-basic-example", never, {}, {}, never, never, true, never>;
+interface Transaction$2 {
+    item: string;
+    cost: number;
 }
-
-/**
- * @title Flex table where one column's cells has a greater height than others.
- */
-export declare class TableFlexLargeRowExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement_24[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexLargeRowExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, true, never>;
-}
-
 /**
  * @title Footer row table
  */
-export declare class TableFooterRowExample {
+declare class TableFooterRowExample {
     displayedColumns: string[];
-    transactions: Transaction[];
+    transactions: Transaction$2[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableFooterRowExample, never>;
@@ -337,39 +120,9 @@ export declare class TableFooterRowExample {
 }
 
 /**
- * @title Table with columns defined using a for loop instead of statically written in the template.
- */
-export declare class TableGeneratedColumnsExample {
-    columns: {
-        columnDef: string;
-        header: string;
-        cell: (element: PeriodicElement_23) => string;
-    }[];
-    dataSource: PeriodicElement_23[];
-    displayedColumns: string[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Testing with MatTableHarness
- */
-export declare class TableHarnessExample {
-    displayedColumns: string[];
-    dataSource: {
-        position: number;
-        name: string;
-        weight: number;
-        symbol: string;
-    }[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Table retrieving data through HTTP
  */
-export declare class TableHttpExample implements AfterViewInit {
+declare class TableHttpExample implements AfterViewInit {
     private _httpClient;
     displayedColumns: string[];
     exampleDatabase: ExampleHttpDatabase | null;
@@ -383,13 +136,33 @@ export declare class TableHttpExample implements AfterViewInit {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableHttpExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableHttpExample, "table-http-example", never, {}, {}, never, never, true, never>;
 }
+interface GithubApi {
+    items: GithubIssue[];
+    total_count: number;
+}
+interface GithubIssue {
+    created_at: string;
+    number: string;
+    state: string;
+    title: string;
+}
+/** An example database that the data source uses to retrieve data for the table. */
+declare class ExampleHttpDatabase {
+    private _httpClient;
+    constructor(_httpClient: HttpClient);
+    getRepoIssues(sort: string, order: SortDirection, page: number): Observable<GithubApi>;
+}
 
+interface Transaction$1 {
+    item: string;
+    cost: number;
+}
 /**
  * @title Table with multiple header and footer rows
  */
-export declare class TableMultipleHeaderFooterExample {
+declare class TableMultipleHeaderFooterExample {
     displayedColumns: string[];
-    transactions: Transaction_2[];
+    transactions: Transaction$1[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableMultipleHeaderFooterExample, never>;
@@ -399,17 +172,29 @@ export declare class TableMultipleHeaderFooterExample {
 /**
  * @title Table with multiple row template
  */
-export declare class TableMultipleRowTemplateExample {
+declare class TableMultipleRowTemplateExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_6, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement$i, _angular_material_paginator.MatPaginator>;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableMultipleRowTemplateExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableMultipleRowTemplateExample, "table-multiple-row-template-example", never, {}, {}, never, never, true, never>;
 }
+interface PeriodicElement$i {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 
+interface UserData {
+    id: string;
+    name: string;
+    progress: string;
+    fruit: string;
+}
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
-export declare class TableOverviewExample implements AfterViewInit {
+declare class TableOverviewExample implements AfterViewInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<UserData>;
     paginator: MatPaginator;
@@ -424,81 +209,67 @@ export declare class TableOverviewExample implements AfterViewInit {
 /**
  * @title Table with pagination
  */
-export declare class TablePaginationExample implements AfterViewInit {
+declare class TablePaginationExample implements AfterViewInit {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_7, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement$h, MatPaginator>;
     paginator: MatPaginator;
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<TablePaginationExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never, true, never>;
 }
-
-/**
- * @title Table that uses the recycle view repeater strategy.
- */
-export declare class TableRecycleRowsExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement_18[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Table with re-orderable columns
- */
-export declare class TableReorderableExample {
-    columns: string[];
-    dataSource: PeriodicElement_17[];
-    drop(event: CdkDragDrop<string[]>): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Binding event handlers and properties to the table rows.
- */
-export declare class TableRowBindingExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement_20[];
-    clickedRows: Set<PeriodicElement_20>;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, true, never>;
+interface PeriodicElement$h {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
 }
 
 /**
  * @title Table showing each row context properties.
  */
-export declare class TableRowContextExample {
+declare class TableRowContextExample {
     displayedColumns: string[];
     data: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableRowContextExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableRowContextExample, "table-row-context-example", never, {}, {}, never, never, true, never>;
 }
 
+interface PeriodicElement$g {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Table with selection
  */
-export declare class TableSelectionExample {
+declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_8, MatPaginator>;
-    selection: SelectionModel<PeriodicElement_8>;
+    dataSource: MatTableDataSource<PeriodicElement$g, _angular_material_paginator.MatPaginator>;
+    selection: SelectionModel<PeriodicElement$g>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     toggleAllRows(): void;
     /** The label for the checkbox on the passed row */
-    checkboxLabel(row?: PeriodicElement_8): string;
+    checkboxLabel(row?: PeriodicElement$g): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableSelectionExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableSelectionExample, "table-selection-example", never, {}, {}, never, never, true, never>;
 }
 
+interface PeriodicElement$f {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Table with sorting
  */
-export declare class TableSortingExample implements AfterViewInit {
+declare class TableSortingExample implements AfterViewInit {
     private _liveAnnouncer;
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_9, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement$f, _angular_material_paginator.MatPaginator>;
     sort: MatSort;
     ngAfterViewInit(): void;
     /** Announce the change in sort state for assistive technology. */
@@ -510,33 +281,25 @@ export declare class TableSortingExample implements AfterViewInit {
 /**
  * @title Table with sticky columns
  */
-export declare class TableStickyColumnsExample {
+declare class TableStickyColumnsExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_10[];
+    dataSource: PeriodicElement$e[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyColumnsExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyColumnsExample, "table-sticky-columns-example", never, {}, {}, never, never, true, never>;
 }
-
-/**
- * @title Tables with toggle-able sticky headers, footers, and columns
- */
-export declare class TableStickyComplexExample {
-    displayedColumns: string[];
-    dataSource: PeriodicElement_12[];
-    tables: number[];
-    constructor();
-    /** Whether the button toggle group contains the id as an active value. */
-    isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never, never, true, never>;
+interface PeriodicElement$e {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
 }
 
 /**
  * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
  */
-export declare class TableStickyComplexFlexExample {
+declare class TableStickyComplexFlexExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_11[];
+    dataSource: PeriodicElement$d[];
     tables: number[];
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
@@ -544,13 +307,43 @@ export declare class TableStickyComplexFlexExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexFlexExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never, never, true, never>;
 }
+interface PeriodicElement$d {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 
+/**
+ * @title Tables with toggle-able sticky headers, footers, and columns
+ */
+declare class TableStickyComplexExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement$c[];
+    tables: number[];
+    constructor();
+    /** Whether the button toggle group contains the id as an active value. */
+    isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyComplexExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never, never, true, never>;
+}
+interface PeriodicElement$c {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+
+interface Transaction {
+    item: string;
+    cost: number;
+}
 /**
  * @title Table with a sticky footer
  */
-export declare class TableStickyFooterExample {
+declare class TableStickyFooterExample {
     displayedColumns: string[];
-    transactions: Transaction_3[];
+    transactions: Transaction[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyFooterExample, never>;
@@ -560,42 +353,144 @@ export declare class TableStickyFooterExample {
 /**
  * @title Table with sticky header
  */
-export declare class TableStickyHeaderExample {
+declare class TableStickyHeaderExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_13[];
+    dataSource: PeriodicElement$b[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableStickyHeaderExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never, never, true, never>;
 }
+interface PeriodicElement$b {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 
+interface PeriodicElement$a {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Use of 'mat-text-column' with various configurations of the interface.
  */
-export declare class TableTextColumnAdvancedExample {
+declare class TableTextColumnAdvancedExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_14, MatPaginator>;
+    dataSource: MatTableDataSource<PeriodicElement$a, _angular_material_paginator.MatPaginator>;
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-    getWeight: (data: PeriodicElement_14) => string;
+    getWeight: (data: PeriodicElement$a) => string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnAdvancedExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never, never, true, never>;
 }
 
+interface PeriodicElement$9 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Use of `mat-text-column` which can be used for simple columns that only need to display
  * a text value for the header and cells.
  */
-export declare class TableTextColumnExample {
+declare class TableTextColumnExample {
     displayedColumns: string[];
-    dataSource: PeriodicElement_15[];
+    dataSource: PeriodicElement$9[];
     static ɵfac: i0.ɵɵFactoryDeclaration<TableTextColumnExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TableTextColumnExample, "table-text-column-example", never, {}, {}, never, never, true, never>;
+}
+
+interface PeriodicElement$8 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Table example that shows how to wrap a table component for definition and behavior reuse.
+ */
+declare class TableWrappedExample implements AfterViewInit {
+    displayedColumns: string[];
+    dataSource: MatTableDataSource<PeriodicElement$8, _angular_material_paginator.MatPaginator>;
+    sort: MatSort;
+    ngAfterViewInit(): void;
+    clearTable(): void;
+    addData(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableWrappedExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, true, never>;
+}
+/**
+ * Table component that accepts column and row definitions in its content to be registered to the
+ * table.
+ */
+declare class WrapperTable<T> implements AfterContentInit {
+    headerRowDefs: QueryList<MatHeaderRowDef>;
+    rowDefs: QueryList<MatRowDef<T>>;
+    columnDefs: QueryList<MatColumnDef>;
+    noDataRow: MatNoDataRow;
+    table: MatTable<T>;
+    readonly columns: i0.InputSignal<string[]>;
+    readonly dataSource: i0.InputSignal<DataSource<T>>;
+    ngAfterContentInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": true; "isSignal": true; }; "dataSource": { "alias": "dataSource"; "required": true; "isSignal": true; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], true, never>;
+}
+
+/**
+ * @title Table with re-orderable columns
+ */
+declare class TableReorderableExample {
+    columns: string[];
+    dataSource: PeriodicElement$7[];
+    drop(event: CdkDragDrop<string[]>): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableReorderableExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableReorderableExample, "table-reorderable-example", never, {}, {}, never, never, true, never>;
+}
+interface PeriodicElement$7 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+
+interface PeriodicElement$6 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Table that uses the recycle view repeater strategy.
+ */
+declare class TableRecycleRowsExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement$6[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableRecycleRowsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRecycleRowsExample, "table-recycle-rows-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
+ * @title Testing with MatTableHarness
+ */
+declare class TableHarnessExample {
+    displayedColumns: string[];
+    dataSource: {
+        position: number;
+        name: string;
+        weight: number;
+        symbol: string;
+    }[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableHarnessExample, "table-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
  * @title Tables with Material Design ripples.
  */
-export declare class TableWithRipplesExample {
+declare class TableWithRipplesExample {
     displayedColumns: string[];
     dataSource: {
         name: string;
@@ -604,57 +499,119 @@ export declare class TableWithRipplesExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<TableWithRipplesExample, "table-with-ripples-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Table example that shows how to wrap a table component for definition and behavior reuse.
- */
-export declare class TableWrappedExample implements AfterViewInit {
-    displayedColumns: string[];
-    dataSource: MatTableDataSource<PeriodicElement_16, MatPaginator>;
-    sort: MatSort;
-    ngAfterViewInit(): void;
-    clearTable(): void;
-    addData(): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TableWrappedExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TableWrappedExample, "table-wrapped-example", never, {}, {}, never, never, true, never>;
-}
-
-declare interface Transaction {
-    item: string;
-    cost: number;
-}
-
-declare interface Transaction_2 {
-    item: string;
-    cost: number;
-}
-
-declare interface Transaction_3 {
-    item: string;
-    cost: number;
-}
-
-declare interface UserData {
-    id: string;
+interface PeriodicElement$5 {
     name: string;
-    progress: string;
-    fruit: string;
+    position: number;
+    weight: number;
+    symbol: string;
 }
-
 /**
- * Table component that accepts column and row definitions in its content to be registered to the
- * table.
+ * @title Styling columns using their auto-generated column names
  */
-export declare class WrapperTable<T> implements AfterContentInit {
-    headerRowDefs: QueryList<MatHeaderRowDef>;
-    rowDefs: QueryList<MatRowDef<T>>;
-    columnDefs: QueryList<MatColumnDef>;
-    noDataRow: MatNoDataRow;
-    table: MatTable<T>;
-    readonly columns: InputSignal<string[]>;
-    readonly dataSource: InputSignal<DataSource<T>>;
-    ngAfterContentInit(): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<WrapperTable<any>, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<WrapperTable<any>, "wrapper-table", never, { "columns": { "alias": "columns"; "required": true; "isSignal": true; }; "dataSource": { "alias": "dataSource"; "required": true; "isSignal": true; }; }, {}, ["noDataRow", "headerRowDefs", "rowDefs", "columnDefs"], ["*"], true, never>;
+declare class TableColumnStylingExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement$5[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableColumnStylingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableColumnStylingExample, "table-column-styling-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+interface PeriodicElement$4 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Binding event handlers and properties to the table rows.
+ */
+declare class TableRowBindingExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement$4[];
+    clickedRows: Set<PeriodicElement$4>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableRowBindingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableRowBindingExample, "table-row-binding-example", never, {}, {}, never, never, true, never>;
+}
+
+interface PeriodicElement$3 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Adding and removing data when using an array-based datasource.
+ */
+declare class TableDynamicArrayDataExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement$3[];
+    table: MatTable<PeriodicElement$3>;
+    addData(): void;
+    removeData(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicArrayDataExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicArrayDataExample, "table-dynamic-array-data-example", never, {}, {}, never, never, true, never>;
+}
+
+interface PeriodicElement$2 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Adding and removing data when using an observable-based datasource.
+ */
+declare class TableDynamicObservableDataExample {
+    displayedColumns: string[];
+    dataToDisplay: PeriodicElement$2[];
+    dataSource: ExampleDataSource;
+    addData(): void;
+    removeData(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableDynamicObservableDataExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableDynamicObservableDataExample, "table-dynamic-observable-data-example", never, {}, {}, never, never, true, never>;
+}
+declare class ExampleDataSource extends DataSource<PeriodicElement$2> {
+    private _dataStream;
+    constructor(initialData: PeriodicElement$2[]);
+    connect(): Observable<PeriodicElement$2[]>;
+    disconnect(): void;
+    setData(data: PeriodicElement$2[]): void;
+}
+
+interface PeriodicElement$1 {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Table with columns defined using a for loop instead of statically written in the template.
+ */
+declare class TableGeneratedColumnsExample {
+    columns: {
+        columnDef: string;
+        header: string;
+        cell: (element: PeriodicElement$1) => string;
+    }[];
+    dataSource: PeriodicElement$1[];
+    displayedColumns: string[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableGeneratedColumnsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableGeneratedColumnsExample, "table-generated-columns-example", never, {}, {}, never, never, true, never>;
+}
+
+interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
+/**
+ * @title Flex table where one column's cells has a greater height than others.
+ */
+declare class TableFlexLargeRowExample {
+    displayedColumns: string[];
+    dataSource: PeriodicElement[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TableFlexLargeRowExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TableFlexLargeRowExample, "table-flex-large-row-example", never, {}, {}, never, never, true, never>;
+}
+
+export { TableBasicExample, TableColumnStylingExample, TableDynamicArrayDataExample, TableDynamicColumnsExample, TableDynamicObservableDataExample, TableExpandableRowsExample, TableFilteringExample, TableFlexBasicExample, TableFlexLargeRowExample, TableFooterRowExample, TableGeneratedColumnsExample, TableHarnessExample, TableHttpExample, TableMultipleHeaderFooterExample, TableMultipleRowTemplateExample, TableOverviewExample, TablePaginationExample, TableRecycleRowsExample, TableReorderableExample, TableRowBindingExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWithRipplesExample, TableWrappedExample, WrapperTable };

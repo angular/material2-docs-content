@@ -1,10 +1,10 @@
-import * as i0 from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
+import * as i0 from '@angular/core';
 
 /**
  * @title Configurable paginator
  */
-export declare class PaginatorConfigurableExample {
+declare class PaginatorConfigurableExample {
     length: number;
     pageSize: number;
     pageIndex: number;
@@ -21,9 +21,17 @@ export declare class PaginatorConfigurableExample {
 }
 
 /**
+ * @title Paginator
+ */
+declare class PaginatorOverviewExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorOverviewExample, "paginator-overview-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Testing with MatPaginatorHarness
  */
-export declare class PaginatorHarnessExample {
+declare class PaginatorHarnessExample {
     length: number;
     pageSize: number;
     pageIndex: number;
@@ -37,17 +45,9 @@ export declare class PaginatorHarnessExample {
 /**
  * @title Paginator internationalization
  */
-export declare class PaginatorIntlExample {
+declare class PaginatorIntlExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorIntlExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorIntlExample, "paginator-intl-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Paginator
- */
-export declare class PaginatorOverviewExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<PaginatorOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<PaginatorOverviewExample, "paginator-overview-example", never, {}, {}, never, never, true, never>;
-}
-
-export { }
+export { PaginatorConfigurableExample, PaginatorHarnessExample, PaginatorIntlExample, PaginatorOverviewExample };
