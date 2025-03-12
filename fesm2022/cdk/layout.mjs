@@ -46,9 +46,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImpor
             args: [{ selector: 'breakpoint-observer-overview-example', template: "<p>\n  Resize your browser window to see the current screen size change.\n</p>\n<p>\n  The current screen size is <strong>{{currentScreenSize}}</strong>\n</p>\n", styles: ["/** No CSS for this example */\n"] }]
         }], ctorParameters: () => [] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { BreakpointObserverOverviewExample };
 //# sourceMappingURL=layout.mjs.map

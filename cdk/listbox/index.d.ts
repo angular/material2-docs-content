@@ -1,16 +1,16 @@
-import { FormControl } from '@angular/forms';
 import * as i0 from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 /** @title Listbox with aria-activedescendant. */
-export declare class CdkListboxActivedescendantExample {
+declare class CdkListboxActivedescendantExample {
     features: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxActivedescendantExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxActivedescendantExample, "cdk-listbox-activedescendant-example", ["cdkListboxActivedescendantExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with complex object as values. */
-export declare class CdkListboxCompareWithExample {
+declare class CdkListboxCompareWithExample {
     slots: Date[];
     appointment: readonly Date[];
     compareDate(date1: Date, date2: Date): boolean;
@@ -21,26 +21,26 @@ export declare class CdkListboxCompareWithExample {
 }
 
 /** @title Listbox with custom keyboard navigation options. */
-export declare class CdkListboxCustomNavigationExample {
+declare class CdkListboxCustomNavigationExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxCustomNavigationExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxCustomNavigationExample, "cdk-listbox-custom-navigation-example", ["cdkListboxCustomNavigationExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with custom typeahead. */
-export declare class CdkListboxCustomTypeaheadExample {
+declare class CdkListboxCustomTypeaheadExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxCustomTypeaheadExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxCustomTypeaheadExample, "cdk-listbox-custom-typeahead-example", ["cdkListboxCustomTypeaheadExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with disabled options. */
-export declare class CdkListboxDisabledExample {
+declare class CdkListboxDisabledExample {
     canDrinkCtrl: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxDisabledExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxDisabledExample, "cdk-listbox-disabled-example", ["cdkListboxDisabledExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with forms validation. */
-export declare class CdkListboxFormsValidationExample {
+declare class CdkListboxFormsValidationExample {
     signs: string[];
     invalid: Observable<boolean>;
     constructor();
@@ -51,26 +51,26 @@ export declare class CdkListboxFormsValidationExample {
 }
 
 /** @title Horizontal listbox */
-export declare class CdkListboxHorizontalExample {
+declare class CdkListboxHorizontalExample {
     sizes: string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxHorizontalExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxHorizontalExample, "cdk-listbox-horizontal-example", ["cdkListboxhorizontalExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with multiple selection. */
-export declare class CdkListboxMultipleExample {
+declare class CdkListboxMultipleExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxMultipleExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxMultipleExample, "cdk-listbox-multiple-example", ["cdkListboxMultipleExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Basic listbox. */
-export declare class CdkListboxOverviewExample {
+declare class CdkListboxOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxOverviewExample, "cdk-listbox-overview-example", ["cdkListboxOverviewExample"], {}, {}, never, never, true, never>;
 }
 
 /** @title Listbox with reactive forms. */
-export declare class CdkListboxReactiveFormsExample {
+declare class CdkListboxReactiveFormsExample {
     languages: string[];
     languageCtrl: FormControl<string[] | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxReactiveFormsExample, never>;
@@ -78,7 +78,7 @@ export declare class CdkListboxReactiveFormsExample {
 }
 
 /** @title Listbox with template-driven forms. */
-export declare class CdkListboxTemplateFormsExample {
+declare class CdkListboxTemplateFormsExample {
     toppings: string[];
     order: readonly string[];
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkListboxTemplateFormsExample, never>;
@@ -86,7 +86,7 @@ export declare class CdkListboxTemplateFormsExample {
 }
 
 /** @title Listbox with value binding. */
-export declare class CdkListboxValueBindingExample {
+declare class CdkListboxValueBindingExample {
     starters: string[];
     starter: readonly string[];
     reset(): void;
@@ -94,4 +94,4 @@ export declare class CdkListboxValueBindingExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkListboxValueBindingExample, "cdk-listbox-value-binding-example", ["cdkListboxValueBindingExample"], {}, {}, never, never, true, never>;
 }
 
-export { }
+export { CdkListboxActivedescendantExample, CdkListboxCompareWithExample, CdkListboxCustomNavigationExample, CdkListboxCustomTypeaheadExample, CdkListboxDisabledExample, CdkListboxFormsValidationExample, CdkListboxHorizontalExample, CdkListboxMultipleExample, CdkListboxOverviewExample, CdkListboxReactiveFormsExample, CdkListboxTemplateFormsExample, CdkListboxValueBindingExample };

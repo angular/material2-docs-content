@@ -66,9 +66,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImpor
             args: [{ selector: 'example-custom-linear-stepper', providers: [{ provide: CdkStepper, useExisting: CustomLinearStepper }], imports: [NgTemplateOutlet, CdkStepperModule], template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{selectedIndex + 1}}/{{steps.length}}</h2>\n  </header>\n\n  <div [ngTemplateOutlet]=\"selected ? selected.content : null\"></div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    @for (step of steps; track step; let i = $index) {\n      <button\n        class=\"example-step\"\n        [class.example-active]=\"selectedIndex === i\"\n        (click)=\"selectStepByIndex(i)\">Step {{ i + 1 }}</button>\n    }\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n", styles: [".example-container {\n  border: 1px solid;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: inherit;\n}\n\n.example-step.example-active {\n  border-bottom: 1px solid;\n  font-weight: 600;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n  color: inherit;\n}\n"] }]
         }] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkCustomStepperWithoutFormExample, CdkLinearStepperWithFormExample, CustomLinearStepper, CustomStepper };
 //# sourceMappingURL=stepper.mjs.map

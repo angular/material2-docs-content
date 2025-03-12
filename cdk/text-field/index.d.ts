@@ -1,11 +1,9 @@
-import { AfterViewInit } from '@angular/core';
-import { CdkTextareaAutosize } from '@angular/cdk/text-field';
-import { ElementRef } from '@angular/core';
 import * as i0 from '@angular/core';
-import { OnDestroy } from '@angular/core';
+import { AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 
 /** @title Monitoring autofill state with cdkAutofill */
-export declare class TextFieldAutofillDirectiveExample {
+declare class TextFieldAutofillDirectiveExample {
     firstNameAutofilled: boolean;
     lastNameAutofilled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TextFieldAutofillDirectiveExample, never>;
@@ -13,7 +11,7 @@ export declare class TextFieldAutofillDirectiveExample {
 }
 
 /** @title Monitoring autofill state with AutofillMonitor */
-export declare class TextFieldAutofillMonitorExample implements AfterViewInit, OnDestroy {
+declare class TextFieldAutofillMonitorExample implements AfterViewInit, OnDestroy {
     private _autofill;
     firstName: ElementRef<HTMLElement>;
     lastName: ElementRef<HTMLElement>;
@@ -26,7 +24,7 @@ export declare class TextFieldAutofillMonitorExample implements AfterViewInit, O
 }
 
 /** @title Auto-resizing textarea */
-export declare class TextFieldAutosizeTextareaExample {
+declare class TextFieldAutosizeTextareaExample {
     private _injector;
     autosize: CdkTextareaAutosize;
     triggerResize(): void;
@@ -34,4 +32,4 @@ export declare class TextFieldAutosizeTextareaExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<TextFieldAutosizeTextareaExample, "text-field-autosize-textarea-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+export { TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample };

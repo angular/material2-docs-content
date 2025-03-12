@@ -29,9 +29,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImpor
             args: [{ selector: 'divider-harness-example', imports: [MatDividerModule], changeDetection: ChangeDetectionStrategy.OnPush, template: "<mat-divider></mat-divider>\n<mat-divider inset vertical></mat-divider>\n" }]
         }] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { DividerHarnessExample, DividerOverviewExample };
 //# sourceMappingURL=divider.mjs.map

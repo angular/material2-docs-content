@@ -1,10 +1,10 @@
-import * as i0 from '@angular/core';
 import { SelectionChange } from '@angular/cdk-experimental/selection';
+import * as i0 from '@angular/core';
 
 /**
  * @title CDK Selection Column on a CDK table.
  */
-export declare class CdkSelectionColumnExample {
+declare class CdkSelectionColumnExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
     selected: string[];
@@ -12,11 +12,17 @@ export declare class CdkSelectionColumnExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CdkSelectionColumnExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionColumnExample, "cdk-selection-column-example", never, {}, {}, never, never, true, never>;
 }
+interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 
 /**
  * @title CDK Selection on a simple list.
  */
-export declare class CdkSelectionListExample {
+declare class CdkSelectionListExample {
     data: string[];
     selected1: string[];
     selected2: string[];
@@ -30,11 +36,4 @@ export declare class CdkSelectionListExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CdkSelectionListExample, "cdk-selection-list-example", never, {}, {}, never, never, true, never>;
 }
 
-declare interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-}
-
-export { }
+export { CdkSelectionColumnExample, CdkSelectionListExample };

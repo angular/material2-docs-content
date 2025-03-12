@@ -1,30 +1,22 @@
-import { ErrorStateMatcher } from '@angular/material/core';
-import { FormControl } from '@angular/forms';
-import { FormGroupDirective } from '@angular/forms';
 import * as i0 from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { WritableSignal } from '@angular/core';
+import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
 
 /**
  * @title Input with a clear button
  */
-export declare class InputClearableExample {
+declare class InputClearableExample {
     value: string;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputClearableExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputClearableExample, "input-clearable-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Input with error messages
- */
-export declare class InputErrorsExample {
-    emailFormControl: FormControl<string | null>;
-    static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorsExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never, true, never>;
+/** Error when invalid control is dirty, touched, or submitted. */
+declare class MyErrorStateMatcher implements ErrorStateMatcher {
+    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean;
 }
-
 /** @title Input with a custom ErrorStateMatcher */
-export declare class InputErrorStateMatcherExample {
+declare class InputErrorStateMatcherExample {
     emailFormControl: FormControl<string | null>;
     matcher: MyErrorStateMatcher;
     static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorStateMatcherExample, never>;
@@ -32,27 +24,26 @@ export declare class InputErrorStateMatcherExample {
 }
 
 /**
+ * @title Input with error messages
+ */
+declare class InputErrorsExample {
+    emailFormControl: FormControl<string | null>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputErrorsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputErrorsExample, "input-errors-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Inputs in a form
  */
-export declare class InputFormExample {
+declare class InputFormExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputFormExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputFormExample, "input-form-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
- * @title Testing with MatInputHarness
- */
-export declare class InputHarnessExample {
-    inputType: WritableSignal<string>;
-    disabled: WritableSignal<boolean>;
-    static ɵfac: i0.ɵɵFactoryDeclaration<InputHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<InputHarnessExample, "input-harness-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
  * @title Input with hints
  */
-export declare class InputHintExample {
+declare class InputHintExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputHintExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputHintExample, "input-hint-example", never, {}, {}, never, never, true, never>;
 }
@@ -60,7 +51,7 @@ export declare class InputHintExample {
 /**
  * @title Basic Inputs
  */
-export declare class InputOverviewExample {
+declare class InputOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputOverviewExample, "input-overview-example", never, {}, {}, never, never, true, never>;
 }
@@ -68,14 +59,19 @@ export declare class InputOverviewExample {
 /**
  * @title Inputs with prefixes and suffixes
  */
-export declare class InputPrefixSuffixExample {
+declare class InputPrefixSuffixExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<InputPrefixSuffixExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<InputPrefixSuffixExample, "input-prefix-suffix-example", never, {}, {}, never, never, true, never>;
 }
 
-/** Error when invalid control is dirty, touched, or submitted. */
-declare class MyErrorStateMatcher implements ErrorStateMatcher {
-    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean;
+/**
+ * @title Testing with MatInputHarness
+ */
+declare class InputHarnessExample {
+    inputType: i0.WritableSignal<string>;
+    disabled: i0.WritableSignal<boolean>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<InputHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<InputHarnessExample, "input-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHarnessExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };

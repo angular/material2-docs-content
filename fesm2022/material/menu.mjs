@@ -67,9 +67,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImpor
             args: [{ selector: 'menu-harness-example', imports: [MatMenuModule], template: "<button type=\"button\" [matMenuTriggerFor]=\"settingsMenu\">Settings</button>\n<button type=\"button\" disabled [matMenuTriggerFor]=\"settingsMenu\">Disabled menu</button>\n\n<mat-menu #settingsMenu>\n  <menu mat-menu-item>Profile</menu>\n  <menu mat-menu-item>Account</menu>\n</mat-menu>\n" }]
         }] });
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { MenuHarnessExample, MenuIconsExample, MenuNestedExample, MenuOverviewExample, MenuPositionExample };
 //# sourceMappingURL=menu.mjs.map

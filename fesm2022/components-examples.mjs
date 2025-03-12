@@ -5774,9 +5774,5 @@ class ExampleData {
     }
 }
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { EXAMPLE_COMPONENTS, ExampleData, loadExample };
 //# sourceMappingURL=components-examples.mjs.map
