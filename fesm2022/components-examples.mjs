@@ -1616,7 +1616,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "button-overview": {
         "packagePath": "material/button/button-overview",
-        "title": "Basic buttons",
+        "title": "Button overview",
         "componentName": "ButtonOverviewExample",
         "files": [
             "button-overview-example.ts",

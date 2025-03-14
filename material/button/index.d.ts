@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
 
 /**
- * @title Basic buttons
+ * @title Button overview
  */
 declare class ButtonOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonOverviewExample, never>;

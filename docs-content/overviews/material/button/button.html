@@ -1,57 +1,53 @@
 <div class="docs-markdown"><p>Angular Material buttons are native <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> elements enhanced with Material Design
-styling and ink ripples.</p>
+styling.</p>
 <div material-docs-example="button-overview"></div>
 
 <p>Native <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements are always used in order to provide the most straightforward
 and accessible experience for users. A <code>&lt;button&gt;</code> element should be used whenever some <em>action</em>
 is performed. An <code>&lt;a&gt;</code> element should be used whenever the user will <em>navigate</em> to another view.</p>
-<p>There are several button variants, each applied as an attribute:</p>
+<p>There are several button variants, each applied as an attribute:
+| Attribute            | Description                                                              |
+|----------------------|--------------------------------------------------------------------------|
+| <code>matButton</code>          | Rectangular button that can contain text and icons                       |
+| <code>matIconButton</code>      | Smaller, circular button, meant to contain an icon and no text           |
+| <code>matFab</code>             | Rectangular button w/ elevation and rounded corners, meant to contain an icon. Can be <a href="https://material.angular.io/components/button/overview#extended-fab-buttons">extended</a> to a rectangle to also fit a label               |
+| <code>matMiniFab</code>         | Smaller variant of <code>matFab</code>                                              |</p>
+<p>Additionally, the <code>matButton</code> has several appearances that can be set using the <code>matButton</code>
+attribute, for example <code>matButton=&quot;outlined&quot;</code>:</p>
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Appearance</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>mat-button</code></td>
-<td>Rectangular text button w/ no elevation and rounded corners</td>
+<td><code>text</code></td>
+<td>Default appearance. Does not have a background until the user interacts with it.</td>
 </tr>
 <tr>
-<td><code>mat-raised-button</code></td>
-<td>Rectangular contained button w/ elevation and rounded corners</td>
+<td><code>elevated</code></td>
+<td>Has a background color, elevation and rounded corners.</td>
 </tr>
 <tr>
-<td><code>mat-flat-button</code></td>
-<td>Rectangular contained button w/ no elevation and rounded corners</td>
+<td><code>filled</code></td>
+<td>Has a flat appearance with rounded corners and no elevation.</td>
 </tr>
 <tr>
-<td><code>mat-stroked-button</code></td>
-<td>Rectangular outlined button w/ no elevation and rounded corners</td>
-</tr>
-<tr>
-<td><code>mat-icon-button</code></td>
-<td>Circular button with a transparent background, meant to contain an icon</td>
-</tr>
-<tr>
-<td><code>mat-fab</code></td>
-<td>Square button w/ elevation and rounded corners, meant to contain an icon. Can be <a href="https://material.angular.io/components/button/overview#extended-fab-buttons">extended</a> to a rectangle to also fit a label</td>
-</tr>
-<tr>
-<td><code>mat-mini-fab</code></td>
-<td>Same as <code>mat-fab</code> but smaller</td>
+<td><code>outlined</code></td>
+<td>Has an outline, rounded corners and a transparent background.</td>
 </tr>
 </tbody></table>
 
         <h3 id="extended-fab-buttons" class="docs-header-link">
           <span header-link="extended-fab-buttons"></span>
-          Extended fab buttons
+          Extended FAB buttons
         </h3>
-      <p>Traditional fab buttons are circular and only have space for a single icon. However, you can add the
-<code>extended</code> attribute to allow the fab to expand into a rounded rectangle shape with space for a text
-label in addition to the icon. Only full sized fabs support the <code>extended</code> attribute, mini fabs do
-not.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-fab</span> <span class="hljs-attr">extended</span>&gt;</span>
+      <p>Traditional floating action buttons (FAB) buttons are circular and only have space for a single
+icon. However, you can add the <code>extended</code> attribute to allow the fab to expand into a rounded
+rectangle shape with space for a text label in addition to the icon. Only full sized fabs support
+the <code>extended</code> attribute, mini FABs do not.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matFab</span> <span class="hljs-attr">extended</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>home<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
   Home
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -102,7 +98,7 @@ with any assistive technology your application supports.</p>
           <span header-link="buttons-with-icons"></span>
           Buttons with icons
         </h4>
-      <p>Buttons or links containing only icons (such as <code>mat-fab</code>, <code>mat-mini-fab</code>, and <code>mat-icon-button</code>)
+      <p>Buttons or links containing only icons (such as <code>matFab</code>, <code>matMiniFab</code>, and <code>matIconButton</code>)
 should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>. <a href="https://material.angular.io/components/icon">See the documentation
 for <code>MatIcon</code></a> for more
 information on using icons in buttons. Additionally, to be fully accessible the icon should have a minimum touch-target of 48x48 to ensure that the icon is easily clickable particularly on mobile devices and small screens.</p>

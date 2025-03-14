@@ -3,7 +3,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">cdk-nested-tree-node</span> #<span class="hljs-attr">treeNode</span>=<span class="hljs-string">&quot;cdkNestedTreeNode&quot;</span> *<span class="hljs-attr">cdkTreeNodeDef</span>=<span class="hljs-string">&quot;let node&quot;</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-node&quot;</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- use a disabled button to provide padding for tree leaf --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matIconButton</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     {{node.name}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-nested-tree-node</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- This is the tree node template for expandable nodes --&gt;</span>
@@ -13,7 +13,7 @@
     <span class="hljs-attr">isExpandable</span>
     <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-tree-node&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-      <span class="hljs-attr">mat-icon-button</span>
+      <span class="hljs-attr">matIconButton</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-toggle&quot;</span>
       [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;Toggle &#x27; + node.name&quot;</span>
       <span class="hljs-attr">cdkTreeNodeToggle</span>&gt;</span>

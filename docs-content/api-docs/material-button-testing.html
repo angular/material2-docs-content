@@ -57,8 +57,9 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>static&nbsp;hostSelector: `[mat-button], [mat-raised-button], [mat-flat-button],
-                         [mat-icon-button], [mat-stroked-button], [mat-fab], [mat-mini-fab]`</code>
+      <code>static&nbsp;hostSelector: `[matButton], [mat-button], [matIconButton], [matFab], [matMiniFab],
+    [mat-raised-button], [mat-flat-button], [mat-icon-button], [mat-stroked-button], [mat-fab],
+    [mat-mini-fab]`</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -374,6 +375,39 @@
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          async
+        </div>getAppearance
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the appearance of the button.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;ButtonAppearance | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
@@ -767,6 +801,7 @@
 <li><code>selector</code> finds a button whose host element matches the given selector.</li>
 <li><code>text</code> finds a button with specific text content.</li>
 <li><code>variant</code> finds buttons matching a specific variant.</li>
+<li><code>appearance</code> finds buttons matching a specific appearance.</li>
 </ul>
 
       </p>
@@ -811,6 +846,19 @@
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>appearance: ButtonAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find instances with a specific appearance.</p>
+</td>
+</tr>
+
+
     
       
 
@@ -868,10 +916,24 @@
 <h4 id="ButtonVariant" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="ButtonVariant"></span>
   <code>ButtonVariant</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible button variants.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> ButtonVariant = <span class="hljs-string">&#x27;basic&#x27;</span> | <span class="hljs-string">&#x27;icon&#x27;</span> | <span class="hljs-string">&#x27;fab&#x27;</span> | <span class="hljs-string">&#x27;mini-fab&#x27;</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="ButtonAppearance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ButtonAppearance"></span>
+  <code>ButtonAppearance</code>
 </h4><p class="docs-api-type-alias-description"><p>Possible button appearances.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> ButtonVariant = <span class="hljs-string">&#x27;basic&#x27;</span> | <span class="hljs-string">&#x27;raised&#x27;</span> | <span class="hljs-string">&#x27;flat&#x27;</span> | <span class="hljs-string">&#x27;icon&#x27;</span> | <span class="hljs-string">&#x27;stroked&#x27;</span> | <span class="hljs-string">&#x27;fab&#x27;</span> | <span class="hljs-string">&#x27;mini-fab&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> ButtonAppearance = <span class="hljs-string">&#x27;text&#x27;</span> | <span class="hljs-string">&#x27;filled&#x27;</span> | <span class="hljs-string">&#x27;elevated&#x27;</span> | <span class="hljs-string">&#x27;outlined&#x27;</span>;</code>
 </pre>
 </div>
 

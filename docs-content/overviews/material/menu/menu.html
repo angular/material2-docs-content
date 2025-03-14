@@ -72,7 +72,7 @@ with the <code>matMenuContent</code> attribute:</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matIconButton</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
@@ -91,11 +91,11 @@ with a different set of data, depending on the trigger that opened it:</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">&quot;{name: &#x27;Sally&#x27;}&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matIconButton</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">&quot;{name: &#x27;Sally&#x27;}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">&quot;{name: &#x27;Bob&#x27;}&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matIconButton</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">&quot;appMenu&quot;</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">&quot;{name: &#x27;Bob&#x27;}&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
@@ -147,7 +147,7 @@ with a different set of data, depending on the trigger that opened it:</p>
 <p>The pop-up menu implements the <code>role=&quot;menu&quot;</code> pattern, handling keyboard interaction and focus
 management. Upon opening, the trigger will focus the first focusable menu item. Upon close, the menu
 will return focus to its trigger. Avoid creating a menu in which all items are disabled, instead
-hiding or disabling the menu trigger. </p>
+hiding or disabling the menu trigger.</p>
 <p>Angular Material does not support the <code>menuitemcheckbox</code> or <code>menuitemradio</code> roles.</p>
 <p>Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for any menu
 triggers or menu items without descriptive text content.</p>
