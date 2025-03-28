@@ -168,6 +168,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImpor
             args: [{ selector: 'chips-stacked-example', imports: [MatChipsModule], template: "<mat-chip-listbox class=\"mat-mdc-chip-set-stacked\" aria-label=\"Cutest dog breeds\">\n  @for (dog of bestBoys; track dog) {\n    <mat-chip-option selected>{{dog}}</mat-chip-option>\n  }\n</mat-chip-listbox>\n", styles: [".mat-mdc-chip-set {\n  max-width: 200px;\n}\n"] }]
         }] });
 
+/// <reference types="jasmine" />
 /**
  * @title Testing with MatChipsHarness
  */
