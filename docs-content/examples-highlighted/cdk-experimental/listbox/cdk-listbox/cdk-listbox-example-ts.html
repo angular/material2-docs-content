@@ -1,0 +1,70 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/listbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormControl, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatPseudoCheckbox} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Listbox using UI Patterns. */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-listbox-example&#x27;</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;cdkListboxExample&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-example.css&#x27;</span>,
+  <span class="hljs-attr">imports</span>: [
+    CdkListbox,
+    CdkOption,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatPseudoCheckbox,
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxExample</span> </span>{
+  <span class="hljs-attr">orientation</span>: <span class="hljs-string">&#x27;vertical&#x27;</span> | <span class="hljs-string">&#x27;horizontal&#x27;</span> = <span class="hljs-string">&#x27;vertical&#x27;</span>;
+  focusMode: <span class="hljs-string">&#x27;roving&#x27;</span> | <span class="hljs-string">&#x27;activedescendant&#x27;</span> = <span class="hljs-string">&#x27;roving&#x27;</span>;
+  selectionMode: <span class="hljs-string">&#x27;explicit&#x27;</span> | <span class="hljs-string">&#x27;follow&#x27;</span> = <span class="hljs-string">&#x27;explicit&#x27;</span>;
+
+  wrap = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">true</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  multi = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  disabled = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+  skipDisabled = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">true</span>, {<span class="hljs-attr">nonNullable</span>: <span class="hljs-literal">true</span>});
+
+  fruits = [
+    <span class="hljs-string">&#x27;Apple&#x27;</span>,
+    <span class="hljs-string">&#x27;Apricot&#x27;</span>,
+    <span class="hljs-string">&#x27;Banana&#x27;</span>,
+    <span class="hljs-string">&#x27;Blackberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Blueberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Cantaloupe&#x27;</span>,
+    <span class="hljs-string">&#x27;Cherry&#x27;</span>,
+    <span class="hljs-string">&#x27;Clementine&#x27;</span>,
+    <span class="hljs-string">&#x27;Cranberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Dates&#x27;</span>,
+    <span class="hljs-string">&#x27;Figs&#x27;</span>,
+    <span class="hljs-string">&#x27;Grapes&#x27;</span>,
+    <span class="hljs-string">&#x27;Grapefruit&#x27;</span>,
+    <span class="hljs-string">&#x27;Guava&#x27;</span>,
+    <span class="hljs-string">&#x27;Kiwi&#x27;</span>,
+    <span class="hljs-string">&#x27;Kumquat&#x27;</span>,
+    <span class="hljs-string">&#x27;Lemon&#x27;</span>,
+    <span class="hljs-string">&#x27;Lime&#x27;</span>,
+    <span class="hljs-string">&#x27;Mandarin&#x27;</span>,
+    <span class="hljs-string">&#x27;Mango&#x27;</span>,
+    <span class="hljs-string">&#x27;Nectarine&#x27;</span>,
+    <span class="hljs-string">&#x27;Orange&#x27;</span>,
+    <span class="hljs-string">&#x27;Papaya&#x27;</span>,
+    <span class="hljs-string">&#x27;Passion&#x27;</span>,
+    <span class="hljs-string">&#x27;Peach&#x27;</span>,
+    <span class="hljs-string">&#x27;Pear&#x27;</span>,
+    <span class="hljs-string">&#x27;Pineapple&#x27;</span>,
+    <span class="hljs-string">&#x27;Plum&#x27;</span>,
+    <span class="hljs-string">&#x27;Pomegranate&#x27;</span>,
+    <span class="hljs-string">&#x27;Raspberries&#x27;</span>,
+    <span class="hljs-string">&#x27;Strawberry&#x27;</span>,
+    <span class="hljs-string">&#x27;Tangerine&#x27;</span>,
+    <span class="hljs-string">&#x27;Watermelon&#x27;</span>,
+  ];
+}
