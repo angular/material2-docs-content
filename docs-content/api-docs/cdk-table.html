@@ -27,33 +27,10 @@
 
       <div class="docs-api-module-import-button" data-docs-api-module-import-button="import {CdkTableModule} from '@angular/cdk/table';"></div>
     </div>
-  <h3 id="cdk-table-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+  <h3 id="cdk-table-components" class="docs-header-link docs-api-h3">
+      <span header-link="components"></span>
+      Components
     </h3>
-    
-      
-
-<h4 id="CdkRecycleRows" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkRecycleRows"></span>
-  <code>CdkRecycleRows</code>
-  
-</h4><p class="docs-api-class-description"><p>Enables the recycle view repeater strategy, which reduces rendering latency. Not compatible with
-tables that animate rows.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">cdk-table[recycleRows]</span>
-  
-    <span class="docs-api-class-selector-name">table[cdk-table][recycleRows]</span>
-  
-</p>
-
-
-
-
-
-
     
       
 
@@ -65,7 +42,7 @@ tables that animate rows.</p>
 Uses the dataSource input to determine the data to be rendered. The data can be provided either
 as a data array, an Observable stream that emits the data array to render, or a DataSource with a
 connect function that will return an Observable stream that emits the data array to render.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">cdk-table</span>
@@ -609,6 +586,191 @@ of these events.</p>
 
 
   
+
+
+
+    
+      
+
+<h4 id="CdkHeaderRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkHeaderRow"></span>
+  <code>CdkHeaderRow</code>
+  
+</h4><p class="docs-api-class-description"><p>Header template container that contains the cell outlet. Adds the right class and role.</p>
+</p><p class="docs-api-component-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">cdk-header-row</span>
+  
+    <span class="docs-api-class-selector-name">tr[cdk-header-row]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkFooterRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkFooterRow"></span>
+  <code>CdkFooterRow</code>
+  
+</h4><p class="docs-api-class-description"><p>Footer template container that contains the cell outlet. Adds the right class and role.</p>
+</p><p class="docs-api-component-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">cdk-footer-row</span>
+  
+    <span class="docs-api-class-selector-name">tr[cdk-footer-row]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkRow"></span>
+  <code>CdkRow</code>
+  
+</h4><p class="docs-api-class-description"><p>Data row template container that contains the cell outlet. Adds the right class and role.</p>
+</p><p class="docs-api-component-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">cdk-row</span>
+  
+    <span class="docs-api-class-selector-name">tr[cdk-row]</span>
+  
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTextColumn" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTextColumn"></span>
+  <code>CdkTextColumn</code>
+  
+</h4><p class="docs-api-class-description"><p>Column that simply shows text content for the header and row cells. Assumes that the table
+is using the native table implementation (<code>&lt;table&gt;</code>).</p>
+<p>By default, the name of this column will be the header text and data property accessor.
+The header text can be overridden with the <code>headerText</code> input. Cell values can be overridden with
+the <code>dataAccessor</code> input. Change the text justification to the start or end using the <code>justify</code>
+input.</p>
+</p><p class="docs-api-component-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">cdk-text-column</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dataAccessor: (data: T, name: string) =&gt; string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Accessor function to retrieve the data rendered for each cell. If this
+property is not set, the data cells will render the value found in the data&#39;s property matching
+the column&#39;s name. For example, if the column is named <code>id</code>, then the rendered value will be
+value defined by the data&#39;s <code>id</code> property.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>headerText: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Text label that should be used for the column header. If this property is not
+set, the header text will default to the column name with its first letter capitalized.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>justify: &#39;start&#39; | &#39;end&#39; | &#39;center&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Alignment of the cell values.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Column name that should be used to reference this column.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="cdk-table-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="CdkRecycleRows" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkRecycleRows"></span>
+  <code>CdkRecycleRows</code>
+  
+</h4><p class="docs-api-class-description"><p>Enables the recycle view repeater strategy, which reduces rendering latency. Not compatible with
+tables that animate rows.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">cdk-table[recycleRows]</span>
+  
+    <span class="docs-api-class-selector-name">table[cdk-table][recycleRows]</span>
+  
+</p>
+
+
+
 
 
 
@@ -1472,72 +1634,6 @@ if there is no difference.</p>
     
       
 
-<h4 id="CdkHeaderRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkHeaderRow"></span>
-  <code>CdkHeaderRow</code>
-  
-</h4><p class="docs-api-class-description"><p>Header template container that contains the cell outlet. Adds the right class and role.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">cdk-header-row</span>
-  
-    <span class="docs-api-class-selector-name">tr[cdk-header-row]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="CdkFooterRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkFooterRow"></span>
-  <code>CdkFooterRow</code>
-  
-</h4><p class="docs-api-class-description"><p>Footer template container that contains the cell outlet. Adds the right class and role.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">cdk-footer-row</span>
-  
-    <span class="docs-api-class-selector-name">tr[cdk-footer-row]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
-<h4 id="CdkRow" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkRow"></span>
-  <code>CdkRow</code>
-  
-</h4><p class="docs-api-class-description"><p>Data row template container that contains the cell outlet. Adds the right class and role.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">cdk-row</span>
-  
-    <span class="docs-api-class-selector-name">tr[cdk-row]</span>
-  
-</p>
-
-
-
-
-
-
-    
-      
-
 <h4 id="CdkNoDataRow" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="CdkNoDataRow"></span>
   <code>CdkNoDataRow</code>
@@ -1563,98 +1659,6 @@ if there is no difference.</p>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="CdkTextColumn" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkTextColumn"></span>
-  <code>CdkTextColumn</code>
-  
-</h4><p class="docs-api-class-description"><p>Column that simply shows text content for the header and row cells. Assumes that the table
-is using the native table implementation (<code>&lt;table&gt;</code>).</p>
-<p>By default, the name of this column will be the header text and data property accessor.
-The header text can be overridden with the <code>headerText</code> input. Cell values can be overridden with
-the <code>dataAccessor</code> input. Change the text justification to the start or end using the <code>justify</code>
-input.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">cdk-text-column</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>dataAccessor: (data: T, name: string) =&gt; string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Accessor function to retrieve the data rendered for each cell. If this
-property is not set, the data cells will render the value found in the data&#39;s property matching
-the column&#39;s name. For example, if the column is named <code>id</code>, then the rendered value will be
-value defined by the data&#39;s <code>id</code> property.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>headerText: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Text label that should be used for the column header. If this property is not
-set, the header text will default to the column name with its first letter capitalized.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>justify: &#39;start&#39; | &#39;end&#39; | &#39;center&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Alignment of the cell values.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>name: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Column name that should be used to reference this column.</p>
-</td>
 </tr>
 
 

@@ -27,275 +27,10 @@
 
       <div class="docs-api-module-import-button" data-docs-api-module-import-button="import {MatTabsModule} from '@angular/material/tabs';"></div>
     </div>
-  <h3 id="material-tabs-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+  <h3 id="material-tabs-components" class="docs-header-link docs-api-h3">
+      <span header-link="components"></span>
+      Components
     </h3>
-    
-      
-
-<h4 id="MatTabContent" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabContent"></span>
-  <code>MatTabContent</code>
-  
-</h4><p class="docs-api-class-description"><p>Decorates the <code>ng-template</code> tags and reads out the template from it.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[matTabContent]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>template: inject&lt;TemplateRef&lt;any&gt;&gt;(TemplateRef)</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="MatTabLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTabLabel"></span>
-  <code>MatTabLabel</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/portal/api#CdkPortal" class="docs-api-class-extends-type">
-      CdkPortal
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Used to flag tab labels for use with the portal directive</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[mat-tab-label]</span>
-  
-    <span class="docs-api-class-selector-name">[matTabLabel]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>context: C</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Contextual data to be passed in to the embedded view.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>injector: Injector</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The injector to use for the embedded view.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isAttached: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>origin: ElementRef</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;C&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The embedded template that will be used to instantiate an embedded View in the host.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Reference to the ViewContainer into which the template will be stamped out.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">attach
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach the portal to the provided <code>PortalOutlet</code>.
-When a context is provided it will override the <code>context</code> property of the <code>TemplatePortal</code>
-instance.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        context</p>
-      <code class="docs-api-method-parameter-type">C = this.context</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">detach
-      </th>
-    </tr>
-  </thead></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
-the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        host</p>
-      <code class="docs-api-method-parameter-type">PortalOutlet</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-
-
-
     
       
 
@@ -303,7 +38,7 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
   <span header-link="MatTab"></span>
   <code>MatTab</code>
   
-</h4><p class="docs-api-directive-selectors">
+</h4><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-tab</span>
@@ -487,7 +222,7 @@ represents the right.</p>
 </h4><p class="docs-api-class-description"><p>Material design tab-group component. Supports basic tab pairs (label + content) and includes
 animated ink-bar, keyboard navigation, and screen reader.
 See: <a href="https://material.io/design/components/tabs.html">https://material.io/design/components/tabs.html</a></p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-tab-group</span>
@@ -871,7 +606,7 @@ page.</p>
   
 </h4><p class="docs-api-class-description"><p>Navigation component matching the styles of the tab group header.
 Provides anchored navigation with animated ink bar.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">[mat-tab-nav-bar]</span>
@@ -1125,7 +860,7 @@ page.</p>
   <code>MatTabNavPanel</code>
   
 </h4><p class="docs-api-class-description"><p>Tab panel component associated with MatTabNav.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-tab-nav-panel</span>
@@ -1167,7 +902,7 @@ page.</p>
   <code>MatTabLink</code>
   
 </h4><p class="docs-api-class-description"><p>Link inside a <code>mat-tab-nav-bar</code>.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">[mat-tab-link]</span>
@@ -1335,6 +1070,275 @@ page.</p>
 
     </td>
   </tr></table>
+
+
+  
+
+
+
+    <h3 id="material-tabs-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="MatTabContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTabContent"></span>
+  <code>MatTabContent</code>
+  
+</h4><p class="docs-api-class-description"><p>Decorates the <code>ng-template</code> tags and reads out the template from it.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matTabContent]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>template: inject&lt;TemplateRef&lt;any&gt;&gt;(TemplateRef)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatTabLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTabLabel"></span>
+  <code>MatTabLabel</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/portal/api#CdkPortal" class="docs-api-class-extends-type">
+      CdkPortal
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Used to flag tab labels for use with the portal directive</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[mat-tab-label]</span>
+  
+    <span class="docs-api-class-selector-name">[matTabLabel]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>context: C</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Contextual data to be passed in to the embedded view.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: Injector</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The injector to use for the embedded view.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isAttached: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether this portal is attached to a host.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>origin: ElementRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>templateRef: TemplateRef&lt;C&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The embedded template that will be used to instantiate an embedded View in the host.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainerRef: ViewContainerRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the ViewContainer into which the template will be stamped out.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">attach
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Attach the portal to the provided <code>PortalOutlet</code>.
+When a context is provided it will override the <code>context</code> property of the <code>TemplatePortal</code>
+instance.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">PortalOutlet</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        context</p>
+      <code class="docs-api-method-parameter-type">C = this.context</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">EmbeddedViewRef&lt;C&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setAttachedHost
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the PortalOutlet reference without performing <code>attach()</code>. This is used directly by
+the PortalOutlet when it is performing an <code>attach()</code> or <code>detach()</code>.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">PortalOutlet</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   

@@ -27,575 +27,10 @@
 
       <div class="docs-api-module-import-button" data-docs-api-module-import-button="import {CdkTreeModule} from '@angular/cdk/tree';"></div>
     </div>
-  <h3 id="cdk-tree-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+  <h3 id="cdk-tree-components" class="docs-header-link docs-api-h3">
+      <span header-link="components"></span>
+      Components
     </h3>
-    
-      
-
-<h4 id="CdkNestedTreeNode" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkNestedTreeNode"></span>
-  <code>CdkNestedTreeNode</code>
-  
-  <span class="docs-api-class-extends-clauses">
-    <span class="docs-api-class-extends-label">extends</span>
-    <a href="cdk/tree/api#CdkTreeNode" class="docs-api-class-extends-type">
-      CdkTreeNode
-    </a>
-  </span>
-  
-</h4><p class="docs-api-class-description"><p>Nested node is a child of <code>&lt;cdk-tree&gt;</code>. It works with nested tree.
-By using <code>cdk-nested-tree-node</code> component in tree node template, children of the parent node will
-be added in the <code>cdkTreeNodeOutlet</code> in tree node template.
-The children of node will be automatically added to <code>cdkTreeNodeOutlet</code>.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">cdk-nested-tree-node</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">cdkNestedTreeNode</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
-      <code>isDisabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether or not this node is disabled. If it&#39;s disabled, then the user won&#39;t be able to focus
-or activate this node.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
-        </div><p class="docs-api-property-name">
-      <code>isExpandable: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether or not this node is expandable.</p>
-<p>If not using <code>FlatTreeControl</code>, or if <code>isExpandable</code> is not provided to
-<code>NestedTreeControl</code>, this should be provided for correct node a11y.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>isExpanded: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkTreeNodeTypeaheadLabel&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>typeaheadLabel: string | null</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The text used to locate this item during typeahead. If not specified, the <code>textContent</code> will
-will be used.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>activation: EventEmitter&lt;T&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>This emits when the node has been programatically activated or activated by keyboard.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>expandedChange: EventEmitter&lt;boolean&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>This emits when the node&#39;s expansion status has been changed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>data: T</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The tree node&#39;s data.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isLeafNode: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>level: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nodeOutlet: QueryList&lt;CdkTreeNodeOutlet&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The children node placeholder.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><div class="docs-api-deprecated-marker" deprecated-message="This will be ignored; the tree will automatically determine the appropriate role
-for tree node. This input will be removed in a future version. Will be removed in v21.0.0 or later."
-  >
-        Deprecated
-      </div><p class="docs-api-property-name">
-      <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The role of the tree node.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">activate
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Emits an activation event. Implemented for TreeKeyManagerItem.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">collapse
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Collapses this data node. Implemented for TreeKeyManagerItem.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">expand
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Expands this data node. Implemented for TreeKeyManagerItem.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses this data node. Implemented for TreeKeyManagerItem.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getChildren
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkTreeNode&lt;T, K&gt;[] | Observable&lt;CdkTreeNode&lt;T, K&gt;[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getLabel
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getParent
-      </th>
-    </tr>
-  </thead><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">CdkTreeNode&lt;T, K&gt; | null</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">makeFocusable
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Makes the node focusable. Implemented for TreeKeyManagerItem.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">unfocus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Defocus this data node.</p>
-
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">updateChildrenNodes
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Add children dataNodes to the NodeOutlet</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        children<span class="docs-api-method-parameter-optional-marker">?</span></p>
-      <code class="docs-api-method-parameter-type">T[]</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  </table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="CdkTreeNodeDef" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkTreeNodeDef"></span>
-  <code>CdkTreeNodeDef</code>
-  
-</h4><p class="docs-api-class-description"><p>Data node definition for the CdkTree.
-Captures the node&#39;s template and a when predicate that describes when this node should be used.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[cdkTreeNodeDef]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">cdkTreeNodeDefWhen</span>)
-        </div><p class="docs-api-property-name">
-      <code>when: (index: number, nodeData: T) =&gt; boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Function that should return true if this node template should be used for the provided node
-data and index. If left undefined, this node will be considered the default node template to
-use when no other when functions return true for the data.
-For every node, there must be at least one when function that passes or an undefined to
-default.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="CdkTreeNodePadding" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkTreeNodePadding"></span>
-  <code>CdkTreeNodePadding</code>
-  
-</h4><p class="docs-api-class-description"><p>Indent for the children tree dataNodes.
-This directive will add left-padding to the node to show hierarchy.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[cdkTreeNodePadding]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkTreeNodePaddingIndent&#39;</span>)
-        </div><p class="docs-api-property-name">
-      <code>indent: number | string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The indent for each level. Can be a number or a CSS string.
-Default number 40px from material design menu sub-menu spec.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkTreeNodePadding&#39;, transform: numberAttribute }</span>)
-        </div><p class="docs-api-property-name">
-      <code>level: number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The level of depth of the tree node. The padding will be <code>level * indent</code> pixels.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>indentUnits: &#39;px&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>CSS units used for the indentation value.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
-    
-      
-
-<h4 id="CdkTreeNodeOutlet" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkTreeNodeOutlet"></span>
-  <code>CdkTreeNodeOutlet</code>
-  
-</h4><p class="docs-api-class-description"><p>Outlet for nested CdkNode. Put <code>[cdkTreeNodeOutlet]</code> on a tag to place children dataNodes
-inside the outlet.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">[cdkTreeNodeOutlet]</span>
-  
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainer: inject(ViewContainerRef)</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
-
-
-
-
-
-
     
       
 
@@ -605,7 +40,7 @@ inside the outlet.</p>
   
 </h4><p class="docs-api-class-description"><p>CDK tree component that connects with a data source to retrieve data of type <code>T</code> and renders
 dataNodes with hierarchy. Updates the dataNodes when new data is provided by the data source.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">cdk-tree</span>
@@ -1180,6 +615,575 @@ Otherwise, expand it and all its descendants.</p>
 
 
   
+
+
+
+    <h3 id="cdk-tree-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="CdkNestedTreeNode" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkNestedTreeNode"></span>
+  <code>CdkNestedTreeNode</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/tree/api#CdkTreeNode" class="docs-api-class-extends-type">
+      CdkTreeNode
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Nested node is a child of <code>&lt;cdk-tree&gt;</code>. It works with nested tree.
+By using <code>cdk-nested-tree-node</code> component in tree node template, children of the parent node will
+be added in the <code>cdkTreeNodeOutlet</code> in tree node template.
+The children of node will be automatically added to <code>cdkTreeNodeOutlet</code>.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">cdk-nested-tree-node</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">cdkNestedTreeNode</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>isDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether or not this node is disabled. If it&#39;s disabled, then the user won&#39;t be able to focus
+or activate this node.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>isExpandable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether or not this node is expandable.</p>
+<p>If not using <code>FlatTreeControl</code>, or if <code>isExpandable</code> is not provided to
+<code>NestedTreeControl</code>, this should be provided for correct node a11y.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>isExpanded: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkTreeNodeTypeaheadLabel&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>typeaheadLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The text used to locate this item during typeahead. If not specified, the <code>textContent</code> will
+will be used.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>activation: EventEmitter&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>This emits when the node has been programatically activated or activated by keyboard.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>expandedChange: EventEmitter&lt;boolean&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>This emits when the node&#39;s expansion status has been changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The tree node&#39;s data.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isLeafNode: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nodeOutlet: QueryList&lt;CdkTreeNodeOutlet&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The children node placeholder.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><div class="docs-api-deprecated-marker" deprecated-message="This will be ignored; the tree will automatically determine the appropriate role
+for tree node. This input will be removed in a future version. Will be removed in v21.0.0 or later."
+  >
+        Deprecated
+      </div><p class="docs-api-property-name">
+      <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The role of the tree node.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">activate
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Emits an activation event. Implemented for TreeKeyManagerItem.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapse
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Collapses this data node. Implemented for TreeKeyManagerItem.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expand
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Expands this data node. Implemented for TreeKeyManagerItem.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses this data node. Implemented for TreeKeyManagerItem.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getChildren
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkTreeNode&lt;T, K&gt;[] | Observable&lt;CdkTreeNode&lt;T, K&gt;[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getParent
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkTreeNode&lt;T, K&gt; | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">makeFocusable
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Makes the node focusable. Implemented for TreeKeyManagerItem.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">unfocus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Defocus this data node.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateChildrenNodes
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Add children dataNodes to the NodeOutlet</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        children<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodeDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodeDef"></span>
+  <code>CdkTreeNodeDef</code>
+  
+</h4><p class="docs-api-class-description"><p>Data node definition for the CdkTree.
+Captures the node&#39;s template and a when predicate that describes when this node should be used.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodeDef]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">cdkTreeNodeDefWhen</span>)
+        </div><p class="docs-api-property-name">
+      <code>when: (index: number, nodeData: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function that should return true if this node template should be used for the provided node
+data and index. If left undefined, this node will be considered the default node template to
+use when no other when functions return true for the data.
+For every node, there must be at least one when function that passes or an undefined to
+default.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodePadding" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodePadding"></span>
+  <code>CdkTreeNodePadding</code>
+  
+</h4><p class="docs-api-class-description"><p>Indent for the children tree dataNodes.
+This directive will add left-padding to the node to show hierarchy.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodePadding]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkTreeNodePaddingIndent&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>indent: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The indent for each level. Can be a number or a CSS string.
+Default number 40px from material design menu sub-menu spec.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;cdkTreeNodePadding&#39;, transform: numberAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The level of depth of the tree node. The padding will be <code>level * indent</code> pixels.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>indentUnits: &#39;px&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>CSS units used for the indentation value.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodeOutlet" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodeOutlet"></span>
+  <code>CdkTreeNodeOutlet</code>
+  
+</h4><p class="docs-api-class-description"><p>Outlet for nested CdkNode. Put <code>[cdkTreeNodeOutlet]</code> on a tag to place children dataNodes
+inside the outlet.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodeOutlet]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainer: inject(ViewContainerRef)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
 
 
 
