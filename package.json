@@ -1,6 +1,6 @@
 {
   "name": "@angular/components-examples",
-  "version": "20.0.0-next.5+sha-965aadf",
+  "version": "20.0.0-next.5+sha-207bc6c",
   "description": "Angular Components Examples",
   "private": true,
   "repository": {
@@ -23,10 +23,6 @@
     ".": {
       "types": "./index.d.ts",
       "default": "./fesm2022/components-examples.mjs"
-    },
-    "./cdk-experimental/listbox": {
-      "types": "./cdk-experimental/listbox/index.d.ts",
-      "default": "./fesm2022/cdk-experimental/listbox.mjs"
     },
     "./cdk-experimental/popover-edit": {
       "types": "./cdk-experimental/popover-edit/index.d.ts",
@@ -255,10 +251,6 @@
     "./material/tree": {
       "types": "./material/tree/index.d.ts",
       "default": "./fesm2022/material/tree.mjs"
-    },
-    "./private": {
-      "types": "./private/index.d.ts",
-      "default": "./fesm2022/private.mjs"
     }
   },
   "license": "MIT",
@@ -267,24 +259,15 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "20.0.0-next.5+sha-965aadf",
-    "@angular/cdk-experimental": "20.0.0-next.5+sha-965aadf",
+    "@angular/cdk": "20.0.0-next.5+sha-207bc6c",
+    "@angular/cdk-experimental": "20.0.0-next.5+sha-207bc6c",
     "@angular/core": "^20.0.0-0 || ^20.1.0-0 || ^20.2.0-0 || ^20.3.0-0 || ^21.0.0-0",
     "@angular/common": "^20.0.0-0 || ^20.1.0-0 || ^20.2.0-0 || ^20.3.0-0 || ^21.0.0-0",
-    "@angular/material": "20.0.0-next.5+sha-965aadf",
-    "@angular/material-experimental": "20.0.0-next.5+sha-965aadf",
-    "@angular/material-moment-adapter": "20.0.0-next.5+sha-965aadf",
-    "@angular/material-luxon-adapter": "20.0.0-next.5+sha-965aadf",
-    "@angular/material-date-fns-adapter": "20.0.0-next.5+sha-965aadf"
-  },
-  "devDependencies": {
-    "@angular/cdk-experimental": "workspace:*",
-    "@angular/cdk": "workspace:*",
-    "@angular/material-date-fns-adapter": "workspace:*",
-    "@angular/material-experimental": "workspace:*",
-    "@angular/material-luxon-adapter": "workspace:*",
-    "@angular/material-moment-adapter": "workspace:*",
-    "@angular/material": "workspace:*"
+    "@angular/material": "20.0.0-next.5+sha-207bc6c",
+    "@angular/material-experimental": "20.0.0-next.5+sha-207bc6c",
+    "@angular/material-moment-adapter": "20.0.0-next.5+sha-207bc6c",
+    "@angular/material-luxon-adapter": "20.0.0-next.5+sha-207bc6c",
+    "@angular/material-date-fns-adapter": "20.0.0-next.5+sha-207bc6c"
   },
   "dependencies": {
     "tslib": "^2.3.0"
