@@ -44,4 +44,5 @@ declare const EXAMPLE_COMPONENTS: {
 };
 declare function loadExample(id: string): Promise<any>;
 
-export { EXAMPLE_COMPONENTS, ExampleData, type LiveExample, loadExample };
+export { EXAMPLE_COMPONENTS, ExampleData, loadExample };
+export type { LiveExample };
