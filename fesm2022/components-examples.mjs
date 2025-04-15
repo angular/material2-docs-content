@@ -1641,20 +1641,6 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "card-actions-example.ts",
         "importPath": "material/card"
     },
-    "card-fancy": {
-        "packagePath": "material/card/card-fancy",
-        "title": "Card with multiple sections",
-        "componentName": "CardFancyExample",
-        "files": [
-            "card-fancy-example.ts",
-            "card-fancy-example.html",
-            "card-fancy-example.css"
-        ],
-        "selector": "card-fancy-example",
-        "additionalComponents": [],
-        "primaryFile": "card-fancy-example.ts",
-        "importPath": "material/card"
-    },
     "card-footer": {
         "packagePath": "material/card/card-footer",
         "title": "Card with footer",
@@ -1699,11 +1685,12 @@ const EXAMPLE_COMPONENTS = {
     },
     "card-overview": {
         "packagePath": "material/card/card-overview",
-        "title": "Basic cards",
+        "title": "Card overview",
         "componentName": "CardOverviewExample",
         "files": [
             "card-overview-example.ts",
-            "card-overview-example.html"
+            "card-overview-example.html",
+            "card-overview-example.css"
         ],
         "selector": "card-overview-example",
         "additionalComponents": [],
@@ -5250,8 +5237,6 @@ async function loadExample(id) {
         case 'button-overview':
             return import('@angular/components-examples/material/button');
         case 'card-actions':
-            return import('@angular/components-examples/material/card');
-        case 'card-fancy':
             return import('@angular/components-examples/material/card');
         case 'card-footer':
             return import('@angular/components-examples/material/card');

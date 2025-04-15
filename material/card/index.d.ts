@@ -1,15 +1,7 @@
 import * as i0 from '@angular/core';
 
 /**
- * @title Card with multiple sections
- */
-declare class CardFancyExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<CardFancyExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<CardFancyExample, "card-fancy-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Basic cards
+ * @title Card overview
  */
 declare class CardOverviewExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<CardOverviewExample, never>;
@@ -50,4 +42,4 @@ declare class CardFooterExample {
     static ɵcmp: i0.ɵɵComponentDeclaration<CardFooterExample, "card-footer-example", never, {}, {}, never, never, true, never>;
 }
 
-export { CardActionsExample, CardFancyExample, CardFooterExample, CardHarnessExample, CardMediaSizeExample, CardOverviewExample };
+export { CardActionsExample, CardFooterExample, CardHarnessExample, CardMediaSizeExample, CardOverviewExample };
