@@ -1891,7 +1891,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         control</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1904,7 +1904,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         form</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1964,7 +1964,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         control</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1977,7 +1977,7 @@ a valid date, or <code>null</code> if it&#39;s not a valid date.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         form</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">FormGroupDirective | NgForm</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -4760,7 +4760,7 @@ true/false, all checks will be enabled/disabled.</p>
 </h4><p class="docs-api-constant-description"><p>Current version of Angular Material.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> VERSION: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> VERSION: Version;</code>
 </pre>
 </div>
 
@@ -4777,7 +4777,7 @@ true/false, all checks will be enabled/disabled.</p>
 </div><p class="docs-api-constant-description"><p>Injection token that configures whether the Material sanity checks are enabled.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MATERIAL_SANITY_CHECKS: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MATERIAL_SANITY_CHECKS: InjectionToken&lt;SanityChecks&gt;;</code>
 </pre>
 </div>
 
@@ -4791,7 +4791,7 @@ true/false, all checks will be enabled/disabled.</p>
 </h4><p class="docs-api-constant-description"><p>InjectionToken for datepicker that can be used to override default locale code.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATE_LOCALE: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATE_LOCALE: InjectionToken&lt;{}&gt;;</code>
 </pre>
 </div>
 
@@ -4804,7 +4804,7 @@ true/false, all checks will be enabled/disabled.</p>
   <code>MAT_DATE_FORMATS</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATE_FORMATS: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATE_FORMATS: InjectionToken&lt;MatDateFormats&gt;;</code>
 </pre>
 </div>
 
@@ -4833,7 +4833,7 @@ alternative token to the actual <code>MatOptgroup</code> class which could cause
 retention of the class and its component metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_OPTGROUP: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_OPTGROUP: InjectionToken&lt;MatOptgroup&gt;;</code>
 </pre>
 </div>
 
@@ -4847,7 +4847,7 @@ retention of the class and its component metadata.</p>
 </h4><p class="docs-api-constant-description"><p>Injection token used to provide the parent component to options.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_OPTION_PARENT_COMPONENT: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_OPTION_PARENT_COMPONENT: InjectionToken&lt;MatOptionParentComponent&gt;;</code>
 </pre>
 </div>
 
