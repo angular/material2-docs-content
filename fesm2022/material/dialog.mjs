@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { inject, Component, ChangeDetectionStrategy, signal, model, viewChild, TemplateRef } from '@angular/core';
+import { inject, ChangeDetectionStrategy, Component, signal, model, viewChild, TemplateRef } from '@angular/core';
 import * as i1 from '@angular/material/button';
 import { MatButtonModule } from '@angular/material/button';
 import * as i3 from '@angular/material/dialog';

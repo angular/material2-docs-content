@@ -67,7 +67,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         element</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -131,7 +131,7 @@
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         element</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1846,7 +1846,7 @@ While dragging this is the placeholder, otherwise it&#39;s the root element.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         boundaryElement</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -1944,7 +1944,7 @@ While dragging this is the placeholder, otherwise it&#39;s the root element.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         handles</p>
-      <code class="docs-api-method-parameter-type">any[]</code>
+      <code class="docs-api-method-parameter-type">(HTMLElement | ElementRef&lt;HTMLElement&gt;)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2092,7 +2092,7 @@ While dragging this is the placeholder, otherwise it&#39;s the root element.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         value</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">PreviewContainer</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -2194,7 +2194,7 @@ dragging on an element that you might not have access to.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         rootElement</p>
-      <code class="docs-api-method-parameter-type">any</code>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
@@ -4418,7 +4418,7 @@ Same advantages and disadvantages as <code>parent</code>.</li>
 behavior of the drag&amp;drop-related components.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_CONFIG: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_CONFIG: InjectionToken&lt;DragDropConfig&gt;;</code>
 </pre>
 </div>
 
@@ -4434,7 +4434,7 @@ alternative token to the actual <code>CdkDropListGroup</code> class which could 
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: InjectionToken&lt;CdkDropListGroup&lt;unknown&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -4450,7 +4450,7 @@ alternative token to the actual <code>CdkDropList</code> class which could cause
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -4466,7 +4466,7 @@ alternative token to the actual <code>CdkDragHandle</code> class which could cau
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_HANDLE: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_HANDLE: InjectionToken&lt;CdkDragHandle&gt;;</code>
 </pre>
 </div>
 
@@ -4482,7 +4482,7 @@ alternative token to the actual <code>CdkDragPreview</code> class which could ca
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PREVIEW: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PREVIEW: InjectionToken&lt;CdkDragPreview&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -4498,7 +4498,7 @@ alternative token to the actual <code>CdkDragPlaceholder</code> class which coul
 retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PLACEHOLDER: <span class="hljs-built_in">any</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PLACEHOLDER: InjectionToken&lt;CdkDragPlaceholder&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 

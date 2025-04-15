@@ -37,7 +37,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.5", 
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-class ExampleDataSource$3 extends DataSource {
+let ExampleDataSource$3 = class ExampleDataSource extends DataSource {
     /** Stream of data that is provided to the table. */
     data = new BehaviorSubject(ELEMENT_DATA$3);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -45,7 +45,7 @@ class ExampleDataSource$3 extends DataSource {
         return this.data;
     }
     disconnect() { }
-}
+};
 
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -79,7 +79,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.5", 
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-class ExampleDataSource$2 extends DataSource {
+let ExampleDataSource$2 = class ExampleDataSource extends DataSource {
     /** Stream of data that is provided to the table. */
     data = new BehaviorSubject(ELEMENT_DATA$2);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -87,7 +87,7 @@ class ExampleDataSource$2 extends DataSource {
         return this.data;
     }
     disconnect() { }
-}
+};
 
 const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -121,7 +121,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.5", 
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-class ExampleDataSource$1 extends DataSource {
+let ExampleDataSource$1 = class ExampleDataSource extends DataSource {
     /** Stream of data that is provided to the table. */
     data = new BehaviorSubject(ELEMENT_DATA$1);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -129,7 +129,7 @@ class ExampleDataSource$1 extends DataSource {
         return this.data;
     }
     disconnect() { }
-}
+};
 
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
