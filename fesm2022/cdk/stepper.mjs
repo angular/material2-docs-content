@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { forwardRef, Component, inject } from '@angular/core';
+import { Component, forwardRef, inject } from '@angular/core';
 import * as i1 from '@angular/cdk/stepper';
 import { CdkStepperModule, CdkStepper } from '@angular/cdk/stepper';
 import { NgTemplateOutlet } from '@angular/common';
