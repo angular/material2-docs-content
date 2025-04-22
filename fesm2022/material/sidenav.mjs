@@ -18,7 +18,7 @@ import * as i2$2 from '@angular/material/input';
 import { MatInputModule } from '@angular/material/input';
 import * as i1$4 from '@angular/material/radio';
 import { MatRadioModule } from '@angular/material/radio';
-import { FocusTrapFactory, ConfigurableFocusTrapFactory } from '@angular/cdk/a11y';
+import { ConfigurableFocusTrapFactory, FocusTrapFactory } from '@angular/cdk/a11y';
 import { MediaMatcher } from '@angular/cdk/layout';
 import * as i1$5 from '@angular/material/list';
 import { MatListModule } from '@angular/material/list';

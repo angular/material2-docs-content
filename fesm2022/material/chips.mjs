@@ -1,7 +1,7 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import * as i0 from '@angular/core';
-import { model, signal, computed, inject, Component, ChangeDetectionStrategy } from '@angular/core';
+import { model, signal, computed, inject, ChangeDetectionStrategy, Component } from '@angular/core';
 import * as i3$1 from '@angular/forms';
 import { FormsModule, FormControl, ReactiveFormsModule } from '@angular/forms';
 import * as i4 from '@angular/material/autocomplete';
