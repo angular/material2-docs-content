@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, signal } from '@angular/core';
 import * as i3 from '@angular/material/timepicker';
 import { MatTimepickerModule } from '@angular/material/timepicker';
 import * as i2 from '@angular/material/input';
