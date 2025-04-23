@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { model, ChangeDetectionStrategy, Component, input, signal, computed, inject } from '@angular/core';
+import { model, Component, ChangeDetectionStrategy, input, signal, computed, inject } from '@angular/core';
 import * as i3 from '@angular/forms';
 import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import * as i1 from '@angular/material/card';

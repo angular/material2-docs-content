@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { inject, ViewContainerRef, ViewChild, Component } from '@angular/core';
+import { inject, ViewContainerRef, Component, ViewChild } from '@angular/core';
 import * as i1 from '@angular/cdk/portal';
 import { ComponentPortal, TemplatePortal, DomPortal, PortalModule } from '@angular/cdk/portal';
 
