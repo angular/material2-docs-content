@@ -1,6 +1,6 @@
 import { FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import * as i0 from '@angular/core';
-import { inject, signal, Injectable, ChangeDetectionStrategy, Component } from '@angular/core';
+import { Injectable, inject, Component, ChangeDetectionStrategy, signal } from '@angular/core';
 import { BehaviorSubject, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as i1$2 from '@angular/material/progress-bar';
