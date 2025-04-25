@@ -157,7 +157,7 @@ declare class CdkDragDropOverviewExample {
  * @title Drag&Drop with alternate root element
  */
 declare class CdkDragDropRootElementExample implements AfterViewInit, OnDestroy {
-    private _overlay;
+    private _injector;
     private _viewContainerRef;
     _dialogTemplate: TemplateRef<any>;
     private _overlayRef;

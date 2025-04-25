@@ -1,7 +1,7 @@
 import * as i0 from '@angular/core';
-import { Component, inject, ViewContainerRef, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, inject, Injector, ViewContainerRef, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CdkDrag, moveItemInArray, transferArrayItem, CdkDropListGroup, CdkDropList, CdkDragPlaceholder, CdkDragPreview, CdkDragHandle } from '@angular/cdk/drag-drop';
-import { Overlay } from '@angular/cdk/overlay';
+import { createOverlayRef, createGlobalPositionStrategy } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import * as i1 from '@angular/material/table';
 import { MatTableModule } from '@angular/material/table';
@@ -309,15 +309,17 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "20.0.0-next.5", 
  * @title Drag&Drop with alternate root element
  */
 class CdkDragDropRootElementExample {
-    _overlay = inject(Overlay);
+    _injector = inject(Injector);
     _viewContainerRef = inject(ViewContainerRef);
     _dialogTemplate;
     _overlayRef;
     _portal;
     ngAfterViewInit() {
         this._portal = new TemplatePortal(this._dialogTemplate, this._viewContainerRef);
-        this._overlayRef = this._overlay.create({
-            positionStrategy: this._overlay.position().global().centerHorizontally().centerVertically(),
+        this._overlayRef = createOverlayRef(this._injector, {
+            positionStrategy: createGlobalPositionStrategy(this._injector)
+                .centerHorizontally()
+                .centerVertically(),
             hasBackdrop: true,
         });
         this._overlayRef.backdropClick().subscribe(() => this._overlayRef.detach());
