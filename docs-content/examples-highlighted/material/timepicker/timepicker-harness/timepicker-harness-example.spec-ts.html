@@ -3,15 +3,17 @@
 <span class="hljs-keyword">import</span> {MatTimepickerInputHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/timepicker/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {TimepickerHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./timepicker-harness-example&#x27;</span>;
-<span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser/animations&#x27;</span>;
-<span class="hljs-keyword">import</span> {DateAdapter, MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MATERIAL_ANIMATIONS, MatNativeDateModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;TimepickerHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;TimepickerHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
-    TestBed.configureTestingModule({<span class="hljs-attr">imports</span>: [NoopAnimationsModule, MatNativeDateModule]});
+    TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [MatNativeDateModule],
+      <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MATERIAL_ANIMATIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">animationsDisabled</span>: <span class="hljs-literal">true</span>}}],
+    });
     TestBed.inject(DateAdapter).setLocale(<span class="hljs-string">&#x27;en-US&#x27;</span>); <span class="hljs-comment">// Set the locale to en-US to guarantee consistent tests.</span>
     fixture = TestBed.createComponent(TimepickerHarnessExample);
     fixture.detectChanges();

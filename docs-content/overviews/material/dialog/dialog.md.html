@@ -55,7 +55,7 @@ option to pass information to the dialog component.</p>
 </code></pre>
 <p>To access the data in your dialog component, you have to use the MAT_DIALOG_DATA injection token:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../dialog&#x27;</span>;
 
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;your-dialog&#x27;</span>,
@@ -107,14 +107,14 @@ will be available implicitly in the template:</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">mat-dialog-title</span>&gt;</span>Delete all elements?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-content</span>&gt;</span>This will delete all elements that are currently on this page and cannot be undone.<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-content</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">mat-dialog-close</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span> <span class="hljs-attr">mat-dialog-close</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
 </code></pre>
 <p>Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
 <p>You can control which elements are tab stops with the <code>tabindex</code> attribute</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;-1&quot;</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;-1&quot;</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
 <div material-docs-example="dialog-content"></div>
 

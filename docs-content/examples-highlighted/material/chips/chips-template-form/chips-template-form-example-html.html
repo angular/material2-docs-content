@@ -6,7 +6,7 @@
     @for (keyword of templateKeywords(); track keyword) {
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;removeTemplateKeyword(keyword)&quot;</span>&gt;</span>
         {{keyword}}
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&#x27;remove template form&#x27; + keyword&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;remove template form&#x27; + keyword&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>

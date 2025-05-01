@@ -1,17 +1,17 @@
-import { ArrayDataSource } from '@angular/cdk/collections';
-import { BehaviorSubject } from 'rxjs';
-import { CollectionViewer } from '@angular/cdk/collections';
-import { DataSource } from '@angular/cdk/collections';
-import { FlatTreeControl } from '@angular/cdk/tree';
 import * as i0 from '@angular/core';
-import { MatTreeFlatDataSource } from '@angular/material/tree';
-import { MatTreeFlattener } from '@angular/material/tree';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
-import { NestedTreeControl } from '@angular/cdk/tree';
-import { Observable } from 'rxjs';
-import { SelectionChange } from '@angular/cdk/collections';
-import { WritableSignal } from '@angular/core';
+import { DataSource, CollectionViewer, SelectionChange, ArrayDataSource } from '@angular/cdk/collections';
+import { FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
 
+/** Flat node with expandable and level information */
+declare class DynamicFlatNode {
+    item: string;
+    level: number;
+    expandable: boolean;
+    isLoading: i0.WritableSignal<boolean>;
+    constructor(item: string, level?: number, expandable?: boolean, isLoading?: i0.WritableSignal<boolean>);
+}
 /**
  * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
  * the descendants data from the database.
@@ -26,7 +26,6 @@ declare class DynamicDatabase {
     static ɵfac: i0.ɵɵFactoryDeclaration<DynamicDatabase, never>;
     static ɵprov: i0.ɵɵInjectableDeclaration<DynamicDatabase>;
 }
-
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -50,80 +49,120 @@ declare class DynamicDataSource implements DataSource<DynamicFlatNode> {
      */
     toggleNode(node: DynamicFlatNode, expand: boolean): void;
 }
-
-/** Flat node with expandable and level information */
-declare class DynamicFlatNode {
-    item: string;
-    level: number;
-    expandable: boolean;
-    isLoading: WritableSignal<boolean>;
-    constructor(item: string, level?: number, expandable?: boolean, isLoading?: WritableSignal<boolean>);
-}
-
-/** Flat node with expandable and level information */
-declare interface ExampleFlatNode {
-    expandable: boolean;
-    name: string;
-    level: number;
-}
-
-declare interface ExampleFlatNode_2 {
-    expandable: boolean;
-    name: string;
-    level: number;
-}
-
-/** Flat node with expandable and level information */
-declare interface ExampleFlatNode_3 {
-    expandable: boolean;
-    name: string;
-    level: number;
-}
-
-/** Flat node with expandable and level information */
-declare class FlatNode {
-    name: string;
-    level: number;
-    expandable: boolean;
-    parent: string | null;
-    isLoadMore: boolean;
-    constructor(name: string, level?: number, expandable?: boolean, parent?: string | null, isLoadMore?: boolean);
+/**
+ * @title Tree with dynamic data
+ */
+declare class TreeDynamicExample {
+    constructor();
+    treeControl: FlatTreeControl<DynamicFlatNode>;
+    dataSource: DynamicDataSource;
+    getLevel: (node: DynamicFlatNode) => number;
+    isExpandable: (node: DynamicFlatNode) => boolean;
+    hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
  */
-declare interface FoodNode {
+interface FoodNode$3 {
     name: string;
-    children?: FoodNode[];
+    children?: FoodNode$3[];
+}
+/** Flat node with expandable and level information */
+interface ExampleFlatNode$2 {
+    expandable: boolean;
+    name: string;
+    level: number;
+}
+/**
+ * @title Tree with flat nodes
+ */
+declare class TreeFlatOverviewExample {
+    private _transformer;
+    treeControl: FlatTreeControl<ExampleFlatNode$2, ExampleFlatNode$2>;
+    treeFlattener: MatTreeFlattener<FoodNode$3, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }>;
+    dataSource: MatTreeFlatDataSource<FoodNode$3, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }>;
+    constructor();
+    hasChild: (_: number, node: ExampleFlatNode$2) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, true, never>;
 }
 
 /**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
  */
-declare interface FoodNode_2 {
+interface FoodNode$2 {
     name: string;
-    children?: FoodNode_2[];
+    children?: FoodNode$2[];
+}
+/**
+ * @title Tree with flat nodes (childrenAccessor)
+ */
+declare class TreeFlatChildAccessorOverviewExample {
+    dataSource: FoodNode$2[];
+    childrenAccessor: (node: FoodNode$2) => FoodNode$2[];
+    hasChild: (_: number, node: FoodNode$2) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatChildAccessorOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatChildAccessorOverviewExample, "tree-flat-child-accessor-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * Food data with nested structure.
- * Each node has a name and an optional list of children.
- */
-declare interface FoodNode_3 {
+interface Node {
     name: string;
-    children?: FoodNode_3[];
+    children?: Node[];
 }
-
-/**
- * Food data with nested structure.
- * Each node has a name and an optional list of children.
- */
-declare interface FoodNode_4 {
+interface ExampleFlatNode$1 {
+    expandable: boolean;
     name: string;
-    children?: FoodNode_4[];
+    level: number;
+}
+/**
+ * @title Testing with MatTreeHarness
+ */
+declare class TreeHarnessExample {
+    private _transformer;
+    treeControl: FlatTreeControl<ExampleFlatNode$1, ExampleFlatNode$1>;
+    treeFlattener: MatTreeFlattener<Node, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }>;
+    dataSource: MatTreeFlatDataSource<Node, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }, {
+        expandable: boolean;
+        name: string;
+        level: number;
+    }>;
+    constructor();
+    hasChild: (_: number, node: ExampleFlatNode$1) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never, true, never>;
 }
 
 /** Nested node */
@@ -136,113 +175,19 @@ declare class NestedNode {
     get children(): NestedNode[];
     constructor(name: string, hasChildren?: boolean, parent?: string | null, isLoadMore?: boolean);
 }
-
-declare interface Node_2 {
+/** Flat node with expandable and level information */
+declare class FlatNode {
     name: string;
-    children?: Node_2[];
+    level: number;
+    expandable: boolean;
+    parent: string | null;
+    isLoadMore: boolean;
+    constructor(name: string, level?: number, expandable?: boolean, parent?: string | null, isLoadMore?: boolean);
 }
-
-/**
- * @title Tree with dynamic data
- */
-export declare class TreeDynamicExample {
-    constructor();
-    treeControl: FlatTreeControl<DynamicFlatNode>;
-    dataSource: DynamicDataSource;
-    getLevel: (node: DynamicFlatNode) => number;
-    isExpandable: (node: DynamicFlatNode) => boolean;
-    hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeDynamicExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Tree with flat nodes (childrenAccessor)
- */
-export declare class TreeFlatChildAccessorOverviewExample {
-    dataSource: FoodNode_2[];
-    childrenAccessor: (node: FoodNode_2) => FoodNode_2[];
-    hasChild: (_: number, node: FoodNode_2) => boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatChildAccessorOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatChildAccessorOverviewExample, "tree-flat-child-accessor-overview-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Tree with flat nodes
- */
-export declare class TreeFlatOverviewExample {
-    private _transformer;
-    treeControl: FlatTreeControl<ExampleFlatNode, ExampleFlatNode>;
-    treeFlattener: MatTreeFlattener<FoodNode, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }>;
-    dataSource: MatTreeFlatDataSource<FoodNode, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }>;
-    constructor();
-    hasChild: (_: number, node: ExampleFlatNode) => boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeFlatOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Testing with MatTreeHarness
- */
-export declare class TreeHarnessExample {
-    private _transformer;
-    treeControl: FlatTreeControl<ExampleFlatNode_2, ExampleFlatNode_2>;
-    treeFlattener: MatTreeFlattener<Node_2, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }>;
-    dataSource: MatTreeFlatDataSource<Node_2, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }, {
-        expandable: boolean;
-        name: string;
-        level: number;
-    }>;
-    constructor();
-    hasChild: (_: number, node: ExampleFlatNode_2) => boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeHarnessExample, "tree-harness-example", never, {}, {}, never, never, true, never>;
-}
-
-/**
- * @title Tree with flat nodes
- */
-export declare class TreeLegacyKeyboardInterfaceExample {
-    treeControl: FlatTreeControl<ExampleFlatNode_3, ExampleFlatNode_3>;
-    dataSource: ArrayDataSource<ExampleFlatNode_3>;
-    hasChild: (_: number, node: ExampleFlatNode_3) => boolean;
-    getParentNode(node: ExampleFlatNode_3): ExampleFlatNode_3 | null;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeLegacyKeyboardInterfaceExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLegacyKeyboardInterfaceExample, "tree-legacy-keyboard-interface-example", never, {}, {}, never, never, true, never>;
-}
-
 /**
  * @title Tree with partially loaded data
  */
-export declare class TreeLoadmoreExample {
+declare class TreeLoadmoreExample {
     private _database;
     nodeMap: Map<string, FlatNode>;
     treeControl: FlatTreeControl<FlatNode>;
@@ -266,26 +211,60 @@ export declare class TreeLoadmoreExample {
 }
 
 /**
- * @title Tree with nested nodes (childrenAccessor)
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
  */
-export declare class TreeNestedChildAccessorOverviewExample {
-    childrenAccessor: (node: FoodNode_4) => FoodNode_4[];
-    dataSource: FoodNode_4[];
-    hasChild: (_: number, node: FoodNode_4) => boolean;
-    static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedChildAccessorOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedChildAccessorOverviewExample, "tree-nested-child-accessor-overview-example", never, {}, {}, never, never, true, never>;
+interface FoodNode$1 {
+    name: string;
+    children?: FoodNode$1[];
 }
-
 /**
  * @title Tree with nested nodes
  */
-export declare class TreeNestedOverviewExample {
-    treeControl: NestedTreeControl<FoodNode_3, FoodNode_3>;
-    dataSource: MatTreeNestedDataSource<FoodNode_3>;
+declare class TreeNestedOverviewExample {
+    treeControl: NestedTreeControl<FoodNode$1, FoodNode$1>;
+    dataSource: MatTreeNestedDataSource<FoodNode$1>;
     constructor();
-    hasChild: (_: number, node: FoodNode_3) => boolean;
+    hasChild: (_: number, node: FoodNode$1) => boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedOverviewExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */
+interface FoodNode {
+    name: string;
+    children?: FoodNode[];
+}
+/**
+ * @title Tree with nested nodes (childrenAccessor)
+ */
+declare class TreeNestedChildAccessorOverviewExample {
+    childrenAccessor: (node: FoodNode) => FoodNode[];
+    dataSource: FoodNode[];
+    hasChild: (_: number, node: FoodNode) => boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeNestedChildAccessorOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeNestedChildAccessorOverviewExample, "tree-nested-child-accessor-overview-example", never, {}, {}, never, never, true, never>;
+}
+
+/** Flat node with expandable and level information */
+interface ExampleFlatNode {
+    expandable: boolean;
+    name: string;
+    level: number;
+}
+/**
+ * @title Tree with flat nodes
+ */
+declare class TreeLegacyKeyboardInterfaceExample {
+    treeControl: FlatTreeControl<ExampleFlatNode, ExampleFlatNode>;
+    dataSource: ArrayDataSource<ExampleFlatNode>;
+    hasChild: (_: number, node: ExampleFlatNode) => boolean;
+    getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TreeLegacyKeyboardInterfaceExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TreeLegacyKeyboardInterfaceExample, "tree-legacy-keyboard-interface-example", never, {}, {}, never, never, true, never>;
+}
+
+export { TreeDynamicExample, TreeFlatChildAccessorOverviewExample, TreeFlatOverviewExample, TreeHarnessExample, TreeLegacyKeyboardInterfaceExample, TreeLoadmoreExample, TreeNestedChildAccessorOverviewExample, TreeNestedOverviewExample };

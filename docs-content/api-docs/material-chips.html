@@ -27,9 +27,9 @@
 
       <div class="docs-api-module-import-button" data-docs-api-module-import-button="import {MatChipsModule} from '@angular/material/chips';"></div>
     </div>
-  <h3 id="material-chips-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+  <h3 id="material-chips-components" class="docs-header-link docs-api-h3">
+      <span header-link="components"></span>
+      Components
     </h3>
     
       
@@ -40,7 +40,7 @@
   
 </h4><p class="docs-api-class-description"><p>Material design styled Chip base component. Used inside the MatChipSet component.</p>
 <p>Extended by MatChipOption and MatChipRow for different interaction patterns.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-basic-chip</span>
@@ -356,7 +356,7 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
 </h4><p class="docs-api-class-description"><p>An extension of the MatChip component that supports chip selection. Used with MatChipListbox.</p>
 <p>Unlike other chips, the user can focus on disabled chip options inside a MatChipListbox. The
 user cannot click disabled chips.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-basic-chip-option</span>
@@ -848,7 +848,7 @@ VoiceOver reading every option as &quot;selected&quot; (#25736).</p>
   
 </h4><p class="docs-api-class-description"><p>An extension of the MatChip component used with MatChipGrid and
 the matChipInputFor directive.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-chip-row</span>
@@ -1207,7 +1207,7 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
   
 </h4><p class="docs-api-class-description"><p>Basic container component for the MatChip component.</p>
 <p>Extended by MatChipListbox and MatChipGrid for different interaction patterns.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-chip-set</span>
@@ -1353,7 +1353,7 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
   
 </h4><p class="docs-api-class-description"><p>An extension of the MatChipSet component that supports chip selection.
 Used with MatChipOption chips.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-chip-listbox</span>
@@ -1655,7 +1655,7 @@ are no selected chips.</p>
   
 </h4><p class="docs-api-class-description"><p>An extension of the MatChipSet component used with MatChipRow chips and
 the matChipInputFor directive.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-chip-grid</span>
@@ -1877,6 +1877,10 @@ are no eligible chips.</p>
 
 
 
+    <h3 id="material-chips-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
     
       
 
@@ -1944,6 +1948,20 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: &#39;matChipInputDisabledInteractive&#39;, transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the input should remain interactive when it is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
       <code>id: string</code>
@@ -1964,6 +1982,20 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The input&#39;s placeholder text.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>readonly: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the input is readonly.</p>
 </td>
 </tr>
 
@@ -2737,6 +2769,19 @@ element&#39;s contents.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>inputDisabledInteractive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the chip input should be interactive while disabled by default.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>separatorKeyCodes: readonly number[] | ReadonlySet&lt;number&gt;</code>
     </p>
   </td>
@@ -2766,6 +2811,19 @@ element&#39;s contents.</p>
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>describedByIds: string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Gets the list of ids the input is described by.</p>
+</td>
+</tr>
+
+
     
       
 

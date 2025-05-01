@@ -1,9 +1,17 @@
 import * as i0 from '@angular/core';
 
 /**
+ * @title Button overview
+ */
+declare class ButtonOverviewExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Interactive disabled buttons
  */
-export declare class ButtonDisabledInteractiveExample {
+declare class ButtonDisabledInteractiveExample {
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonDisabledInteractiveExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonDisabledInteractiveExample, "button-disabled-interactive-example", never, {}, {}, never, never, true, never>;
 }
@@ -11,18 +19,10 @@ export declare class ButtonDisabledInteractiveExample {
 /**
  * @title Testing with MatButtonHarness
  */
-export declare class ButtonHarnessExample {
+declare class ButtonHarnessExample {
     clicked: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<ButtonHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<ButtonHarnessExample, "button-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Basic buttons
- */
-export declare class ButtonOverviewExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonOverviewExample, "button-overview-example", never, {}, {}, never, never, true, never>;
-}
-
-export { }
+export { ButtonDisabledInteractiveExample, ButtonHarnessExample, ButtonOverviewExample };

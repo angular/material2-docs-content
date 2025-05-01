@@ -1,6 +1,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-button-container&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;formControl.disable()&quot;</span>&gt;</span>Disable form control<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;formControl.enable()&quot;</span>&gt;</span>Enable form control<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>=<span class="hljs-string">&quot;elevated&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;formControl.disable()&quot;</span>&gt;</span>Disable form control<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matButton</span>=<span class="hljs-string">&quot;elevated&quot;</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;formControl.enable()&quot;</span>&gt;</span>Enable form control<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Enter video keywords<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span>
@@ -11,7 +11,7 @@
     @for (keyword of keywords(); track keyword) {
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-row</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">&quot;removeKeyword(keyword)&quot;</span>&gt;</span>
         {{keyword}}
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;&#x27;remove &#x27; + keyword&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matChipRemove</span> [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">&quot;&#x27;remove &#x27; + keyword&quot;</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>cancel<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>

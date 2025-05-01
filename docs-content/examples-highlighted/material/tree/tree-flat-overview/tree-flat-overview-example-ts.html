@@ -13,26 +13,6 @@
   children?: FoodNode[];
 }
 
-<span class="hljs-keyword">const</span> TREE_DATA: FoodNode[] = [
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
-    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>}],
-  },
-  {
-    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
-    <span class="hljs-attr">children</span>: [
-      {
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
-        <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>}],
-      },
-      {
-        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
-        <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>}],
-      },
-    ],
-  },
-];
-
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
 <span class="hljs-keyword">interface</span> ExampleFlatNode {
   <span class="hljs-attr">expandable</span>: <span class="hljs-built_in">boolean</span>;
@@ -73,8 +53,28 @@
   dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-built_in">this</span>.treeControl, <span class="hljs-built_in">this</span>.treeFlattener);
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dataSource.data = TREE_DATA;
+    <span class="hljs-built_in">this</span>.dataSource.data = EXAMPLE_DATA;
   }
 
   hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: ExampleFlatNode</span>) =&gt;</span> node.expandable;
 }
+
+<span class="hljs-keyword">const</span> EXAMPLE_DATA: FoodNode[] = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
+    <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>}],
+  },
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vegetables&#x27;</span>,
+    <span class="hljs-attr">children</span>: [
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Green&#x27;</span>,
+        <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Broccoli&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussels sprouts&#x27;</span>}],
+      },
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Orange&#x27;</span>,
+        <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>}],
+      },
+    ],
+  },
+];

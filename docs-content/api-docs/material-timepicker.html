@@ -27,9 +27,9 @@
 
       <div class="docs-api-module-import-button" data-docs-api-module-import-button="import {MatTimepickerModule} from '@angular/material/timepicker';"></div>
     </div>
-  <h3 id="material-timepicker-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      Directives
+  <h3 id="material-timepicker-components" class="docs-header-link docs-api-h3">
+      <span header-link="components"></span>
+      Components
     </h3>
     
       
@@ -40,7 +40,7 @@
   
 </h4><p class="docs-api-class-description"><p>Renders out a listbox that can be used to select a time of day.
 Intended to be used together with <code>MatTimepickerInput</code>.</p>
-</p><p class="docs-api-directive-selectors">
+</p><p class="docs-api-component-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
     <span class="docs-api-class-selector-name">mat-timepicker</span>
@@ -292,6 +292,140 @@ seconds (e.g. 90) or a number with a unit (e.g. 45m). Supported units are <code>
     
       
 
+<h4 id="MatTimepickerToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTimepickerToggle"></span>
+  <code>MatTimepickerToggle</code>
+  
+</h4><p class="docs-api-class-description"><p>Button that can be used to open a <code>mat-timepicker</code>.</p>
+</p><p class="docs-api-component-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-timepicker-toggle</span>
+  
+</p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">matTimepickerToggle</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabel: input&lt;string | undefined&gt;(undefined, {
+    alias: &#39;aria-label&#39;,
+})</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Screen-reader label for the button.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabelledby: input&lt;string | undefined&gt;(undefined, {
+    alias: &#39;aria-labelledby&#39;,
+})</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Screen-reader labelled by id for the button.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableRipple: InputSignalWithTransform&lt;boolean, unknown&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples on the toggle should be disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: InputSignalWithTransform&lt;boolean, unknown&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the toggle button is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>timepicker: InputSignal&lt;MatTimepicker&lt;D&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Timepicker instance that the button will toggle.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getAriaLabel
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks for ariaLabelledby and if empty uses custom
+aria-label or defaultAriaLabel if neither is provided.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="material-timepicker-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
 <h4 id="MatTimepickerInput" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatTimepickerInput"></span>
   <code>MatTimepickerInput</code>
@@ -420,136 +554,6 @@ a date object (only time will be used) or a valid time string.</p>
   <tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-
-
-
-    
-      
-
-<h4 id="MatTimepickerToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatTimepickerToggle"></span>
-  <code>MatTimepickerToggle</code>
-  
-</h4><p class="docs-api-class-description"><p>Button that can be used to open a <code>mat-timepicker</code>.</p>
-</p><p class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">Selector:</span>
-  
-    <span class="docs-api-class-selector-name">mat-timepicker-toggle</span>
-  
-</p><span class="docs-api-class-export-label">Exported as:</span>
-<span class="docs-api-class-export-name">matTimepickerToggle</span><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaLabel: input&lt;string | undefined&gt;(undefined, {
-    alias: &#39;aria-label&#39;,
-})</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Screen-reader label for the button.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>ariaLabelledby: input&lt;string | undefined&gt;(undefined, {
-    alias: &#39;aria-labelledby&#39;,
-})</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Screen-reader labelled by id for the button.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disableRipple: InputSignalWithTransform&lt;boolean, unknown&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples on the toggle should be disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disabled: InputSignalWithTransform&lt;boolean, unknown&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the toggle button is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>timepicker: InputSignal&lt;MatTimepicker&lt;D&gt;&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Timepicker instance that the button will toggle.</p>
-</td>
-</tr>
-
-
-    
-  </table>
-
-
-<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getAriaLabel
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Checks for ariaLabelledby and if empty uses custom
-aria-label or defaultAriaLabel if neither is provided.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string | null</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">

@@ -1,6 +1,6 @@
 <div class="example-button-container">
-  <button mat-raised-button (click)="formControl.disable()">Disable form control</button>
-  <button mat-raised-button (click)="formControl.enable()">Enable form control</button>
+  <button matButton="elevated" (click)="formControl.disable()">Disable form control</button>
+  <button matButton="elevated" (click)="formControl.enable()">Enable form control</button>
 </div>
 <p>
   <em>Enter video keywords</em>
@@ -11,7 +11,7 @@
     @for (keyword of keywords(); track keyword) {
       <mat-chip-row (removed)="removeKeyword(keyword)">
         {{keyword}}
-        <button matChipRemove aria-label="'remove ' + keyword">
+        <button matChipRemove [attr.aria-label]="'remove ' + keyword">
           <mat-icon>cancel</mat-icon>
         </button>
       </mat-chip-row>

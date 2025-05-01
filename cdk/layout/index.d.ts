@@ -3,7 +3,7 @@ import { OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 
 /** @title Respond to viewport changes with BreakpointObserver */
-export declare class BreakpointObserverOverviewExample implements OnDestroy {
+declare class BreakpointObserverOverviewExample implements OnDestroy {
     destroyed: Subject<void>;
     currentScreenSize: string;
     displayNameMap: Map<string, string>;
@@ -13,4 +13,4 @@ export declare class BreakpointObserverOverviewExample implements OnDestroy {
     static ɵcmp: i0.ɵɵComponentDeclaration<BreakpointObserverOverviewExample, "breakpoint-observer-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+export { BreakpointObserverOverviewExample };

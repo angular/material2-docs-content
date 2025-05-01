@@ -1616,7 +1616,7 @@ const EXAMPLE_COMPONENTS = {
     },
     "button-overview": {
         "packagePath": "material/button/button-overview",
-        "title": "Basic buttons",
+        "title": "Button overview",
         "componentName": "ButtonOverviewExample",
         "files": [
             "button-overview-example.ts",
@@ -1639,20 +1639,6 @@ const EXAMPLE_COMPONENTS = {
         "selector": "card-actions-example",
         "additionalComponents": [],
         "primaryFile": "card-actions-example.ts",
-        "importPath": "material/card"
-    },
-    "card-fancy": {
-        "packagePath": "material/card/card-fancy",
-        "title": "Card with multiple sections",
-        "componentName": "CardFancyExample",
-        "files": [
-            "card-fancy-example.ts",
-            "card-fancy-example.html",
-            "card-fancy-example.css"
-        ],
-        "selector": "card-fancy-example",
-        "additionalComponents": [],
-        "primaryFile": "card-fancy-example.ts",
         "importPath": "material/card"
     },
     "card-footer": {
@@ -1699,11 +1685,12 @@ const EXAMPLE_COMPONENTS = {
     },
     "card-overview": {
         "packagePath": "material/card/card-overview",
-        "title": "Basic cards",
+        "title": "Card overview",
         "componentName": "CardOverviewExample",
         "files": [
             "card-overview-example.ts",
-            "card-overview-example.html"
+            "card-overview-example.html",
+            "card-overview-example.css"
         ],
         "selector": "card-overview-example",
         "additionalComponents": [],
@@ -5251,8 +5238,6 @@ async function loadExample(id) {
             return import('@angular/components-examples/material/button');
         case 'card-actions':
             return import('@angular/components-examples/material/card');
-        case 'card-fancy':
-            return import('@angular/components-examples/material/card');
         case 'card-footer':
             return import('@angular/components-examples/material/card');
         case 'card-harness':
@@ -5745,6 +5730,7 @@ async function loadExample(id) {
 }
 
 // The example-module file will be auto-generated. As soon as the
+// examples are being compiled, the module file will be generated.
 /**
  * Example data with information about component name, selector, files used in
  * example, and path to examples.
@@ -5773,10 +5759,6 @@ class ExampleData {
         this.componentNames = [componentName, ...additionalComponents];
     }
 }
-
-/**
- * Generated bundle index. Do not edit.
- */
 
 export { EXAMPLE_COMPONENTS, ExampleData, loadExample };
 //# sourceMappingURL=components-examples.mjs.map

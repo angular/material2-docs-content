@@ -495,6 +495,19 @@ browser location changes.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closePredicate: &lt;Result = unknown, Component = unknown, Config extends DialogConfig = DialogConfig&gt;(result: Result | undefined, config: Config, componentInstance: Component | null) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Function used to determine whether the dialog is allowed to close.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>container: Type&lt;C&gt; | {
     type: Type&lt;C&gt;;
     providers: (config: DialogConfig&lt;D, R, C&gt;) =&gt; StaticProvider[];
@@ -530,6 +543,19 @@ to the dialog container.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Layout direction for the dialog&#39;s content.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableAnimations: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the built-in overlay animations should be disabled.</p>
 </td>
 </tr>
 
@@ -877,6 +903,7 @@ null when the dialog is opened using a <code>TemplateRef</code>.</p>
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>containerInstance: BasePortalOutlet &amp; {
     _closeInteractionType?: FocusOrigin;
+    _recaptureFocus?: () =&gt; void;
 }</code>
     </p>
   </td>

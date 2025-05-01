@@ -158,6 +158,7 @@ and <code>ReactiveFormsModule</code>.</p>
           Text Entry
         </h4>
       <p><code>&lt;mat-chip-grid&gt;</code> and <code>&lt;mat-chip-row&gt;</code> : These elements implement a grid accessibility pattern. Use them as part of a free form input that allows users to enter text to add chips.</p>
+<p>Note : be sure to have the input element be a sibling of mat-chip-grid to ensure accessibility of the input element by accessibility devices such as Voice Control. It is also recommended to apply an appropriate <code>aria-label</code> to the input to optimize accessibility of the input.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-grid</span> #<span class="hljs-attr">myChipGrid</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;mySelection&quot;</span>
     <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;enter sandwich fillings&quot;</span>&gt;</span>
@@ -169,10 +170,11 @@ and <code>ReactiveFormsModule</code>.</p>
         <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-row</span>&gt;</span>
     }
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;myChipGrid&quot;</span>
-           [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
-           (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span> /&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-grid</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">&quot;myChipGrid&quot;</span>
+          [<span class="hljs-attr">matChipInputSeparatorKeyCodes</span>]=<span class="hljs-string">&quot;separatorKeysCodes&quot;</span>
+          (<span class="hljs-attr">matChipInputTokenEnd</span>)=<span class="hljs-string">&quot;add($event)&quot;</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Add sandwich fillings...&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 </code></pre>
 

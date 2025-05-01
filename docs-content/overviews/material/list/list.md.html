@@ -89,7 +89,7 @@ element in an <code>&lt;mat-list-item&gt;</code>.</p>
   @for (link of links; track link) {
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> [<span class="hljs-attr">activated</span>]=<span class="hljs-string">&quot;link.isActive&quot;</span>&gt;</span>
        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">matListItemTitle</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span>{{ link }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;showInfo(link)&quot;</span> <span class="hljs-attr">matListItemMeta</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">matIconButton</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;showInfo(link)&quot;</span> <span class="hljs-attr">matListItemMeta</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>info<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
@@ -255,6 +255,32 @@ with the <code>mat-list-item</code> attribute. You should not nest any interacti
 anchors, including buttons and checkboxes.</p>
 <p>Always provide an accessible label for the <code>&lt;mat-nav-list&gt;</code> element via <code>aria-label</code> or
 <code>aria-labelledby</code>.</p>
+<p>To provide the best screen reader experience for a list, wrap each anchor element with a <code>&lt;li&gt;</code> or <code>&lt;div role=&quot;listitem&quot;&gt;</code> element and wrap all of the anchor elements with a <code>&lt;ul&gt;</code> element or <code>&lt;div role=&quot;list&quot;&gt;</code> element.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-nav-list</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Select a folder&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    @for (link of list; track link) {
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span> [<span class="hljs-attr">activated</span>]=<span class="hljs-string">&quot;link.isActive&quot;</span>&gt;</span>{{ link }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-nav-list</span>&gt;</span>
+</code></pre>
+
+        <h4 id="action" class="docs-header-link">
+          <span header-link="action"></span>
+          Action
+        </h4>
+      <p>To provide the best screen reader experience for a list, wrap each button element with a <code>&lt;li&gt;</code> or <code>&lt;div role=&quot;listitem&quot;&gt;</code> element and add <code>role=&quot;list&quot;</code> to <code>&lt;mat-action-list&gt;</code>.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-action-list</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;list&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Post actions&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-list-item</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;save()&quot;</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-list-item</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">&quot;undo()&quot;</span>&gt;</span>Undo<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-list</span>&gt;</span>
+</code></pre>
 
         <h4 id="selection" class="docs-header-link">
           <span header-link="selection"></span>

@@ -1,11 +1,11 @@
-import { FormControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
+import * as _angular_forms from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 /**
  * @title Configurable slide-toggle
  */
-export declare class SlideToggleConfigurableExample {
+declare class SlideToggleConfigurableExample {
     checked: boolean;
     disabled: boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleConfigurableExample, never>;
@@ -15,12 +15,12 @@ export declare class SlideToggleConfigurableExample {
 /**
  * @title Slide-toggle with forms
  */
-export declare class SlideToggleFormsExample {
+declare class SlideToggleFormsExample {
     private _formBuilder;
     isChecked: boolean;
     formGroup: FormGroup<{
-        enableWifi: FormControl<string | null>;
-        acceptTerms: FormControl<string | null>;
+        enableWifi: _angular_forms.FormControl<string | null>;
+        acceptTerms: _angular_forms.FormControl<string | null>;
     }>;
     alertFormValues(formGroup: FormGroup): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleFormsExample, never>;
@@ -28,21 +28,21 @@ export declare class SlideToggleFormsExample {
 }
 
 /**
+ * @title Basic slide-toggles
+ */
+declare class SlideToggleOverviewExample {
+    static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleOverviewExample, "slide-toggle-overview-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Testing with MatSlideToggleHarness
  */
-export declare class SlideToggleHarnessExample {
+declare class SlideToggleHarnessExample {
     disabled: boolean;
     ctrl: FormControl<boolean | null>;
     static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleHarnessExample, never>;
     static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleHarnessExample, "slide-toggle-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Basic slide-toggles
- */
-export declare class SlideToggleOverviewExample {
-    static ɵfac: i0.ɵɵFactoryDeclaration<SlideToggleOverviewExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<SlideToggleOverviewExample, "slide-toggle-overview-example", never, {}, {}, never, never, true, never>;
-}
-
-export { }
+export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleHarnessExample, SlideToggleOverviewExample };

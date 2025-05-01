@@ -1,12 +1,9 @@
-import { AfterViewInit } from '@angular/core';
-import { ElementRef } from '@angular/core';
-import { FocusMonitor } from '@angular/cdk/a11y';
-import { FocusOrigin } from '@angular/cdk/a11y';
+import { FocusOrigin, FocusMonitor } from '@angular/cdk/a11y';
 import * as i0 from '@angular/core';
-import { OnDestroy } from '@angular/core';
+import { OnDestroy, AfterViewInit, ElementRef } from '@angular/core';
 
 /** @title Monitoring focus with FocusMonitor */
-export declare class FocusMonitorDirectivesExample {
+declare class FocusMonitorDirectivesExample {
     private _ngZone;
     private _cdr;
     elementOrigin: string;
@@ -18,7 +15,7 @@ export declare class FocusMonitorDirectivesExample {
 }
 
 /** @title Focusing with a specific FocusOrigin */
-export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterViewInit {
+declare class FocusMonitorFocusViaExample implements OnDestroy, AfterViewInit {
     focusMonitor: FocusMonitor;
     private _cdr;
     private _ngZone;
@@ -32,7 +29,7 @@ export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterView
 }
 
 /** @title Monitoring focus with FocusMonitor */
-export declare class FocusMonitorOverviewExample implements OnDestroy, AfterViewInit {
+declare class FocusMonitorOverviewExample implements OnDestroy, AfterViewInit {
     private _focusMonitor;
     private _cdr;
     private _ngZone;
@@ -47,4 +44,4 @@ export declare class FocusMonitorOverviewExample implements OnDestroy, AfterView
     static ɵcmp: i0.ɵɵComponentDeclaration<FocusMonitorOverviewExample, "focus-monitor-overview-example", never, {}, {}, never, never, true, never>;
 }
 
-export { }
+export { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample };

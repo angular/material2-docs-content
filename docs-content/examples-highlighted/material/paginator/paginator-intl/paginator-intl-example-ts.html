@@ -2,6 +2,8 @@
 <span class="hljs-keyword">import</span> {MatPaginatorIntl, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;@angular/localize/init&#x27;</span>;
+
 <span class="hljs-meta">@Injectable</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyCustomPaginatorIntl</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatPaginatorIntl</span> </span>{
   changes = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();

@@ -1,14 +1,13 @@
-import { ElementRef } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
 import * as i0 from '@angular/core';
+import { OnInit, ElementRef } from '@angular/core';
+import * as _angular_forms from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { OnInit } from '@angular/core';
 
 /**
  * @title Highlight the first autocomplete option
  */
-export declare class AutocompleteAutoActiveFirstOptionExample implements OnInit {
+declare class AutocompleteAutoActiveFirstOptionExample implements OnInit {
     myControl: FormControl<string | null>;
     options: string[];
     filteredOptions: Observable<string[]>;
@@ -18,10 +17,13 @@ export declare class AutocompleteAutoActiveFirstOptionExample implements OnInit 
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteAutoActiveFirstOptionExample, "autocomplete-auto-active-first-option-example", never, {}, {}, never, never, true, never>;
 }
 
+interface User {
+    name: string;
+}
 /**
  * @title Display value autocomplete
  */
-export declare class AutocompleteDisplayExample implements OnInit {
+declare class AutocompleteDisplayExample implements OnInit {
     myControl: FormControl<string | User | null>;
     options: User[];
     filteredOptions: Observable<User[]>;
@@ -35,7 +37,7 @@ export declare class AutocompleteDisplayExample implements OnInit {
 /**
  * @title Filter autocomplete
  */
-export declare class AutocompleteFilterExample implements OnInit {
+declare class AutocompleteFilterExample implements OnInit {
     myControl: FormControl<string | null>;
     options: string[];
     filteredOptions: Observable<string[]>;
@@ -45,25 +47,17 @@ export declare class AutocompleteFilterExample implements OnInit {
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteFilterExample, "autocomplete-filter-example", never, {}, {}, never, never, true, never>;
 }
 
-/**
- * @title Testing with MatAutocompleteHarness
- */
-export declare class AutocompleteHarnessExample {
-    states: {
-        code: string;
-        name: string;
-    }[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteHarnessExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteHarnessExample, "autocomplete-harness-example", never, {}, {}, never, never, true, never>;
+interface StateGroup {
+    letter: string;
+    names: string[];
 }
-
 /**
  * @title Option groups autocomplete
  */
-export declare class AutocompleteOptgroupExample implements OnInit {
+declare class AutocompleteOptgroupExample implements OnInit {
     private _formBuilder;
-    stateForm: FormGroup<    {
-    stateGroup: FormControl<string | null>;
+    stateForm: _angular_forms.FormGroup<{
+        stateGroup: _angular_forms.FormControl<string | null>;
     }>;
     stateGroups: StateGroup[];
     stateGroupOptions: Observable<StateGroup[]>;
@@ -73,10 +67,15 @@ export declare class AutocompleteOptgroupExample implements OnInit {
     static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteOptgroupExample, "autocomplete-optgroup-example", never, {}, {}, never, never, true, never>;
 }
 
+interface State {
+    flag: string;
+    name: string;
+    population: string;
+}
 /**
  * @title Autocomplete overview
  */
-export declare class AutocompleteOverviewExample {
+declare class AutocompleteOverviewExample {
     stateCtrl: FormControl<string | null>;
     filteredStates: Observable<State[]>;
     states: State[];
@@ -89,7 +88,7 @@ export declare class AutocompleteOverviewExample {
 /**
  * @title Plain input autocomplete
  */
-export declare class AutocompletePlainInputExample implements OnInit {
+declare class AutocompletePlainInputExample implements OnInit {
     control: FormControl<string | null>;
     streets: string[];
     filteredStreets: Observable<string[]>;
@@ -101,9 +100,19 @@ export declare class AutocompletePlainInputExample implements OnInit {
 }
 
 /**
+ * @title Simple autocomplete
+ */
+declare class AutocompleteSimpleExample {
+    myControl: FormControl<string | null>;
+    options: string[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteSimpleExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteSimpleExample, "autocomplete-simple-example", never, {}, {}, never, never, true, never>;
+}
+
+/**
  * @title Require an autocomplete option to be selected
  */
-export declare class AutocompleteRequireSelectionExample {
+declare class AutocompleteRequireSelectionExample {
     input: ElementRef<HTMLInputElement>;
     myControl: FormControl<string | null>;
     options: string[];
@@ -115,28 +124,15 @@ export declare class AutocompleteRequireSelectionExample {
 }
 
 /**
- * @title Simple autocomplete
+ * @title Testing with MatAutocompleteHarness
  */
-export declare class AutocompleteSimpleExample {
-    myControl: FormControl<string | null>;
-    options: string[];
-    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteSimpleExample, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteSimpleExample, "autocomplete-simple-example", never, {}, {}, never, never, true, never>;
+declare class AutocompleteHarnessExample {
+    states: {
+        code: string;
+        name: string;
+    }[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<AutocompleteHarnessExample, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AutocompleteHarnessExample, "autocomplete-harness-example", never, {}, {}, never, never, true, never>;
 }
 
-declare interface State {
-    flag: string;
-    name: string;
-    population: string;
-}
-
-declare interface StateGroup {
-    letter: string;
-    names: string[];
-}
-
-declare interface User {
-    name: string;
-}
-
-export { }
+export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteHarnessExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteRequireSelectionExample, AutocompleteSimpleExample };
