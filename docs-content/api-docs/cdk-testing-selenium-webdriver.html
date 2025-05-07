@@ -1219,7 +1219,8 @@ and attempts to add the string to the Element&#39;s value.</p>
       <code>rootElement: TestElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>The root element of this <code>HarnessEnvironment</code> as a <code>TestElement</code>.</p>
+</td>
 </tr>
 
 
@@ -1335,7 +1336,12 @@ and attempts to add the string to the Element&#39;s value.</p>
       <th colspan="2" class="docs-api-method-name-cell">documentRootLocatorFactory
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a locator factory rooted at the document root.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -1399,7 +1405,14 @@ cases where it is needed to fully flush animation events.</p>
         </div>getAllChildLoaders
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Searches for all elements with the given selector under the environment&#39;s root element,
+and returns an array of <code>HarnessLoader</code>s, one for each matching element, rooted at that
+element.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1413,7 +1426,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element of the new <code>HarnessLoader</code></p>
+
       </p>
     </td>
   </tr>
@@ -1428,7 +1442,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A list of <code>HarnessLoader</code>s, one for each matching element, rooted at that element.</p>
+
       </p>
     </td>
   </tr></table>
@@ -1445,7 +1460,13 @@ cases where it is needed to fully flush animation events.</p>
         </div>getAllHarnesses
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Searches for all instances of the component corresponding to the given harness type under the
+<code>HarnessEnvironment</code>&#39;s root element, and returns a list <code>ComponentHarness</code> for each instance.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1459,7 +1480,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A query for a harness to create</p>
+
       </p>
     </td>
   </tr>
@@ -1474,7 +1496,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A list instances of the given harness type.</p>
+
       </p>
     </td>
   </tr></table>
@@ -1542,7 +1565,14 @@ cases where it is needed to fully flush animation events.</p>
         </div>getChildLoader
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Searches for an element with the given selector under the evironment&#39;s root element,
+and returns a <code>HarnessLoader</code> rooted at the matching element. If multiple elements match the
+selector, the first is used. If no elements match, an error is thrown.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1556,7 +1586,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element of the new <code>HarnessLoader</code></p>
+
       </p>
     </td>
   </tr>
@@ -1571,7 +1602,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A <code>HarnessLoader</code> rooted at the element matching the given selector.</p>
+
       </p>
     </td>
   </tr></table>
@@ -1619,7 +1651,15 @@ cases where it is needed to fully flush animation events.</p>
         </div>getHarness
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Searches for an instance of the component corresponding to the given harness type under the
+<code>HarnessEnvironment</code>&#39;s root element, and returns a <code>ComponentHarness</code> for that instance. If
+multiple matching components are found, a harness for the first one is returned. If no matching
+component is found, an error is thrown.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1633,7 +1673,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A query for a harness to create</p>
+
       </p>
     </td>
   </tr>
@@ -1648,7 +1689,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>An instance of the given harness type</p>
+
       </p>
     </td>
   </tr></table>
@@ -1665,7 +1707,15 @@ cases where it is needed to fully flush animation events.</p>
         </div>getHarnessOrNull
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Searches for an instance of the component corresponding to the given harness type under the
+<code>HarnessEnvironment</code>&#39;s root element, and returns a <code>ComponentHarness</code> for that instance. If
+multiple matching components are found, a harness for the first one is returned. If no matching
+component is found, null is returned.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1679,7 +1729,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A query for a harness to create</p>
+
       </p>
     </td>
   </tr>
@@ -1694,7 +1745,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>An instance of the given harness type (or null if not found).</p>
+
       </p>
     </td>
   </tr></table>
@@ -1762,7 +1814,12 @@ cases where it is needed to fully flush animation events.</p>
         </div>harnessLoaderFor
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessLoader</code> instance for an element under the root of this <code>HarnessEnvironment</code>.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1776,7 +1833,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element.</p>
+
       </p>
     </td>
   </tr>
@@ -1791,7 +1849,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A <code>HarnessLoader</code> rooted at the first element matching the given selector.</p>
+
       </p>
     </td>
   </tr></table>
@@ -1808,7 +1867,12 @@ cases where it is needed to fully flush animation events.</p>
         </div>harnessLoaderForAll
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>HarnessLoader</code> instances, one for each matching element.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1822,7 +1886,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element.</p>
+
       </p>
     </td>
   </tr>
@@ -1837,7 +1902,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A list of <code>HarnessLoader</code>, one rooted at each element matching the given selector.</p>
+
       </p>
     </td>
   </tr></table>
@@ -1854,7 +1920,12 @@ cases where it is needed to fully flush animation events.</p>
         </div>harnessLoaderForOptional
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>HarnessLoader</code> instance for an element under the root of this <code>HarnessEnvironment</code>.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1868,7 +1939,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>The selector for the root element.</p>
+
       </p>
     </td>
   </tr>
@@ -1883,7 +1955,9 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A <code>HarnessLoader</code> rooted at the first element matching the given selector, or null if
+    no matching element is found.</p>
+
       </p>
     </td>
   </tr></table>
@@ -1900,7 +1974,13 @@ cases where it is needed to fully flush animation events.</p>
         </div>hasHarness
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Searches for an instance of the component corresponding to the given harness type under the
+<code>HarnessEnvironment</code>&#39;s root element, and returns a boolean indicating if any were found.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -1914,7 +1994,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A query for a harness to create</p>
+
       </p>
     </td>
   </tr>
@@ -1929,7 +2010,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A boolean indicating if an instance was found.</p>
+
       </p>
     </td>
   </tr></table>
@@ -2008,11 +2090,44 @@ cases where it is needed to fully flush animation events.</p>
       <th colspan="2" class="docs-api-method-name-cell">locatorFor
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Creates an asynchronous locator function that can be used to find a <code>ComponentHarness</code> instance
+or element under the root element of this <code>HarnessEnvironment</code>.</p>
+<p>For example, given the following DOM and assuming <code>DivHarness.hostSelector</code> is <code>&#39;div&#39;</code></p>
+<pre><code class="language-html">&lt;div id=&quot;d1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;d2&quot;&gt;&lt;/div&gt;</code></pre>
+<p>then we expect:</p>
+<pre><code class="language-ts">await lf.locatorFor(DivHarness, &#39;div&#39;)() // Gets a `DivHarness` instance for #d1
+await lf.locatorFor(&#39;div&#39;, DivHarness)() // Gets a `TestElement` instance for #d1
+await lf.locatorFor(&#39;span&#39;)()            // Throws because the `Promise` rejects</code></pre>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
   </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        queries</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
+      </p>
+    </td>
+  </tr>
   
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
@@ -2033,11 +2148,16 @@ cases where it is needed to fully flush animation events.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;&gt;</code>
+      <code class="docs-api-method-returns-type">() =&gt; Promise&lt;LocatorFnResult&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+  first element or harness matching the given search criteria. Matches are ordered first by
+  order in the DOM, and second by order in the queries list. If no matches are found, the
+  <code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
+  each query.</p>
+
       </p>
     </td>
   </tr></table>
@@ -2052,11 +2172,50 @@ cases where it is needed to fully flush animation events.</p>
       <th colspan="2" class="docs-api-method-name-cell">locatorForAll
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Creates an asynchronous locator function that can be used to find <code>ComponentHarness</code> instances
+or elements under the root element of this <code>HarnessEnvironment</code>.</p>
+<p>For example, given the following DOM and assuming <code>DivHarness.hostSelector</code> is <code>&#39;div&#39;</code> and
+<code>IdIsD1Harness.hostSelector</code> is <code>&#39;#d1&#39;</code></p>
+<pre><code class="language-html">&lt;div id=&quot;d1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;d2&quot;&gt;&lt;/div&gt;</code></pre>
+<p>then we expect:</p>
+<pre><code class="language-ts">// Gets [DivHarness for #d1, TestElement for #d1, DivHarness for #d2, TestElement for #d2]
+await lf.locatorForAll(DivHarness, &#39;div&#39;)()
+// Gets [TestElement for #d1, TestElement for #d2]
+await lf.locatorForAll(&#39;div&#39;, &#39;#d1&#39;)()
+// Gets [DivHarness for #d1, IdIsD1Harness for #d1, DivHarness for #d2]
+await lf.locatorForAll(DivHarness, IdIsD1Harness)()
+// Gets []
+await lf.locatorForAll(&#39;span&#39;)()</code></pre>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
   </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        queries</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
+      </p>
+    </td>
+  </tr>
   
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
@@ -2077,11 +2236,18 @@ cases where it is needed to fully flush animation events.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;[]&gt;</code>
+      <code class="docs-api-method-returns-type">() =&gt; Promise&lt;LocatorFnResult&lt;T&gt;[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for all
+  elements and harnesses matching the given search criteria. Matches are ordered first by
+  order in the DOM, and second by order in the queries list. If an element matches more than
+  one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
+  an element matches multiple <code>string</code> selectors, only one <code>TestElement</code> instance is returned
+  for that element. The type that the <code>Promise</code> resolves to is an array where each element is
+  the union of all result types for each query.</p>
+
       </p>
     </td>
   </tr></table>
@@ -2096,11 +2262,44 @@ cases where it is needed to fully flush animation events.</p>
       <th colspan="2" class="docs-api-method-name-cell">locatorForOptional
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Creates an asynchronous locator function that can be used to find a <code>ComponentHarness</code> instance
+or element under the root element of this <code>HarnessEnvironmnet</code>.</p>
+<p>For example, given the following DOM and assuming <code>DivHarness.hostSelector</code> is <code>&#39;div&#39;</code></p>
+<pre><code class="language-html">&lt;div id=&quot;d1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;d2&quot;&gt;&lt;/div&gt;</code></pre>
+<p>then we expect:</p>
+<pre><code class="language-ts">await lf.locatorForOptional(DivHarness, &#39;div&#39;)() // Gets a `DivHarness` instance for #d1
+await lf.locatorForOptional(&#39;div&#39;, DivHarness)() // Gets a `TestElement` instance for #d1
+await lf.locatorForOptional(&#39;span&#39;)()            // Gets `null`</code></pre>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
   </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        queries</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
+<ul>
+<li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
+<li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
+given class.</li>
+<li>A <code>HarnessPredicate</code> searches for <code>ComponentHarness</code> instances matching the given
+predicate.</li>
+</ul>
+
+      </p>
+    </td>
+  </tr>
   
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
@@ -2121,11 +2320,16 @@ cases where it is needed to fully flush animation events.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt; | null&gt;</code>
+      <code class="docs-api-method-returns-type">() =&gt; Promise&lt;LocatorFnResult&lt;T&gt; | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+  first element or harness matching the given search criteria. Matches are ordered first by
+  order in the DOM, and second by order in the queries list. If no matches are found, the
+  <code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
+  result types for each query or null.</p>
+
       </p>
     </td>
   </tr></table>
@@ -2153,7 +2357,8 @@ cases where it is needed to fully flush animation events.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        
+        <p>A <code>HarnessLoader</code> rooted at the root element of this <code>HarnessEnvironment</code>.</p>
+
       </p>
     </td>
   </tr></table>
