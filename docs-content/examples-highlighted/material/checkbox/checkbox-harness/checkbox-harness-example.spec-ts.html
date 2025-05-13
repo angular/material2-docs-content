@@ -3,12 +3,14 @@
 <span class="hljs-keyword">import</span> {ComponentFixture, TestBed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {MatCheckboxHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox/testing&#x27;</span>;
 <span class="hljs-keyword">import</span> {CheckboxHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./checkbox-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {provideCheckNoChangesConfig} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 
 describe(<span class="hljs-string">&#x27;CheckboxHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;CheckboxHarnessExample&gt;;
   <span class="hljs-keyword">let</span> loader: HarnessLoader;
 
   beforeEach(<span class="hljs-function">() =&gt;</span> {
+    TestBed.configureTestingModule({<span class="hljs-attr">providers</span>: [provideCheckNoChangesConfig({<span class="hljs-attr">exhaustive</span>: <span class="hljs-literal">false</span>})]});
     fixture = TestBed.createComponent(CheckboxHarnessExample);
     fixture.detectChanges();
     loader = TestbedHarnessEnvironment.loader(fixture);
