@@ -4,7 +4,7 @@ data.</p>
 data input and template, except that its element and attribute selectors will be prefixed
 with <code>mat-</code> instead of <code>cdk-</code>. For more information on the interface and a detailed look at how
 the table is implemented, see the
-<a href="https://material.angular.io/guide/cdk-table">guide covering the CDK data-table</a>.</p>
+<a href="https://material.angular.dev/guide/cdk-table">guide covering the CDK data-table</a>.</p>
 
         <h3 id="getting-started" class="docs-header-link">
           <span header-link="getting-started"></span>
@@ -159,7 +159,7 @@ and send the right paged data to the table.</p>
 <p>Otherwise if you are implementing the logic to paginate your data, you will want to listen to the
 paginator&#39;s <code>(page)</code> output and pass the right slice of data to your table.</p>
 <p>For more information on using and configuring the <code>&lt;mat-paginator&gt;</code>, check out the
-<a href="https://material.angular.io/components/paginator/overview">mat-paginator docs</a>.</p>
+<a href="https://material.angular.dev/components/paginator/overview">mat-paginator docs</a>.</p>
 <p>The <code>MatPaginator</code> is one provided solution to paginating your table&#39;s data, but it is not the only
 option. In fact, the table can work with any custom pagination UI or strategy since the <code>MatTable</code>
 and its interface is not tied to any one specific implementation.</p>
@@ -171,7 +171,7 @@ and its interface is not tied to any one specific implementation.</p>
           Sorting
         </h4>
       <p>To add sorting behavior to the table, add the <code>matSort</code> directive to the table and add
-<code>mat-sort-header</code> to each column header cell that should trigger sorting. Note that you have to import <code>MatSortModule</code> in order to initialize the <code>matSort</code> directive (see <a href="https://material.angular.io/components/sort/api">API docs</a>).</p>
+<code>mat-sort-header</code> to each column header cell that should trigger sorting. Note that you have to import <code>MatSortModule</code> in order to initialize the <code>matSort</code> directive (see <a href="https://material.angular.dev/components/sort/api">API docs</a>).</p>
 <pre><code class="language-html"><span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">&quot;position&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
@@ -195,7 +195,7 @@ table, since it will not automatically check the array for changes.</p>
 <div material-docs-example="table-sorting"></div>
 
 <p>For more information on using and configuring the sorting behavior, check out the
-<a href="https://material.angular.io/components/sort/overview">matSort docs</a>.</p>
+<a href="https://material.angular.dev/components/sort/overview">matSort docs</a>.</p>
 <p>The <code>MatSort</code> is one provided solution to sorting your table&#39;s data, but it is not the only option.
 In fact, the table can work with any custom sorting UI or strategy since the <code>MatTable</code> and
 its interface is not tied to any one specific implementation.</p>

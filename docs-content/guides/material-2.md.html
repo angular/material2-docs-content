@@ -7,12 +7,12 @@
 components in your application. The theming system is based on Google&#39;s
 <a href="https://m2.material.io/design/material-theming/overview.html">Material Design 2</a> specification.</p>
 <p><strong>This guide refers to Material 2, the previous version of Material. For the
-latest Material 3 documentation, see the <a href="https://material.angular.io/guide/theming">theming guide</a>.</strong></p>
+latest Material 3 documentation, see the <a href="https://material.angular.dev/guide/theming">theming guide</a>.</strong></p>
 <p><strong>For information on how to update, see the section
 on <a href="#how-to-migrate-an-app-from-material-2-to-material-3">how to migrate an app from Material 2 to Material 3</a>.</strong></p>
 <p>This document describes the concepts and APIs for customizing colors. For typography customization,
-see <a href="https://material.angular.io/guide/typography">Angular Material Typography</a>. For guidance on building components to be
-customizable with this system, see <a href="https://material.angular.io/guide/theming-your-components">Theming your own components</a>.</p>
+see <a href="https://material.angular.dev/guide/typography">Angular Material Typography</a>. For guidance on building components to be
+customizable with this system, see <a href="https://material.angular.dev/guide/theming-your-components">Theming your own components</a>.</p>
 
         <h3 id="sass" class="docs-header-link">
           <span header-link="sass"></span>
@@ -104,7 +104,7 @@ typography, and density CSS styles.</p>
         </h4>
       <p>Angular Material represents a theme as a Sass map that contains your color, typography, and density
 choices, as well as some base design system settings. See
-<a href="https://material.angular.io/guide/typography">Angular Material Typography</a> for an in-depth guide to customizing typography. See
+<a href="https://material.angular.dev/guide/typography">Angular Material Typography</a> for an in-depth guide to customizing typography. See
 <a href="#customizing-density">Customizing density</a> below for details on adjusting component density.</p>
 <p>Constructing the theme first requires defining your primary and accent palettes, with an optional
 warn palette. The <code>m2-define-palette</code> Sass function accepts a color palette, described in the
@@ -1159,7 +1159,7 @@ typography level. The <code>.mat-h5</code> style uses the <code>body-2</code> le
           Reading typography values from a config
         </h4>
       <p>It is possible to read typography properties from a theme for use in your own components. For more
-information about this see our section on <a href="https://material.angular.io/guide/material-2-theming#theming-your-components">Theming your own components</a>,</p>
+information about this see our section on <a href="https://material.angular.dev/guide/material-2-theming#theming-your-components">Theming your own components</a>,</p>
 
         <h3 id="step-by-step-example" class="docs-header-link">
           <span header-link="step-by-step-example"></span>
@@ -1322,7 +1322,7 @@ removed.</p>
 <p>The simplest way to accomplish this is by checking the theme version and emitting different styles
 for M2 vs M3. You can check the theme version using the <code>get-theme-version</code> function from
 <code>@angular/material</code>. The function will return <code>0</code> for an M2 theme or <code>1</code> for an M3 theme (see
-<a href="https://material.angular.io/guide/theming#theme-your-own-components-using-a-material-3-theme">theme your own components using a Material 3 theme</a>
+<a href="https://material.angular.dev/guide/theming#theme-your-own-components-using-a-material-3-theme">theme your own components using a Material 3 theme</a>
 for how to read values from an M3 theme).</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
