@@ -168,11 +168,23 @@ are used to create <code>ComponentHarness</code> instances for elements under th
 <td>Searches for an instance of the given <code>ComponentHarness</code> class or <code>HarnessPredicate</code> below the root element of this <code>HarnessLoader</code> and returns an instance of the harness corresponding to the first matching element</td>
 </tr>
 <tr>
+<td><code>getHarnessAtIndex&lt;T extends ComponentHarness&gt;(harnessType: ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;, index: number): Promise&lt;T&gt;</code></td>
+<td>Acts like <code>getHarness</code>, but returns an instance of the harness corresponding to the matching element with the given index (zero-indexed)</td>
+</tr>
+<tr>
 <td><code>getAllHarnesses&lt;T extends ComponentHarness&gt;(harnessType: ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;): Promise&lt;T[]&gt;</code></td>
 <td>Acts like <code>getHarness</code>, but returns an array of harness instances, one for each matching element, rather than just the first matching element</td>
 </tr>
+<tr>
+<td><code>countHarnesses&lt;T extends ComponentHarness&gt;(harnessType: ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;): Promise&lt;number&gt;</code></td>
+<td>Counts the number of instances of the given <code>ComponentHarness</code> class or <code>HarnessPredicate</code> below the root element of this <code>HarnessLoader</code>, and returns the result.</td>
+</tr>
+<tr>
+<td><code>hasHarness&lt;T extends ComponentHarness&gt;(harnessType: ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;): Promise&lt;boolean&gt;</code></td>
+<td>Returns true if an instance of the given <code>ComponentHarness</code> class or <code>HarnessPredicate</code> exists below the root element of this <code>HarnessLoader</code></td>
+</tr>
 </tbody></table>
-<p>Calls to <code>getHarness</code> and <code>getAllHarnesses</code> can either take <code>ComponentHarness</code> subclass or a
+<p>Calls to the harness functions can either take <code>ComponentHarness</code> subclass or a
 <code>HarnessPredicate</code>. <code>HarnessPredicate</code> applies additional restrictions to the search (e.g. searching
 for a button that has some particular text, etc). The
 <a href="#filtering-harness-instances-with-harnesspredicate">details of <code>HarnessPredicate</code></a> are discussed in
