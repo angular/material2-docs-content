@@ -326,10 +326,89 @@ only, it has no effect in M3 themes. For color customization in M3, see <a href=
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>interacted: false</code>
+      <code>index: signal(-1)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Current index of the step within the stepper.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>indicatorType: computed&lt;StepState&gt;(() =&gt; {
+    const selected = this.isSelected();
+    const completed = this.completed;
+    const defaultState = this._state() ?? STEP_STATE.NUMBER;
+    const editable = this._editable();
+    if (this._showError() &amp;&amp; this.hasError &amp;&amp; !selected) {
+        return STEP_STATE.ERROR;
+    }
+    if (this._displayDefaultIndicatorType) {
+        if (!completed || selected) {
+            return STEP_STATE.NUMBER;
+        }
+        return editable ? STEP_STATE.EDIT : STEP_STATE.DONE;
+    }
+    else {
+        if (completed &amp;&amp; !selected) {
+            return STEP_STATE.DONE;
+        }
+        else if (completed &amp;&amp; selected) {
+            return defaultState;
+        }
+        return editable &amp;&amp; selected ? STEP_STATE.EDIT : defaultState;
+    }
+})</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Type of indicator that should be shown for the step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>interacted: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether user has attempted to move away from the step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isNavigable: computed&lt;boolean&gt;(() =&gt; {
+    const isSelected = this.isSelected();
+    const isCompleted = this.completed;
+    return isCompleted || isSelected || !this._stepper.linear;
+})</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the user can navigate to the step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isSelected: computed&lt;boolean&gt;(() =&gt; this._stepper.selectedIndex === this.index())</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the step is selected.</p>
 </td>
 </tr>
 
