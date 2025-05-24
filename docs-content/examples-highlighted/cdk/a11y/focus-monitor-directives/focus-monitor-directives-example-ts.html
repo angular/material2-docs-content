@@ -1,26 +1,26 @@
-<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, NgZone, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {A11yModule, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectorRef</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">NgZone</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {A11yModule, <span class="hljs-title class_">FocusOrigin</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Monitoring focus with FocusMonitor */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Monitoring focus with FocusMonitor */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;focus-monitor-directives-example.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [A11yModule],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorDirectivesExample</span> </span>{
-  <span class="hljs-keyword">private</span> _ngZone = inject(NgZone);
-  <span class="hljs-keyword">private</span> _cdr = inject(ChangeDetectorRef);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">FocusMonitorDirectivesExample</span> {
+  <span class="hljs-keyword">private</span> _ngZone = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">NgZone</span>);
+  <span class="hljs-keyword">private</span> _cdr = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">ChangeDetectorRef</span>);
 
-  elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
-  subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+  elementOrigin = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">formatOrigin</span>(<span class="hljs-literal">null</span>);
+  subtreeOrigin = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">formatOrigin</span>(<span class="hljs-literal">null</span>);
 
-  formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
+  <span class="hljs-title function_">formatOrigin</span>(<span class="hljs-attr">origin</span>: <span class="hljs-title class_">FocusOrigin</span>): <span class="hljs-built_in">string</span> {
     <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">&#x27; focused&#x27;</span> : <span class="hljs-string">&#x27;blurred&#x27;</span>;
   }
 
   <span class="hljs-comment">// Workaround for the fact that (cdkFocusChange) emits outside NgZone.</span>
-  <span class="hljs-function"><span class="hljs-title">markForCheck</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._ngZone.run(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>._cdr.markForCheck());
+  <span class="hljs-title function_">markForCheck</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_ngZone</span>.<span class="hljs-title function_">run</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">_cdr</span>.<span class="hljs-title function_">markForCheck</span>());
   }
 }

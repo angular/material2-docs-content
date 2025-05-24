@@ -1,23 +1,23 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {DatePipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DatePipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTabsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tab group where the tab content is loaded lazily (when activated)
+ * <span class="hljs-doctag">@title</span> Tab group where the tab content is loaded lazily (when activated)
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tab-group-lazy-loaded-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tab-group-lazy-loaded-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTabsModule, DatePipe],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTabsModule</span>, <span class="hljs-title class_">DatePipe</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabGroupLazyLoadedExample</span> </span>{
-  <span class="hljs-attr">tabLoadTimes</span>: <span class="hljs-built_in">Date</span>[] = [];
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TabGroupLazyLoadedExample</span> {
+  <span class="hljs-attr">tabLoadTimes</span>: <span class="hljs-title class_">Date</span>[] = [];
 
-  <span class="hljs-function"><span class="hljs-title">getTimeLoaded</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span></span>)</span> {
-    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.tabLoadTimes[index]) {
-      <span class="hljs-built_in">this</span>.tabLoadTimes[index] = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+  <span class="hljs-title function_">getTimeLoaded</span>(<span class="hljs-params"><span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span></span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>[index]) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>[index] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();
     }
 
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.tabLoadTimes[index];
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">tabLoadTimes</span>[index];
   }
 }

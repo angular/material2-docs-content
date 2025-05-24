@@ -1,23 +1,23 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatGridListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatGridListModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/grid-list&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Tile {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Tile</span> {
   <span class="hljs-attr">color</span>: <span class="hljs-built_in">string</span>;
-  cols: <span class="hljs-built_in">number</span>;
-  rows: <span class="hljs-built_in">number</span>;
-  text: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">cols</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">rows</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">text</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Dynamic grid-list
+ * <span class="hljs-doctag">@title</span> Dynamic grid-list
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;grid-list-dynamic-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;grid-list-dynamic-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatGridListModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatGridListModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GridListDynamicExample</span> </span>{
-  <span class="hljs-attr">tiles</span>: Tile[] = [
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GridListDynamicExample</span> {
+  <span class="hljs-attr">tiles</span>: <span class="hljs-title class_">Tile</span>[] = [
     {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;One&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;lightblue&#x27;</span>},
     {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Two&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;lightgreen&#x27;</span>},
     {<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Three&#x27;</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">&#x27;lightpink&#x27;</span>},

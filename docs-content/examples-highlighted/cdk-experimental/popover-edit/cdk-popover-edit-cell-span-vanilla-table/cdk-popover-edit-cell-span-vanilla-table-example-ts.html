@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgForm, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgForm</span>, <span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkPopoverEditModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Person {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Person</span> {
   <span class="hljs-attr">id</span>: <span class="hljs-built_in">number</span>;
-  firstName: <span class="hljs-built_in">string</span>;
-  middleName: <span class="hljs-built_in">string</span>;
-  lastName: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">firstName</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">middleName</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">lastName</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> PERSON_DATA: Person[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">PERSON_DATA</span>: <span class="hljs-title class_">Person</span>[] = [
   {<span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Terra&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Maduin&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Branford&#x27;</span>},
   {<span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Locke&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Cole&#x27;</span>},
   {<span class="hljs-attr">id</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">firstName</span>: <span class="hljs-string">&#x27;Celes&#x27;</span>, <span class="hljs-attr">middleName</span>: <span class="hljs-string">&#x27;Gestahl&#x27;</span>, <span class="hljs-attr">lastName</span>: <span class="hljs-string">&#x27;Chere&#x27;</span>},
@@ -22,26 +22,26 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>CDK Popover Edit spanning multiple columns on an HTML data-table
+ * <span class="hljs-doctag">@title</span> CDK Popover Edit spanning multiple columns on an HTML data-table
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cell-span-vanilla-table-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cell-span-vanilla-table-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cell-span-vanilla-table-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkPopoverEditModule, FormsModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkPopoverEditModule</span>, <span class="hljs-title class_">FormsModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPopoverEditCellSpanVanillaTableExample</span> </span>{
-  <span class="hljs-keyword">readonly</span> preservedValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;Person, <span class="hljs-built_in">any</span>&gt;();
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkPopoverEditCellSpanVanillaTableExample</span> {
+  <span class="hljs-keyword">readonly</span> preservedValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WeakMap</span>&lt;<span class="hljs-title class_">Person</span>, <span class="hljs-built_in">any</span>&gt;();
 
-  <span class="hljs-keyword">readonly</span> persons = PERSON_DATA;
+  <span class="hljs-keyword">readonly</span> persons = <span class="hljs-variable constant_">PERSON_DATA</span>;
 
-  <span class="hljs-function"><span class="hljs-title">onSubmit</span>(<span class="hljs-params">person: Person, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmit</span>(<span class="hljs-params"><span class="hljs-attr">person</span>: <span class="hljs-title class_">Person</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    person.firstName = f.value[<span class="hljs-string">&#x27;firstName&#x27;</span>];
-    person.middleName = f.value[<span class="hljs-string">&#x27;middleName&#x27;</span>];
-    person.lastName = f.value[<span class="hljs-string">&#x27;lastName&#x27;</span>];
+    person.<span class="hljs-property">firstName</span> = f.<span class="hljs-property">value</span>[<span class="hljs-string">&#x27;firstName&#x27;</span>];
+    person.<span class="hljs-property">middleName</span> = f.<span class="hljs-property">value</span>[<span class="hljs-string">&#x27;middleName&#x27;</span>];
+    person.<span class="hljs-property">lastName</span> = f.<span class="hljs-property">value</span>[<span class="hljs-string">&#x27;lastName&#x27;</span>];
   }
 }

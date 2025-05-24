@@ -75,7 +75,7 @@ applies to all inputs. For convenience, <code>ShowOnDirtyErrorStateMatcher</code
 globally cause input errors to show when the input is dirty and invalid.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: ErrorStateMatcher, <span class="hljs-attr">useClass</span>: ShowOnDirtyErrorStateMatcher}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">ErrorStateMatcher</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">ShowOnDirtyErrorStateMatcher</span>}
   ]
 })
 </code></pre>

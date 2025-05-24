@@ -15,11 +15,11 @@
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./custom-stepper.component.css&#x27;</span>,
   <span class="hljs-comment">// This custom stepper provides itself as CdkStepper so that it can be recognized</span>
   <span class="hljs-comment">// by other components.</span>
-  <span class="hljs-attr">providers</span>: [{ <span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomStepperComponent }]
+  <span class="hljs-attr">providers</span>: [{ <span class="hljs-attr">provide</span>: <span class="hljs-title class_">CdkStepper</span>, <span class="hljs-attr">useExisting</span>: <span class="hljs-title class_">CustomStepperComponent</span> }]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomStepperComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CdkStepper</span> </span>{
-  onClick(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>.selectedIndex = index;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CustomStepperComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">CdkStepper</span> {
+  <span class="hljs-title function_">onClick</span>(<span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">selectedIndex</span> = index;
   }
 }
 </code></pre>
@@ -122,11 +122,11 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">app-custom-stepper</span>&gt;</span>
 </code></pre>
 <p><strong>app.component.ts</strong></p>
-<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppComponent</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AppComponent</span> {
   completed = <span class="hljs-literal">false</span>;
 
-  completeStep(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>.completed = <span class="hljs-literal">true</span>;
+  <span class="hljs-title function_">completeStep</span>(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">completed</span> = <span class="hljs-literal">true</span>;
   }
 }
 </code></pre>

@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatAutocompleteModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Testing with MatAutocompleteHarness
+ * <span class="hljs-doctag">@title</span> Testing with MatAutocompleteHarness
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;autocomplete-harness-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;autocomplete-harness-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatAutocompleteModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatAutocompleteModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteHarnessExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteHarnessExample</span> {
   states = [
     {<span class="hljs-attr">code</span>: <span class="hljs-string">&#x27;AL&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Alabama&#x27;</span>},
     {<span class="hljs-attr">code</span>: <span class="hljs-string">&#x27;CA&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;California&#x27;</span>},

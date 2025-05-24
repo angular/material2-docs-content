@@ -1,34 +1,34 @@
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  MatDialog,
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-  MatDialogTitle,
+  <span class="hljs-title class_">MatDialog</span>,
+  <span class="hljs-title class_">MatDialogActions</span>,
+  <span class="hljs-title class_">MatDialogClose</span>,
+  <span class="hljs-title class_">MatDialogContent</span>,
+  <span class="hljs-title class_">MatDialogTitle</span>,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Dialog elements
+ * <span class="hljs-doctag">@title</span> Dialog elements
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-elements-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-elements-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogElementsExample</span> </span>{
-  <span class="hljs-keyword">readonly</span> dialog = inject(MatDialog);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DialogElementsExample</span> {
+  <span class="hljs-keyword">readonly</span> dialog = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatDialog</span>);
 
-  <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dialog.open(DialogElementsExampleDialog);
+  <span class="hljs-title function_">openDialog</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dialog</span>.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">DialogElementsExampleDialog</span>);
   }
 }
 
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-elements-example-dialog&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-elements-example-dialog.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MatButtonModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatDialogTitle</span>, <span class="hljs-title class_">MatDialogContent</span>, <span class="hljs-title class_">MatDialogActions</span>, <span class="hljs-title class_">MatDialogClose</span>, <span class="hljs-title class_">MatButtonModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogElementsExampleDialog</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DialogElementsExampleDialog</span> {}

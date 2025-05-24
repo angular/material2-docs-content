@@ -1,10 +1,10 @@
-signCtrl = <span class="hljs-keyword">new</span> FormControl&lt;<span class="hljs-built_in">string</span>[]&gt;([], Validators.required);
+signCtrl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>&lt;<span class="hljs-built_in">string</span>[]&gt;([], <span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>);
 
-<span class="hljs-function"><span class="hljs-title">getErrors</span>(<span class="hljs-params"></span>)</span> {
+<span class="hljs-title function_">getErrors</span>(<span class="hljs-params"></span>) {
   <span class="hljs-keyword">const</span> errors = [];
-  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">&#x27;required&#x27;</span>)) {
-    errors.push(<span class="hljs-string">&#x27;You must enter your zodiac sign&#x27;</span>);
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">signCtrl</span>.<span class="hljs-title function_">hasError</span>(<span class="hljs-string">&#x27;required&#x27;</span>)) {
+    errors.<span class="hljs-title function_">push</span>(<span class="hljs-string">&#x27;You must enter your zodiac sign&#x27;</span>);
   }
 
-  <span class="hljs-keyword">return</span> errors.length ? errors : <span class="hljs-literal">null</span>;
+  <span class="hljs-keyword">return</span> errors.<span class="hljs-property">length</span> ? errors : <span class="hljs-literal">null</span>;
 }

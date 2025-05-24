@@ -4,28 +4,28 @@ animations.</p>
 
 <p>A dialog is opened by calling the <code>open</code> method with a component to be loaded and an optional
 config object. The <code>open</code> method will return an instance of <code>MatDialogRef</code>:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.open(UserProfileComponent, {
+<pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">UserProfileComponent</span>, {
   <span class="hljs-attr">height</span>: <span class="hljs-string">&#x27;400px&#x27;</span>,
   <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;600px&#x27;</span>,
 });
 </code></pre>
 <p>The <code>MatDialogRef</code> provides a handle on the opened dialog. It can be used to close the dialog and to
 receive notifications when the dialog has been closed. Any notification Observables will complete when the dialog closes.</p>
-<pre><code class="language-ts">dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>); <span class="hljs-comment">// Pizza!</span>
+<pre><code class="language-ts">dialogRef.<span class="hljs-title function_">afterClosed</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>); <span class="hljs-comment">// Pizza!</span>
 });
 
-dialogRef.close(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
+dialogRef.<span class="hljs-title function_">close</span>(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
 </code></pre>
 <p>Components created via <code>MatDialog</code> can <em>inject</em> <code>MatDialogRef</code> and use it to close the dialog
 in which they are contained. When closing, an optional result value can be provided. This result
 value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({<span class="hljs-comment">/* ... */</span>})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourDialog</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;YourDialog&gt;</span>)</span> { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">YourDialog</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> <span class="hljs-attr">dialogRef</span>: <span class="hljs-title class_">MatDialogRef</span>&lt;<span class="hljs-title class_">YourDialog</span>&gt;</span>) { }
 
-  <span class="hljs-function"><span class="hljs-title">closeDialog</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dialogRef.close(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
+  <span class="hljs-title function_">closeDialog</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dialogRef</span>.<span class="hljs-title function_">close</span>(<span class="hljs-string">&#x27;Pizza!&#x27;</span>);
   }
 }
 </code></pre>
@@ -38,7 +38,7 @@ value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
 MAT_DIALOG_DEFAULT_OPTIONS in your application&#39;s root module.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_DIALOG_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DIALOG_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
 })
 </code></pre>
@@ -49,20 +49,20 @@ MAT_DIALOG_DEFAULT_OPTIONS in your application&#39;s root module.</p>
         </h3>
       <p>If you want to share data with your dialog, you can use the <code>data</code>
 option to pass information to the dialog component.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
+<pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">YourDialog</span>, {
   <span class="hljs-attr">data</span>: { <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;austin&#x27;</span> },
 });
 </code></pre>
 <p>To access the data in your dialog component, you have to use the MAT_DIALOG_DATA injection token:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../dialog&#x27;</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Inject</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">MAT_DIALOG_DATA</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../dialog&#x27;</span>;
 
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;your-dialog&#x27;</span>,
   <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;passed in {{ data.name }}&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourDialog</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: {name: <span class="hljs-built_in">string</span>}</span>)</span> { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">YourDialog</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> <span class="hljs-attr">data</span>: {name: <span class="hljs-built_in">string</span>}</span>) { }
 }
 </code></pre>
 <p>Note that if you&#39;re using a template dialog (one that was opened with a <code>TemplateRef</code>), the data

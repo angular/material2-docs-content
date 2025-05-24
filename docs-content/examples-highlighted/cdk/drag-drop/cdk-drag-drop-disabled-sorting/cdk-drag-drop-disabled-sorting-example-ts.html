@@ -1,36 +1,36 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  CdkDrag,
-  CdkDragDrop,
-  CdkDropList,
-  CdkDropListGroup,
+  <span class="hljs-title class_">CdkDrag</span>,
+  <span class="hljs-title class_">CdkDragDrop</span>,
+  <span class="hljs-title class_">CdkDropList</span>,
+  <span class="hljs-title class_">CdkDropListGroup</span>,
   moveItemInArray,
   transferArrayItem,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/drag-drop&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Drag&amp;Drop disabled sorting
+ * <span class="hljs-doctag">@title</span> Drag&amp;Drop disabled sorting
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-drag-drop-disabled-sorting-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-disabled-sorting-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-disabled-sorting-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkDropListGroup, CdkDropList, CdkDrag],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkDropListGroup</span>, <span class="hljs-title class_">CdkDropList</span>, <span class="hljs-title class_">CdkDrag</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDragDropDisabledSortingExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkDragDropDisabledSortingExample</span> {
   items = [<span class="hljs-string">&#x27;Carrots&#x27;</span>, <span class="hljs-string">&#x27;Tomatoes&#x27;</span>, <span class="hljs-string">&#x27;Onions&#x27;</span>, <span class="hljs-string">&#x27;Apples&#x27;</span>, <span class="hljs-string">&#x27;Avocados&#x27;</span>];
 
   basket = [<span class="hljs-string">&#x27;Oranges&#x27;</span>, <span class="hljs-string">&#x27;Bananas&#x27;</span>, <span class="hljs-string">&#x27;Cucumbers&#x27;</span>];
 
-  <span class="hljs-function"><span class="hljs-title">drop</span>(<span class="hljs-params">event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;</span>)</span> {
-    <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+  <span class="hljs-title function_">drop</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">CdkDragDrop</span>&lt;<span class="hljs-built_in">string</span>[]&gt;</span>) {
+    <span class="hljs-keyword">if</span> (event.<span class="hljs-property">previousContainer</span> === event.<span class="hljs-property">container</span>) {
+      <span class="hljs-title function_">moveItemInArray</span>(event.<span class="hljs-property">container</span>.<span class="hljs-property">data</span>, event.<span class="hljs-property">previousIndex</span>, event.<span class="hljs-property">currentIndex</span>);
     } <span class="hljs-keyword">else</span> {
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex,
+      <span class="hljs-title function_">transferArrayItem</span>(
+        event.<span class="hljs-property">previousContainer</span>.<span class="hljs-property">data</span>,
+        event.<span class="hljs-property">container</span>.<span class="hljs-property">data</span>,
+        event.<span class="hljs-property">previousIndex</span>,
+        event.<span class="hljs-property">currentIndex</span>,
       );
     }
   }

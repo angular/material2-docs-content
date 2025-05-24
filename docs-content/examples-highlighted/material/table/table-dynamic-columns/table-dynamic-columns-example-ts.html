@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -23,40 +23,40 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Table dynamically changing the columns displayed
+ * <span class="hljs-doctag">@title</span> Table dynamically changing the columns displayed
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-dynamic-columns-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-dynamic-columns-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-dynamic-columns-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatTableModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatTableModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableDynamicColumnsExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableDynamicColumnsExample</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>];
-  columnsToDisplay: <span class="hljs-built_in">string</span>[] = <span class="hljs-built_in">this</span>.displayedColumns.slice();
-  data: PeriodicElement[] = ELEMENT_DATA;
+  <span class="hljs-attr">columnsToDisplay</span>: <span class="hljs-built_in">string</span>[] = <span class="hljs-variable language_">this</span>.<span class="hljs-property">displayedColumns</span>.<span class="hljs-title function_">slice</span>();
+  <span class="hljs-attr">data</span>: <span class="hljs-title class_">PeriodicElement</span>[] = <span class="hljs-variable constant_">ELEMENT_DATA</span>;
 
-  <span class="hljs-function"><span class="hljs-title">addColumn</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> randomColumn = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-built_in">this</span>.displayedColumns.length);
-    <span class="hljs-built_in">this</span>.columnsToDisplay.push(<span class="hljs-built_in">this</span>.displayedColumns[randomColumn]);
+  <span class="hljs-title function_">addColumn</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> randomColumn = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-variable language_">this</span>.<span class="hljs-property">displayedColumns</span>.<span class="hljs-property">length</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">displayedColumns</span>[randomColumn]);
   }
 
-  <span class="hljs-function"><span class="hljs-title">removeColumn</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.columnsToDisplay.length) {
-      <span class="hljs-built_in">this</span>.columnsToDisplay.pop();
+  <span class="hljs-title function_">removeColumn</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>.<span class="hljs-property">length</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>.<span class="hljs-title function_">pop</span>();
     }
   }
 
-  <span class="hljs-function"><span class="hljs-title">shuffle</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">let</span> currentIndex = <span class="hljs-built_in">this</span>.columnsToDisplay.length;
+  <span class="hljs-title function_">shuffle</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">let</span> currentIndex = <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>.<span class="hljs-property">length</span>;
     <span class="hljs-keyword">while</span> (<span class="hljs-number">0</span> !== currentIndex) {
-      <span class="hljs-keyword">let</span> randomIndex = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * currentIndex);
+      <span class="hljs-keyword">let</span> randomIndex = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * currentIndex);
       currentIndex -= <span class="hljs-number">1</span>;
 
       <span class="hljs-comment">// Swap</span>
-      <span class="hljs-keyword">let</span> temp = <span class="hljs-built_in">this</span>.columnsToDisplay[currentIndex];
-      <span class="hljs-built_in">this</span>.columnsToDisplay[currentIndex] = <span class="hljs-built_in">this</span>.columnsToDisplay[randomIndex];
-      <span class="hljs-built_in">this</span>.columnsToDisplay[randomIndex] = temp;
+      <span class="hljs-keyword">let</span> temp = <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>[currentIndex];
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>[currentIndex] = <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>[randomIndex];
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>[randomIndex] = temp;
     }
   }
 }

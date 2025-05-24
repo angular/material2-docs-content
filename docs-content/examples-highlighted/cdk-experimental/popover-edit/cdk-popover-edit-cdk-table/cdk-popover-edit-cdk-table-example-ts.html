@@ -1,18 +1,18 @@
-<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgForm, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DataSource</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgForm</span>, <span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">BehaviorSubject</span>, <span class="hljs-title class_">Observable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkPopoverEditModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/table&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -36,35 +36,35 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>CDK Popover Edit on a CDK data-table
+ * <span class="hljs-doctag">@title</span> CDK Popover Edit on a CDK data-table
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cdk-table-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cdk-table-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-cdk-table-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkTableModule, CdkPopoverEditModule, FormsModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkTableModule</span>, <span class="hljs-title class_">CdkPopoverEditModule</span>, <span class="hljs-title class_">FormsModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPopoverEditCdkTableExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkPopoverEditCdkTableExample</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
+  dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExampleDataSource</span>();
 
-  <span class="hljs-keyword">readonly</span> preservedNameValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-  <span class="hljs-keyword">readonly</span> preservedWeightValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> preservedNameValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WeakMap</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> preservedWeightValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WeakMap</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitName</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitName</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.name = f.value.name;
+    element.<span class="hljs-property">name</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">name</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitWeight</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitWeight</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.weight = f.value.weight;
+    element.<span class="hljs-property">weight</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">weight</span>;
   }
 }
 
@@ -75,14 +75,14 @@
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataSource</span>&lt;<span class="hljs-title">PeriodicElement</span>&gt; </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">DataSource</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt; {
   <span class="hljs-comment">/** Stream of data that is provided to the table. */</span>
-  data = <span class="hljs-keyword">new</span> BehaviorSubject&lt;PeriodicElement[]&gt;(ELEMENT_DATA);
+  data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">BehaviorSubject</span>&lt;<span class="hljs-title class_">PeriodicElement</span>[]&gt;(<span class="hljs-variable constant_">ELEMENT_DATA</span>);
 
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
-  connect(): Observable&lt;PeriodicElement[]&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.data;
+  <span class="hljs-title function_">connect</span>(): <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>[]&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">disconnect</span>(<span class="hljs-params"></span>)</span> {}
+  <span class="hljs-title function_">disconnect</span>(<span class="hljs-params"></span>) {}
 }

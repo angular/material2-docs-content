@@ -1,51 +1,51 @@
-<span class="hljs-keyword">import</span> {ComponentFixture, TestBed} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatChipHarness, MatChipListboxHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {ChipsHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-harness-example&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ComponentFixture</span>, <span class="hljs-title class_">TestBed</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">TestbedHarnessEnvironment</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatChipHarness</span>, <span class="hljs-title class_">MatChipListboxHarness</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/chips/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">HarnessLoader</span>, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChipsHarnessExample</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./chips-harness-example&#x27;</span>;
 
-describe(<span class="hljs-string">&#x27;ChipsHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;ChipsHarnessExample&gt;;
-  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+<span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;ChipsHarnessExample&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">fixture</span>: <span class="hljs-title class_">ComponentFixture</span>&lt;<span class="hljs-title class_">ChipsHarnessExample</span>&gt;;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">loader</span>: <span class="hljs-title class_">HarnessLoader</span>;
 
-  beforeEach(<span class="hljs-function">() =&gt;</span> {
-    fixture = TestBed.createComponent(ChipsHarnessExample);
-    fixture.detectChanges();
-    loader = TestbedHarnessEnvironment.loader(fixture);
+  <span class="hljs-title function_">beforeEach</span>(<span class="hljs-function">() =&gt;</span> {
+    fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">ChipsHarnessExample</span>);
+    fixture.<span class="hljs-title function_">detectChanges</span>();
+    loader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">loader</span>(fixture);
   });
 
-  it(<span class="hljs-string">&#x27;should get whether a chip list is disabled&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.getHarness(MatChipListboxHarness);
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should get whether a chip list is disabled&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatChipListboxHarness</span>);
 
-    expect(<span class="hljs-keyword">await</span> chipList.isDisabled()).toBeFalse();
+    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> chipList.<span class="hljs-title function_">isDisabled</span>()).<span class="hljs-title function_">toBeFalse</span>();
 
-    fixture.componentInstance.isDisabled.set(<span class="hljs-literal">true</span>);
-    fixture.detectChanges();
+    fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">isDisabled</span>.<span class="hljs-title function_">set</span>(<span class="hljs-literal">true</span>);
+    fixture.<span class="hljs-title function_">detectChanges</span>();
 
-    expect(<span class="hljs-keyword">await</span> chipList.isDisabled()).toBeTrue();
+    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> chipList.<span class="hljs-title function_">isDisabled</span>()).<span class="hljs-title function_">toBeTrue</span>();
   });
 
-  it(<span class="hljs-string">&#x27;should get the orientation of a chip list&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.getHarness(MatChipListboxHarness);
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should get the orientation of a chip list&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatChipListboxHarness</span>);
 
-    expect(<span class="hljs-keyword">await</span> chipList.getOrientation()).toEqual(<span class="hljs-string">&#x27;horizontal&#x27;</span>);
+    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> chipList.<span class="hljs-title function_">getOrientation</span>()).<span class="hljs-title function_">toEqual</span>(<span class="hljs-string">&#x27;horizontal&#x27;</span>);
   });
 
-  it(<span class="hljs-string">&#x27;should be able to get the selected chips in a list&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.getHarness(MatChipListboxHarness);
-    <span class="hljs-keyword">const</span> chips = <span class="hljs-keyword">await</span> chipList.getChips();
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to get the selected chips in a list&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> chipList = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatChipListboxHarness</span>);
+    <span class="hljs-keyword">const</span> chips = <span class="hljs-keyword">await</span> chipList.<span class="hljs-title function_">getChips</span>();
 
-    expect((<span class="hljs-keyword">await</span> chipList.getChips({<span class="hljs-attr">selected</span>: <span class="hljs-literal">true</span>})).length).toBe(<span class="hljs-number">0</span>);
-    <span class="hljs-keyword">await</span> chips[<span class="hljs-number">1</span>].select();
+    <span class="hljs-title function_">expect</span>((<span class="hljs-keyword">await</span> chipList.<span class="hljs-title function_">getChips</span>({<span class="hljs-attr">selected</span>: <span class="hljs-literal">true</span>})).<span class="hljs-property">length</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">await</span> chips[<span class="hljs-number">1</span>].<span class="hljs-title function_">select</span>();
 
-    <span class="hljs-keyword">const</span> selectedChips = <span class="hljs-keyword">await</span> chipList.getChips({<span class="hljs-attr">selected</span>: <span class="hljs-literal">true</span>});
-    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> selectedChips.map(<span class="hljs-function"><span class="hljs-params">chip</span> =&gt;</span> chip.getText()))).toEqual([<span class="hljs-string">&#x27;Chip 2&#x27;</span>]);
+    <span class="hljs-keyword">const</span> selectedChips = <span class="hljs-keyword">await</span> chipList.<span class="hljs-title function_">getChips</span>({<span class="hljs-attr">selected</span>: <span class="hljs-literal">true</span>});
+    <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> <span class="hljs-title function_">parallel</span>(<span class="hljs-function">() =&gt;</span> selectedChips.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">chip</span> =&gt;</span> chip.<span class="hljs-title function_">getText</span>()))).<span class="hljs-title function_">toEqual</span>([<span class="hljs-string">&#x27;Chip 2&#x27;</span>]);
   });
 
-  it(<span class="hljs-string">&#x27;should be able to trigger chip removal&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> chip = <span class="hljs-keyword">await</span> loader.getHarness(MatChipHarness);
-    expect(fixture.componentInstance.remove).not.toHaveBeenCalled();
-    <span class="hljs-keyword">await</span> chip.remove();
-    expect(fixture.componentInstance.remove).toHaveBeenCalled();
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should be able to trigger chip removal&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> chip = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatChipHarness</span>);
+    <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">remove</span>).<span class="hljs-property">not</span>.<span class="hljs-title function_">toHaveBeenCalled</span>();
+    <span class="hljs-keyword">await</span> chip.<span class="hljs-title function_">remove</span>();
+    <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">remove</span>).<span class="hljs-title function_">toHaveBeenCalled</span>();
   });
 });

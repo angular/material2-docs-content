@@ -1,22 +1,22 @@
-<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   getSupportedInputTypes,
-  Platform,
+  <span class="hljs-title class_">Platform</span>,
   supportsPassiveEventListeners,
   supportsScrollBehavior,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/platform&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Platform overview
+ * <span class="hljs-doctag">@title</span> Platform overview
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-platform-overview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-platform-overview-example.html&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPlatformOverviewExample</span> </span>{
-  platform = inject(Platform);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkPlatformOverviewExample</span> {
+  platform = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Platform</span>);
 
-  supportedInputTypes = <span class="hljs-built_in">Array</span>.from(getSupportedInputTypes()).join(<span class="hljs-string">&#x27;, &#x27;</span>);
-  supportsPassiveEventListeners = supportsPassiveEventListeners();
-  supportsScrollBehavior = supportsScrollBehavior();
+  supportedInputTypes = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(<span class="hljs-title function_">getSupportedInputTypes</span>()).<span class="hljs-title function_">join</span>(<span class="hljs-string">&#x27;, &#x27;</span>);
+  supportsPassiveEventListeners = <span class="hljs-title function_">supportsPassiveEventListeners</span>();
+  supportsScrollBehavior = <span class="hljs-title function_">supportsScrollBehavior</span>();
 }

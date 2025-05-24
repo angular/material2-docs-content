@@ -1,22 +1,22 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  CdkDragDrop,
-  CdkDropList,
-  CdkDragPreview,
-  CdkDrag,
+  <span class="hljs-title class_">CdkDragDrop</span>,
+  <span class="hljs-title class_">CdkDropList</span>,
+  <span class="hljs-title class_">CdkDragPreview</span>,
+  <span class="hljs-title class_">CdkDrag</span>,
   moveItemInArray,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/drag-drop&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Drag&amp;Drop custom preview
+ * <span class="hljs-doctag">@title</span> Drag&amp;Drop custom preview
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-drag-drop-custom-preview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-custom-preview-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-drag-drop-custom-preview-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkDropList, CdkDrag, CdkDragPreview],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkDropList</span>, <span class="hljs-title class_">CdkDrag</span>, <span class="hljs-title class_">CdkDragPreview</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDragDropCustomPreviewExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkDragDropCustomPreviewExample</span> {
   <span class="hljs-comment">// tslint:disable:max-line-length</span>
   movies = [
     {
@@ -63,7 +63,7 @@
   ];
   <span class="hljs-comment">// tslint:enable:max-line-length</span>
 
-  <span class="hljs-function"><span class="hljs-title">drop</span>(<span class="hljs-params">event: CdkDragDrop&lt;{title: <span class="hljs-built_in">string</span>; poster: <span class="hljs-built_in">string</span>}[]&gt;</span>)</span> {
-    moveItemInArray(<span class="hljs-built_in">this</span>.movies, event.previousIndex, event.currentIndex);
+  <span class="hljs-title function_">drop</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">CdkDragDrop</span>&lt;{title: <span class="hljs-built_in">string</span>; poster: <span class="hljs-built_in">string</span>}[]&gt;</span>) {
+    <span class="hljs-title function_">moveItemInArray</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">movies</span>, event.<span class="hljs-property">previousIndex</span>, event.<span class="hljs-property">currentIndex</span>);
   }
 }

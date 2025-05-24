@@ -1,19 +1,19 @@
-<span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatPaginator, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource, MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">AfterViewInit</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">ViewChild</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatPaginator</span>, <span class="hljs-title class_">MatPaginatorModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSort</span>, <span class="hljs-title class_">MatSortModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableDataSource</span>, <span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserData {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">UserData</span> {
   <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
-  name: <span class="hljs-built_in">string</span>;
-  progress: <span class="hljs-built_in">string</span>;
-  fruit: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">progress</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">fruit</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/** Constants used to fill up our data base. */</span>
-<span class="hljs-keyword">const</span> FRUITS: <span class="hljs-built_in">string</span>[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">FRUITS</span>: <span class="hljs-built_in">string</span>[] = [
   <span class="hljs-string">&#x27;blueberry&#x27;</span>,
   <span class="hljs-string">&#x27;lychee&#x27;</span>,
   <span class="hljs-string">&#x27;kiwi&#x27;</span>,
@@ -23,7 +23,7 @@
   <span class="hljs-string">&#x27;pomegranate&#x27;</span>,
   <span class="hljs-string">&#x27;pineapple&#x27;</span>,
 ];
-<span class="hljs-keyword">const</span> NAMES: <span class="hljs-built_in">string</span>[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">NAMES</span>: <span class="hljs-built_in">string</span>[] = [
   <span class="hljs-string">&#x27;Maia&#x27;</span>,
   <span class="hljs-string">&#x27;Asher&#x27;</span>,
   <span class="hljs-string">&#x27;Olivia&#x27;</span>,
@@ -46,56 +46,56 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Data table with sorting, pagination, and filtering.
+ * <span class="hljs-doctag">@title</span> Data table with sorting, pagination, and filtering.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-overview-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-overview-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-overview-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatSortModule</span>, <span class="hljs-title class_">MatPaginatorModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableOverviewExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;progress&#x27;</span>, <span class="hljs-string">&#x27;fruit&#x27;</span>];
-  dataSource: MatTableDataSource&lt;UserData&gt;;
+  <span class="hljs-attr">dataSource</span>: <span class="hljs-title class_">MatTableDataSource</span>&lt;<span class="hljs-title class_">UserData</span>&gt;;
 
-  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
-  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatPaginator</span>) <span class="hljs-attr">paginator</span>: <span class="hljs-title class_">MatPaginator</span>;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSort</span>) <span class="hljs-attr">sort</span>: <span class="hljs-title class_">MatSort</span>;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-comment">// Create 100 users</span>
-    <span class="hljs-keyword">const</span> users = <span class="hljs-built_in">Array</span>.from({<span class="hljs-attr">length</span>: <span class="hljs-number">100</span>}, <span class="hljs-function">(<span class="hljs-params">_, k</span>) =&gt;</span> createNewUser(k + <span class="hljs-number">1</span>));
+    <span class="hljs-keyword">const</span> users = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>({<span class="hljs-attr">length</span>: <span class="hljs-number">100</span>}, <span class="hljs-function">(<span class="hljs-params">_, k</span>) =&gt;</span> <span class="hljs-title function_">createNewUser</span>(k + <span class="hljs-number">1</span>));
 
     <span class="hljs-comment">// Assign the data to the data source for the table to render</span>
-    <span class="hljs-built_in">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(users);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MatTableDataSource</span>(users);
   }
 
-  <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dataSource.paginator = <span class="hljs-built_in">this</span>.paginator;
-    <span class="hljs-built_in">this</span>.dataSource.sort = <span class="hljs-built_in">this</span>.sort;
+  <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">paginator</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">paginator</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">sort</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">sort</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">applyFilter</span>(<span class="hljs-params">event: Event</span>)</span> {
-    <span class="hljs-keyword">const</span> filterValue = (event.target <span class="hljs-keyword">as</span> HTMLInputElement).value;
-    <span class="hljs-built_in">this</span>.dataSource.filter = filterValue.trim().toLowerCase();
+  <span class="hljs-title function_">applyFilter</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">Event</span></span>) {
+    <span class="hljs-keyword">const</span> filterValue = (event.<span class="hljs-property">target</span> <span class="hljs-keyword">as</span> <span class="hljs-title class_">HTMLInputElement</span>).<span class="hljs-property">value</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">filter</span> = filterValue.<span class="hljs-title function_">trim</span>().<span class="hljs-title function_">toLowerCase</span>();
 
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.dataSource.paginator) {
-      <span class="hljs-built_in">this</span>.dataSource.paginator.firstPage();
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">paginator</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">paginator</span>.<span class="hljs-title function_">firstPage</span>();
     }
   }
 }
 
 <span class="hljs-comment">/** Builds and returns a new User. */</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createNewUser</span>(<span class="hljs-params">id: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">UserData</span> </span>{
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">createNewUser</span>(<span class="hljs-params"><span class="hljs-attr">id</span>: <span class="hljs-built_in">number</span></span>): <span class="hljs-title class_">UserData</span> {
   <span class="hljs-keyword">const</span> name =
-    NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] +
+    <span class="hljs-variable constant_">NAMES</span>[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * (<span class="hljs-variable constant_">NAMES</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>))] +
     <span class="hljs-string">&#x27; &#x27;</span> +
-    NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) +
+    <span class="hljs-variable constant_">NAMES</span>[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * (<span class="hljs-variable constant_">NAMES</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>))].<span class="hljs-title function_">charAt</span>(<span class="hljs-number">0</span>) +
     <span class="hljs-string">&#x27;.&#x27;</span>;
 
   <span class="hljs-keyword">return</span> {
-    <span class="hljs-attr">id</span>: id.toString(),
+    <span class="hljs-attr">id</span>: id.<span class="hljs-title function_">toString</span>(),
     <span class="hljs-attr">name</span>: name,
-    <span class="hljs-attr">progress</span>: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>).toString(),
-    <span class="hljs-attr">fruit</span>: FRUITS[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (FRUITS.length - <span class="hljs-number">1</span>))],
+    <span class="hljs-attr">progress</span>: <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-number">100</span>).<span class="hljs-title function_">toString</span>(),
+    <span class="hljs-attr">fruit</span>: <span class="hljs-variable constant_">FRUITS</span>[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * (<span class="hljs-variable constant_">FRUITS</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>))],
   };
 }

@@ -17,7 +17,7 @@ react to changes when the viewport size crosses a breakpoint.</p>
         </h4>
       <p>You can use the <code>isMatched</code> method to evaluate one or more media queries against the current
 viewport size.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.isMatched(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.<span class="hljs-title function_">isMatched</span>(<span class="hljs-string">&#x27;(max-width: 599px)&#x27;</span>);
 </code></pre>
 
         <h4 id="react-to-changes-to-the-viewport" class="docs-header-link">
@@ -26,13 +26,13 @@ viewport size.</p>
         </h4>
       <p>You can use the <code>observe</code> method to get an observable stream that emits whenever the viewport size
 crosses a breakpoint.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> layoutChanges = breakpointObserver.observe([
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> layoutChanges = breakpointObserver.<span class="hljs-title function_">observe</span>([
   <span class="hljs-string">&#x27;(orientation: portrait)&#x27;</span>,
   <span class="hljs-string">&#x27;(orientation: landscape)&#x27;</span>,
 ]);
 
-layoutChanges.subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-  updateMyLayoutForOrientationChange();
+layoutChanges.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+  <span class="hljs-title function_">updateMyLayoutForOrientationChange</span>();
 });
 </code></pre>
 
@@ -108,12 +108,12 @@ specification</a>.</p>
 </tr>
 </tbody></table>
 <p>You can use these predefined breakpoints with <code>BreakpointObserver</code>.</p>
-<pre><code class="language-ts">breakpointObserver.observe([
-  Breakpoints.HandsetLandscape,
-  Breakpoints.HandsetPortrait
-]).subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-  <span class="hljs-keyword">if</span> (result.matches) {
-    <span class="hljs-built_in">this</span>.activateHandsetLayout();
+<pre><code class="language-ts">breakpointObserver.<span class="hljs-title function_">observe</span>([
+  <span class="hljs-title class_">Breakpoints</span>.<span class="hljs-property">HandsetLandscape</span>,
+  <span class="hljs-title class_">Breakpoints</span>.<span class="hljs-property">HandsetPortrait</span>
+]).<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+  <span class="hljs-keyword">if</span> (result.<span class="hljs-property">matches</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">activateHandsetLayout</span>();
   }
 });
 </code></pre>
@@ -128,9 +128,9 @@ unit tests.
 The <code>matchMedia</code> method can be used to get a native
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList"><code>MediaQueryList</code></a>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({...})
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">mediaMatcher: MediaMatcher</span>)</span> {
-    <span class="hljs-keyword">const</span> mediaQueryList = mediaMatcher.matchMedia(<span class="hljs-string">&#x27;(min-width: 1px)&#x27;</span>);
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-attr">mediaMatcher</span>: <span class="hljs-title class_">MediaMatcher</span></span>) {
+    <span class="hljs-keyword">const</span> mediaQueryList = mediaMatcher.<span class="hljs-title function_">matchMedia</span>(<span class="hljs-string">&#x27;(min-width: 1px)&#x27;</span>);
   }
 }
 </code></pre>

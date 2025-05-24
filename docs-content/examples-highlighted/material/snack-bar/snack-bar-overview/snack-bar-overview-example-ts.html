@@ -1,22 +1,22 @@
-<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSnackBar</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Basic snack-bar
+ * <span class="hljs-doctag">@title</span> Basic snack-bar
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;snack-bar-overview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;snack-bar-overview-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;snack-bar-overview-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatButtonModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">MatButtonModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnackBarOverviewExample</span> </span>{
-  <span class="hljs-keyword">private</span> _snackBar = inject(MatSnackBar);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SnackBarOverviewExample</span> {
+  <span class="hljs-keyword">private</span> _snackBar = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatSnackBar</span>);
 
-  <span class="hljs-function"><span class="hljs-title">openSnackBar</span>(<span class="hljs-params">message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._snackBar.open(message, action);
+  <span class="hljs-title function_">openSnackBar</span>(<span class="hljs-params"><span class="hljs-attr">message</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">action</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_snackBar</span>.<span class="hljs-title function_">open</span>(message, action);
   }
 }

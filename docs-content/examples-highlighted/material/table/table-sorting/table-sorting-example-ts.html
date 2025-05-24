@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {LiveAnnouncer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
-<span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSort, Sort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource, MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">LiveAnnouncer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">AfterViewInit</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">ViewChild</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSort</span>, <span class="hljs-title class_">Sort</span>, <span class="hljs-title class_">MatSortModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableDataSource</span>, <span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -22,36 +22,36 @@
   {<span class="hljs-attr">position</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Neon&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">20.1797</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Ne&#x27;</span>},
 ];
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Table with sorting
+ * <span class="hljs-doctag">@title</span> Table with sorting
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-sorting-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-sorting-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-sorting-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTableModule, MatSortModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatSortModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableSortingExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
-  <span class="hljs-keyword">private</span> _liveAnnouncer = inject(LiveAnnouncer);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableSortingExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span> {
+  <span class="hljs-keyword">private</span> _liveAnnouncer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LiveAnnouncer</span>);
 
-  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
+  dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MatTableDataSource</span>(<span class="hljs-variable constant_">ELEMENT_DATA</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSort</span>) <span class="hljs-attr">sort</span>: <span class="hljs-title class_">MatSort</span>;
 
-  <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dataSource.sort = <span class="hljs-built_in">this</span>.sort;
+  <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">sort</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">sort</span>;
   }
 
   <span class="hljs-comment">/** Announce the change in sort state for assistive technology. */</span>
-  <span class="hljs-function"><span class="hljs-title">announceSortChange</span>(<span class="hljs-params">sortState: Sort</span>)</span> {
+  <span class="hljs-title function_">announceSortChange</span>(<span class="hljs-params"><span class="hljs-attr">sortState</span>: <span class="hljs-title class_">Sort</span></span>) {
     <span class="hljs-comment">// This example uses English messages. If your application supports</span>
     <span class="hljs-comment">// multiple language, you would internationalize these strings.</span>
     <span class="hljs-comment">// Furthermore, you can customize the message to add additional</span>
     <span class="hljs-comment">// details about the values being sorted.</span>
-    <span class="hljs-keyword">if</span> (sortState.direction) {
-      <span class="hljs-built_in">this</span>._liveAnnouncer.announce(<span class="hljs-string">`Sorted <span class="hljs-subst">${sortState.direction}</span>ending`</span>);
+    <span class="hljs-keyword">if</span> (sortState.<span class="hljs-property">direction</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_liveAnnouncer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">`Sorted <span class="hljs-subst">${sortState.direction}</span>ending`</span>);
     } <span class="hljs-keyword">else</span> {
-      <span class="hljs-built_in">this</span>._liveAnnouncer.announce(<span class="hljs-string">&#x27;Sorting cleared&#x27;</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_liveAnnouncer</span>.<span class="hljs-title function_">announce</span>(<span class="hljs-string">&#x27;Sorting cleared&#x27;</span>);
     }
   }
 }

@@ -4,11 +4,11 @@
           <span header-link="example"></span>
           Example
         </h3>
-      <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Directive, ElementRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+      <pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Directive</span>, <span class="hljs-title class_">ElementRef</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
   coerceBooleanProperty,
-  BooleanInput,
-  NumberInput,
+  <span class="hljs-title class_">BooleanInput</span>,
+  <span class="hljs-title class_">NumberInput</span>,
   coerceNumberProperty,
   coerceElement,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/coercion&#x27;</span>;
@@ -20,14 +20,14 @@
     <span class="hljs-string">&#x27;(click)&#x27;</span>: <span class="hljs-string">&#x27;greet()&#x27;</span>,
   }
 })
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyButton</span> </span>{
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyButton</span> {
   <span class="hljs-comment">// Using `coerceBooleanProperty` allows for the disabled value of a button to be set as</span>
   <span class="hljs-comment">// `&lt;my-button disabled&gt;&lt;/my-button&gt;` instead of `&lt;my-button [disabled]=&quot;true&quot;&gt;&lt;/my-button&gt;`.</span>
   <span class="hljs-comment">// It also allows for a string to be passed like `&lt;my-button disabled=&quot;true&quot;&gt;&lt;/my-button&gt;`.</span>
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled; }
-  <span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: BooleanInput</span>) {
-    <span class="hljs-built_in">this</span>._disabled = coerceBooleanProperty(value);
+  <span class="hljs-keyword">get</span> <span class="hljs-title function_">disabled</span>() { <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">_disabled</span>; }
+  <span class="hljs-keyword">set</span> <span class="hljs-title function_">disabled</span>(<span class="hljs-params"><span class="hljs-attr">value</span>: <span class="hljs-title class_">BooleanInput</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_disabled</span> = <span class="hljs-title function_">coerceBooleanProperty</span>(value);
   }
   <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;
 
@@ -37,20 +37,20 @@
   <span class="hljs-comment">// The second parameter specifies a fallback value to be used if the value can&#x27;t be</span>
   <span class="hljs-comment">// parsed to a number.</span>
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> <span class="hljs-title">greetDelay</span>() { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._greetDelay; }
-  <span class="hljs-keyword">set</span> <span class="hljs-title">greetDelay</span>(<span class="hljs-params">value: NumberInput</span>) {
-    <span class="hljs-built_in">this</span>._greetDelay = coerceNumberProperty(value, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">get</span> <span class="hljs-title function_">greetDelay</span>() { <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">_greetDelay</span>; }
+  <span class="hljs-keyword">set</span> <span class="hljs-title function_">greetDelay</span>(<span class="hljs-params"><span class="hljs-attr">value</span>: <span class="hljs-title class_">NumberInput</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_greetDelay</span> = <span class="hljs-title function_">coerceNumberProperty</span>(value, <span class="hljs-number">0</span>);
   }
   <span class="hljs-keyword">private</span> _greetDelay = <span class="hljs-number">0</span>;
 
-  <span class="hljs-function"><span class="hljs-title">greet</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> alert(<span class="hljs-string">&#x27;Hello!&#x27;</span>), <span class="hljs-built_in">this</span>.greetDelay);
+  <span class="hljs-title function_">greet</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;Hello!&#x27;</span>), <span class="hljs-variable language_">this</span>.<span class="hljs-property">greetDelay</span>);
   }
 
   <span class="hljs-comment">// `coerceElement` allows you to accept either an `ElementRef`</span>
   <span class="hljs-comment">// or a raw DOM node and to always return a DOM node.</span>
-  getElement(elementOrRef: ElementRef&lt;HTMLElement&gt; | HTMLElement): HTMLElement {
-    <span class="hljs-keyword">return</span> coerceElement(elementOrRef);
+  <span class="hljs-title function_">getElement</span>(<span class="hljs-attr">elementOrRef</span>: <span class="hljs-title class_">ElementRef</span>&lt;<span class="hljs-title class_">HTMLElement</span>&gt; | <span class="hljs-title class_">HTMLElement</span>): <span class="hljs-title class_">HTMLElement</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">coerceElement</span>(elementOrRef);
   }
 }
 </code></pre>

@@ -1,5 +1,5 @@
-<span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open(DialogFromMenuExampleDialog, {<span class="hljs-attr">restoreFocus</span>: <span class="hljs-literal">false</span>});
+<span class="hljs-keyword">const</span> dialogRef = <span class="hljs-variable language_">this</span>.<span class="hljs-property">dialog</span>.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">DialogFromMenuExampleDialog</span>, {<span class="hljs-attr">restoreFocus</span>: <span class="hljs-literal">false</span>});
 
 <span class="hljs-comment">// Manually restore focus to the menu trigger since the element that</span>
 <span class="hljs-comment">// opens the dialog won&#x27;t be in the DOM any more when the dialog closes.</span>
-dialogRef.afterClosed().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">this</span>.menuTrigger().focus());
+dialogRef.<span class="hljs-title function_">afterClosed</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">menuTrigger</span>().<span class="hljs-title function_">focus</span>());

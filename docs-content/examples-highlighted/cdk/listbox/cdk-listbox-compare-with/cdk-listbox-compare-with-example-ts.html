@@ -1,10 +1,10 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">JsonPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkListbox</span>, <span class="hljs-title class_">CdkOption</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
 
-<span class="hljs-keyword">const</span> today = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+<span class="hljs-keyword">const</span> today = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();
 
-<span class="hljs-keyword">const</span> formatter = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Intl</span>.DateTimeFormat(<span class="hljs-literal">undefined</span>, {
+<span class="hljs-keyword">const</span> formatter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intl</span>.<span class="hljs-title class_">DateTimeFormat</span>(<span class="hljs-literal">undefined</span>, {
   <span class="hljs-attr">weekday</span>: <span class="hljs-string">&#x27;short&#x27;</span>,
   <span class="hljs-attr">month</span>: <span class="hljs-string">&#x27;short&#x27;</span>,
   <span class="hljs-attr">day</span>: <span class="hljs-string">&#x27;numeric&#x27;</span>,
@@ -12,32 +12,32 @@
   <span class="hljs-attr">minute</span>: <span class="hljs-string">&#x27;numeric&#x27;</span>,
 });
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Listbox with complex object as values. */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Listbox with complex object as values. */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-listbox-compare-with-example&#x27;</span>,
   <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;cdkListboxCompareWithExample&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-compare-with-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-compare-with-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkListbox, CdkOption, JsonPipe],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkListbox</span>, <span class="hljs-title class_">CdkOption</span>, <span class="hljs-title class_">JsonPipe</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxCompareWithExample</span> </span>{
-  slots = [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>].map(
-    <span class="hljs-function"><span class="hljs-params">hour</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(today.getFullYear(), today.getMonth(), today.getDate() + <span class="hljs-number">1</span>, hour),
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkListboxCompareWithExample</span> {
+  slots = [<span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>].<span class="hljs-title function_">map</span>(
+    <span class="hljs-function"><span class="hljs-params">hour</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(today.<span class="hljs-title function_">getFullYear</span>(), today.<span class="hljs-title function_">getMonth</span>(), today.<span class="hljs-title function_">getDate</span>() + <span class="hljs-number">1</span>, hour),
   );
 
-  appointment: <span class="hljs-keyword">readonly</span> <span class="hljs-built_in">Date</span>[] = [
-    <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(today.getFullYear(), today.getMonth(), today.getDate() + <span class="hljs-number">1</span>, <span class="hljs-number">14</span>),
+  <span class="hljs-attr">appointment</span>: <span class="hljs-keyword">readonly</span> <span class="hljs-title class_">Date</span>[] = [
+    <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(today.<span class="hljs-title function_">getFullYear</span>(), today.<span class="hljs-title function_">getMonth</span>(), today.<span class="hljs-title function_">getDate</span>() + <span class="hljs-number">1</span>, <span class="hljs-number">14</span>),
   ];
 
-  <span class="hljs-function"><span class="hljs-title">compareDate</span>(<span class="hljs-params">date1: <span class="hljs-built_in">Date</span>, date2: <span class="hljs-built_in">Date</span></span>)</span> {
-    <span class="hljs-keyword">return</span> date1.getTime() === date2.getTime();
+  <span class="hljs-title function_">compareDate</span>(<span class="hljs-params"><span class="hljs-attr">date1</span>: <span class="hljs-title class_">Date</span>, <span class="hljs-attr">date2</span>: <span class="hljs-title class_">Date</span></span>) {
+    <span class="hljs-keyword">return</span> date1.<span class="hljs-title function_">getTime</span>() === date2.<span class="hljs-title function_">getTime</span>();
   }
 
-  <span class="hljs-function"><span class="hljs-title">formatTime</span>(<span class="hljs-params">date: <span class="hljs-built_in">Date</span></span>)</span> {
-    <span class="hljs-keyword">return</span> formatter.format(date);
+  <span class="hljs-title function_">formatTime</span>(<span class="hljs-params"><span class="hljs-attr">date</span>: <span class="hljs-title class_">Date</span></span>) {
+    <span class="hljs-keyword">return</span> formatter.<span class="hljs-title function_">format</span>(date);
   }
 
-  <span class="hljs-function"><span class="hljs-title">formatAppointment</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.appointment.map(<span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> <span class="hljs-built_in">this</span>.formatTime(a));
+  <span class="hljs-title function_">formatAppointment</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">appointment</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">formatTime</span>(a));
   }
 }

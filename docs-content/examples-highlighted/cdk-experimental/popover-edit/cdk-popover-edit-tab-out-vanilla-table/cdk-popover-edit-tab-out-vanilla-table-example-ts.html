@@ -1,15 +1,15 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgForm, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgForm</span>, <span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkPopoverEditModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -33,33 +33,33 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
+ * <span class="hljs-doctag">@title</span> CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-popover-edit-tab-out-vanilla-table-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-tab-out-vanilla-table-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-popover-edit-tab-out-vanilla-table-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkPopoverEditModule, FormsModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkPopoverEditModule</span>, <span class="hljs-title class_">FormsModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkPopoverEditTabOutVanillaTableExample</span> </span>{
-  <span class="hljs-keyword">readonly</span> preservedNameValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-  <span class="hljs-keyword">readonly</span> preservedWeightValues = <span class="hljs-keyword">new</span> <span class="hljs-built_in">WeakMap</span>&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkPopoverEditTabOutVanillaTableExample</span> {
+  <span class="hljs-keyword">readonly</span> preservedNameValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WeakMap</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> preservedWeightValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">WeakMap</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
 
-  <span class="hljs-keyword">readonly</span> elements = ELEMENT_DATA;
+  <span class="hljs-keyword">readonly</span> elements = <span class="hljs-variable constant_">ELEMENT_DATA</span>;
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitName</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitName</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.name = f.value.name;
+    element.<span class="hljs-property">name</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">name</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitWeight</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitWeight</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.weight = f.value.weight;
+    element.<span class="hljs-property">weight</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">weight</span>;
   }
 }

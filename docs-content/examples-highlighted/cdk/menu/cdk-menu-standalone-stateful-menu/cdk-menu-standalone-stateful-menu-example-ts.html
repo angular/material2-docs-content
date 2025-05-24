@@ -1,37 +1,37 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  CdkMenu,
-  CdkMenuItem,
-  CdkMenuItemRadio,
-  CdkMenuGroup,
-  CdkMenuItemCheckbox,
-  CdkMenuTrigger,
+  <span class="hljs-title class_">CdkMenu</span>,
+  <span class="hljs-title class_">CdkMenuItem</span>,
+  <span class="hljs-title class_">CdkMenuItemRadio</span>,
+  <span class="hljs-title class_">CdkMenuGroup</span>,
+  <span class="hljs-title class_">CdkMenuItemCheckbox</span>,
+  <span class="hljs-title class_">CdkMenuTrigger</span>,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/menu&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Stateful Menu with Standalone Trigger. */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Stateful Menu with Standalone Trigger. */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-menu-standalone-stateful-menu-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-menu-standalone-stateful-menu-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-menu-standalone-stateful-menu-example.html&#x27;</span>,
   <span class="hljs-attr">imports</span>: [
-    CdkMenuTrigger,
-    CdkMenu,
-    CdkMenuItemCheckbox,
-    CdkMenuGroup,
-    CdkMenuItemRadio,
-    CdkMenuItem,
+    <span class="hljs-title class_">CdkMenuTrigger</span>,
+    <span class="hljs-title class_">CdkMenu</span>,
+    <span class="hljs-title class_">CdkMenuItemCheckbox</span>,
+    <span class="hljs-title class_">CdkMenuGroup</span>,
+    <span class="hljs-title class_">CdkMenuItemRadio</span>,
+    <span class="hljs-title class_">CdkMenuItem</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkMenuStandaloneStatefulMenuExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkMenuStandaloneStatefulMenuExample</span> {
   bold = <span class="hljs-literal">false</span>;
   italic = <span class="hljs-literal">false</span>;
 
   sizes = [<span class="hljs-string">&#x27;Small&#x27;</span>, <span class="hljs-string">&#x27;Normal&#x27;</span>, <span class="hljs-string">&#x27;Large&#x27;</span>];
-  selectedSize: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-string">&#x27;Normal&#x27;</span>;
+  <span class="hljs-attr">selectedSize</span>: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> = <span class="hljs-string">&#x27;Normal&#x27;</span>;
 
-  <span class="hljs-function"><span class="hljs-title">reset</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.bold = <span class="hljs-literal">false</span>;
-    <span class="hljs-built_in">this</span>.italic = <span class="hljs-literal">false</span>;
-    <span class="hljs-built_in">this</span>.selectedSize = <span class="hljs-string">&#x27;Normal&#x27;</span>;
+  <span class="hljs-title function_">reset</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">bold</span> = <span class="hljs-literal">false</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">italic</span> = <span class="hljs-literal">false</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">selectedSize</span> = <span class="hljs-string">&#x27;Normal&#x27;</span>;
   }
 }

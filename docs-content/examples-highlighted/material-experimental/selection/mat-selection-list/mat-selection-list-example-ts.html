@@ -1,42 +1,42 @@
-<span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
-<span class="hljs-keyword">import</span> {AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/selection&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">SelectionChange</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCheckboxModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">AsyncPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectionModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/selection&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Mat Selection on a simple list.
+ * <span class="hljs-doctag">@title</span> Mat Selection on a simple list.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;mat-selection-list-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;mat-selection-list-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatSelectionModule, MatCheckboxModule, AsyncPipe],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatSelectionModule</span>, <span class="hljs-title class_">MatCheckboxModule</span>, <span class="hljs-title class_">AsyncPipe</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionListExample</span> </span>{
-  data = ELEMENT_NAMES;
-  selected1: <span class="hljs-built_in">string</span>[] = [];
-  selected2: <span class="hljs-built_in">string</span>[] = [];
-  selected3: <span class="hljs-built_in">string</span>[] = [];
-  selected4: <span class="hljs-built_in">string</span>[] = [];
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MatSelectionListExample</span> {
+  data = <span class="hljs-variable constant_">ELEMENT_NAMES</span>;
+  <span class="hljs-attr">selected1</span>: <span class="hljs-built_in">string</span>[] = [];
+  <span class="hljs-attr">selected2</span>: <span class="hljs-built_in">string</span>[] = [];
+  <span class="hljs-attr">selected3</span>: <span class="hljs-built_in">string</span>[] = [];
+  <span class="hljs-attr">selected4</span>: <span class="hljs-built_in">string</span>[] = [];
 
-  <span class="hljs-function"><span class="hljs-title">getCurrentSelected</span>(<span class="hljs-params">event: SelectionChange&lt;<span class="hljs-built_in">string</span>&gt;</span>)</span> {
-    <span class="hljs-keyword">return</span> event.after.map(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.value);
+  <span class="hljs-title function_">getCurrentSelected</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">SelectionChange</span>&lt;<span class="hljs-built_in">string</span>&gt;</span>) {
+    <span class="hljs-keyword">return</span> event.<span class="hljs-property">after</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.<span class="hljs-property">value</span>);
   }
 
-  <span class="hljs-function"><span class="hljs-title">trackByFn</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span>, value: <span class="hljs-built_in">string</span></span>)</span> {
+  <span class="hljs-title function_">trackByFn</span>(<span class="hljs-params"><span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span></span>) {
     <span class="hljs-keyword">return</span> index;
   }
 
-  <span class="hljs-function"><span class="hljs-title">changeElementName</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.data = ELEMENT_SYMBOLS;
+  <span class="hljs-title function_">changeElementName</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span> = <span class="hljs-variable constant_">ELEMENT_SYMBOLS</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">reset</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.data = ELEMENT_NAMES;
+  <span class="hljs-title function_">reset</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span> = <span class="hljs-variable constant_">ELEMENT_NAMES</span>;
   }
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_NAMES = [
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">ELEMENT_NAMES</span> = [
   <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,
   <span class="hljs-string">&#x27;Helium&#x27;</span>,
   <span class="hljs-string">&#x27;Lithium&#x27;</span>,
@@ -59,7 +59,7 @@
   <span class="hljs-string">&#x27;Calcium&#x27;</span>,
 ];
 
-<span class="hljs-keyword">const</span> ELEMENT_SYMBOLS = [
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">ELEMENT_SYMBOLS</span> = [
   <span class="hljs-string">&#x27;H&#x27;</span>,
   <span class="hljs-string">&#x27;He&#x27;</span>,
   <span class="hljs-string">&#x27;Li&#x27;</span>,

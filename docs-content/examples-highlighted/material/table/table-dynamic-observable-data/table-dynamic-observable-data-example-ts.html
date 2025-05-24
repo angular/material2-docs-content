@@ -1,17 +1,17 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
-<span class="hljs-keyword">import</span> {Observable, ReplaySubject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DataSource</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Observable</span>, <span class="hljs-title class_">ReplaySubject</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -25,47 +25,47 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Adding and removing data when using an observable-based datasource.
+ * <span class="hljs-doctag">@title</span> Adding and removing data when using an observable-based datasource.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-dynamic-observable-data-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-dynamic-observable-data-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-dynamic-observable-data-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatTableModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatTableModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableDynamicObservableDataExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableDynamicObservableDataExample</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataToDisplay = [...ELEMENT_DATA];
+  dataToDisplay = [...<span class="hljs-variable constant_">ELEMENT_DATA</span>];
 
-  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource(<span class="hljs-built_in">this</span>.dataToDisplay);
+  dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExampleDataSource</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span>);
 
-  <span class="hljs-function"><span class="hljs-title">addData</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> randomElementIndex = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * ELEMENT_DATA.length);
-    <span class="hljs-built_in">this</span>.dataToDisplay = [...this.dataToDisplay, ELEMENT_DATA[randomElementIndex]];
-    <span class="hljs-built_in">this</span>.dataSource.setData(<span class="hljs-built_in">this</span>.dataToDisplay);
+  <span class="hljs-title function_">addData</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> randomElementIndex = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-variable constant_">ELEMENT_DATA</span>.<span class="hljs-property">length</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span> = [...<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span>, <span class="hljs-variable constant_">ELEMENT_DATA</span>[randomElementIndex]];
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-title function_">setData</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span>);
   }
 
-  <span class="hljs-function"><span class="hljs-title">removeData</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dataToDisplay = <span class="hljs-built_in">this</span>.dataToDisplay.slice(<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>);
-    <span class="hljs-built_in">this</span>.dataSource.setData(<span class="hljs-built_in">this</span>.dataToDisplay);
+  <span class="hljs-title function_">removeData</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span>.<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-title function_">setData</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataToDisplay</span>);
   }
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataSource</span>&lt;<span class="hljs-title">PeriodicElement</span>&gt; </span>{
-  <span class="hljs-keyword">private</span> _dataStream = <span class="hljs-keyword">new</span> ReplaySubject&lt;PeriodicElement[]&gt;();
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">DataSource</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt; {
+  <span class="hljs-keyword">private</span> _dataStream = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ReplaySubject</span>&lt;<span class="hljs-title class_">PeriodicElement</span>[]&gt;();
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">initialData: PeriodicElement[]</span>)</span> {
-    <span class="hljs-built_in">super</span>();
-    <span class="hljs-built_in">this</span>.setData(initialData);
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-attr">initialData</span>: <span class="hljs-title class_">PeriodicElement</span>[]</span>) {
+    <span class="hljs-variable language_">super</span>();
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">setData</span>(initialData);
   }
 
-  connect(): Observable&lt;PeriodicElement[]&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._dataStream;
+  <span class="hljs-title function_">connect</span>(): <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>[]&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStream</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">disconnect</span>(<span class="hljs-params"></span>)</span> {}
+  <span class="hljs-title function_">disconnect</span>(<span class="hljs-params"></span>) {}
 
-  <span class="hljs-function"><span class="hljs-title">setData</span>(<span class="hljs-params">data: PeriodicElement[]</span>)</span> {
-    <span class="hljs-built_in">this</span>._dataStream.next(data);
+  <span class="hljs-title function_">setData</span>(<span class="hljs-params"><span class="hljs-attr">data</span>: <span class="hljs-title class_">PeriodicElement</span>[]</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStream</span>.<span class="hljs-title function_">next</span>(data);
   }
 }

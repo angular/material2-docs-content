@@ -1,46 +1,46 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDividerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {DatePipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatDividerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/divider&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DatePipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatListModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Section {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Section</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  updated: <span class="hljs-built_in">Date</span>;
+  <span class="hljs-attr">updated</span>: <span class="hljs-title class_">Date</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>List with sections
+ * <span class="hljs-doctag">@title</span> List with sections
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;list-sections-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;list-sections-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;list-sections-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatListModule, MatIconModule, MatDividerModule, DatePipe],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatListModule</span>, <span class="hljs-title class_">MatIconModule</span>, <span class="hljs-title class_">MatDividerModule</span>, <span class="hljs-title class_">DatePipe</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListSectionsExample</span> </span>{
-  <span class="hljs-attr">folders</span>: Section[] = [
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ListSectionsExample</span> {
+  <span class="hljs-attr">folders</span>: <span class="hljs-title class_">Section</span>[] = [
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Photos&#x27;</span>,
-      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/1/16&#x27;</span>),
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;1/1/16&#x27;</span>),
     },
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Recipes&#x27;</span>,
-      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/17/16&#x27;</span>),
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;1/17/16&#x27;</span>),
     },
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Work&#x27;</span>,
-      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/28/16&#x27;</span>),
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;1/28/16&#x27;</span>),
     },
   ];
-  notes: Section[] = [
+  <span class="hljs-attr">notes</span>: <span class="hljs-title class_">Section</span>[] = [
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Vacation Itinerary&#x27;</span>,
-      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;2/20/16&#x27;</span>),
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;2/20/16&#x27;</span>),
     },
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Kitchen Remodel&#x27;</span>,
-      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&#x27;1/18/16&#x27;</span>),
+      <span class="hljs-attr">updated</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-string">&#x27;1/18/16&#x27;</span>),
     },
   ];
 }

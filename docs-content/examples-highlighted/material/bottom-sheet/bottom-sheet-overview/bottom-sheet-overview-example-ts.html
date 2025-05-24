@@ -1,39 +1,39 @@
-<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  MatBottomSheet,
-  MatBottomSheetModule,
-  MatBottomSheetRef,
+  <span class="hljs-title class_">MatBottomSheet</span>,
+  <span class="hljs-title class_">MatBottomSheetModule</span>,
+  <span class="hljs-title class_">MatBottomSheetRef</span>,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/bottom-sheet&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatListModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Bottom Sheet Overview
+ * <span class="hljs-doctag">@title</span> Bottom Sheet Overview
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatBottomSheetModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatBottomSheetModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomSheetOverviewExample</span> </span>{
-  <span class="hljs-keyword">private</span> _bottomSheet = inject(MatBottomSheet);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BottomSheetOverviewExample</span> {
+  <span class="hljs-keyword">private</span> _bottomSheet = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatBottomSheet</span>);
 
-  openBottomSheet(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>._bottomSheet.open(BottomSheetOverviewExampleSheet);
+  <span class="hljs-title function_">openBottomSheet</span>(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_bottomSheet</span>.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">BottomSheetOverviewExampleSheet</span>);
   }
 }
 
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example-sheet&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;bottom-sheet-overview-example-sheet.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatListModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatListModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BottomSheetOverviewExampleSheet</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BottomSheetOverviewExampleSheet</span> {
   <span class="hljs-keyword">private</span> _bottomSheetRef =
-    inject&lt;MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;&gt;(MatBottomSheetRef);
+    inject&lt;<span class="hljs-title class_">MatBottomSheetRef</span>&lt;<span class="hljs-title class_">BottomSheetOverviewExampleSheet</span>&gt;&gt;(<span class="hljs-title class_">MatBottomSheetRef</span>);
 
-  openLink(event: MouseEvent): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>._bottomSheetRef.dismiss();
-    event.preventDefault();
+  <span class="hljs-title function_">openLink</span>(<span class="hljs-attr">event</span>: <span class="hljs-title class_">MouseEvent</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_bottomSheetRef</span>.<span class="hljs-title function_">dismiss</span>();
+    event.<span class="hljs-title function_">preventDefault</span>();
   }
 }

@@ -14,11 +14,11 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
         </h3>
       <p>The menu exposes an API to open/close programmatically. Please note that in this case, an
 <code>matMenuTriggerFor</code> directive is still necessary to attach the menu to a trigger element in the DOM.</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
-  <span class="hljs-meta">@ViewChild</span>(MatMenuTrigger) trigger: MatMenuTrigger;
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatMenuTrigger</span>) <span class="hljs-attr">trigger</span>: <span class="hljs-title class_">MatMenuTrigger</span>;
 
-  <span class="hljs-function"><span class="hljs-title">someMethod</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.trigger.openMenu();
+  <span class="hljs-title function_">someMethod</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">trigger</span>.<span class="hljs-title function_">openMenu</span>();
   }
 }
 </code></pre>

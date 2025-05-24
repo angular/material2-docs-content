@@ -1,29 +1,29 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {TooltipPosition, MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkScrollable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/scrolling&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">TooltipPosition</span>, <span class="hljs-title class_">MatTooltipModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkScrollable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/scrolling&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
+ * <span class="hljs-doctag">@title</span> Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tooltip-auto-hide-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tooltip-auto-hide-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;tooltip-auto-hide-example.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [
-    MatFormFieldModule,
-    MatSelectModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CdkScrollable,
-    MatButtonModule,
-    MatTooltipModule,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatSelectModule</span>,
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">ReactiveFormsModule</span>,
+    <span class="hljs-title class_">CdkScrollable</span>,
+    <span class="hljs-title class_">MatButtonModule</span>,
+    <span class="hljs-title class_">MatTooltipModule</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipAutoHideExample</span> </span>{
-  <span class="hljs-attr">positionOptions</span>: TooltipPosition[] = [<span class="hljs-string">&#x27;below&#x27;</span>, <span class="hljs-string">&#x27;above&#x27;</span>, <span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-string">&#x27;right&#x27;</span>];
-  position = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.positionOptions[<span class="hljs-number">0</span>]);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TooltipAutoHideExample</span> {
+  <span class="hljs-attr">positionOptions</span>: <span class="hljs-title class_">TooltipPosition</span>[] = [<span class="hljs-string">&#x27;below&#x27;</span>, <span class="hljs-string">&#x27;above&#x27;</span>, <span class="hljs-string">&#x27;left&#x27;</span>, <span class="hljs-string">&#x27;right&#x27;</span>];
+  position = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">positionOptions</span>[<span class="hljs-number">0</span>]);
 }

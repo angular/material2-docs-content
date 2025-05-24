@@ -1,25 +1,25 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  MAT_TOOLTIP_DEFAULT_OPTIONS,
-  MatTooltipDefaultOptions,
-  MatTooltipModule,
+  <span class="hljs-variable constant_">MAT_TOOLTIP_DEFAULT_OPTIONS</span>,
+  <span class="hljs-title class_">MatTooltipDefaultOptions</span>,
+  <span class="hljs-title class_">MatTooltipModule</span>,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
 <span class="hljs-comment">/** Custom options the configure the tooltip&#x27;s default show/hide delays. */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> myCustomTooltipDefaults: MatTooltipDefaultOptions = {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-attr">myCustomTooltipDefaults</span>: <span class="hljs-title class_">MatTooltipDefaultOptions</span> = {
   <span class="hljs-attr">showDelay</span>: <span class="hljs-number">1000</span>,
   <span class="hljs-attr">hideDelay</span>: <span class="hljs-number">1000</span>,
   <span class="hljs-attr">touchendHideDelay</span>: <span class="hljs-number">1000</span>,
 };
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tooltip with a show and hide delay
+ * <span class="hljs-doctag">@title</span> Tooltip with a show and hide delay
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tooltip-modified-defaults-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tooltip-modified-defaults-example.html&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MAT_TOOLTIP_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: myCustomTooltipDefaults}],
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatTooltipModule],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_TOOLTIP_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: myCustomTooltipDefaults}],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatTooltipModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipModifiedDefaultsExample</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TooltipModifiedDefaultsExample</span> {}

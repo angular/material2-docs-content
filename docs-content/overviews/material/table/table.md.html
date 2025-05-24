@@ -238,7 +238,7 @@ it is not the only way to incorporate row selection in your table.</p>
 selection state.</p>
 <pre><code class="language-js"><span class="hljs-keyword">const</span> initialSelection = [];
 <span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
-<span class="hljs-built_in">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);
+<span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SelectionModel</span>&lt;<span class="hljs-title class_">MyDataType</span>&gt;(allowMultiSelect, initialSelection);
 </code></pre>
 
         <h5 id="2-define-a-selection-column" class="docs-header-link">
@@ -271,17 +271,17 @@ header and data row.</p>
       <p>Implement the behavior in your component&#39;s logic to handle the header&#39;s main toggle and checking
 if all rows are selected.</p>
 <pre><code class="language-js"><span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
-<span class="hljs-function"><span class="hljs-title">isAllSelected</span>(<span class="hljs-params"></span>)</span> {
-  <span class="hljs-keyword">const</span> numSelected = <span class="hljs-built_in">this</span>.selection.selected.length;
-  <span class="hljs-keyword">const</span> numRows = <span class="hljs-built_in">this</span>.dataSource.data.length;
+<span class="hljs-title function_">isAllSelected</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> numSelected = <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-property">selected</span>.<span class="hljs-property">length</span>;
+  <span class="hljs-keyword">const</span> numRows = <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">data</span>.<span class="hljs-property">length</span>;
   <span class="hljs-keyword">return</span> numSelected == numRows;
 }
 
 <span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
-<span class="hljs-function"><span class="hljs-title">toggleAllRows</span>(<span class="hljs-params"></span>)</span> {
-  <span class="hljs-built_in">this</span>.isAllSelected() ?
-      <span class="hljs-built_in">this</span>.selection.clear() :
-      <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
+<span class="hljs-title function_">toggleAllRows</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isAllSelected</span>() ?
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-title function_">clear</span>() :
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">data</span>.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-title function_">select</span>(row));
 }
 </code></pre>
 

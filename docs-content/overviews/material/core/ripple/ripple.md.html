@@ -33,20 +33,20 @@ the <code>matRippleTrigger</code> option that expects a reference to an <code>HT
           Manual ripples
         </h3>
       <p>Ripples can be shown programmatically by getting a reference to the <code>MatRipple</code> directive.</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
 
   <span class="hljs-comment">/** Reference to the directive instance of the ripple. */</span>
-  <span class="hljs-meta">@ViewChild</span>(MatRipple) ripple: MatRipple;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatRipple</span>) <span class="hljs-attr">ripple</span>: <span class="hljs-title class_">MatRipple</span>;
 
   <span class="hljs-comment">/** Shows a centered and persistent ripple. */</span>
-  <span class="hljs-function"><span class="hljs-title">launchRipple</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> rippleRef = <span class="hljs-built_in">this</span>.ripple.launch({
+  <span class="hljs-title function_">launchRipple</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> rippleRef = <span class="hljs-variable language_">this</span>.<span class="hljs-property">ripple</span>.<span class="hljs-title function_">launch</span>({
       <span class="hljs-attr">persistent</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-attr">centered</span>: <span class="hljs-literal">true</span>
     });
 
     <span class="hljs-comment">// Fade out the ripple later.</span>
-    rippleRef.fadeOut();
+    rippleRef.<span class="hljs-title function_">fadeOut</span>();
   }
 }
 </code></pre>
@@ -58,7 +58,7 @@ the <code>RippleRef</code> (<em>useful for focus indicators</em>).</p>
 <p>In case, developers want to launch ripples at specific coordinates within the element, the
 <code>launch()</code> method also accepts <code>x</code> and <code>y</code> coordinates as parameters. Those coordinates
 are relative to the ripple container element.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> rippleRef = <span class="hljs-built_in">this</span>.ripple.launch(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, {<span class="hljs-attr">persistent</span>: <span class="hljs-literal">true</span>});
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> rippleRef = <span class="hljs-variable language_">this</span>.<span class="hljs-property">ripple</span>.<span class="hljs-title function_">launch</span>(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, {<span class="hljs-attr">persistent</span>: <span class="hljs-literal">true</span>});
 </code></pre>
 
         <h3 id="global-options" class="docs-header-link">
@@ -68,7 +68,7 @@ are relative to the ripple container element.</p>
       <p>Developers are able to specify options for all ripples inside of their application.</p>
 <p>The speed of the ripples can be adjusted and the ripples can be disabled globally as well.</p>
 <p>Global ripple options can be specified by setting the <code>MAT_RIPPLE_GLOBAL_OPTIONS</code> provider.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> globalRippleConfig: RippleGlobalOptions = {
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-attr">globalRippleConfig</span>: <span class="hljs-title class_">RippleGlobalOptions</span> = {
   <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">animation</span>: {
     <span class="hljs-attr">enterDuration</span>: <span class="hljs-number">300</span>,
@@ -78,7 +78,7 @@ are relative to the ripple container element.</p>
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_RIPPLE_GLOBAL_OPTIONS, <span class="hljs-attr">useValue</span>: globalRippleConfig}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_RIPPLE_GLOBAL_OPTIONS</span>, <span class="hljs-attr">useValue</span>: globalRippleConfig}
   ]
 })
 </code></pre>
@@ -94,7 +94,7 @@ animation.</p>
 <p>This is specifically useful in combination with the <code>disabled</code> global option, because globally
 disabling ripples won&#39;t affect the focus indicator ripples. If someone still wants to disable
 those ripples for performance reasons, the duration can be set to <code>0</code>, to remove the ripple feel.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> globalRippleConfig: RippleGlobalOptions = {
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-attr">globalRippleConfig</span>: <span class="hljs-title class_">RippleGlobalOptions</span> = {
   <span class="hljs-attr">disabled</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">animation</span>: {
     <span class="hljs-attr">enterDuration</span>: <span class="hljs-number">0</span>,
@@ -117,7 +117,7 @@ that ripples start to fade out immediately on mouse or touch release.</p>
 <p>In some scenarios, developers might prefer that behavior over the default and would like to have
 the same for Angular Material. This behavior can be activated by specifying the
 <code>terminateOnPointerUp</code> global ripple option.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> globalRippleConfig: RippleGlobalOptions = {
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> <span class="hljs-attr">globalRippleConfig</span>: <span class="hljs-title class_">RippleGlobalOptions</span> = {
   <span class="hljs-attr">terminateOnPointerUp</span>: <span class="hljs-literal">true</span>
 };
 </code></pre>
@@ -132,26 +132,26 @@ provider and update the desired options.</p>
 inject and update options at runtime, it&#39;s recommended to create a service that implements
 the <code>RippleGlobalOptions</code> interface.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Injectable</span>({<span class="hljs-attr">providedIn</span>: <span class="hljs-string">&#x27;root&#x27;</span>})
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppGlobalRippleOptions</span> <span class="hljs-title">implements</span> <span class="hljs-title">RippleGlobalOptions</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AppGlobalRippleOptions</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">RippleGlobalOptions</span> {
   <span class="hljs-comment">/** Whether ripples should be disabled globally. */</span>
   <span class="hljs-attr">disabled</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
 }
 </code></pre>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_RIPPLE_GLOBAL_OPTIONS, <span class="hljs-attr">useExisting</span>: AppGlobalRippleOptions},
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_RIPPLE_GLOBAL_OPTIONS</span>, <span class="hljs-attr">useExisting</span>: <span class="hljs-title class_">AppGlobalRippleOptions</span>},
   ]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyModule</span> </span>{...}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyModule</span> {...}
 </code></pre>
 <p>Now that the global ripple options are set to a service we can inject, the service can be
 used update any global ripple option at runtime.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>(...)
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _appRippleOptions: AppGlobalRippleOptions</span>)</span> {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyComponent</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> <span class="hljs-attr">_appRippleOptions</span>: <span class="hljs-title class_">AppGlobalRippleOptions</span></span>) {}
 
-  <span class="hljs-function"><span class="hljs-title">disableRipples</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._appRippleOptions.disabled = <span class="hljs-literal">true</span>;
+  <span class="hljs-title function_">disableRipples</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_appRippleOptions</span>.<span class="hljs-property">disabled</span> = <span class="hljs-literal">true</span>;
   }
 }
 </code></pre>

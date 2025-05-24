@@ -5,41 +5,41 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.dev/license
  */</span>
-<span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, Injectable, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTreeFlatDataSource, MatTreeFlattener, MatTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree&#x27;</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {ENTER, SPACE} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FlatTreeControl</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Injectable</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTreeFlatDataSource</span>, <span class="hljs-title class_">MatTreeFlattener</span>, <span class="hljs-title class_">MatTreeModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">BehaviorSubject</span>, <span class="hljs-title class_">Observable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">ENTER</span>, <span class="hljs-variable constant_">SPACE</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/keycodes&#x27;</span>;
 
 <span class="hljs-keyword">let</span> loadMoreId = <span class="hljs-number">1</span>;
 
 <span class="hljs-comment">/** Nested node */</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NestedNode</span> </span>{
-  childrenChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;NestedNode[]&gt;([]);
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">NestedNode</span> {
+  childrenChange = <span class="hljs-keyword">new</span> <span class="hljs-title class_">BehaviorSubject</span>&lt;<span class="hljs-title class_">NestedNode</span>[]&gt;([]);
 
-  <span class="hljs-keyword">get</span> <span class="hljs-title">children</span>(): <span class="hljs-title">NestedNode</span>[] {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.childrenChange.value;
+  <span class="hljs-keyword">get</span> <span class="hljs-title function_">children</span>(): <span class="hljs-title class_">NestedNode</span>[] {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">childrenChange</span>.<span class="hljs-property">value</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> name: <span class="hljs-built_in">string</span>,
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">public</span> <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>,
     <span class="hljs-keyword">public</span> hasChildren = <span class="hljs-literal">false</span>,
-    <span class="hljs-keyword">public</span> parent: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>,
+    <span class="hljs-keyword">public</span> <span class="hljs-attr">parent</span>: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>,
     <span class="hljs-keyword">public</span> isLoadMore = <span class="hljs-literal">false</span>,
-  </span>)</span> {}
+  </span>) {}
 }
 
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FlatNode</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> name: <span class="hljs-built_in">string</span>,
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">FlatNode</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">public</span> <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>,
     <span class="hljs-keyword">public</span> level = <span class="hljs-number">1</span>,
     <span class="hljs-keyword">public</span> expandable = <span class="hljs-literal">false</span>,
-    <span class="hljs-keyword">public</span> parent: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>,
+    <span class="hljs-keyword">public</span> <span class="hljs-attr">parent</span>: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>,
     <span class="hljs-keyword">public</span> isLoadMore = <span class="hljs-literal">false</span>,
-  </span>)</span> {}
+  </span>) {}
 }
 
 <span class="hljs-comment">/** Number of nodes loaded at a time */</span>
@@ -50,15 +50,15 @@
  * button, more data will be loaded.
  */</span>
 <span class="hljs-meta">@Injectable</span>()
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoadmoreDatabase</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoadmoreDatabase</span> {
   <span class="hljs-comment">/** Map of node name to node */</span>
-  nodes = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, NestedNode&gt;();
+  nodes = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">NestedNode</span>&gt;();
 
-  dataChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;NestedNode[]&gt;([]);
+  dataChange = <span class="hljs-keyword">new</span> <span class="hljs-title class_">BehaviorSubject</span>&lt;<span class="hljs-title class_">NestedNode</span>[]&gt;([]);
 
   <span class="hljs-comment">/** Example data */</span>
-  rootNodes: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Vegetables&#x27;</span>, <span class="hljs-string">&#x27;Fruits&#x27;</span>];
-  childMap = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;([
+  <span class="hljs-attr">rootNodes</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;Vegetables&#x27;</span>, <span class="hljs-string">&#x27;Fruits&#x27;</span>];
+  childMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;([
     [<span class="hljs-string">&#x27;Fruits&#x27;</span>, [<span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-string">&#x27;Orange&#x27;</span>, <span class="hljs-string">&#x27;Banana&#x27;</span>]],
     [<span class="hljs-string">&#x27;Vegetables&#x27;</span>, [<span class="hljs-string">&#x27;Tomato&#x27;</span>, <span class="hljs-string">&#x27;Potato&#x27;</span>, <span class="hljs-string">&#x27;Onion&#x27;</span>]],
     [
@@ -80,138 +80,138 @@
     [<span class="hljs-string">&#x27;Onion&#x27;</span>, [<span class="hljs-string">&#x27;Yellow&#x27;</span>, <span class="hljs-string">&#x27;White&#x27;</span>, <span class="hljs-string">&#x27;Purple&#x27;</span>, <span class="hljs-string">&#x27;Green&#x27;</span>, <span class="hljs-string">&#x27;Shallot&#x27;</span>, <span class="hljs-string">&#x27;Sweet&#x27;</span>, <span class="hljs-string">&#x27;Red&#x27;</span>, <span class="hljs-string">&#x27;Leek&#x27;</span>]],
   ]);
 
-  <span class="hljs-function"><span class="hljs-title">initialize</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> data = <span class="hljs-built_in">this</span>.rootNodes.map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">this</span>._generateNode(name, <span class="hljs-literal">null</span>));
-    <span class="hljs-built_in">this</span>.dataChange.next(data);
+  <span class="hljs-title function_">initialize</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-variable language_">this</span>.<span class="hljs-property">rootNodes</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_generateNode</span>(name, <span class="hljs-literal">null</span>));
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataChange</span>.<span class="hljs-title function_">next</span>(data);
   }
 
   <span class="hljs-comment">/** Expand a node whose children are not loaded */</span>
-  <span class="hljs-function"><span class="hljs-title">loadChildren</span>(<span class="hljs-params">name: <span class="hljs-built_in">string</span>, onlyFirstTime = <span class="hljs-literal">false</span></span>)</span> {
-    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.nodes.has(name) || !<span class="hljs-built_in">this</span>.childMap.has(name)) {
+  <span class="hljs-title function_">loadChildren</span>(<span class="hljs-params"><span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>, onlyFirstTime = <span class="hljs-literal">false</span></span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">nodes</span>.<span class="hljs-title function_">has</span>(name) || !<span class="hljs-variable language_">this</span>.<span class="hljs-property">childMap</span>.<span class="hljs-title function_">has</span>(name)) {
       <span class="hljs-keyword">return</span>;
     }
-    <span class="hljs-keyword">const</span> parent = <span class="hljs-built_in">this</span>.nodes.get(name)!;
-    <span class="hljs-keyword">const</span> children = <span class="hljs-built_in">this</span>.childMap.get(name)!;
+    <span class="hljs-keyword">const</span> parent = <span class="hljs-variable language_">this</span>.<span class="hljs-property">nodes</span>.<span class="hljs-title function_">get</span>(name)!;
+    <span class="hljs-keyword">const</span> children = <span class="hljs-variable language_">this</span>.<span class="hljs-property">childMap</span>.<span class="hljs-title function_">get</span>(name)!;
 
-    <span class="hljs-keyword">if</span> (onlyFirstTime &amp;&amp; parent.children!.length &gt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">if</span> (onlyFirstTime &amp;&amp; parent.<span class="hljs-property">children</span>!.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    <span class="hljs-keyword">const</span> newChildrenNumber = parent.children!.length + batchSize;
+    <span class="hljs-keyword">const</span> newChildrenNumber = parent.<span class="hljs-property">children</span>!.<span class="hljs-property">length</span> + batchSize;
     <span class="hljs-keyword">const</span> nodes = children
-      .slice(<span class="hljs-number">0</span>, newChildrenNumber)
-      .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-built_in">this</span>._generateNode(name, parent.name));
-    <span class="hljs-keyword">if</span> (newChildrenNumber &lt; children.length) {
+      .<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>, newChildrenNumber)
+      .<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_generateNode</span>(name, parent.<span class="hljs-property">name</span>));
+    <span class="hljs-keyword">if</span> (newChildrenNumber &lt; children.<span class="hljs-property">length</span>) {
       <span class="hljs-comment">// Need a new &quot;Load More&quot; node</span>
-      nodes.push(<span class="hljs-keyword">new</span> NestedNode(<span class="hljs-string">`LOAD_MORE-<span class="hljs-subst">${loadMoreId++}</span>`</span>, <span class="hljs-literal">false</span>, name, <span class="hljs-literal">true</span>));
+      nodes.<span class="hljs-title function_">push</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">NestedNode</span>(<span class="hljs-string">`LOAD_MORE-<span class="hljs-subst">${loadMoreId++}</span>`</span>, <span class="hljs-literal">false</span>, name, <span class="hljs-literal">true</span>));
     }
 
-    parent.childrenChange.next(nodes);
-    <span class="hljs-built_in">this</span>.dataChange.next(<span class="hljs-built_in">this</span>.dataChange.value);
+    parent.<span class="hljs-property">childrenChange</span>.<span class="hljs-title function_">next</span>(nodes);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataChange</span>.<span class="hljs-title function_">next</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataChange</span>.<span class="hljs-property">value</span>);
   }
 
-  <span class="hljs-keyword">private</span> _generateNode(name: <span class="hljs-built_in">string</span>, <span class="hljs-attr">parent</span>: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>): NestedNode {
-    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.nodes.has(name)) {
-      <span class="hljs-built_in">this</span>.nodes.set(name, <span class="hljs-keyword">new</span> NestedNode(name, <span class="hljs-built_in">this</span>.childMap.has(name), parent));
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_generateNode</span>(<span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">parent</span>: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>): <span class="hljs-title class_">NestedNode</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-property">nodes</span>.<span class="hljs-title function_">has</span>(name)) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">nodes</span>.<span class="hljs-title function_">set</span>(name, <span class="hljs-keyword">new</span> <span class="hljs-title class_">NestedNode</span>(name, <span class="hljs-variable language_">this</span>.<span class="hljs-property">childMap</span>.<span class="hljs-title function_">has</span>(name), parent));
     }
 
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.nodes.get(name)!;
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">nodes</span>.<span class="hljs-title function_">get</span>(name)!;
   }
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tree with partially loaded data
+ * <span class="hljs-doctag">@title</span> Tree with partially loaded data
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tree-loadmore-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tree-loadmore-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;tree-loadmore-example.css&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [LoadmoreDatabase],
-  <span class="hljs-attr">imports</span>: [MatTreeModule, MatButtonModule, MatIconModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title class_">LoadmoreDatabase</span>],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTreeModule</span>, <span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatIconModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeLoadmoreExample</span> </span>{
-  <span class="hljs-keyword">private</span> _database = inject(LoadmoreDatabase);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TreeLoadmoreExample</span> {
+  <span class="hljs-keyword">private</span> _database = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">LoadmoreDatabase</span>);
 
-  nodeMap = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, FlatNode&gt;();
-  treeControl: FlatTreeControl&lt;FlatNode&gt;;
-  treeFlattener: MatTreeFlattener&lt;NestedNode, FlatNode&gt;;
+  nodeMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">FlatNode</span>&gt;();
+  <span class="hljs-attr">treeControl</span>: <span class="hljs-title class_">FlatTreeControl</span>&lt;<span class="hljs-title class_">FlatNode</span>&gt;;
+  <span class="hljs-attr">treeFlattener</span>: <span class="hljs-title class_">MatTreeFlattener</span>&lt;<span class="hljs-title class_">NestedNode</span>, <span class="hljs-title class_">FlatNode</span>&gt;;
   <span class="hljs-comment">// Flat tree data source</span>
-  dataSource: MatTreeFlatDataSource&lt;NestedNode, FlatNode&gt;;
+  <span class="hljs-attr">dataSource</span>: <span class="hljs-title class_">MatTreeFlatDataSource</span>&lt;<span class="hljs-title class_">NestedNode</span>, <span class="hljs-title class_">FlatNode</span>&gt;;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> _database = <span class="hljs-built_in">this</span>._database;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> _database = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>;
 
-    <span class="hljs-built_in">this</span>.treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(
-      <span class="hljs-built_in">this</span>.transformer,
-      <span class="hljs-built_in">this</span>.getLevel,
-      <span class="hljs-built_in">this</span>.isExpandable,
-      <span class="hljs-built_in">this</span>.getChildren,
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">treeFlattener</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MatTreeFlattener</span>(
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">transformer</span>,
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">getLevel</span>,
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">isExpandable</span>,
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">getChildren</span>,
     );
 
     <span class="hljs-comment">// TODO(#27626): Remove treeControl. Adopt either levelAccessor or childrenAccessor.</span>
-    <span class="hljs-built_in">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;FlatNode&gt;(<span class="hljs-built_in">this</span>.getLevel, <span class="hljs-built_in">this</span>.isExpandable);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">treeControl</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FlatTreeControl</span>&lt;<span class="hljs-title class_">FlatNode</span>&gt;(<span class="hljs-variable language_">this</span>.<span class="hljs-property">getLevel</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">isExpandable</span>);
 
-    <span class="hljs-built_in">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-built_in">this</span>.treeControl, <span class="hljs-built_in">this</span>.treeFlattener);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MatTreeFlatDataSource</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">treeControl</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">treeFlattener</span>);
 
-    _database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
-      <span class="hljs-built_in">this</span>.dataSource.data = data;
+    _database.<span class="hljs-property">dataChange</span>.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">data</span> = data;
     });
 
-    _database.initialize();
+    _database.<span class="hljs-title function_">initialize</span>();
   }
 
-  getChildren = (node: NestedNode): Observable&lt;NestedNode[]&gt; =&gt; node.childrenChange;
+  getChildren = (<span class="hljs-attr">node</span>: <span class="hljs-title class_">NestedNode</span>): <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">NestedNode</span>[]&gt; =&gt; node.<span class="hljs-property">childrenChange</span>;
 
-  transformer = <span class="hljs-function">(<span class="hljs-params">node: NestedNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
-    <span class="hljs-keyword">const</span> existingNode = <span class="hljs-built_in">this</span>.nodeMap.get(node.name);
+  transformer = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">NestedNode</span>, <span class="hljs-attr">level</span>: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> existingNode = <span class="hljs-variable language_">this</span>.<span class="hljs-property">nodeMap</span>.<span class="hljs-title function_">get</span>(node.<span class="hljs-property">name</span>);
 
     <span class="hljs-keyword">if</span> (existingNode) {
       <span class="hljs-keyword">return</span> existingNode;
     }
 
-    <span class="hljs-keyword">const</span> newNode = <span class="hljs-keyword">new</span> FlatNode(node.name, level, node.hasChildren, node.parent, node.isLoadMore);
-    <span class="hljs-built_in">this</span>.nodeMap.set(node.name, newNode);
+    <span class="hljs-keyword">const</span> newNode = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FlatNode</span>(node.<span class="hljs-property">name</span>, level, node.<span class="hljs-property">hasChildren</span>, node.<span class="hljs-property">parent</span>, node.<span class="hljs-property">isLoadMore</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">nodeMap</span>.<span class="hljs-title function_">set</span>(node.<span class="hljs-property">name</span>, newNode);
     <span class="hljs-keyword">return</span> newNode;
   };
 
-  getLevel = <span class="hljs-function">(<span class="hljs-params">node: FlatNode</span>) =&gt;</span> node.level;
+  getLevel = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) =&gt;</span> node.<span class="hljs-property">level</span>;
 
-  isExpandable = <span class="hljs-function">(<span class="hljs-params">node: FlatNode</span>) =&gt;</span> node.expandable;
+  isExpandable = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) =&gt;</span> node.<span class="hljs-property">expandable</span>;
 
-  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: FlatNode</span>) =&gt;</span> node.expandable;
+  hasChild = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">_</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) =&gt;</span> node.<span class="hljs-property">expandable</span>;
 
-  isLoadMore = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: FlatNode</span>) =&gt;</span> node.isLoadMore;
+  isLoadMore = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">_</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) =&gt;</span> node.<span class="hljs-property">isLoadMore</span>;
 
-  <span class="hljs-function"><span class="hljs-title">loadChildren</span>(<span class="hljs-params">node: FlatNode</span>)</span> {
-    <span class="hljs-built_in">this</span>._database.loadChildren(node.name, <span class="hljs-literal">true</span>);
+  <span class="hljs-title function_">loadChildren</span>(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>.<span class="hljs-title function_">loadChildren</span>(node.<span class="hljs-property">name</span>, <span class="hljs-literal">true</span>);
   }
 
   <span class="hljs-comment">/** Load more nodes when clicking on &quot;Load more&quot; node. */</span>
-  <span class="hljs-function"><span class="hljs-title">loadOnClick</span>(<span class="hljs-params">event: MouseEvent, node: FlatNode</span>)</span> {
-    <span class="hljs-built_in">this</span>._loadSiblings(event.target <span class="hljs-keyword">as</span> HTMLElement, node);
+  <span class="hljs-title function_">loadOnClick</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">MouseEvent</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_loadSiblings</span>(event.<span class="hljs-property">target</span> <span class="hljs-keyword">as</span> <span class="hljs-title class_">HTMLElement</span>, node);
   }
 
   <span class="hljs-comment">/** Load more nodes on keyboardpress when focused on &quot;Load more&quot; node */</span>
-  <span class="hljs-function"><span class="hljs-title">loadOnKeypress</span>(<span class="hljs-params">event: KeyboardEvent, node: FlatNode</span>)</span> {
-    <span class="hljs-keyword">if</span> (event.keyCode === ENTER || event.keyCode === SPACE) {
-      <span class="hljs-built_in">this</span>._loadSiblings(event.target <span class="hljs-keyword">as</span> HTMLElement, node);
+  <span class="hljs-title function_">loadOnKeypress</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">KeyboardEvent</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) {
+    <span class="hljs-keyword">if</span> (event.<span class="hljs-property">keyCode</span> === <span class="hljs-variable constant_">ENTER</span> || event.<span class="hljs-property">keyCode</span> === <span class="hljs-variable constant_">SPACE</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_loadSiblings</span>(event.<span class="hljs-property">target</span> <span class="hljs-keyword">as</span> <span class="hljs-title class_">HTMLElement</span>, node);
     }
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_loadSiblings</span>(<span class="hljs-params">nodeElement: HTMLElement, node: FlatNode</span>)</span> {
-    <span class="hljs-keyword">if</span> (node.parent) {
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_loadSiblings</span>(<span class="hljs-params"><span class="hljs-attr">nodeElement</span>: <span class="hljs-title class_">HTMLElement</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">FlatNode</span></span>) {
+    <span class="hljs-keyword">if</span> (node.<span class="hljs-property">parent</span>) {
       <span class="hljs-comment">// Store a reference to the sibling of the &quot;Load More&quot; node before it is removed from the DOM</span>
-      <span class="hljs-keyword">const</span> previousSibling = nodeElement.previousElementSibling;
+      <span class="hljs-keyword">const</span> previousSibling = nodeElement.<span class="hljs-property">previousElementSibling</span>;
 
       <span class="hljs-comment">// Synchronously load data.</span>
-      <span class="hljs-built_in">this</span>._database.loadChildren(node.parent);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_database</span>.<span class="hljs-title function_">loadChildren</span>(node.<span class="hljs-property">parent</span>);
 
-      <span class="hljs-keyword">const</span> focusDesination = previousSibling?.nextElementSibling || previousSibling;
+      <span class="hljs-keyword">const</span> focusDesination = previousSibling?.<span class="hljs-property">nextElementSibling</span> || previousSibling;
 
       <span class="hljs-keyword">if</span> (focusDesination) {
         <span class="hljs-comment">// Restore focus.</span>
-        (focusDesination <span class="hljs-keyword">as</span> HTMLElement).focus();
+        (focusDesination <span class="hljs-keyword">as</span> <span class="hljs-title class_">HTMLElement</span>).<span class="hljs-title function_">focus</span>();
       }
     }
   }

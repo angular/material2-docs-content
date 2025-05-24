@@ -1,34 +1,34 @@
-<span class="hljs-keyword">import</span> {SelectionChange, CdkSelectionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">SelectionChange</span>, <span class="hljs-title class_">CdkSelectionModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/table&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>CDK Selection Column on a CDK table.
+ * <span class="hljs-doctag">@title</span> CDK Selection Column on a CDK table.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-selection-column-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-selection-column-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-selection-column-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [CdkTableModule, CdkSelectionModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkTableModule</span>, <span class="hljs-title class_">CdkSelectionModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkSelectionColumnExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkSelectionColumnExample</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;select&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = ELEMENT_DATA;
-  selected: <span class="hljs-built_in">string</span>[] = [];
+  dataSource = <span class="hljs-variable constant_">ELEMENT_DATA</span>;
+  <span class="hljs-attr">selected</span>: <span class="hljs-built_in">string</span>[] = [];
 
-  <span class="hljs-function"><span class="hljs-title">selectionChanged</span>(<span class="hljs-params">event: SelectionChange&lt;PeriodicElement&gt;</span>)</span> {
-    <span class="hljs-built_in">this</span>.selected = event.after.map(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.value.name);
+  <span class="hljs-title function_">selectionChanged</span>(<span class="hljs-params"><span class="hljs-attr">event</span>: <span class="hljs-title class_">SelectionChange</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">selected</span> = event.<span class="hljs-property">after</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.<span class="hljs-property">value</span>.<span class="hljs-property">name</span>);
   }
 }
 
-<span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},

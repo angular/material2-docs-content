@@ -1,26 +1,26 @@
-<span class="hljs-keyword">import</span> {Component, forwardRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkStepper, CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgTemplateOutlet} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, forwardRef} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkStepper</span>, <span class="hljs-title class_">CdkStepperModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgTemplateOutlet</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>A custom CDK stepper without a form */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> A custom CDK stepper without a form */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-custom-stepper-without-form-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./cdk-custom-stepper-without-form-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./cdk-custom-stepper-without-form-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [forwardRef(<span class="hljs-function">() =&gt;</span> CustomStepper), CdkStepperModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title function_">forwardRef</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">CustomStepper</span>), <span class="hljs-title class_">CdkStepperModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkCustomStepperWithoutFormExample</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkCustomStepperWithoutFormExample</span> {}
 
 <span class="hljs-comment">/** Custom CDK stepper component */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-custom-stepper&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./example-custom-stepper.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./example-custom-stepper.css&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomStepper}],
-  <span class="hljs-attr">imports</span>: [NgTemplateOutlet, CdkStepperModule],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-title class_">CdkStepper</span>, <span class="hljs-attr">useExisting</span>: <span class="hljs-title class_">CustomStepper</span>}],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">NgTemplateOutlet</span>, <span class="hljs-title class_">CdkStepperModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CdkStepper</span> </span>{
-  selectStepByIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>.selectedIndex = index;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CustomStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">CdkStepper</span> {
+  <span class="hljs-title function_">selectStepByIndex</span>(<span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">selectedIndex</span> = index;
   }
 }

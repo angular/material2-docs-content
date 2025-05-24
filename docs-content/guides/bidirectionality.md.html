@@ -28,14 +28,14 @@ emit for changes to <code>dir</code> on <code>&lt;html&gt;</code> and <code>&lt;
           Example
         </h3>
       <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({ <span class="hljs-comment">/* ... */</span> })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyCustomComponent</span> </span>{
-  <span class="hljs-keyword">private</span> dir: Direction;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyCustomComponent</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-attr">dir</span>: <span class="hljs-title class_">Direction</span>;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">directionality: Directionality</span>)</span> {
-    <span class="hljs-built_in">this</span>.dir = directionality.value;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-attr">directionality</span>: <span class="hljs-title class_">Directionality</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dir</span> = directionality.<span class="hljs-property">value</span>;
 
-    directionality.change.subscribe(<span class="hljs-function">() =&gt;</span> {
-      <span class="hljs-built_in">this</span>.dir = directionality.value;
+    directionality.<span class="hljs-property">change</span>.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">dir</span> = directionality.<span class="hljs-property">value</span>;
     });
   }
 }

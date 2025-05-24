@@ -1,28 +1,28 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {Observable, Observer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
-<span class="hljs-keyword">import</span> {AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Observable</span>, <span class="hljs-title class_">Observer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTabsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tabs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">AsyncPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> ExampleTab {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">ExampleTab</span> {
   <span class="hljs-attr">label</span>: <span class="hljs-built_in">string</span>;
-  content: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">content</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tab group with asynchronously loading tab contents
+ * <span class="hljs-doctag">@title</span> Tab group with asynchronously loading tab contents
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tab-group-async-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;tab-group-async-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTabsModule, AsyncPipe],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTabsModule</span>, <span class="hljs-title class_">AsyncPipe</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TabGroupAsyncExample</span> </span>{
-  <span class="hljs-attr">asyncTabs</span>: Observable&lt;ExampleTab[]&gt;;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TabGroupAsyncExample</span> {
+  <span class="hljs-attr">asyncTabs</span>: <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">ExampleTab</span>[]&gt;;
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.asyncTabs = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function">(<span class="hljs-params">observer: Observer&lt;ExampleTab[]&gt;</span>) =&gt;</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">asyncTabs</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Observable</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">observer</span>: <span class="hljs-title class_">Observer</span>&lt;<span class="hljs-title class_">ExampleTab</span>[]&gt;</span>) =&gt;</span> {
       <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-        observer.next([
+        observer.<span class="hljs-title function_">next</span>([
           {<span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;First&#x27;</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;Content 1&#x27;</span>},
           {<span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;Second&#x27;</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;Content 2&#x27;</span>},
           {<span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;Third&#x27;</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;Content 3&#x27;</span>},

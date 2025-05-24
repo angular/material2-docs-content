@@ -1,30 +1,30 @@
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, viewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, viewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 <span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatAccordion, MatExpansionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/expansion&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatDatepickerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatAccordion</span>, <span class="hljs-title class_">MatExpansionModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/expansion&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Accordion with expand/collapse all toggles
+ * <span class="hljs-doctag">@title</span> Accordion with expand/collapse all toggles
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;expansion-expand-collapse-all-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;expansion-expand-collapse-all-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;expansion-expand-collapse-all-example.css&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()],
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>()],
   <span class="hljs-attr">imports</span>: [
-    MatButtonModule,
-    MatExpansionModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
+    <span class="hljs-title class_">MatButtonModule</span>,
+    <span class="hljs-title class_">MatExpansionModule</span>,
+    <span class="hljs-title class_">MatIconModule</span>,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatInputModule</span>,
+    <span class="hljs-title class_">MatDatepickerModule</span>,
   ],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExpansionExpandCollapseAllExample</span> </span>{
-  accordion = viewChild.required(MatAccordion);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ExpansionExpandCollapseAllExample</span> {
+  accordion = viewChild.<span class="hljs-title function_">required</span>(<span class="hljs-title class_">MatAccordion</span>);
 }

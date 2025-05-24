@@ -27,7 +27,7 @@ around.</p>
 appearance for your app.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_FORM_FIELD_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">appearance</span>: <span class="hljs-string">&#x27;outline&#x27;</span>}}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_FORM_FIELD_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">appearance</span>: <span class="hljs-string">&#x27;outline&#x27;</span>}}
   ]
 })
 </code></pre>
@@ -55,7 +55,7 @@ field control, or to <code>auto</code> to restore the default behavior.</p>
 the option can be either set to <code>always</code> or <code>auto</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_FORM_FIELD_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">floatLabel</span>: <span class="hljs-string">&#x27;always&#x27;</span>}}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_FORM_FIELD_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">floatLabel</span>: <span class="hljs-string">&#x27;always&#x27;</span>}}
   ]
 })
 </code></pre>

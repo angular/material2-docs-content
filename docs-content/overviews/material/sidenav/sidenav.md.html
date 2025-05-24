@@ -188,11 +188,11 @@ CSS to adjust to either type of device.</p>
         </h3>
       <p>To react to scrolling inside the <code>&lt;mat-sidenav-container&gt;</code>, you can get a hold of the underlying
 <code>CdkScrollable</code> instance through the <code>MatSidenavContainer</code>.</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourComponent</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
-  <span class="hljs-meta">@ViewChild</span>(MatSidenavContainer) sidenavContainer: MatSidenavContainer;
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">YourComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">AfterViewInit</span> {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">MatSidenavContainer</span>) <span class="hljs-attr">sidenavContainer</span>: <span class="hljs-title class_">MatSidenavContainer</span>;
 
-  <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.sidenavContainer.scrollable.elementScrolled().subscribe(<span class="hljs-function">() =&gt;</span> <span class="hljs-comment">/* react to scrolling */</span>);
+  <span class="hljs-title function_">ngAfterViewInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">sidenavContainer</span>.<span class="hljs-property">scrollable</span>.<span class="hljs-title function_">elementScrolled</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-comment">/* react to scrolling */</span>);
   }
 }
 </code></pre>

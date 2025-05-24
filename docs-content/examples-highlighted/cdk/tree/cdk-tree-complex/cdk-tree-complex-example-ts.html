@@ -1,278 +1,278 @@
-<span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
-<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable, combineLatest, <span class="hljs-keyword">of</span> <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkTreeModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CommonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">OnInit</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatProgressSpinnerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-spinner&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">BehaviorSubject</span>, <span class="hljs-title class_">Observable</span>, combineLatest, <span class="hljs-keyword">of</span> <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {delay, map, shareReplay} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
-<span class="hljs-keyword">interface</span> BackendData {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">BackendData</span> {
   <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
-  name: <span class="hljs-built_in">string</span>;
-  parent?: <span class="hljs-built_in">string</span>;
-  children?: <span class="hljs-built_in">string</span>[];
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">parent</span>?: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">children</span>?: <span class="hljs-built_in">string</span>[];
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FakeDataBackend</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_getRandomDelayTime</span>(<span class="hljs-params"></span>)</span> {
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">FakeDataBackend</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_getRandomDelayTime</span>(<span class="hljs-params"></span>) {
     <span class="hljs-comment">// anywhere from 100 to 500ms.</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">400</span>) + <span class="hljs-number">100</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>() * <span class="hljs-number">400</span>) + <span class="hljs-number">100</span>;
   }
 
-  getChildren(id: <span class="hljs-built_in">string</span>): Observable&lt;BackendData[]&gt; {
+  <span class="hljs-title function_">getChildren</span>(<span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>): <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">BackendData</span>[]&gt; {
     <span class="hljs-comment">// first, find the specified ID in our tree</span>
-    <span class="hljs-keyword">const</span> item = EXAMPLE_DATA.get(id);
-    <span class="hljs-keyword">const</span> children = item?.children ?? [];
+    <span class="hljs-keyword">const</span> item = <span class="hljs-variable constant_">EXAMPLE_DATA</span>.<span class="hljs-title function_">get</span>(id);
+    <span class="hljs-keyword">const</span> children = item?.<span class="hljs-property">children</span> ?? [];
 
-    <span class="hljs-keyword">return</span> observableOf(children.map(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> EXAMPLE_DATA.get(childId)!)).pipe(
-      delay(<span class="hljs-built_in">this</span>._getRandomDelayTime()),
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">observableOf</span>(children.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> <span class="hljs-variable constant_">EXAMPLE_DATA</span>.<span class="hljs-title function_">get</span>(childId)!)).<span class="hljs-title function_">pipe</span>(
+      <span class="hljs-title function_">delay</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_getRandomDelayTime</span>()),
     );
   }
 
-  getRoots(): Observable&lt;BackendData[]&gt; {
-    <span class="hljs-keyword">return</span> observableOf([...EXAMPLE_DATA.values()].filter(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> !datum.parent)).pipe(
-      delay(<span class="hljs-built_in">this</span>._getRandomDelayTime()),
+  <span class="hljs-title function_">getRoots</span>(): <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">BackendData</span>[]&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">observableOf</span>([...<span class="hljs-variable constant_">EXAMPLE_DATA</span>.<span class="hljs-title function_">values</span>()].<span class="hljs-title function_">filter</span>(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> !datum.<span class="hljs-property">parent</span>)).<span class="hljs-title function_">pipe</span>(
+      <span class="hljs-title function_">delay</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_getRandomDelayTime</span>()),
     );
   }
 }
 
-<span class="hljs-keyword">type</span> LoadingState = <span class="hljs-string">&#x27;INIT&#x27;</span> | <span class="hljs-string">&#x27;LOADING&#x27;</span> | <span class="hljs-string">&#x27;LOADED&#x27;</span>;
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">LoadingState</span> = <span class="hljs-string">&#x27;INIT&#x27;</span> | <span class="hljs-string">&#x27;LOADING&#x27;</span> | <span class="hljs-string">&#x27;LOADED&#x27;</span>;
 
-<span class="hljs-keyword">interface</span> RawData {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">RawData</span> {
   <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
-  name: <span class="hljs-built_in">string</span>;
-  parentId?: <span class="hljs-built_in">string</span>;
-  childrenIds?: <span class="hljs-built_in">string</span>[];
-  childrenLoading: LoadingState;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">parentId</span>?: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">childrenIds</span>?: <span class="hljs-built_in">string</span>[];
+  <span class="hljs-attr">childrenLoading</span>: <span class="hljs-title class_">LoadingState</span>;
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TransformedData</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> raw: RawData</span>)</span> {}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TransformedData</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> <span class="hljs-attr">raw</span>: <span class="hljs-title class_">RawData</span></span>) {}
 
-  <span class="hljs-function"><span class="hljs-title">areChildrenLoading</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.raw.childrenLoading === <span class="hljs-string">&#x27;LOADING&#x27;</span>;
+  <span class="hljs-title function_">areChildrenLoading</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">raw</span>.<span class="hljs-property">childrenLoading</span> === <span class="hljs-string">&#x27;LOADING&#x27;</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">isExpandable</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-title function_">isExpandable</span>(<span class="hljs-params"></span>) {
     <span class="hljs-keyword">return</span> (
-      (<span class="hljs-built_in">this</span>.raw.childrenLoading === <span class="hljs-string">&#x27;INIT&#x27;</span> || <span class="hljs-built_in">this</span>.raw.childrenLoading === <span class="hljs-string">&#x27;LOADED&#x27;</span>) &amp;&amp;
-      !!<span class="hljs-built_in">this</span>.raw.childrenIds?.length
+      (<span class="hljs-variable language_">this</span>.<span class="hljs-property">raw</span>.<span class="hljs-property">childrenLoading</span> === <span class="hljs-string">&#x27;INIT&#x27;</span> || <span class="hljs-variable language_">this</span>.<span class="hljs-property">raw</span>.<span class="hljs-property">childrenLoading</span> === <span class="hljs-string">&#x27;LOADED&#x27;</span>) &amp;&amp;
+      !!<span class="hljs-variable language_">this</span>.<span class="hljs-property">raw</span>.<span class="hljs-property">childrenIds</span>?.<span class="hljs-property">length</span>
     );
   }
 
-  <span class="hljs-function"><span class="hljs-title">isLeaf</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">return</span> !<span class="hljs-built_in">this</span>.isExpandable() &amp;&amp; !<span class="hljs-built_in">this</span>.areChildrenLoading();
+  <span class="hljs-title function_">isLeaf</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> !<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isExpandable</span>() &amp;&amp; !<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">areChildrenLoading</span>();
   }
 }
 
-<span class="hljs-keyword">interface</span> State {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">State</span> {
   <span class="hljs-attr">rootIds</span>: <span class="hljs-built_in">string</span>[];
-  rootsLoading: LoadingState;
-  allData: <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, RawData&gt;;
-  dataLoading: <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, LoadingState&gt;;
+  <span class="hljs-attr">rootsLoading</span>: <span class="hljs-title class_">LoadingState</span>;
+  <span class="hljs-attr">allData</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">RawData</span>&gt;;
+  <span class="hljs-attr">dataLoading</span>: <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">LoadingState</span>&gt;;
 }
 
-<span class="hljs-keyword">type</span> ObservedValueOf&lt;T&gt; = T <span class="hljs-keyword">extends</span> Observable&lt;infer U&gt; ? U : <span class="hljs-built_in">never</span>;
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">ObservedValueOf</span>&lt;T&gt; = T <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Observable</span>&lt;infer U&gt; ? U : <span class="hljs-built_in">never</span>;
 
-<span class="hljs-keyword">type</span> ObservedValuesOf&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-keyword">readonly</span> Observable&lt;unknown&gt;[]&gt; = {
-  [K <span class="hljs-keyword">in</span> keyof T]: ObservedValueOf&lt;T[K]&gt;;
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">ObservedValuesOf</span>&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-keyword">readonly</span> <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-built_in">unknown</span>&gt;[]&gt; = {
+  [K <span class="hljs-keyword">in</span> keyof T]: <span class="hljs-title class_">ObservedValueOf</span>&lt;T[K]&gt;;
 };
 
-<span class="hljs-keyword">type</span> TransformFn&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-keyword">readonly</span> Observable&lt;unknown&gt;[], U&gt; = <span class="hljs-function">(<span class="hljs-params">
-  ...args: [...ObservedValuesOf&lt;T&gt;, State]
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">TransformFn</span>&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-keyword">readonly</span> <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-built_in">unknown</span>&gt;[], U&gt; = <span class="hljs-function">(<span class="hljs-params">
+  ...<span class="hljs-attr">args</span>: [...<span class="hljs-title class_">ObservedValuesOf</span>&lt;T&gt;, <span class="hljs-title class_">State</span>]
 </span>) =&gt;</span> U;
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ComplexDataStore</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _backend = <span class="hljs-keyword">new</span> FakeDataBackend();
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">ComplexDataStore</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _backend = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FakeDataBackend</span>();
 
-  <span class="hljs-keyword">private</span> _state = <span class="hljs-keyword">new</span> BehaviorSubject&lt;State&gt;({
+  <span class="hljs-keyword">private</span> _state = <span class="hljs-keyword">new</span> <span class="hljs-title class_">BehaviorSubject</span>&lt;<span class="hljs-title class_">State</span>&gt;({
     <span class="hljs-attr">rootIds</span>: [],
     <span class="hljs-attr">rootsLoading</span>: <span class="hljs-string">&#x27;INIT&#x27;</span>,
-    <span class="hljs-attr">allData</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>(),
-    <span class="hljs-attr">dataLoading</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>(),
+    <span class="hljs-attr">allData</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>(),
+    <span class="hljs-attr">dataLoading</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>(),
   });
 
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _rootIds = <span class="hljs-built_in">this</span>.select(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.rootIds);
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _allData = <span class="hljs-built_in">this</span>.select(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.allData);
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _loadingData = <span class="hljs-built_in">this</span>.select(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.dataLoading);
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _rootsLoadingState = <span class="hljs-built_in">this</span>.select(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.rootsLoading);
-  <span class="hljs-keyword">readonly</span> areRootsLoading = <span class="hljs-built_in">this</span>.select(
-    <span class="hljs-built_in">this</span>._rootIds,
-    <span class="hljs-built_in">this</span>._loadingData,
-    <span class="hljs-built_in">this</span>._rootsLoadingState,
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _rootIds = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.<span class="hljs-property">rootIds</span>);
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _allData = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.<span class="hljs-property">allData</span>);
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _loadingData = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.<span class="hljs-property">dataLoading</span>);
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _rootsLoadingState = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.<span class="hljs-property">rootsLoading</span>);
+  <span class="hljs-keyword">readonly</span> areRootsLoading = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_rootIds</span>,
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_loadingData</span>,
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_rootsLoadingState</span>,
     <span class="hljs-function">(<span class="hljs-params">rootIds, loading, rootsLoading</span>) =&gt;</span>
-      rootsLoading !== <span class="hljs-string">&#x27;LOADED&#x27;</span> || rootIds.some(<span class="hljs-function"><span class="hljs-params">id</span> =&gt;</span> loading.get(id) !== <span class="hljs-string">&#x27;LOADED&#x27;</span>),
+      rootsLoading !== <span class="hljs-string">&#x27;LOADED&#x27;</span> || rootIds.<span class="hljs-title function_">some</span>(<span class="hljs-function"><span class="hljs-params">id</span> =&gt;</span> loading.<span class="hljs-title function_">get</span>(id) !== <span class="hljs-string">&#x27;LOADED&#x27;</span>),
   );
-  <span class="hljs-keyword">readonly</span> roots = <span class="hljs-built_in">this</span>.select(
-    <span class="hljs-built_in">this</span>.areRootsLoading,
-    <span class="hljs-built_in">this</span>._rootIds,
-    <span class="hljs-built_in">this</span>._allData,
+  <span class="hljs-keyword">readonly</span> roots = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">areRootsLoading</span>,
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_rootIds</span>,
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_allData</span>,
     <span class="hljs-function">(<span class="hljs-params">rootsLoading, rootIds, data</span>) =&gt;</span> {
       <span class="hljs-keyword">if</span> (rootsLoading) {
         <span class="hljs-keyword">return</span> [];
       }
-      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._getDataByIds(rootIds, data);
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_getDataByIds</span>(rootIds, data);
     },
   );
 
-  <span class="hljs-function"><span class="hljs-title">getChildren</span>(<span class="hljs-params">parentId: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.select(<span class="hljs-built_in">this</span>._allData, <span class="hljs-built_in">this</span>._loadingData, <span class="hljs-function">(<span class="hljs-params">data, loading</span>) =&gt;</span> {
-      <span class="hljs-keyword">const</span> parentData = data.get(parentId);
-      <span class="hljs-keyword">if</span> (parentData?.childrenLoading !== <span class="hljs-string">&#x27;LOADED&#x27;</span>) {
+  <span class="hljs-title function_">getChildren</span>(<span class="hljs-params"><span class="hljs-attr">parentId</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">select</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_allData</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_loadingData</span>, <span class="hljs-function">(<span class="hljs-params">data, loading</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> parentData = data.<span class="hljs-title function_">get</span>(parentId);
+      <span class="hljs-keyword">if</span> (parentData?.<span class="hljs-property">childrenLoading</span> !== <span class="hljs-string">&#x27;LOADED&#x27;</span>) {
         <span class="hljs-keyword">return</span> [];
       }
-      <span class="hljs-keyword">const</span> childIds = parentData.childrenIds ?? [];
-      <span class="hljs-keyword">if</span> (childIds.some(<span class="hljs-function"><span class="hljs-params">id</span> =&gt;</span> loading.get(id) !== <span class="hljs-string">&#x27;LOADED&#x27;</span>)) {
+      <span class="hljs-keyword">const</span> childIds = parentData.<span class="hljs-property">childrenIds</span> ?? [];
+      <span class="hljs-keyword">if</span> (childIds.<span class="hljs-title function_">some</span>(<span class="hljs-function"><span class="hljs-params">id</span> =&gt;</span> loading.<span class="hljs-title function_">get</span>(id) !== <span class="hljs-string">&#x27;LOADED&#x27;</span>)) {
         <span class="hljs-keyword">return</span> [];
       }
-      <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._getDataByIds(childIds, data);
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_getDataByIds</span>(childIds, data);
     });
   }
 
-  <span class="hljs-function"><span class="hljs-title">loadRoots</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._setRootsLoading();
-    <span class="hljs-built_in">this</span>._backend.getRoots().subscribe(<span class="hljs-function"><span class="hljs-params">roots</span> =&gt;</span> {
-      <span class="hljs-built_in">this</span>._setRoots(roots);
+  <span class="hljs-title function_">loadRoots</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_setRootsLoading</span>();
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_backend</span>.<span class="hljs-title function_">getRoots</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">roots</span> =&gt;</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_setRoots</span>(roots);
     });
   }
 
-  <span class="hljs-function"><span class="hljs-title">loadChildren</span>(<span class="hljs-params">parentId: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._setChildrenLoading(parentId);
-    <span class="hljs-built_in">this</span>._backend.getChildren(parentId).subscribe(<span class="hljs-function"><span class="hljs-params">children</span> =&gt;</span> {
-      <span class="hljs-built_in">this</span>._addLoadedData(parentId, children);
+  <span class="hljs-title function_">loadChildren</span>(<span class="hljs-params"><span class="hljs-attr">parentId</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_setChildrenLoading</span>(parentId);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_backend</span>.<span class="hljs-title function_">getChildren</span>(parentId).<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">children</span> =&gt;</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_addLoadedData</span>(parentId, children);
     });
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_setRootsLoading</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._state.next({
-      ...this._state.value,
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_setRootsLoading</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-title function_">next</span>({
+      ...<span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-property">value</span>,
       <span class="hljs-attr">rootsLoading</span>: <span class="hljs-string">&#x27;LOADING&#x27;</span>,
     });
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_setRoots</span>(<span class="hljs-params">roots: BackendData[]</span>)</span> {
-    <span class="hljs-keyword">const</span> currentState = <span class="hljs-built_in">this</span>._state.value;
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_setRoots</span>(<span class="hljs-params"><span class="hljs-attr">roots</span>: <span class="hljs-title class_">BackendData</span>[]</span>) {
+    <span class="hljs-keyword">const</span> currentState = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-property">value</span>;
 
-    <span class="hljs-built_in">this</span>._state.next({
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-title function_">next</span>({
       ...currentState,
-      <span class="hljs-attr">rootIds</span>: roots.map(<span class="hljs-function"><span class="hljs-params">root</span> =&gt;</span> root.id),
+      <span class="hljs-attr">rootIds</span>: roots.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">root</span> =&gt;</span> root.<span class="hljs-property">id</span>),
       <span class="hljs-attr">rootsLoading</span>: <span class="hljs-string">&#x27;LOADED&#x27;</span>,
-      ...this._addData(currentState, roots),
+      ...<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_addData</span>(currentState, roots),
     });
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_setChildrenLoading</span>(<span class="hljs-params">parentId: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-keyword">const</span> currentState = <span class="hljs-built_in">this</span>._state.value;
-    <span class="hljs-keyword">const</span> parentData = currentState.allData.get(parentId);
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_setChildrenLoading</span>(<span class="hljs-params"><span class="hljs-attr">parentId</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-keyword">const</span> currentState = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-property">value</span>;
+    <span class="hljs-keyword">const</span> parentData = currentState.<span class="hljs-property">allData</span>.<span class="hljs-title function_">get</span>(parentId);
 
-    <span class="hljs-built_in">this</span>._state.next({
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-title function_">next</span>({
       ...currentState,
-      <span class="hljs-attr">allData</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        ...currentState.allData,
+      <span class="hljs-attr">allData</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
+        ...currentState.<span class="hljs-property">allData</span>,
         ...(parentData ? ([[parentId, {...parentData, <span class="hljs-attr">childrenLoading</span>: <span class="hljs-string">&#x27;LOADING&#x27;</span>}]] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>) : []),
       ]),
-      <span class="hljs-attr">dataLoading</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
-        ...currentState.dataLoading,
-        ...(parentData?.childrenIds?.map(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> [childId, <span class="hljs-string">&#x27;LOADING&#x27;</span>] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>) ?? []),
+      <span class="hljs-attr">dataLoading</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
+        ...currentState.<span class="hljs-property">dataLoading</span>,
+        ...(parentData?.<span class="hljs-property">childrenIds</span>?.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> [childId, <span class="hljs-string">&#x27;LOADING&#x27;</span>] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>) ?? []),
       ]),
     });
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_addLoadedData</span>(<span class="hljs-params">parentId: <span class="hljs-built_in">string</span>, childData: BackendData[]</span>)</span> {
-    <span class="hljs-keyword">const</span> currentState = <span class="hljs-built_in">this</span>._state.value;
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_addLoadedData</span>(<span class="hljs-params"><span class="hljs-attr">parentId</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">childData</span>: <span class="hljs-title class_">BackendData</span>[]</span>) {
+    <span class="hljs-keyword">const</span> currentState = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-property">value</span>;
 
-    <span class="hljs-built_in">this</span>._state.next({
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>.<span class="hljs-title function_">next</span>({
       ...currentState,
-      ...this._addData(currentState, childData, parentId),
+      ...<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_addData</span>(currentState, childData, parentId),
     });
   }
 
-  <span class="hljs-keyword">private</span> _addData(
-    {allData, dataLoading}: State,
-    <span class="hljs-attr">data</span>: BackendData[],
-    parentId?: <span class="hljs-built_in">string</span>,
-  ): Pick&lt;State, <span class="hljs-string">&#x27;allData&#x27;</span> | <span class="hljs-string">&#x27;dataLoading&#x27;</span>&gt; {
-    <span class="hljs-keyword">const</span> parentData = parentId &amp;&amp; allData.get(parentId);
-    <span class="hljs-keyword">const</span> allChildren = data.flatMap(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> datum.children ?? []);
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_addData</span>(
+    {allData, dataLoading}: <span class="hljs-title class_">State</span>,
+    <span class="hljs-attr">data</span>: <span class="hljs-title class_">BackendData</span>[],
+    <span class="hljs-attr">parentId</span>?: <span class="hljs-built_in">string</span>,
+  ): <span class="hljs-title class_">Pick</span>&lt;<span class="hljs-title class_">State</span>, <span class="hljs-string">&#x27;allData&#x27;</span> | <span class="hljs-string">&#x27;dataLoading&#x27;</span>&gt; {
+    <span class="hljs-keyword">const</span> parentData = parentId &amp;&amp; allData.<span class="hljs-title function_">get</span>(parentId);
+    <span class="hljs-keyword">const</span> allChildren = data.<span class="hljs-title function_">flatMap</span>(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> datum.<span class="hljs-property">children</span> ?? []);
     <span class="hljs-keyword">return</span> {
-      <span class="hljs-attr">allData</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
+      <span class="hljs-attr">allData</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
         ...allData,
-        ...data.map(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> {
+        ...data.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> {
           <span class="hljs-keyword">return</span> [
-            datum.id,
+            datum.<span class="hljs-property">id</span>,
             {
-              <span class="hljs-attr">id</span>: datum.id,
-              <span class="hljs-attr">name</span>: datum.name,
+              <span class="hljs-attr">id</span>: datum.<span class="hljs-property">id</span>,
+              <span class="hljs-attr">name</span>: datum.<span class="hljs-property">name</span>,
               parentId,
-              <span class="hljs-attr">childrenIds</span>: datum.children,
+              <span class="hljs-attr">childrenIds</span>: datum.<span class="hljs-property">children</span>,
               <span class="hljs-attr">childrenLoading</span>: <span class="hljs-string">&#x27;INIT&#x27;</span>,
             },
           ] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>;
         }),
         ...(parentData ? ([[parentId, {...parentData, <span class="hljs-attr">childrenLoading</span>: <span class="hljs-string">&#x27;LOADED&#x27;</span>}]] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>) : []),
       ]),
-      <span class="hljs-attr">dataLoading</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([
+      <span class="hljs-attr">dataLoading</span>: <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([
         ...dataLoading,
-        ...data.map(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> [datum.id, <span class="hljs-string">&#x27;LOADED&#x27;</span>] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>),
-        ...allChildren.map(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> [childId, <span class="hljs-string">&#x27;INIT&#x27;</span>] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>),
+        ...data.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> [datum.<span class="hljs-property">id</span>, <span class="hljs-string">&#x27;LOADED&#x27;</span>] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>),
+        ...allChildren.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">childId</span> =&gt;</span> [childId, <span class="hljs-string">&#x27;INIT&#x27;</span>] <span class="hljs-keyword">as</span> <span class="hljs-keyword">const</span>),
       ]),
     };
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">_getDataByIds</span>(<span class="hljs-params">ids: <span class="hljs-built_in">string</span>[], data: State[<span class="hljs-string">&#x27;allData&#x27;</span>]</span>)</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_getDataByIds</span>(<span class="hljs-params"><span class="hljs-attr">ids</span>: <span class="hljs-built_in">string</span>[], <span class="hljs-attr">data</span>: <span class="hljs-title class_">State</span>[<span class="hljs-string">&#x27;allData&#x27;</span>]</span>) {
     <span class="hljs-keyword">return</span> ids
-      .map(<span class="hljs-function"><span class="hljs-params">id</span> =&gt;</span> data.get(id))
-      .filter(&lt;T&gt;(item: T | <span class="hljs-literal">undefined</span>): item is T =&gt; !!item)
-      .map(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> <span class="hljs-keyword">new</span> TransformedData(datum));
+      .<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">id</span> =&gt;</span> data.<span class="hljs-title function_">get</span>(id))
+      .<span class="hljs-title function_">filter</span>(&lt;T&gt;(<span class="hljs-attr">item</span>: T | <span class="hljs-literal">undefined</span>): item is T =&gt; !!item)
+      .<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TransformedData</span>(datum));
   }
 
-  select&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-keyword">readonly</span> Observable&lt;unknown&gt;[], U&gt;(
-    ...sourcesAndTransform: [...T, TransformFn&lt;T, U&gt;]
+  select&lt;T <span class="hljs-keyword">extends</span> <span class="hljs-keyword">readonly</span> <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-built_in">unknown</span>&gt;[], U&gt;(
+    ...<span class="hljs-attr">sourcesAndTransform</span>: [...T, <span class="hljs-title class_">TransformFn</span>&lt;T, U&gt;]
   ) {
-    <span class="hljs-keyword">const</span> sources = sourcesAndTransform.slice(<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>) <span class="hljs-keyword">as</span> unknown <span class="hljs-keyword">as</span> T;
-    <span class="hljs-keyword">const</span> transformFn = sourcesAndTransform[sourcesAndTransform.length - <span class="hljs-number">1</span>] <span class="hljs-keyword">as</span> TransformFn&lt;T, U&gt;;
+    <span class="hljs-keyword">const</span> sources = sourcesAndTransform.<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>) <span class="hljs-keyword">as</span> <span class="hljs-built_in">unknown</span> <span class="hljs-keyword">as</span> T;
+    <span class="hljs-keyword">const</span> transformFn = sourcesAndTransform[sourcesAndTransform.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>] <span class="hljs-keyword">as</span> <span class="hljs-title class_">TransformFn</span>&lt;T, U&gt;;
 
-    <span class="hljs-keyword">return</span> combineLatest([...sources, <span class="hljs-built_in">this</span>._state]).pipe(
-      map(<span class="hljs-function"><span class="hljs-params">args</span> =&gt;</span> transformFn(...(args <span class="hljs-keyword">as</span> unknown <span class="hljs-keyword">as</span> [...ObservedValuesOf&lt;T&gt;, State]))),
-      shareReplay({<span class="hljs-attr">refCount</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">bufferSize</span>: <span class="hljs-number">1</span>}),
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">combineLatest</span>([...sources, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_state</span>]).<span class="hljs-title function_">pipe</span>(
+      <span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">args</span> =&gt;</span> <span class="hljs-title function_">transformFn</span>(...(args <span class="hljs-keyword">as</span> <span class="hljs-built_in">unknown</span> <span class="hljs-keyword">as</span> [...<span class="hljs-title class_">ObservedValuesOf</span>&lt;T&gt;, <span class="hljs-title class_">State</span>]))),
+      <span class="hljs-title function_">shareReplay</span>({<span class="hljs-attr">refCount</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">bufferSize</span>: <span class="hljs-number">1</span>}),
     );
   }
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Complex example making use of the redux pattern.
+ * <span class="hljs-doctag">@title</span> Complex example making use of the redux pattern.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-tree-complex-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-tree-complex-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-tree-complex-example.css&#x27;</span>],
-  <span class="hljs-attr">imports</span>: [CdkTreeModule, MatButtonModule, MatIconModule, CommonModule, MatProgressSpinnerModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkTreeModule</span>, <span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatIconModule</span>, <span class="hljs-title class_">CommonModule</span>, <span class="hljs-title class_">MatProgressSpinnerModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTreeComplexExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnInit</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _dataStore = <span class="hljs-keyword">new</span> ComplexDataStore();
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkTreeComplexExample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnInit</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _dataStore = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ComplexDataStore</span>();
 
-  areRootsLoading = <span class="hljs-built_in">this</span>._dataStore.areRootsLoading;
-  roots = <span class="hljs-built_in">this</span>._dataStore.roots;
+  areRootsLoading = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStore</span>.<span class="hljs-property">areRootsLoading</span>;
+  roots = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStore</span>.<span class="hljs-property">roots</span>;
 
-  getChildren = <span class="hljs-function">(<span class="hljs-params">node: TransformedData</span>) =&gt;</span> <span class="hljs-built_in">this</span>._dataStore.getChildren(node.raw.id);
-  trackBy = <span class="hljs-function">(<span class="hljs-params">index: <span class="hljs-built_in">number</span>, node: TransformedData</span>) =&gt;</span> <span class="hljs-built_in">this</span>.expansionKey(node);
-  expansionKey = <span class="hljs-function">(<span class="hljs-params">node: TransformedData</span>) =&gt;</span> node.raw.id;
+  getChildren = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">TransformedData</span></span>) =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStore</span>.<span class="hljs-title function_">getChildren</span>(node.<span class="hljs-property">raw</span>.<span class="hljs-property">id</span>);
+  trackBy = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">TransformedData</span></span>) =&gt;</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">expansionKey</span>(node);
+  expansionKey = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">TransformedData</span></span>) =&gt;</span> node.<span class="hljs-property">raw</span>.<span class="hljs-property">id</span>;
 
-  <span class="hljs-function"><span class="hljs-title">ngOnInit</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._dataStore.loadRoots();
+  <span class="hljs-title function_">ngOnInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStore</span>.<span class="hljs-title function_">loadRoots</span>();
   }
 
-  <span class="hljs-function"><span class="hljs-title">onExpand</span>(<span class="hljs-params">node: TransformedData, expanded: <span class="hljs-built_in">boolean</span></span>)</span> {
+  <span class="hljs-title function_">onExpand</span>(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">TransformedData</span>, <span class="hljs-attr">expanded</span>: <span class="hljs-built_in">boolean</span></span>) {
     <span class="hljs-keyword">if</span> (expanded) {
       <span class="hljs-comment">// Only perform a load on expansion.</span>
-      <span class="hljs-built_in">this</span>._dataStore.loadChildren(node.raw.id);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dataStore</span>.<span class="hljs-title function_">loadChildren</span>(node.<span class="hljs-property">raw</span>.<span class="hljs-property">id</span>);
     }
   }
 }
 
-<span class="hljs-keyword">const</span> EXAMPLE_DATA = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">string</span>, BackendData&gt;(
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">EXAMPLE_DATA</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>&lt;<span class="hljs-built_in">string</span>, <span class="hljs-title class_">BackendData</span>&gt;(
   [
     {
       <span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;1&#x27;</span>,
@@ -303,5 +303,5 @@
     {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-1-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Brussel sprouts&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-1&#x27;</span>},
     {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2-1&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Pumpkins&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>},
     {<span class="hljs-attr">id</span>: <span class="hljs-string">&#x27;2-2-2&#x27;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Carrots&#x27;</span>, <span class="hljs-attr">parent</span>: <span class="hljs-string">&#x27;2-2&#x27;</span>},
-  ].map(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> [datum.id, datum]),
+  ].<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">datum</span> =&gt;</span> [datum.<span class="hljs-property">id</span>, datum]),
 );

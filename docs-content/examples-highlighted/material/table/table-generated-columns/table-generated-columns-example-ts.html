@@ -1,14 +1,14 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -22,37 +22,37 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Table with columns defined using a for loop instead of statically written in the template.
+ * <span class="hljs-doctag">@title</span> Table with columns defined using a for loop instead of statically written in the template.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-generated-columns-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-generated-columns-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-generated-columns-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTableModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableGeneratedColumnsExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableGeneratedColumnsExample</span> {
   columns = [
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;position&#x27;</span>,
       <span class="hljs-attr">header</span>: <span class="hljs-string">&#x27;No.&#x27;</span>,
-      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params">element: PeriodicElement</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.position}</span>`</span>,
+      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.position}</span>`</span>,
     },
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;name&#x27;</span>,
       <span class="hljs-attr">header</span>: <span class="hljs-string">&#x27;Name&#x27;</span>,
-      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params">element: PeriodicElement</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.name}</span>`</span>,
+      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.name}</span>`</span>,
     },
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;weight&#x27;</span>,
       <span class="hljs-attr">header</span>: <span class="hljs-string">&#x27;Weight&#x27;</span>,
-      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params">element: PeriodicElement</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.weight}</span>`</span>,
+      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.weight}</span>`</span>,
     },
     {
       <span class="hljs-attr">columnDef</span>: <span class="hljs-string">&#x27;symbol&#x27;</span>,
       <span class="hljs-attr">header</span>: <span class="hljs-string">&#x27;Symbol&#x27;</span>,
-      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params">element: PeriodicElement</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.symbol}</span>`</span>,
+      <span class="hljs-attr">cell</span>: <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${element.<span class="hljs-built_in">symbol</span>}</span>`</span>,
     },
   ];
-  dataSource = ELEMENT_DATA;
-  displayedColumns = <span class="hljs-built_in">this</span>.columns.map(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> c.columnDef);
+  dataSource = <span class="hljs-variable constant_">ELEMENT_DATA</span>;
+  displayedColumns = <span class="hljs-variable language_">this</span>.<span class="hljs-property">columns</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">c</span> =&gt;</span> c.<span class="hljs-property">columnDef</span>);
 }

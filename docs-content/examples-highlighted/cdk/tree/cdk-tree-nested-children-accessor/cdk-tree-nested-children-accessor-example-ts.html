@@ -1,51 +1,51 @@
-<span class="hljs-keyword">import</span> {ArrayDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkTree, CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ArrayDataSource</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkTree</span>, <span class="hljs-title class_">CdkTreeModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/tree&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">ViewChild</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 
 <span class="hljs-comment">/**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
  */</span>
-<span class="hljs-keyword">interface</span> NestedFoodNode {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">NestedFoodNode</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  children?: NestedFoodNode[];
+  <span class="hljs-attr">children</span>?: <span class="hljs-title class_">NestedFoodNode</span>[];
 }
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">flattenNodes</span>(<span class="hljs-params">nodes: NestedFoodNode[]</span>): <span class="hljs-title">NestedFoodNode</span>[] </span>{
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">flattenNodes</span>(<span class="hljs-params"><span class="hljs-attr">nodes</span>: <span class="hljs-title class_">NestedFoodNode</span>[]</span>): <span class="hljs-title class_">NestedFoodNode</span>[] {
   <span class="hljs-keyword">const</span> flattenedNodes = [];
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> node <span class="hljs-keyword">of</span> nodes) {
-    flattenedNodes.push(node);
-    <span class="hljs-keyword">if</span> (node.children) {
-      flattenedNodes.push(...flattenNodes(node.children));
+    flattenedNodes.<span class="hljs-title function_">push</span>(node);
+    <span class="hljs-keyword">if</span> (node.<span class="hljs-property">children</span>) {
+      flattenedNodes.<span class="hljs-title function_">push</span>(...<span class="hljs-title function_">flattenNodes</span>(node.<span class="hljs-property">children</span>));
     }
   }
   <span class="hljs-keyword">return</span> flattenedNodes;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tree with nested nodes using childAccessor
+ * <span class="hljs-doctag">@title</span> Tree with nested nodes using childAccessor
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-tree-nested-children-accessor-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-tree-nested-children-accessor-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-tree-nested-children-accessor-example.css&#x27;</span>],
-  <span class="hljs-attr">imports</span>: [CdkTreeModule, MatButtonModule, MatIconModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">CdkTreeModule</span>, <span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatIconModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkTreeNestedChildrenAccessorExample</span> </span>{
-  <span class="hljs-meta">@ViewChild</span>(CdkTree) tree: CdkTree&lt;NestedFoodNode&gt;;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkTreeNestedChildrenAccessorExample</span> {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-title class_">CdkTree</span>) <span class="hljs-attr">tree</span>: <span class="hljs-title class_">CdkTree</span>&lt;<span class="hljs-title class_">NestedFoodNode</span>&gt;;
 
-  childrenAccessor = <span class="hljs-function">(<span class="hljs-params">dataNode: NestedFoodNode</span>) =&gt;</span> dataNode.children ?? [];
+  childrenAccessor = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">dataNode</span>: <span class="hljs-title class_">NestedFoodNode</span></span>) =&gt;</span> dataNode.<span class="hljs-property">children</span> ?? [];
 
-  dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(EXAMPLE_DATA);
+  dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayDataSource</span>(<span class="hljs-variable constant_">EXAMPLE_DATA</span>);
 
-  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: NestedFoodNode</span>) =&gt;</span> !!node.children &amp;&amp; node.children.length &gt; <span class="hljs-number">0</span>;
+  hasChild = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">_</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">node</span>: <span class="hljs-title class_">NestedFoodNode</span></span>) =&gt;</span> !!node.<span class="hljs-property">children</span> &amp;&amp; node.<span class="hljs-property">children</span>.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>;
 
-  <span class="hljs-function"><span class="hljs-title">getParentNode</span>(<span class="hljs-params">node: NestedFoodNode</span>)</span> {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> parent <span class="hljs-keyword">of</span> flattenNodes(EXAMPLE_DATA)) {
-      <span class="hljs-keyword">if</span> (parent.children?.includes(node)) {
+  <span class="hljs-title function_">getParentNode</span>(<span class="hljs-params"><span class="hljs-attr">node</span>: <span class="hljs-title class_">NestedFoodNode</span></span>) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> parent <span class="hljs-keyword">of</span> <span class="hljs-title function_">flattenNodes</span>(<span class="hljs-variable constant_">EXAMPLE_DATA</span>)) {
+      <span class="hljs-keyword">if</span> (parent.<span class="hljs-property">children</span>?.<span class="hljs-title function_">includes</span>(node)) {
         <span class="hljs-keyword">return</span> parent;
       }
     }
@@ -53,14 +53,14 @@
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
 
-  shouldRender(node: NestedFoodNode): <span class="hljs-built_in">boolean</span> {
+  <span class="hljs-title function_">shouldRender</span>(<span class="hljs-attr">node</span>: <span class="hljs-title class_">NestedFoodNode</span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-comment">// This node should render if it is a root node or if all of its ancestors are expanded.</span>
-    <span class="hljs-keyword">const</span> parent = <span class="hljs-built_in">this</span>.getParentNode(node);
-    <span class="hljs-keyword">return</span> !parent || (!!<span class="hljs-built_in">this</span>.tree?.isExpanded(parent) &amp;&amp; <span class="hljs-built_in">this</span>.shouldRender(parent));
+    <span class="hljs-keyword">const</span> parent = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getParentNode</span>(node);
+    <span class="hljs-keyword">return</span> !parent || (!!<span class="hljs-variable language_">this</span>.<span class="hljs-property">tree</span>?.<span class="hljs-title function_">isExpanded</span>(parent) &amp;&amp; <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">shouldRender</span>(parent));
   }
 }
 
-<span class="hljs-keyword">const</span> EXAMPLE_DATA: NestedFoodNode[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">EXAMPLE_DATA</span>: <span class="hljs-title class_">NestedFoodNode</span>[] = [
   {
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit&#x27;</span>,
     <span class="hljs-attr">children</span>: [{<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Apple&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Banana&#x27;</span>}, {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Fruit loops&#x27;</span>}],

@@ -1,28 +1,28 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {PageEvent, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
-<span class="hljs-keyword">import</span> {JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">PageEvent</span>, <span class="hljs-title class_">MatPaginatorModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">JsonPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSlideToggleModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Configurable paginator
+ * <span class="hljs-doctag">@title</span> Configurable paginator
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;paginator-configurable-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;paginator-configurable-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;paginator-configurable-example.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatSlideToggleModule,
-    MatPaginatorModule,
-    JsonPipe,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatInputModule</span>,
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">MatSlideToggleModule</span>,
+    <span class="hljs-title class_">MatPaginatorModule</span>,
+    <span class="hljs-title class_">JsonPipe</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaginatorConfigurableExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PaginatorConfigurableExample</span> {
   length = <span class="hljs-number">50</span>;
   pageSize = <span class="hljs-number">10</span>;
   pageIndex = <span class="hljs-number">0</span>;
@@ -33,18 +33,18 @@
   showFirstLastButtons = <span class="hljs-literal">true</span>;
   disabled = <span class="hljs-literal">false</span>;
 
-  pageEvent: PageEvent;
+  <span class="hljs-attr">pageEvent</span>: <span class="hljs-title class_">PageEvent</span>;
 
-  <span class="hljs-function"><span class="hljs-title">handlePageEvent</span>(<span class="hljs-params">e: PageEvent</span>)</span> {
-    <span class="hljs-built_in">this</span>.pageEvent = e;
-    <span class="hljs-built_in">this</span>.length = e.length;
-    <span class="hljs-built_in">this</span>.pageSize = e.pageSize;
-    <span class="hljs-built_in">this</span>.pageIndex = e.pageIndex;
+  <span class="hljs-title function_">handlePageEvent</span>(<span class="hljs-params"><span class="hljs-attr">e</span>: <span class="hljs-title class_">PageEvent</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageEvent</span> = e;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">length</span> = e.<span class="hljs-property">length</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageSize</span> = e.<span class="hljs-property">pageSize</span>;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageIndex</span> = e.<span class="hljs-property">pageIndex</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">setPageSizeOptions</span>(<span class="hljs-params">setPageSizeOptionsInput: <span class="hljs-built_in">string</span></span>)</span> {
+  <span class="hljs-title function_">setPageSizeOptions</span>(<span class="hljs-params"><span class="hljs-attr">setPageSizeOptionsInput</span>: <span class="hljs-built_in">string</span></span>) {
     <span class="hljs-keyword">if</span> (setPageSizeOptionsInput) {
-      <span class="hljs-built_in">this</span>.pageSizeOptions = setPageSizeOptionsInput.split(<span class="hljs-string">&#x27;,&#x27;</span>).map(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">pageSizeOptions</span> = setPageSizeOptionsInput.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;,&#x27;</span>).<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
     }
   }
 }

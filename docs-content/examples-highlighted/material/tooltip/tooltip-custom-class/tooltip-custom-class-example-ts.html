@@ -1,9 +1,9 @@
-<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">ViewEncapsulation</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTooltipModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/tooltip&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Tooltip that can have a custom class applied.
+ * <span class="hljs-doctag">@title</span> Tooltip that can have a custom class applied.
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;tooltip-custom-class-example&#x27;</span>,
@@ -11,7 +11,7 @@
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;tooltip-custom-class-example.css&#x27;</span>,
   <span class="hljs-comment">// Need to remove view encapsulation so that the custom tooltip style defined in</span>
   <span class="hljs-comment">// `tooltip-custom-class-example.css` will not be scoped to this component&#x27;s view.</span>
-  <span class="hljs-attr">encapsulation</span>: ViewEncapsulation.None,
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatTooltipModule],
+  <span class="hljs-attr">encapsulation</span>: <span class="hljs-title class_">ViewEncapsulation</span>.<span class="hljs-property">None</span>,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatTooltipModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipCustomClassExample</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TooltipCustomClassExample</span> {}

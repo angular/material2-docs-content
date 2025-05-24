@@ -92,30 +92,30 @@ components, each with a corresponding harness:</p>
 <li><code>MyDialog</code> (a dialog appended to <code>document.body</code> by <code>MyDialogButton</code> upon click)</li>
 </ul>
 <p>The following code loads harnesses for each of these components:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;MyDialogButton&gt;;
-<span class="hljs-keyword">let</span> loader: HarnessLoader;
-<span class="hljs-keyword">let</span> rootLoader: HarnessLoader;
+<pre><code class="language-ts"><span class="hljs-keyword">let</span> <span class="hljs-attr">fixture</span>: <span class="hljs-title class_">ComponentFixture</span>&lt;<span class="hljs-title class_">MyDialogButton</span>&gt;;
+<span class="hljs-keyword">let</span> <span class="hljs-attr">loader</span>: <span class="hljs-title class_">HarnessLoader</span>;
+<span class="hljs-keyword">let</span> <span class="hljs-attr">rootLoader</span>: <span class="hljs-title class_">HarnessLoader</span>;
 
-beforeEach(<span class="hljs-function">() =&gt;</span> {
-  fixture = TestBed.createComponent(MyDialogButton);
-  loader = TestbedHarnessEnvironment.loader(fixture);
-  rootLoader = TestbedHarnessEnvironment.documentRootLoader(fixture);
+<span class="hljs-title function_">beforeEach</span>(<span class="hljs-function">() =&gt;</span> {
+  fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">MyDialogButton</span>);
+  loader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">loader</span>(fixture);
+  rootLoader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">documentRootLoader</span>(fixture);
 });
 
-it(<span class="hljs-string">&#x27;loads harnesses&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+<span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;loads harnesses&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
   <span class="hljs-comment">// Load a harness for the bootstrapped component with `harnessForFixture`</span>
   dialogButtonHarness =
-      <span class="hljs-keyword">await</span> TestbedHarnessEnvironment.harnessForFixture(fixture, MyDialogButtonHarness);
+      <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">harnessForFixture</span>(fixture, <span class="hljs-title class_">MyDialogButtonHarness</span>);
 
   <span class="hljs-comment">// The button element is inside the fixture&#x27;s root element, so we use `loader`.</span>
-  <span class="hljs-keyword">const</span> buttonHarness = <span class="hljs-keyword">await</span> loader.getHarness(MyButtonHarness);
+  <span class="hljs-keyword">const</span> buttonHarness = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MyButtonHarness</span>);
 
   <span class="hljs-comment">// Click the button to open the dialog</span>
-  <span class="hljs-keyword">await</span> buttonHarness.click();
+  <span class="hljs-keyword">await</span> buttonHarness.<span class="hljs-title function_">click</span>();
 
   <span class="hljs-comment">// The dialog is appended to `document.body`, outside of the fixture&#x27;s root element,</span>
   <span class="hljs-comment">// so we use `rootLoader` in this case.</span>
-  <span class="hljs-keyword">const</span> dialogHarness = <span class="hljs-keyword">await</span> rootLoader.getHarness(MyDialogHarness);
+  <span class="hljs-keyword">const</span> dialogHarness = <span class="hljs-keyword">await</span> rootLoader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MyDialogHarness</span>);
 
   <span class="hljs-comment">// ... make some assertions</span>
 });
@@ -203,16 +203,16 @@ that you need finer-grained control over change detection. For example, you may 
 state of a component while an async operation is pending. In these cases you can use the
 <code>manualChangeDetection</code> function to disable automatic handling of change detection for a block of
 code. For example:</p>
-<pre><code class="language-ts">it(<span class="hljs-string">&#x27;checks state while async action is in progress&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-  <span class="hljs-keyword">const</span> buttonHarness = loader.getHarness(MyButtonHarness);
-  <span class="hljs-keyword">await</span> manualChangeDetection(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> buttonHarness.click();
-    fixture.detectChanges();
+<pre><code class="language-ts"><span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;checks state while async action is in progress&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> buttonHarness = loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MyButtonHarness</span>);
+  <span class="hljs-keyword">await</span> <span class="hljs-title function_">manualChangeDetection</span>(<span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> buttonHarness.<span class="hljs-title function_">click</span>();
+    fixture.<span class="hljs-title function_">detectChanges</span>();
     <span class="hljs-comment">// Check expectations while async click operation is in progress.</span>
-    expect(isProgressSpinnerVisible()).toBe(<span class="hljs-literal">true</span>);
-    <span class="hljs-keyword">await</span> fixture.whenStable();
+    <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">isProgressSpinnerVisible</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">await</span> fixture.<span class="hljs-title function_">whenStable</span>();
     <span class="hljs-comment">// Check expectations after async click operation complete.</span>
-    expect(isProgressSpinnerVisible()).toBe(<span class="hljs-literal">false</span>);
+    <span class="hljs-title function_">expect</span>(<span class="hljs-title function_">isProgressSpinnerVisible</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">false</span>);
   });
 });
 </code></pre>
@@ -233,15 +233,15 @@ properties off a single component. In these situations use the <code>parallel</c
 the operations. The parallel function works similarly to <code>Promise.all</code>, while also optimizing change
 detection, so it is not run an excessive number of times. The following code demonstrates how you
 can read multiple properties from a harness with <code>parallel</code>:</p>
-<pre><code class="language-ts">it(<span class="hljs-string">&#x27;reads properties in parallel&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-  <span class="hljs-keyword">const</span> checkboxHarness = loader.getHarness(MyCheckboxHarness);
+<pre><code class="language-ts"><span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;reads properties in parallel&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> checkboxHarness = loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MyCheckboxHarness</span>);
   <span class="hljs-comment">// Read the checked and intermediate properties simultaneously.</span>
-  <span class="hljs-keyword">const</span> [checked, indeterminate] = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> [
-    checkboxHarness.isChecked(),
-    checkboxHarness.isIndeterminate()
+  <span class="hljs-keyword">const</span> [checked, indeterminate] = <span class="hljs-keyword">await</span> <span class="hljs-title function_">parallel</span>(<span class="hljs-function">() =&gt;</span> [
+    checkboxHarness.<span class="hljs-title function_">isChecked</span>(),
+    checkboxHarness.<span class="hljs-title function_">isIndeterminate</span>()
   ]);
-  expect(checked).toBe(<span class="hljs-literal">false</span>);
-  expect(indeterminate).toBe(<span class="hljs-literal">true</span>);
+  <span class="hljs-title function_">expect</span>(checked).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">false</span>);
+  <span class="hljs-title function_">expect</span>(indeterminate).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">true</span>);
 });
 </code></pre>
 
@@ -270,18 +270,18 @@ subclass. In most cases, the <code>hostSelector</code> should be the same as the
     &lt;div *ngIf=&quot;open&quot; class=&quot;my-popup-content&quot;&gt;&lt;ng-content&gt;&lt;/ng-content&gt;&lt;/div&gt;
   `</span>
 })
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopup</span> </span>{
-  <span class="hljs-meta">@Input</span>() triggerText: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPopup</span> {
+  <span class="hljs-meta">@Input</span>() <span class="hljs-attr">triggerText</span>: <span class="hljs-built_in">string</span>;
 
   open = <span class="hljs-literal">false</span>;
 
-  <span class="hljs-function"><span class="hljs-title">toggle</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.open = !<span class="hljs-built_in">this</span>.open;
+  <span class="hljs-title function_">toggle</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">open</span> = !<span class="hljs-variable language_">this</span>.<span class="hljs-property">open</span>;
   }
 }
 </code></pre>
 <p>In this case, a minimal harness for the component would look like the following:</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
 }
 </code></pre>
@@ -329,14 +329,14 @@ functions ensures that tests always reference the current state of the DOM.</p>
 </tbody></table>
 <p>For example, the <code>MyPopupHarness</code> class discussed above could provide methods to get the trigger
 and content elements as follows:</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
 
   <span class="hljs-comment">/** Gets the trigger element */</span>
-  getTriggerElement = <span class="hljs-built_in">this</span>.locatorFor(<span class="hljs-string">&#x27;button&#x27;</span>);
+  getTriggerElement = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorFor</span>(<span class="hljs-string">&#x27;button&#x27;</span>);
 
   <span class="hljs-comment">/** Gets the content element. */</span>
-  getContentElement = <span class="hljs-built_in">this</span>.locatorForOptional(<span class="hljs-string">&#x27;.my-popup-content&#x27;</span>);
+  getContentElement = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorForOptional</span>(<span class="hljs-string">&#x27;.my-popup-content&#x27;</span>);
 }
 </code></pre>
 
@@ -429,21 +429,21 @@ structure.</p>
 <p>Instead, provide more narrow-focused methods for particular actions the end-user will
 take or particular state they may want to check. For example, <code>MyPopupHarness</code> could provide methods
 like <code>toggle</code> and <code>isOpen</code>:</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
 
-  <span class="hljs-keyword">protected</span> getTriggerElement = <span class="hljs-built_in">this</span>.locatorFor(<span class="hljs-string">&#x27;button&#x27;</span>);
-  <span class="hljs-keyword">protected</span> getContentElement = <span class="hljs-built_in">this</span>.locatorForOptional(<span class="hljs-string">&#x27;.my-popup-content&#x27;</span>);
+  <span class="hljs-keyword">protected</span> getTriggerElement = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorFor</span>(<span class="hljs-string">&#x27;button&#x27;</span>);
+  <span class="hljs-keyword">protected</span> getContentElement = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorForOptional</span>(<span class="hljs-string">&#x27;.my-popup-content&#x27;</span>);
 
   <span class="hljs-comment">/** Toggles the open state of the popup. */</span>
-  <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-title">toggle</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> trigger = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getTriggerElement();
-    <span class="hljs-keyword">return</span> trigger.click();
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">toggle</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> trigger = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getTriggerElement</span>();
+    <span class="hljs-keyword">return</span> trigger.<span class="hljs-title function_">click</span>();
   }
 
   <span class="hljs-comment">/** Checks if the popup us open. */</span>
-  <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-title">isOpen</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> content = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getContentElement();
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">isOpen</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> content = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getContentElement</span>();
     <span class="hljs-keyword">return</span> !!content;
   }
 }
@@ -485,34 +485,34 @@ earlier has an alternate signature that can be used for locating sub-harnesses r
     &lt;/my-popup&gt;
   `</span>
 })
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenu</span> </span>{
-  <span class="hljs-meta">@Input</span>() triggerText: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenu</span> {
+  <span class="hljs-meta">@Input</span>() <span class="hljs-attr">triggerText</span>: <span class="hljs-built_in">string</span>;
 
-  <span class="hljs-meta">@ContentChildren</span>(MyMenuItem) items: QueryList&lt;MyMenuItem&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(<span class="hljs-title class_">MyMenuItem</span>) <span class="hljs-attr">items</span>: <span class="hljs-title class_">QueryList</span>&lt;<span class="hljs-title class_">MyMenuItem</span>&gt;;
 }
 
 <span class="hljs-meta">@Directive</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;my-menu-item&#x27;</span>
 })
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItem</span> </span>{}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenuItem</span> {}
 </code></pre>
 <p>The harness for <code>MyMenu</code> can then take advantage of other harnesses for <code>MyPopup</code> and <code>MyMenuItem</code>:</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu&#x27;</span>;
 
-  <span class="hljs-keyword">protected</span> getPopupHarness = <span class="hljs-built_in">this</span>.locatorFor(MyPopupHarness);
+  <span class="hljs-keyword">protected</span> getPopupHarness = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorFor</span>(<span class="hljs-title class_">MyPopupHarness</span>);
 
   <span class="hljs-comment">/** Gets the currently shown menu items (empty list if menu is closed). */</span>
-  getItems = <span class="hljs-built_in">this</span>.locatorForAll(MyMenuItemHarness);
+  getItems = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorForAll</span>(<span class="hljs-title class_">MyMenuItemHarness</span>);
 
   <span class="hljs-comment">/** Toggles open state of the menu. */</span>
-  <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-title">toggle</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> popupHarness = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getPopupHarness();
-    <span class="hljs-keyword">return</span> popupHarness.toggle();
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">toggle</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> popupHarness = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getPopupHarness</span>();
+    <span class="hljs-keyword">return</span> popupHarness.<span class="hljs-title function_">toggle</span>();
   }
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItemHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenuItemHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu-item&#x27;</span>;
 }
 </code></pre>
@@ -558,51 +558,51 @@ for adding options.</p>
 </tbody></table>
 <p>For example, when working with a menu it would likely be useful to add a way to filter based on
 trigger text and to filter menu items based on their text:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">interface</span> MyMenuHarnessFilters <span class="hljs-keyword">extends</span> BaseHarnessFilters {
+<pre><code class="language-ts"><span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyMenuHarnessFilters</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseHarnessFilters</span> {
   <span class="hljs-comment">/** Filters based on the trigger text for the menu. */</span>
-  triggerText?: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">RegExp</span>;
+  <span class="hljs-attr">triggerText</span>?: <span class="hljs-built_in">string</span> | <span class="hljs-title class_">RegExp</span>;
 }
 
-<span class="hljs-keyword">interface</span> MyMenuItemHarnessFilters <span class="hljs-keyword">extends</span> BaseHarnessFilters {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyMenuItemHarnessFilters</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseHarnessFilters</span> {
   <span class="hljs-comment">/** Filters based on the text of the menu item. */</span>
-  text?: <span class="hljs-built_in">string</span> | <span class="hljs-built_in">RegExp</span>;
+  <span class="hljs-attr">text</span>?: <span class="hljs-built_in">string</span> | <span class="hljs-title class_">RegExp</span>;
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu&#x27;</span>;
 
   <span class="hljs-comment">/** Creates a `HarnessPredicate` used to locate a particular `MyMenuHarness`. */</span>
-  <span class="hljs-keyword">static</span> <span class="hljs-keyword">with</span>(options: MyMenuHarnessFilters): HarnessPredicate&lt;MyMenuHarness&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HarnessPredicate(MyMenuHarness, options)
-        .addOption(<span class="hljs-string">&#x27;trigger text&#x27;</span>, options.triggerText,
-            <span class="hljs-function">(<span class="hljs-params">harness, text</span>) =&gt;</span> HarnessPredicate.stringMatches(harness.getTriggerText(), text));
+  <span class="hljs-keyword">static</span> <span class="hljs-title function_">with</span>(<span class="hljs-attr">options</span>: <span class="hljs-title class_">MyMenuHarnessFilters</span>): <span class="hljs-title class_">HarnessPredicate</span>&lt;<span class="hljs-title class_">MyMenuHarness</span>&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">HarnessPredicate</span>(<span class="hljs-title class_">MyMenuHarness</span>, options)
+        .<span class="hljs-title function_">addOption</span>(<span class="hljs-string">&#x27;trigger text&#x27;</span>, options.<span class="hljs-property">triggerText</span>,
+            <span class="hljs-function">(<span class="hljs-params">harness, text</span>) =&gt;</span> <span class="hljs-title class_">HarnessPredicate</span>.<span class="hljs-title function_">stringMatches</span>(harness.<span class="hljs-title function_">getTriggerText</span>(), text));
   }
 
-  <span class="hljs-keyword">protected</span> getPopupHarness = <span class="hljs-built_in">this</span>.locatorFor(MyPopupHarness);
+  <span class="hljs-keyword">protected</span> getPopupHarness = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorFor</span>(<span class="hljs-title class_">MyPopupHarness</span>);
 
   <span class="hljs-comment">/** Gets the text of the menu trigger. */</span>
-  <span class="hljs-keyword">async</span> getTriggerText(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">string</span>&gt; {
-    <span class="hljs-keyword">const</span> popupHarness = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getPopupHarness();
-    <span class="hljs-keyword">return</span> popupHarness.getTriggerText();
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">getTriggerText</span>(): <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-built_in">string</span>&gt; {
+    <span class="hljs-keyword">const</span> popupHarness = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getPopupHarness</span>();
+    <span class="hljs-keyword">return</span> popupHarness.<span class="hljs-title function_">getTriggerText</span>();
   }
 
   ...
 }
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuItemHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenuItemHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu-item&#x27;</span>;
 
   <span class="hljs-comment">/** Creates a `HarnessPredicate` used to locate a particular `MyMenuItemHarness`. */</span>
-  <span class="hljs-keyword">static</span> <span class="hljs-keyword">with</span>(options: MyMenuItemHarnessFilters): HarnessPredicate&lt;MyMenuItemHarness&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HarnessPredicate(MyMenuItemHarness, options)
-        .addOption(<span class="hljs-string">&#x27;text&#x27;</span>, options.text,
-            <span class="hljs-function">(<span class="hljs-params">harness, text</span>) =&gt;</span> HarnessPredicate.stringMatches(harness.getText(), text));
+  <span class="hljs-keyword">static</span> <span class="hljs-title function_">with</span>(<span class="hljs-attr">options</span>: <span class="hljs-title class_">MyMenuItemHarnessFilters</span>): <span class="hljs-title class_">HarnessPredicate</span>&lt;<span class="hljs-title class_">MyMenuItemHarness</span>&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">HarnessPredicate</span>(<span class="hljs-title class_">MyMenuItemHarness</span>, options)
+        .<span class="hljs-title function_">addOption</span>(<span class="hljs-string">&#x27;text&#x27;</span>, options.<span class="hljs-property">text</span>,
+            <span class="hljs-function">(<span class="hljs-params">harness, text</span>) =&gt;</span> <span class="hljs-title class_">HarnessPredicate</span>.<span class="hljs-title function_">stringMatches</span>(harness.<span class="hljs-title function_">getText</span>(), text));
   }
 
   <span class="hljs-comment">/** Gets the text of the menu item. */</span>
-  <span class="hljs-keyword">async</span> getText(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">string</span>&gt; {
-    <span class="hljs-keyword">const</span> host = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.host();
-    <span class="hljs-keyword">return</span> host.text();
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">getText</span>(): <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-built_in">string</span>&gt; {
+    <span class="hljs-keyword">const</span> host = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">host</span>();
+    <span class="hljs-keyword">return</span> host.<span class="hljs-title function_">text</span>();
   }
 }
 </code></pre>
@@ -612,13 +612,13 @@ a particular component instance when creating a harness instance. It also allows
 to leverage the same <code>HarnessPredicate</code> to enable more powerful APIs on their harness class. For
 example, consider the <code>getItems</code> method on the <code>MyMenuHarness</code> shown above.
 This can now easily be expanded to allow users of the harness to search for particular menu items:</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMenuHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-menu&#x27;</span>;
 
   <span class="hljs-comment">/** Gets a list of items in the menu, optionally filtered based on the given criteria. */</span>
-  <span class="hljs-keyword">async</span> getItems(filters: MyMenuItemHarnessFilters = {}): <span class="hljs-built_in">Promise</span>&lt;MyMenuItemHarness[]&gt; {
-    <span class="hljs-keyword">const</span> getFilteredItems = <span class="hljs-built_in">this</span>.locatorForAll(MyMenuItemHarness.with(filters));
-    <span class="hljs-keyword">return</span> getFilteredItems();
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">getItems</span>(<span class="hljs-attr">filters</span>: <span class="hljs-title class_">MyMenuItemHarnessFilters</span> = {}): <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-title class_">MyMenuItemHarness</span>[]&gt; {
+    <span class="hljs-keyword">const</span> getFilteredItems = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">locatorForAll</span>(<span class="hljs-title class_">MyMenuItemHarness</span>.<span class="hljs-title function_">with</span>(filters));
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">getFilteredItems</span>();
   }
 
   ...
@@ -657,7 +657,7 @@ several APIs that can be used to create <code>HarnessLoader</code> instances for
 <p>The <code>MyPopup</code> component discussed earlier is a good example of a component with arbitrary content
 that users may want to load harnesses for. <code>MyPopupHarness</code> could add support for this by
 extending <code>ContentContainerComponentHarness</code>.</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ContentContainerComponentHarness</span>&lt;<span class="hljs-title">string</span>&gt; </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ContentContainerComponentHarness</span>&lt;<span class="hljs-built_in">string</span>&gt; {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
 }
 </code></pre>
@@ -686,13 +686,13 @@ class, and can then be used to query relative to the document&#39;s root element
 <p>Consider if the <code>MyPopup</code> component above used the CDK overlay for the popup content, rather than an
 element in its own template. In this case, <code>MyPopupHarness</code> would have to access the content element
 via <code>documentRootLocatorFactory()</code>:</p>
-<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ComponentHarness</span> </span>{
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> <span class="hljs-title class_">MyPopupHarness</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">ComponentHarness</span> {
   <span class="hljs-keyword">static</span> hostSelector = <span class="hljs-string">&#x27;my-popup&#x27;</span>;
 
   <span class="hljs-comment">/** Gets a `HarnessLoader` whose root element is the popup&#x27;s content element. */</span>
-  <span class="hljs-keyword">async</span> getHarnessLoaderForContent(): <span class="hljs-built_in">Promise</span>&lt;HarnessLoader&gt; {
-    <span class="hljs-keyword">const</span> rootLocator = <span class="hljs-built_in">this</span>.documentRootLocatorFactory();
-    <span class="hljs-keyword">return</span> rootLocator.harnessLoaderFor(<span class="hljs-string">&#x27;my-popup-content&#x27;</span>);
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">getHarnessLoaderForContent</span>(): <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-title class_">HarnessLoader</span>&gt; {
+    <span class="hljs-keyword">const</span> rootLocator = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">documentRootLocatorFactory</span>();
+    <span class="hljs-keyword">return</span> rootLocator.<span class="hljs-title function_">harnessLoaderFor</span>(<span class="hljs-string">&#x27;my-popup-content&#x27;</span>);
   }
 }
 </code></pre>

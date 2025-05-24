@@ -1,32 +1,32 @@
-<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormValueContainer, CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgForm, FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/popover-edit&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DataSource</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormValueContainer</span>, <span class="hljs-title class_">CdkPopoverEditModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/popover-edit&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgForm</span>, <span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSnackBar</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/snack-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">BehaviorSubject</span>, <span class="hljs-title class_">Observable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatListModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/list&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCheckboxModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatPopoverEditModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/popover-edit&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> ElementType = <span class="hljs-string">&#x27;Metal&#x27;</span> | <span class="hljs-string">&#x27;Semimetal&#x27;</span> | <span class="hljs-string">&#x27;Nonmetal&#x27;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> <span class="hljs-title class_">ElementType</span> = <span class="hljs-string">&#x27;Metal&#x27;</span> | <span class="hljs-string">&#x27;Semimetal&#x27;</span> | <span class="hljs-string">&#x27;Nonmetal&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> FantasyElement = <span class="hljs-string">&#x27;Earth&#x27;</span> | <span class="hljs-string">&#x27;Water&#x27;</span> | <span class="hljs-string">&#x27;Wind&#x27;</span> | <span class="hljs-string">&#x27;Fire&#x27;</span> | <span class="hljs-string">&#x27;Light&#x27;</span> | <span class="hljs-string">&#x27;Dark&#x27;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> <span class="hljs-title class_">FantasyElement</span> = <span class="hljs-string">&#x27;Earth&#x27;</span> | <span class="hljs-string">&#x27;Water&#x27;</span> | <span class="hljs-string">&#x27;Wind&#x27;</span> | <span class="hljs-string">&#x27;Fire&#x27;</span> | <span class="hljs-string">&#x27;Light&#x27;</span> | <span class="hljs-string">&#x27;Dark&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  <span class="hljs-keyword">type</span>: ElementType;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
-  fantasyCounterparts: FantasyElement[];
+  <span class="hljs-attr">type</span>: <span class="hljs-title class_">ElementType</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">fantasyCounterparts</span>: <span class="hljs-title class_">FantasyElement</span>[];
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {
     <span class="hljs-attr">position</span>: <span class="hljs-number">1</span>,
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,
@@ -189,8 +189,8 @@
   },
 ];
 
-<span class="hljs-keyword">const</span> TYPES: <span class="hljs-keyword">readonly</span> ElementType[] = [<span class="hljs-string">&#x27;Metal&#x27;</span>, <span class="hljs-string">&#x27;Semimetal&#x27;</span>, <span class="hljs-string">&#x27;Nonmetal&#x27;</span>];
-<span class="hljs-keyword">const</span> FANTASY_ELEMENTS: <span class="hljs-keyword">readonly</span> FantasyElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">TYPES</span>: <span class="hljs-keyword">readonly</span> <span class="hljs-title class_">ElementType</span>[] = [<span class="hljs-string">&#x27;Metal&#x27;</span>, <span class="hljs-string">&#x27;Semimetal&#x27;</span>, <span class="hljs-string">&#x27;Nonmetal&#x27;</span>];
+<span class="hljs-keyword">const</span> <span class="hljs-attr">FANTASY_ELEMENTS</span>: <span class="hljs-keyword">readonly</span> <span class="hljs-title class_">FantasyElement</span>[] = [
   <span class="hljs-string">&#x27;Earth&#x27;</span>,
   <span class="hljs-string">&#x27;Water&#x27;</span>,
   <span class="hljs-string">&#x27;Wind&#x27;</span>,
@@ -200,29 +200,29 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Material Popover Edit on a Material data-table
+ * <span class="hljs-doctag">@title</span> Material Popover Edit on a Material data-table
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;popover-edit-mat-table-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;popover-edit-mat-table-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;popover-edit-mat-table-example.html&#x27;</span>,
   <span class="hljs-attr">imports</span>: [
-    MatTableModule,
-    CdkPopoverEditModule,
-    FormsModule,
-    MatPopoverEditModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCheckboxModule,
-    MatListModule,
+    <span class="hljs-title class_">MatTableModule</span>,
+    <span class="hljs-title class_">CdkPopoverEditModule</span>,
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">MatPopoverEditModule</span>,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatInputModule</span>,
+    <span class="hljs-title class_">MatButtonModule</span>,
+    <span class="hljs-title class_">MatIconModule</span>,
+    <span class="hljs-title class_">MatCheckboxModule</span>,
+    <span class="hljs-title class_">MatListModule</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PopoverEditMatTableExample</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _snackBar = inject(MatSnackBar);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PopoverEditMatTableExample</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _snackBar = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatSnackBar</span>);
 
-  displayedColumns: <span class="hljs-built_in">string</span>[] = [
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [
     <span class="hljs-string">&#x27;position&#x27;</span>,
     <span class="hljs-string">&#x27;name&#x27;</span>,
     <span class="hljs-string">&#x27;type&#x27;</span>,
@@ -230,56 +230,56 @@
     <span class="hljs-string">&#x27;symbol&#x27;</span>,
     <span class="hljs-string">&#x27;fantasyCounterpart&#x27;</span>,
   ];
-  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
+  dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ExampleDataSource</span>();
 
   nameEditEnabled = <span class="hljs-literal">true</span>;
 
-  <span class="hljs-keyword">readonly</span> TYPES = TYPES;
-  <span class="hljs-keyword">readonly</span> FANTASY_ELEMENTS = FANTASY_ELEMENTS;
+  <span class="hljs-keyword">readonly</span> <span class="hljs-variable constant_">TYPES</span> = <span class="hljs-variable constant_">TYPES</span>;
+  <span class="hljs-keyword">readonly</span> <span class="hljs-variable constant_">FANTASY_ELEMENTS</span> = <span class="hljs-variable constant_">FANTASY_ELEMENTS</span>;
 
-  <span class="hljs-keyword">readonly</span> nameValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-  <span class="hljs-keyword">readonly</span> weightValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-  <span class="hljs-keyword">readonly</span> typeValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-  <span class="hljs-keyword">readonly</span> fantasyValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> nameValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormValueContainer</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> weightValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormValueContainer</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> typeValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormValueContainer</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
+  <span class="hljs-keyword">readonly</span> fantasyValues = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormValueContainer</span>&lt;<span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-built_in">any</span>&gt;();
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitName</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitName</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.name = f.value.name;
+    element.<span class="hljs-property">name</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">name</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitWeight</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitWeight</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.weight = f.value.weight;
+    element.<span class="hljs-property">weight</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">weight</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitType</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitType</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.type = f.value.type[<span class="hljs-number">0</span>];
+    element.<span class="hljs-property">type</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">type</span>[<span class="hljs-number">0</span>];
   }
 
-  <span class="hljs-function"><span class="hljs-title">onSubmitFantasyCounterparts</span>(<span class="hljs-params">element: PeriodicElement, f: NgForm</span>)</span> {
-    <span class="hljs-keyword">if</span> (!f.valid) {
+  <span class="hljs-title function_">onSubmitFantasyCounterparts</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span>, <span class="hljs-attr">f</span>: <span class="hljs-title class_">NgForm</span></span>) {
+    <span class="hljs-keyword">if</span> (!f.<span class="hljs-property">valid</span>) {
       <span class="hljs-keyword">return</span>;
     }
 
-    element.fantasyCounterparts = f.value.fantasyCounterparts;
+    element.<span class="hljs-property">fantasyCounterparts</span> = f.<span class="hljs-property">value</span>.<span class="hljs-property">fantasyCounterparts</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">goodJob</span>(<span class="hljs-params">element: PeriodicElement</span>)</span> {
-    <span class="hljs-built_in">this</span>._snackBar.open(<span class="hljs-string">`Way to go, <span class="hljs-subst">${element.name}</span>!`</span>, <span class="hljs-literal">undefined</span>, {<span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span>});
+  <span class="hljs-title function_">goodJob</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_snackBar</span>.<span class="hljs-title function_">open</span>(<span class="hljs-string">`Way to go, <span class="hljs-subst">${element.name}</span>!`</span>, <span class="hljs-literal">undefined</span>, {<span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span>});
   }
 
-  <span class="hljs-function"><span class="hljs-title">badJob</span>(<span class="hljs-params">element: PeriodicElement</span>)</span> {
-    <span class="hljs-built_in">this</span>._snackBar.open(<span class="hljs-string">`You have failed me for the last time, #<span class="hljs-subst">${element.position}</span>.`</span>, <span class="hljs-literal">undefined</span>, {
+  <span class="hljs-title function_">badJob</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_snackBar</span>.<span class="hljs-title function_">open</span>(<span class="hljs-string">`You have failed me for the last time, #<span class="hljs-subst">${element.position}</span>.`</span>, <span class="hljs-literal">undefined</span>, {
       <span class="hljs-attr">duration</span>: <span class="hljs-number">2000</span>,
     });
   }
@@ -292,14 +292,14 @@
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataSource</span>&lt;<span class="hljs-title">PeriodicElement</span>&gt; </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ExampleDataSource</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">DataSource</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt; {
   <span class="hljs-comment">/** Stream of data that is provided to the table. */</span>
-  data = <span class="hljs-keyword">new</span> BehaviorSubject&lt;PeriodicElement[]&gt;(ELEMENT_DATA);
+  data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">BehaviorSubject</span>&lt;<span class="hljs-title class_">PeriodicElement</span>[]&gt;(<span class="hljs-variable constant_">ELEMENT_DATA</span>);
 
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
-  connect(): Observable&lt;PeriodicElement[]&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.data;
+  <span class="hljs-title function_">connect</span>(): <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">PeriodicElement</span>[]&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span>;
   }
 
-  <span class="hljs-function"><span class="hljs-title">disconnect</span>(<span class="hljs-params"></span>)</span> {}
+  <span class="hljs-title function_">disconnect</span>(<span class="hljs-params"></span>) {}
 }

@@ -1,42 +1,42 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl, FormGroup, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormGroup</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
-<span class="hljs-keyword">interface</span> Food {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Food</span> {
   <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
-  viewValue: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">viewValue</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">interface</span> Car {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Car</span> {
   <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
-  viewValue: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">viewValue</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Select in a reactive form
+ * <span class="hljs-doctag">@title</span> Select in a reactive form
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-reactive-form-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-reactive-form-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [FormsModule, ReactiveFormsModule, MatFormFieldModule, MatSelectModule, MatInputModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>, <span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">MatInputModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectReactiveFormExample</span> </span>{
-  <span class="hljs-attr">foods</span>: Food[] = [
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SelectReactiveFormExample</span> {
+  <span class="hljs-attr">foods</span>: <span class="hljs-title class_">Food</span>[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;steak-0&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Steak&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;pizza-1&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Pizza&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;tacos-2&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Tacos&#x27;</span>},
   ];
-  cars: Car[] = [
+  <span class="hljs-attr">cars</span>: <span class="hljs-title class_">Car</span>[] = [
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;volvo&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Volvo&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;saab&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Saab&#x27;</span>},
     {<span class="hljs-attr">value</span>: <span class="hljs-string">&#x27;mercedes&#x27;</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">&#x27;Mercedes&#x27;</span>},
   ];
-  foodControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.foods[<span class="hljs-number">2</span>].value);
-  carControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.cars[<span class="hljs-number">1</span>].value);
-  form = <span class="hljs-keyword">new</span> FormGroup({
-    <span class="hljs-attr">food</span>: <span class="hljs-built_in">this</span>.foodControl,
-    <span class="hljs-attr">car</span>: <span class="hljs-built_in">this</span>.carControl,
+  foodControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">foods</span>[<span class="hljs-number">2</span>].<span class="hljs-property">value</span>);
+  carControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">cars</span>[<span class="hljs-number">1</span>].<span class="hljs-property">value</span>);
+  form = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormGroup</span>({
+    <span class="hljs-attr">food</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">foodControl</span>,
+    <span class="hljs-attr">car</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">carControl</span>,
   });
 }

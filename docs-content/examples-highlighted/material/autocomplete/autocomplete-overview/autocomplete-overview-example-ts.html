@@ -1,41 +1,41 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormControl</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Observable</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
-<span class="hljs-keyword">import</span> {AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatAutocompleteModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSlideToggleModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slide-toggle&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">AsyncPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatAutocompleteModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/autocomplete&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> State {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">State</span> {
   <span class="hljs-attr">flag</span>: <span class="hljs-built_in">string</span>;
-  name: <span class="hljs-built_in">string</span>;
-  population: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">population</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Autocomplete overview
+ * <span class="hljs-doctag">@title</span> Autocomplete overview
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;autocomplete-overview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;autocomplete-overview-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;autocomplete-overview-example.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    ReactiveFormsModule,
-    MatSlideToggleModule,
-    AsyncPipe,
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">MatFormFieldModule</span>,
+    <span class="hljs-title class_">MatInputModule</span>,
+    <span class="hljs-title class_">MatAutocompleteModule</span>,
+    <span class="hljs-title class_">ReactiveFormsModule</span>,
+    <span class="hljs-title class_">MatSlideToggleModule</span>,
+    <span class="hljs-title class_">AsyncPipe</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AutocompleteOverviewExample</span> </span>{
-  stateCtrl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;&#x27;</span>);
-  filteredStates: Observable&lt;State[]&gt;;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AutocompleteOverviewExample</span> {
+  stateCtrl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-string">&#x27;&#x27;</span>);
+  <span class="hljs-attr">filteredStates</span>: <span class="hljs-title class_">Observable</span>&lt;<span class="hljs-title class_">State</span>[]&gt;;
 
-  states: State[] = [
+  <span class="hljs-attr">states</span>: <span class="hljs-title class_">State</span>[] = [
     {
       <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Arkansas&#x27;</span>,
       <span class="hljs-attr">population</span>: <span class="hljs-string">&#x27;2.978M&#x27;</span>,
@@ -62,16 +62,16 @@
     },
   ];
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.filteredStates = <span class="hljs-built_in">this</span>.stateCtrl.valueChanges.pipe(
-      startWith(<span class="hljs-string">&#x27;&#x27;</span>),
-      map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> (state ? <span class="hljs-built_in">this</span>._filterStates(state) : <span class="hljs-built_in">this</span>.states.slice())),
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">filteredStates</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">stateCtrl</span>.<span class="hljs-property">valueChanges</span>.<span class="hljs-title function_">pipe</span>(
+      <span class="hljs-title function_">startWith</span>(<span class="hljs-string">&#x27;&#x27;</span>),
+      <span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> (state ? <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_filterStates</span>(state) : <span class="hljs-variable language_">this</span>.<span class="hljs-property">states</span>.<span class="hljs-title function_">slice</span>())),
     );
   }
 
-  <span class="hljs-keyword">private</span> _filterStates(value: <span class="hljs-built_in">string</span>): State[] {
-    <span class="hljs-keyword">const</span> filterValue = value.toLowerCase();
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">_filterStates</span>(<span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>): <span class="hljs-title class_">State</span>[] {
+    <span class="hljs-keyword">const</span> filterValue = value.<span class="hljs-title function_">toLowerCase</span>();
 
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.name.toLowerCase().includes(filterValue));
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">states</span>.<span class="hljs-title function_">filter</span>(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.<span class="hljs-property">name</span>.<span class="hljs-title function_">toLowerCase</span>().<span class="hljs-title function_">includes</span>(filterValue));
   }
 }

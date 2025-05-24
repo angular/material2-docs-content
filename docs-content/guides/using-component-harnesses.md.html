@@ -41,17 +41,17 @@ of the CDK&#39;s <code>HarnessEnvironment</code> and <code>TestElement</code> cl
 unit test or an e2e test. From the <code>HarnessEnvironment</code>, you can get a <code>HarnessLoader</code> instance,
 which you will use to load Angular Material component harnesses. For example, if we&#39;re writing unit
 tests for a <code>UserProfile</code> component, the code might look like this:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
-<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">HarnessLoader</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">TestbedHarnessEnvironment</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/testing/testbed&#x27;</span>;
 
-<span class="hljs-keyword">let</span> loader: HarnessLoader;
+<span class="hljs-keyword">let</span> <span class="hljs-attr">loader</span>: <span class="hljs-title class_">HarnessLoader</span>;
 
-describe(<span class="hljs-string">&#x27;my-component&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({<span class="hljs-attr">imports</span>: [MyModule], <span class="hljs-attr">declarations</span>: [UserProfile]})
-        .compileComponents();
-    fixture = TestBed.createComponent(UserProfile);
-    loader = TestbedHarnessEnvironment.loader(fixture);
+<span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;my-component&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-title function_">beforeEach</span>(<span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({<span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MyModule</span>], <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">UserProfile</span>]})
+        .<span class="hljs-title function_">compileComponents</span>();
+    fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">UserProfile</span>);
+    loader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">loader</span>(fixture);
   });
 }
 </code></pre>
@@ -76,13 +76,13 @@ Selenium WebDriver tests.</li>
 of the matching component, while <code>getAllHarnesses</code> gets a list of harnesses, one
 for each instance of the corresponding component. For example, suppose <code>UserProfile</code> contains three
 <code>MatButton</code> instances. We could load harnesses for them as follows:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button/testing&#x27;</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonHarness</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button/testing&#x27;</span>;
 
 ...
 
-it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-  <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatButtonHarness); <span class="hljs-comment">// length: 3</span>
-  <span class="hljs-keyword">const</span> firstButton = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness); <span class="hljs-comment">// === buttons[0]</span>
+<span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getAllHarnesses</span>(<span class="hljs-title class_">MatButtonHarness</span>); <span class="hljs-comment">// length: 3</span>
+  <span class="hljs-keyword">const</span> firstButton = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatButtonHarness</span>); <span class="hljs-comment">// === buttons[0]</span>
 });
 </code></pre>
 <p>Notice the example code uses <code>async</code> and <code>await</code> syntax. All component harness APIs are
@@ -96,9 +96,9 @@ write a less brittle test by instead asking for only a subset of harnesses insid
 method on <code>HarnessLoader</code>. For example, say that we know <code>UserProfile</code> has a div,
 <code>&lt;div class=&quot;footer&quot;&gt;</code>, and we want the button inside that specific <code>&lt;div&gt;</code>. We can accomplish this
 with the following code:</p>
-<pre><code class="language-ts">it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-  <span class="hljs-keyword">const</span> footerLoader = <span class="hljs-keyword">await</span> loader.getChildLoader(<span class="hljs-string">&#x27;.footer&#x27;</span>);
-  <span class="hljs-keyword">const</span> footerButton = <span class="hljs-keyword">await</span> footerLoader.getHarness(MatButtonHarness);
+<pre><code class="language-ts"><span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> footerLoader = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getChildLoader</span>(<span class="hljs-string">&#x27;.footer&#x27;</span>);
+  <span class="hljs-keyword">const</span> footerButton = <span class="hljs-keyword">await</span> footerLoader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatButtonHarness</span>);
 });
 </code></pre>
 <p>You can also use the static <code>with</code> method implemented on all Angular Material component harnesses.
@@ -115,14 +115,14 @@ as <code>[mat-button]</code>)</li>
 <li><code>text</code> - String text or regular expressions that matches the text content of the button </li>
 </ul>
 <p>Using this method we could locate buttons as follows in our test:</p>
-<pre><code class="language-ts">it(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+<pre><code class="language-ts"><span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should work&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
   <span class="hljs-comment">// Harness for mat-button whose id is &#x27;more-info&#x27;.</span>
-  <span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#more-info&#x27;</span>}));
+  <span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatButtonHarness</span>.<span class="hljs-title function_">with</span>({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;#more-info&#x27;</span>}));
   <span class="hljs-comment">// Harness for mat-button whose text is &#x27;Cancel&#x27;.</span>
-  <span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Cancel&#x27;</span>}));
+  <span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatButtonHarness</span>.<span class="hljs-title function_">with</span>({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Cancel&#x27;</span>}));
   <span class="hljs-comment">// Harness for mat-button with class &#x27;confirm&#x27; and whose text is either &#x27;Ok&#x27; or &#x27;Okay&#x27;.</span>
-  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
-      MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>}));
+  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(
+      <span class="hljs-title class_">MatButtonHarness</span>.<span class="hljs-title function_">with</span>({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>}));
 });
 </code></pre>
 
@@ -138,12 +138,12 @@ component, these harness methods might not seem very different from working dire
 However, more complex harnesses like <code>MatSelectHarness</code> have methods like <code>open</code> and <code>isOpen</code> which
 capture more knowledge about the component&#39;s internals.</p>
 <p>A test using the <code>MatButtonHarness</code> to interact with a <code>mat-button</code> might look like the following:</p>
-<pre><code class="language-ts">it(<span class="hljs-string">&#x27;should mark confirmed when ok button clicked&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>});
-  expect(fixture.componentInstance.confirmed).toBe(<span class="hljs-literal">false</span>);
-  expect(<span class="hljs-keyword">await</span> okButton.isDisabled()).toBe(<span class="hljs-literal">false</span>);
-  <span class="hljs-keyword">await</span> okButton.click();
-  expect(fixture.componentInstance.confirmed).toBe(<span class="hljs-literal">true</span>);
+<pre><code class="language-ts"><span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should mark confirmed when ok button clicked&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatButtonHarness</span>.<span class="hljs-title function_">with</span>({<span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;.confirm&#x27;</span>});
+  <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">confirmed</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">false</span>);
+  <span class="hljs-title function_">expect</span>(<span class="hljs-keyword">await</span> okButton.<span class="hljs-title function_">isDisabled</span>()).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">await</span> okButton.<span class="hljs-title function_">click</span>();
+  <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">componentInstance</span>.<span class="hljs-property">confirmed</span>).<span class="hljs-title function_">toBe</span>(<span class="hljs-literal">true</span>);
 });
 </code></pre>
 <p>Note that the code above does not call <code>fixture.detectChanges()</code>, something you commonly see in
@@ -159,56 +159,56 @@ which will cause the test to wait for <code>setTimeout</code>, <code>Promise</co
 choose an issue type and display the necessary form create report for that issue type. You need a 
 test to verify that when the user chooses an issue type the proper report displays. First consider
 what the test might look like without using component harnesses:</p>
-<pre><code class="language-ts">describe(<span class="hljs-string">&#x27;issue-report-selector&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IssueReportSelector&gt;;
+<pre><code class="language-ts"><span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;issue-report-selector&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">fixture</span>: <span class="hljs-title class_">ComponentFixture</span>&lt;<span class="hljs-title class_">IssueReportSelector</span>&gt;;
 
-  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [IssueReportSelectorModule],
-      <span class="hljs-attr">declarations</span>: [IssueReportSelector],
-    }).compileComponents();
+  <span class="hljs-title function_">beforeEach</span>(<span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
+      <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">IssueReportSelectorModule</span>],
+      <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">IssueReportSelector</span>],
+    }).<span class="hljs-title function_">compileComponents</span>();
 
-    fixture = TestBed.createComponent(IssueReportSelector);
-    fixture.detectChanges();
+    fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">IssueReportSelector</span>);
+    fixture.<span class="hljs-title function_">detectChanges</span>();
   });
 
-  it(<span class="hljs-string">&#x27;should switch to bug report template&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    expect(fixture.debugElement.query(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).toBeNull();
-    <span class="hljs-keyword">const</span> selectTrigger = fixture.debugElement.query(By.css(<span class="hljs-string">&#x27;.mat-select-trigger&#x27;</span>));
-    selectTrigger.triggerEventHandler(<span class="hljs-string">&#x27;click&#x27;</span>, {});
-    fixture.detectChanges();
-    <span class="hljs-keyword">await</span> fixture.whenStable();
-    <span class="hljs-keyword">const</span> options = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.mat-select-panel mat-option&#x27;</span>);
-    options[<span class="hljs-number">1</span>].click(); <span class="hljs-comment">// Click the second option, &quot;Bug&quot;.</span>
-    fixture.detectChanges();
-    <span class="hljs-keyword">await</span> fixture.whenStable();
-    expect(fixture.debugElement.query(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).not.toBeNull();
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should switch to bug report template&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">debugElement</span>.<span class="hljs-title function_">query</span>(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).<span class="hljs-title function_">toBeNull</span>();
+    <span class="hljs-keyword">const</span> selectTrigger = fixture.<span class="hljs-property">debugElement</span>.<span class="hljs-title function_">query</span>(<span class="hljs-title class_">By</span>.<span class="hljs-title function_">css</span>(<span class="hljs-string">&#x27;.mat-select-trigger&#x27;</span>));
+    selectTrigger.<span class="hljs-title function_">triggerEventHandler</span>(<span class="hljs-string">&#x27;click&#x27;</span>, {});
+    fixture.<span class="hljs-title function_">detectChanges</span>();
+    <span class="hljs-keyword">await</span> fixture.<span class="hljs-title function_">whenStable</span>();
+    <span class="hljs-keyword">const</span> options = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&#x27;.mat-select-panel mat-option&#x27;</span>);
+    options[<span class="hljs-number">1</span>].<span class="hljs-title function_">click</span>(); <span class="hljs-comment">// Click the second option, &quot;Bug&quot;.</span>
+    fixture.<span class="hljs-title function_">detectChanges</span>();
+    <span class="hljs-keyword">await</span> fixture.<span class="hljs-title function_">whenStable</span>();
+    <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">debugElement</span>.<span class="hljs-title function_">query</span>(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).<span class="hljs-property">not</span>.<span class="hljs-title function_">toBeNull</span>();
   });
 });
 </code></pre>
 <p>The same test, using the Angular Material component harnesses might look like the following:</p>
-<pre><code class="language-ts">describe(<span class="hljs-string">&#x27;issue-report-selector&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IssueReportSelector&gt;;
-  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+<pre><code class="language-ts"><span class="hljs-title function_">describe</span>(<span class="hljs-string">&#x27;issue-report-selector&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">fixture</span>: <span class="hljs-title class_">ComponentFixture</span>&lt;<span class="hljs-title class_">IssueReportSelector</span>&gt;;
+  <span class="hljs-keyword">let</span> <span class="hljs-attr">loader</span>: <span class="hljs-title class_">HarnessLoader</span>;
 
-  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
-      <span class="hljs-attr">imports</span>: [IssueReportSelectorModule],
-      <span class="hljs-attr">declarations</span>: [IssueReportSelector],
-    }).compileComponents();
+  <span class="hljs-title function_">beforeEach</span>(<span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">configureTestingModule</span>({
+      <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">IssueReportSelectorModule</span>],
+      <span class="hljs-attr">declarations</span>: [<span class="hljs-title class_">IssueReportSelector</span>],
+    }).<span class="hljs-title function_">compileComponents</span>();
 
-    fixture = TestBed.createComponent(IssueReportSelector);
-    fixture.detectChanges();
-    loader = TestbedHarnessEnvironment.loader(fixture);
+    fixture = <span class="hljs-title class_">TestBed</span>.<span class="hljs-title function_">createComponent</span>(<span class="hljs-title class_">IssueReportSelector</span>);
+    fixture.<span class="hljs-title function_">detectChanges</span>();
+    loader = <span class="hljs-title class_">TestbedHarnessEnvironment</span>.<span class="hljs-title function_">loader</span>(fixture);
   });
 
-  it(<span class="hljs-string">&#x27;should switch to bug report template&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
-    expect(fixture.debugElement.query(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).toBeNull();
-    <span class="hljs-keyword">const</span> select = <span class="hljs-keyword">await</span> loader.getHarness(MatSelectHarness);
-    <span class="hljs-keyword">await</span> select.open();
-    <span class="hljs-keyword">const</span> bugOption = <span class="hljs-keyword">await</span> select.getOption({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Bug&#x27;</span>});
-    <span class="hljs-keyword">await</span> bugOption.click();
-    expect(fixture.debugElement.query(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).not.toBeNull();
+  <span class="hljs-title function_">it</span>(<span class="hljs-string">&#x27;should switch to bug report template&#x27;</span>, <span class="hljs-title function_">async</span> () =&gt; {
+    <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">debugElement</span>.<span class="hljs-title function_">query</span>(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).<span class="hljs-title function_">toBeNull</span>();
+    <span class="hljs-keyword">const</span> select = <span class="hljs-keyword">await</span> loader.<span class="hljs-title function_">getHarness</span>(<span class="hljs-title class_">MatSelectHarness</span>);
+    <span class="hljs-keyword">await</span> select.<span class="hljs-title function_">open</span>();
+    <span class="hljs-keyword">const</span> bugOption = <span class="hljs-keyword">await</span> select.<span class="hljs-title function_">getOption</span>({<span class="hljs-attr">text</span>: <span class="hljs-string">&#x27;Bug&#x27;</span>});
+    <span class="hljs-keyword">await</span> bugOption.<span class="hljs-title function_">click</span>();
+    <span class="hljs-title function_">expect</span>(fixture.<span class="hljs-property">debugElement</span>.<span class="hljs-title function_">query</span>(<span class="hljs-string">&#x27;bug-report-form&#x27;</span>)).<span class="hljs-property">not</span>.<span class="hljs-title function_">toBeNull</span>();
   });
 });
 </code></pre>

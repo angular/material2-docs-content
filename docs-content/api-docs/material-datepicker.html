@@ -4256,7 +4256,7 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </h4><p class="docs-api-type-alias-description"><p>Possible positions for the datepicker dropdown along the X axis.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DatepickerDropdownPositionX = <span class="hljs-string">&#x27;start&#x27;</span> | <span class="hljs-string">&#x27;end&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DatepickerDropdownPositionX</span> = <span class="hljs-string">&#x27;start&#x27;</span> | <span class="hljs-string">&#x27;end&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -4270,7 +4270,7 @@ has no effect in M3 themes. For color customization in M3, see <a href="https://
 </h4><p class="docs-api-type-alias-description"><p>Possible positions for the datepicker dropdown along the Y axis.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DatepickerDropdownPositionY = <span class="hljs-string">&#x27;above&#x27;</span> | <span class="hljs-string">&#x27;below&#x27;</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DatepickerDropdownPositionY</span> = <span class="hljs-string">&#x27;above&#x27;</span> | <span class="hljs-string">&#x27;below&#x27;</span>;</code>
 </pre>
 </div>
 
@@ -4286,7 +4286,7 @@ Datepicker can sometimes receive a null value as input for the date argument.
 This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no date has been selected yet in the calendar.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DateFilterFn = <span class="hljs-function">(<span class="hljs-params">date: D | <span class="hljs-literal">null</span></span>) =&gt;</span> <span class="hljs-built_in">boolean</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">DateFilterFn</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">date</span>: D | <span class="hljs-literal">null</span></span>) =&gt;</span> <span class="hljs-built_in">boolean</span>;</code>
 </pre>
 </div>
 
@@ -4300,8 +4300,8 @@ This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no 
 </h4><p class="docs-api-type-alias-description"><p>Extra CSS classes that can be associated with a calendar cell.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCalendarCellCssClasses = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[] | <span class="hljs-built_in">Set</span>&lt;<span class="hljs-built_in">string</span>&gt; | {
-    [key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MatCalendarCellCssClasses</span> = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[] | <span class="hljs-title class_">Set</span>&lt;<span class="hljs-built_in">string</span>&gt; | {
+    [<span class="hljs-attr">key</span>: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>;
 };</code>
 </pre>
 </div>
@@ -4316,7 +4316,7 @@ This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no 
 </h4><p class="docs-api-type-alias-description"><p>Function that can generate the extra classes that should be added to a calendar cell.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCalendarCellClassFunction = <span class="hljs-function">(<span class="hljs-params">date: D, view: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span> | <span class="hljs-string">&#x27;multi-year&#x27;</span></span>) =&gt;</span> MatCalendarCellCssClasses;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> <span class="hljs-title class_">MatCalendarCellClassFunction</span> = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">date</span>: D, <span class="hljs-attr">view</span>: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span> | <span class="hljs-string">&#x27;multi-year&#x27;</span></span>) =&gt;</span> <span class="hljs-title class_">MatCalendarCellCssClasses</span>;</code>
 </pre>
 </div>
 
@@ -4334,7 +4334,7 @@ This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no 
 </h4><p class="docs-api-constant-description"><p>Injection token used to customize the date range selection behavior.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATE_RANGE_SELECTION_STRATEGY: InjectionToken&lt;MatDateRangeSelectionStrategy&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_DATE_RANGE_SELECTION_STRATEGY</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-title class_">MatDateRangeSelectionStrategy</span>&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 
@@ -4348,7 +4348,7 @@ This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no 
 </h4><p class="docs-api-constant-description"><p>Injection token that determines the scroll handling while the calendar is open.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DATEPICKER_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_DATEPICKER_SCROLL_STRATEGY</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">ScrollStrategy</span>&gt;;</code>
 </pre>
 </div>
 
@@ -4361,7 +4361,7 @@ This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no 
   <code>yearsPerPage</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> yearsPerPage: <span class="hljs-number">24</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">yearsPerPage</span>: <span class="hljs-number">24</span>;</code>
 </pre>
 </div>
 
@@ -4374,7 +4374,7 @@ This doesn&#39;t represent a &quot;null date&quot; but rather signifies that no 
   <code>yearsPerRow</code>
 </h4><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> yearsPerRow: <span class="hljs-number">4</span>;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">yearsPerRow</span>: <span class="hljs-number">4</span>;</code>
 </pre>
 </div>
 

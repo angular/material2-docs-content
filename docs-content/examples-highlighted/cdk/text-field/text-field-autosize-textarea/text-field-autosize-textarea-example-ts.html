@@ -1,29 +1,29 @@
-<span class="hljs-keyword">import</span> {CdkTextareaAutosize, TextFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/text-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {afterNextRender, Component, inject, Injector, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkTextareaAutosize</span>, <span class="hljs-title class_">TextFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/text-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {afterNextRender, <span class="hljs-title class_">Component</span>, inject, <span class="hljs-title class_">Injector</span>, <span class="hljs-title class_">ViewChild</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title <span class="hljs-variable">Auto</span></span>-resizing textarea */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> <span class="hljs-variable">Auto</span>-resizing textarea */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;text-field-autosize-textarea-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./text-field-autosize-textarea-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./text-field-autosize-textarea-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule, MatInputModule, TextFieldModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">TextFieldModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TextFieldAutosizeTextareaExample</span> </span>{
-  <span class="hljs-keyword">private</span> _injector = inject(Injector);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TextFieldAutosizeTextareaExample</span> {
+  <span class="hljs-keyword">private</span> _injector = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Injector</span>);
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;autosize&#x27;</span>) autosize: CdkTextareaAutosize;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;autosize&#x27;</span>) <span class="hljs-attr">autosize</span>: <span class="hljs-title class_">CdkTextareaAutosize</span>;
 
-  <span class="hljs-function"><span class="hljs-title">triggerResize</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-title function_">triggerResize</span>(<span class="hljs-params"></span>) {
     <span class="hljs-comment">// Wait for content to render, then trigger textarea resize.</span>
-    afterNextRender(
+    <span class="hljs-title function_">afterNextRender</span>(
       <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-built_in">this</span>.autosize.resizeToFitContent(<span class="hljs-literal">true</span>);
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">autosize</span>.<span class="hljs-title function_">resizeToFitContent</span>(<span class="hljs-literal">true</span>);
       },
       {
-        <span class="hljs-attr">injector</span>: <span class="hljs-built_in">this</span>._injector,
+        <span class="hljs-attr">injector</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">_injector</span>,
       },
     );
   }

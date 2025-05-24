@@ -5,18 +5,18 @@ alternative to dialogs and menus.</p>
 
 <p>You can open a bottom sheet by calling the <code>open</code> method with a component to be loaded and an
 optional config object. The <code>open</code> method will return an instance of <code>MatBottomSheetRef</code>:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(SocialShareComponent, {
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">SocialShareComponent</span>, {
   <span class="hljs-attr">ariaLabel</span>: <span class="hljs-string">&#x27;Share on social media&#x27;</span>
 });
 </code></pre>
 <p>The <code>MatBottomSheetRef</code> is a reference to the currently-opened bottom sheet and can be used to close
 it or to subscribe to events. Note that only one bottom sheet can be open at a time. Any component
 contained inside of a bottom sheet can inject the <code>MatBottomSheetRef</code> as well.</p>
-<pre><code class="language-ts">bottomSheetRef.afterDismissed().subscribe(<span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Bottom sheet has been dismissed.&#x27;</span>);
+<pre><code class="language-ts">bottomSheetRef.<span class="hljs-title function_">afterDismissed</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;Bottom sheet has been dismissed.&#x27;</span>);
 });
 
-bottomSheetRef.dismiss();
+bottomSheetRef.<span class="hljs-title function_">dismiss</span>();
 </code></pre>
 
         <h3 id="sharing-data-with-the-bottom-sheet-component" class="docs-header-link">
@@ -24,20 +24,20 @@ bottomSheetRef.dismiss();
           Sharing data with the bottom sheet component.
         </h3>
       <p>If you want to pass in some data to the bottom sheet, you can do so using the <code>data</code> property:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(HobbitSheet, {
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">HobbitSheet</span>, {
   <span class="hljs-attr">data</span>: { <span class="hljs-attr">names</span>: [<span class="hljs-string">&#x27;Frodo&#x27;</span>, <span class="hljs-string">&#x27;Bilbo&#x27;</span>] },
 });
 </code></pre>
 <p>Afterwards you can access the injected data using the <code>MAT_BOTTOM_SHEET_DATA</code> injection token:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MAT_BOTTOM_SHEET_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../bottom-sheet&#x27;</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Inject</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">MAT_BOTTOM_SHEET_DATA</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../bottom-sheet&#x27;</span>;
 
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;hobbit-sheet&#x27;</span>,
   <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;passed in {{ data.names }}&#x27;</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HobbitSheet</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> data: {names: <span class="hljs-built_in">string</span>[]}</span>)</span> { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HobbitSheet</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> <span class="hljs-attr">data</span>: {names: <span class="hljs-built_in">string</span>[]}</span>) { }
 }
 </code></pre>
 
@@ -49,7 +49,7 @@ bottomSheetRef.dismiss();
 for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application&#39;s root module.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</span>, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
   ]
 })
 </code></pre>
@@ -118,8 +118,8 @@ closes upon clicking an item, thus the focused menu item is no longer in the DOM
 sheet attempts to restore focus.</p>
 <p>You can add handling for this situation with the <code>afterDismissed()</code> observable from
 <code>MatBottomSheetRef</code>.</p>
-<pre><code class="language-typescript"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(FileTypeChooser);
-bottomSheetRef.afterDismissed().subscribe(<span class="hljs-function">() =&gt;</span> {
+<pre><code class="language-typescript"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">FileTypeChooser</span>);
+bottomSheetRef.<span class="hljs-title function_">afterDismissed</span>().<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> {
   <span class="hljs-comment">// Restore focus to an appropriate element for the user&#x27;s workflow here.</span>
 });
 </code></pre>

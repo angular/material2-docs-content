@@ -1,23 +1,23 @@
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, OnDestroy, signal, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCalendar, MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">OnDestroy</span>, signal, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DateAdapter</span>, <span class="hljs-variable constant_">MAT_DATE_FORMATS</span>, provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCalendar</span>, <span class="hljs-title class_">MatDatepickerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Subject</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
 <span class="hljs-keyword">import</span> {startWith, takeUntil} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Datepicker with custom calendar header */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Datepicker with custom calendar header */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;datepicker-custom-header-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-custom-header-example.html&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()],
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>()],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">MatDatepickerModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerCustomHeaderExample</span> </span>{
-  <span class="hljs-keyword">readonly</span> exampleHeader = ExampleHeader;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DatepickerCustomHeaderExample</span> {
+  <span class="hljs-keyword">readonly</span> exampleHeader = <span class="hljs-title class_">ExampleHeader</span>;
 }
 
 <span class="hljs-comment">/** Custom header component for datepicker. */</span>
@@ -54,44 +54,44 @@
       &lt;/button&gt;
     &lt;/div&gt;
   `</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonModule, MatIconModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatIconModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExampleHeader</span>&lt;<span class="hljs-title">D</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span> </span>{
-  <span class="hljs-keyword">private</span> _calendar = inject&lt;MatCalendar&lt;D&gt;&gt;(MatCalendar);
-  <span class="hljs-keyword">private</span> _dateAdapter = inject&lt;DateAdapter&lt;D&gt;&gt;(DateAdapter);
-  <span class="hljs-keyword">private</span> _dateFormats = inject(MAT_DATE_FORMATS);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ExampleHeader</span>&lt;D&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnDestroy</span> {
+  <span class="hljs-keyword">private</span> _calendar = inject&lt;<span class="hljs-title class_">MatCalendar</span>&lt;D&gt;&gt;(<span class="hljs-title class_">MatCalendar</span>);
+  <span class="hljs-keyword">private</span> _dateAdapter = inject&lt;<span class="hljs-title class_">DateAdapter</span>&lt;D&gt;&gt;(<span class="hljs-title class_">DateAdapter</span>);
+  <span class="hljs-keyword">private</span> _dateFormats = <span class="hljs-title function_">inject</span>(<span class="hljs-variable constant_">MAT_DATE_FORMATS</span>);
 
-  <span class="hljs-keyword">private</span> _destroyed = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
+  <span class="hljs-keyword">private</span> _destroyed = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Subject</span>&lt;<span class="hljs-built_in">void</span>&gt;();
 
-  <span class="hljs-keyword">readonly</span> periodLabel = signal(<span class="hljs-string">&#x27;&#x27;</span>);
+  <span class="hljs-keyword">readonly</span> periodLabel = <span class="hljs-title function_">signal</span>(<span class="hljs-string">&#x27;&#x27;</span>);
 
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._calendar.stateChanges.pipe(startWith(<span class="hljs-literal">null</span>), takeUntil(<span class="hljs-built_in">this</span>._destroyed)).subscribe(<span class="hljs-function">() =&gt;</span> {
-      <span class="hljs-built_in">this</span>.periodLabel.set(
-        <span class="hljs-built_in">this</span>._dateAdapter
-          .format(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-built_in">this</span>._dateFormats.display.monthYearLabel)
-          .toLocaleUpperCase(),
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">stateChanges</span>.<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">startWith</span>(<span class="hljs-literal">null</span>), <span class="hljs-title function_">takeUntil</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_destroyed</span>)).<span class="hljs-title function_">subscribe</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">periodLabel</span>.<span class="hljs-title function_">set</span>(
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dateAdapter</span>
+          .<span class="hljs-title function_">format</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dateFormats</span>.<span class="hljs-property">display</span>.<span class="hljs-property">monthYearLabel</span>)
+          .<span class="hljs-title function_">toLocaleUpperCase</span>(),
       );
     });
   }
 
-  <span class="hljs-function"><span class="hljs-title">ngOnDestroy</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>._destroyed.next();
-    <span class="hljs-built_in">this</span>._destroyed.complete();
+  <span class="hljs-title function_">ngOnDestroy</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_destroyed</span>.<span class="hljs-title function_">next</span>();
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_destroyed</span>.<span class="hljs-title function_">complete</span>();
   }
 
-  <span class="hljs-function"><span class="hljs-title">previousClicked</span>(<span class="hljs-params">mode: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._calendar.activeDate =
+  <span class="hljs-title function_">previousClicked</span>(<span class="hljs-params"><span class="hljs-attr">mode</span>: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span> =
       mode === <span class="hljs-string">&#x27;month&#x27;</span>
-        ? <span class="hljs-built_in">this</span>._dateAdapter.addCalendarMonths(<span class="hljs-built_in">this</span>._calendar.activeDate, -<span class="hljs-number">1</span>)
-        : <span class="hljs-built_in">this</span>._dateAdapter.addCalendarYears(<span class="hljs-built_in">this</span>._calendar.activeDate, -<span class="hljs-number">1</span>);
+        ? <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dateAdapter</span>.<span class="hljs-title function_">addCalendarMonths</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span>, -<span class="hljs-number">1</span>)
+        : <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dateAdapter</span>.<span class="hljs-title function_">addCalendarYears</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span>, -<span class="hljs-number">1</span>);
   }
 
-  <span class="hljs-function"><span class="hljs-title">nextClicked</span>(<span class="hljs-params">mode: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span></span>)</span> {
-    <span class="hljs-built_in">this</span>._calendar.activeDate =
+  <span class="hljs-title function_">nextClicked</span>(<span class="hljs-params"><span class="hljs-attr">mode</span>: <span class="hljs-string">&#x27;month&#x27;</span> | <span class="hljs-string">&#x27;year&#x27;</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span> =
       mode === <span class="hljs-string">&#x27;month&#x27;</span>
-        ? <span class="hljs-built_in">this</span>._dateAdapter.addCalendarMonths(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-number">1</span>)
-        : <span class="hljs-built_in">this</span>._dateAdapter.addCalendarYears(<span class="hljs-built_in">this</span>._calendar.activeDate, <span class="hljs-number">1</span>);
+        ? <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dateAdapter</span>.<span class="hljs-title function_">addCalendarMonths</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span>, <span class="hljs-number">1</span>)
+        : <span class="hljs-variable language_">this</span>.<span class="hljs-property">_dateAdapter</span>.<span class="hljs-title function_">addCalendarYears</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_calendar</span>.<span class="hljs-property">activeDate</span>, <span class="hljs-number">1</span>);
   }
 }

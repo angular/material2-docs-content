@@ -1,21 +1,21 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {ProgressBarMode, MatProgressBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-bar&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSliderModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slider&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ProgressBarMode</span>, <span class="hljs-title class_">MatProgressBarModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/progress-bar&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSliderModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/slider&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatRadioModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/radio&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCardModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/card&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Configurable progress-bar
+ * <span class="hljs-doctag">@title</span> Configurable progress-bar
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;progress-bar-configurable-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;progress-bar-configurable-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;progress-bar-configurable-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatCardModule, MatRadioModule, FormsModule, MatSliderModule, MatProgressBarModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatCardModule</span>, <span class="hljs-title class_">MatRadioModule</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">MatSliderModule</span>, <span class="hljs-title class_">MatProgressBarModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ProgressBarConfigurableExample</span> </span>{
-  <span class="hljs-attr">mode</span>: ProgressBarMode = <span class="hljs-string">&#x27;determinate&#x27;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ProgressBarConfigurableExample</span> {
+  <span class="hljs-attr">mode</span>: <span class="hljs-title class_">ProgressBarMode</span> = <span class="hljs-string">&#x27;determinate&#x27;</span>;
   value = <span class="hljs-number">50</span>;
   bufferValue = <span class="hljs-number">75</span>;
 }

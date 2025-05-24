@@ -43,9 +43,9 @@ structure of a palette. <a href="https://m2.material.io/design/color/the-color-s
  <span class="hljs-number">300</span>: <span class="hljs-number">#7986cb</span>,
  // ... continues to <span class="hljs-number">900</span>
  contrast: (
-   <span class="hljs-number">50</span>: rgba(black, <span class="hljs-number">0.87</span>),
-   <span class="hljs-number">100</span>: rgba(black, <span class="hljs-number">0.87</span>),
-   <span class="hljs-number">200</span>: rgba(black, <span class="hljs-number">0.87</span>),
+   <span class="hljs-number">50</span>: <span class="hljs-built_in">rgba</span>(black, <span class="hljs-number">0.87</span>),
+   <span class="hljs-number">100</span>: <span class="hljs-built_in">rgba</span>(black, <span class="hljs-number">0.87</span>),
+   <span class="hljs-number">200</span>: <span class="hljs-built_in">rgba</span>(black, <span class="hljs-number">0.87</span>),
    <span class="hljs-number">300</span>: white,
    // ... continues to <span class="hljs-number">900</span>
  )
@@ -114,30 +114,30 @@ Components use these hues to choose the most appropriate color for different par
 themselves.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
 <span class="hljs-comment">// The &quot;warn&quot; palette is optional and defaults to red if not specified.</span>
-<span class="hljs-variable">$my-warn</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-red-palette</span>);
+<span class="hljs-variable">$my-warn</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-red-palette</span>);
 </code></pre>
 <p>You can construct a theme by calling either <code>m2-define-light-theme</code> or <code>m2-define-dark-theme</code> with
 the result from <code>m2-define-palette</code>. The choice of a light versus a dark theme determines the
 background and foreground colors used throughout the components.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
 <span class="hljs-comment">// The &quot;warn&quot; palette is optional and defaults to red if not specified.</span>
-<span class="hljs-variable">$my-warn</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-red-palette</span>);
+<span class="hljs-variable">$my-warn</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-red-palette</span>);
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
    warn: <span class="hljs-variable">$my-warn</span>,
  ),
- typography: mat.m2-define-typography-config(),
+ typography: mat.<span class="hljs-built_in">m2-define-typography-config</span>(),
  density: <span class="hljs-number">0</span>,
 ));
 </code></pre>
@@ -160,15 +160,15 @@ base styles.</p>
 theme Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
  ),
- typography: mat.m2-define-typography-config(),
+ typography: mat.<span class="hljs-built_in">m2-define-typography-config</span>(),
  density: <span class="hljs-number">0</span>,
 ));
 
@@ -190,15 +190,15 @@ emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angul
 uses every single component, this will produce unnecessary CSS.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
  ),
- typography: mat.m2-define-typography-config(),
+ typography: mat.<span class="hljs-built_in">m2-define-typography-config</span>(),
  density: <span class="hljs-number">0</span>,
 ));
 
@@ -328,21 +328,21 @@ CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-ru
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-comment">// Define a dark theme</span>
-<span class="hljs-variable">$dark-theme</span>: mat.m2-define-dark-theme((
+<span class="hljs-variable">$dark-theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>((
  color: (
-   primary: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>),
-   accent: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-blue-grey-palette</span>),
+   primary: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>),
+   accent: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-blue-grey-palette</span>),
  ),
   // Only include `typography` and `density` in the default dark theme.
-  typography: mat.m2-define-typography-config(),
+  typography: mat.<span class="hljs-built_in">m2-define-typography-config</span>(),
   density: <span class="hljs-number">0</span>,
 ));
 
 <span class="hljs-comment">// Define a light theme</span>
-<span class="hljs-variable">$light-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$light-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
-   primary: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>),
-   accent: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>),
+   primary: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>),
+   accent: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>),
  ),
 ));
 
@@ -394,9 +394,9 @@ The example below shows how to customize the color of all buttons inside element
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-selector-class">.my-special-section</span> {
- <span class="hljs-variable">$special-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-orange-palette</span>);
- <span class="hljs-variable">$special-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-brown-palette</span>);
- <span class="hljs-variable">$special-theme</span>: mat.m2-define-dark-theme((
+ <span class="hljs-variable">$special-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-orange-palette</span>);
+ <span class="hljs-variable">$special-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-brown-palette</span>);
+ <span class="hljs-variable">$special-theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>((
    color: (primary: <span class="hljs-variable">$special-primary</span>, accent: <span class="hljs-variable">$special-accent</span>),
  ));
 
@@ -423,7 +423,7 @@ application&#39;s layout.</p>
 <p>You can apply custom density setting to the entire library or to individual components using their
 density Sass mixins.</p>
 <pre><code class="language-scss"><span class="hljs-comment">// You can set a density setting in your theme to apply to all components.</span>
-<span class="hljs-variable">$dark-theme</span>: mat.m2-define-dark-theme((
+<span class="hljs-variable">$dark-theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>((
   color: ...,
   typography: ...,
   density: -<span class="hljs-number">2</span>,
@@ -457,10 +457,10 @@ the custom theme API.</p>
 
 <span class="hljs-keyword">@include</span> mat.strong-focus-indicators();
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
@@ -490,10 +490,10 @@ of the custom theme API.</p>
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>,
 ));
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
@@ -726,15 +726,15 @@ the name of the palette, and the name of the color.</p>
 determine the type of theme (either light or dark). This function takes a single argument, the
 theme, and returns either <code>light</code> or <code>dark</code>.</p>
 <p>See the below example of reading some colors from a theme:</p>
-<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.m2-define-dark-theme(...);
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>(...);
 
-<span class="hljs-variable">$primary-default</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, primary, default);
-<span class="hljs-variable">$accent-a100</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, accent, A100);
-<span class="hljs-variable">$warn-500-contrast</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, warn, <span class="hljs-number">500</span>-contrast);
-<span class="hljs-variable">$foreground-text</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, foreground, text);
-<span class="hljs-variable">$background-card</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, background, card);
-<span class="hljs-variable">$type</span>: mat.get-theme-type(<span class="hljs-variable">$theme</span>);
-<span class="hljs-variable">$custom-background</span>: if(<span class="hljs-variable">$type</span> == dark, <span class="hljs-number">#030</span>, <span class="hljs-number">#dfd</span>);
+<span class="hljs-variable">$primary-default</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, primary, default);
+<span class="hljs-variable">$accent-a100</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, accent, A100);
+<span class="hljs-variable">$warn-500-contrast</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, warn, <span class="hljs-number">500</span>-contrast);
+<span class="hljs-variable">$foreground-text</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, foreground, text);
+<span class="hljs-variable">$background-card</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, background, card);
+<span class="hljs-variable">$type</span>: mat.<span class="hljs-built_in">get-theme-type</span>(<span class="hljs-variable">$theme</span>);
+<span class="hljs-variable">$custom-background</span>: <span class="hljs-built_in">if</span>(<span class="hljs-variable">$type</span> == dark, <span class="hljs-number">#030</span>, <span class="hljs-number">#dfd</span>);
 </code></pre>
 
         <h4 id="reading-typography-values" class="docs-header-link">
@@ -807,11 +807,11 @@ you want: <code>font-family</code>, <code>font-size</code>, <code>font-weight</c
 </tr>
 </tbody></table>
 <p>See the below example of reading some typography settings from a theme:</p>
-<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.m2-define-dark-theme(...);
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>(...);
 
 <span class="hljs-selector-tag">body</span> {
-  <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>);
-  <span class="hljs-attribute">letter-spacing</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>, letter-spacing);
+  <span class="hljs-attribute">font</span>: mat.<span class="hljs-built_in">get-theme-typography</span>(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>);
+  <span class="hljs-attribute">letter-spacing</span>: mat.<span class="hljs-built_in">get-theme-typography</span>(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>, letter-spacing);
 }
 </code></pre>
 
@@ -822,9 +822,9 @@ you want: <code>font-family</code>, <code>font-size</code>, <code>font-weight</c
       <p>To read the density scale from a theme, you can use the <code>get-theme-density</code> Sass function. This
 function takes a theme and returns the density scale (0, -1, -2, -3, -4, or -5).</p>
 <p>See the below example of reading the density scale from a theme:</p>
-<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.m2-define-dark-theme(...);
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>(...);
 
-<span class="hljs-variable">$density-scale</span>: mat.get-theme-density(<span class="hljs-variable">$theme</span>);
+<span class="hljs-variable">$density-scale</span>: mat.<span class="hljs-built_in">get-theme-density</span>(<span class="hljs-variable">$theme</span>);
 </code></pre>
 
         <h3 id="checking-what-dimensions-are-configured-for-a-theme" class="docs-header-link">
@@ -835,12 +835,12 @@ function takes a theme and returns the density scale (0, -1, -2, -3, -4, or -5).
 (base, color, typography, density). You can check if a theme has a configuration for a particular
 dimension by calling the <code>theme-has</code> Sass function, passing the theme and the dimension to check.</p>
 <p>See the below example of checking the configured dimensions for a theme:</p>
-<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.m2-define-dark-theme(...);
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.<span class="hljs-built_in">m2-define-dark-theme</span>(...);
 
-<span class="hljs-variable">$has-base</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, base);
-<span class="hljs-variable">$has-color</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, color);
-<span class="hljs-variable">$has-typography</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, typography);
-<span class="hljs-variable">$has-density</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, density);
+<span class="hljs-variable">$has-base</span>: mat.<span class="hljs-built_in">theme-has</span>(<span class="hljs-variable">$theme</span>, base);
+<span class="hljs-variable">$has-color</span>: mat.<span class="hljs-built_in">theme-has</span>(<span class="hljs-variable">$theme</span>, color);
+<span class="hljs-variable">$has-typography</span>: mat.<span class="hljs-built_in">theme-has</span>(<span class="hljs-variable">$theme</span>, typography);
+<span class="hljs-variable">$has-density</span>: mat.<span class="hljs-built_in">theme-has</span>(<span class="hljs-variable">$theme</span>, density);
 </code></pre>
 
         <h3 id="separating-theme-styles" class="docs-header-link">
@@ -951,7 +951,7 @@ accepts, in order, CSS values for <code>font-size</code>, <code>line-height</cod
 <code>letter-spacing</code>. You can also specify the parameters by name, as demonstrated in the example below.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-custom-level</span>: mat.m2-define-typography-level(
+<span class="hljs-variable">$my-custom-level</span>: mat.<span class="hljs-built_in">m2-define-typography-level</span>(
   <span class="hljs-variable">$font-family</span>: Roboto,
   <span class="hljs-variable">$font-weight</span>: <span class="hljs-number">400</span>,
   <span class="hljs-variable">$font-size</span>: <span class="hljs-number">1rem</span>,
@@ -971,12 +971,12 @@ a typography config with the <code>m2-define-typography-config</code> Sass funct
 baseline if unspecified.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-custom-typography-config</span>: mat.m2-define-typography-config(
-  <span class="hljs-variable">$headline-1</span>: mat.m2-define-typography-level(<span class="hljs-number">112px</span>, <span class="hljs-number">112px</span>, <span class="hljs-number">300</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.05em</span>),
-  <span class="hljs-variable">$headline-2</span>: mat.m2-define-typography-level(<span class="hljs-number">56px</span>, <span class="hljs-number">56px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.02em</span>),
-  <span class="hljs-variable">$headline-3</span>: mat.m2-define-typography-level(<span class="hljs-number">45px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.005em</span>),
-  <span class="hljs-variable">$headline-4</span>: mat.m2-define-typography-level(<span class="hljs-number">34px</span>, <span class="hljs-number">40px</span>, <span class="hljs-number">400</span>),
-  <span class="hljs-variable">$headline-5</span>: mat.m2-define-typography-level(<span class="hljs-number">24px</span>, <span class="hljs-number">32px</span>, <span class="hljs-number">400</span>),
+<span class="hljs-variable">$my-custom-typography-config</span>: mat.<span class="hljs-built_in">m2-define-typography-config</span>(
+  <span class="hljs-variable">$headline-1</span>: mat.<span class="hljs-built_in">m2-define-typography-level</span>(<span class="hljs-number">112px</span>, <span class="hljs-number">112px</span>, <span class="hljs-number">300</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.05em</span>),
+  <span class="hljs-variable">$headline-2</span>: mat.<span class="hljs-built_in">m2-define-typography-level</span>(<span class="hljs-number">56px</span>, <span class="hljs-number">56px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.02em</span>),
+  <span class="hljs-variable">$headline-3</span>: mat.<span class="hljs-built_in">m2-define-typography-level</span>(<span class="hljs-number">45px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">400</span>, <span class="hljs-variable">$letter-spacing</span>: -<span class="hljs-number">0.005em</span>),
+  <span class="hljs-variable">$headline-4</span>: mat.<span class="hljs-built_in">m2-define-typography-level</span>(<span class="hljs-number">34px</span>, <span class="hljs-number">40px</span>, <span class="hljs-number">400</span>),
+  <span class="hljs-variable">$headline-5</span>: mat.<span class="hljs-built_in">m2-define-typography-level</span>(<span class="hljs-number">24px</span>, <span class="hljs-number">32px</span>, <span class="hljs-number">400</span>),
   // ...
 );
 </code></pre>
@@ -991,11 +991,11 @@ the <code>&quot;.kids-theme&quot;</code> CSS class is present. You can <a href="
 defining multiple themes</a>.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
-<span class="hljs-variable">$my-typography</span>: mat.m2-define-typography-config();
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-typography</span>: mat.<span class="hljs-built_in">m2-define-typography-config</span>();
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
  color: (
    primary: <span class="hljs-variable">$my-primary</span>,
    accent: <span class="hljs-variable">$my-accent</span>,
@@ -1006,16 +1006,16 @@ defining multiple themes</a>.</p>
 <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
 
 <span class="hljs-selector-class">.kids-theme</span> {
-  <span class="hljs-variable">$kids-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$cyan-palette</span>);
-  <span class="hljs-variable">$kids-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$yellow-palette</span>);
+  <span class="hljs-variable">$kids-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$cyan-palette</span>);
+  <span class="hljs-variable">$kids-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$yellow-palette</span>);
 
   <span class="hljs-comment">// Typography config based on the default, but using &quot;Comic Sans&quot; as the</span>
   <span class="hljs-comment">// default font family for all levels.</span>
-  <span class="hljs-variable">$kids-typography</span>: mat.m2-define-typography-config(
+  <span class="hljs-variable">$kids-typography</span>: mat.<span class="hljs-built_in">m2-define-typography-config</span>(
     <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
   );
 
-  <span class="hljs-variable">$kids-theme</span>: mat.m2-define-light-theme((
+  <span class="hljs-variable">$kids-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
    color: (
      primary: <span class="hljs-variable">$kids-primary</span>,
      accent: <span class="hljs-variable">$kids-accent</span>,
@@ -1031,7 +1031,7 @@ component, based on a provided typography config. The following example demonstr
 typography styles only for the button component.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$kids-typography</span>: mat.m2-define-typography-config(
+<span class="hljs-variable">$kids-typography</span>: mat.<span class="hljs-built_in">m2-define-typography-config</span>(
   // Specify <span class="hljs-string">&quot;Comic Sans&quot;</span> as the default font family for all levels.
   <span class="hljs-variable">$font-family</span>: <span class="hljs-string">&#x27;Comic Sans&#x27;</span>,
 );
@@ -1051,7 +1051,7 @@ typography config. This mixin also emits styles for native header elements scope
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
 <span class="hljs-comment">// Use the default configuration.</span>
-<span class="hljs-variable">$my-typography</span>: mat.m2-define-typography-config();
+<span class="hljs-variable">$my-typography</span>: mat.<span class="hljs-built_in">m2-define-typography-config</span>();
 <span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$my-typography</span>);
 </code></pre>
 <p>The table below lists the CSS classes emitted and the native elements styled.</p>
@@ -1229,14 +1229,14 @@ theme passed into the mixins.</p>
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-carousel-button</span> {
     <span class="hljs-comment">// Read the 500 hue from the primary color palette.</span>
-    <span class="hljs-attribute">color</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, primary, <span class="hljs-number">500</span>);
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, primary, <span class="hljs-number">500</span>);
   }
 }
 
 <span class="hljs-keyword">@mixin</span> typography(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-carousel</span> {
     <span class="hljs-comment">// Get the headline font from the theme.</span>
-    <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
+    <span class="hljs-attribute">font</span>: mat.<span class="hljs-built_in">get-theme-typography</span>(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
   }
 }
 </code></pre>
@@ -1256,14 +1256,14 @@ have a config specified.</p>
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-carousel-button</span> {
     <span class="hljs-comment">// Read the 500 hue from the primary color palette.</span>
-    <span class="hljs-attribute">color</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, primary, <span class="hljs-number">500</span>);
+    <span class="hljs-attribute">color</span>: mat.<span class="hljs-built_in">get-theme-color</span>(<span class="hljs-variable">$theme</span>, primary, <span class="hljs-number">500</span>);
   }
 }
 
 <span class="hljs-keyword">@mixin</span> typography(<span class="hljs-variable">$theme</span>) {
   <span class="hljs-selector-class">.my-carousel</span> {
     <span class="hljs-comment">// Get the headline font from the theme.</span>
-    <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
+    <span class="hljs-attribute">font</span>: mat.<span class="hljs-built_in">get-theme-typography</span>(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
   }
 }
 
@@ -1287,15 +1287,15 @@ the other theme mixins in your application.</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;./path/to/carousel-theme&#x27;</span> as carousel;
 
-<span class="hljs-variable">$my-primary</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
-<span class="hljs-variable">$my-accent</span>: mat.m2-define-palette(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
+<span class="hljs-variable">$my-primary</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-indigo-palette</span>, <span class="hljs-number">500</span>);
+<span class="hljs-variable">$my-accent</span>: mat.<span class="hljs-built_in">m2-define-palette</span>(mat.<span class="hljs-variable">$m2-pink-palette</span>, A200, A100, A400);
 
-<span class="hljs-variable">$my-theme</span>: mat.m2-define-light-theme((
+<span class="hljs-variable">$my-theme</span>: mat.<span class="hljs-built_in">m2-define-light-theme</span>((
   color: (
     primary: <span class="hljs-variable">$my-primary</span>,
     accent: <span class="hljs-variable">$my-accent</span>,
   ),
-  typography: mat.m2-define-typography-config(
+  typography: mat.<span class="hljs-built_in">m2-define-typography-config</span>(
     <span class="hljs-variable">$font-family</span>: serif,
   ),
 ));
@@ -1382,7 +1382,7 @@ to generate color variant styles for.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$theme</span>: mat.define-theme();
+<span class="hljs-variable">$theme</span>: mat.<span class="hljs-built_in">define-theme</span>();
 
 <span class="hljs-selector-tag">html</span> {
   <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$theme</span>);
@@ -1405,7 +1405,7 @@ styles, pass an additional argument <code>$back-compat: true</code> to the mixin
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#x27;@angular/material&#x27;</span> as mat;
 
-<span class="hljs-variable">$theme</span>: mat.define-theme();
+<span class="hljs-variable">$theme</span>: mat.<span class="hljs-built_in">define-theme</span>();
 
 <span class="hljs-keyword">@include</span> mat.typography-hierarchy(<span class="hljs-variable">$theme</span>, <span class="hljs-variable">$back-compat</span>: true);
 </code></pre>

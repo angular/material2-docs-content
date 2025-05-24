@@ -1,35 +1,35 @@
-<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {Dialog, DialogRef, DIALOG_DATA, DialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/dialog&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Dialog</span>, <span class="hljs-title class_">DialogRef</span>, <span class="hljs-variable constant_">DIALOG_DATA</span>, <span class="hljs-title class_">DialogModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/dialog&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">DialogData</span> {
   <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span>;
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>CDK Dialog Overview
+ * <span class="hljs-doctag">@title</span> CDK Dialog Overview
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-dialog-overview-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-overview-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [FormsModule, DialogModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">DialogModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDialogOverviewExample</span> </span>{
-  dialog = inject(Dialog);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkDialogOverviewExample</span> {
+  dialog = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">Dialog</span>);
 
-  animal: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>;
-  name: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">animal</span>: <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>;
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
 
-  openDialog(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-built_in">this</span>.dialog.open&lt;<span class="hljs-built_in">string</span>&gt;(CdkDialogOverviewExampleDialog, {
+  <span class="hljs-title function_">openDialog</span>(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-variable language_">this</span>.<span class="hljs-property">dialog</span>.<span class="hljs-property">open</span>&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-title class_">CdkDialogOverviewExampleDialog</span>, {
       <span class="hljs-attr">width</span>: <span class="hljs-string">&#x27;250px&#x27;</span>,
-      <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-built_in">this</span>.name, <span class="hljs-attr">animal</span>: <span class="hljs-built_in">this</span>.animal},
+      <span class="hljs-attr">data</span>: {<span class="hljs-attr">name</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span>, <span class="hljs-attr">animal</span>: <span class="hljs-variable language_">this</span>.<span class="hljs-property">animal</span>},
     });
 
-    dialogRef.closed.subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;The dialog was closed&#x27;</span>);
-      <span class="hljs-built_in">this</span>.animal = result;
+    dialogRef.<span class="hljs-property">closed</span>.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&#x27;The dialog was closed&#x27;</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">animal</span> = result;
     });
   }
 }
@@ -38,9 +38,9 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-dialog-overview-example-dialog&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-overview-example-dialog.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;cdk-dialog-overview-example-dialog.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [FormsModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">FormsModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkDialogOverviewExampleDialog</span> </span>{
-  dialogRef = inject&lt;DialogRef&lt;<span class="hljs-built_in">string</span>&gt;&gt;(DialogRef&lt;<span class="hljs-built_in">string</span>&gt;);
-  data = inject(DIALOG_DATA);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkDialogOverviewExampleDialog</span> {
+  dialogRef = inject&lt;<span class="hljs-title class_">DialogRef</span>&lt;<span class="hljs-built_in">string</span>&gt;&gt;(<span class="hljs-title class_">DialogRef</span>&lt;<span class="hljs-built_in">string</span>&gt;);
+  data = <span class="hljs-title function_">inject</span>(<span class="hljs-variable constant_">DIALOG_DATA</span>);
 }

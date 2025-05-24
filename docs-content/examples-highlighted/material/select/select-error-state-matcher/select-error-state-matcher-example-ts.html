@@ -1,40 +1,40 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  FormControl,
-  FormGroupDirective,
-  NgForm,
-  Validators,
-  FormsModule,
-  ReactiveFormsModule,
+  <span class="hljs-title class_">FormControl</span>,
+  <span class="hljs-title class_">FormGroupDirective</span>,
+  <span class="hljs-title class_">NgForm</span>,
+  <span class="hljs-title class_">Validators</span>,
+  <span class="hljs-title class_">FormsModule</span>,
+  <span class="hljs-title class_">ReactiveFormsModule</span>,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {ErrorStateMatcher} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ErrorStateMatcher</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSelectModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/select&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
 
 <span class="hljs-comment">/** Error when invalid control is dirty, touched, or submitted. */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyErrorStateMatcher</span> <span class="hljs-title">implements</span> <span class="hljs-title">ErrorStateMatcher</span> </span>{
-  isErrorState(control: FormControl | <span class="hljs-literal">null</span>, <span class="hljs-attr">form</span>: FormGroupDirective | NgForm | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
-    <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.submitted;
-    <span class="hljs-keyword">return</span> !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyErrorStateMatcher</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">ErrorStateMatcher</span> {
+  <span class="hljs-title function_">isErrorState</span>(<span class="hljs-attr">control</span>: <span class="hljs-title class_">FormControl</span> | <span class="hljs-literal">null</span>, <span class="hljs-attr">form</span>: <span class="hljs-title class_">FormGroupDirective</span> | <span class="hljs-title class_">NgForm</span> | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.<span class="hljs-property">submitted</span>;
+    <span class="hljs-keyword">return</span> !!(control &amp;&amp; control.<span class="hljs-property">invalid</span> &amp;&amp; (control.<span class="hljs-property">dirty</span> || control.<span class="hljs-property">touched</span> || isSubmitted));
   }
 }
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Select with a custom ErrorStateMatcher */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Select with a custom ErrorStateMatcher */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;select-error-state-matcher-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;select-error-state-matcher-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatSelectModule, FormsModule, ReactiveFormsModule, MatInputModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatSelectModule</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>, <span class="hljs-title class_">MatInputModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectErrorStateMatcherExample</span> </span>{
-  selected = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [Validators.required, Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>)]);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SelectErrorStateMatcherExample</span> {
+  selected = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-string">&#x27;valid&#x27;</span>, [<span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>, <span class="hljs-title class_">Validators</span>.<span class="hljs-title function_">pattern</span>(<span class="hljs-string">&#x27;valid&#x27;</span>)]);
 
-  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [Validators.required, Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>)]);
+  selectFormControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-string">&#x27;valid&#x27;</span>, [<span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>, <span class="hljs-title class_">Validators</span>.<span class="hljs-title function_">pattern</span>(<span class="hljs-string">&#x27;valid&#x27;</span>)]);
 
-  nativeSelectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">&#x27;valid&#x27;</span>, [
-    Validators.required,
-    Validators.pattern(<span class="hljs-string">&#x27;valid&#x27;</span>),
+  nativeSelectFormControl = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FormControl</span>(<span class="hljs-string">&#x27;valid&#x27;</span>, [
+    <span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>,
+    <span class="hljs-title class_">Validators</span>.<span class="hljs-title function_">pattern</span>(<span class="hljs-string">&#x27;valid&#x27;</span>),
   ]);
 
-  matcher = <span class="hljs-keyword">new</span> MyErrorStateMatcher();
+  matcher = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyErrorStateMatcher</span>();
 }

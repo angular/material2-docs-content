@@ -1,24 +1,24 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {CurrencyPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CurrencyPipe</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
-<span class="hljs-keyword">interface</span> Transaction {
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Transaction</span> {
   <span class="hljs-attr">item</span>: <span class="hljs-built_in">string</span>;
-  cost: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">cost</span>: <span class="hljs-built_in">number</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Footer row table
+ * <span class="hljs-doctag">@title</span> Footer row table
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-footer-row-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-footer-row-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-footer-row-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTableModule, CurrencyPipe],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">CurrencyPipe</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableFooterRowExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableFooterRowExample</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;item&#x27;</span>, <span class="hljs-string">&#x27;cost&#x27;</span>];
-  transactions: Transaction[] = [
+  <span class="hljs-attr">transactions</span>: <span class="hljs-title class_">Transaction</span>[] = [
     {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Beach ball&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">4</span>},
     {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Towel&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">5</span>},
     {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Frisbee&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">2</span>},
@@ -28,7 +28,7 @@
   ];
 
   <span class="hljs-comment">/** Gets the total cost of all transactions. */</span>
-  <span class="hljs-function"><span class="hljs-title">getTotalCost</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.transactions.map(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.cost).reduce(<span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> acc + value, <span class="hljs-number">0</span>);
+  <span class="hljs-title function_">getTotalCost</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">transactions</span>.<span class="hljs-title function_">map</span>(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.<span class="hljs-property">cost</span>).<span class="hljs-title function_">reduce</span>(<span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> acc + value, <span class="hljs-number">0</span>);
   }
 }

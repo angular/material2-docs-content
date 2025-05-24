@@ -1,29 +1,29 @@
-<span class="hljs-keyword">import</span> {Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogTitle,
-  MatDialogContent,
+  <span class="hljs-title class_">MatDialog</span>,
+  <span class="hljs-variable constant_">MAT_DIALOG_DATA</span>,
+  <span class="hljs-title class_">MatDialogTitle</span>,
+  <span class="hljs-title class_">MatDialogContent</span>,
 } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/dialog&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">DialogData</span> {
   <span class="hljs-attr">animal</span>: <span class="hljs-string">&#x27;panda&#x27;</span> | <span class="hljs-string">&#x27;unicorn&#x27;</span> | <span class="hljs-string">&#x27;lion&#x27;</span>;
 }
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Injecting data when opening a dialog
+ * <span class="hljs-doctag">@title</span> Injecting data when opening a dialog
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-data-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-data-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatButtonModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatButtonModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogDataExample</span> </span>{
-  dialog = inject(MatDialog);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DialogDataExample</span> {
+  dialog = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatDialog</span>);
 
-  <span class="hljs-function"><span class="hljs-title">openDialog</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.dialog.open(DialogDataExampleDialog, {
+  <span class="hljs-title function_">openDialog</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">dialog</span>.<span class="hljs-title function_">open</span>(<span class="hljs-title class_">DialogDataExampleDialog</span>, {
       <span class="hljs-attr">data</span>: {
         <span class="hljs-attr">animal</span>: <span class="hljs-string">&#x27;panda&#x27;</span>,
       },
@@ -34,8 +34,8 @@
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;dialog-data-example-dialog&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;dialog-data-example-dialog.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatDialogTitle, MatDialogContent],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatDialogTitle</span>, <span class="hljs-title class_">MatDialogContent</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DialogDataExampleDialog</span> </span>{
-  data = inject(MAT_DIALOG_DATA);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DialogDataExampleDialog</span> {
+  data = <span class="hljs-title function_">inject</span>(<span class="hljs-variable constant_">MAT_DIALOG_DATA</span>);
 }

@@ -1,16 +1,16 @@
-<span class="hljs-keyword">import</span> {Component, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {Sort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, signal} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Sort</span>, <span class="hljs-title class_">MatSortModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Testing with MatSortHarness
+ * <span class="hljs-doctag">@title</span> Testing with MatSortHarness
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;sort-harness-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sort-harness-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatSortModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatSortModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SortHarnessExample</span> </span>{
-  disableThirdHeader = signal(<span class="hljs-literal">false</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SortHarnessExample</span> {
+  disableThirdHeader = <span class="hljs-title function_">signal</span>(<span class="hljs-literal">false</span>);
   desserts = [
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Frozen yogurt&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">159</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Ice cream sandwich&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">237</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">37</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
@@ -19,18 +19,18 @@
     {<span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Gingerbread&#x27;</span>, <span class="hljs-attr">calories</span>: <span class="hljs-number">356</span>, <span class="hljs-attr">fat</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">carbs</span>: <span class="hljs-number">49</span>, <span class="hljs-attr">protein</span>: <span class="hljs-number">4</span>},
   ];
 
-  sortedData = <span class="hljs-built_in">this</span>.desserts.slice();
+  sortedData = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();
 
-  <span class="hljs-function"><span class="hljs-title">sortData</span>(<span class="hljs-params">sort: Sort</span>)</span> {
-    <span class="hljs-keyword">const</span> data = <span class="hljs-built_in">this</span>.desserts.slice();
+  <span class="hljs-title function_">sortData</span>(<span class="hljs-params"><span class="hljs-attr">sort</span>: <span class="hljs-title class_">Sort</span></span>) {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-variable language_">this</span>.<span class="hljs-property">desserts</span>.<span class="hljs-title function_">slice</span>();
 
-    <span class="hljs-keyword">if</span> (!sort.active || sort.direction === <span class="hljs-string">&#x27;&#x27;</span>) {
-      <span class="hljs-built_in">this</span>.sortedData = data;
+    <span class="hljs-keyword">if</span> (!sort.<span class="hljs-property">active</span> || sort.<span class="hljs-property">direction</span> === <span class="hljs-string">&#x27;&#x27;</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span> = data;
     } <span class="hljs-keyword">else</span> {
-      <span class="hljs-built_in">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
-        <span class="hljs-keyword">const</span> aValue = (a <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.active];
-        <span class="hljs-keyword">const</span> bValue = (b <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.active];
-        <span class="hljs-keyword">return</span> (aValue &lt; bValue ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>) * (sort.direction === <span class="hljs-string">&#x27;asc&#x27;</span> ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">sortedData</span> = data.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+        <span class="hljs-keyword">const</span> aValue = (a <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.<span class="hljs-property">active</span>];
+        <span class="hljs-keyword">const</span> bValue = (b <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>)[sort.<span class="hljs-property">active</span>];
+        <span class="hljs-keyword">return</span> (aValue &lt; bValue ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>) * (sort.<span class="hljs-property">direction</span> === <span class="hljs-string">&#x27;asc&#x27;</span> ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>);
       });
     }
   }

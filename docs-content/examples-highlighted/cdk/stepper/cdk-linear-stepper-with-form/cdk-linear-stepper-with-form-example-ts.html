@@ -1,33 +1,33 @@
-<span class="hljs-keyword">import</span> {Component, forwardRef, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkStepper, CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgTemplateOutlet} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, forwardRef, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">CdkStepper</span>, <span class="hljs-title class_">CdkStepperModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/stepper&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">FormBuilder</span>, <span class="hljs-title class_">Validators</span>, <span class="hljs-title class_">FormsModule</span>, <span class="hljs-title class_">ReactiveFormsModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">NgTemplateOutlet</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>A custom CDK linear stepper with forms */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> A custom CDK linear stepper with forms */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-linear-stepper-with-form-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./cdk-linear-stepper-with-form-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./cdk-linear-stepper-with-form-example.css&#x27;</span>,
   <span class="hljs-attr">imports</span>: [
-    forwardRef(<span class="hljs-function">() =&gt;</span> CustomLinearStepper),
-    CdkStepperModule,
-    FormsModule,
-    ReactiveFormsModule,
+    <span class="hljs-title function_">forwardRef</span>(<span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">CustomLinearStepper</span>),
+    <span class="hljs-title class_">CdkStepperModule</span>,
+    <span class="hljs-title class_">FormsModule</span>,
+    <span class="hljs-title class_">ReactiveFormsModule</span>,
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkLinearStepperWithFormExample</span> </span>{
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _formBuilder = inject(FormBuilder);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CdkLinearStepperWithFormExample</span> {
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _formBuilder = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">FormBuilder</span>);
 
   isLinear = <span class="hljs-literal">true</span>;
-  firstFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-    <span class="hljs-attr">firstControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
+  firstFormGroup = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_formBuilder</span>.<span class="hljs-title function_">group</span>({
+    <span class="hljs-attr">firstControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>],
   });
-  secondFormGroup = <span class="hljs-built_in">this</span>._formBuilder.group({
-    <span class="hljs-attr">secondControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, Validators.required],
+  secondFormGroup = <span class="hljs-variable language_">this</span>.<span class="hljs-property">_formBuilder</span>.<span class="hljs-title function_">group</span>({
+    <span class="hljs-attr">secondControl</span>: [<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-title class_">Validators</span>.<span class="hljs-property">required</span>],
   });
 
-  <span class="hljs-function"><span class="hljs-title">toggleLinearity</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-built_in">this</span>.isLinear = !<span class="hljs-built_in">this</span>.isLinear;
+  <span class="hljs-title function_">toggleLinearity</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">isLinear</span> = !<span class="hljs-variable language_">this</span>.<span class="hljs-property">isLinear</span>;
   }
 }
 
@@ -36,11 +36,11 @@
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;example-custom-linear-stepper&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;./example-custom-linear-stepper.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;./example-custom-linear-stepper.css&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomLinearStepper}],
-  <span class="hljs-attr">imports</span>: [NgTemplateOutlet, CdkStepperModule],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-title class_">CdkStepper</span>, <span class="hljs-attr">useExisting</span>: <span class="hljs-title class_">CustomLinearStepper</span>}],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">NgTemplateOutlet</span>, <span class="hljs-title class_">CdkStepperModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomLinearStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CdkStepper</span> </span>{
-  selectStepByIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>.selectedIndex = index;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CustomLinearStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">CdkStepper</span> {
+  <span class="hljs-title function_">selectStepByIndex</span>(<span class="hljs-attr">index</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">selectedIndex</span> = index;
   }
 }

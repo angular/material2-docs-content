@@ -1,43 +1,43 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Table with expandable rows
+ * <span class="hljs-doctag">@title</span> Table with expandable rows
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-expandable-rows-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-expandable-rows-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-expandable-rows-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTableModule, MatButtonModule, MatIconModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatButtonModule</span>, <span class="hljs-title class_">MatIconModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableExpandableRowsExample</span> </span>{
-  dataSource = ELEMENT_DATA;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableExpandableRowsExample</span> {
+  dataSource = <span class="hljs-variable constant_">ELEMENT_DATA</span>;
   columnsToDisplay = [<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>];
-  columnsToDisplayWithExpand = [...this.columnsToDisplay, <span class="hljs-string">&#x27;expand&#x27;</span>];
-  expandedElement: PeriodicElement | <span class="hljs-literal">null</span>;
+  columnsToDisplayWithExpand = [...<span class="hljs-variable language_">this</span>.<span class="hljs-property">columnsToDisplay</span>, <span class="hljs-string">&#x27;expand&#x27;</span>];
+  <span class="hljs-attr">expandedElement</span>: <span class="hljs-title class_">PeriodicElement</span> | <span class="hljs-literal">null</span>;
 
   <span class="hljs-comment">/** Checks whether an element is expanded. */</span>
-  <span class="hljs-function"><span class="hljs-title">isExpanded</span>(<span class="hljs-params">element: PeriodicElement</span>)</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.expandedElement === element;
+  <span class="hljs-title function_">isExpanded</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">expandedElement</span> === element;
   }
 
   <span class="hljs-comment">/** Toggles the expanded state of an element. */</span>
-  <span class="hljs-function"><span class="hljs-title">toggle</span>(<span class="hljs-params">element: PeriodicElement</span>)</span> {
-    <span class="hljs-built_in">this</span>.expandedElement = <span class="hljs-built_in">this</span>.isExpanded(element) ? <span class="hljs-literal">null</span> : element;
+  <span class="hljs-title function_">toggle</span>(<span class="hljs-params"><span class="hljs-attr">element</span>: <span class="hljs-title class_">PeriodicElement</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">expandedElement</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isExpanded</span>(element) ? <span class="hljs-literal">null</span> : element;
   }
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
-  description: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">description</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {
     <span class="hljs-attr">position</span>: <span class="hljs-number">1</span>,
     <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,

@@ -11,30 +11,30 @@ This model is used in components such as the selection list, table selections an
           <span header-link="basic-usage"></span>
           Basic Usage
         </h4>
-      <pre><code class="language-javascript"><span class="hljs-keyword">const</span> model = <span class="hljs-keyword">new</span> SelectionModel(
+      <pre><code class="language-javascript"><span class="hljs-keyword">const</span> model = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SelectionModel</span>(
   <span class="hljs-literal">true</span>,   <span class="hljs-comment">// multiple selection or not</span>
   [<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>] <span class="hljs-comment">// initial selected values</span>
 );
 
 <span class="hljs-comment">// select a value</span>
-model.select(<span class="hljs-number">4</span>);
-<span class="hljs-built_in">console</span>.log(model.selected.length) <span class="hljs-comment">//-&gt;  4</span>
+model.<span class="hljs-title function_">select</span>(<span class="hljs-number">4</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(model.<span class="hljs-property">selected</span>.<span class="hljs-property">length</span>) <span class="hljs-comment">//-&gt;  4</span>
 
 <span class="hljs-comment">// deselect a value</span>
-model.deselect(<span class="hljs-number">4</span>);
-<span class="hljs-built_in">console</span>.log(model.selected.length) <span class="hljs-comment">//-&gt;  3</span>
+model.<span class="hljs-title function_">deselect</span>(<span class="hljs-number">4</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(model.<span class="hljs-property">selected</span>.<span class="hljs-property">length</span>) <span class="hljs-comment">//-&gt;  3</span>
 
 <span class="hljs-comment">// toggle a value</span>
-model.toggle(<span class="hljs-number">4</span>);
-<span class="hljs-built_in">console</span>.log(model.selected.length) <span class="hljs-comment">//-&gt;  4</span>
+model.<span class="hljs-title function_">toggle</span>(<span class="hljs-number">4</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(model.<span class="hljs-property">selected</span>.<span class="hljs-property">length</span>) <span class="hljs-comment">//-&gt;  4</span>
 
 <span class="hljs-comment">// check for selection</span>
-<span class="hljs-built_in">console</span>.log(model.isSelected(<span class="hljs-number">4</span>)) <span class="hljs-comment">//-&gt; true</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(model.<span class="hljs-title function_">isSelected</span>(<span class="hljs-number">4</span>)) <span class="hljs-comment">//-&gt; true</span>
 
 <span class="hljs-comment">// sort the selections</span>
-<span class="hljs-built_in">console</span>.log(model.sort()) <span class="hljs-comment">//-&gt; [1,2,3,4]</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(model.<span class="hljs-title function_">sort</span>()) <span class="hljs-comment">//-&gt; [1,2,3,4]</span>
 
 <span class="hljs-comment">// listen for changes</span>
-model.changed.subscribe(<span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(s));
+model.<span class="hljs-property">changed</span>.<span class="hljs-title function_">subscribe</span>(<span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(s));
 </code></pre>
 </div>

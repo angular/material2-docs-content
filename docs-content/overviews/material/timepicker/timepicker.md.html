@@ -86,10 +86,10 @@ hours and <code>second</code> or <code>seconds</code> for seconds.</li>
 <p>Furthermore, the default interval can be controlled for the entire application using the
 <code>MAT_TIMEPICKER_CONFIG</code> injection token. For example, adding the following to your <code>providers</code> will
 default all timepickers to a 90 minute interval:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MAT_TIMEPICKER_CONFIG} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../timepicker&#x27;</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {<span class="hljs-variable constant_">MAT_TIMEPICKER_CONFIG</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../timepicker&#x27;</span>;
 
 {
-  <span class="hljs-attr">provide</span>: MAT_TIMEPICKER_CONFIG,
+  <span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_TIMEPICKER_CONFIG</span>,
   <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">interval</span>: <span class="hljs-string">&#x27;90 minutes&#x27;</span>},
 }
 </code></pre>
@@ -128,8 +128,8 @@ configured via three aspects:</p>
       <p>By default, the <code>MAT_DATE_LOCALE</code> injection token will use the existing <code>LOCALE_ID</code> locale code
 from <code>@angular/core</code>. If you want to override it, you can provide a new value for the
 <code>MAT_DATE_LOCALE</code> token:</p>
-<pre><code class="language-ts">bootstapApplication(MyApp, {
-  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: MAT_DATE_LOCALE, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
+<pre><code class="language-ts"><span class="hljs-title function_">bootstapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">MAT_DATE_LOCALE</span>, <span class="hljs-attr">useValue</span>: <span class="hljs-string">&#x27;en-GB&#x27;</span>}],
 });
 </code></pre>
 <p>It&#39;s also possible to set the locale at runtime using the <code>setLocale</code> method of the <code>DateAdapter</code>.</p>
@@ -245,8 +245,8 @@ adapters mentioned above or creating your own adapter by extending the <code>Dat
 your <code>bootstrapApplication</code> format to the following:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {provideDateFnsAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-date-fns-adapter&#x27;</span>;
 
-bootstrapApplication(MyApp, {
-  <span class="hljs-attr">providers</span>: [provideDateFnsAdapter()]
+<span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideDateFnsAdapter</span>()]
 });
 </code></pre>
 
@@ -264,8 +264,8 @@ configured if your app is using the datepicker, but for the timepicker you need 
 <p>If you want use one of the <code>DateAdapters</code> that ships with Angular Material, but use your own
 <code>MAT_DATE_FORMATS</code>, you can either pass the formats into the providers function, or provide the
 <code>MAT_DATE_FORMATS</code> token yourself. For example:</p>
-<pre><code class="language-ts">bootstrapApplication(MyApp, {
-  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter(MY_NATIVE_DATE_FORMATS)],
+<pre><code class="language-ts"><span class="hljs-title function_">bootstrapApplication</span>(<span class="hljs-title class_">MyApp</span>, {
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>(<span class="hljs-variable constant_">MY_NATIVE_DATE_FORMATS</span>)],
 });
 </code></pre>
 

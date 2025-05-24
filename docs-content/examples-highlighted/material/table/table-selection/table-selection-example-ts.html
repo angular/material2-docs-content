@@ -1,16 +1,16 @@
-<span class="hljs-keyword">import</span> {SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource, MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">SelectionModel</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/collections&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatTableDataSource</span>, <span class="hljs-title class_">MatTableModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatCheckboxModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">PeriodicElement</span> {
   <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
-  symbol: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">position</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">weight</span>: <span class="hljs-built_in">number</span>;
+  <span class="hljs-attr">symbol</span>: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+<span class="hljs-keyword">const</span> <span class="hljs-attr">ELEMENT_DATA</span>: <span class="hljs-title class_">PeriodicElement</span>[] = [
   {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Hydrogen&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;H&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Helium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;He&#x27;</span>},
   {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Lithium&#x27;</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">&#x27;Li&#x27;</span>},
@@ -24,41 +24,41 @@
 ];
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>Table with selection
+ * <span class="hljs-doctag">@title</span> Table with selection
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-selection-example&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;table-selection-example.css&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-selection-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatTableModule, MatCheckboxModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatTableModule</span>, <span class="hljs-title class_">MatCheckboxModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableSelectionExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TableSelectionExample</span> {
   <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;select&#x27;</span>, <span class="hljs-string">&#x27;position&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;weight&#x27;</span>, <span class="hljs-string">&#x27;symbol&#x27;</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
-  selection = <span class="hljs-keyword">new</span> SelectionModel&lt;PeriodicElement&gt;(<span class="hljs-literal">true</span>, []);
+  dataSource = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MatTableDataSource</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;(<span class="hljs-variable constant_">ELEMENT_DATA</span>);
+  selection = <span class="hljs-keyword">new</span> <span class="hljs-title class_">SelectionModel</span>&lt;<span class="hljs-title class_">PeriodicElement</span>&gt;(<span class="hljs-literal">true</span>, []);
 
   <span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
-  <span class="hljs-function"><span class="hljs-title">isAllSelected</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> numSelected = <span class="hljs-built_in">this</span>.selection.selected.length;
-    <span class="hljs-keyword">const</span> numRows = <span class="hljs-built_in">this</span>.dataSource.data.length;
+  <span class="hljs-title function_">isAllSelected</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> numSelected = <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-property">selected</span>.<span class="hljs-property">length</span>;
+    <span class="hljs-keyword">const</span> numRows = <span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">data</span>.<span class="hljs-property">length</span>;
     <span class="hljs-keyword">return</span> numSelected === numRows;
   }
 
   <span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
-  <span class="hljs-function"><span class="hljs-title">toggleAllRows</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.isAllSelected()) {
-      <span class="hljs-built_in">this</span>.selection.clear();
+  <span class="hljs-title function_">toggleAllRows</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isAllSelected</span>()) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-title function_">clear</span>();
       <span class="hljs-keyword">return</span>;
     }
 
-    <span class="hljs-built_in">this</span>.selection.select(...this.dataSource.data);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">selection</span>.<span class="hljs-title function_">select</span>(...<span class="hljs-variable language_">this</span>.<span class="hljs-property">dataSource</span>.<span class="hljs-property">data</span>);
   }
 
   <span class="hljs-comment">/** The label for the checkbox on the passed row */</span>
-  checkboxLabel(row?: PeriodicElement): <span class="hljs-built_in">string</span> {
+  <span class="hljs-title function_">checkboxLabel</span>(<span class="hljs-attr">row</span>?: <span class="hljs-title class_">PeriodicElement</span>): <span class="hljs-built_in">string</span> {
     <span class="hljs-keyword">if</span> (!row) {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.isAllSelected() ? <span class="hljs-string">&#x27;deselect&#x27;</span> : <span class="hljs-string">&#x27;select&#x27;</span>}</span> all`</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-variable language_">this</span>.isAllSelected() ? <span class="hljs-string">&#x27;deselect&#x27;</span> : <span class="hljs-string">&#x27;select&#x27;</span>}</span> all`</span>;
     }
-    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.selection.isSelected(row) ? <span class="hljs-string">&#x27;deselect&#x27;</span> : <span class="hljs-string">&#x27;select&#x27;</span>}</span> row <span class="hljs-subst">${row.position + <span class="hljs-number">1</span>}</span>`</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-variable language_">this</span>.selection.isSelected(row) ? <span class="hljs-string">&#x27;deselect&#x27;</span> : <span class="hljs-string">&#x27;select&#x27;</span>}</span> row <span class="hljs-subst">${row.position + <span class="hljs-number">1</span>}</span>`</span>;
   }
 }

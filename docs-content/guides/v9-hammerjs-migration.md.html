@@ -42,11 +42,11 @@ are required. Read more <a href="#the-migration-reported-ambiguous-usage-what-sh
       <p>HammerJS can be set up in many ways. The migration handles the most common cases, covering
 approaches recommended by Angular Material in the past. The migration performs the following steps:</p>
 <p><em>1.</em> Remove <code>hammerjs</code> from your project <code>package.json</code>.</p>
-<pre><code class="language-json">{
-  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
-    <span class="hljs-attr">&quot;hammerjs&quot;</span>: <span class="hljs-string">&quot;...&quot;</span>
-  }
-}
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;dependencies&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">&quot;hammerjs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;...&quot;</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
 </code></pre>
 <p><em>2.</em> Remove script imports to <code>hammerjs</code> in the <code>index.html</code> file.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://my-cdn.io/hammer.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -64,15 +64,15 @@ the test setup and resolve any test issues. Read more in a
         </h2>
       <p>The <code>GestureConfig</code> can be consumed in multiple ways. The migration covers the most common cases.
 The most common case is that an <code>NgModule</code> in your application directly provides <code>GestureConfig</code>:</p>
-<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {GestureConfig} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {<span class="hljs-title class_">GestureConfig</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: HAMMER_GESTURE_CONFIG, <span class="hljs-attr">useClass</span>: GestureConfig}
+    {<span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">HAMMER_GESTURE_CONFIG</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">GestureConfig</span>}
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">AppModule</span> {}
 </code></pre>
 <p>If this pattern is found in your project, it usually means that a component relies on the
 deprecated <code>GestureConfig</code> in order to use HammerJS events in the template. If this is the case,

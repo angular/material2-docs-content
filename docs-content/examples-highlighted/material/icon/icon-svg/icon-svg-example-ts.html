@@ -1,8 +1,8 @@
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatIconRegistry, MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>, inject} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">DomSanitizer</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/platform-browser&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatIconRegistry</span>, <span class="hljs-title class_">MatIconModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/icon&#x27;</span>;
 
-<span class="hljs-keyword">const</span> THUMBUP_ICON =
+<span class="hljs-keyword">const</span> <span class="hljs-variable constant_">THUMBUP_ICON</span> =
   <span class="hljs-string">`
   &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24px&quot; height=&quot;24px&quot;&gt;
     &lt;path d=&quot;M0 0h24v24H0z&quot; fill=&quot;none&quot;/&gt;
@@ -13,22 +13,22 @@
 `</span>;
 
 <span class="hljs-comment">/**
- * <span class="hljs-doctag">@title </span>SVG icons
+ * <span class="hljs-doctag">@title</span> SVG icons
  */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;icon-svg-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;icon-svg-example.html&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatIconModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatIconModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IconSvgExample</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> iconRegistry = inject(MatIconRegistry);
-    <span class="hljs-keyword">const</span> sanitizer = inject(DomSanitizer);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">IconSvgExample</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> iconRegistry = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">MatIconRegistry</span>);
+    <span class="hljs-keyword">const</span> sanitizer = <span class="hljs-title function_">inject</span>(<span class="hljs-title class_">DomSanitizer</span>);
 
     <span class="hljs-comment">// Note that we provide the icon here as a string literal here due to a limitation in</span>
     <span class="hljs-comment">// Stackblitz. If you want to provide the icon from a URL, you can use:</span>
     <span class="hljs-comment">// `iconRegistry.addSvgIcon(&#x27;thumbs-up&#x27;, sanitizer.bypassSecurityTrustResourceUrl(&#x27;icon.svg&#x27;));`</span>
-    iconRegistry.addSvgIconLiteral(<span class="hljs-string">&#x27;thumbs-up&#x27;</span>, sanitizer.bypassSecurityTrustHtml(THUMBUP_ICON));
+    iconRegistry.<span class="hljs-title function_">addSvgIconLiteral</span>(<span class="hljs-string">&#x27;thumbs-up&#x27;</span>, sanitizer.<span class="hljs-title function_">bypassSecurityTrustHtml</span>(<span class="hljs-variable constant_">THUMBUP_ICON</span>));
   }
 }

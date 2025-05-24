@@ -1,23 +1,23 @@
-<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSidenav, MatSidenavModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">Component</span>, <span class="hljs-title class_">ViewChild</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatSidenav</span>, <span class="hljs-title class_">MatSidenavModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sidenav&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatButtonModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/button&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Sidenav with custom escape and backdrop click behavior */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Sidenav with custom escape and backdrop click behavior */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;sidenav-disable-close-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;sidenav-disable-close-example.html&#x27;</span>,
   <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">&#x27;sidenav-disable-close-example.css&#x27;</span>,
-  <span class="hljs-attr">imports</span>: [MatSidenavModule, MatButtonModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatSidenavModule</span>, <span class="hljs-title class_">MatButtonModule</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SidenavDisableCloseExample</span> </span>{
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;sidenav&#x27;</span>) sidenav: MatSidenav;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">SidenavDisableCloseExample</span> {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;sidenav&#x27;</span>) <span class="hljs-attr">sidenav</span>: <span class="hljs-title class_">MatSidenav</span>;
 
   reason = <span class="hljs-string">&#x27;&#x27;</span>;
 
-  <span class="hljs-function"><span class="hljs-title">close</span>(<span class="hljs-params">reason: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>.reason = reason;
-    <span class="hljs-built_in">this</span>.sidenav.close();
+  <span class="hljs-title function_">close</span>(<span class="hljs-params"><span class="hljs-attr">reason</span>: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">reason</span> = reason;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">sidenav</span>.<span class="hljs-title function_">close</span>();
   }
 
-  shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.test(<span class="hljs-built_in">window</span>.location.host);
+  shouldRun = <span class="hljs-regexp">/(^|.)(stackblitz|webcontainer).(io|com)$/</span>.<span class="hljs-title function_">test</span>(<span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">host</span>);
 }

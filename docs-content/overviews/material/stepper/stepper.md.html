@@ -197,7 +197,7 @@ the global default stepper options which can be specified by providing a value f
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
     {
-      <span class="hljs-attr">provide</span>: STEPPER_GLOBAL_OPTIONS,
+      <span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">STEPPER_GLOBAL_OPTIONS</span>,
       <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">displayDefaultIndicatorType</span>: <span class="hljs-literal">false</span> }
     }
   ]
@@ -218,7 +218,7 @@ will not affect steppers marked as <code>linear</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
     {
-      <span class="hljs-attr">provide</span>: STEPPER_GLOBAL_OPTIONS,
+      <span class="hljs-attr">provide</span>: <span class="hljs-variable constant_">STEPPER_GLOBAL_OPTIONS</span>,
       <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">showError</span>: <span class="hljs-literal">true</span> }
     }
   ]
@@ -283,12 +283,12 @@ viewport.</p>
       <p>Labels used by the stepper are provided through <code>MatStepperIntl</code>. Localization of these messages
 can be done by providing a subclass with translated values in your application root module.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  <span class="hljs-attr">imports</span>: [MatStepperModule],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatStepperModule</span>],
   <span class="hljs-attr">providers</span>: [
-    {<span class="hljs-attr">provide</span>: MatStepperIntl, <span class="hljs-attr">useClass</span>: MyIntl},
+    {<span class="hljs-attr">provide</span>: <span class="hljs-title class_">MatStepperIntl</span>, <span class="hljs-attr">useClass</span>: <span class="hljs-title class_">MyIntl</span>},
   ],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyApp</span> {}
 </code></pre>
 <div material-docs-example="stepper-intl"></div>
 

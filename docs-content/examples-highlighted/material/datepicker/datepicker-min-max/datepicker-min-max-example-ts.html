@@ -1,20 +1,20 @@
-<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">ChangeDetectionStrategy</span>, <span class="hljs-title class_">Component</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
 <span class="hljs-keyword">import</span> {provideNativeDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatDatepickerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatDatepickerModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/datepicker&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatFormFieldModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-title class_">MatInputModule</span>} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
 
-<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Datepicker with min &amp; max validation */</span>
+<span class="hljs-comment">/** <span class="hljs-doctag">@title</span> Datepicker with min &amp; max validation */</span>
 <span class="hljs-meta">@Component</span>({
   <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;datepicker-min-max-example&#x27;</span>,
   <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;datepicker-min-max-example.html&#x27;</span>,
-  <span class="hljs-attr">providers</span>: [provideNativeDateAdapter()],
-  <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
-  <span class="hljs-attr">changeDetection</span>: ChangeDetectionStrategy.OnPush,
+  <span class="hljs-attr">providers</span>: [<span class="hljs-title function_">provideNativeDateAdapter</span>()],
+  <span class="hljs-attr">imports</span>: [<span class="hljs-title class_">MatFormFieldModule</span>, <span class="hljs-title class_">MatInputModule</span>, <span class="hljs-title class_">MatDatepickerModule</span>],
+  <span class="hljs-attr">changeDetection</span>: <span class="hljs-title class_">ChangeDetectionStrategy</span>.<span class="hljs-property">OnPush</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatepickerMinMaxExample</span> </span>{
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DatepickerMinMaxExample</span> {
   <span class="hljs-comment">// Set the minimum to January 1st 20 years in the past and December 31st a year in the future.</span>
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _currentYear = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getFullYear();
-  <span class="hljs-keyword">readonly</span> minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">this</span>._currentYear - <span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
-  <span class="hljs-keyword">readonly</span> maxDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">this</span>._currentYear + <span class="hljs-number">1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">31</span>);
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> _currentYear = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>().<span class="hljs-title function_">getFullYear</span>();
+  <span class="hljs-keyword">readonly</span> minDate = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_currentYear</span> - <span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
+  <span class="hljs-keyword">readonly</span> maxDate = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">_currentYear</span> + <span class="hljs-number">1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">31</span>);
 }
