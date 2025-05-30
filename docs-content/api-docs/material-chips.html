@@ -248,6 +248,19 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>editIcon: MatChipEdit</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s leading edit icon.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>leadingIcon: MatChipAvatar</code>
     </p>
   </td>
@@ -632,6 +645,19 @@ VoiceOver reading every option as &quot;selected&quot; (#25736).</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the chip list is selectable.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>editIcon: MatChipEdit</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s leading edit icon.</p>
 </td>
 </tr>
 
@@ -1098,6 +1124,19 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The default chip edit input that is used if none is projected into this chip row.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>editIcon: MatChipEdit</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The chip&#39;s leading edit icon.</p>
 </td>
 </tr>
 
@@ -2236,6 +2275,83 @@ but we support non-interactive trailing icons.</p>
     
       
 
+<h4 id="MatChipEdit" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipEdit"></span>
+  <code>MatChipEdit</code>
+  
+</h4><p class="docs-api-class-description"><p>Directive to edit the parent chip when the leading action icon is clicked or
+when the ENTER key is pressed on it.</p>
+<p>Recommended for use with the Material Design &quot;edit&quot; icon
+available at <a href="https://material.io/icons/#ic_edit">https://material.io/icons/#ic_edit</a>.</p>
+<p>Example:</p>
+<pre><code>&lt;mat-chip&gt;
+  &lt;button matChipEdit aria-label=&quot;Edit&quot;&gt;
+    &lt;mat-icon&gt;edit&lt;/mat-icon&gt;
+  &lt;/button&gt;
+&lt;/mat-chip&gt;</code></pre>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[matChipEdit]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ transform: booleanAttribute }</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the action is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>isInteractive: true</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the action is interactive.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+
+
+
+    
+      
+
 <h4 id="MatChipRemove" class="docs-header-link docs-api-h4 docs-api-class-name">
   <span header-link="MatChipRemove"></span>
   <code>MatChipRemove</code>
@@ -2983,6 +3099,22 @@ retention of the class and its directive metadata.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_CHIP_TRAILING_ICON</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-built_in">unknown</span>&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_CHIP_EDIT" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHIP_EDIT"></span>
+  <code>MAT_CHIP_EDIT</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatChipEdit</code>. It serves as
+alternative token to the actual <code>MatChipEdit</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> <span class="hljs-attr">MAT_CHIP_EDIT</span>: <span class="hljs-title class_">InjectionToken</span>&lt;<span class="hljs-built_in">unknown</span>&gt;;</code>
 </pre>
 </div>
 
