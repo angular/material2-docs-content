@@ -278,6 +278,20 @@ const EXAMPLE_COMPONENTS = {
         "primaryFile": "cdk-drag-drop-connected-sorting-example.ts",
         "importPath": "cdk/drag-drop"
     },
+    "cdk-drag-drop-copy-list": {
+        "packagePath": "cdk/drag-drop/cdk-drag-drop-copy-list",
+        "title": "Drag&Drop copy between lists",
+        "componentName": "CdkDragDropCopyListExample",
+        "files": [
+            "cdk-drag-drop-copy-list-example.ts",
+            "cdk-drag-drop-copy-list-example.html",
+            "cdk-drag-drop-copy-list-example.css"
+        ],
+        "selector": "cdk-drag-drop-copy-list-example",
+        "additionalComponents": [],
+        "primaryFile": "cdk-drag-drop-copy-list-example.ts",
+        "importPath": "cdk/drag-drop"
+    },
     "cdk-drag-drop-custom-placeholder": {
         "packagePath": "cdk/drag-drop/cdk-drag-drop-custom-placeholder",
         "title": "Drag&Drop custom placeholder",
@@ -5043,6 +5057,8 @@ async function loadExample(id) {
         case 'cdk-drag-drop-connected-sorting-group':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-connected-sorting':
+            return import('@angular/components-examples/cdk/drag-drop');
+        case 'cdk-drag-drop-copy-list':
             return import('@angular/components-examples/cdk/drag-drop');
         case 'cdk-drag-drop-custom-placeholder':
             return import('@angular/components-examples/cdk/drag-drop');

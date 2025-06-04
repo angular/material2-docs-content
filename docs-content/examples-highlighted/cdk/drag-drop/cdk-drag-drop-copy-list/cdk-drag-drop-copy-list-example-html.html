@@ -1,0 +1,31 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Products<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">cdkDropList</span>
+    [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">&quot;products&quot;</span>
+    [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">&quot;[cartList]&quot;</span>
+    <span class="hljs-attr">cdkDropListSortingDisabled</span>
+    <span class="hljs-attr">cdkDropListHasAnchor</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span>&gt;</span>
+    @for (product of products; track $index) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span> <span class="hljs-attr">cdkDrag</span> [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">&quot;product&quot;</span>&gt;</span>{{product}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Shopping cart<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">cdkDropList</span>
+    #<span class="hljs-attr">cartList</span>=<span class="hljs-string">&quot;cdkDropList&quot;</span>
+    [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">&quot;cart&quot;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-list&quot;</span>
+    (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>&gt;</span>
+    @for (product of cart; track $index) {
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-box&quot;</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{product}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    }
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
